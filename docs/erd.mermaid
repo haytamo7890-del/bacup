@@ -1,0 +1,174 @@
+erDiagram
+    countries ||--o{ education_systems : has
+    education_systems ||--o{ levels : has
+    education_systems ||--o{ tracks : has
+    education_systems ||--o{ subjects : has
+    countries ||--o{ regions : has
+
+    levels ||--o{ track_subjects : "at level"
+    tracks ||--o{ track_subjects : "for track"
+    subjects ||--o{ track_subjects : "of subject"
+
+    subjects ||--o{ chapters : contains
+    levels ||--o{ chapters : "at level"
+    chapters ||--o{ lessons : contains
+
+    education_systems ||--o{ exams : has
+    levels ||--o{ exams : "at level"
+    tracks ||--o{ exams : "for track"
+    subjects ||--o{ exams : "of subject"
+    regions ||--o{ exams : "regional only"
+
+    subjects ||--o{ exercises : "of subject"
+    chapters ||--o{ exercises : from
+    exams ||--o{ exercises : "sourced from"
+    exercises ||--o{ questions : has
+    questions ||--o{ answer_options : "mcq"
+    questions ||--o{ solutions : "HSGenius correction"
+
+    auth_users ||--|| profiles : extends
+    profiles ||--|| student_profiles : is
+    profiles ||--o{ guardianships : guardian
+    profiles ||--o{ consents : gives
+    levels ||--o{ student_profiles : enrolled
+    tracks ||--o{ student_profiles : filiere
+
+    student_profiles ||--o{ attempts : makes
+    questions ||--o{ attempts : on
+    student_profiles ||--o{ chapter_mastery : tracks
+    chapters ||--o{ chapter_mastery : per
+    student_profiles ||--o{ mistakes : logs
+    student_profiles ||--o{ recommendations : receives
+
+    student_profiles ||--o{ conversations : starts
+    conversations ||--o{ messages : contains
+
+    student_profiles ||--o{ xp_events : earns
+    student_profiles ||--|| streaks : has
+
+    profiles ||--o{ subscriptions : buys
+    subscriptions ||--o{ payments : paid_by
+    profiles ||--o{ referrals : refers
+
+    countries {
+        uuid id PK
+        text code
+        text name
+    }
+    education_systems {
+        uuid id PK
+        uuid country_id FK
+        text code
+        text name
+    }
+    levels {
+        uuid id PK
+        uuid education_system_id FK
+        text code "1bac / 2bac"
+        int position
+    }
+    tracks {
+        uuid id PK
+        text code "sm_a, pc, svt..."
+        text name
+    }
+    subjects {
+        uuid id PK
+        text code
+        text name
+    }
+    track_subjects {
+        uuid id PK
+        uuid level_id FK
+        uuid track_id FK
+        uuid subject_id FK
+        numeric coefficient
+        exam_type exam_type
+    }
+    chapters {
+        uuid id PK
+        uuid subject_id FK
+        uuid level_id FK
+        uuid track_id FK "nullable"
+        text name
+    }
+    exams {
+        uuid id PK
+        exam_type exam_type
+        exam_session session
+        int year
+        uuid region_id FK "regional"
+        text source_url "official sujet"
+    }
+    exercises {
+        uuid id PK
+        uuid exam_id FK "nullable"
+        content_source source
+        int difficulty
+    }
+    questions {
+        uuid id PK
+        uuid exercise_id FK
+        question_kind kind
+        text statement
+    }
+    solutions {
+        uuid id PK
+        uuid question_id FK
+        content_source author "hsgenius"
+        text body "our correction"
+    }
+    profiles {
+        uuid id PK "auth.users"
+        app_role role
+        int birth_year "minimal PII"
+    }
+    student_profiles {
+        uuid id PK
+        uuid level_id FK
+        uuid track_id FK
+    }
+    attempts {
+        uuid id PK
+        uuid student_id FK
+        attempt_status status
+        numeric score
+    }
+    chapter_mastery {
+        uuid id PK
+        uuid student_id FK
+        uuid chapter_id FK
+        numeric mastery_pct
+    }
+    recommendations {
+        uuid id PK
+        uuid student_id FK
+        text reason
+        reco_status status
+    }
+    conversations {
+        uuid id PK
+        uuid student_id FK
+    }
+    messages {
+        uuid id PK
+        msg_role role
+        text model "cost routing"
+        int input_tokens
+    }
+    subscriptions {
+        uuid id PK
+        sub_status status
+        numeric price_mad "220"
+        timestamptz expires_at
+    }
+    payments {
+        uuid id PK
+        pay_method method "cmi / wallet / cash"
+        pay_status status
+    }
+    referrals {
+        uuid id PK
+        text code
+        referral_status status
+    }
