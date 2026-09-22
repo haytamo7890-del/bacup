@@ -12,6 +12,19 @@ export const PRICING = {
 
 export const TRIAL_DAYS = 7;
 
+/** Paid programs (annual access). One per BAC year, 220 DH each. */
+export const PROGRAMS = {
+  bac1: { code: "bac1", levelCode: "1bac", label: "Bac 1 (1ère année)", price: 220 },
+  bac2: { code: "bac2", levelCode: "2bac", label: "Bac 2 (2ème année)", price: 220 },
+} as const;
+
+export type ProgramCode = keyof typeof PROGRAMS;
+
+/** Map a level code (1bac/2bac) to its paid program. */
+export function programForLevel(levelCode: string | null | undefined): ProgramCode {
+  return levelCode === "1bac" ? "bac1" : "bac2";
+}
+
 /** Fair-use limits per tier (protects AI margins). Tune with real data. */
 export const AI_LIMITS = {
   free: { questionsPerDay: 5 },

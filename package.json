@@ -7,12 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate:explanations": "node --env-file=.env.local scripts/generate-explanations.mjs"
+    "generate:explanations": "node --env-file=.env.local scripts/generate-explanations.mjs",
+    "generate:modes": "node --env-file=.env.local scripts/generate-explanation-modes.mjs",
+    "import:exams": "node --env-file=.env.local scripts/generate-exam-qcu.mjs",
+    "import:content": "node --env-file=.env.local scripts/import-content.mjs",
+    "import:cours": "node --env-file=.env.local scripts/import-cours.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
     "@supabase/ssr": "^0.12.5",
     "@supabase/supabase-js": "^2.112.4",
+    "katex": "^0.18.4",
     "lucide-react": "^1.34.0",
     "next": "16.3.3",
     "next-themes": "^0.4.6",

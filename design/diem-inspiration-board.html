@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Diem → Bac-up · Inspiration Board</title>
+<style>
+  :root{
+    /* extracted straight from Diem.exe */
+    --d-mint:#4BFDE8; --d-cyan:#23C0FE; --d-sky:#00BBFF; --d-blue:#1C91FF;
+    --d-royal:#0086FF; --d-deep:#033ACC; --d-navy:#0934B3;
+    --d-cream:#f9f6f1; --d-cream2:#ece9e4; --d-mid:#919c9c;
+    --d-char:#2e3333; --d-char2:#1d2121; --d-ink:#141818;
+    --d-teal:#3cb4a0; --d-gold:#cdab60;
+    --ff:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--ff);background:var(--d-ink);color:var(--d-cream);
+    line-height:1.5;-webkit-font-smoothing:antialiased;padding:48px 32px 80px}
+  .wrap{max-width:1080px;margin:0 auto}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--d-mint)}
+  h1{font-size:clamp(30px,5vw,46px);font-weight:800;letter-spacing:-.02em;margin:10px 0 6px;
+    background:linear-gradient(90deg,#fff,var(--d-cyan) 60%,var(--d-mint));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .lede{color:var(--d-mid);max-width:640px;font-size:15px}
+  section{margin-top:56px}
+  h2{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--d-cyan);
+    margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(75,253,232,.35),transparent)}
+
+  /* hero orb — signature Diem gradient, rebuilt */
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;
+    padding:40px;border-radius:28px;position:relative;overflow:hidden;
+    background:radial-gradient(120% 140% at 85% 10%,rgba(75,253,232,.10),transparent 55%),
+      radial-gradient(90% 120% at 10% 100%,rgba(3,58,204,.28),transparent 60%),
+      #0b0f10;border:1px solid rgba(255,255,255,.06)}
+  .orb{width:220px;height:220px;border-radius:50%;margin:0 auto;position:relative;
+    background:
+      radial-gradient(circle at 68% 30%,#fff 0%,rgba(255,255,255,0) 22%),
+      radial-gradient(circle at 30% 22%,var(--d-cyan),rgba(35,192,254,0) 55%),
+      radial-gradient(circle at 78% 78%,var(--d-mint),rgba(75,253,232,0) 50%),
+      radial-gradient(circle at 20% 80%,var(--d-deep),rgba(3,58,204,0) 60%),
+      conic-gradient(from 210deg,var(--d-navy),var(--d-blue),var(--d-sky),var(--d-mint),var(--d-cyan),var(--d-navy));
+    box-shadow:0 0 60px rgba(35,192,254,.45),0 0 120px rgba(75,253,232,.25),inset 0 0 40px rgba(255,255,255,.15);
+    animation:spin 14s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .hero-txt h3{font-size:22px;font-weight:800;letter-spacing:-.01em;margin-bottom:10px}
+  .hero-txt p{color:var(--d-mid);font-size:14px}
+  .tag{display:inline-block;font-size:11px;font-weight:700;color:var(--d-ink);
+    background:var(--d-mint);padding:3px 9px;border-radius:999px;margin-top:14px}
+
+  /* swatches */
+  .rail{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px}
+  .sw{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.07);background:#111516}
+  .sw .chip{height:76px}
+  .sw .meta{padding:8px 10px;font-size:11px}
+  .sw .nm{font-weight:700;color:#fff}
+  .sw .hx{color:var(--d-mid);font-family:ui-monospace,monospace;letter-spacing:.02em}
+  .grad-bar{height:64px;border-radius:14px;margin-bottom:10px;
+    background:linear-gradient(90deg,var(--d-navy),var(--d-deep),var(--d-blue),var(--d-sky),var(--d-cyan),var(--d-mint))}
+
+  /* map cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+    border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:20px}
+  .card .k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--d-mint)}
+  .card h4{font-size:16px;font-weight:800;margin:8px 0 6px;color:#fff}
+  .card p{font-size:13.5px;color:#c7cccc}
+  .card .do{margin-top:12px;font-size:12.5px;color:var(--d-cyan);font-weight:600}
+
+  /* motion demo */
+  .demo{display:flex;gap:14px;flex-wrap:wrap}
+  .glowbtn{position:relative;font-weight:700;font-size:14px;color:var(--d-ink);border:none;cursor:pointer;
+    padding:13px 22px;border-radius:999px;background:linear-gradient(90deg,var(--d-mint),var(--d-sky));
+    box-shadow:0 8px 30px rgba(35,192,254,.4)}
+  .glass{padding:16px 20px;border-radius:16px;font-size:13.5px;color:#dfe4e4;
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  .foot{margin-top:64px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);
+    font-size:12px;color:var(--d-mid)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Extracted from Diem.exe · Qt6 build</div>
+  <h1>Diem → Bac-up inspiration</h1>
+  <p class="lede">Diem is a pro video / RAW media app. Its brand is <b>electric arctic blue on warm cinematic dark</b> — which maps almost perfectly onto Bac-up's arctic-glass. Below: the real palette pulled from the binary, and how to adapt each idea (not copy) to the landing.</p>
+
+  <section>
+    <h2>The signature — a glowing gradient orb</h2>
+    <div class="hero">
+      <div><div class="orb"></div></div>
+      <div class="hero-txt">
+        <h3>One radiant focal object</h3>
+        <p>Diem's whole identity is a single multi-stop radial gradient — mint→cyan→blue→deep-navy with a white hot-spot and a soft teal bloom around it. It reads as "light / energy" against warm charcoal.</p>
+        <p style="margin-top:10px">For Bac-up: a slow-rotating arctic orb behind the hero headline (or as the "B" mark's halo) gives instant premium tech feel with zero illustration work.</p>
+        <span class="tag">rebuilt live from extracted stops →</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The gradient (exact stops)</h2>
+    <div class="grad-bar"></div>
+    <div class="rail">
+      <div class="sw"><div class="chip" style="background:#4BFDE8"></div><div class="meta"><div class="nm">Mint glow</div><div class="hx">#4BFDE8</div></div></div>
+      <div class="sw"><div class="chip" style="background:#23C0FE"></div><div class="meta"><div class="nm">Cyan</div><div class="hx">#23C0FE</div></div></div>
+      <div class="sw"><div class="chip" style="background:#00BBFF"></div><div class="meta"><div class="nm">Sky</div><div class="hx">#00BBFF</div></div></div>
+      <div class="sw"><div class="chip" style="background:#1C91FF"></div><div class="meta"><div class="nm">Blue</div><div class="hx">#1C91FF</div></div></div>
+      <div class="sw"><div class="chip" style="background:#0086FF"></div><div class="meta"><div class="nm">Royal</div><div class="hx">#0086FF</div></div></div>
+      <div class="sw"><div class="chip" style="background:#033ACC"></div><div class="meta"><div class="nm">Deep</div><div class="hx">#033ACC</div></div></div>
+      <div class="sw"><div class="chip" style="background:#0934B3"></div><div class="meta"><div class="nm">Navy</div><div class="hx">#0934B3</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Warm dark neutrals (the un-obvious part)</h2>
+    <p class="lede" style="margin-bottom:16px">Diem doesn't use pure grey/black. The darks are warm (green-tinged charcoal) and the lights are cream. That warmth is what makes the blue glow "pop" instead of looking like a generic SaaS dark theme.</p>
+    <div class="rail">
+      <div class="sw"><div class="chip" style="background:#f9f6f1"></div><div class="meta"><div class="nm" style="color:#111">Cream</div><div class="hx">#f9f6f1</div></div></div>
+      <div class="sw"><div class="chip" style="background:#ece9e4"></div><div class="meta"><div class="nm" style="color:#111">Cream 2</div><div class="hx">#ece9e4</div></div></div>
+      <div class="sw"><div class="chip" style="background:#919c9c"></div><div class="meta"><div class="nm">Mid</div><div class="hx">#919c9c</div></div></div>
+      <div class="sw"><div class="chip" style="background:#3a4040"></div><div class="meta"><div class="nm">Charcoal</div><div class="hx">#3a4040</div></div></div>
+      <div class="sw"><div class="chip" style="background:#2e3333"></div><div class="meta"><div class="nm">Char 2</div><div class="hx">#2e3333</div></div></div>
+      <div class="sw"><div class="chip" style="background:#1d2121"></div><div class="meta"><div class="nm">Ink</div><div class="hx">#1d2121</div></div></div>
+      <div class="sw"><div class="chip" style="background:#3cb4a0"></div><div class="meta"><div class="nm">Teal</div><div class="hx">#3cb4a0</div></div></div>
+      <div class="sw"><div class="chip" style="background:#cdab60"></div><div class="meta"><div class="nm">Gold</div><div class="hx">#cdab60</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What to steal → for the landing</h2>
+    <div class="cards">
+      <div class="card"><div class="k">Hero</div><h4>Glowing orb + gradient text</h4><p>Slow-spinning arctic orb behind the headline; headline uses a white→cyan→mint clip-gradient (like the H1 above).</p><div class="do">→ adapt --arctic-cyan / --arctic-blue you already have</div></div>
+      <div class="card"><div class="k">Base</div><h4>Warm charcoal, not black</h4><p>Shift the dark landing bg from pure `#05080c` toward a warmer `#0b0f10 / #1d2121`. Makes glass + glow read richer.</p><div class="do">→ tweak .glass-d + landing bg tokens</div></div>
+      <div class="card"><div class="k">Accent</div><h4>Mint as the "energy" pop</h4><p>Reserve #4BFDE8 for one thing per section — active state, live dot, CTA glow — so it stays special.</p><div class="do">→ new --arctic-mint accent</div></div>
+      <div class="card"><div class="k">CTA</div><h4>Glow-shadow buttons</h4><p>Gradient fill + colored drop-shadow = the "lit from within" button. Subtle lift on hover.</p><div class="do">→ see live buttons below</div></div>
+      <div class="card"><div class="k">Depth</div><h4>Layered radial bloom bg</h4><p>Two big off-screen radial gradients (one mint top-right, one deep-blue bottom-left) behind sections give cinematic depth.</p><div class="do">→ pure CSS, no images</div></div>
+      <div class="card"><div class="k">Motion</div><h4>Slow, confident easing</h4><p>Long durations (8–14s ambient, ~0.6s interactions), nothing bouncy. Premium = unhurried.</p><div class="do">→ matches your reveal curves</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Live pieces you can lift</h2>
+    <div class="demo">
+      <button class="glowbtn">Commencer gratuitement</button>
+      <div class="glass">Frosted glass card · blur(14px) · 1px light border</div>
+      <div class="glass" style="border-color:rgba(75,253,232,.3);color:var(--d-mint)">● En direct — accent mint reserved</div>
+    </div>
+  </section>
+
+  <div class="foot">Palette + gradients extracted from the compiled Diem.exe (Qt6). Used as abstract design inspiration only — colors, gradient technique, motion feel. No Diem assets, logo, or copy reproduced. Adapt to Bac-up's own arctic-glass system.</div>
+</div>
+</body>
+</html>

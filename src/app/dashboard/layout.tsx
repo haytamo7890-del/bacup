@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { Sparkles, ArrowRight } from "lucide-react";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { DashboardSidebar } from "@/components/dashboard/sidebar";
 import { DashboardTopbar } from "@/components/dashboard/topbar";
@@ -18,6 +20,7 @@ export default function DashboardLayout({
   const [checking, setChecking] = useState(true);
   const [name, setName] = useState("");
   const [subtitle, setSubtitle] = useState("");
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -30,18 +33,30 @@ export default function DashboardLayout({
       }
       const { data: profile } = await supabase
         .from("profiles")
-        .select("display_name")
+        .select("display_name, role")
         .eq("id", user.id)
         .single();
       const { data: sp } = await supabase
         .from("student_profiles")
-        .select("levels(name), tracks(name)")
+        .select("level_id, track_id, status, levels(name), tracks(name)")
         .eq("id", user.id)
         .single();
 
+      const isAdmin = profile?.role === "admin";
+      if (!isAdmin && (!sp?.level_id || !sp?.track_id)) {
+        router.push("/onboarding");
+        return;
+      }
+      // Freemium: 'active' (paid) and 'demo' (free tier) can enter; others pay.
+      if (!isAdmin && sp?.status !== "active" && sp?.status !== "demo") {
+        router.push("/payment");
+        return;
+      }
+
       setName(profile?.display_name ?? "");
-      const lv = (sp?.levels as { name: string } | null)?.name ?? "";
-      const tr = (sp?.tracks as { name: string } | null)?.name ?? "";
+      setStatus(sp?.status ?? "");
+      const lv = (sp?.levels as unknown as { name: string } | null)?.name ?? "";
+      const tr = (sp?.tracks as unknown as { name: string } | null)?.name ?? "";
       setSubtitle([tr, lv].filter(Boolean).join(" · "));
       setChecking(false);
     })();
@@ -70,6 +85,19 @@ export default function DashboardLayout({
           subtitle={subtitle}
           onToggle={() => setCollapsed((v) => !v)}
         />
+        {status === "demo" && (
+          <Link
+            href="/payment"
+            className="mx-6 lg:mx-10 mt-3 rounded-xl bg-gradient-to-r from-arctic-cyan/15 to-arctic-blue/15 border border-arctic-blue/25 px-4 py-2.5 flex items-center justify-between gap-3 hover:brightness-110 transition"
+          >
+            <span className="text-sm font-semibold text-arctic-blue dark:text-arctic-cyan inline-flex items-center gap-2">
+              <Sparkles className="w-4 h-4" /> Mode démo · accès limité
+            </span>
+            <span className="text-sm font-bold text-arctic-blue dark:text-arctic-cyan inline-flex items-center gap-1">
+              Obtenir l&apos;accès <ArrowRight className="w-4 h-4" />
+            </span>
+          </Link>
+        )}
         <main className="flex-1 overflow-y-auto px-6 lg:px-10 pb-12">{children}</main>
       </div>
     </div>

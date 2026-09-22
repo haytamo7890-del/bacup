@@ -1,14 +1,30 @@
 import { NextResponse } from "next/server";
 import { askTutor } from "@/lib/ai/gateway";
+import { guardAI } from "@/lib/ai/guard";
+
+const MODES: Record<string, string> = {
+  autrement:
+    "Explique la bonne réponse AUTREMENT : plus simplement, avec une autre approche ou un exemple concret.",
+  etapes: "Détaille la solution ÉTAPE PAR ÉTAPE, clairement.",
+  cours: "Rappelle le COURS et les formules indispensables pour répondre à cette question.",
+  erreurs:
+    "Explique les ERREURS FRÉQUENTES sur ce type de question, et pourquoi les autres options sont fausses.",
+  methode: "Donne la MÉTHODE GÉNÉRALE pour résoudre ce type de question.",
+};
 
 export async function POST(req: Request) {
   try {
-    const { question, options, choice, existing } = await req.json();
+    const g = await guardAI();
+    if (!g.ok) return NextResponse.json({ text: null, error: g.message }, { status: g.status });
+
+    const { question, options, choice, existing, mode } = await req.json();
     const optText = (options ?? [])
       .map((o: string, i: number) => `${String.fromCharCode(65 + i)}. ${o}`)
       .join("\n");
 
-    const prompt = `Voici une question à choix multiple du BAC marocain.
+    const instruction = MODES[mode] ?? MODES.etapes;
+
+    const prompt = `Question à choix multiple du BAC marocain.
 
 Question :
 ${question}
@@ -17,16 +33,14 @@ Options :
 ${optText}
 
 Réponse choisie par l'élève : ${choice || "(aucune)"}
-${existing ? `\nL'élève a déjà vu cette explication :\n"${existing}"\nIl n'a pas bien compris.` : ""}
+${existing ? `\nCorrection de référence :\n"${existing}"` : ""}
 
-Explique la bonne réponse ${existing ? "AUTREMENT" : ""} : plus simplement, avec
-une autre approche, une image ou un exemple concret. En français clair,
-comme un professeur bienveillant. Sois concis (4-6 lignes maximum).`;
+${instruction}
+Réponds en français clair, comme un professeur bienveillant. Concis (4-6 lignes).`;
 
     const { text } = await askTutor([{ role: "user", content: prompt }], { hard: false });
     return NextResponse.json({ text });
   } catch (e) {
-    // Return 200 with an error field so the UI can show it gracefully
     return NextResponse.json({
       text: null,
       error: e instanceof Error ? e.message : "Erreur du coach IA",

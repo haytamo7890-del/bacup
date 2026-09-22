@@ -1,0 +1,56 @@
+{
+  "subject": "maths",
+  "level": "2bac",
+  "filiere": null,
+  "chapters": [
+    {
+      "code": "continuite",
+      "name": "Continuité d'une fonction",
+      "position": 1,
+      "lessons": [
+        {
+          "kind": "cours",
+          "title": "1. Continuité en un point",
+          "body": "Soit $f$ une fonction définie sur un intervalle $I$ et $a \\in I$.\n\nOn dit que $f$ est continue en $a$ lorsque :\n$$\\lim_{x \\to a} f(x) = f(a).$$\n\nConcrètement, la courbe de $f$ ne présente aucune « coupure » au point d'abscisse $a$ : on peut la tracer sans lever le crayon.\n\nContinuité à droite / à gauche :\n- $f$ est continue à droite en $a$ si $\\lim_{x \\to a^+} f(x) = f(a)$ ;\n- $f$ est continue à gauche en $a$ si $\\lim_{x \\to a^-} f(x) = f(a)$.\n\n$f$ est continue en $a$ si et seulement si elle est continue à droite ET à gauche en $a$."
+        },
+        {
+          "kind": "cours",
+          "title": "2. Continuité sur un intervalle & opérations",
+          "body": "$f$ est continue sur un intervalle $I$ si elle est continue en chaque point de $I$.\n\nFonctions de référence (continues sur tout leur domaine) : les fonctions polynômes, les fonctions rationnelles, $x \\mapsto \\sqrt{x}$, $\\sin$, $\\cos$, $\\exp$ et $\\ln$.\n\nOpérations : si $u$ et $v$ sont continues sur $I$, alors :\n- $u + v$ et $u \\times v$ sont continues sur $I$ ;\n- $\\dfrac{u}{v}$ est continue en tout point où $v$ ne s'annule pas ;\n- la composée $v \\circ u$ est continue là où elle est définie.\n\nRetiens : toute fonction construite à partir des fonctions de référence est continue sur son domaine de définition."
+        },
+        {
+          "kind": "cours",
+          "title": "3. Théorème des valeurs intermédiaires (TVI)",
+          "body": "Théorème. Si $f$ est continue sur $[a, b]$ et si $k$ est un réel compris entre $f(a)$ et $f(b)$, alors il existe au moins un réel $c \\in [a, b]$ tel que $f(c) = k$.\n\nCas particulier très utile : si $f$ est continue sur $[a, b]$ et $f(a) \\times f(b) < 0$, alors l'équation $f(x) = 0$ admet au moins une solution dans $]a, b[$.\n\nCorollaire (bijection). Si de plus $f$ est strictement monotone sur $[a, b]$, alors la solution est UNIQUE : $f$ réalise une bijection de $[a, b]$ vers $[f(a), f(b)]$ (ou $[f(b), f(a)]$).\n\nMéthode type au BAC : pour montrer que $f(x) = k$ a une solution unique $\\alpha$, on vérifie (1) $f$ continue, (2) $f$ strictement monotone, (3) $k$ entre les valeurs aux bornes — puis on encadre $\\alpha$ par balayage."
+        },
+        {
+          "kind": "resume",
+          "title": "Résumé — Continuité",
+          "body": "À retenir :\n\n• Continuité en $a$ : $\\lim_{x \\to a} f(x) = f(a)$.\n\n• Continue à droite + à gauche $\\Leftrightarrow$ continue en $a$.\n\n• Sont continues sur leur domaine : polynômes, rationnelles, $\\sqrt{x}$, $\\sin$, $\\cos$, $\\exp$, $\\ln$, ainsi que leurs sommes, produits, quotients (dénominateur $\\neq 0$) et composées.\n\n• TVI : $f$ continue sur $[a,b]$ et $k$ entre $f(a)$ et $f(b)$ $\\Rightarrow$ $\\exists\\, c \\in [a,b],\\ f(c) = k$.\n\n• Signes opposés aux bornes ($f(a)\\,f(b) < 0$) $\\Rightarrow$ l'équation $f(x)=0$ a une solution dans $]a,b[$.\n\n• Continue + strictement monotone $\\Rightarrow$ bijection $\\Rightarrow$ solution UNIQUE.\n\nRéflexe examen : « existence » = TVI ; « unicité » = stricte monotonie."
+        }
+      ]
+    },
+    {
+      "code": "derivation",
+      "name": "Dérivation et étude de fonctions",
+      "position": 2,
+      "lessons": [
+        {
+          "kind": "cours",
+          "title": "1. Nombre dérivé et tangente",
+          "body": "Le nombre dérivé de $f$ en $a$ est, lorsqu'elle existe, la limite :\n$$f'(a) = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}.$$\n\nInterprétation : $f'(a)$ est le coefficient directeur de la tangente à la courbe de $f$ au point d'abscisse $a$.\n\nÉquation de la tangente en $a$ :\n$$y = f'(a)(x - a) + f(a).$$"
+        },
+        {
+          "kind": "cours",
+          "title": "2. Dérivées usuelles et opérations",
+          "body": "Dérivées de référence :\n- $(x^n)' = n\\,x^{n-1}$\n- $(\\sqrt{x})' = \\dfrac{1}{2\\sqrt{x}}$\n- $(\\sin x)' = \\cos x$ et $(\\cos x)' = -\\sin x$\n- $(e^x)' = e^x$ et $(\\ln x)' = \\dfrac{1}{x}$\n\nOpérations :\n- $(u + v)' = u' + v'$\n- $(u\\,v)' = u'v + u v'$\n- $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - u v'}{v^2}$\n- $\\big(f(ax + b)\\big)' = a\\,f'(ax + b)$"
+        },
+        {
+          "kind": "cours",
+          "title": "3. Dérivée et sens de variation",
+          "body": "Soit $f$ dérivable sur un intervalle $I$ :\n- si $f'(x) > 0$ sur $I$, alors $f$ est strictement croissante sur $I$ ;\n- si $f'(x) < 0$ sur $I$, alors $f$ est strictement décroissante sur $I$ ;\n- si $f'(x) = 0$ sur $I$, alors $f$ est constante sur $I$.\n\nExtremum : si $f'$ s'annule en $a$ EN CHANGEANT de signe, alors $f$ admet un extremum local en $a$ (maximum si $f'$ passe de $+$ à $-$, minimum sinon).\n\nMéthode d'étude d'une fonction : domaine → dérivée $f'$ → signe de $f'$ → tableau de variations → limites aux bornes → courbe."
+        }
+      ]
+    }
+  ]
+}

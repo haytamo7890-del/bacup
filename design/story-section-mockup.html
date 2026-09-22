@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bac-up · Story section mockup</title>
+<style>
+  :root{
+    --cyan:#0db8d3; --blue:#1b7fdc; --deep:#065b98; --mint:#4bfde8;
+    --ink:#070b12; --char:#0d1420;
+    --wa:#25D366; --wa2:#128C7E;
+    --ff:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--ff);background:var(--ink);color:#eef3f8;-webkit-font-smoothing:antialiased}
+  .sec{min-height:100vh;display:grid;place-items:center;padding:80px 24px;position:relative;overflow:hidden}
+  .wrap{max-width:760px;width:100%;margin:0 auto}
+  .eyebrow{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--cyan);margin-bottom:14px}
+  .act-no{font-size:13px;font-weight:800;color:rgba(255,255,255,.35);letter-spacing:.1em}
+  h2{font-size:clamp(28px,6vw,52px);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+  p.lede{color:rgba(255,255,255,.6);font-size:16px;margin-top:14px;max-width:520px}
+
+  /* scroll reveal */
+  .rv{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+  .rv.in{opacity:1;transform:none}
+  .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.22s}.rv.d3{transition-delay:.34s}
+
+  /* ACT 1 — perdu (desaturated dark) */
+  #act1{background:radial-gradient(120% 90% at 50% 120%,#11161d,transparent),#080a0e}
+  #act1 .wrap{filter:saturate(.55)}
+  .chat{max-width:340px;margin:26px auto 0;background:#0b141a;border-radius:18px;
+    padding:14px;box-shadow:0 20px 60px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.06)}
+  .chat-top{display:flex;align-items:center;gap:10px;padding:4px 4px 12px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .wa-badge{width:34px;height:34px;border-radius:50%;background:var(--wa);display:grid;place-items:center;flex:none}
+  .chat-name{font-weight:700;font-size:14px}.chat-sub{font-size:11px;color:rgba(255,255,255,.4)}
+  .bubbles{padding:14px 4px 4px;display:flex;flex-direction:column;gap:8px}
+  .b{max-width:80%;padding:8px 12px;border-radius:14px;font-size:13.5px;line-height:1.35}
+  .b.me{align-self:flex-end;background:#075E54;border-bottom-right-radius:4px}
+  .b.them{align-self:flex-start;background:#1f2c34;border-bottom-left-radius:4px}
+  .b .t{display:block;font-size:9px;color:rgba(255,255,255,.45);text-align:right;margin-top:2px}
+  .note-bad{display:inline-flex;align-items:baseline;gap:6px;margin-top:22px;
+    font-weight:800;color:#d55858}
+  .note-bad b{font-size:40px}
+
+  /* ACT 2 — découverte */
+  #act2{background:radial-gradient(90% 80% at 50% 40%,rgba(13,184,211,.10),transparent),#080d14}
+  .logo-orb{width:120px;height:120px;border-radius:50%;margin:0 auto 8px;
+    background:radial-gradient(circle at 68% 30%,#fff 0,rgba(255,255,255,0) 22%),
+      radial-gradient(circle at 30% 22%,var(--cyan),transparent 55%),
+      radial-gradient(circle at 78% 78%,var(--mint),transparent 50%),
+      conic-gradient(from 210deg,var(--deep),var(--blue),var(--cyan),var(--mint),var(--deep));
+    box-shadow:0 0 60px rgba(13,184,211,.5);animation:spin 12s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* ACT 3 — ça scale */
+  #act3{background:radial-gradient(100% 90% at 50% 120%,rgba(27,127,220,.14),transparent),#08111c}
+  .stat-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  .stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;padding:16px 22px;min-width:130px}
+  .stat .big{font-size:34px;font-weight:800;
+    background:linear-gradient(90deg,var(--cyan),var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat .lab{font-size:12px;color:rgba(255,255,255,.55);margin-top:2px}
+  .curve{margin:28px auto 0;max-width:460px}
+  .curve path.line{stroke-dasharray:var(--L);stroke-dashoffset:var(--L);transition:stroke-dashoffset 2s cubic-bezier(.4,0,.2,1)}
+  .curve.in path.line{stroke-dashoffset:0}
+
+  /* ACT 4 — le rêve (bright) */
+  #act4{background:linear-gradient(180deg,#0a1b2e,#0d2942 60%,#0e3a5c)}
+  .note-good{display:inline-flex;align-items:baseline;gap:8px;margin:6px 0 4px;font-weight:800}
+  .note-good b{font-size:56px;background:linear-gradient(90deg,#fff,var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .gmail{max-width:420px;margin:26px auto 0;background:#fff;color:#202124;border-radius:14px;
+    text-align:left;box-shadow:0 24px 70px rgba(0,0,0,.4);overflow:hidden}
+  .gm-top{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid #eee}
+  .gm-sub{font-weight:700;font-size:14px}.gm-meta{font-size:12px;color:#5f6368}
+  .gm-body{padding:14px 16px;font-size:13.5px;color:#3c4043;line-height:1.5}
+  .gm-tag{display:inline-block;font-size:11px;font-weight:700;color:#137333;background:#e6f4ea;padding:2px 8px;border-radius:6px;margin-bottom:8px}
+  .cta{display:inline-block;margin-top:34px;font-weight:800;font-size:16px;color:#062033;
+    background:linear-gradient(90deg,var(--mint),var(--cyan));padding:15px 30px;border-radius:999px;
+    text-decoration:none;box-shadow:0 12px 40px rgba(13,184,211,.45)}
+  .confetti{position:absolute;top:-10px;width:9px;height:14px;opacity:0;border-radius:2px}
+  .center{text-align:center}
+  .scrollhint{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);
+    font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);animation:bob 1.8s ease-in-out infinite}
+  @keyframes bob{50%{transform:translate(-50%,-6px)}}
+</style>
+</head>
+<body>
+
+<!-- ACT 1 -->
+<section class="sec" id="act1"><div class="wrap center">
+  <div class="act-no rv">ACTE 1 · SEPTEMBRE</div>
+  <h2 class="rv d1">Yassine était<br>complètement perdu.</h2>
+  <p class="lede rv d2" style="margin-inline:auto">BAC dans 3 mois. Pas de plan, pas de méthode. Il révise, oublie, panique, scrolle. Sa moyenne stagne.</p>
+  <div class="chat rv d3">
+    <div class="chat-top">
+      <span class="wa-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2zm5.7 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.3-.9-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.4-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.4.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.8-.1 1.3z"/></svg></span>
+      <div><div class="chat-name">Réda 🐐</div><div class="chat-sub">en ligne</div></div>
+    </div>
+    <div class="bubbles">
+      <div class="b me">wallah 3ayit… je révise rien khoya 😞<span class="t">21:47</span></div>
+      <div class="b me">BAC f 3 chhour o ana daya3t<span class="t">21:47</span></div>
+      <div class="b them">safi khsek chi plan wa3r<span class="t">21:52</span></div>
+    </div>
+  </div>
+  <div class="note-bad rv d3">Moyenne : <b>08</b><span style="font-size:20px;color:rgba(255,255,255,.4)">/20</span></div>
+</div></section>
+
+<!-- ACT 2 -->
+<section class="sec" id="act2"><div class="wrap center">
+  <div class="logo-orb rv"></div>
+  <div class="act-no rv d1">ACTE 2 · LA DÉCOUVERTE</div>
+  <h2 class="rv d2">Puis il a trouvé <span style="background:linear-gradient(90deg,var(--cyan),var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Bac-up</span>.</h2>
+  <p class="lede rv d3" style="margin-inline:auto">Un plan clair adapté à sa filière. Des examens blancs corrigés sur /20. Une IA qui lui explique ce qu'il n'a jamais compris. Un coach qui le relance sur WhatsApp.</p>
+</div></section>
+
+<!-- ACT 3 -->
+<section class="sec" id="act3"><div class="wrap center">
+  <div class="act-no rv">ACTE 3 · TOUT SCALE</div>
+  <h2 class="rv d1">Et là, tout a changé.</h2>
+  <div class="stat-row">
+    <div class="stat rv d1"><div class="big" data-count="14">08</div><div class="lab">Moyenne · janvier</div></div>
+    <div class="stat rv d2"><div class="big" data-count="47">0</div><div class="lab">Jours de série 🔥</div></div>
+    <div class="stat rv d3"><div class="big" data-count="120">0</div><div class="lab">Examens blancs</div></div>
+  </div>
+  <svg class="curve" viewBox="0 0 460 150" fill="none">
+    <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0db8d3"/><stop offset="1" stop-color="#4bfde8"/></linearGradient></defs>
+    <path class="line" d="M10,135 C120,130 210,120 300,80 S420,20 450,12" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
+  </svg>
+</div></section>
+
+<!-- ACT 4 -->
+<section class="sec" id="act4"><div class="wrap center">
+  <div class="act-no rv">ACTE 4 · JUIN · LE RÊVE</div>
+  <div class="note-good rv d1">Bac : <b>18</b><span style="font-size:26px;color:rgba(255,255,255,.7)">/20</span></div>
+  <h2 class="rv d1">Il a eu la note de ses rêves.</h2>
+  <div class="gmail rv d2">
+    <div class="gm-top">
+      <svg width="26" height="26" viewBox="0 0 48 48"><path fill="#4285F4" d="M6 12v24h6V18l12 9 12-9v18h6V12l-4-3-14 10.5L10 9z"/><path fill="#EA4335" d="M6 12l4-3 14 10.5V27z" opacity="0"/></svg>
+      <div><div class="gm-sub">Admission · Faculté de Médecine</div><div class="gm-meta">à moi · 10:12</div></div>
+    </div>
+    <div class="gm-body"><span class="gm-tag">✓ Admis</span><br>Cher Yassine, nous avons le plaisir de vous informer de votre admission en première année de médecine…</div>
+  </div>
+  <p class="lede rv d3" style="margin-inline:auto">De 08 à 18. De perdu à admis. La seule différence : un vrai système.</p>
+  <a class="cta rv d3" href="#act1">Commence ton histoire →</a>
+</div></section>
+
+<div class="scrollhint">↓ scroll</div>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add('in');
+    e.target.querySelectorAll('[data-count]').forEach(el=>{
+      const to=+el.dataset.count, from=parseInt(el.textContent)||0, dur=1400, t0=performance.now();
+      const suf=el.dataset.count==='14'?'':'';
+      const tick=(t)=>{const p=Math.min(1,(t-t0)/dur);const e2=1-Math.pow(1-p,3);
+        el.textContent=Math.round(from+(to-from)*e2);if(p<1)requestAnimationFrame(tick);};
+      requestAnimationFrame(tick);
+    });
+    const c=e.target.querySelector('.curve');if(c){c.style.setProperty('--L','560');requestAnimationFrame(()=>c.classList.add('in'));}
+  }
+});},{threshold:.35});
+document.querySelectorAll('.rv,.curve').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

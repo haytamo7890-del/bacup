@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
 import { askTutor } from "@/lib/ai/gateway";
+import { guardAI } from "@/lib/ai/guard";
 
 export async function POST(req: Request) {
   try {
+    const g = await guardAI();
+    if (!g.ok) return NextResponse.json({ text: null, error: g.message }, { status: g.status });
+
     const { name, subjects, mastery } = await req.json();
 
     const ctx =

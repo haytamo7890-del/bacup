@@ -16,12 +16,15 @@
 
 /* ---- Theme-aware glass tokens ---- */
 :root {
+  color-scheme: light;
   --glass-bg: rgba(255, 255, 255, 0.60);
   --glass-border: rgba(255, 255, 255, 0.85);
   --glass-shadow: 0 10px 40px rgba(6, 91, 152, 0.10);
   --glass-sheen: rgba(255, 255, 255, 0.65);
 }
 .dark {
+  /* render native controls (select dropdowns, scrollbars, date pickers) in dark */
+  color-scheme: dark;
   --glass-bg: rgba(255, 255, 255, 0.045);
   --glass-border: rgba(255, 255, 255, 0.09);
   --glass-shadow: 0 12px 44px rgba(0, 0, 0, 0.42);
@@ -37,6 +40,21 @@
   -webkit-backdrop-filter: blur(22px) saturate(160%);
 }
 
+/* Interactive pill / tab idle surface — clearly visible in BOTH themes
+   (fixes chips looking blank until hover). Use on carousels, filters, tabs. */
+.chip {
+  background: rgba(15, 23, 42, 0.055);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: rgb(82, 92, 108);
+}
+.chip:hover { background: rgba(15, 23, 42, 0.09); }
+.dark .chip {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.82);
+}
+.dark .chip:hover { background: rgba(255, 255, 255, 0.14); }
+
 /* ---- Base type: crisp, slightly tight (Apple/OpenAI feel) ---- */
 html {
   scroll-behavior: smooth;
@@ -44,6 +62,31 @@ html {
 body {
   letter-spacing: -0.011em;
   font-feature-settings: "cv11", "ss01";
+}
+
+/* ---- Subject-name cards: bold brush script (adaptable, font-only) ----
+   One class applied to the subject NAME across cours, annales, exam engine
+   and dashboard tiles. Latin names render in Yellowtail (brush lettering);
+   Arabic names (e.g. الفلسفة) fall back per-glyph to Aref Ruqaa.
+   Size/color/layout stay whatever the card already sets — this only swaps
+   the typeface. A slightly looser line-height keeps the brush tails clean. */
+.subject-title {
+  font-family: var(--font-yellowtail), var(--font-aref), cursive;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.25;
+}
+/* Sweeping brush swash under the name (Starlight-style flourish). Sized in em
+   so it scales with the name; overflow visible lets the tail flick past the
+   right edge. currentColor = matches the name's color on any surface. */
+.subject-swash {
+  display: block;
+  width: 100%;
+  height: 0.3em;
+  margin-top: -0.16em;
+  overflow: visible;
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 /* ---- Gentle entrance ---- */
@@ -60,3 +103,179 @@ body {
 .fade-up {
   animation: fadeUp 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) both;
 }
+
+/* ==========================================================================
+   LANDING PAGE — self-contained light→dark journey (independent of theme)
+   ========================================================================== */
+
+/* Light glass (hero) + dark glass (lower sections) — fixed tokens so the
+   landing renders identically regardless of the app's light/dark theme. */
+.glass-l {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 50px rgba(6, 91, 152, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+.glass-d {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+/* Scroll-reveal: element rises + fades once it enters the viewport. */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.3, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Slow float for the Pack Bac books. */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(-8deg); }
+  50% { transform: translateY(-14px) rotate(-8deg); }
+}
+@keyframes floaty2 {
+  0%, 100% { transform: translateY(0) rotate(7deg); }
+  50% { transform: translateY(-14px) rotate(7deg); }
+}
+.floaty { animation: floaty 6.5s ease-in-out infinite; }
+.floaty2 { animation: floaty2 6.5s ease-in-out infinite; animation-delay: -2s; }
+
+/* Morphing headline word swap. */
+@keyframes wordIn {
+  from { opacity: 0; transform: translateY(14px); filter: blur(6px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+.word-in { animation: wordIn 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+
+/* Marquee for the testimonials / logos row. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 34s linear infinite; }
+.marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+
+/* Impact-graph line draw (JS toggles the stroke-dashoffset). */
+.graph-line {
+  transition: stroke-dashoffset 1.6s cubic-bezier(0.22, 0.7, 0.24, 1), stroke 0.5s ease;
+}
+.graph-area { transition: opacity 0.9s ease 0.3s; }
+@keyframes pulseDot {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.graph-dot { transform-origin: center; }
+.graph-dot.on { animation: pulseDot 0.7s ease 1.2s both; }
+
+/* ==========================================================================
+   PUBLIC PAGES — theme-aware tokens (switch automatically on .dark)
+   Lets the marketing + SEO pages render in both light ("clair") and dark.
+   ========================================================================== */
+.c-page { background: #f6f9fd; color: #0f172a; }
+.dark .c-page { background: #070b12; color: #ffffff; }
+
+.c-surface { background: #ffffff; }
+.dark .c-surface { background: #070b12; }
+
+.c-sub { color: #475569; }
+.dark .c-sub { color: rgba(255, 255, 255, 0.62); }
+
+.c-dim { color: #94a3b8; }
+.dark .c-dim { color: rgba(255, 255, 255, 0.42); }
+
+.c-accent { color: #1b7fdc; }
+.dark .c-accent { color: #0db8d3; }
+
+.c-line { border-color: #e4e9f1; }
+.dark .c-line { border-color: rgba(255, 255, 255, 0.1); }
+
+/* soft inner panel */
+.c-soft { background: rgba(6, 91, 152, 0.04); border: 1px solid #e4e9f1; }
+.dark .c-soft { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); }
+
+/* small chip */
+.c-chip { background: rgba(6, 91, 152, 0.06); color: #475569; }
+.dark .c-chip { background: rgba(255, 255, 255, 0.08); color: rgba(255, 255, 255, 0.62); }
+
+/* sticky nav + footer surfaces */
+.c-nav { background: rgba(255, 255, 255, 0.82); border-bottom: 1px solid #e4e9f1; }
+.dark .c-nav { background: rgba(7, 11, 18, 0.82); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+
+/* theme-aware card = reuse .glass tokens, but a dedicated alias keeps markup clear */
+.c-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 var(--glass-sheen);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+/* --- quiz tool-preview mini animations --- */
+@keyframes qz-rise  { 0%, 100% { transform: scaleY(.35) } 50% { transform: scaleY(1) } }
+@keyframes qz-fill  { 0%, 15% { opacity: .15; transform: scale(.7) } 45%, 100% { opacity: 1; transform: scale(1) } }
+@keyframes qz-sweep { to { transform: rotate(360deg) } }
+@keyframes qz-type  { 0% { width: 0 } 55%, 100% { width: 100% } }
+@keyframes qz-slide { 0% { opacity: 0; transform: translateX(-10px) } 100% { opacity: 1; transform: translateX(0) } }
+@keyframes qz-pop   { 0%, 15% { opacity: 0; transform: translateY(6px) scale(.9) } 100% { opacity: 1; transform: translateY(0) scale(1) } }
+
+/* ==========================================================================
+   LANDING (Bac Up) — display font + motion system
+   ========================================================================== */
+/* Landing fonts, scoped so the app interior keeps Inter */
+.landing-root {
+  font-family: var(--font-afacad), ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+.landing-root h1, .landing-root h2, .landing-root h3, .font-display {
+  font-family: "Satoshi", var(--font-afacad), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* scroll reveal — staggered rise + fade */
+.lz { opacity: 0; transform: translateY(24px);
+  transition: opacity .75s cubic-bezier(.2,.7,.3,1), transform .75s cubic-bezier(.2,.7,.3,1);
+  will-change: opacity, transform; }
+.lz.in { opacity: 1; transform: none; }
+
+/* per-word headline reveal */
+.wz { display: inline-block; opacity: 0; transform: translateY(0.5em) rotate(1deg);
+  transition: opacity .55s cubic-bezier(.2,.7,.3,1), transform .55s cubic-bezier(.2,.7,.3,1); }
+.wz.in { opacity: 1; transform: none; }
+
+/* intro choreography */
+@keyframes bolt-in { 0% { opacity: 0; transform: scale(.55) rotate(-10deg) }
+  55% { opacity: 1; transform: scale(1.07) rotate(3deg) }
+  100% { opacity: 1; transform: scale(1) rotate(0) } }
+@keyframes wm-in { 0%,30% { opacity: 0; transform: translateY(8px) }
+  100% { opacity: 1; transform: none } }
+
+/* ambient life */
+@keyframes lz-spin { to { transform: rotate(360deg) } }
+@keyframes lz-orb { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-16px) } }
+@keyframes lz-drift { 0%,100% { transform: translate(0,0) scale(1) } 50% { transform: translate(2%,-3%) scale(1.05) } }
+.lz-orbfloat { animation: lz-orb 7s ease-in-out infinite; }
+.lz-spinslow { animation: lz-spin 18s linear infinite; }
+.lz-drift { animation: lz-drift 14s ease-in-out infinite; }
+
+/* second marquee direction */
+@keyframes marquee-rev { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .lz, .wz { transition: none; opacity: 1; transform: none; }
+  .lz-orbfloat, .lz-spinslow, .lz-drift, .marquee-track { animation: none; }
+}
+
+/* hide horizontal scrollbar on the exam tab switcher */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

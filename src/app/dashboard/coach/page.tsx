@@ -1,12 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { CoachAvatar } from "@/components/dashboard/coach-avatar";
-import { Sparkles, Loader2, TrendingUp, TrendingDown } from "lucide-react";
+import { Sparkles, Loader2, TrendingUp, TrendingDown, Lock } from "lucide-react";
+import { useAccess } from "@/lib/use-access";
 
 export default function CoachPage() {
   const supabase = createBrowserSupabase();
+  const router = useRouter();
+  const access = useAccess();
   const [name, setName] = useState("");
   const [subjects, setSubjects] = useState<string[]>([]);
   const [result, setResult] = useState<string | null>(null);
@@ -34,10 +38,14 @@ export default function CoachPage() {
     setLoading(true);
     setResult(null);
     try {
+      const { data: stats } = await supabase.rpc("my_stats");
+      const mastery = ((stats?.subjects ?? []) as { name: string; mastery: number }[]).map(
+        (s) => ({ chapter: s.name, pct: s.mastery })
+      );
       const res = await fetch("/api/coach", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, subjects }),
+        body: JSON.stringify({ name, subjects, mastery }),
       });
       const json = await res.json();
       setResult(json.text || `⚠ ${json.error || "Le coach n'a pas pu répondre."}`);
@@ -70,12 +78,12 @@ export default function CoachPage() {
           </div>
         </div>
         <button
-          onClick={analyse}
+          onClick={() => (access.isDemo ? router.push("/payment") : analyse())}
           disabled={loading}
           className="relative mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white text-sm font-semibold px-6 py-3.5 hover:opacity-90 transition shadow-lg shadow-arctic-blue/20 disabled:opacity-60"
         >
-          {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
-          Analyse ma performance
+          {access.isDemo ? <Lock className="w-4 h-4" /> : loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
+          {access.isDemo ? "Débloque le coach IA" : "Analyse ma performance"}
         </button>
       </div>
 
