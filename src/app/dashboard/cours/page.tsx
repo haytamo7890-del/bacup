@@ -154,8 +154,26 @@ export default function CoursPage() {
 
   const chips = useMemo(() => {
     if (!is2bac || !ownTrack) return [];
-    const codes = [ownTrack, ...SCIENCE_ORDER.filter((c) => c !== ownTrack)];
-    return codes.filter((c) => trackIdByCode.has(c)).map((c) => ({ code: c, label: SHORT[c] ?? c.toUpperCase(), name: trackNameByCode.get(c) ?? c }));
+    // SM-A and SM-B sit the SAME papers → collapse to one "SM" chip.
+    const groupOf = (c: string) => (c === "sm_a" || c === "sm_b") ? "sm" : c;
+    const smRep = (ownTrack === "sm_a" || ownTrack === "sm_b") ? ownTrack : "sm_b";
+    const ordered = [ownTrack, ...SCIENCE_ORDER.filter((c) => c !== ownTrack)];
+    const seen = new Set<string>();
+    const out: { code: string; label: string; name: string }[] = [];
+    for (const c of ordered) {
+      const g = groupOf(c);
+      if (seen.has(g)) continue;
+      if (g === "sm") {
+        if (!trackIdByCode.has("sm_a") && !trackIdByCode.has("sm_b")) continue;
+        seen.add(g);
+        out.push({ code: smRep, label: "SM", name: "Sciences Mathématiques (A & B)" });
+      } else {
+        if (!trackIdByCode.has(c)) continue;
+        seen.add(g);
+        out.push({ code: c, label: SHORT[c] ?? c.toUpperCase(), name: trackNameByCode.get(c) ?? c });
+      }
+    }
+    return out;
   }, [is2bac, ownTrack, trackIdByCode, trackNameByCode]);
 
   // Subjects for the selected filière (curriculum order), each with its chapters.
