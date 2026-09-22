@@ -42,7 +42,7 @@ docs/                   product-spec.md, plan-day1.md, erd.mermaid
 - **Secrets only in `.env.local`** — never in client code, never committed. Only `NEXT_PUBLIC_*` reach the browser.
 - **RLS on every table.** Students see only their own rows. Content tables are public-read. (See migrations 0002.)
 - **Math**: render any text that may contain LaTeX with `<Math>{...}</Math>` (`src/components/math.tsx`), using `$...$` inline delimiters.
-- **Content/IP**: official past sujets are public (OK). Corrections are **ours** (author `hsgenius`) — never copy a competitor's corrections, wording, or design. This is legal safety AND the moat.
+- **Content/IP**: official past sujets are public (OK). **Corrigés**: we take the *answers/methods* from the reference corrigés we hold (facts about public exams — not copyrightable), then **re-express them in our own words, verify them for correctness, and brand them Bac-up (author `hsgenius`)**. Never ship a third party's verbatim wording, layout, or logo. Re-expressed + verified = legally safe AND the moat.
 - **Design**: Arctic-glass (`.glass` utility, `arctic-*` colors), dark-first, French copy, minimal + premium.
 - Keep PRs/changes small and verifiable; TS strict, no `any` where avoidable, no `SELECT *`.
 
