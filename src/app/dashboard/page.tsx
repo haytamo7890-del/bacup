@@ -30,6 +30,7 @@ export default function DashboardHome() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [series, setSeries] = useState<number[]>([]);
   const [board, setBoard] = useState<LeaderRow[]>([]);
+  const [myRank, setMyRank] = useState<{ rank: number; total_xp: number } | null>(null);
   const [fresh, setFresh] = useState<NewContent>(null);
   const [resume, setResume] = useState<ResumeItem[]>([]);
   const [monkStreak, setMonkStreak] = useState<number>(-1);
@@ -46,14 +47,16 @@ export default function DashboardHome() {
       const { data: profile } = await supabase.from("profiles").select("display_name").eq("id", user.id).maybeSingle();
       setName(profile?.display_name ?? "");
 
-      const [{ data: st }, { data: sd }, { data: lb }] = await Promise.all([
+      const [{ data: st }, { data: sd }, { data: lb }, { data: mr }] = await Promise.all([
         supabase.rpc("my_stats"),
         supabase.rpc("my_xp_series", { p_days: 14 }),
-        supabase.rpc("leaderboard", { p_limit: 5 }),
+        supabase.rpc("leaderboard", { p_period: "week", p_limit: 3 }),
+        supabase.rpc("my_rank", { p_period: "week" }),
       ]);
       if (st && !(st as { error?: unknown }).error) setStats(st as Stats);
       if (sd) setSeries((sd as { xp: number }[]).map((r) => r.xp));
       if (lb) setBoard(lb as LeaderRow[]);
+      { const m = Array.isArray(mr) ? mr[0] : mr; if (m) setMyRank({ rank: Number((m as { rank: number }).rank), total_xp: Number((m as { total_xp: number }).total_xp) }); }
 
       // Bibliothèque preview (recent PDFs + storage used) — safe if empty.
       const { data: lf } = await supabase.from("library_files").select("id, name, size_bytes, subject_code").order("created_at", { ascending: false }).limit(3);
@@ -150,7 +153,7 @@ export default function DashboardHome() {
       <div className="grid lg:grid-cols-2 gap-5">
         <div className="glass rounded-3xl p-6">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-base font-semibold tracking-tight inline-flex items-center gap-2"><Trophy className="w-4 h-4 text-arctic-blue dark:text-arctic-cyan" /> Classement national</h3>
+            <h3 className="text-base font-semibold tracking-tight inline-flex items-center gap-2"><Trophy className="w-4 h-4 text-arctic-blue dark:text-arctic-cyan" /> Classement · ta filière</h3>
             <Link href="/dashboard/classement" className="text-xs font-semibold text-arctic-blue dark:text-arctic-cyan inline-flex items-center gap-1">Tout voir <ChevronRight className="w-3.5 h-3.5" /></Link>
           </div>
           {board.length === 0 ? (
@@ -166,6 +169,14 @@ export default function DashboardHome() {
                 </li>
               ))}
             </ul>
+          )}
+          {myRank && !board.some((r) => r.is_me) && board.length > 0 && (
+            <div className="mt-1 flex items-center gap-3 rounded-xl px-3 py-2.5 bg-arctic-blue/10 ring-1 ring-arctic-blue/25">
+              <span className="w-6 text-center font-bold text-sm text-arctic-blue dark:text-arctic-cyan">{myRank.rank}</span>
+              <span className="w-8 h-8 rounded-full bg-arctic-blue/15 grid place-items-center text-[11px] font-bold text-arctic-blue dark:text-arctic-cyan uppercase">TO</span>
+              <span className="flex-1 text-sm font-medium truncate">Toi <span className="ml-1 text-xs text-arctic-blue dark:text-arctic-cyan">(cette semaine)</span></span>
+              <span className="text-sm font-semibold">{myRank.total_xp} XP</span>
+            </div>
           )}
         </div>
         <div className="glass rounded-3xl p-6">
