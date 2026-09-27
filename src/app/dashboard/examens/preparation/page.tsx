@@ -190,10 +190,10 @@ export default function ExamensBrowser() {
                   <div className="text-[11px] text-neutral-400 capitalize">Session {e.session}{e.duration_minutes ? ` · ${Math.round(e.duration_minutes / 60)}h` : ""}</div>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
-                  <Link href={`/dashboard/examens?exam=${e.id}&mode=etude`} className="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-full bg-arctic-blue/10 text-arctic-blue dark:text-arctic-cyan hover:bg-arctic-blue/20 transition">
+                  <Link href={`/dashboard/examens/session?exam=${e.id}&mode=revise`} className="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-full bg-arctic-blue/10 text-arctic-blue dark:text-arctic-cyan hover:bg-arctic-blue/20 transition">
                     <BookOpen className="w-3.5 h-3.5" /> Réviser
                   </Link>
-                  <Link href={`/dashboard/examens?exam=${e.id}`} className="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white hover:brightness-105 transition">
+                  <Link href={`/dashboard/examens/session?exam=${e.id}&mode=exam`} className="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white hover:brightness-105 transition">
                     <Timer className="w-3.5 h-3.5" /> Examen
                   </Link>
                 </div>
