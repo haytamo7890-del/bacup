@@ -22,7 +22,7 @@ import {
 type Subject = { id: string; code: string; name: string };
 type Track = { id: string; code: string; name: string };
 type Chapter = { id: string; subject_id: string; track_id: string | null; name: string; position: number; domain?: string | null; unit?: string | null; unit_pos?: number | null };
-type Lesson = { id: string; title: string; body: string | null; kind: string };
+type Lesson = { id: string; title: string; body: string | null; resume: string | null; kind: string; difficulty: number | null; duration_min: number | null; bac_frequency: number | null };
 type SubjectCard = { id: string; code: string; name: string; coeff: number | null; chapters: Chapter[] };
 
 type Kind = "cours" | "resume";
@@ -58,6 +58,7 @@ export default function CoursPage() {
   const [lessons, setLessons] = useState<Lesson[]>([]);       // for current kind
   const [coursBodies, setCoursBodies] = useState<string>("");  // raw cours text (for AI résumé)
   const [completed, setCompleted] = useState<Set<string>>(new Set());
+  const [xpFlash, setXpFlash] = useState<string | null>(null);
   const [reachedEnd, setReachedEnd] = useState(false);
   const [aiResume, setAiResume] = useState<string | null>(null);
   const [aiBusy, setAiBusy] = useState(false);
@@ -214,12 +215,15 @@ export default function CoursPage() {
     setReachedEnd(false);
     const { data } = await supabase
       .from("lessons")
-      .select("id, title, body, kind")
+      .select("id, title, body, resume, kind, difficulty, duration_min, bac_frequency")
       .eq("chapter_id", c.id)
       .order("position");
     const all = (data ?? []) as Lesson[];
     const cours = all.filter((l) => l.kind !== "resume");
-    const show = k === "resume" ? all.filter((l) => l.kind === "resume") : cours;
+    // Fiche view = each notion's own résumé; fall back to legacy résumé-lessons, then AI.
+    const ficheNotions = cours.filter((l) => (l.resume ?? "").trim());
+    const legacyResume = all.filter((l) => l.kind === "resume");
+    const show = k === "resume" ? (ficheNotions.length ? ficheNotions : legacyResume) : cours;
     setLessons(show);
     setCoursBodies(cours.map((l) => `## ${l.title}\n${l.body ?? ""}`).join("\n\n"));
 
@@ -262,6 +266,8 @@ export default function CoursPage() {
   async function markRead(id: string) {
     await supabase.rpc("mark_lesson_read", { p_lesson: id });
     setCompleted((s) => new Set(s).add(id));
+    setXpFlash(id);
+    setTimeout(() => setXpFlash((x) => (x === id ? null : x)), 2500);
   }
 
   async function generateResume() {
@@ -382,11 +388,15 @@ export default function CoursPage() {
           <div className="mt-5 space-y-4">
             {lessons.map((l) => (
               <div key={l.id} className="glass rounded-3xl p-7">
-                <h3 dir="auto" className="text-lg font-bold tracking-tight mb-3"><Tex>{l.title}</Tex></h3>
+                <h3 dir="auto" className="text-lg font-bold tracking-tight mb-2"><Tex>{l.title}</Tex></h3>
+                <NotionMeta lesson={l} />
                 <CourseContent body={l.body ?? ""} lessonId={l.id} onProgress={(m, t) => onLessonProg(l.id, m, t)} onPractice={chapterItems.length ? (notion) => setPracticeNotion(notion) : undefined} canPractice={canPractice} />
                 <div className="mt-5 pt-4 border-t border-neutral-200/60 dark:border-neutral-800 flex justify-end">
                   {completed.has(l.id) ? (
-                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-500"><Check className="w-4 h-4" /> Lu</span>
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-500">
+                      {xpFlash === l.id && <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan">+15 XP</span>}
+                      <span className="inline-flex items-center gap-1.5"><Check className="w-4 h-4" /> Lu</span>
+                    </span>
                   ) : (
                     <button onClick={() => markRead(l.id)} disabled={!reachedEnd} className="text-sm font-semibold rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-4 py-2 hover:opacity-90 transition disabled:opacity-40">
                       Marquer comme lu
@@ -584,11 +594,39 @@ export default function CoursPage() {
   );
 }
 
+const DIFF_LABEL = ["", "Facile", "Moyen", "Difficile"];
+const FREQ_LABEL = ["Rare au BAC", "Rare au BAC", "Parfois au BAC", "Souvent au BAC", "Tombe presque toujours"];
+
+function NotionMeta({ lesson }: { lesson: Lesson }) {
+  const d = lesson.difficulty, dur = lesson.duration_min, f = lesson.bac_frequency;
+  if (d == null && dur == null && f == null) return null;
+  return (
+    <div className="flex flex-wrap items-center gap-2 mb-4">
+      {d != null && (
+        <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold px-2.5 py-1 rounded-full bg-black/[0.04] dark:bg-white/[0.06] text-neutral-600 dark:text-neutral-300">
+          <span className={`w-1.5 h-1.5 rounded-full ${d >= 3 ? "bg-red-500" : d === 2 ? "bg-amber-500" : "bg-emerald-500"}`} />
+          {DIFF_LABEL[d] ?? ""}
+        </span>
+      )}
+      {dur != null && (
+        <span className="inline-flex items-center gap-1 text-[12px] font-semibold px-2.5 py-1 rounded-full bg-black/[0.04] dark:bg-white/[0.06] text-neutral-600 dark:text-neutral-300">≈ {dur} min</span>
+      )}
+      {f != null && (
+        <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold px-2.5 py-1 rounded-full bg-arctic-blue/10 text-arctic-blue dark:text-arctic-cyan">
+          <span className="tracking-tight">{"\u25CF".repeat(Math.max(0, f))}{"\u25CB".repeat(Math.max(0, 3 - f))}</span>
+          {FREQ_LABEL[f] ?? ""}
+        </span>
+      )}
+    </div>
+  );
+}
+
 function Reader({ lesson, accent }: { lesson: Lesson; accent?: boolean }) {
   return (
     <div className={`glass rounded-3xl p-7 ${accent ? "border-l-2 border-arctic-blue/40" : ""}`}>
-      <h3 dir="auto" className="text-lg font-bold tracking-tight mb-3"><Tex>{lesson.title}</Tex></h3>
-      <CourseContent body={lesson.body ?? ""} />
+      <h3 dir="auto" className="text-lg font-bold tracking-tight mb-2"><Tex>{lesson.title}</Tex></h3>
+      <NotionMeta lesson={lesson} />
+      <CourseContent body={(lesson.resume ?? lesson.body) ?? ""} />
     </div>
   );
 }

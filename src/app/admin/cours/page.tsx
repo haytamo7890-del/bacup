@@ -3,14 +3,22 @@
 import { useCallback, useEffect, useState } from "react";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { ResourcePanel } from "@/components/resource-panel";
-import { Loader2, Plus, Trash2, ChevronRight, ChevronLeft, Save, BookOpen, ScrollText } from "lucide-react";
+import { Loader2, Plus, Trash2, ChevronRight, ChevronLeft, Save, BookOpen, ScrollText, Target, Gauge, Clock, Flame, ArrowDownToLine } from "lucide-react";
 
 type Row = { id: string; code: string; name: string };
 type Chapter = { id: string; name: string; code: string | null; position: number };
-type Lesson = { id: string; title: string; body: string | null; kind: string; position: number };
+type Lesson = {
+  id: string; title: string; body: string | null; resume: string | null;
+  objectives: string | null; difficulty: number | null; duration_min: number | null;
+  bac_frequency: number | null; kind: string; position: number;
+};
 
 const sel = "rounded-xl border border-neutral-300 dark:border-neutral-700 bg-transparent px-3 py-2.5 text-sm outline-none focus:border-arctic-blue";
 const input = "w-full " + sel;
+const LESSON_COLS = "id, title, body, resume, objectives, difficulty, duration_min, bac_frequency, kind, position";
+
+const DIFF = [{ v: 1, l: "Facile" }, { v: 2, l: "Moyen" }, { v: 3, l: "Difficile" }];
+const FREQ = [{ v: 0, l: "Jamais" }, { v: 1, l: "Parfois" }, { v: 2, l: "Souvent" }, { v: 3, l: "Quasi-systématique" }];
 
 export default function AdminCours() {
   const supabase = createBrowserSupabase();
@@ -25,6 +33,7 @@ export default function AdminCours() {
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [lessons, setLessons] = useState<Lesson[]>([]);
   const [loading, setLoading] = useState(false);
+  const [saved, setSaved] = useState<string | null>(null);
 
   const [newChap, setNewChap] = useState({ code: "", name: "" });
 
@@ -72,28 +81,40 @@ export default function AdminCours() {
 
   async function openChapter(c: Chapter) {
     setChapter(c);
-    const { data } = await supabase.from("lessons").select("id, title, body, kind, position").eq("chapter_id", c.id).order("position");
+    const { data } = await supabase.from("lessons").select(LESSON_COLS).eq("chapter_id", c.id).order("position");
     setLessons((data ?? []) as Lesson[]);
   }
 
-  async function addLesson(kind: string) {
+  async function addLesson() {
     if (!chapter) return;
     const { data } = await supabase.from("lessons").insert({
-      chapter_id: chapter.id, title: kind === "resume" ? "Résumé" : "Nouvelle leçon", body: "", kind, position: lessons.length + 1,
-    }).select("id, title, body, kind, position").single();
+      chapter_id: chapter.id, title: "Nouvelle notion", body: "", kind: "cours", position: lessons.length + 1,
+    }).select(LESSON_COLS).single();
     if (data) setLessons((l) => [...l, data as Lesson]);
   }
 
   async function saveLesson(l: Lesson) {
-    await supabase.from("lessons").update({ title: l.title, body: l.body, kind: l.kind }).eq("id", l.id);
+    await supabase.from("lessons").update({
+      title: l.title, body: l.body, resume: l.resume, objectives: l.objectives,
+      difficulty: l.difficulty, duration_min: l.duration_min, bac_frequency: l.bac_frequency,
+    }).eq("id", l.id);
+    setSaved(l.id);
+    setTimeout(() => setSaved((s) => (s === l.id ? null : s)), 1600);
   }
   async function delLesson(id: string) {
-    if (!confirm("Supprimer cette leçon ?")) return;
+    if (!confirm("Supprimer cette notion ?")) return;
     await supabase.from("lessons").delete().eq("id", id);
     setLessons((l) => l.filter((x) => x.id !== id));
   }
   function editLesson(id: string, patch: Partial<Lesson>) {
     setLessons((ls) => ls.map((x) => (x.id === id ? { ...x, ...patch } : x)));
+  }
+  // Migration helper: promote the current course body into the Fiche field
+  // (used when loading a real deep course from the source files over the old summary).
+  function promoteToFiche(l: Lesson) {
+    if (!l.body?.trim()) return;
+    if (l.resume?.trim() && !confirm("La fiche existe déjà. La remplacer par le cours actuel ?")) return;
+    editLesson(l.id, { resume: l.body });
   }
 
   // ---- Lessons editor for the selected chapter ----
@@ -102,26 +123,69 @@ export default function AdminCours() {
       <div className="max-w-3xl fade-up">
         <button onClick={() => setChapter(null)} className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white"><ChevronLeft className="w-4 h-4" /> Chapitres</button>
         <h1 className="mt-3 text-2xl font-bold tracking-tight">{chapter.name}</h1>
-        <div className="mt-2 flex gap-2">
-          <button onClick={() => addLesson("cours")} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full bg-arctic-blue/10 text-arctic-blue dark:text-arctic-cyan hover:bg-arctic-blue/20 transition"><BookOpen className="w-4 h-4" /> + Leçon de cours</button>
-          <button onClick={() => addLesson("resume")} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white hover:brightness-105 transition"><ScrollText className="w-4 h-4" /> + Résumé</button>
+        <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">Chaque <b>notion</b> a un cours complet et une fiche. L&apos;élève bascule entre les deux.</p>
+        <div className="mt-3">
+          <button onClick={addLesson} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white hover:brightness-105 transition"><Plus className="w-4 h-4" /> Ajouter une notion</button>
         </div>
 
-        <div className="mt-5 space-y-4">
-          {lessons.map((l) => (
+        <div className="mt-5 space-y-5">
+          {lessons.map((l, i) => (
             <div key={l.id} className="glass rounded-2xl p-5">
               <div className="flex items-center gap-2">
-                <span className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${l.kind === "resume" ? "bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan" : "bg-black/[0.05] dark:bg-white/[0.08] text-neutral-500"}`}>{l.kind}</span>
-                <input className={input} value={l.title} onChange={(e) => editLesson(l.id, { title: e.target.value })} />
+                <span className="w-7 h-7 rounded-lg bg-arctic-blue/10 text-arctic-blue dark:text-arctic-cyan grid place-items-center text-xs font-bold shrink-0">{i + 1}</span>
+                <input className={input} value={l.title} onChange={(e) => editLesson(l.id, { title: e.target.value })} placeholder="Titre de la notion" />
                 <button onClick={() => delLesson(l.id)} className="shrink-0 w-9 h-9 rounded-lg bg-red-500/10 text-red-500 grid place-items-center hover:bg-red-500/20 transition"><Trash2 className="w-4 h-4" /></button>
               </div>
-              <textarea className={input + " mt-3 font-mono"} rows={8} value={l.body ?? ""} onChange={(e) => editLesson(l.id, { body: e.target.value })} placeholder="Contenu. Maths entre $...$" />
-              <div className="mt-2 flex justify-end">
+
+              {/* En-tête metadata */}
+              <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <label className="flex flex-col gap-1">
+                  <span className="text-[11px] font-semibold text-neutral-400 inline-flex items-center gap-1"><Gauge className="w-3 h-3" /> Difficulté</span>
+                  <select className={sel} value={l.difficulty ?? ""} onChange={(e) => editLesson(l.id, { difficulty: e.target.value ? Number(e.target.value) : null })}>
+                    <option value="">—</option>
+                    {DIFF.map((d) => <option key={d.v} value={d.v}>{d.l}</option>)}
+                  </select>
+                </label>
+                <label className="flex flex-col gap-1">
+                  <span className="text-[11px] font-semibold text-neutral-400 inline-flex items-center gap-1"><Clock className="w-3 h-3" /> Durée (min)</span>
+                  <input type="number" min={0} className={sel} value={l.duration_min ?? ""} onChange={(e) => editLesson(l.id, { duration_min: e.target.value ? Number(e.target.value) : null })} />
+                </label>
+                <label className="flex flex-col gap-1">
+                  <span className="text-[11px] font-semibold text-neutral-400 inline-flex items-center gap-1"><Flame className="w-3 h-3" /> Fréquence BAC</span>
+                  <select className={sel} value={l.bac_frequency ?? ""} onChange={(e) => editLesson(l.id, { bac_frequency: e.target.value ? Number(e.target.value) : null })}>
+                    <option value="">—</option>
+                    {FREQ.map((d) => <option key={d.v} value={d.v}>{d.l}</option>)}
+                  </select>
+                </label>
+              </div>
+
+              <label className="mt-3 flex flex-col gap-1">
+                <span className="text-[11px] font-semibold text-neutral-400 inline-flex items-center gap-1"><Target className="w-3 h-3" /> Objectifs (un par ligne)</span>
+                <textarea className={input} rows={2} value={l.objectives ?? ""} onChange={(e) => editLesson(l.id, { objectives: e.target.value })} placeholder={"Résoudre une équation du second degré\nInterpréter le discriminant"} />
+              </label>
+
+              {/* Cours complet */}
+              <div className="mt-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-bold uppercase tracking-wide text-arctic-blue dark:text-arctic-cyan inline-flex items-center gap-1.5"><BookOpen className="w-3.5 h-3.5" /> Cours complet</span>
+                  <button onClick={() => promoteToFiche(l)} title="Copier le cours actuel dans la fiche" className="inline-flex items-center gap-1 text-[11px] font-semibold text-neutral-500 hover:text-arctic-blue dark:hover:text-arctic-cyan transition"><ArrowDownToLine className="w-3.5 h-3.5" /> Utiliser comme fiche</button>
+                </div>
+                <textarea className={input + " mt-1.5 font-mono"} rows={10} value={l.body ?? ""} onChange={(e) => editLesson(l.id, { body: e.target.value })} placeholder="Cours natif. Sections avec ## Titre, callouts :::definition / :::theoreme / :::methode / :::attention, maths entre $...$ ou $$...$$." />
+              </div>
+
+              {/* Fiche / résumé */}
+              <div className="mt-4">
+                <span className="text-[11px] font-bold uppercase tracking-wide text-arctic-blue dark:text-arctic-cyan inline-flex items-center gap-1.5"><ScrollText className="w-3.5 h-3.5" /> Fiche · L&apos;essentiel</span>
+                <textarea className={input + " mt-1.5 font-mono"} rows={6} value={l.resume ?? ""} onChange={(e) => editLesson(l.id, { resume: e.target.value })} placeholder="Résumé condensé pour la révision rapide. Vide = fiche générée automatiquement." />
+              </div>
+
+              <div className="mt-3 flex items-center justify-end gap-3">
+                {saved === l.id && <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Enregistré ✓</span>}
                 <button onClick={() => saveLesson(l)} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:opacity-90 transition"><Save className="w-4 h-4" /> Enregistrer</button>
               </div>
             </div>
           ))}
-          {lessons.length === 0 && <div className="glass rounded-2xl p-8 text-center text-sm text-neutral-400">Aucune leçon. Ajoute un cours ou un résumé ci-dessus.</div>}
+          {lessons.length === 0 && <div className="glass rounded-2xl p-8 text-center text-sm text-neutral-400">Aucune notion. Ajoute la première ci-dessus.</div>}
         </div>
 
         <div className="mt-6"><ResourcePanel scope="chapter" scopeKey={chapter.id} /></div>
@@ -133,7 +197,7 @@ export default function AdminCours() {
   return (
     <div className="max-w-3xl fade-up">
       <h1 className="text-3xl font-bold tracking-tight">Cours</h1>
-      <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">Gère les chapitres, cours et résumés.</p>
+      <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">Gère les chapitres et leurs notions (cours + fiche).</p>
 
       <div className="mt-6 flex flex-wrap gap-2">
         <select className={sel} value={levelId} onChange={(e) => setLevelId(e.target.value)}>

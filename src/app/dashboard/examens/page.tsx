@@ -104,7 +104,7 @@ export default function ExamensPage() {
         lvl = sp?.level_id ?? null;
       }
       setLevelId(lvl);
-      let q = supabase.from("exams").select("subject_id, subjects(id, name)").eq("exam_type", "national");
+      let q = supabase.from("exams").select("subject_id, subjects(id, name)").in("exam_type", ["national", "blanc"]);
       if (lvl) q = q.eq("level_id", lvl);
       const { data } = await q;
       const map = new Map<string, Subject>();
@@ -173,7 +173,7 @@ export default function ExamensPage() {
       .from("exams")
       .select("id, title, year, session, exam_type, duration_minutes")
       .eq("subject_id", s.id)
-      .eq("exam_type", "national"); // seulement les examens nationaux pour l'instant
+      .in("exam_type", ["national", "blanc"]); // examens nationaux + examens blancs
     if (levelId) eq = eq.eq("level_id", levelId);
     let cq = supabase.from("chapters").select("id, name, code").eq("subject_id", s.id);
     if (levelId) cq = cq.eq("level_id", levelId);
@@ -335,8 +335,8 @@ export default function ExamensPage() {
   if (step === "subjects") {
     return (
       <Shell
-        title="Examen blanc rapide"
-        subtitle="Choisis une matière, puis lance un examen blanc chronométré."
+        title="Entraînement & Examens"
+        subtitle="Choisis une matière : révise par notion, enchaîne des séries d'exercices, ou passe un examen blanc/national."
         tabs={
           <Link href="/dashboard/examens/preparation" className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full chip hover:-translate-y-0.5 transition">
             <FileText className="w-4 h-4" /> Toutes les annales
@@ -373,37 +373,54 @@ export default function ExamensPage() {
         {loading ? (
           <Loading />
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <ModeCard
-              icon={<FileText className="w-5 h-5" />}
-              title="Examen Complet"
-              desc="Sujet complet, chronomètre officiel, conditions réelles du Bac."
-              onClick={() => setStep("exams")}
-            />
-            <ModeCard
-              icon={<Shuffle className="w-5 h-5" />}
-              title="Exercices Aléatoires"
-              desc="Questions aléatoires pour une pratique rapide et variée."
-              badge={access.isDemo ? "Premium" : undefined}
-              premium={access.isDemo}
-              onClick={() => (access.isDemo ? router.push("/payment") : startRandom(20))}
-            />
-            <ModeCard
-              icon={<BookOpen className="w-5 h-5" />}
-              title="Par Notion"
-              desc="Choisis un chapitre ou une notion précise pour t'entraîner."
-              badge={access.isDemo ? "Premium" : "Nouveau"}
-              premium={access.isDemo}
-              onClick={() => (access.isDemo ? router.push("/payment") : setStep("notions"))}
-            />
-            <ModeCard
-              icon={<Zap className="w-5 h-5" />}
-              title="Mode Adaptatif"
-              desc="L'IA cible tes points faibles pour progresser plus vite."
-              badge="Premium"
-              premium
-              onClick={() => (access.isDemo ? router.push("/payment") : startAdaptive(20))}
-            />
+          <div className="space-y-8">
+            <section>
+              <SectionLabel n={1} title="Réviser par notion" desc="Cible une notion précise — corrigé détaillé + IA." />
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <ModeCard
+                  icon={<BookOpen className="w-5 h-5" />}
+                  title="Par Notion"
+                  desc="Choisis un chapitre ou une notion précise pour t'entraîner."
+                  badge={access.isDemo ? "Premium" : "Nouveau"}
+                  premium={access.isDemo}
+                  onClick={() => (access.isDemo ? router.push("/payment") : setStep("notions"))}
+                />
+              </div>
+            </section>
+
+            <section>
+              <SectionLabel n={2} title="Séries d'exercices" desc="Enchaîne des séries pour t'entraîner : au hasard, ou ciblées sur tes points faibles." />
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <ModeCard
+                  icon={<Shuffle className="w-5 h-5" />}
+                  title="Exercices Aléatoires"
+                  desc="Une série variée tirée au hasard dans toute la matière."
+                  badge={access.isDemo ? "Premium" : undefined}
+                  premium={access.isDemo}
+                  onClick={() => (access.isDemo ? router.push("/payment") : startRandom(20))}
+                />
+                <ModeCard
+                  icon={<Zap className="w-5 h-5" />}
+                  title="Mode Adaptatif"
+                  desc="L'IA cible tes points faibles pour progresser plus vite."
+                  badge="Premium"
+                  premium
+                  onClick={() => (access.isDemo ? router.push("/payment") : startAdaptive(20))}
+                />
+              </div>
+            </section>
+
+            <section>
+              <SectionLabel n={3} title="Exam blanc & national" desc="Sujets nationaux et examens blancs, chronométrés comme le jour J." />
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <ModeCard
+                  icon={<FileText className="w-5 h-5" />}
+                  title="Examen Complet"
+                  desc="Sujet complet, chronomètre officiel, conditions réelles du Bac."
+                  onClick={() => setStep("exams")}
+                />
+              </div>
+            </section>
           </div>
         )}
       </Shell>
@@ -466,7 +483,7 @@ export default function ExamensPage() {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-arctic-blue dark:text-arctic-cyan text-xs font-semibold">
-                    <FileText className="w-4 h-4" /> {e.exam_type === "national" ? "National" : "Régional"} · {e.year}
+                    <FileText className="w-4 h-4" /> {e.exam_type === "national" ? "National" : e.exam_type === "blanc" ? "Examen blanc" : e.exam_type === "regional" ? "Régional" : "Examen"} · {e.year}
                   </div>
                   {locked && <Lock className="w-4 h-4 text-neutral-400" />}
                 </div>
@@ -782,6 +799,18 @@ function Shell({
         {tabs}
       </div>
       <div className="mt-7">{children}</div>
+    </div>
+  );
+}
+
+function SectionLabel({ n, title, desc }: { n: number; title: string; desc: string }) {
+  return (
+    <div className="mb-3 flex items-center gap-3">
+      <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center text-xs font-extrabold shrink-0">{n}</span>
+      <div className="min-w-0">
+        <div className="font-bold tracking-tight">{title}</div>
+        <div className="text-xs text-neutral-400">{desc}</div>
+      </div>
     </div>
   );
 }

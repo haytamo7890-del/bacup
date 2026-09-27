@@ -7,6 +7,7 @@ import { CourseFigure } from "./figures";
 import {
   BookMarked, Sigma, CheckCircle2, Lightbulb, Wrench, Info, AlertTriangle,
   Sparkles, ListTree, ChevronDown, ScrollText, Check, PencilLine, Target, ChevronRight,
+  FlaskConical, Microscope, FileText,
 } from "lucide-react";
 
 /** Interactive context: mastery toggles + the practice-overlay launcher (funnels). */
@@ -166,6 +167,9 @@ const CO: Record<string, { label: string; icon: typeof Info; bar: string; bg: st
   aretenir:      { label: "À retenir",    icon: Sparkles,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   demonstration: { label: "Démonstration",icon: ScrollText,   bar: "border-neutral-400/40",  bg: "bg-black/[0.02] dark:bg-white/[0.03]", tile: "bg-neutral-400/15 text-neutral-500 dark:text-neutral-300", text: "text-neutral-500 dark:text-neutral-300", collapsible: true },
   solution:      { label: "Correction",   icon: CheckCircle2, bar: "border-emerald-500/50",  bg: "bg-emerald-500/[0.05]",  tile: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-300", text: "text-emerald-600 dark:text-emerald-300", collapsible: true },
+  experience:    { label: "Expérience",    icon: FlaskConical, bar: "border-teal-500/60",     bg: "bg-teal-500/[0.05]",     tile: "bg-teal-500/15 text-teal-600 dark:text-teal-300", text: "text-teal-600 dark:text-teal-300" },
+  observation:   { label: "Observation",   icon: Microscope,   bar: "border-teal-500/50",     bg: "bg-teal-500/[0.04]",     tile: "bg-teal-500/15 text-teal-600 dark:text-teal-300", text: "text-teal-600 dark:text-teal-300" },
+  document:      { label: "Document",      icon: FileText,     bar: "border-cyan-500/60",     bg: "bg-cyan-500/[0.05]",     tile: "bg-cyan-500/15 text-cyan-600 dark:text-cyan-300", text: "text-cyan-600 dark:text-cyan-300" },
   // English-workbook callouts
   rule:          { label: "Rule",         icon: BookMarked,   bar: "border-arctic-blue/60",  bg: "bg-arctic-blue/[0.05]",  tile: "bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   example:       { label: "Example",      icon: Lightbulb,    bar: "border-emerald-500/60",  bg: "bg-emerald-500/[0.05]",  tile: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-300", text: "text-emerald-600 dark:text-emerald-300" },
