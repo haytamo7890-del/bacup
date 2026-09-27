@@ -113,16 +113,27 @@ export default function ExamensPage() {
       }
       setSubjects(Array.from(map.values()).sort((a, b) => a.name.localeCompare(b.name)));
 
-      // Deep-link from Espace Préparation: ?exam=<id>[&mode=etude] auto-starts a run.
+      // Deep-link: ?exam=<id>[&mode=etude] (Espace Préparation) or ?defi=<id>
+      // (Défi National) opens the session runner. A défi resolves to its exam and
+      // carries the defi id through so the score lands on the leaderboard.
       const params = new URLSearchParams(window.location.search);
-      const examId = params.get("exam");
+      let examId = params.get("exam");
+      const defi = params.get("defi");
+      if (defi && !examId) {
+        const { data: ch } = await supabase
+          .from("challenges")
+          .select("exam_id")
+          .eq("id", defi)
+          .maybeSingle();
+        examId = (ch as { exam_id: string | null } | null)?.exam_id ?? null;
+      }
       if (examId) {
-        const { data: ex } = await supabase
-          .from("exams")
-          .select("id, title, year, session, exam_type, duration_minutes")
-          .eq("id", examId)
-          .single();
-        if (ex) await startExam(ex as Exam, params.get("mode") === "etude" ? "revise" : "exam");
+        const runMode =
+          params.get("mode") === "etude" || params.get("mode") === "revise" ? "revise" : "exam";
+        const sp = new URLSearchParams({ exam: examId, mode: runMode });
+        if (defi) sp.set("defi", defi);
+        router.replace(`/dashboard/examens/session?${sp.toString()}`);
+        return;
       }
     })();
     return () => {

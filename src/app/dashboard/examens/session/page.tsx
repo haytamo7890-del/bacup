@@ -79,6 +79,7 @@ export default function ExamSessionPage() {
   const startedRef = useRef<number>(Date.now());
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const topRef = useRef<HTMLDivElement | null>(null);
+  const defiRef = useRef<string | null>(null);
   const [filter, setFilter] = useState<"all" | "wrong" | "flagged">("all");
   const [saved, setSaved] = useState(false);
 
@@ -92,6 +93,7 @@ export default function ExamSessionPage() {
       const params = new URLSearchParams(window.location.search);
       const examId = params.get("exam");
       const m: RunMode = params.get("mode") === "exam" ? "exam" : "revise";
+      defiRef.current = params.get("defi");
       if (!examId) { setLoading(false); return; }
       const { data: ex } = await supabase.from("exams")
         .select("id, title, year, session, duration_minutes, source_url, subjects(name, code)").eq("id", examId).maybeSingle();
@@ -203,6 +205,20 @@ export default function ExamSessionPage() {
       score_20: Number(score20.toFixed(2)), duration_s: durS, finished_at: new Date().toISOString(),
     }).select("id").single();
     setSaved(true);
+    // Award XP + streak (same RPC as the notion/random flow), and, if launched from
+    // a Défi National, submit the score to the leaderboard.
+    const p_answers = items.map((q) => ({
+      question_id: q.id,
+      is_correct: q.options.some((o) => o.id === chosen[q.id] && o.is_correct),
+    }));
+    await supabase.rpc("record_exam", { p_answers });
+    if (defiRef.current) {
+      await supabase.rpc("submit_challenge", {
+        p_challenge: defiRef.current,
+        p_score: Number(score20.toFixed(2)),
+        p_time: durS,
+      });
+    }
     if (error || !sess) return;
     const rows = items.map((q) => {
       const opt = q.options.find((o) => o.id === chosen[q.id]);
