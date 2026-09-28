@@ -2,16 +2,17 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { MARK_PATH, MARK_VIEWBOX } from "@/components/brand";
 
 /* ------------------------------------------------------------------ Logo */
 /**
- * Bac Up mark — an ORIGINAL star-bolt (4-point star pierced by a lightning
- * bolt). White glyph inside the arctic gradient tile (Postflows format).
- * `simple` drops the bolt cut for tiny sizes (favicon).
+ * Bac Up mark — the official graduate + swoosh-star, traced to a single vector
+ * path (shared from @/components/brand). Standalone white mark by default;
+ * `tile` wraps it in the arctic gradient badge for icon-style placements.
  */
 export function LogoMark({
   size = 40,
-  tile = true,
+  tile = false,
   simple = false,
   className = "",
 }: {
@@ -20,37 +21,31 @@ export function LogoMark({
   simple?: boolean;
   className?: string;
 }) {
-  const gid = "bacup-tile";
+  void simple;
+  const [, , vw, vh] = MARK_VIEWBOX.split(" ").map(Number);
+  if (tile) {
+    const gid = "bacup-tile";
+    const mh = 60;
+    const mw = (mh * vw) / vh;
+    return (
+      <svg width={size} height={size} viewBox="0 0 100 100" className={className} aria-label="Bac Up">
+        <defs>
+          <linearGradient id={gid} x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#12c7de" />
+            <stop offset="1" stopColor="#1b7fdc" />
+          </linearGradient>
+        </defs>
+        <rect x="3" y="3" width="94" height="94" rx="26" fill={`url(#${gid})`} />
+        <svg x={(100 - mw) / 2} y={(100 - mh) / 2} width={mw} height={mh} viewBox={MARK_VIEWBOX}>
+          <path fill="#fff" fillRule="evenodd" clipRule="evenodd" d={MARK_PATH} />
+        </svg>
+      </svg>
+    );
+  }
+  const w = Math.round((size * vw) / vh);
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" className={className} aria-label="Bac Up">
-      <defs>
-        <linearGradient id={gid} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#12c7de" />
-          <stop offset="1" stopColor="#1b7fdc" />
-        </linearGradient>
-        <radialGradient id={`${gid}-sheen`} cx="0.3" cy="0.2" r="0.9">
-          <stop offset="0" stopColor="#fff" stopOpacity="0.35" />
-          <stop offset="0.5" stopColor="#fff" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      {tile && (
-        <>
-          <rect x="3" y="3" width="94" height="94" rx="26" fill={`url(#${gid})`} />
-          <rect x="3" y="3" width="94" height="94" rx="26" fill={`url(#${gid}-sheen)`} />
-        </>
-      )}
-      {/* star + integrated bolt (evenodd carves the bolt) */}
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        fill={tile ? "#ffffff" : `url(#${gid})`}
-        d={
-          simple
-            ? "M50 12 L58 42 L88 50 L58 58 L50 88 L42 58 L12 50 L42 42 Z"
-            : "M50 10 L58 41 L90 50 L58 59 L50 90 L42 59 L10 50 L42 41 Z " +
-              "M55 31 L44 53 L51 53 L46 69 L58 45 L51 45 L57 31 Z"
-        }
-      />
+    <svg width={w} height={size} viewBox={MARK_VIEWBOX} fill="currentColor" className={className} aria-label="Bac Up">
+      <path fillRule="evenodd" clipRule="evenodd" d={MARK_PATH} />
     </svg>
   );
 }

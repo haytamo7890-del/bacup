@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     siteName: "Bac Up",
   },
   twitter: { card: "summary_large_image", title: "Bac Up — Réussis ton BAC. Sans t'ennuyer." },
+  manifest: "/manifest.webmanifest",
+  appleWebApp: { capable: true, title: "Bac Up", statusBarStyle: "black-translucent" },
 };
+
+export const viewport = { themeColor: "#0e1a2d" };
 
 export default function RootLayout({
   children,
