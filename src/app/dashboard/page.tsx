@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import {
-  Sparkles, Flame, Zap, Trophy, ArrowRight, BookOpen, FileText, PlayCircle,
-  ChevronRight, ChevronLeft, Library, Upload,
+  Flame, Zap, Trophy, ArrowRight, FileText,
+  ChevronRight, Library, Upload,
 } from "lucide-react";
 import { ProgressCurve } from "@/components/dashboard/progress-curve";
 import { subjectTheme } from "@/config/subjects";
 import { SubjectName } from "@/components/subject-pad";
+import { SubjectBanner } from "@/components/subject-banner";
 
 type Stats = {
   xp: number; level: number; streak: number; accuracy: number | null;
@@ -220,24 +221,15 @@ export default function DashboardHome() {
 /* ---------- BENTO CELLS ---------- */
 
 function NewContentBanner({ c }: { c: NewContent }) {
-  // Dark pad with the subject's color glowing up from the bottom edge.
-  const t = subjectTheme(c?.subject ?? "");
   return (
-    <Link href={c?.href ?? "/dashboard/cours"} className="group block h-full min-h-[280px] rounded-3xl p-8 relative overflow-hidden border border-white/10 bg-gradient-to-b from-neutral-900 to-neutral-950 text-white shadow-lg shadow-black/20">
-      <span className={`pointer-events-none absolute -bottom-16 left-1/2 -translate-x-1/2 w-[80%] h-44 rounded-full blur-3xl opacity-60 group-hover:opacity-80 transition-opacity ${c ? t.bar : "bg-arctic-blue"}`} />
-      <span className="pointer-events-none absolute right-5 -bottom-3 text-[7rem] leading-none font-black text-white/[0.05] uppercase select-none">{c ? c.title.slice(0, 2) : "★"}</span>
-      <div className="relative flex flex-col h-full justify-between">
-        <div>
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-white/70"><Sparkles className="w-3.5 h-3.5" /> Nouveau contenu</span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight leading-tight max-w-md">{c ? c.title : "Bientôt du nouveau ✨"}</h2>
-          <p className="mt-2 text-sm text-white/70 max-w-md">{c ? c.sub : "Le prochain cours ou examen ajouté apparaîtra ici en premier."}</p>
-        </div>
-        <span className="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide bg-white text-neutral-900 px-5 py-2.5 rounded-full w-fit group-hover:-translate-y-0.5 transition">
-          {c ? (c.kind === "cours" ? <BookOpen className="w-4 h-4" /> : <FileText className="w-4 h-4" />) : <ArrowRight className="w-4 h-4" />}
-          {c ? "Découvrir" : "Explorer"}
-        </span>
-      </div>
-    </Link>
+    <SubjectBanner
+      mode="new"
+      code={c?.subject ?? ""}
+      name={c?.subject ?? "Bac Up"}
+      href={c?.href ?? "/dashboard/cours"}
+      subtitle={c ? c.sub : "Le prochain cours ou examen ajouté apparaîtra ici."}
+      className="h-full min-h-[220px]"
+    />
   );
 }
 
@@ -322,46 +314,29 @@ function ResumeCarousel({ items }: { items: ResumeItem[] }) {
   const [idx, setIdx] = useState(0);
   const has = items.length > 0;
   const cur = has ? items[Math.min(idx, items.length - 1)] : null;
-  const col = cur ? subjectTheme(cur.subject || cur.chapter) : subjectTheme("");
-  const pct = cur ? Math.round((cur.done / cur.total) * 100) : 0;
-
+  if (!has || !cur) {
+    return (
+      <SubjectBanner mode="new" code="" name="Bac Up" href="/dashboard/cours" subtitle="Rien en cours — ouvre un chapitre et reprends-le ici." className="h-full min-h-[220px]" />
+    );
+  }
   return (
-    <div className="glass rounded-3xl p-5 h-full min-h-[280px] flex flex-col">
-      <span className="text-sm font-semibold inline-flex items-center gap-2 mb-3"><PlayCircle className="w-4 h-4 text-arctic-blue dark:text-arctic-cyan" /> Reprends où tu t&apos;es arrêté</span>
-      {!has || !cur ? (
-        <div className="flex-1 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] grid place-items-center text-center p-6">
-          <div>
-            <p className="text-sm text-neutral-400">Rien en cours. Ouvre un chapitre et reprends-le ici. ✨</p>
-            <Link href="/dashboard/cours" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white px-4 py-2.5">Explorer les cours <ArrowRight className="w-4 h-4" /></Link>
-          </div>
+    <div className="h-full flex flex-col gap-3">
+      <SubjectBanner
+        mode="resume"
+        code={cur.subject || cur.chapter}
+        name={cur.subject || cur.chapter}
+        href={cur.href}
+        subtitle={`${cur.chapter} · ${cur.done}/${cur.total} leçons`}
+        done={cur.done}
+        total={cur.total}
+        className="flex-1 min-h-[220px]"
+      />
+      {items.length > 1 && (
+        <div className="flex items-center justify-center gap-1.5">
+          {items.map((_, i) => (
+            <button key={i} onClick={() => setIdx(i)} aria-label={`Reprise ${i + 1}`} className={`h-2 rounded-full transition-all ${i === Math.min(idx, items.length - 1) ? "w-5 bg-arctic-blue" : "w-2 bg-neutral-300 dark:bg-neutral-700"}`} />
+          ))}
         </div>
-      ) : (
-        <>
-          <Link href={cur.href} className="group flex-1 rounded-2xl p-6 relative overflow-hidden text-white border border-white/10 bg-gradient-to-b from-neutral-900 to-neutral-950 flex flex-col justify-between">
-            <span className={`pointer-events-none absolute -bottom-14 left-1/2 -translate-x-1/2 w-2/3 h-28 rounded-full blur-3xl opacity-60 group-hover:opacity-80 transition-opacity ${col.bar}`} />
-            <span className="pointer-events-none absolute right-4 -bottom-2 text-8xl font-black text-white/[0.05] uppercase select-none">{(cur.subject || cur.chapter).slice(0, 2)}</span>
-            <div className="relative">
-              <div className={`text-xs font-bold uppercase tracking-wide ${col.text}`}>{cur.subject || "Cours"}</div>
-              <div className="mt-2 text-2xl font-extrabold tracking-tight leading-tight">{cur.chapter}</div>
-              <div className="mt-1 text-sm text-white/70">{cur.done}/{cur.total} leçons terminées</div>
-            </div>
-            <div className="relative">
-              <div className="h-1.5 rounded-full bg-white/15 overflow-hidden"><div className={`h-full ${col.bar} rounded-full`} style={{ width: `${Math.max(6, pct)}%` }} /></div>
-              <span className="mt-3 inline-flex items-center gap-2 text-sm font-bold bg-white text-neutral-900 px-4 py-2 rounded-full group-hover:-translate-y-0.5 transition"><PlayCircle className="w-4 h-4" /> Reprendre</span>
-            </div>
-          </Link>
-          {items.length > 1 && (
-            <div className="mt-3 flex items-center justify-center gap-3">
-              <button onClick={() => setIdx((i) => Math.max(0, i - 1))} disabled={idx === 0} className="w-8 h-8 rounded-full chip grid place-items-center disabled:opacity-40 hover:-translate-y-0.5 transition"><ChevronLeft className="w-4 h-4" /></button>
-              <div className="flex gap-1.5">
-                {items.map((_, i) => (
-                  <button key={i} onClick={() => setIdx(i)} className={`h-2 rounded-full transition-all ${i === Math.min(idx, items.length - 1) ? "w-5 bg-arctic-blue" : "w-2 bg-neutral-300 dark:bg-neutral-700"}`} />
-                ))}
-              </div>
-              <button onClick={() => setIdx((i) => Math.min(items.length - 1, i + 1))} disabled={idx >= items.length - 1} className="w-8 h-8 rounded-full chip grid place-items-center disabled:opacity-40 hover:-translate-y-0.5 transition"><ChevronRight className="w-4 h-4" /></button>
-            </div>
-          )}
-        </>
       )}
     </div>
   );

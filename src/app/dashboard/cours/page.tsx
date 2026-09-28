@@ -14,6 +14,7 @@ import { notionSlug } from "@/config/notion-map";
 import { curriculumFor, type SubjectRef } from "@/config/curriculum";
 import { subjectTheme } from "@/config/subjects";
 import { SubjectPad, PadChip, subjectIcon, SubjectAmbient } from "@/components/subject-pad";
+import { SubjectBanner } from "@/components/subject-banner";
 import {
   ChevronLeft, ChevronRight, BookOpen, Loader2, Check, GraduationCap,
   FileText, Sparkles, ScrollText, Layers, Lock,
@@ -66,6 +67,7 @@ export default function CoursPage() {
 
   // study layer: per-lesson mastery progress + flashcards deck
   const [prog, setProg] = useState<Record<string, { m: number; t: number }>>({});
+  const [subjResume, setSubjResume] = useState<{ chapterId: string; name: string; done: number; total: number } | null>(null);
   const [deckOpen, setDeckOpen] = useState(false);
   const [chapterItems, setChapterItems] = useState<PQItem[]>([]);
   const [practiceNotion, setPracticeNotion] = useState<string | null>(null);
@@ -150,6 +152,38 @@ export default function CoursPage() {
     obs.observe(endRef.current);
     return () => obs.disconnect();
   }, [kind, lessons]);
+
+  // subject-resume effect: most-progressed in-progress chapter for the open subject.
+  useEffect(() => {
+    setSubjResume(null);
+    if (!subject) return;
+    const chapIds = subject.chapters.map((c) => c.id);
+    if (chapIds.length === 0) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const { data: les } = await supabase.from("lessons").select("id, chapter_id").in("chapter_id", chapIds);
+        const rows = (les ?? []) as { id: string; chapter_id: string }[];
+        if (rows.length === 0) return;
+        const { data: comp } = await supabase.from("lesson_completions").select("lesson_id").in("lesson_id", rows.map((l) => l.id));
+        const done = new Set((comp ?? []).map((r) => r.lesson_id as string));
+        const byChap = new Map<string, { total: number; done: number }>();
+        for (const l of rows) {
+          const cur = byChap.get(l.chapter_id) ?? { total: 0, done: 0 };
+          cur.total += 1; if (done.has(l.id)) cur.done += 1;
+          byChap.set(l.chapter_id, cur);
+        }
+        let best: { chapterId: string; name: string; done: number; total: number } | null = null;
+        for (const c of subject.chapters) {
+          const v = byChap.get(c.id);
+          if (!v || v.done === 0 || v.done >= v.total) continue;
+          if (!best || v.done / v.total > best.done / best.total) best = { chapterId: c.id, name: c.name, done: v.done, total: v.total };
+        }
+        if (!cancelled) setSubjResume(best);
+      } catch { /* stay in the "new" state */ }
+    })();
+    return () => { cancelled = true; };
+  }, [subject, supabase]);
 
   const is2bac = levelCode === "2bac";
 
@@ -444,12 +478,26 @@ export default function CoursPage() {
         <button onClick={() => setSubject(null)} className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white">
           <ChevronLeft className="w-4 h-4" /> {is2bac ? `Retour · ${SHORT[filiere ?? ""] ?? "matières"}` : "Toutes les matières"}
         </button>
-        <div className="mt-3 flex items-center gap-3">
-          <span className={`w-11 h-11 rounded-2xl bg-gradient-to-br ${t.grad} text-white grid place-items-center font-bold uppercase shadow-sm`}>{subject.name.slice(0, 2)}</span>
-          <div>
-            <h1 className="text-2xl font-bold tracking-tight">{subject.name}</h1>
-            <div className="text-sm text-neutral-400">{subject.chapters.length} chapitre{subject.chapters.length > 1 ? "s" : ""} · cours + résumés</div>
-          </div>
+        <div className="mt-3">
+          {subjResume ? (
+            <SubjectBanner
+              mode="resume"
+              code={subject.code}
+              name={subject.name}
+              subtitle={`${subjResume.name} · ${subjResume.done}/${subjResume.total} leçons`}
+              done={subjResume.done}
+              total={subjResume.total}
+              onClick={() => { const c = subject.chapters.find((x) => x.id === subjResume.chapterId); if (c) setChapter(c); }}
+            />
+          ) : (
+            <SubjectBanner
+              mode="new"
+              code={subject.code}
+              name={subject.name}
+              subtitle={`${subject.chapters.length} chapitre${subject.chapters.length > 1 ? "s" : ""} · cours + résumés`}
+              onClick={() => { const c = subject.chapters[0]; if (c) setChapter(c); }}
+            />
+          )}
         </div>
 
         {subject.chapters.length === 0 ? (
