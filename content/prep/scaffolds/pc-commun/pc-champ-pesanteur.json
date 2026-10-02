@@ -1,0 +1,1525 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "pc",
+ "track": null,
+ "_scaffold": {
+  "pack": "pc-commun",
+  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+  "priority": "P1",
+  "chapter": {
+   "code": "pc-champ-pesanteur",
+   "name": "Mouvements plans dans un champ de pesanteur",
+   "domain": "physique",
+   "unit": "Mécanique"
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "La situation",
+   "Les équations horaires",
+   "L'équation de la trajectoire",
+   "Le vecteur vitesse au cours du vol",
+   "Les grandeurs caractéristiques",
+   "Le sommet et la flèche",
+   "Le temps de vol et la portée",
+   "L'angle de portée maximale",
+   "Le tir depuis une hauteur",
+   "La parabole de sûreté",
+   "L'influence de la résistance de l'air",
+   "L'effet Magnus",
+   "Le mouvement dans un champ uniforme quelconque",
+   "Le dispositif",
+   "Exploiter le tableau de mesures",
+   "Exemple complet",
+   "Vérifier la conservation de l'énergie",
+   "Sources d'erreur",
+   "Méthode 1 — Établir les équations horaires",
+   "Méthode 2 — Le projectile passe-t-il au-dessus d'un obstacle ?",
+   "Méthode 3 — Retrouver $v_0$ ou $\\alpha$ à partir d'un point atteint",
+   "Méthode 4 — Utiliser l'énergie",
+   "Méthode 5 — Exploiter une chronophotographie"
+  ],
+  "methodes_du_cours": [
+   "Méthode 1 — Établir les équations horaires",
+   "Méthode 2 — Le projectile passe-t-il au-dessus d'un obstacle ?",
+   "Méthode 3 — Retrouver $v_0$ ou $\\alpha$ à partir d'un point atteint",
+   "Méthode 4 — Utiliser l'énergie",
+   "Méthode 5 — Exploiter une chronophotographie"
+  ],
+  "existing_questions_total": 5,
+  "target_new_questions": 55,
+  "suggested_figures": [
+   "projectile — Mouvement d'un projectile — trajectoire parabolique",
+   "projectile-portee — Flèche, portée et temps de vol d'un projectile",
+   "chronophoto-projectile — Chronophotographie d'un projectile",
+   "particule-champ-b — Mouvement circulaire dans un champ magnétique",
+   "pendule-pesant — Pendule pesant",
+   "retard-temporel — Retard temporel : M reproduit le mouvement de S avec τ = d/c"
+  ],
+  "sources": [
+   {
+    "annale": "pc-svt-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2026-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2025-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2024-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2023-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2022-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2021-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2020-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2018-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2017-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2016-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2026-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2025-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2022-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2021-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2019-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2018-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2017-normale",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2016-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2015-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2014-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La situation",
+    "lesson": "Mouvement d'un projectile",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-la-situation",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "La situation",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-la-situation-q1",
+     "notion": "La situation",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les équations horaires",
+    "lesson": "Mouvement d'un projectile",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-les-equations-horaires",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Les équations horaires",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-les-equations-horaires-q1",
+     "notion": "Les équations horaires",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'équation de la trajectoire",
+    "lesson": "Mouvement d'un projectile",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-l-equation-de-la-trajectoire",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "L'équation de la trajectoire",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-l-equation-de-la-trajectoire-q1",
+     "notion": "L'équation de la trajectoire",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le vecteur vitesse au cours du vol",
+    "lesson": "Mouvement d'un projectile",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-le-vecteur-vitesse-au-cours-du-vol",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Le vecteur vitesse au cours du vol",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-le-vecteur-vitesse-au-cours-du-vol-q1",
+     "notion": "Le vecteur vitesse au cours du vol",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les grandeurs caractéristiques",
+    "lesson": "Trajectoire, flèche et portée",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-les-grandeurs-caracteristiques",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Les grandeurs caractéristiques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-les-grandeurs-caracteristiques-q1",
+     "notion": "Les grandeurs caractéristiques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le sommet et la flèche",
+    "lesson": "Trajectoire, flèche et portée",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-le-sommet-et-la-fleche",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Le sommet et la flèche",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-le-sommet-et-la-fleche-q1",
+     "notion": "Le sommet et la flèche",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le temps de vol et la portée",
+    "lesson": "Trajectoire, flèche et portée",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-le-temps-de-vol-et-la-portee",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Le temps de vol et la portée",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-le-temps-de-vol-et-la-portee-q1",
+     "notion": "Le temps de vol et la portée",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'angle de portée maximale",
+    "lesson": "Trajectoire, flèche et portée",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-l-angle-de-portee-maximale",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "L'angle de portée maximale",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-l-angle-de-portee-maximale-q1",
+     "notion": "L'angle de portée maximale",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le tir depuis une hauteur",
+    "lesson": "Trajectoire, flèche et portée",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-le-tir-depuis-une-hauteur",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Le tir depuis une hauteur",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-le-tir-depuis-une-hauteur-q1",
+     "notion": "Le tir depuis une hauteur",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le dispositif",
+    "lesson": "Chronophotographie d'un projectile",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-le-dispositif",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Le dispositif",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-le-dispositif-q1",
+     "notion": "Le dispositif",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Exploiter le tableau de mesures",
+    "lesson": "Chronophotographie d'un projectile",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-exploiter-le-tableau-de-mesures",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Exploiter le tableau de mesures",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-exploiter-le-tableau-de-mesures-q1",
+     "notion": "Exploiter le tableau de mesures",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Exemple complet",
+    "lesson": "Chronophotographie d'un projectile",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-exemple-complet",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Exemple complet",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-exemple-complet-q1",
+     "notion": "Exemple complet",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Vérifier la conservation de l'énergie",
+    "lesson": "Chronophotographie d'un projectile",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-verifier-la-conservation-de-l-energie",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Vérifier la conservation de l'énergie",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-verifier-la-conservation-de-l-energie-q1",
+     "notion": "Vérifier la conservation de l'énergie",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Sources d'erreur",
+    "lesson": "Chronophotographie d'un projectile",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-sources-d-erreur",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Sources d'erreur",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-sources-d-erreur-q1",
+     "notion": "Sources d'erreur",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La parabole de sûreté",
+    "lesson": "Approfondissement — Mouvements plans",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-la-parabole-de-surete",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "La parabole de sûreté",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-la-parabole-de-surete-q1",
+     "notion": "La parabole de sûreté",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'influence de la résistance de l'air",
+    "lesson": "Approfondissement — Mouvements plans",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-l-influence-de-la-resistance-de-l-air",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "L'influence de la résistance de l'air",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-l-influence-de-la-resistance-de-l-air-q1",
+     "notion": "L'influence de la résistance de l'air",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'effet Magnus",
+    "lesson": "Approfondissement — Mouvements plans",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-l-effet-magnus",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "L'effet Magnus",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-l-effet-magnus-q1",
+     "notion": "L'effet Magnus",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le mouvement dans un champ uniforme quelconque",
+    "lesson": "Approfondissement — Mouvements plans",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 1,
+    "target_new_questions": 0,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-champ-pesanteur-le-mouvement-dans-un-champ-uniforme-quel",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "qcu",
+   "title": "Le mouvement dans un champ uniforme quelconque",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-le-mouvement-dans-un-champ-uniforme-quel-q1",
+     "notion": "Le mouvement dans un champ uniforme quelconque",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "pc-svt-2026-rattrapage",
+     "pc-svt-2026-normale",
+     "pc-svt-2025-rattrapage",
+     "pc-svt-2025-normale",
+     "pc-svt-2024-rattrapage",
+     "pc-svt-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "pc-champ-pesanteur-probleme-1",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. pc-svt-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "pc-svt-2026-rattrapage",
+     "pc-svt-2026-normale",
+     "pc-svt-2025-rattrapage",
+     "pc-svt-2025-normale",
+     "pc-svt-2024-rattrapage",
+     "pc-svt-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "pc-champ-pesanteur-probleme-2",
+   "chapter": "pc-champ-pesanteur",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. pc-svt-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-champ-pesanteur-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "pc-champ-pesanteur-serie-1",
+   "title": "Mouvements plans dans un champ de pesanteur · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "pc-champ-pesanteur",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "pc-champ-pesanteur-serie-2",
+   "title": "Mouvements plans dans un champ de pesanteur · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "pc-champ-pesanteur",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "pc-champ-pesanteur-serie-3",
+   "title": "Mouvements plans dans un champ de pesanteur · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "pc-champ-pesanteur",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

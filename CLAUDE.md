@@ -22,7 +22,7 @@ src/app/                route (App Router)
 src/components/         UI (dashboard/sidebar, topbar, coach-avatar, math, theme-*)
 src/lib/                supabase clients, ai/gateway.ts (the ONLY place models are called)
 src/config/             pricing, tiers, limits, feature flags (no hardcoded config elsewhere)
-db/migrations/          SQL migrations (0001 schema … 0025 questions_notion) — run in Supabase SQL editor
+db/migrations/          SQL migrations (0001 schema … 0028 prep content packs) — run in Supabase SQL editor
 db/seed/                idempotent content seed batches (cours enrichment, QCU banks)
 data/                   exam content JSON (loaded by the import script)
 scripts/                import-content.mjs, generate-explanations.mjs
@@ -66,8 +66,27 @@ docs/                   product-spec.md, plan-day1.md, erd.mermaid
 - **Subject-name typography:** `SubjectName` in `src/components/subject-pad.tsx` — Yellowtail brush + SVG swash
   underline (`.subject-title` / `.subject-swash` in `globals.css`), used on cours/annales/exam/dashboard. Arabic
   falls back to Aref Ruqaa. Fonts loaded in `src/app/layout.tsx` via `next/font`.
+- **Espace de préparation** (`/dashboard/examens/preparation`): hub → `/preparation/<subject>?mode=notion|series|examens`
+- **Review surfacing + error journal (0030)**: `my_prep_stats()` (due + errors per subject) feeds `<PrepAlerts>` (dashboard home, prep hub, subject page); `my_errors(p_subject)` = questions whose latest attempt is wrong → `/dashboard/examens/erreurs`; replay via `pratique?errors=<subject|all>[&chapter=<id|__exam>&notion=<heading|__autres>]` (kind `review`). `0030b`: record_exam also feeds review_items. Cours notions show « M'entraîner sur cette notion » (→ prep runner) + « Test rapide »; wrong answers in the runner link « Revoir le cours ».
+  → runner `/dashboard/examens/pratique?chapter=&notion=` | `?serie=`. Same taxonomy as the cours: notions = lesson `##`
+  headings, grouped by ONE resolver `groupByNotion` in `src/lib/notions.ts` (also used by cours funnels). Progress via
+  `record_practice` RPC (attempts + chapter_mastery + XP `prep_*` + streak + `series_progress`, one-time série bonus ≥70 %).
+  Data layer `src/lib/prep.ts`. Examens tab reuses the session runner unchanged (chapter "— QCU" banks hidden there).
+- **Séries**: tables `series` / `series_items` / `series_progress` (0027). Auto séries (`auto:*` slugs: bilans, unités,
+  mixtes) rebuilt by `regenerate_auto_series()`; hand-made ones = `kind='custom'`.
+- **Prep content = JSON packs** `bacup.prep/v1` (spec `docs/content-packs.md`, template `data/_prep-pack-template.json`),
+  imported via **/admin/preparation** (Import JSON · Séries · Couverture/export) or `npm run import:prep` →
+  `import_prep_pack(pack, dry_run)` (0028). `ref` / `id` make re-imports update in place.
+- **Notion tags = exact cours headings** (2026-09-30 retag, `db/seed/notion_retag_20260930.sql`; old values in
+  `questions_notion_backup_20260930`). Maths chapter banks restored from `db/seed/exercise_bank_batch1.sql` as packs
+  `content/prep/maths-2bac-*-banque1.json` (6 original QCU per chapter — thin, needs more content).
+- **Prep v2 (0029)**: guided BAC problems (`exercises.kind='probleme'`, `figure`, `origin`), `questions.hint/methode/difficulty/part`,
+  `answer_options.why`; notion mastery ladder (`notionLevel` in `src/lib/prep.ts`: À découvrir → En cours → Acquis → Maîtrisé →
+  Niveau BAC); spaced review `review_items` (Leitner 0→1d→3d→7d, fed by `record_practice`, runner `?review=<subject|all>`).
+  Content brief for the content team: `docs/content-brief-preparation.md`; scaffolds `content/prep/scaffolds/**` (manifest);
+  gold-standard example `content/prep/examples/pc-rc-exemple-complet.json` (imported).
 - Calculette page (`/dashboard/calculette`). Bibliothèque, classement, monk mode, reminders, payments/admin.
-- Schema/migrations: `0001` … `0025`. Idempotent content seeds under `db/seed/`. AI gateway with cheap/strong routing.
+- Schema/migrations: `0001` … `0028` (0027/0028 applied to the live DB). Idempotent content seeds under `db/seed/`. AI gateway with cheap/strong routing.
 
 ## What's NEXT (candidates — nothing broken)
 1. **Content breadth/QA:** some chapters are still thinner than Maths; audit filière-by-filière and level them up.

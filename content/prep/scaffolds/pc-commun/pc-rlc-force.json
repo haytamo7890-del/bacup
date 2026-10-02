@@ -1,0 +1,1305 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "pc",
+ "track": null,
+ "_scaffold": {
+  "pack": "pc-commun",
+  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+  "priority": "P1",
+  "chapter": {
+   "code": "pc-rlc-force",
+   "name": "Circuit RLC en régime sinusoïdal forcé",
+   "domain": "physique",
+   "unit": "Électricité"
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Excitateur et résonateur",
+   "Grandeurs efficaces",
+   "Notation et déphasage",
+   "Le diagramme de Fresnel",
+   "Nature du circuit",
+   "Le phénomène",
+   "L'acuité de la résonance",
+   "La surtension",
+   "La puissance",
+   "Retour sur le diagramme de Fresnel",
+   "Comportement asymptotique et filtrage",
+   "Résonance de charge et résonance de tension",
+   "Analogie mécanique",
+   "Améliorer le facteur de puissance",
+   "Méthode 1 — Calculer $Z$, $I$ et $\\varphi$",
+   "Méthode 2 — Déterminer $L$, $C$ ou $r$ par la résonance",
+   "Méthode 3 — Exploiter une courbe de résonance",
+   "Méthode 4 — Exploiter un oscillogramme à deux voies",
+   "Méthode 5 — Bande passante, facteur de qualité et puissance"
+  ],
+  "methodes_du_cours": [
+   "Méthode 1 — Calculer $Z$, $I$ et $\\varphi$",
+   "Méthode 2 — Déterminer $L$, $C$ ou $r$ par la résonance",
+   "Méthode 3 — Exploiter une courbe de résonance",
+   "Méthode 4 — Exploiter un oscillogramme à deux voies",
+   "Méthode 5 — Bande passante, facteur de qualité et puissance"
+  ],
+  "existing_questions_total": 7,
+  "target_new_questions": 35,
+  "suggested_figures": [
+   "montage-rsf — Montage RLC en régime sinusoïdal forcé (GBF)",
+   "resonance-intensite — Courbe de résonance d'intensité I(f), maximum à f₀",
+   "rlc-regimes — Les trois régimes d'un circuit RLC (u_C au cours du temps)",
+   "montage-rc — Montage d'un circuit RC"
+  ],
+  "sources": [
+   {
+    "annale": "pc-svt-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2026-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2025-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2024-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2023-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2022-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2021-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2020-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2018-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2017-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2016-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2026-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2025-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2022-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2021-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2019-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2018-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2017-normale",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2016-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2015-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2014-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Excitateur et résonateur",
+    "lesson": "Régime sinusoïdal forcé & impédance",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-excitateur-et-resonateur",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Excitateur et résonateur",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-excitateur-et-resonateur-q1",
+     "notion": "Excitateur et résonateur",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Grandeurs efficaces",
+    "lesson": "Régime sinusoïdal forcé & impédance",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-grandeurs-efficaces",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Grandeurs efficaces",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-grandeurs-efficaces-q1",
+     "notion": "Grandeurs efficaces",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Notation et déphasage",
+    "lesson": "Régime sinusoïdal forcé & impédance",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-notation-et-dephasage",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Notation et déphasage",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-notation-et-dephasage-q1",
+     "notion": "Notation et déphasage",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le diagramme de Fresnel",
+    "lesson": "Régime sinusoïdal forcé & impédance",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-le-diagramme-de-fresnel",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Le diagramme de Fresnel",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-le-diagramme-de-fresnel-q1",
+     "notion": "Le diagramme de Fresnel",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Nature du circuit",
+    "lesson": "Régime sinusoïdal forcé & impédance",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-nature-du-circuit",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Nature du circuit",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-nature-du-circuit-q1",
+     "notion": "Nature du circuit",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le phénomène",
+    "lesson": "Résonance d'intensité",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-le-phenomene",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Le phénomène",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-le-phenomene-q1",
+     "notion": "Le phénomène",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'acuité de la résonance",
+    "lesson": "Résonance d'intensité",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 4,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-l-acuite-de-la-resonance",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "L'acuité de la résonance",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-l-acuite-de-la-resonance-q1",
+     "notion": "L'acuité de la résonance",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La surtension",
+    "lesson": "Résonance d'intensité",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-la-surtension",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "La surtension",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-la-surtension-q1",
+     "notion": "La surtension",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La puissance",
+    "lesson": "Résonance d'intensité",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-la-puissance",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "La puissance",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-la-puissance-q1",
+     "notion": "La puissance",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Retour sur le diagramme de Fresnel",
+    "lesson": "Approfondissement — RLC en régime sinusoïdal forcé",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-retour-sur-le-diagramme-de-fresnel",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Retour sur le diagramme de Fresnel",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-retour-sur-le-diagramme-de-fresnel-q1",
+     "notion": "Retour sur le diagramme de Fresnel",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Comportement asymptotique et filtrage",
+    "lesson": "Approfondissement — RLC en régime sinusoïdal forcé",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-comportement-asymptotique-et-filtrage",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Comportement asymptotique et filtrage",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-comportement-asymptotique-et-filtrage-q1",
+     "notion": "Comportement asymptotique et filtrage",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Résonance de charge et résonance de tension",
+    "lesson": "Approfondissement — RLC en régime sinusoïdal forcé",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-resonance-de-charge-et-resonance-de-tens",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Résonance de charge et résonance de tension",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-resonance-de-charge-et-resonance-de-tens-q1",
+     "notion": "Résonance de charge et résonance de tension",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Analogie mécanique",
+    "lesson": "Approfondissement — RLC en régime sinusoïdal forcé",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-analogie-mecanique",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Analogie mécanique",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-analogie-mecanique-q1",
+     "notion": "Analogie mécanique",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Améliorer le facteur de puissance",
+    "lesson": "Approfondissement — RLC en régime sinusoïdal forcé",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-force-ameliorer-le-facteur-de-puissance",
+   "chapter": "pc-rlc-force",
+   "kind": "qcu",
+   "title": "Améliorer le facteur de puissance",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-ameliorer-le-facteur-de-puissance-q1",
+     "notion": "Améliorer le facteur de puissance",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "pc-svt-2026-rattrapage",
+     "pc-svt-2026-normale",
+     "pc-svt-2025-rattrapage",
+     "pc-svt-2025-normale",
+     "pc-svt-2024-rattrapage",
+     "pc-svt-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "pc-rlc-force-probleme-1",
+   "chapter": "pc-rlc-force",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. pc-svt-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "pc-svt-2026-rattrapage",
+     "pc-svt-2026-normale",
+     "pc-svt-2025-rattrapage",
+     "pc-svt-2025-normale",
+     "pc-svt-2024-rattrapage",
+     "pc-svt-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "pc-rlc-force-probleme-2",
+   "chapter": "pc-rlc-force",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. pc-svt-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-rlc-force-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "pc-rlc-force-serie-1",
+   "title": "Circuit RLC en régime sinusoïdal forcé · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "pc-rlc-force",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "pc-rlc-force-serie-2",
+   "title": "Circuit RLC en régime sinusoïdal forcé · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "pc-rlc-force",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "pc-rlc-force-serie-3",
+   "title": "Circuit RLC en régime sinusoïdal forcé · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "pc-rlc-force",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1210 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "si",
+ "track": "sm_b",
+ "_scaffold": {
+  "pack": "si-smb",
+  "label": "Sciences de l'Ingénieur — SM-B",
+  "priority": "P2",
+  "chapter": {
+   "code": "si-analyse",
+   "name": "Analyse fonctionnelle et structurelle",
+   "domain": null,
+   "unit": null
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Partir du besoin, pas de la solution",
+   "Le diagramme « bête à cornes »",
+   "L'actigramme de la fonction globale",
+   "Le diagramme pieuvre",
+   "Le cahier des charges fonctionnel",
+   "Du fonctionnel au structurel",
+   "La chaîne d'énergie",
+   "La chaîne d'information",
+   "Le couplage des deux chaînes",
+   "Pourquoi l'analyse fonctionnelle existe",
+   "Les systèmes à plusieurs énergies",
+   "Lire un système qu'on ne connaît pas",
+   "Du fonctionnel au réel",
+   "Méthode 1 — Construire un diagramme pieuvre",
+   "Méthode 2 — Lire et construire un FAST",
+   "Méthode 3 — Lire un SADT",
+   "Méthode 4 — Identifier les blocs d'un système"
+  ],
+  "methodes_du_cours": [
+   "Méthode 1 — Construire un diagramme pieuvre",
+   "Méthode 2 — Lire et construire un FAST",
+   "Méthode 3 — Lire un SADT",
+   "Méthode 4 — Identifier les blocs d'un système"
+  ],
+  "existing_questions_total": 7,
+  "target_new_questions": 33,
+  "suggested_figures": [
+   "si-chaine — Chaîne d'énergie + chaîne d'information",
+   "si-capteur — Capteur — chaîne d'acquisition"
+  ],
+  "sources": [
+   {
+    "annale": "si-smb-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2025-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2025-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2025-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2024-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2024-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2024-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2023-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2023-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2023-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2022-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2022-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2022-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2021-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2021-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2021-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2020-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2020-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2020-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2019-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2019-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2019-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2018-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2018-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2018-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2017-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2017-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2017-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2016-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2016-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2016-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2015-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2015-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2015-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2015-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2014-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2014-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2014-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2014-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2013-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2013-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2013-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2013-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2013-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2013-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2012-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2012-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2012-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2012-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2012-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2012-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2011-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2011-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2011-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2011-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2011-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2011-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2010-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2010-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2010-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2010-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2010-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2010-normale.pdf"
+   },
+   {
+    "annale": "si-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-si-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "si-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-si-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "si-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-si-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "si-sm-2023-normale",
+    "sujet": "annales-propres/Sujet-si-sm-2023-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Partir du besoin, pas de la solution",
+    "lesson": "Analyse fonctionnelle",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-partir-du-besoin-pas-de-la-solution",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "Partir du besoin, pas de la solution",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-partir-du-besoin-pas-de-la-solution-q1",
+     "notion": "Partir du besoin, pas de la solution",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le diagramme « bête à cornes »",
+    "lesson": "Analyse fonctionnelle",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-le-diagramme-bete-a-cornes",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "Le diagramme « bête à cornes »",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-le-diagramme-bete-a-cornes-q1",
+     "notion": "Le diagramme « bête à cornes »",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'actigramme de la fonction globale",
+    "lesson": "Analyse fonctionnelle",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-l-actigramme-de-la-fonction-globale",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "L'actigramme de la fonction globale",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-l-actigramme-de-la-fonction-globale-q1",
+     "notion": "L'actigramme de la fonction globale",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le diagramme pieuvre",
+    "lesson": "Analyse fonctionnelle",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-le-diagramme-pieuvre",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "Le diagramme pieuvre",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-le-diagramme-pieuvre-q1",
+     "notion": "Le diagramme pieuvre",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le cahier des charges fonctionnel",
+    "lesson": "Analyse fonctionnelle",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-le-cahier-des-charges-fonctionnel",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "Le cahier des charges fonctionnel",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-le-cahier-des-charges-fonctionnel-q1",
+     "notion": "Le cahier des charges fonctionnel",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Du fonctionnel au structurel",
+    "lesson": "Chaîne d'énergie et chaîne d'information",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-du-fonctionnel-au-structurel",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "Du fonctionnel au structurel",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-du-fonctionnel-au-structurel-q1",
+     "notion": "Du fonctionnel au structurel",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La chaîne d'énergie",
+    "lesson": "Chaîne d'énergie et chaîne d'information",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-la-chaine-d-energie",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "La chaîne d'énergie",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-la-chaine-d-energie-q1",
+     "notion": "La chaîne d'énergie",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La chaîne d'information",
+    "lesson": "Chaîne d'énergie et chaîne d'information",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-la-chaine-d-information",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "La chaîne d'information",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-la-chaine-d-information-q1",
+     "notion": "La chaîne d'information",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le couplage des deux chaînes",
+    "lesson": "Chaîne d'énergie et chaîne d'information",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-le-couplage-des-deux-chaines",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "Le couplage des deux chaînes",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-le-couplage-des-deux-chaines-q1",
+     "notion": "Le couplage des deux chaînes",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Pourquoi l'analyse fonctionnelle existe",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-pourquoi-l-analyse-fonctionnelle-existe",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "Pourquoi l'analyse fonctionnelle existe",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-pourquoi-l-analyse-fonctionnelle-existe-q1",
+     "notion": "Pourquoi l'analyse fonctionnelle existe",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les systèmes à plusieurs énergies",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-les-systemes-a-plusieurs-energies",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "Les systèmes à plusieurs énergies",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-les-systemes-a-plusieurs-energies-q1",
+     "notion": "Les systèmes à plusieurs énergies",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Lire un système qu'on ne connaît pas",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-lire-un-systeme-qu-on-ne-connait-pas",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "Lire un système qu'on ne connaît pas",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-lire-un-systeme-qu-on-ne-connait-pas-q1",
+     "notion": "Lire un système qu'on ne connaît pas",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Du fonctionnel au réel",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-analyse-du-fonctionnel-au-reel",
+   "chapter": "si-analyse",
+   "kind": "qcu",
+   "title": "Du fonctionnel au réel",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-du-fonctionnel-au-reel-q1",
+     "notion": "Du fonctionnel au réel",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "si-smb-2025-rattrapage",
+     "si-smb-2025-normale",
+     "si-smb-2024-rattrapage",
+     "si-smb-2024-normale",
+     "si-smb-2023-rattrapage",
+     "si-smb-2023-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "si-analyse-probleme-1",
+   "chapter": "si-analyse",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. si-smb-2025-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-analyse-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-analyse-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "si-smb-2025-rattrapage",
+     "si-smb-2025-normale",
+     "si-smb-2024-rattrapage",
+     "si-smb-2024-normale",
+     "si-smb-2023-rattrapage",
+     "si-smb-2023-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "si-analyse-probleme-2",
+   "chapter": "si-analyse",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. si-smb-2025-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-analyse-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-analyse-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-analyse-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "si-analyse-serie-1",
+   "title": "Analyse fonctionnelle et structurelle · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "si-analyse",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "si-analyse-serie-2",
+   "title": "Analyse fonctionnelle et structurelle · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "si-analyse",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "si-analyse-serie-3",
+   "title": "Analyse fonctionnelle et structurelle · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "si-analyse",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

@@ -11,6 +11,7 @@ import { ProgressCurve } from "@/components/dashboard/progress-curve";
 import { subjectTheme } from "@/config/subjects";
 import { SubjectName } from "@/components/subject-pad";
 import { SubjectBanner } from "@/components/subject-banner";
+import { PrepAlerts } from "@/components/prep/prep-alerts";
 
 type Stats = {
   xp: number; level: number; streak: number; accuracy: number | null;
@@ -75,7 +76,7 @@ export default function DashboardHome() {
       const eTime = e0 ? Date.parse(e0.created_at) : 0;
       if (lTime === 0 && eTime === 0) setFresh(null);
       else if (lTime >= eTime && l0) setFresh({ kind: "cours", title: l0.chapters?.name ?? "Nouveau cours", sub: l0.title, href: "/dashboard/cours", subject: l0.chapters?.subjects?.code ?? l0.chapters?.subjects?.name ?? "" });
-      else if (e0) setFresh({ kind: "examen", title: e0.title ?? `Examen ${e0.year}`, sub: "Nouvel examen disponible", href: "/dashboard/examens/preparation", subject: e0.subjects?.code ?? e0.subjects?.name ?? "" });
+      else if (e0) setFresh({ kind: "examen", title: e0.title ?? `Examen ${e0.year}`, sub: "Nouvel examen disponible", href: e0.subjects?.code ? `/dashboard/examens/preparation/${e0.subjects.code}?mode=examens` : "/dashboard/examens/preparation", subject: e0.subjects?.code ?? e0.subjects?.name ?? "" });
 
       const { data: comp } = await supabase.from("lesson_completions").select("lesson_id");
       const doneIds = new Set((comp ?? []).map((r) => r.lesson_id as string));
@@ -126,6 +127,9 @@ export default function DashboardHome() {
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">{greeting}{firstName ? `, ${firstName}` : ""}.</h1>
         <p className="mt-1.5 text-neutral-500 dark:text-neutral-400">Voici où tu en es. Chaque QCM fait monter ces chiffres. 💪</p>
       </div>
+
+      {/* review engine — "À réviser aujourd'hui" + "Mes erreurs" */}
+      <PrepAlerts showEmpty />
 
       {/* BENTO — same asymmetric layout as the reference */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">

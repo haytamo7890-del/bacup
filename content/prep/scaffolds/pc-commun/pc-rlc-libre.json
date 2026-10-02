@@ -1,0 +1,1364 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "pc",
+ "track": null,
+ "_scaffold": {
+  "pack": "pc-commun",
+  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+  "priority": "P1",
+  "chapter": {
+   "code": "pc-rlc-libre",
+   "name": "Oscillations libres d'un circuit RLC",
+   "domain": "physique",
+   "unit": "Électricité"
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Le montage",
+   "L'équation différentielle",
+   "Les trois régimes",
+   "Le décrément logarithmique",
+   "L'oscillateur LC idéal",
+   "Les échanges d'énergie",
+   "Le circuit RLC réel : l'énergie diminue",
+   "L'analogie électromécanique",
+   "L'entretien des oscillations",
+   "Résistance critique et amortissement",
+   "Applications",
+   "Ce que l'on observe",
+   "Mesurer $T$ correctement",
+   "Exploiter l'amortissement",
+   "Sources d'erreur",
+   "Méthode 1 — Établir l'équation différentielle",
+   "Méthode 2 — Vérifier une solution sinusoïdale",
+   "Méthode 3 — Exploiter un oscillogramme",
+   "Méthode 4 — Le bilan énergétique",
+   "Méthode 5 — Reconnaître un régime, prévoir une évolution"
+  ],
+  "methodes_du_cours": [
+   "Méthode 1 — Établir l'équation différentielle",
+   "Méthode 2 — Vérifier une solution sinusoïdale",
+   "Méthode 3 — Exploiter un oscillogramme",
+   "Méthode 4 — Le bilan énergétique",
+   "Méthode 5 — Reconnaître un régime, prévoir une évolution"
+  ],
+  "existing_questions_total": 10,
+  "target_new_questions": 39,
+  "suggested_figures": [
+   "montage-rlc-libre — Montage RLC — oscillations libres (C chargé puis basculé sur L)",
+   "rlc-oscillation — Oscillations libres amorties d'un circuit RLC (régime pseudo-périodique)",
+   "rc-decharge — Décharge d'un condensateur — u_C(t) décroît",
+   "oscillations-amorties — Les trois régimes d'un oscillateur mécanique amorti",
+   "energie-oscillateur — Échanges Ec / Ep dans un oscillateur harmonique",
+   "rlc-regimes — Les trois régimes d'un circuit RLC (u_C au cours du temps)",
+   "montage-rc — Montage d'un circuit RC"
+  ],
+  "sources": [
+   {
+    "annale": "pc-svt-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2026-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2025-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2024-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2023-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2022-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2021-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2020-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2018-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2017-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2016-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2026-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2025-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2022-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2021-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2019-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2018-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2017-normale",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2016-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2015-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2014-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le montage",
+    "lesson": "La décharge oscillante d'un circuit RLC",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-le-montage",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Le montage",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-le-montage-q1",
+     "notion": "Le montage",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'équation différentielle",
+    "lesson": "La décharge oscillante d'un circuit RLC",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-l-equation-differentielle",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "L'équation différentielle",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-l-equation-differentielle-q1",
+     "notion": "L'équation différentielle",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les trois régimes",
+    "lesson": "La décharge oscillante d'un circuit RLC",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 3,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-les-trois-regimes",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Les trois régimes",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-les-trois-regimes-q1",
+     "notion": "Les trois régimes",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le décrément logarithmique",
+    "lesson": "La décharge oscillante d'un circuit RLC",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-le-decrement-logarithmique",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Le décrément logarithmique",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-le-decrement-logarithmique-q1",
+     "notion": "Le décrément logarithmique",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'oscillateur LC idéal",
+    "lesson": "Oscillateur LC & aspects énergétiques",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 4,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-l-oscillateur-lc-ideal",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "L'oscillateur LC idéal",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-l-oscillateur-lc-ideal-q1",
+     "notion": "L'oscillateur LC idéal",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les échanges d'énergie",
+    "lesson": "Oscillateur LC & aspects énergétiques",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-les-echanges-d-energie",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Les échanges d'énergie",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-les-echanges-d-energie-q1",
+     "notion": "Les échanges d'énergie",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le circuit RLC réel : l'énergie diminue",
+    "lesson": "Oscillateur LC & aspects énergétiques",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-le-circuit-rlc-reel-l-energie-diminue",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Le circuit RLC réel : l'énergie diminue",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-le-circuit-rlc-reel-l-energie-diminue-q1",
+     "notion": "Le circuit RLC réel : l'énergie diminue",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Ce que l'on observe",
+    "lesson": "Observation à l'oscilloscope",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-ce-que-l-on-observe",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Ce que l'on observe",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-ce-que-l-on-observe-q1",
+     "notion": "Ce que l'on observe",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Mesurer $T$ correctement",
+    "lesson": "Observation à l'oscilloscope",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-mesurer-t-correctement",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Mesurer $T$ correctement",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-mesurer-t-correctement-q1",
+     "notion": "Mesurer $T$ correctement",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Exploiter l'amortissement",
+    "lesson": "Observation à l'oscilloscope",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-exploiter-l-amortissement",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Exploiter l'amortissement",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-exploiter-l-amortissement-q1",
+     "notion": "Exploiter l'amortissement",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Sources d'erreur",
+    "lesson": "Observation à l'oscilloscope",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-sources-d-erreur",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Sources d'erreur",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-sources-d-erreur-q1",
+     "notion": "Sources d'erreur",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'analogie électromécanique",
+    "lesson": "Approfondissement — Oscillations libres RLC",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-l-analogie-electromecanique",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "L'analogie électromécanique",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-l-analogie-electromecanique-q1",
+     "notion": "L'analogie électromécanique",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'entretien des oscillations",
+    "lesson": "Approfondissement — Oscillations libres RLC",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-l-entretien-des-oscillations",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "L'entretien des oscillations",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-l-entretien-des-oscillations-q1",
+     "notion": "L'entretien des oscillations",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Résistance critique et amortissement",
+    "lesson": "Approfondissement — Oscillations libres RLC",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-resistance-critique-et-amortissement",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Résistance critique et amortissement",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-resistance-critique-et-amortissement-q1",
+     "notion": "Résistance critique et amortissement",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Applications",
+    "lesson": "Approfondissement — Oscillations libres RLC",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-rlc-libre-applications",
+   "chapter": "pc-rlc-libre",
+   "kind": "qcu",
+   "title": "Applications",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-applications-q1",
+     "notion": "Applications",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "pc-svt-2026-rattrapage",
+     "pc-svt-2026-normale",
+     "pc-svt-2025-rattrapage",
+     "pc-svt-2025-normale",
+     "pc-svt-2024-rattrapage",
+     "pc-svt-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "pc-rlc-libre-probleme-1",
+   "chapter": "pc-rlc-libre",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. pc-svt-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "pc-svt-2026-rattrapage",
+     "pc-svt-2026-normale",
+     "pc-svt-2025-rattrapage",
+     "pc-svt-2025-normale",
+     "pc-svt-2024-rattrapage",
+     "pc-svt-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "pc-rlc-libre-probleme-2",
+   "chapter": "pc-rlc-libre",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. pc-svt-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-rlc-libre-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "pc-rlc-libre-serie-1",
+   "title": "Oscillations libres d'un circuit RLC · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "pc-rlc-libre",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "pc-rlc-libre-serie-2",
+   "title": "Oscillations libres d'un circuit RLC · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "pc-rlc-libre",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "pc-rlc-libre-serie-3",
+   "title": "Oscillations libres d'un circuit RLC · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "pc-rlc-libre",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

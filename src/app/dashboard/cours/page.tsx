@@ -10,7 +10,9 @@ import { Tex } from "@/components/math";
 import { CourseContent } from "@/components/course/course-content";
 import { FlashcardDeck } from "@/components/course/flashcards";
 import { PracticeQuiz, type PQItem } from "@/components/course/practice-quiz";
-import { notionSlug } from "@/config/notion-map";
+import { questionsForNotion, groupByNotion, lessonNotions } from "@/lib/notions";
+import { prepRoutes } from "@/lib/prep";
+import { filiereChips, SHORT } from "@/lib/filieres";
 import { curriculumFor, type SubjectRef } from "@/config/curriculum";
 import { subjectTheme } from "@/config/subjects";
 import { SubjectPad, PadChip, subjectIcon, SubjectAmbient } from "@/components/subject-pad";
@@ -28,9 +30,6 @@ type SubjectCard = { id: string; code: string; name: string; coeff: number | nul
 
 type Kind = "cours" | "resume";
 
-// Science filière order for the 2bac chips (own filière is prepended).
-const SCIENCE_ORDER = ["sm_a", "sm_b", "pc", "svt", "eco"];
-const SHORT: Record<string, string> = { sm_a: "SM-A", sm_b: "SM-B", pc: "PC", svt: "SVT", eco: "Éco" };
 
 export default function CoursPage() {
   const supabase = createBrowserSupabase();
@@ -81,21 +80,17 @@ export default function CoursPage() {
   // Shared by practiceItems (what the quiz shows) and canPractice (whether to show
   // the CTA at all) so a section with no exercises simply hides its funnel — never
   // the old behaviour of falling back to the entire chapter bank.
-  const selectForNotion = useCallback((notion: string): PQItem[] => {
-    const available = new Set(chapterItems.map((q) => q.notion).filter(Boolean) as string[]);
-    const slug = notionSlug(notion, available);
-    let sel = slug ? chapterItems.filter((q) => q.notion === slug) : [];
-    if (!sel.length) {
-      const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9؀-ۿ ]/g, " ").replace(/\s+/g, " ").trim();
-      const h = norm(notion);
-      sel = chapterItems.filter((q) => {
-        if (!q.notion) return false;
-        const n = norm(q.notion);
-        return n.length > 2 && (h.includes(n) || n.includes(h));
-      });
-    }
-    return sel;
-  }, [chapterItems]);
+  // Same grouping as the Espace de préparation ("Par notion"): exact tag match first,
+  // then closest heading by shared words — so a funnel and its prep notion hold the same questions.
+  const notionGroups = useMemo(() => {
+    const heads = lessons.filter((l) => l.kind !== "resume").flatMap((l) => lessonNotions(l.body).map((n) => ({ notion: n, lessonId: l.id })));
+    const items = chapterItems.map((q, i) => ({ ...q, id: q.id ?? `i${i}` }));
+    return groupByNotion(heads, items);
+  }, [lessons, chapterItems]);
+  const selectForNotion = useCallback(
+    (notion: string): PQItem[] => notionGroups.find((g) => g.notion === notion)?.items ?? questionsForNotion(notion, chapterItems),
+    [notionGroups, chapterItems],
+  );
 
   const practiceItems = useMemo<PQItem[]>(() => {
     if (practiceNotion === null) return [];
@@ -138,6 +133,22 @@ export default function CoursPage() {
       setTrackIdByCode(tId); setTrackNameByCode(tName);
       setChapters((chs ?? []) as Chapter[]);
       setLoading(false);
+
+      // Deep link from the Espace de préparation: /dashboard/cours?chapter=<id> opens that cours.
+      const deep = new URLSearchParams(window.location.search).get("chapter");
+      const dc = deep ? ((chs ?? []) as Chapter[]).find((c) => c.id === deep) : undefined;
+      const ds = dc ? sById.get(dc.subject_id) : undefined;
+      if (dc && ds) {
+        const trackCode = dc.track_id ? [...tId.entries()].find(([, id]) => id === dc.track_id)?.[0] ?? tc : tc;
+        const trackId = trackCode ? tId.get(trackCode) ?? null : null;
+        const subjChapters = ((chs ?? []) as Chapter[])
+          .filter((c) => c.subject_id === ds.id && (c.track_id === trackId || c.track_id == null))
+          .sort((a, b) => a.position - b.position);
+        const coeff = curriculumFor(lc, trackCode)?.find((r) => r.code === ds.code)?.coeff ?? null;
+        setFiliere(trackCode);
+        setSubject({ id: ds.id, code: ds.code, name: ds.name, coeff, chapters: subjChapters });
+        await openChapterKind(dc, "cours");
+      }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -187,29 +198,10 @@ export default function CoursPage() {
 
   const is2bac = levelCode === "2bac";
 
-  const chips = useMemo(() => {
-    if (!is2bac || !ownTrack) return [];
-    // SM-A and SM-B sit the SAME papers → collapse to one "SM" chip.
-    const groupOf = (c: string) => (c === "sm_a" || c === "sm_b") ? "sm" : c;
-    const smRep = (ownTrack === "sm_a" || ownTrack === "sm_b") ? ownTrack : "sm_b";
-    const ordered = [ownTrack, ...SCIENCE_ORDER.filter((c) => c !== ownTrack)];
-    const seen = new Set<string>();
-    const out: { code: string; label: string; name: string }[] = [];
-    for (const c of ordered) {
-      const g = groupOf(c);
-      if (seen.has(g)) continue;
-      if (g === "sm") {
-        if (!trackIdByCode.has("sm_a") && !trackIdByCode.has("sm_b")) continue;
-        seen.add(g);
-        out.push({ code: smRep, label: "SM", name: "Sciences Mathématiques (A & B)" });
-      } else {
-        if (!trackIdByCode.has(c)) continue;
-        seen.add(g);
-        out.push({ code: c, label: SHORT[c] ?? c.toUpperCase(), name: trackNameByCode.get(c) ?? c });
-      }
-    }
-    return out;
-  }, [is2bac, ownTrack, trackIdByCode, trackNameByCode]);
+  const chips = useMemo(
+    () => (is2bac ? filiereChips(ownTrack, trackIdByCode, trackNameByCode) : []),
+    [is2bac, ownTrack, trackIdByCode, trackNameByCode],
+  );
 
   // Subjects for the selected filière (curriculum order), each with its chapters.
   const subjectCards = useMemo<SubjectCard[]>(() => {
@@ -279,6 +271,7 @@ export default function CoursPage() {
       const solByQ = new Map<string, string>();
       for (const s of (sRows ?? []) as { question_id: string; body: string }[]) solByQ.set(s.question_id, s.body);
       setChapterItems(qs.map((q) => ({
+        id: q.id,
         statement: q.statement,
         options: (optsByQ.get(q.id) ?? []).sort((a, b) => a.position - b.position).map((o) => ({ label: o.label, correct: o.correct })),
         solution: solByQ.get(q.id),
@@ -371,7 +364,7 @@ export default function CoursPage() {
                 <div className="h-2 rounded-full bg-black/[0.06] dark:bg-white/[0.08] overflow-hidden"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${pct}%` }} /></div>
               </div>
               <button onClick={() => setDeckOpen(true)} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full glass hover:-translate-y-0.5 transition"><Sparkles className="w-4 h-4 text-arctic-blue dark:text-arctic-cyan" /> Flashcards</button>
-              <button onClick={() => router.push("/dashboard/examens/preparation")} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white hover:brightness-105 transition"><FileText className="w-4 h-4" /> S&apos;entraîner</button>
+              <button onClick={() => router.push(subject ? prepRoutes.subject(subject.code, { f: filiere, mode: "notion", chapter: chapter.id }) : prepRoutes.hub())} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white hover:brightness-105 transition"><FileText className="w-4 h-4" /> S&apos;entraîner</button>
             </div>
           );
         })()}
@@ -424,7 +417,7 @@ export default function CoursPage() {
               <div key={l.id} className="glass rounded-3xl p-7">
                 <h3 dir="auto" className="text-lg font-bold tracking-tight mb-2"><Tex>{l.title}</Tex></h3>
                 <NotionMeta lesson={l} />
-                <CourseContent body={l.body ?? ""} lessonId={l.id} onProgress={(m, t) => onLessonProg(l.id, m, t)} onPractice={chapterItems.length ? (notion) => setPracticeNotion(notion) : undefined} canPractice={canPractice} />
+                <CourseContent body={l.body ?? ""} lessonId={l.id} onProgress={(m, t) => onLessonProg(l.id, m, t)} onPractice={chapterItems.length ? (notion) => setPracticeNotion(notion) : undefined} canPractice={canPractice} onTrain={chapter ? (notion) => router.push(prepRoutes.notion(chapter.id, notion)) : undefined} />
                 <div className="mt-5 pt-4 border-t border-neutral-200/60 dark:border-neutral-800 flex justify-end">
                   {completed.has(l.id) ? (
                     <span className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-500">

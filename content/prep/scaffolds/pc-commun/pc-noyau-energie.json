@@ -1,0 +1,1197 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "pc",
+ "track": null,
+ "_scaffold": {
+  "pack": "pc-commun",
+  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+  "priority": "P1",
+  "chapter": {
+   "code": "pc-noyau-energie",
+   "name": "Noyaux, masse et énergie",
+   "domain": "physique",
+   "unit": "Transformations nucléaires"
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "L'équivalence masse–énergie",
+   "Le défaut de masse",
+   "Énergie de liaison",
+   "La courbe d'Aston",
+   "Le bilan d'énergie d'une réaction nucléaire",
+   "La fission nucléaire",
+   "La fusion nucléaire",
+   "Comparaison et ordres de grandeur",
+   "La réaction en chaîne et son contrôle",
+   "La fusion : dans les étoiles et sur Terre",
+   "Les déchets et la question des durées",
+   "Applications et bilan",
+   "Méthode 1 — Calculer $\\Delta m$, $E_{\\ell}$ et $E_{\\ell}/A$",
+   "Méthode 2 — Classer des noyaux par stabilité",
+   "Méthode 3 — Bilan d'énergie par les masses",
+   "Méthode 4 — Bilan d'énergie par les énergies de liaison",
+   "Méthode 5 — Passer de l'échelle du noyau à l'échelle du gramme"
+  ],
+  "methodes_du_cours": [
+   "Méthode 1 — Calculer $\\Delta m$, $E_{\\ell}$ et $E_{\\ell}/A$",
+   "Méthode 2 — Classer des noyaux par stabilité",
+   "Méthode 3 — Bilan d'énergie par les masses",
+   "Méthode 4 — Bilan d'énergie par les énergies de liaison",
+   "Méthode 5 — Passer de l'échelle du noyau à l'échelle du gramme"
+  ],
+  "existing_questions_total": 5,
+  "target_new_questions": 31,
+  "suggested_figures": [
+   "chute-fluide-forces — Bilan des forces sur un corps tombant dans un fluide",
+   "pendule-elastique — Pendule élastique horizontal (masse-ressort)"
+  ],
+  "sources": [
+   {
+    "annale": "pc-svt-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2026-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2025-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2024-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2023-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2022-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2021-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2020-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2018-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2017-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2016-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2026-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2025-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2022-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2021-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2019-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2018-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2017-normale",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2016-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2015-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2014-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'équivalence masse–énergie",
+    "lesson": "Défaut de masse & énergie de liaison",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-l-equivalence-masseenergie",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "L'équivalence masse–énergie",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-l-equivalence-masseenergie-q1",
+     "notion": "L'équivalence masse–énergie",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le défaut de masse",
+    "lesson": "Défaut de masse & énergie de liaison",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-le-defaut-de-masse",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "Le défaut de masse",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-le-defaut-de-masse-q1",
+     "notion": "Le défaut de masse",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Énergie de liaison",
+    "lesson": "Défaut de masse & énergie de liaison",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-energie-de-liaison",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "Énergie de liaison",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-energie-de-liaison-q1",
+     "notion": "Énergie de liaison",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La courbe d'Aston",
+    "lesson": "Défaut de masse & énergie de liaison",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-la-courbe-d-aston",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "La courbe d'Aston",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-la-courbe-d-aston-q1",
+     "notion": "La courbe d'Aston",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le bilan d'énergie d'une réaction nucléaire",
+    "lesson": "Fission, fusion & bilan d'énergie",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-le-bilan-d-energie-d-une-reaction-nuclea",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "Le bilan d'énergie d'une réaction nucléaire",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-le-bilan-d-energie-d-une-reaction-nuclea-q1",
+     "notion": "Le bilan d'énergie d'une réaction nucléaire",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La fission nucléaire",
+    "lesson": "Fission, fusion & bilan d'énergie",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-la-fission-nucleaire",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "La fission nucléaire",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-la-fission-nucleaire-q1",
+     "notion": "La fission nucléaire",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La fusion nucléaire",
+    "lesson": "Fission, fusion & bilan d'énergie",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-la-fusion-nucleaire",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "La fusion nucléaire",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-la-fusion-nucleaire-q1",
+     "notion": "La fusion nucléaire",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Comparaison et ordres de grandeur",
+    "lesson": "Fission, fusion & bilan d'énergie",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-comparaison-et-ordres-de-grandeur",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "Comparaison et ordres de grandeur",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-comparaison-et-ordres-de-grandeur-q1",
+     "notion": "Comparaison et ordres de grandeur",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La réaction en chaîne et son contrôle",
+    "lesson": "Approfondissement — Noyaux, masse et énergie",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-la-reaction-en-chaine-et-son-controle",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "La réaction en chaîne et son contrôle",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-la-reaction-en-chaine-et-son-controle-q1",
+     "notion": "La réaction en chaîne et son contrôle",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La fusion : dans les étoiles et sur Terre",
+    "lesson": "Approfondissement — Noyaux, masse et énergie",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-la-fusion-dans-les-etoiles-et-sur-terre",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "La fusion : dans les étoiles et sur Terre",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-la-fusion-dans-les-etoiles-et-sur-terre-q1",
+     "notion": "La fusion : dans les étoiles et sur Terre",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les déchets et la question des durées",
+    "lesson": "Approfondissement — Noyaux, masse et énergie",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-les-dechets-et-la-question-des-durees",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "Les déchets et la question des durées",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-les-dechets-et-la-question-des-durees-q1",
+     "notion": "Les déchets et la question des durées",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Applications et bilan",
+    "lesson": "Approfondissement — Noyaux, masse et énergie",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-noyau-energie-applications-et-bilan",
+   "chapter": "pc-noyau-energie",
+   "kind": "qcu",
+   "title": "Applications et bilan",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-applications-et-bilan-q1",
+     "notion": "Applications et bilan",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "pc-svt-2026-rattrapage",
+     "pc-svt-2026-normale",
+     "pc-svt-2025-rattrapage",
+     "pc-svt-2025-normale",
+     "pc-svt-2024-rattrapage",
+     "pc-svt-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "pc-noyau-energie-probleme-1",
+   "chapter": "pc-noyau-energie",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. pc-svt-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "pc-svt-2026-rattrapage",
+     "pc-svt-2026-normale",
+     "pc-svt-2025-rattrapage",
+     "pc-svt-2025-normale",
+     "pc-svt-2024-rattrapage",
+     "pc-svt-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "pc-noyau-energie-probleme-2",
+   "chapter": "pc-noyau-energie",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. pc-svt-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-noyau-energie-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "pc-noyau-energie-serie-1",
+   "title": "Noyaux, masse et énergie · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "pc-noyau-energie",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "pc-noyau-energie-serie-2",
+   "title": "Noyaux, masse et énergie · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "pc-noyau-energie",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "pc-noyau-energie-serie-3",
+   "title": "Noyaux, masse et énergie · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "pc-noyau-energie",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

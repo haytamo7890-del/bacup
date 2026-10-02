@@ -11,21 +11,40 @@ import {
 } from "lucide-react";
 
 /** Interactive context: mastery toggles + the practice-overlay launcher (funnels). */
-const InteractiveCtx = createContext<{ mastered: Set<string>; toggle: (k: string) => void; practice?: (notion: string) => void; canPractice?: (notion: string) => boolean } | null>(null);
+const InteractiveCtx = createContext<{ mastered: Set<string>; toggle: (k: string) => void; practice?: (notion: string) => void; canPractice?: (notion: string) => boolean; train?: (notion: string) => void } | null>(null);
 
 /** Funnel CTA — opens the inline practice overlay for a notion, then resumes the cours. */
-function FunnelCTA({ notion, onClick }: { notion: string; onClick: () => void }) {
-  return (
-    <button onClick={onClick} className="mt-4 w-full group rounded-2xl border border-arctic-blue/30 bg-gradient-to-r from-arctic-blue/[0.07] to-arctic-cyan/[0.04] px-4 py-3 flex items-center justify-between gap-3 hover:border-arctic-blue/60 hover:shadow-md hover:shadow-arctic-blue/10 transition">
-      <span className="flex items-center gap-2.5 text-left min-w-0">
-        <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center shrink-0 shadow-sm shadow-arctic-blue/25"><Target className="w-4 h-4" /></span>
-        <span className="min-w-0">
-          <span className="block text-sm font-bold tracking-tight">Teste-toi sur cette notion</span>
-          <span className="block text-[12px] text-neutral-500 dark:text-neutral-400 truncate">Exercices corrigés · tu reviens ensuite au cours</span>
+function FunnelCTA({ notion, onClick, onTrain }: { notion: string; onClick: () => void; onTrain?: () => void }) {
+  // Primary: the Espace de préparation runner for this notion (records XP, mastery level, review queue).
+  // Secondary: a quick inline self-test that keeps the student on the cours.
+  if (!onTrain) {
+    return (
+      <button onClick={onClick} className="mt-4 w-full group rounded-2xl border border-arctic-blue/30 bg-gradient-to-r from-arctic-blue/[0.07] to-arctic-cyan/[0.04] px-4 py-3 flex items-center justify-between gap-3 hover:border-arctic-blue/60 hover:shadow-md hover:shadow-arctic-blue/10 transition">
+        <span className="flex items-center gap-2.5 text-left min-w-0">
+          <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center shrink-0 shadow-sm shadow-arctic-blue/25"><Target className="w-4 h-4" /></span>
+          <span className="min-w-0">
+            <span className="block text-sm font-bold tracking-tight">Teste-toi sur cette notion</span>
+            <span className="block text-[12px] text-neutral-500 dark:text-neutral-400 truncate">Exercices corrigés · tu reviens ensuite au cours</span>
+          </span>
         </span>
-      </span>
-      <ChevronRight className="w-5 h-5 text-arctic-blue dark:text-arctic-cyan shrink-0 group-hover:translate-x-0.5 transition" />
-    </button>
+        <ChevronRight className="w-5 h-5 text-arctic-blue dark:text-arctic-cyan shrink-0 group-hover:translate-x-0.5 transition" />
+      </button>
+    );
+  }
+  return (
+    <div className="mt-4 w-full rounded-2xl border border-arctic-blue/30 bg-gradient-to-r from-arctic-blue/[0.07] to-arctic-cyan/[0.04] p-2 flex flex-wrap items-center gap-2">
+      <button onClick={onTrain} title={notion} className="flex-1 min-w-[13rem] group rounded-xl px-2.5 py-2 flex items-center gap-2.5 text-left min-w-0 hover:bg-arctic-blue/[0.06] transition">
+        <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center shrink-0 shadow-sm shadow-arctic-blue/25"><Target className="w-4.5 h-4.5" /></span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-sm font-bold tracking-tight">M&apos;entraîner sur cette notion</span>
+          <span className="block text-[12px] text-neutral-500 dark:text-neutral-400 truncate">Espace de préparation · XP, niveau de maîtrise, révision espacée</span>
+        </span>
+        <ChevronRight className="w-5 h-5 text-arctic-blue dark:text-arctic-cyan shrink-0 group-hover:translate-x-0.5 transition" />
+      </button>
+      <button onClick={onClick} className="shrink-0 ml-auto text-[12px] font-semibold px-3.5 py-2 rounded-xl bg-white/60 dark:bg-white/[0.06] text-neutral-600 dark:text-neutral-300 hover:text-arctic-blue dark:hover:text-arctic-cyan transition">
+        Test rapide
+      </button>
+    </div>
   );
 }
 
@@ -34,7 +53,7 @@ function FunnelBlock({ notion }: { notion: string }) {
   const ctx = useContext(InteractiveCtx);
   if (!ctx?.practice) return null;
   if (ctx.canPractice && !ctx.canPractice(notion)) return null; // hide when the notion has no exercises yet
-  return <FunnelCTA notion={notion} onClick={() => ctx.practice!(notion)} />;
+  return <FunnelCTA notion={notion} onClick={() => ctx.practice!(notion)} onTrain={ctx.train ? () => ctx.train!(notion) : undefined} />;
 }
 
 /* ------------------------------ inline text ------------------------------ */
@@ -296,7 +315,7 @@ export function extractCards(body: string): { kind: string; title?: string; bloc
   return cards;
 }
 
-export function CourseContent({ body, lessonId, onProgress, onPractice, canPractice }: { body: string; lessonId?: string; onProgress?: (mastered: number, total: number) => void; onPractice?: (notion: string) => void; canPractice?: (notion: string) => boolean }) {
+export function CourseContent({ body, lessonId, onProgress, onPractice, canPractice, onTrain }: { body: string; lessonId?: string; onProgress?: (mastered: number, total: number) => void; onPractice?: (notion: string) => void; canPractice?: (notion: string) => boolean; onTrain?: (notion: string) => void }) {
   const supabase = useMemo(() => createBrowserSupabase(), []);
   const sections = useMemo(() => parseSections(body), [body]);
   const titled = useMemo(() => sections.filter((s) => s.title), [sections]);
@@ -347,7 +366,7 @@ export function CourseContent({ body, lessonId, onProgress, onPractice, canPract
   const rtl = /[؀-ۿ]/.test(body); // Arabic → full right-to-left layout
 
   return (
-    <InteractiveCtx.Provider value={{ mastered, toggle, practice: onPractice, canPractice }}>
+    <InteractiveCtx.Provider value={{ mastered, toggle, practice: onPractice, canPractice, train: onTrain }}>
     <div className="text-[15px]" dir={rtl ? "rtl" : "ltr"}>
       {hasToc && (
         <div className="mb-5 rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.03] p-4">
@@ -385,7 +404,7 @@ export function CourseContent({ body, lessonId, onProgress, onPractice, canPract
             </summary>
             <div className="px-4 pb-4 pt-1">
               <Blocks blocks={s.blocks} />
-              {onPractice && (!canPractice || canPractice(s.title!)) && <FunnelCTA notion={s.title!} onClick={() => onPractice(s.title!)} />}
+              {onPractice && (!canPractice || canPractice(s.title!)) && <FunnelCTA notion={s.title!} onClick={() => onPractice(s.title!)} onTrain={onTrain ? () => onTrain(s.title!) : undefined} />}
             </div>
           </details>
         ) : (

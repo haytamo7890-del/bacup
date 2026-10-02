@@ -1,0 +1,866 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "svt",
+ "track": "pc",
+ "_scaffold": {
+  "pack": "svt-pc",
+  "label": "SVT — filière PC",
+  "priority": "P1",
+  "chapter": {
+   "code": "svtp-radioactivite",
+   "name": "Matières radioactives et énergie nucléaire",
+   "domain": "Environnement",
+   "unit": "Utilisation des substances"
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Radioactivité naturelle et artificielle",
+   "La demi-vie",
+   "Les applications",
+   "Les dangers",
+   "Le fonctionnement d'une centrale",
+   "Les alternatives écologiques",
+   "Les accidents et la contamination",
+   "Le stockage des déchets à vie longue",
+   "Méthode 1 — Les calculs de demi-vie",
+   "Méthode 2 — Lire une courbe de décroissance",
+   "Méthode 3 — Classer les déchets nucléaires",
+   "Méthode 4 — Argumenter sur le nucléaire"
+  ],
+  "methodes_du_cours": [
+   "Méthode 1 — Les calculs de demi-vie",
+   "Méthode 2 — Lire une courbe de décroissance",
+   "Méthode 3 — Classer les déchets nucléaires",
+   "Méthode 4 — Argumenter sur le nucléaire"
+  ],
+  "existing_questions_total": 6,
+  "target_new_questions": 14,
+  "suggested_figures": [
+   "svt-chaines-types — Les trois types de chaines de montagnes recentes"
+  ],
+  "sources": [
+   {
+    "annale": "svt-pc-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-svt-pc-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2026-normale",
+    "sujet": "annales-propres/Sujet-svt-pc-2026-normale.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2026-normale.pdf"
+   },
+   {
+    "annale": "svt-pc-2025-rattrapage",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2025-normale",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2025-normale.pdf"
+   },
+   {
+    "annale": "svt-pc-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-svt-pc-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2024-normale",
+    "sujet": "annales-propres/Sujet-svt-pc-2024-normale.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2024-normale.pdf"
+   },
+   {
+    "annale": "svt-pc-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-svt-pc-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2023-normale",
+    "sujet": "annales-propres/Sujet-svt-pc-2023-normale.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2023-normale.pdf"
+   },
+   {
+    "annale": "svt-pc-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-svt-pc-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2022-normale",
+    "sujet": "annales-propres/Sujet-svt-pc-2022-normale.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2022-normale.pdf"
+   },
+   {
+    "annale": "svt-pc-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-svt-pc-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2021-normale",
+    "sujet": "annales-propres/Sujet-svt-pc-2021-normale.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2021-normale.pdf"
+   },
+   {
+    "annale": "svt-pc-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-svt-pc-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2020-normale",
+    "sujet": "annales-propres/Sujet-svt-pc-2020-normale.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2020-normale.pdf"
+   },
+   {
+    "annale": "svt-pc-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-svt-pc-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2019-normale",
+    "sujet": "annales-propres/Sujet-svt-pc-2019-normale.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2019-normale.pdf"
+   },
+   {
+    "annale": "svt-pc-2018-rattrapage",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2018-normale",
+    "sujet": "annales-propres/Sujet-svt-pc-2018-normale.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2018-normale.pdf"
+   },
+   {
+    "annale": "svt-pc-2017-rattrapage",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2017-normale",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2017-normale.pdf"
+   },
+   {
+    "annale": "svt-pc-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-svt-pc-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "svt-pc-2016-normale",
+    "sujet": "annales-propres/Sujet-svt-pc-2016-normale.pdf",
+    "corrige": "corriges-propres/svt/Corrige-svt-pc-2016-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Radioactivité naturelle et artificielle",
+    "lesson": "Matières radioactives et énergie nucléaire",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "svt-svtp-radioactivite-radioactivite-naturelle-et-artificielle",
+   "chapter": "svtp-radioactivite",
+   "kind": "qcu",
+   "title": "Radioactivité naturelle et artificielle",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-radioactivite-naturelle-et-artificielle-q1",
+     "notion": "Radioactivité naturelle et artificielle",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La demi-vie",
+    "lesson": "Matières radioactives et énergie nucléaire",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "svt-svtp-radioactivite-la-demi-vie",
+   "chapter": "svtp-radioactivite",
+   "kind": "qcu",
+   "title": "La demi-vie",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-la-demi-vie-q1",
+     "notion": "La demi-vie",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les applications",
+    "lesson": "Matières radioactives et énergie nucléaire",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "svt-svtp-radioactivite-les-applications",
+   "chapter": "svtp-radioactivite",
+   "kind": "qcu",
+   "title": "Les applications",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-les-applications-q1",
+     "notion": "Les applications",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les dangers",
+    "lesson": "Matières radioactives et énergie nucléaire",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "svt-svtp-radioactivite-les-dangers",
+   "chapter": "svtp-radioactivite",
+   "kind": "qcu",
+   "title": "Les dangers",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-les-dangers-q1",
+     "notion": "Les dangers",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le fonctionnement d'une centrale",
+    "lesson": "Approfondissement — centrale, contamination et gestion des déchets",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 1,
+    "target_new_questions": 0,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "svt-svtp-radioactivite-le-fonctionnement-d-une-centrale",
+   "chapter": "svtp-radioactivite",
+   "kind": "qcu",
+   "title": "Le fonctionnement d'une centrale",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-le-fonctionnement-d-une-centrale-q1",
+     "notion": "Le fonctionnement d'une centrale",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les alternatives écologiques",
+    "lesson": "Approfondissement — centrale, contamination et gestion des déchets",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "svt-svtp-radioactivite-les-alternatives-ecologiques",
+   "chapter": "svtp-radioactivite",
+   "kind": "qcu",
+   "title": "Les alternatives écologiques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-les-alternatives-ecologiques-q1",
+     "notion": "Les alternatives écologiques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les accidents et la contamination",
+    "lesson": "Approfondissement — centrale, contamination et gestion des déchets",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "svt-svtp-radioactivite-les-accidents-et-la-contamination",
+   "chapter": "svtp-radioactivite",
+   "kind": "qcu",
+   "title": "Les accidents et la contamination",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-les-accidents-et-la-contamination-q1",
+     "notion": "Les accidents et la contamination",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le stockage des déchets à vie longue",
+    "lesson": "Approfondissement — centrale, contamination et gestion des déchets",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 1,
+    "target_new_questions": 0,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "svt-svtp-radioactivite-le-stockage-des-dechets-a-vie-longue",
+   "chapter": "svtp-radioactivite",
+   "kind": "qcu",
+   "title": "Le stockage des déchets à vie longue",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-le-stockage-des-dechets-a-vie-longue-q1",
+     "notion": "Le stockage des déchets à vie longue",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "svt-pc-2026-rattrapage",
+     "svt-pc-2026-normale",
+     "svt-pc-2025-rattrapage",
+     "svt-pc-2025-normale",
+     "svt-pc-2024-rattrapage",
+     "svt-pc-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "svt-svtp-radioactivite-probleme-1",
+   "chapter": "svtp-radioactivite",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. svt-pc-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "svt-pc-2026-rattrapage",
+     "svt-pc-2026-normale",
+     "svt-pc-2025-rattrapage",
+     "svt-pc-2025-normale",
+     "svt-pc-2024-rattrapage",
+     "svt-pc-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "svt-svtp-radioactivite-probleme-2",
+   "chapter": "svtp-radioactivite",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. svt-pc-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "svt-svtp-radioactivite-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "svt-svtp-radioactivite-serie-1",
+   "title": "Matières radioactives et énergie nucléaire · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "svtp-radioactivite",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "svt-svtp-radioactivite-serie-2",
+   "title": "Matières radioactives et énergie nucléaire · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "svtp-radioactivite",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "svt-svtp-radioactivite-serie-3",
+   "title": "Matières radioactives et énergie nucléaire · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "svtp-radioactivite",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

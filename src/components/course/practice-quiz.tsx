@@ -6,7 +6,7 @@ import { Tex } from "@/components/math";
 import { X, Check, ChevronRight, RotateCw, Trophy, Target, PartyPopper } from "lucide-react";
 
 export type PQOption = { label: string; correct: boolean };
-export type PQItem = { statement: string; options: PQOption[]; solution?: string; notion?: string };
+export type PQItem = { id?: string; statement: string; options: PQOption[]; solution?: string; notion?: string };
 
 /**
  * Inline practice overlay — launched from a cours funnel. The student answers

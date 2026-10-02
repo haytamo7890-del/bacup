@@ -1,0 +1,652 @@
+{
+ "format": "bacup.prep/v1",
+ "level": "2bac",
+ "subject": "maths",
+ "track": "pc",
+ "exercises": [
+  {
+   "ref": "maths-pc-lim-bank1",
+   "chapter": "contderiv",
+   "title": "Banque QCU · Limites",
+   "difficulty": 2,
+   "questions": [
+    {
+     "ref": "maths-pc-lim-q1",
+     "notion": "Techniques de levée",
+     "statement": "Calculer $\\lim_{x \\to +\\infty}\\left(\\sqrt{x^{2}+3x}-x\\right)$.",
+     "options": [
+      "$\\frac{3}{2}$",
+      "$3$",
+      "$0$",
+      "$+\\infty$"
+     ],
+     "correct": 0,
+     "solution": "Conjuguée : $\\frac{3x}{\\sqrt{x^{2}+3x}+x} \\to \\frac{3}{2}$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-lim-q2",
+     "notion": "Techniques de levée",
+     "statement": "Calculer $\\lim_{x \\to 0}\\frac{\\sqrt{1+x}-1}{x}$.",
+     "options": [
+      "$\\frac{1}{2}$",
+      "$1$",
+      "$0$",
+      "$2$"
+     ],
+     "correct": 0,
+     "solution": "Conjuguée : $\\frac{1}{\\sqrt{1+x}+1} \\to \\frac{1}{2}$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-lim-q3",
+     "notion": "Limites par comparaison",
+     "statement": "Calculer $\\lim_{x \\to +\\infty}\\frac{x-\\sin x}{x+\\sin x}$.",
+     "options": [
+      "$1$",
+      "$0$",
+      "$-1$",
+      "$+\\infty$"
+     ],
+     "correct": 0,
+     "solution": "On divise par $x$ : $\\frac{1-\\frac{\\sin x}{x}}{1+\\frac{\\sin x}{x}} \\to 1$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-lim-q4",
+     "notion": "Théorème des valeurs intermédiaires",
+     "statement": "$f$ continue sur $[0, 2]$, $f(0)=1$, $f(2)=5$. La valeur $3$ est-elle atteinte ?",
+     "options": [
+      "Oui, d'après le TVI",
+      "Non",
+      "Seulement si $f$ monotone",
+      "On ne peut pas savoir"
+     ],
+     "correct": 0,
+     "solution": "$3$ est entre $1$ et $5$ : par le TVI, $\\exists c,\\ f(c)=3$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-lim-q5",
+     "notion": "Les formes indéterminées",
+     "statement": "Calculer $\\lim_{x \\to 1}\\frac{x^{3}-1}{x-1}$.",
+     "options": [
+      "$3$",
+      "$1$",
+      "$0$",
+      "$+\\infty$"
+     ],
+     "correct": 0,
+     "solution": "$x^{3}-1=(x-1)(x^{2}+x+1) \\to 3$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-lim-q6",
+     "notion": "Prolongement par continuité",
+     "statement": "$x \\mapsto \\frac{\\sin x}{x}$ prolongeable par continuité en $0$ ; quelle valeur ?",
+     "options": [
+      "$1$",
+      "$0$",
+      "$+\\infty$",
+      "non prolongeable"
+     ],
+     "correct": 0,
+     "solution": "$\\lim_{x\\to0}\\frac{\\sin x}{x}=1$, donc $f(0)=1$.",
+     "points": 2.5
+    }
+   ]
+  },
+  {
+   "ref": "maths-pc-der-bank1",
+   "chapter": "contderiv",
+   "title": "Banque QCU · Dérivation",
+   "difficulty": 2,
+   "questions": [
+    {
+     "ref": "maths-pc-der-q1",
+     "notion": "Dérivées usuelles et opérations",
+     "statement": "Dériver $f(x)=x\\ln x$.",
+     "options": [
+      "$\\ln x + 1$",
+      "$\\frac{1}{x}$",
+      "$\\ln x$",
+      "$1$"
+     ],
+     "correct": 0,
+     "solution": "$(x\\ln x)' = \\ln x + x\\cdot\\frac1x = \\ln x + 1$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-der-q2",
+     "notion": "Dérivées usuelles et opérations",
+     "statement": "Dériver $f(x)=x e^{x}$.",
+     "options": [
+      "$(1+x)e^{x}$",
+      "$e^{x}$",
+      "$x e^{x}$",
+      "$(x-1)e^{x}$"
+     ],
+     "correct": 0,
+     "solution": "$(xe^x)' = e^x + xe^x = (1+x)e^x$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-der-q3",
+     "notion": "Nombre dérivé et tangente",
+     "statement": "Tangente à $f(x)=e^{x}$ au point d'abscisse $0$ :",
+     "options": [
+      "$y=x+1$",
+      "$y=x$",
+      "$y=ex$",
+      "$y=1$"
+     ],
+     "correct": 0,
+     "solution": "$f'(0)=1$, $f(0)=1$ : $y=x+1$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-der-q4",
+     "notion": "Limites de référence",
+     "statement": "Calculer $\\lim_{x \\to +\\infty} x e^{-x}$.",
+     "options": [
+      "$0$",
+      "$+\\infty$",
+      "$1$",
+      "$-\\infty$"
+     ],
+     "correct": 0,
+     "solution": "$xe^{-x}=\\frac{x}{e^{x}}\\to 0$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-der-q5",
+     "notion": "Primitives des fonctions usuelles",
+     "statement": "Une primitive de $\\frac{2x}{x^{2}+1}$ :",
+     "options": [
+      "$\\ln(x^{2}+1)$",
+      "$\\frac{1}{x^{2}+1}$",
+      "$2\\ln x$",
+      "$(x^{2}+1)^{2}$"
+     ],
+     "correct": 0,
+     "solution": "Forme $\\frac{u'}{u}$ : primitive $\\ln(x^{2}+1)$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-der-q6",
+     "notion": "Équations différentielles $y'' + ay' + by = 0$",
+     "statement": "Solution générale de $y'' - y = 0$ :",
+     "options": [
+      "$A e^{x} + B e^{-x}$",
+      "$A e^{x}$",
+      "$A\\cos x + B\\sin x$",
+      "$(A+Bx)e^{x}$"
+     ],
+     "correct": 0,
+     "solution": "Équation caractéristique $r^{2}-1=0$, $r=\\pm1$ : $A e^{x}+B e^{-x}$.",
+     "points": 2.5
+    }
+   ]
+  },
+  {
+   "ref": "maths-pc-sui-bank1",
+   "chapter": "suites",
+   "title": "Banque QCU · Suites",
+   "difficulty": 2,
+   "questions": [
+    {
+     "ref": "maths-pc-sui-q1",
+     "notion": "Suites arithmético-géométriques",
+     "statement": "$u_{n+1}=3u_n-4$ converge vers $\\ell$. Point fixe ?",
+     "options": [
+      "$2$",
+      "$4$",
+      "$-2$",
+      "$-4$"
+     ],
+     "correct": 0,
+     "solution": "$\\ell=3\\ell-4 \\Rightarrow \\ell=2$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-sui-q2",
+     "notion": "Les limites de référence",
+     "statement": "Calculer $\\lim_{n \\to +\\infty}\\frac{2^{n}}{n^{2}}$.",
+     "options": [
+      "$+\\infty$",
+      "$0$",
+      "$2$",
+      "$1$"
+     ],
+     "correct": 0,
+     "solution": "L'exponentielle l'emporte : $\\to +\\infty$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-sui-q3",
+     "notion": "Lever une forme indéterminée",
+     "statement": "Calculer $\\lim_{n \\to +\\infty}\\frac{n^{2}+1}{2n^{2}-n}$.",
+     "options": [
+      "$\\frac{1}{2}$",
+      "$0$",
+      "$2$",
+      "$+\\infty$"
+     ],
+     "correct": 0,
+     "solution": "Terme dominant : $\\frac{1}{2}$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-sui-q4",
+     "notion": "Suites géométriques",
+     "statement": "$(u_n)$ géométrique, $u_0=5$, $q=\\frac{1}{2}$. Limite ?",
+     "options": [
+      "$0$",
+      "$5$",
+      "$+\\infty$",
+      "$\\frac{1}{2}$"
+     ],
+     "correct": 0,
+     "solution": "$u_n=5\\left(\\frac12\\right)^{n}\\to 0$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-sui-q5",
+     "notion": "Sommes de termes et limites de sommes",
+     "statement": "Calculer $\\lim_{n \\to +\\infty}\\sum_{k=0}^{n}\\left(\\frac{1}{2}\\right)^{k}$.",
+     "options": [
+      "$2$",
+      "$1$",
+      "$\\frac{1}{2}$",
+      "$+\\infty$"
+     ],
+     "correct": 0,
+     "solution": "Série géométrique : $\\frac{1}{1-\\frac12}=2$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-sui-q6",
+     "notion": "Convergence monotone",
+     "statement": "$u_0=3$, $u_{n+1}=\\sqrt{u_n}$ converge vers $\\ell$. $\\ell = ?$",
+     "options": [
+      "$1$",
+      "$0$",
+      "$3$",
+      "$\\sqrt{3}$"
+     ],
+     "correct": 0,
+     "solution": "$\\ell=\\sqrt{\\ell}\\Rightarrow \\ell=1$.",
+     "points": 2.5
+    }
+   ]
+  },
+  {
+   "ref": "maths-pc-int-bank1",
+   "chapter": "integrale",
+   "title": "Banque QCU · Intégrales",
+   "difficulty": 2,
+   "questions": [
+    {
+     "ref": "maths-pc-int-q1",
+     "notion": "Définition de l'intégrale",
+     "statement": "Calculer $\\int_{0}^{\\pi}\\sin x\\,dx$.",
+     "options": [
+      "$2$",
+      "$0$",
+      "$1$",
+      "$\\pi$"
+     ],
+     "correct": 0,
+     "solution": "$[-\\cos x]_0^{\\pi} = 1+1 = 2$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-int-q2",
+     "notion": "Définition de l'intégrale",
+     "statement": "Calculer $\\int_{1}^{2}\\frac{1}{x}\\,dx$.",
+     "options": [
+      "$\\ln 2$",
+      "$1$",
+      "$\\frac{1}{2}$",
+      "$\\ln\\frac{1}{2}$"
+     ],
+     "correct": 0,
+     "solution": "$[\\ln x]_1^2 = \\ln 2$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-int-q3",
+     "notion": "Technique 1 — Reconnaître une primitive",
+     "statement": "Calculer $\\int_{0}^{1}e^{2x}\\,dx$.",
+     "options": [
+      "$\\frac{e^{2}-1}{2}$",
+      "$e^{2}-1$",
+      "$\\frac{e^{2}}{2}$",
+      "$2(e^{2}-1)$"
+     ],
+     "correct": 0,
+     "solution": "$\\left[\\frac{e^{2x}}{2}\\right]_0^1 = \\frac{e^{2}-1}{2}$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-int-q4",
+     "notion": "Valeur moyenne",
+     "statement": "Valeur moyenne de $f(x)=x^{2}$ sur $[0,3]$ :",
+     "options": [
+      "$3$",
+      "$9$",
+      "$\\frac{1}{3}$",
+      "$27$"
+     ],
+     "correct": 0,
+     "solution": "$\\frac{1}{3}\\int_0^3 x^2 = \\frac{1}{3}\\cdot 9 = 3$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-int-q5",
+     "notion": "Parité et symétries : simplifier avant de calculer",
+     "statement": "Calculer $\\int_{-2}^{2}x^{3}\\,dx$.",
+     "options": [
+      "$0$",
+      "$8$",
+      "$16$",
+      "$4$"
+     ],
+     "correct": 0,
+     "solution": "$x^{3}$ est impaire : $\\int_{-2}^{2}=0$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-int-q6",
+     "notion": "Aire entre une courbe et l'axe des abscisses",
+     "statement": "Aire sous $f(x)=2x$ sur $[0,3]$ :",
+     "options": [
+      "$9$",
+      "$6$",
+      "$3$",
+      "$18$"
+     ],
+     "correct": 0,
+     "solution": "$\\int_0^3 2x = [x^{2}]_0^3 = 9$.",
+     "points": 2.5
+    }
+   ]
+  },
+  {
+   "ref": "maths-pc-cpx-bank1",
+   "chapter": "complexes",
+   "title": "Banque QCU · Complexes",
+   "difficulty": 2,
+   "questions": [
+    {
+     "ref": "maths-pc-cpx-q1",
+     "notion": "Le module",
+     "statement": "Que vaut $|(1+i)^{4}|$ ?",
+     "options": [
+      "$4$",
+      "$2$",
+      "$\\sqrt{2}$",
+      "$16$"
+     ],
+     "correct": 0,
+     "solution": "$|1+i|=\\sqrt2$, donc $|(1+i)^4|=(\\sqrt2)^4=4$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-cpx-q2",
+     "notion": "Opérations sous forme algébrique",
+     "statement": "Calculer $(1+i)^{2}$.",
+     "options": [
+      "$2i$",
+      "$2$",
+      "$1+2i$",
+      "$-2i$"
+     ],
+     "correct": 0,
+     "solution": "$(1+i)^2 = 1+2i-1 = 2i$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-cpx-q3",
+     "notion": "Forme exponentielle",
+     "statement": "Forme exponentielle de $-1$ :",
+     "options": [
+      "$e^{i\\pi}$",
+      "$e^{i\\pi/2}$",
+      "$1$",
+      "$e^{-i\\pi/2}$"
+     ],
+     "correct": 0,
+     "solution": "$-1 = \\cos\\pi + i\\sin\\pi = e^{i\\pi}$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-cpx-q4",
+     "notion": "Équation du second degré à coefficients réels",
+     "statement": "Les solutions de $z^{2}=-1$ sont :",
+     "options": [
+      "$\\pm i$",
+      "$\\pm 1$",
+      "$i$",
+      "$1 \\pm i$"
+     ],
+     "correct": 0,
+     "solution": "$z^{2}=-1 \\Rightarrow z = i$ ou $z=-i$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-cpx-q5",
+     "notion": "Affixe : le dictionnaire entre complexes et géométrie",
+     "statement": "$A$ et $B$ ont pour affixes $1$ et $i$. La distance $AB$ vaut :",
+     "options": [
+      "$\\sqrt{2}$",
+      "$1$",
+      "$2$",
+      "$0$"
+     ],
+     "correct": 0,
+     "solution": "$AB = |i-1| = \\sqrt{2}$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-cpx-q6",
+     "notion": "Le conjugué",
+     "statement": "Le conjugué de $e^{i\\theta}$ est :",
+     "options": [
+      "$e^{-i\\theta}$",
+      "$-e^{i\\theta}$",
+      "$e^{i\\theta}$",
+      "$i e^{i\\theta}$"
+     ],
+     "correct": 0,
+     "solution": "$\\overline{e^{i\\theta}} = \\cos\\theta - i\\sin\\theta = e^{-i\\theta}$.",
+     "points": 2.5
+    }
+   ]
+  },
+  {
+   "ref": "maths-pc-pro-bank1",
+   "chapter": "proba",
+   "title": "Banque QCU · Probabilités",
+   "difficulty": 2,
+   "questions": [
+    {
+     "ref": "maths-pc-pro-q1",
+     "notion": "Combinaisons",
+     "statement": "Que vaut $\\binom{6}{2}$ ?",
+     "options": [
+      "$15$",
+      "$30$",
+      "$12$",
+      "$36$"
+     ],
+     "correct": 0,
+     "solution": "$\\binom{6}{2}=\\frac{6\\times5}{2}=15$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-pro-q2",
+     "notion": "Vocabulaire et équiprobabilité",
+     "statement": "On lance un dé équilibré. $P(\\text{résultat pair})$ vaut :",
+     "options": [
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{2}{3}$",
+      "$\\frac{1}{6}$"
+     ],
+     "correct": 0,
+     "solution": "$\\{2,4,6\\}$ sur $6$ : $\\frac{3}{6}=\\frac12$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-pro-q3",
+     "notion": "Vocabulaire et équiprobabilité",
+     "statement": "On lance deux pièces équilibrées. $P(\\text{deux piles})$ vaut :",
+     "options": [
+      "$\\frac{1}{4}$",
+      "$\\frac{1}{2}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{3}{4}$"
+     ],
+     "correct": 0,
+     "solution": "$\\frac12\\times\\frac12=\\frac14$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-pro-q4",
+     "notion": "Loi binomiale",
+     "statement": "$X \\sim \\mathcal{B}(10, 0{,}5)$. $E(X)$ vaut :",
+     "options": [
+      "$5$",
+      "$10$",
+      "$2{,}5$",
+      "$0{,}5$"
+     ],
+     "correct": 0,
+     "solution": "$E(X)=np=10\\times0{,}5=5$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-pro-q5",
+     "notion": "Indépendance",
+     "statement": "$A, B$ indépendants, $P(A)=0{,}3$, $P(B)=0{,}5$. $P(A\\cap B)$ vaut :",
+     "options": [
+      "$0{,}15$",
+      "$0{,}8$",
+      "$0{,}5$",
+      "$0{,}3$"
+     ],
+     "correct": 0,
+     "solution": "Indépendance : $P(A\\cap B)=P(A)P(B)=0{,}3\\times0{,}5=0{,}15$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-pro-q6",
+     "notion": "Dénombrer sous contrainte",
+     "statement": "Une urne a $5$ boules dont $3$ rouges. On en tire $2$ (sans remise). $P(\\text{2 rouges})$ vaut :",
+     "options": [
+      "$\\frac{3}{10}$",
+      "$\\frac{1}{10}$",
+      "$\\frac{2}{5}$",
+      "$\\frac{9}{25}$"
+     ],
+     "correct": 0,
+     "solution": "$\\frac{\\binom{3}{2}}{\\binom{5}{2}}=\\frac{3}{10}$.",
+     "points": 2.5
+    }
+   ]
+  },
+  {
+   "ref": "maths-pc-geo-bank1",
+   "chapter": "geoespace",
+   "title": "Banque QCU · Géométrie",
+   "difficulty": 2,
+   "questions": [
+    {
+     "ref": "maths-pc-geo-q1",
+     "notion": "Orthogonalité",
+     "statement": "$\\vec{u}(1,2,-1)$ et $\\vec{v}(3,-1,1)$. Le produit scalaire $\\vec{u}\\cdot\\vec{v}$ vaut :",
+     "options": [
+      "$0$",
+      "$2$",
+      "$-4$",
+      "$6$"
+     ],
+     "correct": 0,
+     "solution": "$1\\times3+2\\times(-1)+(-1)\\times1=3-2-1=0$ : vecteurs orthogonaux.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-geo-q2",
+     "notion": "Définition et expressions",
+     "statement": "La norme du vecteur $\\vec{u}(2,-1,2)$ vaut :",
+     "options": [
+      "$3$",
+      "$\\sqrt{5}$",
+      "$9$",
+      "$5$"
+     ],
+     "correct": 0,
+     "solution": "$\\|\\vec{u}\\|=\\sqrt{4+1+4}=\\sqrt{9}=3$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-geo-q3",
+     "notion": "Équation cartésienne d'un plan",
+     "statement": "Un vecteur normal au plan $2x-y+3z-5=0$ est :",
+     "options": [
+      "$(2,-1,3)$",
+      "$(2,1,3)$",
+      "$(-5,0,0)$",
+      "$(1,1,1)$"
+     ],
+     "correct": 0,
+     "solution": "Les coefficients de $x,y,z$ donnent le vecteur normal $(2,-1,3)$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-geo-q4",
+     "notion": "Distance d'un point à un plan",
+     "statement": "Distance du point $O(0,0,0)$ au plan $x+2y+2z-6=0$ :",
+     "options": [
+      "$2$",
+      "$6$",
+      "$3$",
+      "$\\frac{6}{5}$"
+     ],
+     "correct": 0,
+     "solution": "$d=\\frac{|{-6}|}{\\sqrt{1+4+4}}=\\frac{6}{3}=2$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-geo-q5",
+     "notion": "Définition",
+     "statement": "Le produit vectoriel $\\vec{i}\\wedge\\vec{j}$ vaut :",
+     "options": [
+      "$\\vec{k}$",
+      "$-\\vec{k}$",
+      "$\\vec{0}$",
+      "$\\vec{i}$"
+     ],
+     "correct": 0,
+     "solution": "Repère orthonormé direct : $\\vec{i}\\wedge\\vec{j}=\\vec{k}$.",
+     "points": 2.5
+    },
+    {
+     "ref": "maths-pc-geo-q6",
+     "notion": "Définition et expressions",
+     "statement": "$\\vec{u}$ et $\\vec{v}$ tels que $\\|\\vec{u}\\|=2$, $\\|\\vec{v}\\|=3$, angle $\\frac{\\pi}{3}$. Alors $\\vec{u}\\cdot\\vec{v}=$ :",
+     "options": [
+      "$3$",
+      "$6$",
+      "$\\frac{3\\sqrt{3}}{2}$",
+      "$0$"
+     ],
+     "correct": 0,
+     "solution": "$\\vec{u}\\cdot\\vec{v}=\\|\\vec{u}\\|\\|\\vec{v}\\|\\cos\\frac{\\pi}{3}=2\\times3\\times\\frac12=3$.",
+     "points": 2.5
+    }
+   ]
+  }
+ ]
+}

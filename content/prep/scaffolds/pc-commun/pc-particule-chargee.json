@@ -1,0 +1,1199 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "pc",
+ "track": null,
+ "_scaffold": {
+  "pack": "pc-commun",
+  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+  "priority": "P1",
+  "chapter": {
+   "code": "pc-particule-chargee",
+   "name": "Mouvement d'une particule chargée dans un champ",
+   "domain": "physique",
+   "unit": "Mécanique"
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Le champ électrique uniforme",
+   "L'accélération : un cas de champ uniforme",
+   "Cas 1 — Accélération : $\\vec v_0$ parallèle à $\\vec E$",
+   "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+   "La force de Lorentz",
+   "Le mouvement circulaire uniforme",
+   "Comparaison des deux champs",
+   "Applications",
+   "Le cyclotron",
+   "Le spectromètre de masse, en détail",
+   "Les champs croisés",
+   "Le champ magnétique terrestre",
+   "Méthode 1 — Justifier que le poids est négligeable",
+   "Méthode 2 — L'accélération sous une tension",
+   "Méthode 3 — La déviation électrique complète",
+   "Méthode 4 — Le mouvement circulaire magnétique",
+   "Méthode 5 — Le sélecteur de vitesse"
+  ],
+  "methodes_du_cours": [
+   "Méthode 1 — Justifier que le poids est négligeable",
+   "Méthode 2 — L'accélération sous une tension",
+   "Méthode 3 — La déviation électrique complète",
+   "Méthode 4 — Le mouvement circulaire magnétique",
+   "Méthode 5 — Le sélecteur de vitesse"
+  ],
+  "existing_questions_total": 7,
+  "target_new_questions": 30,
+  "suggested_figures": [
+   "particule-champ-e — Déviation d'une particule chargée dans un condensateur plan",
+   "particule-champ-b — Mouvement circulaire dans un champ magnétique",
+   "projectile — Mouvement d'un projectile — trajectoire parabolique",
+   "retard-temporel — Retard temporel : M reproduit le mouvement de S avec τ = d/c"
+  ],
+  "sources": [
+   {
+    "annale": "pc-svt-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2026-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2025-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2024-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2023-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2022-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2021-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2020-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2018-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2017-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+   },
+   {
+    "annale": "pc-svt-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-svt-2016-normale",
+    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2026-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2025-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2022-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2021-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2019-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2018-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2017-normale",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2016-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2015-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+   },
+   {
+    "annale": "pc-sm-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "pc-sm-2014-normale",
+    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le champ électrique uniforme",
+    "lesson": "Dans un champ électrique uniforme",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-le-champ-electrique-uniforme",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "Le champ électrique uniforme",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-le-champ-electrique-uniforme-q1",
+     "notion": "Le champ électrique uniforme",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'accélération : un cas de champ uniforme",
+    "lesson": "Dans un champ électrique uniforme",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "L'accélération : un cas de champ uniforme",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme-q1",
+     "notion": "L'accélération : un cas de champ uniforme",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Cas 1 — Accélération : $\\vec v_0$ parallèle à $\\vec E$",
+    "lesson": "Dans un champ électrique uniforme",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-cas-1-acceleration-vec-v-0-parallele-a-v",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "Cas 1 — Accélération : $\\vec v_0$ parallèle à $\\vec E$",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-cas-1-acceleration-vec-v-0-parallele-a-v-q1",
+     "notion": "Cas 1 — Accélération : $\\vec v_0$ parallèle à $\\vec E$",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+    "lesson": "Dans un champ électrique uniforme",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire-",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire--q1",
+     "notion": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La force de Lorentz",
+    "lesson": "Dans un champ magnétique uniforme",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-la-force-de-lorentz",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "La force de Lorentz",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-la-force-de-lorentz-q1",
+     "notion": "La force de Lorentz",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le mouvement circulaire uniforme",
+    "lesson": "Dans un champ magnétique uniforme",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-le-mouvement-circulaire-uniforme",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "Le mouvement circulaire uniforme",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-le-mouvement-circulaire-uniforme-q1",
+     "notion": "Le mouvement circulaire uniforme",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Comparaison des deux champs",
+    "lesson": "Dans un champ magnétique uniforme",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-comparaison-des-deux-champs",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "Comparaison des deux champs",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-comparaison-des-deux-champs-q1",
+     "notion": "Comparaison des deux champs",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Applications",
+    "lesson": "Dans un champ magnétique uniforme",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-applications",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "Applications",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-applications-q1",
+     "notion": "Applications",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le cyclotron",
+    "lesson": "Approfondissement — Particule chargée dans un champ",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-le-cyclotron",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "Le cyclotron",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-le-cyclotron-q1",
+     "notion": "Le cyclotron",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le spectromètre de masse, en détail",
+    "lesson": "Approfondissement — Particule chargée dans un champ",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-le-spectrometre-de-masse-en-detail",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "Le spectromètre de masse, en détail",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-le-spectrometre-de-masse-en-detail-q1",
+     "notion": "Le spectromètre de masse, en détail",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les champs croisés",
+    "lesson": "Approfondissement — Particule chargée dans un champ",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-les-champs-croises",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "Les champs croisés",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-les-champs-croises-q1",
+     "notion": "Les champs croisés",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le champ magnétique terrestre",
+    "lesson": "Approfondissement — Particule chargée dans un champ",
+    "role": "approfondissement",
+    "bac_frequency": 1,
+    "existing_questions": 2,
+    "target_new_questions": 0,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "pc-particule-chargee-le-champ-magnetique-terrestre",
+   "chapter": "pc-particule-chargee",
+   "kind": "qcu",
+   "title": "Le champ magnétique terrestre",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-le-champ-magnetique-terrestre-q1",
+     "notion": "Le champ magnétique terrestre",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "pc-svt-2026-rattrapage",
+     "pc-svt-2026-normale",
+     "pc-svt-2025-rattrapage",
+     "pc-svt-2025-normale",
+     "pc-svt-2024-rattrapage",
+     "pc-svt-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "pc-particule-chargee-probleme-1",
+   "chapter": "pc-particule-chargee",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. pc-svt-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "pc-svt-2026-rattrapage",
+     "pc-svt-2026-normale",
+     "pc-svt-2025-rattrapage",
+     "pc-svt-2025-normale",
+     "pc-svt-2024-rattrapage",
+     "pc-svt-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "pc-particule-chargee-probleme-2",
+   "chapter": "pc-particule-chargee",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. pc-svt-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "pc-particule-chargee-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "pc-particule-chargee-serie-1",
+   "title": "Mouvement d'une particule chargée dans un champ · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "pc-particule-chargee",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "pc-particule-chargee-serie-2",
+   "title": "Mouvement d'une particule chargée dans un champ · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "pc-particule-chargee",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "pc-particule-chargee-serie-3",
+   "title": "Mouvement d'une particule chargée dans un champ · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "pc-particule-chargee",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1318 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "si",
+ "track": "sm_b",
+ "_scaffold": {
+  "pack": "si-smb",
+  "label": "Sciences de l'Ingénieur — SM-B",
+  "priority": "P2",
+  "chapter": {
+   "code": "si-alimenter",
+   "name": "Chaîne d'énergie — Alimenter et distribuer",
+   "domain": null,
+   "unit": null
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "L'alimentation électrique : le réseau triphasé",
+   "Les grandeurs électriques",
+   "L'alimentation pneumatique",
+   "L'alimentation hydraulique",
+   "Le rôle du préactionneur",
+   "Le relais",
+   "Le contacteur",
+   "Les protections associées",
+   "Le transistor en commutation",
+   "La variation de vitesse par hacheur",
+   "Les distributeurs pneumatiques",
+   "Pourquoi le triphasé",
+   "Le rendement des trois énergies",
+   "Sécurité et état de repli",
+   "Ce que le modèle simplifie",
+   "Méthode 1 — Les calculs de base",
+   "Méthode 2 — Dimensionner un vérin",
+   "Méthode 3 — Lire un schéma pneumatique",
+   "Méthode 4 — Choisir une énergie et un préactionneur"
+  ],
+  "methodes_du_cours": [
+   "Méthode 1 — Les calculs de base",
+   "Méthode 2 — Dimensionner un vérin",
+   "Méthode 3 — Lire un schéma pneumatique",
+   "Méthode 4 — Choisir une énergie et un préactionneur"
+  ],
+  "existing_questions_total": 7,
+  "target_new_questions": 42,
+  "suggested_figures": [
+   "si-chaine — Chaîne d'énergie + chaîne d'information",
+   "si-capteur — Capteur — chaîne d'acquisition"
+  ],
+  "sources": [
+   {
+    "annale": "si-smb-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2025-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2025-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2025-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2024-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2024-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2024-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2023-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2023-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2023-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2022-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2022-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2022-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2021-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2021-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2021-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2020-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2020-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2020-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2019-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2019-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2019-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2018-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2018-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2018-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2017-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2017-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2017-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2016-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2016-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2016-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2015-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2015-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2015-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2015-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2014-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2014-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2014-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2014-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2013-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2013-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2013-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2013-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2013-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2013-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2012-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2012-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2012-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2012-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2012-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2012-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2011-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2011-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2011-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2011-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2011-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2011-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2010-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2010-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2010-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2010-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2010-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2010-normale.pdf"
+   },
+   {
+    "annale": "si-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-si-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "si-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-si-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "si-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-si-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "si-sm-2023-normale",
+    "sujet": "annales-propres/Sujet-si-sm-2023-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'alimentation électrique : le réseau triphasé",
+    "lesson": "Alimenter en énergie",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-l-alimentation-electrique-le-reseau-trip",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "L'alimentation électrique : le réseau triphasé",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-l-alimentation-electrique-le-reseau-trip-q1",
+     "notion": "L'alimentation électrique : le réseau triphasé",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les grandeurs électriques",
+    "lesson": "Alimenter en énergie",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-les-grandeurs-electriques",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Les grandeurs électriques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-les-grandeurs-electriques-q1",
+     "notion": "Les grandeurs électriques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'alimentation pneumatique",
+    "lesson": "Alimenter en énergie",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-l-alimentation-pneumatique",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "L'alimentation pneumatique",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-l-alimentation-pneumatique-q1",
+     "notion": "L'alimentation pneumatique",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "L'alimentation hydraulique",
+    "lesson": "Alimenter en énergie",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-l-alimentation-hydraulique",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "L'alimentation hydraulique",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-l-alimentation-hydraulique-q1",
+     "notion": "L'alimentation hydraulique",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le rôle du préactionneur",
+    "lesson": "Distribuer l'énergie — les préactionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 4,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-le-role-du-preactionneur",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Le rôle du préactionneur",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-le-role-du-preactionneur-q1",
+     "notion": "Le rôle du préactionneur",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le relais",
+    "lesson": "Distribuer l'énergie — les préactionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-le-relais",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Le relais",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-le-relais-q1",
+     "notion": "Le relais",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le contacteur",
+    "lesson": "Distribuer l'énergie — les préactionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-le-contacteur",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Le contacteur",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-le-contacteur-q1",
+     "notion": "Le contacteur",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les protections associées",
+    "lesson": "Distribuer l'énergie — les préactionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-les-protections-associees",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Les protections associées",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-les-protections-associees-q1",
+     "notion": "Les protections associées",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le transistor en commutation",
+    "lesson": "Distribuer l'énergie — les préactionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-le-transistor-en-commutation",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Le transistor en commutation",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-le-transistor-en-commutation-q1",
+     "notion": "Le transistor en commutation",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La variation de vitesse par hacheur",
+    "lesson": "Distribuer l'énergie — les préactionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-la-variation-de-vitesse-par-hacheur",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "La variation de vitesse par hacheur",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-la-variation-de-vitesse-par-hacheur-q1",
+     "notion": "La variation de vitesse par hacheur",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les distributeurs pneumatiques",
+    "lesson": "Distribuer l'énergie — les préactionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-les-distributeurs-pneumatiques",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Les distributeurs pneumatiques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-les-distributeurs-pneumatiques-q1",
+     "notion": "Les distributeurs pneumatiques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Pourquoi le triphasé",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-pourquoi-le-triphase",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Pourquoi le triphasé",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-pourquoi-le-triphase-q1",
+     "notion": "Pourquoi le triphasé",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le rendement des trois énergies",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-le-rendement-des-trois-energies",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Le rendement des trois énergies",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-le-rendement-des-trois-energies-q1",
+     "notion": "Le rendement des trois énergies",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Sécurité et état de repli",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-securite-et-etat-de-repli",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Sécurité et état de repli",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-securite-et-etat-de-repli-q1",
+     "notion": "Sécurité et état de repli",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Ce que le modèle simplifie",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-alimenter-ce-que-le-modele-simplifie",
+   "chapter": "si-alimenter",
+   "kind": "qcu",
+   "title": "Ce que le modèle simplifie",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-ce-que-le-modele-simplifie-q1",
+     "notion": "Ce que le modèle simplifie",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "si-smb-2025-rattrapage",
+     "si-smb-2025-normale",
+     "si-smb-2024-rattrapage",
+     "si-smb-2024-normale",
+     "si-smb-2023-rattrapage",
+     "si-smb-2023-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "si-alimenter-probleme-1",
+   "chapter": "si-alimenter",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. si-smb-2025-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-alimenter-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-alimenter-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "si-smb-2025-rattrapage",
+     "si-smb-2025-normale",
+     "si-smb-2024-rattrapage",
+     "si-smb-2024-normale",
+     "si-smb-2023-rattrapage",
+     "si-smb-2023-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "si-alimenter-probleme-2",
+   "chapter": "si-alimenter",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. si-smb-2025-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-alimenter-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-alimenter-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-alimenter-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "si-alimenter-serie-1",
+   "title": "Chaîne d'énergie — Alimenter et distribuer · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "si-alimenter",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "si-alimenter-serie-2",
+   "title": "Chaîne d'énergie — Alimenter et distribuer · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "si-alimenter",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "si-alimenter-serie-3",
+   "title": "Chaîne d'énergie — Alimenter et distribuer · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "si-alimenter",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}
