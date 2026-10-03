@@ -1,1302 +1,2177 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "track": null,
- "_scaffold": {
-  "pack": "pc-commun",
-  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-acide-base",
-   "name": "Réactions acide-base",
-   "domain": "chimie",
-   "unit": "Acido-basique"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-acide-base",
+      "name": "Réactions acide-base",
+      "domain": "chimie",
+      "unit": "Acido-basique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "La définition de Brønsted",
+      "Écrire une réaction acide-base",
+      "Le pH",
+      "Le produit ionique de l'eau",
+      "Acide fort, acide faible",
+      "La constante d'acidité",
+      "La relation fondamentale",
+      "Le diagramme de prédominance",
+      "Les indicateurs colorés",
+      "Les solutions tampons",
+      "Les polyacides",
+      "L'échelle des $\\mathrm{p}K_A$ dans l'eau",
+      "Le calcul rigoureux du pH",
+      "Les applications",
+      "Méthode 1 — Écrire une réaction acide-base",
+      "Méthode 2 — Déterminer $K_A$ à partir du pH",
+      "Méthode 3 — Exploiter le diagramme de prédominance",
+      "Méthode 4 — Utiliser la relation entre conjugués",
+      "Méthode 5 — Prévoir le sens d'une réaction acide-base"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Écrire une réaction acide-base",
+      "Méthode 2 — Déterminer $K_A$ à partir du pH",
+      "Méthode 3 — Exploiter le diagramme de prédominance",
+      "Méthode 4 — Utiliser la relation entre conjugués",
+      "Méthode 5 — Prévoir le sens d'une réaction acide-base"
+    ],
+    "existing_questions_total": 5,
+    "target_new_questions": 36,
+    "suggested_figures": [
+      "predominance-acide-base — Diagramme de prédominance d'un couple acide/base"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "La définition de Brønsted",
-   "Écrire une réaction acide-base",
-   "Le pH",
-   "Le produit ionique de l'eau",
-   "Acide fort, acide faible",
-   "La constante d'acidité",
-   "La relation fondamentale",
-   "Le diagramme de prédominance",
-   "Les indicateurs colorés",
-   "Les solutions tampons",
-   "Les polyacides",
-   "L'échelle des $\\mathrm{p}K_A$ dans l'eau",
-   "Le calcul rigoureux du pH",
-   "Les applications",
-   "Méthode 1 — Écrire une réaction acide-base",
-   "Méthode 2 — Déterminer $K_A$ à partir du pH",
-   "Méthode 3 — Exploiter le diagramme de prédominance",
-   "Méthode 4 — Utiliser la relation entre conjugués",
-   "Méthode 5 — Prévoir le sens d'une réaction acide-base"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "La définition de Brønsted",
+        "lesson": "Acides, bases et pH",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-la-definition-de-brnsted",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "La définition de Brønsted",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La définition de Brønsted",
+          "difficulty": 1,
+          "statement": "Selon Brønsted, un acide est une espèce chimique capable de :",
+          "options": [
+            {
+              "label": "céder un proton $\\mathrm{H^+}$",
+              "correct": true,
+              "why": "C'est la définition de Brønsted : l'acide est un donneur de proton."
+            },
+            {
+              "label": "capter un proton $\\mathrm{H^+}$",
+              "why": "Capter un proton est le rôle d'une base : l'acide en cède."
+            },
+            {
+              "label": "céder un électron",
+              "why": "Céder un électron est le rôle d'un réducteur dans un couple oxydant/réducteur, pas celui d'un acide."
+            },
+            {
+              "label": "capter un électron",
+              "why": "Capter un électron est le rôle d'un oxydant, pas celui d'un acide au sens de Brønsted."
+            }
+          ],
+          "hint": "Une réaction acide-base est un transfert de particule : laquelle ?",
+          "solution": "Un acide de Brønsted est une espèce capable de céder un proton $\\mathrm{H^+}$ ; une base est capable d'en capter un. Une réaction acide-base est un transfert de proton, alors qu'une réaction d'oxydoréduction est un transfert d'électron. Contrôle : $\\mathrm{AH}\\rightleftharpoons\\mathrm{A^-}+\\mathrm{H^+}$ : l'acide cède $\\mathrm{H^+}$.",
+          "methode": "Acide = donneur de $\\mathrm{H^+}$ ; base = accepteur de $\\mathrm{H^+}$.",
+          "points": 1,
+          "ref": "pc-acide-base-la-definition-de-brnsted-q1"
+        },
+        {
+          "notion": "La définition de Brønsted",
+          "difficulty": 2,
+          "statement": "Dans la réaction $\\mathrm{CH_3COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{H_3O^+}$, lue dans le sens direct, l'acide parmi les réactifs est :",
+          "options": [
+            {
+              "label": "$\\mathrm{CH_3COOH}$, qui cède un proton à l'eau",
+              "correct": true,
+              "why": "Il perd $\\mathrm{H^+}$ et devient $\\mathrm{CH_3COO^-}$ : c'est l'acide du couple $\\mathrm{CH_3COOH/CH_3COO^-}$."
+            },
+            {
+              "label": "$\\mathrm{H_2O}$, qui cède un proton à l'acide éthanoïque",
+              "why": "Dans le sens direct, l'eau capte le proton pour donner $\\mathrm{H_3O^+}$ : elle joue le rôle de base."
+            },
+            {
+              "label": "$\\mathrm{CH_3COO^-}$, qui cède un proton à l'eau",
+              "why": "$\\mathrm{CH_3COO^-}$ est un produit du sens direct, et c'est la base conjuguée de l'acide éthanoïque."
+            },
+            {
+              "label": "$\\mathrm{H_3O^+}$, qui cède un proton à l'acide éthanoïque",
+              "why": "$\\mathrm{H_3O^+}$ est un produit du sens direct, pas un réactif ; il joue le rôle d'acide dans le sens inverse."
+            }
+          ],
+          "hint": "Quel réactif perd un proton et lequel en gagne un ?",
+          "solution": "Dans le sens direct, $\\mathrm{CH_3COOH}$ cède un proton à $\\mathrm{H_2O}$ : l'acide éthanoïque est l'acide, l'eau est la base. Les deux couples sont $\\mathrm{CH_3COOH/CH_3COO^-}$ et $\\mathrm{H_3O^+/H_2O}$. Contrôle : $\\mathrm{CH_3COO^-}$ a un $\\mathrm{H}$ de moins et une charge de plus négative que $\\mathrm{CH_3COOH}$.",
+          "methode": "Sens direct : le réactif qui perd $\\mathrm{H^+}$ est l'acide.",
+          "points": 1,
+          "ref": "pc-acide-base-la-definition-de-brnsted-q2"
+        },
+        {
+          "notion": "La définition de Brønsted",
+          "difficulty": 3,
+          "statement": "L'eau est qualifiée d'ampholyte (ou espèce amphotère) parce qu'elle :",
+          "options": [
+            {
+              "label": "est la base de $\\mathrm{H_3O^+/H_2O}$ et l'acide de $\\mathrm{H_2O/HO^-}$",
+              "correct": true,
+              "why": "Elle peut capter un proton (donner $\\mathrm{H_3O^+}$) et en céder un (donner $\\mathrm{HO^-}$) : elle appartient à deux couples."
+            },
+            {
+              "label": "est à la fois le solvant et un réactif de la transformation étudiée",
+              "why": "Être solvant et réactif n'a rien à voir avec le rôle acide ou basique : un ampholyte est une espèce à la fois acide et base."
+            },
+            {
+              "label": "a un pH neutre égal à $7$ quelle que soit la température du mélange",
+              "why": "L'eau pure n'est neutre à $\\mathrm{pH}=7$ qu'à $25\\ ^\\circ\\mathrm{C}$ ; et la neutralité n'est pas la définition d'un ampholyte."
+            },
+            {
+              "label": "ne réagit jamais avec les acides ni avec les bases, quelle que soit leur force",
+              "why": "L'eau réagit avec les acides (elle capte leur proton) et avec les bases (elle leur cède un proton)."
+            }
+          ],
+          "hint": "Cherche les deux couples auxquels appartient l'eau, et le rôle qu'elle y joue.",
+          "solution": "L'eau est la base du couple $\\mathrm{H_3O^+/H_2O}$ ($\\mathrm{H_2O}+\\mathrm{H^+}=\\mathrm{H_3O^+}$) et l'acide du couple $\\mathrm{H_2O/HO^-}$ ($\\mathrm{H_2O}=\\mathrm{HO^-}+\\mathrm{H^+}$) : c'est un ampholyte. Sa réaction avec elle-même est l'autoprotolyse : $2\\,\\mathrm{H_2O}\\rightleftharpoons\\mathrm{H_3O^+}+\\mathrm{HO^-}$. Contrôle : un ampholyte appartient à deux couples acide/base.",
+          "methode": "Ampholyte : espèce qui est la base d'un couple et l'acide d'un autre (ex. $\\mathrm{H_2O}$).",
+          "points": 1,
+          "ref": "pc-acide-base-la-definition-de-brnsted-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Écrire une réaction acide-base",
+        "lesson": "Acides, bases et pH",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-ecrire-une-reaction-acide-base",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "Écrire une réaction acide-base",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Écrire une réaction acide-base",
+          "difficulty": 1,
+          "statement": "La base conjuguée de l'acide éthanoïque $\\mathrm{CH_3COOH}$ est :",
+          "options": [
+            {
+              "label": "$\\mathrm{CH_3COO^-}$",
+              "correct": true,
+              "why": "L'acide perd un proton $\\mathrm{H^+}$ : il devient l'ion éthanoate, de charge $-1$."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH_2^+}$",
+              "why": "Cette espèce a gagné un proton : c'est l'acide conjugué de $\\mathrm{CH_3COOH}$, pas sa base conjuguée."
+            },
+            {
+              "label": "$\\mathrm{CH_3COO}$",
+              "why": "Tu as oublié la charge : en perdant $\\mathrm{H^+}$, l'espèce garde les deux électrons de liaison et porte la charge $-1$."
+            },
+            {
+              "label": "$\\mathrm{CH_3CO^+}$",
+              "why": "Tu as retiré $\\mathrm{OH^-}$ au lieu de $\\mathrm{H^+}$ : la base conjuguée résulte de la perte d'un proton."
+            }
+          ],
+          "hint": "La base conjuguée d'un acide s'obtient en lui retirant un proton : que devient la charge ?",
+          "solution": "$\\mathrm{CH_3COOH}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{H^+}$ : la base conjuguée est $\\mathrm{CH_3COO^-}$, de charge $-1$. Les deux formes constituent le couple $\\mathrm{CH_3COOH/CH_3COO^-}$. Contrôle : la somme des charges se conserve, $0=-1+1$.",
+          "methode": "Base conjuguée = acide $-\\,\\mathrm{H^+}$ (charge diminuée de $1$).",
+          "points": 1,
+          "ref": "pc-acide-base-ecrire-une-reaction-acide-base-q1"
+        },
+        {
+          "notion": "Écrire une réaction acide-base",
+          "difficulty": 2,
+          "statement": "L'équation de la réaction de l'ammoniac $\\mathrm{NH_3}$ avec l'eau s'écrit :",
+          "options": [
+            {
+              "label": "$\\mathrm{NH_3}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{NH_4^+}+\\mathrm{HO^-}$",
+              "correct": true,
+              "why": "$\\mathrm{NH_3}$ capte un proton à l'eau, qui devient $\\mathrm{HO^-}$ ; réaction limitée d'une base faible."
+            },
+            {
+              "label": "$\\mathrm{NH_3}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{NH_2^-}+\\mathrm{H_3O^+}$",
+              "why": "Tu as fait céder un proton à $\\mathrm{NH_3}$ : dans l'eau $\\mathrm{NH_3}$ se comporte comme une base qui capte un proton."
+            },
+            {
+              "label": "$\\mathrm{NH_3}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{NH_4^+}+\\mathrm{H_3O^+}$",
+              "why": "Les charges ne sont pas conservées : $0$ à gauche et $+2$ à droite."
+            },
+            {
+              "label": "$\\mathrm{NH_3}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{NH_4}+\\mathrm{HO}$",
+              "why": "Tu as oublié les charges : $\\mathrm{NH_4^+}$ et $\\mathrm{HO^-}$ sont des ions."
+            }
+          ],
+          "hint": "L'ammoniac est une base : que fait-il avec l'eau, et que devient l'eau ?",
+          "solution": "Une base capte un proton : $\\mathrm{NH_3}+\\mathrm{H^+}=\\mathrm{NH_4^+}$. L'eau cède ce proton : $\\mathrm{H_2O}=\\mathrm{HO^-}+\\mathrm{H^+}$. Bilan : $\\mathrm{NH_3}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{NH_4^+}+\\mathrm{HO^-}$ ; charge $0$ de chaque côté. Contrôle : la solution devient basique ($\\mathrm{HO^-}$ formé).",
+          "methode": "Base + $\\mathrm{H_2O}$ : la base capte $\\mathrm{H^+}$, l'eau donne $\\mathrm{HO^-}$.",
+          "points": 1,
+          "ref": "pc-acide-base-ecrire-une-reaction-acide-base-q2"
+        },
+        {
+          "notion": "Écrire une réaction acide-base",
+          "difficulty": 2,
+          "statement": "L'équation de la réaction de l'acide éthanoïque $\\mathrm{CH_3COOH}$ sur l'ammoniac $\\mathrm{NH_3}$ s'écrit :",
+          "options": [
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{NH_3}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{NH_4^+}$",
+              "correct": true,
+              "why": "L'acide $\\mathrm{CH_3COOH}$ cède un proton à la base $\\mathrm{NH_3}$ : on obtient les formes conjuguées $\\mathrm{CH_3COO^-}$ et $\\mathrm{NH_4^+}$."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{NH_3}\\rightleftharpoons\\mathrm{CH_3COOH_2^+}+\\mathrm{NH_2^-}$",
+              "why": "Tu as fait céder un proton à $\\mathrm{NH_3}$ vers $\\mathrm{CH_3COOH}$ : c'est l'acide éthanoïque qui est l'acide dans ce mélange."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{NH_3}\\rightleftharpoons\\mathrm{CH_3COO}+\\mathrm{NH_4}$",
+              "why": "Tu as oublié les deux charges : les produits sont des ions $\\mathrm{CH_3COO^-}$ et $\\mathrm{NH_4^+}$."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{NH_3}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{NH_4}$",
+              "why": "Tu as oublié la charge de l'ion ammonium : l'équation n'est alors pas équilibrée en charges ($0$ contre $-1$)."
+            }
+          ],
+          "hint": "Quel réactif cède le proton, lequel le capte ? Vérifie les charges.",
+          "solution": "$\\mathrm{CH_3COOH}$ est l'acide du couple $\\mathrm{CH_3COOH/CH_3COO^-}$, $\\mathrm{NH_3}$ la base du couple $\\mathrm{NH_4^+/NH_3}$. Le proton passe de l'acide à la base : $\\mathrm{CH_3COOH}+\\mathrm{NH_3}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{NH_4^+}$. Contrôle : charge $0$ à gauche, $-1+1=0$ à droite.",
+          "methode": "Réaction acide-base : $\\mathrm{AH}_1+\\mathrm{A}_2^-\\rightleftharpoons\\mathrm{A}_1^-+\\mathrm{A}_2\\mathrm{H}$ ; le proton passe de l'acide du 1er couple à la base du 2e.",
+          "points": 1,
+          "ref": "pc-acide-base-ecrire-une-reaction-acide-base-q3"
+        },
+        {
+          "notion": "Écrire une réaction acide-base",
+          "difficulty": 3,
+          "statement": "L'équation de la réaction de l'acide hypochloreux $\\mathrm{HClO}$ avec les ions hydroxyde $\\mathrm{HO^-}$ s'écrit :",
+          "options": [
+            {
+              "label": "$\\mathrm{HClO}+\\mathrm{HO^-}\\rightleftharpoons\\mathrm{ClO^-}+\\mathrm{H_2O}$",
+              "correct": true,
+              "why": "$\\mathrm{HClO}$ cède son proton à $\\mathrm{HO^-}$, qui devient $\\mathrm{H_2O}$ ; la charge est $-1$ de chaque côté."
+            },
+            {
+              "label": "$\\mathrm{HClO}+\\mathrm{HO^-}\\rightleftharpoons\\mathrm{ClO^-}+\\mathrm{H_3O^+}$",
+              "why": "Les charges ne sont pas conservées : $-1$ à gauche, $0$ à droite ; et $\\mathrm{HO^-}$ capte un proton pour donner $\\mathrm{H_2O}$, pas $\\mathrm{H_3O^+}$."
+            },
+            {
+              "label": "$\\mathrm{HClO}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{ClO^-}+\\mathrm{HO^-}$",
+              "why": "Quand un acide cède un proton à l'eau, on forme $\\mathrm{H_3O^+}$, pas $\\mathrm{HO^-}$ ; de plus les ions $\\mathrm{HO^-}$ du mélange ne sont pas utilisés."
+            },
+            {
+              "label": "$\\mathrm{ClO^-}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{HClO}+\\mathrm{H_3O^+}$",
+              "why": "Tu as écrit une réaction où $\\mathrm{ClO^-}$ cède un proton à l'eau, ce qui est impossible pour une base : l'équation correcte a $\\mathrm{HClO}$ et $\\mathrm{HO^-}$ pour réactifs."
+            }
+          ],
+          "hint": "Identifie l'acide et la base parmi les réactifs, puis écris le transfert de proton ; vérifie la conservation de la charge.",
+          "solution": "$\\mathrm{HClO}$ est l'acide du couple $\\mathrm{HClO/ClO^-}$ ; $\\mathrm{HO^-}$ est la base du couple $\\mathrm{H_2O/HO^-}$. Le proton passe de $\\mathrm{HClO}$ à $\\mathrm{HO^-}$ : $\\mathrm{HClO}+\\mathrm{HO^-}\\rightleftharpoons\\mathrm{ClO^-}+\\mathrm{H_2O}$. Contrôle : charge $-1$ de chaque côté.",
+          "methode": "Charge conservée : vérifier toujours $\\sum q$ à gauche = à droite.",
+          "points": 1,
+          "ref": "pc-acide-base-ecrire-une-reaction-acide-base-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le pH",
+        "lesson": "Acides, bases et pH",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-le-ph",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "Le pH",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le pH",
+          "difficulty": 1,
+          "statement": "Le pH d'une solution aqueuse est défini par :",
+          "options": [
+            {
+              "label": "$\\mathrm{pH}=-\\log\\bigl[\\mathrm{H_3O^+}\\bigr]$",
+              "correct": true,
+              "why": "Le pH est l'opposé du logarithme décimal de la concentration en ions oxonium (rapportée à $1\\ \\mathrm{mol\\,L^{-1}}$)."
+            },
+            {
+              "label": "$\\mathrm{pH}=\\log\\bigl[\\mathrm{H_3O^+}\\bigr]$",
+              "why": "Tu as oublié le signe moins : le pH serait négatif pour les solutions usuelles."
+            },
+            {
+              "label": "$\\mathrm{pH}=-\\ln\\bigl[\\mathrm{H_3O^+}\\bigr]$",
+              "why": "Le pH est défini avec le logarithme décimal $\\log$, non avec le logarithme népérien $\\ln$."
+            },
+            {
+              "label": "$\\mathrm{pH}=\\bigl[\\mathrm{H_3O^+}\\bigr]$",
+              "why": "Le pH n'est pas la concentration elle-même : c'est son opposé logarithmique, un nombre sans unité."
+            }
+          ],
+          "hint": "Le pH est un nombre sans unité, grand pour les solutions peu acides.",
+          "solution": "$\\mathrm{pH}=-\\log\\dfrac{[\\mathrm{H_3O^+}]}{c^\\circ}$ avec $c^\\circ=1\\ \\mathrm{mol\\,L^{-1}}$, d'où $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : plus $[\\mathrm{H_3O^+}]$ est petite, plus le pH est grand.",
+          "methode": "$\\mathrm{pH}=-\\log[\\mathrm{H_3O^+}]$ et $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$.",
+          "points": 1,
+          "ref": "pc-acide-base-le-ph-q1"
+        },
+        {
+          "notion": "Le pH",
+          "difficulty": 2,
+          "statement": "Une solution a pour pH $4{,}3$. La concentration en ions oxonium vaut :",
+          "options": [
+            {
+              "label": "$5{,}0\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}=10^{-4{,}3}=5{,}01\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$2{,}0\\times10^{4}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as oublié le signe moins de l'exposant : $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$ et non $10^{\\mathrm{pH}}$."
+            },
+            {
+              "label": "$1{,}4\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as utilisé la fonction exponentielle $e^{-\\mathrm{pH}}$ : le pH est défini avec le logarithme décimal, donc $10^{-\\mathrm{pH}}$."
+            },
+            {
+              "label": "$1{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as arrondi le pH à $4$ avant de calculer : $10^{-4}\\ne10^{-4{,}3}$, l'écart est d'un facteur $2$."
+            }
+          ],
+          "hint": "Inverse la définition : $[\\mathrm{H_3O^+}]=10^{\\ldots}$.",
+          "solution": "$[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}=10^{-4{,}3}=5{,}01\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $\\mathrm{pH}=4{,}3$ est compris entre $4$ et $5$, donc $[\\mathrm{H_3O^+}]$ est comprise entre $10^{-5}$ et $10^{-4}$.",
+          "methode": "$[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$ (en $\\mathrm{mol\\,L^{-1}}$), calculatrice en base $10$.",
+          "points": 1,
+          "ref": "pc-acide-base-le-ph-q2"
+        },
+        {
+          "notion": "Le pH",
+          "difficulty": 2,
+          "statement": "On dilue $100$ fois une solution d'acide chlorhydrique de pH $2{,}0$ (acide fort, la dilution restant faible devant l'eau). Le pH de la solution diluée vaut :",
+          "options": [
+            {
+              "label": "$4{,}0$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]$ est divisée par $100$ donc $\\mathrm{pH}=-\\log\\dfrac{10^{-2}}{100}=2{,}0+2=4{,}0$."
+            },
+            {
+              "label": "$0{,}020$",
+              "why": "Tu as divisé le pH par $100$ : c'est la concentration qui est divisée par $100$, le pH augmente de $\\log100=2$."
+            },
+            {
+              "label": "$0{,}0$",
+              "why": "Tu as retranché $2$ au pH : diluer une solution acide augmente son pH, il ne le diminue pas."
+            },
+            {
+              "label": "$2{,}0$",
+              "why": "Tu as supposé que le pH ne change pas à la dilution : or $[\\mathrm{H_3O^+}]$ est divisée par $100$."
+            }
+          ],
+          "hint": "Divise la concentration par $100$ puis traduis dans le pH : de combien d'unités varie le pH ?",
+          "solution": "Acide fort : $[\\mathrm{H_3O^+}]=C$. Avant dilution, $[\\mathrm{H_3O^+}]=10^{-2}\\ \\mathrm{mol\\,L^{-1}}$ ; après, $10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ donc $\\mathrm{pH}=4{,}0$. Contrôle : une dilution par $10^n$ augmente le pH de $n$ unités (acide fort, pas trop dilué).",
+          "methode": "Acide fort dilué $10^n$ fois : $\\mathrm{pH}$ augmente de $n$ unités.",
+          "points": 1,
+          "ref": "pc-acide-base-le-ph-q3"
+        },
+        {
+          "notion": "Le pH",
+          "difficulty": 3,
+          "statement": "À $25\\ ^\\circ\\mathrm{C}$, une solution d'hydroxyde de sodium (base forte) de concentration $1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$ a pour pH :",
+          "options": [
+            {
+              "label": "$12{,}0$",
+              "correct": true,
+              "why": "$[\\mathrm{HO^-}]=10^{-2}$ donc $[\\mathrm{H_3O^+}]=\\dfrac{10^{-14}}{10^{-2}}=10^{-12}$ et $\\mathrm{pH}=12{,}0$."
+            },
+            {
+              "label": "$2{,}0$",
+              "why": "Tu as calculé $-\\log[\\mathrm{HO^-}]=\\mathrm{pOH}=2{,}0$ ; le pH vaut $14-\\mathrm{pOH}$."
+            },
+            {
+              "label": "$16{,}0$",
+              "why": "Tu as ajouté $2{,}0$ à $14$ : $\\mathrm{pH}=14-\\mathrm{pOH}=14-2{,}0$, pas $14+\\mathrm{pOH}$."
+            },
+            {
+              "label": "$7{,}0$",
+              "why": "Tu as supposé la solution neutre : une base forte donne un pH supérieur à $7$."
+            }
+          ],
+          "hint": "Calcule $[\\mathrm{H_3O^+}]$ avec le produit ionique de l'eau, puis $\\mathrm{pH}=-\\log[\\mathrm{H_3O^+}]$.",
+          "solution": "$[\\mathrm{HO^-}]=C=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$ ; $[\\mathrm{H_3O^+}]=\\dfrac{K_e}{[\\mathrm{HO^-}]}=\\dfrac{10^{-14}}{10^{-2}}=10^{-12}\\ \\mathrm{mol\\,L^{-1}}$ ; $\\mathrm{pH}=12{,}0$. Contrôle : $\\mathrm{pH}+\\mathrm{pOH}=12{,}0+2{,}0=14$.",
+          "methode": "Base forte : $[\\mathrm{HO^-}]=C$ ; $\\mathrm{pH}=14+\\log C$ à $25\\ ^\\circ\\mathrm{C}$.",
+          "points": 1,
+          "ref": "pc-acide-base-le-ph-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le produit ionique de l'eau",
+        "lesson": "Acides, bases et pH",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-le-produit-ionique-de-l-eau",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "Le produit ionique de l'eau",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le produit ionique de l'eau",
+          "difficulty": 1,
+          "statement": "Dans l'eau pure à $25\\ ^\\circ\\mathrm{C}$, les concentrations en ions oxonium et hydroxyde valent chacune :",
+          "options": [
+            {
+              "label": "$1{,}0\\times10^{-7}\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "Dans l'eau pure $[\\mathrm{H_3O^+}]=[\\mathrm{HO^-}]$ et leur produit vaut $10^{-14}$ : chacune vaut $\\sqrt{10^{-14}}=10^{-7}\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$1{,}0\\times10^{-14}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "$10^{-14}$ est la valeur du produit des deux concentrations, pas de chacune d'elles."
+            },
+            {
+              "label": "$7{,}0\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "$7{,}0$ est le pH de l'eau pure, nombre sans unité, pas une concentration."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Une concentration de $1\\ \\mathrm{mol\\,L^{-1}}$ en ions serait énorme : l'eau pure en contient très peu."
+            }
+          ],
+          "hint": "L'eau pure est neutre : que valent les deux concentrations, et quel est leur produit ?",
+          "solution": "Dans l'eau pure, $[\\mathrm{H_3O^+}]=[\\mathrm{HO^-}]$ et $K_e=[\\mathrm{H_3O^+}][\\mathrm{HO^-}]=10^{-14}$ : chaque concentration vaut $10^{-7}\\ \\mathrm{mol\\,L^{-1}}$, ce qui donne $\\mathrm{pH}=7$. Contrôle : $10^{-7}\\times10^{-7}=10^{-14}$.",
+          "methode": "Eau pure à $25\\ ^\\circ\\mathrm{C}$ : $[\\mathrm{H_3O^+}]=[\\mathrm{HO^-}]=10^{-7}\\ \\mathrm{mol\\,L^{-1}}$.",
+          "points": 1,
+          "ref": "pc-acide-base-le-produit-ionique-de-l-eau-q1"
+        },
+        {
+          "notion": "Le produit ionique de l'eau",
+          "difficulty": 2,
+          "statement": "À $25\\ ^\\circ\\mathrm{C}$, une solution a un pH de $11{,}5$. La concentration en ions hydroxyde vaut :",
+          "options": [
+            {
+              "label": "$3{,}2\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=10^{-11{,}5}=3{,}16\\times10^{-12}$ puis $[\\mathrm{HO^-}]=\\dfrac{K_e}{[\\mathrm{H_3O^+}]}=\\dfrac{10^{-14}}{3{,}16\\times10^{-12}}=3{,}16\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$3{,}2\\times10^{-12}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as donné $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$, pas $[\\mathrm{HO^-}]$."
+            },
+            {
+              "label": "$3{,}2\\times10^{-26}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as multiplié $K_e$ par $[\\mathrm{H_3O^+}]$ au lieu de diviser."
+            },
+            {
+              "label": "$3{,}2\\times10^{11}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as oublié le signe moins de l'exposant : $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$, et $[\\mathrm{HO^-}]$ ne peut de toute façon pas être aussi grande."
+            }
+          ],
+          "hint": "Calcule d'abord $[\\mathrm{H_3O^+}]$ puis utilise $K_e$.",
+          "solution": "$[\\mathrm{H_3O^+}]=10^{-11{,}5}=3{,}16\\times10^{-12}\\ \\mathrm{mol\\,L^{-1}}$ ; $[\\mathrm{HO^-}]=\\dfrac{K_e}{[\\mathrm{H_3O^+}]}=3{,}16\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $\\mathrm{pOH}=14-11{,}5=2{,}5$ et $10^{-2{,}5}=3{,}16\\times10^{-3}$.",
+          "methode": "$[\\mathrm{HO^-}]=K_e/10^{-\\mathrm{pH}}=10^{\\mathrm{pH}-14}$ à $25\\ ^\\circ\\mathrm{C}$.",
+          "points": 1,
+          "ref": "pc-acide-base-le-produit-ionique-de-l-eau-q2"
+        },
+        {
+          "notion": "Le produit ionique de l'eau",
+          "difficulty": 2,
+          "statement": "À $25\\ ^\\circ\\mathrm{C}$, une solution a une concentration en ions hydroxyde $[\\mathrm{HO^-}]=1{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$. On en déduit :",
+          "options": [
+            {
+              "label": "$[\\mathrm{H_3O^+}]=1{,}0\\times10^{-10}\\ \\mathrm{mol\\,L^{-1}}$ et $\\mathrm{pH}=10{,}0$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=\\dfrac{10^{-14}}{10^{-4}}=10^{-10}$ et $\\mathrm{pH}=-\\log10^{-10}=10{,}0$."
+            },
+            {
+              "label": "$[\\mathrm{H_3O^+}]=1{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ et $\\mathrm{pH}=4{,}0$",
+              "why": "Tu as pris $[\\mathrm{H_3O^+}]=[\\mathrm{HO^-}]$ : ce n'est vrai que dans l'eau pure ; ici la solution est basique."
+            },
+            {
+              "label": "$[\\mathrm{H_3O^+}]=1{,}0\\times10^{-18}\\ \\mathrm{mol\\,L^{-1}}$ et $\\mathrm{pH}=18{,}0$",
+              "why": "Tu as multiplié $K_e$ par $[\\mathrm{HO^-}]$ ($10^{-14}\\times10^{-4}$) au lieu de diviser."
+            },
+            {
+              "label": "$[\\mathrm{H_3O^+}]=1{,}0\\times10^{10}\\ \\mathrm{mol\\,L^{-1}}$ et $\\mathrm{pH}=-10{,}0$",
+              "why": "Tu as inversé l'exposant : $\\dfrac{10^{-14}}{10^{-4}}=10^{-10}$, valeur très petite, pas très grande."
+            }
+          ],
+          "hint": "Utilise $K_e=[\\mathrm{H_3O^+}][\\mathrm{HO^-}]$ pour trouver $[\\mathrm{H_3O^+}]$.",
+          "solution": "$[\\mathrm{H_3O^+}]=\\dfrac{K_e}{[\\mathrm{HO^-}]}=\\dfrac{10^{-14}}{10^{-4}}=10^{-10}\\ \\mathrm{mol\\,L^{-1}}$ et $\\mathrm{pH}=10{,}0$. Contrôle : $\\mathrm{pH}+\\mathrm{pOH}=10{,}0+4{,}0=14$.",
+          "methode": "$K_e=[\\mathrm{H_3O^+}][\\mathrm{HO^-}]$ : l'une des deux concentrations donne l'autre.",
+          "points": 1,
+          "ref": "pc-acide-base-le-produit-ionique-de-l-eau-q3"
+        },
+        {
+          "notion": "Le produit ionique de l'eau",
+          "difficulty": 3,
+          "statement": "À $60\\ ^\\circ\\mathrm{C}$, $K_e=9{,}6\\times10^{-14}$. Une solution de pH $7{,}0$ à cette température est :",
+          "options": [
+            {
+              "label": "basique : $[\\mathrm{HO^-}]=9{,}6\\times10^{-7}$ dépasse $[\\mathrm{H_3O^+}]=1{,}0\\times10^{-7}$",
+              "correct": true,
+              "why": "Une solution est basique si $[\\mathrm{HO^-}]>[\\mathrm{H_3O^+}]$ : ici $9{,}6\\times10^{-7}>1{,}0\\times10^{-7}$."
+            },
+            {
+              "label": "neutre, car son pH vaut $7{,}0$ comme celui de l'eau pure à $25\\ ^\\circ\\mathrm{C}$",
+              "why": "La neutralité ($[\\mathrm{H_3O^+}]=[\\mathrm{HO^-}]$) correspond à $\\mathrm{pH}=7$ seulement à $25\\ ^\\circ\\mathrm{C}$ ; à $60\\ ^\\circ\\mathrm{C}$ l'eau pure a $\\mathrm{pH}=6{,}5$."
+            },
+            {
+              "label": "acide, car son pH est inférieur à $14$, valeur maximale de l'échelle de pH",
+              "why": "Le critère d'acidité n'est pas la comparaison du pH à $14$ ; il faut comparer $[\\mathrm{H_3O^+}]$ et $[\\mathrm{HO^-}]$."
+            },
+            {
+              "label": "acide, car son pH est inférieur à $7$ comme pour toute solution acide",
+              "why": "Le pH n'est pas inférieur à $7$ ($\\mathrm{pH}=7{,}0$), et la valeur de référence dépend de la température."
+            }
+          ],
+          "hint": "Compare $[\\mathrm{H_3O^+}]$ et $[\\mathrm{HO^-}]$ en utilisant le $K_e$ à $60\\ ^\\circ\\mathrm{C}$.",
+          "solution": "$[\\mathrm{H_3O^+}]=10^{-7{,}0}=1{,}0\\times10^{-7}\\ \\mathrm{mol\\,L^{-1}}$ et $[\\mathrm{HO^-}]=\\dfrac{9{,}6\\times10^{-14}}{1{,}0\\times10^{-7}}=9{,}6\\times10^{-7}\\ \\mathrm{mol\\,L^{-1}}$. Comme $[\\mathrm{HO^-}]>[\\mathrm{H_3O^+}]$, la solution est basique. L'eau pure neutre à $60\\ ^\\circ\\mathrm{C}$ a $\\mathrm{pH}=-\\tfrac12\\log(9{,}6\\times10^{-14})=6{,}51$. Contrôle : $7{,}0>6{,}51$.",
+          "methode": "Acide/neutre/basique : comparer $[\\mathrm{H_3O^+}]$ à $[\\mathrm{HO^-}]$, pas le pH à $7$ si $T\\ne25\\ ^\\circ\\mathrm{C}$.",
+          "points": 1,
+          "ref": "pc-acide-base-le-produit-ionique-de-l-eau-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Acide fort, acide faible",
+        "lesson": "Acides, bases et pH",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-acide-fort-acide-faible",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "Acide fort, acide faible",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Acide fort, acide faible",
+          "difficulty": 1,
+          "statement": "Un acide fort, dissous dans l'eau, réagit avec l'eau de façon :",
+          "options": [
+            {
+              "label": "totale : il est entièrement transformé, $\\tau=1$",
+              "correct": true,
+              "why": "Un acide fort réagit totalement avec l'eau : la quantité d'ions oxonium formés vaut la quantité d'acide apportée."
+            },
+            {
+              "label": "très limitée : seule une petite proportion de l'acide réagit",
+              "why": "Cela caractérise un acide faible : $\\tau$ est alors bien inférieur à $1$."
+            },
+            {
+              "label": "nulle : un acide fort ne réagit pas avec l'eau",
+              "why": "Un acide fort réagit totalement avec l'eau en donnant des ions oxonium ; c'est même ce qui le rend fort."
+            },
+            {
+              "label": "variable : elle dépend uniquement de sa concentration",
+              "why": "Pour un acide fort, la réaction est totale quelle que soit la concentration ; la force est une propriété de l'acide."
+            }
+          ],
+          "hint": "Compare $\\tau$ d'un acide fort avec celui d'un acide faible.",
+          "solution": "Un acide fort est entièrement dissocié dans l'eau : $\\mathrm{AH}+\\mathrm{H_2O}\\rightarrow\\mathrm{A^-}+\\mathrm{H_3O^+}$ avec $\\tau=1$ et $[\\mathrm{H_3O^+}]=C$. Un acide faible réagit partiellement ($\\tau<1$). Contrôle : pour un acide fort, $\\mathrm{pH}=-\\log C$.",
+          "methode": "Acide fort : réaction totale, $\\tau=1$, $\\mathrm{pH}=-\\log C$.",
+          "points": 1,
+          "ref": "pc-acide-base-acide-fort-acide-faible-q1"
+        },
+        {
+          "notion": "Acide fort, acide faible",
+          "difficulty": 2,
+          "statement": "Une solution d'acide chlorhydrique (acide fort) de concentration $2{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ a pour pH :",
+          "options": [
+            {
+              "label": "$2{,}70$",
+              "correct": true,
+              "why": "Acide fort : $[\\mathrm{H_3O^+}]=C=2{,}0\\times10^{-3}$ et $\\mathrm{pH}=-\\log(2{,}0\\times10^{-3})=2{,}70$."
+            },
+            {
+              "label": "$3{,}00$",
+              "why": "Tu as ignoré la mantisse $2{,}0$ : $-\\log(2{,}0\\times10^{-3})=3-\\log2{,}0=2{,}70$, pas $3{,}00$."
+            },
+            {
+              "label": "$11{,}30$",
+              "why": "Tu as calculé $14-\\mathrm{pH}$, c'est-à-dire le pOH ; le pH d'un acide est inférieur à $7$."
+            },
+            {
+              "label": "$-2{,}70$",
+              "why": "Tu as oublié le signe moins : un pH ne peut pas être négatif ici ; $\\mathrm{pH}=-\\log[\\mathrm{H_3O^+}]$."
+            }
+          ],
+          "hint": "Pour un acide fort, quelle relation relie $[\\mathrm{H_3O^+}]$ et $C$ ?",
+          "solution": "$[\\mathrm{H_3O^+}]=C=2{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ donc $\\mathrm{pH}=-\\log(2{,}0\\times10^{-3})=3-\\log2{,}0=2{,}70$. Contrôle : $10^{-2{,}70}=2{,}0\\times10^{-3}$.",
+          "methode": "Acide fort : $\\mathrm{pH}=-\\log C$.",
+          "points": 1,
+          "ref": "pc-acide-base-acide-fort-acide-faible-q2"
+        },
+        {
+          "notion": "Acide fort, acide faible",
+          "difficulty": 2,
+          "statement": "Une solution d'un acide de concentration apportée $C=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$ a pour pH $3{,}0$. On en déduit que cet acide est :",
+          "options": [
+            {
+              "label": "faible, avec $\\tau=0{,}10$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=10^{-3}$ et $\\tau=\\dfrac{10^{-3}}{10^{-2}}=0{,}10<1$ : l'acide n'est pas entièrement dissocié, donc faible."
+            },
+            {
+              "label": "fort, avec $\\tau=1$",
+              "why": "Pour un acide fort on aurait $\\mathrm{pH}=-\\log C=2{,}0$ ; le pH mesuré est $3{,}0$, donc $\\tau=0{,}10$."
+            },
+            {
+              "label": "faible, avec $\\tau=10$",
+              "why": "Tu as inversé le rapport : $\\dfrac{C}{[\\mathrm{H_3O^+}]}=10$ dépasse $1$, ce qui est impossible pour un taux d'avancement."
+            },
+            {
+              "label": "faible, avec $\\tau=0{,}010$",
+              "why": "Tu as divisé $[\\mathrm{H_3O^+}]=10^{-3}$ par $10^{-1}$ au lieu de $C=10^{-2}\\ \\mathrm{mol\\,L^{-1}}$."
+            }
+          ],
+          "hint": "Compare le pH mesuré à $-\\log C$ puis calcule $\\tau=[\\mathrm{H_3O^+}]/C$.",
+          "solution": "$-\\log C=2{,}0$ alors que le pH mesuré est $3{,}0>2{,}0$ : l'acide est faible. $[\\mathrm{H_3O^+}]=10^{-3,0}\\ \\mathrm{mol\\,L^{-1}}$ donc $\\tau=\\dfrac{10^{-3}}{10^{-2}}=0{,}10$. Contrôle : seulement $10\\ \\%$ de l'acide a réagi avec l'eau.",
+          "methode": "Acide faible : $\\mathrm{pH}>-\\log C$ et $\\tau=10^{-\\mathrm{pH}}/C<1$.",
+          "points": 1,
+          "ref": "pc-acide-base-acide-fort-acide-faible-q3"
+        },
+        {
+          "notion": "Acide fort, acide faible",
+          "difficulty": 3,
+          "statement": "On dilue $1000$ fois une solution d'acide chlorhydrique de concentration $1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$ (acide fort). Le pH de la solution diluée vaut :",
+          "options": [
+            {
+              "label": "$5{,}0$",
+              "correct": true,
+              "why": "$C$ est divisée par $1000$ : $C'=10^{-5}\\ \\mathrm{mol\\,L^{-1}}$ et $\\mathrm{pH}=-\\log10^{-5}=5{,}0$ ; l'autoprotolyse de l'eau est négligeable à ce niveau."
+            },
+            {
+              "label": "$7{,}0$",
+              "why": "La solution reste acide : $[\\mathrm{H_3O^+}]=10^{-5}>10^{-7}$ ; elle ne devient neutre qu'à dilution extrême."
+            },
+            {
+              "label": "$9{,}0$",
+              "why": "Tu as calculé $14-5{,}0$ : le pH reste inférieur à $7$ pour une solution acide diluée."
+            },
+            {
+              "label": "$2{,}0$",
+              "why": "Tu as supposé que le pH ne change pas à la dilution : or $[\\mathrm{H_3O^+}]$ est divisée par $1000$ et le pH augmente de $3$ unités."
+            }
+          ],
+          "hint": "Calcule la nouvelle concentration en ions oxonium puis le pH.",
+          "solution": "Acide fort : $[\\mathrm{H_3O^+}]=C'$ avec $C'=\\dfrac{1{,}0\\times10^{-2}}{1000}=1{,}0\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$. $\\mathrm{pH}=5{,}0$. Contrôle : $\\mathrm{pH}$ augmente de $\\log1000=3$ unités, de $2{,}0$ à $5{,}0$.",
+          "methode": "Acide fort dilué $10^n$ fois : $\\mathrm{pH}$ augmente de $n$ unités.",
+          "points": 1,
+          "ref": "pc-acide-base-acide-fort-acide-faible-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La constante d'acidité",
+        "lesson": "Constante d'acidité et prédominance",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-la-constante-d-acidite",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "La constante d'acidité",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "La constante d'acidité",
+          "difficulty": 1,
+          "statement": "Quand la constante d'acidité $K_A$ d'un couple augmente, son $\\mathrm{p}K_A=-\\log K_A$ :",
+          "options": [
+            {
+              "label": "diminue : un $K_A$ plus grand correspond à un acide plus fort",
+              "correct": true,
+              "why": "$\\mathrm{p}K_A=-\\log K_A$ est une fonction décroissante de $K_A$ : plus l'acide est fort, plus son $\\mathrm{p}K_A$ est petit."
+            },
+            {
+              "label": "augmente : un $K_A$ plus grand correspond à un $\\mathrm{p}K_A$ plus grand",
+              "why": "Le signe moins dans $-\\log K_A$ inverse le sens : $K_A$ plus grand donne $\\mathrm{p}K_A$ plus petit."
+            },
+            {
+              "label": "reste constant : $\\mathrm{p}K_A$ ne dépend pas de $K_A$",
+              "why": "$\\mathrm{p}K_A$ est défini à partir de $K_A$ : il en dépend directement."
+            },
+            {
+              "label": "devient négatif pour tous les acides faibles",
+              "why": "Pour les acides faibles usuels, $K_A<1$ donne $\\mathrm{p}K_A>0$ ; c'est pour les acides très forts qu'il peut être négatif."
+            }
+          ],
+          "hint": "Le signe moins devant le logarithme change-t-il le sens de variation ?",
+          "solution": "$\\mathrm{p}K_A=-\\log K_A$ : si $K_A$ augmente, $\\log K_A$ augmente et $\\mathrm{p}K_A$ diminue. Un acide plus fort a donc un $K_A$ plus grand et un $\\mathrm{p}K_A$ plus petit. Contrôle : $\\mathrm{p}K_A(\\mathrm{HCOOH/HCOO^-})=3{,}75<\\mathrm{p}K_A(\\mathrm{CH_3COOH/CH_3COO^-})=4{,}75$, et l'acide méthanoïque est plus fort.",
+          "methode": "$\\mathrm{p}K_A=-\\log K_A$ : acide plus fort $\\Leftrightarrow$ $K_A$ plus grand $\\Leftrightarrow$ $\\mathrm{p}K_A$ plus petit.",
+          "points": 1,
+          "ref": "pc-acide-base-la-constante-d-acidite-q1"
+        },
+        {
+          "notion": "La constante d'acidité",
+          "difficulty": 2,
+          "statement": "Le couple $\\mathrm{HCOOH/HCOO^-}$ a pour $\\mathrm{p}K_A=3{,}75$ et le couple $\\mathrm{CH_3COOH/CH_3COO^-}$ a pour $\\mathrm{p}K_A=4{,}75$. On en déduit que :",
+          "options": [
+            {
+              "label": "l'acide méthanoïque est plus fort, son $K_A$ étant $10$ fois plus grand",
+              "correct": true,
+              "why": "$K_A=10^{-\\mathrm{p}K_A}$ : $\\dfrac{10^{-3{,}75}}{10^{-4{,}75}}=10$ ; le plus petit $\\mathrm{p}K_A$ désigne l'acide le plus fort."
+            },
+            {
+              "label": "l'acide éthanoïque est plus fort, car son $\\mathrm{p}K_A$ est plus grand",
+              "why": "Un $\\mathrm{p}K_A$ plus grand correspond à un $K_A$ plus petit, donc à un acide plus faible."
+            },
+            {
+              "label": "l'acide méthanoïque est plus fort, son $K_A$ étant $1{,}0$ unité plus grand",
+              "why": "Une différence de $1$ unité de $\\mathrm{p}K_A$ correspond à un rapport $10$ entre les $K_A$, pas à une différence de $1$."
+            },
+            {
+              "label": "les deux acides ont la même force, leurs $\\mathrm{p}K_A$ étant du même ordre",
+              "why": "Les $\\mathrm{p}K_A$ diffèrent d'une unité, soit un facteur $10$ sur $K_A$ : les forces sont bien différentes."
+            }
+          ],
+          "hint": "Calcule le rapport $K_A(\\mathrm{HCOOH})/K_A(\\mathrm{CH_3COOH})$.",
+          "solution": "$K_A(\\mathrm{HCOOH})=10^{-3{,}75}=1{,}8\\times10^{-4}$ et $K_A(\\mathrm{CH_3COOH})=10^{-4{,}75}=1{,}8\\times10^{-5}$ : le rapport est $10$. L'acide méthanoïque est plus fort. Contrôle : plus $\\mathrm{p}K_A$ est petit, plus l'acide est fort.",
+          "methode": "Comparer deux acides par leurs $\\mathrm{p}K_A$ : le plus petit $\\mathrm{p}K_A$ est le plus fort ; $\\Delta\\mathrm{p}K_A=1\\Rightarrow\\times10$ sur $K_A$.",
+          "points": 1,
+          "ref": "pc-acide-base-la-constante-d-acidite-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La relation fondamentale",
+        "lesson": "Constante d'acidité et prédominance",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-la-relation-fondamentale",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "La relation fondamentale",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La relation fondamentale",
+          "difficulty": 1,
+          "statement": "Pour un couple $\\mathrm{AH/A^-}$, la relation entre le pH et le $\\mathrm{p}K_A$ s'écrit :",
+          "options": [
+            {
+              "label": "$\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$",
+              "correct": true,
+              "why": "Elle se déduit de l'expression de $K_A$ en prenant $-\\log$ : la base est au numérateur, l'acide au dénominateur."
+            },
+            {
+              "label": "$\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{AH}]}{[\\mathrm{A^-}]}$",
+              "why": "Tu as inversé le rapport : c'est $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$, la base sur l'acide."
+            },
+            {
+              "label": "$\\mathrm{pH}=\\mathrm{p}K_A-\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$",
+              "why": "Tu as changé le signe : avec $\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ le signe est $+$, ce qui donne un pH qui augmente avec la base."
+            },
+            {
+              "label": "$\\mathrm{pH}=\\mathrm{p}K_A+\\ln\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$",
+              "why": "Le logarithme est décimal ($\\log$), comme dans la définition du pH et de $\\mathrm{p}K_A$, non népérien."
+            }
+          ],
+          "hint": "Prends $-\\log$ de l'expression de $K_A=\\dfrac{[\\mathrm{A^-}][\\mathrm{H_3O^+}]}{[\\mathrm{AH}]}$.",
+          "solution": "$K_A=\\dfrac{[\\mathrm{A^-}][\\mathrm{H_3O^+}]}{[\\mathrm{AH}]}\\Rightarrow-\\log K_A=-\\log[\\mathrm{H_3O^+}]-\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$, soit $\\mathrm{p}K_A=\\mathrm{pH}-\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ et $\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$. Contrôle : si $[\\mathrm{A^-}]=[\\mathrm{AH}]$, $\\mathrm{pH}=\\mathrm{p}K_A$.",
+          "methode": "$\\mathrm{pH}=\\mathrm{p}K_A+\\log([\\mathrm{base}]/[\\mathrm{acide}])$.",
+          "points": 1,
+          "ref": "pc-acide-base-la-relation-fondamentale-q1"
+        },
+        {
+          "notion": "La relation fondamentale",
+          "difficulty": 2,
+          "statement": "Pour le couple $\\mathrm{CH_3COOH/CH_3COO^-}$ ($\\mathrm{p}K_A=4{,}75$), une solution contient $[\\mathrm{CH_3COO^-}]=10\\times[\\mathrm{CH_3COOH}]$. Son pH vaut :",
+          "options": [
+            {
+              "label": "$5{,}75$",
+              "correct": true,
+              "why": "$\\mathrm{pH}=4{,}75+\\log10=4{,}75+1=5{,}75$."
+            },
+            {
+              "label": "$3{,}75$",
+              "why": "Tu as inversé le rapport : $\\log\\dfrac{1}{10}=-1$ donne $3{,}75$ ; il faut $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=10$."
+            },
+            {
+              "label": "$14{,}75$",
+              "why": "Tu as ajouté le rapport $10$ sans prendre son logarithme : $\\log10=1$."
+            },
+            {
+              "label": "$7{,}05$",
+              "why": "Tu as utilisé le logarithme népérien : $\\ln10=2{,}30$ donne $7{,}05$ ; la relation utilise $\\log$ décimal."
+            }
+          ],
+          "hint": "Remplace dans $\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$.",
+          "solution": "$\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=10$ donc $\\mathrm{pH}=4{,}75+\\log10=5{,}75$. Contrôle : le pH est supérieur au $\\mathrm{p}K_A$ car la base prédomine.",
+          "methode": "$\\mathrm{pH}-\\mathrm{p}K_A=\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ : un facteur $10$ vaut $1$ unité de pH.",
+          "points": 1,
+          "ref": "pc-acide-base-la-relation-fondamentale-q2"
+        },
+        {
+          "notion": "La relation fondamentale",
+          "difficulty": 2,
+          "statement": "Une solution du couple $\\mathrm{CH_3COOH/CH_3COO^-}$ ($\\mathrm{p}K_A=4{,}75$) a pour pH $3{,}75$. Le rapport $\\dfrac{[\\mathrm{CH_3COO^-}]}{[\\mathrm{CH_3COOH}]}$ vaut :",
+          "options": [
+            {
+              "label": "$0{,}10$",
+              "correct": true,
+              "why": "$\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=\\mathrm{pH}-\\mathrm{p}K_A=-1$ donc le rapport vaut $10^{-1}=0{,}10$."
+            },
+            {
+              "label": "$10$",
+              "why": "Tu as inversé le rapport : pour un pH inférieur au $\\mathrm{p}K_A$, c'est l'acide qui prédomine, donc $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}<1$."
+            },
+            {
+              "label": "$-1{,}0$",
+              "why": "Tu as donné $\\mathrm{pH}-\\mathrm{p}K_A$ : c'est le logarithme du rapport ; le rapport vaut $10^{-1}$."
+            },
+            {
+              "label": "$0{,}010$",
+              "why": "Tu as pris $10^{-2}$ : $\\mathrm{pH}-\\mathrm{p}K_A=-1{,}00$, donc $10^{-1}$."
+            }
+          ],
+          "hint": "Isole le logarithme du rapport avec $\\mathrm{pH}-\\mathrm{p}K_A$, puis prends $10^{\\ldots}$.",
+          "solution": "$\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=\\mathrm{pH}-\\mathrm{p}K_A=3{,}75-4{,}75=-1{,}00$ donc $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=10^{-1}=0{,}10$. Contrôle : $\\mathrm{pH}<\\mathrm{p}K_A$, l'acide prédomine, donc le rapport est inférieur à $1$.",
+          "methode": "$\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=10^{\\mathrm{pH}-\\mathrm{p}K_A}$.",
+          "points": 1,
+          "ref": "pc-acide-base-la-relation-fondamentale-q3"
+        },
+        {
+          "notion": "La relation fondamentale",
+          "difficulty": 3,
+          "statement": "On mélange $10{,}0\\ \\mathrm{mL}$ d'acide éthanoïque à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$ et $5{,}0\\ \\mathrm{mL}$ de soude à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$ ; la réaction $\\mathrm{CH_3COOH}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{H_2O}$ est totale ($\\mathrm{p}K_A=4{,}75$). Le pH du mélange vaut :",
+          "options": [
+            {
+              "label": "$4{,}75$",
+              "correct": true,
+              "why": "$n(\\mathrm{HO^-})=0{,}50\\ \\mathrm{mmol}$ réagit avec $0{,}50\\ \\mathrm{mmol}$ d'acide sur $1{,}00$ : il reste $0{,}50$ d'acide et il se forme $0{,}50$ de base, donc $\\log1=0$ et $\\mathrm{pH}=\\mathrm{p}K_A$."
+            },
+            {
+              "label": "$7{,}00$",
+              "why": "Tu as supposé un mélange neutre : la solution contient un couple acide/base à quantités égales, dont le pH est le $\\mathrm{p}K_A$."
+            },
+            {
+              "label": "$2{,}88$",
+              "why": "Tu as ignoré la soude : $\\mathrm{pH}=\\tfrac12(\\mathrm{p}K_A-\\log C)$ vaut pour l'acide seul ; ici $\\mathrm{HO^-}$ est ajouté."
+            },
+            {
+              "label": "$9{,}25$",
+              "why": "Tu as calculé $14-\\mathrm{p}K_A$ : cette valeur n'est pas le pH du mélange ; ici $[\\mathrm{A^-}]=[\\mathrm{AH}]$."
+            }
+          ],
+          "hint": "Fais un tableau d'avancement en quantités de matière : que reste-t-il d'acide, que se forme-t-il de base ?",
+          "solution": "$n(\\mathrm{CH_3COOH})_0=0{,}100\\times10{,}0=1{,}00\\ \\mathrm{mmol}$ ; $n(\\mathrm{HO^-})=0{,}100\\times5{,}0=0{,}50\\ \\mathrm{mmol}$ (limitant). Réaction totale : $n(\\mathrm{CH_3COOH})=0{,}50\\ \\mathrm{mmol}$ et $n(\\mathrm{CH_3COO^-})=0{,}50\\ \\mathrm{mmol}$. Le volume se simplifie dans le rapport : $\\mathrm{pH}=4{,}75+\\log\\dfrac{0{,}50}{0{,}50}=4{,}75$. Contrôle : c'est la demi-équivalence, où $\\mathrm{pH}=\\mathrm{p}K_A$.",
+          "methode": "Demi-équivalence : $[\\mathrm{A^-}]=[\\mathrm{AH}]$, donc $\\mathrm{pH}=\\mathrm{p}K_A$.",
+          "points": 1,
+          "ref": "pc-acide-base-la-relation-fondamentale-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le diagramme de prédominance",
+        "lesson": "Constante d'acidité et prédominance",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-le-diagramme-de-predominance",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "Le diagramme de prédominance",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le diagramme de prédominance",
+          "difficulty": 1,
+          "statement": "Pour un couple $\\mathrm{AH/A^-}$, la forme acide $\\mathrm{AH}$ prédomine lorsque :",
+          "options": [
+            {
+              "label": "$\\mathrm{pH}<\\mathrm{p}K_A$",
+              "correct": true,
+              "why": "Pour $\\mathrm{pH}<\\mathrm{p}K_A$, $\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}<0$, donc $[\\mathrm{AH}]>[\\mathrm{A^-}]$."
+            },
+            {
+              "label": "$\\mathrm{pH}>\\mathrm{p}K_A$",
+              "why": "Dans ce cas c'est la forme basique $\\mathrm{A^-}$ qui prédomine."
+            },
+            {
+              "label": "$\\mathrm{pH}=7$",
+              "why": "La frontière de prédominance est le $\\mathrm{p}K_A$ du couple, et non le $\\mathrm{pH}$ neutre."
+            },
+            {
+              "label": "$\\mathrm{pH}=\\mathrm{p}K_A$",
+              "why": "À $\\mathrm{pH}=\\mathrm{p}K_A$ les deux formes ont la même concentration : aucune ne prédomine."
+            }
+          ],
+          "hint": "Utilise la relation $\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ pour comparer $[\\mathrm{A^-}]$ et $[\\mathrm{AH}]$.",
+          "solution": "$\\mathrm{pH}-\\mathrm{p}K_A=\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ : si $\\mathrm{pH}<\\mathrm{p}K_A$ le logarithme est négatif, donc $[\\mathrm{A^-}]<[\\mathrm{AH}]$ et l'acide prédomine. Contrôle : en milieu très acide, c'est bien la forme acide qui prédomine.",
+          "methode": "$\\mathrm{pH}<\\mathrm{p}K_A$ : acide ; $\\mathrm{pH}>\\mathrm{p}K_A$ : base ; $\\mathrm{pH}=\\mathrm{p}K_A$ : égalité.",
+          "points": 1,
+          "ref": "pc-acide-base-le-diagramme-de-predominance-q1"
+        },
+        {
+          "notion": "Le diagramme de prédominance",
+          "difficulty": 2,
+          "statement": "Dans une solution de pH $5{,}5$, quelle est l'espèce prédominante du couple $\\mathrm{CH_3COOH/CH_3COO^-}$ ($\\mathrm{p}K_A=4{,}75$) ?",
+          "options": [
+            {
+              "label": "$\\mathrm{CH_3COO^-}$, car $\\mathrm{pH}>\\mathrm{p}K_A$",
+              "correct": true,
+              "why": "$5{,}5>4{,}75$ : la forme basique prédomine, avec $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=10^{0{,}75}\\approx5{,}6$."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}$, car le pH est supérieur à $\\mathrm{p}K_A$",
+              "why": "Tu as inversé la règle : pour un pH supérieur au $\\mathrm{p}K_A$, c'est la base qui prédomine."
+            },
+            {
+              "label": "aucune des deux : elles ont la même concentration",
+              "why": "L'égalité n'a lieu qu'à $\\mathrm{pH}=\\mathrm{p}K_A=4{,}75$, pas à $5{,}5$."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}$, car la solution est acide",
+              "why": "Une solution de pH $5{,}5$ est acide, mais la prédominance se juge par rapport au $\\mathrm{p}K_A$, pas par rapport à $7$."
+            }
+          ],
+          "hint": "Compare le pH de la solution et le $\\mathrm{p}K_A$ du couple.",
+          "solution": "$\\mathrm{pH}=5{,}5>\\mathrm{p}K_A=4{,}75$ : la base $\\mathrm{CH_3COO^-}$ prédomine. Le rapport est $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=10^{5{,}5-4{,}75}=10^{0{,}75}=5{,}6$. Contrôle : $5{,}6>1$.",
+          "methode": "Prédominance : comparer le pH au $\\mathrm{p}K_A$, pas à $7$.",
+          "points": 1,
+          "ref": "pc-acide-base-le-diagramme-de-predominance-q2"
+        },
+        {
+          "notion": "Le diagramme de prédominance",
+          "difficulty": 3,
+          "statement": "Dans une solution de pH égal au $\\mathrm{p}K_A$ du couple moins $2$, le rapport $\\dfrac{[\\mathrm{AH}]}{[\\mathrm{A^-}]}$ vaut :",
+          "options": [
+            {
+              "label": "$100$",
+              "correct": true,
+              "why": "$\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=\\mathrm{pH}-\\mathrm{p}K_A=-2$ donc $\\dfrac{[\\mathrm{AH}]}{[\\mathrm{A^-}]}=10^{2}=100$."
+            },
+            {
+              "label": "$0{,}010$",
+              "why": "Tu as calculé $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$, l'inverse du rapport demandé."
+            },
+            {
+              "label": "$2$",
+              "why": "Tu as pris l'écart de pH comme rapport : il faut prendre $10^{\\text{écart}}$."
+            },
+            {
+              "label": "$20$",
+              "why": "Tu as multiplié l'écart $2$ par $10$ : le rapport est $10^2$, pas $10\\times2$."
+            }
+          ],
+          "hint": "Exprime $\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ puis inverse le rapport.",
+          "solution": "$\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=\\mathrm{pH}-\\mathrm{p}K_A=-2$ donc $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=10^{-2}$ et $\\dfrac{[\\mathrm{AH}]}{[\\mathrm{A^-}]}=10^{2}=100$. Contrôle : l'acide est environ $99\\ \\%$ du couple.",
+          "methode": "$\\Delta\\mathrm{pH}=n$ unités autour du $\\mathrm{p}K_A$ : rapport $10^{\\,n}$.",
+          "points": 1,
+          "ref": "pc-acide-base-le-diagramme-de-predominance-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les indicateurs colorés",
+        "lesson": "Constante d'acidité et prédominance",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-les-indicateurs-colores",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "Les indicateurs colorés",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les indicateurs colorés",
+          "difficulty": 1,
+          "statement": "La zone de virage d'un indicateur coloré de couple $\\mathrm{HIn/In^-}$ est l'intervalle de pH :",
+          "options": [
+            {
+              "label": "d'environ $\\mathrm{p}K_A\\pm1$, où les teintes se mélangent",
+              "correct": true,
+              "why": "Dans cet intervalle, les formes $\\mathrm{HIn}$ et $\\mathrm{In^-}$ ont des concentrations comparables : la couleur change."
+            },
+            {
+              "label": "de $0$ à $7$, où la forme acide de l'indicateur est présente",
+              "why": "La zone de virage est étroite et centrée sur le $\\mathrm{p}K_A$ de l'indicateur, pas sur une plage aussi large."
+            },
+            {
+              "label": "de $7$ à $14$, où la forme basique de l'indicateur est présente",
+              "why": "La zone de virage est étroite, autour du $\\mathrm{p}K_A$ de l'indicateur ; elle ne couvre pas toute la zone basique."
+            },
+            {
+              "label": "réduit à une seule valeur, égale au $\\mathrm{p}K_A$ de l'indicateur",
+              "why": "Le changement de teinte s'étale sur environ deux unités de pH, pas sur une seule valeur."
+            }
+          ],
+          "hint": "La teinte change quand les deux formes ont des concentrations du même ordre : autour de quelle valeur de pH ?",
+          "solution": "Un indicateur coloré est un couple acide/base dont les deux formes ont des couleurs différentes. Sa zone de virage est l'intervalle où ni l'une ni l'autre ne prédomine nettement, soit environ $\\mathrm{p}K_A\\pm1$. Contrôle : au centre, $\\mathrm{pH}=\\mathrm{p}K_A$ et $[\\mathrm{In^-}]=[\\mathrm{HIn}]$ (teinte sensible).",
+          "methode": "Zone de virage $\\approx\\mathrm{p}K_{A,\\text{ind}}\\pm1$.",
+          "points": 1,
+          "ref": "pc-acide-base-les-indicateurs-colores-q1"
+        },
+        {
+          "notion": "Les indicateurs colorés",
+          "difficulty": 2,
+          "statement": "Le bleu de bromothymol (BBT) est jaune en milieu acide (forme $\\mathrm{HIn}$) et bleu en milieu basique (forme $\\mathrm{In^-}$), avec $\\mathrm{p}K_A=7{,}1$ ; sa zone de virage est $6{,}0$–$7{,}6$. Dans une solution de pH $9{,}0$, il est :",
+          "options": [
+            {
+              "label": "bleu, car $\\mathrm{pH}>7{,}6$ : la forme $\\mathrm{In^-}$ prédomine",
+              "correct": true,
+              "why": "Au-dessus de la zone de virage, la forme basique prédomine : teinte bleue."
+            },
+            {
+              "label": "jaune, car la solution est basique, comme toute solution de pH élevé",
+              "why": "Le jaune est la teinte de la forme acide ; en milieu basique c'est la forme basique, bleue, qui prédomine."
+            },
+            {
+              "label": "vert, car $\\mathrm{pH}=9{,}0$ est proche de $7$, valeur du virage",
+              "why": "La teinte intermédiaire (verte) n'apparaît que dans la zone de virage $6{,}0$–$7{,}6$, pas à $9{,}0$."
+            },
+            {
+              "label": "incolore, car l'indicateur n'est actif qu'autour de $\\mathrm{pH}=7$",
+              "why": "Un indicateur coloré a une teinte pour chaque forme ; il n'est pas incolore en dehors du pH neutre."
+            }
+          ],
+          "hint": "Compare le pH $9{,}0$ à la zone de virage $6{,}0$–$7{,}6$ du BBT.",
+          "solution": "$\\mathrm{pH}=9{,}0>7{,}6$ : on est au-delà de la zone de virage, du côté basique. La forme $\\mathrm{In^-}$ prédomine : $\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}=10^{9{,}0-7{,}1}\\approx80$, la solution est bleue. Contrôle : jaune pour $\\mathrm{pH}<6{,}0$.",
+          "methode": "Indicateur : en dessous de la zone teinte acide, au-dessus teinte basique, dedans teinte mélangée.",
+          "points": 1,
+          "ref": "pc-acide-base-les-indicateurs-colores-q2"
+        },
+        {
+          "notion": "Les indicateurs colorés",
+          "difficulty": 2,
+          "statement": "On veut repérer l'équivalence d'un dosage dont le pH à l'équivalence est $8{,}7$. Zones de virage : hélianthine $3{,}1$–$4{,}4$ ; bleu de bromothymol $6{,}0$–$7{,}6$ ; phénolphtaléine $8{,}2$–$10{,}0$ ; vert de bromocrésol $3{,}8$–$5{,}4$. L'indicateur adapté est :",
+          "options": [
+            {
+              "label": "la phénolphtaléine, car $8{,}7$ est dans sa zone de virage",
+              "correct": true,
+              "why": "Le critère est que le pH à l'équivalence appartienne à la zone de virage : $8{,}2<8{,}7<10{,}0$."
+            },
+            {
+              "label": "l'hélianthine, car c'est l'indicateur le plus utilisé",
+              "why": "La popularité n'est pas un critère : sa zone de virage $3{,}1$–$4{,}4$ ne contient pas $8{,}7$."
+            },
+            {
+              "label": "le bleu de bromothymol, car sa zone de virage est proche de $7$",
+              "why": "Sa zone de virage $6{,}0$–$7{,}6$ ne contient pas $8{,}7$ : le changement de teinte se produirait avant l'équivalence."
+            },
+            {
+              "label": "le vert de bromocrésol, car il est le plus sensible",
+              "why": "Sa zone de virage $3{,}8$–$5{,}4$ est loin de $8{,}7$ : la teinte aurait changé bien avant l'équivalence."
+            }
+          ],
+          "hint": "Cherche l'indicateur dont la zone de virage contient le pH à l'équivalence.",
+          "solution": "Un indicateur convient si la zone de virage contient le pH à l'équivalence. Seule la phénolphtaléine ($8{,}2$–$10{,}0$) contient $8{,}7$. Contrôle : les trois autres zones de virage sont toutes situées en dessous de $8{,}2$.",
+          "methode": "Choix de l'indicateur : $\\mathrm{pH}_E\\in$ zone de virage.",
+          "points": 1,
+          "ref": "pc-acide-base-les-indicateurs-colores-q3"
+        },
+        {
+          "notion": "Les indicateurs colorés",
+          "difficulty": 3,
+          "statement": "Un indicateur de $\\mathrm{p}K_A=7{,}1$ (couple $\\mathrm{HIn/In^-}$) est en solution. À quel pH le rapport $\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}$ vaut-il $10$ ?",
+          "options": [
+            {
+              "label": "$\\mathrm{pH}=8{,}1$",
+              "correct": true,
+              "why": "$\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}=7{,}1+\\log10=8{,}1$."
+            },
+            {
+              "label": "$\\mathrm{pH}=6{,}1$",
+              "why": "Tu as pris un rapport $\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}=\\dfrac1{10}$ : pour un rapport $10$, le pH est supérieur au $\\mathrm{p}K_A$."
+            },
+            {
+              "label": "$\\mathrm{pH}=17{,}1$",
+              "why": "Tu as ajouté le rapport $10$ au $\\mathrm{p}K_A$ sans prendre le logarithme : $\\log10=1$."
+            },
+            {
+              "label": "$\\mathrm{pH}=7{,}1$",
+              "why": "À $\\mathrm{pH}=\\mathrm{p}K_A=7{,}1$, le rapport vaut $1$ ($[\\mathrm{In^-}]=[\\mathrm{HIn}]$), pas $10$."
+            }
+          ],
+          "hint": "Utilise $\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}$.",
+          "solution": "$\\mathrm{pH}=7{,}1+\\log10=8{,}1$. À ce pH la forme $\\mathrm{In^-}$ est dix fois plus abondante : on atteint la limite basique de la zone de virage. Contrôle : $\\mathrm{pH}=8{,}1>\\mathrm{p}K_A$, la forme basique prédomine.",
+          "methode": "Limites de la zone de virage : $\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}=\\tfrac1{10}$ ou $10$, soit $\\mathrm{p}K_A\\mp1$.",
+          "points": 1,
+          "ref": "pc-acide-base-les-indicateurs-colores-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les solutions tampons",
+        "lesson": "Approfondissement — Réactions acide-base",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 0,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-les-solutions-tampons",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "Les solutions tampons",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les solutions tampons",
+          "difficulty": 3,
+          "statement": "Un litre de solution tampon contient $0{,}100\\ \\mathrm{mol}$ d'acide éthanoïque et $0{,}100\\ \\mathrm{mol}$ d'ion éthanoate ($\\mathrm{p}K_A=4{,}75$). On ajoute $0{,}010\\ \\mathrm{mol}$ d'acide fort ($\\mathrm{H_3O^+}$), supposé sans variation de volume. Le pH devient :",
+          "options": [
+            {
+              "label": "$4{,}66$",
+              "correct": true,
+              "why": "$\\mathrm{H_3O^+}$ réagit avec $\\mathrm{CH_3COO^-}$ : $n(\\mathrm{A^-})=0{,}090$ et $n(\\mathrm{AH})=0{,}110$ ; $\\mathrm{pH}=4{,}75+\\log\\dfrac{0{,}090}{0{,}110}=4{,}66$."
+            },
+            {
+              "label": "$2{,}00$",
+              "why": "Tu as supposé que $\\mathrm{H_3O^+}$ ajouté reste libre comme dans de l'eau pure ($-\\log0{,}010$) ; dans le tampon, il est consommé par la base."
+            },
+            {
+              "label": "$4{,}75$",
+              "why": "Le pH varie légèrement : le rapport $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ passe de $1$ à $\\dfrac{0{,}090}{0{,}110}$, donc le pH baisse de $0{,}09$."
+            },
+            {
+              "label": "$4{,}84$",
+              "why": "Tu as inversé l'effet : un acide ajouté consomme la base et augmente $[\\mathrm{AH}]$, ce qui diminue le pH."
+            }
+          ],
+          "hint": "L'acide ajouté réagit avec la base du tampon : recalcule les deux quantités.",
+          "solution": "$\\mathrm{H_3O^+}+\\mathrm{CH_3COO^-}\\rightarrow\\mathrm{CH_3COOH}+\\mathrm{H_2O}$ : $n(\\mathrm{CH_3COO^-})=0{,}100-0{,}010=0{,}090\\ \\mathrm{mol}$ et $n(\\mathrm{CH_3COOH})=0{,}110\\ \\mathrm{mol}$. Le volume se simplifie dans le rapport : $\\mathrm{pH}=4{,}75+\\log\\dfrac{0{,}090}{0{,}110}=4{,}66$. Contrôle : dans $1\\ \\mathrm{L}$ d'eau pure, la même quantité d'acide ferait passer le pH de $7$ à $2{,}00$ ; ici il ne varie que de $0{,}09$ unité.",
+          "methode": "Tampon : pH peu sensible à l'ajout d'acide ou de base fort(e), car le rapport $[\\mathrm{A^-}]/[\\mathrm{AH}]$ varie peu.",
+          "points": 1,
+          "ref": "pc-acide-base-les-solutions-tampons-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les polyacides",
+        "lesson": "Approfondissement — Réactions acide-base",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-les-polyacides",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "Les polyacides",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les polyacides",
+          "difficulty": 3,
+          "statement": "Le dioxyde de carbone dissous forme deux couples : $\\mathrm{CO_2,H_2O/HCO_3^-}$ ($\\mathrm{p}K_{A1}=6{,}4$) et $\\mathrm{HCO_3^-/CO_3^{2-}}$ ($\\mathrm{p}K_{A2}=10{,}3$). À $\\mathrm{pH}=8{,}3$, l'espèce prédominante est :",
+          "options": [
+            {
+              "label": "$\\mathrm{HCO_3^-}$, car $6{,}4<8{,}3<10{,}3$",
+              "correct": true,
+              "why": "$8{,}3>\\mathrm{p}K_{A1}$ donc $\\mathrm{HCO_3^-}$ prédomine sur $\\mathrm{CO_2,H_2O}$ ; $8{,}3<\\mathrm{p}K_{A2}$ donc $\\mathrm{HCO_3^-}$ prédomine sur $\\mathrm{CO_3^{2-}}$."
+            },
+            {
+              "label": "$\\mathrm{CO_2,H_2O}$, car sa formule contient le plus d'atomes d'hydrogène",
+              "why": "La prédominance ne dépend pas de la formule mais de la position du pH par rapport aux $\\mathrm{p}K_A$ : $8{,}3>6{,}4$."
+            },
+            {
+              "label": "$\\mathrm{CO_3^{2-}}$, car la solution est basique ($\\mathrm{pH}>7$)",
+              "why": "$\\mathrm{CO_3^{2-}}$ ne prédomine que pour $\\mathrm{pH}>10{,}3$ ; ici $8{,}3<10{,}3$."
+            },
+            {
+              "label": "aucune espèce : elles ont toutes la même concentration à $\\mathrm{pH}=8{,}3$",
+              "why": "L'égalité de concentrations n'a lieu qu'à $\\mathrm{pH}=\\mathrm{p}K_A$ pour chaque couple ; $8{,}3$ n'en est pas un."
+            }
+          ],
+          "hint": "Place le pH sur l'axe gradué par les deux $\\mathrm{p}K_A$ : dans quel intervalle se trouve-t-il ?",
+          "solution": "Le diagramme de prédominance comporte trois domaines : $\\mathrm{CO_2,H_2O}$ pour $\\mathrm{pH}<6{,}4$, $\\mathrm{HCO_3^-}$ pour $6{,}4<\\mathrm{pH}<10{,}3$, $\\mathrm{CO_3^{2-}}$ pour $\\mathrm{pH}>10{,}3$. À $\\mathrm{pH}=8{,}3$, $\\mathrm{HCO_3^-}$ prédomine. Contrôle : $\\mathrm{HCO_3^-}$ est un ampholyte, base du premier couple et acide du second.",
+          "methode": "Polyacide : un diagramme à plusieurs domaines, délimités par les $\\mathrm{p}K_A$ successifs.",
+          "points": 1,
+          "ref": "pc-acide-base-les-polyacides-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'échelle des $\\mathrm{p}K_A$ dans l'eau",
+        "lesson": "Approfondissement — Réactions acide-base",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-l-echelle-des-mathrm-p-k-a-dans-l-eau",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "L'échelle des $\\mathrm{p}K_A$ dans l'eau",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'échelle des $\\mathrm{p}K_A$ dans l'eau",
+          "difficulty": 3,
+          "statement": "Dans l'eau, l'acide le plus fort que l'on puisse rencontrer et la base la plus forte sont respectivement :",
+          "options": [
+            {
+              "label": "$\\mathrm{H_3O^+}$ (couple de $\\mathrm{p}K_A=0$) et $\\mathrm{HO^-}$ (couple de $\\mathrm{p}K_A=14$)",
+              "correct": true,
+              "why": "Tout acide plus fort que $\\mathrm{H_3O^+}$ réagit totalement avec l'eau pour donner $\\mathrm{H_3O^+}$ ; toute base plus forte que $\\mathrm{HO^-}$ donne $\\mathrm{HO^-}$."
+            },
+            {
+              "label": "$\\mathrm{HCl}$ et $\\mathrm{NaOH}$, car ce sont les réactifs les plus courants",
+              "why": "$\\mathrm{HCl}$ et $\\mathrm{NaOH}$ sont complètement dissociés dans l'eau : en solution ne subsistent que $\\mathrm{H_3O^+}$ et $\\mathrm{HO^-}$, qui sont les espèces les plus fortes."
+            },
+            {
+              "label": "$\\mathrm{H_2O}$ pour les deux, car l'eau est un ampholyte",
+              "why": "L'eau est acide faible ($\\mathrm{p}K_A=14$) et base faible ($\\mathrm{p}K_A=0$ pour son acide conjugué) : ce n'est pas l'espèce la plus forte dans chaque rôle."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}$ et $\\mathrm{CH_3COO^-}$, car ils forment un couple tampon",
+              "why": "Ce couple a un $\\mathrm{p}K_A$ de $4{,}75$ : il est bien plus faible, dans les deux rôles, que $\\mathrm{H_3O^+}$ et $\\mathrm{HO^-}$."
+            }
+          ],
+          "hint": "Que devient un acide plus fort que $\\mathrm{H_3O^+}$ quand on le met dans l'eau ?",
+          "solution": "L'eau limite l'échelle des forces : un acide de $\\mathrm{p}K_A<0$ cède totalement son proton à l'eau et devient $\\mathrm{H_3O^+}$ (effet nivelant) ; une base de $\\mathrm{p}K_A>14$ capte un proton de l'eau et devient $\\mathrm{HO^-}$. Dans l'eau, l'acide le plus fort est donc $\\mathrm{H_3O^+}$ et la base la plus forte $\\mathrm{HO^-}$. Contrôle : leurs $\\mathrm{p}K_A$ valent $0$ et $14$.",
+          "methode": "Dans l'eau : acide le plus fort $\\mathrm{H_3O^+}$ ($\\mathrm{p}K_A=0$), base la plus forte $\\mathrm{HO^-}$ ($\\mathrm{p}K_A=14$).",
+          "points": 1,
+          "ref": "pc-acide-base-l-echelle-des-mathrm-p-k-a-dans-l-eau-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le calcul rigoureux du pH",
+        "lesson": "Approfondissement — Réactions acide-base",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-le-calcul-rigoureux-du-ph",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "Le calcul rigoureux du pH",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le calcul rigoureux du pH",
+          "difficulty": 3,
+          "statement": "On considère un acide faible $\\mathrm{AH}$ ($K_A=1{,}8\\times10^{-5}$) de concentration apportée $C=1{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$. On écrit $K_A=\\dfrac{x^2}{C-x}$ avec $x=[\\mathrm{H_3O^+}]$ et on résout cette équation du second degré. Le pH vaut :",
+          "options": [
+            {
+              "label": "$4{,}46$",
+              "correct": true,
+              "why": "$x^2+K_Ax-K_AC=0$ donne $x=3{,}44\\times10^{-5}$ (racine positive), soit $\\mathrm{pH}=-\\log x=4{,}46$ ; ici $\\tau=0{,}34$ n'est pas négligeable."
+            },
+            {
+              "label": "$4{,}37$",
+              "why": "Tu as utilisé $\\mathrm{pH}=\\tfrac12(\\mathrm{p}K_A-\\log C)$, valable seulement si $\\tau\\ll1$ ; ici $\\tau=0{,}34$, l'approximation n'est plus valable."
+            },
+            {
+              "label": "$4{,}00$",
+              "why": "Tu as appliqué la formule des acides forts $\\mathrm{pH}=-\\log C$ : ici l'acide est faible, le pH est plus élevé."
+            },
+            {
+              "label": "$4{,}74$",
+              "why": "Tu as pris $\\mathrm{pH}=\\mathrm{p}K_A$ : cette égalité n'a lieu que si $[\\mathrm{A^-}]=[\\mathrm{AH}]$, ce qui n'est pas le cas pour un acide seul."
+            }
+          ],
+          "hint": "Mets l'équation sous la forme $x^2+K_Ax-K_AC=0$ puis garde la racine positive.",
+          "solution": "$x^2+K_Ax-K_AC=0$ avec $K_A=1{,}8\\times10^{-5}$ et $C=1{,}0\\times10^{-4}$ : $\\Delta=K_A^2+4K_AC=7{,}52\\times10^{-9}$, $x=\\dfrac{-K_A+\\sqrt{\\Delta}}{2}=3{,}44\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$ et $\\mathrm{pH}=4{,}46$. Contrôle : l'approximation $\\tau\\ll1$ donnerait $4{,}37$ et $\\tau=\\dfrac{x}{C}=0{,}34$ n'est pas petit devant $1$.",
+          "methode": "Quand $\\tau$ n'est pas petit, résoudre l'équation du second degré en $[\\mathrm{H_3O^+}]$.",
+          "points": 1,
+          "ref": "pc-acide-base-le-calcul-rigoureux-du-ph-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les applications",
+        "lesson": "Approfondissement — Réactions acide-base",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-acide-base-les-applications",
+      "chapter": "pc-acide-base",
+      "kind": "qcu",
+      "title": "Les applications",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les applications",
+          "difficulty": 3,
+          "statement": "Le pH du sang est maintenu à $7{,}4$ notamment par le couple $\\mathrm{CO_2,H_2O/HCO_3^-}$, de $\\mathrm{p}K_A=6{,}1$ dans le plasma à $37\\ ^\\circ\\mathrm{C}$. Le rapport $\\dfrac{[\\mathrm{HCO_3^-}]}{[\\mathrm{CO_2,H_2O}]}$ dans le sang vaut environ :",
+          "options": [
+            {
+              "label": "$20$",
+              "correct": true,
+              "why": "$\\log\\dfrac{[\\mathrm{HCO_3^-}]}{[\\mathrm{CO_2}]}=\\mathrm{pH}-\\mathrm{p}K_A=7{,}4-6{,}1=1{,}3$ donc le rapport vaut $10^{1{,}3}=20{,}0$."
+            },
+            {
+              "label": "$0{,}050$",
+              "why": "Tu as inversé le rapport : $\\dfrac{[\\mathrm{CO_2}]}{[\\mathrm{HCO_3^-}]}=0{,}05$ ; ici on cherche la base sur l'acide."
+            },
+            {
+              "label": "$1{,}3$",
+              "why": "Tu as donné $\\mathrm{pH}-\\mathrm{p}K_A$, qui est le logarithme du rapport, et non le rapport lui-même."
+            },
+            {
+              "label": "$1{,}2$",
+              "why": "Tu as divisé le pH par le $\\mathrm{p}K_A$ : la relation fondamentale fait intervenir une différence et un logarithme."
+            }
+          ],
+          "hint": "Utilise la relation fondamentale en isolant le rapport base sur acide.",
+          "solution": "$\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{HCO_3^-}]}{[\\mathrm{CO_2,H_2O}]}$ donc $\\dfrac{[\\mathrm{HCO_3^-}]}{[\\mathrm{CO_2,H_2O}]}=10^{7{,}4-6{,}1}=10^{1{,}3}=20{,}0$. La base prédomine nettement : le sang peut neutraliser des acides en consommant $\\mathrm{HCO_3^-}$. Contrôle : $\\mathrm{pH}>\\mathrm{p}K_A$, donc base prédominante.",
+          "methode": "Couple tampon du sang : $\\mathrm{pH}=\\mathrm{p}K_A+\\log([\\mathrm{HCO_3^-}]/[\\mathrm{CO_2}])$.",
+          "points": 1,
+          "ref": "pc-acide-base-les-applications-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-acide-base-probleme-1",
+      "chapter": "pc-acide-base",
+      "kind": "probleme",
+      "title": "Acide benzoïque : constante d'acidité et prédominance",
+      "difficulty": 3,
+      "context": "À $25\\ ^\\circ\\mathrm{C}$, on dissout de l'acide benzoïque $\\mathrm{C_6H_5COOH}$, noté $\\mathrm{AH}$, dans l'eau pour obtenir une solution $\\mathrm{S}$ de concentration apportée $C=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$. Le pH mesuré est $3{,}12$. La base conjuguée est l'ion benzoate $\\mathrm{C_6H_5COO^-}$, noté $\\mathrm{A^-}$. Dans la solution $\\mathrm{S}$, on a $[\\mathrm{A^-}]=[\\mathrm{H_3O^+}]$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "La définition de Brønsted",
+          "difficulty": 1,
+          "statement": "Dans le couple $\\mathrm{C_6H_5COOH/C_6H_5COO^-}$, l'ion benzoate est :",
+          "options": [
+            {
+              "label": "la base conjuguée, capable de capter un proton",
+              "correct": true,
+              "why": "$\\mathrm{C_6H_5COO^-}+\\mathrm{H^+}\\rightleftharpoons\\mathrm{C_6H_5COOH}$ : l'ion benzoate capte un proton, c'est la base du couple."
+            },
+            {
+              "label": "l'acide conjugué, capable de céder un proton",
+              "why": "Un acide cède un proton ; l'ion benzoate est l'espèce obtenue après la cession : c'est la base."
+            },
+            {
+              "label": "l'ampholyte du couple, à la fois acide et base",
+              "why": "Un ampholyte appartient à deux couples ; l'ion benzoate est la forme basique d'un seul couple dans cette étude."
+            },
+            {
+              "label": "une espèce spectatrice, sans rôle acido-basique",
+              "why": "L'ion benzoate est la base conjuguée de l'acide benzoïque ; il participe bien au couple acide/base."
+            }
+          ],
+          "hint": "L'ion benzoate a un proton de moins que l'acide benzoïque.",
+          "solution": "L'acide benzoïque cède un proton : $\\mathrm{C_6H_5COOH}\\rightleftharpoons\\mathrm{C_6H_5COO^-}+\\mathrm{H^+}$. L'ion benzoate est donc la base conjuguée du couple. Contrôle : la base capte le proton cédé par l'acide.",
+          "methode": "Base conjuguée : forme obtenue après perte de $\\mathrm{H^+}$ par l'acide.",
+          "points": 1,
+          "part": "Partie A — Acide, base, constante d'acidité",
+          "ref": "pc-acide-base-probleme-1-q1"
+        },
+        {
+          "notion": "Écrire une réaction acide-base",
+          "difficulty": 2,
+          "statement": "L'équation de la réaction de l'acide benzoïque avec l'eau s'écrit :",
+          "options": [
+            {
+              "label": "$\\mathrm{C_6H_5COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{C_6H_5COO^-}+\\mathrm{H_3O^+}$",
+              "correct": true,
+              "why": "L'acide cède un proton à l'eau : formation de la base conjuguée et de l'ion oxonium, réaction limitée."
+            },
+            {
+              "label": "$\\mathrm{C_6H_5COOH}+\\mathrm{H_2O}\\rightarrow\\mathrm{C_6H_5COO^-}+\\mathrm{H_3O^+}$",
+              "why": "La simple flèche traduit une transformation totale, ce qui serait le cas d'un acide fort ; l'acide benzoïque est faible ($\\tau<1$)."
+            },
+            {
+              "label": "$\\mathrm{C_6H_5COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{C_6H_5COO^-}+\\mathrm{HO^-}$",
+              "why": "Quand l'acide cède un proton à l'eau, l'eau devient $\\mathrm{H_3O^+}$ ; $\\mathrm{HO^-}$ se forme quand l'eau cède un proton."
+            },
+            {
+              "label": "$\\mathrm{C_6H_5COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{C_6H_5COO}+\\mathrm{H_3O}$",
+              "why": "Tu as oublié les charges : $\\mathrm{C_6H_5COO^-}$ et $\\mathrm{H_3O^+}$ sont des ions."
+            }
+          ],
+          "hint": "L'acide cède un proton à l'eau ; l'acide benzoïque est un acide faible.",
+          "solution": "$\\mathrm{AH}$ cède $\\mathrm{H^+}$ à $\\mathrm{H_2O}$ qui devient $\\mathrm{H_3O^+}$ ; $\\mathrm{AH}$ devient $\\mathrm{A^-}$. Acide faible : double flèche. Contrôle : charge $0$ de chaque côté ($-1+1$).",
+          "methode": "Acide faible + eau : $\\mathrm{AH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{A^-}+\\mathrm{H_3O^+}$.",
+          "points": 1,
+          "part": "Partie A — Acide, base, constante d'acidité",
+          "ref": "pc-acide-base-probleme-1-q2"
+        },
+        {
+          "notion": "La constante d'acidité",
+          "difficulty": 2,
+          "statement": "La constante d'acidité du couple, calculée avec la solution $\\mathrm{S}$, vaut :",
+          "options": [
+            {
+              "label": "$K_A=6{,}2\\times10^{-5}$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=[\\mathrm{A^-}]=10^{-3{,}12}=7{,}6\\times10^{-4}$ ; $[\\mathrm{AH}]=C-[\\mathrm{H_3O^+}]=0{,}00924$ ; $K_A=\\dfrac{(7{,}6\\times10^{-4})^2}{0{,}00924}=6{,}2\\times10^{-5}$."
+            },
+            {
+              "label": "$K_A=7{,}6\\times10^{-4}$",
+              "why": "Tu as donné $[\\mathrm{H_3O^+}]$ au lieu du quotient $\\dfrac{[\\mathrm{A^-}][\\mathrm{H_3O^+}]}{[\\mathrm{AH}]}$."
+            },
+            {
+              "label": "$K_A=5{,}8\\times10^{-7}$",
+              "why": "Tu as oublié de diviser par $[\\mathrm{AH}]$ : le quotient comporte l'acide au dénominateur."
+            },
+            {
+              "label": "$K_A=1{,}6\\times10^{4}$",
+              "why": "Tu as inversé le quotient : les produits $\\mathrm{A^-}$ et $\\mathrm{H_3O^+}$ sont au numérateur."
+            }
+          ],
+          "hint": "À l'équilibre $[\\mathrm{A^-}]=[\\mathrm{H_3O^+}]$ et $[\\mathrm{AH}]=C-[\\mathrm{H_3O^+}]$.",
+          "solution": "$[\\mathrm{H_3O^+}]=10^{-3{,}12}=7{,}6\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ ; $[\\mathrm{AH}]=1{,}0\\times10^{-2}-7{,}6\\times10^{-4}=0{,}00924\\ \\mathrm{mol\\,L^{-1}}$ ; $K_A=\\dfrac{[\\mathrm{A^-}][\\mathrm{H_3O^+}]}{[\\mathrm{AH}]}=6{,}2\\times10^{-5}$. Contrôle : $\\tau=\\dfrac{[\\mathrm{H_3O^+}]}{C}=0{,}076$, acide faible.",
+          "methode": "$K_A=[\\mathrm{H_3O^+}]^2/(C-[\\mathrm{H_3O^+}])$ pour un acide faible seul en solution.",
+          "points": 1,
+          "part": "Partie A — Acide, base, constante d'acidité",
+          "ref": "pc-acide-base-probleme-1-q3"
+        },
+        {
+          "notion": "La constante d'acidité",
+          "difficulty": 2,
+          "statement": "Le $\\mathrm{p}K_A$ du couple vaut :",
+          "options": [
+            {
+              "label": "$\\mathrm{p}K_A=4{,}21$",
+              "correct": true,
+              "why": "$\\mathrm{p}K_A=-\\log K_A=-\\log(6{,}2\\times10^{-5})=4{,}21$."
+            },
+            {
+              "label": "$\\mathrm{p}K_A=3{,}12$",
+              "why": "Tu as donné le pH de la solution $\\mathrm{S}$ : le $\\mathrm{p}K_A$ se calcule avec $K_A$."
+            },
+            {
+              "label": "$\\mathrm{p}K_A=9{,}79$",
+              "why": "Tu as calculé $14-\\mathrm{p}K_A$ : c'est le $\\mathrm{p}K_B$ de la base conjuguée."
+            },
+            {
+              "label": "$\\mathrm{p}K_A=-4{,}21$",
+              "why": "Tu as oublié de prendre l'opposé : $\\mathrm{p}K_A=-\\log K_A$ est positif pour un acide faible."
+            }
+          ],
+          "hint": "$\\mathrm{p}K_A=-\\log K_A$.",
+          "solution": "$\\mathrm{p}K_A=-\\log K_A=-\\log(6{,}2\\times10^{-5})=4{,}21$. Contrôle : $\\mathrm{p}K_A>\\mathrm{pH}=3{,}12$ : à ce pH l'acide prédomine.",
+          "methode": "$\\mathrm{p}K_A=-\\log K_A$ ; comparer ensuite au pH.",
+          "points": 1,
+          "part": "Partie A — Acide, base, constante d'acidité",
+          "ref": "pc-acide-base-probleme-1-q4"
+        },
+        {
+          "notion": "La relation fondamentale",
+          "difficulty": 3,
+          "statement": "Dans une solution du même couple de pH $4{,}00$, le rapport $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ vaut :",
+          "options": [
+            {
+              "label": "$0{,}62$",
+              "correct": true,
+              "why": "$\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=\\mathrm{pH}-\\mathrm{p}K_A=4{,}00-4{,}21=-0{,}21$ donc le rapport vaut $10^{-0{,}21}=0{,}62$."
+            },
+            {
+              "label": "$1{,}6$",
+              "why": "Tu as inversé le rapport : $\\dfrac{[\\mathrm{AH}]}{[\\mathrm{A^-}]}=1{,}6$ ; ici on cherche la base sur l'acide."
+            },
+            {
+              "label": "$-0{,}21$",
+              "why": "Tu as donné $\\mathrm{pH}-\\mathrm{p}K_A$, qui est le logarithme du rapport, pas le rapport."
+            },
+            {
+              "label": "$6{,}2\\times10^{-5}$",
+              "why": "Tu as donné $K_A$ : il faut utiliser $\\mathrm{pH}-\\mathrm{p}K_A$ pour calculer le rapport."
+            }
+          ],
+          "hint": "Isole le logarithme du rapport : $\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=\\mathrm{pH}-\\mathrm{p}K_A$.",
+          "solution": "$\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=4{,}00-4{,}21=-0{,}21$ donc $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=10^{-0{,}21}=0{,}62$. Contrôle : $\\mathrm{pH}<\\mathrm{p}K_A$, donc le rapport est inférieur à $1$ (l'acide prédomine).",
+          "methode": "$[\\mathrm{A^-}]/[\\mathrm{AH}]=10^{\\mathrm{pH}-\\mathrm{p}K_A}$.",
+          "points": 1,
+          "part": "Partie B — Prédominance",
+          "ref": "pc-acide-base-probleme-1-q5"
+        },
+        {
+          "notion": "Le diagramme de prédominance",
+          "difficulty": 3,
+          "statement": "Dans la solution $\\mathrm{S}$ (pH $3{,}12$), le rapport $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ vaut :",
+          "options": [
+            {
+              "label": "$0{,}082$",
+              "correct": true,
+              "why": "$\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=\\dfrac{7{,}6\\times10^{-4}}{0{,}00924}=0{,}082$ (ou $10^{\\mathrm{pH}-\\mathrm{p}K_A}=10^{3{,}12-4{,}21}$) : l'acide prédomine nettement."
+            },
+            {
+              "label": "$12$",
+              "why": "Tu as inversé le rapport : $\\dfrac{[\\mathrm{AH}]}{[\\mathrm{A^-}]}=12$."
+            },
+            {
+              "label": "$-1{,}09$",
+              "why": "Tu as donné $\\mathrm{pH}-\\mathrm{p}K_A$ : c'est le logarithme du rapport, pas le rapport."
+            },
+            {
+              "label": "$0{,}076$",
+              "why": "Tu as donné $\\tau=\\dfrac{[\\mathrm{A^-}]}{C}$ : le rapport $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ divise par $[\\mathrm{AH}]=C-[\\mathrm{A^-}]$, pas par $C$."
+            }
+          ],
+          "hint": "Utilise les concentrations ou la relation fondamentale ; compare le pH au $\\mathrm{p}K_A$ pour contrôler.",
+          "solution": "$[\\mathrm{A^-}]=[\\mathrm{H_3O^+}]=7{,}6\\times10^{-4}$ et $[\\mathrm{AH}]=0{,}00924$ : rapport $=0{,}082$. Par la relation fondamentale : $10^{\\mathrm{pH}-\\mathrm{p}K_A}=10^{3{,}12-4{,}21}=0{,}082$. Contrôle : $\\mathrm{pH}<\\mathrm{p}K_A$, la forme acide prédomine, rapport inférieur à $1$.",
+          "methode": "Prédominance : le rapport $[\\mathrm{A^-}]/[\\mathrm{AH}]$ se lit directement par $10^{\\mathrm{pH}-\\mathrm{p}K_A}$.",
+          "points": 1,
+          "part": "Partie B — Prédominance",
+          "ref": "pc-acide-base-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-acide-base-probleme-2",
+      "chapter": "pc-acide-base",
+      "kind": "probleme",
+      "title": "Trois solutions, trois indicateurs",
+      "difficulty": 3,
+      "context": "À $25\\ ^\\circ\\mathrm{C}$, on dispose de trois solutions de même volume $V=1{,}00\\ \\mathrm{L}$ : $\\mathrm{A}$ : acide chlorhydrique (acide fort) à $1{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ ; $\\mathrm{B}$ : hydroxyde de sodium (base forte) à $1{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ ; $\\mathrm{C}$ : solution tampon contenant $0{,}100\\ \\mathrm{mol}$ d'acide éthanoïque et $0{,}100\\ \\mathrm{mol}$ d'ion éthanoate ($\\mathrm{p}K_A=4{,}75$). Zones de virage : hélianthine $3{,}1$–$4{,}4$ (rouge puis jaune) ; bleu de bromothymol $6{,}0$–$7{,}6$ (jaune puis bleu) ; phénolphtaléine $8{,}2$–$10{,}0$ (incolore puis rose).",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Acide fort, acide faible",
+          "difficulty": 1,
+          "statement": "Le pH de la solution $\\mathrm{A}$ vaut :",
+          "options": [
+            {
+              "label": "$3{,}0$",
+              "correct": true,
+              "why": "Acide fort : $[\\mathrm{H_3O^+}]=C=10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ donc $\\mathrm{pH}=-\\log10^{-3}=3{,}0$."
+            },
+            {
+              "label": "$11{,}0$",
+              "why": "Tu as calculé $14-\\mathrm{pH}$, c'est-à-dire le pOH : une solution d'acide a un pH inférieur à $7$."
+            },
+            {
+              "label": "$1{,}0$",
+              "why": "Tu as pris l'exposant $-3$ pour $-1$ : $[\\mathrm{H_3O^+}]=10^{-3}$ conduit à $\\mathrm{pH}=3{,}0$."
+            },
+            {
+              "label": "$-3{,}0$",
+              "why": "Tu as oublié le signe moins du logarithme : $\\mathrm{pH}=-\\log[\\mathrm{H_3O^+}]$ est positif ici."
+            }
+          ],
+          "hint": "Acide fort : quelle est la relation entre $[\\mathrm{H_3O^+}]$ et $C$ ?",
+          "solution": "$\\mathrm{HCl}$ est un acide fort : $[\\mathrm{H_3O^+}]=C=1{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ donc $\\mathrm{pH}=3{,}0$. Contrôle : $\\mathrm{pH}<7$, solution acide.",
+          "methode": "Acide fort : $\\mathrm{pH}=-\\log C$.",
+          "points": 1,
+          "part": "Partie A — pH de solutions simples",
+          "ref": "pc-acide-base-probleme-2-q1"
+        },
+        {
+          "notion": "Le produit ionique de l'eau",
+          "difficulty": 2,
+          "statement": "Le pH de la solution $\\mathrm{B}$ vaut :",
+          "options": [
+            {
+              "label": "$11{,}0$",
+              "correct": true,
+              "why": "$[\\mathrm{HO^-}]=10^{-3}$ donc $[\\mathrm{H_3O^+}]=\\dfrac{10^{-14}}{10^{-3}}=10^{-11}$ et $\\mathrm{pH}=11{,}0$."
+            },
+            {
+              "label": "$3{,}0$",
+              "why": "Tu as calculé $-\\log[\\mathrm{HO^-}]=\\mathrm{pOH}=3{,}0$ ; le pH vaut $14-\\mathrm{pOH}$."
+            },
+            {
+              "label": "$17{,}0$",
+              "why": "Tu as ajouté $3{,}0$ à $14$ : $\\mathrm{pH}=14-\\mathrm{pOH}=14-3{,}0$."
+            },
+            {
+              "label": "$7{,}0$",
+              "why": "Tu as supposé la solution neutre : une base forte donne un pH supérieur à $7$."
+            }
+          ],
+          "hint": "Calcule $[\\mathrm{H_3O^+}]$ avec $K_e$, puis le pH.",
+          "solution": "$[\\mathrm{HO^-}]=C=10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ ; $[\\mathrm{H_3O^+}]=\\dfrac{K_e}{[\\mathrm{HO^-}]}=10^{-11}$ ; $\\mathrm{pH}=11{,}0$. Contrôle : $\\mathrm{pH}+\\mathrm{pOH}=11{,}0+3{,}0=14$.",
+          "methode": "Base forte : $\\mathrm{pH}=14+\\log C$ à $25\\ ^\\circ\\mathrm{C}$.",
+          "points": 1,
+          "part": "Partie A — pH de solutions simples",
+          "ref": "pc-acide-base-probleme-2-q2"
+        },
+        {
+          "notion": "La relation fondamentale",
+          "difficulty": 2,
+          "statement": "Le pH de la solution $\\mathrm{C}$ vaut :",
+          "options": [
+            {
+              "label": "$4{,}75$",
+              "correct": true,
+              "why": "$[\\mathrm{A^-}]=[\\mathrm{AH}]$ donc $\\log\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=0$ et $\\mathrm{pH}=\\mathrm{p}K_A=4{,}75$."
+            },
+            {
+              "label": "$7{,}00$",
+              "why": "Tu as supposé un mélange neutre : ici le pH vaut le $\\mathrm{p}K_A$ car les deux formes ont la même quantité."
+            },
+            {
+              "label": "$9{,}25$",
+              "why": "Tu as calculé $14-\\mathrm{p}K_A$ : cette valeur n'est pas le pH du tampon."
+            },
+            {
+              "label": "$2{,}38$",
+              "why": "Tu as pris la moitié du $\\mathrm{p}K_A$ : la formule $\\tfrac12(\\mathrm{p}K_A-\\log C)$ concerne l'acide seul, pas un mélange acide/base."
+            }
+          ],
+          "hint": "Compare les quantités d'acide et de base dans $\\mathrm{C}$.",
+          "solution": "$n(\\mathrm{CH_3COOH})=n(\\mathrm{CH_3COO^-})=0{,}100\\ \\mathrm{mol}$ dans le même volume : $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=1$ et $\\mathrm{pH}=\\mathrm{p}K_A+\\log1=4{,}75$. Contrôle : $\\mathrm{pH}=\\mathrm{p}K_A$ quand les deux formes ont la même concentration.",
+          "methode": "Quantités égales d'acide et de base conjuguée : $\\mathrm{pH}=\\mathrm{p}K_A$.",
+          "points": 1,
+          "part": "Partie A — pH de solutions simples",
+          "ref": "pc-acide-base-probleme-2-q3"
+        },
+        {
+          "notion": "Les indicateurs colorés",
+          "difficulty": 2,
+          "statement": "Dans la solution $\\mathrm{A}$ ($\\mathrm{pH}=3{,}0$), la couleur de l'hélianthine est :",
+          "options": [
+            {
+              "label": "rouge, car $\\mathrm{pH}<3{,}1$ : sa forme acide prédomine",
+              "correct": true,
+              "why": "En dessous de la zone de virage $3{,}1$–$4{,}4$, la forme acide, rouge, prédomine."
+            },
+            {
+              "label": "jaune, car la solution est acide",
+              "why": "Le jaune est la teinte de la forme basique de l'hélianthine, observée au-dessus de $4{,}4$."
+            },
+            {
+              "label": "orange, car le pH est dans la zone de virage",
+              "why": "La teinte orange correspond à la zone de virage $3{,}1$–$4{,}4$ ; $\\mathrm{pH}=3{,}0$ est en dessous."
+            },
+            {
+              "label": "incolore, car l'indicateur ne réagit pas aux acides forts",
+              "why": "Un indicateur coloré change de teinte selon le pH, y compris en milieu fortement acide : il est rouge ici."
+            }
+          ],
+          "hint": "Compare le pH à la zone de virage de l'hélianthine.",
+          "solution": "$\\mathrm{pH}=3{,}0<3{,}1$ : la solution est en dessous de la zone de virage de l'hélianthine, côté acide : la teinte est celle de la forme acide, rouge. Contrôle : à $\\mathrm{pH}>4{,}4$ elle serait jaune.",
+          "methode": "Indicateur : sous la zone de virage, teinte acide.",
+          "points": 1,
+          "part": "Partie B — Indicateurs et tampon",
+          "ref": "pc-acide-base-probleme-2-q4"
+        },
+        {
+          "notion": "Les indicateurs colorés",
+          "difficulty": 3,
+          "statement": "On veut distinguer les trois solutions $\\mathrm{A}$, $\\mathrm{B}$ et $\\mathrm{C}$ avec un seul indicateur parmi les trois proposés. On peut affirmer que :",
+          "options": [
+            {
+              "label": "aucun des trois indicateurs seul ne permet de distinguer les trois solutions",
+              "correct": true,
+              "why": "Hélianthine : rouge (A), jaune (B), jaune (C) ; BBT : jaune (A), bleu (B), jaune (C) ; phénolphtaléine : incolore (A), rose (B), incolore (C) : chaque indicateur confond deux solutions."
+            },
+            {
+              "label": "le bleu de bromothymol suffit : il donne trois couleurs différentes",
+              "why": "Avec $\\mathrm{pH}=3{,}0$ pour A et $4{,}75$ pour C, tous deux inférieurs à $6{,}0$, le BBT est jaune dans A et dans C."
+            },
+            {
+              "label": "l'hélianthine suffit : elle donne trois couleurs différentes",
+              "why": "À $\\mathrm{pH}=11$ (B) et $4{,}75$ (C), tous deux au-dessus de $4{,}4$, l'hélianthine est jaune dans B et dans C."
+            },
+            {
+              "label": "la phénolphtaléine suffit : elle donne trois couleurs différentes",
+              "why": "À $\\mathrm{pH}=3{,}0$ (A) et $4{,}75$ (C), tous deux en dessous de $8{,}2$, elle est incolore dans A et dans C."
+            }
+          ],
+          "hint": "Pour chaque indicateur, détermine la couleur dans A, B et C en comparant le pH à sa zone de virage.",
+          "solution": "pH : $\\mathrm{A}=3{,}0$, $\\mathrm{C}=4{,}75$, $\\mathrm{B}=11{,}0$. Hélianthine ($3{,}1$–$4{,}4$) : A rouge, C et B jaunes. BBT ($6{,}0$–$7{,}6$) : A et C jaunes, B bleu. Phénolphtaléine ($8{,}2$–$10{,}0$) : A et C incolores, B rose. Aucun indicateur ne sépare les trois. Contrôle : il faudrait deux indicateurs, par exemple hélianthine et BBT.",
+          "methode": "Distinguer plusieurs solutions : tester chaque indicateur sur chacune, selon sa zone de virage.",
+          "points": 1,
+          "part": "Partie B — Indicateurs et tampon",
+          "ref": "pc-acide-base-probleme-2-q5"
+        },
+        {
+          "notion": "Les solutions tampons",
+          "difficulty": 3,
+          "statement": "On ajoute $0{,}010\\ \\mathrm{mol}$ d'hydroxyde de sodium solide à la solution tampon $\\mathrm{C}$ ($1{,}00\\ \\mathrm{L}$, sans variation de volume). Le pH devient :",
+          "options": [
+            {
+              "label": "$4{,}84$",
+              "correct": true,
+              "why": "$\\mathrm{HO^-}$ réagit avec $\\mathrm{CH_3COOH}$ : $n(\\mathrm{AH})=0{,}090$ et $n(\\mathrm{A^-})=0{,}110$ ; $\\mathrm{pH}=4{,}75+\\log\\dfrac{0{,}110}{0{,}090}=4{,}84$."
+            },
+            {
+              "label": "$12{,}00$",
+              "why": "Tu as supposé que $\\mathrm{HO^-}$ ajouté reste libre ($\\mathrm{pH}=14+\\log0{,}010$) ; dans le tampon, il est consommé par l'acide."
+            },
+            {
+              "label": "$4{,}66$",
+              "why": "Tu as inversé l'effet : une base ajoutée consomme l'acide et fait augmenter $[\\mathrm{A^-}]$, donc le pH augmente."
+            },
+            {
+              "label": "$4{,}75$",
+              "why": "Le pH varie légèrement : le rapport $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ passe de $1$ à $\\dfrac{0{,}110}{0{,}090}$, ce qui fait augmenter le pH de $0{,}09$."
+            }
+          ],
+          "hint": "La base ajoutée réagit avec l'acide du tampon : recalcule les quantités d'acide et de base.",
+          "solution": "$\\mathrm{CH_3COOH}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{H_2O}$ : $n(\\mathrm{CH_3COOH})=0{,}100-0{,}010=0{,}090\\ \\mathrm{mol}$ et $n(\\mathrm{CH_3COO^-})=0{,}110\\ \\mathrm{mol}$ ; le volume se simplifie : $\\mathrm{pH}=4{,}75+\\log\\dfrac{0{,}110}{0{,}090}=4{,}84$. Contrôle : dans $1\\ \\mathrm{L}$ de la solution $\\mathrm{B}$ (base forte seule) le pH serait $12{,}0$ ; ici il varie de $0{,}09$ unité seulement.",
+          "methode": "Tampon : une base ajoutée consomme l'acide du couple ; le pH varie peu.",
+          "points": 1,
+          "part": "Partie B — Indicateurs et tampon",
+          "ref": "pc-acide-base-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [
-   "Méthode 1 — Écrire une réaction acide-base",
-   "Méthode 2 — Déterminer $K_A$ à partir du pH",
-   "Méthode 3 — Exploiter le diagramme de prédominance",
-   "Méthode 4 — Utiliser la relation entre conjugués",
-   "Méthode 5 — Prévoir le sens d'une réaction acide-base"
-  ],
-  "existing_questions_total": 5,
-  "target_new_questions": 36,
-  "suggested_figures": [
-   "predominance-acide-base — Diagramme de prédominance d'un couple acide/base"
-  ],
-  "sources": [
-   {
-    "annale": "pc-svt-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-acide-base-serie-1",
+      "title": "Réactions acide-base · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-acide-base",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-acide-base-la-definition-de-brnsted-q1",
+        "pc-acide-base-ecrire-une-reaction-acide-base-q1",
+        "pc-acide-base-le-ph-q1",
+        "pc-acide-base-le-produit-ionique-de-l-eau-q1",
+        "pc-acide-base-acide-fort-acide-faible-q1",
+        "pc-acide-base-la-constante-d-acidite-q1",
+        "pc-acide-base-la-relation-fondamentale-q1",
+        "pc-acide-base-le-diagramme-de-predominance-q1",
+        "pc-acide-base-les-indicateurs-colores-q1",
+        "pc-acide-base-la-definition-de-brnsted-q2",
+        "pc-acide-base-le-ph-q2",
+        "pc-acide-base-la-relation-fondamentale-q2"
+      ]
+    },
+    {
+      "slug": "pc-acide-base-serie-2",
+      "title": "Réactions acide-base · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-acide-base",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-acide-base-ecrire-une-reaction-acide-base-q2",
+        "pc-acide-base-ecrire-une-reaction-acide-base-q3",
+        "pc-acide-base-le-produit-ionique-de-l-eau-q2",
+        "pc-acide-base-le-produit-ionique-de-l-eau-q3",
+        "pc-acide-base-acide-fort-acide-faible-q2",
+        "pc-acide-base-acide-fort-acide-faible-q3",
+        "pc-acide-base-la-constante-d-acidite-q2",
+        "pc-acide-base-la-relation-fondamentale-q3",
+        "pc-acide-base-le-diagramme-de-predominance-q2",
+        "pc-acide-base-les-indicateurs-colores-q2",
+        "pc-acide-base-les-indicateurs-colores-q3",
+        "pc-acide-base-le-ph-q3"
+      ]
+    },
+    {
+      "slug": "pc-acide-base-serie-3",
+      "title": "Réactions acide-base · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-acide-base",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-acide-base-la-definition-de-brnsted-q3",
+        "pc-acide-base-ecrire-une-reaction-acide-base-q4",
+        "pc-acide-base-le-ph-q4",
+        "pc-acide-base-le-produit-ionique-de-l-eau-q4",
+        "pc-acide-base-acide-fort-acide-faible-q4",
+        "pc-acide-base-la-relation-fondamentale-q4",
+        "pc-acide-base-le-diagramme-de-predominance-q3",
+        "pc-acide-base-les-indicateurs-colores-q4",
+        "pc-acide-base-les-solutions-tampons-q1",
+        "pc-acide-base-le-calcul-rigoureux-du-ph-q1",
+        "pc-acide-base-probleme-1-q5",
+        "pc-acide-base-probleme-2-q6"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La définition de Brønsted",
-    "lesson": "Acides, bases et pH",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-la-definition-de-brnsted",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "La définition de Brønsted",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-la-definition-de-brnsted-q1",
-     "notion": "La définition de Brønsted",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Écrire une réaction acide-base",
-    "lesson": "Acides, bases et pH",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-ecrire-une-reaction-acide-base",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "Écrire une réaction acide-base",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-ecrire-une-reaction-acide-base-q1",
-     "notion": "Écrire une réaction acide-base",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le pH",
-    "lesson": "Acides, bases et pH",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-le-ph",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "Le pH",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-le-ph-q1",
-     "notion": "Le pH",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le produit ionique de l'eau",
-    "lesson": "Acides, bases et pH",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-le-produit-ionique-de-l-eau",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "Le produit ionique de l'eau",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-le-produit-ionique-de-l-eau-q1",
-     "notion": "Le produit ionique de l'eau",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Acide fort, acide faible",
-    "lesson": "Acides, bases et pH",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-acide-fort-acide-faible",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "Acide fort, acide faible",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-acide-fort-acide-faible-q1",
-     "notion": "Acide fort, acide faible",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La constante d'acidité",
-    "lesson": "Constante d'acidité et prédominance",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 2,
-    "target_new_questions": 2,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-la-constante-d-acidite",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "La constante d'acidité",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-la-constante-d-acidite-q1",
-     "notion": "La constante d'acidité",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La relation fondamentale",
-    "lesson": "Constante d'acidité et prédominance",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-la-relation-fondamentale",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "La relation fondamentale",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-la-relation-fondamentale-q1",
-     "notion": "La relation fondamentale",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le diagramme de prédominance",
-    "lesson": "Constante d'acidité et prédominance",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-le-diagramme-de-predominance",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "Le diagramme de prédominance",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-le-diagramme-de-predominance-q1",
-     "notion": "Le diagramme de prédominance",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les indicateurs colorés",
-    "lesson": "Constante d'acidité et prédominance",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-les-indicateurs-colores",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "Les indicateurs colorés",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-les-indicateurs-colores-q1",
-     "notion": "Les indicateurs colorés",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les solutions tampons",
-    "lesson": "Approfondissement — Réactions acide-base",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 1,
-    "target_new_questions": 0,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-les-solutions-tampons",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "Les solutions tampons",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-les-solutions-tampons-q1",
-     "notion": "Les solutions tampons",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les polyacides",
-    "lesson": "Approfondissement — Réactions acide-base",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-les-polyacides",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "Les polyacides",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-les-polyacides-q1",
-     "notion": "Les polyacides",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'échelle des $\\mathrm{p}K_A$ dans l'eau",
-    "lesson": "Approfondissement — Réactions acide-base",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-l-echelle-des-mathrm-p-k-a-dans-l-eau",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "L'échelle des $\\mathrm{p}K_A$ dans l'eau",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-l-echelle-des-mathrm-p-k-a-dans-l-eau-q1",
-     "notion": "L'échelle des $\\mathrm{p}K_A$ dans l'eau",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le calcul rigoureux du pH",
-    "lesson": "Approfondissement — Réactions acide-base",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-le-calcul-rigoureux-du-ph",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "Le calcul rigoureux du pH",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-le-calcul-rigoureux-du-ph-q1",
-     "notion": "Le calcul rigoureux du pH",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les applications",
-    "lesson": "Approfondissement — Réactions acide-base",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-acide-base-les-applications",
-   "chapter": "pc-acide-base",
-   "kind": "qcu",
-   "title": "Les applications",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-les-applications-q1",
-     "notion": "Les applications",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-acide-base-probleme-1",
-   "chapter": "pc-acide-base",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-acide-base-probleme-2",
-   "chapter": "pc-acide-base",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-acide-base-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-acide-base-serie-1",
-   "title": "Réactions acide-base · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-acide-base",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-acide-base-serie-2",
-   "title": "Réactions acide-base · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-acide-base",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-acide-base-serie-3",
-   "title": "Réactions acide-base · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-acide-base",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
