@@ -1,1248 +1,2093 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "track": null,
- "_scaffold": {
-  "pack": "pc-commun",
-  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-controle-evolution",
-   "name": "Contrôle de l'évolution d'un système",
-   "domain": "chimie",
-   "unit": "Chimie organique"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-controle-evolution",
+      "name": "Contrôle de l'évolution d'un système",
+      "domain": "chimie",
+      "unit": "Chimie organique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "La réaction d'un ester avec une base forte",
+      "Les corps gras et la fabrication du savon",
+      "Pourquoi un savon lave-t-il ?",
+      "Qu'est-ce qu'un catalyseur ?",
+      "Le profil énergétique",
+      "Les trois types de catalyse",
+      "L'indice de saponification",
+      "Changer de réactif pour rendre la réaction totale",
+      "Récapitulatif — tous les leviers du contrôle",
+      "Retour sur le critère d'évolution",
+      "L'objectif du TP",
+      "Le protocole",
+      "Les tests du savon obtenu",
+      "Méthode 1 — Écrire une équation de saponification",
+      "Méthode 2 — Calculer une masse de savon et un rendement",
+      "Méthode 3 — Suivre une saponification par dosage de la soude restante",
+      "Méthode 4 — Réactif ou catalyseur ?"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Écrire une équation de saponification",
+      "Méthode 2 — Calculer une masse de savon et un rendement",
+      "Méthode 3 — Suivre une saponification par dosage de la soude restante",
+      "Méthode 4 — Réactif ou catalyseur ?"
+    ],
+    "existing_questions_total": 5,
+    "target_new_questions": 35,
+    "suggested_figures": [
+      "montage-reflux — Montage à reflux (estérification / saponification)"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "La réaction d'un ester avec une base forte",
-   "Les corps gras et la fabrication du savon",
-   "Pourquoi un savon lave-t-il ?",
-   "Qu'est-ce qu'un catalyseur ?",
-   "Le profil énergétique",
-   "Les trois types de catalyse",
-   "L'indice de saponification",
-   "Changer de réactif pour rendre la réaction totale",
-   "Récapitulatif — tous les leviers du contrôle",
-   "Retour sur le critère d'évolution",
-   "L'objectif du TP",
-   "Le protocole",
-   "Les tests du savon obtenu",
-   "Méthode 1 — Écrire une équation de saponification",
-   "Méthode 2 — Calculer une masse de savon et un rendement",
-   "Méthode 3 — Suivre une saponification par dosage de la soude restante",
-   "Méthode 4 — Réactif ou catalyseur ?"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "La réaction d'un ester avec une base forte",
+        "lesson": "La saponification",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-la-reaction-d-un-ester-avec-une-base-for",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "La réaction d'un ester avec une base forte",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La réaction d'un ester avec une base forte",
+          "difficulty": 1,
+          "statement": "La saponification est une réaction :",
+          "options": [
+            {
+              "label": "totale, entre un ester et une base forte",
+              "correct": true,
+              "why": "Un ester et l'ion hydroxyde donnent un carboxylate et un alcool, de façon totale."
+            },
+            {
+              "label": "limitée, entre un ester et l'eau",
+              "why": "C'est l'hydrolyse, limitée ; la saponification fait intervenir une base forte."
+            },
+            {
+              "label": "totale, entre un acide carboxylique et un alcool",
+              "why": "L'acide et l'alcool donnent un ester dans une réaction limitée (estérification)."
+            },
+            {
+              "label": "limitée, entre un ester et une base forte",
+              "why": "La base forte rend la réaction totale : le carboxylate formé ne peut pas réagir avec l'alcool."
+            }
+          ],
+          "hint": "Quels sont les réactifs de la saponification, et la réaction est-elle limitée ?",
+          "solution": "$\\mathrm{ester}+\\mathrm{HO^-}\\rightarrow\\mathrm{carboxylate}+\\mathrm{alcool}$ : la réaction est totale. Contrôle : l'hydrolyse acide (avec l'eau seule) est limitée.",
+          "methode": "Saponification : ester + base forte, totale.",
+          "points": 1,
+          "ref": "pc-controle-evolution-la-reaction-d-un-ester-avec-une-base-for-q1"
+        },
+        {
+          "notion": "La réaction d'un ester avec une base forte",
+          "difficulty": 2,
+          "statement": "L'équation de la saponification de l'éthanoate d'éthyle par la soude est :",
+          "options": [
+            {
+              "label": "$\\mathrm{CH_3COOC_2H_5}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{C_2H_5OH}$",
+              "correct": true,
+              "why": "L'ion carboxylate et l'alcool se forment ; charges : $-1$ de chaque côté ; atomes conservés."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOC_2H_5}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COOH}+\\mathrm{C_2H_5O^-}$",
+              "why": "En milieu basique, l'acide formé serait aussitôt déprotoné ; l'ion éthanolate n'existe pas dans l'eau."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOC_2H_5}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COOH}+\\mathrm{C_2H_5OH}$",
+              "why": "Les charges ne sont pas conservées ($-1$ à gauche, $0$ à droite) : en milieu basique, l'acide formé est transformé en ion carboxylate."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOC_2H_5}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{C_2H_5O^-}$",
+              "why": "Les charges ne sont pas conservées ($-1$ à gauche, $-2$ à droite) ; l'alcool reste neutre."
+            }
+          ],
+          "hint": "Produits : un ion carboxylate et un alcool ; vérifie les charges.",
+          "solution": "$\\mathrm{CH_3COOC_2H_5}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{C_2H_5OH}$. Contrôle : charges $-1=-1$ ; $\\mathrm{C}$ : $4=4$ ; $\\mathrm{O}$ : $3=3$.",
+          "methode": "Saponification : ester + $\\mathrm{HO^-}$ $\\to$ carboxylate + alcool.",
+          "points": 1,
+          "ref": "pc-controle-evolution-la-reaction-d-un-ester-avec-une-base-for-q2"
+        },
+        {
+          "notion": "La réaction d'un ester avec une base forte",
+          "difficulty": 3,
+          "statement": "On saponifie $0{,}010\\ \\mathrm{mol}$ de triglycéride avec de la soude à $2{,}0\\ \\mathrm{mol\\,L^{-1}}$. Le volume minimal de soude nécessaire est :",
+          "options": [
+            {
+              "label": "$V=15\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "Un triglycéride a $3$ fonctions ester : $n(\\mathrm{HO^-})=3\\times0{,}010=0{,}030\\ \\mathrm{mol}$ ; $V=\\dfrac{0{,}030}{2{,}0}=15\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$V=5{,}0\\ \\mathrm{mL}$",
+              "why": "Tu as oublié le facteur $3$ : un triglycéride consomme $3$ ions $\\mathrm{HO^-}$."
+            },
+            {
+              "label": "$V=45\\ \\mathrm{mL}$",
+              "why": "Tu as multiplié par $3$ deux fois : $n(\\mathrm{HO^-})=3\\,n(\\text{triglycéride})$ une seule fois."
+            },
+            {
+              "label": "$V=67\\ \\mathrm{mL}$",
+              "why": "Tu as calculé $C/n$ au lieu de $n/C$ : $V=\\dfrac{n}{C}$."
+            }
+          ],
+          "hint": "Combien d'ions $\\mathrm{HO^-}$ faut-il pour une mole de triglycéride ? Puis $V=n/C$.",
+          "solution": "$n(\\mathrm{HO^-})=3\\times0{,}010=0{,}030\\ \\mathrm{mol}$ ; $V=\\dfrac{n}{C}=\\dfrac{0{,}030}{2{,}0}=0{,}015\\ \\mathrm{L}=15\\ \\mathrm{mL}$. Contrôle : $2{,}0\\times0{,}015=0{,}030\\ \\mathrm{mol}$.",
+          "methode": "Triglycéride : $n(\\mathrm{HO^-})=3\\,n$.",
+          "points": 1,
+          "ref": "pc-controle-evolution-la-reaction-d-un-ester-avec-une-base-for-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les corps gras et la fabrication du savon",
+        "lesson": "La saponification",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-les-corps-gras-et-la-fabrication-du-savo",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "Les corps gras et la fabrication du savon",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les corps gras et la fabrication du savon",
+          "difficulty": 1,
+          "statement": "Un corps gras (huile ou graisse) est constitué essentiellement de :",
+          "options": [
+            {
+              "label": "triglycérides, triesters du glycérol et d'acides gras",
+              "correct": true,
+              "why": "Chaque molécule de triglycéride est formée d'un glycérol estérifié par trois acides gras."
+            },
+            {
+              "label": "acides gras libres, sans aucun glycérol associé",
+              "why": "Dans un corps gras, les acides gras sont liés au glycérol sous forme d'esters, non libres."
+            },
+            {
+              "label": "alcools gras à très longue chaîne carbonée",
+              "why": "Les alcools gras ne sont pas les constituants principaux des corps gras."
+            },
+            {
+              "label": "esters de l'éthanol et de plusieurs acides gras",
+              "why": "Les corps gras sont des esters du glycérol (trois fonctions $-\\mathrm{OH}$), non de l'éthanol."
+            }
+          ],
+          "hint": "De quel alcool à trois groupes $-\\mathrm{OH}$ les corps gras dérivent-ils ?",
+          "solution": "Corps gras $=$ triglycérides : $1$ glycérol estérifié par $3$ acides gras. Contrôle : leur saponification libère le glycérol et trois carboxylates.",
+          "methode": "Corps gras : triglycérides (glycérol + $3$ acides gras).",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-corps-gras-et-la-fabrication-du-savo-q1"
+        },
+        {
+          "notion": "Les corps gras et la fabrication du savon",
+          "difficulty": 2,
+          "statement": "La saponification d'un corps gras par la soude donne :",
+          "options": [
+            {
+              "label": "du glycérol et des carboxylates de sodium (savon)",
+              "correct": true,
+              "why": "Triglycéride $+3\\,\\mathrm{HO^-}\\rightarrow$ glycérol $+3\\,\\mathrm{R-COO^-}$, accompagnés de $\\mathrm{Na^+}$."
+            },
+            {
+              "label": "du glycérol et des acides gras sous forme libre",
+              "why": "En milieu basique, les acides gras sont sous forme d'ions carboxylate."
+            },
+            {
+              "label": "du glycérol et de l'éthanol, mais aucun savon",
+              "why": "Il ne se forme pas d'éthanol : l'alcool est le glycérol, et le savon est le carboxylate."
+            },
+            {
+              "label": "des acides gras et de l'eau, sans autre produit",
+              "why": "L'hydrolyse acide forme des acides gras ; la saponification forme aussi du glycérol, et non seulement de l'eau."
+            }
+          ],
+          "hint": "Que deviennent le glycérol et les trois chaînes d'acide gras en milieu basique ?",
+          "solution": "$\\mathrm{triglyc\\acute{e}ride}+3\\,\\mathrm{HO^-}\\rightarrow\\mathrm{glyc\\acute{e}rol}+3\\,\\mathrm{R-COO^-}$ ; avec $\\mathrm{Na^+}$, les carboxylates forment le savon. Contrôle : $3$ ions $\\mathrm{HO^-}$ consommés pour $3$ fonctions ester.",
+          "methode": "Savon = carboxylates d'acides gras (avec $\\mathrm{Na^+}$ ou $\\mathrm{K^+}$).",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-corps-gras-et-la-fabrication-du-savo-q2"
+        },
+        {
+          "notion": "Les corps gras et la fabrication du savon",
+          "difficulty": 3,
+          "statement": "On saponifie $100\\ \\mathrm{g}$ de tristéarine ($M=891\\ \\mathrm{g\\,mol^{-1}}$) par de la soude en excès. Le savon est le stéarate de sodium $\\mathrm{C_{17}H_{35}COONa}$ ($M=306\\ \\mathrm{g\\,mol^{-1}}$). La masse maximale de savon vaut :",
+          "options": [
+            {
+              "label": "$m=103\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$n=\\dfrac{100}{891}=0{,}1122\\ \\mathrm{mol}$ ; $n(\\text{savon})=3\\,n=0{,}3367\\ \\mathrm{mol}$ ; $m=0{,}3367\\times306=103\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=34{,}3\\ \\mathrm{g}$",
+              "why": "Tu as oublié le facteur $3$ : une mole de triglycéride donne trois moles de carboxylate."
+            },
+            {
+              "label": "$m=309\\ \\mathrm{g}$",
+              "why": "Tu as multiplié par $3$ deux fois : $n(\\text{savon})=3\\,n(\\text{triglycéride})$ une seule fois."
+            },
+            {
+              "label": "$m=95{,}6\\ \\mathrm{g}$",
+              "why": "Tu as pris la masse molaire de l'acide stéarique ($284$) au lieu de celle du stéarate de sodium ($306$)."
+            }
+          ],
+          "hint": "Passe de $m$ à $n(\\text{triglycéride})$, puis à $n(\\text{savon})$ avec le coefficient $3$, puis à la masse du savon.",
+          "solution": "$n(\\text{tristéarine})=\\dfrac{100}{891}=0{,}1122\\ \\mathrm{mol}$ ; $n(\\text{savon})=3\\times0{,}1122=0{,}3367\\ \\mathrm{mol}$ ; $m=0{,}3367\\times306=103\\ \\mathrm{g}$. Contrôle : un peu plus que la masse de corps gras, car la soude s'incorpore au savon.",
+          "methode": "Masse de savon : $m=3\\,n(\\text{TG})\\,M(\\text{savon})$.",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-corps-gras-et-la-fabrication-du-savo-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Pourquoi un savon lave-t-il ?",
+        "lesson": "La saponification",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-pourquoi-un-savon-lave-t-il",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "Pourquoi un savon lave-t-il ?",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Pourquoi un savon lave-t-il ?",
+          "difficulty": 1,
+          "statement": "Dans l'ion carboxylate $\\mathrm{R-COO^-}$ d'un savon :",
+          "options": [
+            {
+              "label": "le groupe $-\\mathrm{COO^-}$ est hydrophile et la chaîne $\\mathrm{R}$ est hydrophobe",
+              "correct": true,
+              "why": "La tête chargée est attirée par l'eau ; la longue chaîne carbonée apolaire la repousse."
+            },
+            {
+              "label": "le groupe $-\\mathrm{COO^-}$ est hydrophobe et la chaîne $\\mathrm{R}$ est hydrophile",
+              "why": "C'est l'inverse : la chaîne carbonée est apolaire donc hydrophobe."
+            },
+            {
+              "label": "le groupe $-\\mathrm{COO^-}$ et la chaîne $\\mathrm{R}$ sont tous deux hydrophiles",
+              "why": "La chaîne carbonée n'a aucune affinité pour l'eau."
+            },
+            {
+              "label": "le groupe $-\\mathrm{COO^-}$ et la chaîne $\\mathrm{R}$ sont tous deux hydrophobes",
+              "why": "Le groupe chargé $-\\mathrm{COO^-}$ interagit fortement avec l'eau : il est hydrophile."
+            }
+          ],
+          "hint": "Quelle partie de la molécule est chargée, quelle partie est une longue chaîne de carbone ?",
+          "solution": "Un ion carboxylate de savon est amphiphile : tête hydrophile $-\\mathrm{COO^-}$ (chargée) et queue hydrophobe (chaîne carbonée, soluble dans les graisses). Contrôle : c'est cette double nature qui explique le pouvoir lavant.",
+          "methode": "Savon : tête hydrophile, queue hydrophobe.",
+          "points": 1,
+          "ref": "pc-controle-evolution-pourquoi-un-savon-lave-t-il-q1"
+        },
+        {
+          "notion": "Pourquoi un savon lave-t-il ?",
+          "difficulty": 2,
+          "statement": "Lors du lavage, les ions carboxylate entourent une gouttelette de graisse. Leur orientation est :",
+          "options": [
+            {
+              "label": "chaînes hydrophobes vers la graisse, têtes hydrophiles vers l'eau",
+              "correct": true,
+              "why": "Les chaînes se dissolvent dans la graisse ; les têtes chargées restent en contact avec l'eau : on forme des micelles."
+            },
+            {
+              "label": "têtes hydrophiles vers la graisse, chaînes hydrophobes vers l'eau",
+              "why": "Ce serait l'orientation inverse : les têtes ne peuvent pas se loger dans la graisse."
+            },
+            {
+              "label": "les ions carboxylate dissolvent chimiquement la graisse par une saponification",
+              "why": "Il n'y a pas de transformation chimique de la graisse : l'action est physique (micelles)."
+            },
+            {
+              "label": "les ions carboxylate réagissent avec la graisse dans une réaction acido-basique",
+              "why": "La graisse n'est ni acide ni basique : les carboxylates ne la neutralisent pas."
+            }
+          ],
+          "hint": "Chaque partie de l'ion va vers le milieu avec lequel elle a de l'affinité.",
+          "solution": "Les chaînes hydrophobes s'insèrent dans la graisse, les têtes hydrophiles restent dans l'eau : la graisse est emprisonnée dans des micelles, entraînée par l'eau de rinçage. Contrôle : les micelles sont stables car leur surface est hydrophile.",
+          "methode": "Lavage : micelles, queues dans la graisse, têtes dans l'eau.",
+          "points": 1,
+          "ref": "pc-controle-evolution-pourquoi-un-savon-lave-t-il-q2"
+        },
+        {
+          "notion": "Pourquoi un savon lave-t-il ?",
+          "difficulty": 2,
+          "statement": "Dans une eau dure (riche en $\\mathrm{Ca^{2+}}$ et $\\mathrm{Mg^{2+}}$), un savon mousse mal parce que :",
+          "options": [
+            {
+              "label": "les ions $\\mathrm{Ca^{2+}}$ forment un précipité insoluble avec les carboxylates",
+              "correct": true,
+              "why": "$2\\,\\mathrm{R-COO^-}+\\mathrm{Ca^{2+}}\\rightarrow(\\mathrm{R-COO})_2\\mathrm{Ca}$ solide : le savon est consommé et ne mousse plus."
+            },
+            {
+              "label": "les ions $\\mathrm{Ca^{2+}}$ détruisent la chaîne carbonée des ions du savon",
+              "why": "Les ions $\\mathrm{Ca^{2+}}$ ne réagissent pas avec la chaîne carbonée : ils précipitent avec la tête."
+            },
+            {
+              "label": "l'eau dure est trop acide et protonne tous les carboxylates présents",
+              "why": "L'eau dure n'est pas forcément acide : c'est la présence de $\\mathrm{Ca^{2+}}$ qui est en cause."
+            },
+            {
+              "label": "les ions $\\mathrm{Na^+}$ du savon rendent la chaîne carbonée hydrophile",
+              "why": "$\\mathrm{Na^+}$ est un ion spectateur : il ne modifie pas le caractère hydrophobe de la chaîne."
+            }
+          ],
+          "hint": "Que forment un ion calcium et deux ions carboxylate ?",
+          "solution": "Les ions $\\mathrm{Ca^{2+}}$ précipitent les carboxylates sous forme de carboxylate de calcium insoluble : il faut plus de savon et il se forme un dépôt (écume). Contrôle : un adoucisseur d'eau retire $\\mathrm{Ca^{2+}}$ et restaure le pouvoir moussant.",
+          "methode": "Eau dure : précipité de carboxylate de calcium.",
+          "points": 1,
+          "ref": "pc-controle-evolution-pourquoi-un-savon-lave-t-il-q3"
+        },
+        {
+          "notion": "Pourquoi un savon lave-t-il ?",
+          "difficulty": 3,
+          "statement": "Dans une eau très acide ($\\mathrm{pH}<3$), un savon perd son pouvoir lavant parce que :",
+          "options": [
+            {
+              "label": "les ions carboxylate sont protonés en acide gras, peu soluble et non chargé",
+              "correct": true,
+              "why": "$\\mathrm{R-COO^-}+\\mathrm{H_3O^+}\\rightarrow\\mathrm{R-COOH}+\\mathrm{H_2O}$ : l'acide gras ne forme plus de micelles solubles."
+            },
+            {
+              "label": "les ions carboxylate sont oxydés en dioxyde de carbone",
+              "why": "Un acide ne suffit pas à oxyder les carboxylates ; la réaction est acido-basique."
+            },
+            {
+              "label": "les ions $\\mathrm{Na^+}$ précipitent en présence d'acide",
+              "why": "Les sels de sodium restent solubles : aucun précipité de $\\mathrm{Na^+}$ ne se forme."
+            },
+            {
+              "label": "les micelles gonflent jusqu'à éclater sous l'effet des ions $\\mathrm{H_3O^+}$",
+              "why": "Ce n'est pas un effet de gonflement : c'est la protonation de la tête hydrophile qui supprime son caractère ionique."
+            }
+          ],
+          "hint": "Quelle réaction acido-basique subit l'ion carboxylate en présence d'ions oxonium ?",
+          "solution": "$\\mathrm{R-COO^-}+\\mathrm{H_3O^+}\\rightarrow\\mathrm{R-COOH}+\\mathrm{H_2O}$ : l'acide gras, non chargé, n'est plus hydrophile et précipite. Contrôle : le $\\mathrm{p}K_A$ d'un acide gras est voisin de $5$ : en dessous, la forme acide domine.",
+          "methode": "Savon en milieu acide : formation de $\\mathrm{R-COOH}$ insoluble.",
+          "points": 1,
+          "ref": "pc-controle-evolution-pourquoi-un-savon-lave-t-il-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Qu'est-ce qu'un catalyseur ?",
+        "lesson": "La catalyse",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 3,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-qu-est-ce-qu-un-catalyseur",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "Qu'est-ce qu'un catalyseur ?",
+      "difficulty": 1,
+      "questions": [
+        {
+          "notion": "Qu'est-ce qu'un catalyseur ?",
+          "difficulty": 1,
+          "statement": "Un catalyseur est une espèce qui :",
+          "options": [
+            {
+              "label": "accélère une transformation, sans figurer dans son équation ni être consommé",
+              "correct": true,
+              "why": "Il intervient dans le mécanisme mais est régénéré : il n'apparaît pas dans le bilan."
+            },
+            {
+              "label": "est consommé pendant la transformation, d'où sa présence dans l'équation",
+              "why": "Un réactif est consommé ; un catalyseur est régénéré à la fin."
+            },
+            {
+              "label": "déplace l'équilibre dans le sens de formation des produits",
+              "why": "Un catalyseur ne modifie pas l'état d'équilibre : il accélère les deux sens."
+            },
+            {
+              "label": "accélère seulement la réaction dans le sens direct",
+              "why": "Il accélère les deux sens de la même façon : sinon l'équilibre serait déplacé."
+            }
+          ],
+          "hint": "Un catalyseur est-il consommé ? Change-t-il l'état final ?",
+          "solution": "Un catalyseur accélère la transformation, n'est pas consommé (régénéré) et ne figure pas dans l'équation ; il ne modifie pas l'état d'équilibre. Contrôle : on le retrouve intact en fin de réaction.",
+          "methode": "Catalyseur : accélère les deux sens, non consommé, sans effet sur l'équilibre.",
+          "points": 1,
+          "ref": "pc-controle-evolution-qu-est-ce-qu-un-catalyseur-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le profil énergétique",
+        "lesson": "La catalyse",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-le-profil-energetique",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "Le profil énergétique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le profil énergétique",
+          "difficulty": 1,
+          "statement": "Un catalyseur augmente la vitesse d'une réaction car il :",
+          "options": [
+            {
+              "label": "diminue l'énergie d'activation",
+              "correct": true,
+              "why": "La barrière à franchir est plus basse : davantage de chocs sont efficaces."
+            },
+            {
+              "label": "diminue l'énergie libérée par la réaction",
+              "why": "L'énergie libérée dépend des niveaux initial et final, que le catalyseur ne modifie pas."
+            },
+            {
+              "label": "diminue l'énergie des produits",
+              "why": "Les niveaux des réactifs et des produits ne changent pas avec un catalyseur."
+            },
+            {
+              "label": "augmente la constante d'équilibre",
+              "why": "Un catalyseur ne modifie pas $K$, qui dépend de la température."
+            }
+          ],
+          "hint": "Quelle grandeur du profil énergétique le catalyseur change-t-il ?",
+          "solution": "Sur le profil énergétique, le catalyseur offre un chemin à barrière plus basse : l'énergie d'activation diminue. Contrôle : les niveaux de départ et d'arrivée ne bougent pas.",
+          "methode": "Catalyseur : $E_a$ plus faible, niveaux inchangés.",
+          "points": 1,
+          "ref": "pc-controle-evolution-le-profil-energetique-q1"
+        },
+        {
+          "notion": "Le profil énergétique",
+          "difficulty": 2,
+          "statement": "Sur un profil énergétique, l'énergie d'activation $E_a$ est :",
+          "options": [
+            {
+              "label": "l'écart entre le niveau des réactifs et le sommet de la barrière",
+              "correct": true,
+              "why": "C'est l'énergie à fournir aux réactifs pour franchir la barrière."
+            },
+            {
+              "label": "l'écart entre le niveau des réactifs et celui des produits",
+              "why": "C'est la variation d'énergie de la réaction ($\\Delta E$), non l'énergie d'activation."
+            },
+            {
+              "label": "le niveau d'énergie des produits",
+              "why": "Le niveau des produits seul n'est pas l'énergie d'activation."
+            },
+            {
+              "label": "l'écart entre le sommet de la barrière et le niveau des produits",
+              "why": "C'est l'énergie d'activation de la réaction inverse, non celle de la réaction directe."
+            }
+          ],
+          "hint": "Pour la réaction directe, entre quels niveaux se mesure la barrière à franchir ?",
+          "solution": "$E_a$ (sens direct) $=E_{sommet}-E_{r\\acute{e}actifs}$. L'écart réactifs–produits est $\\Delta E$ ; l'écart sommet–produits est l'énergie d'activation du sens inverse. Contrôle : $E_a>0$ toujours.",
+          "methode": "$E_a$ : sommet de la barrière moins niveau des réactifs.",
+          "points": 1,
+          "ref": "pc-controle-evolution-le-profil-energetique-q2"
+        },
+        {
+          "notion": "Le profil énergétique",
+          "difficulty": 2,
+          "statement": "Comparé au profil sans catalyseur, le profil avec catalyseur présente :",
+          "options": [
+            {
+              "label": "une barrière plus basse, avec des niveaux initial et final identiques",
+              "correct": true,
+              "why": "Le catalyseur change seulement le chemin (barrière) : la différence d'énergie entre réactifs et produits est la même."
+            },
+            {
+              "label": "une barrière plus basse et des produits situés plus bas en énergie",
+              "why": "Les produits restent au même niveau : $\\Delta E$ ne dépend pas du catalyseur."
+            },
+            {
+              "label": "la même barrière, mais des produits situés plus bas en énergie",
+              "why": "Le catalyseur agit sur la barrière, non sur le niveau des produits."
+            },
+            {
+              "label": "une barrière plus haute, avec des niveaux initial et final identiques",
+              "why": "Une barrière plus haute ralentirait la réaction ; un catalyseur l'abaisse."
+            }
+          ],
+          "hint": "Que modifie un catalyseur : le chemin, ou le bilan énergétique ?",
+          "solution": "Le catalyseur ouvre un chemin de plus faible barrière ; les niveaux des réactifs et des produits ne changent pas, donc ni $\\Delta E$ ni $K$. Contrôle : sens direct et sens inverse sont tous deux accélérés.",
+          "methode": "Profil avec catalyseur : barrière abaissée, mêmes niveaux de départ et d'arrivée.",
+          "points": 1,
+          "ref": "pc-controle-evolution-le-profil-energetique-q3"
+        },
+        {
+          "notion": "Le profil énergétique",
+          "difficulty": 3,
+          "statement": "Une réaction a des produits situés $30\\ \\mathrm{kJ\\,mol^{-1}}$ sous les réactifs. Avec un catalyseur, l'énergie d'activation du sens direct est $E_{a,d}=50\\ \\mathrm{kJ\\,mol^{-1}}$. L'énergie d'activation du sens inverse, avec ce même catalyseur, vaut :",
+          "options": [
+            {
+              "label": "$E_{a,i}=80\\ \\mathrm{kJ\\,mol^{-1}}$",
+              "correct": true,
+              "why": "$E_{a,i}=E_{a,d}-\\Delta E=50-(-30)=80\\ \\mathrm{kJ\\,mol^{-1}}$ : de la base des produits au sommet de la barrière."
+            },
+            {
+              "label": "$E_{a,i}=50\\ \\mathrm{kJ\\,mol^{-1}}$",
+              "why": "Tu as repris l'énergie d'activation directe : le sens inverse doit remonter la différence de niveaux supplémentaire de $30$."
+            },
+            {
+              "label": "$E_{a,i}=20\\ \\mathrm{kJ\\,mol^{-1}}$",
+              "why": "Tu as retranché $30$ au lieu de l'ajouter : les produits sont plus bas, la barrière inverse est plus haute."
+            },
+            {
+              "label": "$E_{a,i}=110\\ \\mathrm{kJ\\,mol^{-1}}$",
+              "why": "Tu as additionné $30$ à une énergie d'activation $80$ non catalysée : avec le catalyseur, $E_{a,d}=50$ donc $50+30=80$."
+            }
+          ],
+          "hint": "Le sommet de la barrière est le même pour les deux sens ; de quelle hauteur part-on en sens inverse ?",
+          "solution": "Le sommet de la barrière est à $50\\ \\mathrm{kJ\\,mol^{-1}}$ au-dessus des réactifs, soit $50+30=80\\ \\mathrm{kJ\\,mol^{-1}}$ au-dessus des produits : $E_{a,i}=80\\ \\mathrm{kJ\\,mol^{-1}}$. Contrôle : $E_{a,i}-E_{a,d}=30=-\\Delta E$.",
+          "methode": "$E_{a,i}=E_{a,d}-\\Delta E$ ; le catalyseur abaisse les deux de la même quantité.",
+          "points": 1,
+          "ref": "pc-controle-evolution-le-profil-energetique-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les trois types de catalyse",
+        "lesson": "La catalyse",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-les-trois-types-de-catalyse",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "Les trois types de catalyse",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les trois types de catalyse",
+          "difficulty": 1,
+          "statement": "Une catalyse est dite homogène lorsque :",
+          "options": [
+            {
+              "label": "le catalyseur et les réactifs sont dans la même phase",
+              "correct": true,
+              "why": "C'est la définition : par exemple, tous dissous dans la même solution."
+            },
+            {
+              "label": "le catalyseur est un solide et les réactifs sont en solution",
+              "why": "Le catalyseur et les réactifs sont alors dans des phases différentes : catalyse hétérogène."
+            },
+            {
+              "label": "le catalyseur est une enzyme produite par un être vivant",
+              "why": "Une enzyme caractérise la catalyse enzymatique, qui est un cas particulier."
+            },
+            {
+              "label": "le catalyseur est consommé en même temps que les réactifs",
+              "why": "Un catalyseur n'est jamais consommé ; ce n'est pas un critère de classification."
+            }
+          ],
+          "hint": "Homogène : un seul mélange, une seule phase.",
+          "solution": "Catalyse homogène : catalyseur et réactifs dans la même phase ; hétérogène : phases différentes ; enzymatique : enzyme. Contrôle : un catalyseur solide dans un liquide est hétérogène.",
+          "methode": "Homogène : même phase ; hétérogène : phases différentes.",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-trois-types-de-catalyse-q1"
+        },
+        {
+          "notion": "Les trois types de catalyse",
+          "difficulty": 2,
+          "statement": "Dans l'estérification d'un acide et d'un alcool en solution, l'acide sulfurique concentré joue le rôle de :",
+          "options": [
+            {
+              "label": "catalyseur homogène : il est dans la même phase liquide que les réactifs",
+              "correct": true,
+              "why": "L'acide sulfurique est miscible au mélange : catalyseur et réactifs forment une seule phase."
+            },
+            {
+              "label": "catalyseur hétérogène : il est dans une phase différente de celle des réactifs",
+              "why": "Il est dissous dans le mélange : il n'y a pas deux phases distinctes."
+            },
+            {
+              "label": "enzyme, car il accélère la réaction de façon très sélective",
+              "why": "Une enzyme est une protéine ; l'acide sulfurique n'est pas sélectif de cette façon."
+            },
+            {
+              "label": "réactif, car il est consommé pendant la formation de l'ester",
+              "why": "Il n'apparaît pas dans l'équation et n'est pas consommé : c'est un catalyseur."
+            }
+          ],
+          "hint": "Dans quelle phase se trouve l'acide sulfurique par rapport aux réactifs ?",
+          "solution": "L'acide sulfurique est soluble dans le milieu réactionnel : catalyse homogène. Contrôle : le catalyseur n'est ni consommé ni présent dans l'équation.",
+          "methode": "$\\mathrm{H_2SO_4}$ : catalyseur homogène.",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-trois-types-de-catalyse-q2"
+        },
+        {
+          "notion": "Les trois types de catalyse",
+          "difficulty": 2,
+          "statement": "Dans un pot catalytique, des métaux solides (platine, rhodium) accélèrent la transformation de gaz d'échappement. Cette catalyse est :",
+          "options": [
+            {
+              "label": "hétérogène : le catalyseur est solide, les réactifs sont gazeux",
+              "correct": true,
+              "why": "Le catalyseur et les réactifs sont dans des phases différentes."
+            },
+            {
+              "label": "homogène : tout le système est à la même température élevée",
+              "why": "L'homogénéité concerne la phase, non la température."
+            },
+            {
+              "label": "enzymatique : les métaux précieux jouent le rôle d'enzymes",
+              "why": "Les enzymes sont des protéines ; les métaux précieux n'en sont pas."
+            },
+            {
+              "label": "sans catalyse : les métaux sont consommés au fil du temps",
+              "why": "Un catalyseur n'est pas consommé ; le pot catalytique reste actif pendant des années."
+            }
+          ],
+          "hint": "Compare l'état physique du catalyseur à celui des réactifs.",
+          "solution": "Catalyseur solide, réactifs gazeux : deux phases, donc catalyse hétérogène. Contrôle : on le sépare facilement des produits, atout industriel.",
+          "methode": "Catalyseur solide + réactifs gazeux : hétérogène.",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-trois-types-de-catalyse-q3"
+        },
+        {
+          "notion": "Les trois types de catalyse",
+          "difficulty": 3,
+          "statement": "On chauffe à $90\\ ^\\circ\\mathrm{C}$ une solution contenant une enzyme et son substrat : la vitesse de la réaction, d'abord croissante avec la température, chute fortement. L'explication est :",
+          "options": [
+            {
+              "label": "l'enzyme est dénaturée à haute température et perd son pouvoir catalytique",
+              "correct": true,
+              "why": "La structure de la protéine est détruite : le site actif n'existe plus."
+            },
+            {
+              "label": "l'enzyme est consommée par la réaction à haute température",
+              "why": "Une enzyme est un catalyseur : elle n'est pas consommée, mais dénaturée par la chaleur."
+            },
+            {
+              "label": "la constante d'équilibre diminue fortement avec la température",
+              "why": "Ce n'est pas $K$ qui change : l'enzyme devient inactive, ce qui annule son effet cinétique."
+            },
+            {
+              "label": "l'enzyme se transforme en réactif au-dessus de $50\\ ^\\circ\\mathrm{C}$",
+              "why": "Une enzyme ne devient jamais un réactif : elle perd sa structure active."
+            }
+          ],
+          "hint": "Que devient une protéine chauffée à haute température ?",
+          "solution": "Les enzymes sont des protéines actives dans une zone étroite de température ($\\approx37\\ ^\\circ\\mathrm{C}$) ; au-delà, la dénaturation détruit leur site actif et la vitesse chute. Contrôle : un blanc d'œuf cuit ne se retransforme pas.",
+          "methode": "Enzyme : sélective, active dans des conditions douces ; dénaturée par la chaleur.",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-trois-types-de-catalyse-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'objectif du TP",
+        "lesson": "La saponification au reflux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-l-objectif-du-tp",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "L'objectif du TP",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'objectif du TP",
+          "difficulty": 1,
+          "statement": "Le TP de saponification au reflux a pour objectif de :",
+          "options": [
+            {
+              "label": "préparer un savon à partir d'un corps gras et de la soude",
+              "correct": true,
+              "why": "On réalise la saponification d'un triglycéride par la soude pour obtenir le savon."
+            },
+            {
+              "label": "préparer un ester à partir d'un acide et d'un alcool",
+              "why": "C'est le but du TP d'estérification, non de saponification."
+            },
+            {
+              "label": "doser l'acide éthanoïque d'un vinaigre par la soude",
+              "why": "C'est un dosage acido-basique, sans rapport avec le savon."
+            },
+            {
+              "label": "électrolyser une solution de chlorure de sodium",
+              "why": "C'est une électrolyse : aucun corps gras n'intervient."
+            }
+          ],
+          "hint": "Quels réactifs entrent dans une saponification ?",
+          "solution": "On saponifie un corps gras par la soude, au reflux, puis on isole le savon par relargage. Contrôle : le glycérol, autre produit, reste dans la solution aqueuse.",
+          "methode": "TP : saponification d'un corps gras par la soude.",
+          "points": 1,
+          "ref": "pc-controle-evolution-l-objectif-du-tp-q1"
+        },
+        {
+          "notion": "L'objectif du TP",
+          "difficulty": 2,
+          "statement": "La saponification est réalisée à chaud parce que :",
+          "options": [
+            {
+              "label": "la réaction est lente à froid : le chauffage la rend plus rapide",
+              "correct": true,
+              "why": "La saponification est totale mais lente à température ambiante : on chauffe pour gagner du temps."
+            },
+            {
+              "label": "la réaction est limitée à froid : le chauffage la rend totale",
+              "why": "La saponification est totale à toute température ; la chaleur ne change que la durée."
+            },
+            {
+              "label": "la réaction est endothermique : la chaleur déplace son équilibre",
+              "why": "Une réaction totale n'a pas d'équilibre à déplacer : le chauffage agit sur la vitesse."
+            },
+            {
+              "label": "la soude se décompose à froid en produits inactifs",
+              "why": "La soude est stable à froid : c'est la lenteur de la réaction qu'il faut compenser."
+            }
+          ],
+          "hint": "La saponification est-elle limitée ? Qu'apporte alors le chauffage ?",
+          "solution": "La saponification est totale mais lente à froid : le chauffage (au reflux, sans perte de matière) accélère la transformation. Contrôle : la température est un facteur cinétique.",
+          "methode": "Chauffage : facteur cinétique, non thermodynamique.",
+          "points": 1,
+          "ref": "pc-controle-evolution-l-objectif-du-tp-q2"
+        },
+        {
+          "notion": "L'objectif du TP",
+          "difficulty": 2,
+          "statement": "On ajoute de l'éthanol au mélange d'huile et de solution de soude. Son rôle est de :",
+          "options": [
+            {
+              "label": "servir de solvant commun à l'huile et à la solution de soude",
+              "correct": true,
+              "why": "L'huile et l'eau ne sont pas miscibles ; l'éthanol dissout les deux et homogénéise le mélange."
+            },
+            {
+              "label": "jouer le rôle de catalyseur de la saponification de l'huile",
+              "why": "L'éthanol est un solvant ; il n'accélère pas la réaction par un mécanisme catalytique."
+            },
+            {
+              "label": "réagir avec l'huile pour former l'ester propre au savon",
+              "why": "L'éthanol ne participe pas à la saponification : il n'est pas un réactif."
+            },
+            {
+              "label": "refroidir le mélange pendant le chauffage à reflux",
+              "why": "L'éthanol n'a aucun rôle de refroidissement : c'est le réfrigérant qui condense les vapeurs."
+            }
+          ],
+          "hint": "Pourquoi ne peut-on pas simplement mélanger huile et solution aqueuse ?",
+          "solution": "Huile et solution aqueuse sont deux phases : le contact est limité à l'interface. L'éthanol, miscible aux deux, crée un milieu homogène et accélère la saponification. Contrôle : le mélange devient limpide.",
+          "methode": "Éthanol : solvant commun huile / soude.",
+          "points": 1,
+          "ref": "pc-controle-evolution-l-objectif-du-tp-q3"
+        },
+        {
+          "notion": "L'objectif du TP",
+          "difficulty": 3,
+          "statement": "On saponifie $10{,}0\\ \\mathrm{g}$ de trioléine ($M=885\\ \\mathrm{g\\,mol^{-1}}$). La masse minimale de soude solide $\\mathrm{NaOH}$ ($M=40{,}0\\ \\mathrm{g\\,mol^{-1}}$) nécessaire est :",
+          "options": [
+            {
+              "label": "$m=1{,}36\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$n(\\text{TG})=\\dfrac{10{,}0}{885}=0{,}0113\\ \\mathrm{mol}$ ; $n(\\mathrm{NaOH})=3\\,n=0{,}0339\\ \\mathrm{mol}$ ; $m=0{,}0339\\times40{,}0=1{,}36\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=0{,}45\\ \\mathrm{g}$",
+              "why": "Tu as oublié le facteur $3$ : un triglycéride consomme $3$ ions $\\mathrm{HO^-}$."
+            },
+            {
+              "label": "$m=4{,}07\\ \\mathrm{g}$",
+              "why": "Tu as multiplié par $3$ deux fois : $n(\\mathrm{NaOH})=3\\,n(\\text{TG})$ une seule fois."
+            },
+            {
+              "label": "$m=0{,}0339\\ \\mathrm{g}$",
+              "why": "$0{,}0339$ est la quantité de matière en mol : il manque la multiplication par $M(\\mathrm{NaOH})=40{,}0\\ \\mathrm{g\\,mol^{-1}}$."
+            }
+          ],
+          "hint": "Passe de $m(\\text{TG})$ à $n(\\text{TG})$, puis à $n(\\mathrm{NaOH})$ avec le coefficient $3$, puis à la masse.",
+          "solution": "$n(\\text{TG})=\\dfrac{10{,}0}{885}=0{,}0113\\ \\mathrm{mol}$ ; $n(\\mathrm{NaOH})=3\\times0{,}0113=0{,}0339\\ \\mathrm{mol}$ ; $m=0{,}0339\\times40{,}0=1{,}36\\ \\mathrm{g}$. Contrôle : en pratique on prend un léger excès de soude.",
+          "methode": "$m(\\mathrm{NaOH})=3\\,\\dfrac{m(\\text{TG})}{M(\\text{TG})}M(\\mathrm{NaOH})$.",
+          "points": 1,
+          "ref": "pc-controle-evolution-l-objectif-du-tp-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le protocole",
+        "lesson": "La saponification au reflux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-le-protocole",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "Le protocole",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le protocole",
+          "difficulty": 1,
+          "statement": "Après refroidissement, on verse le mélange dans une solution saturée de chlorure de sodium. Ce relargage a pour but de :",
+          "options": [
+            {
+              "label": "faire précipiter le savon, moins soluble dans l'eau salée",
+              "correct": true,
+              "why": "Les ions de l'eau salée réduisent la solubilité du savon : il se sépare sous forme solide."
+            },
+            {
+              "label": "dissoudre complètement le savon dans la solution salée",
+              "why": "C'est l'inverse : on veut séparer le savon de la solution aqueuse."
+            },
+            {
+              "label": "neutraliser la soude restante qui est en excès",
+              "why": "Le chlorure de sodium n'a aucune action acido-basique sur la soude."
+            },
+            {
+              "label": "poursuivre la saponification en milieu salin chauffé",
+              "why": "La saponification est terminée à ce stade ; le sel ne l'accélère pas."
+            }
+          ],
+          "hint": "Le savon est-il plus ou moins soluble dans l'eau salée que dans l'eau pure ?",
+          "solution": "Le relargage diminue la solubilité du savon : il précipite et on peut le séparer par filtration. Contrôle : le glycérol, très soluble, reste dans le filtrat.",
+          "methode": "Relargage : faire précipiter le savon.",
+          "points": 1,
+          "ref": "pc-controle-evolution-le-protocole-q1"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 2,
+          "statement": "Après relargage et filtration du savon, le filtrat contient principalement :",
+          "options": [
+            {
+              "label": "du glycérol, de la soude en excès et du chlorure de sodium",
+              "correct": true,
+              "why": "Ces espèces solubles restent dans la phase aqueuse ; le savon, solide, est retenu sur le filtre."
+            },
+            {
+              "label": "le savon dissous, qui a traversé le papier filtre",
+              "why": "Le savon précipite en milieu salé : c'est lui qu'on retient sur le filtre."
+            },
+            {
+              "label": "uniquement de l'huile qui n'a pas été transformée",
+              "why": "L'huile a été saponifiée ; les produits principaux de la réaction sont le savon et le glycérol."
+            },
+            {
+              "label": "uniquement du chlorure de sodium et de l'eau pure",
+              "why": "Le glycérol, formé par la réaction, est très soluble dans l'eau : il se trouve aussi dans le filtrat."
+            }
+          ],
+          "hint": "Parmi les produits de la saponification, lequel ne précipite pas ?",
+          "solution": "Le savon est retenu sur le filtre ; le glycérol (soluble), la soude en excès et le sel passent dans le filtrat. Contrôle : on peut récupérer le glycérol par évaporation du filtrat.",
+          "methode": "Filtrat : glycérol, soude, sel ; filtre : savon.",
+          "points": 1,
+          "ref": "pc-controle-evolution-le-protocole-q2"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 2,
+          "statement": "On rince le savon filtré avec de l'eau glacée plutôt qu'avec de l'eau chaude parce que :",
+          "options": [
+            {
+              "label": "le savon est moins soluble à froid : on réduit les pertes",
+              "correct": true,
+              "why": "Le rinçage élimine la soude restante ; à basse température, le savon se dissout peu."
+            },
+            {
+              "label": "l'eau chaude hydrolyserait le savon en huile",
+              "why": "Le savon n'est pas hydrolysé en huile par l'eau chaude : le problème est sa solubilité."
+            },
+            {
+              "label": "l'eau glacée saponifie l'huile restante",
+              "why": "La saponification demande de la soude et de la chaleur, non de l'eau glacée."
+            },
+            {
+              "label": "l'eau glacée fait précipiter la soude avec le savon",
+              "why": "La soude reste dissoute ; l'eau de rinçage l'emporte avec elle."
+            }
+          ],
+          "hint": "Comment la solubilité d'un solide ionique varie-t-elle avec la température, en général ?",
+          "solution": "À froid, le savon se dissout moins : le rinçage retire la soude et le sel en limitant les pertes de savon. Contrôle : le rendement serait plus faible avec de l'eau chaude.",
+          "methode": "Rinçage à l'eau glacée : moins de savon dissous.",
+          "points": 1,
+          "ref": "pc-controle-evolution-le-protocole-q3"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 3,
+          "statement": "Au début du chauffage, le mélange huile / éthanol / soude est hétérogène ; à la fin du reflux, il est limpide et homogène. Cela indique que :",
+          "options": [
+            {
+              "label": "l'huile, non miscible, a été transformée en espèces solubles : la saponification est terminée",
+              "correct": true,
+              "why": "Savon et glycérol sont solubles dans le mélange eau-éthanol ; l'absence d'huile résiduelle traduit une transformation totale."
+            },
+            {
+              "label": "la réaction n'a pas eu lieu, car l'huile s'est simplement dissoute dans l'éthanol",
+              "why": "Une dissolution de l'huile aurait rendu le mélange homogène dès le départ ; ici l'homogénéité apparaît avec la transformation."
+            },
+            {
+              "label": "l'équilibre est atteint, avec autant d'huile que de savon dans le mélange",
+              "why": "La saponification est totale : il ne reste pas d'équilibre avec de l'huile résiduelle."
+            },
+            {
+              "label": "le catalyseur a été consommé et la réaction s'est arrêtée",
+              "why": "Il n'y a pas de catalyseur dans la saponification : la soude est un réactif, consommé par la réaction."
+            }
+          ],
+          "hint": "Quelles espèces de la réaction sont solubles dans le mélange eau-éthanol ?",
+          "solution": "L'huile (non miscible) disparaît au profit du savon et du glycérol, solubles dans le mélange : le trouble disparaît quand la saponification s'achève. Contrôle : la réaction étant totale, on ne forme pas d'équilibre huile / savon.",
+          "methode": "Mélange limpide : huile entièrement transformée.",
+          "points": 1,
+          "ref": "pc-controle-evolution-le-protocole-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les tests du savon obtenu",
+        "lesson": "La saponification au reflux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-les-tests-du-savon-obtenu",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "Les tests du savon obtenu",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les tests du savon obtenu",
+          "difficulty": 1,
+          "statement": "Pour tester le pouvoir moussant du savon, on :",
+          "options": [
+            {
+              "label": "agite une solution de savon dans un tube bouché pour observer la mousse",
+              "correct": true,
+              "why": "Un savon abaisse la tension superficielle de l'eau : la mousse est abondante et persiste."
+            },
+            {
+              "label": "chauffe la solution de savon jusqu'à son ébullition vive",
+              "why": "L'ébullition ne teste pas le pouvoir moussant."
+            },
+            {
+              "label": "ajoute un indicateur coloré à la solution de savon étudiée",
+              "why": "L'indicateur renseigne sur le $\\mathrm{pH}$, non sur le pouvoir moussant."
+            },
+            {
+              "label": "filtre la solution de savon sur un papier filtre",
+              "why": "La filtration sépare des solides ; ce n'est pas un test de mousse."
+            }
+          ],
+          "hint": "Quelle observation caractérise un savon dans l'eau ?",
+          "solution": "On agite la solution dans un tube : une mousse stable traduit le pouvoir moussant. Contrôle : sans savon, l'eau pure ne mousse pas.",
+          "methode": "Test de mousse : agiter une solution de savon.",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-tests-du-savon-obtenu-q1"
+        },
+        {
+          "notion": "Les tests du savon obtenu",
+          "difficulty": 2,
+          "statement": "Le $\\mathrm{pH}$ d'une solution de savon (carboxylate de sodium) est :",
+          "options": [
+            {
+              "label": "supérieur à $7$, car l'ion carboxylate est une base faible",
+              "correct": true,
+              "why": "$\\mathrm{R-COO^-}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{R-COOH}+\\mathrm{HO^-}$ : il apparaît des ions hydroxyde."
+            },
+            {
+              "label": "inférieur à $7$, car le savon contient un acide gras",
+              "why": "Le savon est la forme basique conjuguée d'un acide gras, non l'acide lui-même."
+            },
+            {
+              "label": "égal à $7$, car c'est un sel neutre",
+              "why": "L'ion carboxylate est une base, même faible : le $\\mathrm{pH}$ est supérieur à $7$."
+            },
+            {
+              "label": "égal à $14$, car c'est une base forte",
+              "why": "L'ion carboxylate est une base faible : le $\\mathrm{pH}$ reste voisin de $9$ à $10$."
+            }
+          ],
+          "hint": "Que fait un ion carboxylate (base faible) avec l'eau ?",
+          "solution": "$\\mathrm{R-COO^-}$ est la base conjuguée d'un acide faible : la solution est légèrement basique ($\\mathrm{pH}\\approx9$ à $10$). Contrôle : $\\mathrm{Na^+}$ est spectateur.",
+          "methode": "Savon : $\\mathrm{pH}>7$ (base faible).",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-tests-du-savon-obtenu-q2"
+        },
+        {
+          "notion": "Les tests du savon obtenu",
+          "difficulty": 2,
+          "statement": "On ajoute une solution de chlorure de calcium à une solution de savon. On observe :",
+          "options": [
+            {
+              "label": "un précipité blanc de carboxylate de calcium insoluble",
+              "correct": true,
+              "why": "$2\\,\\mathrm{R-COO^-}+\\mathrm{Ca^{2+}}\\rightarrow(\\mathrm{R-COO})_2\\mathrm{Ca}$ : les ions $\\mathrm{Ca^{2+}}$ simulent une eau dure."
+            },
+            {
+              "label": "aucun changement visible, les deux solutions étant limpides",
+              "why": "Le carboxylate de calcium est insoluble : un précipité apparaît."
+            },
+            {
+              "label": "un dégagement gazeux de dioxyde de carbone",
+              "why": "Aucun carbonate ni acide n'est présent : il n'y a pas de dégagement de $\\mathrm{CO_2}$."
+            },
+            {
+              "label": "une coloration rouge de la solution",
+              "why": "Aucun ion coloré ni indicateur n'est impliqué : le produit est un solide blanc."
+            }
+          ],
+          "hint": "Que se passe-t-il quand $\\mathrm{Ca^{2+}}$ rencontre des ions carboxylate ?",
+          "solution": "Le carboxylate de calcium est insoluble : il précipite, ce qui reproduit l'effet d'une eau dure sur le savon. Contrôle : le savon perd son pouvoir moussant.",
+          "methode": "Test de l'eau dure : précipité de $(\\mathrm{R-COO})_2\\mathrm{Ca}$.",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-tests-du-savon-obtenu-q3"
+        },
+        {
+          "notion": "Les tests du savon obtenu",
+          "difficulty": 3,
+          "statement": "On ajoute de l'acide chlorhydrique en excès à une solution limpide de savon : un trouble blanc apparaît. Ce trouble est dû :",
+          "options": [
+            {
+              "label": "à l'acide gras $\\mathrm{R-COOH}$, peu soluble, formé par protonation de $\\mathrm{R-COO^-}$",
+              "correct": true,
+              "why": "$\\mathrm{R-COO^-}+\\mathrm{H_3O^+}\\rightarrow\\mathrm{R-COOH}+\\mathrm{H_2O}$ : la forme acide n'est pas soluble."
+            },
+            {
+              "label": "à un précipité de chlorure de sodium formé avec l'acide ajouté",
+              "why": "$\\mathrm{NaCl}$ reste dissous aux concentrations utilisées ; le trouble vient de l'acide gras."
+            },
+            {
+              "label": "à de l'huile reformée par la réaction inverse de la saponification",
+              "why": "La saponification est totale : l'acide ne régénère pas l'huile à température ambiante."
+            },
+            {
+              "label": "à du dioxyde de carbone dissous qui forme une émulsion stable",
+              "why": "Aucun carbonate n'est présent : il ne se forme pas de $\\mathrm{CO_2}$."
+            }
+          ],
+          "hint": "Quelle réaction acido-basique l'ion carboxylate subit-il avec $\\mathrm{H_3O^+}$ ? Cette espèce est-elle soluble ?",
+          "solution": "En milieu acide, $\\mathrm{R-COO^-}$ est protoné : $\\mathrm{R-COO^-}+\\mathrm{H_3O^+}\\rightarrow\\mathrm{R-COOH}+\\mathrm{H_2O}$ ; l'acide gras, non chargé et peu soluble, précipite. Contrôle : on retrouve le caractère basique du savon.",
+          "methode": "Savon + acide fort : $\\mathrm{R-COOH}$ insoluble, trouble blanc.",
+          "points": 1,
+          "ref": "pc-controle-evolution-les-tests-du-savon-obtenu-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'indice de saponification",
+        "lesson": "Approfondissement — contrôler l'évolution d'un système",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-l-indice-de-saponification",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "L'indice de saponification",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'indice de saponification",
+          "difficulty": 3,
+          "statement": "L'indice de saponification $I_S$ est la masse de potasse $\\mathrm{KOH}$ (en $\\mathrm{mg}$) nécessaire pour saponifier $1\\ \\mathrm{g}$ de corps gras. Pour la trioléine ($M=885\\ \\mathrm{g\\,mol^{-1}}$), avec $M(\\mathrm{KOH})=56{,}1\\ \\mathrm{g\\,mol^{-1}}$, $I_S$ vaut :",
+          "options": [
+            {
+              "label": "$I_S=190\\ \\mathrm{mg\\,g^{-1}}$",
+              "correct": true,
+              "why": "Pour $1\\ \\mathrm{g}$ : $n(\\text{TG})=\\dfrac{1}{885}$ ; $n(\\mathrm{KOH})=3\\,n$ ; $m=3\\times\\dfrac{56{,}1}{885}=0{,}1902\\ \\mathrm{g}=190\\ \\mathrm{mg}$."
+            },
+            {
+              "label": "$I_S=63\\ \\mathrm{mg\\,g^{-1}}$",
+              "why": "Tu as oublié le facteur $3$ : un triglycéride consomme $3$ ions $\\mathrm{HO^-}$."
+            },
+            {
+              "label": "$I_S=0{,}190\\ \\mathrm{mg\\,g^{-1}}$",
+              "why": "Tu as donné la masse en grammes ($0{,}190\\ \\mathrm{g}$) ; l'indice est exprimé en milligrammes."
+            },
+            {
+              "label": "$I_S=571\\ \\mathrm{mg\\,g^{-1}}$",
+              "why": "Tu as multiplié par $3$ deux fois : $n(\\mathrm{KOH})=3\\,n(\\text{TG})$ une seule fois."
+            }
+          ],
+          "hint": "Pour $1\\ \\mathrm{g}$ de corps gras : $n(\\text{TG})=1/M$, $n(\\mathrm{KOH})=3\\,n$, puis la masse en mg.",
+          "solution": "$n(\\text{TG})=\\dfrac{1}{885}=1{,}13\\times10^{-3}\\ \\mathrm{mol}$ ; $n(\\mathrm{KOH})=3\\,n=3{,}39\\times10^{-3}\\ \\mathrm{mol}$ ; $m(\\mathrm{KOH})=3{,}39\\times10^{-3}\\times56{,}1=0{,}1902\\ \\mathrm{g}=190\\ \\mathrm{mg}$. Contrôle : $I_S\\approx190\\ \\mathrm{mg\\,g^{-1}}$, ordre de grandeur des huiles végétales.",
+          "methode": "$I_S=3\\times1000\\,M(\\mathrm{KOH})/M(\\text{TG})$.",
+          "points": 1,
+          "ref": "pc-controle-evolution-l-indice-de-saponification-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Changer de réactif pour rendre la réaction totale",
+        "lesson": "Approfondissement — contrôler l'évolution d'un système",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-changer-de-reactif-pour-rendre-la-reacti",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "Changer de réactif pour rendre la réaction totale",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Changer de réactif pour rendre la réaction totale",
+          "difficulty": 3,
+          "statement": "On fait réagir $0{,}100\\ \\mathrm{mol}$ de chlorure d'éthanoyle $\\mathrm{CH_3COCl}$ et $0{,}100\\ \\mathrm{mol}$ d'éthanol : $\\mathrm{CH_3COCl}+\\mathrm{C_2H_5OH}\\rightarrow\\mathrm{CH_3COOC_2H_5}+\\mathrm{HCl}$ (réaction totale). Avec $M(\\text{ester})=88{,}0\\ \\mathrm{g\\,mol^{-1}}$, la masse d'ester attendue est :",
+          "options": [
+            {
+              "label": "$m=8{,}80\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "La réaction est totale et les réactifs sont dans les proportions stœchiométriques : $n(\\text{ester})=0{,}100\\ \\mathrm{mol}$, $m=0{,}100\\times88{,}0=8{,}80\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=5{,}87\\ \\mathrm{g}$",
+              "why": "Tu as appliqué le rendement de $67\\ \\%$ de l'estérification directe ; avec le chlorure d'acyle la réaction est totale."
+            },
+            {
+              "label": "$m=17{,}6\\ \\mathrm{g}$",
+              "why": "Tu as additionné les quantités des deux réactifs ($0{,}200\\ \\mathrm{mol}$) : l'ester se forme à raison d'une mole par mole de chlorure d'acyle."
+            },
+            {
+              "label": "$m=4{,}40\\ \\mathrm{g}$",
+              "why": "Tu as divisé par $2$ : les coefficients valent $1$, il n'y a pas de facteur $2$."
+            }
+          ],
+          "hint": "La réaction est totale : quel est l'avancement maximal ?",
+          "solution": "Avec le chlorure d'éthanoyle, la réaction est rapide et totale : $n(\\text{ester})=0{,}100\\ \\mathrm{mol}$ et $m=0{,}100\\times88{,}0=8{,}80\\ \\mathrm{g}$ (contre environ $5{,}9\\ \\mathrm{g}$ avec l'acide). Contrôle : il se forme aussi du chlorure d'hydrogène gazeux, à manipuler sous la hotte.",
+          "methode": "Chlorure d'acyle : réaction totale, rendement théorique $100\\ \\%$.",
+          "points": 1,
+          "ref": "pc-controle-evolution-changer-de-reactif-pour-rendre-la-reacti-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Récapitulatif — tous les leviers du contrôle",
+        "lesson": "Approfondissement — contrôler l'évolution d'un système",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-recapitulatif-tous-les-leviers-du-contro",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "Récapitulatif — tous les leviers du contrôle",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Récapitulatif — tous les leviers du contrôle",
+          "difficulty": 3,
+          "statement": "Parmi les actions suivantes sur une synthèse d'ester, celles qui modifient la composition finale du système sont :",
+          "options": [
+            {
+              "label": "l'excès d'un réactif, l'élimination d'un produit et l'emploi d'un anhydride",
+              "correct": true,
+              "why": "Ces trois actions agissent sur l'état final (position de l'équilibre ou nature des réactifs)."
+            },
+            {
+              "label": "le catalyseur, le chauffage et l'excès d'un réactif de départ",
+              "why": "Le catalyseur et le chauffage ne changent que la vitesse, non la composition finale."
+            },
+            {
+              "label": "le chauffage, le catalyseur et l'emploi d'un anhydride d'acide",
+              "why": "Le chauffage et le catalyseur n'agissent que sur la vitesse."
+            },
+            {
+              "label": "le catalyseur, l'élimination d'un produit et le chauffage du mélange",
+              "why": "Le catalyseur et le chauffage n'agissent que sur la vitesse."
+            }
+          ],
+          "hint": "Distingue ce qui agit sur la vitesse de ce qui agit sur l'état final.",
+          "solution": "Agissent sur la composition finale : l'excès d'un réactif, l'élimination d'un produit et le changement de réactif (anhydride, chlorure d'acyle). N'agissent que sur la vitesse : température et catalyseur. Contrôle : deux leviers indépendants, cinétique et thermodynamique.",
+          "methode": "Composition finale : excès, élimination d'un produit, changement de réactif.",
+          "points": 1,
+          "ref": "pc-controle-evolution-recapitulatif-tous-les-leviers-du-contro-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Retour sur le critère d'évolution",
+        "lesson": "Approfondissement — contrôler l'évolution d'un système",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-controle-evolution-retour-sur-le-critere-d-evolution",
+      "chapter": "pc-controle-evolution",
+      "kind": "qcu",
+      "title": "Retour sur le critère d'évolution",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Retour sur le critère d'évolution",
+          "difficulty": 3,
+          "statement": "Pour $\\mathrm{acide}+\\mathrm{alcool}\\rightleftharpoons\\mathrm{ester}+\\mathrm{eau}$ ($K=4{,}0$), un mélange contient $1{,}0\\ \\mathrm{mol}$ d'ester, $1{,}0\\ \\mathrm{mol}$ d'eau, $0{,}25\\ \\mathrm{mol}$ d'acide et $0{,}25\\ \\mathrm{mol}$ d'alcool. Son quotient initial et son sens d'évolution sont :",
+          "options": [
+            {
+              "label": "$Q_{r,i}=16$ ; sens inverse (hydrolyse de l'ester), car $Q_{r,i}>K$",
+              "correct": true,
+              "why": "$Q_{r,i}=\\dfrac{1{,}0\\times1{,}0}{0{,}25\\times0{,}25}=16>K=4{,}0$ : le système évolue dans le sens inverse."
+            },
+            {
+              "label": "$Q_{r,i}=16$ ; sens direct (estérification), car $Q_{r,i}>K$",
+              "why": "$Q_{r,i}>K$ impose le sens inverse ; le sens direct correspond à $Q_{r,i}<K$."
+            },
+            {
+              "label": "$Q_{r,i}=0{,}062$ ; sens direct (estérification), car $Q_{r,i}<K$",
+              "why": "Tu as inversé le quotient : les produits (ester, eau) sont au numérateur ; $Q_{r,i}=16$."
+            },
+            {
+              "label": "$Q_{r,i}=4{,}0$ ; le système est à l'équilibre, car $Q_{r,i}=K$",
+              "why": "Tu as oublié un facteur $\\dfrac{1}{0{,}25}$ : $Q_{r,i}=\\dfrac{1{,}0\\times1{,}0}{0{,}25\\times0{,}25}=16\\neq K$."
+            }
+          ],
+          "hint": "Écris $Q_r$ avec les quatre quantités (le volume se simplifie), puis compare à $K$.",
+          "solution": "$Q_{r,i}=\\dfrac{n(\\text{ester})\\,n(\\text{eau})}{n(\\text{acide})\\,n(\\text{alcool})}=\\dfrac{1{,}0\\times1{,}0}{0{,}25\\times0{,}25}=16>K=4{,}0$ : le système évolue dans le sens inverse (hydrolyse). Contrôle : l'ester et l'eau sont trop abondants par rapport à l'équilibre.",
+          "methode": "$Q_{r,i}>K$ : sens inverse ; $Q_{r,i}<K$ : sens direct.",
+          "points": 1,
+          "ref": "pc-controle-evolution-retour-sur-le-critere-d-evolution-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-controle-evolution-probleme-1",
+      "chapter": "pc-controle-evolution",
+      "kind": "probleme",
+      "title": "Fabrication d'un savon et rendement",
+      "difficulty": 3,
+      "context": "On saponifie $m=20{,}0\\ \\mathrm{g}$ d'huile, assimilée à la trioléine (triglycéride de masse molaire $M=885\\ \\mathrm{g\\,mol^{-1}}$), par $V=50{,}0\\ \\mathrm{mL}$ de soude de concentration $2{,}00\\ \\mathrm{mol\\,L^{-1}}$, au reflux, avec de l'éthanol comme solvant. Après relargage, filtration et séchage, on obtient $17{,}0\\ \\mathrm{g}$ de savon (oléate de sodium, $M=304\\ \\mathrm{g\\,mol^{-1}}$). Le reste du mélange est ensuite complété à $100{,}0\\ \\mathrm{mL}$ pour un dosage par de l'acide chlorhydrique à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 1 — Écrire une équation de saponification",
+          "difficulty": 1,
+          "statement": "L'équation de la saponification du triglycéride par la soude s'écrit :",
+          "options": [
+            {
+              "label": "$\\mathrm{triglyc\\acute{e}ride}+3\\,\\mathrm{HO^-}\\rightarrow\\mathrm{glyc\\acute{e}rol}+3\\,\\mathrm{R-COO^-}$",
+              "correct": true,
+              "why": "Trois fonctions ester consomment trois ions hydroxyde et libèrent un glycérol et trois carboxylates."
+            },
+            {
+              "label": "$\\mathrm{triglyc\\acute{e}ride}+\\mathrm{HO^-}\\rightarrow\\mathrm{glyc\\acute{e}rol}+\\mathrm{R-COO^-}$",
+              "why": "Il y a $3$ fonctions ester : $3$ ions $\\mathrm{HO^-}$ sont consommés et $3$ carboxylates formés."
+            },
+            {
+              "label": "$\\mathrm{triglyc\\acute{e}ride}+3\\,\\mathrm{HO^-}\\rightarrow3\\,\\mathrm{glyc\\acute{e}rol}+\\mathrm{R-COO^-}$",
+              "why": "Un triglycéride ne contient qu'un glycérol, mais trois chaînes d'acide gras : $1$ glycérol et $3$ carboxylates."
+            },
+            {
+              "label": "$\\mathrm{triglyc\\acute{e}ride}+3\\,\\mathrm{H_2O}\\rightarrow\\mathrm{glyc\\acute{e}rol}+3\\,\\mathrm{R-COOH}$",
+              "why": "C'est l'hydrolyse, limitée ; en présence de soude, les acides gras sont sous forme de carboxylates."
+            }
+          ],
+          "hint": "Combien de fonctions ester contient un triglycéride ? Quelle espèce de la soude réagit ?",
+          "solution": "$\\mathrm{triglyc\\acute{e}ride}+3\\,\\mathrm{HO^-}\\rightarrow\\mathrm{glyc\\acute{e}rol}+3\\,\\mathrm{R-COO^-}$ : $3$ esters, $3$ ions hydroxyde. Contrôle : charges $-3=-3$.",
+          "methode": "Saponification d'un triglycéride : $3\\,\\mathrm{HO^-}$ $\\to$ $3\\,\\mathrm{R-COO^-}$ + glycérol.",
+          "points": 1,
+          "part": "Partie A — Réaction et rôle des réactifs",
+          "ref": "pc-controle-evolution-probleme-1-q1"
+        },
+        {
+          "notion": "Les corps gras et la fabrication du savon",
+          "difficulty": 2,
+          "statement": "Le réactif limitant de cette saponification est :",
+          "options": [
+            {
+              "label": "l'huile : $0{,}0678\\ \\mathrm{mol}$ de $\\mathrm{HO^-}$ suffisent, et la soude en apporte $0{,}100\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$n(\\text{TG})=\\dfrac{20{,}0}{885}=0{,}0226\\ \\mathrm{mol}$ exige $3\\,n=0{,}0678\\ \\mathrm{mol}$ de $\\mathrm{HO^-}$, inférieur à $0{,}100\\ \\mathrm{mol}$ disponibles."
+            },
+            {
+              "label": "la soude : il faut trois fois plus d'ions $\\mathrm{HO^-}$ que de triglycéride",
+              "why": "Il faut $3$ fois plus d'ions, mais la soude en apporte assez : elle est en excès."
+            },
+            {
+              "label": "aucun : les réactifs sont dans les proportions stœchiométriques exactes",
+              "why": "$0{,}100\\neq0{,}0678\\ \\mathrm{mol}$ : les quantités de soude et de triglycéride ne sont pas dans le rapport $3$ pour $1$."
+            },
+            {
+              "label": "la soude, car elle est utilisée sous forme de solution diluée",
+              "why": "La concentration n'intervient pas : seule compte la quantité de matière ($0{,}100\\ \\mathrm{mol}$)."
+            }
+          ],
+          "hint": "Calcule $n(\\text{TG})$ et $n(\\mathrm{HO^-})$ puis compare $n(\\mathrm{HO^-})$ à $3\\,n(\\text{TG})$.",
+          "solution": "$n(\\text{TG})=\\dfrac{20{,}0}{885}=0{,}0226\\ \\mathrm{mol}$ ; $n(\\mathrm{HO^-})=2{,}00\\times50{,}0\\times10^{-3}=0{,}100\\ \\mathrm{mol}$. Il faut $3\\,n(\\text{TG})=0{,}0678\\ \\mathrm{mol}<0{,}100\\ \\mathrm{mol}$ : l'huile est limitante. Contrôle : il reste $0{,}0322\\ \\mathrm{mol}$ de soude.",
+          "methode": "Réactif limitant : comparer $n(\\mathrm{HO^-})$ à $3\\,n(\\text{TG})$.",
+          "points": 1,
+          "part": "Partie A — Réaction et rôle des réactifs",
+          "ref": "pc-controle-evolution-probleme-1-q2"
+        },
+        {
+          "notion": "Méthode 4 — Réactif ou catalyseur ?",
+          "difficulty": 2,
+          "statement": "Dans cette synthèse, la soude est :",
+          "options": [
+            {
+              "label": "un réactif : consommée ($3\\,\\mathrm{HO^-}$ par triglycéride), elle figure dans l'équation",
+              "correct": true,
+              "why": "La quantité de soude diminue au cours de la réaction : c'est un réactif."
+            },
+            {
+              "label": "un catalyseur : elle accélère la réaction sans être consommée",
+              "why": "La soude est consommée par la formation des carboxylates : un catalyseur ne l'est pas."
+            },
+            {
+              "label": "un catalyseur : elle n'apparaît pas dans le bilan de la réaction",
+              "why": "Elle apparaît bien dans l'équation de saponification : $3\\,\\mathrm{HO^-}$ à gauche."
+            },
+            {
+              "label": "ni un réactif ni un catalyseur : elle est simplement spectatrice",
+              "why": "Seuls les ions $\\mathrm{Na^+}$ sont spectateurs ; $\\mathrm{HO^-}$ réagit avec l'ester."
+            }
+          ],
+          "hint": "La quantité de soude varie-t-elle au cours de la réaction ?",
+          "solution": "Les ions $\\mathrm{HO^-}$ sont consommés et figurent dans l'équation : c'est un réactif. Un catalyseur resterait intact et n'apparaîtrait pas dans le bilan. Contrôle : le dosage de la soude restante montre qu'il en reste moins qu'au départ.",
+          "methode": "Réactif : consommé, dans l'équation ; catalyseur : régénéré, absent du bilan.",
+          "points": 1,
+          "part": "Partie A — Réaction et rôle des réactifs",
+          "ref": "pc-controle-evolution-probleme-1-q3"
+        },
+        {
+          "notion": "Méthode 2 — Calculer une masse de savon et un rendement",
+          "difficulty": 2,
+          "statement": "La masse maximale de savon vaut :",
+          "options": [
+            {
+              "label": "$m_{max}=20{,}6\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$n(\\text{savon})=3\\,n(\\text{TG})=0{,}0678\\ \\mathrm{mol}$ ; $m_{max}=0{,}0678\\times304=20{,}6\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m_{max}=6{,}87\\ \\mathrm{g}$",
+              "why": "Tu as oublié le facteur $3$ : une mole de triglycéride donne trois moles de carboxylate."
+            },
+            {
+              "label": "$m_{max}=61{,}8\\ \\mathrm{g}$",
+              "why": "Tu as multiplié par $3$ deux fois : $n(\\text{savon})=3\\,n(\\text{TG})$ une seule fois."
+            },
+            {
+              "label": "$m_{max}=30{,}4\\ \\mathrm{g}$",
+              "why": "Tu as pris la soude comme réactif limitant ($0{,}100\\ \\mathrm{mol}$) : elle est en excès, l'huile limite."
+            }
+          ],
+          "hint": "Le réactif limitant est l'huile : passe de $n(\\text{TG})$ à $n(\\text{savon})$.",
+          "solution": "$n(\\text{TG})=0{,}0226\\ \\mathrm{mol}$ ; $n(\\text{savon})=3\\times0{,}0226=0{,}0678\\ \\mathrm{mol}$ ; $m_{max}=0{,}0678\\times304=20{,}6\\ \\mathrm{g}$. Contrôle : un peu plus que $20{,}0\\ \\mathrm{g}$ d'huile, car la soude s'incorpore au savon.",
+          "methode": "$m_{max}=3\\,n(\\text{TG})\\,M(\\text{savon})$.",
+          "points": 1,
+          "part": "Partie B — Masse de savon, rendement et dosage",
+          "ref": "pc-controle-evolution-probleme-1-q4"
+        },
+        {
+          "notion": "Méthode 2 — Calculer une masse de savon et un rendement",
+          "difficulty": 2,
+          "statement": "Le rendement de la fabrication est :",
+          "options": [
+            {
+              "label": "$r=82{,}5\\ \\%$",
+              "correct": true,
+              "why": "$r=\\dfrac{m_{exp}}{m_{max}}=\\dfrac{17{,}0}{20{,}6}=0{,}825$."
+            },
+            {
+              "label": "$r=121\\ \\%$",
+              "why": "Tu as inversé le rapport : le rendement ne peut pas dépasser $100\\ \\%$."
+            },
+            {
+              "label": "$r=17{,}5\\ \\%$",
+              "why": "Tu as calculé la fraction manquante ($1-r$), non le rendement."
+            },
+            {
+              "label": "$r=55{,}9\\ \\%$",
+              "why": "Tu as comparé à la masse calculée avec la soude ($30{,}4\\ \\mathrm{g}$) ; la référence est la masse maximale limitée par l'huile."
+            }
+          ],
+          "hint": "Compare la masse obtenue à la masse maximale, dans cet ordre.",
+          "solution": "$r=\\dfrac{m_{exp}}{m_{max}}=\\dfrac{17{,}0}{20{,}6}=0{,}825\\approx82{,}5\\ \\%$. Contrôle : $r<100\\ \\%$ : pertes lors de la filtration et du séchage.",
+          "methode": "$r=m_{exp}/m_{max}$.",
+          "points": 1,
+          "part": "Partie B — Masse de savon, rendement et dosage",
+          "ref": "pc-controle-evolution-probleme-1-q5"
+        },
+        {
+          "notion": "Méthode 3 — Suivre une saponification par dosage de la soude restante",
+          "difficulty": 3,
+          "statement": "On suppose la saponification totale. On dose $10{,}0\\ \\mathrm{mL}$ des $100{,}0\\ \\mathrm{mL}$ par l'acide chlorhydrique à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$. Le volume équivalent attendu est :",
+          "options": [
+            {
+              "label": "$V_E=32{,}2\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$n(\\mathrm{HO^-})_{reste}=0{,}100-0{,}0678=0{,}0322\\ \\mathrm{mol}$ ; dans $10{,}0\\ \\mathrm{mL}$ : $0{,}00322\\ \\mathrm{mol}$ ; $V_E=\\dfrac{0{,}00322}{0{,}100}=32{,}2\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$V_E=322\\ \\mathrm{mL}$",
+              "why": "Tu as oublié que seuls $10{,}0\\ \\mathrm{mL}$ des $100{,}0\\ \\mathrm{mL}$ sont dosés : il faut diviser par $10$."
+            },
+            {
+              "label": "$V_E=77{,}4\\ \\mathrm{mL}$",
+              "why": "Tu as retranché $n(\\text{TG})$ au lieu de $3\\,n(\\text{TG})$ : trois ions $\\mathrm{HO^-}$ sont consommés par triglycéride."
+            },
+            {
+              "label": "$V_E=100\\ \\mathrm{mL}$",
+              "why": "Tu as ignoré la soude consommée : la quantité dosée est la soude restante, non la soude introduite."
+            }
+          ],
+          "hint": "Soude restante $=$ soude introduite $-$ soude consommée ($3\\,n(\\text{TG})$) ; tiens compte du prélèvement.",
+          "solution": "$n(\\mathrm{HO^-})_{reste}=0{,}100-0{,}0678=0{,}0322\\ \\mathrm{mol}$ ; dans $10{,}0\\ \\mathrm{mL}$ : $0{,}00322\\ \\mathrm{mol}$ ; à l'équivalence $n(\\mathrm{H_3O^+})=n(\\mathrm{HO^-})$ donc $V_E=\\dfrac{0{,}00322}{0{,}100}=32{,}2\\ \\mathrm{mL}$. Contrôle : $32{,}2\\ \\mathrm{mL}<50{,}0\\ \\mathrm{mL}$ de la burette.",
+          "methode": "Dosage en retour de la soude : $n_{reste}=n_{introduite}-3\\,n(\\text{TG})$.",
+          "points": 1,
+          "part": "Partie B — Masse de savon, rendement et dosage",
+          "ref": "pc-controle-evolution-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-controle-evolution-probleme-2",
+      "chapter": "pc-controle-evolution",
+      "kind": "probleme",
+      "title": "Indice de saponification d'une huile",
+      "difficulty": 3,
+      "context": "Pour déterminer l'indice de saponification d'une huile, on chauffe à reflux $m=2{,}00\\ \\mathrm{g}$ d'huile avec $V_0=25{,}0\\ \\mathrm{mL}$ de potasse alcoolique $\\mathrm{KOH}$ de concentration $0{,}500\\ \\mathrm{mol\\,L^{-1}}$ (excès). Après saponification complète, la potasse restante est dosée directement par de l'acide chlorhydrique à $0{,}500\\ \\mathrm{mol\\,L^{-1}}$ : $V_E=12{,}9\\ \\mathrm{mL}$. Un essai à blanc (mêmes réactifs, sans huile) nécessite $25{,}0\\ \\mathrm{mL}$ d'acide. $M(\\mathrm{KOH})=56{,}1\\ \\mathrm{g\\,mol^{-1}}$. L'indice $I_S$ est la masse de $\\mathrm{KOH}$ (en $\\mathrm{mg}$) consommée par $1\\ \\mathrm{g}$ d'huile.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 3 — Suivre une saponification par dosage de la soude restante",
+          "difficulty": 1,
+          "statement": "Le dosage par l'acide chlorhydrique porte sur :",
+          "options": [
+            {
+              "label": "la potasse introduite en excès et non consommée par la saponification",
+              "correct": true,
+              "why": "On dose ce qui reste de $\\mathrm{KOH}$ ; la quantité consommée s'en déduit par différence avec la quantité introduite."
+            },
+            {
+              "label": "l'huile qui n'a pas été saponifiée au cours du reflux",
+              "why": "L'huile n'est pas basique : elle ne réagit pas avec l'acide chlorhydrique."
+            },
+            {
+              "label": "le savon formé au cours de la réaction de saponification",
+              "why": "Le dosage direct par $\\mathrm{HCl}$ porte sur les ions $\\mathrm{HO^-}$ en excès ; le savon réagirait ensuite en excès d'acide."
+            },
+            {
+              "label": "le glycérol formé au cours de la réaction de saponification",
+              "why": "Le glycérol n'a pas de propriété acido-basique mesurable ici."
+            }
+          ],
+          "hint": "Quelle espèce basique forte reste dans le mélange à la fin de la saponification ?",
+          "solution": "Dosage en retour : la potasse est en excès ; on dose celle qui reste après saponification, et on en déduit celle qui a été consommée. Contrôle : consommée $=$ introduite $-$ restante.",
+          "methode": "Dosage en retour : doser l'excès de réactif.",
+          "points": 1,
+          "part": "Partie A — Principe du dosage en retour",
+          "ref": "pc-controle-evolution-probleme-2-q1"
+        },
+        {
+          "notion": "Méthode 3 — Suivre une saponification par dosage de la soude restante",
+          "difficulty": 1,
+          "statement": "L'équation de la réaction de dosage est :",
+          "options": [
+            {
+              "label": "$\\mathrm{HO^-}+\\mathrm{H_3O^+}\\rightarrow2\\,\\mathrm{H_2O}$",
+              "correct": true,
+              "why": "Charges : $-1+1=0$ ; $\\mathrm{H}$ : $1+3=4$ ; $\\mathrm{O}$ : $1+1=2$ ; deux molécules d'eau."
+            },
+            {
+              "label": "$\\mathrm{HO^-}+\\mathrm{H_3O^+}\\rightarrow\\mathrm{H_2O}$",
+              "why": "Il se forme deux molécules d'eau : les atomes $\\mathrm{H}$ et $\\mathrm{O}$ ne sont pas conservés ($4$ et $2$ à gauche, $2$ et $1$ à droite)."
+            },
+            {
+              "label": "$2\\,\\mathrm{HO^-}+\\mathrm{H_3O^+}\\rightarrow3\\,\\mathrm{H_2O}$",
+              "why": "Les charges ne sont pas conservées : $-2+1=-1$ à gauche et $0$ à droite."
+            },
+            {
+              "label": "$\\mathrm{HO^-}+2\\,\\mathrm{H_3O^+}\\rightarrow3\\,\\mathrm{H_2O}$",
+              "why": "Les charges ne sont pas conservées : $-1+2=+1$ à gauche et $0$ à droite."
+            }
+          ],
+          "hint": "Un ion hydroxyde réagit avec un ion oxonium : quel est le produit et en quelle quantité ?",
+          "solution": "$\\mathrm{HO^-}+\\mathrm{H_3O^+}\\rightarrow2\\,\\mathrm{H_2O}$ : réaction $1{:}1$. Contrôle : charges $0=0$ ; atomes $\\mathrm{H}$ et $\\mathrm{O}$ conservés.",
+          "methode": "Dosage $\\mathrm{HO^-}/\\mathrm{H_3O^+}$ : $1{:}1$.",
+          "points": 1,
+          "part": "Partie A — Principe du dosage en retour",
+          "ref": "pc-controle-evolution-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 3 — Suivre une saponification par dosage de la soude restante",
+          "difficulty": 2,
+          "statement": "Le volume $25{,}0\\ \\mathrm{mL}$ de l'essai à blanc représente :",
+          "options": [
+            {
+              "label": "la quantité totale de potasse introduite, rien ne la consommant sans huile",
+              "correct": true,
+              "why": "Sans huile, rien ne consomme $\\mathrm{KOH}$ : le dosage donne la quantité introduite ($12{,}5\\ \\mathrm{mmol}$)."
+            },
+            {
+              "label": "la quantité de potasse consommée par la saponification de l'huile",
+              "why": "Il n'y a pas d'huile dans l'essai à blanc : aucune potasse n'est consommée."
+            },
+            {
+              "label": "la quantité d'huile contenue dans le prélèvement du mélange",
+              "why": "Le dosage porte sur $\\mathrm{KOH}$ et non sur l'huile."
+            },
+            {
+              "label": "la quantité de savon formée dans l'essai à blanc réalisé",
+              "why": "Sans huile, il ne se forme pas de savon."
+            }
+          ],
+          "hint": "Que consomme la potasse dans un mélange sans huile ?",
+          "solution": "Dans l'essai à blanc, $n(\\mathrm{HCl})_E=0{,}500\\times25{,}0\\times10^{-3}=12{,}5\\ \\mathrm{mmol}$ : c'est la quantité de potasse introduite. Contrôle : elle vaut $C_0V_0=0{,}500\\times25{,}0$.",
+          "methode": "Essai à blanc : quantité initiale de réactif.",
+          "points": 1,
+          "part": "Partie A — Principe du dosage en retour",
+          "ref": "pc-controle-evolution-probleme-2-q3"
+        },
+        {
+          "notion": "Méthode 3 — Suivre une saponification par dosage de la soude restante",
+          "difficulty": 2,
+          "statement": "La quantité de potasse consommée par la saponification de l'huile vaut :",
+          "options": [
+            {
+              "label": "$n_c=6{,}05\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "$n_{introduite}=12{,}5\\ \\mathrm{mmol}$ ; $n_{reste}=0{,}500\\times12{,}9=6{,}45\\ \\mathrm{mmol}$ ; $n_c=12{,}5-6{,}45=6{,}05\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$n_c=6{,}45\\ \\mathrm{mmol}$",
+              "why": "Tu as donné la quantité de potasse restante, celle qui a été dosée, et non celle qui a été consommée."
+            },
+            {
+              "label": "$n_c=12{,}5\\ \\mathrm{mmol}$",
+              "why": "Tu as donné la quantité de potasse introduite, sans retrancher celle qui reste."
+            },
+            {
+              "label": "$n_c=18{,}95\\ \\mathrm{mmol}$",
+              "why": "Tu as additionné la quantité restante à la quantité introduite au lieu de la soustraire."
+            }
+          ],
+          "hint": "Consommée $=$ introduite $-$ restante.",
+          "solution": "$n_c=n_{introduite}-n_{reste}=12{,}5-6{,}45=6{,}05\\ \\mathrm{mmol}$. Contrôle : $n_c$ est aussi égale à $0{,}500\\times(25{,}0-12{,}9)$, différence des volumes à l'essai à blanc et au dosage.",
+          "methode": "$n_{consommée}=C(V_{blanc}-V_E)$.",
+          "points": 1,
+          "part": "Partie B — Calcul de l'indice",
+          "ref": "pc-controle-evolution-probleme-2-q4"
+        },
+        {
+          "notion": "L'indice de saponification",
+          "difficulty": 2,
+          "statement": "L'indice de saponification de l'huile vaut :",
+          "options": [
+            {
+              "label": "$I_S=170\\ \\mathrm{mg\\,g^{-1}}$",
+              "correct": true,
+              "why": "$m(\\mathrm{KOH})=6{,}05\\times10^{-3}\\times56{,}1=339{,}4\\ \\mathrm{mg}$ ; $I_S=\\dfrac{339{,}4}{2{,}00}=170\\ \\mathrm{mg\\,g^{-1}}$."
+            },
+            {
+              "label": "$I_S=181\\ \\mathrm{mg\\,g^{-1}}$",
+              "why": "Tu as utilisé la quantité de potasse restante ($6{,}45\\ \\mathrm{mmol}$) au lieu de celle qui a été consommée."
+            },
+            {
+              "label": "$I_S=339\\ \\mathrm{mg\\,g^{-1}}$",
+              "why": "Tu as oublié de diviser par la masse d'huile : l'indice est rapporté à $1\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$I_S=351\\ \\mathrm{mg\\,g^{-1}}$",
+              "why": "Tu as utilisé la quantité de potasse introduite ($12{,}5\\ \\mathrm{mmol}$) au lieu de celle qui a été consommée."
+            }
+          ],
+          "hint": "Masse de $\\mathrm{KOH}$ consommée en mg, puis division par la masse d'huile en g.",
+          "solution": "$m(\\mathrm{KOH})=n_c\\,M=6{,}05\\times10^{-3}\\times56{,}1=339{,}4\\ \\mathrm{mg}$ ; $I_S=\\dfrac{339{,}4}{2{,}00}=170\\ \\mathrm{mg\\,g^{-1}}$. Contrôle : valeur usuelle d'une huile végétale ($\\approx170$ à $200$).",
+          "methode": "$I_S=\\dfrac{n_c\\,M(\\mathrm{KOH})}{m_{huile}}$ en $\\mathrm{mg\\,g^{-1}}$.",
+          "points": 1,
+          "part": "Partie B — Calcul de l'indice",
+          "ref": "pc-controle-evolution-probleme-2-q5"
+        },
+        {
+          "notion": "L'indice de saponification",
+          "difficulty": 3,
+          "statement": "En assimilant l'huile à un triglycéride unique, sa masse molaire moyenne vaut environ :",
+          "options": [
+            {
+              "label": "$M=992\\ \\mathrm{g\\,mol^{-1}}$",
+              "correct": true,
+              "why": "$n(\\text{TG})=\\dfrac{n_c}{3}=2{,}017\\ \\mathrm{mmol}$ ; $M=\\dfrac{m}{n}=\\dfrac{2{,}00}{2{,}017\\times10^{-3}}=992\\ \\mathrm{g\\,mol^{-1}}$."
+            },
+            {
+              "label": "$M=331\\ \\mathrm{g\\,mol^{-1}}$",
+              "why": "Tu as pris $n(\\text{TG})=n_c$ : un triglycéride consomme $3$ ions $\\mathrm{HO^-}$, donc $n(\\text{TG})=n_c/3$."
+            },
+            {
+              "label": "$M=110\\ \\mathrm{g\\,mol^{-1}}$",
+              "why": "Tu as multiplié $n_c$ par $3$ au lieu de le diviser : $n(\\text{TG})=n_c/3$."
+            },
+            {
+              "label": "$M=930\\ \\mathrm{g\\,mol^{-1}}$",
+              "why": "Tu as utilisé la quantité de potasse restante ($6{,}45\\ \\mathrm{mmol}$) au lieu de celle qui a été consommée."
+            }
+          ],
+          "hint": "Combien d'ions $\\mathrm{HO^-}$ une molécule de triglycéride consomme-t-elle ? Puis $M=m/n$.",
+          "solution": "$n(\\text{TG})=\\dfrac{n_c}{3}=\\dfrac{6{,}05}{3}=2{,}017\\ \\mathrm{mmol}$ ; $M=\\dfrac{m}{n}=\\dfrac{2{,}00}{2{,}017\\times10^{-3}}=992\\ \\mathrm{g\\,mol^{-1}}$. Contrôle : valeur plausible pour un triglycéride ($\\approx900$ à $1000$).",
+          "methode": "$M(\\text{TG})=\\dfrac{3\\,m}{n_c}$.",
+          "points": 1,
+          "part": "Partie B — Calcul de l'indice",
+          "ref": "pc-controle-evolution-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [
-   "Méthode 1 — Écrire une équation de saponification",
-   "Méthode 2 — Calculer une masse de savon et un rendement",
-   "Méthode 3 — Suivre une saponification par dosage de la soude restante",
-   "Méthode 4 — Réactif ou catalyseur ?"
-  ],
-  "existing_questions_total": 5,
-  "target_new_questions": 35,
-  "suggested_figures": [
-   "montage-reflux — Montage à reflux (estérification / saponification)"
-  ],
-  "sources": [
-   {
-    "annale": "pc-svt-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-controle-evolution-serie-1",
+      "title": "Contrôle de l'évolution d'un système · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-controle-evolution",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-controle-evolution-la-reaction-d-un-ester-avec-une-base-for-q1",
+        "pc-controle-evolution-les-corps-gras-et-la-fabrication-du-savo-q1",
+        "pc-controle-evolution-pourquoi-un-savon-lave-t-il-q1",
+        "pc-controle-evolution-qu-est-ce-qu-un-catalyseur-q1",
+        "pc-controle-evolution-le-profil-energetique-q1",
+        "pc-controle-evolution-les-trois-types-de-catalyse-q1",
+        "pc-controle-evolution-l-objectif-du-tp-q1",
+        "pc-controle-evolution-le-protocole-q1",
+        "pc-controle-evolution-les-tests-du-savon-obtenu-q1",
+        "pc-controle-evolution-la-reaction-d-un-ester-avec-une-base-for-q2",
+        "pc-controle-evolution-les-corps-gras-et-la-fabrication-du-savo-q2",
+        "pc-controle-evolution-pourquoi-un-savon-lave-t-il-q2"
+      ]
+    },
+    {
+      "slug": "pc-controle-evolution-serie-2",
+      "title": "Contrôle de l'évolution d'un système · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-controle-evolution",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-controle-evolution-pourquoi-un-savon-lave-t-il-q3",
+        "pc-controle-evolution-le-profil-energetique-q2",
+        "pc-controle-evolution-le-profil-energetique-q3",
+        "pc-controle-evolution-les-trois-types-de-catalyse-q2",
+        "pc-controle-evolution-les-trois-types-de-catalyse-q3",
+        "pc-controle-evolution-l-objectif-du-tp-q2",
+        "pc-controle-evolution-l-objectif-du-tp-q3",
+        "pc-controle-evolution-le-protocole-q2",
+        "pc-controle-evolution-le-protocole-q3",
+        "pc-controle-evolution-les-tests-du-savon-obtenu-q2",
+        "pc-controle-evolution-les-tests-du-savon-obtenu-q3",
+        "pc-controle-evolution-la-reaction-d-un-ester-avec-une-base-for-q3"
+      ]
+    },
+    {
+      "slug": "pc-controle-evolution-serie-3",
+      "title": "Contrôle de l'évolution d'un système · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-controle-evolution",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-controle-evolution-les-corps-gras-et-la-fabrication-du-savo-q3",
+        "pc-controle-evolution-pourquoi-un-savon-lave-t-il-q4",
+        "pc-controle-evolution-le-profil-energetique-q4",
+        "pc-controle-evolution-les-trois-types-de-catalyse-q4",
+        "pc-controle-evolution-l-objectif-du-tp-q4",
+        "pc-controle-evolution-le-protocole-q4",
+        "pc-controle-evolution-les-tests-du-savon-obtenu-q4",
+        "pc-controle-evolution-l-indice-de-saponification-q1",
+        "pc-controle-evolution-changer-de-reactif-pour-rendre-la-reacti-q1",
+        "pc-controle-evolution-recapitulatif-tous-les-leviers-du-contro-q1",
+        "pc-controle-evolution-retour-sur-le-critere-d-evolution-q1",
+        "pc-controle-evolution-probleme-1-q6"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La réaction d'un ester avec une base forte",
-    "lesson": "La saponification",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-la-reaction-d-un-ester-avec-une-base-for",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "La réaction d'un ester avec une base forte",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-la-reaction-d-un-ester-avec-une-base-for-q1",
-     "notion": "La réaction d'un ester avec une base forte",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les corps gras et la fabrication du savon",
-    "lesson": "La saponification",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-les-corps-gras-et-la-fabrication-du-savo",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "Les corps gras et la fabrication du savon",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-les-corps-gras-et-la-fabrication-du-savo-q1",
-     "notion": "Les corps gras et la fabrication du savon",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Pourquoi un savon lave-t-il ?",
-    "lesson": "La saponification",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-pourquoi-un-savon-lave-t-il",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "Pourquoi un savon lave-t-il ?",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-pourquoi-un-savon-lave-t-il-q1",
-     "notion": "Pourquoi un savon lave-t-il ?",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Qu'est-ce qu'un catalyseur ?",
-    "lesson": "La catalyse",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 3,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-qu-est-ce-qu-un-catalyseur",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "Qu'est-ce qu'un catalyseur ?",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-qu-est-ce-qu-un-catalyseur-q1",
-     "notion": "Qu'est-ce qu'un catalyseur ?",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le profil énergétique",
-    "lesson": "La catalyse",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-le-profil-energetique",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "Le profil énergétique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-le-profil-energetique-q1",
-     "notion": "Le profil énergétique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les trois types de catalyse",
-    "lesson": "La catalyse",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-les-trois-types-de-catalyse",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "Les trois types de catalyse",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-les-trois-types-de-catalyse-q1",
-     "notion": "Les trois types de catalyse",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'objectif du TP",
-    "lesson": "La saponification au reflux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-l-objectif-du-tp",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "L'objectif du TP",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-l-objectif-du-tp-q1",
-     "notion": "L'objectif du TP",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le protocole",
-    "lesson": "La saponification au reflux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-le-protocole",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "Le protocole",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-le-protocole-q1",
-     "notion": "Le protocole",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les tests du savon obtenu",
-    "lesson": "La saponification au reflux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-les-tests-du-savon-obtenu",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "Les tests du savon obtenu",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-les-tests-du-savon-obtenu-q1",
-     "notion": "Les tests du savon obtenu",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'indice de saponification",
-    "lesson": "Approfondissement — contrôler l'évolution d'un système",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-l-indice-de-saponification",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "L'indice de saponification",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-l-indice-de-saponification-q1",
-     "notion": "L'indice de saponification",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Changer de réactif pour rendre la réaction totale",
-    "lesson": "Approfondissement — contrôler l'évolution d'un système",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-changer-de-reactif-pour-rendre-la-reacti",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "Changer de réactif pour rendre la réaction totale",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-changer-de-reactif-pour-rendre-la-reacti-q1",
-     "notion": "Changer de réactif pour rendre la réaction totale",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Récapitulatif — tous les leviers du contrôle",
-    "lesson": "Approfondissement — contrôler l'évolution d'un système",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-recapitulatif-tous-les-leviers-du-contro",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "Récapitulatif — tous les leviers du contrôle",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-recapitulatif-tous-les-leviers-du-contro-q1",
-     "notion": "Récapitulatif — tous les leviers du contrôle",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Retour sur le critère d'évolution",
-    "lesson": "Approfondissement — contrôler l'évolution d'un système",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-controle-evolution-retour-sur-le-critere-d-evolution",
-   "chapter": "pc-controle-evolution",
-   "kind": "qcu",
-   "title": "Retour sur le critère d'évolution",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-retour-sur-le-critere-d-evolution-q1",
-     "notion": "Retour sur le critère d'évolution",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-controle-evolution-probleme-1",
-   "chapter": "pc-controle-evolution",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-controle-evolution-probleme-2",
-   "chapter": "pc-controle-evolution",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-controle-evolution-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-controle-evolution-serie-1",
-   "title": "Contrôle de l'évolution d'un système · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-controle-evolution",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-controle-evolution-serie-2",
-   "title": "Contrôle de l'évolution d'un système · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-controle-evolution",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-controle-evolution-serie-3",
-   "title": "Contrôle de l'évolution d'un système · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-controle-evolution",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
