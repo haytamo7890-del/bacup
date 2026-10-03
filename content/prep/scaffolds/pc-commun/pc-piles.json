@@ -1,817 +1,1297 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "track": null,
- "_scaffold": {
-  "pack": "pc-commun",
-  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-piles",
-   "name": "Piles et production d'énergie",
-   "domain": "chimie",
-   "unit": "Évolution & électrochimie"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-piles",
+      "name": "Piles et production d'énergie",
+      "domain": "chimie",
+      "unit": "Évolution & électrochimie"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Une pile électrochimique",
+      "Quantité d'électricité",
+      "Capacité et durée de vie",
+      "Construire la pile",
+      "Interprétation",
+      "Grandeurs électriques d'une pile"
+    ],
+    "methodes_du_cours": [
+      "Grandeurs électriques d'une pile"
+    ],
+    "existing_questions_total": 3,
+    "target_new_questions": 14,
+    "suggested_figures": [
+      "pile — Pile Daniell — deux demi-piles, pont salin, voltmètre",
+      "pile-daniell — La pile Daniell : montage expérimental complet"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "Une pile électrochimique",
-   "Quantité d'électricité",
-   "Capacité et durée de vie",
-   "Construire la pile",
-   "Interprétation",
-   "Grandeurs électriques d'une pile"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Une pile électrochimique",
+        "lesson": "Constitution d'une pile",
+        "role": "cours",
+        "bac_frequency": null,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-piles-une-pile-electrochimique",
+      "chapter": "pc-piles",
+      "kind": "qcu",
+      "title": "Une pile électrochimique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Une pile électrochimique",
+          "difficulty": 1,
+          "statement": "Dans une pile, l'électrode qui est le siège de l'oxydation est :",
+          "options": [
+            {
+              "label": "l'anode, qui constitue le pôle négatif de la pile",
+              "correct": true,
+              "why": "L'oxydation libère des électrons : l'électrode où elle a lieu est l'anode, pôle négatif d'une pile."
+            },
+            {
+              "label": "l'anode, qui constitue le pôle positif de la pile",
+              "why": "L'anode est bien le siège de l'oxydation, mais c'est le pôle négatif : les électrons y sont libérés."
+            },
+            {
+              "label": "la cathode, qui constitue le pôle négatif de la pile",
+              "why": "La cathode est le siège de la réduction : les électrons y sont consommés, c'est le pôle positif."
+            },
+            {
+              "label": "la cathode, qui constitue le pôle positif de la pile",
+              "why": "Le pôle positif est bien la cathode, mais elle est le siège de la réduction et non de l'oxydation."
+            }
+          ],
+          "hint": "Retiens : anode et oxydation vont ensemble ; l'électrode qui libère des électrons est le pôle négatif.",
+          "solution": "Dans une pile, l'oxydation a lieu à l'anode, pôle négatif (les électrons y sont libérés), et la réduction à la cathode, pôle positif. Contrôle : les électrons circulent de l'anode vers la cathode dans le circuit extérieur.",
+          "methode": "Pile : anode = oxydation = pôle $-$ ; cathode = réduction = pôle $+$.",
+          "points": 1,
+          "ref": "pc-piles-une-pile-electrochimique-q1"
+        },
+        {
+          "notion": "Une pile électrochimique",
+          "difficulty": 2,
+          "statement": "Dans la pile Daniell, la transformation spontanée est $\\mathrm{Zn(s)}+\\mathrm{Cu^{2+}}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{Cu(s)}$. Dans le circuit extérieur, le sens du courant et celui des électrons sont :",
+          "options": [
+            {
+              "label": "courant de la lame de cuivre vers la lame de zinc ; électrons de la lame de zinc vers la lame de cuivre",
+              "correct": true,
+              "why": "Le zinc, anode ($-$), libère les électrons qui vont vers le cuivre, cathode ($+$) ; le courant, de $+$ vers $-$, va en sens inverse."
+            },
+            {
+              "label": "courant de la lame de zinc vers la lame de cuivre ; électrons de la lame de cuivre vers la lame de zinc",
+              "why": "Sens inversés : le courant sort du pôle $+$ (cuivre) et les électrons sortent du pôle $-$ (zinc)."
+            },
+            {
+              "label": "courant et électrons de la lame de zinc vers la lame de cuivre",
+              "why": "Le courant a le sens opposé à celui des électrons : il va du pôle $+$ au pôle $-$ à l'extérieur."
+            },
+            {
+              "label": "courant et électrons de la lame de cuivre vers la lame de zinc",
+              "why": "Les électrons partent de l'anode (zinc, où se produit l'oxydation) et non de la lame de cuivre, et le courant a le sens opposé."
+            }
+          ],
+          "hint": "Identifie l'anode et la cathode, puis rappelle le sens conventionnel du courant.",
+          "solution": "$\\mathrm{Zn}\\rightarrow\\mathrm{Zn^{2+}}+2\\,e^-$ à l'anode : les électrons quittent le zinc et rejoignent le cuivre ($\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$). Le courant, de sens conventionnel opposé, va du cuivre ($+$) vers le zinc ($-$). Contrôle : courant et électrons en sens opposés.",
+          "methode": "Électrons : de l'anode vers la cathode ; courant : de $+$ vers $-$ à l'extérieur.",
+          "points": 1,
+          "ref": "pc-piles-une-pile-electrochimique-q2"
+        },
+        {
+          "notion": "Une pile électrochimique",
+          "difficulty": 3,
+          "statement": "Dans la pile Daniell, le pont salin contient $\\mathrm{K^+}$ et $\\mathrm{NO_3^-}$. Pendant le fonctionnement, les ions nitrate $\\mathrm{NO_3^-}$ du pont salin se dirigent :",
+          "options": [
+            {
+              "label": "vers la demi-pile de zinc, où $\\mathrm{Zn^{2+}}$ est produit, compenser sa charge positive",
+              "correct": true,
+              "why": "L'oxydation du zinc libère des $\\mathrm{Zn^{2+}}$ : l'excès de charges positives est compensé par l'arrivée d'anions."
+            },
+            {
+              "label": "vers la demi-pile de cuivre, pour compenser la disparition des ions $\\mathrm{Cu^{2+}}$",
+              "why": "La disparition de $\\mathrm{Cu^{2+}}$ crée un défaut de charges positives : il faut des cations ($\\mathrm{K^+}$), non des anions."
+            },
+            {
+              "label": "vers la cathode, car ils sont chargés négativement et attirés par le pôle positif",
+              "why": "L'anode est le pôle négatif d'une pile, et ce sont les anions qui migrent vers la demi-pile de l'anode, pas vers la cathode."
+            },
+            {
+              "label": "nulle part : le pont salin laisse passer les électrons, non les ions",
+              "why": "Dans le pont salin circulent des ions, jamais des électrons : c'est ce qui ferme le circuit."
+            }
+          ],
+          "hint": "Quelle demi-pile devient trop positive, laquelle devient trop négative, au cours du fonctionnement ?",
+          "solution": "Dans la demi-pile de zinc, $\\mathrm{Zn^{2+}}$ apparaît (excès de charges $+$) : les anions $\\mathrm{NO_3^-}$ y migrent. Dans celle de cuivre, $\\mathrm{Cu^{2+}}$ disparaît (défaut de charges $+$) : les cations $\\mathrm{K^+}$ y migrent. Contrôle : les ions assurent la neutralité électrique et ferment le circuit.",
+          "methode": "Pont salin : anions vers l'anode, cations vers la cathode ; les ions, non les électrons, y circulent.",
+          "points": 1,
+          "ref": "pc-piles-une-pile-electrochimique-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Quantité d'électricité",
+        "lesson": "Grandeurs électriques d'une pile",
+        "role": "cours",
+        "bac_frequency": null,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-piles-quantite-d-electricite",
+      "chapter": "pc-piles",
+      "kind": "qcu",
+      "title": "Quantité d'électricité",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Quantité d'électricité",
+          "difficulty": 1,
+          "statement": "Une pile débite un courant constant $I=0{,}20\\ \\mathrm{A}$ pendant $10\\ \\mathrm{min}$. La quantité d'électricité $Q$ qui a traversé le circuit vaut :",
+          "options": [
+            {
+              "label": "$Q=120\\ \\mathrm{C}$",
+              "correct": true,
+              "why": "$Q=I\\,\\Delta t=0{,}20\\times600=120\\ \\mathrm{C}$ ($10\\ \\mathrm{min}=600\\ \\mathrm{s}$)."
+            },
+            {
+              "label": "$Q=2{,}0\\ \\mathrm{C}$",
+              "why": "Tu as multiplié par la durée en minutes : il faut la convertir en secondes ($600\\ \\mathrm{s}$)."
+            },
+            {
+              "label": "$Q=3{,}0\\times10^{3}\\ \\mathrm{C}$",
+              "why": "Tu as divisé la durée par l'intensité : $Q=I\\,\\Delta t$ est un produit."
+            },
+            {
+              "label": "$Q=3{,}3\\times10^{-4}\\ \\mathrm{C}$",
+              "why": "Tu as divisé l'intensité par la durée : $Q=I\\,\\Delta t$ est un produit."
+            }
+          ],
+          "hint": "$Q=I\\,\\Delta t$ avec $\\Delta t$ en secondes.",
+          "solution": "$\\Delta t=10\\times60=600\\ \\mathrm{s}$ donc $Q=I\\,\\Delta t=0{,}20\\times600=120\\ \\mathrm{C}$. Contrôle : $1\\ \\mathrm{A}$ pendant $1\\ \\mathrm{s}$ correspond à $1\\ \\mathrm{C}$.",
+          "methode": "$Q=I\\,\\Delta t$, avec $\\Delta t$ en secondes.",
+          "points": 1,
+          "ref": "pc-piles-quantite-d-electricite-q1"
+        },
+        {
+          "notion": "Quantité d'électricité",
+          "difficulty": 2,
+          "statement": "Une pile a fait circuler une quantité d'électricité $Q=1930\\ \\mathrm{C}$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$, la quantité d'électrons échangée vaut :",
+          "options": [
+            {
+              "label": "$n(e^-)=0{,}0200\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$n(e^-)=\\dfrac{Q}{F}=\\dfrac{1930}{9{,}65\\times10^{4}}=0{,}0200\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$n(e^-)=50{,}0\\ \\mathrm{mol}$",
+              "why": "Tu as calculé $F/Q$ : la quantité d'électrons est $Q/F$."
+            },
+            {
+              "label": "$n(e^-)=1{,}9\\times10^{8}\\ \\mathrm{mol}$",
+              "why": "Tu as multiplié $Q$ par $F$ : $Q=n(e^-)\\,F$ donne $n(e^-)=Q/F$."
+            },
+            {
+              "label": "$n(e^-)=2{,}0\\times10^{2}\\ \\mathrm{mol}$",
+              "why": "Tu as utilisé $F=9{,}65$ au lieu de $9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ : la puissance de dix a été oubliée."
+            }
+          ],
+          "hint": "Utilise $Q=n(e^-)\\,F$ ; vérifie l'ordre de grandeur : $F$ est de l'ordre de $10^{5}\\ \\mathrm{C\\,mol^{-1}}$.",
+          "solution": "$n(e^-)=\\dfrac{Q}{F}=\\dfrac{1930}{9{,}65\\times10^{4}}=0{,}0200\\ \\mathrm{mol}$. Contrôle : $F=9{,}65\\times10^{4}\\ \\mathrm{C}$ correspond à une mole d'électrons, donc $1930\\ \\mathrm{C}$ en représente une très petite fraction.",
+          "methode": "$n(e^-)=Q/F$ avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$.",
+          "points": 1,
+          "ref": "pc-piles-quantite-d-electricite-q2"
+        },
+        {
+          "notion": "Quantité d'électricité",
+          "difficulty": 2,
+          "statement": "Une pile Daniell débite $I=0{,}100\\ \\mathrm{A}$ pendant $1{,}0\\ \\mathrm{h}$. Le zinc s'oxyde selon $\\mathrm{Zn}\\rightarrow\\mathrm{Zn^{2+}}+2\\,e^-$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ et $M(\\mathrm{Zn})=65{,}4\\ \\mathrm{g\\,mol^{-1}}$, la masse de zinc consommée vaut :",
+          "options": [
+            {
+              "label": "$m=0{,}122\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$Q=360\\ \\mathrm{C}$ ; $n(e^-)=0{,}00373\\ \\mathrm{mol}$ ; $n(\\mathrm{Zn})=\\dfrac{n(e^-)}{2}=0{,}00187\\ \\mathrm{mol}$ ; $m=nM=0{,}122\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=0{,}244\\ \\mathrm{g}$",
+              "why": "Tu as pris $n(\\mathrm{Zn})=n(e^-)$ : chaque atome de zinc libère $2$ électrons, donc $n(\\mathrm{Zn})=n(e^-)/2$."
+            },
+            {
+              "label": "$m=0{,}488\\ \\mathrm{g}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ au lieu de le diviser : $n(\\mathrm{Zn})=n(e^-)/2$."
+            },
+            {
+              "label": "$m=3{,}4\\times10^{-5}\\ \\mathrm{g}$",
+              "why": "Tu as oublié de convertir l'heure en secondes : $\\Delta t=3600\\ \\mathrm{s}$ et non $1\\ \\mathrm{s}$."
+            }
+          ],
+          "hint": "Enchaîne : $Q=I\\,\\Delta t$, puis $n(e^-)=Q/F$, puis $n(\\mathrm{Zn})$ avec la demi-équation, puis $m$.",
+          "solution": "$Q=I\\,\\Delta t=0{,}100\\times3600=360\\ \\mathrm{C}$ ; $n(e^-)=\\dfrac{360}{9{,}65\\times10^{4}}=0{,}00373\\ \\mathrm{mol}$ ; $n(\\mathrm{Zn})=\\dfrac{0{,}00373}{2}=0{,}00187\\ \\mathrm{mol}$ ; $m=0{,}00187\\times65{,}4=0{,}122\\ \\mathrm{g}$. Contrôle : environ $0{,}12\\ \\mathrm{g}$ en une heure à $0{,}1\\ \\mathrm{A}$ : ordre de grandeur raisonnable.",
+          "methode": "Masse consommée : $Q=I\\Delta t\\to n(e^-)\\to n(\\mathrm{Zn})=n(e^-)/2\\to m=nM$.",
+          "points": 1,
+          "ref": "pc-piles-quantite-d-electricite-q3"
+        },
+        {
+          "notion": "Quantité d'électricité",
+          "difficulty": 3,
+          "statement": "Une pile cuivre-argent débite $I=0{,}250\\ \\mathrm{A}$ pendant $3860\\ \\mathrm{s}$. À la cathode, $\\mathrm{Ag^+}+e^-\\rightarrow\\mathrm{Ag(s)}$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ et $M(\\mathrm{Ag})=108\\ \\mathrm{g\\,mol^{-1}}$, la masse d'argent déposée vaut :",
+          "options": [
+            {
+              "label": "$m=1{,}08\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$Q=0{,}250\\times3860=965\\ \\mathrm{C}$ ; $n(e^-)=0{,}0100\\ \\mathrm{mol}$ ; $n(\\mathrm{Ag})=n(e^-)$ (un électron par ion) ; $m=1{,}08\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=0{,}54\\ \\mathrm{g}$",
+              "why": "Tu as divisé $n(e^-)$ par $2$, comme pour $\\mathrm{Cu^{2+}}$ ou $\\mathrm{Zn^{2+}}$ ; ici un seul électron est capté par ion $\\mathrm{Ag^+}$."
+            },
+            {
+              "label": "$m=2{,}16\\ \\mathrm{g}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ : un ion $\\mathrm{Ag^+}$ capte un seul électron, donc $n(\\mathrm{Ag})=n(e^-)$."
+            },
+            {
+              "label": "$m=0{,}0100\\ \\mathrm{g}$",
+              "why": "$0{,}0100$ est la quantité de matière d'argent en mol : il manque la multiplication par $M(\\mathrm{Ag})=108\\ \\mathrm{g\\,mol^{-1}}$."
+            }
+          ],
+          "hint": "Regarde la demi-équation pour savoir combien d'électrons correspondent à une mole d'argent déposé.",
+          "solution": "$Q=It=0{,}250\\times3860=965\\ \\mathrm{C}$ ; $n(e^-)=\\dfrac{965}{9{,}65\\times10^{4}}=0{,}0100\\ \\mathrm{mol}$ ; $n(\\mathrm{Ag})=n(e^-)=0{,}0100\\ \\mathrm{mol}$ ; $m=0{,}0100\\times108=1{,}08\\ \\mathrm{g}$. Contrôle : si le dépôt était du cuivre ($2\\,e^-$ par atome), on obtiendrait la moitié de la quantité de matière.",
+          "methode": "Le rapport $n(e^-)/n(\\text{métal})$ vient de la demi-équation : $1$ pour $\\mathrm{Ag^+}$, $2$ pour $\\mathrm{Cu^{2+}}$.",
+          "points": 1,
+          "ref": "pc-piles-quantite-d-electricite-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Construire la pile",
+        "lesson": "La pile Daniell : montage et mesures",
+        "role": "cours",
+        "bac_frequency": null,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-piles-construire-la-pile",
+      "chapter": "pc-piles",
+      "kind": "qcu",
+      "title": "Construire la pile",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Construire la pile",
+          "difficulty": 1,
+          "statement": "La demi-pile du couple $\\mathrm{Cu^{2+}/Cu}$ de la pile Daniell est constituée de :",
+          "options": [
+            {
+              "label": "une lame de cuivre plongeant dans une solution de sulfate de cuivre(II)",
+              "correct": true,
+              "why": "Une demi-pile associe le métal et une solution de son ion : $\\mathrm{Cu}$ et $\\mathrm{Cu^{2+}}$."
+            },
+            {
+              "label": "une lame de cuivre plongeant dans une solution de sulfate de zinc",
+              "why": "La solution contient $\\mathrm{Zn^{2+}}$ : ce serait le mélange de deux couples différents, non le couple $\\mathrm{Cu^{2+}/Cu}$."
+            },
+            {
+              "label": "une lame de zinc plongeant dans une solution de sulfate de cuivre(II)",
+              "why": "Ce montage met $\\mathrm{Zn}$ directement en contact avec $\\mathrm{Cu^{2+}}$ : la transformation a lieu sans circuit extérieur."
+            },
+            {
+              "label": "une lame de cuivre plongeant dans de l'eau distillée",
+              "why": "Sans ions $\\mathrm{Cu^{2+}}$ dissous, le couple n'est pas présent : l'eau distillée ne contient pas l'oxydant du couple."
+            }
+          ],
+          "hint": "Une demi-pile contient les deux formes (oxydant et réducteur) du même couple.",
+          "solution": "Pour le couple $\\mathrm{Cu^{2+}/Cu}$ : réducteur $\\mathrm{Cu}$ (lame) et oxydant $\\mathrm{Cu^{2+}}$ (solution de $\\mathrm{CuSO_4}$). Contrôle : la demi-pile de zinc est une lame de zinc dans une solution contenant $\\mathrm{Zn^{2+}}$.",
+          "methode": "Demi-pile : métal + solution de son cation.",
+          "points": 1,
+          "ref": "pc-piles-construire-la-pile-q1"
+        },
+        {
+          "notion": "Construire la pile",
+          "difficulty": 2,
+          "statement": "La pile Daniell ($\\mathrm{Zn(s)}+\\mathrm{Cu^{2+}}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{Cu(s)}$) se représente par le schéma conventionnel :",
+          "options": [
+            {
+              "label": "$(-)\\ \\mathrm{Zn(s)}\\,|\\,\\mathrm{Zn^{2+}}\\,\\|\\,\\mathrm{Cu^{2+}}\\,|\\,\\mathrm{Cu(s)}\\ (+)$",
+              "correct": true,
+              "why": "Le pôle négatif (oxydation du zinc) est à gauche, le pôle positif (réduction de $\\mathrm{Cu^{2+}}$) à droite ; chaque barre sépare réducteur et oxydant d'un même couple."
+            },
+            {
+              "label": "$(-)\\ \\mathrm{Cu(s)}\\,|\\,\\mathrm{Cu^{2+}}\\,\\|\\,\\mathrm{Zn^{2+}}\\,|\\,\\mathrm{Zn(s)}\\ (+)$",
+              "why": "Polarités inversées : le cuivre est le pôle positif de la pile, non le pôle négatif."
+            },
+            {
+              "label": "$(-)\\ \\mathrm{Zn(s)}\\,|\\,\\mathrm{Cu^{2+}}\\,\\|\\,\\mathrm{Zn^{2+}}\\,|\\,\\mathrm{Cu(s)}\\ (+)$",
+              "why": "Les espèces ne sont plus associées par couple : $\\mathrm{Zn}$ s'écrit avec $\\mathrm{Zn^{2+}}$, $\\mathrm{Cu}$ avec $\\mathrm{Cu^{2+}}$."
+            },
+            {
+              "label": "$(-)\\ \\mathrm{Zn^{2+}}\\,|\\,\\mathrm{Zn(s)}\\,\\|\\,\\mathrm{Cu(s)}\\,|\\,\\mathrm{Cu^{2+}}\\ (+)$",
+              "why": "Dans l'écriture, le réducteur (électrode) est du côté de l'électrode, l'oxydant du côté du pont salin : ordre des espèces inversé."
+            }
+          ],
+          "hint": "Pôle négatif à gauche ; de chaque côté, l'électrode puis la solution de son ion.",
+          "solution": "Le zinc s'oxyde (anode, $-$), $\\mathrm{Cu^{2+}}$ se réduit (cathode, $+$). Schéma : $(-)\\ \\mathrm{Zn}\\,|\\,\\mathrm{Zn^{2+}}\\,\\|\\,\\mathrm{Cu^{2+}}\\,|\\,\\mathrm{Cu}\\ (+)$, la double barre représentant le pont salin. Contrôle : lecture de gauche à droite : oxydation à gauche, réduction à droite.",
+          "methode": "Schéma : $(-)$ anode $|$ ion $\\|$ ion $|$ cathode $(+)$.",
+          "points": 1,
+          "ref": "pc-piles-construire-la-pile-q2"
+        },
+        {
+          "notion": "Construire la pile",
+          "difficulty": 2,
+          "statement": "Pour la pile Daniell, les réactions aux électrodes sont :",
+          "options": [
+            {
+              "label": "anode : $\\mathrm{Zn}\\rightarrow\\mathrm{Zn^{2+}}+2\\,e^-$ ; cathode : $\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$",
+              "correct": true,
+              "why": "Oxydation du zinc à l'anode, réduction de $\\mathrm{Cu^{2+}}$ à la cathode : charges conservées ($0=+2-2$ et $+2-2=0$)."
+            },
+            {
+              "label": "anode : $\\mathrm{Cu}\\rightarrow\\mathrm{Cu^{2+}}+2\\,e^-$ ; cathode : $\\mathrm{Zn^{2+}}+2\\,e^-\\rightarrow\\mathrm{Zn}$",
+              "why": "Cela correspondrait à la transformation inverse ($\\mathrm{Cu}$ réduit $\\mathrm{Zn^{2+}}$), non spontanée."
+            },
+            {
+              "label": "anode : $\\mathrm{Zn}\\rightarrow\\mathrm{Zn^{2+}}+e^-$ ; cathode : $\\mathrm{Cu^{2+}}+e^-\\rightarrow\\mathrm{Cu}$",
+              "why": "Les charges ne sont pas conservées : $\\mathrm{Zn^{2+}}$ et $\\mathrm{Cu^{2+}}$ échangent $2$ électrons chacun."
+            },
+            {
+              "label": "anode : $\\mathrm{Zn^{2+}}+2\\,e^-\\rightarrow\\mathrm{Zn}$ ; cathode : $\\mathrm{Cu}\\rightarrow\\mathrm{Cu^{2+}}+2\\,e^-$",
+              "why": "Les sens sont inversés : l'anode est le siège d'une oxydation, la cathode d'une réduction."
+            }
+          ],
+          "hint": "L'anode est le siège de l'oxydation : quelle espèce se transforme en son oxydant ?",
+          "solution": "À l'anode (oxydation) : $\\mathrm{Zn}\\rightarrow\\mathrm{Zn^{2+}}+2\\,e^-$. À la cathode (réduction) : $\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$. Somme : $\\mathrm{Zn}+\\mathrm{Cu^{2+}}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{Cu}$. Contrôle : les $2\\,e^-$ libérés par l'anode sont captés par la cathode.",
+          "methode": "Anode : oxydation du réducteur ; cathode : réduction de l'oxydant.",
+          "points": 1,
+          "ref": "pc-piles-construire-la-pile-q3"
+        },
+        {
+          "notion": "Construire la pile",
+          "difficulty": 3,
+          "statement": "On retire le pont salin d'une pile Daniell en fonctionnement : le courant dans l'ampèremètre devient presque aussitôt nul. L'explication est :",
+          "options": [
+            {
+              "label": "le circuit ionique n'est plus fermé : les charges s'accumulent et la transformation s'arrête",
+              "correct": true,
+              "why": "Sans pont salin, l'excès de charges $+$ côté zinc et le défaut côté cuivre bloquent le passage des électrons."
+            },
+            {
+              "label": "les électrons circulaient dans le pont salin et ne peuvent plus changer de demi-pile",
+              "why": "Les électrons ne traversent jamais le pont salin : il ne contient que des ions."
+            },
+            {
+              "label": "le zinc n'est plus en contact avec la solution de sulfate de cuivre(II) nécessaire",
+              "why": "Dans la pile, le zinc et $\\mathrm{Cu^{2+}}$ sont déjà séparés ; le pont salin n'est pas le lieu du transfert d'électrons."
+            },
+            {
+              "label": "la constante d'équilibre $K$ de la réaction diminue brusquement sans le pont salin",
+              "why": "$K$ ne dépend que de la température : retirer le pont salin ne la modifie pas."
+            }
+          ],
+          "hint": "Que faut-il pour que la transformation se poursuive : des électrons dans le fil, et quoi dans les solutions ?",
+          "solution": "Le pont salin ferme le circuit par un déplacement d'ions et maintient l'électroneutralité de chaque solution. Sans lui, les demi-piles se chargent ($\\mathrm{Zn^{2+}}$ en excès d'un côté, $\\mathrm{Cu^{2+}}$ en défaut de l'autre) : le courant cesse. Contrôle : un circuit doit être fermé pour qu'un courant circule.",
+          "methode": "Pont salin : ferme le circuit et assure la neutralité ; il ne transporte pas d'électrons.",
+          "points": 1,
+          "ref": "pc-piles-construire-la-pile-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Interprétation",
+        "lesson": "La pile Daniell : montage et mesures",
+        "role": "cours",
+        "bac_frequency": null,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-piles-interpretation",
+      "chapter": "pc-piles",
+      "kind": "qcu",
+      "title": "Interprétation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Interprétation",
+          "difficulty": 1,
+          "statement": "Dans la pile Daniell, la lame qui constitue le pôle positif est :",
+          "options": [
+            {
+              "label": "la lame de cuivre, car elle est le siège de la réduction",
+              "correct": true,
+              "why": "À la cathode ($+$), $\\mathrm{Cu^{2+}}$ capte les électrons et se réduit."
+            },
+            {
+              "label": "la lame de zinc, car elle est le siège de l'oxydation",
+              "why": "Le siège de l'oxydation est l'anode, qui est le pôle négatif de la pile : la lame de zinc est donc le pôle $-$."
+            },
+            {
+              "label": "la lame de cuivre, car elle est le siège de l'oxydation",
+              "why": "Le cuivre n'est pas oxydé dans cette pile : $\\mathrm{Cu^{2+}}$ est réduit à la cathode."
+            },
+            {
+              "label": "la lame de zinc, car elle est le siège de la réduction",
+              "why": "Le zinc est oxydé, non réduit : c'est $\\mathrm{Cu^{2+}}$ qui est réduit."
+            }
+          ],
+          "hint": "Quelle espèce capte les électrons, et sur quelle lame cela se passe-t-il ?",
+          "solution": "$\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$ a lieu sur la lame de cuivre : c'est la cathode, pôle $+$. Contrôle : la lame de zinc, siège de l'oxydation, est le pôle $-$.",
+          "methode": "Cathode = réduction = pôle $+$.",
+          "points": 1,
+          "ref": "pc-piles-interpretation-q1"
+        },
+        {
+          "notion": "Interprétation",
+          "difficulty": 2,
+          "statement": "Pour la pile Daniell, $K=2\\times10^{37}$. À l'instant initial, $[\\mathrm{Zn^{2+}}]=0{,}10$ et $[\\mathrm{Cu^{2+}}]=0{,}010\\ \\mathrm{mol\\,L^{-1}}$. Le quotient initial et le sens d'évolution sont :",
+          "options": [
+            {
+              "label": "$Q_{r,i}=10$ ; sens direct, car $Q_{r,i}<K$",
+              "correct": true,
+              "why": "$Q_{r,i}=\\dfrac{[\\mathrm{Zn^{2+}}]}{[\\mathrm{Cu^{2+}}]}=\\dfrac{0{,}10}{0{,}010}=10\\ll K$ : sens direct, la pile débite."
+            },
+            {
+              "label": "$Q_{r,i}=0{,}10$ ; sens direct, car $Q_{r,i}<K$",
+              "why": "Tu as inversé le quotient : $\\mathrm{Zn^{2+}}$, produit, est au numérateur."
+            },
+            {
+              "label": "$Q_{r,i}=10$ ; sens inverse, car $Q_{r,i}>1$",
+              "why": "Le critère compare $Q_{r,i}$ à $K$ et non à $1$ : $Q_{r,i}=10\\ll K=2\\times10^{37}$."
+            },
+            {
+              "label": "$Q_{r,i}=1{,}0\\times10^{-3}$ ; sens direct, car $Q_{r,i}<K$",
+              "why": "Tu as multiplié les concentrations au lieu de les diviser : les deux ions sont de part et d'autre de la fraction."
+            }
+          ],
+          "hint": "Écris $Q_r$ pour $\\mathrm{Zn}+\\mathrm{Cu^{2+}}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{Cu}$ sans les solides, puis compare à $K$.",
+          "solution": "$Q_{r,i}=\\dfrac{[\\mathrm{Zn^{2+}}]}{[\\mathrm{Cu^{2+}}]}=\\dfrac{0{,}10}{0{,}010}=10<K=2\\times10^{37}$ : évolution dans le sens direct, spontanée. Contrôle : $Q_{r,i}$ minuscule devant $K$ : la pile pourra fonctionner longtemps.",
+          "methode": "$Q_{r,i}<K$ : sens direct ; solides absents de $Q_r$.",
+          "points": 1,
+          "ref": "pc-piles-interpretation-q2"
+        },
+        {
+          "notion": "Interprétation",
+          "difficulty": 3,
+          "statement": "Au cours du fonctionnement de la pile Daniell ($Q_{r,i}<K$), le quotient de réaction $Q_r$ :",
+          "options": [
+            {
+              "label": "augmente et tend vers $K$, valeur atteinte lorsque la pile est épuisée",
+              "correct": true,
+              "why": "$\\mathrm{Zn^{2+}}$ se forme et $\\mathrm{Cu^{2+}}$ est consommé : $Q_r=[\\mathrm{Zn^{2+}}]/[\\mathrm{Cu^{2+}}]$ croît jusqu'à $K$."
+            },
+            {
+              "label": "diminue et tend vers $K$, valeur atteinte lorsque la pile est épuisée",
+              "why": "$Q_r$ ne diminuerait que si $Q_{r,i}$ était supérieur à $K$ : ici $\\mathrm{Zn^{2+}}$ augmente et $\\mathrm{Cu^{2+}}$ diminue."
+            },
+            {
+              "label": "reste égal à $K$ pendant tout le fonctionnement de la pile",
+              "why": "$Q_r=K$ caractérise l'état d'équilibre : à cet instant la pile ne débite plus."
+            },
+            {
+              "label": "augmente indéfiniment et dépasse $K$ au bout d'un certain temps",
+              "why": "$Q_r$ ne peut pas dépasser $K$ : lorsqu'il l'atteint, le système cesse d'évoluer."
+            }
+          ],
+          "hint": "Comment évoluent $[\\mathrm{Zn^{2+}}]$ et $[\\mathrm{Cu^{2+}}]$ ? Que devient leur rapport ?",
+          "solution": "Au cours du temps $[\\mathrm{Zn^{2+}}]$ augmente et $[\\mathrm{Cu^{2+}}]$ diminue : $Q_r=\\dfrac{[\\mathrm{Zn^{2+}}]}{[\\mathrm{Cu^{2+}}]}$ augmente vers $K$. À $Q_r=K$, l'équilibre est atteint : la pile est épuisée. Contrôle : $Q_r$ évolue toujours vers $K$ et jamais au-delà.",
+          "methode": "Fonctionnement : $Q_r$ évolue vers $K$ ; pile épuisée quand $Q_r=K$.",
+          "points": 1,
+          "ref": "pc-piles-interpretation-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Capacité et durée de vie",
+        "lesson": "Approfondissement",
+        "role": "approfondissement",
+        "bac_frequency": null,
+        "existing_questions": 1,
+        "target_new_questions": 0,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-piles-capacite-et-duree-de-vie",
+      "chapter": "pc-piles",
+      "kind": "qcu",
+      "title": "Capacité et durée de vie",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Capacité et durée de vie",
+          "difficulty": 3,
+          "statement": "Une pile Daniell contient $1{,}0\\ \\mathrm{g}$ de zinc, avec un large excès d'ions $\\mathrm{Cu^{2+}}$. Elle débite $I=0{,}100\\ \\mathrm{A}$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ et $M(\\mathrm{Zn})=65{,}4\\ \\mathrm{g\\,mol^{-1}}$, la durée maximale de fonctionnement vaut environ :",
+          "options": [
+            {
+              "label": "$8{,}2\\ \\mathrm{h}$",
+              "correct": true,
+              "why": "$n(\\mathrm{Zn})=0{,}0153\\ \\mathrm{mol}$ ; $Q_{max}=2\\,n\\,F=2951\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{Q_{max}}{I}=29511\\ \\mathrm{s}\\approx8{,}2\\ \\mathrm{h}$."
+            },
+            {
+              "label": "$4{,}1\\ \\mathrm{h}$",
+              "why": "Tu as oublié le facteur $2$ : un atome de zinc libère $2$ électrons, donc $Q_{max}=2\\,n(\\mathrm{Zn})\\,F$."
+            },
+            {
+              "label": "$16{,}4\\ \\mathrm{h}$",
+              "why": "Tu as multiplié par $2$ une seconde fois : $n(e^-)=2\\,n(\\mathrm{Zn})$ n'intervient qu'une fois."
+            },
+            {
+              "label": "$8{,}4\\ \\mathrm{h}$",
+              "why": "Tu as utilisé la masse molaire du cuivre ($63{,}5$) au lieu de celle du zinc ($65{,}4$), alors que le zinc est le réactif limitant."
+            }
+          ],
+          "hint": "Le réactif limitant est le zinc : calcule $n(e^-)$ maximale, puis $Q_{max}$ et $\\Delta t=Q_{max}/I$.",
+          "solution": "$n(\\mathrm{Zn})=\\dfrac{1{,}0}{65{,}4}=0{,}0153\\ \\mathrm{mol}$ ; $n(e^-)_{max}=2\\,n(\\mathrm{Zn})$ ; $Q_{max}=n(e^-)F=2951\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{2951}{0{,}100}=29511\\ \\mathrm{s}\\approx8{,}2\\ \\mathrm{h}$. Contrôle : $1\\ \\mathrm{h}=3600\\ \\mathrm{s}$ ; le résultat est de quelques heures, cohérent avec une pile de laboratoire à $0{,}1\\ \\mathrm{A}$.",
+          "methode": "Capacité : $Q_{max}=n(e^-)_{max}F$ imposé par le réactif limitant.",
+          "points": 1,
+          "ref": "pc-piles-capacite-et-duree-de-vie-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-piles-probleme-1",
+      "chapter": "pc-piles",
+      "kind": "probleme",
+      "title": "Pile zinc-cuivre : fonctionnement et durée",
+      "difficulty": 3,
+      "context": "On réalise une pile Daniell : une lame de zinc de masse $m_0=0{,}300\\ \\mathrm{g}$ plonge dans $V=100\\ \\mathrm{mL}$ de sulfate de zinc à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$, une lame de cuivre plonge dans $V=100\\ \\mathrm{mL}$ de sulfate de cuivre(II) à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$ ; un pont salin ($\\mathrm{K^+}$, $\\mathrm{NO_3^-}$) relie les deux solutions et un conducteur ohmique ferme le circuit. On suppose le courant constant : $I=0{,}050\\ \\mathrm{A}$. Données : $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ ; $M(\\mathrm{Zn})=65{,}4\\ \\mathrm{g\\,mol^{-1}}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Une pile électrochimique",
+          "difficulty": 1,
+          "statement": "Dans cette pile, la lame de zinc est :",
+          "options": [
+            {
+              "label": "l'anode, siège de l'oxydation, et le pôle négatif",
+              "correct": true,
+              "why": "Le zinc cède des électrons ($\\mathrm{Zn}\\rightarrow\\mathrm{Zn^{2+}}+2\\,e^-$) : c'est l'anode, pôle négatif."
+            },
+            {
+              "label": "l'anode, siège de la réduction, et le pôle positif",
+              "why": "L'anode est le siège de l'oxydation et le pôle négatif d'une pile, non l'inverse."
+            },
+            {
+              "label": "la cathode, siège de la réduction, et le pôle positif",
+              "why": "$\\mathrm{Zn}$ est le réducteur du couple $\\mathrm{Zn^{2+}/Zn}$ : il s'oxyde. La cathode est la lame de cuivre."
+            },
+            {
+              "label": "la cathode, siège de l'oxydation, et le pôle négatif",
+              "why": "La cathode est le siège de la réduction : une électrode où a lieu l'oxydation est toujours une anode."
+            }
+          ],
+          "hint": "Le zinc est le réducteur de la transformation spontanée.",
+          "solution": "Le zinc s'oxyde ($\\mathrm{Zn}\\rightarrow\\mathrm{Zn^{2+}}+2\\,e^-$) : c'est l'anode, pôle négatif. Contrôle : la lame de cuivre, siège de la réduction de $\\mathrm{Cu^{2+}}$, est la cathode (pôle $+$).",
+          "methode": "Anode : oxydation, pôle $-$ de la pile.",
+          "points": 1,
+          "part": "Partie A — Construire et orienter la pile",
+          "ref": "pc-piles-probleme-1-q1"
+        },
+        {
+          "notion": "Construire la pile",
+          "difficulty": 2,
+          "statement": "Pendant le fonctionnement de cette pile, les ions $\\mathrm{K^+}$ du pont salin se déplacent :",
+          "options": [
+            {
+              "label": "vers la demi-pile de cuivre, où $\\mathrm{Cu^{2+}}$ disparaît, pour compenser le défaut de charges positives",
+              "correct": true,
+              "why": "La réduction de $\\mathrm{Cu^{2+}}$ crée un défaut de charges positives : les cations $\\mathrm{K^+}$ y arrivent."
+            },
+            {
+              "label": "vers la demi-pile de zinc, où $\\mathrm{Zn^{2+}}$ apparaît, pour compenser l'excès de charges positives",
+              "why": "Un excès de charges positives est compensé par des anions ($\\mathrm{NO_3^-}$), non par d'autres cations."
+            },
+            {
+              "label": "dans le conducteur ohmique, avec les électrons, du pôle négatif vers le pôle positif",
+              "why": "Les ions $\\mathrm{K^+}$ ne circulent que dans les solutions et le pont salin : seuls les électrons traversent les fils."
+            },
+            {
+              "label": "ils restent immobiles : seuls les anions $\\mathrm{NO_3^-}$ se déplacent dans le pont",
+              "why": "Cations et anions migrent tous deux : les cations vers la cathode, les anions vers l'anode."
+            }
+          ],
+          "hint": "Dans quelle demi-pile la charge positive diminue-t-elle ?",
+          "solution": "Dans la demi-pile de cuivre, $\\mathrm{Cu^{2+}}$ est consommé : il y a défaut de charges $+$ ; les ions $\\mathrm{K^+}$ du pont salin y migrent. Dans celle de zinc, les ions $\\mathrm{NO_3^-}$ compensent l'excès de charges $+$. Contrôle : le pont salin assure la neutralité de chaque solution.",
+          "methode": "Pont salin : cations vers la cathode, anions vers l'anode.",
+          "points": 1,
+          "part": "Partie A — Construire et orienter la pile",
+          "ref": "pc-piles-probleme-1-q2"
+        },
+        {
+          "notion": "Construire la pile",
+          "difficulty": 2,
+          "statement": "L'équation de la transformation qui se produit dans cette pile est :",
+          "options": [
+            {
+              "label": "$\\mathrm{Zn(s)}+\\mathrm{Cu^{2+}}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{Cu(s)}$",
+              "correct": true,
+              "why": "$2\\,e^-$ cédés par $\\mathrm{Zn}$, captés par $\\mathrm{Cu^{2+}}$ ; charges : $+2$ de chaque côté."
+            },
+            {
+              "label": "$\\mathrm{Zn^{2+}}+\\mathrm{Cu(s)}\\rightarrow\\mathrm{Zn(s)}+\\mathrm{Cu^{2+}}$",
+              "why": "C'est la transformation inverse, qui n'est pas spontanée dans cette pile."
+            },
+            {
+              "label": "$\\mathrm{Zn(s)}+\\mathrm{Cu^{2+}}\\rightarrow\\mathrm{Zn^{2+}}+2\\,\\mathrm{Cu(s)}$",
+              "why": "Le zinc libère $2$ électrons qui réduisent un seul ion $\\mathrm{Cu^{2+}}$ ; il n'y a pas d'atome de cuivre en plus, la matière n'est pas conservée."
+            },
+            {
+              "label": "$2\\,\\mathrm{Zn(s)}+\\mathrm{Cu^{2+}}\\rightarrow2\\,\\mathrm{Zn^{2+}}+\\mathrm{Cu(s)}$",
+              "why": "Les charges ne sont pas conservées : $+2$ à gauche et $+4$ à droite."
+            }
+          ],
+          "hint": "Additionne les deux demi-équations des électrodes, en vérifiant les électrons.",
+          "solution": "$\\mathrm{Zn}\\rightarrow\\mathrm{Zn^{2+}}+2\\,e^-$ et $\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$ : somme $\\mathrm{Zn}+\\mathrm{Cu^{2+}}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{Cu}$. Contrôle : charges $+2$ et $+2$.",
+          "methode": "Équation de la pile : somme des demi-équations, électrons simplifiés.",
+          "points": 1,
+          "part": "Partie A — Construire et orienter la pile",
+          "ref": "pc-piles-probleme-1-q3"
+        },
+        {
+          "notion": "Quantité d'électricité",
+          "difficulty": 2,
+          "statement": "Au bout de $1{,}0\\ \\mathrm{h}$ de fonctionnement, la quantité d'électricité débitée vaut :",
+          "options": [
+            {
+              "label": "$Q=180\\ \\mathrm{C}$",
+              "correct": true,
+              "why": "$Q=I\\,\\Delta t=0{,}050\\times3600=180\\ \\mathrm{C}$."
+            },
+            {
+              "label": "$Q=3{,}0\\ \\mathrm{C}$",
+              "why": "Tu as pris $\\Delta t=60$ : l'heure vaut $3600\\ \\mathrm{s}$, non $60\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$Q=7{,}2\\times10^{4}\\ \\mathrm{C}$",
+              "why": "Tu as divisé la durée par l'intensité : $Q=I\\,\\Delta t$ est un produit."
+            },
+            {
+              "label": "$Q=0{,}050\\ \\mathrm{C}$",
+              "why": "Tu as oublié de convertir l'heure en secondes ($\\Delta t=1$ au lieu de $3600\\ \\mathrm{s}$)."
+            }
+          ],
+          "hint": "$Q=I\\,\\Delta t$ avec $\\Delta t$ en secondes.",
+          "solution": "$\\Delta t=1{,}0\\times3600=3600\\ \\mathrm{s}$ donc $Q=0{,}050\\times3600=180\\ \\mathrm{C}$. Contrôle : $n(e^-)=\\dfrac{180}{9{,}65\\times10^{4}}=0{,}00187\\ \\mathrm{mol}$.",
+          "methode": "$Q=I\\,\\Delta t$.",
+          "points": 1,
+          "part": "Partie B — Grandeurs électriques",
+          "ref": "pc-piles-probleme-1-q4"
+        },
+        {
+          "notion": "Grandeurs électriques d'une pile",
+          "difficulty": 2,
+          "statement": "Pendant cette heure, la masse de zinc consommée vaut :",
+          "options": [
+            {
+              "label": "$m=61\\ \\mathrm{mg}$",
+              "correct": true,
+              "why": "$n(e^-)=0{,}00187\\ \\mathrm{mol}$ ; $n(\\mathrm{Zn})=\\dfrac{n(e^-)}{2}=0{,}000933\\ \\mathrm{mol}$ ; $m=nM=61\\ \\mathrm{mg}$."
+            },
+            {
+              "label": "$m=122\\ \\mathrm{mg}$",
+              "why": "Tu as pris $n(\\mathrm{Zn})=n(e^-)$ : un atome de zinc libère $2$ électrons."
+            },
+            {
+              "label": "$m=244\\ \\mathrm{mg}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ au lieu de le diviser."
+            },
+            {
+              "label": "$m=0{,}061\\ \\mathrm{mg}$",
+              "why": "$0{,}061$ est la masse en grammes : il manque la conversion en mg (facteur $1000$)."
+            }
+          ],
+          "hint": "Passe de $n(e^-)$ à $n(\\mathrm{Zn})$ avec la demi-équation, puis à la masse.",
+          "solution": "$n(e^-)=\\dfrac{180}{9{,}65\\times10^{4}}=0{,}00187\\ \\mathrm{mol}$ ; $n(\\mathrm{Zn})=0{,}000933\\ \\mathrm{mol}$ ; $m=0{,}000933\\times65{,}4=0{,}061\\ \\mathrm{g}=61\\ \\mathrm{mg}$. Contrôle : $61\\ \\mathrm{mg}<m_0=300\\ \\mathrm{mg}$ : la lame n'est pas entièrement consommée.",
+          "methode": "Masse consommée : $n(\\mathrm{Zn})=n(e^-)/2$, $m=nM$.",
+          "points": 1,
+          "part": "Partie B — Grandeurs électriques",
+          "ref": "pc-piles-probleme-1-q5"
+        },
+        {
+          "notion": "Capacité et durée de vie",
+          "difficulty": 3,
+          "statement": "La lame de zinc ($0{,}300\\ \\mathrm{g}$) est le réactif limitant, les ions $\\mathrm{Cu^{2+}}$ étant en excès. À $I=0{,}050\\ \\mathrm{A}$, la durée maximale de fonctionnement est d'environ :",
+          "options": [
+            {
+              "label": "$4{,}9\\ \\mathrm{h}$",
+              "correct": true,
+              "why": "$n(\\mathrm{Zn})=0{,}00459\\ \\mathrm{mol}$ ; $Q_{max}=2\\,n\\,F=885\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{Q_{max}}{I}=17706\\ \\mathrm{s}\\approx4{,}9\\ \\mathrm{h}$."
+            },
+            {
+              "label": "$10{,}7\\ \\mathrm{h}$",
+              "why": "Tu as pris $\\mathrm{Cu^{2+}}$ ($10{,}0\\ \\mathrm{mmol}$) comme réactif limitant alors qu'il est en excès par rapport au zinc ($4{,}59\\ \\mathrm{mmol}$)."
+            },
+            {
+              "label": "$2{,}5\\ \\mathrm{h}$",
+              "why": "Tu as oublié le facteur $2$ : $n(e^-)=2\\,n(\\mathrm{Zn})$."
+            },
+            {
+              "label": "$5{,}1\\ \\mathrm{h}$",
+              "why": "Tu as utilisé $M(\\mathrm{Cu})=63{,}5$ au lieu de $M(\\mathrm{Zn})=65{,}4\\ \\mathrm{g\\,mol^{-1}}$ pour calculer la quantité de zinc."
+            }
+          ],
+          "hint": "Compare les quantités de zinc et de $\\mathrm{Cu^{2+}}$ pour identifier le réactif limitant, puis $Q_{max}=n(e^-)_{max}F$.",
+          "solution": "$n(\\mathrm{Zn})=\\dfrac{0{,}300}{65{,}4}=0{,}00459\\ \\mathrm{mol}$ $<n(\\mathrm{Cu^{2+}})=0{,}0100\\ \\mathrm{mol}$ : le zinc est limitant. $Q_{max}=2\\,n(\\mathrm{Zn})F=885\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{885}{0{,}050}=17706\\ \\mathrm{s}\\approx4{,}9\\ \\mathrm{h}$. Contrôle : $3{,}9\\ \\mathrm{h}$ de plus que l'heure déjà écoulée : cohérent avec $61\\ \\mathrm{mg}$ consommés sur $300\\ \\mathrm{mg}$.",
+          "methode": "Réactif limitant : le plus petit $n(e^-)$ disponible fixe $Q_{max}$.",
+          "points": 1,
+          "part": "Partie B — Grandeurs électriques",
+          "ref": "pc-piles-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-piles-probleme-2",
+      "chapter": "pc-piles",
+      "kind": "probleme",
+      "title": "Pile cuivre-argent",
+      "difficulty": 3,
+      "context": "On étudie une pile cuivre-argent : une lame de cuivre plonge dans $100\\ \\mathrm{mL}$ de sulfate de cuivre(II) à $0{,}10\\ \\mathrm{mol\\,L^{-1}}$ et une lame d'argent dans $100\\ \\mathrm{mL}$ de nitrate d'argent à $0{,}050\\ \\mathrm{mol\\,L^{-1}}$ ; un pont salin relie les solutions. Couples : $\\mathrm{Ag^+/Ag}$ et $\\mathrm{Cu^{2+}/Cu}$. La transformation spontanée est $\\mathrm{Cu(s)}+2\\,\\mathrm{Ag^+}\\rightarrow\\mathrm{Cu^{2+}}+2\\,\\mathrm{Ag(s)}$ de constante $K=3{,}9\\times10^{15}$. Le cuivre est en large excès. Le courant, supposé constant, vaut $I=0{,}100\\ \\mathrm{A}$. Données : $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ ; $M(\\mathrm{Cu})=63{,}5$ et $M(\\mathrm{Ag})=108\\ \\mathrm{g\\,mol^{-1}}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Une pile électrochimique",
+          "difficulty": 1,
+          "statement": "Dans cette pile, la lame d'argent est :",
+          "options": [
+            {
+              "label": "la cathode, siège de la réduction de $\\mathrm{Ag^+}$, et le pôle positif",
+              "correct": true,
+              "why": "$\\mathrm{Ag^+}+e^-\\rightarrow\\mathrm{Ag}$ : réduction, donc cathode, pôle positif."
+            },
+            {
+              "label": "l'anode, siège de l'oxydation de $\\mathrm{Ag}$, et le pôle négatif",
+              "why": "L'argent n'est pas oxydé dans cette pile : $\\mathrm{Ag^+}$ est réduit, et c'est le cuivre qui s'oxyde."
+            },
+            {
+              "label": "la cathode, siège de la réduction, et le pôle négatif",
+              "why": "La cathode est bien le siège de la réduction, mais c'est le pôle positif d'une pile."
+            },
+            {
+              "label": "l'anode, siège de la réduction, et le pôle positif",
+              "why": "L'anode est le siège de l'oxydation : l'électrode de la réduction est la cathode."
+            }
+          ],
+          "hint": "Quelle espèce est réduite : l'ion $\\mathrm{Ag^+}$ ou l'atome $\\mathrm{Cu}$ ?",
+          "solution": "$\\mathrm{Ag^+}$ capte un électron sur la lame d'argent : réduction, donc cathode, pôle $+$. Contrôle : la lame de cuivre, où le cuivre s'oxyde, est l'anode, pôle $-$.",
+          "methode": "Cathode : réduction, pôle $+$.",
+          "points": 1,
+          "part": "Partie A — Étude de la pile",
+          "ref": "pc-piles-probleme-2-q1"
+        },
+        {
+          "notion": "Construire la pile",
+          "difficulty": 2,
+          "statement": "Les réactions aux électrodes de cette pile sont :",
+          "options": [
+            {
+              "label": "anode : $\\mathrm{Cu}\\rightarrow\\mathrm{Cu^{2+}}+2\\,e^-$ ; cathode : $\\mathrm{Ag^+}+e^-\\rightarrow\\mathrm{Ag}$",
+              "correct": true,
+              "why": "Oxydation du cuivre ($2\\,e^-$), réduction d'un ion $\\mathrm{Ag^+}$ ($1\\,e^-$) : il faudra $2\\,\\mathrm{Ag^+}$ pour un $\\mathrm{Cu}$."
+            },
+            {
+              "label": "anode : $\\mathrm{Ag}\\rightarrow\\mathrm{Ag^+}+e^-$ ; cathode : $\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$",
+              "why": "Ce sont les réactions inverses : $\\mathrm{Cu^{2+}}$ ne peut pas oxyder $\\mathrm{Ag}$ (l'oxydant le plus fort est $\\mathrm{Ag^+}$)."
+            },
+            {
+              "label": "anode : $\\mathrm{Cu}\\rightarrow\\mathrm{Cu^{2+}}+e^-$ ; cathode : $\\mathrm{Ag^+}+e^-\\rightarrow\\mathrm{Ag}$",
+              "why": "Les charges ne sont pas conservées à l'anode : $\\mathrm{Cu^{2+}}$ porte $+2$, il y a $2$ électrons cédés."
+            },
+            {
+              "label": "anode : $\\mathrm{Cu}\\rightarrow\\mathrm{Cu^{2+}}+2\\,e^-$ ; cathode : $\\mathrm{Ag^+}+2\\,e^-\\rightarrow\\mathrm{Ag}$",
+              "why": "Les charges ne sont pas conservées à la cathode : $+1-2=-1$ à gauche et $0$ à droite."
+            }
+          ],
+          "hint": "Écris la demi-équation de chaque couple en équilibrant les charges.",
+          "solution": "$\\mathrm{Cu}\\rightarrow\\mathrm{Cu^{2+}}+2\\,e^-$ (anode) ; $2\\,(\\mathrm{Ag^+}+e^-\\rightarrow\\mathrm{Ag})$ (cathode) ; somme : $\\mathrm{Cu}+2\\,\\mathrm{Ag^+}\\rightarrow\\mathrm{Cu^{2+}}+2\\,\\mathrm{Ag}$. Contrôle : $2$ électrons cédés, $2$ captés.",
+          "methode": "Demi-équations : équilibrer les charges, multiplier pour égaliser les électrons.",
+          "points": 1,
+          "part": "Partie A — Étude de la pile",
+          "ref": "pc-piles-probleme-2-q2"
+        },
+        {
+          "notion": "Interprétation",
+          "difficulty": 2,
+          "statement": "À l'instant initial, le quotient de réaction et le sens d'évolution sont :",
+          "options": [
+            {
+              "label": "$Q_{r,i}=4{,}0\\times10^{1}$ ; sens direct, car $Q_{r,i}<K$",
+              "correct": true,
+              "why": "$Q_{r,i}=\\dfrac{[\\mathrm{Cu^{2+}}]}{[\\mathrm{Ag^+}]^2}=\\dfrac{0{,}10}{0{,}050^2}=40\\ll K$ : sens direct."
+            },
+            {
+              "label": "$Q_{r,i}=2{,}0$ ; sens direct, car $Q_{r,i}<K$",
+              "why": "Tu as oublié l'exposant $2$ sur $[\\mathrm{Ag^+}]$ : son coefficient est $2$."
+            },
+            {
+              "label": "$Q_{r,i}=0{,}025$ ; sens direct, car $Q_{r,i}<K$",
+              "why": "Tu as inversé le quotient : $\\mathrm{Cu^{2+}}$, produit, est au numérateur."
+            },
+            {
+              "label": "$Q_{r,i}=4{,}0\\times10^{1}$ ; sens inverse, car $Q_{r,i}>1$",
+              "why": "Le critère compare $Q_{r,i}$ à $K$ et non à $1$ : $Q_{r,i}\\ll K=3{,}9\\times10^{15}$."
+            }
+          ],
+          "hint": "Écris $Q_r$ sans les solides, avec les exposants égaux aux coefficients.",
+          "solution": "$Q_{r,i}=\\dfrac{0{,}10}{(0{,}050)^2}=40<K=3{,}9\\times10^{15}$ : sens direct, spontané. Contrôle : $Q_{r,i}\\ll K$ : la pile pourra débiter jusqu'à épuisement de $\\mathrm{Ag^+}$.",
+          "methode": "$Q_{r,i}<K$ : sens direct.",
+          "points": 1,
+          "part": "Partie A — Étude de la pile",
+          "ref": "pc-piles-probleme-2-q3"
+        },
+        {
+          "notion": "Quantité d'électricité",
+          "difficulty": 2,
+          "statement": "Au bout de $1{,}0\\ \\mathrm{h}$, la masse d'argent déposée vaut :",
+          "options": [
+            {
+              "label": "$m=0{,}403\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$Q=0{,}100\\times3600=360\\ \\mathrm{C}$ ; $n(e^-)=0{,}00373\\ \\mathrm{mol}$ ; $n(\\mathrm{Ag})=n(e^-)$ ; $m=0{,}403\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=0{,}201\\ \\mathrm{g}$",
+              "why": "Tu as divisé $n(e^-)$ par $2$ : un ion $\\mathrm{Ag^+}$ capte un seul électron."
+            },
+            {
+              "label": "$m=0{,}806\\ \\mathrm{g}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ : $n(\\mathrm{Ag})=n(e^-)$."
+            },
+            {
+              "label": "$m=1{,}1\\times10^{-4}\\ \\mathrm{g}$",
+              "why": "Tu as oublié de convertir l'heure en secondes ($\\Delta t=1$ au lieu de $3600\\ \\mathrm{s}$)."
+            }
+          ],
+          "hint": "Enchaîne : $Q$, $n(e^-)$, $n(\\mathrm{Ag})$, $m$.",
+          "solution": "$Q=It=0{,}100\\times3600=360\\ \\mathrm{C}$ ; $n(e^-)=\\dfrac{360}{9{,}65\\times10^{4}}=0{,}00373\\ \\mathrm{mol}$ ; $n(\\mathrm{Ag})=n(e^-)$ ; $m=0{,}00373\\times108=0{,}403\\ \\mathrm{g}$. Contrôle : $n(\\mathrm{Ag})=3{,}73\\ \\mathrm{mmol}<n_0(\\mathrm{Ag^+})=5{,}00\\ \\mathrm{mmol}$ : le dépôt est possible.",
+          "methode": "Un ion $\\mathrm{Ag^+}$ capte $1$ électron : $n(\\mathrm{Ag})=n(e^-)$.",
+          "points": 1,
+          "part": "Partie B — Grandeurs électriques",
+          "ref": "pc-piles-probleme-2-q4"
+        },
+        {
+          "notion": "Grandeurs électriques d'une pile",
+          "difficulty": 2,
+          "statement": "Pendant la même heure, la masse de cuivre consommée à l'anode vaut :",
+          "options": [
+            {
+              "label": "$m=0{,}118\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$n(\\mathrm{Cu})=\\dfrac{n(e^-)}{2}=0{,}001865\\ \\mathrm{mol}$ ; $m=nM=0{,}118\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=0{,}237\\ \\mathrm{g}$",
+              "why": "Tu as pris $n(\\mathrm{Cu})=n(e^-)$ : un atome de cuivre libère $2$ électrons."
+            },
+            {
+              "label": "$m=0{,}403\\ \\mathrm{g}$",
+              "why": "Tu as repris la masse d'argent déposée : la masse de cuivre consommée se calcule avec $M(\\mathrm{Cu})$ et $n(\\mathrm{Cu})=n(e^-)/2$."
+            },
+            {
+              "label": "$m=0{,}474\\ \\mathrm{g}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ au lieu de le diviser."
+            }
+          ],
+          "hint": "La demi-équation d'oxydation du cuivre fait intervenir deux électrons.",
+          "solution": "$n(e^-)=0{,}00373\\ \\mathrm{mol}$ ; $n(\\mathrm{Cu})=\\dfrac{0{,}00373}{2}=0{,}001865\\ \\mathrm{mol}$ ; $m=0{,}001865\\times63{,}5=0{,}118\\ \\mathrm{g}$. Contrôle : $m(\\mathrm{Ag})/m(\\mathrm{Cu})\\approx3{,}40$, rapport de $2\\times108/63{,}5$.",
+          "methode": "Cuivre consommé : $n(\\mathrm{Cu})=n(e^-)/2$.",
+          "points": 1,
+          "part": "Partie B — Grandeurs électriques",
+          "ref": "pc-piles-probleme-2-q5"
+        },
+        {
+          "notion": "Capacité et durée de vie",
+          "difficulty": 3,
+          "statement": "Le cuivre est en excès : le réactif limitant est $\\mathrm{Ag^+}$ ($5{,}00\\ \\mathrm{mmol}$). La durée maximale de fonctionnement à $I=0{,}100\\ \\mathrm{A}$ est d'environ :",
+          "options": [
+            {
+              "label": "$1{,}34\\ \\mathrm{h}$",
+              "correct": true,
+              "why": "$n(e^-)_{max}=n(\\mathrm{Ag^+})=5{,}00\\ \\mathrm{mmol}$ ; $Q_{max}=482{,}5\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{Q_{max}}{I}=4825\\ \\mathrm{s}\\approx1{,}34\\ \\mathrm{h}$."
+            },
+            {
+              "label": "$2{,}68\\ \\mathrm{h}$",
+              "why": "Tu as pris $2$ électrons par ion $\\mathrm{Ag^+}$ ; chaque ion n'en capte qu'un."
+            },
+            {
+              "label": "$0{,}67\\ \\mathrm{h}$",
+              "why": "Tu as divisé par $2$ : $n(e^-)=n(\\mathrm{Ag^+})$, sans facteur $\\frac{1}{2}$."
+            },
+            {
+              "label": "$5{,}36\\ \\mathrm{h}$",
+              "why": "Tu as pris $\\mathrm{Cu^{2+}}$ ($10{,}0\\ \\mathrm{mmol}$) comme réactif : c'est un produit de la pile, non un réactif."
+            }
+          ],
+          "hint": "Identifie le réactif limitant, puis $Q_{max}=n(e^-)_{max}F$ et $\\Delta t=Q_{max}/I$.",
+          "solution": "$n(e^-)_{max}=5{,}00\\ \\mathrm{mmol}$ ; $Q_{max}=5{,}00\\times10^{-3}\\times9{,}65\\times10^{4}=482{,}5\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{482{,}5}{0{,}100}=4825\\ \\mathrm{s}=1{,}34\\ \\mathrm{h}$. Contrôle : en une heure, $3{,}73\\ \\mathrm{mmol}$ d'argent se déposent (partie B) sur $5{,}00\\ \\mathrm{mmol}$ disponibles.",
+          "methode": "Réactif limitant : $\\mathrm{Ag^+}$ ; $n(e^-)_{max}=n(\\mathrm{Ag^+})$.",
+          "points": 1,
+          "part": "Partie B — Grandeurs électriques",
+          "ref": "pc-piles-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [
-   "Grandeurs électriques d'une pile"
-  ],
-  "existing_questions_total": 3,
-  "target_new_questions": 14,
-  "suggested_figures": [
-   "pile — Pile Daniell — deux demi-piles, pont salin, voltmètre",
-   "pile-daniell — La pile Daniell : montage expérimental complet"
-  ],
-  "sources": [
-   {
-    "annale": "pc-svt-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-piles-serie-1",
+      "title": "Piles et production d'énergie · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-piles",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-piles-une-pile-electrochimique-q1",
+        "pc-piles-quantite-d-electricite-q1",
+        "pc-piles-construire-la-pile-q1",
+        "pc-piles-interpretation-q1",
+        "pc-piles-une-pile-electrochimique-q2",
+        "pc-piles-quantite-d-electricite-q2",
+        "pc-piles-construire-la-pile-q2",
+        "pc-piles-interpretation-q2"
+      ]
+    },
+    {
+      "slug": "pc-piles-serie-2",
+      "title": "Piles et production d'énergie · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-piles",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-piles-quantite-d-electricite-q3",
+        "pc-piles-construire-la-pile-q3",
+        "pc-piles-probleme-1-q3",
+        "pc-piles-une-pile-electrochimique-q3",
+        "pc-piles-quantite-d-electricite-q4",
+        "pc-piles-construire-la-pile-q4",
+        "pc-piles-interpretation-q3",
+        "pc-piles-capacite-et-duree-de-vie-q1"
+      ]
+    },
+    {
+      "slug": "pc-piles-serie-3",
+      "title": "Piles et production d'énergie · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-piles",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-piles-probleme-1-q1",
+        "pc-piles-probleme-2-q1",
+        "pc-piles-probleme-1-q2",
+        "pc-piles-probleme-2-q2",
+        "pc-piles-probleme-2-q3",
+        "pc-piles-probleme-1-q4",
+        "pc-piles-probleme-2-q4",
+        "pc-piles-probleme-1-q5",
+        "pc-piles-probleme-2-q5",
+        "pc-piles-probleme-1-q6",
+        "pc-piles-probleme-2-q6"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Une pile électrochimique",
-    "lesson": "Constitution d'une pile",
-    "role": "cours",
-    "bac_frequency": null,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-piles-une-pile-electrochimique",
-   "chapter": "pc-piles",
-   "kind": "qcu",
-   "title": "Une pile électrochimique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-piles-une-pile-electrochimique-q1",
-     "notion": "Une pile électrochimique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Quantité d'électricité",
-    "lesson": "Grandeurs électriques d'une pile",
-    "role": "cours",
-    "bac_frequency": null,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-piles-quantite-d-electricite",
-   "chapter": "pc-piles",
-   "kind": "qcu",
-   "title": "Quantité d'électricité",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-piles-quantite-d-electricite-q1",
-     "notion": "Quantité d'électricité",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Construire la pile",
-    "lesson": "La pile Daniell : montage et mesures",
-    "role": "cours",
-    "bac_frequency": null,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-piles-construire-la-pile",
-   "chapter": "pc-piles",
-   "kind": "qcu",
-   "title": "Construire la pile",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-piles-construire-la-pile-q1",
-     "notion": "Construire la pile",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Interprétation",
-    "lesson": "La pile Daniell : montage et mesures",
-    "role": "cours",
-    "bac_frequency": null,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-piles-interpretation",
-   "chapter": "pc-piles",
-   "kind": "qcu",
-   "title": "Interprétation",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-piles-interpretation-q1",
-     "notion": "Interprétation",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Capacité et durée de vie",
-    "lesson": "Approfondissement",
-    "role": "approfondissement",
-    "bac_frequency": null,
-    "existing_questions": 1,
-    "target_new_questions": 0,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-piles-capacite-et-duree-de-vie",
-   "chapter": "pc-piles",
-   "kind": "qcu",
-   "title": "Capacité et durée de vie",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-piles-capacite-et-duree-de-vie-q1",
-     "notion": "Capacité et durée de vie",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-piles-probleme-1",
-   "chapter": "pc-piles",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-piles-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-piles-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-piles-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-piles-probleme-2",
-   "chapter": "pc-piles",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-piles-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-piles-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-piles-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-piles-serie-1",
-   "title": "Piles et production d'énergie · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-piles",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-piles-serie-2",
-   "title": "Piles et production d'énergie · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-piles",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-piles-serie-3",
-   "title": "Piles et production d'énergie · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-piles",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
