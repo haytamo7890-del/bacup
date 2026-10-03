@@ -1,1302 +1,2090 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "track": null,
- "_scaffold": {
-  "pack": "pc-commun",
-  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-electrolyse",
-   "name": "Électrolyse",
-   "domain": "chimie",
-   "unit": "Évolution & électrochimie"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-electrolyse",
+      "name": "Électrolyse",
+      "domain": "chimie",
+      "unit": "Évolution & électrochimie"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Forcer un système à reculer",
+      "Le montage",
+      "Écrire les réactions aux électrodes",
+      "Identifier les produits",
+      "La loi de Faraday",
+      "La masse déposée",
+      "Le volume de gaz",
+      "Déterminer une durée ou une intensité",
+      "L'épaisseur d'un dépôt",
+      "Les applications industrielles",
+      "L'affinage électrolytique",
+      "La galvanoplastie",
+      "La tension minimale",
+      "Le bilan énergétique",
+      "Méthode 1 — Identifier les réactions aux électrodes",
+      "Méthode 2 — La chaîne quantitative",
+      "Méthode 3 — Déterminer une durée, une intensité ou une concentration",
+      "Méthode 4 — Le rendement faradique",
+      "Méthode 5 — Comparer pile et électrolyse"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Identifier les réactions aux électrodes",
+      "Méthode 2 — La chaîne quantitative",
+      "Méthode 3 — Déterminer une durée, une intensité ou une concentration",
+      "Méthode 4 — Le rendement faradique",
+      "Méthode 5 — Comparer pile et électrolyse"
+    ],
+    "existing_questions_total": 8,
+    "target_new_questions": 33,
+    "suggested_figures": [
+      "montage-electrolyse — Montage d'une électrolyse"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "Forcer un système à reculer",
-   "Le montage",
-   "Écrire les réactions aux électrodes",
-   "Identifier les produits",
-   "La loi de Faraday",
-   "La masse déposée",
-   "Le volume de gaz",
-   "Déterminer une durée ou une intensité",
-   "L'épaisseur d'un dépôt",
-   "Les applications industrielles",
-   "L'affinage électrolytique",
-   "La galvanoplastie",
-   "La tension minimale",
-   "Le bilan énergétique",
-   "Méthode 1 — Identifier les réactions aux électrodes",
-   "Méthode 2 — La chaîne quantitative",
-   "Méthode 3 — Déterminer une durée, une intensité ou une concentration",
-   "Méthode 4 — Le rendement faradique",
-   "Méthode 5 — Comparer pile et électrolyse"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Forcer un système à reculer",
+        "lesson": "La transformation forcée",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 3,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-forcer-un-systeme-a-reculer",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "Forcer un système à reculer",
+      "difficulty": 1,
+      "questions": [
+        {
+          "notion": "Forcer un système à reculer",
+          "difficulty": 1,
+          "statement": "Une électrolyse est une transformation :",
+          "options": [
+            {
+              "label": "forcée : un générateur impose le sens inverse du sens spontané",
+              "correct": true,
+              "why": "Le générateur apporte l'énergie qui force le système à évoluer à l'opposé de son sens spontané ($Q_r$ s'éloigne de $K$)."
+            },
+            {
+              "label": "spontanée : le système évolue seul vers son état d'équilibre",
+              "why": "Une évolution spontanée rapproche $Q_r$ de $K$ sans apport d'énergie : c'est le cas d'une pile, non d'une électrolyse."
+            },
+            {
+              "label": "qui rapproche toujours le quotient $Q_r$ de la constante $K$",
+              "why": "C'est l'effet d'une évolution spontanée ; l'électrolyse éloigne $Q_r$ de $K$."
+            },
+            {
+              "label": "sans aucun transfert d'électrons entre les espèces du système",
+              "why": "Comme dans une pile, il y a transfert d'électrons : oxydation à l'anode, réduction à la cathode."
+            }
+          ],
+          "hint": "Que fournit le générateur au système ?",
+          "solution": "Dans une électrolyse, le générateur impose le sens inverse du sens spontané : le système est éloigné de l'équilibre ($Q_r$ s'éloigne de $K$). Contrôle : sans générateur, rien ne se passerait.",
+          "methode": "Électrolyse : transformation forcée, $Q_r$ s'éloigne de $K$.",
+          "points": 1,
+          "ref": "pc-electrolyse-forcer-un-systeme-a-reculer-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le montage",
+        "lesson": "La transformation forcée",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-le-montage",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "Le montage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le montage",
+          "difficulty": 1,
+          "statement": "Dans une cellule d'électrolyse, l'anode est l'électrode reliée :",
+          "options": [
+            {
+              "label": "à la borne positive du générateur",
+              "correct": true,
+              "why": "L'anode est reliée à la borne $+$ : c'est le siège de l'oxydation."
+            },
+            {
+              "label": "à la borne négative du générateur",
+              "why": "La borne $-$ est reliée à la cathode, siège de la réduction."
+            },
+            {
+              "label": "à l'une ou l'autre borne, au choix de l'opérateur",
+              "why": "Le nom de l'électrode est imposé par la borne à laquelle elle est reliée : $+$ pour l'anode."
+            },
+            {
+              "label": "à un pont salin plongeant dans la solution",
+              "why": "Une cellule d'électrolyse n'a pas besoin de pont salin : les deux électrodes plongent dans la même solution."
+            }
+          ],
+          "hint": "Retiens : anode et oxydation ; l'oxydation libère des électrons qui doivent être repris par le générateur.",
+          "solution": "Les électrons libérés à l'anode sont repris par la borne $+$ du générateur ; ceux de la borne $-$ sont fournis à la cathode. Contrôle : la règle « anode = oxydation » est la même que dans une pile ; seule la polarité change.",
+          "methode": "Électrolyse : anode reliée à $+$, cathode reliée à $-$.",
+          "points": 1,
+          "ref": "pc-electrolyse-le-montage-q1"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 2,
+          "statement": "Dans une électrolyse, le courant (sens conventionnel) et les électrons dans les fils sont tels que :",
+          "options": [
+            {
+              "label": "le courant traverse la solution de l'anode vers la cathode ; les électrons arrivent à la cathode par le fil relié à la borne $-$",
+              "correct": true,
+              "why": "Le courant entre par l'anode, traverse la solution et sort par la cathode ; les électrons suivent le sens inverse du courant dans les fils."
+            },
+            {
+              "label": "le courant traverse la solution de la cathode vers l'anode ; les électrons arrivent à la cathode par le fil relié à la borne $-$",
+              "why": "Le courant conventionnel sort de la borne $+$ et entre par l'anode : il traverse donc la solution de l'anode vers la cathode."
+            },
+            {
+              "label": "le courant traverse la solution de l'anode vers la cathode ; les électrons arrivent à la cathode par le fil relié à la borne $+$",
+              "why": "Les électrons arrivant à la cathode proviennent de la borne $-$ du générateur et non de la borne $+$."
+            },
+            {
+              "label": "les électrons traversent la solution de l'anode vers la cathode, portés par les ions",
+              "why": "Les électrons ne circulent pas dans la solution : ce sont les ions qui assurent la conduction du courant."
+            }
+          ],
+          "hint": "Dans la solution, quels porteurs de charge circulent ? Dans les fils ?",
+          "solution": "Le courant conventionnel va de la borne $+$ à l'anode, traverse la solution jusqu'à la cathode, puis revient à la borne $-$. Les électrons circulent en sens inverse dans les fils, et les ions transportent le courant dans la solution. Contrôle : courant et électrons ont toujours des sens opposés dans les fils.",
+          "methode": "Fils : électrons ; solution : ions ; courant conventionnel de l'anode à la cathode dans la solution.",
+          "points": 1,
+          "ref": "pc-electrolyse-le-montage-q2"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 2,
+          "statement": "Une électrode inerte (graphite, platine) dans une cellule d'électrolyse :",
+          "options": [
+            {
+              "label": "ne participe pas aux réactions : elle sert de lieu aux transferts d'électrons",
+              "correct": true,
+              "why": "Elle conduit le courant mais n'est ni oxydée ni réduite : les transformations concernent les espèces de la solution."
+            },
+            {
+              "label": "ne conduit pas le courant électrique, d'où son nom d'électrode inerte",
+              "why": "Une électrode inerte est conductrice ; c'est son absence de réactivité qui la rend « inerte »."
+            },
+            {
+              "label": "est toujours consommée à l'anode, où elle s'oxyde la première",
+              "why": "Une électrode inerte n'est pas oxydée dans les conditions de l'électrolyse : elle ne se consomme pas."
+            },
+            {
+              "label": "empêche toute réaction aux électrodes, seule la solution restant active",
+              "why": "Les réactions ont lieu à la surface des électrodes ; l'électrode inerte en est le support, non un obstacle."
+            }
+          ],
+          "hint": "Que signifie « inerte » : conductrice ou non ? réactive ou non ?",
+          "solution": "Une électrode inerte est un conducteur chimiquement stable : elle permet l'échange d'électrons avec les espèces de la solution sans réagir elle-même. Contrôle : en fin d'électrolyse, une électrode de graphite a la même masse qu'au départ.",
+          "methode": "Électrode inerte : conductrice, non réactive.",
+          "points": 1,
+          "ref": "pc-electrolyse-le-montage-q3"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 3,
+          "statement": "On électrolyse du sulfate de cuivre(II) entre deux lames de cuivre ; l'anode, en cuivre, s'oxyde ($\\mathrm{Cu}\\rightarrow\\mathrm{Cu^{2+}}+2\\,e^-$). On inverse les branchements du générateur. Le nouvel effet est :",
+          "options": [
+            {
+              "label": "le dépôt de la première lame se dissout ; l'autre lame se recouvre de cuivre",
+              "correct": true,
+              "why": "La première lame devient l'anode : son cuivre s'oxyde. L'autre devient la cathode : $\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$."
+            },
+            {
+              "label": "rien ne change, car les deux électrodes sont toutes deux en cuivre",
+              "why": "Les rôles s'échangent : l'électrode reliée à $+$ s'oxyde et celle reliée à $-$ reçoit le dépôt."
+            },
+            {
+              "label": "le dépôt de la première lame continue de croître sur celle-ci",
+              "why": "La première lame, reliée à $+$, devient l'anode : le cuivre n'y est plus réduit mais oxydé."
+            },
+            {
+              "label": "les deux lames se recouvrent de cuivre en même temps dans la cuve",
+              "why": "Une électrode siège d'une oxydation ne peut pas accumuler de dépôt : seule la cathode voit du cuivre se déposer."
+            }
+          ],
+          "hint": "Après inversion, quelle lame est reliée à la borne $+$ ? Qu'arrive-t-il au cuivre à cet endroit ?",
+          "solution": "L'inversion échange anode et cathode. La lame qui avait reçu le dépôt, désormais anode, voit son cuivre s'oxyder ($\\mathrm{Cu}\\rightarrow\\mathrm{Cu^{2+}}+2\\,e^-$) ; l'autre lame, désormais cathode, reçoit un dépôt. Contrôle : la quantité de cuivre dissoute est égale à celle déposée (mêmes $2\\,e^-$).",
+          "methode": "Inverser le générateur échange les rôles d'anode et de cathode.",
+          "points": 1,
+          "ref": "pc-electrolyse-le-montage-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Écrire les réactions aux électrodes",
+        "lesson": "La transformation forcée",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-ecrire-les-reactions-aux-electrodes",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "Écrire les réactions aux électrodes",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Écrire les réactions aux électrodes",
+          "difficulty": 1,
+          "statement": "Lors de l'électrolyse d'une solution de chlorure de cuivre(II) ($\\mathrm{Cu^{2+}}$, $\\mathrm{Cl^-}$), la réaction à la cathode est :",
+          "options": [
+            {
+              "label": "$\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu(s)}$",
+              "correct": true,
+              "why": "À la cathode a lieu la réduction : l'ion $\\mathrm{Cu^{2+}}$ capte deux électrons et se dépose."
+            },
+            {
+              "label": "$\\mathrm{Cu(s)}\\rightarrow\\mathrm{Cu^{2+}}+2\\,e^-$",
+              "why": "C'est une oxydation : elle ne peut pas se produire à la cathode."
+            },
+            {
+              "label": "$2\\,\\mathrm{Cl^-}\\rightarrow\\mathrm{Cl_2}+2\\,e^-$",
+              "why": "C'est une oxydation : elle a lieu à l'anode, où se dégage le dichlore."
+            },
+            {
+              "label": "$\\mathrm{Cl_2}+2\\,e^-\\rightarrow2\\,\\mathrm{Cl^-}$",
+              "why": "Le dichlore n'est pas présent au départ : $\\mathrm{Cl^-}$ n'est pas réduit, c'est un réducteur."
+            }
+          ],
+          "hint": "La cathode est le siège de la réduction : quel ion de la solution capte des électrons ?",
+          "solution": "À la cathode : réduction de l'oxydant $\\mathrm{Cu^{2+}}$ : $\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$ ; à l'anode : oxydation de $\\mathrm{Cl^-}$ en $\\mathrm{Cl_2}$. Contrôle : charges conservées ($+2-2=0$).",
+          "methode": "Cathode : réduction ; anode : oxydation.",
+          "points": 1,
+          "ref": "pc-electrolyse-ecrire-les-reactions-aux-electrodes-q1"
+        },
+        {
+          "notion": "Écrire les réactions aux électrodes",
+          "difficulty": 2,
+          "statement": "À l'anode de cette même électrolyse, il se dégage du dichlore. La demi-équation est :",
+          "options": [
+            {
+              "label": "$2\\,\\mathrm{Cl^-}\\rightarrow\\mathrm{Cl_2}+2\\,e^-$",
+              "correct": true,
+              "why": "Oxydation : $2$ ions chlorure cèdent chacun un électron ; charges : $-2=0-2$."
+            },
+            {
+              "label": "$\\mathrm{Cl_2}+2\\,e^-\\rightarrow2\\,\\mathrm{Cl^-}$",
+              "why": "C'est la réduction du dichlore, réaction inverse de celle qui a lieu à l'anode."
+            },
+            {
+              "label": "$\\mathrm{Cl^-}\\rightarrow\\mathrm{Cl_2}+e^-$",
+              "why": "Les atomes de chlore ne sont pas conservés ($1$ à gauche, $2$ à droite) ; il faut $2\\,\\mathrm{Cl^-}$."
+            },
+            {
+              "label": "$2\\,\\mathrm{Cl^-}+2\\,e^-\\rightarrow\\mathrm{Cl_2}$",
+              "why": "Les charges ne sont pas conservées ($-4$ à gauche, $0$ à droite) : les électrons sont du mauvais côté pour une oxydation."
+            }
+          ],
+          "hint": "À l'anode, l'espèce est oxydée : écris les électrons du côté des produits et équilibre les atomes de chlore.",
+          "solution": "$2\\,\\mathrm{Cl^-}\\rightarrow\\mathrm{Cl_2}+2\\,e^-$ : atomes de chlore : $2=2$ ; charges : $-2=-2$. Contrôle : les $2\\,e^-$ cédés à l'anode sont ceux captés par $\\mathrm{Cu^{2+}}$ à la cathode.",
+          "methode": "Anode : le réducteur cède des électrons, qui figurent à droite.",
+          "points": 1,
+          "ref": "pc-electrolyse-ecrire-les-reactions-aux-electrodes-q2"
+        },
+        {
+          "notion": "Écrire les réactions aux électrodes",
+          "difficulty": 3,
+          "statement": "On électrolyse de l'eau additionnée de sulfate de sodium (les ions $\\mathrm{Na^+}$ et $\\mathrm{SO_4^{2-}}$ sont spectateurs). Il se forme du dihydrogène à la cathode et du dioxygène à l'anode. L'équation globale est :",
+          "options": [
+            {
+              "label": "$2\\,\\mathrm{H_2O}\\rightarrow2\\,\\mathrm{H_2}+\\mathrm{O_2}$",
+              "correct": true,
+              "why": "$\\mathrm{H}$ : $4=4$ ; $\\mathrm{O}$ : $2=2$ ; obtenu avec la cathode $2\\times(2\\,\\mathrm{H_2O}+2\\,e^-\\rightarrow\\mathrm{H_2}+2\\,\\mathrm{HO^-})$ et l'anode $2\\,\\mathrm{H_2O}\\rightarrow\\mathrm{O_2}+4\\,\\mathrm{H^+}+4\\,e^-$, puis neutralisation."
+            },
+            {
+              "label": "$2\\,\\mathrm{H_2O}\\rightarrow\\mathrm{H_2}+\\mathrm{O_2}$",
+              "why": "Les atomes d'hydrogène ne sont pas conservés : $4$ à gauche, $2$ à droite."
+            },
+            {
+              "label": "$2\\,\\mathrm{H_2O}\\rightarrow2\\,\\mathrm{H_2}+2\\,\\mathrm{O_2}$",
+              "why": "Les atomes d'oxygène ne sont pas conservés : $2$ à gauche, $4$ à droite."
+            },
+            {
+              "label": "$4\\,\\mathrm{H_2O}\\rightarrow2\\,\\mathrm{H_2}+\\mathrm{O_2}$",
+              "why": "Les atomes d'hydrogène ne sont pas conservés : $8$ à gauche, $4$ à droite."
+            }
+          ],
+          "hint": "Compte les atomes $\\mathrm{H}$ et $\\mathrm{O}$ des deux côtés.",
+          "solution": "À la cathode : $4\\,\\mathrm{H_2O}+4\\,e^-\\rightarrow2\\,\\mathrm{H_2}+4\\,\\mathrm{HO^-}$ ; à l'anode : $2\\,\\mathrm{H_2O}\\rightarrow\\mathrm{O_2}+4\\,\\mathrm{H^+}+4\\,e^-$. Les ions $\\mathrm{H^+}$ et $\\mathrm{HO^-}$ se recombinent ($4\\,\\mathrm{H_2O}$ formées), d'où le bilan : $2\\,\\mathrm{H_2O}\\rightarrow2\\,\\mathrm{H_2}+\\mathrm{O_2}$. Contrôle : $\\mathrm{H}$ : $4=4$ ; $\\mathrm{O}$ : $2=2$.",
+          "methode": "Eau : $2\\,\\mathrm{H_2O}\\rightarrow2\\,\\mathrm{H_2}+\\mathrm{O_2}$ ; les électrons échangés valent $4$ pour $2\\,\\mathrm{H_2}$.",
+          "points": 1,
+          "ref": "pc-electrolyse-ecrire-les-reactions-aux-electrodes-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Identifier les produits",
+        "lesson": "La transformation forcée",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-identifier-les-produits",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "Identifier les produits",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Identifier les produits",
+          "difficulty": 1,
+          "statement": "Un gaz recueilli lors d'une électrolyse provoque une petite détonation à l'approche d'une flamme. C'est :",
+          "options": [
+            {
+              "label": "le dihydrogène $\\mathrm{H_2}$",
+              "correct": true,
+              "why": "Le dihydrogène brûle dans l'air en produisant une petite détonation caractéristique."
+            },
+            {
+              "label": "le dioxygène $\\mathrm{O_2}$",
+              "why": "Le dioxygène ne détone pas : il rallume une bûchette incandescente."
+            },
+            {
+              "label": "le dichlore $\\mathrm{Cl_2}$",
+              "why": "Le dichlore est un gaz jaune-vert à l'odeur piquante, qui ne détone pas ainsi."
+            },
+            {
+              "label": "le dioxyde de carbone $\\mathrm{CO_2}$",
+              "why": "Le dioxyde de carbone éteint une flamme et trouble l'eau de chaux ; il ne détone pas."
+            }
+          ],
+          "hint": "Quel gaz fait « pop » à l'approche d'une allumette ?",
+          "solution": "Le test caractéristique du dihydrogène est la petite détonation à l'approche d'une flamme. Contrôle : $\\mathrm{O_2}$ rallume une bûchette incandescente ; $\\mathrm{CO_2}$ trouble l'eau de chaux.",
+          "methode": "Test de $\\mathrm{H_2}$ : détonation ; de $\\mathrm{O_2}$ : bûchette qui se rallume.",
+          "points": 1,
+          "ref": "pc-electrolyse-identifier-les-produits-q1"
+        },
+        {
+          "notion": "Identifier les produits",
+          "difficulty": 2,
+          "statement": "Dans l'électrolyse de l'eau, le rapport des volumes de gaz recueillis $\\dfrac{V(\\mathrm{H_2})}{V(\\mathrm{O_2})}$ à même température et même pression vaut :",
+          "options": [
+            {
+              "label": "$2$",
+              "correct": true,
+              "why": "$2\\,\\mathrm{H_2O}\\rightarrow2\\,\\mathrm{H_2}+\\mathrm{O_2}$ : $n(\\mathrm{H_2})=2\\,n(\\mathrm{O_2})$, et à même $V_m$, $V(\\mathrm{H_2})=2\\,V(\\mathrm{O_2})$."
+            },
+            {
+              "label": "$\\dfrac{1}{2}$",
+              "why": "Tu as inversé le rapport : c'est le dihydrogène qui est obtenu en quantité double."
+            },
+            {
+              "label": "$1$",
+              "why": "Cela supposerait $n(\\mathrm{H_2})=n(\\mathrm{O_2})$ ; les coefficients de l'équation valent $2$ et $1$."
+            },
+            {
+              "label": "$4$",
+              "why": "Tu as pris le rapport des électrons ($4$ pour $\\mathrm{O_2}$, $2$ pour $\\mathrm{H_2}$ par molécule) comme rapport des quantités ; $n(\\mathrm{H_2})/n(\\mathrm{O_2})=2$."
+            }
+          ],
+          "hint": "Utilise les coefficients de l'équation et le fait que $V=nV_m$.",
+          "solution": "$2\\,\\mathrm{H_2O}\\rightarrow2\\,\\mathrm{H_2}+\\mathrm{O_2}$ : $\\dfrac{n(\\mathrm{H_2})}{n(\\mathrm{O_2})}=2$ donc $\\dfrac{V(\\mathrm{H_2})}{V(\\mathrm{O_2})}=2$ ($V=nV_m$ avec le même $V_m$). Contrôle : le tube de la cathode contient deux fois plus de gaz que celui de l'anode.",
+          "methode": "Même $V_m$ : rapport des volumes = rapport des quantités.",
+          "points": 1,
+          "ref": "pc-electrolyse-identifier-les-produits-q2"
+        },
+        {
+          "notion": "Identifier les produits",
+          "difficulty": 2,
+          "statement": "On électrolyse une solution concentrée de chlorure de sodium en ajoutant de la phénolphtaléine près de la cathode. On observe :",
+          "options": [
+            {
+              "label": "une teinte rose, car l'eau est réduite en $\\mathrm{H_2}$ et en ions $\\mathrm{HO^-}$",
+              "correct": true,
+              "why": "$2\\,\\mathrm{H_2O}+2\\,e^-\\rightarrow\\mathrm{H_2}+2\\,\\mathrm{HO^-}$ : le milieu devient basique, la phénolphtaléine rosit."
+            },
+            {
+              "label": "aucune teinte, car $\\mathrm{Na^+}$ est réduit en sodium métallique $\\mathrm{Na(s)}$",
+              "why": "Le sodium métallique réagirait violemment avec l'eau : $\\mathrm{Na^+}$ n'est pas réduit dans l'eau, c'est l'eau qui l'est."
+            },
+            {
+              "label": "une teinte rose près de l'anode, car la formation de $\\mathrm{Cl_2}$ libère des ions $\\mathrm{HO^-}$",
+              "why": "La formation de $\\mathrm{Cl_2}$ ($2\\,\\mathrm{Cl^-}\\rightarrow\\mathrm{Cl_2}+2\\,e^-$) ne produit aucun ion $\\mathrm{HO^-}$."
+            },
+            {
+              "label": "aucune teinte nulle part, car aucune base ne se forme au cours de l'électrolyse",
+              "why": "La réduction de l'eau à la cathode forme des ions $\\mathrm{HO^-}$ : la solution devient basique."
+            }
+          ],
+          "hint": "Quelle espèce est réduite à la cathode ? Forme-t-elle un acide ou une base ?",
+          "solution": "À la cathode, l'eau est réduite : $2\\,\\mathrm{H_2O}+2\\,e^-\\rightarrow\\mathrm{H_2}+2\\,\\mathrm{HO^-}$. Les ions $\\mathrm{HO^-}$ rendent la solution basique : la phénolphtaléine devient rose. Contrôle : à l'anode, $2\\,\\mathrm{Cl^-}\\rightarrow\\mathrm{Cl_2}+2\\,e^-$ ne modifie pas le $\\mathrm{pH}$ de la même façon.",
+          "methode": "Électrolyse de $\\mathrm{NaCl}$ : $\\mathrm{H_2}$ et $\\mathrm{HO^-}$ à la cathode, $\\mathrm{Cl_2}$ à l'anode.",
+          "points": 1,
+          "ref": "pc-electrolyse-identifier-les-produits-q3"
+        },
+        {
+          "notion": "Identifier les produits",
+          "difficulty": 3,
+          "statement": "On électrolyse une solution de sulfate de cuivre(II) entre deux électrodes de graphite. Les observations sont :",
+          "options": [
+            {
+              "label": "cathode : dépôt rouge de cuivre ; anode : dégagement de dioxygène ; la solution se décolore peu à peu",
+              "correct": true,
+              "why": "$\\mathrm{Cu^{2+}}$ est réduit en $\\mathrm{Cu}$ ; l'eau est oxydée en $\\mathrm{O_2}$ ; la disparition de $\\mathrm{Cu^{2+}}$ décolore la solution bleue."
+            },
+            {
+              "label": "cathode : dégagement de dihydrogène ; anode : dégagement de dioxygène ; la solution reste bleue",
+              "why": "$\\mathrm{Cu^{2+}}$, oxydant plus fort que l'eau, est réduit : on obtient un dépôt de cuivre, pas de $\\mathrm{H_2}$ (et la solution se décolore)."
+            },
+            {
+              "label": "cathode : dégagement de dioxygène ; anode : dépôt rouge de cuivre ; la solution se décolore",
+              "why": "Les rôles sont inversés : la réduction (dépôt de cuivre) a lieu à la cathode, l'oxydation (dioxygène) à l'anode."
+            },
+            {
+              "label": "cathode : dépôt rouge de cuivre ; anode : dégagement de dichlore ; la solution se décolore",
+              "why": "La solution ne contient aucun ion chlorure : le gaz formé à l'anode ne peut pas être du dichlore."
+            }
+          ],
+          "hint": "La cathode réduit : quelle espèce coloré de la solution est réduite ? L'anode oxyde : quel réducteur est présent, sans chlorure ?",
+          "solution": "Cathode : $\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$ (dépôt rouge, perte de la couleur bleue). Anode : $2\\,\\mathrm{H_2O}\\rightarrow\\mathrm{O_2}+4\\,\\mathrm{H^+}+4\\,e^-$ (dioxygène). Contrôle : $\\mathrm{SO_4^{2-}}$ est spectateur, et le milieu s'acidifie.",
+          "methode": "Sulfate de cuivre(II) entre graphite : $\\mathrm{Cu}$ à la cathode, $\\mathrm{O_2}$ à l'anode.",
+          "points": 1,
+          "ref": "pc-electrolyse-identifier-les-produits-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La loi de Faraday",
+        "lesson": "Aspects quantitatifs",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-la-loi-de-faraday",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "La loi de Faraday",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La loi de Faraday",
+          "difficulty": 1,
+          "statement": "Une électrolyse dure $30\\ \\mathrm{min}$ sous un courant constant $I=2{,}0\\ \\mathrm{A}$. La quantité d'électricité qui traverse la cellule vaut :",
+          "options": [
+            {
+              "label": "$Q=3{,}6\\times10^{3}\\ \\mathrm{C}$",
+              "correct": true,
+              "why": "$Q=I\\,\\Delta t=2{,}0\\times1800=3600\\ \\mathrm{C}$ ($30\\ \\mathrm{min}=1800\\ \\mathrm{s}$)."
+            },
+            {
+              "label": "$Q=60\\ \\mathrm{C}$",
+              "why": "Tu as multiplié par la durée en minutes : il faut la convertir en secondes ($1800\\ \\mathrm{s}$)."
+            },
+            {
+              "label": "$Q=9{,}0\\times10^{2}\\ \\mathrm{C}$",
+              "why": "Tu as divisé la durée par l'intensité : $Q=I\\,\\Delta t$ est un produit."
+            },
+            {
+              "label": "$Q=1{,}1\\times10^{-3}\\ \\mathrm{C}$",
+              "why": "Tu as divisé l'intensité par la durée : $Q=I\\,\\Delta t$ est un produit."
+            }
+          ],
+          "hint": "$Q=I\\,\\Delta t$, avec $\\Delta t$ en secondes.",
+          "solution": "$\\Delta t=30\\times60=1800\\ \\mathrm{s}$ donc $Q=I\\,\\Delta t=2{,}0\\times1800=3600\\ \\mathrm{C}$. Contrôle : unité : $\\mathrm{A}\\times\\mathrm{s}=\\mathrm{C}$.",
+          "methode": "$Q=I\\,\\Delta t$ ($\\Delta t$ en secondes) ; $Q=n(e^-)\\,F$.",
+          "points": 1,
+          "ref": "pc-electrolyse-la-loi-de-faraday-q1"
+        },
+        {
+          "notion": "La loi de Faraday",
+          "difficulty": 2,
+          "statement": "Une quantité d'électricité $Q=3600\\ \\mathrm{C}$ a traversé la cellule. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$, la quantité d'électrons échangée vaut :",
+          "options": [
+            {
+              "label": "$n(e^-)=3{,}73\\times10^{-2}\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$n(e^-)=\\dfrac{Q}{F}=\\dfrac{3600}{9{,}65\\times10^{4}}=0{,}0373\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$n(e^-)=26{,}8\\ \\mathrm{mol}$",
+              "why": "Tu as calculé $F/Q$ : la quantité d'électrons est $Q/F$."
+            },
+            {
+              "label": "$n(e^-)=3{,}5\\times10^{8}\\ \\mathrm{mol}$",
+              "why": "Tu as multiplié $Q$ par $F$ : $Q=n(e^-)F$ donne $n(e^-)=Q/F$."
+            },
+            {
+              "label": "$n(e^-)=3{,}7\\times10^{2}\\ \\mathrm{mol}$",
+              "why": "Tu as utilisé $F=9{,}65$ au lieu de $9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ : la puissance de dix a été oubliée."
+            }
+          ],
+          "hint": "Utilise $Q=n(e^-)\\,F$ et vérifie l'ordre de grandeur de $F$.",
+          "solution": "$n(e^-)=\\dfrac{3600}{9{,}65\\times10^{4}}=0{,}0373\\ \\mathrm{mol}$. Contrôle : $3600\\ \\mathrm{C}$ est environ $4\\ \\%$ de $F$, donc environ $0{,}04\\ \\mathrm{mol}$.",
+          "methode": "$n(e^-)=Q/F$ avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$.",
+          "points": 1,
+          "ref": "pc-electrolyse-la-loi-de-faraday-q2"
+        },
+        {
+          "notion": "La loi de Faraday",
+          "difficulty": 3,
+          "statement": "Deux cellules identiques sont traversées par la même quantité d'électricité : l'une dépose de l'argent ($\\mathrm{Ag^+}+e^-\\rightarrow\\mathrm{Ag}$), l'autre du cuivre ($\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$). Avec $M(\\mathrm{Ag})=108$ et $M(\\mathrm{Cu})=63{,}5\\ \\mathrm{g\\,mol^{-1}}$, le rapport $\\dfrac{m(\\mathrm{Ag})}{m(\\mathrm{Cu})}$ vaut :",
+          "options": [
+            {
+              "label": "$3{,}40$",
+              "correct": true,
+              "why": "Pour $n(e^-)$ donné : $n(\\mathrm{Ag})=n(e^-)$ et $n(\\mathrm{Cu})=\\dfrac{n(e^-)}{2}$ ; rapport $=\\dfrac{2\\times108}{63{,}5}=3{,}40$."
+            },
+            {
+              "label": "$1{,}70$",
+              "why": "Tu as oublié le nombre d'électrons : $n(\\mathrm{Cu})=n(e^-)/2$, ce qui double le rapport."
+            },
+            {
+              "label": "$6{,}80$",
+              "why": "Tu as appliqué deux fois le facteur $2$ : un seul suffit, issu de $n(\\mathrm{Cu})=n(e^-)/2$."
+            },
+            {
+              "label": "$0{,}29$",
+              "why": "Tu as inversé le rapport : c'est l'argent, $1$ électron par atome, qui se dépose en plus grande masse."
+            }
+          ],
+          "hint": "Exprime $n(\\mathrm{Ag})$ et $n(\\mathrm{Cu})$ en fonction de $n(e^-)$, puis multiplie par les masses molaires.",
+          "solution": "$m(\\mathrm{Ag})=n(e^-)\\,M(\\mathrm{Ag})$ et $m(\\mathrm{Cu})=\\dfrac{n(e^-)}{2}M(\\mathrm{Cu})$ donc $\\dfrac{m(\\mathrm{Ag})}{m(\\mathrm{Cu})}=\\dfrac{2\\times108}{63{,}5}=3{,}40$. Contrôle : l'argent, plus lourd et déposé par $1\\,e^-$, l'emporte largement.",
+          "methode": "Rapport des masses = $\\dfrac{z_{Cu}\\,M(Ag)}{z_{Ag}\\,M(Cu)}$ avec $z$ = électrons par atome.",
+          "points": 1,
+          "ref": "pc-electrolyse-la-loi-de-faraday-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La masse déposée",
+        "lesson": "Aspects quantitatifs",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-la-masse-deposee",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "La masse déposée",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "La masse déposée",
+          "difficulty": 1,
+          "statement": "On électrolyse une solution de nitrate d'argent avec $I=1{,}0\\ \\mathrm{A}$ pendant $965\\ \\mathrm{s}$ ($\\mathrm{Ag^+}+e^-\\rightarrow\\mathrm{Ag}$). Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ et $M(\\mathrm{Ag})=108\\ \\mathrm{g\\,mol^{-1}}$, la masse d'argent déposée vaut :",
+          "options": [
+            {
+              "label": "$m=1{,}08\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$Q=965\\ \\mathrm{C}$ ; $n(e^-)=0{,}0100\\ \\mathrm{mol}$ ; $n(\\mathrm{Ag})=n(e^-)$ ; $m=0{,}0100\\times108=1{,}08\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=0{,}54\\ \\mathrm{g}$",
+              "why": "Tu as divisé $n(e^-)$ par $2$ : un ion $\\mathrm{Ag^+}$ capte un seul électron."
+            },
+            {
+              "label": "$m=2{,}16\\ \\mathrm{g}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ : $n(\\mathrm{Ag})=n(e^-)$."
+            },
+            {
+              "label": "$m=0{,}0100\\ \\mathrm{g}$",
+              "why": "$0{,}0100$ est la quantité de matière en mol : il manque la multiplication par $M(\\mathrm{Ag})$."
+            }
+          ],
+          "hint": "Combien d'électrons faut-il pour déposer un atome d'argent ?",
+          "solution": "$n(e^-)=\\dfrac{965}{9{,}65\\times10^{4}}=0{,}0100\\ \\mathrm{mol}$ ; $n(\\mathrm{Ag})=n(e^-)$ ; $m=nM=0{,}0100\\times108=1{,}08\\ \\mathrm{g}$. Contrôle : $1{,}0\\ \\mathrm{A}$ pendant $965\\ \\mathrm{s}$ transporte $0{,}010$ mole d'électrons.",
+          "methode": "$m=\\dfrac{I\\,\\Delta t}{zF}M$ avec $z=1$ pour l'argent.",
+          "points": 1,
+          "ref": "pc-electrolyse-la-masse-deposee-q1"
+        },
+        {
+          "notion": "La masse déposée",
+          "difficulty": 2,
+          "statement": "On dépose du cuivre ($\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$) avec $I=2{,}00\\ \\mathrm{A}$ pendant $30{,}0\\ \\mathrm{min}$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ et $M(\\mathrm{Cu})=63{,}5\\ \\mathrm{g\\,mol^{-1}}$, la masse déposée vaut :",
+          "options": [
+            {
+              "label": "$m=1{,}18\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$Q=2{,}00\\times1800=3600\\ \\mathrm{C}$ ; $n(e^-)=0{,}0373\\ \\mathrm{mol}$ ; $n(\\mathrm{Cu})=\\dfrac{n(e^-)}{2}=0{,}01865\\ \\mathrm{mol}$ ; $m=1{,}18\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=2{,}37\\ \\mathrm{g}$",
+              "why": "Tu as pris $n(\\mathrm{Cu})=n(e^-)$ : il faut $2$ électrons par atome de cuivre."
+            },
+            {
+              "label": "$m=4{,}74\\ \\mathrm{g}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ au lieu de le diviser."
+            },
+            {
+              "label": "$m=2{,}0\\times10^{-2}\\ \\mathrm{g}$",
+              "why": "Tu as multiplié $I$ par $30$ (minutes) au lieu de $1800$ (secondes)."
+            }
+          ],
+          "hint": "Enchaîne : $Q$, $n(e^-)$, $n(\\mathrm{Cu})$ avec la demi-équation, $m$.",
+          "solution": "$Q=It=2{,}00\\times1800=3600\\ \\mathrm{C}$ ; $n(e^-)=0{,}0373\\ \\mathrm{mol}$ ; $n(\\mathrm{Cu})=\\dfrac{0{,}0373}{2}=0{,}01865\\ \\mathrm{mol}$ ; $m=0{,}01865\\times63{,}5=1{,}18\\ \\mathrm{g}$. Contrôle : environ $1\\ \\mathrm{g}$ pour $2\\ \\mathrm{A}$ en une demi-heure : ordre de grandeur plausible.",
+          "methode": "Chaîne : $Q=I\\Delta t\\to n(e^-)\\to n(\\text{métal})\\to m$.",
+          "points": 1,
+          "ref": "pc-electrolyse-la-masse-deposee-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le volume de gaz",
+        "lesson": "Aspects quantitatifs",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-le-volume-de-gaz",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "Le volume de gaz",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le volume de gaz",
+          "difficulty": 1,
+          "statement": "Une électrolyse a libéré $0{,}050\\ \\mathrm{mol}$ de dihydrogène. Avec $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$, le volume de gaz vaut :",
+          "options": [
+            {
+              "label": "$V=1{,}20\\ \\mathrm{L}$",
+              "correct": true,
+              "why": "$V=n\\,V_m=0{,}050\\times24{,}0=1{,}20\\ \\mathrm{L}$."
+            },
+            {
+              "label": "$V=2{,}1\\times10^{-3}\\ \\mathrm{L}$",
+              "why": "Tu as divisé $n$ par $V_m$ : $V=n\\,V_m$."
+            },
+            {
+              "label": "$V=4{,}8\\times10^{2}\\ \\mathrm{L}$",
+              "why": "Tu as divisé $V_m$ par $n$ : $V=n\\,V_m$."
+            },
+            {
+              "label": "$V=2{,}40\\ \\mathrm{L}$",
+              "why": "Tu as doublé la quantité de matière : $n(\\mathrm{H_2})=0{,}050\\ \\mathrm{mol}$ est déjà donnée."
+            }
+          ],
+          "hint": "$V=n\\,V_m$.",
+          "solution": "$V=n\\,V_m=0{,}050\\times24{,}0=1{,}20\\ \\mathrm{L}$. Contrôle : $1\\ \\mathrm{mol}$ occupe $24\\ \\mathrm{L}$, donc $0{,}050\\ \\mathrm{mol}$ occupent un vingtième : environ $1\\ \\mathrm{L}$.",
+          "methode": "Gaz : $V=nV_m$.",
+          "points": 1,
+          "ref": "pc-electrolyse-le-volume-de-gaz-q1"
+        },
+        {
+          "notion": "Le volume de gaz",
+          "difficulty": 2,
+          "statement": "On électrolyse de l'eau avec $I=1{,}0\\ \\mathrm{A}$ pendant $965\\ \\mathrm{s}$. À la cathode, $2\\,\\mathrm{H_2O}+2\\,e^-\\rightarrow\\mathrm{H_2}+2\\,\\mathrm{HO^-}$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ et $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$, le volume de dihydrogène vaut :",
+          "options": [
+            {
+              "label": "$V(\\mathrm{H_2})=120\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$n(e^-)=0{,}0100\\ \\mathrm{mol}$ ; $n(\\mathrm{H_2})=\\dfrac{n(e^-)}{2}=0{,}0050\\ \\mathrm{mol}$ ; $V=0{,}0050\\times24{,}0=120\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$V(\\mathrm{H_2})=240\\ \\mathrm{mL}$",
+              "why": "Tu as pris $n(\\mathrm{H_2})=n(e^-)$ : il faut $2$ électrons par molécule de dihydrogène."
+            },
+            {
+              "label": "$V(\\mathrm{H_2})=60\\ \\mathrm{mL}$",
+              "why": "Tu as pris $n(\\mathrm{H_2})=n(e^-)/4$, rapport valable pour le dioxygène et non pour le dihydrogène."
+            },
+            {
+              "label": "$V(\\mathrm{H_2})=480\\ \\mathrm{mL}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ au lieu de le diviser."
+            }
+          ],
+          "hint": "Combien d'électrons faut-il pour former une molécule de $\\mathrm{H_2}$ ? Convertis aussi les litres en millilitres.",
+          "solution": "$n(e^-)=\\dfrac{965}{9{,}65\\times10^{4}}=0{,}0100\\ \\mathrm{mol}$ ; $n(\\mathrm{H_2})=0{,}0050\\ \\mathrm{mol}$ ; $V=nV_m=0{,}120\\ \\mathrm{L}=120\\ \\mathrm{mL}$. Contrôle : le volume de $\\mathrm{O_2}$ sera la moitié de celui de $\\mathrm{H_2}$.",
+          "methode": "$n(\\mathrm{H_2})=n(e^-)/2$ ; $V=nV_m$.",
+          "points": 1,
+          "ref": "pc-electrolyse-le-volume-de-gaz-q2"
+        },
+        {
+          "notion": "Le volume de gaz",
+          "difficulty": 2,
+          "statement": "Dans la même électrolyse de l'eau ($I=1{,}0\\ \\mathrm{A}$, $965\\ \\mathrm{s}$), à l'anode $2\\,\\mathrm{H_2O}\\rightarrow\\mathrm{O_2}+4\\,\\mathrm{H^+}+4\\,e^-$. Avec $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$, le volume de dioxygène vaut :",
+          "options": [
+            {
+              "label": "$V(\\mathrm{O_2})=60\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$n(e^-)=0{,}0100\\ \\mathrm{mol}$ ; $n(\\mathrm{O_2})=\\dfrac{n(e^-)}{4}=0{,}00250\\ \\mathrm{mol}$ ; $V=60\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$V(\\mathrm{O_2})=120\\ \\mathrm{mL}$",
+              "why": "Tu as pris $n(\\mathrm{O_2})=n(e^-)/2$, rapport du dihydrogène ; pour $\\mathrm{O_2}$ il faut $4$ électrons."
+            },
+            {
+              "label": "$V(\\mathrm{O_2})=240\\ \\mathrm{mL}$",
+              "why": "Tu as pris $n(\\mathrm{O_2})=n(e^-)$ : il faut $4$ électrons par molécule de dioxygène."
+            },
+            {
+              "label": "$V(\\mathrm{O_2})=30\\ \\mathrm{mL}$",
+              "why": "Tu as divisé $n(e^-)$ par $8$ ; la demi-équation indique $4\\,e^-$ par molécule."
+            }
+          ],
+          "hint": "Compte les électrons échangés pour former une molécule $\\mathrm{O_2}$.",
+          "solution": "$n(\\mathrm{O_2})=\\dfrac{n(e^-)}{4}=\\dfrac{0{,}0100}{4}=0{,}00250\\ \\mathrm{mol}$ ; $V=0{,}00250\\times24{,}0=60\\ \\mathrm{mL}$. Contrôle : $V(\\mathrm{O_2})=\\dfrac{V(\\mathrm{H_2})}{2}$ comme le prévoit le bilan $2\\,\\mathrm{H_2O}\\rightarrow2\\,\\mathrm{H_2}+\\mathrm{O_2}$.",
+          "methode": "$n(\\mathrm{O_2})=n(e^-)/4$.",
+          "points": 1,
+          "ref": "pc-electrolyse-le-volume-de-gaz-q3"
+        },
+        {
+          "notion": "Le volume de gaz",
+          "difficulty": 3,
+          "statement": "On électrolyse de l'eau avec $I=0{,}50\\ \\mathrm{A}$ pendant $3860\\ \\mathrm{s}$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ et $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$, le volume total de gaz (dihydrogène et dioxygène) dégagé vaut :",
+          "options": [
+            {
+              "label": "$V=360\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$n(e^-)=0{,}0200\\ \\mathrm{mol}$ ; $n(\\mathrm{H_2})=0{,}0100$ et $n(\\mathrm{O_2})=0{,}0050\\ \\mathrm{mol}$ ; $V=(0{,}0100+0{,}0050)\\times24{,}0$."
+            },
+            {
+              "label": "$V=240\\ \\mathrm{mL}$",
+              "why": "Tu n'as compté que le dihydrogène : le dioxygène formé à l'anode s'ajoute au volume total."
+            },
+            {
+              "label": "$V=120\\ \\mathrm{mL}$",
+              "why": "Tu n'as compté que le dioxygène : le dihydrogène formé à la cathode s'ajoute au volume total."
+            },
+            {
+              "label": "$V=720\\ \\mathrm{mL}$",
+              "why": "Tu as compté chaque quantité deux fois : $n(\\mathrm{H_2})=n(e^-)/2$ et $n(\\mathrm{O_2})=n(e^-)/4$ ne se doublent pas."
+            }
+          ],
+          "hint": "Calcule séparément $n(\\mathrm{H_2})$ et $n(\\mathrm{O_2})$ à partir de $n(e^-)$, puis additionne avant de convertir.",
+          "solution": "$Q=0{,}50\\times3860=1930\\ \\mathrm{C}$ ; $n(e^-)=0{,}0200\\ \\mathrm{mol}$ ; $n(\\mathrm{H_2})=0{,}0100\\ \\mathrm{mol}$ ; $n(\\mathrm{O_2})=0{,}0050\\ \\mathrm{mol}$ ; $V=(0{,}0100+0{,}0050)\\times24{,}0=0{,}360\\ \\mathrm{L}=360\\ \\mathrm{mL}$. Contrôle : $\\dfrac{3}{2}\\,n(\\mathrm{H_2})$ ; le volume total vaut $3\\times$ le volume de $\\mathrm{O_2}$.",
+          "methode": "Gaz total : $n(\\mathrm{H_2})+n(\\mathrm{O_2})=\\dfrac{3}{4}n(e^-)$.",
+          "points": 1,
+          "ref": "pc-electrolyse-le-volume-de-gaz-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Déterminer une durée ou une intensité",
+        "lesson": "Aspects quantitatifs",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-determiner-une-duree-ou-une-intensite",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "Déterminer une durée ou une intensité",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Déterminer une durée ou une intensité",
+          "difficulty": 1,
+          "statement": "Une électrolyse doit faire circuler $Q=1930\\ \\mathrm{C}$ avec un courant constant $I=0{,}50\\ \\mathrm{A}$. La durée nécessaire vaut :",
+          "options": [
+            {
+              "label": "$\\Delta t=3{,}86\\times10^{3}\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$\\Delta t=\\dfrac{Q}{I}=\\dfrac{1930}{0{,}50}=3860\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$\\Delta t=9{,}65\\times10^{2}\\ \\mathrm{s}$",
+              "why": "Tu as multiplié $Q$ par $I$ : $Q=I\\,\\Delta t$ donne $\\Delta t=Q/I$."
+            },
+            {
+              "label": "$\\Delta t=2{,}6\\times10^{-4}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $I/Q$ : la durée est $Q/I$."
+            },
+            {
+              "label": "$\\Delta t=64{,}3\\ \\mathrm{s}$",
+              "why": "Tu as converti le résultat en minutes ($3860/60=64{,}3$) mais l'unité demandée est la seconde."
+            }
+          ],
+          "hint": "$Q=I\\,\\Delta t$ : isole $\\Delta t$.",
+          "solution": "$\\Delta t=\\dfrac{Q}{I}=\\dfrac{1930}{0{,}50}=3860\\ \\mathrm{s}$, soit environ $64\\ \\mathrm{min}$. Contrôle : $I\\,\\Delta t=0{,}50\\times3860=1930\\ \\mathrm{C}$.",
+          "methode": "$\\Delta t=Q/I$.",
+          "points": 1,
+          "ref": "pc-electrolyse-determiner-une-duree-ou-une-intensite-q1"
+        },
+        {
+          "notion": "Déterminer une durée ou une intensité",
+          "difficulty": 2,
+          "statement": "On veut déposer $0{,}500\\ \\mathrm{g}$ de cuivre ($\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$) avec $I=1{,}50\\ \\mathrm{A}$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ et $M(\\mathrm{Cu})=63{,}5\\ \\mathrm{g\\,mol^{-1}}$, la durée nécessaire est d'environ :",
+          "options": [
+            {
+              "label": "$\\Delta t=1{,}01\\times10^{3}\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$n(\\mathrm{Cu})=0{,}00787\\ \\mathrm{mol}$ ; $n(e^-)=2\\,n(\\mathrm{Cu})=0{,}01575\\ \\mathrm{mol}$ ; $Q=n(e^-)F=1520\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{Q}{I}=1013\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$\\Delta t=5{,}07\\times10^{2}\\ \\mathrm{s}$",
+              "why": "Tu as pris $n(e^-)=n(\\mathrm{Cu})$ : il faut $2$ électrons par atome de cuivre."
+            },
+            {
+              "label": "$\\Delta t=2{,}53\\times10^{2}\\ \\mathrm{s}$",
+              "why": "Tu as pris $n(e^-)=n(\\mathrm{Cu})/2$ : le rapport est inversé."
+            },
+            {
+              "label": "$\\Delta t=4{,}05\\times10^{3}\\ \\mathrm{s}$",
+              "why": "Tu as multiplié par $4$ : $n(e^-)=2\\,n(\\mathrm{Cu})$ ne comporte qu'un facteur $2$."
+            }
+          ],
+          "hint": "Remonte de la masse à $n(\\mathrm{Cu})$, puis à $n(e^-)$, puis à $Q$, puis à $\\Delta t$.",
+          "solution": "$n(\\mathrm{Cu})=\\dfrac{0{,}500}{63{,}5}=0{,}00787\\ \\mathrm{mol}$ ; $n(e^-)=2\\,n(\\mathrm{Cu})=0{,}01575\\ \\mathrm{mol}$ ; $Q=n(e^-)F=1520\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{1520}{1{,}50}=1013\\ \\mathrm{s}$, soit environ $17\\ \\mathrm{min}$. Contrôle : $I\\,\\Delta t=1{,}50\\times1013\\approx1520\\ \\mathrm{C}$.",
+          "methode": "$\\Delta t=\\dfrac{n(e^-)F}{I}$ avec $n(e^-)=z\\,n(\\text{métal})$.",
+          "points": 1,
+          "ref": "pc-electrolyse-determiner-une-duree-ou-une-intensite-q2"
+        },
+        {
+          "notion": "Déterminer une durée ou une intensité",
+          "difficulty": 2,
+          "statement": "On veut déposer $2{,}00\\ \\mathrm{g}$ d'argent ($\\mathrm{Ag^+}+e^-\\rightarrow\\mathrm{Ag}$) en $20{,}0\\ \\mathrm{min}$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ et $M(\\mathrm{Ag})=108\\ \\mathrm{g\\,mol^{-1}}$, l'intensité nécessaire est d'environ :",
+          "options": [
+            {
+              "label": "$I=1{,}49\\ \\mathrm{A}$",
+              "correct": true,
+              "why": "$n(\\mathrm{Ag})=n(e^-)=0{,}01852\\ \\mathrm{mol}$ ; $Q=1787\\ \\mathrm{C}$ ; $I=\\dfrac{Q}{\\Delta t}=\\dfrac{1787}{1200}=1{,}49\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$I=0{,}745\\ \\mathrm{A}$",
+              "why": "Tu as divisé $n(e^-)$ par $2$ : un ion $\\mathrm{Ag^+}$ capte un seul électron."
+            },
+            {
+              "label": "$I=2{,}98\\ \\mathrm{A}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ : $n(e^-)=n(\\mathrm{Ag})$."
+            },
+            {
+              "label": "$I=89{,}4\\ \\mathrm{A}$",
+              "why": "Tu as divisé par $20$ (minutes) au lieu de $1200$ (secondes)."
+            }
+          ],
+          "hint": "$Q=n(e^-)F$ et $I=Q/\\Delta t$ avec $\\Delta t$ en secondes.",
+          "solution": "$n(\\mathrm{Ag})=\\dfrac{2{,}00}{108}=0{,}01852\\ \\mathrm{mol}=n(e^-)$ ; $Q=n(e^-)F=1787\\ \\mathrm{C}$ ; $I=\\dfrac{Q}{\\Delta t}=\\dfrac{1787}{1200}=1{,}49\\ \\mathrm{A}$. Contrôle : $I\\,\\Delta t=1{,}49\\times1200\\approx1787\\ \\mathrm{C}$.",
+          "methode": "$I=\\dfrac{n(e^-)F}{\\Delta t}$, $\\Delta t$ en secondes.",
+          "points": 1,
+          "ref": "pc-electrolyse-determiner-une-duree-ou-une-intensite-q3"
+        },
+        {
+          "notion": "Déterminer une durée ou une intensité",
+          "difficulty": 3,
+          "statement": "On électrolyse $V=50{,}0\\ \\mathrm{mL}$ de sulfate de cuivre(II) ($\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$) avec $I=0{,}500\\ \\mathrm{A}$ pendant $1930\\ \\mathrm{s}$ : tous les ions $\\mathrm{Cu^{2+}}$ sont alors déposés. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$, la concentration initiale en $\\mathrm{Cu^{2+}}$ vaut :",
+          "options": [
+            {
+              "label": "$C=0{,}100\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "$Q=965\\ \\mathrm{C}$ ; $n(e^-)=0{,}0100\\ \\mathrm{mol}$ ; $n(\\mathrm{Cu^{2+}})=0{,}0050\\ \\mathrm{mol}$ ; $C=\\dfrac{n}{V}=\\dfrac{0{,}0050}{0{,}0500}=0{,}100\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$C=0{,}200\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as pris $n(\\mathrm{Cu^{2+}})=n(e^-)$ : il faut $2$ électrons par ion $\\mathrm{Cu^{2+}}$."
+            },
+            {
+              "label": "$C=0{,}050\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as divisé $n(e^-)$ par $4$ au lieu de $2$ : un seul facteur $\\frac{1}{2}$ intervient."
+            },
+            {
+              "label": "$C=1{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as utilisé $V=50{,}0$ sans convertir les millilitres en litres."
+            }
+          ],
+          "hint": "$n(\\mathrm{Cu^{2+}})$ déposé s'obtient à partir de $n(e^-)=Q/F$ ; convertis $V$ en litres.",
+          "solution": "$n(e^-)=\\dfrac{0{,}500\\times1930}{9{,}65\\times10^{4}}=0{,}0100\\ \\mathrm{mol}$ ; $n(\\mathrm{Cu^{2+}})=\\dfrac{n(e^-)}{2}=0{,}0050\\ \\mathrm{mol}$ ; $C=\\dfrac{0{,}0050}{50{,}0\\times10^{-3}}=0{,}100\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $C\\,V\\times2=0{,}0100\\ \\mathrm{mol}=n(e^-)$.",
+          "methode": "Dosage par électrolyse totale : $C=\\dfrac{n(e^-)}{zV}$.",
+          "points": 1,
+          "ref": "pc-electrolyse-determiner-une-duree-ou-une-intensite-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'épaisseur d'un dépôt",
+        "lesson": "Aspects quantitatifs",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-l-epaisseur-d-un-depot",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "L'épaisseur d'un dépôt",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'épaisseur d'un dépôt",
+          "difficulty": 1,
+          "statement": "Un dépôt de cuivre a une masse $m=1{,}79\\ \\mathrm{g}$ ; la masse volumique du cuivre vaut $\\rho=8{,}96\\ \\mathrm{g\\,cm^{-3}}$. Le volume du dépôt vaut :",
+          "options": [
+            {
+              "label": "$V=0{,}200\\ \\mathrm{cm^3}$",
+              "correct": true,
+              "why": "$V=\\dfrac{m}{\\rho}=\\dfrac{1{,}79}{8{,}96}=0{,}200\\ \\mathrm{cm^3}$."
+            },
+            {
+              "label": "$V=16{,}0\\ \\mathrm{cm^3}$",
+              "why": "Tu as multiplié $m$ par $\\rho$ : $\\rho=m/V$ donne $V=m/\\rho$."
+            },
+            {
+              "label": "$V=5{,}01\\ \\mathrm{cm^3}$",
+              "why": "Tu as calculé $\\rho/m$ : le volume est $m/\\rho$."
+            },
+            {
+              "label": "$V=2{,}0\\times10^{-7}\\ \\mathrm{cm^3}$",
+              "why": "Tu as converti en $\\mathrm{m^3}$ ($\\times10^{-6}$) mais gardé l'unité $\\mathrm{cm^3}$."
+            }
+          ],
+          "hint": "$\\rho=\\dfrac{m}{V}$ : isole $V$.",
+          "solution": "$V=\\dfrac{m}{\\rho}=\\dfrac{1{,}79}{8{,}96}=0{,}200\\ \\mathrm{cm^3}$. Contrôle : $\\rho V=8{,}96\\times0{,}200=1{,}79\\ \\mathrm{g}$.",
+          "methode": "$V=m/\\rho$.",
+          "points": 1,
+          "ref": "pc-electrolyse-l-epaisseur-d-un-depot-q1"
+        },
+        {
+          "notion": "L'épaisseur d'un dépôt",
+          "difficulty": 2,
+          "statement": "Un dépôt de nickel de masse $0{,}200\\ \\mathrm{g}$ recouvre une surface $S=50{,}0\\ \\mathrm{cm^2}$ ; $\\rho(\\mathrm{Ni})=8{,}90\\ \\mathrm{g\\,cm^{-3}}$. L'épaisseur du dépôt vaut :",
+          "options": [
+            {
+              "label": "$e=4{,}49\\ \\mathrm{\\mu m}$",
+              "correct": true,
+              "why": "$V=\\dfrac{0{,}200}{8{,}90}=0{,}0225\\ \\mathrm{cm^3}$ ; $e=\\dfrac{V}{S}=4{,}49\\times10^{-4}\\ \\mathrm{cm}=4{,}49\\ \\mathrm{\\mu m}$ ($1\\ \\mathrm{cm}=10^4\\ \\mathrm{\\mu m}$)."
+            },
+            {
+              "label": "$e=225\\ \\mathrm{\\mu m}$",
+              "why": "Tu as oublié de diviser par la surface $S$ : $e=V/S$."
+            },
+            {
+              "label": "$e=449\\ \\mathrm{\\mu m}$",
+              "why": "Tu as converti les cm en µm avec $10^6$ au lieu de $10^4$."
+            },
+            {
+              "label": "$e=0{,}045\\ \\mathrm{\\mu m}$",
+              "why": "Tu as converti les cm en µm avec $10^2$ au lieu de $10^4$."
+            }
+          ],
+          "hint": "Volume du dépôt $V=m/\\rho$, puis $e=V/S$ ; $1\\ \\mathrm{cm}=10^4\\ \\mathrm{\\mu m}$.",
+          "solution": "$V=\\dfrac{m}{\\rho}=0{,}0225\\ \\mathrm{cm^3}$ ; $e=\\dfrac{V}{S}=\\dfrac{0{,}0225}{50{,}0}=4{,}49\\times10^{-4}\\ \\mathrm{cm}=4{,}49\\ \\mathrm{\\mu m}$. Contrôle : quelques micromètres : ordre de grandeur d'un nickelage.",
+          "methode": "$e=\\dfrac{m}{\\rho S}$, avec $1\\ \\mathrm{cm}=10^4\\ \\mathrm{\\mu m}$.",
+          "points": 1,
+          "ref": "pc-electrolyse-l-epaisseur-d-un-depot-q2"
+        },
+        {
+          "notion": "L'épaisseur d'un dépôt",
+          "difficulty": 2,
+          "statement": "On veut déposer $20\\ \\mathrm{\\mu m}$ de chrome ($\\rho=7{,}19\\ \\mathrm{g\\,cm^{-3}}$) sur les deux faces d'une plaque de $8{,}0\\ \\mathrm{cm}\\times5{,}0\\ \\mathrm{cm}$ (bords négligés). La masse de chrome nécessaire est :",
+          "options": [
+            {
+              "label": "$m=1{,}15\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$S=2\\times8{,}0\\times5{,}0=80{,}0\\ \\mathrm{cm^2}$ ; $e=2{,}0\\times10^{-3}\\ \\mathrm{cm}$ ; $m=\\rho\\,S\\,e=7{,}19\\times80{,}0\\times2{,}0\\times10^{-3}=1{,}15\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=0{,}575\\ \\mathrm{g}$",
+              "why": "Tu n'as compté qu'une seule face : la surface à recouvrir est $2\\times40{,}0=80{,}0\\ \\mathrm{cm^2}$."
+            },
+            {
+              "label": "$m=2{,}30\\ \\mathrm{g}$",
+              "why": "Tu as compté les deux faces deux fois : $S=80{,}0\\ \\mathrm{cm^2}$, pas $160\\ \\mathrm{cm^2}$."
+            },
+            {
+              "label": "$m=0{,}115\\ \\mathrm{g}$",
+              "why": "Tu as converti $20\\ \\mathrm{\\mu m}$ en $2{,}0\\times10^{-4}\\ \\mathrm{cm}$ : $1\\ \\mathrm{\\mu m}=10^{-4}\\ \\mathrm{cm}$ donne $2{,}0\\times10^{-3}\\ \\mathrm{cm}$."
+            }
+          ],
+          "hint": "$m=\\rho\\,V=\\rho\\,S\\,e$ ; compte toutes les faces à recouvrir et convertis $e$ en cm.",
+          "solution": "$S=2\\times(8{,}0\\times5{,}0)=80{,}0\\ \\mathrm{cm^2}$ ; $e=20\\times10^{-4}=2{,}0\\times10^{-3}\\ \\mathrm{cm}$ ; $V=S\\,e=0{,}160\\ \\mathrm{cm^3}$ ; $m=\\rho V=7{,}19\\times0{,}160=1{,}15\\ \\mathrm{g}$. Contrôle : $\\dfrac{1{,}15}{7{,}19\\times80{,}0}=2{,}0\\times10^{-3}\\ \\mathrm{cm}$.",
+          "methode": "$m=\\rho\\,S\\,e$ avec $e$ en cm.",
+          "points": 1,
+          "ref": "pc-electrolyse-l-epaisseur-d-un-depot-q3"
+        },
+        {
+          "notion": "L'épaisseur d'un dépôt",
+          "difficulty": 3,
+          "statement": "On veut un dépôt de cuivre de $10{,}0\\ \\mathrm{\\mu m}$ sur $S=100\\ \\mathrm{cm^2}$ ($\\rho=8{,}96\\ \\mathrm{g\\,cm^{-3}}$, $M(\\mathrm{Cu})=63{,}5\\ \\mathrm{g\\,mol^{-1}}$, $\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$) avec $I=5{,}00\\ \\mathrm{A}$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$, la durée de l'électrolyse est d'environ :",
+          "options": [
+            {
+              "label": "$\\Delta t=545\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$m=\\rho S e=0{,}896\\ \\mathrm{g}$ ; $n(\\mathrm{Cu})=0{,}01411\\ \\mathrm{mol}$ ; $Q=2\\,n\\,F=2723\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{Q}{I}=545\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$\\Delta t=272\\ \\mathrm{s}$",
+              "why": "Tu as pris $n(e^-)=n(\\mathrm{Cu})$ : il faut $2$ électrons par atome de cuivre."
+            },
+            {
+              "label": "$\\Delta t=1089\\ \\mathrm{s}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ deux fois : un seul facteur $2$ relie $n(e^-)$ à $n(\\mathrm{Cu})$."
+            },
+            {
+              "label": "$\\Delta t=54{,}5\\ \\mathrm{s}$",
+              "why": "Tu as converti $10{,}0\\ \\mathrm{\\mu m}$ en $10^{-5}\\ \\mathrm{cm}$ : $1\\ \\mathrm{\\mu m}=10^{-4}\\ \\mathrm{cm}$, donc $e=1{,}0\\times10^{-3}\\ \\mathrm{cm}$."
+            }
+          ],
+          "hint": "Chaîne : épaisseur, volume, masse, quantité de matière, électrons, charge, durée.",
+          "solution": "$V=S\\,e=100\\times1{,}0\\times10^{-3}=0{,}100\\ \\mathrm{cm^3}$ ; $m=\\rho V=0{,}896\\ \\mathrm{g}$ ; $n(\\mathrm{Cu})=\\dfrac{0{,}896}{63{,}5}=0{,}01411\\ \\mathrm{mol}$ ; $n(e^-)=2\\,n(\\mathrm{Cu})$ ; $Q=n(e^-)F=2723\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{Q}{I}=545\\ \\mathrm{s}\\approx9{,}1\\ \\mathrm{min}$. Contrôle : $I\\,\\Delta t=5{,}00\\times545=2723\\ \\mathrm{C}$.",
+          "methode": "Du dépôt à la durée : $e\\to V\\to m\\to n\\to n(e^-)\\to Q\\to\\Delta t$.",
+          "points": 1,
+          "ref": "pc-electrolyse-l-epaisseur-d-un-depot-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les applications industrielles",
+        "lesson": "Approfondissement — Électrolyse",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 0,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-les-applications-industrielles",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "Les applications industrielles",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les applications industrielles",
+          "difficulty": 3,
+          "statement": "L'aluminium est produit par électrolyse de l'alumine dissoute dans de la cryolithe fondue ($\\mathrm{Al^{3+}}+3\\,e^-\\rightarrow\\mathrm{Al}$). Une cuve débite $I=1{,}00\\times10^{5}\\ \\mathrm{A}$ pendant $1{,}00\\ \\mathrm{h}$. Avec $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ et $M(\\mathrm{Al})=27{,}0\\ \\mathrm{g\\,mol^{-1}}$, la masse d'aluminium produite est d'environ :",
+          "options": [
+            {
+              "label": "$33{,}6\\ \\mathrm{kg}$",
+              "correct": true,
+              "why": "$Q=3{,}60\\times10^{8}\\ \\mathrm{C}$ ; $n(e^-)=3731\\ \\mathrm{mol}$ ; $n(\\mathrm{Al})=\\dfrac{n(e^-)}{3}=1244\\ \\mathrm{mol}$ ; $m=33{,}6\\ \\mathrm{kg}$."
+            },
+            {
+              "label": "$100{,}7\\ \\mathrm{kg}$",
+              "why": "Tu as pris $n(\\mathrm{Al})=n(e^-)$ : il faut $3$ électrons par atome d'aluminium."
+            },
+            {
+              "label": "$11{,}2\\ \\mathrm{kg}$",
+              "why": "Tu as divisé par $3$ deux fois : un seul facteur $\\frac{1}{3}$ relie $n(\\mathrm{Al})$ à $n(e^-)$."
+            },
+            {
+              "label": "$33{,}6\\ \\mathrm{g}$",
+              "why": "Le calcul donne $33{,}6$ en kilogrammes : tu as laissé l'unité en grammes ($M$ en $\\mathrm{g\\,mol^{-1}}$ donne des grammes, soit $33575\\ \\mathrm{g}$)."
+            }
+          ],
+          "hint": "Passe de $Q$ à $n(e^-)$ puis à $n(\\mathrm{Al})$ avec $3$ électrons par atome ; surveille l'unité de masse.",
+          "solution": "$Q=I\\,\\Delta t=1{,}00\\times10^{5}\\times3600=3{,}60\\times10^{8}\\ \\mathrm{C}$ ; $n(e^-)=3731\\ \\mathrm{mol}$ ; $n(\\mathrm{Al})=1244\\ \\mathrm{mol}$ ; $m=1244\\times27{,}0=33575\\ \\mathrm{g}\\approx33{,}6\\ \\mathrm{kg}$. Contrôle : ordre de grandeur d'une cuve industrielle : quelques dizaines de kilogrammes par heure.",
+          "methode": "Aluminium : $3\\,e^-$ par atome ; $m=\\dfrac{I\\Delta t}{3F}M$.",
+          "points": 1,
+          "ref": "pc-electrolyse-les-applications-industrielles-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'affinage électrolytique",
+        "lesson": "Approfondissement — Électrolyse",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-l-affinage-electrolytique",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "L'affinage électrolytique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'affinage électrolytique",
+          "difficulty": 3,
+          "statement": "Pour affiner du cuivre, on utilise comme anode du cuivre impur (contenant de l'argent et de l'or) et comme cathode une lame de cuivre pur, dans une solution de sulfate de cuivre(II). La tension est réglée pour n'oxyder que le cuivre. Les impuretés d'argent et d'or de l'anode :",
+          "options": [
+            {
+              "label": "tombent au fond de la cuve en boues, car elles ne sont pas oxydées",
+              "correct": true,
+              "why": "L'argent et l'or sont moins réducteurs que le cuivre ($E^\\circ$ plus élevés) : ils ne s'oxydent pas et se détachent de l'anode."
+            },
+            {
+              "label": "se dissolvent d'abord, puis se déposent à la cathode avec le cuivre",
+              "why": "Ils ne se dissolvent pas : à cette tension, seul le cuivre est oxydé, donc seul le cuivre se dépose."
+            },
+            {
+              "label": "restent fixées sur la cathode, qui devient alors une électrode impure",
+              "why": "Elles ne quittent pas l'anode sous forme d'ions : elles ne peuvent donc pas atteindre la cathode."
+            },
+            {
+              "label": "se transforment en un gaz qui se dégage au niveau de l'anode",
+              "why": "Aucun gaz ne se forme avec ces métaux : ils tombent à l'état solide sous l'anode."
+            }
+          ],
+          "hint": "Un métal est-il oxydé si son réducteur est moins fort que le cuivre ?",
+          "solution": "À l'anode, $\\mathrm{Cu}\\rightarrow\\mathrm{Cu^{2+}}+2\\,e^-$ ; l'argent et l'or, plus difficiles à oxyder, restent métalliques et tombent au fond (boues anodiques) ; à la cathode, $\\mathrm{Cu^{2+}}+2\\,e^-\\rightarrow\\mathrm{Cu}$ dépose du cuivre pur. Contrôle : la masse dissoute à l'anode vaut la masse déposée à la cathode (hors boues).",
+          "methode": "Affinage : anode impure dissoute, cathode de cuivre pur, métaux nobles en boues.",
+          "points": 1,
+          "ref": "pc-electrolyse-l-affinage-electrolytique-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La galvanoplastie",
+        "lesson": "Approfondissement — Électrolyse",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-la-galvanoplastie",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "La galvanoplastie",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La galvanoplastie",
+          "difficulty": 3,
+          "statement": "Pour recouvrir un objet métallique de nickel, on l'immerge dans une solution de sulfate de nickel(II) ($\\mathrm{Ni^{2+}}$, $\\mathrm{SO_4^{2-}}$) en face d'une lame de nickel. Il faut relier l'objet :",
+          "options": [
+            {
+              "label": "à la borne négative du générateur : il joue le rôle de cathode et reçoit le dépôt",
+              "correct": true,
+              "why": "$\\mathrm{Ni^{2+}}+2\\,e^-\\rightarrow\\mathrm{Ni}$ se produit à la cathode, reliée à $-$, ici l'objet à recouvrir."
+            },
+            {
+              "label": "à la borne positive du générateur : il joue le rôle d'anode et reçoit le dépôt",
+              "why": "À l'anode a lieu l'oxydation : le métal s'y dissout au lieu de s'y déposer."
+            },
+            {
+              "label": "à la borne négative, la solution étant remplacée par de l'eau pure",
+              "why": "Sans ions $\\mathrm{Ni^{2+}}$ dans la solution, aucun nickel ne peut se déposer à la cathode."
+            },
+            {
+              "label": "à aucune borne : le nickel se dépose spontanément sur l'objet immergé",
+              "why": "Le dépôt est forcé par le générateur : sans courant, rien ne se produit."
+            }
+          ],
+          "hint": "L'objet doit capter des électrons : quelle électrode, anode ou cathode, est concernée ?",
+          "solution": "Le dépôt est une réduction : l'objet doit être la cathode, reliée à la borne $-$. La lame de nickel, reliée à $+$, s'oxyde ($\\mathrm{Ni}\\rightarrow\\mathrm{Ni^{2+}}+2\\,e^-$) et renouvelle les ions $\\mathrm{Ni^{2+}}$. Contrôle : la concentration en $\\mathrm{Ni^{2+}}$ reste constante.",
+          "methode": "Galvanoplastie : l'objet à recouvrir est la cathode (borne $-$).",
+          "points": 1,
+          "ref": "pc-electrolyse-la-galvanoplastie-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La tension minimale",
+        "lesson": "Approfondissement — Électrolyse",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-la-tension-minimale",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "La tension minimale",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La tension minimale",
+          "difficulty": 3,
+          "statement": "On électrolyse du chlorure de cuivre(II) : $\\mathrm{Cu^{2+}}+2\\,\\mathrm{Cl^-}\\rightarrow\\mathrm{Cu}+\\mathrm{Cl_2}$. On donne $E^\\circ(\\mathrm{Cl_2/Cl^-})=1{,}36\\ \\mathrm{V}$ et $E^\\circ(\\mathrm{Cu^{2+}/Cu})=0{,}34\\ \\mathrm{V}$ ; la tension minimale s'obtient par $U_{min}=E_{anode}-E_{cathode}$. Sa valeur est :",
+          "options": [
+            {
+              "label": "$U_{min}=1{,}02\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "À l'anode, le couple $\\mathrm{Cl_2/Cl^-}$ ; à la cathode, $\\mathrm{Cu^{2+}/Cu}$ : $U_{min}=1{,}36-0{,}34=1{,}02\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$U_{min}=1{,}70\\ \\mathrm{V}$",
+              "why": "Tu as additionné les potentiels au lieu de les soustraire."
+            },
+            {
+              "label": "$U_{min}=-1{,}02\\ \\mathrm{V}$",
+              "why": "Tu as inversé la soustraction : une tension minimale à fournir est positive ; l'anode correspond à $\\mathrm{Cl_2/Cl^-}$."
+            },
+            {
+              "label": "$U_{min}=1{,}36\\ \\mathrm{V}$",
+              "why": "Tu n'as retenu que le potentiel de l'anode ; il faut soustraire celui de la cathode."
+            }
+          ],
+          "hint": "Identifie le couple de l'anode (oxydation) et celui de la cathode (réduction), puis soustrais.",
+          "solution": "Anode : $\\mathrm{Cl_2/Cl^-}$ ($1{,}36\\ \\mathrm{V}$) ; cathode : $\\mathrm{Cu^{2+}/Cu}$ ($0{,}34\\ \\mathrm{V}$). $U_{min}=1{,}36-0{,}34=1{,}02\\ \\mathrm{V}$. Contrôle : la réaction étant non spontanée ($E^\\circ_{Cl_2/Cl^-}>E^\\circ_{Cu^{2+}/Cu}$), il faut bien fournir une tension positive.",
+          "methode": "Électrolyse : $U_{min}=E_{anode}-E_{cathode}>0$.",
+          "points": 1,
+          "ref": "pc-electrolyse-la-tension-minimale-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le bilan énergétique",
+        "lesson": "Approfondissement — Électrolyse",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-electrolyse-le-bilan-energetique",
+      "chapter": "pc-electrolyse",
+      "kind": "qcu",
+      "title": "Le bilan énergétique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le bilan énergétique",
+          "difficulty": 3,
+          "statement": "Une cuve d'électrolyse fonctionne sous une tension $U=3{,}0\\ \\mathrm{V}$ avec un courant $I=2{,}0\\ \\mathrm{A}$ pendant $30\\ \\mathrm{min}$. L'énergie électrique reçue ($W=U\\,I\\,\\Delta t$) vaut :",
+          "options": [
+            {
+              "label": "$W=1{,}08\\times10^{4}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$W=U\\,I\\,\\Delta t=3{,}0\\times2{,}0\\times1800=10800\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$W=6{,}0\\ \\mathrm{J}$",
+              "why": "Tu as oublié la durée : $W=U\\,I\\,\\Delta t$ est une énergie, non une puissance."
+            },
+            {
+              "label": "$W=1{,}8\\times10^{2}\\ \\mathrm{J}$",
+              "why": "Tu as pris la durée en minutes ($30$) au lieu de $1800\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$W=3{,}6\\times10^{3}\\ \\mathrm{J}$",
+              "why": "Tu as calculé $I\\,\\Delta t$, une charge en coulombs, et oublié la tension $U$."
+            }
+          ],
+          "hint": "$W=U\\,I\\,\\Delta t$ avec $\\Delta t$ en secondes.",
+          "solution": "$\\Delta t=1800\\ \\mathrm{s}$ ; $W=U\\,I\\,\\Delta t=3{,}0\\times2{,}0\\times1800=10800\\ \\mathrm{J}\\approx10{,}8\\ \\mathrm{kJ}$. Contrôle : puissance $P=UI=6{,}0\\ \\mathrm{W}$ ; $6{,}0\\times1800=10800\\ \\mathrm{J}$.",
+          "methode": "Énergie électrique : $W=U\\,I\\,\\Delta t=U\\,Q$.",
+          "points": 1,
+          "ref": "pc-electrolyse-le-bilan-energetique-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-electrolyse-probleme-1",
+      "chapter": "pc-electrolyse",
+      "kind": "probleme",
+      "title": "Nickelage d'une pièce",
+      "difficulty": 3,
+      "context": "Pour nickeler une pièce de surface totale $S=200\\ \\mathrm{cm^2}$, on la plonge dans un bain de sulfate de nickel(II) ($\\mathrm{Ni^{2+}}$, $\\mathrm{SO_4^{2-}}$) en face d'une anode en nickel. On impose un courant constant $I=5{,}00\\ \\mathrm{A}$ pendant $20{,}0\\ \\mathrm{min}$. Données : $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ ; $M(\\mathrm{Ni})=58{,}7\\ \\mathrm{g\\,mol^{-1}}$ ; $\\rho(\\mathrm{Ni})=8{,}90\\ \\mathrm{g\\,cm^{-3}}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 1 — Identifier les réactions aux électrodes",
+          "difficulty": 1,
+          "statement": "La réaction qui se produit sur la pièce à nickeler est :",
+          "options": [
+            {
+              "label": "$\\mathrm{Ni^{2+}}+2\\,e^-\\rightarrow\\mathrm{Ni(s)}$",
+              "correct": true,
+              "why": "Le dépôt est une réduction : l'ion $\\mathrm{Ni^{2+}}$ capte deux électrons sur la pièce, qui est la cathode."
+            },
+            {
+              "label": "$\\mathrm{Ni(s)}\\rightarrow\\mathrm{Ni^{2+}}+2\\,e^-$",
+              "why": "C'est une oxydation : elle se produit à l'anode en nickel, non sur la pièce."
+            },
+            {
+              "label": "$\\mathrm{Ni^{2+}}\\rightarrow\\mathrm{Ni(s)}+2\\,e^-$",
+              "why": "Les électrons sont du mauvais côté : un dépôt de métal consomme des électrons."
+            },
+            {
+              "label": "$\\mathrm{Ni^{2+}}+e^-\\rightarrow\\mathrm{Ni(s)}$",
+              "why": "Les charges ne sont pas conservées : $\\mathrm{Ni^{2+}}$ exige $2$ électrons."
+            }
+          ],
+          "hint": "Le dépôt de métal est-il une oxydation ou une réduction ?",
+          "solution": "Sur la pièce (cathode) : $\\mathrm{Ni^{2+}}+2\\,e^-\\rightarrow\\mathrm{Ni}$. Contrôle : charges $+2-2=0$.",
+          "methode": "Cathode : réduction de l'ion métallique en métal.",
+          "points": 1,
+          "part": "Partie A — Le montage et les réactions",
+          "ref": "pc-electrolyse-probleme-1-q1"
+        },
+        {
+          "notion": "Méthode 1 — Identifier les réactions aux électrodes",
+          "difficulty": 1,
+          "statement": "La réaction qui se produit à l'anode en nickel est :",
+          "options": [
+            {
+              "label": "$\\mathrm{Ni(s)}\\rightarrow\\mathrm{Ni^{2+}}+2\\,e^-$",
+              "correct": true,
+              "why": "L'anode est le siège de l'oxydation : le nickel métallique se dissout en ions $\\mathrm{Ni^{2+}}$."
+            },
+            {
+              "label": "$\\mathrm{Ni^{2+}}+2\\,e^-\\rightarrow\\mathrm{Ni(s)}$",
+              "why": "C'est la réduction qui a lieu à la cathode, non à l'anode."
+            },
+            {
+              "label": "$2\\,\\mathrm{H_2O}\\rightarrow\\mathrm{O_2}+4\\,\\mathrm{H^+}+4\\,e^-$",
+              "why": "L'anode en nickel, métal oxydable, est attaquée avant l'eau : le nickel s'oxyde et ne reste pas intact."
+            },
+            {
+              "label": "$\\mathrm{SO_4^{2-}}\\rightarrow\\mathrm{SO_4}+2\\,e^-$",
+              "why": "L'ion sulfate est spectateur : il n'est pas oxydé dans ces conditions."
+            }
+          ],
+          "hint": "L'anode est en nickel métallique : quelle espèce peut y être oxydée ?",
+          "solution": "À l'anode : $\\mathrm{Ni}\\rightarrow\\mathrm{Ni^{2+}}+2\\,e^-$. Contrôle : chaque ion $\\mathrm{Ni^{2+}}$ déposé à la cathode est remplacé par un ion libéré à l'anode.",
+          "methode": "Anode soluble : le métal de l'anode s'oxyde.",
+          "points": 1,
+          "part": "Partie A — Le montage et les réactions",
+          "ref": "pc-electrolyse-probleme-1-q2"
+        },
+        {
+          "notion": "La galvanoplastie",
+          "difficulty": 2,
+          "statement": "Au cours du nickelage, la concentration en ions $\\mathrm{Ni^{2+}}$ du bain :",
+          "options": [
+            {
+              "label": "reste constante : la quantité déposée égale celle libérée à l'anode",
+              "correct": true,
+              "why": "Mêmes $2$ électrons échangés : un $\\mathrm{Ni^{2+}}$ consommé à la cathode pour un $\\mathrm{Ni^{2+}}$ formé à l'anode."
+            },
+            {
+              "label": "diminue, car le nickel se dépose sur la pièce sans être renouvelé",
+              "why": "L'anode en nickel renouvelle les ions au même rythme qu'ils sont consommés."
+            },
+            {
+              "label": "augmente, car l'anode se dissout plus vite que le dépôt ne se forme",
+              "why": "Les deux transformations échangent le même nombre d'électrons : les quantités sont égales."
+            },
+            {
+              "label": "tombe à zéro après quelques minutes, ce qui arrête l'électrolyse",
+              "why": "L'anode soluble maintient la concentration : l'électrolyse peut se poursuivre."
+            }
+          ],
+          "hint": "Compare la quantité de $\\mathrm{Ni^{2+}}$ consommée à la cathode et celle formée à l'anode.",
+          "solution": "Cathode : $\\mathrm{Ni^{2+}}+2\\,e^-\\rightarrow\\mathrm{Ni}$ ; anode : $\\mathrm{Ni}\\rightarrow\\mathrm{Ni^{2+}}+2\\,e^-$. Pour chaque électron échangé les quantités se compensent : $[\\mathrm{Ni^{2+}}]$ est constante. Contrôle : la masse perdue par l'anode vaut la masse gagnée par la pièce.",
+          "methode": "Anode soluble : bain de concentration constante.",
+          "points": 1,
+          "part": "Partie A — Le montage et les réactions",
+          "ref": "pc-electrolyse-probleme-1-q3"
+        },
+        {
+          "notion": "La masse déposée",
+          "difficulty": 2,
+          "statement": "La masse de nickel déposée vaut :",
+          "options": [
+            {
+              "label": "$m=1{,}82\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$Q=5{,}00\\times1200=6000\\ \\mathrm{C}$ ; $n(e^-)=0{,}06218\\ \\mathrm{mol}$ ; $n(\\mathrm{Ni})=\\dfrac{n(e^-)}{2}=0{,}03109\\ \\mathrm{mol}$ ; $m=1{,}82\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=3{,}65\\ \\mathrm{g}$",
+              "why": "Tu as pris $n(\\mathrm{Ni})=n(e^-)$ : il faut $2$ électrons par atome de nickel."
+            },
+            {
+              "label": "$m=7{,}30\\ \\mathrm{g}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ au lieu de le diviser."
+            },
+            {
+              "label": "$m=0{,}030\\ \\mathrm{g}$",
+              "why": "Tu as pris la durée en minutes ($20$) au lieu de $1200\\ \\mathrm{s}$."
+            }
+          ],
+          "hint": "Chaîne : $Q$, $n(e^-)$, $n(\\mathrm{Ni})$, $m$.",
+          "solution": "$Q=It=5{,}00\\times1200=6000\\ \\mathrm{C}$ ; $n(e^-)=\\dfrac{6000}{9{,}65\\times10^{4}}=0{,}06218\\ \\mathrm{mol}$ ; $n(\\mathrm{Ni})=0{,}03109\\ \\mathrm{mol}$ ; $m=0{,}03109\\times58{,}7=1{,}82\\ \\mathrm{g}$. Contrôle : environ $1{,}8\\ \\mathrm{g}$ pour $6000\\ \\mathrm{C}$.",
+          "methode": "Chaîne quantitative : $Q\\to n(e^-)\\to n\\to m$.",
+          "points": 1,
+          "part": "Partie B — Grandeurs quantitatives",
+          "ref": "pc-electrolyse-probleme-1-q4"
+        },
+        {
+          "notion": "L'épaisseur d'un dépôt",
+          "difficulty": 2,
+          "statement": "En supposant le dépôt uniforme sur toute la surface $S=200\\ \\mathrm{cm^2}$, son épaisseur vaut :",
+          "options": [
+            {
+              "label": "$e=10{,}3\\ \\mathrm{\\mu m}$",
+              "correct": true,
+              "why": "$V=\\dfrac{m}{\\rho}=\\dfrac{1{,}825}{8{,}90}=0{,}2050\\ \\mathrm{cm^3}$ ; $e=\\dfrac{V}{S}=1{,}03\\times10^{-3}\\ \\mathrm{cm}=10{,}3\\ \\mathrm{\\mu m}$."
+            },
+            {
+              "label": "$e=2050\\ \\mathrm{\\mu m}$",
+              "why": "Tu as oublié de diviser le volume par la surface $S$ : $e=V/S$."
+            },
+            {
+              "label": "$e=1025\\ \\mathrm{\\mu m}$",
+              "why": "Tu as converti les cm en µm avec $10^6$ au lieu de $10^4$."
+            },
+            {
+              "label": "$e=812\\ \\mathrm{\\mu m}$",
+              "why": "Tu as multiplié $m$ par $\\rho$ au lieu de diviser : $V=m/\\rho$."
+            }
+          ],
+          "hint": "Volume : $V=m/\\rho$ ; épaisseur : $e=V/S$ ; $1\\ \\mathrm{cm}=10^4\\ \\mathrm{\\mu m}$.",
+          "solution": "$m=1{,}825\\ \\mathrm{g}$ ; $V=\\dfrac{1{,}825}{8{,}90}=0{,}2050\\ \\mathrm{cm^3}$ ; $e=\\dfrac{0{,}2050}{200}=1{,}03\\times10^{-3}\\ \\mathrm{cm}=10{,}3\\ \\mathrm{\\mu m}$. Contrôle : une dizaine de micromètres, ordre de grandeur d'un nickelage décoratif.",
+          "methode": "$e=\\dfrac{m}{\\rho S}$.",
+          "points": 1,
+          "part": "Partie B — Grandeurs quantitatives",
+          "ref": "pc-electrolyse-probleme-1-q5"
+        },
+        {
+          "notion": "Méthode 4 — Le rendement faradique",
+          "difficulty": 3,
+          "statement": "La pesée donne une masse réellement déposée de $1{,}64\\ \\mathrm{g}$ ; la masse théorique est celle calculée avec la loi de Faraday. Le rendement faradique vaut :",
+          "options": [
+            {
+              "label": "$\\eta=89{,}9\\ \\%$",
+              "correct": true,
+              "why": "$\\eta=\\dfrac{m_{réel}}{m_{théo}}=\\dfrac{1{,}64}{1{,}825}=0{,}899$."
+            },
+            {
+              "label": "$\\eta=111\\ \\%$",
+              "why": "Tu as inversé le rapport : $\\eta=m_{réel}/m_{théo}$ ne peut pas dépasser $100\\ \\%$."
+            },
+            {
+              "label": "$\\eta=44{,}9\\ \\%$",
+              "why": "Tu as calculé la masse théorique avec $n(\\mathrm{Ni})=n(e^-)$ ; il faut $n(\\mathrm{Ni})=n(e^-)/2$."
+            },
+            {
+              "label": "$\\eta=10{,}1\\ \\%$",
+              "why": "Tu as calculé la perte, $1-\\eta$, et non le rendement lui-même."
+            }
+          ],
+          "hint": "Rendement : rapport de la masse réelle à la masse théorique, dans cet ordre.",
+          "solution": "$\\eta=\\dfrac{m_{réel}}{m_{théo}}=\\dfrac{1{,}64}{1{,}825}=0{,}899\\approx89{,}9\\ \\%$. Contrôle : $\\eta<100\\ \\%$ : une partie du courant sert à d'autres réactions (dégagement de dihydrogène à la cathode).",
+          "methode": "$\\eta=m_{réel}/m_{théo}\\le1$.",
+          "points": 1,
+          "part": "Partie B — Grandeurs quantitatives",
+          "ref": "pc-electrolyse-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-electrolyse-probleme-2",
+      "chapter": "pc-electrolyse",
+      "kind": "probleme",
+      "title": "Voltamètre : électrolyse de l'eau",
+      "difficulty": 3,
+      "context": "On électrolyse de l'eau additionnée de sulfate de sodium (ions $\\mathrm{Na^+}$ et $\\mathrm{SO_4^{2-}}$ spectateurs) dans un voltamètre à électrodes de graphite, sous un courant constant $I=0{,}600\\ \\mathrm{A}$ pendant $30{,}0\\ \\mathrm{min}$. Deux éprouvettes recueillent les gaz formés aux électrodes. Données : $F=9{,}65\\times10^{4}\\ \\mathrm{C\\,mol^{-1}}$ ; $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Identifier les produits",
+          "difficulty": 1,
+          "statement": "L'éprouvette qui recueille le plus grand volume de gaz est celle :",
+          "options": [
+            {
+              "label": "de la cathode, qui contient du dihydrogène",
+              "correct": true,
+              "why": "$2\\,\\mathrm{H_2O}\\rightarrow2\\,\\mathrm{H_2}+\\mathrm{O_2}$ : le dihydrogène, formé à la cathode, a un volume double de celui du dioxygène."
+            },
+            {
+              "label": "de l'anode, qui contient du dioxygène",
+              "why": "Le dioxygène de l'anode est formé en quantité moitié moindre que le dihydrogène."
+            },
+            {
+              "label": "de l'anode, qui contient du dihydrogène",
+              "why": "Le dihydrogène se forme à la cathode, où a lieu la réduction de l'eau."
+            },
+            {
+              "label": "les deux éprouvettes contiennent le même volume",
+              "why": "Les coefficients $2$ et $1$ de l'équation donnent des quantités différentes, donc des volumes différents."
+            }
+          ],
+          "hint": "Utilise l'équation bilan $2\\,\\mathrm{H_2O}\\rightarrow2\\,\\mathrm{H_2}+\\mathrm{O_2}$ et le fait que la cathode est le siège de la réduction.",
+          "solution": "Le dihydrogène se forme à la cathode et son volume est double de celui du dioxygène de l'anode. Contrôle : détonation du gaz de la cathode à l'approche d'une flamme.",
+          "methode": "Eau : $V(\\mathrm{H_2})=2\\,V(\\mathrm{O_2})$, $\\mathrm{H_2}$ à la cathode.",
+          "points": 1,
+          "part": "Partie A — Réactions et produits",
+          "ref": "pc-electrolyse-probleme-2-q1"
+        },
+        {
+          "notion": "Écrire les réactions aux électrodes",
+          "difficulty": 1,
+          "statement": "La demi-équation à la cathode est :",
+          "options": [
+            {
+              "label": "$2\\,\\mathrm{H_2O}+2\\,e^-\\rightarrow\\mathrm{H_2}+2\\,\\mathrm{HO^-}$",
+              "correct": true,
+              "why": "Réduction de l'eau : charges $-2$ de chaque côté ; $\\mathrm{H}$ : $4=4$ ; $\\mathrm{O}$ : $2=2$."
+            },
+            {
+              "label": "$\\mathrm{H_2}+2\\,\\mathrm{HO^-}\\rightarrow2\\,\\mathrm{H_2O}+2\\,e^-$",
+              "why": "C'est l'oxydation du dihydrogène, réaction inverse de celle qui a lieu à la cathode."
+            },
+            {
+              "label": "$2\\,\\mathrm{H_2O}\\rightarrow\\mathrm{H_2}+2\\,\\mathrm{HO^-}$",
+              "why": "Les charges ne sont pas conservées ($0$ à gauche, $-2$ à droite) : il manque $2\\,e^-$ à gauche."
+            },
+            {
+              "label": "$\\mathrm{Na^+}+e^-\\rightarrow\\mathrm{Na(s)}$",
+              "why": "$\\mathrm{Na^+}$ est spectateur : le sodium métallique n'est pas formé dans l'eau."
+            }
+          ],
+          "hint": "La cathode est le siège de la réduction : l'eau capte-t-elle ou cède-t-elle des électrons ?",
+          "solution": "Cathode (réduction) : $2\\,\\mathrm{H_2O}+2\\,e^-\\rightarrow\\mathrm{H_2}+2\\,\\mathrm{HO^-}$. Contrôle : $2$ électrons pour une molécule de $\\mathrm{H_2}$.",
+          "methode": "Cathode : $2\\,\\mathrm{H_2O}+2\\,e^-\\rightarrow\\mathrm{H_2}+2\\,\\mathrm{HO^-}$.",
+          "points": 1,
+          "part": "Partie A — Réactions et produits",
+          "ref": "pc-electrolyse-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 5 — Comparer pile et électrolyse",
+          "difficulty": 2,
+          "statement": "Par rapport à une pile, dans ce voltamètre :",
+          "options": [
+            {
+              "label": "l'anode reste le siège de l'oxydation, mais elle est reliée à la borne $+$ et non au pôle $-$",
+              "correct": true,
+              "why": "La règle anode = oxydation est la même ; la polarité change : pôle $-$ pour l'anode d'une pile, borne $+$ pour l'anode d'une électrolyse."
+            },
+            {
+              "label": "la cathode devient le siège de l'oxydation, car la polarité est inversée par le générateur",
+              "why": "La polarité change mais pas la nature de la réaction : la cathode reste le siège de la réduction."
+            },
+            {
+              "label": "la transformation est spontanée comme dans une pile, le générateur ne servant que de témoin",
+              "why": "Le générateur impose une transformation non spontanée : sans lui, l'eau ne se décompose pas."
+            },
+            {
+              "label": "le courant est de sens inverse, mais $Q_r$ se rapproche de $K$ comme dans une pile",
+              "why": "Dans une électrolyse, $Q_r$ s'éloigne de $K$ ; c'est dans une pile qu'il s'en rapproche."
+            }
+          ],
+          "hint": "Que garde-t-on identique entre pile et électrolyse, et qu'est-ce qui change ?",
+          "solution": "Pile et électrolyse : anode = oxydation, cathode = réduction. Ce qui change : la polarité (pile : anode $-$ ; électrolyse : anode $+$) et le caractère de la transformation (spontanée / forcée, $Q_r$ vers / loin de $K$). Contrôle : une pile produit de l'énergie, une électrolyse en consomme.",
+          "methode": "Pile / électrolyse : même rôle des électrodes, polarités et sens d'évolution opposés.",
+          "points": 1,
+          "part": "Partie A — Réactions et produits",
+          "ref": "pc-electrolyse-probleme-2-q3"
+        },
+        {
+          "notion": "La loi de Faraday",
+          "difficulty": 2,
+          "statement": "La quantité d'électrons échangée pendant l'électrolyse vaut :",
+          "options": [
+            {
+              "label": "$n(e^-)=1{,}12\\times10^{-2}\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$Q=0{,}600\\times1800=1080\\ \\mathrm{C}$ ; $n(e^-)=\\dfrac{Q}{F}=\\dfrac{1080}{9{,}65\\times10^{4}}=0{,}0112\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$n(e^-)=1{,}9\\times10^{-4}\\ \\mathrm{mol}$",
+              "why": "Tu as pris la durée en minutes ($30$) au lieu de $1800\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$n(e^-)=89{,}4\\ \\mathrm{mol}$",
+              "why": "Tu as calculé $F/Q$ : la quantité d'électrons est $Q/F$."
+            },
+            {
+              "label": "$n(e^-)=1{,}04\\times10^{8}\\ \\mathrm{mol}$",
+              "why": "Tu as multiplié $Q$ par $F$ : $n(e^-)=Q/F$."
+            }
+          ],
+          "hint": "Calcule d'abord $Q=I\\,\\Delta t$ avec $\\Delta t$ en secondes.",
+          "solution": "$Q=I\\,\\Delta t=0{,}600\\times1800=1080\\ \\mathrm{C}$ ; $n(e^-)=\\dfrac{1080}{9{,}65\\times10^{4}}=0{,}0112\\ \\mathrm{mol}$. Contrôle : environ $1\\ \\%$ d'une mole d'électrons.",
+          "methode": "$n(e^-)=\\dfrac{I\\,\\Delta t}{F}$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-electrolyse-probleme-2-q4"
+        },
+        {
+          "notion": "Le volume de gaz",
+          "difficulty": 2,
+          "statement": "Le volume de dihydrogène recueilli vaut :",
+          "options": [
+            {
+              "label": "$V(\\mathrm{H_2})=134\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$n(\\mathrm{H_2})=\\dfrac{n(e^-)}{2}=0{,}00560\\ \\mathrm{mol}$ ; $V=nV_m=0{,}00560\\times24{,}0=0{,}1343\\ \\mathrm{L}=134\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$V(\\mathrm{H_2})=269\\ \\mathrm{mL}$",
+              "why": "Tu as pris $n(\\mathrm{H_2})=n(e^-)$ : il faut $2$ électrons par molécule de $\\mathrm{H_2}$."
+            },
+            {
+              "label": "$V(\\mathrm{H_2})=67\\ \\mathrm{mL}$",
+              "why": "Tu as pris $n(\\mathrm{H_2})=n(e^-)/4$, rapport du dioxygène."
+            },
+            {
+              "label": "$V(\\mathrm{H_2})=537\\ \\mathrm{mL}$",
+              "why": "Tu as multiplié $n(e^-)$ par $2$ au lieu de le diviser."
+            }
+          ],
+          "hint": "Combien d'électrons pour une molécule de $\\mathrm{H_2}$ ? Convertis les litres en millilitres.",
+          "solution": "$n(e^-)=0{,}01119\\ \\mathrm{mol}$ ; $n(\\mathrm{H_2})=0{,}00560\\ \\mathrm{mol}$ ; $V=0{,}00560\\times24{,}0=0{,}1343\\ \\mathrm{L}=134\\ \\mathrm{mL}$. Contrôle : $V(\\mathrm{O_2})\\approx67\\ \\mathrm{mL}$, moitié de $V(\\mathrm{H_2})$.",
+          "methode": "$V(\\mathrm{H_2})=\\dfrac{n(e^-)}{2}V_m$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-electrolyse-probleme-2-q5"
+        },
+        {
+          "notion": "Méthode 3 — Déterminer une durée, une intensité ou une concentration",
+          "difficulty": 3,
+          "statement": "Avec le même courant $I=0{,}600\\ \\mathrm{A}$, la durée nécessaire pour recueillir $100\\ \\mathrm{mL}$ de dihydrogène est d'environ :",
+          "options": [
+            {
+              "label": "$\\Delta t=1{,}34\\times10^{3}\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$n(\\mathrm{H_2})=\\dfrac{0{,}100}{24{,}0}=0{,}00417\\ \\mathrm{mol}$ ; $n(e^-)=2\\,n(\\mathrm{H_2})=0{,}00833\\ \\mathrm{mol}$ ; $Q=n(e^-)F=804\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{Q}{I}=1340\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$\\Delta t=6{,}70\\times10^{2}\\ \\mathrm{s}$",
+              "why": "Tu as pris $n(e^-)=n(\\mathrm{H_2})$ : il faut $2$ électrons par molécule."
+            },
+            {
+              "label": "$\\Delta t=2{,}68\\times10^{3}\\ \\mathrm{s}$",
+              "why": "Tu as pris $n(e^-)=4\\,n(\\mathrm{H_2})$, rapport du dioxygène ; pour $\\mathrm{H_2}$ il en faut $2$."
+            },
+            {
+              "label": "$\\Delta t=1{,}34\\times10^{6}\\ \\mathrm{s}$",
+              "why": "Tu as utilisé $100$ au lieu de $0{,}100\\ \\mathrm{L}$ : le volume doit être en litres pour $V_m$ en $\\mathrm{L\\,mol^{-1}}$."
+            }
+          ],
+          "hint": "Remonte du volume à $n(\\mathrm{H_2})$, puis à $n(e^-)$, puis à $Q$, puis à $\\Delta t$ ; convertis $100\\ \\mathrm{mL}$ en litres.",
+          "solution": "$n(\\mathrm{H_2})=\\dfrac{0{,}100}{24{,}0}=0{,}00417\\ \\mathrm{mol}$ ; $n(e^-)=0{,}00833\\ \\mathrm{mol}$ ; $Q=804\\ \\mathrm{C}$ ; $\\Delta t=\\dfrac{804}{0{,}600}=1340\\ \\mathrm{s}\\approx22{,}3\\ \\mathrm{min}$. Contrôle : proportionnel au volume : $134\\ \\mathrm{mL}$ en $30\\ \\mathrm{min}$ donnent environ $22\\ \\mathrm{min}$ pour $100\\ \\mathrm{mL}$.",
+          "methode": "$\\Delta t=\\dfrac{n(e^-)F}{I}$ avec $n(e^-)=2\\,n(\\mathrm{H_2})$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-electrolyse-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [
-   "Méthode 1 — Identifier les réactions aux électrodes",
-   "Méthode 2 — La chaîne quantitative",
-   "Méthode 3 — Déterminer une durée, une intensité ou une concentration",
-   "Méthode 4 — Le rendement faradique",
-   "Méthode 5 — Comparer pile et électrolyse"
-  ],
-  "existing_questions_total": 8,
-  "target_new_questions": 33,
-  "suggested_figures": [
-   "montage-electrolyse — Montage d'une électrolyse"
-  ],
-  "sources": [
-   {
-    "annale": "pc-svt-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-electrolyse-serie-1",
+      "title": "Électrolyse · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-electrolyse",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-electrolyse-forcer-un-systeme-a-reculer-q1",
+        "pc-electrolyse-le-montage-q1",
+        "pc-electrolyse-ecrire-les-reactions-aux-electrodes-q1",
+        "pc-electrolyse-identifier-les-produits-q1",
+        "pc-electrolyse-la-loi-de-faraday-q1",
+        "pc-electrolyse-la-masse-deposee-q1",
+        "pc-electrolyse-le-volume-de-gaz-q1",
+        "pc-electrolyse-determiner-une-duree-ou-une-intensite-q1",
+        "pc-electrolyse-l-epaisseur-d-un-depot-q1",
+        "pc-electrolyse-le-montage-q2",
+        "pc-electrolyse-identifier-les-produits-q2",
+        "pc-electrolyse-la-masse-deposee-q2"
+      ]
+    },
+    {
+      "slug": "pc-electrolyse-serie-2",
+      "title": "Électrolyse · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-electrolyse",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-electrolyse-le-montage-q3",
+        "pc-electrolyse-ecrire-les-reactions-aux-electrodes-q2",
+        "pc-electrolyse-identifier-les-produits-q3",
+        "pc-electrolyse-la-loi-de-faraday-q2",
+        "pc-electrolyse-le-volume-de-gaz-q2",
+        "pc-electrolyse-le-volume-de-gaz-q3",
+        "pc-electrolyse-determiner-une-duree-ou-une-intensite-q2",
+        "pc-electrolyse-determiner-une-duree-ou-une-intensite-q3",
+        "pc-electrolyse-l-epaisseur-d-un-depot-q2",
+        "pc-electrolyse-l-epaisseur-d-un-depot-q3",
+        "pc-electrolyse-ecrire-les-reactions-aux-electrodes-q3",
+        "pc-electrolyse-la-loi-de-faraday-q3"
+      ]
+    },
+    {
+      "slug": "pc-electrolyse-serie-3",
+      "title": "Électrolyse · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-electrolyse",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-electrolyse-probleme-1-q6",
+        "pc-electrolyse-probleme-2-q6",
+        "pc-electrolyse-le-montage-q4",
+        "pc-electrolyse-identifier-les-produits-q4",
+        "pc-electrolyse-le-volume-de-gaz-q4",
+        "pc-electrolyse-determiner-une-duree-ou-une-intensite-q4",
+        "pc-electrolyse-l-epaisseur-d-un-depot-q4",
+        "pc-electrolyse-les-applications-industrielles-q1",
+        "pc-electrolyse-l-affinage-electrolytique-q1",
+        "pc-electrolyse-la-galvanoplastie-q1",
+        "pc-electrolyse-la-tension-minimale-q1",
+        "pc-electrolyse-le-bilan-energetique-q1"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Forcer un système à reculer",
-    "lesson": "La transformation forcée",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 3,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-forcer-un-systeme-a-reculer",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "Forcer un système à reculer",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-forcer-un-systeme-a-reculer-q1",
-     "notion": "Forcer un système à reculer",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le montage",
-    "lesson": "La transformation forcée",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-le-montage",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "Le montage",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-le-montage-q1",
-     "notion": "Le montage",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Écrire les réactions aux électrodes",
-    "lesson": "La transformation forcée",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-ecrire-les-reactions-aux-electrodes",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "Écrire les réactions aux électrodes",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-ecrire-les-reactions-aux-electrodes-q1",
-     "notion": "Écrire les réactions aux électrodes",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Identifier les produits",
-    "lesson": "La transformation forcée",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-identifier-les-produits",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "Identifier les produits",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-identifier-les-produits-q1",
-     "notion": "Identifier les produits",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La loi de Faraday",
-    "lesson": "Aspects quantitatifs",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-la-loi-de-faraday",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "La loi de Faraday",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-la-loi-de-faraday-q1",
-     "notion": "La loi de Faraday",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La masse déposée",
-    "lesson": "Aspects quantitatifs",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 2,
-    "target_new_questions": 2,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-la-masse-deposee",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "La masse déposée",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-la-masse-deposee-q1",
-     "notion": "La masse déposée",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le volume de gaz",
-    "lesson": "Aspects quantitatifs",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-le-volume-de-gaz",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "Le volume de gaz",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-le-volume-de-gaz-q1",
-     "notion": "Le volume de gaz",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Déterminer une durée ou une intensité",
-    "lesson": "Aspects quantitatifs",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-determiner-une-duree-ou-une-intensite",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "Déterminer une durée ou une intensité",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-determiner-une-duree-ou-une-intensite-q1",
-     "notion": "Déterminer une durée ou une intensité",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'épaisseur d'un dépôt",
-    "lesson": "Aspects quantitatifs",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-l-epaisseur-d-un-depot",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "L'épaisseur d'un dépôt",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-l-epaisseur-d-un-depot-q1",
-     "notion": "L'épaisseur d'un dépôt",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les applications industrielles",
-    "lesson": "Approfondissement — Électrolyse",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 1,
-    "target_new_questions": 0,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-les-applications-industrielles",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "Les applications industrielles",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-les-applications-industrielles-q1",
-     "notion": "Les applications industrielles",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'affinage électrolytique",
-    "lesson": "Approfondissement — Électrolyse",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-l-affinage-electrolytique",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "L'affinage électrolytique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-l-affinage-electrolytique-q1",
-     "notion": "L'affinage électrolytique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La galvanoplastie",
-    "lesson": "Approfondissement — Électrolyse",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-la-galvanoplastie",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "La galvanoplastie",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-la-galvanoplastie-q1",
-     "notion": "La galvanoplastie",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La tension minimale",
-    "lesson": "Approfondissement — Électrolyse",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-la-tension-minimale",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "La tension minimale",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-la-tension-minimale-q1",
-     "notion": "La tension minimale",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le bilan énergétique",
-    "lesson": "Approfondissement — Électrolyse",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-electrolyse-le-bilan-energetique",
-   "chapter": "pc-electrolyse",
-   "kind": "qcu",
-   "title": "Le bilan énergétique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-le-bilan-energetique-q1",
-     "notion": "Le bilan énergétique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-electrolyse-probleme-1",
-   "chapter": "pc-electrolyse",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-electrolyse-probleme-2",
-   "chapter": "pc-electrolyse",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-electrolyse-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-electrolyse-serie-1",
-   "title": "Électrolyse · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-electrolyse",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-electrolyse-serie-2",
-   "title": "Électrolyse · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-electrolyse",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-electrolyse-serie-3",
-   "title": "Électrolyse · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-electrolyse",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
