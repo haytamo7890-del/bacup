@@ -419,7 +419,7 @@
             },
             {
               "label": "$u(t)=k\\,P_m\\,S_m\\,[1+m\\cos(2\\pi f t)]\\cos(2\\pi F t)$",
-              "why": "Tu as factorisé $S_m$ au lieu de $U_0$ : la composante continue est $U_0$."
+              "why": "Cette expression vaut $kP_m(S_m+mS_m\\cos)$ : $S_m$ est à la place de $U_0$ dans la composante continue et $mS_m$ devant le cosinus ; or $s+U_0=U_0[1+m\\cos]$."
             }
           ],
           "hint": "Factorise $U_0$ dans $s(t)+U_0$.",
@@ -506,7 +506,7 @@
             }
           ],
           "hint": "Développe $[1+m\\cos(2\\pi f t)]\\cos(2\\pi F t)$ avec la formule de linéarisation du produit de cosinus.",
-          "solution": "$\\cos a\\cos b=\\tfrac{1}{2}[\\cos(a-b)+\\cos(a+b)]$ donne la porteuse ($F$) et deux raies latérales ($F-f$ et $F+f$), d'amplitude $mU_m/2$ chacune. Contrôle : le spectre est symétrique autour de $F$.",
+          "solution": "$\\cos a\\cos b=\\tfrac{1}{2}[\\cos(a-b)+\\cos(a+b)]$ donne la porteuse ($F$) et deux raies latérales ($F-f$ et $F+f$), d'amplitude $mU_m/2$ chacune, avec $U_m=kP_mU_0$. Contrôle : le spectre est symétrique autour de $F$.",
           "methode": "Spectre : $F-f$, $F$, $F+f$.",
           "points": 1,
           "ref": "pc-modulation-le-spectre-du-signal-module-q1"
@@ -776,11 +776,11 @@
             },
             {
               "label": "$m>1$",
-              "why": "Pour $m>1$, il y a surmodulation : l'enveloppe est déformée."
+              "why": "Pour $m>1$, $U_0+s(t)$ change de signe : surmodulation, l'enveloppe est déformée."
             },
             {
-              "label": "$m=0$",
-              "why": "Pour $m=0$, il n'y a aucune modulation : l'amplitude est constante."
+              "label": "$U_0=0$",
+              "why": "Avec $U_0=0$, $m=S_m/U_0$ n'est pas défini et $U_0+s(t)=s(t)$ change de signe : l'enveloppe est déformée."
             },
             {
               "label": "$F<f$",
@@ -974,7 +974,7 @@
               "why": "Pour $m=1$, $A_{min}=0$ : la petite base $b$ s'annule et le trapèze devient un triangle."
             },
             {
-              "label": "un rectangle",
+              "label": "un rectangle (les deux bases sont égales)",
               "why": "Le rectangle correspond à $m=0$ (signal non modulé)."
             },
             {
@@ -1049,7 +1049,7 @@
         {
           "notion": "La démodulation",
           "difficulty": 1,
-          "statement": "Les deux étapes de la démodulation d'un signal modulé en amplitude sont :",
+          "statement": "Les deux étapes de la démodulation par détection d'enveloppe sont :",
           "options": [
             {
               "label": "la détection d'enveloppe (diode et filtre $RC$), puis la suppression de la composante continue",
@@ -1058,11 +1058,11 @@
             },
             {
               "label": "la suppression de la composante continue, puis la détection d'enveloppe par diode et filtre $RC$",
-              "why": "La composante continue ne peut être retirée qu'après avoir extrait l'enveloppe."
+              "why": "Le signal modulé $u(t)$ n'a pas de composante continue : $U_0$ n'apparaît que dans l'enveloppe détectée, donc on la retire après la détection."
             },
             {
               "label": "la multiplication par la porteuse, puis l'amplification du signal obtenu",
-              "why": "Ce ne sont pas les étapes de la détection d'enveloppe étudiée ici."
+              "why": "Multiplier par la porteuse (démodulation synchrone) demande ensuite un filtrage passe-bas, pas une amplification ; et ce n'est pas la détection d'enveloppe par diode et filtre $RC$."
             },
             {
               "label": "le redressement du signal, puis l'ajout d'une composante continue",
@@ -1090,11 +1090,11 @@
               "why": "$RC<\\dfrac{1}{F}=10\\ \\mathrm{\\mu s}$ : le condensateur suit la porteuse, la sortie reste fortement ondulée."
             },
             {
-              "label": "$RC=1{,}0\\times10\\ \\mathrm{ms}$",
+              "label": "$RC=10\\ \\mathrm{ms}$",
               "why": "$RC>\\dfrac{1}{f}=1{,}0\\ \\mathrm{ms}$ : le condensateur est trop lent pour suivre l'enveloppe."
             },
             {
-              "label": "$RC=1{,}0\\times10\\ \\mathrm{\\mu s}$",
+              "label": "$RC=10\\ \\mathrm{\\mu s}$",
               "why": "$RC=\\dfrac{1}{F}$ : il faut $RC\\gg\\dfrac{1}{F}$, non égal."
             }
           ],
@@ -1225,7 +1225,7 @@
         {
           "notion": "Le spectre du signal modulé",
           "difficulty": 2,
-          "statement": "Le spectre de $u(t)$ comporte des raies de fréquences et d'amplitudes :",
+          "statement": "Le spectre de $u(t)$ (on pose $U_m=kP_mU_0$) comporte des raies de fréquences et d'amplitudes :",
           "options": [
             {
               "label": "$99$, $100$ et $101\\ \\mathrm{kHz}$ ; $1{,}25$, $4{,}0$ et $1{,}25\\ \\mathrm{V}$",
@@ -1258,9 +1258,9 @@
           "statement": "Le taux de modulation du signal vaut :",
           "options": [
             {
-              "label": "$m=0{,}62$",
+              "label": "$m=0{,}63$",
               "correct": true,
-              "why": "$m=\\dfrac{S_m}{U_0}=\\dfrac{2{,}5}{4{,}0}=0{,}625$."
+              "why": "$m=\\dfrac{S_m}{U_0}=\\dfrac{2{,}5}{4{,}0}=0{,}625\\approx0{,}63$."
             },
             {
               "label": "$m=1{,}6$",
@@ -1363,7 +1363,7 @@
       "kind": "probleme",
       "title": "Démodulation d'un signal modulé en amplitude",
       "difficulty": 3,
-      "context": "On démodule un signal modulé en amplitude de porteuse $F=200\\ \\mathrm{kHz}$ et de signal modulant de fréquence $f=1{,}0\\ \\mathrm{kHz}$. On suppose $kP_m=1$ : l'enveloppe vaut donc $U_0+s(t)$ ; elle oscille entre $A_{max}=7{,}0\\ \\mathrm{V}$ et $A_{min}=3{,}0\\ \\mathrm{V}$. Le détecteur est formé d'une diode en série avec un conducteur ohmique $R=10\\ \\mathrm{k\\Omega}$ en parallèle sur un condensateur $C$ ; il est suivi d'un condensateur de liaison.",
+      "context": "On démodule un signal modulé en amplitude de porteuse $F=200\\ \\mathrm{kHz}$ et de signal modulant de fréquence $f=1{,}0\\ \\mathrm{kHz}$. On suppose $kP_m=1$ : l'enveloppe vaut donc $U_0+s(t)$ ; elle oscille entre $A_{max}=7{,}0\\ \\mathrm{V}$ et $A_{min}=3{,}0\\ \\mathrm{V}$. Le détecteur est formé d'une diode en série avec l'association en parallèle d'un conducteur ohmique $R=10\\ \\mathrm{k\\Omega}$ et d'un condensateur $C$ ; il est suivi d'un condensateur de liaison.",
       "origin": {
         "type": "original"
       },
@@ -1485,7 +1485,7 @@
           "solution": "$\\dfrac{1}{F}=5{,}0\\ \\mathrm{\\mu s}$ et $\\dfrac{1}{f}=1{,}0\\ \\mathrm{ms}$ : on choisit $RC$ entre les deux. Pour $C=10\\ \\mathrm{nF}$ : $RC=1{,}0\\times10^{-4}\\ \\mathrm{s}=100\\ \\mathrm{\\mu s}$. Contrôle : $5{,}0\\ \\mathrm{\\mu s}\\ll100\\ \\mathrm{\\mu s}\\ll1{,}0\\ \\mathrm{ms}$.",
           "methode": "Choix de $C$ : $\\dfrac{1}{F}\\ll RC\\ll\\dfrac{1}{f}$.",
           "points": 1,
-          "part": "Partie B — Choix des composants",
+          "part": "Partie B — Composants et réglages",
           "ref": "pc-modulation-probleme-2-q4"
         },
         {
@@ -1511,11 +1511,11 @@
               "why": "Pour $S_m=7{,}0\\ \\mathrm{V}$ (valeur de $A_{max}$), $m=1{,}4>1$ : il y aurait surmodulation."
             }
           ],
-          "hint": "La condition est $m<1$ avec $m=S_m/U_0$.",
+          "hint": "Quelle valeur de $S_m$ donne $m=1$ pour $U_0=5{,}0\\ \\mathrm{V}$ ?",
           "solution": "$m<1$ donne $S_m<U_0=5{,}0\\ \\mathrm{V}$. Contrôle : pour $S_m=4{,}0\\ \\mathrm{V}$, $m=0{,}80$ ; pour $S_m=6{,}0\\ \\mathrm{V}$, $m=1{,}2$ (surmodulation).",
           "methode": "Sans surmodulation : $S_m<U_0$.",
           "points": 1,
-          "part": "Partie B — Choix des composants",
+          "part": "Partie B — Composants et réglages",
           "ref": "pc-modulation-probleme-2-q5"
         },
         {
@@ -1545,7 +1545,7 @@
           "solution": "$m=\\dfrac{S_m}{U_0}=0{,}40$ ne dépend pas de $P_m$ ; $A_{max}=kP_m(U_0+S_m)$ est proportionnelle à $P_m$ : $2\\times7{,}0=14\\ \\mathrm{V}$. Contrôle : $\\dfrac{A_{max}-A_{min}}{A_{max}+A_{min}}=\\dfrac{14-6}{14+6}=0{,}40$.",
           "methode": "$P_m$ change l'amplitude globale, non le taux $m$.",
           "points": 1,
-          "part": "Partie B — Choix des composants",
+          "part": "Partie B — Composants et réglages",
           "ref": "pc-modulation-probleme-2-q6"
         }
       ]
@@ -1613,7 +1613,7 @@
       "position": 103,
       "published": true,
       "questions": [
-        "pc-modulation-probleme-1-q2",
+        "pc-modulation-probleme-2-q2",
         "pc-modulation-probleme-1-q3",
         "pc-modulation-probleme-2-q3",
         "pc-modulation-probleme-1-q4",
