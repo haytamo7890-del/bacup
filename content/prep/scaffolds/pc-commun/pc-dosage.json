@@ -1,1521 +1,2661 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "track": null,
- "_scaffold": {
-  "pack": "pc-commun",
-  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-dosage",
-   "name": "Dosage acido-basique",
-   "domain": "chimie",
-   "unit": "Acido-basique"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-dosage",
+      "name": "Dosage acido-basique",
+      "domain": "chimie",
+      "unit": "Acido-basique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Le principe du dosage",
+      "L'équivalence",
+      "L'allure de la courbe",
+      "Quatre méthodes",
+      "La méthode des tangentes parallèles",
+      "La méthode de la dérivée",
+      "L'indicateur coloré",
+      "Le dosage conductimétrique",
+      "Pourquoi le pH à l'équivalence dépend de la force",
+      "L'amplitude du saut de pH",
+      "La solution tampon du dosage",
+      "Les dosages indirects",
+      "Les incertitudes",
+      "Le montage",
+      "Les préliminaires",
+      "Le protocole",
+      "L'exploitation",
+      "Les sources d'erreur",
+      "Méthode 1 — Le dosage complet, de A à Z",
+      "Méthode 2 — Gérer les coefficients stœchiométriques",
+      "Méthode 3 — Déterminer un $\\mathrm{p}K_A$ par dosage",
+      "Méthode 4 — Déterminer les espèces majoritaires",
+      "Méthode 5 — Remonter à une grandeur pratique"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Le dosage complet, de A à Z",
+      "Méthode 2 — Gérer les coefficients stœchiométriques",
+      "Méthode 3 — Déterminer un $\\mathrm{p}K_A$ par dosage",
+      "Méthode 4 — Déterminer les espèces majoritaires",
+      "Méthode 5 — Remonter à une grandeur pratique"
+    ],
+    "existing_questions_total": 9,
+    "target_new_questions": 50,
+    "suggested_figures": [
+      "titrage-ph — Dosage acido-basique — pH = f(V), saut à l'équivalence",
+      "montage-titrage — Montage de dosage acido-basique",
+      "dosage-derivee — Dosage pH-métrique : méthode de la dérivée (pic de dpH/dV à V_E)",
+      "dosage-conductimetrique — Dosage conductimétrique : rupture de pente à l'équivalence"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "Le principe du dosage",
-   "L'équivalence",
-   "L'allure de la courbe",
-   "Quatre méthodes",
-   "La méthode des tangentes parallèles",
-   "La méthode de la dérivée",
-   "L'indicateur coloré",
-   "Le dosage conductimétrique",
-   "Pourquoi le pH à l'équivalence dépend de la force",
-   "L'amplitude du saut de pH",
-   "La solution tampon du dosage",
-   "Les dosages indirects",
-   "Les incertitudes",
-   "Le montage",
-   "Les préliminaires",
-   "Le protocole",
-   "L'exploitation",
-   "Les sources d'erreur",
-   "Méthode 1 — Le dosage complet, de A à Z",
-   "Méthode 2 — Gérer les coefficients stœchiométriques",
-   "Méthode 3 — Déterminer un $\\mathrm{p}K_A$ par dosage",
-   "Méthode 4 — Déterminer les espèces majoritaires",
-   "Méthode 5 — Remonter à une grandeur pratique"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Le principe du dosage",
+        "lesson": "Principe et équivalence",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-le-principe-du-dosage",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "Le principe du dosage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le principe du dosage",
+          "difficulty": 1,
+          "statement": "Pour qu'une réaction chimique serve de support à un dosage, elle doit être :",
+          "options": [
+            {
+              "label": "totale, rapide et unique",
+              "correct": true,
+              "why": "Totale pour que le réactif limitant soit entièrement consommé, rapide pour repérer l'équivalence sans attendre, unique pour que la relation entre quantités soit sans ambiguïté."
+            },
+            {
+              "label": "limitée, lente et accompagnée de réactions parasites",
+              "why": "Une réaction limitée, lente ou accompagnée de réactions parasites ne permet pas de relier simplement les quantités de matière."
+            },
+            {
+              "label": "totale mais très lente, pour mieux suivre l'évolution",
+              "why": "Une réaction lente retarde l'équilibre à chaque ajout de titrant : on ne peut pas repérer l'équivalence de façon fiable."
+            },
+            {
+              "label": "rapide mais limitée, pour atteindre vite l'équilibre",
+              "why": "Une réaction limitée laisse du réactif titré à l'équilibre : la relation à l'équivalence n'est plus valable."
+            }
+          ],
+          "hint": "Pense à ce qu'il faut pour que la quantité versée à l'équivalence soit liée sans ambiguïté à celle du réactif dosé.",
+          "solution": "Un dosage repose sur une réaction support : totale (le réactif limitant disparaît), rapide (chaque ajout est immédiatement consommé) et unique (une seule équation relie titrant et titré). Contrôle : une réaction limitée ou lente ne permet pas d'écrire $C_AV_A=C_BV_E$.",
+          "methode": "Réaction de dosage : totale, rapide, unique.",
+          "points": 1,
+          "ref": "pc-dosage-le-principe-du-dosage-q1"
+        },
+        {
+          "notion": "Le principe du dosage",
+          "difficulty": 2,
+          "statement": "Parmi les réactions suivantes, laquelle peut servir de réaction de dosage ?",
+          "options": [
+            {
+              "label": "$\\mathrm{H_3O^+}+\\mathrm{HO^-}\\rightarrow2\\,\\mathrm{H_2O}$",
+              "correct": true,
+              "why": "Cette réaction acide-base est totale, rapide et unique : elle convient pour un dosage."
+            },
+            {
+              "label": "$\\mathrm{S_2O_8^{2-}}+2\\,\\mathrm{I^-}\\rightarrow2\\,\\mathrm{SO_4^{2-}}+\\mathrm{I_2}$",
+              "why": "Cette oxydoréduction est lente à température ordinaire : on ne repérerait pas l'équivalence après chaque ajout."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{C_2H_5OH}\\rightleftharpoons\\mathrm{CH_3COOC_2H_5}+\\mathrm{H_2O}$",
+              "why": "L'estérification est lente et limitée : elle ne convient pas comme réaction de dosage."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{H_3O^+}$",
+              "why": "Cette réaction avec l'eau est limitée : ce n'est pas la réaction entre titrant et titré qui sert au dosage."
+            }
+          ],
+          "hint": "Cherche la réaction à la fois totale, rapide et unique.",
+          "solution": "La réaction entre $\\mathrm{H_3O^+}$ et $\\mathrm{HO^-}$ est totale et quasi instantanée : c'est la réaction de dosage classique d'un acide par une base forte. L'oxydoréduction entre $\\mathrm{S_2O_8^{2-}}$ et $\\mathrm{I^-}$ est lente, l'estérification est lente et limitée, et la réaction d'un acide faible avec l'eau est limitée. Contrôle : une réaction de dosage doit être rapide devant la vitesse d'ajout du titrant.",
+          "methode": "Dosage acide-base : $\\mathrm{H_3O^+}+\\mathrm{HO^-}\\rightarrow2\\,\\mathrm{H_2O}$, totale et rapide.",
+          "points": 1,
+          "ref": "pc-dosage-le-principe-du-dosage-q2"
+        },
+        {
+          "notion": "Le principe du dosage",
+          "difficulty": 3,
+          "statement": "On dose une solution d'acide sulfurique $\\mathrm{H_2SO_4}$ (diacide fort) par une solution de soude. À l'équivalence, la quantité de matière d'ions hydroxyde versés est :",
+          "options": [
+            {
+              "label": "$n(\\mathrm{HO^-})=2\\,n(\\mathrm{H_2SO_4})$",
+              "correct": true,
+              "why": "$\\mathrm{H_2SO_4}+2\\,\\mathrm{HO^-}\\rightarrow\\mathrm{SO_4^{2-}}+2\\,\\mathrm{H_2O}$ : à l'équivalence les réactifs sont dans les proportions stœchiométriques de l'équation."
+            },
+            {
+              "label": "$n(\\mathrm{HO^-})=n(\\mathrm{H_2SO_4})$",
+              "why": "Tu as oublié le coefficient $2$ : $\\mathrm{H_2SO_4}$ cède deux protons, donc il réagit avec deux ions hydroxyde."
+            },
+            {
+              "label": "$n(\\mathrm{HO^-})=\\dfrac12\\,n(\\mathrm{H_2SO_4})$",
+              "why": "Tu as inversé le rapport : il faut deux ions hydroxyde pour un acide sulfurique, pas la moitié."
+            },
+            {
+              "label": "$n(\\mathrm{HO^-})=4\\,n(\\mathrm{H_2SO_4})$",
+              "why": "Tu as appliqué deux fois le coefficient $2$ : le rapport stœchiométrique est $2$ pour $1$."
+            }
+          ],
+          "hint": "Écris l'équation de dosage avec ses coefficients : combien de $\\mathrm{HO^-}$ réagissent avec une molécule de $\\mathrm{H_2SO_4}$ ?",
+          "solution": "$\\mathrm{H_2SO_4}$ est un diacide fort : $\\mathrm{H_2SO_4}+2\\,\\mathrm{HO^-}\\rightarrow\\mathrm{SO_4^{2-}}+2\\,\\mathrm{H_2O}$. À l'équivalence, $\\dfrac{n(\\mathrm{H_2SO_4})}{1}=\\dfrac{n(\\mathrm{HO^-})}{2}$, donc $n(\\mathrm{HO^-})=2\\,n(\\mathrm{H_2SO_4})$, soit $C_BV_E=2\\,C_AV_A$. Contrôle : le diacide consomme deux fois plus de soude qu'un monoacide de même quantité.",
+          "methode": "À l'équivalence : $n_{\\text{titré}}/\\nu_{\\text{titré}}=n_{\\text{titrant}}/\\nu_{\\text{titrant}}$.",
+          "points": 1,
+          "ref": "pc-dosage-le-principe-du-dosage-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'équivalence",
+        "lesson": "Principe et équivalence",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 5,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-l-equivalence",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "L'équivalence",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "L'équivalence",
+          "difficulty": 2,
+          "statement": "À l'équivalence d'un dosage, on peut affirmer que :",
+          "options": [
+            {
+              "label": "le réactif titré et le titrant sont dans les proportions stœchiométriques",
+              "correct": true,
+              "why": "À l'équivalence, les deux réactifs sont entièrement consommés : aucun n'est en excès."
+            },
+            {
+              "label": "le pH de la solution vaut toujours $7$, quels que soient les réactifs utilisés",
+              "why": "Le pH à l'équivalence n'est égal à $7$ que pour un acide fort dosé par une base forte (à $25\\ ^\\circ\\mathrm{C}$) ; équivalence et neutralité sont deux notions différentes."
+            },
+            {
+              "label": "le réactif titré est en excès et le titrant est limitant dans le mélange",
+              "why": "Avant l'équivalence le réactif titré est en excès ; à l'équivalence aucun des deux n'est en excès."
+            },
+            {
+              "label": "le volume de titrant versé vaut toujours la moitié du volume du réactif titré",
+              "why": "Le volume équivalent se déduit de la relation stœchiométrique $C_AV_A=C_BV_E$ ; il n'est pas en général la moitié de $V_A$."
+            }
+          ],
+          "hint": "À l'équivalence, que reste-t-il de chacun des deux réactifs ?",
+          "solution": "À l'équivalence, le réactif titré et le titrant sont entièrement consommés : ils ont été mélangés dans les proportions stœchiométriques de la réaction support. Avant, le titré est en excès ; après, c'est le titrant. Contrôle : pour un dosage $1{:}1$, $C_AV_A=C_BV_E$.",
+          "methode": "Équivalence : réactifs dans les proportions stœchiométriques ; pas de lien avec $\\mathrm{pH}=7$.",
+          "points": 1,
+          "ref": "pc-dosage-l-equivalence-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'allure de la courbe",
+        "lesson": "Principe et équivalence",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-l-allure-de-la-courbe",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "L'allure de la courbe",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'allure de la courbe",
+          "difficulty": 1,
+          "statement": "Quand on dose un acide par une base forte, la courbe $\\mathrm{pH}=f(V_B)$ a l'allure :",
+          "options": [
+            {
+              "label": "d'une courbe croissante avec un saut de pH autour de l'équivalence",
+              "correct": true,
+              "why": "Le pH croît lentement, subit un saut brusque autour de $V_E$ puis croît à nouveau lentement."
+            },
+            {
+              "label": "d'une courbe décroissante avec un saut de pH autour de l'équivalence",
+              "why": "Ajouter une base fait augmenter le pH : la courbe ne peut pas être décroissante."
+            },
+            {
+              "label": "d'une droite croissante sans aucun changement de pente",
+              "why": "Le pH n'est pas proportionnel au volume versé : la courbe présente un saut marqué."
+            },
+            {
+              "label": "d'une courbe constante, le pH ne variant pas pendant le dosage",
+              "why": "Le pH varie fortement entre l'acide initial et la solution finale basique."
+            }
+          ],
+          "hint": "Ajoute-t-on une espèce acide ou basique, et que devient le pH ?",
+          "solution": "En versant une base dans un acide, le pH augmente : il part d'une valeur acide, croît lentement, présente un saut brusque autour de l'équivalence puis tend vers une valeur basique. Contrôle : le point d'inflexion est au centre du saut.",
+          "methode": "Dosage acide par base : $\\mathrm{pH}$ croissant, saut à l'équivalence.",
+          "points": 1,
+          "ref": "pc-dosage-l-allure-de-la-courbe-q1"
+        },
+        {
+          "notion": "L'allure de la courbe",
+          "difficulty": 2,
+          "statement": "Lors du dosage d'un acide fort par une base forte à $25\\ ^\\circ\\mathrm{C}$, le pH à l'équivalence vaut :",
+          "options": [
+            {
+              "label": "$7{,}0$",
+              "correct": true,
+              "why": "À l'équivalence il ne reste que $\\mathrm{Na^+}$ et $\\mathrm{Cl^-}$ (ions spectateurs) et l'eau : $\\mathrm{pH}=7$."
+            },
+            {
+              "label": "une valeur supérieure à $7$",
+              "why": "Cela se produit pour un acide faible dosé par une base forte, à cause de la base conjuguée formée."
+            },
+            {
+              "label": "une valeur inférieure à $7$",
+              "why": "Cela se produit pour une base faible dosée par un acide fort, à cause de l'acide conjugué formé."
+            },
+            {
+              "label": "$14$",
+              "why": "Le pH ne vaut $14$ qu'en présence d'un grand excès de base forte très concentrée ; à l'équivalence la solution est neutre."
+            }
+          ],
+          "hint": "Quelles espèces sont présentes à l'équivalence, et ont-elles un caractère acide ou basique ?",
+          "solution": "Acide fort + base forte : à l'équivalence ne subsistent que les ions spectateurs $\\mathrm{Na^+}$ et $\\mathrm{Cl^-}$ dans l'eau : la solution est neutre, $\\mathrm{pH}_E=7{,}0$ à $25\\ ^\\circ\\mathrm{C}$. Contrôle : aucun de ces ions ne réagit avec l'eau.",
+          "methode": "Acide fort/base forte : $\\mathrm{pH}_E=7$ à $25\\ ^\\circ\\mathrm{C}$.",
+          "points": 1,
+          "ref": "pc-dosage-l-allure-de-la-courbe-q2"
+        },
+        {
+          "notion": "L'allure de la courbe",
+          "difficulty": 2,
+          "statement": "Lors du dosage de l'acide éthanoïque (acide faible) par la soude (base forte), le pH à l'équivalence est :",
+          "options": [
+            {
+              "label": "supérieur à $7$, car la base conjuguée $\\mathrm{CH_3COO^-}$ formée est faible",
+              "correct": true,
+              "why": "À l'équivalence la solution contient $\\mathrm{CH_3COO^-}$ et $\\mathrm{Na^+}$ : l'ion éthanoate réagit avec l'eau en formant $\\mathrm{HO^-}$."
+            },
+            {
+              "label": "égal à $7$, car l'équivalence correspond toujours à la neutralisation",
+              "why": "Équivalence ne signifie pas neutralité : l'ion éthanoate formé rend la solution basique."
+            },
+            {
+              "label": "inférieur à $7$, car il reste de l'acide éthanoïque dans le mélange",
+              "why": "À l'équivalence l'acide est entièrement consommé ; il ne reste que sa base conjuguée."
+            },
+            {
+              "label": "égal au $\\mathrm{p}K_A=4{,}75$ du couple, comme à la demi-équivalence",
+              "why": "$\\mathrm{pH}=\\mathrm{p}K_A$ vaut à la demi-équivalence, pas à l'équivalence."
+            }
+          ],
+          "hint": "Quelle espèce majoritaire est présente à l'équivalence, et réagit-elle avec l'eau ?",
+          "solution": "Acide faible + base forte : à l'équivalence, $n(\\mathrm{CH_3COO^-})=n_0(\\mathrm{CH_3COOH})$ et il ne reste pas d'acide. $\\mathrm{CH_3COO^-}$ est une base faible : $\\mathrm{CH_3COO^-}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{CH_3COOH}+\\mathrm{HO^-}$, donc $\\mathrm{pH}_E>7$ (environ $8{,}7$ pour $0{,}05\\ \\mathrm{mol\\,L^{-1}}$). Contrôle : $\\mathrm{pH}=\\mathrm{p}K_A$ ne s'observe qu'à $V_E/2$.",
+          "methode": "Acide faible/base forte : $\\mathrm{pH}_E>7$ ; base faible/acide fort : $\\mathrm{pH}_E<7$.",
+          "points": 1,
+          "ref": "pc-dosage-l-allure-de-la-courbe-q3"
+        },
+        {
+          "notion": "L'allure de la courbe",
+          "difficulty": 3,
+          "statement": "On dose une solution d'ammoniac $\\mathrm{NH_3}$ (base faible, couple $\\mathrm{NH_4^+/NH_3}$ de $\\mathrm{p}K_A=9{,}2$) par de l'acide chlorhydrique. Le pH à l'équivalence est :",
+          "options": [
+            {
+              "label": "inférieur à $7$, car l'ion ammonium $\\mathrm{NH_4^+}$ formé est un acide faible",
+              "correct": true,
+              "why": "À l'équivalence $\\mathrm{NH_3}$ est consommé et il ne reste que $\\mathrm{NH_4^+}$ et $\\mathrm{Cl^-}$ ; $\\mathrm{NH_4^+}$ cède un proton à l'eau."
+            },
+            {
+              "label": "égal à $7$, car l'ion chlorure est spectateur et ne réagit pas avec l'eau",
+              "why": "Les ions chlorure sont spectateurs, mais $\\mathrm{NH_4^+}$ réagit avec l'eau et acidifie la solution."
+            },
+            {
+              "label": "supérieur à $7$, car l'ammoniac est une base et reste présent dans la solution",
+              "why": "À l'équivalence l'ammoniac a été consommé : il reste son acide conjugué."
+            },
+            {
+              "label": "égal à $9{,}2$, car c'est le $\\mathrm{p}K_A$ du couple $\\mathrm{NH_4^+/NH_3}$",
+              "why": "$\\mathrm{pH}=\\mathrm{p}K_A$ vaut à la demi-équivalence, où $[\\mathrm{NH_4^+}]=[\\mathrm{NH_3}]$, pas à l'équivalence."
+            }
+          ],
+          "hint": "À l'équivalence, quelle espèce de l'ammoniac reste-t-il, et se comporte-t-elle comme un acide ou une base ?",
+          "solution": "$\\mathrm{NH_3}+\\mathrm{H_3O^+}\\rightarrow\\mathrm{NH_4^+}+\\mathrm{H_2O}$. À l'équivalence la solution contient $\\mathrm{NH_4^+}$ (acide faible) et $\\mathrm{Cl^-}$ (spectateur). $\\mathrm{NH_4^+}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{NH_3}+\\mathrm{H_3O^+}$ rend la solution acide : $\\mathrm{pH}_E<7$. Contrôle : on choisirait un indicateur à zone de virage acide (rouge de méthyle).",
+          "methode": "Base faible dosée par acide fort : $\\mathrm{pH}_E<7$ (acide conjugué).",
+          "points": 1,
+          "ref": "pc-dosage-l-allure-de-la-courbe-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Quatre méthodes",
+        "lesson": "Repérer l'équivalence",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-quatre-methodes",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "Quatre méthodes",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Quatre méthodes",
+          "difficulty": 1,
+          "statement": "Parmi ces méthodes de repérage de l'équivalence, laquelle ne nécessite aucun appareil de mesure ?",
+          "options": [
+            {
+              "label": "l'indicateur coloré",
+              "correct": true,
+              "why": "Le changement de teinte s'observe à l'œil nu ; il n'exige ni pH-mètre ni conductimètre."
+            },
+            {
+              "label": "la méthode des tangentes parallèles",
+              "why": "Elle s'applique à une courbe $\\mathrm{pH}=f(V)$ tracée à partir de mesures au pH-mètre."
+            },
+            {
+              "label": "la méthode de la dérivée",
+              "why": "Elle repose sur la courbe $\\dfrac{d\\mathrm{pH}}{dV}$, obtenue à partir de relevés de pH."
+            },
+            {
+              "label": "la conductimétrie",
+              "why": "Elle exige un conductimètre pour relever la conductivité à chaque ajout."
+            }
+          ],
+          "hint": "Quelle méthode repose sur une observation visuelle plutôt que sur une mesure ?",
+          "solution": "Quatre méthodes repèrent l'équivalence : tangentes parallèles et dérivée (courbe de pH-métrie), conductimétrie (rupture de pente de $\\sigma(V)$) et indicateur coloré (changement de teinte). Seul l'indicateur coloré n'utilise aucun appareil. Contrôle : il est moins précis car l'observation est visuelle.",
+          "methode": "Quatre méthodes : tangentes, dérivée, conductimétrie, indicateur coloré.",
+          "points": 1,
+          "ref": "pc-dosage-quatre-methodes-q1"
+        },
+        {
+          "notion": "Quatre méthodes",
+          "difficulty": 2,
+          "statement": "La solution à doser est fortement colorée et opaque. Pour repérer l'équivalence, on choisit plutôt :",
+          "options": [
+            {
+              "label": "la pH-métrie ou la conductimétrie, qui ne reposent pas sur la vue",
+              "correct": true,
+              "why": "Ces méthodes mesurent une grandeur physique, indépendante de la couleur de la solution."
+            },
+            {
+              "label": "l'indicateur coloré, dont le changement de teinte restera bien visible à l'œil",
+              "why": "Dans une solution fortement colorée, le changement de teinte d'un indicateur est masqué ou difficile à voir."
+            },
+            {
+              "label": "la mesure de la température du mélange, qui change nettement à l'équivalence",
+              "why": "La température ne varie pas de façon exploitable pour repérer l'équivalence lors d'un dosage usuel."
+            },
+            {
+              "label": "aucune méthode : un dosage est impossible dans une solution colorée",
+              "why": "La pH-métrie et la conductimétrie permettent de doser une solution colorée sans difficulté."
+            }
+          ],
+          "hint": "Une solution opaque empêche-t-elle de mesurer un pH ou une conductivité ?",
+          "solution": "Dans une solution colorée, l'indicateur n'est pas fiable (la teinte n'est pas visible). On utilise une méthode physique : pH-métrie (tangentes ou dérivée) ou conductimétrie. Contrôle : ces méthodes donnent une courbe exploitable quelle que soit la couleur.",
+          "methode": "Solution colorée : pH-métrie ou conductimétrie plutôt qu'indicateur.",
+          "points": 1,
+          "ref": "pc-dosage-quatre-methodes-q2"
+        },
+        {
+          "notion": "Quatre méthodes",
+          "difficulty": 3,
+          "statement": "On dose l'acide éthanoïque par la soude. Parmi les trois méthodes suivantes, laquelle est inadaptée : pH-métrie (dérivée), conductimétrie, indicateur coloré bleu de bromothymol (zone de virage $6{,}0$–$7{,}6$) ?",
+          "options": [
+            {
+              "label": "le bleu de bromothymol, dont la zone de virage est hors du pH à l'équivalence",
+              "correct": true,
+              "why": "À l'équivalence le pH est d'environ $8{,}7$ : le BBT a déjà viré avant l'équivalence."
+            },
+            {
+              "label": "la pH-métrie, car la courbe de dosage ne présente aucun saut de pH net",
+              "why": "La courbe présente bien un saut de pH autour de l'équivalence : la méthode de la dérivée s'applique."
+            },
+            {
+              "label": "la conductimétrie, car l'acide éthanoïque ne contient absolument aucun ion",
+              "why": "Le dosage forme $\\mathrm{CH_3COO^-}$ et $\\mathrm{Na^+}$ : la conductivité varie, et présente une rupture de pente à l'équivalence."
+            },
+            {
+              "label": "aucune des trois : elles conviennent toutes parfaitement à ce dosage",
+              "why": "Le BBT vire avant l'équivalence : il ne convient pas pour ce dosage."
+            }
+          ],
+          "hint": "Compare le pH à l'équivalence ($>7$) aux zones de virage.",
+          "solution": "Acide faible dosé par base forte : $\\mathrm{pH}_E\\approx8{,}7>7$. Le BBT ($6{,}0$–$7{,}6$) vire avant l'équivalence : l'indicateur est inadapté (la phénolphtaléine, $8{,}2$–$10{,}0$, conviendrait). La pH-métrie et la conductimétrie conviennent. Contrôle : critère : $\\mathrm{pH}_E\\in$ zone de virage.",
+          "methode": "Indicateur : sa zone de virage doit contenir $\\mathrm{pH}_E$.",
+          "points": 1,
+          "ref": "pc-dosage-quatre-methodes-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La méthode des tangentes parallèles",
+        "lesson": "Repérer l'équivalence",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-la-methode-des-tangentes-paralleles",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "La méthode des tangentes parallèles",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La méthode des tangentes parallèles",
+          "difficulty": 1,
+          "statement": "Dans la méthode des tangentes parallèles, on trace sur la courbe $\\mathrm{pH}=f(V_B)$ :",
+          "options": [
+            {
+              "label": "deux tangentes parallèles, l'une avant et l'autre après le saut de pH",
+              "correct": true,
+              "why": "Elles encadrent le saut, de part et d'autre de l'équivalence, avec la même direction."
+            },
+            {
+              "label": "deux tangentes perpendiculaires, de part et d'autre du saut",
+              "why": "Les tangentes de la méthode sont parallèles, pas perpendiculaires."
+            },
+            {
+              "label": "une seule tangente horizontale au sommet de la courbe",
+              "why": "La courbe de dosage n'a pas de sommet : la méthode utilise deux tangentes parallèles au saut."
+            },
+            {
+              "label": "la droite $\\mathrm{pH}=7$ et sa parallèle passant par l'origine",
+              "why": "La méthode ne dépend pas de la valeur $7$ : elle ne repose que sur des tangentes à la courbe."
+            }
+          ],
+          "hint": "Le nom de la méthode indique le type de droites tracées.",
+          "solution": "On trace deux tangentes à la courbe, parallèles entre elles, l'une de chaque côté du saut de pH. On trace ensuite une droite parallèle à égale distance des deux. Contrôle : cette droite coupe la courbe au point d'équivalence.",
+          "methode": "Tangentes parallèles : deux tangentes parallèles de part et d'autre du saut.",
+          "points": 1,
+          "ref": "pc-dosage-la-methode-des-tangentes-paralleles-q1"
+        },
+        {
+          "notion": "La méthode des tangentes parallèles",
+          "difficulty": 2,
+          "statement": "Une fois les deux tangentes parallèles tracées, on repère le point d'équivalence comme :",
+          "options": [
+            {
+              "label": "l'intersection de la courbe avec la parallèle équidistante des deux tangentes",
+              "correct": true,
+              "why": "Cette droite médiane coupe la courbe au centre du saut : c'est le point d'équivalence."
+            },
+            {
+              "label": "l'intersection des deux tangentes parallèles, tracées de part et d'autre du saut",
+              "why": "Deux droites parallèles ne se coupent pas : le point d'équivalence se repère avec la droite équidistante."
+            },
+            {
+              "label": "le point de la courbe où le pH vaut exactement $7$, quel que soit le dosage",
+              "why": "Le pH à l'équivalence ne vaut $7$ que pour acide fort/base forte ; la méthode des tangentes n'utilise pas la valeur $7$."
+            },
+            {
+              "label": "le point de la courbe où la pente est nulle, au milieu du saut de pH",
+              "why": "Au saut de pH, la pente est maximale ; elle n'est pas nulle."
+            }
+          ],
+          "hint": "On cherche le centre du saut : quelle droite passe par ce centre ?",
+          "solution": "La droite parallèle aux deux tangentes et à égale distance de chacune coupe la courbe au centre du saut : c'est le point d'équivalence $E(V_E\\,;\\,\\mathrm{pH}_E)$. On lit $V_E$ en abscisse. Contrôle : le point est un point d'inflexion de la courbe.",
+          "methode": "Équivalence : intersection de la courbe avec la médiane des deux tangentes parallèles.",
+          "points": 1,
+          "ref": "pc-dosage-la-methode-des-tangentes-paralleles-q2"
+        },
+        {
+          "notion": "La méthode des tangentes parallèles",
+          "difficulty": 2,
+          "statement": "Par la méthode des tangentes, on trouve le point d'équivalence $E(V=14{,}8\\ \\mathrm{mL}\\,;\\,\\mathrm{pH}=8{,}4)$. Le volume équivalent est :",
+          "options": [
+            {
+              "label": "$V_E=14{,}8\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "Le volume équivalent est l'abscisse du point d'équivalence."
+            },
+            {
+              "label": "$V_E=8{,}4\\ \\mathrm{mL}$",
+              "why": "Tu as lu l'ordonnée : $8{,}4$ est le pH à l'équivalence, pas un volume."
+            },
+            {
+              "label": "$V_E=7{,}4\\ \\mathrm{mL}$",
+              "why": "Tu as pris la moitié du volume équivalent : c'est le volume de la demi-équivalence."
+            },
+            {
+              "label": "$V_E=29{,}6\\ \\mathrm{mL}$",
+              "why": "Tu as doublé le volume équivalent : rien ne justifie de le doubler."
+            }
+          ],
+          "hint": "Un point se note $(x\\,;\\,y)$ : laquelle des deux coordonnées est un volume ?",
+          "solution": "Le point d'équivalence a pour coordonnées $(V_E\\,;\\,\\mathrm{pH}_E)=(14{,}8\\ \\mathrm{mL}\\,;\\,8{,}4)$ : $V_E=14{,}8\\ \\mathrm{mL}$ et $\\mathrm{pH}_E=8{,}4$. Contrôle : $\\mathrm{pH}_E>7$ est cohérent avec un acide faible dosé par une base forte.",
+          "methode": "$E(V_E\\,;\\,\\mathrm{pH}_E)$ : le volume est l'abscisse.",
+          "points": 1,
+          "ref": "pc-dosage-la-methode-des-tangentes-paralleles-q3"
+        },
+        {
+          "notion": "La méthode des tangentes parallèles",
+          "difficulty": 3,
+          "statement": "Dans un dosage $1{:}1$, la méthode des tangentes donne $V_E=12{,}4\\ \\mathrm{mL}$ pour $V_A=10{,}0\\ \\mathrm{mL}$ d'acide dosé par une soude de concentration $C_B=0{,}050\\ \\mathrm{mol\\,L^{-1}}$. La concentration de l'acide vaut :",
+          "options": [
+            {
+              "label": "$C_A=0{,}062\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "$C_A=\\dfrac{C_BV_E}{V_A}=\\dfrac{0{,}050\\times12{,}4}{10{,}0}=0{,}062\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$C_A=0{,}040\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as inversé les volumes : $\\dfrac{C_BV_A}{V_E}$ ; ici le volume équivalent est au numérateur."
+            },
+            {
+              "label": "$C_A=0{,}620\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as oublié de diviser par $V_A$ : $C_BV_E=0{,}620\\ \\mathrm{mmol}$ est une quantité de matière, pas une concentration."
+            },
+            {
+              "label": "$C_A=0{,}028\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as divisé par le volume total $V_A+V_E$ au lieu du volume $V_A$ de la prise d'essai."
+            }
+          ],
+          "hint": "Utilise la relation à l'équivalence $C_AV_A=C_BV_E$.",
+          "solution": "Dosage $1{:}1$ : $n(\\text{titré})=n(\\text{titrant versé})$ donc $C_AV_A=C_BV_E$ et $C_A=\\dfrac{C_BV_E}{V_A}=\\dfrac{0{,}050\\times12{,}4}{10{,}0}=0{,}062\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $C_BV_E=0{,}62\\ \\mathrm{mmol}$ et $0{,}62/10{,}0=0{,}062$.",
+          "methode": "À l'équivalence : $C_AV_A=C_BV_E$ (dosage $1{:}1$).",
+          "points": 1,
+          "ref": "pc-dosage-la-methode-des-tangentes-paralleles-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La méthode de la dérivée",
+        "lesson": "Repérer l'équivalence",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-la-methode-de-la-derivee",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "La méthode de la dérivée",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La méthode de la dérivée",
+          "difficulty": 1,
+          "statement": "Dans la méthode de la dérivée, l'équivalence est repérée par :",
+          "options": [
+            {
+              "label": "le maximum de la courbe $\\dfrac{d\\mathrm{pH}}{dV_B}=f(V_B)$",
+              "correct": true,
+              "why": "Au saut de pH la pente de $\\mathrm{pH}(V)$ est maximale : $\\dfrac{d\\mathrm{pH}}{dV}$ passe par un maximum à $V_E$."
+            },
+            {
+              "label": "le minimum de la courbe $\\dfrac{d\\mathrm{pH}}{dV_B}=f(V_B)$",
+              "why": "La pente est la plus grande au saut : la dérivée présente un maximum, pas un minimum."
+            },
+            {
+              "label": "l'annulation de la courbe $\\dfrac{d\\mathrm{pH}}{dV_B}=f(V_B)$",
+              "why": "La dérivée ne s'annule pas au saut : au contraire, elle y est maximale."
+            },
+            {
+              "label": "la valeur $\\dfrac{d\\mathrm{pH}}{dV_B}=7$",
+              "why": "Cette valeur n'a aucun sens général : c'est le volume où la dérivée est maximale qui désigne l'équivalence."
+            }
+          ],
+          "hint": "Où la courbe $\\mathrm{pH}(V)$ est-elle la plus pentue ?",
+          "solution": "L'équivalence correspond au saut de pH, où la pente de $\\mathrm{pH}=f(V)$ est maximale : la courbe dérivée $\\dfrac{d\\mathrm{pH}}{dV}$ présente un pic dont l'abscisse est $V_E$. Contrôle : c'est le point d'inflexion de la courbe de dosage.",
+          "methode": "Dérivée : $V_E$ = abscisse du maximum de $\\dfrac{d\\mathrm{pH}}{dV}$.",
+          "points": 1,
+          "ref": "pc-dosage-la-methode-de-la-derivee-q1"
+        },
+        {
+          "notion": "La méthode de la dérivée",
+          "difficulty": 2,
+          "statement": "On relève $\\dfrac{d\\mathrm{pH}}{dV}$ (en $\\mathrm{mL^{-1}}$) : $0{,}35$ à $V=13{,}0\\ \\mathrm{mL}$ ; $0{,}90$ à $14{,}0$ ; $3{,}1$ à $15{,}0$ ; $0{,}80$ à $16{,}0$. Le volume équivalent est environ :",
+          "options": [
+            {
+              "label": "$15{,}0\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "La dérivée est maximale ($3{,}1$) à $V=15{,}0\\ \\mathrm{mL}$ : c'est le volume équivalent."
+            },
+            {
+              "label": "$3{,}1\\ \\mathrm{mL}$",
+              "why": "Tu as lu la valeur maximale de la dérivée en ordonnée comme un volume : $V_E$ est son abscisse."
+            },
+            {
+              "label": "$14{,}0\\ \\mathrm{mL}$",
+              "why": "À $14{,}0\\ \\mathrm{mL}$ la dérivée ($0{,}90$) n'est pas maximale : le maximum est à $15{,}0\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$16{,}0\\ \\mathrm{mL}$",
+              "why": "À $16{,}0\\ \\mathrm{mL}$ la dérivée ($0{,}80$) est déjà retombée : le maximum est à $15{,}0\\ \\mathrm{mL}$."
+            }
+          ],
+          "hint": "Cherche le volume où la dérivée est la plus grande.",
+          "solution": "Les valeurs de $\\dfrac{d\\mathrm{pH}}{dV}$ sont $0{,}35$ ; $0{,}90$ ; $3{,}1$ ; $0{,}80$ : le maximum, $3{,}1$, est atteint à $V=15{,}0\\ \\mathrm{mL}$. Contrôle : la dérivée augmente avant puis diminue après ce volume.",
+          "methode": "$V_E$ : abscisse du maximum de la dérivée.",
+          "points": 1,
+          "ref": "pc-dosage-la-methode-de-la-derivee-q2"
+        },
+        {
+          "notion": "La méthode de la dérivée",
+          "difficulty": 2,
+          "statement": "Sur la courbe de dosage $\\mathrm{pH}=f(V_B)$, le point d'équivalence est :",
+          "options": [
+            {
+              "label": "le point d'inflexion de la courbe, où la pente est maximale",
+              "correct": true,
+              "why": "Au centre du saut, la courbe passe de concave à convexe : c'est un point d'inflexion, de pente maximale."
+            },
+            {
+              "label": "le point de la courbe où le pH vaut $7$",
+              "why": "Le pH à l'équivalence dépend de la force de l'acide et de la base ; il ne vaut $7$ que pour acide fort/base forte."
+            },
+            {
+              "label": "le point de départ de la courbe, au volume nul",
+              "why": "Au volume nul, on n'a pas encore versé de titrant : ce n'est pas l'équivalence."
+            },
+            {
+              "label": "le point final de la courbe, au plus grand volume versé",
+              "why": "Au plus grand volume versé, le titrant est en large excès : c'est après l'équivalence."
+            }
+          ],
+          "hint": "Au saut de pH, la courbe change de concavité : quel nom donne-t-on à ce point ?",
+          "solution": "Le point d'équivalence est le point d'inflexion de la courbe $\\mathrm{pH}(V)$ : la pente y est maximale, ce qui correspond au maximum de la dérivée. Contrôle : il se trouve au centre du saut de pH.",
+          "methode": "Équivalence : point d'inflexion de $\\mathrm{pH}(V)$, pente maximale.",
+          "points": 1,
+          "ref": "pc-dosage-la-methode-de-la-derivee-q3"
+        },
+        {
+          "notion": "La méthode de la dérivée",
+          "difficulty": 3,
+          "statement": "On relève : $(V\\,;\\,\\mathrm{pH})=(14{,}0\\,;\\,5{,}2)$, $(14{,}5\\,;\\,6{,}4)$, $(15{,}0\\,;\\,10{,}2)$, $(15{,}5\\,;\\,11{,}0)$. Le volume équivalent est compris entre :",
+          "options": [
+            {
+              "label": "$14{,}5$ et $15{,}0\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$\\dfrac{\\Delta\\mathrm{pH}}{\\Delta V}$ vaut $2{,}4$, $7{,}6$ puis $1{,}6\\ \\mathrm{mL^{-1}}$ : le maximum se situe entre $14{,}5$ et $15{,}0\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$14{,}0$ et $14{,}5\\ \\mathrm{mL}$",
+              "why": "Sur cet intervalle $\\dfrac{\\Delta\\mathrm{pH}}{\\Delta V}=\\dfrac{1{,}2}{0{,}5}=2{,}4\\ \\mathrm{mL^{-1}}$, valeur plus faible que sur $14{,}5$–$15{,}0$ ($7{,}6$)."
+            },
+            {
+              "label": "$15{,}0$ et $15{,}5\\ \\mathrm{mL}$",
+              "why": "Sur cet intervalle $\\dfrac{\\Delta\\mathrm{pH}}{\\Delta V}=\\dfrac{0{,}8}{0{,}5}=1{,}6\\ \\mathrm{mL^{-1}}$, pente déjà redevenue faible."
+            },
+            {
+              "label": "exactement $15{,}0\\ \\mathrm{mL}$, car c'est le volume où le pH dépasse $10$",
+              "why": "Le critère n'est pas un pH atteint mais la pente maximale, qui se situe dans l'intervalle $14{,}5$–$15{,}0$."
+            }
+          ],
+          "hint": "Calcule les pentes $\\dfrac{\\Delta\\mathrm{pH}}{\\Delta V}$ entre points consécutifs et repère la plus grande.",
+          "solution": "$\\dfrac{\\Delta\\mathrm{pH}}{\\Delta V}$ : entre $14{,}0$ et $14{,}5$ : $\\dfrac{1{,}2}{0{,}5}=2{,}4$ ; entre $14{,}5$ et $15{,}0$ : $\\dfrac{3{,}8}{0{,}5}=7{,}6$ ; entre $15{,}0$ et $15{,}5$ : $\\dfrac{0{,}8}{0{,}5}=1{,}6$ (en $\\mathrm{mL^{-1}}$). La pente maximale est sur $14{,}5$–$15{,}0$ : $V_E\\in[14{,}5\\,;\\,15{,}0]$. Contrôle : on resserrerait les ajouts dans cet intervalle pour affiner $V_E$.",
+          "methode": "Dérivée numérique : $\\Delta\\mathrm{pH}/\\Delta V$ entre points voisins ; $V_E$ dans l'intervalle de pente maximale.",
+          "points": 1,
+          "ref": "pc-dosage-la-methode-de-la-derivee-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'indicateur coloré",
+        "lesson": "Repérer l'équivalence",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-l-indicateur-colore",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "L'indicateur coloré",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'indicateur coloré",
+          "difficulty": 1,
+          "statement": "Un indicateur coloré convient pour repérer l'équivalence d'un dosage si :",
+          "options": [
+            {
+              "label": "sa zone de virage contient le pH à l'équivalence",
+              "correct": true,
+              "why": "Le changement de teinte se produit alors à l'équivalence, ou très près d'elle."
+            },
+            {
+              "label": "sa zone de virage contient le pH initial de la solution",
+              "why": "Le pH initial n'a aucun rapport avec l'équivalence : le critère porte sur le pH à l'équivalence."
+            },
+            {
+              "label": "il est incolore dans l'eau pure à $\\mathrm{pH}=7$",
+              "why": "Ce n'est pas un critère : un indicateur coloré a au contraire une teinte dans chacune de ses formes."
+            },
+            {
+              "label": "son $\\mathrm{p}K_A$ est égal à $7$",
+              "why": "Seuls certains indicateurs ont un $\\mathrm{p}K_A$ proche de $7$ ; le critère général est la position de la zone de virage par rapport à $\\mathrm{pH}_E$."
+            }
+          ],
+          "hint": "À quel instant du dosage veut-on que la teinte change ?",
+          "solution": "On veut que la teinte change à l'équivalence : la zone de virage de l'indicateur doit donc contenir le pH à l'équivalence $\\mathrm{pH}_E$. Contrôle : pour $\\mathrm{pH}_E=7$ on peut utiliser le bleu de bromothymol ($6{,}0$–$7{,}6$).",
+          "methode": "Indicateur : $\\mathrm{pH}_E\\in$ zone de virage.",
+          "points": 1,
+          "ref": "pc-dosage-l-indicateur-colore-q1"
+        },
+        {
+          "notion": "L'indicateur coloré",
+          "difficulty": 2,
+          "statement": "Au cours d'un dosage, on observe le changement de teinte de l'indicateur après l'ajout d'une goutte de titrant. Le volume lu correspond alors à :",
+          "options": [
+            {
+              "label": "une valeur très proche du volume équivalent, à une goutte près",
+              "correct": true,
+              "why": "La teinte change quand le pH franchit la zone de virage, ce qui se produit au saut de pH, donc à environ une goutte de l'équivalence."
+            },
+            {
+              "label": "la moitié du volume équivalent, au début du saut de pH",
+              "why": "À la demi-équivalence le pH vaut le $\\mathrm{p}K_A$ du couple dosé : l'indicateur n'a pas encore viré."
+            },
+            {
+              "label": "le double du volume équivalent, bien après le saut de pH",
+              "why": "Le saut de pH est atteint à l'équivalence : le double du volume équivalent correspondrait à un excès de titrant."
+            },
+            {
+              "label": "un volume quelconque, sans lien avec l'équivalence du dosage",
+              "why": "Le virage est lié au saut de pH et se produit à l'équivalence, à la précision d'une goutte près."
+            }
+          ],
+          "hint": "Le virage a lieu quand le pH saute : à quel volume ?",
+          "solution": "Le saut de pH est très brusque autour de $V_E$ : une goutte de titrant suffit à franchir la zone de virage. Le volume lu au changement de teinte est donc $V_E$ à une goutte près ($\\approx0{,}05\\ \\mathrm{mL}$). Contrôle : l'incertitude est de l'ordre de la goutte.",
+          "methode": "Virage de l'indicateur : $V_E$ à une goutte près, si l'indicateur est adapté.",
+          "points": 1,
+          "ref": "pc-dosage-l-indicateur-colore-q2"
+        },
+        {
+          "notion": "L'indicateur coloré",
+          "difficulty": 3,
+          "statement": "Le pH à l'équivalence d'un dosage d'une base faible par un acide fort est $5{,}3$. Zones de virage : hélianthine $3{,}1$–$4{,}4$ ; rouge de méthyle $4{,}2$–$6{,}2$ ; bleu de bromothymol $6{,}0$–$7{,}6$ ; phénolphtaléine $8{,}2$–$10{,}0$. L'indicateur adapté est :",
+          "options": [
+            {
+              "label": "le rouge de méthyle, car $5{,}3$ est dans sa zone de virage",
+              "correct": true,
+              "why": "$4{,}2<5{,}3<6{,}2$ : le changement de teinte coïncide avec l'équivalence."
+            },
+            {
+              "label": "l'hélianthine, car $\\mathrm{pH}_E$ est inférieur à $7$",
+              "why": "Sa zone de virage ($3{,}1$–$4{,}4$) ne contient pas $5{,}3$ : elle vire avant l'équivalence."
+            },
+            {
+              "label": "le bleu de bromothymol, car sa zone de virage est autour du pH neutre",
+              "why": "Sa zone ($6{,}0$–$7{,}6$) ne contient pas $5{,}3$ : il vire après l'équivalence."
+            },
+            {
+              "label": "la phénolphtaléine, qui est l'indicateur le plus courant",
+              "why": "Sa zone ($8{,}2$–$10{,}0$) est très éloignée de $5{,}3$ : elle ne virerait qu'avec un grand excès de base."
+            }
+          ],
+          "hint": "Compare $\\mathrm{pH}_E=5{,}3$ aux quatre zones de virage proposées.",
+          "solution": "On cherche la zone de virage qui contient $\\mathrm{pH}_E=5{,}3$ : $4{,}2$–$6{,}2$, celle du rouge de méthyle. L'hélianthine ($3{,}1$–$4{,}4$) vire trop tôt, le BBT ($6{,}0$–$7{,}6$) trop tard. Contrôle : un acide conjugué faible (ion ammonium) donne bien un $\\mathrm{pH}_E$ acide.",
+          "methode": "Choix d'indicateur : $\\mathrm{pH}_E\\in$ zone de virage ; $\\mathrm{pH}_E<7$ pour base faible/acide fort.",
+          "points": 1,
+          "ref": "pc-dosage-l-indicateur-colore-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le dosage conductimétrique",
+        "lesson": "Repérer l'équivalence",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-le-dosage-conductimetrique",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "Le dosage conductimétrique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le dosage conductimétrique",
+          "difficulty": 1,
+          "statement": "Dans un dosage conductimétrique, l'équivalence est repérée par :",
+          "options": [
+            {
+              "label": "une rupture de pente de la courbe $\\sigma=f(V_B)$",
+              "correct": true,
+              "why": "Avant et après l'équivalence les ions qui varient ne sont pas les mêmes : la courbe est formée de deux segments de pentes différentes."
+            },
+            {
+              "label": "un maximum de la courbe $\\sigma=f(V_B)$ au volume équivalent",
+              "why": "La courbe $\\sigma(V)$ est faite de segments de droite : l'équivalence est une rupture de pente, pas un maximum."
+            },
+            {
+              "label": "un saut brutal de la conductivité au volume équivalent",
+              "why": "La conductivité varie de façon continue : c'est un changement de pente, pas un saut."
+            },
+            {
+              "label": "l'annulation de la conductivité de la solution à l'équivalence",
+              "why": "La conductivité ne s'annule pas : la solution contient toujours des ions."
+            }
+          ],
+          "hint": "Que change-t-on dans la nature des ions présents avant et après l'équivalence ?",
+          "solution": "Avant l'équivalence, les ions du titré sont remplacés par ceux du titrant ; après l'équivalence, le titrant s'accumule en excès. La pente de $\\sigma(V)$ change donc à $V_E$ : $V_E$ est l'abscisse de l'intersection des deux droites. Contrôle : les segments sont presque rectilignes si la dilution est négligeable.",
+          "methode": "Conductimétrie : $V_E$ = intersection des deux segments de droite.",
+          "points": 1,
+          "ref": "pc-dosage-le-dosage-conductimetrique-q1"
+        },
+        {
+          "notion": "Le dosage conductimétrique",
+          "difficulty": 2,
+          "statement": "On dose l'acide chlorhydrique par la soude. Avant l'équivalence, la conductivité de la solution diminue parce que :",
+          "options": [
+            {
+              "label": "les ions $\\mathrm{H_3O^+}$ ($35{,}0$) sont remplacés par $\\mathrm{Na^+}$ ($5{,}0$), moins conducteurs",
+              "correct": true,
+              "why": "Chaque $\\mathrm{HO^-}$ versé consomme un $\\mathrm{H_3O^+}$ et apporte un $\\mathrm{Na^+}$ : $\\lambda(\\mathrm{Na^+})<\\lambda(\\mathrm{H_3O^+})$ donc $\\sigma$ baisse."
+            },
+            {
+              "label": "les ions $\\mathrm{Cl^-}$ disparaissent progressivement de la solution au fil des ajouts",
+              "why": "Les ions $\\mathrm{Cl^-}$ sont spectateurs : leur quantité ne varie pas, seule la dilution les affecte."
+            },
+            {
+              "label": "des ions $\\mathrm{HO^-}$ s'accumulent dans la solution dès le premier ajout de soude",
+              "why": "Avant l'équivalence les ions $\\mathrm{HO^-}$ versés sont aussitôt consommés ; ils ne s'accumulent qu'après."
+            },
+            {
+              "label": "la solution se dilue fortement et devient moins ionique à chaque ajout",
+              "why": "La dilution joue peu si le volume d'eau initial est grand ; la baisse vient surtout du remplacement de $\\mathrm{H_3O^+}$ par $\\mathrm{Na^+}$."
+            }
+          ],
+          "hint": "Compare les conductivités ioniques molaires de $\\mathrm{H_3O^+}$ et de $\\mathrm{Na^+}$.",
+          "solution": "Avant $V_E$ : $\\mathrm{H_3O^+}+\\mathrm{HO^-}\\rightarrow2\\,\\mathrm{H_2O}$ ; chaque $\\mathrm{Na^+}$ ajouté remplace un $\\mathrm{H_3O^+}$ consommé. Avec $\\lambda(\\mathrm{H_3O^+})=35{,}0$ et $\\lambda(\\mathrm{Na^+})=5{,}0\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$, $\\sigma$ diminue. Contrôle : après $V_E$ les ions $\\mathrm{Na^+}$ et $\\mathrm{HO^-}$ s'accumulent et $\\sigma$ augmente.",
+          "methode": "Avant $V_E$ : $\\sigma$ baisse si on remplace un ion très conducteur par un ion moins conducteur.",
+          "points": 1,
+          "ref": "pc-dosage-le-dosage-conductimetrique-q2"
+        },
+        {
+          "notion": "Le dosage conductimétrique",
+          "difficulty": 2,
+          "statement": "On dose l'acide éthanoïque par la soude. Avant l'équivalence, la conductivité :",
+          "options": [
+            {
+              "label": "augmente, car des ions $\\mathrm{CH_3COO^-}$ et $\\mathrm{Na^+}$ apparaissent",
+              "correct": true,
+              "why": "L'acide faible, peu ionisé, est transformé en ions éthanoate, avec les ions sodium : le nombre d'ions augmente, donc $\\sigma$ augmente."
+            },
+            {
+              "label": "diminue, car $\\mathrm{H_3O^+}$ est consommé par la soude versée",
+              "why": "L'acide éthanoïque, faible, contient très peu d'ions $\\mathrm{H_3O^+}$ : leur disparition pèse peu face à l'apparition de $\\mathrm{CH_3COO^-}$ et $\\mathrm{Na^+}$."
+            },
+            {
+              "label": "reste constante, car la charge totale de la solution se conserve",
+              "why": "La conservation de la charge n'implique pas que $\\sigma$ soit constante : le nombre d'ions augmente."
+            },
+            {
+              "label": "s'annule, car la solution devient neutre avant l'équivalence",
+              "why": "La solution contient des ions $\\mathrm{CH_3COO^-}$ et $\\mathrm{Na^+}$ : sa conductivité ne s'annule pas."
+            }
+          ],
+          "hint": "Compare le nombre d'ions avant et après chaque ajout de soude pour un acide faible.",
+          "solution": "$\\mathrm{CH_3COOH}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{H_2O}$ : l'acide faible, peu dissocié, devient l'ion $\\mathrm{CH_3COO^-}$ et s'accompagne de $\\mathrm{Na^+}$ : le nombre d'ions augmente, donc $\\sigma$ augmente. Contrôle : la pente est plus faible qu'après l'équivalence où $\\mathrm{HO^-}$ très conducteur s'accumule.",
+          "methode": "Acide faible dosé par base forte : $\\sigma$ croît dès le début.",
+          "points": 1,
+          "ref": "pc-dosage-le-dosage-conductimetrique-q3"
+        },
+        {
+          "notion": "Le dosage conductimétrique",
+          "difficulty": 3,
+          "statement": "Avant l'équivalence, la conductivité suit $\\sigma=110-5{,}0\\,V$ et après l'équivalence $\\sigma=-40+5{,}0\\,V$ ($\\sigma$ en $\\mathrm{mS\\,m^{-1}}$, $V$ en $\\mathrm{mL}$). Le volume équivalent vaut :",
+          "options": [
+            {
+              "label": "$V_E=15{,}0\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "À l'intersection : $110-5V=-40+5V$ donc $150=10V$ et $V_E=15{,}0\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$V_E=110\\ \\mathrm{mL}$",
+              "why": "Tu as pris l'ordonnée à l'origine de la première droite : ce n'est pas un volume équivalent."
+            },
+            {
+              "label": "$V_E=22{,}0\\ \\mathrm{mL}$",
+              "why": "Tu as cherché le volume où la première droite s'annule ($110/5{,}0$) : l'équivalence est à l'intersection des deux droites."
+            },
+            {
+              "label": "$V_E=8{,}0\\ \\mathrm{mL}$",
+              "why": "Tu as cherché le volume où la seconde droite s'annule ($40/5{,}0$) : l'équivalence est à l'intersection des deux droites."
+            }
+          ],
+          "hint": "L'équivalence est à l'intersection des deux droites : écris l'égalité des deux expressions de $\\sigma$.",
+          "solution": "On résout $110-5{,}0V=-40+5{,}0V$ : $150=10{,}0V$ donc $V_E=15{,}0\\ \\mathrm{mL}$. Contrôle : $\\sigma(V_E)=110-5{,}0\\times15{,}0=35\\ \\mathrm{mS\\,m^{-1}}$ par les deux expressions : $-40+75=35$.",
+          "methode": "$V_E$ : intersection des deux segments de droite de $\\sigma(V)$.",
+          "points": 1,
+          "ref": "pc-dosage-le-dosage-conductimetrique-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le montage",
+        "lesson": "Montage du dosage pH-métrique",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-le-montage",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "Le montage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le montage",
+          "difficulty": 1,
+          "statement": "Pour réaliser un dosage, on place dans la burette graduée :",
+          "options": [
+            {
+              "label": "la solution titrante, de concentration connue",
+              "correct": true,
+              "why": "La burette contient le titrant, dont on connaît la concentration, et dont on lit le volume versé."
+            },
+            {
+              "label": "la solution à doser, de concentration inconnue",
+              "why": "La solution à doser est placée dans le bécher, mesurée avec une pipette jaugée."
+            },
+            {
+              "label": "de l'eau distillée, pour diluer le mélange",
+              "why": "L'eau distillée n'est pas le titrant : elle sert au rinçage ou à la dilution éventuelle dans le bécher."
+            },
+            {
+              "label": "l'indicateur coloré uniquement, sans solution titrante",
+              "why": "L'indicateur est introduit en quelques gouttes dans le bécher, pas dans la burette."
+            }
+          ],
+          "hint": "La burette sert à verser un volume mesuré d'un réactif dont on connaît la concentration : lequel ?",
+          "solution": "La burette contient la solution titrante, de concentration connue, versée progressivement dans le bécher qui contient la prise d'essai de la solution à doser (mesurée à la pipette jaugée), sous agitation. Contrôle : on lit sur la burette le volume de titrant versé.",
+          "methode": "Burette : titrant ; bécher : prise d'essai du titré.",
+          "points": 1,
+          "ref": "pc-dosage-le-montage-q1"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 2,
+          "statement": "Avant un dosage pH-métrique, le pH-mètre doit être étalonné avec :",
+          "options": [
+            {
+              "label": "deux solutions tampons de pH connus, encadrant les pH à mesurer",
+              "correct": true,
+              "why": "L'étalonnage utilise deux points de référence qui encadrent la plage de mesure, pour corriger la réponse de l'électrode."
+            },
+            {
+              "label": "de l'eau distillée uniquement, de pH supposé égal à $7$",
+              "why": "Un seul point de référence, et non tampon, ne permet pas d'étalonner correctement : l'eau distillée a un pH instable."
+            },
+            {
+              "label": "la solution à doser elle-même, dont le pH est inconnu au départ",
+              "why": "On ne peut pas étalonner avec une solution de pH inconnu : il faut des références de pH connu."
+            },
+            {
+              "label": "la solution titrante, dont le pH est inconnu à ce stade",
+              "why": "Le pH de la solution titrante n'est pas une référence connue : on utilise des solutions tampons."
+            }
+          ],
+          "hint": "Quelles solutions ont un pH connu avec précision ?",
+          "solution": "L'étalonnage d'un pH-mètre se fait avec deux solutions tampons de pH connus (par exemple $4{,}0$ et $7{,}0$, ou $7{,}0$ et $10{,}0$), encadrant les valeurs à mesurer ; l'électrode est rincée à l'eau distillée entre deux mesures. Contrôle : la pente de l'électrode s'ajuste sur ces deux points.",
+          "methode": "Étalonnage pH-mètre : deux tampons encadrant la plage de mesure.",
+          "points": 1,
+          "ref": "pc-dosage-le-montage-q2"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 3,
+          "statement": "Pour immerger correctement l'électrode du pH-mètre, on ajoute de l'eau distillée dans le bécher contenant la prise d'essai. Le volume équivalent $V_E$ :",
+          "options": [
+            {
+              "label": "n'est pas modifié, car la quantité de matière de réactif titré ne change pas",
+              "correct": true,
+              "why": "L'eau ajoutée dilue la solution mais $n(\\text{titré})=C_AV_A$ reste la même : $V_E$ ne change pas."
+            },
+            {
+              "label": "augmente, car la solution est plus diluée après l'ajout d'eau distillée",
+              "why": "La dilution ne change pas la quantité de matière à titrer, seule la forme de la courbe est modifiée (saut un peu moins brusque) ; $V_E$ reste identique."
+            },
+            {
+              "label": "diminue, car il y a moins de réactif par litre dans le bécher",
+              "why": "La concentration par litre diminue mais la quantité de matière totale est conservée ; $V_E$ dépend de cette quantité, pas de la concentration."
+            },
+            {
+              "label": "double, car on a doublé le volume du mélange avec l'eau ajoutée",
+              "why": "Le volume équivalent est lié à la quantité de matière de titré, pas au volume total de la solution."
+            }
+          ],
+          "hint": "À l'équivalence, la quantité de matière de titrant versé est égale à celle du titré : l'eau ajoutée change-t-elle cette dernière ?",
+          "solution": "$n(\\text{titré})=C_AV_A$ est fixée par la prise d'essai ; l'eau distillée ajoutée n'en modifie pas la quantité. À l'équivalence $n(\\text{titrant versé})=n(\\text{titré})$ : $V_E$ est inchangé. Contrôle : la dilution n'est jamais prise en compte dans $C_AV_A=C_BV_E$.",
+          "methode": "Ajouter de l'eau dans le bécher : $V_E$ inchangé, car $n(\\text{titré})$ est conservée.",
+          "points": 1,
+          "ref": "pc-dosage-le-montage-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les préliminaires",
+        "lesson": "Montage du dosage pH-métrique",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-les-preliminaires",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "Les préliminaires",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les préliminaires",
+          "difficulty": 1,
+          "statement": "Avant de remplir la burette, on la rince avec :",
+          "options": [
+            {
+              "label": "un peu de la solution titrante qu'elle va contenir",
+              "correct": true,
+              "why": "Ce rinçage évite de diluer le titrant avec de l'eau restant dans la burette, ce qui fausserait sa concentration."
+            },
+            {
+              "label": "de l'eau distillée uniquement, sans solution titrante",
+              "why": "Une burette mouillée d'eau distillée diluerait le titrant : il faut la rincer avec le titrant lui-même."
+            },
+            {
+              "label": "la solution à doser de concentration inconnue",
+              "why": "La burette doit contenir le titrant ; la solution à doser est mesurée avec la pipette."
+            },
+            {
+              "label": "de l'acétone, pour la sécher rapidement",
+              "why": "L'acétone n'est pas utilisée pour préparer une burette à un dosage aqueux : elle laisserait des résidus."
+            }
+          ],
+          "hint": "Que se passe-t-il si de l'eau reste sur les parois avant de remplir ?",
+          "solution": "On rince la burette avec la solution titrante pour que sa concentration ne soit pas modifiée par de l'eau résiduelle. On la remplit ensuite, on chasse les bulles d'air et on ajuste le zéro. Contrôle : une burette mouillée d'eau diluerait le titrant.",
+          "methode": "Burette : rincer avec le titrant, chasser les bulles, ajuster le zéro.",
+          "points": 1,
+          "ref": "pc-dosage-les-preliminaires-q1"
+        },
+        {
+          "notion": "Les préliminaires",
+          "difficulty": 2,
+          "statement": "Avant de prélever la prise d'essai avec une pipette jaugée, on rince cette pipette avec :",
+          "options": [
+            {
+              "label": "un peu de la solution à prélever",
+              "correct": true,
+              "why": "Le rinçage avec la solution à prélever évite de la diluer par l'eau restée dans la pipette."
+            },
+            {
+              "label": "de l'eau distillée uniquement",
+              "why": "Une pipette mouillée d'eau distillée diluerait la prise d'essai et fausserait la quantité de matière prélevée."
+            },
+            {
+              "label": "la solution titrante contenue dans la burette",
+              "why": "On risquerait de contaminer la prise d'essai avec le titrant : il faut rincer avec la solution à prélever."
+            },
+            {
+              "label": "aucun liquide : la pipette est utilisée telle quelle, sèche",
+              "why": "Une pipette utilisée telle quelle peut retenir de l'eau ou des résidus : on la rince avec la solution à prélever."
+            }
+          ],
+          "hint": "Quel liquide la pipette doit-elle contenir sans modification de sa concentration ?",
+          "solution": "La pipette jaugée est rincée avec la solution à prélever (après un premier rinçage à l'eau distillée éventuel) : toute eau résiduelle diluerait la prise d'essai et diminuerait la quantité de matière du titré. Contrôle : le volume prélevé est exact, la concentration inchangée.",
+          "methode": "Pipette jaugée : rincer avec la solution qu'elle va prélever.",
+          "points": 1,
+          "ref": "pc-dosage-les-preliminaires-q2"
+        },
+        {
+          "notion": "Les préliminaires",
+          "difficulty": 2,
+          "statement": "On remplit la burette de titrant puis on ajuste le zéro. Si une bulle d'air est présente dans la pointe de la burette, il faut :",
+          "options": [
+            {
+              "label": "chasser la bulle avant de commencer, en faisant couler un peu de titrant",
+              "correct": true,
+              "why": "Une bulle d'air dans la pointe fausserait le volume lu : elle partirait au cours du dosage, et le volume écoulé ne correspondrait pas au volume de titrant."
+            },
+            {
+              "label": "ignorer la bulle, qui n'a aucune influence sur la mesure",
+              "why": "La bulle prend la place du liquide : quand elle disparaît, le volume lu surestime le volume de titrant réellement versé."
+            },
+            {
+              "label": "ajouter de l'eau distillée dans la burette pour la faire disparaître",
+              "why": "Ajouter de l'eau diluerait le titrant : la concentration ne serait plus connue."
+            },
+            {
+              "label": "recommencer la préparation de la solution titrante",
+              "why": "Il suffit de chasser la bulle ; il n'est pas nécessaire de refaire la solution."
+            }
+          ],
+          "hint": "La bulle occupe-t-elle un volume dans la burette ? Où va-t-elle pendant le dosage ?",
+          "solution": "On fait couler un peu de titrant avant d'ajuster le zéro pour chasser les bulles de la pointe. Sinon la bulle s'évacuerait pendant le dosage et le volume lu comprendrait un volume d'air, ce qui fausserait $V_E$. Contrôle : la pointe doit être remplie de liquide.",
+          "methode": "Burette : chasser les bulles de la pointe avant d'ajuster le zéro.",
+          "points": 1,
+          "ref": "pc-dosage-les-preliminaires-q3"
+        },
+        {
+          "notion": "Les préliminaires",
+          "difficulty": 3,
+          "statement": "La pipette jaugée utilisée pour prélever $V_A=20{,}0\\ \\mathrm{mL}$ d'acide était mouillée d'eau distillée et n'a pas été rincée avec la solution. Par rapport à une pipette correctement rincée, la concentration $C_A$ calculée est :",
+          "options": [
+            {
+              "label": "sous-estimée, car la prise d'essai a été diluée donc contient moins d'acide",
+              "correct": true,
+              "why": "L'eau résiduelle dilue la prise d'essai : $n(\\text{acide})$ plus petite, donc $V_E$ plus petit, donc $C_A=\\dfrac{C_BV_E}{V_A}$ sous-estimée."
+            },
+            {
+              "label": "surestimée, car la pipette contient un volume supplémentaire d'eau",
+              "why": "Le volume prélevé reste $20{,}0\\ \\mathrm{mL}$ ; l'eau résiduelle réduit la quantité d'acide, ce qui sous-estime $C_A$."
+            },
+            {
+              "label": "exacte, car le volume prélevé reste égal à $20{,}0\\ \\mathrm{mL}$",
+              "why": "Le volume est bien $20{,}0\\ \\mathrm{mL}$ mais sa concentration est diminuée par l'eau résiduelle : la quantité d'acide est plus petite."
+            },
+            {
+              "label": "indéterminée, car cela dépend de la couleur de l'indicateur",
+              "why": "L'effet est connu : la prise d'essai diluée conduit à un $V_E$ plus petit, donc à une valeur de $C_A$ sous-estimée."
+            }
+          ],
+          "hint": "L'eau présente dans la pipette est mélangée à la solution prélevée : que devient la quantité d'acide dosée ?",
+          "solution": "L'eau restée dans la pipette dilue la solution prélevée : le volume est toujours $V_A=20{,}0\\ \\mathrm{mL}$ mais la quantité d'acide $n_A$ est plus petite. À l'équivalence $n_B=n_A$ donc $V_E$ est plus petit et $C_A=\\dfrac{C_BV_E}{V_A}$ est sous-estimée. Contrôle : le calcul suppose que la prise d'essai a bien la concentration cherchée.",
+          "methode": "Pipette mouillée non rincée : prise d'essai diluée, $C_A$ sous-estimée.",
+          "points": 1,
+          "ref": "pc-dosage-les-preliminaires-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le protocole",
+        "lesson": "Montage du dosage pH-métrique",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-le-protocole",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "Le protocole",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le protocole",
+          "difficulty": 1,
+          "statement": "Pendant le dosage, le mélange dans le bécher doit être :",
+          "options": [
+            {
+              "label": "agité en continu, le titrant étant ajouté progressivement",
+              "correct": true,
+              "why": "L'agitation homogénéise la solution : le pH ou la conductivité mesurés sont représentatifs et la réaction est complète à chaque ajout."
+            },
+            {
+              "label": "laissé au repos, sans agitation, pour ne pas perturber la mesure",
+              "why": "Sans agitation, le titrant versé n'est pas mélangé immédiatement : la mesure serait fausse et le virage tardif."
+            },
+            {
+              "label": "chauffé à ébullition, pour accélérer la réaction",
+              "why": "La réaction de dosage est déjà rapide ; un chauffage fausserait les mesures (pH, conductivité dépendent de la température)."
+            },
+            {
+              "label": "versé en une seule fois, pour gagner du temps",
+              "why": "Il faut verser par petits volumes pour repérer l'équivalence avec précision : un seul ajout ne donne aucune courbe."
+            }
+          ],
+          "hint": "Pour mesurer fidèlement, la solution doit-elle être homogène ?",
+          "solution": "On agite en continu (agitateur magnétique) pour que la solution soit homogène et que la réaction soit complète à chaque ajout. Le titrant est versé par petits volumes. Contrôle : sans agitation, la mesure serait locale et décalée.",
+          "methode": "Dosage : agitation continue, ajouts progressifs.",
+          "points": 1,
+          "ref": "pc-dosage-le-protocole-q1"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 2,
+          "statement": "Lors d'un dosage pH-métrique, on verse le titrant par ajouts de $1\\ \\mathrm{mL}$ puis, près de l'équivalence, par ajouts de :",
+          "options": [
+            {
+              "label": "$0{,}2\\ \\mathrm{mL}$ environ, pour mieux décrire le saut de pH",
+              "correct": true,
+              "why": "Près de l'équivalence, le pH varie très vite : des ajouts plus petits donnent plus de points dans le saut et un $V_E$ plus précis."
+            },
+            {
+              "label": "$5\\ \\mathrm{mL}$, pour aller plus vite à l'équivalence",
+              "why": "Des ajouts plus grands près de l'équivalence feraient sauter le saut de pH sans le décrire : on perdrait la précision."
+            },
+            {
+              "label": "$1\\ \\mathrm{mL}$ encore, sans rien changer",
+              "why": "Garder $1\\ \\mathrm{mL}$ ne donnerait que peu de points dans le saut de pH, qui s'étend sur quelques dixièmes de millilitre."
+            },
+            {
+              "label": "aucun ajout : on attend simplement que le pH se stabilise",
+              "why": "Sans ajout de titrant, le pH ne change pas : le dosage n'avance pas."
+            }
+          ],
+          "hint": "Où le pH varie-t-il le plus vite ? Comment faut-il adapter le pas d'ajout ?",
+          "solution": "Loin de l'équivalence, le pH varie lentement : on verse $1\\ \\mathrm{mL}$ à chaque fois. Près de $V_E$, il varie très vite : on resserre les ajouts (environ $0{,}2\\ \\mathrm{mL}$) pour avoir plusieurs points dans le saut. Contrôle : un dosage préliminaire grossier permet de repérer la zone de $V_E$.",
+          "methode": "Resserrer les ajouts près de l'équivalence.",
+          "points": 1,
+          "ref": "pc-dosage-le-protocole-q2"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 2,
+          "statement": "Avant le dosage précis, on réalise souvent un dosage rapide (grossier) par ajouts de $1\\ \\mathrm{mL}$. Son but est :",
+          "options": [
+            {
+              "label": "d'estimer l'ordre de grandeur de $V_E$ pour resserrer ensuite les ajouts",
+              "correct": true,
+              "why": "Il localise l'équivalence ; le dosage précis resserre les ajouts autour de ce volume."
+            },
+            {
+              "label": "de déterminer exactement la concentration de la solution à doser, sans autre essai",
+              "why": "Un dosage grossier donne seulement un ordre de grandeur ; la précision vient du dosage resserré."
+            },
+            {
+              "label": "d'étalonner le pH-mètre avant de commencer le dosage précis, avec les tampons",
+              "why": "L'étalonnage se fait avec des solutions tampons, pas avec un dosage grossier."
+            },
+            {
+              "label": "de remplacer le dosage précis, qui n'est plus nécessaire ensuite",
+              "why": "Le dosage grossier est moins précis : il prépare le dosage précis, il ne le remplace pas."
+            }
+          ],
+          "hint": "À quoi sert un premier essai approximatif avant le dosage précis ?",
+          "solution": "Un premier dosage grossier par ajouts de $1\\ \\mathrm{mL}$ donne un ordre de grandeur de $V_E$. On refait le dosage en resserrant les ajouts autour de ce volume, ce qui améliore la précision. Contrôle : on économise du temps et on évite de manquer le saut de pH.",
+          "methode": "Dosage grossier : repérer la zone de $V_E$ avant le dosage précis.",
+          "points": 1,
+          "ref": "pc-dosage-le-protocole-q3"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 3,
+          "statement": "Dans un dosage conductimétrique, on ajoute un grand volume d'eau distillée dans le bécher avant de commencer. Cette précaution permet :",
+          "options": [
+            {
+              "label": "de rendre la dilution négligeable : les portions de $\\sigma(V)$ sont presque rectilignes",
+              "correct": true,
+              "why": "Le volume total varie peu au cours du dosage : les concentrations ioniques varient presque linéairement avec $V$ et les deux segments sont quasi droits."
+            },
+            {
+              "label": "d'augmenter la quantité d'acide à doser présente dans le bécher avant le dosage",
+              "why": "L'eau ajoutée ne contient pas d'acide : la quantité de matière à doser ne change pas."
+            },
+            {
+              "label": "de déplacer l'équivalence vers un volume plus grand de titrant versé",
+              "why": "$V_E$ ne dépend que de la quantité de matière de titré et de la concentration du titrant : l'eau ne le déplace pas."
+            },
+            {
+              "label": "d'annuler la conductivité de la solution avant l'équivalence du dosage",
+              "why": "La solution garde des ions à chaque instant : la conductivité ne s'annule pas."
+            }
+          ],
+          "hint": "Que devient le volume total de la solution quand on ajoute beaucoup d'eau au départ ?",
+          "solution": "Avec un grand volume d'eau initial, le volume total change peu pendant l'ajout du titrant : la dilution est négligeable et $\\sigma$ varie presque linéairement avec $V$. L'intersection des deux droites donne alors $V_E$ avec précision. Contrôle : $V_E$ lui-même n'est pas modifié par l'eau.",
+          "methode": "Conductimétrie : eau en excès au départ pour que $\\sigma(V)$ soit quasi linéaire.",
+          "points": 1,
+          "ref": "pc-dosage-le-protocole-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'exploitation",
+        "lesson": "Montage du dosage pH-métrique",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-l-exploitation",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "L'exploitation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'exploitation",
+          "difficulty": 1,
+          "statement": "Pour un dosage $1{:}1$, la concentration $C_A$ de la solution dosée (prise d'essai de volume $V_A$) s'exprime par :",
+          "options": [
+            {
+              "label": "$C_A=\\dfrac{C_B\\,V_E}{V_A}$",
+              "correct": true,
+              "why": "À l'équivalence $C_AV_A=C_BV_E$ : on isole $C_A$."
+            },
+            {
+              "label": "$C_A=\\dfrac{C_B\\,V_A}{V_E}$",
+              "why": "Tu as inversé les volumes : le volume équivalent est au numérateur."
+            },
+            {
+              "label": "$C_A=C_B\\,V_E\\,V_A$",
+              "why": "Tu as multiplié par $V_A$ au lieu de diviser : $C_AV_A=C_BV_E$."
+            },
+            {
+              "label": "$C_A=\\dfrac{C_B}{V_E\\,V_A}$",
+              "why": "$C_B$ n'est pas divisé par $V_E$ : la relation est $C_AV_A=C_BV_E$."
+            }
+          ],
+          "hint": "Écris la relation à l'équivalence puis isole $C_A$.",
+          "solution": "À l'équivalence d'un dosage $1{:}1$, $n(\\text{titré})=n(\\text{titrant versé})$ : $C_AV_A=C_BV_E$ donc $C_A=\\dfrac{C_BV_E}{V_A}$. Contrôle : $\\mathrm{mol\\,L^{-1}}\\times\\mathrm{mL}/\\mathrm{mL}$ donne bien des $\\mathrm{mol\\,L^{-1}}$ ; si $V_E<V_A$, alors $C_A<C_B$.",
+          "methode": "Dosage $1{:}1$ : $C_A=C_BV_E/V_A$.",
+          "points": 1,
+          "ref": "pc-dosage-l-exploitation-q1"
+        },
+        {
+          "notion": "L'exploitation",
+          "difficulty": 2,
+          "statement": "On dose $V_A=20{,}0\\ \\mathrm{mL}$ d'une solution d'acide chlorhydrique par une soude à $C_B=0{,}100\\ \\mathrm{mol\\,L^{-1}}$ ; $V_E=15{,}0\\ \\mathrm{mL}$. La concentration de l'acide vaut :",
+          "options": [
+            {
+              "label": "$C_A=0{,}0750\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "$C_A=\\dfrac{C_BV_E}{V_A}=\\dfrac{0{,}100\\times15{,}0}{20{,}0}=0{,}0750\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$C_A=0{,}133\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as inversé les volumes : $\\dfrac{C_BV_A}{V_E}=\\dfrac{0{,}100\\times20{,}0}{15{,}0}$."
+            },
+            {
+              "label": "$C_A=1{,}50\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as oublié de diviser par $V_A$ : $C_BV_E=1{,}50\\ \\mathrm{mmol}$ est une quantité de matière."
+            },
+            {
+              "label": "$C_A=0{,}0429\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as divisé par le volume total $V_A+V_E=35{,}0\\ \\mathrm{mL}$ au lieu du volume $V_A$ de la prise d'essai."
+            }
+          ],
+          "hint": "Utilise $C_AV_A=C_BV_E$ avec des volumes dans la même unité.",
+          "solution": "$C_A=\\dfrac{C_BV_E}{V_A}=\\dfrac{0{,}100\\times15{,}0}{20{,}0}=0{,}0750\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $n=C_BV_E=1{,}50\\ \\mathrm{mmol}$ dans $20{,}0\\ \\mathrm{mL}$ donne $0{,}0750\\ \\mathrm{mol\\,L^{-1}}$.",
+          "methode": "$C_A=C_BV_E/V_A$ : volumes dans la même unité.",
+          "points": 1,
+          "ref": "pc-dosage-l-exploitation-q2"
+        },
+        {
+          "notion": "L'exploitation",
+          "difficulty": 2,
+          "statement": "On dose $V_A=20{,}0\\ \\mathrm{mL}$ d'acide sulfurique $\\mathrm{H_2SO_4}$ (diacide fort) par une soude à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$ ; $V_E=24{,}0\\ \\mathrm{mL}$. La concentration en acide sulfurique vaut :",
+          "options": [
+            {
+              "label": "$C_A=0{,}0600\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "$n(\\mathrm{HO^-})=0{,}100\\times24{,}0=2{,}40\\ \\mathrm{mmol}$ ; $n(\\mathrm{H_2SO_4})=\\dfrac{2{,}40}{2}=1{,}20\\ \\mathrm{mmol}$ ; $C_A=\\dfrac{1{,}20}{20{,}0}=0{,}0600\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$C_A=0{,}120\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as oublié le coefficient $2$ : $\\mathrm{H_2SO_4}$ consomme deux $\\mathrm{HO^-}$, donc $n(\\mathrm{H_2SO_4})=\\dfrac{n(\\mathrm{HO^-})}{2}$."
+            },
+            {
+              "label": "$C_A=0{,}0300\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as divisé deux fois par $2$ : le coefficient $2$ intervient une seule fois."
+            },
+            {
+              "label": "$C_A=0{,}0833\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as inversé les volumes : $\\dfrac{C_BV_A}{V_E}$ ; le volume équivalent est au numérateur."
+            }
+          ],
+          "hint": "Compte les ions hydroxyde consommés par une molécule de $\\mathrm{H_2SO_4}$, puis remonte à $n(\\mathrm{H_2SO_4})$.",
+          "solution": "$\\mathrm{H_2SO_4}+2\\,\\mathrm{HO^-}\\rightarrow\\mathrm{SO_4^{2-}}+2\\,\\mathrm{H_2O}$ : à l'équivalence $n(\\mathrm{H_2SO_4})=\\dfrac{C_BV_E}{2}=\\dfrac{0{,}100\\times24{,}0}{2}=1{,}20\\ \\mathrm{mmol}$ puis $C_A=\\dfrac{1{,}20}{20{,}0}=0{,}0600\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $[\\mathrm{H_3O^+}]=2C_A=0{,}120\\ \\mathrm{mol\\,L^{-1}}$ est cohérent avec $0{,}100\\times24{,}0/20{,}0$.",
+          "methode": "Dosage $1{:}2$ : $C_AV_A=\\dfrac{C_BV_E}{2}$.",
+          "points": 1,
+          "ref": "pc-dosage-l-exploitation-q3"
+        },
+        {
+          "notion": "L'exploitation",
+          "difficulty": 3,
+          "statement": "Une solution commerciale d'acide a été diluée $10$ fois avant le dosage. Le dosage de la solution diluée donne $C_A=0{,}045\\ \\mathrm{mol\\,L^{-1}}$. La concentration de la solution commerciale vaut :",
+          "options": [
+            {
+              "label": "$C_0=0{,}45\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "La solution diluée est $10$ fois moins concentrée : $C_0=10\\times C_A=10\\times0{,}045=0{,}45\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$C_0=0{,}0045\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as divisé par $10$ au lieu de multiplier : la solution commerciale est la plus concentrée."
+            },
+            {
+              "label": "$C_0=0{,}045\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as oublié le facteur de dilution : la solution dosée n'est pas la solution commerciale."
+            },
+            {
+              "label": "$C_0=4{,}5\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as multiplié par $100$ : le facteur de dilution est $10$, pas $100$."
+            }
+          ],
+          "hint": "La dilution diminue la concentration d'un facteur $10$ : comment remonter à la solution initiale ?",
+          "solution": "Facteur de dilution $F=\\dfrac{C_0}{C_A}=10$ donc $C_0=F\\times C_A=10\\times0{,}045=0{,}45\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $C_0V_0=C_AV$ avec $V=10\\,V_0$ : on retrouve la même quantité de matière.",
+          "methode": "Solution diluée $F$ fois : $C_0=F\\times C_{\\text{dosée}}$.",
+          "points": 1,
+          "ref": "pc-dosage-l-exploitation-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les sources d'erreur",
+        "lesson": "Montage du dosage pH-métrique",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-les-sources-d-erreur",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "Les sources d'erreur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 1,
+          "statement": "Pour réduire l'incertitude sur $V_E$ lors d'un dosage pH-métrique, il est efficace de :",
+          "options": [
+            {
+              "label": "resserrer les ajouts de titrant autour de l'équivalence",
+              "correct": true,
+              "why": "On obtient plus de points dans le saut de pH et le repérage du point d'équivalence est plus précis."
+            },
+            {
+              "label": "verser le titrant plus vite, sans attendre l'homogénéisation",
+              "why": "Une agitation insuffisante fausse les mesures : le pH relevé n'est pas celui de la solution homogène."
+            },
+            {
+              "label": "augmenter le volume de la prise d'essai de plusieurs ordres de grandeur",
+              "why": "Ce n'est pas adapté : il faut garder une prise d'essai raisonnable ; la précision vient surtout du resserrement des ajouts."
+            },
+            {
+              "label": "ne relever le pH qu'à deux volumes seulement",
+              "why": "Avec deux points, on ne peut pas tracer la courbe de dosage ni repérer le saut de pH."
+            }
+          ],
+          "hint": "Quelle précaution augmente le nombre de points exploitables dans le saut de pH ?",
+          "solution": "Près de l'équivalence, le pH varie très vite ; resserrer les ajouts (par exemple $0{,}2\\ \\mathrm{mL}$) donne plusieurs points dans le saut et un repérage précis de $V_E$. Contrôle : l'incertitude sur $V_E$ est de l'ordre de la moitié du pas d'ajout.",
+          "methode": "Plus de points dans le saut : $V_E$ plus précis.",
+          "points": 1,
+          "ref": "pc-dosage-les-sources-d-erreur-q1"
+        },
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 2,
+          "statement": "Au début du dosage, une bulle d'air est restée dans la pointe de la burette et disparaît pendant les premiers ajouts. La concentration $C_A$ calculée est :",
+          "options": [
+            {
+              "label": "surestimée : le volume lu inclut du volume d'air qui n'est pas du titrant",
+              "correct": true,
+              "why": "La bulle s'évacue : le volume lu est supérieur au volume de titrant réellement versé ; $V_E$ lu trop grand, donc $C_A=\\dfrac{C_BV_E}{V_A}$ surestimée."
+            },
+            {
+              "label": "sous-estimée : la bulle diminue le volume de titrant réellement versé",
+              "why": "Le volume lu comprend celui de la bulle : $V_E$ lu est trop grand, pas trop petit."
+            },
+            {
+              "label": "exacte : une bulle d'air ne modifie pas le volume lu dans la burette",
+              "why": "La bulle occupe un volume dans la burette : quand elle s'échappe, la graduation descend sans que du titrant soit versé."
+            },
+            {
+              "label": "indéterminée : cela dépend de la température du laboratoire ce jour-là",
+              "why": "Le sens de l'erreur est connu : le volume lu est trop grand, donc $C_A$ surestimée."
+            }
+          ],
+          "hint": "La graduation de la burette baisse quand la bulle s'échappe : le liquide a-t-il été versé ?",
+          "solution": "Quand la bulle quitte la pointe, le niveau de la burette baisse de son volume sans que du titrant soit versé dans le bécher : le volume lu $V_E$ est supérieur au volume de titrant réellement nécessaire, donc $C_A=\\dfrac{C_BV_E}{V_A}$ est surestimée. Contrôle : on chasse toujours les bulles avant le zéro.",
+          "methode": "Bulle dans la burette : $V_E$ lu trop grand, $C_A$ surestimée.",
+          "points": 1,
+          "ref": "pc-dosage-les-sources-d-erreur-q2"
+        },
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 2,
+          "statement": "Parmi ces causes d'erreur, laquelle est une erreur systématique ?",
+          "options": [
+            {
+              "label": "la concentration réelle du titrant est différente de celle indiquée sur l'étiquette",
+              "correct": true,
+              "why": "Cette erreur affecte tous les dosages dans le même sens : c'est une erreur systématique."
+            },
+            {
+              "label": "la lecture du niveau dans la burette varie légèrement d'un opérateur à l'autre",
+              "why": "Une lecture légèrement variable donne des écarts dans un sens ou dans l'autre : erreur aléatoire."
+            },
+            {
+              "label": "la goutte versée est parfois un peu plus grosse, parfois un peu plus petite",
+              "why": "Cette variation d'une goutte à l'autre est aléatoire, elle ne biaise pas toujours dans le même sens."
+            },
+            {
+              "label": "la température du laboratoire varie légèrement au cours de la séance",
+              "why": "Une petite variation de température produit des écarts de sens variable : erreur aléatoire."
+            }
+          ],
+          "hint": "Une erreur systématique décale toujours les résultats dans le même sens.",
+          "solution": "Une erreur systématique affecte toutes les mesures de la même façon (même sens, même ordre de grandeur) : ici une concentration de titrant fausse décale $C_A$ à chaque dosage. Les erreurs de lecture ou de goutte sont aléatoires et se compensent en répétant. Contrôle : répéter le dosage réduit l'erreur aléatoire mais pas l'erreur systématique.",
+          "methode": "Erreur systématique : même sens à chaque mesure ; aléatoire : sens variable, réduite en répétant.",
+          "points": 1,
+          "ref": "pc-dosage-les-sources-d-erreur-q3"
+        },
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 3,
+          "statement": "On remplit la burette avec la solution de soude sans la rincer, alors qu'elle est mouillée d'eau distillée. Par rapport à un dosage correct, la concentration $C_A$ calculée est :",
+          "options": [
+            {
+              "label": "surestimée : le titrant dilué exige un volume équivalent plus grand",
+              "correct": true,
+              "why": "Le titrant est plus dilué que prévu, donc il en faut plus : $V_E$ lu trop grand, et $C_A=\\dfrac{C_BV_E}{V_A}$ (avec $C_B$ supposée) surestimée."
+            },
+            {
+              "label": "sous-estimée : le titrant dilué est moins efficace",
+              "why": "Le titrant moins concentré demande plus de volume pour atteindre l'équivalence, donc $V_E$ trop grand et $C_A$ surestimée."
+            },
+            {
+              "label": "exacte : l'eau de la burette n'intervient pas dans la réaction",
+              "why": "L'eau dilue le titrant : sa concentration réelle est inférieure à $C_B$ supposée, ce qui fausse $C_A$."
+            },
+            {
+              "label": "surestimée seulement si le dosage est suivi par un indicateur coloré",
+              "why": "L'effet se produit quelle que soit la méthode : $V_E$ est trop grand dans tous les cas."
+            }
+          ],
+          "hint": "La concentration réelle du titrant est-elle celle que tu utilises dans le calcul ?",
+          "solution": "L'eau résiduelle dilue le titrant : sa concentration réelle est $C_B'<C_B$. À l'équivalence $C_B'V_E'=C_AV_A$ donc $V_E'>V_E$ ; en calculant avec $C_B$ on obtient $C_A=\\dfrac{C_BV_E'}{V_A}$, trop grande. Contrôle : une burette doit toujours être rincée avec le titrant.",
+          "methode": "Burette mouillée non rincée : titrant dilué, $V_E$ trop grand, $C_A$ surestimée.",
+          "points": 1,
+          "ref": "pc-dosage-les-sources-d-erreur-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Pourquoi le pH à l'équivalence dépend de la force",
+        "lesson": "Approfondissement — Dosage acido-basique",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-pourquoi-le-ph-a-l-equivalence-depend-de",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "Pourquoi le pH à l'équivalence dépend de la force",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Pourquoi le pH à l'équivalence dépend de la force",
+          "difficulty": 3,
+          "statement": "On dose $20{,}0\\ \\mathrm{mL}$ d'acide éthanoïque à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$ par de la soude à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$ ($V_E=20{,}0\\ \\mathrm{mL}$). À l'équivalence, la solution est une solution d'ion éthanoate de concentration $C_b$, de pH donné par $\\mathrm{pH}=\\tfrac12\\bigl(\\mathrm{p}K_A+14+\\log C_b\\bigr)$ (relation donnée, $\\mathrm{p}K_A=4{,}75$). Le pH à l'équivalence vaut :",
+          "options": [
+            {
+              "label": "$8{,}72$",
+              "correct": true,
+              "why": "$C_b=\\dfrac{n}{V_{\\text{tot}}}=\\dfrac{2{,}00\\ \\mathrm{mmol}}{40{,}0\\ \\mathrm{mL}}=0{,}0500\\ \\mathrm{mol\\,L^{-1}}$ ; $\\mathrm{pH}=\\tfrac12(4{,}75+14+\\log0{,}0500)=8{,}72$."
+            },
+            {
+              "label": "$7{,}00$",
+              "why": "Tu as supposé que l'équivalence rend la solution neutre : l'ion éthanoate est une base faible, le pH est supérieur à $7$."
+            },
+            {
+              "label": "$8{,}88$",
+              "why": "Tu as oublié la dilution : à l'équivalence le volume total est $40{,}0\\ \\mathrm{mL}$, donc $C_b=0{,}0500$ et non $0{,}100\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$4{,}75$",
+              "why": "Tu as pris $\\mathrm{pH}=\\mathrm{p}K_A$ : cette égalité vaut à la demi-équivalence, pas à l'équivalence."
+            }
+          ],
+          "hint": "Calcule d'abord $C_b$ à l'équivalence en tenant compte du volume total.",
+          "solution": "À l'équivalence, $n(\\mathrm{CH_3COO^-})=0{,}100\\times20{,}0=2{,}00\\ \\mathrm{mmol}$ dans $V=20{,}0+20{,}0=40{,}0\\ \\mathrm{mL}$ : $C_b=0{,}0500\\ \\mathrm{mol\\,L^{-1}}$. $\\mathrm{pH}=\\tfrac12(4{,}75+14+\\log0{,}0500)=\\tfrac12(18{,}75-1{,}30)=8{,}72$. Contrôle : $\\mathrm{pH}_E>7$, comme attendu pour un acide faible dosé par une base forte.",
+          "methode": "Équivalence acide faible/base forte : solution de la base conjuguée ; $\\mathrm{pH}_E>7$.",
+          "points": 1,
+          "ref": "pc-dosage-pourquoi-le-ph-a-l-equivalence-depend-de-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'amplitude du saut de pH",
+        "lesson": "Approfondissement — Dosage acido-basique",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-l-amplitude-du-saut-de-ph",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "L'amplitude du saut de pH",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'amplitude du saut de pH",
+          "difficulty": 3,
+          "statement": "On dose $20{,}0\\ \\mathrm{mL}$ d'acide chlorhydrique par de la soude de même concentration $C$ ($V_E=20{,}0\\ \\mathrm{mL}$). Avec $C=0{,}100\\ \\mathrm{mol\\,L^{-1}}$, le pH passe de $3{,}60$ à $V=19{,}9\\ \\mathrm{mL}$ à $10{,}40$ à $V=20{,}1\\ \\mathrm{mL}$. Avec $C=1{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$, le saut de pH entre ces deux volumes devient :",
+          "options": [
+            {
+              "label": "d'environ $2{,}8$ unités, plus petit que $6{,}8$ unités pour $C=0{,}100$",
+              "correct": true,
+              "why": "À $C=10^{-3}$ : $\\mathrm{pH}=5{,}60$ à $19{,}9\\ \\mathrm{mL}$ et $8{,}40$ à $20{,}1\\ \\mathrm{mL}$ ; le saut vaut $2{,}8$ unités, plus faible : une dilution réduit l'amplitude du saut."
+            },
+            {
+              "label": "d'environ $6{,}8$ unités, identique à celui de la solution plus concentrée",
+              "why": "L'amplitude du saut dépend de la concentration : plus les solutions sont diluées, plus le saut est réduit."
+            },
+            {
+              "label": "d'environ $8{,}8$ unités, plus grand qu'avec $C=0{,}100\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "C'est l'inverse : la dilution réduit le saut de pH, elle ne l'augmente pas."
+            },
+            {
+              "label": "nul : il n'y a plus aucun saut de pH visible sur la courbe de dosage",
+              "why": "Il y a toujours un saut, plus étroit en amplitude ; il disparaît seulement pour des concentrations extrêmement faibles."
+            }
+          ],
+          "hint": "Calcule la concentration en excès d'acide à $V=19{,}9\\ \\mathrm{mL}$ puis le pH, pour chaque concentration.",
+          "solution": "À $V=19{,}9\\ \\mathrm{mL}$ : $[\\mathrm{H_3O^+}]=\\dfrac{C\\,(20{,}0-19{,}9)}{39{,}9}$ ; à $20{,}1\\ \\mathrm{mL}$ : $[\\mathrm{HO^-}]=\\dfrac{C\\,(20{,}1-20{,}0)}{40{,}1}$. Pour $C=10^{-3}$ : pH de $5{,}60$ à $8{,}40$, saut de $2{,}8$ unités ; pour $C=0{,}100$ : de $3{,}60$ à $10{,}40$, saut de $6{,}8$ unités. Contrôle : diviser $C$ par $100$ réduit le saut de $4$ unités environ.",
+          "methode": "Saut de pH plus marqué pour des solutions plus concentrées.",
+          "points": 1,
+          "ref": "pc-dosage-l-amplitude-du-saut-de-ph-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La solution tampon du dosage",
+        "lesson": "Approfondissement — Dosage acido-basique",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-la-solution-tampon-du-dosage",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "La solution tampon du dosage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La solution tampon du dosage",
+          "difficulty": 3,
+          "statement": "On dose $20{,}0\\ \\mathrm{mL}$ d'acide éthanoïque à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$ ($\\mathrm{p}K_A=4{,}75$, $V_E=20{,}0\\ \\mathrm{mL}$) par de la soude à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$. Après ajout de $V=15{,}0\\ \\mathrm{mL}$ de soude, le pH vaut :",
+          "options": [
+            {
+              "label": "$5{,}23$",
+              "correct": true,
+              "why": "$n(\\mathrm{A^-})=1{,}50\\ \\mathrm{mmol}$ et $n(\\mathrm{AH})=2{,}00-1{,}50=0{,}50\\ \\mathrm{mmol}$ ; $\\mathrm{pH}=4{,}75+\\log\\dfrac{1{,}50}{0{,}50}=5{,}23$."
+            },
+            {
+              "label": "$4{,}27$",
+              "why": "Tu as inversé le rapport $\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$ : la base prédomine ici, le pH est supérieur au $\\mathrm{p}K_A$."
+            },
+            {
+              "label": "$4{,}75$",
+              "why": "$\\mathrm{pH}=\\mathrm{p}K_A$ vaut à $V=V_E/2=10{,}0\\ \\mathrm{mL}$, quand $[\\mathrm{A^-}]=[\\mathrm{AH}]$, pas à $15{,}0\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$7{,}00$",
+              "why": "Tu as supposé la solution neutre : à $15{,}0\\ \\mathrm{mL}$, on est avant l'équivalence, la solution est un mélange acide/base conjuguée de pH proche du $\\mathrm{p}K_A$."
+            }
+          ],
+          "hint": "Avant l'équivalence, la solution est un mélange acide/base : calcule les quantités avec un tableau d'avancement.",
+          "solution": "$n(\\mathrm{AH})_0=0{,}100\\times20{,}0=2{,}00\\ \\mathrm{mmol}$ ; $n(\\mathrm{HO^-})=0{,}100\\times15{,}0=1{,}50\\ \\mathrm{mmol}$ (limitant). Réaction totale : $n(\\mathrm{A^-})=1{,}50$ et $n(\\mathrm{AH})=0{,}50\\ \\mathrm{mmol}$. $\\mathrm{pH}=4{,}75+\\log\\dfrac{1{,}50}{0{,}50}=5{,}23$. Contrôle : $\\mathrm{pH}>\\mathrm{p}K_A$ car $V>V_E/2$.",
+          "methode": "Avant $V_E$ (acide faible/base forte) : tampon $\\mathrm{AH/A^-}$, $\\mathrm{pH}=\\mathrm{p}K_A+\\log(n_{A^-}/n_{AH})$.",
+          "points": 1,
+          "ref": "pc-dosage-la-solution-tampon-du-dosage-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les dosages indirects",
+        "lesson": "Approfondissement — Dosage acido-basique",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-les-dosages-indirects",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "Les dosages indirects",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les dosages indirects",
+          "difficulty": 3,
+          "statement": "Un échantillon de calcaire $\\mathrm{CaCO_3}$ est traité par $50{,}0\\ \\mathrm{mL}$ d'acide chlorhydrique à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$ ($5{,}00\\ \\mathrm{mmol}$ d'ions $\\mathrm{H_3O^+}$, en excès) selon $\\mathrm{CaCO_3}+2\\,\\mathrm{H_3O^+}\\rightarrow\\mathrm{Ca^{2+}}+\\mathrm{CO_2}+3\\,\\mathrm{H_2O}$. L'excès d'acide est dosé par de la soude à $0{,}100\\ \\mathrm{mol\\,L^{-1}}$ : $V_E=20{,}0\\ \\mathrm{mL}$. La quantité de $\\mathrm{CaCO_3}$ vaut :",
+          "options": [
+            {
+              "label": "$1{,}50\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "$n(\\mathrm{H_3O^+})_{\\text{excès}}=0{,}100\\times20{,}0=2{,}00\\ \\mathrm{mmol}$ ; consommé : $5{,}00-2{,}00=3{,}00\\ \\mathrm{mmol}$ ; $n(\\mathrm{CaCO_3})=\\dfrac{3{,}00}{2}=1{,}50\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$3{,}00\\ \\mathrm{mmol}$",
+              "why": "Tu as oublié le coefficient $2$ : une mole de $\\mathrm{CaCO_3}$ consomme deux moles de $\\mathrm{H_3O^+}$."
+            },
+            {
+              "label": "$2{,}00\\ \\mathrm{mmol}$",
+              "why": "Tu as donné la quantité d'acide en excès (celle qui a été dosée) et non celle qui a réagi avec le calcaire."
+            },
+            {
+              "label": "$3{,}50\\ \\mathrm{mmol}$",
+              "why": "Tu as additionné la quantité d'acide en excès au lieu de la soustraire : l'acide consommé vaut $5{,}00-2{,}00$."
+            }
+          ],
+          "hint": "Calcule d'abord l'acide consommé par le calcaire : acide introduit moins acide en excès.",
+          "solution": "Dosage en retour : l'acide introduit ($5{,}00\\ \\mathrm{mmol}$) est en excès par rapport au calcaire ; l'excès, dosé par la soude ($1{:}1$), vaut $2{,}00\\ \\mathrm{mmol}$. Acide consommé : $5{,}00-2{,}00=3{,}00\\ \\mathrm{mmol}$ ; $n(\\mathrm{CaCO_3})=\\dfrac{3{,}00}{2}=1{,}50\\ \\mathrm{mmol}$. Contrôle : soit $150\\ \\mathrm{mg}$ de $\\mathrm{CaCO_3}$ ($M=100{,}1\\ \\mathrm{g\\,mol^{-1}}$).",
+          "methode": "Dosage en retour : $n_{\\text{consommé}}=n_{\\text{introduit}}-n_{\\text{excès dosé}}$, puis le coefficient.",
+          "points": 1,
+          "ref": "pc-dosage-les-dosages-indirects-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les incertitudes",
+        "lesson": "Approfondissement — Dosage acido-basique",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-dosage-les-incertitudes",
+      "chapter": "pc-dosage",
+      "kind": "qcu",
+      "title": "Les incertitudes",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les incertitudes",
+          "difficulty": 3,
+          "statement": "Pour $C_A=\\dfrac{C_BV_E}{V_A}$ avec $C_B=0{,}100\\ \\mathrm{mol\\,L^{-1}}$ ($\\Delta C_B=0{,}0002$), $V_E=15{,}0\\ \\mathrm{mL}$ ($\\Delta V_E=0{,}10\\ \\mathrm{mL}$) et $V_A=20{,}0\\ \\mathrm{mL}$ ($\\Delta V_A=0{,}05\\ \\mathrm{mL}$), la grandeur qui contribue le plus à l'incertitude relative sur $C_A$ est :",
+          "options": [
+            {
+              "label": "le volume équivalent $V_E$, dont l'incertitude relative est de $0{,}67\\ \\%$",
+              "correct": true,
+              "why": "$\\dfrac{\\Delta V_E}{V_E}=\\dfrac{0{,}10}{15{,}0}=0{,}67\\ \\%$, plus grande que les deux autres."
+            },
+            {
+              "label": "le volume de la prise d'essai $V_A$, dont l'incertitude relative est de $0{,}25\\ \\%$",
+              "why": "$\\dfrac{\\Delta V_A}{V_A}=\\dfrac{0{,}05}{20{,}0}=0{,}25\\ \\%$, inférieure à celle de $V_E$ ($0{,}67\\ \\%$)."
+            },
+            {
+              "label": "la concentration du titrant $C_B$, dont l'incertitude relative est de $0{,}20\\ \\%$",
+              "why": "$\\dfrac{\\Delta C_B}{C_B}=\\dfrac{0{,}0002}{0{,}100}=0{,}20\\ \\%$, la plus faible des trois."
+            },
+            {
+              "label": "les trois contribuent exactement autant, car l'incertitude absolue est petite",
+              "why": "Les incertitudes relatives sont $0{,}67$, $0{,}25$ et $0{,}20\\ \\%$ : elles ne contribuent pas également."
+            }
+          ],
+          "hint": "Compare les incertitudes relatives $\\dfrac{\\Delta x}{x}$, pas les incertitudes absolues.",
+          "solution": "Incertitudes relatives : $\\dfrac{\\Delta V_E}{V_E}=0{,}67\\ \\%$, $\\dfrac{\\Delta V_A}{V_A}=0{,}25\\ \\%$, $\\dfrac{\\Delta C_B}{C_B}=0{,}20\\ \\%$. Pour un produit/quotient, ce sont les incertitudes relatives qui interviennent : $V_E$ domine. Contrôle : on réduit l'incertitude en resserrant les ajouts près de l'équivalence.",
+          "methode": "Incertitudes : comparer les incertitudes relatives $\\Delta x/x$ des grandeurs d'un produit ou d'un quotient.",
+          "points": 1,
+          "ref": "pc-dosage-les-incertitudes-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-dosage-probleme-1",
+      "chapter": "pc-dosage",
+      "kind": "probleme",
+      "title": "Dosage du vinaigre",
+      "difficulty": 3,
+      "context": "On dose un vinaigre commercial (solution d'acide éthanoïque $\\mathrm{CH_3COOH}$) préalablement dilué $10$ fois. On prélève $V_A=20{,}0\\ \\mathrm{mL}$ de la solution diluée, que l'on dose par une solution de soude de concentration $C_B=0{,}100\\ \\mathrm{mol\\,L^{-1}}$. La réaction du dosage est $\\mathrm{CH_3COOH}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{H_2O}$. Le suivi pH-métrique donne un maximum de la dérivée $\\dfrac{d\\mathrm{pH}}{dV}$ pour $V_E=14{,}8\\ \\mathrm{mL}$ ; à $V=7{,}4\\ \\mathrm{mL}$, le pH mesuré est $4{,}76$. Masse molaire de l'acide éthanoïque : $60{,}0\\ \\mathrm{g\\,mol^{-1}}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "L'équivalence",
+          "difficulty": 1,
+          "statement": "À l'équivalence de ce dosage, on peut affirmer que :",
+          "options": [
+            {
+              "label": "les quantités d'acide éthanoïque et d'ions hydroxyde sont dans les proportions stœchiométriques",
+              "correct": true,
+              "why": "Les deux réactifs sont entièrement consommés : $n(\\mathrm{CH_3COOH})=n(\\mathrm{HO^-})_{\\text{versé}}$ pour un dosage $1{:}1$."
+            },
+            {
+              "label": "le pH vaut $7$, car l'équivalence est toujours la neutralisation du mélange",
+              "why": "Équivalence ne signifie pas neutralité : l'ion éthanoate formé rend la solution basique."
+            },
+            {
+              "label": "il reste de l'acide éthanoïque en excès, qui est dosé à la fin du dosage",
+              "why": "À l'équivalence l'acide est entièrement consommé ; il n'en reste pas."
+            },
+            {
+              "label": "le volume de soude versé est égal à $V_A=20{,}0\\ \\mathrm{mL}$, volume de la prise d'essai",
+              "why": "$V_E$ vient de la relation stœchiométrique ; ici $V_E=14{,}8\\ \\mathrm{mL}$, différent de $V_A$."
+            }
+          ],
+          "hint": "À l'équivalence, que reste-t-il de chacun des réactifs ?",
+          "solution": "À l'équivalence, l'acide éthanoïque et les ions hydroxyde ont été mélangés dans les proportions stœchiométriques de la réaction $1{:}1$ : $n(\\mathrm{CH_3COOH})=n(\\mathrm{HO^-})_E$. Contrôle : $C_AV_A=C_BV_E$.",
+          "methode": "Équivalence : proportions stœchiométriques, aucun réactif en excès.",
+          "points": 1,
+          "part": "Partie A — Dosage pH-métrique",
+          "ref": "pc-dosage-probleme-1-q1"
+        },
+        {
+          "notion": "L'allure de la courbe",
+          "difficulty": 2,
+          "statement": "Le pH à l'équivalence de ce dosage est :",
+          "options": [
+            {
+              "label": "supérieur à $7$, car la solution contient la base faible $\\mathrm{CH_3COO^-}$",
+              "correct": true,
+              "why": "Acide faible dosé par base forte : à l'équivalence la solution contient l'ion éthanoate, base faible : $\\mathrm{pH}_E>7$."
+            },
+            {
+              "label": "égal à $7$, car la soude est une base forte, donc le mélange est neutre",
+              "why": "Le pH n'est égal à $7$ que pour un acide fort dosé par une base forte ; ici l'acide est faible."
+            },
+            {
+              "label": "inférieur à $7$, car le vinaigre est acide au début du dosage",
+              "why": "Le vinaigre est acide au départ, mais à l'équivalence l'acide est remplacé par sa base conjuguée."
+            },
+            {
+              "label": "égal au $\\mathrm{p}K_A$ du couple, soit $4{,}76$, comme à la demi-équivalence",
+              "why": "$\\mathrm{pH}=\\mathrm{p}K_A$ vaut à la demi-équivalence ($7{,}4\\ \\mathrm{mL}$), pas à l'équivalence."
+            }
+          ],
+          "hint": "Quelle espèce acido-basique est majoritaire à l'équivalence, et comment réagit-elle avec l'eau ?",
+          "solution": "À $V_E$, $\\mathrm{CH_3COOH}$ est remplacé par $\\mathrm{CH_3COO^-}$ (et $\\mathrm{Na^+}$ spectateur). $\\mathrm{CH_3COO^-}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{CH_3COOH}+\\mathrm{HO^-}$ rend la solution basique : $\\mathrm{pH}_E>7$. Contrôle : un indicateur adapté serait la phénolphtaléine.",
+          "methode": "Acide faible/base forte : $\\mathrm{pH}_E>7$.",
+          "points": 1,
+          "part": "Partie A — Dosage pH-métrique",
+          "ref": "pc-dosage-probleme-1-q2"
+        },
+        {
+          "notion": "Méthode 2 — Gérer les coefficients stœchiométriques",
+          "difficulty": 2,
+          "statement": "La concentration de la solution diluée d'acide éthanoïque vaut :",
+          "options": [
+            {
+              "label": "$C_A=0{,}0740\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "$C_A=\\dfrac{C_BV_E}{V_A}=\\dfrac{0{,}100\\times14{,}8}{20{,}0}=0{,}0740\\ \\mathrm{mol\\,L^{-1}}$ (dosage $1{:}1$)."
+            },
+            {
+              "label": "$C_A=0{,}135\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as inversé les volumes : $\\dfrac{C_BV_A}{V_E}$ ; le volume équivalent est au numérateur."
+            },
+            {
+              "label": "$C_A=1{,}48\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as oublié de diviser par $V_A$ : $C_BV_E=1{,}48\\ \\mathrm{mmol}$ est une quantité de matière."
+            },
+            {
+              "label": "$C_A=0{,}0425\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as divisé par $V_A+V_E=34{,}8\\ \\mathrm{mL}$ au lieu du volume $V_A$ de la prise d'essai."
+            }
+          ],
+          "hint": "Relation à l'équivalence pour un dosage $1{:}1$ : $C_AV_A=C_BV_E$.",
+          "solution": "$n(\\mathrm{CH_3COOH})=n(\\mathrm{HO^-})_E$ donc $C_AV_A=C_BV_E$ et $C_A=\\dfrac{0{,}100\\times14{,}8}{20{,}0}=0{,}0740\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $n=1{,}48\\ \\mathrm{mmol}$ dans $20{,}0\\ \\mathrm{mL}$ donne $0{,}0740\\ \\mathrm{mol\\,L^{-1}}$.",
+          "methode": "Dosage $1{:}1$ : $C_A=C_BV_E/V_A$.",
+          "points": 1,
+          "part": "Partie A — Dosage pH-métrique",
+          "ref": "pc-dosage-probleme-1-q3"
+        },
+        {
+          "notion": "Méthode 3 — Déterminer un $\\mathrm{p}K_A$ par dosage",
+          "difficulty": 2,
+          "statement": "Le $\\mathrm{p}K_A$ du couple $\\mathrm{CH_3COOH/CH_3COO^-}$, déterminé par ce dosage, vaut :",
+          "options": [
+            {
+              "label": "$4{,}76$",
+              "correct": true,
+              "why": "À $V=V_E/2=7{,}4\\ \\mathrm{mL}$ (demi-équivalence), $[\\mathrm{CH_3COOH}]=[\\mathrm{CH_3COO^-}]$ donc $\\mathrm{pH}=\\mathrm{p}K_A=4{,}76$."
+            },
+            {
+              "label": "$7{,}0$",
+              "why": "Tu as supposé que le $\\mathrm{p}K_A$ vaut le pH neutre : il est lu au pH de la demi-équivalence."
+            },
+            {
+              "label": "$8{,}7$",
+              "why": "Tu as lu le pH à l'équivalence : c'est à la demi-équivalence que $\\mathrm{pH}=\\mathrm{p}K_A$."
+            },
+            {
+              "label": "$14{,}0$",
+              "why": "Tu as pris $\\mathrm{p}K_e$ : le $\\mathrm{p}K_A$ se lit au pH de la demi-équivalence."
+            }
+          ],
+          "hint": "À quel volume versé le pH est-il égal au $\\mathrm{p}K_A$ ?",
+          "solution": "À $V_E/2=7{,}4\\ \\mathrm{mL}$, la moitié de l'acide a été transformée : $[\\mathrm{AH}]=[\\mathrm{A^-}]$, donc $\\mathrm{pH}=\\mathrm{p}K_A+\\log1=\\mathrm{p}K_A$. Le pH mesuré à ce volume est $4{,}76$ : $\\mathrm{p}K_A=4{,}76$. Contrôle : valeur voisine de $4{,}75$ attendue.",
+          "methode": "Demi-équivalence : $V=V_E/2$, $\\mathrm{pH}=\\mathrm{p}K_A$.",
+          "points": 1,
+          "part": "Partie A — Dosage pH-métrique",
+          "ref": "pc-dosage-probleme-1-q4"
+        },
+        {
+          "notion": "Méthode 5 — Remonter à une grandeur pratique",
+          "difficulty": 3,
+          "statement": "La concentration massique d'acide éthanoïque dans le vinaigre commercial (non dilué) vaut environ :",
+          "options": [
+            {
+              "label": "$44{,}4\\ \\mathrm{g\\,L^{-1}}$",
+              "correct": true,
+              "why": "$C_0=10\\times C_A=10\\times0{,}0740=0{,}740\\ \\mathrm{mol\\,L^{-1}}$ puis $C_m=C_0M=0{,}740\\times60{,}0=44{,}4\\ \\mathrm{g\\,L^{-1}}$."
+            },
+            {
+              "label": "$4{,}44\\ \\mathrm{g\\,L^{-1}}$",
+              "why": "Tu as oublié le facteur de dilution : $C_AM=0{,}0740\\times60{,}0$ concerne la solution diluée."
+            },
+            {
+              "label": "$0{,}740\\ \\mathrm{g\\,L^{-1}}$",
+              "why": "Tu as oublié la masse molaire : $C_0=0{,}740\\ \\mathrm{mol\\,L^{-1}}$ n'est pas une concentration massique."
+            },
+            {
+              "label": "$0{,}44\\ \\mathrm{g\\,L^{-1}}$",
+              "why": "Tu as divisé par $10$ au lieu de multiplier : la solution commerciale est la plus concentrée."
+            }
+          ],
+          "hint": "Remonte à la solution commerciale avec le facteur de dilution, puis multiplie par la masse molaire.",
+          "solution": "$C_A=0{,}0740\\ \\mathrm{mol\\,L^{-1}}$ pour la solution diluée $10$ fois, donc $C_0=0{,}740\\ \\mathrm{mol\\,L^{-1}}$ pour le vinaigre. $C_m=C_0M=0{,}740\\times60{,}0=44{,}4\\ \\mathrm{g\\,L^{-1}}$, soit environ $4{,}4\\ \\%$ en masse pour une masse volumique voisine de $1{,}0\\ \\mathrm{g\\,mL^{-1}}$. Contrôle : ordre de grandeur usuel du vinaigre ($4$ à $8\\ \\%$).",
+          "methode": "Grandeur pratique : $C_0=F\\,C_A$ puis $C_m=C_0M$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-dosage-probleme-1-q5"
+        },
+        {
+          "notion": "Méthode 4 — Déterminer les espèces majoritaires",
+          "difficulty": 3,
+          "statement": "Après ajout de $V=20{,}0\\ \\mathrm{mL}$ de soude (au-delà de l'équivalence), les espèces ioniques majoritaires de la solution sont :",
+          "options": [
+            {
+              "label": "$\\mathrm{Na^+}$, $\\mathrm{CH_3COO^-}$ et $\\mathrm{HO^-}$ en excès",
+              "correct": true,
+              "why": "Après $V_E$ : $n(\\mathrm{CH_3COO^-})=1{,}48\\ \\mathrm{mmol}$, $n(\\mathrm{HO^-})=0{,}100\\times(20{,}0-14{,}8)=0{,}52\\ \\mathrm{mmol}$ en excès, et $n(\\mathrm{Na^+})=2{,}00\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$\\mathrm{Na^+}$ et $\\mathrm{CH_3COOH}$ non dosé restant",
+              "why": "Après l'équivalence l'acide est consommé : il ne reste plus d'acide éthanoïque."
+            },
+            {
+              "label": "$\\mathrm{CH_3COO^-}$ et $\\mathrm{H_3O^+}$ en excès",
+              "why": "La solution est basique ($\\mathrm{HO^-}$ en excès) : les ions $\\mathrm{H_3O^+}$ sont très minoritaires."
+            },
+            {
+              "label": "$\\mathrm{Na^+}$ et $\\mathrm{HO^-}$ seulement, sans éthanoate",
+              "why": "Les ions $\\mathrm{CH_3COO^-}$ ($1{,}48\\ \\mathrm{mmol}$) sont plus nombreux que les ions $\\mathrm{HO^-}$ en excès ($0{,}52\\ \\mathrm{mmol}$) : ils sont aussi majoritaires."
+            }
+          ],
+          "hint": "Après l'équivalence, que reste-t-il, et que s'est-il formé ? Compte les quantités de matière.",
+          "solution": "Pour $V=20{,}0\\ \\mathrm{mL}>V_E=14{,}8\\ \\mathrm{mL}$ : la réaction totale a formé $n(\\mathrm{CH_3COO^-})=C_AV_A=1{,}48\\ \\mathrm{mmol}$ ; il reste $0{,}100\\times(20{,}0-14{,}8)=0{,}52\\ \\mathrm{mmol}$ de $\\mathrm{HO^-}$ ; $n(\\mathrm{Na^+})=0{,}100\\times20{,}0=2{,}00\\ \\mathrm{mmol}$. Les ions majoritaires sont $\\mathrm{Na^+}$, $\\mathrm{CH_3COO^-}$ et $\\mathrm{HO^-}$. Contrôle : électroneutralité $2{,}00=1{,}48+0{,}52$.",
+          "methode": "Après $V_E$ : titré consommé, titrant en excès ; compter chaque ion avec un tableau d'avancement.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-dosage-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-dosage-probleme-2",
+      "chapter": "pc-dosage",
+      "kind": "probleme",
+      "title": "Dosage conductimétrique d'un détartrant",
+      "difficulty": 3,
+      "context": "On dose par conductimétrie $V_A=10{,}0\\ \\mathrm{mL}$ d'un détartrant dilué $20$ fois (solution d'acide chlorhydrique), dans $200\\ \\mathrm{mL}$ d'eau distillée, avec une soude de concentration $C_B=0{,}200\\ \\mathrm{mol\\,L^{-1}}$. La conductivité $\\sigma$ (en $\\mathrm{mS\\,m^{-1}}$) en fonction du volume $V$ de soude (en $\\mathrm{mL}$) est modélisée par deux droites : avant l'équivalence $\\sigma=500-28{,}0\\,V$ et après l'équivalence $\\sigma=-150+24{,}0\\,V$. $\\lambda(\\mathrm{H_3O^+})=35{,}0$, $\\lambda(\\mathrm{Na^+})=5{,}0$, $\\lambda(\\mathrm{HO^-})=19{,}9$ et $\\lambda(\\mathrm{Cl^-})=7{,}6\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$. Masse molaire de $\\mathrm{HCl}$ : $36{,}5\\ \\mathrm{g\\,mol^{-1}}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Le dosage conductimétrique",
+          "difficulty": 1,
+          "statement": "Avant l'équivalence, la conductivité diminue parce que :",
+          "options": [
+            {
+              "label": "les ions $\\mathrm{H_3O^+}$ très conducteurs sont remplacés par des ions $\\mathrm{Na^+}$ moins conducteurs",
+              "correct": true,
+              "why": "Chaque $\\mathrm{HO^-}$ versé consomme un $\\mathrm{H_3O^+}$ et apporte un $\\mathrm{Na^+}$ ; $\\lambda(\\mathrm{Na^+})=5{,}0<\\lambda(\\mathrm{H_3O^+})=35{,}0$."
+            },
+            {
+              "label": "les ions $\\mathrm{Cl^-}$ sont consommés par la soude au fur et à mesure du dosage",
+              "why": "Les ions $\\mathrm{Cl^-}$ sont spectateurs : leur quantité reste constante."
+            },
+            {
+              "label": "la dilution fait baisser la conductivité plus que tout autre effet dans cette solution",
+              "why": "Le volume d'eau initial est grand : la dilution est faible ; la baisse vient surtout du remplacement des ions."
+            },
+            {
+              "label": "des ions $\\mathrm{HO^-}$ très conducteurs s'accumulent dans la solution dès les premiers ajouts",
+              "why": "Avant l'équivalence, les ions $\\mathrm{HO^-}$ versés sont consommés ; ils ne s'accumulent qu'après."
+            }
+          ],
+          "hint": "Compare les conductivités ioniques de $\\mathrm{H_3O^+}$ et de $\\mathrm{Na^+}$.",
+          "solution": "Avant $V_E$ : $\\mathrm{H_3O^+}+\\mathrm{HO^-}\\rightarrow2\\,\\mathrm{H_2O}$ ; un ion $\\mathrm{Na^+}$ ($5{,}0$) remplace un ion $\\mathrm{H_3O^+}$ ($35{,}0$) : $\\sigma$ diminue. Contrôle : la pente de la première droite est négative ($-28{,}0$).",
+          "methode": "Avant $V_E$ : ion très conducteur remplacé par un ion moins conducteur : $\\sigma$ diminue.",
+          "points": 1,
+          "part": "Partie A — Lecture de la courbe",
+          "ref": "pc-dosage-probleme-2-q1"
+        },
+        {
+          "notion": "Méthode 1 — Le dosage complet, de A à Z",
+          "difficulty": 2,
+          "statement": "Le volume équivalent, à l'intersection des deux droites, vaut :",
+          "options": [
+            {
+              "label": "$V_E=12{,}5\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$500-28{,}0V=-150+24{,}0V$ donne $650=52{,}0V$ donc $V_E=12{,}5\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$V_E=17{,}9\\ \\mathrm{mL}$",
+              "why": "Tu as cherché le volume où la première droite s'annule ($500/28{,}0$) : l'équivalence est à l'intersection des deux droites."
+            },
+            {
+              "label": "$V_E=6{,}25\\ \\mathrm{mL}$",
+              "why": "Tu as cherché le volume où la seconde droite s'annule ($150/24{,}0$) : l'équivalence est à l'intersection."
+            },
+            {
+              "label": "$V_E=500\\ \\mathrm{mL}$",
+              "why": "Tu as pris l'ordonnée à l'origine de la première droite : ce n'est pas un volume."
+            }
+          ],
+          "hint": "Égale les deux expressions de $\\sigma$ puis résous en $V$.",
+          "solution": "Intersection : $500-28{,}0V=-150+24{,}0V$ donc $650=52{,}0V$ et $V_E=12{,}5\\ \\mathrm{mL}$. Contrôle : $\\sigma(12{,}5)=500-28{,}0\\times12{,}5=150$ et $-150+24{,}0\\times12{,}5=150\\ \\mathrm{mS\\,m^{-1}}$.",
+          "methode": "$V_E$ : intersection des deux droites de $\\sigma(V)$.",
+          "points": 1,
+          "part": "Partie A — Lecture de la courbe",
+          "ref": "pc-dosage-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 2 — Gérer les coefficients stœchiométriques",
+          "difficulty": 2,
+          "statement": "La concentration de la solution diluée d'acide chlorhydrique vaut :",
+          "options": [
+            {
+              "label": "$C_A=0{,}250\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "$C_A=\\dfrac{C_BV_E}{V_A}=\\dfrac{0{,}200\\times12{,}5}{10{,}0}=0{,}250\\ \\mathrm{mol\\,L^{-1}}$ (dosage $1{:}1$)."
+            },
+            {
+              "label": "$C_A=0{,}160\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as inversé les volumes : $\\dfrac{C_BV_A}{V_E}$ ; le volume équivalent est au numérateur."
+            },
+            {
+              "label": "$C_A=2{,}50\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as oublié de diviser par $V_A$ : $C_BV_E=2{,}50\\ \\mathrm{mmol}$ est une quantité de matière."
+            },
+            {
+              "label": "$C_A=0{,}0119\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as divisé par le volume total ($210\\ \\mathrm{mL}$) : la concentration de la prise d'essai se calcule avec $V_A=10{,}0\\ \\mathrm{mL}$, l'eau ajoutée ne change pas $n$."
+            }
+          ],
+          "hint": "Utilise $C_AV_A=C_BV_E$ ; l'eau distillée ajoutée ne change pas la quantité de matière à doser.",
+          "solution": "$n(\\mathrm{H_3O^+})=C_BV_E=0{,}200\\times12{,}5=2{,}50\\ \\mathrm{mmol}$ dans la prise d'essai $V_A=10{,}0\\ \\mathrm{mL}$ : $C_A=\\dfrac{2{,}50}{10{,}0}=0{,}250\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $\\sigma_0=(35{,}0+7{,}6)\\times\\dfrac{2{,}50}{210}\\times10^{3}=507\\ \\mathrm{mS\\,m^{-1}}$ voisin de $500$.",
+          "methode": "$C_A=C_BV_E/V_A$ : l'eau ajoutée dans le bécher ne compte pas.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-dosage-probleme-2-q3"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 2,
+          "statement": "On a placé $200\\ \\mathrm{mL}$ d'eau distillée dans le bécher avant le dosage. Cette précaution a pour effet :",
+          "options": [
+            {
+              "label": "de rendre la dilution négligeable : les portions de $\\sigma(V)$ sont presque droites",
+              "correct": true,
+              "why": "Le volume total varie peu (de $210$ à $222{,}5\\ \\mathrm{mL}$) : les concentrations varient quasi linéairement avec $V$."
+            },
+            {
+              "label": "de modifier la valeur du volume équivalent $V_E$ lu à l'intersection des droites",
+              "why": "$V_E$ dépend de la quantité de matière d'acide et de la concentration de la soude, pas du volume d'eau ajouté."
+            },
+            {
+              "label": "d'augmenter la quantité d'acide à doser présente dans le bécher avant l'ajout",
+              "why": "L'eau distillée ne contient pas d'acide : la quantité de matière à doser est inchangée."
+            },
+            {
+              "label": "de supprimer la rupture de pente à l'équivalence sur la courbe de conductivité",
+              "why": "La rupture de pente subsiste : elle vient du changement de nature des ions, indépendamment du volume d'eau."
+            }
+          ],
+          "hint": "Que devient le volume total quand on ajoute $12{,}5\\ \\mathrm{mL}$ de soude à $210\\ \\mathrm{mL}$ de solution ?",
+          "solution": "Le volume total passe de $210$ à $222{,}5\\ \\mathrm{mL}$ au plus, soit une variation de $6\\ \\%$ : les effets de dilution restent faibles et $\\sigma(V)$ est quasiment formée de deux droites. $V_E$ n'est pas modifié. Contrôle : l'eau ne change pas $n(\\mathrm{H_3O^+})$.",
+          "methode": "Eau en excès au départ : dilution négligeable, droites bien définies, $V_E$ inchangé.",
+          "points": 1,
+          "part": "Partie A — Lecture de la courbe",
+          "ref": "pc-dosage-probleme-2-q4"
+        },
+        {
+          "notion": "Méthode 5 — Remonter à une grandeur pratique",
+          "difficulty": 3,
+          "statement": "La concentration massique en chlorure d'hydrogène du détartrant commercial (non dilué) vaut environ :",
+          "options": [
+            {
+              "label": "$182\\ \\mathrm{g\\,L^{-1}}$",
+              "correct": true,
+              "why": "$C_0=20\\times0{,}250=5{,}00\\ \\mathrm{mol\\,L^{-1}}$ puis $C_m=C_0M=5{,}00\\times36{,}5=182\\ \\mathrm{g\\,L^{-1}}$."
+            },
+            {
+              "label": "$9{,}1\\ \\mathrm{g\\,L^{-1}}$",
+              "why": "Tu as oublié le facteur de dilution : $C_AM$ concerne la solution diluée."
+            },
+            {
+              "label": "$5{,}00\\ \\mathrm{g\\,L^{-1}}$",
+              "why": "Tu as oublié la masse molaire : $C_0=5{,}00\\ \\mathrm{mol\\,L^{-1}}$ n'est pas une concentration massique."
+            },
+            {
+              "label": "$3650\\ \\mathrm{g\\,L^{-1}}$",
+              "why": "Tu as multiplié par $400$ au lieu de $20$ : le facteur de dilution est $20$, pas $20^2$."
+            }
+          ],
+          "hint": "Remonte à la solution commerciale avec le facteur de dilution, puis multiplie par $M$.",
+          "solution": "$C_A=0{,}250\\ \\mathrm{mol\\,L^{-1}}$ pour la solution diluée $20$ fois : $C_0=20\\,C_A=5{,}00\\ \\mathrm{mol\\,L^{-1}}$ ; $C_m=C_0M=5{,}00\\times36{,}5=182\\ \\mathrm{g\\,L^{-1}}$. Contrôle : ordre de grandeur $1{,}8\\times10^{2}\\ \\mathrm{g\\,L^{-1}}$ (détartrant fortement acide).",
+          "methode": "Grandeur pratique : $C_0=F\\,C_A$ puis $C_m=C_0M$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-dosage-probleme-2-q5"
+        },
+        {
+          "notion": "Méthode 4 — Déterminer les espèces majoritaires",
+          "difficulty": 3,
+          "statement": "Pour $V=15{,}0\\ \\mathrm{mL}$ de soude versés, les ions majoritaires dans la solution sont :",
+          "options": [
+            {
+              "label": "$\\mathrm{Na^+}$, $\\mathrm{Cl^-}$ et $\\mathrm{HO^-}$",
+              "correct": true,
+              "why": "Après $V_E=12{,}5\\ \\mathrm{mL}$ : $\\mathrm{Cl^-}$ ($2{,}50\\ \\mathrm{mmol}$, spectateur), $\\mathrm{Na^+}$ ($3{,}00\\ \\mathrm{mmol}$) et $\\mathrm{HO^-}$ en excès ($0{,}50\\ \\mathrm{mmol}$)."
+            },
+            {
+              "label": "$\\mathrm{Na^+}$, $\\mathrm{Cl^-}$ et $\\mathrm{H_3O^+}$",
+              "why": "Après l'équivalence, $\\mathrm{H_3O^+}$ est entièrement consommé : la solution est basique, avec $\\mathrm{HO^-}$ en excès."
+            },
+            {
+              "label": "$\\mathrm{Cl^-}$ et $\\mathrm{H_3O^+}$ uniquement",
+              "why": "Ce serait vrai au tout début du dosage ; ici la soude versée a consommé $\\mathrm{H_3O^+}$ et apporté $\\mathrm{Na^+}$."
+            },
+            {
+              "label": "$\\mathrm{Na^+}$ et $\\mathrm{HO^-}$ uniquement",
+              "why": "Les ions $\\mathrm{Cl^-}$ sont toujours présents ($2{,}50\\ \\mathrm{mmol}$, plus nombreux que $\\mathrm{HO^-}$ en excès) : ils restent majoritaires."
+            }
+          ],
+          "hint": "Après l'équivalence, quel réactif est en excès et quels ions spectateurs sont présents ?",
+          "solution": "Après $V_E$ : $n(\\mathrm{Cl^-})=2{,}50\\ \\mathrm{mmol}$ (inchangé), $n(\\mathrm{Na^+})=0{,}200\\times15{,}0=3{,}00\\ \\mathrm{mmol}$, $n(\\mathrm{HO^-})=0{,}200\\times(15{,}0-12{,}5)=0{,}50\\ \\mathrm{mmol}$ et $n(\\mathrm{H_3O^+})\\approx0$. Majoritaires : $\\mathrm{Na^+}$, $\\mathrm{Cl^-}$, $\\mathrm{HO^-}$. Contrôle : électroneutralité $3{,}00=2{,}50+0{,}50$.",
+          "methode": "Après $V_E$ : le titrant est en excès ; ions spectateurs toujours présents.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-dosage-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [
-   "Méthode 1 — Le dosage complet, de A à Z",
-   "Méthode 2 — Gérer les coefficients stœchiométriques",
-   "Méthode 3 — Déterminer un $\\mathrm{p}K_A$ par dosage",
-   "Méthode 4 — Déterminer les espèces majoritaires",
-   "Méthode 5 — Remonter à une grandeur pratique"
-  ],
-  "existing_questions_total": 9,
-  "target_new_questions": 50,
-  "suggested_figures": [
-   "titrage-ph — Dosage acido-basique — pH = f(V), saut à l'équivalence",
-   "montage-titrage — Montage de dosage acido-basique",
-   "dosage-derivee — Dosage pH-métrique : méthode de la dérivée (pic de dpH/dV à V_E)",
-   "dosage-conductimetrique — Dosage conductimétrique : rupture de pente à l'équivalence"
-  ],
-  "sources": [
-   {
-    "annale": "pc-svt-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-dosage-serie-1",
+      "title": "Dosage acido-basique · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-dosage",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-dosage-le-principe-du-dosage-q1",
+        "pc-dosage-les-sources-d-erreur-q1",
+        "pc-dosage-l-allure-de-la-courbe-q1",
+        "pc-dosage-quatre-methodes-q1",
+        "pc-dosage-la-methode-des-tangentes-paralleles-q1",
+        "pc-dosage-la-methode-de-la-derivee-q1",
+        "pc-dosage-l-indicateur-colore-q1",
+        "pc-dosage-le-dosage-conductimetrique-q1",
+        "pc-dosage-le-montage-q1",
+        "pc-dosage-les-preliminaires-q1",
+        "pc-dosage-le-protocole-q1",
+        "pc-dosage-l-exploitation-q1"
+      ]
+    },
+    {
+      "slug": "pc-dosage-serie-2",
+      "title": "Dosage acido-basique · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-dosage",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-dosage-le-principe-du-dosage-q2",
+        "pc-dosage-l-allure-de-la-courbe-q2",
+        "pc-dosage-l-allure-de-la-courbe-q3",
+        "pc-dosage-quatre-methodes-q2",
+        "pc-dosage-la-methode-des-tangentes-paralleles-q2",
+        "pc-dosage-la-methode-de-la-derivee-q2",
+        "pc-dosage-le-dosage-conductimetrique-q2",
+        "pc-dosage-les-preliminaires-q2",
+        "pc-dosage-les-preliminaires-q3",
+        "pc-dosage-le-protocole-q2",
+        "pc-dosage-l-exploitation-q2",
+        "pc-dosage-l-exploitation-q3"
+      ]
+    },
+    {
+      "slug": "pc-dosage-serie-3",
+      "title": "Dosage acido-basique · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-dosage",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-dosage-le-principe-du-dosage-q3",
+        "pc-dosage-quatre-methodes-q3",
+        "pc-dosage-la-methode-des-tangentes-paralleles-q4",
+        "pc-dosage-la-methode-de-la-derivee-q4",
+        "pc-dosage-le-dosage-conductimetrique-q4",
+        "pc-dosage-les-preliminaires-q4",
+        "pc-dosage-l-exploitation-q4",
+        "pc-dosage-les-sources-d-erreur-q4",
+        "pc-dosage-probleme-1-q5",
+        "pc-dosage-probleme-1-q6",
+        "pc-dosage-probleme-2-q5",
+        "pc-dosage-probleme-2-q6"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le principe du dosage",
-    "lesson": "Principe et équivalence",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-le-principe-du-dosage",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "Le principe du dosage",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-le-principe-du-dosage-q1",
-     "notion": "Le principe du dosage",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'équivalence",
-    "lesson": "Principe et équivalence",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 5,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-l-equivalence",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "L'équivalence",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-l-equivalence-q1",
-     "notion": "L'équivalence",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'allure de la courbe",
-    "lesson": "Principe et équivalence",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-l-allure-de-la-courbe",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "L'allure de la courbe",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-l-allure-de-la-courbe-q1",
-     "notion": "L'allure de la courbe",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Quatre méthodes",
-    "lesson": "Repérer l'équivalence",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-quatre-methodes",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "Quatre méthodes",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-quatre-methodes-q1",
-     "notion": "Quatre méthodes",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La méthode des tangentes parallèles",
-    "lesson": "Repérer l'équivalence",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-la-methode-des-tangentes-paralleles",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "La méthode des tangentes parallèles",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-la-methode-des-tangentes-paralleles-q1",
-     "notion": "La méthode des tangentes parallèles",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La méthode de la dérivée",
-    "lesson": "Repérer l'équivalence",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-la-methode-de-la-derivee",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "La méthode de la dérivée",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-la-methode-de-la-derivee-q1",
-     "notion": "La méthode de la dérivée",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'indicateur coloré",
-    "lesson": "Repérer l'équivalence",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-l-indicateur-colore",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "L'indicateur coloré",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-l-indicateur-colore-q1",
-     "notion": "L'indicateur coloré",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le dosage conductimétrique",
-    "lesson": "Repérer l'équivalence",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-le-dosage-conductimetrique",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "Le dosage conductimétrique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-le-dosage-conductimetrique-q1",
-     "notion": "Le dosage conductimétrique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le montage",
-    "lesson": "Montage du dosage pH-métrique",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-le-montage",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "Le montage",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-le-montage-q1",
-     "notion": "Le montage",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les préliminaires",
-    "lesson": "Montage du dosage pH-métrique",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-les-preliminaires",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "Les préliminaires",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-les-preliminaires-q1",
-     "notion": "Les préliminaires",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le protocole",
-    "lesson": "Montage du dosage pH-métrique",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-le-protocole",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "Le protocole",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-le-protocole-q1",
-     "notion": "Le protocole",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'exploitation",
-    "lesson": "Montage du dosage pH-métrique",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-l-exploitation",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "L'exploitation",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-l-exploitation-q1",
-     "notion": "L'exploitation",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les sources d'erreur",
-    "lesson": "Montage du dosage pH-métrique",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-les-sources-d-erreur",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "Les sources d'erreur",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-les-sources-d-erreur-q1",
-     "notion": "Les sources d'erreur",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Pourquoi le pH à l'équivalence dépend de la force",
-    "lesson": "Approfondissement — Dosage acido-basique",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-pourquoi-le-ph-a-l-equivalence-depend-de",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "Pourquoi le pH à l'équivalence dépend de la force",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-pourquoi-le-ph-a-l-equivalence-depend-de-q1",
-     "notion": "Pourquoi le pH à l'équivalence dépend de la force",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'amplitude du saut de pH",
-    "lesson": "Approfondissement — Dosage acido-basique",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-l-amplitude-du-saut-de-ph",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "L'amplitude du saut de pH",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-l-amplitude-du-saut-de-ph-q1",
-     "notion": "L'amplitude du saut de pH",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La solution tampon du dosage",
-    "lesson": "Approfondissement — Dosage acido-basique",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-la-solution-tampon-du-dosage",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "La solution tampon du dosage",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-la-solution-tampon-du-dosage-q1",
-     "notion": "La solution tampon du dosage",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les dosages indirects",
-    "lesson": "Approfondissement — Dosage acido-basique",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-les-dosages-indirects",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "Les dosages indirects",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-les-dosages-indirects-q1",
-     "notion": "Les dosages indirects",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les incertitudes",
-    "lesson": "Approfondissement — Dosage acido-basique",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-dosage-les-incertitudes",
-   "chapter": "pc-dosage",
-   "kind": "qcu",
-   "title": "Les incertitudes",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-les-incertitudes-q1",
-     "notion": "Les incertitudes",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-dosage-probleme-1",
-   "chapter": "pc-dosage",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-dosage-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-dosage-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-dosage-probleme-2",
-   "chapter": "pc-dosage",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-dosage-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-dosage-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-dosage-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-dosage-serie-1",
-   "title": "Dosage acido-basique · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-dosage",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-dosage-serie-2",
-   "title": "Dosage acido-basique · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-dosage",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-dosage-serie-3",
-   "title": "Dosage acido-basique · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-dosage",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
