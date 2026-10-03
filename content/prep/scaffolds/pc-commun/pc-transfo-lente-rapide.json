@@ -1,1354 +1,2229 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "track": null,
- "_scaffold": {
-  "pack": "pc-commun",
-  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-transfo-lente-rapide",
-   "name": "Transformations lentes et rapides",
-   "domain": "chimie",
-   "unit": "Cinétique chimique"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-transfo-lente-rapide",
+      "name": "Transformations lentes et rapides",
+      "domain": "chimie",
+      "unit": "Cinétique chimique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Deux échelles de temps",
+      "Reconnaître l'une et l'autre",
+      "Comment savoir si une transformation est lente",
+      "Le blocage cinétique",
+      "L'interprétation microscopique",
+      "Définition",
+      "La température",
+      "Les concentrations des réactifs",
+      "Le catalyseur",
+      "Les autres facteurs",
+      "La catalyse, en détail",
+      "La catalyse hétérogène",
+      "La catalyse enzymatique",
+      "Le temps de demi-réaction comme critère",
+      "Applications industrielles",
+      "Méthode 1 — Classer des expériences par vitesse",
+      "Méthode 2 — Choisir une technique de suivi",
+      "Méthode 3 — Justifier une trempe",
+      "Méthode 4 — Reconnaître et justifier le rôle d'un catalyseur",
+      "Méthode 5 — Lire deux courbes d'avancement"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Classer des expériences par vitesse",
+      "Méthode 2 — Choisir une technique de suivi",
+      "Méthode 3 — Justifier une trempe",
+      "Méthode 4 — Reconnaître et justifier le rôle d'un catalyseur",
+      "Méthode 5 — Lire deux courbes d'avancement"
+    ],
+    "existing_questions_total": 7,
+    "target_new_questions": 38,
+    "suggested_figures": [],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "Deux échelles de temps",
-   "Reconnaître l'une et l'autre",
-   "Comment savoir si une transformation est lente",
-   "Le blocage cinétique",
-   "L'interprétation microscopique",
-   "Définition",
-   "La température",
-   "Les concentrations des réactifs",
-   "Le catalyseur",
-   "Les autres facteurs",
-   "La catalyse, en détail",
-   "La catalyse hétérogène",
-   "La catalyse enzymatique",
-   "Le temps de demi-réaction comme critère",
-   "Applications industrielles",
-   "Méthode 1 — Classer des expériences par vitesse",
-   "Méthode 2 — Choisir une technique de suivi",
-   "Méthode 3 — Justifier une trempe",
-   "Méthode 4 — Reconnaître et justifier le rôle d'un catalyseur",
-   "Méthode 5 — Lire deux courbes d'avancement"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Définition",
+        "lesson": "Les facteurs cinétiques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-definition",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "Définition",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Définition",
+          "difficulty": 1,
+          "statement": "Un facteur cinétique est une grandeur ou une condition expérimentale qui :",
+          "options": [
+            {
+              "label": "modifie la vitesse d'évolution d'un système chimique",
+              "correct": true,
+              "why": "C'est la définition : un facteur cinétique agit sur la durée de la transformation, pas sur ce qu'elle produit."
+            },
+            {
+              "label": "modifie la quantité de produit finalement obtenue lorsque la transformation est totale",
+              "why": "Pour une transformation totale, la quantité finale est fixée par le réactif limitant ; un facteur cinétique n'y change rien."
+            },
+            {
+              "label": "impose le sens dans lequel la transformation se produit",
+              "why": "Le sens d'évolution ne dépend pas d'un facteur cinétique : celui-ci joue seulement sur la vitesse."
+            },
+            {
+              "label": "modifie l'équation de la réaction qui modélise la transformation",
+              "why": "L'équation traduit la nature des réactifs et des produits ; changer la température ou ajouter un catalyseur ne la modifie pas."
+            }
+          ],
+          "hint": "Un facteur cinétique répond à la question « à quelle vitesse ? », pas « combien ? » ni « dans quel sens ? ».",
+          "solution": "Un facteur cinétique est une grandeur (température, concentrations initiales, catalyseur, etc.) dont on peut changer la valeur pour modifier la vitesse d'évolution du système. Il ne change ni l'équation de la réaction, ni le sens d'évolution, ni la quantité finale d'une transformation totale. Contrôle : si deux expériences ne diffèrent que par un facteur cinétique, elles finissent au même endroit mais n'y arrivent pas à la même date.",
+          "methode": "Facteur cinétique = agit sur la durée de la transformation, jamais sur l'équation ni sur l'état final d'une transformation totale.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-definition-q1"
+        },
+        {
+          "notion": "Définition",
+          "difficulty": 2,
+          "statement": "On veut accélérer une transformation lente d'oxydoréduction en solution aqueuse, sans changer les réactifs utilisés. Quelle action est efficace ?",
+          "options": [
+            {
+              "label": "chauffer le milieu réactionnel",
+              "correct": true,
+              "why": "Élever la température est un facteur cinétique : l'agitation thermique augmente et la transformation devient plus rapide."
+            },
+            {
+              "label": "diluer le mélange en ajoutant de l'eau",
+              "why": "Diluer diminue les concentrations des réactifs, donc ralentit la transformation au lieu de l'accélérer."
+            },
+            {
+              "label": "plonger le récipient dans un bain d'eau glacée",
+              "why": "Refroidir diminue la température, donc ralentit la transformation."
+            },
+            {
+              "label": "écrire l'équation avec des coefficients stœchiométriques doublés",
+              "why": "Multiplier les coefficients change seulement l'écriture de l'équation : le système réel n'en est pas modifié."
+            }
+          ],
+          "hint": "Parmi les propositions, une seule agit réellement sur le milieu et dans le bon sens.",
+          "solution": "Pour accélérer, on augmente un facteur cinétique : température plus élevée, concentrations plus grandes, catalyseur adapté. Chauffer est donc efficace. Diluer ou refroidir ralentissent ; modifier les coefficients de l'équation est une convention d'écriture sans effet sur l'expérience. Contrôle : on cuisine à chaud pour cuire plus vite.",
+          "methode": "Pour accélérer : chauffer, concentrer, catalyser. Pour ralentir : refroidir, diluer.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-definition-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La température",
+        "lesson": "Les facteurs cinétiques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-la-temperature",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "La température",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La température",
+          "difficulty": 1,
+          "statement": "En général, lorsqu'on élève la température d'un mélange réactionnel, la vitesse de la transformation :",
+          "options": [
+            {
+              "label": "augmente, car l'agitation des entités s'accroît",
+              "correct": true,
+              "why": "Une température plus élevée accroît l'agitation des entités : la transformation est plus rapide."
+            },
+            {
+              "label": "diminue, car les entités s'éloignent les unes des autres",
+              "why": "C'est l'inverse : c'est le refroidissement qui ralentit une transformation."
+            },
+            {
+              "label": "ne change pas : seules les concentrations agissent sur la vitesse",
+              "why": "La température est un facteur cinétique à part entière, au même titre que les concentrations."
+            },
+            {
+              "label": "devient nulle au-delà de $50\\ ^\\circ\\mathrm{C}$",
+              "why": "Aucune limite de ce genre n'existe : la vitesse continue en général d'augmenter quand on chauffe."
+            }
+          ],
+          "hint": "Pense à la cuisson : faut-il chauffer ou refroidir pour que des aliments cuisent plus vite ?",
+          "solution": "La température est un facteur cinétique : quand elle augmente, l'agitation thermique croît et la transformation évolue plus vite. Contrôle : un autocuiseur, plus chaud, cuit plus vite qu'une casserole ouverte.",
+          "methode": "Température plus haute : transformation plus rapide.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-la-temperature-q1"
+        },
+        {
+          "notion": "La température",
+          "difficulty": 2,
+          "statement": "On réalise deux fois la même transformation totale, avec les mêmes réactifs en mêmes quantités, d'abord à $20\\ ^\\circ\\mathrm{C}$ puis à $40\\ ^\\circ\\mathrm{C}$. Les courbes $x(t)$ obtenues ont :",
+          "options": [
+            {
+              "label": "des pentes initiales différentes (plus grande à $40\\ ^\\circ\\mathrm{C}$) mais la même valeur finale de $x$",
+              "correct": true,
+              "why": "La température modifie la vitesse, donc la pente, mais pas l'avancement final d'une transformation totale."
+            },
+            {
+              "label": "la même pente initiale mais des valeurs finales différentes",
+              "why": "Tu as inversé les rôles : la température change la pente (la vitesse), pas la valeur finale."
+            },
+            {
+              "label": "des valeurs finales différentes, la plus grande à $40\\ ^\\circ\\mathrm{C}$",
+              "why": "Chauffer ne fait pas produire davantage : l'avancement final est fixé par le réactif limitant."
+            },
+            {
+              "label": "des valeurs finales différentes, la plus grande à $20\\ ^\\circ\\mathrm{C}$",
+              "why": "Aucune raison que la valeur finale dépende de la température pour une transformation totale ; elle est imposée par le réactif limitant."
+            }
+          ],
+          "hint": "Une courbe se décrit par sa pente au départ et par sa valeur d'arrivée : laquelle des deux traduit la vitesse ?",
+          "solution": "À $40\\ ^\\circ\\mathrm{C}$ la transformation est plus rapide : la courbe monte plus vite (pente initiale plus grande). Comme la transformation est totale et que les quantités initiales sont identiques, le réactif limitant est le même et $x_{\\text{final}}=x_{\\max}$ est le même dans les deux cas. Contrôle : les deux courbes finissent à la même hauteur, la plus chaude y arrive plus tôt.",
+          "methode": "Facteur cinétique : change la pente de $x(t)$, pas l'asymptote d'une transformation totale.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-la-temperature-q2"
+        },
+        {
+          "notion": "La température",
+          "difficulty": 3,
+          "statement": "Un élève affirme : « en chauffant davantage le mélange, on obtiendra davantage de produit à la fin ». La transformation étudiée est totale et les quantités initiales sont fixées. Cette affirmation est :",
+          "options": [
+            {
+              "label": "fausse : chauffer accélère la formation, mais la quantité finale reste fixée par le réactif limitant",
+              "correct": true,
+              "why": "Pour une transformation totale, $x_{\\text{final}}=x_{\\max}$ ne dépend que des quantités initiales et de la stœchiométrie."
+            },
+            {
+              "label": "vraie : l'avancement final augmente avec la température de la réaction",
+              "why": "La température n'agit que sur la vitesse ; elle ne change pas $x_{\\max}$, donc pas l'avancement final d'une transformation totale."
+            },
+            {
+              "label": "fausse : la température n'a aucune influence sur la vitesse de la transformation",
+              "why": "C'est faux : la température est un facteur cinétique, elle accélère bien la transformation ; c'est la quantité finale qu'elle ne change pas."
+            },
+            {
+              "label": "vraie : plus il y a de chocs, plus il se forme de produit au total",
+              "why": "Plus de chocs signifie une transformation plus rapide, mais le réactif limitant s'épuise de la même façon : le total reste le même."
+            }
+          ],
+          "hint": "Que devient l'avancement final d'une transformation totale ? De quoi dépend-il ?",
+          "solution": "Une transformation totale s'arrête quand le réactif limitant est épuisé : $x_{\\text{final}}=x_{\\max}$, valeur imposée par les quantités initiales et les coefficients. Chauffer augmente la vitesse mais pas $x_{\\max}$. L'affirmation est donc fausse. Contrôle : un plat plus chaud est cuit plus tôt, il n'en contient pas plus pour autant.",
+          "methode": "Vitesse et quantité finale sont deux questions indépendantes : un facteur cinétique ne répond qu'à la première.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-la-temperature-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les concentrations des réactifs",
+        "lesson": "Les facteurs cinétiques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-les-concentrations-des-reactifs",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "Les concentrations des réactifs",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les concentrations des réactifs",
+          "difficulty": 1,
+          "statement": "En général, lorsqu'on augmente la concentration d'un réactif, la vitesse de la transformation :",
+          "options": [
+            {
+              "label": "augmente, car les chocs entre entités réactives sont plus fréquents",
+              "correct": true,
+              "why": "Plus d'entités réactives par unité de volume, donc plus de chocs et une transformation plus rapide."
+            },
+            {
+              "label": "diminue, car les entités réactives se gênent davantage entre elles",
+              "why": "C'est l'inverse : c'est la dilution, qui baisse les concentrations, qui ralentit la transformation."
+            },
+            {
+              "label": "ne change pas, car la concentration ne modifie pas la nature des réactifs",
+              "why": "La nature des réactifs ne change pas, mais leur concentration est bien un facteur cinétique."
+            },
+            {
+              "label": "devient infinie quand la concentration devient très grande",
+              "why": "Une vitesse infinie n'a pas de sens : elle augmente, mais reste finie."
+            }
+          ],
+          "hint": "Plus il y a d'entités par litre, que dire de la fréquence de leurs rencontres ?",
+          "solution": "La concentration des réactifs est un facteur cinétique : des concentrations plus grandes rendent les chocs plus fréquents, donc la transformation plus rapide. Contrôle : diluer un mélange le ralentit.",
+          "methode": "Réactifs plus concentrés : transformation plus rapide.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-les-concentrations-des-reactifs-q1"
+        },
+        {
+          "notion": "Les concentrations des réactifs",
+          "difficulty": 2,
+          "statement": "On mélange $20{,}0\\ \\mathrm{mL}$ d'une solution d'iodure de potassium de concentration $0{,}200\\ \\mathrm{mol\\,L^{-1}}$ avec $30{,}0\\ \\mathrm{mL}$ d'une solution ne contenant pas d'ion iodure. Dans le mélange, juste après l'ajout, la concentration des ions iodure est :",
+          "options": [
+            {
+              "label": "$0{,}080\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "La quantité d'iodure se conserve et se répartit dans $V_1+V_2=50{,}0\\ \\mathrm{mL}$ : $\\dfrac{0{,}200\\times20{,}0}{50{,}0}=0{,}080\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$0{,}200\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as oublié la dilution : le volume du mélange est plus grand que $V_1$, la concentration a donc baissé."
+            },
+            {
+              "label": "$0{,}133\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as divisé par $V_2=30{,}0\\ \\mathrm{mL}$ au lieu du volume total $V_1+V_2$."
+            },
+            {
+              "label": "$0{,}500\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as inversé le rapport des volumes : $C_1\\times\\dfrac{V_1+V_2}{V_1}$ augmenterait la concentration, alors qu'on dilue."
+            }
+          ],
+          "hint": "La quantité de matière d'iodure ne change pas lors du mélange ; c'est le volume qui change.",
+          "solution": "$n(\\mathrm{I^-})=C_1V_1=0{,}200\\times20{,}0\\times10^{-3}=4{,}00\\times10^{-3}\\ \\mathrm{mol}$, répartie dans $V=50{,}0\\ \\mathrm{mL}$ : $C=\\dfrac{n}{V}=0{,}080\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : le volume est multiplié par $2{,}50$, la concentration est divisée par $2{,}50$ (de 0{,}200 à 0{,}080).",
+          "methode": "Concentration après mélange : $C=\\dfrac{C_1V_1}{V_{\\text{total}}}$ ; c'est la quantité de matière qui se conserve.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-les-concentrations-des-reactifs-q2"
+        },
+        {
+          "notion": "Les concentrations des réactifs",
+          "difficulty": 3,
+          "statement": "On compare deux essais de la transformation $\\mathrm{S_2O_8^{2-}}+2\\,\\mathrm{I^-}\\rightarrow2\\,\\mathrm{SO_4^{2-}}+\\mathrm{I_2}$, à la même température, avec la même quantité d'ions peroxodisulfate qui est le réactif limitant. L'essai B contient deux fois moins d'ions iodure que l'essai A (ils restent en excès dans les deux essais) et le même volume total. On observe :",
+          "options": [
+            {
+              "label": "B est plus lente que A, et les deux essais forment la même quantité finale de diiode",
+              "correct": true,
+              "why": "Moins d'iodure ralentit la transformation ; le peroxodisulfate limite dans les deux cas, donc $x_{\\max}$ est identique."
+            },
+            {
+              "label": "B est plus rapide que A, car moins d'ions gênent la transformation",
+              "why": "Une concentration plus faible ralentit la transformation : il y a moins de chocs, pas plus."
+            },
+            {
+              "label": "A et B ont la même vitesse, car les ions iodure sont en excès",
+              "why": "L'excès n'annule pas l'effet de la concentration : la vitesse dépend toujours des concentrations des réactifs, même de celui qui est en excès."
+            },
+            {
+              "label": "B est plus lente que A et forme deux fois moins de diiode",
+              "why": "Le réactif limitant est le peroxodisulfate dans les deux essais, donc la quantité finale de diiode est la même."
+            }
+          ],
+          "hint": "Sépare les deux questions : la vitesse dépend des concentrations, la quantité finale dépend du réactif limitant.",
+          "solution": "Moins d'ions iodure : concentration plus faible donc chocs moins fréquents, la transformation B est plus lente. Les ions iodure restent en excès dans les deux essais, le réactif limitant est $\\mathrm{S_2O_8^{2-}}$, de même quantité : $x_{\\max}$ et la quantité finale de $\\mathrm{I_2}$ sont les mêmes. Contrôle : B arrive au même résultat que A, plus tard.",
+          "methode": "Concentration d'un réactif : agit sur la vitesse, même s'il est en excès ; l'état final dépend du réactif limitant.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-les-concentrations-des-reactifs-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le catalyseur",
+        "lesson": "Les facteurs cinétiques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-le-catalyseur",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "Le catalyseur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le catalyseur",
+          "difficulty": 1,
+          "statement": "Un catalyseur est une espèce chimique qui :",
+          "options": [
+            {
+              "label": "augmente la vitesse d'une transformation sans figurer dans son équation",
+              "correct": true,
+              "why": "C'est la définition : il accélère la transformation et n'est ni consommé ni produit, donc absent du bilan."
+            },
+            {
+              "label": "est consommé en même temps que les réactifs pour accélérer la transformation",
+              "why": "Un catalyseur n'est pas consommé : on le retrouve intact à la fin."
+            },
+            {
+              "label": "augmente la quantité finale de produit d'une transformation totale",
+              "why": "Il n'agit que sur la vitesse ; la quantité finale d'une transformation totale reste fixée par le réactif limitant."
+            },
+            {
+              "label": "modifie les coefficients stœchiométriques de l'équation",
+              "why": "Les coefficients traduisent la conservation des éléments et des charges ; un catalyseur ne les modifie pas."
+            }
+          ],
+          "hint": "Un catalyseur se retrouve-t-il intact en fin de transformation ?",
+          "solution": "Un catalyseur accélère une transformation sans y être consommé : il n'apparaît pas dans l'équation de la réaction (on peut le noter au-dessus de la flèche). Il ne change ni les coefficients ni la quantité finale d'une transformation totale. Contrôle : on peut le récupérer en fin d'expérience.",
+          "methode": "Catalyseur : accélère, n'est pas consommé, absent de l'équation.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-le-catalyseur-q1"
+        },
+        {
+          "notion": "Le catalyseur",
+          "difficulty": 2,
+          "statement": "La réaction entre les ions peroxodisulfate et les ions iodure est lente. On ajoute des ions fer(III) $\\mathrm{Fe^{3+}}$, qui jouent le rôle de catalyseur : la transformation devient nettement plus rapide. À la fin, la quantité d'ions $\\mathrm{Fe^{3+}}$ présents est :",
+          "options": [
+            {
+              "label": "la même qu'au départ, car le catalyseur n'est pas consommé",
+              "correct": true,
+              "why": "Un catalyseur intervient dans la transformation mais est régénéré : sa quantité finale est égale à sa quantité initiale."
+            },
+            {
+              "label": "nulle, car les ions fer(III) ont été consommés pour accélérer la transformation",
+              "why": "Un catalyseur n'est pas consommé : s'il disparaissait, ce serait un réactif."
+            },
+            {
+              "label": "plus grande qu'au départ, car la transformation a produit des ions fer(III)",
+              "why": "Un catalyseur n'est pas produit non plus : s'il se formait, ce serait un produit."
+            },
+            {
+              "label": "diminuée de moitié, car la moitié des ions a servi de réactif",
+              "why": "Aucune partie du catalyseur n'est consommée : sa quantité reste inchangée."
+            }
+          ],
+          "hint": "Que deviendrait l'espèce si elle était un réactif ? Un produit ? Qu'est-ce qui distingue le catalyseur ?",
+          "solution": "Un catalyseur participe à la transformation mais est régénéré : à la fin on retrouve la même quantité de $\\mathrm{Fe^{3+}}$ qu'au départ (que l'on peut vérifier par dosage). Contrôle : il n'apparaît pas dans l'équation, donc il n'intervient pas dans le bilan de matière.",
+          "methode": "Catalyseur : quantité finale = quantité initiale.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-le-catalyseur-q2"
+        },
+        {
+          "notion": "Le catalyseur",
+          "difficulty": 3,
+          "statement": "On étudie la décomposition de l'eau oxygénée. Essai 1 : l'eau oxygénée seule ne montre aucun dégagement gazeux observable en une heure. Essai 2 : on ajoute des ions $\\mathrm{Fe^{3+}}$ et un dégagement de dioxygène apparaît rapidement. Essai 3 : à la fin de l'essai 2, un dosage montre que la quantité d'ions $\\mathrm{Fe^{3+}}$ est inchangée. On en conclut que $\\mathrm{Fe^{3+}}$ est :",
+          "options": [
+            {
+              "label": "un catalyseur : il accélère la transformation sans être consommé",
+              "correct": true,
+              "why": "L'essai 2 montre l'accélération, l'essai 3 montre que sa quantité est inchangée : c'est la double preuve d'un catalyseur."
+            },
+            {
+              "label": "un réactif, car sans lui aucun dégagement n'est observé",
+              "why": "Un réactif serait consommé ; or sa quantité est inchangée à la fin (essai 3)."
+            },
+            {
+              "label": "un produit, car il est présent à la fin de l'essai 2",
+              "why": "Il était déjà présent au départ, car on l'avait ajouté ; sa quantité n'a pas augmenté, ce n'est pas un produit."
+            },
+            {
+              "label": "un facteur cinétique de type température, car il rend le milieu plus chaud",
+              "why": "Rien dans les essais ne montre un échauffement : $\\mathrm{Fe^{3+}}$ est une espèce chimique, pas une température."
+            }
+          ],
+          "hint": "Compare ce que devrait devenir la quantité de $\\mathrm{Fe^{3+}}$ s'il était un réactif, un produit ou un catalyseur.",
+          "solution": "Un réactif disparaît, un produit apparaît, un catalyseur se retrouve en même quantité. L'essai 2 prouve l'accélération, l'essai 3 que la quantité de $\\mathrm{Fe^{3+}}$ est inchangée : c'est un catalyseur. L'essai 1 joue le rôle de témoin sans catalyseur. Contrôle : $\\mathrm{Fe^{3+}}$ n'est dans aucun membre de l'équation $2\\,\\mathrm{H_2O_2}\\rightarrow2\\,\\mathrm{H_2O}+\\mathrm{O_2}$.",
+          "methode": "Rôle de catalyseur : accélération observée + quantité identique à la fin.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-le-catalyseur-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les autres facteurs",
+        "lesson": "Les facteurs cinétiques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-les-autres-facteurs",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "Les autres facteurs",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les autres facteurs",
+          "difficulty": 1,
+          "statement": "Une même masse de zinc réagit avec une solution d'acide chlorhydrique de même concentration, à la même température. La poudre de zinc réagit beaucoup plus vite que la grenaille. Le facteur cinétique en jeu est :",
+          "options": [
+            {
+              "label": "la surface de contact entre le solide et la solution (état de division)",
+              "correct": true,
+              "why": "La poudre expose une bien plus grande surface de zinc à l'acide que la grenaille, pour la même masse."
+            },
+            {
+              "label": "la température, qui est plus élevée pour la poudre que pour la grenaille",
+              "why": "Les deux essais sont réalisés à la même température : ce n'est pas ce qui diffère."
+            },
+            {
+              "label": "la concentration du zinc, plus grande dans la poudre que dans la grenaille",
+              "why": "La concentration d'un solide pur n'a pas de sens ici : le zinc est le même métal dans les deux cas, c'est sa surface exposée qui change."
+            },
+            {
+              "label": "la présence d'un catalyseur dans la poudre de zinc utilisée",
+              "why": "Aucun catalyseur n'est ajouté : c'est le même métal, simplement divisé en fins grains."
+            }
+          ],
+          "hint": "Compare ce qui est identique dans les deux essais (masse, concentration, température) et ce qui diffère.",
+          "solution": "À masse, concentration d'acide et température identiques, seule la forme du zinc diffère : la poudre offre une surface de contact bien plus grande que la grenaille. Pour une transformation entre un solide et une solution, l'état de division du solide est un facteur cinétique. Contrôle : on fait fondre un sucre en poudre plus vite qu'un sucre en morceau.",
+          "methode": "Solide + liquide : plus le solide est divisé, plus la transformation est rapide.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-les-autres-facteurs-q1"
+        },
+        {
+          "notion": "Les autres facteurs",
+          "difficulty": 2,
+          "statement": "On fait réagir du zinc avec de l'acide chlorhydrique dans quatre conditions, avec la même masse de zinc et le même volume d'acide. A : grenaille, acide à $0{,}5\\ \\mathrm{mol\\,L^{-1}}$, $20\\ ^\\circ\\mathrm{C}$. B : poudre, acide à $0{,}5\\ \\mathrm{mol\\,L^{-1}}$, $20\\ ^\\circ\\mathrm{C}$. C : poudre, acide à $0{,}1\\ \\mathrm{mol\\,L^{-1}}$, $20\\ ^\\circ\\mathrm{C}$. D : grenaille, acide à $0{,}5\\ \\mathrm{mol\\,L^{-1}}$, $5\\ ^\\circ\\mathrm{C}$. La transformation la plus rapide est celle de l'essai :",
+          "options": [
+            {
+              "label": "B",
+              "correct": true,
+              "why": "B réunit tous les avantages : poudre (surface plus grande qu'en A et D), acide plus concentré qu'en C, température plus haute qu'en D."
+            },
+            {
+              "label": "A",
+              "why": "A utilise de la grenaille, moins divisée que la poudre de B, à même concentration et même température : A est plus lente que B."
+            },
+            {
+              "label": "C",
+              "why": "C a la même poudre que B mais un acide cinq fois moins concentré : elle est plus lente que B."
+            },
+            {
+              "label": "D",
+              "why": "D cumule la grenaille et la température la plus basse : c'est la plus lente, pas la plus rapide."
+            }
+          ],
+          "hint": "Compare B avec chacun des autres essais en ne regardant qu'un seul facteur à la fois.",
+          "solution": "B par rapport à A : seule la forme change, la poudre est plus rapide. B par rapport à C : seule la concentration change, l'acide plus concentré est plus rapide. B par rapport à D : la poudre et la température plus haute sont deux facteurs favorables. B est donc la plus rapide. Contrôle : B et C ont la même poudre, B et A le même acide à $20\\ ^\\circ\\mathrm{C}$ : les comparaisons deux à deux le confirment.",
+          "methode": "Classer des essais : comparer deux à deux, en ne faisant varier qu'un facteur à la fois.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-les-autres-facteurs-q2"
+        },
+        {
+          "notion": "Les autres facteurs",
+          "difficulty": 2,
+          "statement": "On fait réagir $2{,}0\\ \\mathrm{g}$ de carbonate de calcium avec un excès d'acide chlorhydrique, une fois en morceaux, une fois en poudre, à la même température, et on mesure le volume de dioxyde de carbone dégagé. Les deux courbes $V(t)$ ont :",
+          "options": [
+            {
+              "label": "des pentes initiales différentes (plus grande avec la poudre) et le même volume final",
+              "correct": true,
+              "why": "La surface de contact agit sur la vitesse ; le carbonate est le réactif limitant dans les deux cas, donc le volume final est le même."
+            },
+            {
+              "label": "la même pente initiale mais des volumes finaux différents",
+              "why": "La surface de contact change la vitesse, donc la pente ; elle ne change pas la quantité de gaz finalement formée."
+            },
+            {
+              "label": "des volumes finaux différents, le plus grand avec la poudre",
+              "why": "Même masse de carbonate de calcium : la quantité maximale de $\\mathrm{CO_2}$ est la même, quelle que soit la forme du solide."
+            },
+            {
+              "label": "des pentes initiales différentes, plus grande avec les morceaux",
+              "why": "Les morceaux exposent moins de surface que la poudre : ils réagissent plus lentement, pas plus vite."
+            }
+          ],
+          "hint": "La poudre et les morceaux ont la même masse : que dire de la quantité de matière de carbonate de calcium ?",
+          "solution": "Même masse de $\\mathrm{CaCO_3}$ donc même quantité de matière, même réactif limitant et même volume final de $\\mathrm{CO_2}$. En poudre, la surface de contact est plus grande : la courbe monte plus vite. Contrôle : les deux courbes rejoignent la même asymptote.",
+          "methode": "État de division : change la pente de la courbe, pas son asymptote.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-les-autres-facteurs-q3"
+        },
+        {
+          "notion": "Les autres facteurs",
+          "difficulty": 3,
+          "statement": "On dissout un comprimé effervescent dans de l'eau dans quatre conditions : (1) entier à $10\\ ^\\circ\\mathrm{C}$ ; (2) broyé à $10\\ ^\\circ\\mathrm{C}$ ; (3) entier à $40\\ ^\\circ\\mathrm{C}$ ; (4) broyé à $40\\ ^\\circ\\mathrm{C}$. Le comprimé est le même, l'eau est de même volume. Quel essai a la durée la plus courte, et lequel la plus longue ?",
+          "options": [
+            {
+              "label": "le plus court : (4) ; le plus long : (1)",
+              "correct": true,
+              "why": "(4) cumule les deux facteurs favorables (broyé, chaud), (1) les deux défavorables (entier, froid)."
+            },
+            {
+              "label": "le plus court : (3) ; le plus long : (2)",
+              "why": "Tu as supposé que la température l'emporte toujours sur l'état de division ; or (4) cumule les deux facteurs favorables et bat (3), et (1) cumule les deux défavorables et est plus lent que (2)."
+            },
+            {
+              "label": "le plus court : (1) ; le plus long : (4)",
+              "why": "Tu as inversé : un comprimé entier et froid se dissout le plus lentement, un comprimé broyé et chaud le plus vite."
+            },
+            {
+              "label": "le plus court : (2) ; le plus long : (3)",
+              "why": "Tu as supposé que l'état de division l'emporte toujours sur la température ; or (4) bat (2) et (1) est plus lent que (3)."
+            }
+          ],
+          "hint": "Quel essai est favorable pour les deux facteurs à la fois ? Lequel est défavorable pour les deux ?",
+          "solution": "Deux facteurs accélèrent : un comprimé broyé (surface plus grande) et une eau plus chaude. L'essai (4) réunit les deux : durée la plus courte. L'essai (1) n'en a aucun : durée la plus longue. On ne peut pas départager (2) et (3) sans mesure, mais cela n'est pas demandé. Contrôle : (4) bat (2) et (3) car il n'est inférieur à aucun d'eux sur aucun facteur ; (1) est battu par (2) et (3) pour la même raison.",
+          "methode": "Plusieurs facteurs favorables qui s'ajoutent : l'essai qui les cumule tous est le plus rapide.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-les-autres-facteurs-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Deux échelles de temps",
+        "lesson": "Transformations rapides et lentes",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-deux-echelles-de-temps",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "Deux échelles de temps",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Deux échelles de temps",
+          "difficulty": 1,
+          "statement": "Une transformation chimique est dite rapide lorsque :",
+          "options": [
+            {
+              "label": "son évolution paraît terminée dès le mélange, à l'échelle de nos moyens d'observation",
+              "correct": true,
+              "why": "C'est la définition : on ne peut pas en suivre l'évolution dans le temps avec nos moyens usuels."
+            },
+            {
+              "label": "elle s'étale sur plusieurs heures, avec une évolution observable au cours du temps",
+              "why": "Une transformation qui s'étale sur des heures est lente, pas rapide."
+            },
+            {
+              "label": "elle ne peut pas conduire à une transformation totale, quel que soit le réactif limitant",
+              "why": "Rapide et totale sont deux notions indépendantes : la première concerne la durée, la seconde l'état final."
+            },
+            {
+              "label": "elle nécessite toujours l'ajout d'un catalyseur pour se produire à notre échelle",
+              "why": "Beaucoup de transformations rapides se produisent sans catalyseur (précipitations, réactions acido-basiques)."
+            }
+          ],
+          "hint": "Pense à ce que l'on peut observer entre l'instant du mélange et l'instant où l'on regarde.",
+          "solution": "Une transformation est rapide quand elle paraît achevée dès le mélange des réactifs, avec nos yeux ou nos instruments usuels. Elle est lente quand on peut en suivre l'évolution pendant quelques secondes, des minutes ou des heures. Contrôle : une précipitation de chlorure d'argent est immédiate, la rouille met des jours à apparaître.",
+          "methode": "Rapide : terminée dès le mélange à notre échelle. Lente : évolution observable dans le temps.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-deux-echelles-de-temps-q1"
+        },
+        {
+          "notion": "Deux échelles de temps",
+          "difficulty": 2,
+          "statement": "Parmi les transformations suivantes, laquelle est lente à température ordinaire ?",
+          "options": [
+            {
+              "label": "l'oxydation des ions iodure par les ions peroxodisulfate",
+              "correct": true,
+              "why": "C'est la transformation modèle étudiée dans ce chapitre : le diiode brun apparaît progressivement, on peut la suivre pendant plusieurs minutes."
+            },
+            {
+              "label": "la précipitation du chlorure d'argent, $\\mathrm{Ag^+}+\\mathrm{Cl^-}\\rightarrow\\mathrm{AgCl(s)}$",
+              "why": "Le précipité blanc apparaît instantanément au mélange : la transformation est rapide."
+            },
+            {
+              "label": "la réaction entre l'ion oxonium et l'ion hydroxyde, $\\mathrm{H_3O^+}+\\mathrm{HO^-}\\rightarrow2\\,\\mathrm{H_2O}$",
+              "why": "Cette réaction acido-basique est quasi instantanée : elle est rapide."
+            },
+            {
+              "label": "la précipitation de l'hydroxyde de cuivre(II), $\\mathrm{Cu^{2+}}+2\\,\\mathrm{HO^-}\\rightarrow\\mathrm{Cu(OH)_2(s)}$",
+              "why": "Le précipité bleu se forme dès l'ajout de la soude : la transformation est rapide."
+            }
+          ],
+          "hint": "Cherche la transformation dont l'évolution n'est pas immédiate quand on mélange les solutions.",
+          "solution": "Les précipitations et les réactions acido-basiques sont des transformations rapides. L'oxydoréduction entre $\\mathrm{I^-}$ et $\\mathrm{S_2O_8^{2-}}$ est lente : la coloration brune du diiode apparaît en quelques minutes. Contrôle : ce sont les transformations d'oxydoréduction qui fournissent le plus souvent des exemples de transformations lentes dans ce chapitre.",
+          "methode": "Rapides : précipitations, acide-base. Lente à connaître : $\\mathrm{I^-}/\\mathrm{S_2O_8^{2-}}$.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-deux-echelles-de-temps-q2"
+        },
+        {
+          "notion": "Deux échelles de temps",
+          "difficulty": 3,
+          "statement": "Quelle affirmation est correcte à propos de la transformation entre les ions iodure et les ions peroxodisulfate, qui est lente et totale ?",
+          "options": [
+            {
+              "label": "lenteur et caractère total sont deux propriétés indépendantes l'une de l'autre",
+              "correct": true,
+              "why": "Ici la transformation est lente (durée de plusieurs minutes) et totale (le réactif limitant est entièrement consommé) : les deux notions ne se déduisent pas l'une de l'autre."
+            },
+            {
+              "label": "une transformation lente ne peut jamais être une transformation totale",
+              "why": "Le contre-exemple est la transformation étudiée : lente et pourtant totale."
+            },
+            {
+              "label": "toute transformation totale est nécessairement une transformation rapide",
+              "why": "Une transformation peut être totale et lente : l'ordre de grandeur de la durée ne dit rien sur la quantité finale."
+            },
+            {
+              "label": "une transformation lente n'atteint jamais d'état final, même après très longtemps",
+              "why": "Elle atteint son état final, simplement plus tard : l'état final existe, il est atteint après une durée plus longue."
+            }
+          ],
+          "hint": "La vitesse répond à « en combien de temps ? », le caractère total à « jusqu'où va la transformation ? ».",
+          "solution": "La lenteur concerne la durée de l'évolution, le caractère total concerne l'état final (réactif limitant entièrement consommé). La transformation $\\mathrm{S_2O_8^{2-}}+2\\,\\mathrm{I^-}\\rightarrow2\\,\\mathrm{SO_4^{2-}}+\\mathrm{I_2}$ est à la fois lente et totale. Contrôle : un seul exemple de transformation lente et totale suffit à écarter les trois autres propositions.",
+          "methode": "Rapide/lente = durée. Totale/limitée = état final. Ne pas les confondre.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-deux-echelles-de-temps-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Reconnaître l'une et l'autre",
+        "lesson": "Transformations rapides et lentes",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-reconnaitre-l-une-et-l-autre",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "Reconnaître l'une et l'autre",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Reconnaître l'une et l'autre",
+          "difficulty": 1,
+          "statement": "On mélange une solution de nitrate d'argent et une solution de chlorure de sodium : un précipité blanc de chlorure d'argent se forme dès l'ajout. Cette transformation est :",
+          "options": [
+            {
+              "label": "rapide : le précipité apparaît dès le mélange",
+              "correct": true,
+              "why": "Le précipité apparaît dès le mélange : l'évolution est terminée à l'échelle de l'observation."
+            },
+            {
+              "label": "lente, car elle fait intervenir des ions",
+              "why": "Les ions ne rendent pas une transformation lente : les précipitations d'ions sont au contraire des exemples de transformations rapides."
+            },
+            {
+              "label": "lente, car elle conduit à la formation d'un solide",
+              "why": "La formation d'un solide n'est pas un critère de lenteur ; ici le solide apparaît immédiatement."
+            },
+            {
+              "label": "impossible à classer sans mesurer la température",
+              "why": "La classification se fait sur la durée d'évolution observée, ici nulle à notre échelle ; la température n'est pas nécessaire pour la décider."
+            }
+          ],
+          "hint": "Que vois-tu entre le moment du mélange et celui où tu observes ?",
+          "solution": "Le précipité de chlorure d'argent se forme instantanément : $\\mathrm{Ag^+}+\\mathrm{Cl^-}\\rightarrow\\mathrm{AgCl(s)}$ est une transformation rapide. Contrôle : on n'observe aucune évolution progressive de la quantité de précipité.",
+          "methode": "Observer la durée : formation immédiate = rapide.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-reconnaitre-l-une-et-l-autre-q1"
+        },
+        {
+          "notion": "Reconnaître l'une et l'autre",
+          "difficulty": 2,
+          "statement": "Deux solutions incolores, l'une d'iodure de potassium, l'autre de peroxodisulfate de potassium, sont mélangées. Le mélange reste d'abord incolore puis devient progressivement brun en quelques minutes. On peut affirmer que la transformation est :",
+          "options": [
+            {
+              "label": "lente : la formation du diiode, brun, peut être suivie à l'œil nu pendant plusieurs minutes",
+              "correct": true,
+              "why": "La coloration brune apparaît progressivement : l'évolution s'étale sur plusieurs minutes, donc la transformation est lente."
+            },
+            {
+              "label": "rapide : la coloration brune est apparue dès le mélange",
+              "why": "Cela contredit l'énoncé : le mélange reste d'abord incolore, la coloration n'apparaît que progressivement."
+            },
+            {
+              "label": "rapide, car toutes les transformations d'oxydoréduction sont rapides",
+              "why": "Beaucoup de transformations d'oxydoréduction sont lentes, comme celle-ci : le type de transformation ne dit rien sur sa durée."
+            },
+            {
+              "label": "inexistante : deux solutions incolores ne peuvent pas réagir",
+              "why": "L'apparition progressive du diiode brun montre qu'une transformation a bien lieu, même si les réactifs sont incolores."
+            }
+          ],
+          "hint": "Que dit l'énoncé de l'instant où la couleur apparaît ?",
+          "solution": "Les réactifs sont incolores et le diiode est brun. Comme la coloration apparaît progressivement en quelques minutes, l'évolution est observable dans le temps : la transformation est lente. Contrôle : si elle était rapide, le mélange serait brun dès les premières secondes.",
+          "methode": "Une couleur qui apparaît progressivement = transformation lente suivie à l'œil.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-reconnaitre-l-une-et-l-autre-q2"
+        },
+        {
+          "notion": "Reconnaître l'une et l'autre",
+          "difficulty": 2,
+          "statement": "Dans la transformation d'équation $\\mathrm{S_2O_8^{2-}}+2\\,\\mathrm{I^-}\\rightarrow2\\,\\mathrm{SO_4^{2-}}+\\mathrm{I_2}$, quels sont les couples oxydant/réducteur mis en jeu ?",
+          "options": [
+            {
+              "label": "$\\mathrm{S_2O_8^{2-}/SO_4^{2-}}$ et $\\mathrm{I_2/I^-}$",
+              "correct": true,
+              "why": "Chaque couple associe une espèce de gauche et une espèce de droite qui se correspondent : le peroxodisulfate donne le sulfate, l'iodure et le diiode forment l'autre couple."
+            },
+            {
+              "label": "$\\mathrm{S_2O_8^{2-}/I^-}$ et $\\mathrm{SO_4^{2-}/I_2}$",
+              "why": "Tu as regroupé les deux réactifs dans un couple et les deux produits dans l'autre : un couple associe un réactif et un produit."
+            },
+            {
+              "label": "$\\mathrm{S_2O_8^{2-}/I_2}$ et $\\mathrm{SO_4^{2-}/I^-}$",
+              "why": "Tu as associé les deux oxydants entre eux ($\\mathrm{S_2O_8^{2-}}$ et $\\mathrm{I_2}$) : un couple contient un oxydant et son réducteur conjugué."
+            },
+            {
+              "label": "$\\mathrm{S_2O_8^{2-}/SO_4^{2-}}$ et $\\mathrm{IO_3^-/I^-}$",
+              "why": "$\\mathrm{IO_3^-/I^-}$ est un couple réel, mais ici l'iodure est oxydé en diiode : le couple est $\\mathrm{I_2/I^-}$."
+            }
+          ],
+          "hint": "Dans un couple, les deux espèces sont liées par un échange d'électrons : l'une se transforme en l'autre.",
+          "solution": "$\\mathrm{S_2O_8^{2-}}$ capte des électrons et devient $\\mathrm{SO_4^{2-}}$ : couple $\\mathrm{S_2O_8^{2-}/SO_4^{2-}}$ (demi-équation $\\mathrm{S_2O_8^{2-}}+2\\,e^-=2\\,\\mathrm{SO_4^{2-}}$). $\\mathrm{I^-}$ cède des électrons et devient $\\mathrm{I_2}$ : couple $\\mathrm{I_2/I^-}$ ($\\mathrm{I_2}+2\\,e^-=2\\,\\mathrm{I^-}$). Contrôle : $2\\,e^-$ captés d'un côté, $2\\,e^-$ cédés de l'autre, ce qui explique les coefficients de l'équation.",
+          "methode": "Un couple relie un oxydant et son réducteur conjugué : l'un devient l'autre par échange d'électrons.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-reconnaitre-l-une-et-l-autre-q3"
+        },
+        {
+          "notion": "Reconnaître l'une et l'autre",
+          "difficulty": 3,
+          "statement": "On mélange deux solutions et on observe plusieurs phénomènes. Lequel permet de conclure que la transformation est lente ?",
+          "options": [
+            {
+              "label": "la couleur du mélange change progressivement pendant plus d'une minute",
+              "correct": true,
+              "why": "Une évolution visible qui s'étale sur plus d'une minute est la signature d'une transformation lente."
+            },
+            {
+              "label": "la solution ne change plus de couleur $10$ secondes après le mélange",
+              "why": "Une évolution terminée très tôt indiquerait plutôt une transformation rapide, pas lente."
+            },
+            {
+              "label": "un dégagement gazeux violent se produit dès l'ajout",
+              "why": "Un dégagement violent dès l'ajout traduit une transformation très rapide."
+            },
+            {
+              "label": "la température du mélange augmente légèrement",
+              "why": "Un échauffement ne dit rien sur la durée de l'évolution : il ne permet pas de conclure à la lenteur."
+            }
+          ],
+          "hint": "La question porte sur la durée de l'évolution : quelle observation s'étale dans le temps ?",
+          "solution": "La lenteur se reconnaît à une évolution observable dans la durée, par exemple un changement progressif de couleur pendant plusieurs dizaines de secondes. Une évolution déjà terminée, un dégagement violent immédiat ou un simple échauffement ne conduisent pas à cette conclusion. Contrôle : chaque proposition se juge sur ce qu'elle dit de la durée.",
+          "methode": "Lente = évolution qui s'étale dans le temps de façon visible ou mesurable.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-reconnaitre-l-une-et-l-autre-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Comment savoir si une transformation est lente",
+        "lesson": "Transformations rapides et lentes",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-comment-savoir-si-une-transformation-est",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "Comment savoir si une transformation est lente",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Comment savoir si une transformation est lente",
+          "difficulty": 1,
+          "statement": "Pour qu'une transformation soit qualifiée de lente, il faut que :",
+          "options": [
+            {
+              "label": "son évolution s'étale assez longtemps (de quelques secondes à des heures) pour être suivie dans le temps",
+              "correct": true,
+              "why": "C'est le critère de lenteur : une évolution qui s'étale assez pour être suivie."
+            },
+            {
+              "label": "elle soit exothermique, c'est-à-dire qu'elle dégage de la chaleur vers l'extérieur",
+              "why": "Que la transformation dégage de la chaleur ne dit rien sur sa vitesse."
+            },
+            {
+              "label": "elle utilise obligatoirement un catalyseur pour pouvoir se produire dans le temps",
+              "why": "Il existe des transformations lentes sans catalyseur : le catalyseur sert à les accélérer."
+            },
+            {
+              "label": "elle soit toujours limitée, c'est-à-dire qu'elle n'atteigne jamais un état final total",
+              "why": "Lenteur et caractère limité sont indépendants : la transformation lente étudiée dans ce chapitre est totale."
+            }
+          ],
+          "hint": "Le critère porte sur le temps qu'il faut pour la voir évoluer.",
+          "solution": "Une transformation est lente quand son évolution s'étale sur une durée suffisante pour pouvoir être suivie : quelques secondes, des minutes ou des heures. La chaleur dégagée, la présence d'un catalyseur ou le caractère limité ne sont pas des critères de lenteur. Contrôle : on peut mesurer un paramètre à plusieurs instants successifs.",
+          "methode": "Lente = durée d'évolution suffisante pour être suivie dans le temps.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-comment-savoir-si-une-transformation-est-q1"
+        },
+        {
+          "notion": "Comment savoir si une transformation est lente",
+          "difficulty": 2,
+          "statement": "On étudie la décomposition de l'eau oxygénée, d'équation $2\\,\\mathrm{H_2O_2}\\rightarrow2\\,\\mathrm{H_2O}+\\mathrm{O_2}$, catalysée par un fil de platine. Quelle technique de suivi est adaptée ?",
+          "options": [
+            {
+              "label": "la mesure du volume de dioxygène dégagé, à température et pression connues",
+              "correct": true,
+              "why": "Le dioxygène est le seul gaz formé : son volume permet de calculer l'avancement à chaque instant."
+            },
+            {
+              "label": "la conductimétrie, qui suit la conductivité de la solution au cours du temps",
+              "why": "Aucun ion n'est consommé ni formé dans cette transformation : la conductivité ne varie pas de façon exploitable."
+            },
+            {
+              "label": "la spectrophotométrie dans le visible, qui suit l'absorbance de la solution",
+              "why": "Aucune espèce du système n'est colorée : l'absorbance dans le visible ne varie pas."
+            },
+            {
+              "label": "un titrage acido-basique de prélèvements successifs de la solution",
+              "why": "Aucune espèce acide ou basique n'est consommée ou formée : un titrage acido-basique ne suit pas $\\mathrm{H_2O_2}$."
+            }
+          ],
+          "hint": "Cherche l'espèce qui apparaît et peut être mesurée facilement.",
+          "solution": "On choisit une grandeur physique reliée à l'avancement. Ici $\\mathrm{O_2}$ est un gaz formé : $n(\\mathrm{O_2})=x$, mesurable par son volume ($n=V/V_m$) ou par la pression d'un système fermé. Les ions, les espèces colorées et les espèces acido-basiques ne varient pas : conductimétrie, spectrophotométrie et titrage acido-basique ne conviennent pas. Contrôle : à chaque instant, $x=n(\\mathrm{O_2})$.",
+          "methode": "Choisir la technique : repérer une espèce gazeuse, colorée, ionique ou acido-basique dont la quantité varie.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-comment-savoir-si-une-transformation-est-q2"
+        },
+        {
+          "notion": "Comment savoir si une transformation est lente",
+          "difficulty": 2,
+          "statement": "On suit la décoloration d'une solution violette de permanganate de potassium par spectrophotométrie, dans la même cuve et à la même longueur d'onde. L'absorbance vaut $A_0=0{,}90$ à $t=0$ et $A=0{,}36$ à $t=5\\ \\mathrm{min}$ ; seul le permanganate absorbe, et $A$ est proportionnelle à sa concentration. À $t=5\\ \\mathrm{min}$, la fraction de permanganate restante est :",
+          "options": [
+            {
+              "label": "$40\\ \\%$",
+              "correct": true,
+              "why": "$A$ est proportionnelle à la concentration : la fraction restante est $\\dfrac{A}{A_0}=\\dfrac{0{,}36}{0{,}90}=0{,}40$, soit $40\\ \\%$."
+            },
+            {
+              "label": "$60\\ \\%$",
+              "why": "Tu as calculé la fraction consommée $1-\\dfrac{A}{A_0}=60\\ \\%$ au lieu de la fraction restante."
+            },
+            {
+              "label": "$54\\ \\%$",
+              "why": "Tu as pris la différence $A_0-A=0{,}54$ comme un pourcentage : une différence d'absorbance n'est pas une fraction sans la rapporter à $A_0$."
+            },
+            {
+              "label": "$250\\ \\%$",
+              "why": "Tu as inversé le rapport : $\\dfrac{A_0}{A}=2{,}5$ dépasse $100\\ \\%$, alors que le permanganate ne peut que diminuer."
+            }
+          ],
+          "hint": "Si $A$ est proportionnelle à $[\\mathrm{MnO_4^-}]$, comment se comparent les rapports $A/A_0$ et $C/C_0$ ?",
+          "solution": "$A=k\\,\\ell\\,C$ avec $k\\,\\ell$ constant : $\\dfrac{C}{C_0}=\\dfrac{A}{A_0}=\\dfrac{0{,}36}{0{,}90}=0{,}40$. Il reste $40\\ \\%$ du permanganate initial, donc $60\\ \\%$ ont été consommés. Contrôle : $40+60=100\\ \\%$ et l'absorbance a bien diminué.",
+          "methode": "Spectrophotométrie : $A\\propto C$, donc $C/C_0=A/A_0$.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-comment-savoir-si-une-transformation-est-q3"
+        },
+        {
+          "notion": "Comment savoir si une transformation est lente",
+          "difficulty": 3,
+          "statement": "On suit par conductimétrie la transformation du zinc avec une solution d'acide chlorhydrique : $\\mathrm{Zn(s)}+2\\,\\mathrm{H_3O^+}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{H_2(g)}+2\\,\\mathrm{H_2O}$. Les conductivités ioniques molaires sont $\\lambda(\\mathrm{H_3O^+})=35{,}0\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$, $\\lambda(\\mathrm{Zn^{2+}})=10{,}6\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$ et $\\lambda(\\mathrm{Cl^-})=7{,}6\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$. Au cours de la transformation, la conductivité de la solution :",
+          "options": [
+            {
+              "label": "diminue : un ion $\\mathrm{Zn^{2+}}$ formé remplace deux ions $\\mathrm{H_3O^+}$ plus conducteurs",
+              "correct": true,
+              "why": "Pour une avancée $x$, on perd $2x$ ions $\\mathrm{H_3O^+}$ ($2\\times35{,}0=70{,}0$) et on gagne $x$ ions $\\mathrm{Zn^{2+}}$ ($10{,}6$) : la variation est négative."
+            },
+            {
+              "label": "augmente : des ions $\\mathrm{Zn^{2+}}$ apparaissent dans la solution au cours du temps",
+              "why": "Tu n'as compté que le gain en ions $\\mathrm{Zn^{2+}}$ ; il faut aussi retirer les $2x$ ions $\\mathrm{H_3O^+}$ consommés, beaucoup plus conducteurs."
+            },
+            {
+              "label": "reste constante : les ions chlorure ne participent pas à la transformation",
+              "why": "Les ions chlorure sont spectateurs, mais $\\mathrm{H_3O^+}$ est consommé et $\\mathrm{Zn^{2+}}$ formé : la conductivité varie."
+            },
+            {
+              "label": "augmente : le gaz formé conduit le courant électrique dans la solution",
+              "why": "Le dihydrogène dégagé est un gaz non ionique : il ne contribue pas à la conductivité de la solution."
+            }
+          ],
+          "hint": "Compare la conductivité apportée par les ions consommés à celle des ions formés, en tenant compte des coefficients.",
+          "solution": "$\\sigma=\\sum\\lambda_i[X_i]$. Pour un avancement $x$ dans le volume $V$ : $\\Delta\\sigma=\\dfrac{x}{V}\\bigl(\\lambda(\\mathrm{Zn^{2+}})-2\\lambda(\\mathrm{H_3O^+})\\bigr)=\\dfrac{x}{V}(10{,}6-70{,}0)=-59{,}4\\,\\dfrac{x}{V}$ (en $\\mathrm{mS\\,m^{-1}}$ si $x/V$ est en $\\mathrm{mol\\,m^{-3}}$). Les ions $\\mathrm{Cl^-}$ ne varient pas. Contrôle : $\\sigma$ décroît bien avec $x$, de façon proportionnelle.",
+          "methode": "Conductimétrie : $\\Delta\\sigma=\\sum\\nu_i\\lambda_i\\,x/V$ ; compter ions formés (+) et consommés (−), avec leurs coefficients.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-comment-savoir-si-une-transformation-est-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le blocage cinétique",
+        "lesson": "Transformations rapides et lentes",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-le-blocage-cinetique",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "Le blocage cinétique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le blocage cinétique",
+          "difficulty": 1,
+          "statement": "Un mélange de dihydrogène et de dioxygène, conservé à température ambiante, ne forme pas d'eau de façon observable ; il réagit violemment si on y met une étincelle. On dit que le système est en blocage cinétique. Cela signifie que :",
+          "options": [
+            {
+              "label": "la transformation est possible mais si lente qu'aucune évolution n'est observable",
+              "correct": true,
+              "why": "C'est la définition du blocage cinétique : la vitesse est si faible que le système semble figé."
+            },
+            {
+              "label": "la transformation est impossible : les réactifs ne peuvent pas réagir entre eux",
+              "why": "Elle est possible : l'étincelle montre que le mélange réagit, il est seulement bloqué cinétiquement."
+            },
+            {
+              "label": "tout le dihydrogène présent a déjà été consommé par la transformation",
+              "why": "Si le dihydrogène avait été consommé, l'étincelle ne provoquerait aucune réaction."
+            },
+            {
+              "label": "les réactifs sont devenus inactifs pour toujours dans ces conditions",
+              "why": "Ils ne sont pas inactifs : une étincelle, la chaleur ou un catalyseur déclenche la transformation."
+            }
+          ],
+          "hint": "Une étincelle déclenche la réaction : que peux-tu en déduire sur la possibilité de la transformation ?",
+          "solution": "Blocage cinétique : la transformation est possible, mais sa vitesse est si faible à la température considérée que l'on n'observe aucune évolution. Un apport d'énergie (étincelle) ou un catalyseur lève le blocage. Contrôle : le mélange réagit quand on le déclenche, il n'était donc pas dépourvu de réactifs.",
+          "methode": "Blocage cinétique = transformation possible mais vitesse quasi nulle ; on la débloque en apportant de l'énergie ou un catalyseur.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-le-blocage-cinetique-q1"
+        },
+        {
+          "notion": "Le blocage cinétique",
+          "difficulty": 2,
+          "statement": "Comment peut-on lever le blocage cinétique d'un mélange de dihydrogène et de dioxygène ?",
+          "options": [
+            {
+              "label": "en apportant de l'énergie (étincelle, chauffage) ou un catalyseur comme le platine",
+              "correct": true,
+              "why": "Ces moyens augmentent fortement la vitesse de la transformation, ce qui lève le blocage."
+            },
+            {
+              "label": "en refroidissant fortement le mélange, pour ralentir les rencontres entre molécules",
+              "why": "Refroidir diminue la vitesse : cela aggrave le blocage au lieu de le lever."
+            },
+            {
+              "label": "en diluant le mélange avec un gaz inerte comme le diazote",
+              "why": "Diluer diminue les concentrations des réactifs, donc la vitesse : le blocage est renforcé."
+            },
+            {
+              "label": "en changeant les coefficients de l'équation de la réaction chimique",
+              "why": "Changer les coefficients ne modifie que l'écriture, pas le système réel."
+            }
+          ],
+          "hint": "Lever le blocage revient à augmenter fortement la vitesse : quels facteurs cinétiques connais-tu ?",
+          "solution": "On lève un blocage cinétique en augmentant la vitesse : apport d'énergie (étincelle, chauffage) ou catalyseur adapté (platine). Refroidir ou diluer ralentit. Contrôle : un mélange refroidi ou dilué reste bloqué ; une étincelle le fait réagir.",
+          "methode": "Débloquer = augmenter la vitesse : température, catalyseur, énergie d'amorçage.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-le-blocage-cinetique-q2"
+        },
+        {
+          "notion": "Le blocage cinétique",
+          "difficulty": 2,
+          "statement": "De l'eau oxygénée, conservée dans un flacon à l'obscurité, se décompose extrêmement lentement : aucune bulle n'est visible. On y ajoute de l'oxyde de manganèse(IV) solide : un dégagement de dioxygène apparaît aussitôt. On peut conclure que :",
+          "options": [
+            {
+              "label": "la décomposition est possible mais bloquée cinétiquement ; $\\mathrm{MnO_2}$ la débloque comme catalyseur",
+              "correct": true,
+              "why": "Sans $\\mathrm{MnO_2}$ la vitesse est quasi nulle ; avec, elle devient notable : c'est le rôle d'un catalyseur."
+            },
+            {
+              "label": "la décomposition est impossible sans $\\mathrm{MnO_2}$, qui la rend alors possible",
+              "why": "Elle se produit extrêmement lentement même sans $\\mathrm{MnO_2}$ ; l'ajout ne rend pas possible une transformation impossible, il l'accélère."
+            },
+            {
+              "label": "$\\mathrm{MnO_2}$ est un réactif consommé par la transformation, comme l'eau oxygénée",
+              "why": "Un réactif serait consommé et figurerait dans l'équation ; $\\mathrm{MnO_2}$ est un catalyseur, il peut être récupéré."
+            },
+            {
+              "label": "l'eau oxygénée est stable : elle ne peut pas du tout se décomposer",
+              "why": "L'ajout de $\\mathrm{MnO_2}$ montre qu'elle se décompose bien ; elle n'est pas stable cinétiquement, seulement lente."
+            }
+          ],
+          "hint": "Comparer ce que montrent les deux observations : sans puis avec le solide.",
+          "solution": "Sans $\\mathrm{MnO_2}$, la décomposition de l'eau oxygénée est très lente : blocage cinétique. Avec $\\mathrm{MnO_2}$, un catalyseur solide, elle devient rapide. Le solide n'intervient pas dans le bilan et n'est pas consommé. Contrôle : on récupère le solide à la fin, avec la même masse.",
+          "methode": "Transformation bloquée + espèce qui la débloque sans être consommée = catalyseur.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-le-blocage-cinetique-q3"
+        },
+        {
+          "notion": "Le blocage cinétique",
+          "difficulty": 3,
+          "statement": "Un morceau de bois ne s'enflamme pas spontanément à l'air libre, alors que sa combustion est possible et très exothermique ; il suffit d'une flamme pour l'amorcer. L'explication est :",
+          "options": [
+            {
+              "label": "un blocage cinétique : la vitesse est quasi nulle à froid, il faut chauffer pour amorcer",
+              "correct": true,
+              "why": "Le bois et le dioxygène sont présents et peuvent réagir ; c'est la vitesse, quasi nulle à froid, qui empêche la combustion."
+            },
+            {
+              "label": "le bois ne contient aucun réactif capable de brûler, même en présence de dioxygène",
+              "why": "Le bois brûle quand on l'amorce : il contient bien des réactifs."
+            },
+            {
+              "label": "la combustion est impossible dans l'air, quelle que soit la température du bois",
+              "why": "Elle se produit bien dès qu'on l'amorce, donc elle est possible."
+            },
+            {
+              "label": "le dioxygène de l'air est déjà entièrement consommé par le bois à froid",
+              "why": "Si le dioxygène était déjà consommé, la flamme ne pourrait pas déclencher la combustion."
+            }
+          ],
+          "hint": "La flamme amorce la combustion : que peux-tu en déduire des réactifs et de la possibilité de la transformation ?",
+          "solution": "Le bois et le dioxygène sont tous deux présents, la combustion est possible, mais elle est bloquée cinétiquement à température ambiante. Une flamme apporte l'énergie d'amorçage ; la chaleur dégagée entretient ensuite la combustion. Contrôle : à chaud, la vitesse est assez grande pour que la transformation s'auto-entretienne.",
+          "methode": "Si une amorce déclenche la transformation, c'est qu'elle est possible : le système est bloqué cinétiquement.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-le-blocage-cinetique-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'interprétation microscopique",
+        "lesson": "Transformations rapides et lentes",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-l-interpretation-microscopique",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "L'interprétation microscopique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'interprétation microscopique",
+          "difficulty": 1,
+          "statement": "À l'échelle microscopique, pour qu'une transformation chimique se produise, il faut que les entités réactives subissent des :",
+          "options": [
+            {
+              "label": "chocs efficaces : énergie suffisante et orientation favorable",
+              "correct": true,
+              "why": "Seuls les chocs assez énergétiques et correctement orientés permettent de rompre et former des liaisons."
+            },
+            {
+              "label": "chocs, quelles que soient leur énergie et leur orientation, car tous sont efficaces",
+              "why": "Tous les chocs ne sont pas efficaces : la plupart rebondissent sans réaction."
+            },
+            {
+              "label": "chocs uniquement avec les molécules de solvant",
+              "why": "Ce sont les chocs entre entités réactives qui peuvent conduire à la transformation, pas les chocs avec le solvant."
+            },
+            {
+              "label": "aucun choc, car les entités réagissent à distance",
+              "why": "Pour qu'une entité réagisse avec une autre, elles doivent se rencontrer : il faut un choc."
+            }
+          ],
+          "hint": "Un choc suffit-il toujours pour réagir ?",
+          "solution": "Une transformation chimique résulte de chocs efficaces entre entités réactives : l'énergie doit être suffisante et l'orientation favorable. La vitesse dépend du nombre de chocs efficaces par unité de temps. Contrôle : on peut augmenter ce nombre en augmentant la fréquence des chocs ou la proportion de chocs efficaces.",
+          "methode": "Vitesse = nombre de chocs efficaces par unité de temps.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-l-interpretation-microscopique-q1"
+        },
+        {
+          "notion": "L'interprétation microscopique",
+          "difficulty": 2,
+          "statement": "L'élévation de la température augmente la vitesse d'une transformation parce que :",
+          "options": [
+            {
+              "label": "l'agitation thermique augmente : chocs plus fréquents et plus énergétiques, donc plus efficaces par seconde",
+              "correct": true,
+              "why": "Température plus élevée : entités plus rapides, chocs plus fréquents et plus énergétiques, davantage de chocs efficaces par seconde."
+            },
+            {
+              "label": "le nombre d'entités réactives présentes dans le mélange augmente avec la température",
+              "why": "Chauffer ne crée pas d'entités : les quantités de matière restent les mêmes."
+            },
+            {
+              "label": "la température change la nature des réactifs présents dans le mélange",
+              "why": "La nature des réactifs ne change pas : l'équation reste la même."
+            },
+            {
+              "label": "les chocs deviennent plus énergétiques, mais leur fréquence ne change pas du tout",
+              "why": "La fréquence augmente aussi : des entités plus rapides se rencontrent plus souvent."
+            }
+          ],
+          "hint": "Que fait l'agitation thermique à la vitesse des entités ? Que cela change-t-il pour les chocs ?",
+          "solution": "À température plus élevée, les entités se déplacent plus vite : elles se rencontrent plus souvent et avec plus d'énergie, donc le nombre de chocs efficaces par seconde augmente. Les quantités de matière ne changent pas, ni la nature des réactifs. Contrôle : la transformation est plus rapide sans que l'équation change.",
+          "methode": "Température : chocs plus fréquents ET plus énergétiques.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-l-interpretation-microscopique-q2"
+        },
+        {
+          "notion": "L'interprétation microscopique",
+          "difficulty": 3,
+          "statement": "À température constante, l'augmentation de la concentration d'un réactif accélère la transformation parce que :",
+          "options": [
+            {
+              "label": "il y a plus d'entités par unité de volume : chocs plus fréquents, énergie d'un choc inchangée",
+              "correct": true,
+              "why": "Plus de réactif par litre augmente la fréquence des rencontres ; l'énergie moyenne d'un choc dépend de la température, qui est constante ici."
+            },
+            {
+              "label": "chaque choc devient plus énergétique à cause du plus grand nombre d'entités",
+              "why": "À température constante, l'énergie moyenne d'un choc ne change pas ; c'est leur nombre par seconde qui augmente."
+            },
+            {
+              "label": "les entités se gênent mutuellement et les chocs deviennent plus rares",
+              "why": "Plus d'entités par volume implique plus de rencontres, pas moins."
+            },
+            {
+              "label": "tous les chocs entre entités réactives deviennent alors des chocs efficaces",
+              "why": "La proportion de chocs efficaces dépend de l'énergie et de l'orientation, pas de la concentration : seul leur nombre augmente."
+            }
+          ],
+          "hint": "À température constante, que reste-t-il inchangé dans un choc ? Et qu'est-ce qui change par litre ?",
+          "solution": "À température constante, l'énergie moyenne et la proportion de chocs efficaces ne changent pas. Une concentration plus grande signifie plus d'entités par unité de volume : les chocs sont plus fréquents, donc le nombre de chocs efficaces par seconde augmente. Contrôle : on diminue le nombre de chocs en diluant.",
+          "methode": "Concentration : chocs plus fréquents ; température : chocs plus fréquents et plus énergétiques.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-l-interpretation-microscopique-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La catalyse, en détail",
+        "lesson": "Approfondissement — Transformations lentes et rapides",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-la-catalyse-en-detail",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "La catalyse, en détail",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La catalyse, en détail",
+          "difficulty": 3,
+          "statement": "Un industriel veut pouvoir récupérer facilement son catalyseur en fin de transformation, sans étape de séparation compliquée. Il choisira de préférence :",
+          "options": [
+            {
+              "label": "un catalyseur solide, dans une phase différente des réactifs (catalyse hétérogène), séparable par filtration",
+              "correct": true,
+              "why": "Un catalyseur solide, placé dans un milieu liquide ou gazeux, se sépare du mélange par simple filtration."
+            },
+            {
+              "label": "un catalyseur dissous dans la même phase que les réactifs (catalyse homogène), car il sera mieux mélangé",
+              "why": "Dissous, il est mélangé aux réactifs et aux produits : le séparer demande une opération supplémentaire, ce qui est le contraire de ce que l'industriel cherche."
+            },
+            {
+              "label": "une enzyme dissoute, car les enzymes sont toujours consommées en cours de réaction",
+              "why": "Une enzyme n'est pas consommée non plus : c'est un catalyseur ; et dissoute, elle serait aussi difficile à séparer."
+            },
+            {
+              "label": "aucun catalyseur : un catalyseur est toujours consommé et ne peut pas être récupéré",
+              "why": "C'est faux : un catalyseur n'est pas consommé, et on peut précisément le récupérer."
+            }
+          ],
+          "hint": "Compare la phase du catalyseur avec celle du mélange réactionnel : lequel se sépare le plus simplement ?",
+          "solution": "En catalyse homogène, le catalyseur est dans la même phase que les réactifs : il est dissous et difficile à récupérer. En catalyse hétérogène, il est dans une autre phase (solide dans un liquide ou un gaz) : il se sépare par filtration ou reste fixé dans le réacteur. Contrôle : un catalyseur n'étant pas consommé, on peut le réutiliser, à condition de pouvoir le séparer.",
+          "methode": "Homogène = même phase, difficile à séparer ; hétérogène = phase différente, facile à séparer.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-la-catalyse-en-detail-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La catalyse hétérogène",
+        "lesson": "Approfondissement — Transformations lentes et rapides",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-la-catalyse-heterogene",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "La catalyse hétérogène",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La catalyse hétérogène",
+          "difficulty": 3,
+          "statement": "Un fil de platine plongé dans une solution d'eau oxygénée provoque un dégagement de dioxygène à sa surface ; quand on retire le fil, le dégagement cesse, et le fil retiré a la même masse qu'avant. Cette catalyse est :",
+          "options": [
+            {
+              "label": "hétérogène : le catalyseur est solide, dans une phase différente de la solution",
+              "correct": true,
+              "why": "Le platine est un solide dans une solution : deux phases distinctes, donc catalyse hétérogène."
+            },
+            {
+              "label": "homogène, car le platine et la solution sont dans le même récipient",
+              "why": "L'homogénéité se juge sur la phase, pas sur le récipient : le platine solide est dans une phase différente de la solution."
+            },
+            {
+              "label": "enzymatique, car la transformation est très sélective",
+              "why": "Une enzyme est une protéine produite par un organisme vivant ; le platine est un métal, ce n'est pas une catalyse enzymatique."
+            },
+            {
+              "label": "absente : le platine est un réactif, il provoque la transformation",
+              "why": "Un réactif serait consommé ; ici la masse du fil est inchangée, ce qui prouve que c'est un catalyseur."
+            }
+          ],
+          "hint": "Le catalyseur est-il dans la même phase que les réactifs ? Un réactif garderait-il sa masse ?",
+          "solution": "Le fil de platine est solide, la solution est liquide : le catalyseur et les réactifs sont dans deux phases différentes, donc catalyse hétérogène ; la réaction se produit à la surface du solide. La masse du fil est inchangée : le platine n'est pas consommé, c'est un catalyseur. Contrôle : en retirant le fil, on arrête la catalyse.",
+          "methode": "Catalyseur solide + réactifs en solution ou gazeux = catalyse hétérogène, qui se passe à la surface du solide.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-la-catalyse-heterogene-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La catalyse enzymatique",
+        "lesson": "Approfondissement — Transformations lentes et rapides",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-la-catalyse-enzymatique",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "La catalyse enzymatique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La catalyse enzymatique",
+          "difficulty": 3,
+          "statement": "La catalase, enzyme présente dans le foie, décompose très efficacement l'eau oxygénée à $37\\ ^\\circ\\mathrm{C}$. À $80\\ ^\\circ\\mathrm{C}$, la décomposition est beaucoup plus lente qu'à $37\\ ^\\circ\\mathrm{C}$. L'explication est :",
+          "options": [
+            {
+              "label": "l'enzyme, qui est une protéine, est dénaturée à haute température et perd son pouvoir catalytique",
+              "correct": true,
+              "why": "À $80\\ ^\\circ\\mathrm{C}$, la structure de la protéine est détruite : le catalyseur n'agit plus, ce qui l'emporte sur l'effet d'accélération de la température."
+            },
+            {
+              "label": "l'enzyme a été consommée par la transformation",
+              "why": "Une enzyme est un catalyseur : elle n'est pas consommée."
+            },
+            {
+              "label": "une température plus élevée ralentit toujours toute transformation chimique",
+              "why": "C'est faux : en général la température accélère une transformation ; c'est un cas particulier lié à la dénaturation de l'enzyme."
+            },
+            {
+              "label": "à $80\\ ^\\circ\\mathrm{C}$ l'équation de décomposition n'est plus la même",
+              "why": "L'équation reste $2\\,\\mathrm{H_2O_2}\\rightarrow2\\,\\mathrm{H_2O}+\\mathrm{O_2}$ ; la température ne la modifie pas."
+            }
+          ],
+          "hint": "Une enzyme est une protéine : que devient une protéine à haute température ?",
+          "solution": "Les enzymes sont des catalyseurs biologiques très efficaces et très spécifiques, qui agissent dans un domaine de température limité (autour de $37\\ ^\\circ\\mathrm{C}$ pour la catalase du foie). À $80\\ ^\\circ\\mathrm{C}$, la protéine est dénaturée : elle ne joue plus son rôle de catalyseur et la décomposition redevient lente. Contrôle : la vitesse en fonction de la température passe par un maximum avant de chuter.",
+          "methode": "Catalyse enzymatique : efficace dans un domaine de température limité ; au-delà, l'enzyme est dénaturée.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-la-catalyse-enzymatique-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le temps de demi-réaction comme critère",
+        "lesson": "Approfondissement — Transformations lentes et rapides",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-le-temps-de-demi-reaction-comme-critere",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "Le temps de demi-réaction comme critère",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le temps de demi-réaction comme critère",
+          "difficulty": 3,
+          "statement": "On réalise deux fois une même transformation totale, d'avancement maximal $x_{\\max}=6{,}0\\ \\mathrm{mmol}$. Dans l'essai A, l'avancement atteint $3{,}0\\ \\mathrm{mmol}$ à $t=4{,}0\\ \\mathrm{min}$ ; dans l'essai B, il atteint $3{,}0\\ \\mathrm{mmol}$ à $t=10{,}0\\ \\mathrm{min}$. Quelle conclusion est correcte ?",
+          "options": [
+            {
+              "label": "A est plus rapide : $t_{1/2}(\\mathrm{A})=4{,}0\\ \\mathrm{min}$ est plus court que $t_{1/2}(\\mathrm{B})=10{,}0\\ \\mathrm{min}$",
+              "correct": true,
+              "why": "$3{,}0\\ \\mathrm{mmol}=x_{\\max}/2$ : les dates $4{,}0$ et $10{,}0\\ \\mathrm{min}$ sont les temps de demi-réaction ; le plus court correspond à la transformation la plus rapide."
+            },
+            {
+              "label": "B est plus rapide : son temps de demi-réaction $t_{1/2}(\\mathrm{B})$ est plus grand que celui de A",
+              "why": "Un $t_{1/2}$ plus grand signifie qu'il faut plus de temps pour atteindre la moitié de la transformation : la transformation est plus lente."
+            },
+            {
+              "label": "A et B ont la même vitesse, car elles ont le même avancement maximal $x_{\\max}$",
+              "why": "Le même $x_{\\max}$ dit seulement que les deux essais finissent au même point ; la vitesse se lit sur le temps nécessaire pour y arriver."
+            },
+            {
+              "label": "A est plus rapide, avec $t_{1/2}(\\mathrm{A})=3{,}0\\ \\mathrm{min}$ contre $10{,}0\\ \\mathrm{min}$ pour B",
+              "why": "Tu as pris la valeur de l'avancement ($3{,}0\\ \\mathrm{mmol}$) pour une date : $t_{1/2}(\\mathrm{A})$ est la date lue, soit $4{,}0\\ \\mathrm{min}$."
+            }
+          ],
+          "hint": "Le temps de demi-réaction est une durée ; avec le même $x_{\\max}$, que révèle-t-elle ?",
+          "solution": "Le temps de demi-réaction est la date à laquelle l'avancement atteint la moitié de sa valeur finale. Ici $x_{\\max}/2=3{,}0\\ \\mathrm{mmol}$ : $t_{1/2}(\\mathrm{A})=4{,}0\\ \\mathrm{min}$ et $t_{1/2}(\\mathrm{B})=10{,}0\\ \\mathrm{min}$. À même transformation, un $t_{1/2}$ plus court traduit une évolution plus rapide : A est plus rapide que B, d'un facteur $\\dfrac{10{,}0}{4{,}0}=2{,}5$ sur ce critère.",
+          "methode": "Comparer deux essais d'une même transformation totale : le plus rapide est celui dont le $t_{1/2}$ est le plus court.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-le-temps-de-demi-reaction-comme-critere-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Applications industrielles",
+        "lesson": "Approfondissement — Transformations lentes et rapides",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-transfo-lente-rapide-applications-industrielles",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "qcu",
+      "title": "Applications industrielles",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Applications industrielles",
+          "difficulty": 3,
+          "statement": "Dans le pot catalytique d'une voiture, un support céramique en nid d'abeille est recouvert d'une fine couche de platine, de rhodium et de palladium ; les gaz d'échappement (monoxyde de carbone, oxydes d'azote, hydrocarbures imbrûlés) le traversent et sont transformés en dioxyde de carbone, diazote et eau. Le rôle du pot catalytique est :",
+          "options": [
+            {
+              "label": "d'accélérer la transformation des polluants par catalyse hétérogène : métaux solides non consommés, grande surface",
+              "correct": true,
+              "why": "Les métaux nobles sont des catalyseurs solides ; la structure en nid d'abeille offre une grande surface de contact avec les gaz."
+            },
+            {
+              "label": "de fournir du platine comme réactif, consommé pour oxyder les polluants présents",
+              "why": "Le platine n'est pas un réactif : il n'apparaît pas dans les équations de transformation des polluants."
+            },
+            {
+              "label": "de réaliser une catalyse homogène, car gaz et métaux sont dans le même pot",
+              "why": "Les métaux sont solides et les gaz gazeux : ils sont dans deux phases différentes, donc catalyse hétérogène."
+            },
+            {
+              "label": "de refroidir les gaz d'échappement pour ralentir la formation de polluants",
+              "why": "Le pot catalytique fonctionne à chaud, et son rôle n'est pas de ralentir une formation, mais d'accélérer la transformation des polluants en gaz moins nocifs."
+            }
+          ],
+          "hint": "Les métaux du pot sont solides, les gaz sont gazeux : quelle conséquence sur le type de catalyse et sur le rôle de la grande surface ?",
+          "solution": "Le pot catalytique contient des catalyseurs solides (Pt, Rh, Pd) répartis sur un support à grande surface : catalyse hétérogène, car solide et gaz sont dans des phases différentes. Les métaux accélèrent la conversion de $\\mathrm{CO}$, $\\mathrm{NO_x}$ et hydrocarbures en $\\mathrm{CO_2}$, $\\mathrm{N_2}$ et $\\mathrm{H_2O}$ sans être consommés. Contrôle : la grande surface de contact est un facteur cinétique supplémentaire.",
+          "methode": "Pot catalytique = catalyse hétérogène : catalyseur solide, grande surface, polluants transformés plus vite.",
+          "points": 1,
+          "ref": "pc-transfo-lente-rapide-applications-industrielles-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-transfo-lente-rapide-probleme-1",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "probleme",
+      "title": "Suivre la formation du diiode",
+      "difficulty": 3,
+      "context": "À $t=0$ et à $25\\ ^\\circ\\mathrm{C}$, on mélange $V_1=50{,}0\\ \\mathrm{mL}$ de solution d'iodure de potassium de concentration $C_1=0{,}200\\ \\mathrm{mol\\,L^{-1}}$ et $V_2=50{,}0\\ \\mathrm{mL}$ de solution de peroxodisulfate de potassium de concentration $C_2=0{,}0500\\ \\mathrm{mol\\,L^{-1}}$. La transformation, d'équation $\\mathrm{S_2O_8^{2-}}+2\\,\\mathrm{I^-}\\rightarrow2\\,\\mathrm{SO_4^{2-}}+\\mathrm{I_2}$, est totale ; l'ion peroxodisulfate est le réactif limitant, d'où $x_{\\max}=2{,}50\\ \\mathrm{mmol}$. Le diiode formé colore le mélange en brun. On suit sa formation par spectrophotométrie, ce qui permet de tracer l'avancement $x$ en fonction du temps : $t$ (min) : 0 ; 2,0 ; 5,0 ; 10,0 ; 20,0 ; 40,0 ; 60,0 — $x$ (mmol) : 0 ; 0,50 ; 0,83 ; 1,25 ; 1,85 ; 2,30 ; 2,45. Pour vérifier ces résultats, on réalise aussi des prélèvements à des dates choisies, que l'on titre ensuite (méthode discontinue).",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Reconnaître l'une et l'autre",
+          "difficulty": 1,
+          "statement": "Les valeurs du tableau montrent que la transformation est :",
+          "options": [
+            {
+              "label": "lente : l'avancement continue d'évoluer pendant plus d'une heure",
+              "correct": true,
+              "why": "Entre $t=0$ et $t=60\\ \\mathrm{min}$, $x$ passe progressivement de $0$ à $2{,}45\\ \\mathrm{mmol}$ : l'évolution est suivie dans le temps."
+            },
+            {
+              "label": "rapide : l'avancement atteint $x_{\\max}$ dès le mélange",
+              "why": "Le tableau contredit cette affirmation : $x=0$ à $t=0$ et $x$ n'atteint presque $x_{\\max}$ qu'après $60\\ \\mathrm{min}$."
+            },
+            {
+              "label": "rapide, car la transformation est totale",
+              "why": "Totale et rapide sont indépendants : ici la transformation est totale mais lente."
+            },
+            {
+              "label": "impossible à classer, car la transformation est totale",
+              "why": "On classe une transformation sur sa durée d'évolution, pas sur son caractère total : ici l'évolution dure plus d'une heure, elle est lente."
+            }
+          ],
+          "hint": "Que montrent les valeurs de $x$ entre $t=0$ et $t=60\\ \\mathrm{min}$ ?",
+          "solution": "L'avancement augmente lentement de $0$ à $2{,}45\\ \\mathrm{mmol}$ en une heure. Une évolution observable sur une durée aussi longue caractérise une transformation lente, même si elle est totale. Contrôle : si elle était rapide, $x$ vaudrait presque $x_{\\max}$ dès les premières secondes.",
+          "methode": "Classer lente/rapide : regarder la durée de l'évolution, pas son caractère total.",
+          "points": 1,
+          "part": "Partie A — Préparer et suivre la transformation",
+          "ref": "pc-transfo-lente-rapide-probleme-1-q1"
+        },
+        {
+          "notion": "Méthode 2 — Choisir une technique de suivi",
+          "difficulty": 1,
+          "statement": "Quelle espèce du système permet un suivi spectrophotométrique dans le visible ?",
+          "options": [
+            {
+              "label": "le diiode $\\mathrm{I_2}$, seule espèce colorée",
+              "correct": true,
+              "why": "Le diiode est brun en solution : son absorbance est proportionnelle à sa concentration, donc à l'avancement."
+            },
+            {
+              "label": "l'ion iodure $\\mathrm{I^-}$",
+              "why": "Les ions iodure sont incolores en solution : ils n'absorbent pas dans le visible."
+            },
+            {
+              "label": "l'ion peroxodisulfate $\\mathrm{S_2O_8^{2-}}$",
+              "why": "Les ions peroxodisulfate sont incolores en solution : ils n'absorbent pas dans le visible."
+            },
+            {
+              "label": "l'ion sulfate $\\mathrm{SO_4^{2-}}$",
+              "why": "Les ions sulfate sont incolores en solution : ils n'absorbent pas dans le visible."
+            }
+          ],
+          "hint": "Quelle espèce de l'équation a une couleur ?",
+          "solution": "La spectrophotométrie dans le visible exige une espèce colorée dont l'absorbance varie avec l'avancement. Ici seul $\\mathrm{I_2}$ est coloré (brun) : $A=k\\,\\ell\\,[\\mathrm{I_2}]$ et $x=n(\\mathrm{I_2})$. Contrôle : les solutions de départ sont incolores, la couleur brune naît de la transformation.",
+          "methode": "Choisir la technique : repérer l'espèce colorée dont la concentration varie.",
+          "points": 1,
+          "part": "Partie A — Préparer et suivre la transformation",
+          "ref": "pc-transfo-lente-rapide-probleme-1-q2"
+        },
+        {
+          "notion": "Les concentrations des réactifs",
+          "difficulty": 2,
+          "statement": "Dans le mélange, juste après la préparation, la concentration des ions iodure vaut :",
+          "options": [
+            {
+              "label": "$0{,}100\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "Quantité d'iodure conservée, volume total $100{,}0\\ \\mathrm{mL}$ : $\\dfrac{0{,}200\\times50{,}0}{100{,}0}=0{,}100\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$0{,}200\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as oublié la dilution : le volume du mélange ($100{,}0\\ \\mathrm{mL}$) est le double de $V_1$, la concentration est donc divisée par $2$."
+            },
+            {
+              "label": "$0{,}400\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as inversé le rapport des volumes : $0{,}200\\times\\dfrac{100{,}0}{50{,}0}$ augmenterait la concentration alors qu'on dilue."
+            },
+            {
+              "label": "$0{,}050\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as divisé deux fois par $2$ (facteur $4$) : la dilution ne se fait qu'une fois, de $50{,}0$ à $100{,}0\\ \\mathrm{mL}$."
+            }
+          ],
+          "hint": "L'iodure ne disparaît pas lors du mélange : seul le volume dans lequel il est réparti change.",
+          "solution": "$n(\\mathrm{I^-})=C_1V_1=0{,}200\\times50{,}0\\times10^{-3}=10{,}0\\times10^{-3}\\ \\mathrm{mol}$, répartie dans $100{,}0\\ \\mathrm{mL}$ : $[\\mathrm{I^-}]_0=\\dfrac{10{,}0\\times10^{-3}}{0{,}1000}=0{,}100\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : le volume est doublé, la concentration est divisée par $2$ (de $0{,}200$ à $0{,}100$).",
+          "methode": "Concentration après mélange : $C=\\dfrac{C_1V_1}{V_1+V_2}$.",
+          "points": 1,
+          "part": "Partie A — Préparer et suivre la transformation",
+          "ref": "pc-transfo-lente-rapide-probleme-1-q3"
+        },
+        {
+          "notion": "Le temps de demi-réaction comme critère",
+          "difficulty": 2,
+          "statement": "Le temps de demi-réaction $t_{1/2}$ de cette transformation, lu dans le tableau, vaut :",
+          "options": [
+            {
+              "label": "$10{,}0\\ \\mathrm{min}$",
+              "correct": true,
+              "why": "C'est la date à laquelle $x=\\dfrac{x_{\\max}}{2}=1{,}25\\ \\mathrm{mmol}$ ; le tableau donne $x=1{,}25\\ \\mathrm{mmol}$ à $t=10{,}0\\ \\mathrm{min}$."
+            },
+            {
+              "label": "$1{,}25\\ \\mathrm{min}$",
+              "why": "Tu as lu la valeur de l'avancement ($1{,}25\\ \\mathrm{mmol}$) comme si c'était une date : $t_{1/2}$ est l'abscisse, pas l'ordonnée."
+            },
+            {
+              "label": "$30\\ \\mathrm{min}$",
+              "why": "Tu as pris la moitié de la durée de l'expérience ($60\\ \\mathrm{min}$) : $t_{1/2}$ n'est pas la moitié de la durée d'observation mais la date où $x$ vaut la moitié de $x_{\\max}$."
+            },
+            {
+              "label": "$20{,}0\\ \\mathrm{min}$",
+              "why": "À $t=20{,}0\\ \\mathrm{min}$, $x=1{,}85\\ \\mathrm{mmol}$ et non $1{,}25\\ \\mathrm{mmol}$ : tu as lu le mauvais point du tableau."
+            }
+          ],
+          "hint": "Quelle valeur de $x$ dois-tu chercher dans le tableau ? Lis ensuite la date correspondante.",
+          "solution": "La transformation étant totale, $x_f=x_{\\max}=2{,}50\\ \\mathrm{mmol}$ et $x\\bigl(t_{1/2}\\bigr)=\\dfrac{2{,}50}{2}=1{,}25\\ \\mathrm{mmol}$. Le tableau donne $x=1{,}25\\ \\mathrm{mmol}$ à $t=10{,}0\\ \\mathrm{min}$, donc $t_{1/2}=10{,}0\\ \\mathrm{min}$. Contrôle : à $t=5{,}0\\ \\mathrm{min}$, $x=0{,}83\\ \\mathrm{mmol}<1{,}25$ et à $20{,}0\\ \\mathrm{min}$, $x=1{,}85>1{,}25$ : $t_{1/2}$ est bien encadré par ces deux dates.",
+          "methode": "$t_{1/2}$ : date à laquelle $x=x_f/2$ ; on cherche d'abord $x_f/2$ puis on lit la date.",
+          "points": 1,
+          "part": "Partie B — Exploiter les mesures",
+          "ref": "pc-transfo-lente-rapide-probleme-1-q4"
+        },
+        {
+          "notion": "Méthode 3 — Justifier une trempe",
+          "difficulty": 2,
+          "statement": "Lors d'un prélèvement pour le titrage discontinu, on réalise une trempe (refroidissement et dilution brusques). Son rôle est :",
+          "options": [
+            {
+              "label": "de ralentir brutalement la transformation pour figer la composition du prélèvement pendant le titrage",
+              "correct": true,
+              "why": "Le froid et la dilution diminuent température et concentrations : la transformation est quasi stoppée et la composition reste celle de la date du prélèvement."
+            },
+            {
+              "label": "d'accélérer la transformation pour atteindre l'état final avant de titrer le prélèvement",
+              "why": "C'est l'inverse : refroidir et diluer ralentissent la transformation ; accélérer fausserait la date associée à la mesure."
+            },
+            {
+              "label": "de rendre la transformation totale avant de réaliser le titrage du prélèvement",
+              "why": "La transformation est déjà totale, et la trempe ne change pas le caractère total d'une transformation : elle agit sur la vitesse."
+            },
+            {
+              "label": "de régénérer le catalyseur utilisé avant de réaliser le titrage du prélèvement",
+              "why": "Il n'y a pas de catalyseur dans cette transformation, et un catalyseur n'a de toute façon pas besoin d'être régénéré."
+            }
+          ],
+          "hint": "Le prélèvement doit représenter le mélange à une date précise : que faut-il éviter pendant le titrage ?",
+          "solution": "Entre le prélèvement et la fin du titrage, la transformation continuerait si on ne faisait rien : la composition ne correspondrait plus à la date voulue. La trempe (refroidissement dans l'eau glacée et dilution) abaisse la température et les concentrations, deux facteurs cinétiques : la transformation est quasi stoppée. Contrôle : le résultat du titrage se rapporte alors à l'instant du prélèvement.",
+          "methode": "Trempe = refroidir + diluer pour ralentir fortement la transformation et figer la composition.",
+          "points": 1,
+          "part": "Partie B — Exploiter les mesures",
+          "ref": "pc-transfo-lente-rapide-probleme-1-q5"
+        },
+        {
+          "notion": "Méthode 1 — Classer des expériences par vitesse",
+          "difficulty": 3,
+          "statement": "On refait l'expérience en doublant la concentration de la solution d'iodure ($C_1'=0{,}400\\ \\mathrm{mol\\,L^{-1}}$), tout le reste étant identique (même température, mêmes volumes, même $C_2$). On prévoit :",
+          "options": [
+            {
+              "label": "un temps de demi-réaction plus court et un avancement maximal inchangé, égal à $2{,}50\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "Plus d'iodure accélère la transformation ; le réactif limitant reste le peroxodisulfate ($2{,}50\\ \\mathrm{mmol}$ contre $20{,}0/2=10{,}0\\ \\mathrm{mmol}$ d'iodure), donc $x_{\\max}$ ne change pas."
+            },
+            {
+              "label": "un temps de demi-réaction plus court et un avancement maximal doublé, égal à $5{,}00\\ \\mathrm{mmol}$",
+              "why": "Tu as supposé que $x_{\\max}$ double avec la concentration d'iodure ($2\\times2{,}50=5{,}00$) ; il est fixé par le réactif limitant, le peroxodisulfate, dont la quantité n'a pas changé."
+            },
+            {
+              "label": "un temps de demi-réaction plus long et un avancement maximal inchangé",
+              "why": "Une concentration plus grande accélère la transformation : $t_{1/2}$ diminue, il n'augmente pas."
+            },
+            {
+              "label": "un temps de demi-réaction inchangé, car le réactif limitant est le même",
+              "why": "Le réactif limitant fixe $x_{\\max}$, pas la vitesse : la concentration de $\\mathrm{I^-}$ agit sur la vitesse même s'il est en excès."
+            }
+          ],
+          "hint": "Sépare la question de la vitesse (concentrations) et celle de la quantité finale (réactif limitant).",
+          "solution": "Doubler $[\\mathrm{I^-}]$ augmente la fréquence des chocs : la transformation est plus rapide et $t_{1/2}$ diminue. Les quantités initiales deviennent $n(\\mathrm{I^-})=20{,}0\\ \\mathrm{mmol}$ et $n(\\mathrm{S_2O_8^{2-}})=2{,}50\\ \\mathrm{mmol}$ : le réactif limitant est toujours $\\mathrm{S_2O_8^{2-}}$ (car $2{,}50<\\dfrac{20{,}0}{2}$), donc $x_{\\max}=2{,}50\\ \\mathrm{mmol}$. Contrôle : les deux courbes finissent à la même hauteur, la nouvelle y arrive plus tôt.",
+          "methode": "Classer par vitesse : un réactif plus concentré accélère ; $x_{\\max}$ ne change que si le réactif limitant change.",
+          "points": 1,
+          "part": "Partie B — Exploiter les mesures",
+          "ref": "pc-transfo-lente-rapide-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-transfo-lente-rapide-probleme-2",
+      "chapter": "pc-transfo-lente-rapide",
+      "kind": "probleme",
+      "title": "Décomposition catalysée de l'eau oxygénée",
+      "difficulty": 3,
+      "context": "On étudie, à $25\\ ^\\circ\\mathrm{C}$, la décomposition de l'eau oxygénée, d'équation $2\\,\\mathrm{H_2O_2}\\rightarrow2\\,\\mathrm{H_2O}+\\mathrm{O_2}$. On utilise $100\\ \\mathrm{mL}$ de solution d'eau oxygénée de concentration $0{,}100\\ \\mathrm{mol\\,L^{-1}}$ et on mesure le volume de dioxygène dégagé ; le volume molaire des gaz vaut $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$. Essai 0 (témoin) : sans catalyseur, on recueille seulement $2\\ \\mathrm{mL}$ de dioxygène en $30\\ \\mathrm{min}$. Essai A : on ajoute $1\\ \\mathrm{mL}$ d'une solution d'ions fer(III) $\\mathrm{Fe^{3+}}$. Essai B : on ajoute $1\\ \\mathrm{mL}$ d'une solution de catalase (enzyme). Tout le reste est identique. Volumes de dioxygène $V$ (mL) relevés à la date $t$ (min) : $t$ : 0 ; 0,8 ; 2,5 ; 5,0 ; 10,0 ; 20,0 — essai A : 0 ; 28 ; 60 ; 85 ; 108 ; 119 — essai B : 0 ; 60 ; 96 ; 112 ; 119 ; 120.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Le catalyseur",
+          "difficulty": 1,
+          "statement": "Pourquoi réalise-t-on l'essai 0, sans aucun catalyseur ?",
+          "options": [
+            {
+              "label": "pour disposer d'un témoin et attribuer l'accélération observée à l'ajout du catalyseur",
+              "correct": true,
+              "why": "Comparer avec et sans catalyseur, toutes choses égales par ailleurs, montre que l'accélération vient bien de l'espèce ajoutée."
+            },
+            {
+              "label": "pour que le catalyseur se régénère avant les autres essais",
+              "why": "Un catalyseur n'a pas besoin d'être régénéré avant l'emploi : il l'est naturellement en cours de transformation."
+            },
+            {
+              "label": "pour vérifier que l'eau oxygénée est un catalyseur",
+              "why": "L'eau oxygénée est le réactif de la décomposition, pas un catalyseur."
+            },
+            {
+              "label": "pour augmenter la température du milieu avant les autres essais",
+              "why": "Aucun essai n'est destiné à chauffer : tous sont réalisés à $25\\ ^\\circ\\mathrm{C}$."
+            }
+          ],
+          "hint": "Pour attribuer un effet à un facteur, que faut-il pouvoir comparer ?",
+          "solution": "Un témoin est un essai où on ne change pas le facteur étudié : ici la présence du catalyseur. Sans témoin, on ne saurait pas si l'eau oxygénée se décompose vite d'elle-même. Les essais A et B sont donc comparés à l'essai 0, où $2\\ \\mathrm{mL}$ seulement sont recueillis en $30\\ \\mathrm{min}$. Contrôle : même température, même volume, même concentration pour les trois essais.",
+          "methode": "Pour isoler un facteur cinétique : un essai témoin, toutes autres conditions identiques.",
+          "points": 1,
+          "part": "Partie A — Préparer et suivre la transformation",
+          "ref": "pc-transfo-lente-rapide-probleme-2-q1"
+        },
+        {
+          "notion": "Méthode 2 — Choisir une technique de suivi",
+          "difficulty": 2,
+          "statement": "Le volume maximal de dioxygène que l'on peut recueillir à la fin de la décomposition totale est :",
+          "options": [
+            {
+              "label": "$120\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$n(\\mathrm{H_2O_2})=0{,}100\\times0{,}100=10{,}0\\ \\mathrm{mmol}$ ; $x_{\\max}=\\dfrac{10{,}0}{2}=5{,}00\\ \\mathrm{mmol}$ ; $V=x_{\\max}V_m=5{,}00\\times10^{-3}\\times24{,}0=0{,}120\\ \\mathrm{L}$."
+            },
+            {
+              "label": "$240\\ \\mathrm{mL}$",
+              "why": "Tu as pris $n(\\mathrm{O_2})=n(\\mathrm{H_2O_2})=10{,}0\\ \\mathrm{mmol}$ en oubliant le coefficient $2$ devant $\\mathrm{H_2O_2}$."
+            },
+            {
+              "label": "$60\\ \\mathrm{mL}$",
+              "why": "Tu as pris $\\dfrac{x_{\\max}}{2}$, c'est-à-dire le volume dégagé au temps de demi-réaction, pas le volume final."
+            },
+            {
+              "label": "$0{,}12\\ \\mathrm{mL}$",
+              "why": "Tu as écrit $0{,}120\\ \\mathrm{L}$ comme $0{,}12\\ \\mathrm{mL}$ : $0{,}120\\ \\mathrm{L}=120\\ \\mathrm{mL}$."
+            }
+          ],
+          "hint": "Calcule d'abord la quantité d'eau oxygénée, puis l'avancement maximal d'après l'équation, puis le volume.",
+          "solution": "$n_0(\\mathrm{H_2O_2})=C\\,V=0{,}100\\times0{,}100=1{,}00\\times10^{-2}\\ \\mathrm{mol}$. Pour $2\\,\\mathrm{H_2O_2}\\rightarrow2\\,\\mathrm{H_2O}+\\mathrm{O_2}$ : $x_{\\max}=\\dfrac{n_0}{2}=5{,}00\\times10^{-3}\\ \\mathrm{mol}$ et $n(\\mathrm{O_2})_{\\max}=x_{\\max}$. $V_{\\max}=x_{\\max}V_m=5{,}00\\times10^{-3}\\times24{,}0=0{,}120\\ \\mathrm{L}=120\\ \\mathrm{mL}$. Contrôle : les volumes finaux relevés ($119$ et $120\\ \\mathrm{mL}$) concordent.",
+          "methode": "Suivi par volume de gaz : $x=n(\\mathrm{gaz})=V/V_m$, et $V_{\\max}=x_{\\max}V_m$.",
+          "points": 1,
+          "part": "Partie A — Préparer et suivre la transformation",
+          "ref": "pc-transfo-lente-rapide-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 4 — Reconnaître et justifier le rôle d'un catalyseur",
+          "difficulty": 2,
+          "statement": "Quels faits expérimentaux établissent que les ions $\\mathrm{Fe^{3+}}$ jouent le rôle de catalyseur de la décomposition ?",
+          "options": [
+            {
+              "label": "la décomposition est beaucoup plus rapide avec $\\mathrm{Fe^{3+}}$ que sans, et leur quantité est la même au début et à la fin",
+              "correct": true,
+              "why": "Il faut les deux preuves : l'accélération, et la quantité inchangée qui montre qu'il n'est ni consommé ni produit."
+            },
+            {
+              "label": "la décomposition est plus rapide avec $\\mathrm{Fe^{3+}}$ et leur quantité diminue au cours de la transformation",
+              "why": "Si leur quantité diminuait, $\\mathrm{Fe^{3+}}$ serait consommé : ce serait un réactif, pas un catalyseur."
+            },
+            {
+              "label": "le volume final de dioxygène est plus grand avec $\\mathrm{Fe^{3+}}$ qu'avec le témoin",
+              "why": "Un catalyseur ne change pas la quantité finale d'une transformation totale ; un volume final plus grand ne le prouverait pas, et ne se produit pas ici."
+            },
+            {
+              "label": "la solution de $\\mathrm{Fe^{3+}}$ est ajoutée en petite quantité, $1\\ \\mathrm{mL}$",
+              "why": "Une petite quantité ne suffit pas à conclure : une espèce consommée peut aussi être ajoutée en petite quantité ; il faut observer l'accélération et la conservation."
+            }
+          ],
+          "hint": "Un catalyseur se reconnaît à deux critères : un effet sur la durée et un effet (ou une absence d'effet) sur sa propre quantité.",
+          "solution": "Un catalyseur accélère la transformation (comparer A et le témoin : $60\\ \\mathrm{mL}$ en $2{,}5\\ \\mathrm{min}$ contre $2\\ \\mathrm{mL}$ en $30\\ \\mathrm{min}$) et n'est pas consommé : sa quantité finale est égale à sa quantité initiale, ce qu'un dosage de $\\mathrm{Fe^{3+}}$ confirmerait. Contrôle : un réactif disparaîtrait, un produit apparaîtrait.",
+          "methode": "Rôle de catalyseur : accélération observée + quantité identique avant/après.",
+          "points": 1,
+          "part": "Partie A — Préparer et suivre la transformation",
+          "ref": "pc-transfo-lente-rapide-probleme-2-q3"
+        },
+        {
+          "notion": "Méthode 5 — Lire deux courbes d'avancement",
+          "difficulty": 2,
+          "statement": "En comparant les essais A et B à partir des relevés, on peut dire que :",
+          "options": [
+            {
+              "label": "B est plus rapide que A : $t_{1/2}(\\mathrm{B})=0{,}8\\ \\mathrm{min}$ contre $t_{1/2}(\\mathrm{A})=2{,}5\\ \\mathrm{min}$",
+              "correct": true,
+              "why": "$V=60\\ \\mathrm{mL}=V_{\\max}/2$ est atteint à $0{,}8\\ \\mathrm{min}$ avec B et à $2{,}5\\ \\mathrm{min}$ avec A : B a le $t_{1/2}$ le plus court."
+            },
+            {
+              "label": "A est plus rapide que B : $t_{1/2}(\\mathrm{A})=2{,}5\\ \\mathrm{min}$ est supérieur à $t_{1/2}(\\mathrm{B})$",
+              "why": "Un $t_{1/2}$ plus grand veut dire une transformation plus lente : c'est donc A qui est plus lente."
+            },
+            {
+              "label": "A et B ont la même vitesse, car elles finissent au même volume de $120\\ \\mathrm{mL}$",
+              "why": "Le même volume final indique la même quantité formée, pas la même vitesse : A et B atteignent ce volume à des dates très différentes."
+            },
+            {
+              "label": "B est plus rapide que A, avec $t_{1/2}(\\mathrm{B})=2{,}5\\ \\mathrm{min}$",
+              "why": "Tu as permuté les valeurs : $2{,}5\\ \\mathrm{min}$ est le $t_{1/2}$ de A, et celui de B vaut $0{,}8\\ \\mathrm{min}$."
+            }
+          ],
+          "hint": "Cherche à quelle date chaque essai atteint la moitié du volume maximal, soit $60\\ \\mathrm{mL}$.",
+          "solution": "Le volume maximal est $120\\ \\mathrm{mL}$ ; la moitié est $60\\ \\mathrm{mL}$. Avec B, $V=60\\ \\mathrm{mL}$ est atteint à $t=0{,}8\\ \\mathrm{min}$ ; avec A, à $t=2{,}5\\ \\mathrm{min}$. B est donc la transformation la plus rapide ($t_{1/2}$ plus court, environ $3$ fois). Contrôle : à $t=5{,}0\\ \\mathrm{min}$, B ($112\\ \\mathrm{mL}$) est plus avancée que A ($85\\ \\mathrm{mL}$).",
+          "methode": "Lire deux courbes : le $t_{1/2}$ le plus court désigne la transformation la plus rapide.",
+          "points": 1,
+          "part": "Partie B — Exploiter les mesures",
+          "ref": "pc-transfo-lente-rapide-probleme-2-q4"
+        },
+        {
+          "notion": "Méthode 5 — Lire deux courbes d'avancement",
+          "difficulty": 3,
+          "statement": "Pour l'essai A, à la date $t=5{,}0\\ \\mathrm{min}$, la quantité d'eau oxygénée restante dans le mélange est :",
+          "options": [
+            {
+              "label": "$2{,}92\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "$x=n(\\mathrm{O_2})=\\dfrac{85}{24{,}0}=3{,}54\\ \\mathrm{mmol}$ ; $n(\\mathrm{H_2O_2})=n_0-2x=10{,}0-2\\times3{,}54=2{,}92\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$6{,}46\\ \\mathrm{mmol}$",
+              "why": "Tu as retiré $x$ au lieu de $2x$ : le coefficient $2$ devant $\\mathrm{H_2O_2}$ implique que $2x$ de $\\mathrm{H_2O_2}$ sont consommés."
+            },
+            {
+              "label": "$7{,}08\\ \\mathrm{mmol}$",
+              "why": "Tu as calculé la quantité consommée $2x$ au lieu de la quantité restante $n_0-2x$."
+            },
+            {
+              "label": "$3{,}54\\ \\mathrm{mmol}$",
+              "why": "Tu as donné l'avancement $x=n(\\mathrm{O_2})$ : ce n'est pas la quantité d'eau oxygénée restante."
+            }
+          ],
+          "hint": "Relie le volume de $\\mathrm{O_2}$ à l'avancement, puis l'avancement à la quantité de $\\mathrm{H_2O_2}$ consommée avec son coefficient.",
+          "solution": "$x=n(\\mathrm{O_2})=\\dfrac{V}{V_m}=\\dfrac{85\\times10^{-3}}{24{,}0}=3{,}54\\times10^{-3}\\ \\mathrm{mol}$. D'après l'équation, $n(\\mathrm{H_2O_2})=n_0-2x=10{,}0-2\\times3{,}54=2{,}92\\ \\mathrm{mmol}$. Contrôle : c'est bien moins que $n_0=10{,}0\\ \\mathrm{mmol}$ et positif ; il reste environ $29\\ \\%$ de l'eau oxygénée.",
+          "methode": "Tableau d'avancement : $n_{\\text{réactif}}=n_0-\\nu x$ avec le coefficient $\\nu$ de l'équation.",
+          "points": 1,
+          "part": "Partie B — Exploiter les mesures",
+          "ref": "pc-transfo-lente-rapide-probleme-2-q5"
+        },
+        {
+          "notion": "Le catalyseur",
+          "difficulty": 3,
+          "statement": "On refait l'essai A avec deux fois moins de solution de catalyseur ($0{,}5\\ \\mathrm{mL}$ au lieu de $1\\ \\mathrm{mL}$), tout le reste étant identique. On prévoit :",
+          "options": [
+            {
+              "label": "une transformation plus lente que l'essai A, avec le même volume final de $120\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "Moins de catalyseur : moins de sites d'action, donc une vitesse plus faible ; la quantité finale d'une transformation totale ne dépend pas de la quantité de catalyseur."
+            },
+            {
+              "label": "une transformation plus lente, avec un volume final de $60\\ \\mathrm{mL}$",
+              "why": "Tu as supposé que le volume final est proportionnel à la quantité de catalyseur ($120/2=60$) ; il est imposé par la quantité d'eau oxygénée, inchangée."
+            },
+            {
+              "label": "une transformation plus rapide, avec le même volume final de $120\\ \\mathrm{mL}$",
+              "why": "Diminuer la quantité de catalyseur ne peut pas accélérer la transformation : la vitesse diminue."
+            },
+            {
+              "label": "une transformation plus lente, le volume final tendant vers $0$ car le catalyseur est consommé",
+              "why": "Un catalyseur n'est pas consommé, et l'eau oxygénée est toujours en quantité suffisante pour former $120\\ \\mathrm{mL}$ de dioxygène."
+            }
+          ],
+          "hint": "La quantité finale de dioxygène dépend-elle de la quantité de catalyseur ? Et la vitesse ?",
+          "solution": "La quantité d'eau oxygénée est la même, donc $x_{\\max}=5{,}00\\ \\mathrm{mmol}$ et $V_{\\max}=120\\ \\mathrm{mL}$ quelle que soit la quantité de catalyseur. En revanche la vitesse diminue quand on diminue la quantité de catalyseur : la courbe monte moins vite et atteint $120\\ \\mathrm{mL}$ plus tard. Contrôle : toutes les courbes de cette série ont la même asymptote.",
+          "methode": "Quantité de catalyseur : agit sur la vitesse seulement, jamais sur la quantité finale d'une transformation totale.",
+          "points": 1,
+          "part": "Partie B — Exploiter les mesures",
+          "ref": "pc-transfo-lente-rapide-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [
-   "Méthode 1 — Classer des expériences par vitesse",
-   "Méthode 2 — Choisir une technique de suivi",
-   "Méthode 3 — Justifier une trempe",
-   "Méthode 4 — Reconnaître et justifier le rôle d'un catalyseur",
-   "Méthode 5 — Lire deux courbes d'avancement"
-  ],
-  "existing_questions_total": 7,
-  "target_new_questions": 38,
-  "suggested_figures": [],
-  "sources": [
-   {
-    "annale": "pc-svt-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-transfo-lente-rapide-serie-1",
+      "title": "Transformations lentes et rapides · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-transfo-lente-rapide",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-transfo-lente-rapide-definition-q1",
+        "pc-transfo-lente-rapide-la-temperature-q1",
+        "pc-transfo-lente-rapide-les-concentrations-des-reactifs-q1",
+        "pc-transfo-lente-rapide-le-catalyseur-q1",
+        "pc-transfo-lente-rapide-les-autres-facteurs-q1",
+        "pc-transfo-lente-rapide-deux-echelles-de-temps-q1",
+        "pc-transfo-lente-rapide-reconnaitre-l-une-et-l-autre-q1",
+        "pc-transfo-lente-rapide-comment-savoir-si-une-transformation-est-q1",
+        "pc-transfo-lente-rapide-le-blocage-cinetique-q1",
+        "pc-transfo-lente-rapide-l-interpretation-microscopique-q1",
+        "pc-transfo-lente-rapide-definition-q2",
+        "pc-transfo-lente-rapide-la-temperature-q2"
+      ]
+    },
+    {
+      "slug": "pc-transfo-lente-rapide-serie-2",
+      "title": "Transformations lentes et rapides · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-transfo-lente-rapide",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-transfo-lente-rapide-les-concentrations-des-reactifs-q2",
+        "pc-transfo-lente-rapide-le-catalyseur-q2",
+        "pc-transfo-lente-rapide-les-autres-facteurs-q2",
+        "pc-transfo-lente-rapide-deux-echelles-de-temps-q2",
+        "pc-transfo-lente-rapide-reconnaitre-l-une-et-l-autre-q3",
+        "pc-transfo-lente-rapide-comment-savoir-si-une-transformation-est-q2",
+        "pc-transfo-lente-rapide-le-blocage-cinetique-q2",
+        "pc-transfo-lente-rapide-l-interpretation-microscopique-q2",
+        "pc-transfo-lente-rapide-les-autres-facteurs-q3",
+        "pc-transfo-lente-rapide-le-catalyseur-q3",
+        "pc-transfo-lente-rapide-le-blocage-cinetique-q4",
+        "pc-transfo-lente-rapide-la-catalyse-en-detail-q1"
+      ]
+    },
+    {
+      "slug": "pc-transfo-lente-rapide-serie-3",
+      "title": "Transformations lentes et rapides · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-transfo-lente-rapide",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-transfo-lente-rapide-la-temperature-q3",
+        "pc-transfo-lente-rapide-les-concentrations-des-reactifs-q3",
+        "pc-transfo-lente-rapide-l-interpretation-microscopique-q3",
+        "pc-transfo-lente-rapide-comment-savoir-si-une-transformation-est-q4",
+        "pc-transfo-lente-rapide-reconnaitre-l-une-et-l-autre-q4",
+        "pc-transfo-lente-rapide-deux-echelles-de-temps-q3",
+        "pc-transfo-lente-rapide-les-autres-facteurs-q4",
+        "pc-transfo-lente-rapide-la-catalyse-heterogene-q1",
+        "pc-transfo-lente-rapide-probleme-1-q6",
+        "pc-transfo-lente-rapide-probleme-2-q5",
+        "pc-transfo-lente-rapide-probleme-2-q6"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Définition",
-    "lesson": "Les facteurs cinétiques",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 2,
-    "target_new_questions": 2,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-definition",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "Définition",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-definition-q1",
-     "notion": "Définition",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La température",
-    "lesson": "Les facteurs cinétiques",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-la-temperature",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "La température",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-la-temperature-q1",
-     "notion": "La température",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les concentrations des réactifs",
-    "lesson": "Les facteurs cinétiques",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-les-concentrations-des-reactifs",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "Les concentrations des réactifs",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-les-concentrations-des-reactifs-q1",
-     "notion": "Les concentrations des réactifs",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le catalyseur",
-    "lesson": "Les facteurs cinétiques",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-le-catalyseur",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "Le catalyseur",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-le-catalyseur-q1",
-     "notion": "Le catalyseur",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les autres facteurs",
-    "lesson": "Les facteurs cinétiques",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-les-autres-facteurs",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "Les autres facteurs",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-les-autres-facteurs-q1",
-     "notion": "Les autres facteurs",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Deux échelles de temps",
-    "lesson": "Transformations rapides et lentes",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-deux-echelles-de-temps",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "Deux échelles de temps",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-deux-echelles-de-temps-q1",
-     "notion": "Deux échelles de temps",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Reconnaître l'une et l'autre",
-    "lesson": "Transformations rapides et lentes",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-reconnaitre-l-une-et-l-autre",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "Reconnaître l'une et l'autre",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-reconnaitre-l-une-et-l-autre-q1",
-     "notion": "Reconnaître l'une et l'autre",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Comment savoir si une transformation est lente",
-    "lesson": "Transformations rapides et lentes",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-comment-savoir-si-une-transformation-est",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "Comment savoir si une transformation est lente",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-comment-savoir-si-une-transformation-est-q1",
-     "notion": "Comment savoir si une transformation est lente",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le blocage cinétique",
-    "lesson": "Transformations rapides et lentes",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-le-blocage-cinetique",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "Le blocage cinétique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-le-blocage-cinetique-q1",
-     "notion": "Le blocage cinétique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'interprétation microscopique",
-    "lesson": "Transformations rapides et lentes",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-l-interpretation-microscopique",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "L'interprétation microscopique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-l-interpretation-microscopique-q1",
-     "notion": "L'interprétation microscopique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La catalyse, en détail",
-    "lesson": "Approfondissement — Transformations lentes et rapides",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-la-catalyse-en-detail",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "La catalyse, en détail",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-la-catalyse-en-detail-q1",
-     "notion": "La catalyse, en détail",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La catalyse hétérogène",
-    "lesson": "Approfondissement — Transformations lentes et rapides",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-la-catalyse-heterogene",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "La catalyse hétérogène",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-la-catalyse-heterogene-q1",
-     "notion": "La catalyse hétérogène",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La catalyse enzymatique",
-    "lesson": "Approfondissement — Transformations lentes et rapides",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-la-catalyse-enzymatique",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "La catalyse enzymatique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-la-catalyse-enzymatique-q1",
-     "notion": "La catalyse enzymatique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le temps de demi-réaction comme critère",
-    "lesson": "Approfondissement — Transformations lentes et rapides",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-le-temps-de-demi-reaction-comme-critere",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "Le temps de demi-réaction comme critère",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-le-temps-de-demi-reaction-comme-critere-q1",
-     "notion": "Le temps de demi-réaction comme critère",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Applications industrielles",
-    "lesson": "Approfondissement — Transformations lentes et rapides",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-transfo-lente-rapide-applications-industrielles",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "qcu",
-   "title": "Applications industrielles",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-applications-industrielles-q1",
-     "notion": "Applications industrielles",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-transfo-lente-rapide-probleme-1",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-transfo-lente-rapide-probleme-2",
-   "chapter": "pc-transfo-lente-rapide",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-transfo-lente-rapide-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-transfo-lente-rapide-serie-1",
-   "title": "Transformations lentes et rapides · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-transfo-lente-rapide",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-transfo-lente-rapide-serie-2",
-   "title": "Transformations lentes et rapides · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-transfo-lente-rapide",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-transfo-lente-rapide-serie-3",
-   "title": "Transformations lentes et rapides · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-transfo-lente-rapide",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
