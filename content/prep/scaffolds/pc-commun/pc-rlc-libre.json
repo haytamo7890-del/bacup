@@ -1,0 +1,2329 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-rlc-libre",
+      "name": "Oscillations libres d'un circuit RLC",
+      "domain": "physique",
+      "unit": "Électricité"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Le montage",
+      "L'équation différentielle",
+      "Les trois régimes",
+      "Le décrément logarithmique",
+      "L'oscillateur LC idéal",
+      "Les échanges d'énergie",
+      "Le circuit RLC réel : l'énergie diminue",
+      "L'analogie électromécanique",
+      "L'entretien des oscillations",
+      "Résistance critique et amortissement",
+      "Applications",
+      "Ce que l'on observe",
+      "Mesurer $T$ correctement",
+      "Exploiter l'amortissement",
+      "Sources d'erreur",
+      "Méthode 1 — Établir l'équation différentielle",
+      "Méthode 2 — Vérifier une solution sinusoïdale",
+      "Méthode 3 — Exploiter un oscillogramme",
+      "Méthode 4 — Le bilan énergétique",
+      "Méthode 5 — Reconnaître un régime, prévoir une évolution"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Établir l'équation différentielle",
+      "Méthode 2 — Vérifier une solution sinusoïdale",
+      "Méthode 3 — Exploiter un oscillogramme",
+      "Méthode 4 — Le bilan énergétique",
+      "Méthode 5 — Reconnaître un régime, prévoir une évolution"
+    ],
+    "existing_questions_total": 10,
+    "target_new_questions": 39,
+    "suggested_figures": [
+      "montage-rlc-libre — Montage RLC — oscillations libres (C chargé puis basculé sur L)",
+      "rlc-oscillation — Oscillations libres amorties d'un circuit RLC (régime pseudo-périodique)",
+      "rc-decharge — Décharge d'un condensateur — u_C(t) décroît",
+      "oscillations-amorties — Les trois régimes d'un oscillateur mécanique amorti",
+      "energie-oscillateur — Échanges Ec / Ep dans un oscillateur harmonique",
+      "rlc-regimes — Les trois régimes d'un circuit RLC (u_C au cours du temps)",
+      "montage-rc — Montage d'un circuit RC"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Le montage",
+        "lesson": "La décharge oscillante d'un circuit RLC",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-le-montage",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Le montage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le montage",
+          "difficulty": 1,
+          "statement": "Un condensateur de capacité $C$, chargé sous la tension $U_0$, est basculé à $t=0$ sur un conducteur ohmique de résistance $R_0 = 20\\ \\Omega$ monté en série avec une bobine $(L = 0{,}10\\ \\mathrm{H}\\ ;\\ r = 5{,}0\\ \\Omega)$. Quelle est la résistance totale $R$ qui intervient dans l'équation différentielle du circuit ?",
+          "options": [
+            {
+              "label": "$R = 25\\ \\Omega$",
+              "correct": true,
+              "why": "Le conducteur ohmique et la bobine sont en série : $R = R_0 + r = 20 + 5{,}0 = 25\\ \\Omega$."
+            },
+            {
+              "label": "$R = 20\\ \\Omega$",
+              "why": "Tu n'as gardé que $R_0$ et oublié la résistance $r$ de la bobine, pourtant parcourue par le même courant."
+            },
+            {
+              "label": "$R = 5{,}0\\ \\Omega$",
+              "why": "Tu n'as gardé que la résistance $r$ de la bobine et oublié le conducteur ohmique $R_0 = 20\\ \\Omega$."
+            },
+            {
+              "label": "$R = 15\\ \\Omega$",
+              "why": "Tu as calculé $R_0 - r = 20 - 5{,}0 = 15\\ \\Omega$ : des résistances en série s'ajoutent, elles ne se retranchent pas."
+            }
+          ],
+          "hint": "Les deux dipôles sont traversés par le même courant : comment se composent leurs résistances ?",
+          "solution": "Dans une maille série, toutes les résistances s'ajoutent. Ici $$R = R_0 + r = 20 + 5{,}0 = 25\\ \\Omega.$$ Contrôle : la bobine réelle se comporte comme une bobine idéale $L$ en série avec un conducteur ohmique $r$ ; il n'y a donc aucune raison d'écarter $r$ de la somme.",
+          "methode": "Dès la mise en équation d'un circuit RLC, écris $R = R_0 + r$ et sa valeur numérique : tu ne pourras plus oublier $r$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-montage-q1"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 2,
+          "statement": "Le condensateur est chargé sous $U_0 = 6{,}0\\ \\mathrm{V}$, puis on ferme l'interrupteur à $t=0$ sur la bobine et le conducteur ohmique ($R = 25\\ \\Omega$). Quelles sont les conditions initiales ?",
+          "options": [
+            {
+              "label": "$u_C(0) = 6{,}0\\ \\mathrm{V}$ et $i(0) = 0$",
+              "correct": true,
+              "why": "Le condensateur garde sa charge, donc $u_C(0)=U_0$ ; et l'intensité dans une bobine ne peut pas subir de discontinuité, donc $i(0)=0$."
+            },
+            {
+              "label": "$u_C(0) = 6{,}0\\ \\mathrm{V}$ et $i(0) = 0{,}24\\ \\mathrm{A}$",
+              "why": "Tu as appliqué la loi d'Ohm $U_0/R = 6{,}0/25 = 0{,}24\\ \\mathrm{A}$ comme s'il n'y avait pas de bobine : or la bobine interdit toute variation brutale de $i$."
+            },
+            {
+              "label": "$u_C(0) = 0$ et $i(0) = 0{,}24\\ \\mathrm{A}$",
+              "why": "Tu as pris les conditions initiales d'une **charge** de condensateur ; ici le condensateur est déjà chargé, c'est $u_C$ qui part de $U_0$."
+            },
+            {
+              "label": "$u_C(0) = 0$ et $i(0) = 0$",
+              "why": "Tu as décrit un circuit au repos : le condensateur a été chargé avant $t=0$, sa tension initiale vaut $U_0 = 6{,}0\\ \\mathrm{V}$."
+            }
+          ],
+          "hint": "Deux grandeurs ne peuvent pas sauter brutalement dans ce circuit : la tension aux bornes du condensateur, et l'intensité dans la bobine.",
+          "solution": "La charge du condensateur ne peut pas disparaître à l'instant du basculement : $u_C(0^+) = u_C(0^-) = U_0 = 6{,}0\\ \\mathrm{V}$. L'énergie magnétique $\\frac12 L i^2$ ne peut pas sauter non plus, donc $i(0) = 0$ puisque aucun courant ne circulait avant la fermeture. Contrôle : avec $i(0)=0$, la relation $i = C\\,\\frac{du_C}{dt}$ impose une tangente horizontale à la courbe $u_C(t)$ en $t=0$, ce que montre bien l'oscillogramme.",
+          "methode": "Dans un circuit RLC libre : $u_C$ part de $U_0$ (continuité de la tension du condensateur) et $i$ part de $0$ (continuité du courant dans la bobine).",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-montage-q2"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 3,
+          "statement": "On visualise $u_C(t)$ à l'oscilloscope. À l'instant $t_1$, la tangente à la courbe a pour pente $-8{,}0\\times10^{3}\\ \\mathrm{V\\,s^{-1}}$. Avec $C = 1{,}0\\ \\mu\\mathrm{F}$ et l'orientation telle que $i = C\\,\\dfrac{du_C}{dt}$, quelle est l'intensité à cet instant ?",
+          "options": [
+            {
+              "label": "$i = -8{,}0\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$i = C\\,\\frac{du_C}{dt} = 1{,}0\\times10^{-6} \\times (-8{,}0\\times10^{3}) = -8{,}0\\times10^{-3}\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$i = +8{,}0\\ \\mathrm{mA}$",
+              "why": "Tu as oublié que la pente est négative : le produit $C\\,\\frac{du_C}{dt}$ garde le signe de la pente."
+            },
+            {
+              "label": "$i = -8{,}0\\ \\mathrm{\\mu A}$",
+              "why": "Tu as utilisé la pente exprimée en $\\mathrm{V\\,ms^{-1}}$ ($-8{,}0$) sans la convertir en $\\mathrm{V\\,s^{-1}}$ : $1{,}0\\times10^{-6}\\times(-8{,}0) = -8{,}0\\ \\mathrm{\\mu A}$."
+            },
+            {
+              "label": "$i = -8{,}0\\ \\mathrm{kA}$",
+              "why": "Tu as oublié le préfixe micro et pris $C = 1{,}0\\ \\mathrm{F}$ : $1 \\times (-8{,}0\\times10^{3}) = -8{,}0\\times10^{3}\\ \\mathrm{A}$."
+            }
+          ],
+          "hint": "La relation $i = C\\,\\frac{du_C}{dt}$ reste valable pendant les oscillations ; surveille les unités de la pente et de $C$.",
+          "solution": "La relation charge-tension $q = C\\,u_C$ donne, en dérivant, $$i = \\frac{dq}{dt} = C\\,\\frac{du_C}{dt} = 1{,}0\\times10^{-6} \\times (-8{,}0\\times10^{3}) = -8{,}0\\times10^{-3}\\ \\mathrm{A} = -8{,}0\\ \\mathrm{mA}.$$ Contrôle d'ordre de grandeur : avec $U_0$ de quelques volts, $C$ de l'ordre du microfarad et une pseudo-période de quelques millisecondes, une intensité de quelques milliampères est tout à fait attendue. Le signe négatif indique seulement que le courant circule dans le sens opposé à l'orientation choisie.",
+          "methode": "Une pente lue sur la courbe $u_C(t)$ se convertit en intensité en la multipliant par $C$ : convertis d'abord la pente en $\\mathrm{V\\,s^{-1}}$ et $C$ en farads.",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-montage-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'équation différentielle",
+        "lesson": "La décharge oscillante d'un circuit RLC",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-l-equation-differentielle",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "L'équation différentielle",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'équation différentielle",
+          "difficulty": 1,
+          "statement": "Un condensateur chargé est basculé sur une bobine $(L, r)$ en série avec un conducteur ohmique. En notant $R$ la résistance totale du circuit, quelle équation différentielle vérifie la tension $u_C$ ?",
+          "options": [
+            {
+              "label": "$LC\\,\\dfrac{d^2u_C}{dt^2} + RC\\,\\dfrac{du_C}{dt} + u_C = 0$",
+              "correct": true,
+              "why": "La loi des mailles combinée à $i = C\\,\\frac{du_C}{dt}$ conduit exactement à cette équation, de second membre nul car aucun générateur n'alimente le circuit."
+            },
+            {
+              "label": "$LC\\,\\dfrac{d^2u_C}{dt^2} + RC\\,\\dfrac{du_C}{dt} + u_C = E$",
+              "why": "Tu as laissé un second membre : en oscillations **libres** il n'y a pas de générateur, le second membre est nul."
+            },
+            {
+              "label": "$L\\,\\dfrac{d^2u_C}{dt^2} + R\\,\\dfrac{du_C}{dt} + u_C = 0$",
+              "why": "Tu as oublié de multiplier par $C$ : en remplaçant $i$ par $C\\,\\frac{du_C}{dt}$, chaque terme en $i$ fait apparaître un facteur $C$."
+            },
+            {
+              "label": "$LC\\,\\dfrac{d^2u_C}{dt^2} + \\dfrac{R}{C}\\,\\dfrac{du_C}{dt} + u_C = 0$",
+              "why": "Tu as divisé par $C$ au lieu de multiplier : le coefficient de $\\frac{du_C}{dt}$ doit être $RC$, homogène à un temps."
+            }
+          ],
+          "hint": "Écris la loi des mailles avec $u_R = R\\,i$ et $u_L = L\\,\\frac{di}{dt}$, puis remplace $i$ par $C\\,\\frac{du_C}{dt}$.",
+          "solution": "La loi des mailles, avec une orientation où $i = C\\,\\frac{du_C}{dt}$, donne $u_C + R\\,i + L\\,\\frac{di}{dt} = 0$ où $R$ regroupe le conducteur ohmique et la résistance $r$ de la bobine. En remplaçant $i$ : $$u_C + RC\\,\\frac{du_C}{dt} + LC\\,\\frac{d^2u_C}{dt^2} = 0,$$ soit $$LC\\,\\frac{d^2u_C}{dt^2} + RC\\,\\frac{du_C}{dt} + u_C = 0.$$ Contrôle d'homogénéité : $LC$ est en $\\mathrm{s^2}$, $RC$ en $\\mathrm{s}$, donc les trois termes sont bien tous en volts.",
+          "methode": "Pour obtenir l'équation en $u_C$, écris la maille en $i$ puis substitue $i = C\\,\\frac{du_C}{dt}$ : chaque dérivation augmente l'ordre d'un cran.",
+          "points": 1,
+          "ref": "pc-rlc-libre-l-equation-differentielle-q1"
+        },
+        {
+          "notion": "L'équation différentielle",
+          "difficulty": 2,
+          "statement": "Pour le même circuit RLC en oscillations libres, quelle équation différentielle vérifie la charge $q$ de l'armature du condensateur reliée au point d'entrée du courant ?",
+          "options": [
+            {
+              "label": "$L\\,\\dfrac{d^2q}{dt^2} + R\\,\\dfrac{dq}{dt} + \\dfrac{q}{C} = 0$",
+              "correct": true,
+              "why": "Avec $u_C = \\frac{q}{C}$ et $i = \\frac{dq}{dt}$, la loi des mailles $u_C + R\\,i + L\\,\\frac{di}{dt} = 0$ devient exactement cette équation."
+            },
+            {
+              "label": "$L\\,\\dfrac{d^2q}{dt^2} + R\\,\\dfrac{dq}{dt} + C\\,q = 0$",
+              "why": "Tu as écrit $C\\,q$ au lieu de $\\frac{q}{C}$ : la relation du condensateur est $u_C = \\frac{q}{C}$, soit $q = C\\,u_C$."
+            },
+            {
+              "label": "$\\dfrac{d^2q}{dt^2} + R\\,\\dfrac{dq}{dt} + \\dfrac{q}{C} = 0$",
+              "why": "Tu as perdu l'inductance $L$ devant la dérivée seconde : le terme $L\\,\\frac{di}{dt}$ donne $L\\,\\frac{d^2q}{dt^2}$."
+            },
+            {
+              "label": "$L\\,\\dfrac{d^2q}{dt^2} - R\\,\\dfrac{dq}{dt} + \\dfrac{q}{C} = 0$",
+              "why": "Tu as changé le signe du terme résistif : dans la maille, $u_C$, $R\\,i$ et $L\\,\\frac{di}{dt}$ interviennent tous avec le même signe."
+            }
+          ],
+          "hint": "Remplace $u_C$ par $\\frac{q}{C}$ et $i$ par $\\frac{dq}{dt}$ dans la loi des mailles.",
+          "solution": "La loi des mailles s'écrit $u_C + R\\,i + L\\,\\dfrac{di}{dt} = 0$. Avec $u_C = \\dfrac{q}{C}$ et $i = \\dfrac{dq}{dt}$, donc $\\dfrac{di}{dt} = \\dfrac{d^2q}{dt^2}$ : $$L\\,\\frac{d^2q}{dt^2} + R\\,\\frac{dq}{dt} + \\frac{q}{C} = 0.$$ Contrôle : en multipliant toute l'équation par $C$ et en utilisant $q = C\\,u_C$, on retrouve bien $LC\\,\\frac{d^2u_C}{dt^2} + RC\\,\\frac{du_C}{dt} + u_C = 0$.",
+          "methode": "L'équation en $q$ et l'équation en $u_C$ sont la même équation : passe de l'une à l'autre avec $q = C\\,u_C$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-l-equation-differentielle-q2"
+        },
+        {
+          "notion": "L'équation différentielle",
+          "difficulty": 2,
+          "statement": "Un élève écrit l'équation sous la forme $LC\\,\\dfrac{d^2u_C}{dt^2} + a\\,\\dfrac{du_C}{dt} + u_C = 0$ pour un circuit où $C = 1{,}0\\ \\mu\\mathrm{F}$, le conducteur ohmique vaut $R_0 = 20\\ \\Omega$ et la bobine a une résistance $r = 5{,}0\\ \\Omega$. Que vaut le coefficient $a$ ?",
+          "options": [
+            {
+              "label": "$a = 2{,}5\\times10^{-5}\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$a = R\\,C$ avec $R = R_0 + r = 25\\ \\Omega$, soit $a = 25 \\times 1{,}0\\times10^{-6} = 2{,}5\\times10^{-5}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$a = 2{,}0\\times10^{-5}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $R_0\\,C = 20 \\times 1{,}0\\times10^{-6}$ : c'est le piège du chapitre, tu as oublié la résistance $r$ de la bobine."
+            },
+            {
+              "label": "$a = 5{,}0\\times10^{-6}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $r\\,C = 5{,}0 \\times 1{,}0\\times10^{-6}$ : tu n'as retenu que la résistance de la bobine au lieu de la résistance totale."
+            },
+            {
+              "label": "$a = 1{,}5\\times10^{-5}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $(R_0 - r)\\,C = 15 \\times 1{,}0\\times10^{-6}$ : les résistances en série s'ajoutent, elles ne se retranchent pas."
+            }
+          ],
+          "hint": "Identifie d'abord quelle résistance figure dans l'équation différentielle, puis multiplie par $C$.",
+          "solution": "Le coefficient du terme en $\\frac{du_C}{dt}$ est $R\\,C$, où $R$ est la résistance **totale** de la maille : $$R = R_0 + r = 20 + 5{,}0 = 25\\ \\Omega,\\qquad a = R\\,C = 25 \\times 1{,}0\\times10^{-6} = 2{,}5\\times10^{-5}\\ \\mathrm{s}.$$ Contrôle d'homogénéité : $a$ doit être une durée, et $\\Omega\\cdot\\mathrm{F} = \\mathrm{s}$ — ce qui est bien le cas.",
+          "methode": "Le coefficient de $\\frac{du_C}{dt}$ vaut toujours $RC$ avec $R$ la résistance totale : calcule $R_0 + r$ avant de multiplier par $C$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-l-equation-differentielle-q3"
+        },
+        {
+          "notion": "L'équation différentielle",
+          "difficulty": 3,
+          "statement": "Dans un circuit RLC en oscillations libres ($L = 0{,}10\\ \\mathrm{H}$, $C = 1{,}0\\ \\mu\\mathrm{F}$), on considère un instant $t_1$ où $u_C$ passe par un maximum valant $4{,}0\\ \\mathrm{V}$. Que vaut $\\dfrac{d^2u_C}{dt^2}$ à cet instant ?",
+          "options": [
+            {
+              "label": "$-4{,}0\\times10^{7}\\ \\mathrm{V\\,s^{-2}}$",
+              "correct": true,
+              "why": "Au maximum $\\frac{du_C}{dt}=0$, l'équation se réduit à $LC\\,\\frac{d^2u_C}{dt^2} = -u_C$, soit $-\\frac{4{,}0}{1{,}0\\times10^{-7}} = -4{,}0\\times10^{7}\\ \\mathrm{V\\,s^{-2}}$."
+            },
+            {
+              "label": "$+4{,}0\\times10^{7}\\ \\mathrm{V\\,s^{-2}}$",
+              "why": "Tu as oublié le signe moins : l'équation donne $\\frac{d^2u_C}{dt^2} = -\\frac{u_C}{LC}$, et une dérivée seconde est bien négative en un maximum."
+            },
+            {
+              "label": "$-4{,}0\\times10^{-7}\\ \\mathrm{V\\,s^{-2}}$",
+              "why": "Tu as multiplié par $LC$ au lieu de diviser : $-4{,}0 \\times 1{,}0\\times10^{-7} = -4{,}0\\times10^{-7}$."
+            },
+            {
+              "label": "$0\\ \\mathrm{V\\,s^{-2}}$",
+              "why": "Tu as confondu avec la dérivée **première**, qui est effectivement nulle en un maximum ; la dérivée seconde, elle, ne l'est pas."
+            }
+          ],
+          "hint": "Que vaut la dérivée première de $u_C$ en un extremum ? Reporte-le dans l'équation différentielle.",
+          "solution": "En un maximum de $u_C$, la tangente est horizontale : $\\dfrac{du_C}{dt}(t_1) = 0$. L'équation $LC\\,\\dfrac{d^2u_C}{dt^2} + RC\\,\\dfrac{du_C}{dt} + u_C = 0$ se réduit donc à $$\\frac{d^2u_C}{dt^2} = -\\frac{u_C}{LC} = -\\frac{4{,}0}{0{,}10 \\times 1{,}0\\times10^{-6}} = -\\frac{4{,}0}{1{,}0\\times10^{-7}} = -4{,}0\\times10^{7}\\ \\mathrm{V\\,s^{-2}}.$$ Contrôle : le résultat est négatif, ce qui est cohérent avec un maximum, et il ne dépend pas de $R$ puisque le terme résistif s'annule à cet instant.",
+          "methode": "En un extremum de $u_C$, annule $\\frac{du_C}{dt}$ dans l'équation différentielle : il ne reste que deux termes, et tout devient immédiat.",
+          "points": 1,
+          "ref": "pc-rlc-libre-l-equation-differentielle-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les trois régimes",
+        "lesson": "La décharge oscillante d'un circuit RLC",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 3,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-les-trois-regimes",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Les trois régimes",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Les trois régimes",
+          "difficulty": 2,
+          "statement": "Un condensateur chargé est déchargé dans une bobine, $L$ et $C$ étant fixés. On refait l'expérience en augmentant progressivement la résistance totale $R$ du circuit, à partir d'une valeur très faible. Dans quel ordre observe-t-on les régimes ?",
+          "options": [
+            {
+              "label": "pseudo-périodique, puis critique, puis apériodique",
+              "correct": true,
+              "why": "Un faible amortissement laisse osciller le circuit ; en augmentant $R$ on atteint la valeur critique, au-delà de laquelle plus aucune oscillation n'apparaît."
+            },
+            {
+              "label": "apériodique, puis critique, puis pseudo-périodique",
+              "why": "Tu as inversé le sens : c'est l'**augmentation** de $R$ qui dissipe l'énergie plus vite et finit par supprimer les oscillations, pas sa diminution."
+            },
+            {
+              "label": "pseudo-périodique, puis apériodique, puis critique",
+              "why": "Tu as placé le régime critique en dernier : il constitue au contraire la frontière entre les deux autres, donc il se situe entre eux."
+            },
+            {
+              "label": "critique, puis pseudo-périodique, puis apériodique",
+              "why": "Tu as placé le régime critique au départ : pour $R$ très faible le circuit oscille, le régime critique n'apparaît que pour une valeur bien particulière de $R$."
+            }
+          ],
+          "hint": "Le régime critique est une frontière : il ne peut donc pas être au début ni à la fin de la succession.",
+          "solution": "L'amortissement est d'autant plus fort que la résistance totale est grande. Pour $R$ très faible, le circuit effectue de nombreuses oscillations d'amplitude lentement décroissante : c'est le régime **pseudo-périodique**. En augmentant $R$, les oscillations deviennent de moins en moins nombreuses, jusqu'à disparaître pour une valeur particulière $R_c$ : c'est le régime **critique**. Au-delà, $u_C$ rejoint zéro sans osciller : régime **apériodique**. Contrôle : le cas limite $R = 0$ correspond à l'oscillateur LC idéal, qui oscille indéfiniment — on part donc bien du côté pseudo-périodique.",
+          "methode": "Retiens l'axe des $R$ croissants : pseudo-périodique $\\rightarrow$ critique (frontière) $\\rightarrow$ apériodique.",
+          "points": 1,
+          "ref": "pc-rlc-libre-les-trois-regimes-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le décrément logarithmique",
+        "lesson": "La décharge oscillante d'un circuit RLC",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-le-decrement-logarithmique",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Le décrément logarithmique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le décrément logarithmique",
+          "difficulty": 1,
+          "statement": "Sur l'oscillogramme d'un circuit RLC en régime pseudo-périodique, deux maxima **successifs** de $u_C$ valent $U_1 = 6{,}0\\ \\mathrm{V}$ et $U_2 = 3{,}0\\ \\mathrm{V}$. Le décrément logarithmique est défini par $\\lambda = \\ln\\!\\left(\\dfrac{U_1}{U_2}\\right)$. Que vaut $\\lambda$ ?",
+          "options": [
+            {
+              "label": "$\\lambda = 0{,}69$",
+              "correct": true,
+              "why": "$\\lambda = \\ln\\!\\left(\\frac{6{,}0}{3{,}0}\\right) = \\ln 2 = 0{,}69$ ; le décrément est un nombre sans unité."
+            },
+            {
+              "label": "$\\lambda = -0{,}69$",
+              "why": "Tu as calculé $\\ln\\!\\left(\\frac{U_2}{U_1}\\right) = \\ln 0{,}5 = -0{,}69$ : le rapport se prend dans l'ordre maximum précédent sur maximum suivant, de façon à obtenir un nombre positif."
+            },
+            {
+              "label": "$\\lambda = 2{,}0$",
+              "why": "Tu as donné le rapport $\\frac{U_1}{U_2} = 2{,}0$ sans prendre son logarithme népérien."
+            },
+            {
+              "label": "$\\lambda = 0{,}30$",
+              "why": "Tu as utilisé le logarithme décimal : $\\log 2 = 0{,}30$, alors que la définition fait intervenir $\\ln$."
+            }
+          ],
+          "hint": "Attention à l'ordre du rapport, et au logarithme à employer : népérien, pas décimal.",
+          "solution": "Par définition, $$\\lambda = \\ln\\!\\left(\\frac{U_1}{U_2}\\right) = \\ln\\!\\left(\\frac{6{,}0}{3{,}0}\\right) = \\ln 2 = 0{,}69.$$ Contrôle : l'amplitude est divisée par $2$ à chaque pseudo-période, donc $\\lambda$ doit être positif et de l'ordre de l'unité — ce qui est bien le cas. Le décrément logarithmique est une grandeur sans dimension.",
+          "methode": "$\\lambda = \\ln$(maximum précédent / maximum suivant) : rapport $>1$, donc $\\lambda > 0$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-decrement-logarithmique-q1"
+        },
+        {
+          "notion": "Le décrément logarithmique",
+          "difficulty": 2,
+          "statement": "Sur un autre enregistrement, le premier maximum vaut $U_0 = 6{,}0\\ \\mathrm{V}$ et le quatrième maximum vaut $U_3 = 0{,}75\\ \\mathrm{V}$ ; ils sont donc séparés de **trois** pseudo-périodes. Quel est le décrément logarithmique $\\lambda$ (défini sur une pseudo-période) ?",
+          "options": [
+            {
+              "label": "$\\lambda = 0{,}69$",
+              "correct": true,
+              "why": "$\\lambda = \\frac{1}{3}\\ln\\!\\left(\\frac{6{,}0}{0{,}75}\\right) = \\frac{1}{3}\\ln 8 = \\frac{2{,}08}{3} = 0{,}69$."
+            },
+            {
+              "label": "$\\lambda = 2{,}1$",
+              "why": "Tu as calculé $\\ln 8 = 2{,}08$ sans diviser par les **trois** pseudo-périodes écoulées."
+            },
+            {
+              "label": "$\\lambda = 2{,}7$",
+              "why": "Tu as calculé $\\frac{1}{3}\\times\\frac{6{,}0}{0{,}75} = \\frac{8}{3} = 2{,}7$ : tu as oublié de prendre le logarithme népérien du rapport."
+            },
+            {
+              "label": "$\\lambda = 1{,}0$",
+              "why": "Tu as divisé $\\ln 8 = 2{,}08$ par $2$ : entre le premier et le quatrième maximum il s'écoule trois pseudo-périodes, pas deux."
+            }
+          ],
+          "hint": "Compte le nombre de pseudo-périodes qui séparent les deux maxima : ce n'est pas le nombre de maxima.",
+          "solution": "L'amplitude est multipliée par le même facteur à chaque pseudo-période, donc $\\dfrac{U_0}{U_3} = e^{3\\lambda}$, d'où $$\\lambda = \\frac{1}{3}\\ln\\!\\left(\\frac{U_0}{U_3}\\right) = \\frac{1}{3}\\ln\\!\\left(\\frac{6{,}0}{0{,}75}\\right) = \\frac{1}{3}\\ln 8 = \\frac{2{,}08}{3} = 0{,}69.$$ Contrôle : $\\ln 8 = 3\\ln 2$, donc $\\lambda = \\ln 2$ : l'amplitude est bien divisée par $2$ à chaque pseudo-période, et $6{,}0/2^3 = 0{,}75\\ \\mathrm{V}$ redonne la valeur donnée.",
+          "methode": "Entre le maximum de rang $1$ et celui de rang $n+1$ il s'écoule $n$ pseudo-périodes : $\\lambda = \\frac{1}{n}\\ln\\frac{U_1}{U_{n+1}}$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-decrement-logarithmique-q2"
+        },
+        {
+          "notion": "Le décrément logarithmique",
+          "difficulty": 2,
+          "statement": "Un circuit RLC a un décrément logarithmique $\\lambda = \\ln 2$ : l'amplitude est donc divisée par $2$ à chaque pseudo-période. Le premier maximum vaut $8{,}0\\ \\mathrm{V}$. Que vaut le **cinquième** maximum ?",
+          "options": [
+            {
+              "label": "$0{,}50\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "Entre le 1er et le 5e maximum il s'écoule $4$ pseudo-périodes : $\\frac{8{,}0}{2^4} = \\frac{8{,}0}{16} = 0{,}50\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{V}$",
+              "why": "Tu as divisé par $2^3 = 8$ : tu n'as compté que trois pseudo-périodes au lieu de quatre."
+            },
+            {
+              "label": "$0{,}25\\ \\mathrm{V}$",
+              "why": "Tu as divisé par $2^5 = 32$ : tu as pris le rang du maximum ($5$) comme nombre de pseudo-périodes, alors qu'il n'en s'écoule que $4$."
+            },
+            {
+              "label": "$1{,}6\\ \\mathrm{V}$",
+              "why": "Tu as calculé $\\frac{8{,}0}{5} = 1{,}6\\ \\mathrm{V}$ : la décroissance est géométrique (division répétée par $2$), pas une division par le rang."
+            }
+          ],
+          "hint": "Combien de pseudo-périodes séparent le premier maximum du cinquième ?",
+          "solution": "Chaque pseudo-période divise l'amplitude par $e^{\\lambda} = 2$. Du maximum de rang $1$ au maximum de rang $5$, il s'écoule $5 - 1 = 4$ pseudo-périodes, donc $$U_5 = \\frac{U_1}{2^4} = \\frac{8{,}0}{16} = 0{,}50\\ \\mathrm{V}.$$ Contrôle en déroulant la suite : $8{,}0 \\rightarrow 4{,}0 \\rightarrow 2{,}0 \\rightarrow 1{,}0 \\rightarrow 0{,}50\\ \\mathrm{V}$ — on compte bien cinq valeurs.",
+          "methode": "Amplitude du maximum de rang $n$ : $U_n = U_1\\,e^{-(n-1)\\lambda}$. Le $-1$ est l'erreur la plus fréquente.",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-decrement-logarithmique-q3"
+        },
+        {
+          "notion": "Le décrément logarithmique",
+          "difficulty": 3,
+          "statement": "On admet que l'enveloppe des maxima d'un circuit RLC en régime pseudo-périodique décroît comme $e^{-\\frac{R}{2L}t}$, où $R$ est la résistance totale, ce qui donne $\\lambda = \\dfrac{R\\,T}{2L}$. Un relevé donne $\\lambda = 0{,}69$, $T = 2{,}0\\ \\mathrm{ms}$ et $L = 0{,}10\\ \\mathrm{H}$. Que vaut $R$ ?",
+          "options": [
+            {
+              "label": "$R = 69\\ \\Omega$",
+              "correct": true,
+              "why": "$R = \\frac{2L\\lambda}{T} = \\frac{2\\times0{,}10\\times0{,}69}{2{,}0\\times10^{-3}} = \\frac{0{,}138}{2{,}0\\times10^{-3}} = 69\\ \\Omega$."
+            },
+            {
+              "label": "$R = 35\\ \\Omega$",
+              "why": "Tu as calculé $\\frac{L\\lambda}{T} = \\frac{0{,}10\\times0{,}69}{2{,}0\\times10^{-3}} = 35\\ \\Omega$ : tu as oublié le facteur $2$ du dénominateur $2L$."
+            },
+            {
+              "label": "$R = 1{,}4\\times10^{2}\\ \\Omega$",
+              "why": "Tu as placé $\\lambda$ au dénominateur : $\\frac{2L}{\\lambda T} = \\frac{0{,}20}{0{,}69\\times2{,}0\\times10^{-3}} = 1{,}4\\times10^{2}\\ \\Omega$."
+            },
+            {
+              "label": "$R = 6{,}9\\times10^{-3}\\ \\Omega$",
+              "why": "Tu as utilisé la formule inversée $\\frac{\\lambda T}{2L} = \\frac{0{,}69\\times2{,}0\\times10^{-3}}{0{,}20} = 6{,}9\\times10^{-3}$ : ce n'est pas $R$, mais le résultat d'un isolement raté."
+            }
+          ],
+          "hint": "Isole $R$ dans $\\lambda = \\frac{RT}{2L}$ avant de remplacer les valeurs, et garde $T$ en secondes.",
+          "solution": "De $\\lambda = \\dfrac{R\\,T}{2L}$ on tire $$R = \\frac{2L\\lambda}{T} = \\frac{2 \\times 0{,}10 \\times 0{,}69}{2{,}0\\times10^{-3}} = \\frac{0{,}138}{2{,}0\\times10^{-3}} = 69\\ \\Omega.$$ Contrôle d'homogénéité : $\\dfrac{\\mathrm{H}}{\\mathrm{s}} = \\dfrac{\\Omega\\cdot\\mathrm{s}}{\\mathrm{s}} = \\Omega$, et $\\lambda$ est sans dimension — le résultat est bien une résistance. Contrôle d'ordre de grandeur : quelques dizaines d'ohms pour un circuit qui n'effectue que quelques oscillations visibles, c'est cohérent.",
+          "methode": "Isole la grandeur cherchée **avant** tout calcul numérique, puis vérifie l'homogénéité du résultat obtenu.",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-decrement-logarithmique-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'oscillateur LC idéal",
+        "lesson": "Oscillateur LC & aspects énergétiques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 4,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-l-oscillateur-lc-ideal",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "L'oscillateur LC idéal",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "L'oscillateur LC idéal",
+          "difficulty": 2,
+          "statement": "Un circuit LC idéal (résistance totale nulle) est constitué d'une bobine $L = 0{,}10\\ \\mathrm{H}$ et d'un condensateur $C = 1{,}0\\ \\mu\\mathrm{F}$. Quelle est sa période propre $T_0$ ?",
+          "options": [
+            {
+              "label": "$T_0 = 2{,}0\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$T_0 = 2\\pi\\sqrt{LC} = 2\\pi\\sqrt{0{,}10\\times1{,}0\\times10^{-6}} = 2\\pi\\times3{,}16\\times10^{-4} = 1{,}99\\times10^{-3}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$T_0 = 0{,}32\\ \\mathrm{ms}$",
+              "why": "Tu as calculé $\\sqrt{LC} = 3{,}16\\times10^{-4}\\ \\mathrm{s}$ en oubliant le facteur $2\\pi$."
+            },
+            {
+              "label": "$T_0 = 2{,}0\\times10^{4}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $\\frac{2\\pi}{\\sqrt{LC}} = 1{,}99\\times10^{4}$ : c'est la pulsation propre en $\\mathrm{rad\\,s^{-1}}$, pas une période. Retiens $T_0 = 2\\pi\\sqrt{LC}$."
+            },
+            {
+              "label": "$T_0 = 6{,}3\\times10^{-7}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $2\\pi LC = 6{,}28\\times10^{-7}$ sans prendre la racine carrée du produit $LC$."
+            }
+          ],
+          "hint": "Vérifie d'abord quelle combinaison de $L$ et $C$ est homogène à un temps.",
+          "solution": "La période propre d'un oscillateur LC idéal vaut $$T_0 = 2\\pi\\sqrt{LC} = 2\\pi\\sqrt{0{,}10 \\times 1{,}0\\times10^{-6}} = 2\\pi\\sqrt{1{,}0\\times10^{-7}} = 2\\pi \\times 3{,}16\\times10^{-4} = 1{,}99\\times10^{-3}\\ \\mathrm{s} \\approx 2{,}0\\ \\mathrm{ms}.$$ Contrôle d'homogénéité : $1\\ \\mathrm{H} = 1\\ \\Omega\\cdot\\mathrm{s}$ et $1\\ \\mathrm{F} = 1\\ \\mathrm{s}/\\Omega$, donc $LC$ est en $\\mathrm{s^2}$ et $\\sqrt{LC}$ en secondes. Ni $\\sqrt{LC}$ seul, ni $2\\pi/\\sqrt{LC}$, ni $2\\pi LC$ ne conviennent.",
+          "methode": "$T_0 = 2\\pi\\sqrt{LC}$ : la racine porte sur le **produit** $LC$, et le $2\\pi$ est au numérateur.",
+          "points": 1,
+          "ref": "pc-rlc-libre-l-oscillateur-lc-ideal-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les échanges d'énergie",
+        "lesson": "Oscillateur LC & aspects énergétiques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-les-echanges-d-energie",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Les échanges d'énergie",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les échanges d'énergie",
+          "difficulty": 1,
+          "statement": "Un condensateur $C = 1{,}0\\ \\mu\\mathrm{F}$ est chargé sous $U_0 = 6{,}0\\ \\mathrm{V}$, puis basculé sur une bobine idéale. Quelle est l'énergie totale du circuit oscillant ?",
+          "options": [
+            {
+              "label": "$18\\ \\mathrm{\\mu J}$",
+              "correct": true,
+              "why": "À $t=0$ toute l'énergie est électrique : $E = \\frac12 C U_0^2 = 0{,}5\\times1{,}0\\times10^{-6}\\times36 = 1{,}8\\times10^{-5}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$36\\ \\mathrm{\\mu J}$",
+              "why": "Tu as calculé $C U_0^2 = 1{,}0\\times10^{-6}\\times36 = 3{,}6\\times10^{-5}\\ \\mathrm{J}$ : tu as oublié le facteur $\\frac12$."
+            },
+            {
+              "label": "$3{,}0\\ \\mathrm{\\mu J}$",
+              "why": "Tu as calculé $\\frac12 C U_0 = 0{,}5\\times1{,}0\\times10^{-6}\\times6{,}0 = 3{,}0\\times10^{-6}\\ \\mathrm{J}$ : la tension doit être élevée au carré."
+            },
+            {
+              "label": "$18\\ \\mathrm{mJ}$",
+              "why": "La valeur $18$ est juste mais pas l'unité : $1{,}8\\times10^{-5}\\ \\mathrm{J} = 18\\ \\mathrm{\\mu J}$, soit mille fois moins que $18\\ \\mathrm{mJ}$."
+            }
+          ],
+          "hint": "À l'instant initial l'intensité est nulle : toute l'énergie est stockée dans le condensateur.",
+          "solution": "À $t=0$, $i = 0$ donc $E_m = 0$ et toute l'énergie du circuit est l'énergie électrique du condensateur : $$E = \\frac12 C U_0^2 = \\frac12 \\times 1{,}0\\times10^{-6} \\times (6{,}0)^2 = 1{,}8\\times10^{-5}\\ \\mathrm{J} = 18\\ \\mathrm{\\mu J}.$$ Contrôle : la bobine étant idéale, cette énergie se conserve ; elle devra se retrouver intégralement sous forme magnétique quand $u_C = 0$, ce qui donne $i_{\\max} = \\sqrt{\\frac{2E}{L}}$.",
+          "methode": "Énergie électrique $E_e = \\frac12 C u_C^2$ : le $\\frac12$ et le carré sont les deux oublis classiques.",
+          "points": 1,
+          "ref": "pc-rlc-libre-les-echanges-d-energie-q1"
+        },
+        {
+          "notion": "Les échanges d'énergie",
+          "difficulty": 3,
+          "statement": "Dans un circuit LC idéal ($L = 0{,}10\\ \\mathrm{H}$, $C = 1{,}0\\ \\mu\\mathrm{F}$) initialement chargé sous $U_0 = 6{,}0\\ \\mathrm{V}$, quelle est l'intensité du courant à l'instant où $u_C = 3{,}0\\ \\mathrm{V}$ ?",
+          "options": [
+            {
+              "label": "$|i| = 16\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$E_m = E - E_e = 18 - 4{,}5 = 13{,}5\\ \\mathrm{\\mu J}$, donc $|i| = \\sqrt{\\frac{2E_m}{L}} = \\sqrt{\\frac{2\\times1{,}35\\times10^{-5}}{0{,}10}} = 1{,}6\\times10^{-2}\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$|i| = 19\\ \\mathrm{mA}$",
+              "why": "Tu as pris toute l'énergie pour l'énergie magnétique : c'est $i_{\\max} = \\sqrt{\\frac{2\\times1{,}8\\times10^{-5}}{0{,}10}} = 19\\ \\mathrm{mA}$, atteinte seulement quand $u_C = 0$."
+            },
+            {
+              "label": "$|i| = 12\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $\\sqrt{\\frac{E_m}{L}} = \\sqrt{\\frac{1{,}35\\times10^{-5}}{0{,}10}} = 12\\ \\mathrm{mA}$ : tu as oublié le facteur $2$ en isolant $i$ dans $E_m = \\frac12 L i^2$."
+            },
+            {
+              "label": "$|i| = 9{,}5\\ \\mathrm{mA}$",
+              "why": "Tu as pris la moitié de $i_{\\max}$, comme si $i$ était proportionnelle à $u_C$ : elle ne l'est pas, c'est l'**énergie** qui se partage."
+            }
+          ],
+          "hint": "L'énergie totale est constante : calcule ce qui reste pour le terme magnétique, puis remonte à $i$.",
+          "solution": "L'énergie totale se conserve : $E = \\frac12 C U_0^2 = 18\\ \\mathrm{\\mu J}$. À l'instant où $u_C = 3{,}0\\ \\mathrm{V}$, l'énergie électrique vaut $E_e = \\frac12 \\times 1{,}0\\times10^{-6} \\times (3{,}0)^2 = 4{,}5\\ \\mathrm{\\mu J}$, donc $$E_m = 18 - 4{,}5 = 13{,}5\\ \\mathrm{\\mu J} = \\frac12 L i^2 \\ \\Longrightarrow\\ |i| = \\sqrt{\\frac{2 \\times 1{,}35\\times10^{-5}}{0{,}10}} = \\sqrt{2{,}7\\times10^{-4}} = 1{,}6\\times10^{-2}\\ \\mathrm{A} = 16\\ \\mathrm{mA}.$$ Contrôle : cette valeur est bien inférieure à $i_{\\max} = U_0\\sqrt{C/L} = 6{,}0\\times3{,}16\\times10^{-3} = 19\\ \\mathrm{mA}$, ce qui est attendu puisque le condensateur n'est pas entièrement déchargé.",
+          "methode": "Bilan d'énergie : $\\frac12 C u_C^2 + \\frac12 L i^2 = \\frac12 C U_0^2$. Isole le terme cherché, puis n'oublie pas le facteur $2$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-les-echanges-d-energie-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le circuit RLC réel : l'énergie diminue",
+        "lesson": "Oscillateur LC & aspects énergétiques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-le-circuit-rlc-reel-l-energie-diminue",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Le circuit RLC réel : l'énergie diminue",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le circuit RLC réel : l'énergie diminue",
+          "difficulty": 1,
+          "statement": "Dans un circuit RLC réel en oscillations libres, comment évolue l'énergie totale $E = \\frac12 C u_C^2 + \\frac12 L i^2$ au cours du temps ?",
+          "options": [
+            {
+              "label": "Elle décroît et tend vers zéro, l'énergie étant dissipée par effet Joule dans la résistance.",
+              "correct": true,
+              "why": "La puissance dissipée $R\\,i^2$ est toujours positive ou nulle : l'énergie totale ne peut que diminuer, jusqu'à s'annuler."
+            },
+            {
+              "label": "Elle reste constante, car $E_e$ et $E_m$ se transforment l'une en l'autre.",
+              "why": "Les deux formes s'échangent effectivement, mais la résistance en prélève une part à chaque instant : la somme n'est pas conservée."
+            },
+            {
+              "label": "Elle oscille entre zéro et sa valeur initiale, comme $E_e$ et $E_m$.",
+              "why": "C'est le piège classique : $E_e$ et $E_m$ oscillent, mais leur **somme** ne repasse jamais par sa valeur initiale — elle décroît sans osciller."
+            },
+            {
+              "label": "Elle décroît d'abord, puis se stabilise à une valeur non nulle imposée par $L$ et $C$.",
+              "why": "Rien ne maintient d'énergie à la fin : lorsque $u_C$ et $i$ se sont annulés, l'énergie totale est nulle elle aussi."
+            }
+          ],
+          "hint": "Pense à la grandeur qui quitte définitivement le circuit à chaque passage du courant dans la résistance.",
+          "solution": "Le conducteur ohmique et la résistance $r$ de la bobine convertissent en chaleur une puissance $R\\,i^2 \\geq 0$. L'énergie totale du circuit ne cesse donc de décroître (elle est seulement stationnaire aux instants où $i = 0$) et tend vers zéro : le circuit finit au repos, condensateur déchargé et courant nul. Contrôle : si $R = 0$, la puissance dissipée est nulle et l'on retrouve bien l'oscillateur LC idéal, dont l'énergie se conserve.",
+          "methode": "Distingue toujours les échanges $E_e \\leftrightarrow E_m$ (réversibles, donc oscillants) de la dissipation Joule (irréversible, donc décroissance monotone).",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-circuit-rlc-reel-l-energie-diminue-q1"
+        },
+        {
+          "notion": "Le circuit RLC réel : l'énergie diminue",
+          "difficulty": 2,
+          "statement": "Sur un oscillogramme de $u_C(t)$ avec $C = 1{,}0\\ \\mu\\mathrm{F}$, deux maxima successifs valent $U_1 = 6{,}0\\ \\mathrm{V}$ et $U_2 = 3{,}6\\ \\mathrm{V}$. Quelle énergie a été dissipée pendant cette pseudo-période ?",
+          "options": [
+            {
+              "label": "$11{,}5\\ \\mathrm{\\mu J}$",
+              "correct": true,
+              "why": "Aux maxima $i=0$, donc $E = \\frac12 C u_C^2$ : $\\Delta E = \\frac12\\times1{,}0\\times10^{-6}\\times(36 - 12{,}96) = 1{,}15\\times10^{-5}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$6{,}5\\ \\mathrm{\\mu J}$",
+              "why": "Tu as calculé $\\frac12 C U_2^2 = 6{,}5\\ \\mathrm{\\mu J}$ : c'est l'énergie qui **reste** au deuxième maximum, pas celle qui a été perdue."
+            },
+            {
+              "label": "$2{,}9\\ \\mathrm{\\mu J}$",
+              "why": "Tu as calculé $\\frac12 C (U_1 - U_2)^2 = \\frac12\\times1{,}0\\times10^{-6}\\times(2{,}4)^2 = 2{,}9\\ \\mathrm{\\mu J}$ : l'énergie n'est pas proportionnelle à la tension, on doit soustraire les **carrés**."
+            },
+            {
+              "label": "$23{,}0\\ \\mathrm{\\mu J}$",
+              "why": "Tu as calculé $C\\,(U_1^2 - U_2^2) = 2{,}30\\times10^{-5}\\ \\mathrm{J}$ : tu as oublié le facteur $\\frac12$."
+            }
+          ],
+          "hint": "À un maximum de $u_C$ le courant est nul : l'énergie totale se réduit alors à un seul terme.",
+          "solution": "En un maximum de $u_C$, $\\dfrac{du_C}{dt} = 0$ donc $i = C\\,\\dfrac{du_C}{dt} = 0$ et $E_m = 0$ : l'énergie totale vaut $\\frac12 C u_C^2$. Donc $$\\Delta E = \\frac12 C\\left(U_1^2 - U_2^2\\right) = \\frac12 \\times 1{,}0\\times10^{-6} \\times \\left(36 - 12{,}96\\right) = \\frac12 \\times 1{,}0\\times10^{-6} \\times 23{,}04 = 1{,}15\\times10^{-5}\\ \\mathrm{J} = 11{,}5\\ \\mathrm{\\mu J}.$$ Contrôle : l'énergie initiale valait $18{,}0\\ \\mathrm{\\mu J}$ et il en reste $6{,}5\\ \\mathrm{\\mu J}$ ; la somme $11{,}5 + 6{,}5 = 18{,}0\\ \\mathrm{\\mu J}$ est cohérente.",
+          "methode": "Pour un bilan d'énergie entre deux maxima de $u_C$, utilise $E = \\frac12 C u_C^2$ : le terme magnétique est nul à ces instants.",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-circuit-rlc-reel-l-energie-diminue-q2"
+        },
+        {
+          "notion": "Le circuit RLC réel : l'énergie diminue",
+          "difficulty": 2,
+          "statement": "Dans un circuit RLC libre de résistance totale $R = 25\\ \\Omega$, l'intensité vaut $i = 12\\ \\mathrm{mA}$ à un instant donné. À quelle vitesse l'énergie totale du circuit diminue-t-elle à cet instant ?",
+          "options": [
+            {
+              "label": "$3{,}6\\ \\mathrm{mW}$",
+              "correct": true,
+              "why": "La puissance dissipée par effet Joule vaut $\\mathcal{P} = R\\,i^2 = 25\\times(1{,}2\\times10^{-2})^2 = 3{,}6\\times10^{-3}\\ \\mathrm{W}$."
+            },
+            {
+              "label": "$0{,}30\\ \\mathrm{W}$",
+              "why": "Tu as calculé $R\\,i = 25\\times1{,}2\\times10^{-2} = 0{,}30$ : c'est une tension en volts, pas une puissance."
+            },
+            {
+              "label": "$1{,}8\\ \\mathrm{mW}$",
+              "why": "Tu as calculé $\\frac12 R\\,i^2$ : le facteur $\\frac12$ appartient aux expressions d'énergie $\\frac12Cu^2$ et $\\frac12Li^2$, pas à la puissance Joule."
+            },
+            {
+              "label": "$5{,}8\\ \\mathrm{\\mu W}$",
+              "why": "Tu as calculé $\\frac{i^2}{R} = \\frac{1{,}44\\times10^{-4}}{25} = 5{,}8\\times10^{-6}$ : on divise par $R$ quand on connaît la tension, pas l'intensité."
+            }
+          ],
+          "hint": "Quelle est la puissance instantanée convertie en chaleur dans une résistance parcourue par un courant $i$ ?",
+          "solution": "Toute l'énergie qui quitte le circuit est dissipée par effet Joule, à la puissance instantanée $$\\mathcal{P} = R\\,i^2 = 25 \\times (1{,}2\\times10^{-2})^2 = 25 \\times 1{,}44\\times10^{-4} = 3{,}6\\times10^{-3}\\ \\mathrm{W} = 3{,}6\\ \\mathrm{mW}.$$ Contrôle d'homogénéité : $\\Omega \\cdot \\mathrm{A^2} = \\mathrm{W}$. Autre voie : $\\mathcal{P} = u_R\\,i$ avec $u_R = R\\,i = 0{,}30\\ \\mathrm{V}$, donc $\\mathcal{P} = 0{,}30 \\times 1{,}2\\times10^{-2} = 3{,}6\\ \\mathrm{mW}$ — même résultat.",
+          "methode": "Puissance Joule : $\\mathcal{P} = R\\,i^2$ si tu connais $i$, $\\mathcal{P} = \\frac{u^2}{R}$ si tu connais $u$. Jamais de facteur $\\frac12$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-circuit-rlc-reel-l-energie-diminue-q3"
+        },
+        {
+          "notion": "Le circuit RLC réel : l'énergie diminue",
+          "difficulty": 3,
+          "statement": "Sur un oscillogramme, deux maxima successifs de $u_C$ valent $U_1 = 6{,}0\\ \\mathrm{V}$ et $U_2 = 3{,}6\\ \\mathrm{V}$. Quel pourcentage de l'énergie du circuit a été dissipé pendant cette pseudo-période ?",
+          "options": [
+            {
+              "label": "$64\\ \\%$",
+              "correct": true,
+              "why": "$\\frac{\\Delta E}{E_1} = 1 - \\left(\\frac{U_2}{U_1}\\right)^2 = 1 - (0{,}60)^2 = 1 - 0{,}36 = 0{,}64$."
+            },
+            {
+              "label": "$40\\ \\%$",
+              "why": "Tu as calculé $1 - \\frac{U_2}{U_1} = 1 - 0{,}60 = 0{,}40$ : l'énergie varie comme le **carré** de la tension, il faut élever le rapport au carré."
+            },
+            {
+              "label": "$36\\ \\%$",
+              "why": "Tu as calculé $\\left(\\frac{U_2}{U_1}\\right)^2 = 0{,}36$ : c'est la fraction d'énergie qui **reste**, pas celle qui a été dissipée."
+            },
+            {
+              "label": "$60\\ \\%$",
+              "why": "Tu as pris directement le rapport $\\frac{U_2}{U_1} = 0{,}60$ comme fraction dissipée : ce rapport ne concerne ni la bonne grandeur ni le bon sens."
+            }
+          ],
+          "hint": "Le rapport des énergies n'est pas le rapport des tensions : regarde l'exposant dans $E = \\frac12 C u_C^2$.",
+          "solution": "Aux deux maxima le courant est nul, donc $E_1 = \\frac12 C U_1^2$ et $E_2 = \\frac12 C U_2^2$. Le facteur $\\frac12 C$ se simplifie dans le rapport : $$\\frac{E_2}{E_1} = \\left(\\frac{U_2}{U_1}\\right)^2 = \\left(\\frac{3{,}6}{6{,}0}\\right)^2 = (0{,}60)^2 = 0{,}36,$$ donc la fraction dissipée vaut $1 - 0{,}36 = 0{,}64$, soit $64\\ \\%$. Contrôle avec les valeurs absolues : $E_1 = 18{,}0\\ \\mathrm{\\mu J}$, $E_2 = 6{,}5\\ \\mathrm{\\mu J}$, perte $11{,}5\\ \\mathrm{\\mu J}$, et $\\frac{11{,}5}{18{,}0} = 0{,}64$.",
+          "methode": "Pour un rapport d'énergies, passe par le rapport des tensions **au carré** : les constantes $\\frac12$ et $C$ disparaissent.",
+          "points": 1,
+          "ref": "pc-rlc-libre-le-circuit-rlc-reel-l-energie-diminue-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Ce que l'on observe",
+        "lesson": "Observation à l'oscilloscope",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-ce-que-l-on-observe",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Ce que l'on observe",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Ce que l'on observe",
+          "difficulty": 1,
+          "statement": "On enregistre $u_C(t)$ pour un circuit RLC libre en régime pseudo-périodique. Que montre la courbe ?",
+          "options": [
+            {
+              "label": "Une oscillation qui change de signe à chaque demi-pseudo-période, d'amplitude décroissante.",
+              "correct": true,
+              "why": "C'est la signature du régime pseudo-périodique : le signe de $u_C$ alterne, et l'amortissement réduit l'amplitude d'une oscillation à la suivante."
+            },
+            {
+              "label": "Une oscillation qui change de signe, d'amplitude constante.",
+              "why": "Ce serait le cas d'un circuit LC idéal ou d'oscillations entretenues ; ici la résistance dissipe de l'énergie, donc l'amplitude décroît."
+            },
+            {
+              "label": "Une décroissance vers zéro, sans jamais changer de signe.",
+              "why": "C'est l'allure du régime apériodique (forte résistance) : en régime pseudo-périodique, $u_C$ devient bien négative."
+            },
+            {
+              "label": "Une oscillation de signe constant dont l'amplitude décroît.",
+              "why": "Tu décris une courbe toujours positive : une oscillation libre fait passer $u_C$ alternativement par des valeurs positives et négatives."
+            }
+          ],
+          "hint": "Deux caractères sont à décrire : le signe de $u_C$ au cours du temps, et l'évolution de l'amplitude.",
+          "solution": "En régime pseudo-périodique, le condensateur se décharge, se recharge **en sens inverse**, se décharge de nouveau, etc. : $u_C$ alterne donc de signe. Et comme la résistance dissipe de l'énergie, l'amplitude de chaque maximum est plus petite que celle du précédent. La courbe est une sinusoïde dont l'enveloppe décroît. Contrôle : les deux cas extrêmes confirment la lecture — $R=0$ donnerait une amplitude constante, $R$ très grande supprimerait tout changement de signe.",
+          "methode": "Pseudo-périodique = alternance de signe **et** amplitude décroissante. Si l'un des deux manque, ce n'est pas ce régime.",
+          "points": 1,
+          "ref": "pc-rlc-libre-ce-que-l-on-observe-q1"
+        },
+        {
+          "notion": "Ce que l'on observe",
+          "difficulty": 2,
+          "statement": "Dans un circuit LC idéal, $u_C(t)$ est sinusoïdale de période $T_0 = 2{,}0\\ \\mathrm{ms}$. Quelle est la période de l'énergie électrique $E_e(t) = \\frac12 C u_C^2$ ?",
+          "options": [
+            {
+              "label": "$1{,}0\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$u_C^2$ repasse par la même valeur deux fois par période de $u_C$ : l'énergie varie à fréquence double, donc avec la période $\\frac{T_0}{2} = 1{,}0\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as repris la période de $u_C$ : en élevant au carré, les valeurs $+u$ et $-u$ donnent la même énergie, ce qui divise la période par deux."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as doublé la période : c'est la **fréquence** des échanges d'énergie qui double, donc la période est deux fois plus petite, pas deux fois plus grande."
+            },
+            {
+              "label": "$0{,}50\\ \\mathrm{ms}$",
+              "why": "Tu as divisé par $4$ : le carré d'une sinusoïde fait apparaître $\\cos(2\\omega t)$, soit un facteur $2$ sur la fréquence, pas $4$."
+            }
+          ],
+          "hint": "Écris $\\cos^2 x = \\frac{1 + \\cos 2x}{2}$ : quelle pulsation apparaît alors ?",
+          "solution": "Avec $u_C = U_0\\cos\\!\\left(\\frac{2\\pi}{T_0}t + \\varphi\\right)$, $$E_e = \\frac12 C U_0^2 \\cos^2\\!\\left(\\frac{2\\pi}{T_0}t + \\varphi\\right) = \\frac{C U_0^2}{4}\\left[1 + \\cos\\!\\left(\\frac{4\\pi}{T_0}t + 2\\varphi\\right)\\right].$$ La partie variable a pour pulsation $\\frac{4\\pi}{T_0}$, donc pour période $\\frac{T_0}{2} = 1{,}0\\ \\mathrm{ms}$. Contrôle sur la courbe : $E_e$ est maximale chaque fois que $|u_C|$ est maximale, c'est-à-dire **deux** fois par période de $u_C$.",
+          "methode": "Les énergies $E_e$ et $E_m$ évoluent à la fréquence **double** de celle de $u_C$ : leur période vaut $T_0/2$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-ce-que-l-on-observe-q2"
+        },
+        {
+          "notion": "Ce que l'on observe",
+          "difficulty": 2,
+          "statement": "Un circuit RLC comporte $L = 0{,}10\\ \\mathrm{H}$ et $C = 1{,}0\\ \\mu\\mathrm{F}$, ce qui donne $T_0 = 2\\pi\\sqrt{LC} = 1{,}99\\ \\mathrm{ms}$. On mesure sur l'oscillogramme une pseudo-période $T = 2{,}1\\ \\mathrm{ms}$. Que peut-on conclure ?",
+          "options": [
+            {
+              "label": "C'est normal : l'amortissement rend $T$ légèrement supérieure à $T_0$, dont elle se rapproche quand $R$ diminue.",
+              "correct": true,
+              "why": "La pseudo-période n'est pas rigoureusement $T_0$ ; elle lui est un peu supérieure et tend vers $T_0$ lorsque l'amortissement devient négligeable, ce qui est bien l'écart observé ici ($5\\ \\%$)."
+            },
+            {
+              "label": "La mesure est fausse : la pseudo-période d'un circuit RLC vaut exactement $T_0 = 2\\pi\\sqrt{LC}$.",
+              "why": "L'égalité $T = T_0$ n'est qu'une **approximation**, valable pour un faible amortissement ; elle n'est jamais exacte dès que $R \\neq 0$."
+            },
+            {
+              "label": "La mesure est fausse : l'amortissement rend toujours $T$ inférieure à $T_0$.",
+              "why": "Tu as inversé le sens de l'effet : l'amortissement ralentit l'oscillateur, donc allonge la pseudo-période."
+            },
+            {
+              "label": "La valeur de $C$ annoncée est erronée : avec $T = 2{,}1\\ \\mathrm{ms}$ il faudrait $C = 1{,}1\\ \\mu\\mathrm{F}$.",
+              "why": "Il n'y a pas lieu de corriger $C$ : l'écart s'explique entièrement par l'amortissement, qu'on a négligé en écrivant $T = T_0$."
+            }
+          ],
+          "hint": "L'égalité $T = T_0$ est-elle une loi exacte ou une approximation ? Dans quel sens l'amortissement agit-il ?",
+          "solution": "La période propre $T_0 = 2\\pi\\sqrt{LC} = 1{,}99\\ \\mathrm{ms}$ est celle de l'oscillateur **idéal** ($R = 0$). Dès que la résistance totale n'est pas nulle, l'oscillateur est freiné et sa pseudo-période est un peu plus grande : $T > T_0$. L'écart relatif ici vaut $\\frac{2{,}1 - 1{,}99}{1{,}99} \\approx 5\\ \\%$, tout à fait compatible avec un amortissement faible. On conserve donc l'approximation $T \\approx T_0$ pour les calculs, tout en sachant qu'elle n'est pas exacte. Contrôle : plus on augmente $R$, plus l'écart se creuse, jusqu'à la disparition des oscillations au régime critique.",
+          "methode": "Dans les exercices, on utilise $T \\approx T_0 = 2\\pi\\sqrt{LC}$, mais souviens-toi que $T$ est toujours un peu **plus grande** que $T_0$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-ce-que-l-on-observe-q3"
+        },
+        {
+          "notion": "Ce que l'on observe",
+          "difficulty": 3,
+          "statement": "On visualise simultanément $u_C$ (voie 1) et la tension $u_R = R_0\\,i$ aux bornes du conducteur ohmique (voie 2). À $t = 0$ on bascule le condensateur, chargé sous $U_0$, sur la bobine. Que montrent les deux voies au voisinage de $t = 0$ ?",
+          "options": [
+            {
+              "label": "Voie 1 part de $U_0$ avec une tangente horizontale ; voie 2 part de $0$.",
+              "correct": true,
+              "why": "$i(0) = 0$ par continuité du courant dans la bobine, donc $u_R(0)=0$ et, comme $i = C\\,\\frac{du_C}{dt}$, la pente de $u_C$ est nulle en $t=0$."
+            },
+            {
+              "label": "Voie 1 part de $U_0$ avec une pente maximale ; voie 2 part de sa valeur maximale.",
+              "why": "Tu as transposé le comportement d'un circuit RC, où le courant est maximal à l'instant initial ; la bobine interdit ici tout courant instantané."
+            },
+            {
+              "label": "Voie 1 part de $U_0$ avec une tangente horizontale ; voie 2 part de $\\frac{U_0}{R_0}$.",
+              "why": "La tangente horizontale est bien vue, mais elle signifie précisément $i(0) = 0$ : la voie 2 ne peut donc pas partir d'une valeur non nulle."
+            },
+            {
+              "label": "Voie 1 part de $0$ ; voie 2 part de $U_0$.",
+              "why": "Tu as échangé les deux voies : le condensateur est chargé, donc c'est $u_C$ qui vaut $U_0$ à l'instant initial, tandis que $u_R$ est nulle."
+            }
+          ],
+          "hint": "Quelle grandeur est forcément continue dans une bobine ? Traduis-la ensuite sur la pente de $u_C$.",
+          "solution": "L'énergie magnétique $\\frac12 L i^2$ ne peut pas varier brutalement, donc le courant est continu : $i(0) = 0$ puisqu'aucun courant ne circulait avant la fermeture. Par conséquent : la voie 2 affiche $u_R(0) = R_0\\,i(0) = 0$ ; et comme $i = C\\,\\dfrac{du_C}{dt}$, on a $\\dfrac{du_C}{dt}(0) = 0$, c'est-à-dire une tangente horizontale sur la voie 1, qui démarre à $u_C(0) = U_0$. Contrôle : c'est précisément ce qui distingue un circuit RLC d'un circuit RC, où la décharge démarre au contraire avec une pente non nulle et un courant maximal.",
+          "methode": "Traduis toujours $i(0)=0$ en « tangente horizontale sur $u_C(t)$ » : c'est la lecture graphique la plus rentable de ce chapitre.",
+          "points": 1,
+          "ref": "pc-rlc-libre-ce-que-l-on-observe-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Mesurer $T$ correctement",
+        "lesson": "Observation à l'oscilloscope",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-mesurer-t-correctement",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Mesurer $T$ correctement",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Mesurer $T$ correctement",
+          "difficulty": 1,
+          "statement": "La base de temps de l'oscilloscope est réglée sur $0{,}50\\ \\mathrm{ms}$ par division. Une pseudo-période complète occupe $4{,}0$ divisions à l'écran. Que vaut la pseudo-période $T$ ?",
+          "options": [
+            {
+              "label": "$T = 2{,}0\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$T = 4{,}0\\ \\mathrm{div} \\times 0{,}50\\ \\mathrm{ms/div} = 2{,}0\\ \\mathrm{ms}$ : on multiplie le nombre de divisions par le calibre."
+            },
+            {
+              "label": "$T = 8{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as divisé au lieu de multiplier : $\\frac{4{,}0}{0{,}50} = 8{,}0$. Le calibre est une durée **par** division, donc il multiplie."
+            },
+            {
+              "label": "$T = 0{,}13\\ \\mathrm{ms}$",
+              "why": "Tu as calculé $\\frac{0{,}50}{4{,}0} = 0{,}125\\ \\mathrm{ms}$ : tu as inversé le quotient."
+            },
+            {
+              "label": "$T = 4{,}5\\ \\mathrm{ms}$",
+              "why": "Tu as additionné $0{,}50 + 4{,}0$ : une durée par division et un nombre de divisions ne s'additionnent pas."
+            }
+          ],
+          "hint": "Le calibre s'exprime en millisecondes **par division** : quelle opération impose cette unité ?",
+          "solution": "Une durée se lit en multipliant le nombre de divisions par le calibre horizontal : $$T = 4{,}0 \\times 0{,}50 = 2{,}0\\ \\mathrm{ms}.$$ Contrôle des unités : $\\mathrm{div} \\times \\frac{\\mathrm{ms}}{\\mathrm{div}} = \\mathrm{ms}$ — seule la multiplication est homogène.",
+          "methode": "Lecture d'un oscillogramme : grandeur $=$ (nombre de divisions) $\\times$ (calibre). L'unité du calibre te dit déjà qu'il faut multiplier.",
+          "points": 1,
+          "ref": "pc-rlc-libre-mesurer-t-correctement-q1"
+        },
+        {
+          "notion": "Mesurer $T$ correctement",
+          "difficulty": 2,
+          "statement": "Sur un enregistrement, on compte $5$ maxima de $u_C$, le premier à $t = 0$ et le dernier à $t = 8{,}0\\ \\mathrm{ms}$. Quelle est la pseudo-période $T$ ?",
+          "options": [
+            {
+              "label": "$T = 2{,}0\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$5$ maxima délimitent $4$ intervalles d'une pseudo-période chacun : $T = \\frac{8{,}0}{4} = 2{,}0\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$T = 1{,}6\\ \\mathrm{ms}$",
+              "why": "Tu as divisé par le nombre de maxima : $\\frac{8{,}0}{5} = 1{,}6\\ \\mathrm{ms}$. Il faut diviser par le nombre d'**intervalles**, soit $5 - 1 = 4$."
+            },
+            {
+              "label": "$T = 2{,}7\\ \\mathrm{ms}$",
+              "why": "Tu as divisé par $3$ : entre le premier et le cinquième maximum il y a $4$ intervalles, pas $3$."
+            },
+            {
+              "label": "$T = 4{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as divisé par $2$ : tu n'as compté que les intervalles entre le premier, le troisième et le cinquième maximum, soit des durées de $2T$."
+            }
+          ],
+          "hint": "Dessine les maxima alignés : combien d'intervalles séparent le premier du dernier ?",
+          "solution": "Deux maxima consécutifs sont séparés d'exactement une pseudo-période. Avec $5$ maxima, on compte $5 - 1 = 4$ intervalles entre le premier et le dernier, donc $$T = \\frac{8{,}0}{4} = 2{,}0\\ \\mathrm{ms}.$$ Contrôle : les maxima tombent alors à $0$ ; $2{,}0$ ; $4{,}0$ ; $6{,}0$ et $8{,}0\\ \\mathrm{ms}$ — on en compte bien cinq.",
+          "methode": "$n$ maxima $\\Rightarrow$ $n-1$ pseudo-périodes. Ce « $-1$ » est l'erreur la plus fréquente de la lecture graphique.",
+          "points": 1,
+          "ref": "pc-rlc-libre-mesurer-t-correctement-q2"
+        },
+        {
+          "notion": "Mesurer $T$ correctement",
+          "difficulty": 2,
+          "statement": "Pour gagner en précision, on mesure la durée totale de $6$ pseudo-périodes successives : on lit $\\Delta t = 12{,}6\\ \\mathrm{ms}$. Que vaut $T$ ?",
+          "options": [
+            {
+              "label": "$T = 2{,}10\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$T = \\frac{\\Delta t}{6} = \\frac{12{,}6}{6} = 2{,}10\\ \\mathrm{ms}$ : on divise la durée totale par le nombre de pseudo-périodes mesurées."
+            },
+            {
+              "label": "$T = 1{,}80\\ \\mathrm{ms}$",
+              "why": "Tu as divisé par $7$ : $\\frac{12{,}6}{7} = 1{,}80\\ \\mathrm{ms}$. L'énoncé donne la durée de $6$ pseudo-périodes, pas de $7$."
+            },
+            {
+              "label": "$T = 2{,}52\\ \\mathrm{ms}$",
+              "why": "Tu as divisé par $5$ : $\\frac{12{,}6}{5} = 2{,}52\\ \\mathrm{ms}$, comme si tu avais compté $6$ maxima donc $5$ intervalles. Ici ce sont bien $6$ pseudo-périodes qui sont données."
+            },
+            {
+              "label": "$T = 75{,}6\\ \\mathrm{ms}$",
+              "why": "Tu as multiplié par $6$ : $12{,}6 \\times 6 = 75{,}6$. Une pseudo-période est plus courte que la durée de six d'entre elles."
+            }
+          ],
+          "hint": "La grandeur mesurée est une durée totale : quelle opération donne la durée d'une seule pseudo-période ?",
+          "solution": "Mesurer plusieurs pseudo-périodes d'un coup réduit l'incertitude de lecture, puis on moyenne : $$T = \\frac{\\Delta t}{6} = \\frac{12{,}6}{6} = 2{,}10\\ \\mathrm{ms}.$$ Contrôle : l'incertitude absolue sur $\\Delta t$ est divisée par $6$ elle aussi, ce qui est tout l'intérêt de la méthode. Ordre de grandeur cohérent avec les quelques millisecondes attendues pour $L$ de l'ordre de $0{,}1\\ \\mathrm{H}$ et $C$ de l'ordre du microfarad.",
+          "methode": "Mesure $n$ pseudo-périodes et divise par $n$ : la précision sur $T$ est multipliée par $n$. Vérifie seulement ce que compte l'énoncé : des périodes ou des maxima.",
+          "points": 1,
+          "ref": "pc-rlc-libre-mesurer-t-correctement-q3"
+        },
+        {
+          "notion": "Mesurer $T$ correctement",
+          "difficulty": 3,
+          "statement": "On mesure $T = 2{,}0\\ \\mathrm{ms}$ sur un circuit RLC faiblement amorti dont la bobine a pour inductance $L = 0{,}10\\ \\mathrm{H}$. En admettant $T \\approx T_0 = 2\\pi\\sqrt{LC}$, quelle est la capacité $C$ du condensateur ?",
+          "options": [
+            {
+              "label": "$C = 1{,}0\\times10^{-6}\\ \\mathrm{F}$",
+              "correct": true,
+              "why": "$C = \\frac{T^2}{4\\pi^2 L} = \\frac{(2{,}0\\times10^{-3})^2}{4\\pi^2 \\times 0{,}10} = \\frac{4{,}0\\times10^{-6}}{3{,}95} = 1{,}0\\times10^{-6}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$C = 4{,}0\\times10^{-5}\\ \\mathrm{F}$",
+              "why": "Tu as calculé $\\frac{T^2}{L} = \\frac{4{,}0\\times10^{-6}}{0{,}10} = 4{,}0\\times10^{-5}$ : tu as oublié de diviser par $4\\pi^2$."
+            },
+            {
+              "label": "$C = 5{,}1\\times10^{-4}\\ \\mathrm{F}$",
+              "why": "Tu as calculé $\\frac{T}{4\\pi^2 L} = \\frac{2{,}0\\times10^{-3}}{3{,}95} = 5{,}1\\times10^{-4}$ : tu n'as pas élevé $T$ au carré."
+            },
+            {
+              "label": "$C = 9{,}9\\times10^{5}\\ \\mathrm{F}$",
+              "why": "Tu as calculé $\\frac{4\\pi^2 L}{T^2} = \\frac{3{,}95}{4{,}0\\times10^{-6}} = 9{,}9\\times10^{5}$ : la formule est inversée, et une capacité d'un million de farads n'existe pas."
+            }
+          ],
+          "hint": "Élève d'abord $T_0 = 2\\pi\\sqrt{LC}$ au carré, puis isole $C$ avant tout calcul numérique.",
+          "solution": "De $T_0 = 2\\pi\\sqrt{LC}$ on tire, en élevant au carré, $T_0^2 = 4\\pi^2 LC$, donc $$C = \\frac{T^2}{4\\pi^2 L} = \\frac{(2{,}0\\times10^{-3})^2}{4\\pi^2 \\times 0{,}10} = \\frac{4{,}0\\times10^{-6}}{3{,}95} = 1{,}0\\times10^{-6}\\ \\mathrm{F} = 1{,}0\\ \\mu\\mathrm{F}.$$ Contrôle par la voie directe : $2\\pi\\sqrt{0{,}10 \\times 1{,}0\\times10^{-6}} = 1{,}99\\times10^{-3}\\ \\mathrm{s}$, soit bien $2{,}0\\ \\mathrm{ms}$ à la précision de la mesure.",
+          "methode": "Pour exploiter $T_0 = 2\\pi\\sqrt{LC}$, passe systématiquement par $T_0^2 = 4\\pi^2 LC$ : l'isolement de $L$ ou de $C$ devient immédiat.",
+          "points": 1,
+          "ref": "pc-rlc-libre-mesurer-t-correctement-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Exploiter l'amortissement",
+        "lesson": "Observation à l'oscilloscope",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-exploiter-l-amortissement",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Exploiter l'amortissement",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Exploiter l'amortissement",
+          "difficulty": 1,
+          "statement": "On refait la même expérience de décharge oscillante en remplaçant seulement le conducteur ohmique par un autre, de résistance plus grande ($L$ et $C$ inchangés). Qu'observe-t-on sur l'oscillogramme ?",
+          "options": [
+            {
+              "label": "Les oscillations s'éteignent plus vite : on en compte moins avant le retour au repos.",
+              "correct": true,
+              "why": "Une résistance plus grande dissipe l'énergie plus rapidement, donc l'amortissement augmente et le nombre d'oscillations visibles diminue."
+            },
+            {
+              "label": "Les oscillations s'éteignent plus lentement : on en compte davantage.",
+              "why": "Tu as inversé l'effet de la résistance : c'est elle qui consomme l'énergie du circuit, donc l'augmenter accélère l'extinction."
+            },
+            {
+              "label": "Le nombre d'oscillations visibles ne change pas, car il ne dépend que de $L$ et de $C$.",
+              "why": "$L$ et $C$ fixent la pseudo-période, pas l'amortissement : c'est $R$ qui décide de la vitesse d'extinction."
+            },
+            {
+              "label": "L'amplitude reste la même, mais les oscillations deviennent plus rapides.",
+              "why": "Deux erreurs : l'amplitude décroît plus vite, et l'augmentation de $R$ allonge légèrement la pseudo-période au lieu de la raccourcir."
+            }
+          ],
+          "hint": "Quel élément du circuit convertit l'énergie en chaleur ? Que se passe-t-il si on renforce son action ?",
+          "solution": "La résistance totale est la seule responsable des pertes : la puissance dissipée vaut $R\\,i^2$. En augmentant $R$, l'énergie initiale $\\frac12 C U_0^2$ est consommée plus rapidement, l'amplitude décroît plus vite d'une oscillation à la suivante et l'on compte donc moins d'oscillations visibles. Contrôle : en poussant $R$ jusqu'à la valeur critique, le nombre d'oscillations tombe à zéro — le régime devient apériodique.",
+          "methode": "$L$ et $C$ fixent la pseudo-période ; $R$ fixe l'amortissement. Sépare toujours ces deux rôles.",
+          "points": 1,
+          "ref": "pc-rlc-libre-exploiter-l-amortissement-q1"
+        },
+        {
+          "notion": "Exploiter l'amortissement",
+          "difficulty": 2,
+          "statement": "Les maxima successifs de $u_C$ relevés sur un oscillogramme valent $8{,}0\\ \\mathrm{V}$ ; $6{,}4\\ \\mathrm{V}$ ; $5{,}1\\ \\mathrm{V}$. Quelle valeur attend-on pour le quatrième maximum ?",
+          "options": [
+            {
+              "label": "$4{,}1\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "Le rapport est constant : $\\frac{6{,}4}{8{,}0} = 0{,}80$, donc le quatrième maximum vaut $5{,}12 \\times 0{,}80 = 4{,}1\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$3{,}8\\ \\mathrm{V}$",
+              "why": "Tu as prolongé linéairement en retirant le dernier écart : $5{,}12 - 1{,}28 = 3{,}84\\ \\mathrm{V}$. Or la décroissance est géométrique, pas arithmétique."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{V}$",
+              "why": "Tu as divisé $8{,}0$ par $2$ : rien dans les données ne dit que l'amplitude est divisée par deux, ici le facteur est $0{,}80$."
+            },
+            {
+              "label": "$3{,}3\\ \\mathrm{V}$",
+              "why": "Tu as appliqué le facteur deux fois : $5{,}12 \\times 0{,}80^2 = 3{,}3\\ \\mathrm{V}$. Il n'y a qu'une pseudo-période entre le troisième et le quatrième maximum."
+            }
+          ],
+          "hint": "Calcule le rapport de deux maxima consécutifs : est-il constant ? Qu'en déduis-tu pour le suivant ?",
+          "solution": "Vérifions le caractère géométrique de la suite : $\\frac{6{,}4}{8{,}0} = 0{,}80$ et $\\frac{5{,}1}{6{,}4} = 0{,}80$. Le facteur par pseudo-période vaut donc $0{,}80$, et $$U_4 = 5{,}12 \\times 0{,}80 = 4{,}1\\ \\mathrm{V}.$$ Contrôle : $U_4 = U_1 \\times 0{,}80^3 = 8{,}0 \\times 0{,}512 = 4{,}1\\ \\mathrm{V}$ — même résultat par l'autre voie. On peut aussi en déduire $\\lambda = \\ln\\frac{1}{0{,}80} = 0{,}22$.",
+          "methode": "Sur un oscillogramme amorti, teste le **rapport** de deux maxima consécutifs : il est constant, alors que la différence ne l'est pas.",
+          "points": 1,
+          "ref": "pc-rlc-libre-exploiter-l-amortissement-q2"
+        },
+        {
+          "notion": "Exploiter l'amortissement",
+          "difficulty": 2,
+          "statement": "Dans un circuit RLC, l'amplitude des oscillations est divisée par $2$ à chaque pseudo-période, et $T = 2{,}0\\ \\mathrm{ms}$. Au bout de combien de temps l'amplitude devient-elle, pour la première fois, inférieure au dixième de sa valeur initiale ?",
+          "options": [
+            {
+              "label": "$8{,}0\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "Il faut $2^n > 10$, donc $n = 4$ (car $2^4 = 16$) : la durée vaut $4T = 4\\times2{,}0 = 8{,}0\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{ms}$",
+              "why": "Tu t'es arrêté à $n = 3$ : $2^3 = 8 < 10$, l'amplitude n'est alors divisée que par $8$, pas encore par $10$."
+            },
+            {
+              "label": "$10\\ \\mathrm{ms}$",
+              "why": "Tu as pris $n = 5$ : $2^4 = 16$ suffit déjà à dépasser $10$, donc $4$ pseudo-périodes suffisent."
+            },
+            {
+              "label": "$20\\ \\mathrm{ms}$",
+              "why": "Tu as pris $n = 10$, comme s'il fallait $10$ pseudo-périodes pour diviser par $10$ : la décroissance est géométrique, chaque pseudo-période divise déjà par $2$."
+            }
+          ],
+          "hint": "Cherche le plus petit entier $n$ tel que $2^n$ dépasse $10$, puis multiplie-le par $T$.",
+          "solution": "Après $n$ pseudo-périodes l'amplitude est divisée par $2^n$. La condition $\\frac{1}{2^n} < \\frac{1}{10}$ s'écrit $2^n > 10$ : $2^3 = 8$ ne suffit pas, $2^4 = 16$ convient. Donc $n = 4$ et $$t = 4T = 4 \\times 2{,}0 = 8{,}0\\ \\mathrm{ms}.$$ Contrôle par les valeurs : en partant de $8{,}0\\ \\mathrm{V}$, on obtient $4{,}0$ ; $2{,}0$ ; $1{,}0$ ; $0{,}50\\ \\mathrm{V}$ — et $0{,}50 < 0{,}80$, le dixième de $8{,}0$, alors que $1{,}0$ ne l'était pas.",
+          "methode": "Décroissance géométrique : raisonne sur le nombre de pseudo-périodes $n$ tel que le facteur de division dépasse le seuil, puis convertis en durée par $t = nT$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-exploiter-l-amortissement-q3"
+        },
+        {
+          "notion": "Exploiter l'amortissement",
+          "difficulty": 3,
+          "statement": "Deux circuits RLC ont la même capacité $C$ et la même résistance totale $R$, mais $L_2 = 4L_1$. On admet $T \\approx 2\\pi\\sqrt{LC}$ et $\\lambda = \\dfrac{R\\,T}{2L}$. Comment se comparent-ils ?",
+          "options": [
+            {
+              "label": "$T_2 = 2T_1$ et le circuit 2 est moins amorti : $\\lambda_2 = \\frac{\\lambda_1}{2}$.",
+              "correct": true,
+              "why": "$T$ varie comme $\\sqrt{L}$, donc $T_2 = 2T_1$ ; et $\\lambda = \\frac{RT}{2L}$ est multiplié par $\\frac{2}{4} = \\frac12$."
+            },
+            {
+              "label": "$T_2 = 4T_1$ et le circuit 2 est moins amorti : $\\lambda_2 = \\frac{\\lambda_1}{4}$.",
+              "why": "Tu as fait varier $T$ comme $L$ : la période varie comme $\\sqrt{L}$, donc multiplier $L$ par $4$ ne multiplie $T$ que par $2$."
+            },
+            {
+              "label": "$T_2 = 2T_1$ et le circuit 2 est plus amorti : $\\lambda_2 = 2\\lambda_1$.",
+              "why": "La pseudo-période est juste, mais tu n'as tenu compte que du numérateur de $\\lambda = \\frac{RT}{2L}$ : le dénominateur est multiplié par $4$, donc $\\lambda$ diminue."
+            },
+            {
+              "label": "$T_2 = \\frac{T_1}{2}$ et le circuit 2 est plus amorti : $\\lambda_2 = 2\\lambda_1$.",
+              "why": "Tu as fait décroître $T$ avec $L$ : $T = 2\\pi\\sqrt{LC}$ **augmente** avec l'inductance."
+            }
+          ],
+          "hint": "Traite séparément les deux formules : comment chacune réagit-elle à $L \\rightarrow 4L$ ?",
+          "solution": "Pour la pseudo-période : $T \\approx 2\\pi\\sqrt{LC} \\propto \\sqrt{L}$, donc $\\dfrac{T_2}{T_1} = \\sqrt{4} = 2$, soit $T_2 = 2T_1$. Pour le décrément : $$\\frac{\\lambda_2}{\\lambda_1} = \\frac{R T_2 / (2L_2)}{R T_1 / (2L_1)} = \\frac{T_2}{T_1} \\times \\frac{L_1}{L_2} = 2 \\times \\frac14 = \\frac12.$$ Le circuit 2 oscille donc deux fois plus lentement et perd deux fois moins d'amplitude par oscillation : il est moins amorti. Contrôle qualitatif : une grande inductance stocke beaucoup d'énergie magnétique pour un courant donné, le circuit résiste donc mieux à la dissipation.",
+          "methode": "Pour comparer deux circuits, forme le **rapport** des formules littérales : les constantes disparaissent et seuls les facteurs modifiés subsistent.",
+          "points": 1,
+          "ref": "pc-rlc-libre-exploiter-l-amortissement-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Sources d'erreur",
+        "lesson": "Observation à l'oscilloscope",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-sources-d-erreur",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Sources d'erreur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 1,
+          "statement": "Pourquoi faut-il impérativement tenir compte de la résistance $r$ de la bobine dans l'étude d'un circuit RLC en oscillations libres ?",
+          "options": [
+            {
+              "label": "Parce que c'est la résistance totale $R_0 + r$ qui figure dans l'équation différentielle et qui fixe l'amortissement.",
+              "correct": true,
+              "why": "La bobine réelle équivaut à une bobine idéale en série avec un conducteur ohmique $r$ : $r$ s'ajoute donc à $R_0$ partout où la résistance intervient."
+            },
+            {
+              "label": "Parce que $r$ modifie la valeur de l'inductance $L$ de la bobine.",
+              "why": "$L$ et $r$ sont deux caractéristiques indépendantes de la bobine : $r$ ne change pas $L$."
+            },
+            {
+              "label": "Parce que $r$ modifie la période propre $T_0 = 2\\pi\\sqrt{LC}$.",
+              "why": "La période propre ne dépend que de $L$ et de $C$ ; $r$ agit sur l'amortissement, donc un peu sur la pseudo-période $T$, mais pas sur $T_0$."
+            },
+            {
+              "label": "Parce que $r$ empêche le condensateur de se décharger complètement.",
+              "why": "Le condensateur finit toujours déchargé ; $r$ change seulement la vitesse à laquelle l'énergie est dissipée."
+            }
+          ],
+          "hint": "À quel modèle équivalent correspond une bobine réelle ? Où apparaît alors $r$ dans les équations ?",
+          "solution": "Une bobine réelle se modélise par une bobine idéale d'inductance $L$ en série avec un conducteur ohmique de résistance $r$. Dans la maille, $r$ est donc traversée par le même courant que $R_0$, et toutes les formules du chapitre s'écrivent avec la résistance totale $R = R_0 + r$ : équation différentielle $LC\\,u_C'' + RC\\,u_C' + u_C = 0$, décrément $\\lambda = \\frac{RT}{2L}$, résistance critique, puissance dissipée $R\\,i^2$. Contrôle : négliger $r$ revient à sous-estimer l'amortissement, donc à prévoir plus d'oscillations qu'on n'en observe.",
+          "methode": "Remplace mentalement toute bobine réelle par « $L$ en série avec $r$ » : la résistance totale apparaît alors d'elle-même.",
+          "points": 1,
+          "ref": "pc-rlc-libre-sources-d-erreur-q1"
+        },
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 2,
+          "statement": "Un élève mesure la durée séparant un maximum de $u_C$ et le **minimum** qui le suit ; il lit $1{,}0\\ \\mathrm{ms}$ et annonce $T = 1{,}0\\ \\mathrm{ms}$. Qu'en penses-tu ?",
+          "options": [
+            {
+              "label": "Il a mesuré $\\frac{T}{2}$ : la pseudo-période vaut $2{,}0\\ \\mathrm{ms}$.",
+              "correct": true,
+              "why": "Un maximum et le minimum suivant sont séparés d'une demi-pseudo-période, donc $T = 2 \\times 1{,}0 = 2{,}0\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "Il a mesuré $T$ correctement : la pseudo-période vaut $1{,}0\\ \\mathrm{ms}$.",
+              "why": "Une pseudo-période se mesure entre deux maxima **consécutifs** (ou deux minima consécutifs), pas entre un maximum et le minimum suivant."
+            },
+            {
+              "label": "Il a mesuré $2T$ : la pseudo-période vaut $0{,}50\\ \\mathrm{ms}$.",
+              "why": "Tu as supposé qu'il avait balayé deux périodes : du maximum au minimum suivant, il n'y a qu'une **demi**-période."
+            },
+            {
+              "label": "Il a mesuré $\\frac{T}{4}$ : la pseudo-période vaut $4{,}0\\ \\mathrm{ms}$.",
+              "why": "Le quart de période sépare un maximum du passage par zéro suivant, pas du minimum."
+            }
+          ],
+          "hint": "Place sur un schéma un maximum, le zéro suivant, puis le minimum : à quelle fraction de $T$ correspond chaque étape ?",
+          "solution": "Sur une oscillation, un maximum et le minimum qui le suit sont séparés d'une demi-pseudo-période : le quart de période mène au passage par zéro, la moitié au minimum. La lecture de l'élève vaut donc $\\frac{T}{2} = 1{,}0\\ \\mathrm{ms}$, d'où $$T = 2 \\times 1{,}0 = 2{,}0\\ \\mathrm{ms}.$$ Contrôle : mesurée entre deux maxima consécutifs, la durée serait bien de $2{,}0\\ \\mathrm{ms}$, cohérente avec $L$ de l'ordre de $0{,}1\\ \\mathrm{H}$ et $C$ de l'ordre du microfarad.",
+          "methode": "Mesure toujours $T$ entre deux extrema de **même nature**, ou mieux, sur plusieurs pseudo-périodes à la fois.",
+          "points": 1,
+          "ref": "pc-rlc-libre-sources-d-erreur-q2"
+        },
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 2,
+          "statement": "On calcule $T_0 = 2\\pi\\sqrt{LC} = 1{,}99\\ \\mathrm{ms}$, et on mesure sur l'écran $T = 2{,}1\\ \\mathrm{ms}$. Quelle est la bonne interprétation de cet écart ?",
+          "options": [
+            {
+              "label": "L'amortissement allonge légèrement la pseudo-période : on a toujours $T > T_0$, et $T \\rightarrow T_0$ quand $R \\rightarrow 0$.",
+              "correct": true,
+              "why": "La relation $T = T_0$ n'est qu'une approximation de faible amortissement ; la pseudo-période réelle est toujours un peu supérieure à la période propre."
+            },
+            {
+              "label": "Le calcul de $T_0$ est faux : il faut écrire $T_0 = \\frac{2\\pi}{\\sqrt{LC}}$.",
+              "why": "Cette formule donne la pulsation propre en $\\mathrm{rad\\,s^{-1}}$, pas une durée. La période propre est bien $T_0 = 2\\pi\\sqrt{LC}$."
+            },
+            {
+              "label": "L'écart ne peut venir que d'une erreur de lecture : en théorie $T = T_0$ exactement.",
+              "why": "Non : même avec une lecture parfaite, $T$ diffère de $T_0$ dès que la résistance totale n'est pas nulle."
+            },
+            {
+              "label": "La bobine modifie la capacité effective du condensateur, qui n'est plus celle annoncée.",
+              "why": "Une bobine ne modifie pas la capacité d'un condensateur ; l'écart vient de l'amortissement, pas d'un changement de $C$."
+            }
+          ],
+          "hint": "L'égalité $T = T_0$ est-elle exacte, ou valable seulement dans une limite ? Et dans quel sens l'écart se fait-il ?",
+          "solution": "$T_0 = 2\\pi\\sqrt{LC}$ est la période de l'oscillateur **idéal** ($R = 0$). Pour $R \\neq 0$, l'oscillateur est freiné : sa pseudo-période est un peu plus longue, $T > T_0$, et elle tend vers $T_0$ quand l'amortissement devient négligeable. L'écart relatif ici, $\\frac{2{,}1 - 1{,}99}{1{,}99} \\approx 5\\ \\%$, est typique d'un amortissement faible et ne traduit aucune erreur. Contrôle : en augmentant $R$, l'écart se creuse jusqu'à ce que les oscillations disparaissent au régime critique.",
+          "methode": "Retiens l'inégalité $T > T_0$, avec $T \\approx T_0$ seulement si l'amortissement est faible : c'est une des questions de cours les plus fréquentes.",
+          "points": 1,
+          "ref": "pc-rlc-libre-sources-d-erreur-q3"
+        },
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 3,
+          "statement": "On exploite $\\lambda = \\dfrac{R\\,T}{2L}$ avec $T = 2{,}0\\ \\mathrm{ms}$ et $L = 0{,}10\\ \\mathrm{H}$. Un élève néglige la résistance de la bobine et prend $R = 50\\ \\Omega$ au lieu de la résistance totale $R_0 + r = 60\\ \\Omega$. De quel pourcentage sous-estime-t-il le décrément logarithmique ?",
+          "options": [
+            {
+              "label": "$17\\ \\%$",
+              "correct": true,
+              "why": "$\\lambda_{\\text{vrai}} = \\frac{60\\times2{,}0\\times10^{-3}}{0{,}20} = 0{,}60$ et $\\lambda_{\\text{calc}} = 0{,}50$ ; l'écart relatif vaut $\\frac{0{,}60-0{,}50}{0{,}60} = 0{,}17$."
+            },
+            {
+              "label": "$20\\ \\%$",
+              "why": "Tu as rapporté l'écart à la valeur **calculée** : $\\frac{0{,}10}{0{,}50} = 0{,}20$. Un écart relatif se rapporte à la valeur de référence, ici $\\lambda_{\\text{vrai}}$."
+            },
+            {
+              "label": "$10\\ \\%$",
+              "why": "Tu as pris l'écart des résistances, $60 - 50 = 10\\ \\Omega$, pour un pourcentage : c'est une résistance en ohms, pas un écart relatif."
+            },
+            {
+              "label": "$83\\ \\%$",
+              "why": "Tu as calculé le rapport $\\frac{\\lambda_{\\text{calc}}}{\\lambda_{\\text{vrai}}} = \\frac{50}{60} = 0{,}83$ : c'est la fraction conservée, pas l'écart."
+            }
+          ],
+          "hint": "Calcule les deux valeurs de $\\lambda$, puis rapporte leur différence à la valeur correcte.",
+          "solution": "Avec la résistance totale : $\\lambda_{\\text{vrai}} = \\dfrac{60 \\times 2{,}0\\times10^{-3}}{2 \\times 0{,}10} = \\dfrac{0{,}12}{0{,}20} = 0{,}60$. En négligeant $r$ : $\\lambda_{\\text{calc}} = \\dfrac{50 \\times 2{,}0\\times10^{-3}}{0{,}20} = 0{,}50$. L'écart relatif vaut $$\\frac{\\lambda_{\\text{vrai}} - \\lambda_{\\text{calc}}}{\\lambda_{\\text{vrai}}} = \\frac{0{,}60 - 0{,}50}{0{,}60} = 0{,}167 \\approx 17\\ \\%.$$ Contrôle : comme $\\lambda$ est proportionnel à $R$, on pouvait répondre directement par $1 - \\frac{50}{60} = \\frac{1}{6} \\approx 17\\ \\%$, sans calculer les deux décréments.",
+          "methode": "Un écart relatif se rapporte toujours à la valeur de référence (ici la valeur exacte). Et quand une grandeur est proportionnelle à une autre, travaille directement sur le rapport.",
+          "points": 1,
+          "ref": "pc-rlc-libre-sources-d-erreur-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'analogie électromécanique",
+        "lesson": "Approfondissement — Oscillations libres RLC",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-l-analogie-electromecanique",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "L'analogie électromécanique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'analogie électromécanique",
+          "difficulty": 3,
+          "statement": "Un pendule élastique horizontal de masse $m = 0{,}20\\ \\mathrm{kg}$ et de raideur $k = 80\\ \\mathrm{N\\,m^{-1}}$ oscille librement. On veut construire un circuit LC qui lui soit analogue, avec la correspondance $m \\leftrightarrow L$, $k \\leftrightarrow \\dfrac{1}{C}$, $x \\leftrightarrow u_C$. On dispose d'une bobine idéale $L = 0{,}20\\ \\mathrm{H}$. Quelle capacité donne au circuit la même période propre que le pendule ?",
+          "options": [
+            {
+              "label": "$12{,}5\\ \\mathrm{mF}$",
+              "correct": true,
+              "why": "Les deux périodes propres s'écrivent $2\\pi\\sqrt{m/k}$ et $2\\pi\\sqrt{LC}$ : l'égalité donne $LC = \\dfrac{m}{k}$, donc $C = \\dfrac{m}{kL} = \\dfrac{0{,}20}{80\\times0{,}20} = 1{,}25\\times10^{-2}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$2{,}5\\ \\mathrm{mF}$",
+              "why": "Tu as écrit $C = \\dfrac{m}{k} = 2{,}5\\times10^{-3}\\ \\mathrm{F}$ en oubliant de diviser par $L$ : c'est le produit $LC$, et non $C$, qui vaut $m/k$."
+            },
+            {
+              "label": "$250\\ \\mathrm{mF}$",
+              "why": "Tu as oublié d'élever au carré : tu as posé $LC = \\dfrac{T_0}{2\\pi} = 0{,}050$ au lieu de $\\left(\\dfrac{T_0}{2\\pi}\\right)^2 = 2{,}5\\times10^{-3}$, ce qui donne $C = 0{,}25\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$0{,}50\\ \\mathrm{mF}$",
+              "why": "Tu as multiplié par $L$ au lieu de diviser : $\\dfrac{mL}{k} = 5{,}0\\times10^{-4}\\ \\mathrm{F}$. Pose l'égalité $LC = m/k$ et isole $C$ proprement."
+            }
+          ],
+          "hint": "Écris la période propre de chaque oscillateur, puis identifie les deux expressions sous la racine.",
+          "solution": "Pour le pendule, $T_0 = 2\\pi\\sqrt{\\dfrac{m}{k}} = 2\\pi\\sqrt{\\dfrac{0{,}20}{80}} = 2\\pi\\times0{,}050 = 0{,}314\\ \\mathrm{s}$. Pour le circuit, $T_0 = 2\\pi\\sqrt{LC}$. L'égalité des périodes impose $$LC = \\frac{m}{k} = 2{,}5\\times10^{-3}\\quad\\Longrightarrow\\quad C = \\frac{2{,}5\\times10^{-3}}{0{,}20} = 1{,}25\\times10^{-2}\\ \\mathrm{F} = 12{,}5\\ \\mathrm{mF}.$$ Contrôle : $2\\pi\\sqrt{0{,}20\\times1{,}25\\times10^{-2}} = 2\\pi\\sqrt{2{,}5\\times10^{-3}} = 0{,}314\\ \\mathrm{s}$ — on retrouve bien la période du pendule. Remarque : l'analogie associe $k$ à $1/C$, donc une raideur élevée correspond à une **petite** capacité.",
+          "methode": "Dans l'analogie électromécanique, $L$ joue le rôle de $m$ et $\\dfrac{1}{C}$ celui de $k$ : transpose toujours en écrivant les deux périodes propres, puis identifie terme à terme.",
+          "points": 1,
+          "ref": "pc-rlc-libre-l-analogie-electromecanique-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'entretien des oscillations",
+        "lesson": "Approfondissement — Oscillations libres RLC",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-l-entretien-des-oscillations",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "L'entretien des oscillations",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'entretien des oscillations",
+          "difficulty": 3,
+          "statement": "Un circuit RLC en oscillations libres a une résistance totale $R = 40\\ \\Omega$. Pour entretenir les oscillations, on insère en série un dispositif qui délivre une tension $u_G = k\\,i$ proportionnelle à l'intensité, orientée dans le sens du courant. Quelle valeur de $k$ rend la tension $u_C$ sinusoïdale de période propre $T_0 = 2\\pi\\sqrt{LC}$ ?",
+          "options": [
+            {
+              "label": "$k = 40\\ \\Omega$",
+              "correct": true,
+              "why": "La loi des mailles donne $LC\\,\\dfrac{d^2u_C}{dt^2} + (R-k)C\\,\\dfrac{du_C}{dt} + u_C = 0$ : le terme d'amortissement disparaît pour $k = R = 40\\ \\Omega$."
+            },
+            {
+              "label": "$k = 20\\ \\Omega$",
+              "why": "Tu as pris $k = \\dfrac{R}{2} = 20\\ \\Omega$, sans doute en pensant au $\\dfrac{R}{2L}$ de l'enveloppe. Mais c'est le coefficient $(R-k)C$ qui doit s'annuler, donc $k = R$, pas $R/2$."
+            },
+            {
+              "label": "$k = 80\\ \\Omega$",
+              "why": "Tu as pris $k = 2R = 80\\ \\Omega$ : le coefficient devient $(R-2R)C = -RC$, non nul et négatif — l'amplitude serait amplifiée au lieu de rester constante."
+            },
+            {
+              "label": "$k = -40\\ \\Omega$",
+              "why": "Tu as choisi le signe opposé, $k = -R$ : le coefficient devient $(R+R)C = 2RC$, ce dispositif doublerait l'amortissement au lieu de le compenser."
+            }
+          ],
+          "hint": "Écris la loi des mailles avec ce générateur, puis regarde quel coefficient de l'équation différentielle doit s'annuler pour obtenir une sinusoïde.",
+          "solution": "Avec l'orientation choisie, la loi des mailles s'écrit $u_G = u_R + u_L + u_C$, soit $k\\,i = R\\,i + L\\,\\dfrac{di}{dt} + u_C$. En remplaçant $i = C\\,\\dfrac{du_C}{dt}$ : $$LC\\,\\frac{d^2u_C}{dt^2} + (R-k)\\,C\\,\\frac{du_C}{dt} + u_C = 0.$$ Les oscillations sont sinusoïdales non amorties si et seulement si le terme en $\\dfrac{du_C}{dt}$ disparaît, c'est-à-dire $R - k = 0$, donc $k = R = 40\\ \\Omega$. L'équation devient alors $LC\\,\\dfrac{d^2u_C}{dt^2} + u_C = 0$, de période propre $T_0 = 2\\pi\\sqrt{LC}$. Interprétation énergétique : à chaque instant le dispositif fournit la puissance $u_G\\,i = R\\,i^2$, exactement celle que la résistance dissipe par effet Joule — le bilan énergétique du circuit est nul.",
+          "methode": "Entretenir les oscillations = annuler le terme en $\\dfrac{du_C}{dt}$. Un générateur $u_G = k\\,i$ y parvient pour $k = R$, car il restitue à chaque instant la puissance $R\\,i^2$ perdue.",
+          "points": 1,
+          "ref": "pc-rlc-libre-l-entretien-des-oscillations-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Résistance critique et amortissement",
+        "lesson": "Approfondissement — Oscillations libres RLC",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-resistance-critique-et-amortissement",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Résistance critique et amortissement",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Résistance critique et amortissement",
+          "difficulty": 3,
+          "statement": "Un condensateur $C = 1{,}0\\ \\mu\\mathrm{F}$ chargé est basculé sur une bobine $(L = 0{,}10\\ \\mathrm{H}\\ ;\\ r = 50\\ \\Omega)$ en série avec un conducteur ohmique $R_0 = 500\\ \\Omega$. On admet que le régime reste pseudo-périodique tant que la résistance totale du circuit est inférieure à la résistance critique $R_c = 2\\sqrt{\\dfrac{L}{C}}$. Que prévoit-on ?",
+          "options": [
+            {
+              "label": "Régime pseudo-périodique : $R = R_0 + r = 550\\ \\Omega$ est inférieur à $R_c = 6{,}3\\times10^{2}\\ \\Omega$.",
+              "correct": true,
+              "why": "$R_c = 2\\sqrt{\\dfrac{0{,}10}{1{,}0\\times10^{-6}}} = 2\\sqrt{1{,}0\\times10^{5}} = 6{,}3\\times10^{2}\\ \\Omega$, et $550\\ \\Omega < 632\\ \\Omega$ : les oscillations subsistent."
+            },
+            {
+              "label": "Régime apériodique : $R = 550\\ \\Omega$ dépasse $R_c = \\sqrt{\\dfrac{L}{C}} = 3{,}2\\times10^{2}\\ \\Omega$.",
+              "why": "Tu as oublié le facteur $2$ : $\\sqrt{L/C} = 3{,}2\\times10^{2}\\ \\Omega$, mais la résistance critique vaut $2\\sqrt{L/C} = 6{,}3\\times10^{2}\\ \\Omega$, que $550\\ \\Omega$ ne dépasse pas."
+            },
+            {
+              "label": "Régime apériodique : $R = 550\\ \\Omega$ dépasse $R_c = 2\\sqrt{\\dfrac{C}{L}} = 6{,}3\\times10^{-3}\\ \\Omega$.",
+              "why": "Tu as inversé le rapport sous la racine : $2\\sqrt{C/L} = 6{,}3\\times10^{-3}\\ \\Omega$. Une résistance critique de quelques milliohms devrait t'alerter sur l'inversion."
+            },
+            {
+              "label": "Régime critique : $R = 550\\ \\Omega$ est à moins de $15\\ \\%$ de $R_c = 6{,}3\\times10^{2}\\ \\Omega$.",
+              "why": "Le régime critique correspond à l'égalité **exacte** $R = R_c$. Dès que $R < R_c$, même de peu, le régime est pseudo-périodique : on voit encore des oscillations, simplement très amorties."
+            }
+          ],
+          "hint": "Calcule d'abord $R_c$, en faisant attention au sens du rapport sous la racine, puis n'oublie pas que la bobine apporte elle aussi de la résistance.",
+          "solution": "La résistance totale du circuit est $R = R_0 + r = 500 + 50 = 550\\ \\Omega$. La résistance critique vaut $$R_c = 2\\sqrt{\\frac{L}{C}} = 2\\sqrt{\\frac{0{,}10}{1{,}0\\times10^{-6}}} = 2\\sqrt{1{,}0\\times10^{5}} = 2\\times316 = 6{,}3\\times10^{2}\\ \\Omega.$$ Comme $550\\ \\Omega < 632\\ \\Omega$, le régime est **pseudo-périodique** : on observera encore des oscillations, mais fortement amorties car $R$ n'est que $13\\ \\%$ en dessous de $R_c$. Contrôle de l'ordre de grandeur : $\\sqrt{L/C}$ s'exprime bien en ohms, $\\sqrt{\\mathrm{H/F}} = \\sqrt{\\Omega^2} = \\Omega$ — le sens du rapport est donc le bon.",
+          "methode": "Compare toujours la résistance **totale** $R_0 + r$ à $R_c = 2\\sqrt{L/C}$ : $R < R_c$ pseudo-périodique, $R = R_c$ critique, $R > R_c$ apériodique.",
+          "points": 1,
+          "ref": "pc-rlc-libre-resistance-critique-et-amortissement-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Applications",
+        "lesson": "Approfondissement — Oscillations libres RLC",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-libre-applications",
+      "chapter": "pc-rlc-libre",
+      "kind": "qcu",
+      "title": "Applications",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Applications",
+          "difficulty": 3,
+          "statement": "Le circuit oscillant d'un récepteur radio est constitué d'une bobine d'inductance $L = 0{,}20\\ \\mathrm{mH}$ et d'un condensateur de capacité réglable. On néglige l'amortissement, de sorte que le circuit sélectionne la fréquence propre $f_0 = \\dfrac{1}{2\\pi\\sqrt{LC}}$. Sur quelle capacité faut-il régler le condensateur pour capter une station émettant à $f = 1{,}0\\ \\mathrm{MHz}$ ?",
+          "options": [
+            {
+              "label": "$1{,}3\\times10^{-10}\\ \\mathrm{F}$",
+              "correct": true,
+              "why": "De $f = \\dfrac{1}{2\\pi\\sqrt{LC}}$ on tire $C = \\dfrac{1}{4\\pi^2 f^2 L} = \\dfrac{1}{4\\pi^2\\times(1{,}0\\times10^{6})^2\\times2{,}0\\times10^{-4}} = 1{,}3\\times10^{-10}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$1{,}3\\times10^{-4}\\ \\mathrm{F}$",
+              "why": "Tu as oublié d'élever la fréquence au carré : $\\dfrac{1}{4\\pi^2 f L} = 1{,}3\\times10^{-4}\\ \\mathrm{F}$. En passant de $f$ à $C$, c'est $f^2$ qui apparaît au dénominateur."
+            },
+            {
+              "label": "$8{,}0\\times10^{-4}\\ \\mathrm{F}$",
+              "why": "Tu as utilisé $f = \\dfrac{1}{2\\pi LC}$ (sans racine) : cela donne $C = \\dfrac{1}{2\\pi f L} = 8{,}0\\times10^{-4}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$5{,}0\\times10^{-9}\\ \\mathrm{F}$",
+              "why": "Tu as confondu fréquence et pulsation : en écrivant $C = \\dfrac{1}{\\omega^2 L}$ avec $\\omega = f$ on obtient $5{,}0\\times10^{-9}\\ \\mathrm{F}$. Il manque le facteur $(2\\pi)^2 \\approx 39{,}5$."
+            }
+          ],
+          "hint": "Isole $C$ dans l'expression de $f_0$ en élevant au carré, et convertis l'inductance en henrys avant de calculer.",
+          "solution": "On convertit d'abord : $L = 0{,}20\\ \\mathrm{mH} = 2{,}0\\times10^{-4}\\ \\mathrm{H}$. Le circuit capte la station quand sa fréquence propre vaut celle de l'émetteur : $f = \\dfrac{1}{2\\pi\\sqrt{LC}}$. En élevant au carré, $f^2 = \\dfrac{1}{4\\pi^2 LC}$, donc $$C = \\frac{1}{4\\pi^2 f^2 L} = \\frac{1}{4\\pi^2\\times(1{,}0\\times10^{6})^2\\times2{,}0\\times10^{-4}} = 1{,}3\\times10^{-10}\\ \\mathrm{F} = 127\\ \\mathrm{pF}.$$ Contrôle par le retour : $2\\pi\\sqrt{2{,}0\\times10^{-4}\\times1{,}27\\times10^{-10}} = 1{,}0\\times10^{-6}\\ \\mathrm{s}$, soit $T_0 = 1{,}0\\ \\mu\\mathrm{s}$ et $f_0 = 1{,}0\\ \\mathrm{MHz}$. L'ordre de grandeur, quelques centaines de picofarads, est bien celui des condensateurs variables d'un poste radio.",
+          "methode": "Pour accorder un circuit oscillant sur une fréquence, pars de $f_0 = \\dfrac{1}{2\\pi\\sqrt{LC}}$, élève au carré, puis isole l'inconnue : $C = \\dfrac{1}{4\\pi^2 f_0^2 L}$.",
+          "points": 1,
+          "ref": "pc-rlc-libre-applications-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-rlc-libre-probleme-1",
+      "chapter": "pc-rlc-libre",
+      "kind": "probleme",
+      "title": "Décharge oscillante d'un condensateur : du modèle idéal au circuit réel",
+      "difficulty": 3,
+      "context": "Un condensateur de capacité $C = 2{,}0\\ \\mu\\mathrm{F}$ est d'abord chargé sous une tension continue $U_0 = 12{,}0\\ \\mathrm{V}$. À l'instant $t = 0$, on le bascule sur une bobine d'inductance $L = 0{,}50\\ \\mathrm{H}$ et de résistance $r = 10\\ \\Omega$, montée en série avec un conducteur ohmique de résistance $R_0 = 30\\ \\Omega$. Le circuit est orienté de telle sorte que $i = C\\,\\dfrac{du_C}{dt}$, où $u_C$ est la tension aux bornes du condensateur, visualisée à l'oscilloscope.\n\n**Données et formules admises.** Énergie électrique $E_e = \\dfrac{1}{2}C\\,u_C^2$, énergie magnétique $E_m = \\dfrac{1}{2}L\\,i^2$, période propre $T_0 = 2\\pi\\sqrt{LC}$. L'enregistrement du circuit réel montre un régime pseudo-périodique de pseudo-période mesurée $T = 6{,}4\\ \\mathrm{ms}$ ; on admet que l'amplitude des maxima décroît comme $e^{-\\frac{R}{2L}t}$, ce qui donne un décrément logarithmique $\\lambda = \\ln\\!\\left(\\dfrac{U_n}{U_{n+1}}\\right) = \\dfrac{R\\,T}{2L}$ entre deux maxima successifs, $R$ désignant la résistance totale du circuit.\n\nLa **Partie A** étudie le circuit idéalisé : on y néglige toute résistance ($R_0 = r = 0$), $L$ et $C$ gardant les mêmes valeurs. La **Partie B** revient au circuit réel décrit ci-dessus.",
+      "figure": "montage-rlc-libre",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "L'oscillateur LC idéal",
+          "difficulty": 1,
+          "statement": "Quelle est la période propre $T_0$ des oscillations du circuit idéal ?",
+          "options": [
+            {
+              "label": "$6{,}3\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$T_0 = 2\\pi\\sqrt{LC} = 2\\pi\\sqrt{0{,}50\\times2{,}0\\times10^{-6}} = 2\\pi\\times1{,}0\\times10^{-3} = 6{,}3\\times10^{-3}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as oublié le facteur $2\\pi$ : $\\sqrt{LC} = 1{,}0\\times10^{-3}\\ \\mathrm{s}$ n'est pas la période, c'est la quantité qu'il faut encore multiplier par $2\\pi$."
+            },
+            {
+              "label": "$6{,}3\\ \\mu\\mathrm{s}$",
+              "why": "Tu as oublié la racine carrée : $2\\pi LC = 6{,}3\\times10^{-6}\\ \\mathrm{s}$. La période propre varie comme $\\sqrt{LC}$, pas comme $LC$."
+            },
+            {
+              "label": "$3{,}1\\ \\mathrm{ms}$",
+              "why": "Tu as donné $\\dfrac{T_0}{2} = \\pi\\sqrt{LC} = 3{,}1\\ \\mathrm{ms}$, c'est-à-dire la durée entre deux passages consécutifs de $u_C$ par zéro, et non la période complète."
+            }
+          ],
+          "hint": "Applique $T_0 = 2\\pi\\sqrt{LC}$ en convertissant d'abord la capacité en farads.",
+          "solution": "$C = 2{,}0\\ \\mu\\mathrm{F} = 2{,}0\\times10^{-6}\\ \\mathrm{F}$, donc $$LC = 0{,}50\\times2{,}0\\times10^{-6} = 1{,}0\\times10^{-6}\\ \\mathrm{s^2}, \\qquad T_0 = 2\\pi\\sqrt{1{,}0\\times10^{-6}} = 2\\pi\\times1{,}0\\times10^{-3} = 6{,}3\\times10^{-3}\\ \\mathrm{s}.$$ Soit $T_0 = 6{,}3\\ \\mathrm{ms}$, et une fréquence propre $f_0 = 1/T_0 = 1{,}6\\times10^{2}\\ \\mathrm{Hz}$. Contrôle : la pseudo-période mesurée sur le circuit réel, $6{,}4\\ \\mathrm{ms}$, est très proche de $T_0$ — c'est bien ce qu'on attend d'un amortissement faible.",
+          "methode": "Convertis d'abord $C$ en farads, calcule le produit $LC$, prends la racine, puis multiplie par $2\\pi$.",
+          "points": 1,
+          "part": "Partie A — Le modèle idéal",
+          "ref": "pc-rlc-libre-probleme-1-q1"
+        },
+        {
+          "notion": "Les échanges d'énergie",
+          "difficulty": 1,
+          "statement": "Quelle est l'énergie totale emmagasinée dans le circuit à l'instant $t = 0$ ?",
+          "options": [
+            {
+              "label": "$1{,}44\\times10^{-4}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "À $t=0$ le courant est nul, toute l'énergie est électrique : $E = \\frac12 C U_0^2 = 0{,}5\\times2{,}0\\times10^{-6}\\times12{,}0^2 = 1{,}44\\times10^{-4}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$1{,}2\\times10^{-5}\\ \\mathrm{J}$",
+              "why": "Tu as oublié le carré : $\\frac12 C U_0 = 1{,}2\\times10^{-5}$. L'énergie d'un condensateur est proportionnelle au **carré** de la tension."
+            },
+            {
+              "label": "$2{,}88\\times10^{-4}\\ \\mathrm{J}$",
+              "why": "Tu as oublié le facteur $\\frac12$ : $C U_0^2 = 2{,}88\\times10^{-4}\\ \\mathrm{J}$, soit exactement le double du résultat attendu."
+            },
+            {
+              "label": "$1{,}44\\times10^{2}\\ \\mathrm{J}$",
+              "why": "Tu as laissé $C$ en microfarads : $0{,}5\\times2{,}0\\times12{,}0^2 = 144\\ \\mathrm{J}$. Pour un condensateur de quelques microfarads, une telle énergie est impossible."
+            }
+          ],
+          "hint": "À $t = 0$, le courant vient d'être établi : que vaut $i$ ? Où se trouve donc toute l'énergie ?",
+          "solution": "À $t = 0$ l'interrupteur vient d'être basculé, l'intensité est encore nulle, donc $E_m = \\frac12 L i^2 = 0$ et toute l'énergie est électrique : $$E = E_e(0) = \\frac12 C U_0^2 = \\frac12\\times2{,}0\\times10^{-6}\\times(12{,}0)^2 = 1{,}44\\times10^{-4}\\ \\mathrm{J}.$$ Soit $0{,}144\\ \\mathrm{mJ}$. Dans le circuit idéal cette valeur reste constante : elle se répartit ensuite entre $E_e$ et $E_m$, sans jamais diminuer. Contrôle d'ordre de grandeur : quelques $\\mu\\mathrm{F}$ sous quelques volts donnent toujours une énergie de l'ordre de la dizaine de microjoules à la fraction de millijoule.",
+          "methode": "À $t=0$ dans une décharge oscillante, $i = 0$ : l'énergie totale vaut $\\frac12 C U_0^2$, et c'est elle qu'on réutilise dans tous les bilans.",
+          "points": 1,
+          "part": "Partie A — Le modèle idéal",
+          "ref": "pc-rlc-libre-probleme-1-q2"
+        },
+        {
+          "notion": "Les échanges d'énergie",
+          "difficulty": 2,
+          "statement": "Dans le circuit idéal, quelle est la valeur maximale $I_m$ de l'intensité du courant ?",
+          "options": [
+            {
+              "label": "$24\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "L'intensité est maximale quand $u_C = 0$ : $\\frac12 L I_m^2 = \\frac12 C U_0^2$, donc $I_m = U_0\\sqrt{C/L} = 12{,}0\\times\\sqrt{4{,}0\\times10^{-6}} = 2{,}4\\times10^{-2}\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$34\\ \\mathrm{mA}$",
+              "why": "Tu n'as gardé le facteur $\\frac12$ que d'un côté : $\\frac12 L I_m^2 = C U_0^2$ donne $I_m = U_0\\sqrt{2C/L} = 34\\ \\mathrm{mA}$, soit $\\sqrt{2}$ fois trop grand."
+            },
+            {
+              "label": "$3{,}8\\ \\mathrm{mA}$",
+              "why": "Tu as estimé $i \\approx \\dfrac{C\\,U_0}{T_0} = 3{,}8\\ \\mathrm{mA}$ en remplaçant la dérivée par un quotient grossier. Il faut passer par la conservation de l'énergie."
+            },
+            {
+              "label": "$0{,}048\\ \\mathrm{mA}$",
+              "why": "Tu as écrit $I_m = U_0\\dfrac{C}{L} = 4{,}8\\times10^{-5}\\ \\mathrm{A}$ : c'est le rapport $C/L$ au lieu de sa racine carrée $\\sqrt{C/L}$."
+            }
+          ],
+          "hint": "À quel instant $E_m$ est-elle maximale ? Que vaut alors $E_e$ ? Écris la conservation de l'énergie.",
+          "solution": "Dans le circuit idéal l'énergie totale est constante et vaut $1{,}44\\times10^{-4}\\ \\mathrm{J}$. L'intensité est maximale à l'instant où le condensateur est totalement déchargé ($u_C = 0$), toute l'énergie étant alors magnétique : $$\\frac12 L I_m^2 = \\frac12 C U_0^2 \\quad\\Longrightarrow\\quad I_m = U_0\\sqrt{\\frac{C}{L}} = 12{,}0\\times\\sqrt{\\frac{2{,}0\\times10^{-6}}{0{,}50}} = 12{,}0\\times2{,}0\\times10^{-3} = 2{,}4\\times10^{-2}\\ \\mathrm{A}.$$ Soit $I_m = 24\\ \\mathrm{mA}$. Contrôle par l'énergie : $\\frac12\\times0{,}50\\times(0{,}024)^2 = 1{,}44\\times10^{-4}\\ \\mathrm{J}$ — on retrouve exactement l'énergie initiale.",
+          "methode": "$I_m = U_0\\sqrt{C/L}$ : retiens-le comme la traduction de $\\frac12 L I_m^2 = \\frac12 C U_0^2$, à réécrire chaque fois plutôt qu'à apprendre par cœur.",
+          "points": 1,
+          "part": "Partie A — Le modèle idéal",
+          "ref": "pc-rlc-libre-probleme-1-q3"
+        },
+        {
+          "notion": "Les échanges d'énergie",
+          "difficulty": 2,
+          "statement": "Toujours dans le circuit idéal, quelle est la valeur de $u_C$ aux instants où l'énergie électrique du condensateur est égale à l'énergie magnétique de la bobine ?",
+          "options": [
+            {
+              "label": "$8{,}5\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$E_e = E_m$ signifie $E_e = \\frac{E}{2}$, soit $\\frac12 C u_C^2 = \\frac12\\left(\\frac12 C U_0^2\\right)$, donc $u_C = \\dfrac{U_0}{\\sqrt{2}} = 8{,}5\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as partagé la **tension** en deux, $u_C = \\dfrac{U_0}{2} = 6{,}0\\ \\mathrm{V}$, alors que c'est l'énergie qui se partage ; or $E_e$ varie comme $u_C^2$."
+            },
+            {
+              "label": "$17{,}0\\ \\mathrm{V}$",
+              "why": "Tu as multiplié par $\\sqrt{2}$ au lieu de diviser : $12{,}0\\times\\sqrt{2} = 17{,}0\\ \\mathrm{V}$. Une tension supérieure à $U_0$ est impossible, l'énergie totale ne peut pas augmenter."
+            },
+            {
+              "label": "$0\\ \\mathrm{V}$",
+              "why": "Tu as décrit l'instant où $E_e$ est **nulle** : l'énergie est alors toute magnétique, $E_m = E$ et $E_e = 0$, les deux ne sont donc pas égales."
+            }
+          ],
+          "hint": "Si les deux énergies sont égales et que leur somme est constante, que vaut chacune d'elles ?",
+          "solution": "L'énergie totale est constante : $E = \\frac12 C U_0^2$. Si $E_e = E_m$, chacune vaut la moitié de $E$ : $$\\frac12 C u_C^2 = \\frac12\\times\\frac12 C U_0^2 \\quad\\Longrightarrow\\quad u_C^2 = \\frac{U_0^2}{2} \\quad\\Longrightarrow\\quad |u_C| = \\frac{U_0}{\\sqrt{2}} = \\frac{12{,}0}{1{,}414} = 8{,}5\\ \\mathrm{V}.$$ Contrôle : $E_e = \\frac12\\times2{,}0\\times10^{-6}\\times(8{,}485)^2 = 7{,}2\\times10^{-5}\\ \\mathrm{J}$, soit exactement la moitié de $1{,}44\\times10^{-4}\\ \\mathrm{J}$. Cette valeur est atteinte quatre fois par période, en $\\pm 8{,}5\\ \\mathrm{V}$.",
+          "methode": "Pour « $E_e = E_m$ », écris que chacune vaut la moitié de l'énergie totale : cela donne toujours $u_C = U_0/\\sqrt{2}$ dans un circuit LC idéal.",
+          "points": 1,
+          "part": "Partie A — Le modèle idéal",
+          "ref": "pc-rlc-libre-probleme-1-q4"
+        },
+        {
+          "notion": "L'équation différentielle",
+          "difficulty": 2,
+          "statement": "Dans le circuit réel, quelle est l'équation différentielle vérifiée par $u_C$, coefficients numériques compris (unités SI) ?",
+          "options": [
+            {
+              "label": "$1{,}0\\times10^{-6}\\,\\dfrac{d^2u_C}{dt^2} + 8{,}0\\times10^{-5}\\,\\dfrac{du_C}{dt} + u_C = 0$",
+              "correct": true,
+              "why": "L'équation est $LC\\,u_C'' + RC\\,u_C' + u_C = 0$ avec $R = R_0 + r = 40\\ \\Omega$ : $LC = 1{,}0\\times10^{-6}$ et $RC = 40\\times2{,}0\\times10^{-6} = 8{,}0\\times10^{-5}$."
+            },
+            {
+              "label": "$1{,}0\\times10^{-6}\\,\\dfrac{d^2u_C}{dt^2} + 6{,}0\\times10^{-5}\\,\\dfrac{du_C}{dt} + u_C = 0$",
+              "why": "Tu as oublié la résistance $r$ de la bobine : avec $R_0 = 30\\ \\Omega$ seul, $R_0C = 6{,}0\\times10^{-5}$. C'est la résistance **totale** du circuit qui intervient."
+            },
+            {
+              "label": "$8{,}0\\times10^{-5}\\,\\dfrac{d^2u_C}{dt^2} + 1{,}0\\times10^{-6}\\,\\dfrac{du_C}{dt} + u_C = 0$",
+              "why": "Tu as permuté les deux coefficients : $LC$ accompagne la dérivée **seconde** et $RC$ la dérivée première."
+            },
+            {
+              "label": "$2{,}5\\times10^{5}\\,\\dfrac{d^2u_C}{dt^2} + 8{,}0\\times10^{-5}\\,\\dfrac{du_C}{dt} + u_C = 0$",
+              "why": "Tu as calculé $\\dfrac{L}{C} = 2{,}5\\times10^{5}$ au lieu du produit $LC$ : le coefficient de la dérivée seconde est bien $L\\times C$."
+            }
+          ],
+          "hint": "Pars de la loi des mailles, remplace $i$ par $C\\,\\dfrac{du_C}{dt}$, puis calcule les deux coefficients en n'oubliant aucune résistance.",
+          "solution": "Loi des mailles dans la maille fermée : $u_R + u_L + u_C = 0$ avec $u_R = (R_0+r)\\,i$ et $u_L = L\\,\\dfrac{di}{dt}$ pour la partie inductive. En posant $R = R_0 + r = 30 + 10 = 40\\ \\Omega$ et $i = C\\,\\dfrac{du_C}{dt}$ : $$LC\\,\\frac{d^2u_C}{dt^2} + RC\\,\\frac{du_C}{dt} + u_C = 0.$$ Numériquement $LC = 0{,}50\\times2{,}0\\times10^{-6} = 1{,}0\\times10^{-6}$ et $RC = 40\\times2{,}0\\times10^{-6} = 8{,}0\\times10^{-5}$, d'où $$1{,}0\\times10^{-6}\\,\\frac{d^2u_C}{dt^2} + 8{,}0\\times10^{-5}\\,\\frac{du_C}{dt} + u_C = 0.$$ Contrôle de cohérence : en annulant le terme du milieu on retrouve l'équation de la Partie A, de période propre $2\\pi\\sqrt{LC} = 6{,}3\\ \\mathrm{ms}$.",
+          "methode": "Écris toujours l'équation sous la forme $LC\\,u_C'' + RC\\,u_C' + u_C = 0$, avec $R$ = somme de **toutes** les résistances du circuit, celle de la bobine incluse.",
+          "points": 1,
+          "part": "Partie B — Le circuit réel",
+          "ref": "pc-rlc-libre-probleme-1-q5"
+        },
+        {
+          "notion": "Le décrément logarithmique",
+          "difficulty": 3,
+          "statement": "Quel décrément logarithmique $\\lambda$ prévoit-on pour cet enregistrement ?",
+          "options": [
+            {
+              "label": "$0{,}256$",
+              "correct": true,
+              "why": "$\\lambda = \\dfrac{R\\,T}{2L} = \\dfrac{40\\times6{,}4\\times10^{-3}}{2\\times0{,}50} = \\dfrac{0{,}256}{1{,}0} = 0{,}256$."
+            },
+            {
+              "label": "$0{,}512$",
+              "why": "Tu as oublié le facteur $2$ au dénominateur : $\\dfrac{R\\,T}{L} = 0{,}512$, soit exactement le double de la valeur attendue."
+            },
+            {
+              "label": "$0{,}192$",
+              "why": "Tu as oublié la résistance de la bobine : avec $R_0 = 30\\ \\Omega$ seul, $\\dfrac{R_0T}{2L} = 0{,}192$. Il faut la résistance totale $R_0 + r = 40\\ \\Omega$."
+            },
+            {
+              "label": "$3{,}91$",
+              "why": "Tu as inversé la fraction : $\\dfrac{2L}{R\\,T} = 3{,}91$. Un décrément aussi grand signifierait une amplitude divisée par $50$ en une seule oscillation."
+            }
+          ],
+          "hint": "Utilise la relation admise dans l'énoncé, avec la résistance totale et la pseudo-période mesurée.",
+          "solution": "La résistance totale vaut $R = R_0 + r = 40\\ \\Omega$ et la pseudo-période mesurée $T = 6{,}4\\ \\mathrm{ms}$. La relation admise donne $$\\lambda = \\frac{R\\,T}{2L} = \\frac{40\\times6{,}4\\times10^{-3}}{2\\times0{,}50} = \\frac{0{,}256}{1{,}00} = 0{,}256.$$ $\\lambda$ est sans dimension, ce qui se vérifie : $\\dfrac{\\Omega\\cdot\\mathrm{s}}{\\mathrm{H}} = \\dfrac{\\Omega\\cdot\\mathrm{s}}{\\Omega\\cdot\\mathrm{s}} = 1$. Contrôle du sens physique : $\\lambda = 0{,}26$ correspond à une amplitude multipliée par $e^{-0{,}256} = 0{,}77$ à chaque oscillation — un amortissement faible, cohérent avec le fait que $T = 6{,}4\\ \\mathrm{ms}$ diffère peu de $T_0 = 6{,}3\\ \\mathrm{ms}$.",
+          "methode": "$\\lambda = \\dfrac{R\\,T}{2L}$ : vérifie toujours que $R$ est la résistance totale et que $T$ est la pseudo-période **mesurée**, pas la période propre calculée.",
+          "points": 1,
+          "part": "Partie B — Le circuit réel",
+          "ref": "pc-rlc-libre-probleme-1-q6"
+        },
+        {
+          "notion": "Exploiter l'amortissement",
+          "difficulty": 3,
+          "statement": "Le premier maximum de $u_C$ vaut $U_1 = 12{,}0\\ \\mathrm{V}$. Avec $\\lambda = 0{,}256$, quelle valeur prévoit-on pour le maximum suivant $U_2$ ?",
+          "options": [
+            {
+              "label": "$9{,}3\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "Par définition $\\lambda = \\ln\\dfrac{U_1}{U_2}$, donc $U_2 = U_1\\,e^{-\\lambda} = 12{,}0\\times e^{-0{,}256} = 9{,}3\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$8{,}9\\ \\mathrm{V}$",
+              "why": "Tu as approché $e^{-\\lambda}$ par $1-\\lambda = 0{,}744$, ce qui donne $8{,}9\\ \\mathrm{V}$. Cette approximation n'est valable que pour $\\lambda$ très petit devant $1$."
+            },
+            {
+              "label": "$7{,}2\\ \\mathrm{V}$",
+              "why": "Tu as appliqué le facteur deux fois : $12{,}0\\times e^{-2\\times0{,}256} = 7{,}2\\ \\mathrm{V}$. Entre deux maxima **successifs** il n'y a qu'une seule pseudo-période."
+            },
+            {
+              "label": "$15{,}5\\ \\mathrm{V}$",
+              "why": "Tu as pris $e^{+\\lambda}$ : $12{,}0\\times e^{0{,}256} = 15{,}5\\ \\mathrm{V}$. L'amplitude décroît, le maximum suivant est forcément plus petit que $12{,}0\\ \\mathrm{V}$."
+            }
+          ],
+          "hint": "Reviens à la définition du décrément logarithmique, puis passe à l'exponentielle.",
+          "solution": "Le décrément logarithmique est défini par $\\lambda = \\ln\\!\\left(\\dfrac{U_1}{U_2}\\right)$ pour deux maxima successifs. On inverse : $$\\frac{U_1}{U_2} = e^{\\lambda} \\quad\\Longrightarrow\\quad U_2 = U_1\\,e^{-\\lambda} = 12{,}0\\times e^{-0{,}256} = 12{,}0\\times0{,}774 = 9{,}3\\ \\mathrm{V}.$$ Contrôle : $\\ln\\dfrac{12{,}0}{9{,}3} = \\ln 1{,}29 = 0{,}255$ — on retombe bien sur $\\lambda$. L'amplitude perd donc environ $23\\ \\%$ à chaque oscillation.",
+          "methode": "De $\\lambda$ à l'amplitude : $U_{n+1} = U_n\\,e^{-\\lambda}$, et après $n$ pseudo-périodes $U_n = U_1\\,e^{-n\\lambda}$. Compte bien le nombre de pseudo-périodes.",
+          "points": 1,
+          "part": "Partie B — Le circuit réel",
+          "ref": "pc-rlc-libre-probleme-1-q7"
+        },
+        {
+          "notion": "Le circuit RLC réel : l'énergie diminue",
+          "difficulty": 3,
+          "statement": "Quelle énergie le circuit a-t-il dissipée par effet Joule entre le premier maximum $U_1 = 12{,}0\\ \\mathrm{V}$ et le suivant $U_2 = 9{,}3\\ \\mathrm{V}$ ?",
+          "options": [
+            {
+              "label": "$5{,}8\\times10^{-5}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "Aux deux maxima $i = 0$, donc l'énergie est purement électrique : $\\Delta E = \\frac12 C(U_1^2 - U_2^2) = 1{,}0\\times10^{-6}\\times(144 - 86{,}5) = 5{,}8\\times10^{-5}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$8{,}6\\times10^{-5}\\ \\mathrm{J}$",
+              "why": "Tu as calculé $\\frac12 C U_2^2 = 8{,}6\\times10^{-5}\\ \\mathrm{J}$ : c'est l'énergie qui **reste** dans le circuit au second maximum, pas celle qui a été perdue."
+            },
+            {
+              "label": "$1{,}15\\times10^{-4}\\ \\mathrm{J}$",
+              "why": "Tu as oublié le facteur $\\frac12$ : $C(U_1^2 - U_2^2) = 1{,}15\\times10^{-4}\\ \\mathrm{J}$, soit le double de la perte réelle."
+            },
+            {
+              "label": "$7{,}3\\times10^{-6}\\ \\mathrm{J}$",
+              "why": "Tu as écrit $\\frac12 C(U_1 - U_2)^2 = 7{,}3\\times10^{-6}\\ \\mathrm{J}$ : on soustrait les énergies, pas les tensions — $U_1^2 - U_2^2 \\neq (U_1-U_2)^2$."
+            }
+          ],
+          "hint": "Que vaut l'intensité à l'instant d'un maximum de $u_C$ ? Compare alors les énergies totales aux deux maxima.",
+          "solution": "À l'instant d'un maximum de $u_C$, la dérivée $\\dfrac{du_C}{dt}$ est nulle, donc $i = C\\,\\dfrac{du_C}{dt} = 0$ et $E_m = 0$ : l'énergie totale est alors purement électrique. L'énergie dissipée entre les deux maxima est donc $$\\Delta E = \\frac12 C\\left(U_1^2 - U_2^2\\right) = \\frac12\\times2{,}0\\times10^{-6}\\times\\left(12{,}0^2 - 9{,}3^2\\right) = 1{,}0\\times10^{-6}\\times(144 - 86{,}5) = 5{,}8\\times10^{-5}\\ \\mathrm{J}.$$ Contrôle en pourcentage : $1 - \\left(\\dfrac{9{,}3}{12{,}0}\\right)^2 = 1 - 0{,}60 = 0{,}40$, soit $40\\ \\%$ de l'énergie initiale $1{,}44\\times10^{-4}\\ \\mathrm{J}$ — et $0{,}40\\times1{,}44\\times10^{-4} = 5{,}8\\times10^{-5}\\ \\mathrm{J}$, même résultat. Cette énergie a été convertie en chaleur dans $R_0$ et dans la bobine.",
+          "methode": "Place-toi aux maxima de $u_C$ : $i = 0$, l'énergie y est toute électrique, et la perte vaut $\\frac12 C(U_1^2 - U_2^2)$.",
+          "points": 1,
+          "part": "Partie B — Le circuit réel",
+          "ref": "pc-rlc-libre-probleme-1-q8"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-rlc-libre-probleme-2",
+      "chapter": "pc-rlc-libre",
+      "kind": "probleme",
+      "title": "Oscillateur de travaux pratiques : amortir ou entretenir ?",
+      "difficulty": 3,
+      "context": "On étudie le circuit d'un oscillateur électrique de travaux pratiques. Il comporte un condensateur de capacité $C = 0{,}50\\ \\mu\\mathrm{F}$, une bobine d'inductance $L = 0{,}80\\ \\mathrm{H}$ et de résistance $r = 20\\ \\Omega$, et un rhéostat dont la résistance $R_0$ est réglable de $0$ à $2{,}0\\ \\mathrm{k\\Omega}$. Le condensateur est préalablement chargé sous une tension $U_0 = 10{,}0\\ \\mathrm{V}$, puis basculé sur l'ensemble bobine + rhéostat à l'instant $t = 0$. Un système d'acquisition enregistre la tension $u_C$ aux bornes du condensateur.\n\n**Données et formules admises.** Énergie électrique $E_e = \\dfrac{1}{2}C\\,u_C^2$ ; énergie magnétique $E_m = \\dfrac{1}{2}L\\,i^2$ ; période propre $T_0 = 2\\pi\\sqrt{LC}$ ; décrément logarithmique sur une pseudo-période $\\lambda = \\dfrac{R\\,T}{2L}$, où $R$ est la résistance totale du circuit ; résistance critique séparant le régime pseudo-périodique du régime apériodique $R_c = 2\\sqrt{\\dfrac{L}{C}}$. Tant que l'amortissement est faible, on confondra la pseudo-période $T$ avec la période propre $T_0$.\n\nPour la question sur l'entretien des oscillations, on admettra qu'en régime entretenu sinusoïdal d'amplitude $U_m$ l'intensité a pour amplitude $I_m = U_m\\sqrt{\\dfrac{C}{L}}$ et que la puissance moyenne dissipée par effet Joule vaut $\\mathcal{P} = \\dfrac{1}{2}R\\,I_m^2$.",
+      "figure": "rlc-regimes",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Les trois régimes",
+          "difficulty": 1,
+          "statement": "Le rhéostat est réglé sur $R_0 = 0$. L'enregistrement montre une dizaine d'alternances de $u_C$, alternativement positives et négatives, dont l'amplitude décroît jusqu'à l'extinction. De quel régime s'agit-il ?",
+          "options": [
+            {
+              "label": "Régime pseudo-périodique.",
+              "correct": true,
+              "why": "On observe bien des oscillations, mais d'amplitude décroissante : c'est la signature du régime pseudo-périodique, obtenu lorsque la résistance totale reste inférieure à $R_c$."
+            },
+            {
+              "label": "Régime périodique sinusoïdal non amorti.",
+              "why": "Tu as négligé la décroissance de l'amplitude : la bobine garde $r = 20\\ \\Omega$, donc de l'énergie est dissipée et l'amplitude ne peut pas rester constante."
+            },
+            {
+              "label": "Régime critique.",
+              "why": "Le régime critique est le cas limite $R = R_c$ : $u_C$ revient à zéro sans osciller du tout. Ici on compte une dizaine d'alternances, il y a donc bien oscillation."
+            },
+            {
+              "label": "Régime apériodique.",
+              "why": "En régime apériodique $u_C$ décroît vers zéro sans changer de signe. Ici $u_C$ devient alternativement positive et négative : il y a des oscillations."
+            }
+          ],
+          "hint": "Deux questions à te poser dans l'ordre : y a-t-il des oscillations ? Leur amplitude est-elle constante ?",
+          "solution": "Le tracé change de signe plusieurs fois : il y a donc bien **oscillation**, ce qui élimine les régimes critique et apériodique, pour lesquels $u_C$ tend vers zéro sans jamais changer de signe. Mais l'amplitude décroît jusqu'à l'extinction, ce qui élimine le régime sinusoïdal non amorti : la résistance $r = 20\\ \\Omega$ de la bobine dissipe l'énergie par effet Joule. Le régime est donc **pseudo-périodique**. Contrôle : on parle de *pseudo*-période précisément parce que la fonction n'est pas périodique au sens strict, son amplitude diminuant d'une alternance à la suivante.",
+          "methode": "Pour nommer un régime, regarde d'abord s'il y a changement de signe (oscillation ou non), puis si l'amplitude décroît (amortissement ou non).",
+          "points": 1,
+          "part": "Partie A — Observer les oscillations",
+          "ref": "pc-rlc-libre-probleme-2-q1"
+        },
+        {
+          "notion": "L'oscillateur LC idéal",
+          "difficulty": 1,
+          "statement": "L'amortissement étant faible, quelle valeur attend-on pour la pseudo-période $T$ de cet enregistrement ?",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$T \\approx T_0 = 2\\pi\\sqrt{LC} = 2\\pi\\sqrt{0{,}80\\times0{,}50\\times10^{-6}} = 2\\pi\\times6{,}32\\times10^{-4} = 3{,}97\\times10^{-3}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$0{,}63\\ \\mathrm{ms}$",
+              "why": "Tu as oublié le facteur $2\\pi$ : $\\sqrt{LC} = 6{,}3\\times10^{-4}\\ \\mathrm{s}$ doit encore être multiplié par $2\\pi$."
+            },
+            {
+              "label": "$2{,}5\\ \\mu\\mathrm{s}$",
+              "why": "Tu as oublié la racine carrée : $2\\pi LC = 2{,}5\\times10^{-6}\\ \\mathrm{s}$. La période propre varie comme $\\sqrt{LC}$."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as donné $\\dfrac{T_0}{2} = 2{,}0\\ \\mathrm{ms}$, c'est-à-dire la durée entre un maximum de $u_C$ et le minimum qui le suit, et non la pseudo-période complète."
+            }
+          ],
+          "hint": "Quand l'amortissement est faible, à quelle grandeur calculable la pseudo-période est-elle presque égale ?",
+          "solution": "Pour un amortissement faible on confond la pseudo-période avec la période propre : $$T \\approx T_0 = 2\\pi\\sqrt{LC} = 2\\pi\\sqrt{0{,}80\\times0{,}50\\times10^{-6}} = 2\\pi\\sqrt{4{,}0\\times10^{-7}} = 2\\pi\\times6{,}32\\times10^{-4} = 3{,}97\\times10^{-3}\\ \\mathrm{s}.$$ Soit $T \\approx 4{,}0\\ \\mathrm{ms}$, et une dizaine d'alternances occupent donc environ $20\\ \\mathrm{ms}$ à l'écran. Contrôle : la fréquence propre vaut $f_0 = 1/T_0 = 2{,}5\\times10^{2}\\ \\mathrm{Hz}$, un ordre de grandeur très courant en travaux pratiques. En réalité la pseudo-période est toujours très légèrement **supérieure** à $T_0$.",
+          "methode": "Amortissement faible $\\Rightarrow$ $T \\approx T_0 = 2\\pi\\sqrt{LC}$ : c'est la seule valeur calculable à partir de $L$ et $C$, et elle encadre par le bas la pseudo-période réelle.",
+          "points": 1,
+          "part": "Partie A — Observer les oscillations",
+          "ref": "pc-rlc-libre-probleme-2-q2"
+        },
+        {
+          "notion": "Les échanges d'énergie",
+          "difficulty": 2,
+          "statement": "Quelle énergie le circuit reçoit-il au départ, c'est-à-dire quelle est l'énergie totale à l'instant $t = 0$ ?",
+          "options": [
+            {
+              "label": "$25\\ \\mu\\mathrm{J}$",
+              "correct": true,
+              "why": "À $t=0$ l'intensité est nulle, donc $E = \\frac12 C U_0^2 = 0{,}5\\times0{,}50\\times10^{-6}\\times(10{,}0)^2 = 2{,}5\\times10^{-5}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$50\\ \\mu\\mathrm{J}$",
+              "why": "Tu as oublié le facteur $\\frac12$ : $C U_0^2 = 5{,}0\\times10^{-5}\\ \\mathrm{J}$, soit le double de l'énergie réellement stockée."
+            },
+            {
+              "label": "$2{,}5\\ \\mu\\mathrm{J}$",
+              "why": "Tu as oublié le carré : $\\frac12 C U_0 = 2{,}5\\times10^{-6}\\ \\mathrm{J}$. L'énergie d'un condensateur est proportionnelle à $u_C^2$."
+            },
+            {
+              "label": "$25\\ \\mathrm{J}$",
+              "why": "Tu as laissé $C$ en microfarads : $0{,}5\\times0{,}50\\times(10{,}0)^2 = 25\\ \\mathrm{J}$. Convertis d'abord en farads, l'écart est d'un facteur $10^{6}$."
+            }
+          ],
+          "hint": "À $t = 0$ le courant n'a pas encore eu le temps de s'établir : où est logée toute l'énergie ?",
+          "solution": "À $t = 0$ l'intensité est nulle, donc $E_m = \\frac12 L i^2 = 0$, et toute l'énergie du circuit est électrique : $$E = \\frac12 C U_0^2 = \\frac12\\times0{,}50\\times10^{-6}\\times(10{,}0)^2 = 2{,}5\\times10^{-5}\\ \\mathrm{J} = 25\\ \\mu\\mathrm{J}.$$ Contrôle : cette énergie, elle, ne sera pas conservée — la résistance totale la dissipera progressivement par effet Joule, jusqu'à l'extinction des oscillations.",
+          "methode": "Au basculement, $i = 0$ : l'énergie initiale vaut toujours $\\frac12 C U_0^2$. Convertis $C$ en farads avant de calculer.",
+          "points": 1,
+          "part": "Partie A — Observer les oscillations",
+          "ref": "pc-rlc-libre-probleme-2-q3"
+        },
+        {
+          "notion": "Le décrément logarithmique",
+          "difficulty": 2,
+          "statement": "On règle maintenant le rhéostat sur $R_0 = 180\\ \\Omega$, la pseudo-période restant voisine de $4{,}0\\ \\mathrm{ms}$. Que vaut le décrément logarithmique $\\lambda$ ?",
+          "options": [
+            {
+              "label": "$0{,}50$",
+              "correct": true,
+              "why": "$R = R_0 + r = 200\\ \\Omega$, donc $\\lambda = \\dfrac{R\\,T}{2L} = \\dfrac{200\\times4{,}0\\times10^{-3}}{2\\times0{,}80} = \\dfrac{0{,}80}{1{,}6} = 0{,}50$."
+            },
+            {
+              "label": "$0{,}99$",
+              "why": "Tu as oublié le facteur $2$ au dénominateur : $\\dfrac{R\\,T}{L} = 0{,}99$, soit le double de la valeur attendue."
+            },
+            {
+              "label": "$0{,}45$",
+              "why": "Tu as oublié la résistance de la bobine : avec $R_0 = 180\\ \\Omega$ seul, $\\dfrac{R_0T}{2L} = 0{,}45$. C'est la résistance totale $R_0 + r = 200\\ \\Omega$ qui compte."
+            },
+            {
+              "label": "$2{,}0$",
+              "why": "Tu as inversé la fraction : $\\dfrac{2L}{R\\,T} = 2{,}0$. Un tel décrément diviserait l'amplitude par $e^{2} \\approx 7{,}4$ à chaque oscillation."
+            }
+          ],
+          "hint": "Attention à ce que recouvre exactement la lettre $R$ dans la formule donnée.",
+          "solution": "La résistance totale du circuit est $R = R_0 + r = 180 + 20 = 200\\ \\Omega$. Avec $T \\approx 4{,}0\\ \\mathrm{ms}$ : $$\\lambda = \\frac{R\\,T}{2L} = \\frac{200\\times4{,}0\\times10^{-3}}{2\\times0{,}80} = \\frac{0{,}80}{1{,}6} = 0{,}50.$$ Interprétation : l'amplitude est multipliée par $e^{-0{,}50} = 0{,}61$ à chaque pseudo-période. Partant de $10{,}0\\ \\mathrm{V}$, les maxima valent donc environ $6{,}1$ ; $3{,}7$ ; $2{,}2\\ \\mathrm{V}$… Contrôle : après $5$ pseudo-périodes, $10{,}0\\times e^{-2{,}5} = 0{,}82\\ \\mathrm{V}$, l'oscillation est pratiquement éteinte au bout de $20\\ \\mathrm{ms}$ — cohérent avec un amortissement dix fois plus fort qu'avec le rhéostat à zéro.",
+          "methode": "Dans $\\lambda = \\dfrac{R\\,T}{2L}$, $R$ est la somme de toutes les résistances : rhéostat **et** bobine. Vérifie ensuite que $\\lambda$ est sans unité.",
+          "points": 1,
+          "part": "Partie B — Amortir, puis entretenir",
+          "ref": "pc-rlc-libre-probleme-2-q4"
+        },
+        {
+          "notion": "Résistance critique et amortissement",
+          "difficulty": 3,
+          "statement": "Peut-on, avec ce rhéostat, amener le circuit exactement au régime critique ?",
+          "options": [
+            {
+              "label": "Non : il faudrait $R_0 = R_c - r \\approx 2{,}5\\ \\mathrm{k\\Omega}$, alors que le rhéostat s'arrête à $2{,}0\\ \\mathrm{k\\Omega}$.",
+              "correct": true,
+              "why": "$R_c = 2\\sqrt{L/C} = 2\\sqrt{1{,}6\\times10^{6}} = 2{,}53\\ \\mathrm{k\\Omega}$, donc $R_0 = 2{,}53 - 0{,}02 = 2{,}51\\ \\mathrm{k\\Omega}$ : hors de portée du rhéostat."
+            },
+            {
+              "label": "Oui : $R_c = \\sqrt{L/C} = 1{,}3\\ \\mathrm{k\\Omega}$, valeur que le rhéostat atteint sans difficulté.",
+              "why": "Tu as oublié le facteur $2$ : $\\sqrt{L/C} = 1{,}3\\ \\mathrm{k\\Omega}$, mais la résistance critique vaut $2\\sqrt{L/C} = 2{,}5\\ \\mathrm{k\\Omega}$."
+            },
+            {
+              "label": "Oui : $R_c = 2\\sqrt{C/L} = 1{,}6\\times10^{-3}\\ \\Omega$, atteint dès les premiers crans du rhéostat.",
+              "why": "Tu as inversé le rapport sous la racine : $2\\sqrt{C/L} = 1{,}6\\times10^{-3}\\ \\Omega$. Une résistance critique de l'ordre du milliohm devrait t'alerter."
+            },
+            {
+              "label": "Oui : en réglant $R_0 = 2{,}0\\ \\mathrm{k\\Omega}$, la bobine ajoute $r$ et la résistance totale dépasse $R_c = 2{,}5\\ \\mathrm{k\\Omega}$.",
+              "why": "Compare les nombres : $R_0 + r = 2{,}02\\ \\mathrm{k\\Omega}$ reste nettement inférieur à $2{,}53\\ \\mathrm{k\\Omega}$. Les $20\\ \\Omega$ de la bobine ne comblent pas l'écart."
+            }
+          ],
+          "hint": "Calcule d'abord $R_c$, puis retranche la part de résistance que le rhéostat n'a pas à fournir.",
+          "solution": "La résistance critique vaut $$R_c = 2\\sqrt{\\frac{L}{C}} = 2\\sqrt{\\frac{0{,}80}{0{,}50\\times10^{-6}}} = 2\\sqrt{1{,}6\\times10^{6}} = 2\\times1{,}26\\times10^{3} = 2{,}53\\times10^{3}\\ \\Omega.$$ La bobine fournit déjà $r = 20\\ \\Omega$, il faudrait donc régler le rhéostat sur $R_0 = R_c - r = 2{,}53\\times10^{3} - 20 = 2{,}51\\times10^{3}\\ \\Omega$, soit $2{,}5\\ \\mathrm{k\\Omega}$ — au-delà des $2{,}0\\ \\mathrm{k\\Omega}$ disponibles. La réponse est donc **non** : même au maximum, la résistance totale ne vaut que $2{,}02\\ \\mathrm{k\\Omega} < R_c$, et le régime reste pseudo-périodique, avec $\\lambda = \\dfrac{2{,}02\\times10^{3}\\times4{,}0\\times10^{-3}}{1{,}6} = 5{,}1$ : une seule oscillation visible, d'amplitude déjà divisée par $e^{5{,}1} \\approx 160$. Contrôle d'unité : $\\sqrt{\\mathrm{H/F}} = \\Omega$, le rapport $L/C$ est bien dans le bon sens.",
+          "methode": "Pour atteindre un régime visé, calcule $R_c = 2\\sqrt{L/C}$, puis la valeur à régler : $R_0 = R_c - r$. N'oublie jamais de retrancher la résistance de la bobine.",
+          "points": 1,
+          "part": "Partie B — Amortir, puis entretenir",
+          "ref": "pc-rlc-libre-probleme-2-q5"
+        },
+        {
+          "notion": "L'entretien des oscillations",
+          "difficulty": 3,
+          "statement": "On remet le rhéostat à $R_0 = 0$ et on ajoute un dispositif qui entretient les oscillations : l'amplitude de $u_C$ reste constante, égale à $U_m = 10{,}0\\ \\mathrm{V}$. Quelle énergie ce dispositif doit-il fournir au circuit pendant une pseudo-période ?",
+          "options": [
+            {
+              "label": "$2{,}5\\ \\mu\\mathrm{J}$",
+              "correct": true,
+              "why": "$I_m = U_m\\sqrt{C/L} = 7{,}91\\ \\mathrm{mA}$, donc $\\mathcal{P} = \\frac12\\times20\\times(7{,}91\\times10^{-3})^2 = 6{,}25\\times10^{-4}\\ \\mathrm{W}$ et $W = \\mathcal{P}\\,T_0 = 2{,}5\\times10^{-6}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$5{,}0\\ \\mu\\mathrm{J}$",
+              "why": "Tu as oublié le facteur $\\frac12$ dans la puissance moyenne : $R\\,I_m^2\\,T_0 = 5{,}0\\times10^{-6}\\ \\mathrm{J}$, soit le double. La puissance moyenne d'un courant sinusoïdal vaut $\\frac12 R\\,I_m^2$."
+            },
+            {
+              "label": "$1{,}2\\ \\mu\\mathrm{J}$",
+              "why": "Tu as pris une demi-pseudo-période : $\\mathcal{P}\\times\\dfrac{T_0}{2} = 1{,}2\\times10^{-6}\\ \\mathrm{J}$. L'énoncé demande l'énergie sur une pseudo-période entière."
+            },
+            {
+              "label": "$25\\ \\mu\\mathrm{J}$",
+              "why": "Tu as donné l'énergie **emmagasinée** dans le circuit, $\\frac12 C U_m^2 = 25\\ \\mu\\mathrm{J}$, et non celle qui est dissipée pendant une pseudo-période."
+            }
+          ],
+          "hint": "Le dispositif doit compenser exactement les pertes par effet Joule. Calcule la puissance moyenne dissipée, puis multiplie-la par la durée demandée.",
+          "solution": "En régime entretenu, l'énergie fournie compense exactement l'énergie dissipée par effet Joule. Avec $R_0 = 0$, la résistance totale est celle de la bobine, $R = r = 20\\ \\Omega$. L'amplitude de l'intensité vaut $$I_m = U_m\\sqrt{\\frac{C}{L}} = 10{,}0\\times\\sqrt{\\frac{0{,}50\\times10^{-6}}{0{,}80}} = 10{,}0\\times7{,}91\\times10^{-4} = 7{,}91\\times10^{-3}\\ \\mathrm{A},$$ d'où la puissance moyenne $\\mathcal{P} = \\frac12 R\\,I_m^2 = \\frac12\\times20\\times(7{,}91\\times10^{-3})^2 = 6{,}25\\times10^{-4}\\ \\mathrm{W}$. Sur une pseudo-période $T_0 = 3{,}97\\times10^{-3}\\ \\mathrm{s}$ : $$W = \\mathcal{P}\\,T_0 = 6{,}25\\times10^{-4}\\times3{,}97\\times10^{-3} = 2{,}5\\times10^{-6}\\ \\mathrm{J} = 2{,}5\\ \\mu\\mathrm{J}.$$ Contrôle : c'est exactement $10\\ \\%$ de l'énergie emmagasinée ($25\\ \\mu\\mathrm{J}$), ce qui est cohérent avec le décrément du circuit non entretenu, $\\lambda = \\dfrac{20\\times3{,}97\\times10^{-3}}{1{,}6} = 0{,}050$ : sans apport, l'énergie (proportionnelle au carré de l'amplitude) perdrait $1 - e^{-2\\lambda} = 9{,}5\\ \\%$ par oscillation.",
+          "methode": "Entretenir = fournir, par période, l'énergie dissipée : calcule $I_m$, puis $\\mathcal{P} = \\frac12 R I_m^2$, puis $W = \\mathcal{P}\\,T$.",
+          "points": 1,
+          "part": "Partie B — Amortir, puis entretenir",
+          "ref": "pc-rlc-libre-probleme-2-q6"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-rlc-libre-serie-1",
+      "title": "Oscillations libres d'un circuit RLC · Échauffement",
+      "description": "Les réflexes de base : montage, conditions initiales, période propre et première lecture d'un oscillogramme.",
+      "kind": "custom",
+      "chapter": "pc-rlc-libre",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-rlc-libre-le-montage-q1",
+        "pc-rlc-libre-l-equation-differentielle-q1",
+        "pc-rlc-libre-ce-que-l-on-observe-q1",
+        "pc-rlc-libre-les-echanges-d-energie-q1",
+        "pc-rlc-libre-le-decrement-logarithmique-q1",
+        "pc-rlc-libre-mesurer-t-correctement-q1",
+        "pc-rlc-libre-les-trois-regimes-q1",
+        "pc-rlc-libre-l-oscillateur-lc-ideal-q1",
+        "pc-rlc-libre-le-montage-q2",
+        "pc-rlc-libre-mesurer-t-correctement-q2"
+      ]
+    },
+    {
+      "slug": "pc-rlc-libre-serie-2",
+      "title": "Oscillations libres d'un circuit RLC · Entraînement",
+      "description": "Toutes les notions du chapitre : équation différentielle, régimes, énergie, amortissement et analogie mécanique.",
+      "kind": "custom",
+      "chapter": "pc-rlc-libre",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-rlc-libre-exploiter-l-amortissement-q1",
+        "pc-rlc-libre-le-circuit-rlc-reel-l-energie-diminue-q1",
+        "pc-rlc-libre-l-equation-differentielle-q2",
+        "pc-rlc-libre-ce-que-l-on-observe-q2",
+        "pc-rlc-libre-le-decrement-logarithmique-q3",
+        "pc-rlc-libre-mesurer-t-correctement-q3",
+        "pc-rlc-libre-sources-d-erreur-q2",
+        "pc-rlc-libre-les-trois-regimes-q1",
+        "pc-rlc-libre-les-echanges-d-energie-q2",
+        "pc-rlc-libre-l-analogie-electromecanique-q1",
+        "pc-rlc-libre-applications-q1",
+        "pc-rlc-libre-le-montage-q3"
+      ]
+    },
+    {
+      "slug": "pc-rlc-libre-serie-3",
+      "title": "Oscillations libres d'un circuit RLC · Type BAC",
+      "description": "Au niveau de l'examen : bilans énergétiques, décrément, résistance critique et entretien des oscillations.",
+      "kind": "custom",
+      "chapter": "pc-rlc-libre",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-rlc-libre-probleme-1-q3",
+        "pc-rlc-libre-probleme-1-q5",
+        "pc-rlc-libre-probleme-2-q3",
+        "pc-rlc-libre-probleme-2-q4",
+        "pc-rlc-libre-probleme-1-q6",
+        "pc-rlc-libre-probleme-1-q7",
+        "pc-rlc-libre-probleme-1-q8",
+        "pc-rlc-libre-probleme-2-q5",
+        "pc-rlc-libre-probleme-2-q6",
+        "pc-rlc-libre-l-entretien-des-oscillations-q1",
+        "pc-rlc-libre-resistance-critique-et-amortissement-q1",
+        "pc-rlc-libre-sources-d-erreur-q4"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1865 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-radioactivite",
+      "name": "Décroissance radioactive",
+      "domain": "physique",
+      "unit": "Transformations nucléaires"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Le noyau atomique : notation, isotopes",
+      "Stabilité des noyaux : le diagramme $(N, Z)$",
+      "Les lois de conservation (lois de Soddy)",
+      "Les quatre types de radioactivité",
+      "La loi de décroissance",
+      "Demi-vie et constante de temps",
+      "L'activité d'un échantillon",
+      "Exploiter la loi : la linéarisation",
+      "Filiation radioactive et familles",
+      "Compter les noyaux fils",
+      "Activité et mesure",
+      "Effets biologiques et radioprotection",
+      "Méthode 1 — Équilibrer une équation nucléaire",
+      "Méthode 2 — Prévoir le type de radioactivité",
+      "Méthode 3 — Calculs sur la loi $N(t) = N_0 e^{-\\lambda t}$",
+      "Méthode 4 — Exploiter une courbe expérimentale",
+      "Méthode 5 — La datation"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Équilibrer une équation nucléaire",
+      "Méthode 2 — Prévoir le type de radioactivité",
+      "Méthode 3 — Calculs sur la loi $N(t) = N_0 e^{-\\lambda t}$",
+      "Méthode 4 — Exploiter une courbe expérimentale",
+      "Méthode 5 — La datation"
+    ],
+    "existing_questions_total": 8,
+    "target_new_questions": 28,
+    "suggested_figures": [
+      "radioactivite — Décroissance radioactive N(t), demi-vie t½"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Le noyau atomique : notation, isotopes",
+        "lesson": "Noyaux radioactifs et désintégrations",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-le-noyau-atomique-notation-isotopes",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "Le noyau atomique : notation, isotopes",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le noyau atomique : notation, isotopes",
+          "difficulty": 1,
+          "statement": "Le noyau $^{60}_{27}\\mathrm{Co}$ contient :",
+          "options": [
+            {
+              "label": "$27$ protons et $33$ neutrons",
+              "correct": true,
+              "why": "$Z = 27$ donne les protons, et $N = A - Z = 60 - 27 = 33$ donne les neutrons."
+            },
+            {
+              "label": "$27$ protons et $60$ neutrons",
+              "why": "Tu as pris $A$ pour le nombre de neutrons : $A$ compte **tous** les nucléons, protons compris."
+            },
+            {
+              "label": "$33$ protons et $27$ neutrons",
+              "why": "Tu as échangé les deux : le nombre du bas, $Z = 27$, est toujours celui des **protons**."
+            },
+            {
+              "label": "$60$ protons et $27$ neutrons",
+              "why": "Tu as inversé les rôles de $A$ et de $Z$ dans la notation $^{A}_{Z}X$."
+            }
+          ],
+          "hint": "Dans la notation $^{A}_{Z}X$, quelle grandeur est écrite en haut, et laquelle en bas ?",
+          "solution": "Dans $^{A}_{Z}X$, $Z$ est le **nombre de charge** (nombre de protons) et $A$ le **nombre de masse** (nombre total de nucléons). Ici $Z = 27$ protons, et $N = A - Z = 60 - 27 = 33$ neutrons.",
+          "methode": "$A$ en haut = **tous** les nucléons. $Z$ en bas = les protons. Les neutrons se **calculent** : $N = A - Z$.",
+          "points": 1,
+          "ref": "pc-radioactivite-le-noyau-atomique-notation-isotopes-q1"
+        },
+        {
+          "notion": "Le noyau atomique : notation, isotopes",
+          "difficulty": 2,
+          "statement": "Parmi ces quatre noyaux, lequel est un isotope de $^{14}_{6}\\mathrm{C}$ ?",
+          "options": [
+            {
+              "label": "$^{12}_{6}\\mathrm{C}$",
+              "correct": true,
+              "why": "Même $Z = 6$, mais un $A$ différent : c'est bien un isotope du carbone."
+            },
+            {
+              "label": "$^{14}_{7}\\mathrm{N}$",
+              "why": "Même $A = 14$ mais un $Z$ différent : ces noyaux sont **isobares**, pas isotopes."
+            },
+            {
+              "label": "$^{13}_{7}\\mathrm{N}$",
+              "why": "Ni $A$ ni $Z$ en commun avec le carbone 14 : aucun lien d'isotopie."
+            },
+            {
+              "label": "$^{16}_{8}\\mathrm{O}$",
+              "why": "$Z = 8$ : c'est de l'oxygène, un autre élément chimique."
+            }
+          ],
+          "hint": "Deux isotopes appartiennent au **même élément chimique**. Quelle grandeur définit l'élément ?",
+          "solution": "Deux noyaux sont **isotopes** lorsqu'ils ont le **même nombre de protons** $Z$ — donc le même élément chimique — et des nombres de neutrons différents. $^{12}_{6}\\mathrm{C}$ et $^{14}_{6}\\mathrm{C}$ ont tous deux $Z = 6$ : ce sont des isotopes du carbone. $^{14}_{7}\\mathrm{N}$ a le même $A$ : on dit qu'il est **isobare** du carbone 14.",
+          "methode": "Isotopes : **même $Z$**, $A$ différents. Isobares : **même $A$**, $Z$ différents. Ne confonds pas les deux.",
+          "points": 1,
+          "ref": "pc-radioactivite-le-noyau-atomique-notation-isotopes-q2"
+        },
+        {
+          "notion": "Le noyau atomique : notation, isotopes",
+          "difficulty": 3,
+          "statement": "Deux isotopes d'un même élément ont-ils les mêmes propriétés ?",
+          "options": [
+            {
+              "label": "les mêmes propriétés chimiques, mais des stabilités nucléaires qui peuvent être très différentes",
+              "correct": true,
+              "why": "Les propriétés chimiques dépendent de $Z$, identique ; la stabilité du noyau dépend du couple $(N, Z)$, qui diffère."
+            },
+            {
+              "label": "les mêmes propriétés chimiques et la même stabilité nucléaire",
+              "why": "La stabilité dépend du nombre de **neutrons** : le carbone 12 est stable, le carbone 14 est radioactif."
+            },
+            {
+              "label": "des propriétés chimiques différentes, mais la même stabilité nucléaire",
+              "why": "C'est exactement l'inverse : les propriétés chimiques, elles, sont identiques."
+            },
+            {
+              "label": "des propriétés chimiques et une stabilité nucléaires toutes deux différentes",
+              "why": "Les propriétés chimiques ne dépendent que du cortège électronique, donc de $Z$ : elles sont **identiques**."
+            }
+          ],
+          "hint": "Sépare deux questions : qu'est-ce qui gouverne la chimie d'un atome, et qu'est-ce qui gouverne la stabilité de son noyau ?",
+          "solution": "Les propriétés **chimiques** sont fixées par le cortège électronique, donc par $Z$ : deux isotopes réagissent chimiquement de la même façon — c'est pourquoi un organisme vivant incorpore indifféremment du carbone 12 et du carbone 14. La **stabilité nucléaire**, en revanche, dépend de l'équilibre entre protons et neutrons : $^{12}_{6}\\mathrm{C}$ est stable, $^{14}_{6}\\mathrm{C}$ est radioactif. C'est précisément cette combinaison qui rend la datation au carbone 14 possible.",
+          "methode": "Chimie $\\to$ gouvernée par $Z$. Stabilité du noyau $\\to$ gouvernée par le couple $(N, Z)$.",
+          "points": 1,
+          "ref": "pc-radioactivite-le-noyau-atomique-notation-isotopes-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Stabilité des noyaux : le diagramme $(N, Z)$",
+        "lesson": "Noyaux radioactifs et désintégrations",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-stabilite-des-noyaux-le-diagramme-n-z",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "Stabilité des noyaux : le diagramme $(N, Z)$",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Stabilité des noyaux : le diagramme $(N, Z)$",
+          "difficulty": 1,
+          "statement": "Dans le diagramme $(N, Z)$, les noyaux stables se placent sur la droite $N = Z$ :",
+          "options": [
+            {
+              "label": "seulement pour les noyaux légers, jusqu'à $Z \\approx 20$",
+              "correct": true,
+              "why": "Au-delà, la répulsion entre protons impose un excédent de neutrons et la vallée s'écarte de la bissectrice."
+            },
+            {
+              "label": "pour tous les noyaux stables, quel que soit $Z$",
+              "why": "Pour les noyaux lourds, les stables ont **nettement plus** de neutrons que de protons."
+            },
+            {
+              "label": "seulement pour les noyaux lourds, au-delà de $Z \\approx 20$",
+              "why": "C'est l'inverse : ce sont les noyaux **légers** qui ont $N \\approx Z$."
+            },
+            {
+              "label": "pour aucun noyau : la vallée de stabilité est toujours au-dessus de cette droite",
+              "why": "Les noyaux légers stables, comme $^{12}_{6}\\mathrm{C}$ ou $^{16}_{8}\\mathrm{O}$, ont bien $N = Z$."
+            }
+          ],
+          "hint": "Pense à deux exemples précis : le carbone 12, et l'uranium 238.",
+          "solution": "Pour les noyaux **légers** ($Z \\lesssim 20$), les noyaux stables ont autant de neutrons que de protons : $^{12}_{6}\\mathrm{C}$, $^{16}_{8}\\mathrm{O}$ sont sur la droite $N = Z$. Au-delà, la répulsion électrique entre protons devient importante et il faut **davantage** de neutrons pour la compenser : la vallée de stabilité s'écarte progressivement de la bissectrice. Pour $^{238}_{92}\\mathrm{U}$, $N = 146$ contre $Z = 92$.",
+          "methode": "Noyaux légers : $N \\approx Z$. Noyaux lourds : $N > Z$, et l'écart grandit avec $Z$.",
+          "points": 1,
+          "ref": "pc-radioactivite-stabilite-des-noyaux-le-diagramme-n-z-q1"
+        },
+        {
+          "notion": "Stabilité des noyaux : le diagramme $(N, Z)$",
+          "difficulty": 2,
+          "statement": "Un noyau situé **au-dessus** de la vallée de stabilité possède trop de neutrons. Il est :",
+          "options": [
+            {
+              "label": "$\\beta^{-}$, car un neutron excédentaire se transforme en proton",
+              "correct": true,
+              "why": "L'émission $\\beta^{-}$ convertit un neutron en proton : elle diminue $N$ et augmente $Z$, ramenant le noyau vers la vallée."
+            },
+            {
+              "label": "$\\beta^{+}$, car il faut transformer un proton en neutron",
+              "why": "Cela **augmenterait** encore le nombre de neutrons : le noyau s'éloignerait de la vallée."
+            },
+            {
+              "label": "$\\alpha$, car il faut évacuer des nucléons",
+              "why": "L'émission $\\alpha$ concerne les noyaux **lourds** : elle retire autant de protons que de neutrons par paires."
+            },
+            {
+              "label": "$\\gamma$, car il doit se débarrasser de son excès d'énergie",
+              "why": "L'émission $\\gamma$ ne change ni $N$ ni $Z$ : elle ne peut pas corriger un déséquilibre neutrons-protons."
+            }
+          ],
+          "hint": "Quel type de désintégration diminue le nombre de neutrons et augmente celui des protons ?",
+          "solution": "Un excédent de neutrons se corrige en transformant un neutron en proton : c'est la radioactivité $\\beta^{-}$,\n$$^{A}_{Z}X \\longrightarrow\\ ^{A}_{Z+1}Y + ^{0}_{-1}e$$\nLe nombre de masse $A$ est conservé, mais $Z$ augmente d'une unité et $N$ diminue d'autant : le noyau se rapproche de la vallée.",
+          "methode": "Trop de **neutrons** $\\Rightarrow \\beta^{-}$. Trop de **protons** $\\Rightarrow \\beta^{+}$. Trop **lourd** $\\Rightarrow \\alpha$.",
+          "points": 1,
+          "ref": "pc-radioactivite-stabilite-des-noyaux-le-diagramme-n-z-q2"
+        },
+        {
+          "notion": "Stabilité des noyaux : le diagramme $(N, Z)$",
+          "difficulty": 2,
+          "statement": "Le noyau $^{238}_{92}\\mathrm{U}$ se désintègre en émettant :",
+          "options": [
+            {
+              "label": "une particule $\\alpha$, car les noyaux très lourds sont instables au-delà de $Z = 82$",
+              "correct": true,
+              "why": "Au-delà du plomb, aucun noyau n'est stable : la voie principale est l'émission $\\alpha$, qui allège le noyau."
+            },
+            {
+              "label": "un électron $\\beta^{-}$, car il possède beaucoup de neutrons",
+              "why": "Il en possède beaucoup, mais c'est **normal** pour un noyau lourd : il est dans la vallée de ce point de vue. Son problème est sa masse."
+            },
+            {
+              "label": "un positron $\\beta^{+}$, car il possède beaucoup de protons",
+              "why": "$92$ protons, c'est beaucoup, mais accompagnés de $146$ neutrons : le noyau n'a pas un **excès relatif** de protons."
+            },
+            {
+              "label": "un rayonnement $\\gamma$ seul, qui suffit à le stabiliser",
+              "why": "Un rayonnement $\\gamma$ évacue de l'énergie sans changer la composition : il ne peut pas rendre stable un noyau trop lourd."
+            }
+          ],
+          "hint": "Que reproche-t-on au juste à l'uranium 238 : un déséquilibre entre $N$ et $Z$, ou sa masse ?",
+          "solution": "Aucun noyau de $Z > 82$ (au-delà du plomb) n'est stable, quelle que soit sa composition en neutrons : ces noyaux sont simplement **trop gros** pour que l'interaction forte, de courte portée, tienne tête à la répulsion électrique. La voie de désintégration est l'émission $\\alpha$, qui retire d'un coup $2$ protons et $2$ neutrons :\n$$^{238}_{92}\\mathrm{U} \\longrightarrow\\ ^{234}_{90}\\mathrm{Th} + ^{4}_{2}\\mathrm{He}$$",
+          "methode": "$Z > 82$ : **toujours** radioactif, et $\\alpha$ en premier lieu. Ce n'est pas un problème de rapport $N/Z$ mais de taille.",
+          "points": 1,
+          "ref": "pc-radioactivite-stabilite-des-noyaux-le-diagramme-n-z-q3"
+        },
+        {
+          "notion": "Stabilité des noyaux : le diagramme $(N, Z)$",
+          "difficulty": 3,
+          "statement": "Le carbone 14 a $Z = 6$ et $N = 8$, alors que le carbone 12 stable a $Z = 6$ et $N = 6$. Quel type de radioactivité attend-on pour le carbone 14 ?",
+          "options": [
+            {
+              "label": "$\\beta^{-}$, car il est au-dessus de la vallée : il a deux neutrons de trop",
+              "correct": true,
+              "why": "Pour un noyau léger, la stabilité demande $N \\approx Z$ ; avec $N = 8$ pour $Z = 6$, il y a excès de neutrons."
+            },
+            {
+              "label": "$\\beta^{+}$, car il est en dessous de la vallée",
+              "why": "Il est **au-dessus** : $N > Z$. Un $\\beta^{+}$ ajouterait encore un neutron."
+            },
+            {
+              "label": "$\\alpha$, car il doit se débarrasser de deux neutrons",
+              "why": "Une particule $\\alpha$ emporte $2$ protons **et** $2$ neutrons : le rapport $N/Z$ ne serait pas corrigé, et le carbone est bien trop léger pour cette voie."
+            },
+            {
+              "label": "$\\gamma$, car son excès de neutrons correspond à un excès d'énergie",
+              "why": "Le $\\gamma$ ne modifie ni $N$ ni $Z$ : il ne peut pas corriger un excès de neutrons."
+            }
+          ],
+          "hint": "Place le carbone 14 par rapport à la droite $N = Z$, puis choisis la désintégration qui le ramène vers elle.",
+          "solution": "Pour un noyau léger, la vallée de stabilité suit $N \\approx Z$. Le carbone 14 a $N = 8 > Z = 6$ : il est **au-dessus** de la vallée, en excès de neutrons. La désintégration attendue est donc $\\beta^{-}$, et c'est bien ce qu'on observe :\n$$^{14}_{6}\\mathrm{C} \\longrightarrow\\ ^{14}_{7}\\mathrm{N} + ^{0}_{-1}e$$\nLe carbone se transforme en azote, en conservant $A = 14$.",
+          "methode": "Méthode en deux temps : **1)** place le noyau par rapport à la vallée ; **2)** choisis la désintégration qui l'en rapproche.",
+          "points": 1,
+          "ref": "pc-radioactivite-stabilite-des-noyaux-le-diagramme-n-z-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les lois de conservation (lois de Soddy)",
+        "lesson": "Noyaux radioactifs et désintégrations",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 3,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-les-lois-de-conservation-lois-de-soddy",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "Les lois de conservation (lois de Soddy)",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les lois de conservation (lois de Soddy)",
+          "difficulty": 3,
+          "statement": "La désintégration s'écrit $^{226}_{88}\\mathrm{Ra} \\longrightarrow\\ ^{A}_{Z}X + ^{4}_{2}\\mathrm{He}$. Le noyau $X$ est :",
+          "options": [
+            {
+              "label": "$^{222}_{86}X$",
+              "correct": true,
+              "why": "Conservation de $A$ : $226 = A + 4$ donne $A = 222$ ; conservation de $Z$ : $88 = Z + 2$ donne $Z = 86$."
+            },
+            {
+              "label": "$^{222}_{88}X$",
+              "why": "Tu as bien conservé $A$ mais oublié que la particule $\\alpha$ emporte aussi **$2$ charges**."
+            },
+            {
+              "label": "$^{230}_{90}X$",
+              "why": "Tu as **ajouté** les nombres de l'hélium au lieu de les retrancher : le radium est le noyau père."
+            },
+            {
+              "label": "$^{226}_{86}X$",
+              "why": "Tu as conservé $Z$ correctement mais laissé $A$ inchangé : la particule $\\alpha$ emporte $4$ nucléons."
+            }
+          ],
+          "hint": "Écris les deux équations de conservation, l'une sur les nombres du haut, l'autre sur ceux du bas.",
+          "solution": "Les **lois de Soddy** imposent la conservation du nombre de masse et du nombre de charge :\n$$A_{\\text{père}} = \\sum A_{\\text{produits}} \\qquad Z_{\\text{père}} = \\sum Z_{\\text{produits}}$$\nIci : $226 = A + 4 \\Rightarrow A = 222$, et $88 = Z + 2 \\Rightarrow Z = 86$. Le noyau fils est $^{222}_{86}\\mathrm{Rn}$, le radon 222.",
+          "methode": "Deux équations, toujours les mêmes : **somme des $A$** conservée, **somme des $Z$** conservée. Le $Z$ de l'électron $\\beta^{-}$ vaut $-1$, celui du positron $+1$.",
+          "points": 1,
+          "ref": "pc-radioactivite-les-lois-de-conservation-lois-de-soddy-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les quatre types de radioactivité",
+        "lesson": "Noyaux radioactifs et désintégrations",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-les-quatre-types-de-radioactivite",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "Les quatre types de radioactivité",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les quatre types de radioactivité",
+          "difficulty": 1,
+          "statement": "Une émission $\\gamma$ :",
+          "options": [
+            {
+              "label": "ne modifie ni $A$ ni $Z$ : c'est la désexcitation d'un noyau fils formé dans un état excité",
+              "correct": true,
+              "why": "Le rayonnement $\\gamma$ n'emporte ni nucléon ni charge : seul l'état énergétique du noyau change."
+            },
+            {
+              "label": "diminue $A$ de $4$ et $Z$ de $2$",
+              "why": "C'est l'émission $\\alpha$, qui expulse un noyau d'hélium."
+            },
+            {
+              "label": "augmente $Z$ de $1$ sans changer $A$",
+              "why": "C'est l'émission $\\beta^{-}$, qui transforme un neutron en proton."
+            },
+            {
+              "label": "diminue $Z$ de $1$ sans changer $A$",
+              "why": "C'est l'émission $\\beta^{+}$, qui transforme un proton en neutron."
+            }
+          ],
+          "hint": "Un photon a-t-il une masse ou une charge à emporter ?",
+          "solution": "Le rayonnement $\\gamma$ est un **photon** de très grande énergie : il n'emporte ni nucléon ni charge. L'équation s'écrit\n$$^{A}_{Z}Y^{*} \\longrightarrow\\ ^{A}_{Z}Y + \\gamma$$\nL'émission $\\gamma$ **accompagne** presque toujours une désintégration $\\alpha$ ou $\\beta$ : le noyau fils naît excité, puis se désexcite en émettant un photon.",
+          "methode": "Le $\\gamma$ ne change **rien** à la composition du noyau : il n'est jamais une désintégration à lui seul, mais une désexcitation.",
+          "points": 1,
+          "ref": "pc-radioactivite-les-quatre-types-de-radioactivite-q1"
+        },
+        {
+          "notion": "Les quatre types de radioactivité",
+          "difficulty": 3,
+          "statement": "Lors d'une désintégration $\\beta^{-}$, d'où provient l'électron émis ?",
+          "options": [
+            {
+              "label": "d'un **neutron** du noyau, qui se transforme en proton en émettant un électron",
+              "correct": true,
+              "why": "L'électron est **créé** lors de la transformation $n \\to p + e^{-}$ : il n'existait pas avant."
+            },
+            {
+              "label": "du cortège électronique de l'atome, arraché par le noyau",
+              "why": "Les électrons du cortège ne participent pas : la désintégration est un phénomène **nucléaire**."
+            },
+            {
+              "label": "d'un **proton** du noyau, qui se transforme en neutron",
+              "why": "Cette transformation existe, mais elle libère un **positron** : c'est la radioactivité $\\beta^{+}$."
+            },
+            {
+              "label": "du noyau, où il était déjà présent parmi les nucléons",
+              "why": "Un noyau ne contient que des protons et des neutrons : aucun électron n'y préexiste."
+            }
+          ],
+          "hint": "Compare les nombres $Z$ avant et après : quelle particule du noyau a dû changer de nature ?",
+          "solution": "Dans $^{A}_{Z}X \\to\\ ^{A}_{Z+1}Y + ^{0}_{-1}e$, le nombre de nucléons est inchangé mais il y a **un proton de plus**. C'est donc un **neutron** qui s'est transformé :\n$$n \\longrightarrow p + e^{-}$$\nL'électron n'est ni arraché au cortège, ni prélevé dans le noyau : il est **créé** au moment de la transformation. C'est ce qui explique qu'un noyau puisse émettre un électron sans en avoir jamais contenu.",
+          "methode": "$\\beta^{-}$ : un **neutron** devient proton ($Z$ augmente). $\\beta^{+}$ : un **proton** devient neutron ($Z$ diminue). Dans les deux cas, la particule émise est **créée**.",
+          "points": 1,
+          "ref": "pc-radioactivite-les-quatre-types-de-radioactivite-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La loi de décroissance",
+        "lesson": "Loi de décroissance radioactive",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-la-loi-de-decroissance",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "La loi de décroissance",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La loi de décroissance",
+          "difficulty": 1,
+          "statement": "La loi de décroissance radioactive d'un échantillon de $N_0$ noyaux à $t = 0$ s'écrit :",
+          "options": [
+            {
+              "label": "$N(t) = N_0\\,e^{-\\lambda t}$",
+              "correct": true,
+              "why": "Le nombre de noyaux restants décroît exponentiellement, avec la constante radioactive $\\lambda$ en exposant."
+            },
+            {
+              "label": "$N(t) = N_0\\,e^{+\\lambda t}$",
+              "why": "Cette expression **augmente** avec le temps : les noyaux radioactifs se multiplieraient."
+            },
+            {
+              "label": "$N(t) = N_0\\,(1 - e^{-\\lambda t})$",
+              "why": "C'est le nombre de noyaux **désintégrés** (ou de noyaux fils formés), pas de noyaux restants."
+            },
+            {
+              "label": "$N(t) = N_0 - \\lambda t$",
+              "why": "Cette décroissance est **linéaire** : elle deviendrait négative, ce qui est impossible."
+            }
+          ],
+          "hint": "À $t = 0$, l'expression doit donner $N_0$ ; et pour $t$ très grand, elle doit tendre vers zéro sans jamais devenir négative.",
+          "solution": "$N(t) = N_0\\,e^{-\\lambda t}$ : à $t = 0$ on retrouve $N_0$, et quand $t$ croît la fonction décroît vers $0$ sans jamais l'atteindre ni devenir négative. $\\lambda$, la **constante radioactive**, s'exprime en $\\mathrm{s^{-1}}$ (ou $\\mathrm{an^{-1}}$).",
+          "methode": "Deux contrôles systématiques sur une loi de décroissance : la valeur en $t = 0$, et le comportement quand $t \\to \\infty$.",
+          "points": 1,
+          "ref": "pc-radioactivite-la-loi-de-decroissance-q1"
+        },
+        {
+          "notion": "La loi de décroissance",
+          "difficulty": 2,
+          "statement": "Un échantillon contient $N_0 = 8{,}0\\times10^{20}$ noyaux radioactifs. Au bout de **trois** demi-vies, il en reste :",
+          "options": [
+            {
+              "label": "$1{,}0\\times10^{20}$",
+              "correct": true,
+              "why": "Chaque demi-vie divise par $2$ : trois demi-vies divisent par $2^{3} = 8$, et $8{,}0/8 = 1{,}0$."
+            },
+            {
+              "label": "$2{,}7\\times10^{20}$",
+              "why": "Tu as divisé par $3$ : une demi-vie divise par $2$, et trois demi-vies divisent par $2^{3}$, pas par $3$."
+            },
+            {
+              "label": "$4{,}0\\times10^{20}$",
+              "why": "C'est ce qui reste après **une seule** demi-vie."
+            },
+            {
+              "label": "$0$",
+              "why": "La décroissance est exponentielle : elle ne s'annule jamais exactement."
+            }
+          ],
+          "hint": "Que fait **une** demi-vie au nombre de noyaux ? Applique cette opération trois fois de suite.",
+          "solution": "Par définition, une demi-vie divise le nombre de noyaux par $2$. Après $n$ demi-vies, il reste $N_0/2^{n}$. Ici $n = 3$ :\n$$N = \\frac{8{,}0\\times10^{20}}{2^{3}} = \\frac{8{,}0\\times10^{20}}{8} = 1{,}0\\times10^{20}$$",
+          "methode": "Dès qu'une durée est un **multiple entier** de $t_{1/2}$, n'utilise pas l'exponentielle : divise par $2^{n}$, c'est immédiat et sans erreur.",
+          "points": 1,
+          "ref": "pc-radioactivite-la-loi-de-decroissance-q2"
+        },
+        {
+          "notion": "La loi de décroissance",
+          "difficulty": 3,
+          "statement": "Au bout de combien de demi-vies reste-t-il, pour la première fois, **moins de $1\\ \\%$** des noyaux initiaux ?",
+          "options": [
+            {
+              "label": "$7$ demi-vies",
+              "correct": true,
+              "why": "$2^{-6} = 1{,}6\\ \\%$, encore au-dessus de $1\\ \\%$, tandis que $2^{-7} = 0{,}78\\ \\%$ passe en dessous."
+            },
+            {
+              "label": "$5$ demi-vies",
+              "why": "$2^{-5} = 1/32 = 3{,}1\\ \\%$ : c'est encore plus de trois fois la limite."
+            },
+            {
+              "label": "$10$ demi-vies",
+              "why": "C'est vrai qu'il en reste moins de $1\\ \\%$, mais ce n'est pas la **première** fois : $7$ suffisent déjà."
+            },
+            {
+              "label": "$100$ demi-vies",
+              "why": "Tu as raisonné comme si une demi-vie retirait $1\\ \\%$ des noyaux : la décroissance n'est pas linéaire."
+            }
+          ],
+          "hint": "Il reste $2^{-n}$ des noyaux après $n$ demi-vies. Cherche le plus petit entier $n$ tel que cette fraction passe sous $0{,}01$.",
+          "solution": "Après $n$ demi-vies, la fraction restante vaut $2^{-n}$. On cherche le plus petit $n$ tel que $2^{-n} < 0{,}01$ :\n\n| $n$ | $5$ | $6$ | $7$ |\n| --- | --- | --- | --- |\n| $2^{-n}$ | $3{,}1\\ \\%$ | $1{,}6\\ \\%$ | $0{,}78\\ \\%$ |\n\nLa réponse est $n = 7$. Par le calcul : $n > \\dfrac{\\ln 100}{\\ln 2} = 6{,}6$, donc $n = 7$.",
+          "methode": "Ordres de grandeur à retenir : $10$ demi-vies $\\approx 0{,}1\\ \\%$ restant, $7$ demi-vies $\\approx 1\\ \\%$. C'est ce qui fixe les durées de stockage des déchets.",
+          "points": 1,
+          "ref": "pc-radioactivite-la-loi-de-decroissance-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Demi-vie et constante de temps",
+        "lesson": "Loi de décroissance radioactive",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-demi-vie-et-constante-de-temps",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "Demi-vie et constante de temps",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Demi-vie et constante de temps",
+          "difficulty": 1,
+          "statement": "Un nucléide a pour constante radioactive $\\lambda = 1{,}2\\times10^{-2}\\ \\mathrm{s^{-1}}$. Sa demi-vie vaut :",
+          "options": [
+            {
+              "label": "$58\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$t_{1/2} = \\dfrac{\\ln 2}{\\lambda} = \\dfrac{0{,}693}{1{,}2\\times10^{-2}} = 58\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$83\\ \\mathrm{s}$",
+              "why": "Tu as calculé $1/\\lambda$ : c'est la **constante de temps** $\\tau$, pas la demi-vie."
+            },
+            {
+              "label": "$1{,}7\\times10^{-2}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $\\lambda / \\ln 2$ : il faut **diviser** $\\ln 2$ par $\\lambda$."
+            },
+            {
+              "label": "$0{,}12\\ \\mathrm{s}$",
+              "why": "Tu as multiplié $\\lambda$ par $10$ : aucune étape du calcul ne correspond à cette opération."
+            }
+          ],
+          "hint": "La demi-vie s'obtient en écrivant $N(t_{1/2}) = N_0/2$ dans la loi de décroissance.",
+          "solution": "En écrivant $N_0 e^{-\\lambda t_{1/2}} = \\dfrac{N_0}{2}$, on obtient $e^{-\\lambda t_{1/2}} = \\dfrac{1}{2}$, puis $\\lambda t_{1/2} = \\ln 2$ :\n$$t_{1/2} = \\frac{\\ln 2}{\\lambda} = \\frac{0{,}693}{1{,}2\\times10^{-2}} = 58\\ \\mathrm{s}$$",
+          "methode": "$t_{1/2} = \\dfrac{\\ln 2}{\\lambda}$. Le piège classique est de confondre avec $\\tau = \\dfrac{1}{\\lambda}$, qui est $1{,}44$ fois plus grand.",
+          "points": 1,
+          "ref": "pc-radioactivite-demi-vie-et-constante-de-temps-q1"
+        },
+        {
+          "notion": "Demi-vie et constante de temps",
+          "difficulty": 2,
+          "statement": "La constante de temps $\\tau = 1/\\lambda$ s'exprime en fonction de la demi-vie par :",
+          "options": [
+            {
+              "label": "$\\tau = \\dfrac{t_{1/2}}{\\ln 2} \\approx 1{,}44\\,t_{1/2}$",
+              "correct": true,
+              "why": "De $t_{1/2} = \\ln 2 / \\lambda$ et $\\tau = 1/\\lambda$ on tire $\\tau = t_{1/2} / \\ln 2$, et $1/0{,}693 = 1{,}44$."
+            },
+            {
+              "label": "$\\tau = t_{1/2}\\,\\ln 2 \\approx 0{,}69\\,t_{1/2}$",
+              "why": "Tu as multiplié au lieu de diviser : $\\tau$ est **plus grand** que la demi-vie, pas plus petit."
+            },
+            {
+              "label": "$\\tau = t_{1/2}$",
+              "why": "Les deux durées sont proportionnelles mais **pas égales** : leur rapport est $\\ln 2$."
+            },
+            {
+              "label": "$\\tau = 2\\,t_{1/2}$",
+              "why": "Le facteur n'est pas $2$ : le facteur $2$ est celui du nombre de noyaux, pas des durées."
+            }
+          ],
+          "hint": "Élimine $\\lambda$ entre les deux relations $t_{1/2} = \\ln 2/\\lambda$ et $\\tau = 1/\\lambda$.",
+          "solution": "$\\lambda = \\dfrac{\\ln 2}{t_{1/2}}$ et $\\lambda = \\dfrac{1}{\\tau}$, donc $\\dfrac{1}{\\tau} = \\dfrac{\\ln 2}{t_{1/2}}$ et\n$$\\tau = \\frac{t_{1/2}}{\\ln 2} \\approx 1{,}44\\,t_{1/2}$$\nInterprétation : à $t = \\tau$, il reste $e^{-1} = 37\\ \\%$ des noyaux ; à $t = t_{1/2}$, il en reste $50\\ \\%$. Il est donc normal que $\\tau > t_{1/2}$.",
+          "methode": "$\\tau > t_{1/2}$ **toujours** : $\\tau \\approx 1{,}44\\,t_{1/2}$. Contrôle de bon sens : à $\\tau$ il reste $37\\ \\%$, moins qu'à $t_{1/2}$ où il reste $50\\ \\%$.",
+          "points": 1,
+          "ref": "pc-radioactivite-demi-vie-et-constante-de-temps-q2"
+        },
+        {
+          "notion": "Demi-vie et constante de temps",
+          "difficulty": 3,
+          "statement": "Le technétium $99\\mathrm{m}$, utilisé en imagerie médicale, a une demi-vie de $6{,}0\\ \\mathrm{h}$. Après $24\\ \\mathrm{h}$, la fraction de noyaux restants vaut :",
+          "options": [
+            {
+              "label": "$6{,}2\\ \\%$",
+              "correct": true,
+              "why": "$24/6{,}0 = 4$ demi-vies, donc $2^{-4} = 1/16 = 6{,}2\\ \\%$."
+            },
+            {
+              "label": "$25\\ \\%$",
+              "why": "C'est ce qui reste après **deux** demi-vies : tu as compté $12\\ \\mathrm{h}$ au lieu de $24\\ \\mathrm{h}$."
+            },
+            {
+              "label": "$12{,}5\\ \\%$",
+              "why": "C'est ce qui reste après **trois** demi-vies, soit $18\\ \\mathrm{h}$."
+            },
+            {
+              "label": "$0\\ \\%$",
+              "why": "Une décroissance exponentielle ne s'annule jamais exactement."
+            }
+          ],
+          "hint": "Combien de demi-vies tiennent dans $24\\ \\mathrm{h}$ ?",
+          "solution": "$n = \\dfrac{24}{6{,}0} = 4$ demi-vies. La fraction restante vaut $2^{-4} = \\dfrac{1}{16} = 6{,}2\\ \\%$.\n\nC'est ce qui rend ce nucléide utilisable en médecine : il donne un signal suffisant pendant l'examen, puis a pratiquement disparu de l'organisme le lendemain.",
+          "methode": "Divise la durée par $t_{1/2}$ pour obtenir $n$, puis applique $2^{-n}$. À connaître : $2^{-4} = 6{,}2\\ \\%$, $2^{-10} \\approx 0{,}1\\ \\%$.",
+          "points": 1,
+          "ref": "pc-radioactivite-demi-vie-et-constante-de-temps-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'activité d'un échantillon",
+        "lesson": "Loi de décroissance radioactive",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-l-activite-d-un-echantillon",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "L'activité d'un échantillon",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'activité d'un échantillon",
+          "difficulty": 1,
+          "statement": "L'activité d'un échantillon radioactif s'exprime en becquerels. Un becquerel correspond à :",
+          "options": [
+            {
+              "label": "une désintégration par seconde",
+              "correct": true,
+              "why": "$1\\ \\mathrm{Bq} = 1$ désintégration par seconde : l'activité est un **nombre de désintégrations par unité de temps**."
+            },
+            {
+              "label": "une désintégration par minute",
+              "why": "L'unité SI de temps est la **seconde**, pas la minute."
+            },
+            {
+              "label": "un noyau radioactif restant dans l'échantillon",
+              "why": "C'est $N$, le nombre de noyaux : l'activité en est la vitesse de disparition, pas le nombre lui-même."
+            },
+            {
+              "label": "un joule libéré par seconde",
+              "why": "Un joule par seconde est un **watt** : l'activité compte des désintégrations, pas de l'énergie."
+            }
+          ],
+          "hint": "Que compte-t-on, exactement, quand on mesure une activité ?",
+          "solution": "L'activité $a$ est le **nombre de désintégrations par seconde** : $a = -\\dfrac{dN}{dt} = \\lambda N$. Son unité SI est le **becquerel** ($\\mathrm{Bq}$), égal à une désintégration par seconde.",
+          "methode": "$1\\ \\mathrm{Bq} = 1$ désintégration par seconde. Une activité est une **vitesse**, pas une quantité.",
+          "points": 1,
+          "ref": "pc-radioactivite-l-activite-d-un-echantillon-q1"
+        },
+        {
+          "notion": "L'activité d'un échantillon",
+          "difficulty": 2,
+          "statement": "Un échantillon contient $N = 2{,}0\\times10^{18}$ noyaux radioactifs de constante $\\lambda = 5{,}0\\times10^{-9}\\ \\mathrm{s^{-1}}$. Son activité vaut :",
+          "options": [
+            {
+              "label": "$1{,}0\\times10^{10}\\ \\mathrm{Bq}$",
+              "correct": true,
+              "why": "$a = \\lambda N = 5{,}0\\times10^{-9} \\times 2{,}0\\times10^{18} = 1{,}0\\times10^{10}\\ \\mathrm{Bq}$."
+            },
+            {
+              "label": "$4{,}0\\times10^{26}\\ \\mathrm{Bq}$",
+              "why": "Tu as calculé $N/\\lambda$ au lieu de $\\lambda N$."
+            },
+            {
+              "label": "$2{,}5\\times10^{-27}\\ \\mathrm{Bq}$",
+              "why": "Tu as calculé $\\lambda/N$ : le résultat n'est même pas homogène à une activité."
+            },
+            {
+              "label": "$1{,}0\\times10^{13}\\ \\mathrm{Bq}$",
+              "why": "Erreur sur les puissances de dix : $10^{-9} \\times 10^{18} = 10^{9}$, et non $10^{12}$."
+            }
+          ],
+          "hint": "L'activité est proportionnelle au nombre de noyaux présents : le coefficient est $\\lambda$.",
+          "solution": "$a = \\lambda N = 5{,}0\\times10^{-9} \\times 2{,}0\\times10^{18} = 10 \\times 10^{9} = 1{,}0\\times10^{10}\\ \\mathrm{Bq}$.",
+          "methode": "$a = \\lambda N$ : traite séparément les mantisses et les puissances de dix, puis vérifie l'exposant.",
+          "points": 1,
+          "ref": "pc-radioactivite-l-activite-d-un-echantillon-q2"
+        },
+        {
+          "notion": "L'activité d'un échantillon",
+          "difficulty": 2,
+          "statement": "Au cours du temps, l'activité d'un échantillon décroît :",
+          "options": [
+            {
+              "label": "selon la même loi exponentielle que $N$, avec la même demi-vie",
+              "correct": true,
+              "why": "$a = \\lambda N$ avec $\\lambda$ constant : $a$ est proportionnelle à $N$, donc $a(t) = a_0 e^{-\\lambda t}$."
+            },
+            {
+              "label": "linéairement, en perdant la même quantité chaque seconde",
+              "why": "Une décroissance linéaire atteindrait zéro puis deviendrait négative : impossible."
+            },
+            {
+              "label": "plus lentement que $N$, car les noyaux restants sont plus stables",
+              "why": "Tous les noyaux d'un même nucléide ont la **même** probabilité de se désintégrer : rien ne rend les survivants plus stables."
+            },
+            {
+              "label": "deux fois plus vite que $N$, car chaque désintégration compte double",
+              "why": "Chaque désintégration fait disparaître **un** noyau : il n'y a aucun facteur $2$."
+            }
+          ],
+          "hint": "Écris $a = \\lambda N$ et remplace $N$ par son expression : que reconnais-tu ?",
+          "solution": "Puisque $a = \\lambda N$ et que $\\lambda$ est une **constante** :\n$$a(t) = \\lambda N_0 e^{-\\lambda t} = a_0\\,e^{-\\lambda t}$$\nL'activité suit donc exactement la même loi que $N$, avec la même constante $\\lambda$ et la même demi-vie. C'est ce qui permet de daterun échantillon en mesurant son **activité**, grandeur accessible au compteur, plutôt que son nombre de noyaux, qui ne l'est pas.",
+          "methode": "$a$ et $N$ sont proportionnels à tout instant : mêmes $\\lambda$, même $t_{1/2}$, et on peut remplacer $N/N_0$ par $a/a_0$ dans tous les calculs.",
+          "points": 1,
+          "ref": "pc-radioactivite-l-activite-d-un-echantillon-q3"
+        },
+        {
+          "notion": "L'activité d'un échantillon",
+          "difficulty": 3,
+          "statement": "Une source a une activité de $4{,}8\\times10^{5}\\ \\mathrm{Bq}$ et une demi-vie de $5{,}0$ jours. Au bout de $15$ jours, son activité vaut :",
+          "options": [
+            {
+              "label": "$6{,}0\\times10^{4}\\ \\mathrm{Bq}$",
+              "correct": true,
+              "why": "$15/5{,}0 = 3$ demi-vies, donc division par $2^{3} = 8$ : $4{,}8\\times10^{5}/8 = 6{,}0\\times10^{4}\\ \\mathrm{Bq}$."
+            },
+            {
+              "label": "$1{,}6\\times10^{5}\\ \\mathrm{Bq}$",
+              "why": "Tu as divisé par $3$, le nombre de demi-vies, au lieu de diviser par $2^{3}$."
+            },
+            {
+              "label": "$2{,}4\\times10^{5}\\ \\mathrm{Bq}$",
+              "why": "C'est l'activité après **une** demi-vie, soit $5{,}0$ jours."
+            },
+            {
+              "label": "$4{,}8\\times10^{4}\\ \\mathrm{Bq}$",
+              "why": "Tu as divisé par $10$ : cette opération ne correspond à aucune étape du raisonnement."
+            }
+          ],
+          "hint": "L'activité suit la même loi que $N$ : compte le nombre de demi-vies, puis divise par $2$ autant de fois.",
+          "solution": "L'activité décroît comme $N$, donc elle est divisée par $2$ à chaque demi-vie. En $15$ jours il s'écoule $n = 15/5{,}0 = 3$ demi-vies :\n$$a = \\frac{a_0}{2^{3}} = \\frac{4{,}8\\times10^{5}}{8} = 6{,}0\\times10^{4}\\ \\mathrm{Bq}$$",
+          "methode": "Tout ce qui vaut pour $N$ vaut pour $a$ : division par $2^{n}$, loi exponentielle, même demi-vie.",
+          "points": 1,
+          "ref": "pc-radioactivite-l-activite-d-un-echantillon-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Exploiter la loi : la linéarisation",
+        "lesson": "Loi de décroissance radioactive",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-exploiter-la-loi-la-linearisation",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "Exploiter la loi : la linéarisation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Exploiter la loi : la linéarisation",
+          "difficulty": 1,
+          "statement": "En prenant le logarithme népérien des deux membres de $N(t) = N_0 e^{-\\lambda t}$, on obtient :",
+          "options": [
+            {
+              "label": "$\\ln N = \\ln N_0 - \\lambda t$",
+              "correct": true,
+              "why": "$\\ln(N_0 e^{-\\lambda t}) = \\ln N_0 + \\ln(e^{-\\lambda t}) = \\ln N_0 - \\lambda t$."
+            },
+            {
+              "label": "$\\ln N = \\ln N_0 + \\lambda t$",
+              "why": "Erreur de signe : l'exposant est $-\\lambda t$, donc le terme en $t$ est **négatif**."
+            },
+            {
+              "label": "$\\ln N = -\\lambda t$",
+              "why": "Tu as oublié $\\ln N_0$ : à $t = 0$, ton expression donnerait $\\ln N = 0$, donc $N = 1$."
+            },
+            {
+              "label": "$N = \\ln N_0 - \\lambda t$",
+              "why": "Tu as pris le logarithme du membre de droite seulement : il faut l'appliquer aux **deux** membres."
+            }
+          ],
+          "hint": "Utilise $\\ln(ab) = \\ln a + \\ln b$ puis $\\ln(e^{x}) = x$.",
+          "solution": "$\\ln N = \\ln\\left(N_0 e^{-\\lambda t}\\right) = \\ln N_0 + \\ln\\left(e^{-\\lambda t}\\right) = \\ln N_0 - \\lambda t$.\n\nOn obtient une relation **affine** en $t$ : c'est tout l'intérêt de la linéarisation, car une droite se vérifie et s'exploite bien plus facilement qu'une exponentielle.",
+          "methode": "Linéariser une exponentielle : prends le $\\ln$ des **deux** membres. Contrôle : ton expression doit redonner $\\ln N_0$ en $t = 0$.",
+          "points": 1,
+          "ref": "pc-radioactivite-exploiter-la-loi-la-linearisation-q1"
+        },
+        {
+          "notion": "Exploiter la loi : la linéarisation",
+          "difficulty": 2,
+          "statement": "Le graphe de $\\ln N$ en fonction de $t$ est une droite. Son coefficient directeur vaut :",
+          "options": [
+            {
+              "label": "$-\\lambda$",
+              "correct": true,
+              "why": "Dans $\\ln N = \\ln N_0 - \\lambda t$, le coefficient de $t$ est $-\\lambda$ : la pente est **négative**."
+            },
+            {
+              "label": "$+\\lambda$",
+              "why": "La pente est négative, puisque $N$ décroît : $\\ln N$ décroît aussi."
+            },
+            {
+              "label": "$-\\lambda t$",
+              "why": "Une pente est un **nombre**, pas une fonction du temps : $t$ ne doit pas y figurer."
+            },
+            {
+              "label": "$\\ln N_0$",
+              "why": "C'est l'**ordonnée à l'origine** de la droite, pas son coefficient directeur."
+            }
+          ],
+          "hint": "Identifie l'équation $\\ln N = \\ln N_0 - \\lambda t$ avec la forme $y = ax + b$.",
+          "solution": "En identifiant $\\ln N = \\ln N_0 - \\lambda t$ avec $y = a t + b$ : le coefficient directeur est $a = -\\lambda$ et l'ordonnée à l'origine est $b = \\ln N_0$. La constante radioactive se lit donc comme l'**opposé de la pente**.",
+          "methode": "Pente $= -\\lambda$, ordonnée à l'origine $= \\ln N_0$. Comme $\\lambda > 0$ par définition, n'oublie jamais de prendre l'opposé.",
+          "points": 1,
+          "ref": "pc-radioactivite-exploiter-la-loi-la-linearisation-q2"
+        },
+        {
+          "notion": "Exploiter la loi : la linéarisation",
+          "difficulty": 2,
+          "statement": "La droite $\\ln N = f(t)$ passe par les points $(0\\,;\\,46{,}0)$ et $(2{,}0\\times10^{3}\\ \\mathrm{s}\\,;\\,44{,}0)$. La constante radioactive vaut :",
+          "options": [
+            {
+              "label": "$1{,}0\\times10^{-3}\\ \\mathrm{s^{-1}}$",
+              "correct": true,
+              "why": "Pente $= \\dfrac{44{,}0 - 46{,}0}{2{,}0\\times10^{3}} = -1{,}0\\times10^{-3}$, et $\\lambda$ en est l'opposé."
+            },
+            {
+              "label": "$-1{,}0\\times10^{-3}\\ \\mathrm{s^{-1}}$",
+              "why": "C'est la **pente**, pas $\\lambda$ : la constante radioactive est positive par définition."
+            },
+            {
+              "label": "$2{,}0\\times10^{-3}\\ \\mathrm{s^{-1}}$",
+              "why": "Tu as divisé l'écart $2{,}0$ par $1{,}0\\times10^{3}$ : l'écart en abscisse est $2{,}0\\times10^{3}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$1{,}0\\times10^{3}\\ \\mathrm{s^{-1}}$",
+              "why": "Tu as calculé l'inverse de la pente : une constante radioactive s'exprime en $\\mathrm{s^{-1}}$ et vaut ici moins de $1$."
+            }
+          ],
+          "hint": "Calcule la pente avec les deux points, puis souviens-toi que $\\lambda$ est son opposé.",
+          "solution": "Pente $= \\dfrac{\\Delta(\\ln N)}{\\Delta t} = \\dfrac{44{,}0 - 46{,}0}{2{,}0\\times10^{3} - 0} = \\dfrac{-2{,}0}{2{,}0\\times10^{3}} = -1{,}0\\times10^{-3}\\ \\mathrm{s^{-1}}$.\nComme la pente vaut $-\\lambda$ : $\\lambda = 1{,}0\\times10^{-3}\\ \\mathrm{s^{-1}}$.",
+          "methode": "Deux points $\\Rightarrow$ pente $\\Rightarrow$ opposé $= \\lambda$. Vérifie toujours l'unité : $\\mathrm{s^{-1}}$ si $t$ est en secondes.",
+          "points": 1,
+          "ref": "pc-radioactivite-exploiter-la-loi-la-linearisation-q3"
+        },
+        {
+          "notion": "Exploiter la loi : la linéarisation",
+          "difficulty": 3,
+          "statement": "Avec $\\lambda = 1{,}0\\times10^{-3}\\ \\mathrm{s^{-1}}$ tiré du graphe précédent, la demi-vie de ce nucléide vaut :",
+          "options": [
+            {
+              "label": "$6{,}9\\times10^{2}\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$t_{1/2} = \\dfrac{\\ln 2}{\\lambda} = \\dfrac{0{,}693}{1{,}0\\times10^{-3}} = 6{,}9\\times10^{2}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$1{,}0\\times10^{3}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $1/\\lambda$ : c'est la constante de temps $\\tau$, environ $1{,}44$ fois la demi-vie."
+            },
+            {
+              "label": "$3{,}5\\times10^{2}\\ \\mathrm{s}$",
+              "why": "Tu as divisé le bon résultat par $2$ : le facteur $2$ porte sur le nombre de noyaux, pas sur la durée."
+            },
+            {
+              "label": "$1{,}4\\times10^{3}\\ \\mathrm{s}$",
+              "why": "Tu as appliqué le facteur $1{,}44$ dans le mauvais sens : il multiplie $t_{1/2}$ pour donner $\\tau$, et non $\\tau$ pour donner $t_{1/2}$."
+            }
+          ],
+          "hint": "Une fois $\\lambda$ connue, la demi-vie s'obtient par une relation directe — attention à ne pas la confondre avec $\\tau$.",
+          "solution": "$t_{1/2} = \\dfrac{\\ln 2}{\\lambda} = \\dfrac{0{,}693}{1{,}0\\times10^{-3}} = 6{,}93\\times10^{2}\\ \\mathrm{s} \\approx 6{,}9\\times10^{2}\\ \\mathrm{s}$, soit environ $12$ minutes.\n\n**Contrôle** : $\\tau = 1/\\lambda = 1{,}0\\times10^{3}\\ \\mathrm{s}$, et l'on vérifie bien $\\tau = 1{,}44\\,t_{1/2}$.",
+          "methode": "Chaîne complète à maîtriser : graphe $\\to$ pente $\\to \\lambda \\to t_{1/2} = \\ln 2/\\lambda$. C'est l'ossature de presque tous les exercices du chapitre.",
+          "points": 1,
+          "ref": "pc-radioactivite-exploiter-la-loi-la-linearisation-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Filiation radioactive et familles",
+        "lesson": "Approfondissement — Décroissance radioactive",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-filiation-radioactive-et-familles",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "Filiation radioactive et familles",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Filiation radioactive et familles",
+          "difficulty": 3,
+          "statement": "Dans la famille de l'uranium 238, on trouve le radon 222, lui-même radioactif, et le plomb 206, stable. Que peut-on en conclure ?",
+          "options": [
+            {
+              "label": "une désintégration donne souvent un noyau encore radioactif : la filiation se poursuit de père en fils jusqu'à un noyau stable",
+              "correct": true,
+              "why": "C'est la définition d'une **famille radioactive** : une cascade de désintégrations qui ne s'arrête qu'au premier noyau stable."
+            },
+            {
+              "label": "chaque noyau radioactif donne directement un noyau stable",
+              "why": "Le radon 222 prouve le contraire : il est à la fois **fils** de l'uranium et **père** d'autres nucléides."
+            },
+            {
+              "label": "la famille s'arrête au radon, qui est un gaz et s'échappe",
+              "why": "Le radon s'échappe effectivement des sols — d'où son risque sanitaire — mais la cascade nucléaire, elle, se poursuit jusqu'au plomb."
+            },
+            {
+              "label": "tous les descendants d'une même famille ont la même demi-vie",
+              "why": "Les demi-vies varient énormément le long d'une famille : de la fraction de seconde au milliard d'années."
+            }
+          ],
+          "hint": "Le radon 222 est-il un point d'arrivée, ou une étape ?",
+          "solution": "Le noyau fils d'une désintégration n'est pas nécessairement stable : il peut se désintégrer à son tour. On obtient alors une **famille radioactive**, cascade de désintégrations $\\alpha$ et $\\beta^{-}$ qui ne s'interrompt qu'au premier noyau **stable**. Pour la famille de l'uranium 238, le terme est le plomb 206 ; le radon 222 n'en est qu'une étape intermédiaire.\n\nLes demi-vies le long de la chaîne sont extrêmement variées : $4{,}5$ milliards d'années pour l'uranium 238, $3{,}8$ jours pour le radon 222.",
+          "methode": "Fils radioactif $\\Rightarrow$ la cascade continue. Une famille se **nomme** par son premier terme et s'**arrête** à son noyau stable.",
+          "points": 1,
+          "ref": "pc-radioactivite-filiation-radioactive-et-familles-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Compter les noyaux fils",
+        "lesson": "Approfondissement — Décroissance radioactive",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-compter-les-noyaux-fils",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "Compter les noyaux fils",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Compter les noyaux fils",
+          "difficulty": 3,
+          "statement": "Un échantillon contient $N_0$ noyaux radioactifs à $t = 0$, dont le noyau fils est **stable**. À la date $t$, le nombre de noyaux fils formés vaut :",
+          "options": [
+            {
+              "label": "$N_{fils} = N_0 - N(t) = N_0\\left(1 - e^{-\\lambda t}\\right)$",
+              "correct": true,
+              "why": "Chaque noyau disparu a produit exactement un noyau fils : le compte des fils est le compte des pères disparus."
+            },
+            {
+              "label": "$N_{fils} = N_0\\,e^{-\\lambda t}$",
+              "why": "C'est le nombre de noyaux **pères restants**, donc exactement le complément de ce qu'on cherche."
+            },
+            {
+              "label": "$N_{fils} = N_0$",
+              "why": "Ce serait vrai seulement au bout d'un temps infini : à une date finie, il reste toujours des noyaux pères."
+            },
+            {
+              "label": "$N_{fils} = \\lambda N(t)$",
+              "why": "C'est l'**activité** : un nombre de désintégrations par seconde, pas un nombre de noyaux."
+            }
+          ],
+          "hint": "Où sont passés les noyaux pères qui ont disparu ?",
+          "solution": "Chaque désintégration transforme **un** noyau père en **un** noyau fils. Le nombre de fils formés est donc égal au nombre de pères disparus :\n$$N_{fils}(t) = N_0 - N(t) = N_0\\left(1 - e^{-\\lambda t}\\right)$$\nContrôles : à $t = 0$ on trouve $0$ fils, et quand $t \\to \\infty$ on tend vers $N_0$. À $t = t_{1/2}$, il y a autant de fils que de pères.\n\n**Attention** : ce raisonnement suppose le noyau fils **stable**. S'il est lui-même radioactif, il disparaît au fur et à mesure qu'il se forme et cette expression ne s'applique plus.",
+          "methode": "Conservation du nombre de noyaux : **pères restants + fils formés $= N_0$**. Valable seulement si le fils est stable.",
+          "points": 1,
+          "ref": "pc-radioactivite-compter-les-noyaux-fils-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Activité et mesure",
+        "lesson": "Approfondissement — Décroissance radioactive",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-activite-et-mesure",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "Activité et mesure",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Activité et mesure",
+          "difficulty": 3,
+          "statement": "Un compteur placé près d'une source indique un nombre de coups par seconde nettement **inférieur** à l'activité réelle de la source. Pourquoi ?",
+          "options": [
+            {
+              "label": "parce qu'il n'intercepte qu'une petite fraction des rayonnements, émis dans toutes les directions, et que son rendement de détection n'est pas de $100\\ \\%$",
+              "correct": true,
+              "why": "La source rayonne dans tout l'espace : le détecteur n'en voit que l'angle solide qu'il couvre, et ne compte pas tout ce qui le traverse."
+            },
+            {
+              "label": "parce que l'activité de la source diminue pendant la durée de la mesure",
+              "why": "Cette décroissance existe mais elle est totalement négligeable sur quelques secondes, et elle n'expliquerait pas un écart d'un facteur important."
+            },
+            {
+              "label": "parce que le compteur mesure une énergie reçue, et non un nombre de désintégrations",
+              "why": "Un compteur à impulsions compte bien des **événements** : ce n'est pas une erreur de nature de grandeur."
+            },
+            {
+              "label": "parce qu'il faut retrancher le bruit de fond, qui est très supérieur au signal",
+              "why": "Le bruit de fond **augmente** le nombre de coups mesurés : le retrancher ne peut pas expliquer une mesure trop faible."
+            }
+          ],
+          "hint": "Réfléchis à la géométrie : dans quelles directions la source émet-elle, et quelle portion le détecteur couvre-t-il ?",
+          "solution": "Deux causes se cumulent, toutes deux **géométriques et instrumentales** :\n\n- une source émet ses rayonnements dans **toutes les directions** ; un détecteur de petite surface placé à une certaine distance n'en intercepte qu'une fraction, d'autant plus faible qu'il est loin ;\n- parmi les rayonnements qui l'atteignent, tous ne produisent pas une impulsion : le **rendement** du détecteur dépend du type de rayonnement et de son énergie.\n\nEn pratique on ne remonte à l'activité absolue qu'après **étalonnage** avec une source d'activité connue. C'est aussi pourquoi les exercices comparent presque toujours **deux** mesures faites dans les mêmes conditions : le rapport $a/a_0$ élimine tous ces facteurs.",
+          "methode": "Un taux de comptage n'est pas une activité. Mais le **rapport** de deux comptages faits dans les mêmes conditions est bien le rapport des activités — et c'est tout ce dont on a besoin pour dater.",
+          "points": 1,
+          "ref": "pc-radioactivite-activite-et-mesure-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Effets biologiques et radioprotection",
+        "lesson": "Approfondissement — Décroissance radioactive",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-radioactivite-effets-biologiques-et-radioprotection",
+      "chapter": "pc-radioactivite",
+      "kind": "qcu",
+      "title": "Effets biologiques et radioprotection",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Effets biologiques et radioprotection",
+          "difficulty": 3,
+          "statement": "Pour se protéger d'une source radioactive, la démarche efficace consiste à :",
+          "options": [
+            {
+              "label": "s'éloigner, interposer un écran adapté au rayonnement, et limiter la durée d'exposition",
+              "correct": true,
+              "why": "Distance, écran et temps : ce sont les trois leviers de la radioprotection, et ils se combinent."
+            },
+            {
+              "label": "porter des vêtements ordinaires, qui arrêtent tous les types de rayonnements",
+              "why": "Un tissu arrête les $\\alpha$, mais les $\\beta$ le traversent et les $\\gamma$ y passent presque librement."
+            },
+            {
+              "label": "attendre la décroissance de la source, ce qui demande toujours quelques heures",
+              "why": "Les demi-vies vont de la seconde au milliard d'années : attendre n'est une option que pour les nucléides à vie courte."
+            },
+            {
+              "label": "se tourner de côté par rapport à la source plutôt que de lui faire face",
+              "why": "Une source émet dans toutes les directions : l'orientation du corps ne protège pas."
+            }
+          ],
+          "hint": "Il y a trois grandeurs sur lesquelles on peut agir, et une seule d'entre elles concerne la source.",
+          "solution": "La radioprotection repose sur **trois leviers** :\n\n- la **distance** : l'intensité reçue décroît rapidement quand on s'éloigne, puisque le rayonnement se répartit sur une surface croissante ;\n- l'**écran**, choisi selon le rayonnement : une feuille de papier suffit pour les $\\alpha$, quelques millimètres d'aluminium pour les $\\beta$, mais il faut des épaisseurs de plomb ou de béton pour les $\\gamma$, très pénétrants ;\n- le **temps** d'exposition, car la dose reçue lui est proportionnelle.\n\nLe danger vient de l'**ionisation** des molécules du vivant, et notamment des lésions de l'ADN, qui peuvent provoquer mutations et cancers.",
+          "methode": "Les trois leviers : **distance, écran, temps**. Pouvoir de pénétration croissant : $\\alpha$ (papier) $<$ $\\beta$ (aluminium) $<$ $\\gamma$ (plomb).",
+          "points": 1,
+          "ref": "pc-radioactivite-effets-biologiques-et-radioprotection-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-radioactivite-probleme-1",
+      "chapter": "pc-radioactivite",
+      "kind": "probleme",
+      "title": "Dater un fragment de bois au carbone 14",
+      "difficulty": 3,
+      "context": "Le carbone 14, $^{14}_{6}\\mathrm{C}$, est produit en permanence dans la haute atmosphère. Tout organisme vivant échange du carbone avec son milieu et présente donc, de son vivant, la même **activité massique** en carbone 14 que l'atmosphère. À sa mort, les échanges cessent et le carbone 14 qu'il contient ne fait plus que décroître.\n\nUn fragment de bois trouvé sur un site archéologique présente une activité massique $a = 6{,}0\\ \\mathrm{Bq\\,kg^{-1}}$, alors qu'un bois vivant de la même essence présente $a_0 = 16{,}0\\ \\mathrm{Bq\\,kg^{-1}}$.\n\nDonnées : demi-vie du carbone 14 $t_{1/2} = 5570\\ \\mathrm{ans}$ ; $\\ln 2 = 0{,}693$ ; $\\ln(16{,}0/6{,}0) = 0{,}981$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Le noyau atomique : notation, isotopes",
+          "difficulty": 1,
+          "statement": "Le carbone 14 et le carbone 12 sont deux isotopes. Le noyau de carbone 14 contient :",
+          "options": [
+            {
+              "label": "$6$ protons et $8$ neutrons",
+              "correct": true,
+              "why": "$Z = 6$ pour tout carbone, et $N = A - Z = 14 - 6 = 8$."
+            },
+            {
+              "label": "$6$ protons et $14$ neutrons",
+              "why": "Tu as pris $A$ pour le nombre de neutrons : $A$ compte tous les nucléons."
+            },
+            {
+              "label": "$8$ protons et $6$ neutrons",
+              "why": "Tu as échangé les deux : avec $8$ protons, ce serait de l'oxygène."
+            },
+            {
+              "label": "$14$ protons et $6$ neutrons",
+              "why": "Tu as inversé $A$ et $Z$ dans la notation $^{A}_{Z}X$."
+            }
+          ],
+          "hint": "Le nombre du bas de la notation donne les protons ; les neutrons se déduisent par une soustraction.",
+          "solution": "Pour $^{14}_{6}\\mathrm{C}$ : $Z = 6$ protons, et $N = A - Z = 14 - 6 = 8$ neutrons. Le carbone 12 a le même $Z = 6$ mais seulement $6$ neutrons : c'est bien un isotope.",
+          "methode": "Même $Z$ $\\Rightarrow$ isotopes $\\Rightarrow$ **même comportement chimique**, et c'est pour cela qu'un arbre incorpore les deux indifféremment.",
+          "points": 1,
+          "part": "Partie A — Le nucléide et sa désintégration",
+          "ref": "pc-radioactivite-probleme-1-q1"
+        },
+        {
+          "notion": "Les lois de conservation (lois de Soddy)",
+          "difficulty": 1,
+          "statement": "Le carbone 14 est radioactif $\\beta^{-}$. L'équation de sa désintégration est :",
+          "options": [
+            {
+              "label": "$^{14}_{6}\\mathrm{C} \\longrightarrow\\ ^{14}_{7}\\mathrm{N} + ^{0}_{-1}e$",
+              "correct": true,
+              "why": "$A$ est conservé ($14 = 14 + 0$) et $Z$ aussi ($6 = 7 - 1$)."
+            },
+            {
+              "label": "$^{14}_{6}\\mathrm{C} \\longrightarrow\\ ^{14}_{5}\\mathrm{B} + ^{0}_{-1}e$",
+              "why": "Le bilan des charges ne tient pas : $5 - 1 = 4 \\ne 6$. En $\\beta^{-}$, $Z$ **augmente**."
+            },
+            {
+              "label": "$^{14}_{6}\\mathrm{C} \\longrightarrow\\ ^{13}_{7}\\mathrm{N} + ^{0}_{-1}e$",
+              "why": "Le nombre de masse n'est pas conservé : $13 \\ne 14$. Un $\\beta^{-}$ ne retire aucun nucléon."
+            },
+            {
+              "label": "$^{14}_{6}\\mathrm{C} \\longrightarrow\\ ^{10}_{4}\\mathrm{Be} + ^{4}_{2}\\mathrm{He}$",
+              "why": "C'est une désintégration $\\alpha$, alors que l'énoncé indique une radioactivité $\\beta^{-}$."
+            }
+          ],
+          "hint": "Applique les deux lois de Soddy en n'oubliant pas que l'électron a un nombre de charge égal à $-1$.",
+          "solution": "En $\\beta^{-}$, un neutron se transforme en proton : $A$ reste inchangé et $Z$ augmente d'une unité.\n$$^{14}_{6}\\mathrm{C} \\longrightarrow\\ ^{14}_{7}\\mathrm{N} + ^{0}_{-1}e$$\nVérification : $A$ : $14 = 14 + 0$ ; $Z$ : $6 = 7 + (-1)$. Le carbone se transforme en azote 14, stable.",
+          "methode": "L'électron $\\beta^{-}$ s'écrit $^{0}_{-1}e$ : son $Z = -1$ est indispensable pour équilibrer.",
+          "points": 1,
+          "part": "Partie A — Le nucléide et sa désintégration",
+          "ref": "pc-radioactivite-probleme-1-q2"
+        },
+        {
+          "notion": "Demi-vie et constante de temps",
+          "difficulty": 2,
+          "statement": "La constante radioactive du carbone 14 vaut :",
+          "options": [
+            {
+              "label": "$1{,}24\\times10^{-4}\\ \\mathrm{an^{-1}}$",
+              "correct": true,
+              "why": "$\\lambda = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{5570} = 1{,}24\\times10^{-4}\\ \\mathrm{an^{-1}}$."
+            },
+            {
+              "label": "$8{,}04\\times10^{3}\\ \\mathrm{an^{-1}}$",
+              "why": "Tu as calculé $t_{1/2}/\\ln 2$ : c'est la constante de temps $\\tau$, en années, pas $\\lambda$."
+            },
+            {
+              "label": "$1{,}80\\times10^{-4}\\ \\mathrm{an^{-1}}$",
+              "why": "Tu as calculé $1/t_{1/2}$ en oubliant le facteur $\\ln 2$."
+            },
+            {
+              "label": "$3{,}86\\times10^{3}\\ \\mathrm{an^{-1}}$",
+              "why": "Tu as multiplié $t_{1/2}$ par $\\ln 2$ : cela donne une durée, pas une constante en $\\mathrm{an^{-1}}$."
+            }
+          ],
+          "hint": "Pars de la relation entre demi-vie et constante radioactive, et surveille l'unité du résultat.",
+          "solution": "$\\lambda = \\dfrac{\\ln 2}{t_{1/2}} = \\dfrac{0{,}693}{5570} = 1{,}244\\times10^{-4}\\ \\mathrm{an^{-1}}$.\n\nL'unité est l'inverse de celle de la demi-vie : comme $t_{1/2}$ est en années, $\\lambda$ est en $\\mathrm{an^{-1}}$. Il faudra donc exprimer l'âge en **années**.",
+          "methode": "Choisis l'unité de temps **une fois pour toutes** au début de l'exercice : celle de $\\lambda$ impose celle de $t$.",
+          "points": 1,
+          "part": "Partie A — Le nucléide et sa désintégration",
+          "ref": "pc-radioactivite-probleme-1-q3"
+        },
+        {
+          "notion": "L'activité d'un échantillon",
+          "difficulty": 2,
+          "statement": "Pourquoi peut-on remplacer le rapport $N/N_0$ par le rapport $a/a_0$ des activités massiques ?",
+          "options": [
+            {
+              "label": "parce que $a = \\lambda N$ avec la même constante $\\lambda$ aux deux dates : le rapport des activités égale celui des nombres de noyaux",
+              "correct": true,
+              "why": "$\\dfrac{a}{a_0} = \\dfrac{\\lambda N}{\\lambda N_0} = \\dfrac{N}{N_0}$ : la constante $\\lambda$ se simplifie."
+            },
+            {
+              "label": "parce que l'activité est constante au cours du temps",
+              "why": "L'activité décroît, et c'est justement cette décroissance qu'on exploite."
+            },
+            {
+              "label": "parce que le nombre de noyaux est proportionnel à la masse de l'échantillon",
+              "why": "C'est vrai, et c'est pourquoi on travaille en activité **massique** — mais cela ne justifie pas le remplacement de $N/N_0$ par $a/a_0$."
+            },
+            {
+              "label": "parce que $\\lambda$ change avec le temps, ce qui compense la décroissance de $N$",
+              "why": "$\\lambda$ est une **constante** caractéristique du nucléide : elle ne dépend ni du temps ni des conditions."
+            }
+          ],
+          "hint": "Écris $a$ et $a_0$ avec la même relation, puis forme leur rapport.",
+          "solution": "L'activité est proportionnelle au nombre de noyaux : $a = \\lambda N$ et $a_0 = \\lambda N_0$, **avec la même** constante $\\lambda$. Donc\n$$\\frac{a}{a_0} = \\frac{\\lambda N}{\\lambda N_0} = \\frac{N}{N_0} = e^{-\\lambda t}$$\nC'est ce qui rend la datation possible en pratique : on ne sait pas compter les noyaux d'un échantillon, mais on sait mesurer son activité.",
+          "methode": "Dans tous les calculs de décroissance, $N/N_0$, $a/a_0$ et $m/m_0$ sont **interchangeables** : les constantes se simplifient.",
+          "points": 1,
+          "part": "Partie B — Exploitation quantitative",
+          "ref": "pc-radioactivite-probleme-1-q4"
+        },
+        {
+          "notion": "Méthode 5 — La datation",
+          "difficulty": 3,
+          "statement": "L'âge du fragment de bois est donc d'environ :",
+          "options": [
+            {
+              "label": "$7{,}9\\times10^{3}\\ \\mathrm{ans}$",
+              "correct": true,
+              "why": "$t = \\dfrac{1}{\\lambda}\\ln\\dfrac{a_0}{a} = \\dfrac{0{,}981}{1{,}244\\times10^{-4}} = 7{,}9\\times10^{3}\\ \\mathrm{ans}$."
+            },
+            {
+              "label": "$1{,}1\\times10^{4}\\ \\mathrm{ans}$",
+              "why": "Tu as arrondi le rapport $16{,}0/6{,}0$ à $4$ et compté deux demi-vies : le rapport vaut en réalité $2{,}7$."
+            },
+            {
+              "label": "$3{,}4\\times10^{3}\\ \\mathrm{ans}$",
+              "why": "Tu as utilisé le logarithme **décimal** au lieu du logarithme népérien : l'écart est un facteur $\\ln 10 = 2{,}30$."
+            },
+            {
+              "label": "$5{,}6\\times10^{3}\\ \\mathrm{ans}$",
+              "why": "Tu as répondu une demi-vie, ce qui correspondrait à une activité divisée par $2$, soit $8{,}0\\ \\mathrm{Bq\\,kg^{-1}}$."
+            }
+          ],
+          "hint": "Isole $t$ dans $a = a_0 e^{-\\lambda t}$ en passant au logarithme népérien, puis utilise la valeur de $\\ln(16{,}0/6{,}0)$ fournie.",
+          "solution": "De $a = a_0\\,e^{-\\lambda t}$ on tire $\\dfrac{a_0}{a} = e^{\\lambda t}$, puis\n$$t = \\frac{1}{\\lambda}\\,\\ln\\frac{a_0}{a} = \\frac{\\ln(16{,}0/6{,}0)}{\\lambda} = \\frac{0{,}981}{1{,}244\\times10^{-4}} = 7{,}9\\times10^{3}\\ \\mathrm{ans}$$\n**Contrôle de cohérence** : l'activité a été divisée par $2{,}7$, soit un peu plus d'une demi-vie et un peu moins de deux. L'âge doit donc tomber entre $5570$ et $11\\,140$ ans — ce qui est bien le cas.",
+          "methode": "Formule de datation : $t = \\dfrac{1}{\\lambda}\\ln\\dfrac{a_0}{a}$, avec $\\lambda = \\dfrac{\\ln 2}{t_{1/2}}$. Encadre toujours le résultat par le nombre de demi-vies.",
+          "points": 1,
+          "part": "Partie B — Exploitation quantitative",
+          "ref": "pc-radioactivite-probleme-1-q5"
+        },
+        {
+          "notion": "Méthode 3 — Calculs sur la loi $N(t) = N_0 e^{-\\lambda t}$",
+          "difficulty": 3,
+          "statement": "Sur quelle hypothèse cette datation repose-t-elle nécessairement ?",
+          "options": [
+            {
+              "label": "que l'activité massique en carbone 14 de l'atmosphère était la même il y a $8000$ ans qu'aujourd'hui",
+              "correct": true,
+              "why": "$a_0$ est mesurée sur un bois **actuel** : sans cette hypothèse, la valeur de référence utilisée serait fausse."
+            },
+            {
+              "label": "que le carbone 14 du fragment ne s'est pas désintégré depuis la mort de l'arbre",
+              "why": "Il s'est bien désintégré : c'est précisément ce qui fait chuter l'activité de $16{,}0$ à $6{,}0\\ \\mathrm{Bq\\,kg^{-1}}$."
+            },
+            {
+              "label": "que la demi-vie du carbone 14 a diminué au cours des millénaires",
+              "why": "Une demi-vie est une **constante** du nucléide : la supposer variable invaliderait toute datation."
+            },
+            {
+              "label": "que le fragment de bois a conservé toute sa masse depuis la mort de l'arbre",
+              "why": "On travaille en activité **massique**, précisément pour que le résultat ne dépende pas de la masse conservée."
+            }
+          ],
+          "hint": "D'où vient la valeur $a_0$ utilisée dans le calcul, et à quelle époque se rapporte-t-elle ?",
+          "solution": "La méthode compare l'activité du fragment à celle d'un bois **vivant aujourd'hui**. Or ce qu'il faudrait connaître, c'est l'activité que le fragment avait **au moment de la mort de l'arbre**. Le calcul suppose donc que la teneur en carbone 14 de l'atmosphère est restée **constante** au cours du temps.\n\nC'est une hypothèse raisonnable — la production de carbone 14 par le rayonnement cosmique est à peu près stable — mais pas exacte : les variations de l'activité solaire, puis les essais nucléaires et la combustion massive de charbon et de pétrole au $\\mathrm{XX}^{e}$ siècle, l'ont modifiée. Les laboratoires appliquent pour cette raison des **courbes de calibration**.",
+          "methode": "Toute datation compare un état **actuel** à un état **initial supposé**. Sache nommer l'hypothèse sur cet état initial : c'est une question de raisonnement classique au BAC.",
+          "points": 1,
+          "part": "Partie B — Exploitation quantitative",
+          "ref": "pc-radioactivite-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-radioactivite-probleme-2",
+      "chapter": "pc-radioactivite",
+      "kind": "probleme",
+      "title": "Suivre la décroissance de l'iode 131",
+      "difficulty": 3,
+      "context": "L'iode 131 est utilisé en médecine nucléaire. On dispose d'un échantillon dont on mesure l'activité $a$ à intervalles réguliers. En portant $\\ln a$ (avec $a$ exprimée en becquerels) en fonction du temps $t$ exprimé en jours, on obtient une **droite** passant par les points $(0\\,;\\,19{,}80)$ et $(24{,}0\\ \\mathrm{j}\\,;\\,17{,}72)$.\n\nDonnées : $\\ln 2 = 0{,}693$ ; $e^{19{,}80} = 4{,}0\\times10^{8}$ ; $\\ln(39{,}7) = 3{,}68$.",
+      "figure": "radioactivite",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "La loi de décroissance",
+          "difficulty": 1,
+          "statement": "Pourquoi le graphe de $\\ln a$ en fonction de $t$ est-il une droite ?",
+          "options": [
+            {
+              "label": "parce que $a = a_0 e^{-\\lambda t}$, donc $\\ln a = \\ln a_0 - \\lambda t$, qui est affine en $t$",
+              "correct": true,
+              "why": "Prendre le logarithme d'une exponentielle transforme la décroissance en relation affine."
+            },
+            {
+              "label": "parce que l'activité décroît d'une quantité constante chaque jour",
+              "why": "L'activité décroît d'un **facteur** constant chaque jour, pas d'une quantité constante : c'est $\\ln a$ qui décroît linéairement."
+            },
+            {
+              "label": "parce que la constante radioactive $\\lambda$ diminue régulièrement au cours du temps",
+              "why": "$\\lambda$ est une constante du nucléide : elle ne varie pas."
+            },
+            {
+              "label": "parce que le logarithme d'une fonction décroissante est toujours une droite",
+              "why": "C'est faux en général : cette propriété est propre aux fonctions **exponentielles**."
+            }
+          ],
+          "hint": "Applique le logarithme népérien aux deux membres de la loi de décroissance de l'activité.",
+          "solution": "L'activité suit $a(t) = a_0\\,e^{-\\lambda t}$. En prenant le logarithme népérien :\n$$\\ln a = \\ln a_0 - \\lambda t$$\nC'est une fonction **affine** de $t$, d'où la droite. L'intérêt pratique est double : on vérifie du même coup que la décroissance est bien exponentielle, et on lit $\\lambda$ sur la pente.",
+          "methode": "Toute exponentielle se **linéarise** par le logarithme. Une droite obtenue ainsi est à la fois une vérification du modèle et un outil de mesure.",
+          "points": 1,
+          "part": "Partie A — Le nucléide et sa désintégration",
+          "ref": "pc-radioactivite-probleme-2-q1"
+        },
+        {
+          "notion": "L'activité d'un échantillon",
+          "difficulty": 1,
+          "statement": "L'activité mesurée s'exprime en becquerels. Cette unité correspond à :",
+          "options": [
+            {
+              "label": "une désintégration par seconde",
+              "correct": true,
+              "why": "$1\\ \\mathrm{Bq} = 1$ désintégration par seconde."
+            },
+            {
+              "label": "un noyau radioactif restant dans l'échantillon",
+              "why": "C'est $N$ : l'activité mesure la **vitesse** de disparition des noyaux, pas leur nombre."
+            },
+            {
+              "label": "une désintégration par jour",
+              "why": "Le becquerel se rapporte à la **seconde**, même lorsque le graphe utilise des jours en abscisse."
+            },
+            {
+              "label": "un joule par seconde émis par la source",
+              "why": "Un joule par seconde est un watt : le becquerel compte des événements, pas de l'énergie."
+            }
+          ],
+          "hint": "Que compte un compteur de radioactivité, et par unité de quel temps ?",
+          "solution": "L'activité vaut $a = \\lambda N$ et se mesure en **becquerels** : $1\\ \\mathrm{Bq}$ correspond à **une désintégration par seconde**.\n\nRemarque importante pour la suite : le graphe utilise le **jour** comme unité de temps en abscisse, donc la pente donnera $\\lambda$ en $\\mathrm{j^{-1}}$, alors que $a$ reste en $\\mathrm{Bq}$, c'est-à-dire par seconde. Les deux unités coexistent sans contradiction.",
+          "methode": "$1\\ \\mathrm{Bq} = 1$ désintégration par seconde, quelle que soit l'unité de temps utilisée sur le graphe.",
+          "points": 1,
+          "part": "Partie A — Le nucléide et sa désintégration",
+          "ref": "pc-radioactivite-probleme-2-q2"
+        },
+        {
+          "notion": "Exploiter la loi : la linéarisation",
+          "difficulty": 2,
+          "statement": "La constante radioactive de l'iode 131 vaut :",
+          "options": [
+            {
+              "label": "$8{,}67\\times10^{-2}\\ \\mathrm{j^{-1}}$",
+              "correct": true,
+              "why": "Pente $= \\dfrac{17{,}72 - 19{,}80}{24{,}0} = -8{,}67\\times10^{-2}$, et $\\lambda$ en est l'opposé."
+            },
+            {
+              "label": "$-8{,}67\\times10^{-2}\\ \\mathrm{j^{-1}}$",
+              "why": "C'est la pente : $\\lambda$ est positive par définition, c'est son **opposé**."
+            },
+            {
+              "label": "$1{,}15\\times10^{1}\\ \\mathrm{j^{-1}}$",
+              "why": "Tu as calculé l'inverse de la pente : cela donne une durée, pas une constante radioactive."
+            },
+            {
+              "label": "$2{,}08\\times10^{-2}\\ \\mathrm{j^{-1}}$",
+              "why": "Tu as divisé l'écart $2{,}08$ par $100$ au lieu de le diviser par $24{,}0$."
+            }
+          ],
+          "hint": "Calcule la pente de la droite avec les deux points fournis, puis prends son opposé.",
+          "solution": "Pente $= \\dfrac{\\Delta(\\ln a)}{\\Delta t} = \\dfrac{17{,}72 - 19{,}80}{24{,}0 - 0} = \\dfrac{-2{,}08}{24{,}0} = -8{,}67\\times10^{-2}\\ \\mathrm{j^{-1}}$.\nComme la pente vaut $-\\lambda$ : $\\lambda = 8{,}67\\times10^{-2}\\ \\mathrm{j^{-1}}$.",
+          "methode": "Pente d'un graphe $\\ln a = f(t)$ $\\Rightarrow$ $\\lambda = -\\text{pente}$, dans l'unité inverse de celle de l'abscisse.",
+          "points": 1,
+          "part": "Partie B — Exploitation quantitative",
+          "ref": "pc-radioactivite-probleme-2-q3"
+        },
+        {
+          "notion": "Demi-vie et constante de temps",
+          "difficulty": 2,
+          "statement": "La demi-vie de l'iode 131 vaut donc :",
+          "options": [
+            {
+              "label": "$8{,}0\\ \\mathrm{jours}$",
+              "correct": true,
+              "why": "$t_{1/2} = \\dfrac{\\ln 2}{\\lambda} = \\dfrac{0{,}693}{8{,}67\\times10^{-2}} = 8{,}0\\ \\mathrm{j}$."
+            },
+            {
+              "label": "$11{,}5\\ \\mathrm{jours}$",
+              "why": "Tu as calculé $1/\\lambda$ : c'est la constante de temps $\\tau$, égale à $1{,}44\\,t_{1/2}$."
+            },
+            {
+              "label": "$12{,}0\\ \\mathrm{jours}$",
+              "why": "Tu as pris la moitié de la durée du relevé : ces $24{,}0\\ \\mathrm{j}$ correspondent en réalité à **trois** demi-vies, pas à deux."
+            },
+            {
+              "label": "$24{,}0\\ \\mathrm{jours}$",
+              "why": "C'est la durée totale du relevé : elle correspond en fait à trois demi-vies."
+            }
+          ],
+          "hint": "Une fois $\\lambda$ connue, la demi-vie s'en déduit directement — prends garde à ne pas calculer $\\tau$.",
+          "solution": "$t_{1/2} = \\dfrac{\\ln 2}{\\lambda} = \\dfrac{0{,}693}{8{,}67\\times10^{-2}} = 8{,}0\\ \\mathrm{jours}$.\n\n**Contrôle** : la durée du relevé, $24{,}0\\ \\mathrm{j}$, vaut exactement $3\\,t_{1/2}$ ; l'activité devrait donc y être divisée par $8$. Or $\\Delta(\\ln a) = -2{,}08$ et $e^{-2{,}08} = 0{,}125 = 1/8$. Tout concorde.",
+          "methode": "Le contrôle par les demi-vies est gratuit et attrape la plupart des erreurs : convertis la durée en nombre de $t_{1/2}$ et vérifie le facteur.",
+          "points": 1,
+          "part": "Partie B — Exploitation quantitative",
+          "ref": "pc-radioactivite-probleme-2-q4"
+        },
+        {
+          "notion": "Méthode 4 — Exploiter une courbe expérimentale",
+          "difficulty": 3,
+          "statement": "L'activité initiale de l'échantillon valait :",
+          "options": [
+            {
+              "label": "$4{,}0\\times10^{8}\\ \\mathrm{Bq}$",
+              "correct": true,
+              "why": "L'ordonnée à l'origine est $\\ln a_0 = 19{,}80$, donc $a_0 = e^{19{,}80} = 4{,}0\\times10^{8}\\ \\mathrm{Bq}$."
+            },
+            {
+              "label": "$19{,}80\\ \\mathrm{Bq}$",
+              "why": "$19{,}80$ est le **logarithme** de l'activité, pas l'activité : il faut prendre l'exponentielle."
+            },
+            {
+              "label": "$5{,}0\\times10^{7}\\ \\mathrm{Bq}$",
+              "why": "C'est l'activité au bout des $24{,}0$ jours, c'est-à-dire $e^{17{,}72}$, et non l'activité initiale."
+            },
+            {
+              "label": "$2{,}0\\times10^{8}\\ \\mathrm{Bq}$",
+              "why": "Tu as divisé le bon résultat par $2$ : rien dans la question ne demande une demi-vie."
+            }
+          ],
+          "hint": "Que représente l'ordonnée à l'origine de la droite $\\ln a = f(t)$, et quelle opération permet de revenir à $a_0$ ?",
+          "solution": "L'ordonnée à l'origine de la droite est $\\ln a_0 = 19{,}80$. En passant à l'exponentielle :\n$$a_0 = e^{19{,}80} = 4{,}0\\times10^{8}\\ \\mathrm{Bq}$$\n**Contrôle** : après $24{,}0\\ \\mathrm{j}$, soit $3$ demi-vies, on attend $a = a_0/8 = 5{,}0\\times10^{7}\\ \\mathrm{Bq}$ — ce qui correspond bien à $e^{17{,}72}$.",
+          "methode": "Après une linéarisation, n'oublie jamais de **revenir à la grandeur physique** : l'ordonnée à l'origine est un logarithme, pas une activité.",
+          "points": 1,
+          "part": "Partie B — Exploitation quantitative",
+          "ref": "pc-radioactivite-probleme-2-q5"
+        },
+        {
+          "notion": "Méthode 3 — Calculs sur la loi $N(t) = N_0 e^{-\\lambda t}$",
+          "difficulty": 3,
+          "statement": "Au bout de combien de temps l'activité sera-t-elle descendue en dessous de $1{,}0\\times10^{7}\\ \\mathrm{Bq}$ ?",
+          "options": [
+            {
+              "label": "environ $43$ jours",
+              "correct": true,
+              "why": "$t = \\dfrac{1}{\\lambda}\\ln\\dfrac{a_0}{a} = \\dfrac{3{,}68}{8{,}67\\times10^{-2}} = 42{,}5\\ \\mathrm{j}$, donc $43$ jours."
+            },
+            {
+              "label": "environ $40$ jours",
+              "why": "$40\\ \\mathrm{j}$ font $5$ demi-vies, donc $a = a_0/32 = 1{,}2\\times10^{7}\\ \\mathrm{Bq}$ : on est encore **au-dessus** du seuil."
+            },
+            {
+              "label": "environ $48$ jours",
+              "why": "$48\\ \\mathrm{j}$ font $6$ demi-vies : le seuil est bien franchi, mais depuis plusieurs jours déjà."
+            },
+            {
+              "label": "environ $4{,}3$ jours",
+              "why": "Erreur de puissance de dix : l'activité doit être divisée par $40$, ce qui demande plus de $5$ demi-vies."
+            }
+          ],
+          "hint": "Écris la condition $a = 1{,}0\\times10^{7}\\ \\mathrm{Bq}$ dans la loi de décroissance, puis isole $t$. Le rapport $a_0/a$ vaut environ $40$.",
+          "solution": "On cherche $t$ tel que $a_0\\,e^{-\\lambda t} = 1{,}0\\times10^{7}$, soit $\\dfrac{a_0}{a} = \\dfrac{3{,}97\\times10^{8}}{1{,}0\\times10^{7}} = 39{,}7$ (valeur non arrondie de $e^{19{,}80}$). Alors\n$$t = \\frac{1}{\\lambda}\\ln\\frac{a_0}{a} = \\frac{3{,}68}{8{,}67\\times10^{-2}} = 42{,}5\\ \\mathrm{jours}$$\n**Encadrement** : $5$ demi-vies ($40\\ \\mathrm{j}$) divisent par $32$, ce qui ne suffit pas ; $6$ demi-vies ($48\\ \\mathrm{j}$) divisent par $64$, ce qui dépasse. Le résultat devait donc tomber entre $40$ et $48$ jours.",
+          "methode": "Deux réflexes : la formule $t = \\dfrac{1}{\\lambda}\\ln\\dfrac{a_0}{a}$, et l'**encadrement par les demi-vies** pour valider l'ordre de grandeur.",
+          "points": 1,
+          "part": "Partie B — Exploitation quantitative",
+          "ref": "pc-radioactivite-probleme-2-q6"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-radioactivite-serie-1",
+      "title": "Décroissance radioactive · Échauffement",
+      "description": "Les bases : notation des noyaux, types de radioactivité, loi de décroissance et demi-vie.",
+      "kind": "custom",
+      "chapter": "pc-radioactivite",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-radioactivite-le-noyau-atomique-notation-isotopes-q1",
+        "pc-radioactivite-stabilite-des-noyaux-le-diagramme-n-z-q1",
+        "pc-radioactivite-la-loi-de-decroissance-q1",
+        "pc-radioactivite-demi-vie-et-constante-de-temps-q1",
+        "pc-radioactivite-l-activite-d-un-echantillon-q1",
+        "pc-radioactivite-exploiter-la-loi-la-linearisation-q1",
+        "pc-radioactivite-les-quatre-types-de-radioactivite-q1",
+        "pc-radioactivite-le-noyau-atomique-notation-isotopes-q2",
+        "pc-radioactivite-stabilite-des-noyaux-le-diagramme-n-z-q2",
+        "pc-radioactivite-la-loi-de-decroissance-q2"
+      ]
+    },
+    {
+      "slug": "pc-radioactivite-serie-2",
+      "title": "Décroissance radioactive · Entraînement",
+      "description": "Tout le chapitre : équilibrer, linéariser, calculer une demi-vie et une activité.",
+      "kind": "custom",
+      "chapter": "pc-radioactivite",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-radioactivite-l-activite-d-un-echantillon-q1",
+        "pc-radioactivite-exploiter-la-loi-la-linearisation-q2",
+        "pc-radioactivite-stabilite-des-noyaux-le-diagramme-n-z-q3",
+        "pc-radioactivite-demi-vie-et-constante-de-temps-q2",
+        "pc-radioactivite-l-activite-d-un-echantillon-q2",
+        "pc-radioactivite-l-activite-d-un-echantillon-q3",
+        "pc-radioactivite-exploiter-la-loi-la-linearisation-q3",
+        "pc-radioactivite-le-noyau-atomique-notation-isotopes-q3",
+        "pc-radioactivite-les-lois-de-conservation-lois-de-soddy-q1",
+        "pc-radioactivite-la-loi-de-decroissance-q3",
+        "pc-radioactivite-demi-vie-et-constante-de-temps-q3",
+        "pc-radioactivite-exploiter-la-loi-la-linearisation-q4"
+      ]
+    },
+    {
+      "slug": "pc-radioactivite-serie-3",
+      "title": "Décroissance radioactive · Type BAC",
+      "description": "Niveau examen : datation, exploitation de courbe, filiation et radioprotection.",
+      "kind": "custom",
+      "chapter": "pc-radioactivite",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-radioactivite-probleme-1-q1",
+        "pc-radioactivite-probleme-2-q2",
+        "pc-radioactivite-probleme-1-q3",
+        "pc-radioactivite-probleme-2-q3",
+        "pc-radioactivite-probleme-2-q4",
+        "pc-radioactivite-probleme-1-q5",
+        "pc-radioactivite-probleme-2-q6",
+        "pc-radioactivite-filiation-radioactive-et-familles-q1",
+        "pc-radioactivite-compter-les-noyaux-fils-q1",
+        "pc-radioactivite-activite-et-mesure-q1",
+        "pc-radioactivite-effets-biologiques-et-radioprotection-q1",
+        "pc-radioactivite-les-quatre-types-de-radioactivite-q2"
+      ]
+    }
+  ]
+}

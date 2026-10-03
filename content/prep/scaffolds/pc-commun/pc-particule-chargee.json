@@ -1,0 +1,2017 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-particule-chargee",
+      "name": "Mouvement d'une particule chargée dans un champ",
+      "domain": "physique",
+      "unit": "Mécanique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Le champ électrique uniforme",
+      "L'accélération : un cas de champ uniforme",
+      "Cas 1 — Accélération : $\\vec v_0$ parallèle à $\\vec E$",
+      "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+      "La force de Lorentz",
+      "Le mouvement circulaire uniforme",
+      "Comparaison des deux champs",
+      "Applications",
+      "Le cyclotron",
+      "Le spectromètre de masse, en détail",
+      "Les champs croisés",
+      "Le champ magnétique terrestre",
+      "Méthode 1 — Justifier que le poids est négligeable",
+      "Méthode 2 — L'accélération sous une tension",
+      "Méthode 3 — La déviation électrique complète",
+      "Méthode 4 — Le mouvement circulaire magnétique",
+      "Méthode 5 — Le sélecteur de vitesse"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Justifier que le poids est négligeable",
+      "Méthode 2 — L'accélération sous une tension",
+      "Méthode 3 — La déviation électrique complète",
+      "Méthode 4 — Le mouvement circulaire magnétique",
+      "Méthode 5 — Le sélecteur de vitesse"
+    ],
+    "existing_questions_total": 7,
+    "target_new_questions": 30,
+    "suggested_figures": [
+      "particule-champ-e — Déviation d'une particule chargée dans un condensateur plan",
+      "particule-champ-b — Mouvement circulaire dans un champ magnétique",
+      "projectile — Mouvement d'un projectile — trajectoire parabolique",
+      "retard-temporel — Retard temporel : M reproduit le mouvement de S avec τ = d/c"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Le champ électrique uniforme",
+        "lesson": "Dans un champ électrique uniforme",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-le-champ-electrique-uniforme",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "Le champ électrique uniforme",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Le champ électrique uniforme",
+          "difficulty": 1,
+          "statement": "Deux plaques métalliques planes et parallèles, distantes de $d = 4{,}0\\ \\mathrm{cm}$, sont soumises à une tension $U = 2{,}0\\ \\mathrm{kV}$. L'intensité du champ électrique uniforme entre les plaques vaut :",
+          "options": [
+            {
+              "label": "$5{,}0\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$",
+              "correct": true,
+              "why": "$E = \\dfrac{U}{d} = \\dfrac{2{,}0\\times10^{3}}{4{,}0\\times10^{-2}} = 5{,}0\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$."
+            },
+            {
+              "label": "$5{,}0\\times10^{2}\\ \\mathrm{V\\,m^{-1}}$",
+              "why": "Tu as divisé par $d = 4{,}0$ en laissant la distance en centimètres : $2000/4{,}0 = 500$. Il faut convertir $d$ en mètres."
+            },
+            {
+              "label": "$5{,}0\\times10^{5}\\ \\mathrm{V\\,m^{-1}}$",
+              "why": "Tu as pris $d = 4{,}0\\ \\mathrm{mm} = 4{,}0\\times10^{-3}\\ \\mathrm{m}$ : $2000/4{,}0\\times10^{-3} = 5{,}0\\times10^{5}$. L'énoncé donne des centimètres."
+            },
+            {
+              "label": "$8{,}0\\times10^{1}\\ \\mathrm{V\\,m^{-1}}$",
+              "why": "Tu as multiplié : $U\\times d = 2000\\times0{,}040 = 80$. Le champ est le quotient $U/d$, pas le produit."
+            }
+          ],
+          "hint": "Le champ uniforme entre deux plaques vaut $E = U/d$ : commence par convertir $d$ en mètres.",
+          "solution": "Les deux grandeurs en unités du système international : $U = 2{,}0\\ \\mathrm{kV} = 2{,}0\\times10^{3}\\ \\mathrm{V}$ et $d = 4{,}0\\ \\mathrm{cm} = 4{,}0\\times10^{-2}\\ \\mathrm{m}$.\n$$E = \\frac{U}{d} = \\frac{2{,}0\\times10^{3}}{4{,}0\\times10^{-2}} = 5{,}0\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$$\nContrôle d'homogénéité : des volts divisés par des mètres donnent bien des $\\mathrm{V\\,m^{-1}}$, unité du champ électrique. Ordre de grandeur : quelques dizaines de kilovolts par mètre, c'est tout à fait courant entre les plaques d'un condensateur de laboratoire.",
+          "methode": "Avant tout calcul de champ, convertis $U$ en volts et $d$ en mètres : l'erreur de conversion est l'erreur la plus fréquente sur $E = U/d$.",
+          "points": 1,
+          "ref": "pc-particule-chargee-le-champ-electrique-uniforme-q1"
+        },
+        {
+          "notion": "Le champ électrique uniforme",
+          "difficulty": 2,
+          "statement": "Dans le champ uniforme précédent ($U = 2{,}0\\ \\mathrm{kV}$, $d = 4{,}0\\ \\mathrm{cm}$) on place un électron de charge $q = -e$ avec $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$. L'intensité de la force électrique qu'il subit vaut :",
+          "options": [
+            {
+              "label": "$8{,}0\\times10^{-15}\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "$F = |q|\\,E = 1{,}6\\times10^{-19}\\times5{,}0\\times10^{4} = 8{,}0\\times10^{-15}\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$3{,}2\\times10^{-16}\\ \\mathrm{N}$",
+              "why": "Tu as calculé $|q|\\,U = 1{,}6\\times10^{-19}\\times2000 = 3{,}2\\times10^{-16}$ : tu as confondu la tension $U$ et le champ $E$. Il manque la division par $d$."
+            },
+            {
+              "label": "$8{,}0\\times10^{-17}\\ \\mathrm{N}$",
+              "why": "Tu as utilisé $E = 500\\ \\mathrm{V\\,m^{-1}}$, c'est-à-dire $U/d$ avec $d$ laissé en centimètres : $1{,}6\\times10^{-19}\\times500 = 8{,}0\\times10^{-17}$."
+            },
+            {
+              "label": "$1{,}3\\times10^{-17}\\ \\mathrm{N}$",
+              "why": "Tu as utilisé $E = U\\times d = 80\\ \\mathrm{V\\,m^{-1}}$ : $1{,}6\\times10^{-19}\\times80 = 1{,}28\\times10^{-17}$. Le champ est $U/d$, pas $U\\times d$."
+            }
+          ],
+          "hint": "Deux étapes : d'abord $E = U/d$, ensuite $F = |q|\\,E$. Le signe de la charge n'intervient que pour le sens de la force.",
+          "solution": "Étape 1 — le champ : $E = \\dfrac{U}{d} = \\dfrac{2{,}0\\times10^{3}}{4{,}0\\times10^{-2}} = 5{,}0\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$.\nÉtape 2 — la force : $\\vec F = q\\,\\vec E$, donc en norme\n$$F = |q|\\,E = 1{,}6\\times10^{-19}\\times5{,}0\\times10^{4} = 8{,}0\\times10^{-15}\\ \\mathrm{N}$$\nComme $q < 0$, $\\vec F$ est de sens **opposé** à $\\vec E$ : l'électron est attiré vers la plaque positive.\nContrôle : on peut aussi écrire $F = \\dfrac{|q|\\,U}{d} = \\dfrac{1{,}6\\times10^{-19}\\times2000}{0{,}040} = 8{,}0\\times10^{-15}\\ \\mathrm{N}$ — même résultat par une autre voie.",
+          "methode": "Enchaîne toujours $E = U/d$ puis $F = |q|E$. Le raccourci $F = |q|U/d$ évite un arrondi intermédiaire.",
+          "points": 1,
+          "ref": "pc-particule-chargee-le-champ-electrique-uniforme-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'accélération : un cas de champ uniforme",
+        "lesson": "Dans un champ électrique uniforme",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "L'accélération : un cas de champ uniforme",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'accélération : un cas de champ uniforme",
+          "difficulty": 1,
+          "statement": "Un proton ($q = +e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$, $m_p = 1{,}67\\times10^{-27}\\ \\mathrm{kg}$) est placé dans un champ électrique uniforme d'intensité $E = 5{,}0\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$. Le poids étant négligé, son accélération vaut :",
+          "options": [
+            {
+              "label": "$4{,}8\\times10^{12}\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "$a = \\dfrac{|q|E}{m_p} = \\dfrac{1{,}6\\times10^{-19}\\times5{,}0\\times10^{4}}{1{,}67\\times10^{-27}} = \\dfrac{8{,}0\\times10^{-15}}{1{,}67\\times10^{-27}} = 4{,}8\\times10^{12}\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$8{,}8\\times10^{15}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as divisé par la masse de l'électron $9{,}1\\times10^{-31}\\ \\mathrm{kg}$ : $8{,}0\\times10^{-15}/9{,}1\\times10^{-31} = 8{,}8\\times10^{15}$. Ici la particule est un proton."
+            },
+            {
+              "label": "$1{,}9\\times10^{11}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as pris $5{,}0\\times10^{4}$ pour une tension et calculé $\\dfrac{e\\times 2000}{m_p}$ ; en réalité $E$ est déjà un champ, il ne faut rien diviser par une distance."
+            },
+            {
+              "label": "$3{,}0\\times10^{31}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as calculé $E/m_p = 5{,}0\\times10^{4}/1{,}67\\times10^{-27}$ : tu as oublié de multiplier par la charge $e$."
+            }
+          ],
+          "hint": "Applique la deuxième loi de Newton à la seule force électrique : $m\\vec a = q\\vec E$.",
+          "solution": "Le poids étant négligé, la seule force est $\\vec F = q\\,\\vec E$. La deuxième loi de Newton donne $m_p\\,\\vec a = q\\,\\vec E$, soit\n$$a = \\frac{|q|\\,E}{m_p} = \\frac{1{,}6\\times10^{-19}\\times5{,}0\\times10^{4}}{1{,}67\\times10^{-27}} = \\frac{8{,}0\\times10^{-15}}{1{,}67\\times10^{-27}} = 4{,}8\\times10^{12}\\ \\mathrm{m\\,s^{-2}}$$\nContrôle : une telle accélération paraît énorme, mais elle est normale à l'échelle atomique — partant du repos, le proton atteindrait $4{,}8\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$ en seulement $10^{-7}\\ \\mathrm{s}$.",
+          "methode": "$\\vec a = \\dfrac{q\\vec E}{m}$ : l'accélération est proportionnelle à la charge et inversement proportionnelle à la masse. Vérifie toujours quelle particule t'est donnée.",
+          "points": 1,
+          "ref": "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme-q1"
+        },
+        {
+          "notion": "L'accélération : un cas de champ uniforme",
+          "difficulty": 2,
+          "statement": "Un électron est abandonné **sans vitesse initiale** dans un champ électrique uniforme $\\vec E$. Le poids est négligeable. Que peut-on dire de son mouvement ?",
+          "options": [
+            {
+              "label": "$\\vec a = -\\dfrac{e\\vec E}{m}$ : constante, de sens opposé à $\\vec E$ ; le mouvement est rectiligne uniformément accéléré.",
+              "correct": true,
+              "why": "La charge est $q = -e$, donc $\\vec a = \\dfrac{q\\vec E}{m} = -\\dfrac{e\\vec E}{m}$ : opposée à $\\vec E$. Comme $\\vec E$ est uniforme, $\\vec a$ est constante, et un vecteur accélération constant colinéaire à la vitesse initiale nulle donne un mouvement rectiligne uniformément accéléré."
+            },
+            {
+              "label": "$\\vec a = +\\dfrac{e\\vec E}{m}$ : constante, de même sens que $\\vec E$ ; le mouvement est rectiligne uniformément accéléré.",
+              "why": "Tu as oublié le signe de la charge : pour un électron $q = -e < 0$, donc $\\vec F = q\\vec E$ est de sens **opposé** à $\\vec E$."
+            },
+            {
+              "label": "$\\vec a$ est de sens opposé à $\\vec E$ mais de norme croissante ; le mouvement est accéléré de façon non uniforme.",
+              "why": "Tu confonds la vitesse, qui croît, et l'accélération, qui ne croît pas : $\\vec E$ est uniforme donc $a = eE/m$ est une constante."
+            },
+            {
+              "label": "$\\vec a$ est de sens opposé à $\\vec E$ et le mouvement est rectiligne uniforme.",
+              "why": "Tu as confondu « accélération constante » et « vitesse constante ». Si $\\vec a \\neq \\vec 0$, la vitesse varie : le mouvement est uniformément **varié**, pas uniforme."
+            }
+          ],
+          "hint": "Écris $\\vec a = \\dfrac{q\\vec E}{m}$ en gardant le signe de $q$, puis demande-toi si $\\vec a$ dépend du temps.",
+          "solution": "Le théorème du centre d'inertie appliqué à la seule force électrique donne $m\\vec a = q\\,\\vec E$, soit $\\vec a = \\dfrac{q\\,\\vec E}{m}$.\nPour un électron $q = -e$, donc\n$$\\vec a = -\\frac{e\\,\\vec E}{m}$$\nDeux conséquences :\n- $\\vec a$ est **opposée** à $\\vec E$ : l'électron se dirige vers la plaque positive ;\n- $\\vec E$ étant uniforme, $\\vec a$ est un vecteur **constant**.\nLa vitesse initiale est nulle, donc le vecteur vitesse reste constamment colinéaire à $\\vec a$ : le mouvement est rectiligne uniformément accéléré, avec $v = a\\,t$ et $x = \\tfrac12 a t^2$.\nContrôle : la vitesse croît linéairement avec $t$ alors que $a$ reste constante — c'est bien la signature du mouvement uniformément varié.",
+          "methode": "Champ uniforme $\\Rightarrow$ accélération constante. Garde le signe de $q$ : il décide du **sens** de $\\vec a$, jamais de sa constance.",
+          "points": 1,
+          "ref": "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme-q2"
+        },
+        {
+          "notion": "L'accélération : un cas de champ uniforme",
+          "difficulty": 2,
+          "statement": "Pour le proton de la première question ($E = 5{,}0\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$, $m_p = 1{,}67\\times10^{-27}\\ \\mathrm{kg}$, $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$, $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$), le rapport $\\dfrac{F_{\\text{électrique}}}{P}$ vaut environ :",
+          "options": [
+            {
+              "label": "$4{,}9\\times10^{11}$",
+              "correct": true,
+              "why": "$F = eE = 8{,}0\\times10^{-15}\\ \\mathrm{N}$ et $P = m_p\\,g = 1{,}67\\times10^{-27}\\times9{,}8 = 1{,}64\\times10^{-26}\\ \\mathrm{N}$, donc $F/P = 4{,}9\\times10^{11}$ : le poids est totalement négligeable."
+            },
+            {
+              "label": "$4{,}8\\times10^{12}$",
+              "why": "Tu as divisé $F$ par la masse $m_p$ au lieu du poids $m_p g$ : $8{,}0\\times10^{-15}/1{,}67\\times10^{-27} = 4{,}8\\times10^{12}$. C'est une accélération, pas un rapport de forces."
+            },
+            {
+              "label": "$9{,}0\\times10^{14}$",
+              "why": "Tu as utilisé la masse de l'électron : $8{,}0\\times10^{-15}/(9{,}1\\times10^{-31}\\times9{,}8) = 9{,}0\\times10^{14}$. L'énoncé parle d'un proton."
+            },
+            {
+              "label": "$2{,}0\\times10^{-12}$",
+              "why": "Tu as calculé $P/F$ : $1{,}64\\times10^{-26}/8{,}0\\times10^{-15} = 2{,}0\\times10^{-12}$. C'est l'inverse du rapport demandé."
+            }
+          ],
+          "hint": "Calcule séparément $F = eE$ et $P = m_p\\,g$, puis fais le quotient. Un rapport est sans unité.",
+          "solution": "Force électrique : $F = e\\,E = 1{,}6\\times10^{-19}\\times5{,}0\\times10^{4} = 8{,}0\\times10^{-15}\\ \\mathrm{N}$.\nPoids : $P = m_p\\,g = 1{,}67\\times10^{-27}\\times9{,}8 = 1{,}64\\times10^{-26}\\ \\mathrm{N}$.\n$$\\frac{F}{P} = \\frac{8{,}0\\times10^{-15}}{1{,}64\\times10^{-26}} \\approx 4{,}9\\times10^{11}$$\nLa force électrique est près de **mille milliards** de fois plus grande que le poids : négliger le poids est parfaitement justifié.\nContrôle : le rapport est sans unité, et son ordre de grandeur $10^{11}$ est bien celui qu'on trouve pour toutes les particules élémentaires dans un champ de laboratoire.",
+          "methode": "Pour justifier qu'on néglige le poids, calcule le **rapport** $F/P$ et conclus : au-delà de $10^{3}$, la force écrit la trajectoire à elle seule.",
+          "points": 1,
+          "ref": "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme-q3"
+        },
+        {
+          "notion": "L'accélération : un cas de champ uniforme",
+          "difficulty": 3,
+          "statement": "Un proton ($q = +e$, masse $m_p$) et un noyau d'hélium $\\mathrm{He^{2+}}$ (charge $+2e$, masse $4m_p$) sont placés dans le **même** champ électrique uniforme. Le rapport $\\dfrac{a_{\\mathrm{He}}}{a_p}$ de leurs accélérations vaut :",
+          "options": [
+            {
+              "label": "$0{,}50$",
+              "correct": true,
+              "why": "$a = \\dfrac{|q|E}{m}$, donc $\\dfrac{a_{\\mathrm{He}}}{a_p} = \\dfrac{2e/(4m_p)}{e/m_p} = \\dfrac{2}{4} = 0{,}50$ : la charge double mais la masse quadruple."
+            },
+            {
+              "label": "$2{,}0$",
+              "why": "Tu n'as tenu compte que du doublement de la charge et tu as oublié que la masse est multipliée par 4 : $a$ est inversement proportionnelle à la masse."
+            },
+            {
+              "label": "$1{,}0$",
+              "why": "Tu as supposé que toutes les particules prennent la même accélération dans un même champ. C'est vrai dans un champ de pesanteur, pas dans un champ électrique : $a$ dépend du rapport $|q|/m$."
+            },
+            {
+              "label": "$0{,}25$",
+              "why": "Tu n'as tenu compte que de la masse multipliée par 4 et tu as oublié que la charge est doublée : $1/4$ au lieu de $2/4$."
+            }
+          ],
+          "hint": "Écris $a = \\dfrac{|q|E}{m}$ pour chaque particule et forme le rapport : $E$ se simplifie, il ne reste que $|q|/m$.",
+          "solution": "Pour chaque particule $a = \\dfrac{|q|\\,E}{m}$, donc\n$$\\frac{a_{\\mathrm{He}}}{a_p} = \\frac{\\dfrac{2e\\,E}{4m_p}}{\\dfrac{e\\,E}{m_p}} = \\frac{2e}{4m_p}\\times\\frac{m_p}{e} = \\frac{2}{4} = 0{,}50$$\nLe noyau d'hélium est deux fois moins accéléré que le proton : sa charge double, mais sa masse quadruple.\nContrôle : la grandeur qui gouverne tout ici est le **rapport charge/masse** $q/m$. Pour le proton $e/m_p$, pour $\\mathrm{He^{2+}}$ $2e/4m_p = \\tfrac12\\,e/m_p$ — moitié, comme trouvé.",
+          "methode": "Dans un champ électrique, ce n'est pas la charge seule qui compte mais le rapport $q/m$ : c'est lui qui apparaît dans $a$, dans $v = \\sqrt{2qU/m}$ et dans $R = mv/(qB)$.",
+          "points": 1,
+          "ref": "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Cas 1 — Accélération : $\\vec v_0$ parallèle à $\\vec E$",
+        "lesson": "Dans un champ électrique uniforme",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-cas-1-acceleration-vec-v-0-parallele-a-v",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "Cas 1 — Accélération : $\\vec v_0$ parallèle à $\\vec E$",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Cas 1 — Accélération : $\\vec v_0$ parallèle à $\\vec E$",
+          "difficulty": 1,
+          "statement": "Un électron ($m = 9{,}1\\times10^{-31}\\ \\mathrm{kg}$, $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$) part **du repos** et est accéléré entre deux plaques sous la tension accélératrice $U = 500\\ \\mathrm{V}$. Sa vitesse à l'arrivée vaut :",
+          "options": [
+            {
+              "label": "$1{,}3\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v = \\sqrt{\\dfrac{2eU}{m}} = \\sqrt{\\dfrac{2\\times1{,}6\\times10^{-19}\\times500}{9{,}1\\times10^{-31}}} = \\sqrt{1{,}76\\times10^{14}} = 1{,}3\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$9{,}4\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as oublié le facteur $2$ : $\\sqrt{eU/m} = \\sqrt{8{,}8\\times10^{13}} = 9{,}4\\times10^{6}$. Le théorème de l'énergie cinétique donne $\\tfrac12 mv^2 = eU$, d'où $v^2 = 2eU/m$."
+            },
+            {
+              "label": "$6{,}6\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as mis le $2$ au dénominateur : $\\sqrt{eU/(2m)} = 6{,}6\\times10^{6}$. Le $2$ vient du $\\tfrac12$ de l'énergie cinétique et passe au **numérateur**."
+            },
+            {
+              "label": "$1{,}8\\times10^{14}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as oublié la racine carrée : $2eU/m = 1{,}76\\times10^{14}$ est le carré de la vitesse, en $\\mathrm{m^2\\,s^{-2}}$."
+            }
+          ],
+          "hint": "Applique le théorème de l'énergie cinétique entre le départ au repos et l'arrivée : $\\tfrac12 m v^2 - 0 = e\\,U$.",
+          "solution": "Entre le départ (au repos) et l'arrivée, seule la force électrique travaille et son travail vaut $W = q\\,U = e\\,U$ (le travail est positif puisque la particule est accélérée). Le théorème de l'énergie cinétique s'écrit\n$$\\frac12 m v^2 - 0 = e\\,U \\quad\\Longrightarrow\\quad v = \\sqrt{\\frac{2eU}{m}}$$\nNumériquement :\n$$v = \\sqrt{\\frac{2\\times1{,}6\\times10^{-19}\\times500}{9{,}1\\times10^{-31}}} = \\sqrt{\\frac{1{,}6\\times10^{-16}}{9{,}1\\times10^{-31}}} = \\sqrt{1{,}76\\times10^{14}} = 1{,}33\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$$\nContrôle : $1{,}3\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$ représente $4{,}4\\ \\%$ de la vitesse de la lumière — ordre de grandeur habituel pour un électron accéléré sous quelques centaines de volts, et la mécanique de Newton reste légitime.",
+          "methode": "Départ au repos sous une tension $U$ : $v = \\sqrt{\\dfrac{2|q|U}{m}}$. Le $2$ est au numérateur, et la racine ne s'oublie pas.",
+          "points": 1,
+          "ref": "pc-particule-chargee-cas-1-acceleration-vec-v-0-parallele-a-v-q1"
+        },
+        {
+          "notion": "Cas 1 — Accélération : $\\vec v_0$ parallèle à $\\vec E$",
+          "difficulty": 2,
+          "statement": "Un proton ($m_p = 1{,}67\\times10^{-27}\\ \\mathrm{kg}$, $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$) entre dans un champ accélérateur avec la vitesse $v_0 = 4{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$, parallèle et de même sens que la force qu'il subit, et traverse une différence de potentiel accélératrice $U = 1{,}0\\ \\mathrm{kV}$. Sa vitesse de sortie vaut :",
+          "options": [
+            {
+              "label": "$5{,}9\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v = \\sqrt{v_0^2 + \\dfrac{2eU}{m_p}} = \\sqrt{1{,}6\\times10^{11} + 1{,}92\\times10^{11}} = \\sqrt{3{,}52\\times10^{11}} = 5{,}9\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$4{,}4\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as négligé $v_0$ : $\\sqrt{2eU/m_p} = 4{,}4\\times10^{5}$. Or $v_0^2 = 1{,}6\\times10^{11}$ représente $45\\ \\%$ du total, on ne peut pas l'ignorer."
+            },
+            {
+              "label": "$8{,}4\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as ajouté les vitesses : $4{,}0\\times10^{5} + 4{,}4\\times10^{5} = 8{,}4\\times10^{5}$. Le théorème de l'énergie cinétique additionne les **carrés** des vitesses, pas les vitesses."
+            },
+            {
+              "label": "$5{,}1\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as oublié le facteur $2$ : $\\sqrt{v_0^2 + eU/m_p} = \\sqrt{2{,}56\\times10^{11}} = 5{,}1\\times10^{5}$."
+            }
+          ],
+          "hint": "Le théorème de l'énergie cinétique s'écrit $\\tfrac12 mv^2 - \\tfrac12 mv_0^2 = eU$ : isole $v^2$, pas $v$.",
+          "solution": "Seule la force électrique travaille, et son travail vaut $W = e\\,U$ :\n$$\\frac12 m_p v^2 - \\frac12 m_p v_0^2 = e\\,U \\quad\\Longrightarrow\\quad v^2 = v_0^2 + \\frac{2eU}{m_p}$$\nCalcul des deux termes :\n- $v_0^2 = (4{,}0\\times10^{5})^2 = 1{,}60\\times10^{11}\\ \\mathrm{m^2\\,s^{-2}}$ ;\n- $\\dfrac{2eU}{m_p} = \\dfrac{2\\times1{,}6\\times10^{-19}\\times1{,}0\\times10^{3}}{1{,}67\\times10^{-27}} = \\dfrac{3{,}2\\times10^{-16}}{1{,}67\\times10^{-27}} = 1{,}92\\times10^{11}\\ \\mathrm{m^2\\,s^{-2}}$.\nDonc $v^2 = 3{,}52\\times10^{11}$ et\n$$v = \\sqrt{3{,}52\\times10^{11}} = 5{,}93\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$$\nContrôle : la vitesse a été multipliée par $1{,}5$ seulement, alors que l'énergie cinétique a été multipliée par $2{,}2$ — cohérent, puisque $E_c \\propto v^2$.",
+          "methode": "Quand la vitesse d'entrée n'est pas nulle, n'applique jamais $v = \\sqrt{2qU/m}$ : reviens à $v^2 = v_0^2 + \\dfrac{2qU}{m}$.",
+          "points": 1,
+          "ref": "pc-particule-chargee-cas-1-acceleration-vec-v-0-parallele-a-v-q2"
+        },
+        {
+          "notion": "Cas 1 — Accélération : $\\vec v_0$ parallèle à $\\vec E$",
+          "difficulty": 3,
+          "statement": "Un ion négatif de charge $q = -2e$ part **du repos** de la plaque $\\mathrm{A}$ et doit arriver sur la plaque $\\mathrm{B}$. Quelle affirmation est exacte ?",
+          "options": [
+            {
+              "label": "Il faut $U_{\\mathrm{AB}} < 0$, car $\\tfrac12 m v_{\\mathrm{B}}^2 = q\\,U_{\\mathrm{AB}}$ exige $q\\,U_{\\mathrm{AB}} > 0$.",
+              "correct": true,
+              "why": "Le théorème de l'énergie cinétique impose $q\\,U_{\\mathrm{AB}} > 0$ pour que l'énergie cinétique augmente ; comme $q = -2e < 0$, il faut $U_{\\mathrm{AB}} < 0$, c'est-à-dire $V_{\\mathrm{A}} < V_{\\mathrm{B}}$ : l'ion négatif est attiré par la plaque au potentiel le plus élevé."
+            },
+            {
+              "label": "Il faut $U_{\\mathrm{AB}} > 0$ : une particule chargée va toujours de la plaque de plus haut potentiel vers celle de plus bas potentiel.",
+              "why": "Cette règle ne vaut que pour une charge **positive**. Pour $q < 0$ la force $q\\vec E$ est opposée à $\\vec E$, donc l'ion remonte les potentiels : il faut $U_{\\mathrm{AB}} < 0$."
+            },
+            {
+              "label": "Le signe de $U_{\\mathrm{AB}}$ est indifférent : seule $|U_{\\mathrm{AB}}|$ intervient dans $v_{\\mathrm{B}} = \\sqrt{2|q|\\,|U_{\\mathrm{AB}}|/m}$.",
+              "why": "Cette formule ne s'utilise qu'**après** avoir vérifié que $q\\,U_{\\mathrm{AB}} > 0$. Si le signe est mauvais, la force freine l'ion et il ne quitte même pas la plaque $\\mathrm{A}$."
+            },
+            {
+              "label": "Il faut $U_{\\mathrm{AB}} < 0$, et la vitesse d'arrivée ne dépend pas de la charge de l'ion.",
+              "why": "Le signe est juste, mais la seconde affirmation est fausse : $v_{\\mathrm{B}} = \\sqrt{2|q\\,U_{\\mathrm{AB}}|/m}$ dépend du rapport $|q|/m$, donc de la charge."
+            }
+          ],
+          "hint": "Écris le théorème de l'énergie cinétique avec le signe de $q$, puis demande-toi quel signe doit avoir $U_{\\mathrm{AB}}$ pour que le travail soit positif.",
+          "solution": "Entre $\\mathrm{A}$ et $\\mathrm{B}$, le travail de la force électrique vaut $W_{\\mathrm{A}\\to\\mathrm{B}} = q\\,U_{\\mathrm{AB}}$ et le théorème de l'énergie cinétique donne\n$$\\frac12 m v_{\\mathrm{B}}^2 - 0 = q\\,U_{\\mathrm{AB}}$$\nLe membre de gauche est positif, donc il faut $q\\,U_{\\mathrm{AB}} > 0$. Avec $q = -2e < 0$, cela impose\n$$U_{\\mathrm{AB}} < 0 \\quad\\text{c'est-à-dire}\\quad V_{\\mathrm{A}} < V_{\\mathrm{B}}$$\nLa vitesse d'arrivée vaut alors $v_{\\mathrm{B}} = \\sqrt{\\dfrac{2\\times 2e\\,|U_{\\mathrm{AB}}|}{m}}$ : elle dépend bien de la charge, par le rapport $|q|/m$.\nContrôle physique : $\\vec E$ est dirigé des potentiels élevés vers les potentiels bas ; un ion négatif subit $q\\vec E$ opposé à $\\vec E$, donc il se déplace **vers** les potentiels élevés. C'est bien $\\mathrm{B}$ qui doit être au potentiel le plus haut.",
+          "methode": "Réflexe de signe : la particule est accélérée si et seulement si $q\\,U_{\\mathrm{AB}} > 0$. Pour une charge négative, la plaque d'arrivée doit être la plus positive.",
+          "points": 1,
+          "ref": "pc-particule-chargee-cas-1-acceleration-vec-v-0-parallele-a-v-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+        "lesson": "Dans un champ électrique uniforme",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire-",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+          "difficulty": 1,
+          "statement": "Un électron ($m = 9{,}1\\times10^{-31}\\ \\mathrm{kg}$, $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$) entre avec la vitesse $v_0 = 2{,}0\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$ au milieu de deux plaques horizontales, **perpendiculairement** au champ $\\vec E$. Les plaques ont une longueur $\\ell = 4{,}0\\ \\mathrm{cm}$, sont distantes de $d = 2{,}0\\ \\mathrm{cm}$ et sont soumises à $U = 100\\ \\mathrm{V}$. La déviation verticale à la sortie des plaques vaut :",
+          "options": [
+            {
+              "label": "$1{,}8\\ \\mathrm{mm}$",
+              "correct": true,
+              "why": "$y = \\dfrac{eU\\ell^2}{2mdv_0^2} = \\dfrac{1{,}6\\times10^{-19}\\times100\\times(4{,}0\\times10^{-2})^2}{2\\times9{,}1\\times10^{-31}\\times2{,}0\\times10^{-2}\\times(2{,}0\\times10^{7})^2} = 1{,}8\\times10^{-3}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$3{,}5\\ \\mathrm{mm}$",
+              "why": "Tu as oublié le $\\frac12$ de $y = \\frac12 a t^2$ : sans ce facteur on trouve exactement le double, $3{,}5\\ \\mathrm{mm}$."
+            },
+            {
+              "label": "$44\\ \\mathrm{mm}$",
+              "why": "Tu as écrit $\\ell$ au lieu de $\\ell^2$ au numérateur : $\\dfrac{eU\\ell}{2mdv_0^2} = 4{,}4\\times10^{-2}\\ \\mathrm{m}$. La longueur des plaques intervient au carré, par $t = \\ell/v_0$ élevé au carré."
+            },
+            {
+              "label": "$0{,}22\\ \\mathrm{mm}$",
+              "why": "Tu as échangé $\\ell$ et $d$ : $\\dfrac{eUd^2}{2m\\ell v_0^2} = 0{,}22\\ \\mathrm{mm}$. C'est $\\ell$, la longueur parcourue, qui est au carré, et $d$ qui sert à calculer $E = U/d$."
+            }
+          ],
+          "hint": "Deux étapes seulement : la durée de traversée $t = \\ell/v_0$, puis la chute $y = \\frac12 a t^2$ avec $a = eU/(md)$.",
+          "solution": "On repère le mouvement par $Ox$ selon $\\vec v_0$ et $Oy$ selon la déviation. Le poids étant négligeable, l'accélération est constante :\n$$a = \\frac{eE}{m} = \\frac{eU}{md} = \\frac{1{,}6\\times10^{-19}\\times100}{9{,}1\\times10^{-31}\\times2{,}0\\times10^{-2}} = 8{,}8\\times10^{14}\\ \\mathrm{m\\,s^{-2}}$$\nSuivant $Ox$ le mouvement est uniforme, donc la durée de traversée vaut\n$$t = \\frac{\\ell}{v_0} = \\frac{4{,}0\\times10^{-2}}{2{,}0\\times10^{7}} = 2{,}0\\times10^{-9}\\ \\mathrm{s}$$\nSuivant $Oy$ le mouvement est uniformément accéléré de vitesse initiale nulle :\n$$y = \\frac12 a t^2 = \\frac12\\times8{,}8\\times10^{14}\\times(2{,}0\\times10^{-9})^2 = 1{,}8\\times10^{-3}\\ \\mathrm{m} = 1{,}8\\ \\mathrm{mm}$$\nContrôle : $1{,}8\\ \\mathrm{mm}$ est bien inférieur à $d/2 = 10\\ \\mathrm{mm}$, l'électron sort donc des plaques sans les toucher — le résultat est physiquement acceptable.",
+          "methode": "Mémorise la formule compacte $y = \\dfrac{|q|U\\ell^2}{2mdv_0^2}$, mais sache la retrouver par $t = \\ell/v_0$ puis $y = \\frac12 a t^2$.",
+          "points": 1,
+          "ref": "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire--q1"
+        },
+        {
+          "notion": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+          "difficulty": 2,
+          "statement": "Entre les plaques, le poids étant négligé, lequel de ces énoncés décrit correctement le mouvement de l'électron précédent ? On prend $\\mathrm{O}x$ selon $\\vec v_0$ et $\\mathrm{O}y$ selon le sens de la déviation.",
+          "options": [
+            {
+              "label": "Uniforme suivant $Ox$, uniformément accéléré suivant $Oy$ : la trajectoire est un arc de parabole d'équation $y = \\dfrac{eU}{2mdv_0^2}\\,x^2$.",
+              "correct": true,
+              "why": "L'accélération $\\vec a = q\\vec E/m$ est constante et perpendiculaire à $\\vec v_0$ : c'est exactement la situation du projectile, donc $x = v_0 t$, $y = \\frac12 a t^2$, et en éliminant $t$ on obtient $y = \\dfrac{a}{2v_0^2}x^2$ avec $a = eU/(md)$."
+            },
+            {
+              "label": "Uniforme suivant $Ox$, uniformément accéléré suivant $Oy$ : la trajectoire est un arc de cercle de rayon $R = \\dfrac{mv_0^2}{eE}$.",
+              "why": "Tu as transposé le résultat du champ magnétique. Une accélération **constante en direction** ne peut pas donner un cercle : le cercle demande une accélération qui tourne avec la vitesse."
+            },
+            {
+              "label": "Uniformément accéléré suivant $Ox$ et uniforme suivant $Oy$ : la trajectoire est un arc de parabole d'axe horizontal.",
+              "why": "Tu as inversé les deux axes. La force $e\\vec E$ est portée par $Oy$ : c'est donc $Oy$ qui est accéléré et $Ox$ qui reste uniforme."
+            },
+            {
+              "label": "Rectiligne uniformément accéléré dans la direction de $\\vec E$, car la seule force est $\\vec F = q\\vec E$.",
+              "why": "Tu as oublié la vitesse initiale. Le mouvement n'est rectiligne que si $\\vec v_0$ est colinéaire à $\\vec a$ ; ici $\\vec v_0 \\perp \\vec E$, donc la trajectoire se courbe."
+            }
+          ],
+          "hint": "Projette la deuxième loi de Newton sur les deux axes, puis compare avec le mouvement d'un projectile lancé horizontalement.",
+          "solution": "Le poids étant négligé, $m\\vec a = q\\vec E$ : l'accélération est un vecteur **constant**, porté par $Oy$, de norme $a = eU/(md)$. En projetant :\n- suivant $Ox$ : $a_x = 0$, donc $v_x = v_0$ et $x = v_0 t$ — mouvement **uniforme** ;\n- suivant $Oy$ : $a_y = a$, donc $v_y = a t$ et $y = \\frac12 a t^2$ — mouvement **uniformément accéléré**.\n\nEn éliminant le temps ($t = x/v_0$) :\n$$y = \\frac{a}{2v_0^2}\\,x^2 = \\frac{eU}{2mdv_0^2}\\,x^2$$\nC'est l'équation d'une parabole passant par l'origine.\nContrôle : la structure est identique à celle d'un projectile lancé horizontalement, où $\\vec g$ joue le rôle de $q\\vec E/m$. Seule la valeur de l'accélération change — ici $8{,}8\\times10^{14}\\ \\mathrm{m\\,s^{-2}}$ au lieu de $9{,}8\\ \\mathrm{m\\,s^{-2}}$.",
+          "methode": "Champ électrique uniforme $+$ vitesse initiale perpendiculaire $=$ problème de projectile. Réutilise tout ce que tu sais de la chute avec vitesse horizontale.",
+          "points": 1,
+          "ref": "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire--q2"
+        },
+        {
+          "notion": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+          "difficulty": 2,
+          "statement": "Toujours pour le même électron ($v_0 = 2{,}0\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$, $\\ell = 4{,}0\\ \\mathrm{cm}$, $d = 2{,}0\\ \\mathrm{cm}$, $U = 100\\ \\mathrm{V}$), l'angle $\\alpha$ entre le vecteur vitesse de sortie et l'axe $Ox$ vaut :",
+          "options": [
+            {
+              "label": "$5{,}0^\\circ$",
+              "correct": true,
+              "why": "$\\tan\\alpha = \\dfrac{v_y}{v_0}$ avec $v_y = a\\,t = 8{,}8\\times10^{14}\\times2{,}0\\times10^{-9} = 1{,}8\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$, donc $\\tan\\alpha = 0{,}088$ et $\\alpha = 5{,}0^\\circ$."
+            },
+            {
+              "label": "$2{,}5^\\circ$",
+              "why": "Tu as pris $\\tan\\alpha = y/\\ell = 0{,}044$. C'est la pente de la **corde** $OS$, pas celle de la tangente : la bonne relation est $\\tan\\alpha = 2y/\\ell$, deux fois plus grande."
+            },
+            {
+              "label": "$0{,}10^\\circ$",
+              "why": "Tu as utilisé $E = U = 100\\ \\mathrm{V\\,m^{-1}}$ en oubliant de diviser par $d$ : $v_y$ est alors $50$ fois plus petit et $\\alpha$ tombe à $0{,}10^\\circ$."
+            },
+            {
+              "label": "$85{,}0^\\circ$",
+              "why": "Tu as inversé le rapport et calculé $\\tan\\alpha = v_0/v_y = 11{,}4$. L'angle avec $Ox$ s'obtient avec la composante perpendiculaire **au numérateur** : $\\tan\\alpha = v_y/v_0$."
+            }
+          ],
+          "hint": "L'angle de sortie se lit sur le vecteur vitesse : calcule $v_y = a\\,t$ puis compare-le à $v_x = v_0$, qui n'a pas changé.",
+          "solution": "À la sortie des plaques, la composante horizontale est inchangée ($v_x = v_0$) et la composante verticale vaut\n$$v_y = a\\,t = \\frac{eU}{md}\\times\\frac{\\ell}{v_0} = 8{,}8\\times10^{14}\\times2{,}0\\times10^{-9} = 1{,}8\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$$\nD'où\n$$\\tan\\alpha = \\frac{v_y}{v_0} = \\frac{1{,}76\\times10^{6}}{2{,}0\\times10^{7}} = 0{,}088 \\quad\\Longrightarrow\\quad \\alpha = 5{,}0^\\circ$$\nContrôle par une autre voie : la tangente à une parabole $y = kx^2$ a pour pente $2kx$, soit $2y/x$ ; avec $y = 1{,}76\\ \\mathrm{mm}$ et $x = \\ell = 40\\ \\mathrm{mm}$, $\\tan\\alpha = 2\\times1{,}76/40 = 0{,}088$ — même valeur.",
+          "methode": "Angle de sortie : $\\tan\\alpha = \\dfrac{v_y}{v_0} = \\dfrac{2y}{\\ell}$. Le facteur $2$ est la différence entre la corde et la tangente : ne l'oublie jamais.",
+          "points": 1,
+          "ref": "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire--q3"
+        },
+        {
+          "notion": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+          "difficulty": 3,
+          "statement": "Un électron entre **au milieu** des deux plaques ($\\ell = 4{,}0\\ \\mathrm{cm}$, $d = 2{,}0\\ \\mathrm{cm}$) avec $v_0 = 2{,}0\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$. La tension maximale que l'on peut appliquer sans que l'électron heurte une plaque vaut :",
+          "options": [
+            {
+              "label": "$5{,}7\\times10^{2}\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "La condition est $y(\\ell) \\le d/2$, soit $\\dfrac{eU\\ell^2}{2mdv_0^2} \\le \\dfrac{d}{2}$, d'où $U \\le \\dfrac{m\\,d^2v_0^2}{e\\,\\ell^2} = 5{,}7\\times10^{2}\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$1{,}14\\times10^{3}\\ \\mathrm{V}$",
+              "why": "Tu as écrit la condition $y \\le d$. L'électron entre au **milieu** des plaques : il ne dispose que de $d/2$ avant de toucher, ce qui divise la tension limite par deux."
+            },
+            {
+              "label": "$2{,}8\\times10^{2}\\ \\mathrm{V}$",
+              "why": "Tu as oublié le $\\frac12$ dans $y = \\frac12 a t^2$ : ta déviation est double de la vraie, donc ta tension limite est deux fois trop petite."
+            },
+            {
+              "label": "$2{,}3\\times10^{3}\\ \\mathrm{V}$",
+              "why": "Tu as pris $\\ell/2$ comme longueur de déviation : la déviation est alors $4$ fois plus faible et la tension limite $4$ fois trop grande. La déviation s'évalue sur **toute** la longueur $\\ell$ des plaques."
+            }
+          ],
+          "hint": "Écris la condition limite « la déviation à la sortie ne dépasse pas la demi-distance entre les plaques », puis isole $U$.",
+          "solution": "L'électron entre à égale distance des deux plaques : il peut se dévier au maximum de $d/2$. La condition de sortie s'écrit donc\n$$y(\\ell) = \\frac{eU\\ell^2}{2mdv_0^2} \\le \\frac{d}{2}$$\nEn isolant $U$ :\n$$U \\le \\frac{m\\,d^2\\,v_0^2}{e\\,\\ell^2} = \\frac{9{,}1\\times10^{-31}\\times(2{,}0\\times10^{-2})^2\\times(2{,}0\\times10^{7})^2}{1{,}6\\times10^{-19}\\times(4{,}0\\times10^{-2})^2} = 5{,}7\\times10^{2}\\ \\mathrm{V}$$\nLa tension maximale vaut donc environ $5{,}7\\times10^{2}\\ \\mathrm{V}$, soit $570\\ \\mathrm{V}$.\nContrôle : sous $U = 100\\ \\mathrm{V}$ on avait trouvé $y = 1{,}8\\ \\mathrm{mm}$ ; comme $y$ est proportionnelle à $U$, atteindre $y = 10\\ \\mathrm{mm}$ demande $U = 100\\times10/1{,}76 = 5{,}7\\times10^{2}\\ \\mathrm{V}$ — même résultat.",
+          "methode": "Condition de non-contact : $y(\\ell) \\le d/2$ quand la particule entre au milieu. Vérifie toujours cette inégalité avant de conclure qu'une particule sort du condensateur.",
+          "points": 1,
+          "ref": "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire--q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La force de Lorentz",
+        "lesson": "Dans un champ magnétique uniforme",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-la-force-de-lorentz",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "La force de Lorentz",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La force de Lorentz",
+          "difficulty": 1,
+          "statement": "Un proton ($q = +e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$) se déplace à la vitesse $v = 2{,}0\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$ dans un champ magnétique uniforme $B = 0{,}50\\ \\mathrm{T}$. L'angle entre $\\vec v$ et $\\vec B$ vaut $\\theta = 30^\\circ$. L'intensité de la force de Lorentz vaut :",
+          "options": [
+            {
+              "label": "$8{,}0\\times10^{-14}\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "$F = |q|\\,v\\,B\\,\\sin\\theta = 1{,}6\\times10^{-19}\\times2{,}0\\times10^{6}\\times0{,}50\\times0{,}50 = 8{,}0\\times10^{-14}\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$1{,}6\\times10^{-13}\\ \\mathrm{N}$",
+              "why": "Tu as oublié $\\sin\\theta$, c'est-à-dire pris $\\theta = 90^\\circ$ : $1{,}6\\times10^{-19}\\times2{,}0\\times10^{6}\\times0{,}50 = 1{,}6\\times10^{-13}\\ \\mathrm{N}$. Ici $\\sin 30^\\circ = 0{,}50$ divise le résultat par deux."
+            },
+            {
+              "label": "$1{,}4\\times10^{-13}\\ \\mathrm{N}$",
+              "why": "Tu as utilisé $\\cos\\theta = 0{,}866$ au lieu de $\\sin\\theta$. La norme du produit vectoriel $\\vec v \\wedge \\vec B$ contient un **sinus** : elle est maximale quand $\\vec v \\perp \\vec B$ et nulle quand $\\vec v \\parallel \\vec B$."
+            },
+            {
+              "label": "$3{,}2\\times10^{-13}\\ \\mathrm{N}$",
+              "why": "Tu as **divisé** par $\\sin\\theta$ au lieu de multiplier : $1{,}6\\times10^{-13}/0{,}50 = 3{,}2\\times10^{-13}\\ \\mathrm{N}$."
+            }
+          ],
+          "hint": "La norme de la force de Lorentz s'écrit $F = |q|\\,v\\,B\\,\\sin\\theta$ : commence par calculer $\\sin 30^\\circ$.",
+          "solution": "La force de Lorentz vaut $\\vec F = q\\,\\vec v \\wedge \\vec B$, dont la norme est\n$$F = |q|\\,v\\,B\\,\\sin\\theta$$\nAvec $\\sin 30^\\circ = 0{,}50$ :\n$$F = 1{,}6\\times10^{-19}\\times2{,}0\\times10^{6}\\times0{,}50\\times0{,}50 = 8{,}0\\times10^{-14}\\ \\mathrm{N}$$\n$\\vec F$ est perpendiculaire au plan formé par $\\vec v$ et $\\vec B$, et son sens est donné par la règle de la main droite appliquée à $\\vec v \\wedge \\vec B$ (ici $q > 0$, donc $\\vec F$ a le même sens que $\\vec v \\wedge \\vec B$).\nContrôle : si $\\vec v$ était perpendiculaire à $\\vec B$ on trouverait $1{,}6\\times10^{-13}\\ \\mathrm{N}$ ; avec $\\theta = 30^\\circ$ la force doit être exactement deux fois plus faible, ce qui est bien le cas.",
+          "methode": "$F = |q|vB\\sin\\theta$ : le sinus est l'angle entre $\\vec v$ et $\\vec B$, et la force est **nulle** si la particule se déplace le long des lignes de champ.",
+          "points": 1,
+          "ref": "pc-particule-chargee-la-force-de-lorentz-q1"
+        },
+        {
+          "notion": "La force de Lorentz",
+          "difficulty": 3,
+          "statement": "Une particule chargée est lancée dans un champ magnétique uniforme, le poids étant négligeable. Quelle affirmation est exacte ?",
+          "options": [
+            {
+              "label": "La valeur de sa vitesse reste constante, car $\\vec F \\perp \\vec v$ à chaque instant et la puissance $\\vec F\\cdot\\vec v$ est donc nulle.",
+              "correct": true,
+              "why": "La force de Lorentz est perpendiculaire à $\\vec v$ par construction du produit vectoriel, donc $\\mathcal{P} = \\vec F\\cdot\\vec v = 0$ : son travail est nul et le théorème de l'énergie cinétique donne $\\frac12 mv^2 = \\text{constante}$, donc $v$ constante."
+            },
+            {
+              "label": "La valeur de sa vitesse augmente, car la force de Lorentz accélère la particule tant qu'elle est dans le champ.",
+              "why": "Tu confonds « accélération » au sens du vecteur $\\vec a$ et augmentation de la valeur de la vitesse. Ici $\\vec a \\ne \\vec 0$ — elle change la **direction** de $\\vec v$ — mais le travail de $\\vec F$ est nul, donc $v$ ne change pas de valeur."
+            },
+            {
+              "label": "Le vecteur vitesse reste constant, car la force de Lorentz ne travaille pas.",
+              "why": "Un travail nul conserve la **valeur** de la vitesse, pas le vecteur. Si $\\vec v$ était constant, la trajectoire serait rectiligne et il n'y aurait aucune déviation."
+            },
+            {
+              "label": "Sa vitesse reste constante en valeur uniquement si $\\vec v$ est perpendiculaire à $\\vec B$ ; sinon la composante parallèle à $\\vec B$ est freinée.",
+              "why": "La composante de $\\vec v$ parallèle à $\\vec B$ n'est jamais modifiée : $\\vec F = q\\,\\vec v\\wedge\\vec B$ ne possède aucune composante selon $\\vec B$. La valeur de la vitesse est conservée quel que soit l'angle."
+            }
+          ],
+          "hint": "Demande-toi quelle est la direction de $\\vec F$ par rapport à $\\vec v$, puis calcule la puissance $\\vec F \\cdot \\vec v$.",
+          "solution": "La force de Lorentz $\\vec F = q\\,\\vec v \\wedge \\vec B$ est, par définition du produit vectoriel, perpendiculaire à $\\vec v$. Sa puissance est donc\n$$\\mathcal{P} = \\vec F \\cdot \\vec v = 0$$\nLe travail de la force magnétique est **nul** sur tout déplacement. Le théorème de l'énergie cinétique, appliqué au seul champ magnétique, donne\n$$\\frac12 m v^2 - \\frac12 m v_0^2 = 0 \\quad\\Longrightarrow\\quad v = v_0$$\nLa **valeur** de la vitesse ne change pas ; en revanche sa **direction** change en permanence, puisque $\\vec a = \\vec F/m \\ne \\vec 0$.\nContrôle : c'est précisément pourquoi on n'accélère jamais une particule avec un champ magnétique seul — dans un cyclotron, c'est le champ électrique entre les dees qui fournit l'énergie, et le champ magnétique ne fait que ramener la particule.",
+          "methode": "Retiens la chaîne de conséquences : $\\vec F \\perp \\vec v \\Rightarrow$ travail nul $\\Rightarrow v$ constante $\\Rightarrow$ mouvement **uniforme** — mais jamais rectiligne.",
+          "points": 1,
+          "ref": "pc-particule-chargee-la-force-de-lorentz-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le mouvement circulaire uniforme",
+        "lesson": "Dans un champ magnétique uniforme",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-le-mouvement-circulaire-uniforme",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "Le mouvement circulaire uniforme",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le mouvement circulaire uniforme",
+          "difficulty": 1,
+          "statement": "Un proton ($m_p = 1{,}67\\times10^{-27}\\ \\mathrm{kg}$, $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$) entre avec la vitesse $v = 2{,}0\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$ dans un champ magnétique uniforme $B = 0{,}20\\ \\mathrm{T}$, perpendiculairement à $\\vec B$. Le rayon de sa trajectoire vaut :",
+          "options": [
+            {
+              "label": "$10{,}4\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "$R = \\dfrac{m_p v}{eB} = \\dfrac{1{,}67\\times10^{-27}\\times2{,}0\\times10^{6}}{1{,}6\\times10^{-19}\\times0{,}20} = \\dfrac{3{,}34\\times10^{-21}}{3{,}2\\times10^{-20}} = 0{,}104\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$9{,}6\\ \\mathrm{cm}$",
+              "why": "Tu as inversé la formule et calculé $\\dfrac{eB}{m_p v} = 9{,}6$, qui n'est pas une longueur mais l'inverse d'une longueur ($\\mathrm{m^{-1}}$). Un contrôle d'unités t'aurait alerté."
+            },
+            {
+              "label": "$0{,}42\\ \\mathrm{cm}$",
+              "why": "Tu as **multiplié** par $B$ au lieu de diviser : $\\dfrac{m_p v B}{e} = 4{,}2\\times10^{-3}\\ \\mathrm{m}$. Plus le champ est fort, plus la trajectoire est serrée : $B$ est au dénominateur."
+            },
+            {
+              "label": "$20{,}9\\ \\mathrm{cm}$",
+              "why": "Tu as calculé le **diamètre** $2R = 20{,}9\\ \\mathrm{cm}$. La question porte sur le rayon."
+            }
+          ],
+          "hint": "Dans un champ magnétique perpendiculaire à la vitesse, le rayon vaut $R = \\dfrac{mv}{|q|B}$ : vérifie les unités de ton résultat.",
+          "solution": "Comme $\\vec v \\perp \\vec B$, le mouvement est circulaire uniforme. La force de Lorentz joue le rôle de force centripète :\n$$|q|\\,v\\,B = \\frac{m v^2}{R} \\quad\\Longrightarrow\\quad R = \\frac{m v}{|q|\\,B}$$\nNumériquement :\n$$R = \\frac{1{,}67\\times10^{-27}\\times2{,}0\\times10^{6}}{1{,}6\\times10^{-19}\\times0{,}20} = \\frac{3{,}34\\times10^{-21}}{3{,}2\\times10^{-20}} = 1{,}04\\times10^{-1}\\ \\mathrm{m} = 10{,}4\\ \\mathrm{cm}$$\nContrôle d'homogénéité : $\\dfrac{\\mathrm{kg\\,m\\,s^{-1}}}{\\mathrm{C\\cdot T}}$ donne bien des mètres, puisque $1\\ \\mathrm{T} = 1\\ \\mathrm{kg\\,s^{-1}\\,C^{-1}}$. Ordre de grandeur : une dizaine de centimètres, c'est la taille d'un dispositif de laboratoire — plausible.",
+          "methode": "$R = \\dfrac{mv}{|q|B}$ : le rayon croît avec la quantité de mouvement $mv$ et décroît quand le champ augmente.",
+          "points": 1,
+          "ref": "pc-particule-chargee-le-mouvement-circulaire-uniforme-q1"
+        },
+        {
+          "notion": "Le mouvement circulaire uniforme",
+          "difficulty": 2,
+          "statement": "Pour le proton précédent ($m_p = 1{,}67\\times10^{-27}\\ \\mathrm{kg}$, $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$, $B = 0{,}20\\ \\mathrm{T}$), la période du mouvement vaut :",
+          "options": [
+            {
+              "label": "$3{,}3\\times10^{-7}\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$T = \\dfrac{2\\pi m_p}{eB} = \\dfrac{2\\pi\\times1{,}67\\times10^{-27}}{1{,}6\\times10^{-19}\\times0{,}20} = 3{,}3\\times10^{-7}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$1{,}6\\times10^{-7}\\ \\mathrm{s}$",
+              "why": "Tu as calculé la durée d'un **demi-tour**, $\\pi m_p/(eB)$. La période est la durée d'un tour complet, soit le double."
+            },
+            {
+              "label": "$5{,}2\\times10^{-8}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $R/v = m_p/(eB)$ : il manque le facteur $2\\pi$, car un tour complet correspond au périmètre $2\\pi R$, pas à $R$."
+            },
+            {
+              "label": "$6{,}6\\times10^{-1}\\ \\mathrm{s}$",
+              "why": "Tu as calculé le périmètre $2\\pi R = 0{,}66\\ \\mathrm{m}$, une longueur. Pour obtenir une durée, il faut encore diviser par la vitesse $v$."
+            }
+          ],
+          "hint": "La période est la durée d'un tour : $T = \\dfrac{2\\pi R}{v}$, et en remplaçant $R$ le $v$ disparaît.",
+          "solution": "Le mouvement étant circulaire uniforme de rayon $R$ et de vitesse $v$, la période vaut\n$$T = \\frac{2\\pi R}{v} = \\frac{2\\pi}{v}\\times\\frac{m_p v}{eB} = \\frac{2\\pi m_p}{eB}$$\nNumériquement :\n$$T = \\frac{2\\pi\\times1{,}67\\times10^{-27}}{1{,}6\\times10^{-19}\\times0{,}20} = \\frac{1{,}049\\times10^{-26}}{3{,}2\\times10^{-20}} = 3{,}3\\times10^{-7}\\ \\mathrm{s}$$\nRésultat remarquable : **la période ne dépend pas de la vitesse** (ni du rayon). Une particule rapide décrit un grand cercle, mais exactement dans le même temps — c'est le principe de fonctionnement du cyclotron.\nContrôle par l'autre voie : $T = 2\\pi R/v = 2\\pi\\times0{,}104/2{,}0\\times10^{6} = 3{,}3\\times10^{-7}\\ \\mathrm{s}$ — même valeur.",
+          "methode": "$T = \\dfrac{2\\pi m}{|q|B}$ : la période du mouvement circulaire magnétique est indépendante de $v$ et de $R$.",
+          "points": 1,
+          "ref": "pc-particule-chargee-le-mouvement-circulaire-uniforme-q2"
+        },
+        {
+          "notion": "Le mouvement circulaire uniforme",
+          "difficulty": 2,
+          "statement": "Toujours pour ce proton ($v = 2{,}0\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$, $R = 10{,}4\\ \\mathrm{cm}$), la valeur de son accélération vaut :",
+          "options": [
+            {
+              "label": "$3{,}8\\times10^{13}\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "$a = \\dfrac{v^2}{R} = \\dfrac{(2{,}0\\times10^{6})^2}{0{,}104} = 3{,}8\\times10^{13}\\ \\mathrm{m\\,s^{-2}}$ ; on retrouve la même valeur par $a = \\dfrac{evB}{m_p}$."
+            },
+            {
+              "label": "$1{,}9\\times10^{7}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as oublié le carré et calculé $v/R = 1{,}9\\times10^{7}$. L'accélération centripète est en $v^2/R$ ; un contrôle d'unités montre que $v/R$ est en $\\mathrm{s^{-1}}$."
+            },
+            {
+              "label": "$3{,}7\\times10^{14}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as élevé $R$ au carré : $v^2/R^2 = 3{,}7\\times10^{14}$, qui est en $\\mathrm{s^{-2}}$ et non en $\\mathrm{m\\,s^{-2}}$. Seule la vitesse est au carré."
+            },
+            {
+              "label": "$1{,}9\\times10^{13}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as divisé par le diamètre $2R = 0{,}209\\ \\mathrm{m}$ au lieu du rayon : $v^2/(2R) = 1{,}9\\times10^{13}$."
+            }
+          ],
+          "hint": "Mouvement circulaire uniforme : l'accélération est entièrement centripète, de valeur $v^2/R$. Tu peux aussi passer par $a = F/m$.",
+          "solution": "Le mouvement étant circulaire **uniforme**, l'accélération tangentielle est nulle et l'accélération est purement centripète :\n$$a = \\frac{v^2}{R} = \\frac{(2{,}0\\times10^{6})^2}{1{,}04\\times10^{-1}} = \\frac{4{,}0\\times10^{12}}{1{,}04\\times10^{-1}} = 3{,}8\\times10^{13}\\ \\mathrm{m\\,s^{-2}}$$\nContrôle par la deuxième loi de Newton, qui est une voie totalement indépendante :\n$$a = \\frac{F}{m_p} = \\frac{e\\,v\\,B}{m_p} = \\frac{1{,}6\\times10^{-19}\\times2{,}0\\times10^{6}\\times0{,}20}{1{,}67\\times10^{-27}} = \\frac{6{,}4\\times10^{-14}}{1{,}67\\times10^{-27}} = 3{,}8\\times10^{13}\\ \\mathrm{m\\,s^{-2}}$$\nLes deux méthodes concordent : le résultat est fiable.",
+          "methode": "Mouvement circulaire uniforme $\\Rightarrow$ $\\vec a$ centripète de valeur $v^2/R$. Recoupe toujours avec $a = F/m$ : c'est un contrôle gratuit.",
+          "points": 1,
+          "ref": "pc-particule-chargee-le-mouvement-circulaire-uniforme-q3"
+        },
+        {
+          "notion": "Le mouvement circulaire uniforme",
+          "difficulty": 3,
+          "statement": "Un proton et un électron sont lancés avec la **même** vitesse $v$, perpendiculairement au **même** champ magnétique uniforme $\\vec B$. On donne $m_p = 1{,}67\\times10^{-27}\\ \\mathrm{kg}$ et $m_e = 9{,}1\\times10^{-31}\\ \\mathrm{kg}$. Le rapport $\\dfrac{R_p}{R_e}$ des rayons de leurs trajectoires vaut :",
+          "options": [
+            {
+              "label": "$1{,}8\\times10^{3}$",
+              "correct": true,
+              "why": "$R = \\dfrac{mv}{|q|B}$ et les deux charges ont la même valeur absolue, donc $\\dfrac{R_p}{R_e} = \\dfrac{m_p}{m_e} = \\dfrac{1{,}67\\times10^{-27}}{9{,}1\\times10^{-31}} = 1{,}8\\times10^{3}$."
+            },
+            {
+              "label": "$5{,}4\\times10^{-4}$",
+              "why": "Tu as calculé $m_e/m_p$ : c'est le rapport inverse, $R_e/R_p$. Le proton, beaucoup plus lourd, décrit le **grand** cercle."
+            },
+            {
+              "label": "$1{,}0$",
+              "why": "Tu as pensé que les deux charges étant de même valeur absolue, les rayons seraient égaux. Mais $R$ dépend de la quantité de mouvement $mv$ : à vitesse égale, c'est la masse qui décide."
+            },
+            {
+              "label": "$43$",
+              "why": "Tu as pris la racine carrée de $m_p/m_e$. La dépendance en $\\sqrt{m}$ n'apparaît que si les particules sont d'abord **accélérées sous la même tension** ; ici c'est la vitesse qui est imposée, donc $R \\propto m$."
+            }
+          ],
+          "hint": "Écris $R = \\dfrac{mv}{|q|B}$ pour chacune des deux particules et simplifie : que reste-t-il quand $v$, $B$ et $|q|$ sont communs ?",
+          "solution": "Pour une particule entrant perpendiculairement à $\\vec B$ :\n$$R = \\frac{m v}{|q|\\,B}$$\nLe proton et l'électron ont des charges opposées mais de **même valeur absolue** $e$, et ici $v$ et $B$ sont communs. Donc\n$$\\frac{R_p}{R_e} = \\frac{m_p}{m_e} = \\frac{1{,}67\\times10^{-27}}{9{,}1\\times10^{-31}} = 1{,}8\\times10^{3}$$\nLa trajectoire du proton est environ $1800$ fois plus large que celle de l'électron. Les deux cercles sont par ailleurs décrits en sens **opposés**, puisque les charges sont de signes contraires.\nAttention au cas voisin : si les deux particules étaient parties du repos et accélérées sous la même tension $U$, on aurait $v = \\sqrt{2|q|U/m}$ et donc $R = \\dfrac{\\sqrt{2mU/|q|}}{B} \\propto \\sqrt{m}$ — le rapport ne serait plus que $\\sqrt{1835} \\approx 43$.",
+          "methode": "Avant de comparer deux rayons, demande-toi ce qui est **imposé** : la même vitesse donne $R \\propto m$, la même tension accélératrice donne $R \\propto \\sqrt{m}$.",
+          "points": 1,
+          "ref": "pc-particule-chargee-le-mouvement-circulaire-uniforme-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Comparaison des deux champs",
+        "lesson": "Dans un champ magnétique uniforme",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-comparaison-des-deux-champs",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "Comparaison des deux champs",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Comparaison des deux champs",
+          "difficulty": 1,
+          "statement": "Une particule chargée entre dans une région de champ uniforme avec une vitesse $\\vec v_0$ **perpendiculaire** au champ, le poids étant négligeable. Sa trajectoire est :",
+          "options": [
+            {
+              "label": "parabolique si le champ est électrique, circulaire si le champ est magnétique",
+              "correct": true,
+              "why": "Dans $\\vec E$, la force $q\\vec E$ est constante : accélération constante, donc parabole. Dans $\\vec B$, la force $q\\vec v\\wedge\\vec B$ reste perpendiculaire à $\\vec v$ et tourne avec elle : cercle uniforme."
+            },
+            {
+              "label": "circulaire si le champ est électrique, parabolique si le champ est magnétique",
+              "why": "Tu as échangé les deux cas. C'est le champ **électrique** qui donne la parabole, parce que sa force garde une direction fixe, comme le poids d'un projectile."
+            },
+            {
+              "label": "parabolique dans les deux cas, car la force est proportionnelle à la charge",
+              "why": "La proportionnalité à $q$ ne dit rien sur la forme de la trajectoire. Ce qui compte est la **direction** de la force : fixe dans $\\vec E$, tournante dans $\\vec B$."
+            },
+            {
+              "label": "circulaire dans les deux cas, car la force est toujours perpendiculaire à la vitesse",
+              "why": "C'est faux pour le champ électrique : $q\\vec E$ garde une direction fixe, alors que $\\vec v$ se couche progressivement — l'angle entre les deux change en permanence."
+            }
+          ],
+          "hint": "Demande-toi, dans chaque cas, si la direction de la force reste fixe ou si elle suit la vitesse.",
+          "solution": "Tout vient de la **direction** de la force.\n\nChamp électrique uniforme : $\\vec F = q\\vec E$ est un vecteur **constant**, donc $\\vec a = q\\vec E/m$ est constante. Avec $\\vec v_0 \\perp \\vec E$, c'est la situation du projectile : mouvement uniforme suivant $\\vec v_0$, uniformément accéléré suivant $\\vec E$, trajectoire **parabolique**.\n\nChamp magnétique uniforme : $\\vec F = q\\,\\vec v\\wedge\\vec B$ est toujours perpendiculaire à $\\vec v$. Son travail est nul, donc $v$ reste constante ; et comme $F = |q|vB$ est constante en valeur et toujours centripète, la trajectoire est un **cercle** parcouru uniformément.\n\n| | Champ $\\vec E$ | Champ $\\vec B$ |\n| --- | --- | --- |\n| Force | $q\\vec E$, direction fixe | $q\\vec v\\wedge\\vec B$, $\\perp \\vec v$ |\n| Travail | non nul | nul |\n| Valeur de $v$ | varie | constante |\n| Trajectoire | parabole | cercle |\n\nContrôle : la parabole du champ électrique est exactement l'analogue de la chute d'un projectile, $q\\vec E/m$ tenant le rôle de $\\vec g$.",
+          "methode": "Direction de la force fixe $\\Rightarrow$ parabole. Force toujours perpendiculaire à $\\vec v$ $\\Rightarrow$ cercle. C'est le seul critère à retenir.",
+          "points": 1,
+          "ref": "pc-particule-chargee-comparaison-des-deux-champs-q1"
+        },
+        {
+          "notion": "Comparaison des deux champs",
+          "difficulty": 2,
+          "statement": "Une particule chargée traverse successivement une région de champ électrique uniforme puis une région de champ magnétique uniforme. Que peut-on dire de la **valeur** de sa vitesse ?",
+          "options": [
+            {
+              "label": "Elle varie dans le champ électrique, elle reste constante dans le champ magnétique, car la force magnétique est toujours perpendiculaire à $\\vec v$.",
+              "correct": true,
+              "why": "Dans $\\vec E$, le travail $W = qU$ est non nul, donc l'énergie cinétique change. Dans $\\vec B$, $\\vec F\\perp\\vec v$ donne $W = 0$, donc $\\frac12 mv^2$ est conservée et $v$ garde la même valeur."
+            },
+            {
+              "label": "Elle reste constante dans les deux régions, puisque les deux champs sont uniformes.",
+              "why": "« Uniforme » signifie « le même en tout point de l'espace », pas « qui conserve la vitesse ». La force électrique, elle, travaille et modifie l'énergie cinétique."
+            },
+            {
+              "label": "Elle varie dans les deux régions, puisqu'une force non nulle agit dans chacune.",
+              "why": "Une force non nulle modifie toujours le **vecteur** vitesse, mais elle ne modifie sa **valeur** que si elle travaille. La force magnétique ne travaille pas."
+            },
+            {
+              "label": "Elle reste constante dans le champ électrique et varie dans le champ magnétique, car c'est le champ magnétique qui courbe la trajectoire.",
+              "why": "Tu as échangé les deux cas. Les deux champs courbent la trajectoire, mais seul le champ électrique peut modifier la valeur de la vitesse."
+            }
+          ],
+          "hint": "Pour chaque région, calcule la puissance $\\vec F\\cdot\\vec v$ : si elle est nulle, l'énergie cinétique ne change pas.",
+          "solution": "Le critère est le **travail** de la force.\n\nDans le champ électrique, le travail entre deux points de potentiels $V_A$ et $V_B$ vaut $W = q\\,U_{AB}$, en général non nul. Le théorème de l'énergie cinétique donne alors\n$$\\frac12 m v_B^2 - \\frac12 m v_A^2 = q\\,U_{AB} \\ne 0$$\nLa valeur de la vitesse **change**.\n\nDans le champ magnétique, $\\vec F = q\\,\\vec v\\wedge\\vec B$ est perpendiculaire à $\\vec v$, donc $\\mathcal{P} = \\vec F\\cdot\\vec v = 0$ et $W = 0$ :\n$$\\frac12 m v^2 = \\text{constante} \\quad\\Longrightarrow\\quad v = \\text{constante}$$\nLa valeur de la vitesse est **conservée** ; seule sa direction tourne.\nContrôle : c'est bien pour cela qu'un spectromètre de masse utilise un champ électrique pour accélérer les ions, puis un champ magnétique pour les trier — le tri ne doit pas modifier leur vitesse.",
+          "methode": "Un champ électrique change la **valeur** de la vitesse ; un champ magnétique n'en change que la **direction**.",
+          "points": 1,
+          "ref": "pc-particule-chargee-comparaison-des-deux-champs-q2"
+        },
+        {
+          "notion": "Comparaison des deux champs",
+          "difficulty": 2,
+          "statement": "Un électron de vitesse $v = 3{,}0\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$ traverse une région où règne un champ magnétique uniforme $B = 0{,}10\\ \\mathrm{T}$ perpendiculaire à $\\vec v$. Quelle intensité de champ électrique faudrait-il pour lui appliquer une force de **même valeur** ?",
+          "options": [
+            {
+              "label": "$3{,}0\\times10^{5}\\ \\mathrm{V\\,m^{-1}}$",
+              "correct": true,
+              "why": "On égale $|q|E = |q|vB$, d'où $E = vB = 3{,}0\\times10^{6}\\times0{,}10 = 3{,}0\\times10^{5}\\ \\mathrm{V\\,m^{-1}}$ : la charge se simplifie."
+            },
+            {
+              "label": "$3{,}0\\times10^{7}\\ \\mathrm{V\\,m^{-1}}$",
+              "why": "Tu as **divisé** par $B$ : $v/B = 3{,}0\\times10^{7}$. L'égalité $E = vB$ est un produit — c'est $v = E/B$ qui est un quotient, dans le sélecteur de vitesse."
+            },
+            {
+              "label": "$3{,}0\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$",
+              "why": "Tu as élevé $B$ au carré : $vB^2 = 3{,}0\\times10^{6}\\times0{,}010 = 3{,}0\\times10^{4}$. Le champ magnétique n'intervient qu'à la puissance un dans $F = |q|vB$."
+            },
+            {
+              "label": "$3{,}3\\times10^{-8}\\ \\mathrm{V\\,m^{-1}}$",
+              "why": "Tu as calculé $B/v$, l'inverse du produit attendu. Un contrôle d'ordre de grandeur suffisait : un champ de $3\\times10^{-8}\\ \\mathrm{V\\,m^{-1}}$ n'exercerait aucune force mesurable."
+            }
+          ],
+          "hint": "Écris l'égalité des deux normes $|q|E = |q|vB$ : la charge disparaît et il reste une relation entre $E$, $v$ et $B$.",
+          "solution": "La force électrique a pour norme $F_e = |q|\\,E$ et la force magnétique, quand $\\vec v\\perp\\vec B$, $F_m = |q|\\,v\\,B$. L'égalité des deux donne\n$$|q|\\,E = |q|\\,v\\,B \\quad\\Longrightarrow\\quad E = v\\,B$$\nNumériquement :\n$$E = 3{,}0\\times10^{6}\\times0{,}10 = 3{,}0\\times10^{5}\\ \\mathrm{V\\,m^{-1}}$$\nLa charge se simplifie : cette relation est **indépendante de la particule**, et c'est précisément la condition d'équilibre utilisée dans un sélecteur de vitesse, où l'on écrit $v = E/B$.\nContrôle d'homogénéité : $\\mathrm{m\\,s^{-1}}\\times\\mathrm{T} = \\mathrm{V\\,m^{-1}}$, puisque $1\\ \\mathrm{T} = 1\\ \\mathrm{V\\,s\\,m^{-2}}$.",
+          "methode": "$E = vB$ est l'égalité des deux forces : c'est le cœur du sélecteur de vitesse, où l'on en tire $v = E/B$.",
+          "points": 1,
+          "ref": "pc-particule-chargee-comparaison-des-deux-champs-q3"
+        },
+        {
+          "notion": "Comparaison des deux champs",
+          "difficulty": 3,
+          "statement": "On dit du mouvement d'une particule chargée dans un champ magnétique uniforme, $\\vec v_0$ étant perpendiculaire à $\\vec B$, qu'il est « circulaire **uniforme** ». Qu'en déduis-tu sur son accélération ?",
+          "options": [
+            {
+              "label": "Elle n'est pas nulle : elle est centripète, de valeur constante $v^2/R$. « Uniforme » ne qualifie que la valeur de la vitesse.",
+              "correct": true,
+              "why": "Le mot « uniforme » signifie $v = \\text{constante}$. Le vecteur $\\vec v$ change de direction en permanence, donc $\\vec a \\ne \\vec 0$ : elle est dirigée vers le centre et vaut $v^2/R = |q|vB/m$."
+            },
+            {
+              "label": "Elle est nulle, puisque la vitesse de la particule est constante.",
+              "why": "Tu confonds la valeur de la vitesse, qui est constante, et le vecteur vitesse, qui tourne. L'accélération mesure la variation du **vecteur** : une direction qui change suffit à la rendre non nulle."
+            },
+            {
+              "label": "Elle n'est pas nulle, mais elle est tangentielle, de valeur $v^2/R$.",
+              "why": "La valeur est juste, la direction non. Une accélération tangentielle ferait varier la valeur de la vitesse, ce qui contredirait « uniforme » : $\\vec a$ est ici entièrement centripète."
+            },
+            {
+              "label": "Elle est nulle, puisque le travail de la force magnétique est nul.",
+              "why": "Un travail nul n'est pas une force nulle. La force $|q|vB$ est bien non nulle ; elle est simplement perpendiculaire au déplacement, donc elle ne fournit aucune énergie."
+            }
+          ],
+          "hint": "Souviens-toi que l'accélération mesure la variation du **vecteur** vitesse, pas seulement de sa valeur.",
+          "solution": "Dans le mouvement circulaire uniforme, la valeur de la vitesse est constante mais sa direction change continuellement. L'accélération, qui est la dérivée du **vecteur** vitesse, n'est donc pas nulle. En décomposant :\n- composante tangentielle : $a_t = \\dfrac{\\mathrm{d}v}{\\mathrm{d}t} = 0$, car $v$ est constante ;\n- composante normale : $a_n = \\dfrac{v^2}{R}$, dirigée vers le centre du cercle.\n\n$$\\vec a = \\frac{v^2}{R}\\,\\vec n \\quad\\text{avec}\\quad a = \\frac{v^2}{R} = \\frac{|q|\\,v\\,B}{m}$$\nLa deuxième loi de Newton le confirme : $\\vec F = q\\,\\vec v\\wedge\\vec B \\ne \\vec 0$, donc $\\vec a = \\vec F/m \\ne \\vec 0$.\nContrôle : l'égalité $\\dfrac{v^2}{R} = \\dfrac{|q|vB}{m}$ redonne bien $R = \\dfrac{mv}{|q|B}$ — tout est cohérent.",
+          "methode": "« Mouvement uniforme » veut dire $v$ constante, jamais $\\vec a = \\vec 0$. Dans un cercle uniforme, $\\vec a$ est centripète et vaut $v^2/R$.",
+          "points": 1,
+          "ref": "pc-particule-chargee-comparaison-des-deux-champs-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Applications",
+        "lesson": "Dans un champ magnétique uniforme",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-applications",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "Applications",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Applications",
+          "difficulty": 1,
+          "statement": "Dans un sélecteur de vitesse, un champ électrique $E = 2{,}0\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$ et un champ magnétique $B = 0{,}10\\ \\mathrm{T}$ sont croisés. La vitesse des ions qui traversent le dispositif sans être déviés vaut :",
+          "options": [
+            {
+              "label": "$2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "La condition d'équilibre $|q|E = |q|vB$ donne $v = \\dfrac{E}{B} = \\dfrac{2{,}0\\times10^{4}}{0{,}10} = 2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$2{,}0\\times10^{3}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as **multiplié** : $E\\times B = 2{,}0\\times10^{4}\\times0{,}10 = 2{,}0\\times10^{3}$. La vitesse est le **quotient** $E/B$ ; c'est $E = vB$ qui est un produit."
+            },
+            {
+              "label": "$2{,}0\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé par $B^2 = 0{,}010$ : $E/B^2 = 2{,}0\\times10^{6}$. Le champ magnétique n'intervient qu'à la puissance un dans $F = |q|vB$."
+            },
+            {
+              "label": "$5{,}0\\times10^{-6}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $B/E$, le quotient inversé. Un contrôle d'ordre de grandeur suffisait : un ion de $5\\times10^{-6}\\ \\mathrm{m\\,s^{-1}}$ mettrait des heures à traverser le dispositif."
+            }
+          ],
+          "hint": "Les deux forces s'opposent : écris $|q|E = |q|vB$ et isole $v$. La charge se simplifie.",
+          "solution": "Dans un sélecteur de vitesse, les champs $\\vec E$ et $\\vec B$ sont croisés de sorte que la force électrique et la force magnétique soient opposées. Un ion n'est pas dévié si leurs normes sont égales :\n$$|q|\\,E = |q|\\,v\\,B \\quad\\Longrightarrow\\quad v = \\frac{E}{B}$$\nNumériquement :\n$$v = \\frac{2{,}0\\times10^{4}}{0{,}10} = 2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$$\nRemarque capitale : ni $q$ ni $m$ n'apparaissent. **Tous** les ions de cette vitesse passent, quelles que soient leur charge et leur masse — c'est ce qui fait du dispositif un sélecteur de **vitesse** et non de masse.\nContrôle d'homogénéité : $\\dfrac{\\mathrm{V\\,m^{-1}}}{\\mathrm{T}} = \\mathrm{m\\,s^{-1}}$, puisque $1\\ \\mathrm{T} = 1\\ \\mathrm{V\\,s\\,m^{-2}}$.",
+          "methode": "Sélecteur de vitesse : $v = \\dfrac{E}{B}$, indépendant de $q$ et de $m$. Retiens le sens du quotient par l'homogénéité.",
+          "points": 1,
+          "ref": "pc-particule-chargee-applications-q1"
+        },
+        {
+          "notion": "Applications",
+          "difficulty": 2,
+          "statement": "Un faisceau d'ions de charges et de masses variées, animés de vitesses variées, arrive dans le sélecteur précédent ($v = E/B = 2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$). Quels ions le traversent sans déviation ?",
+          "options": [
+            {
+              "label": "Tous ceux dont la vitesse vaut $2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$, quelles que soient leur charge et leur masse.",
+              "correct": true,
+              "why": "La condition $|q|E = |q|vB$ se simplifie en $v = E/B$ : ni la charge ni la masse n'y figurent. Le dispositif trie uniquement selon la vitesse."
+            },
+            {
+              "label": "Uniquement les ions positifs de vitesse $2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$ ; les ions négatifs sont déviés.",
+              "why": "Changer le signe de $q$ inverse **les deux** forces en même temps : leur somme reste nulle. Les ions négatifs de la bonne vitesse passent aussi."
+            },
+            {
+              "label": "Les ions les plus légers, car ils sont les moins déviés par les deux champs.",
+              "why": "La masse n'intervient pas dans la condition d'équilibre : elle ne gouverne que l'accélération des ions qui, justement, ne sont **pas** à l'équilibre."
+            },
+            {
+              "label": "Tous ceux dont la vitesse vaut $2{,}0\\times10^{3}\\ \\mathrm{m\\,s^{-1}}$, c'est-à-dire $E\\times B$.",
+              "why": "La vitesse sélectionnée est le quotient $E/B$, pas le produit $E\\times B$ : le raisonnement sur l'indépendance de $q$ et $m$ est juste, mais la valeur est fausse."
+            }
+          ],
+          "hint": "Écris la condition d'équilibre des deux forces, puis regarde quelles grandeurs disparaissent de l'égalité.",
+          "solution": "Un ion traverse sans déviation si la résultante des forces est nulle, c'est-à-dire si les normes de la force électrique et de la force magnétique sont égales :\n$$|q|\\,E = |q|\\,v\\,B \\quad\\Longrightarrow\\quad v = \\frac{E}{B} = 2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$$\nLa charge $|q|$ se simplifie et la masse $m$ n'apparaît jamais : la condition ne porte **que** sur la vitesse. Et si l'on change le signe de la charge, la force électrique $q\\vec E$ et la force magnétique $q\\,\\vec v\\wedge\\vec B$ s'inversent toutes les deux : leur somme reste nulle.\nConclusion : le dispositif laisse passer tous les ions de vitesse $E/B$, positifs comme négatifs, légers comme lourds. Les autres sont déviés et interceptés par le diaphragme.\nContrôle : c'est bien ce qu'on attend d'un sélecteur placé **avant** un spectromètre de masse — il doit homogénéiser les vitesses sans trier les masses, puisque c'est le champ magnétique suivant qui s'en chargera.",
+          "methode": "Dans un sélecteur de vitesse, seule la vitesse compte. Si une réponse fait intervenir $q$ ou $m$, c'est qu'une erreur s'est glissée dans l'équilibre des forces.",
+          "points": 1,
+          "ref": "pc-particule-chargee-applications-q2"
+        },
+        {
+          "notion": "Applications",
+          "difficulty": 2,
+          "statement": "Les ions sortis du sélecteur ($v = 2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$, charge $q = +e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$) entrent perpendiculairement dans un champ magnétique $B' = 0{,}20\\ \\mathrm{T}$. On mesure un rayon $R = 0{,}26\\ \\mathrm{m}$. La masse de ces ions vaut :",
+          "options": [
+            {
+              "label": "$4{,}2\\times10^{-26}\\ \\mathrm{kg}$",
+              "correct": true,
+              "why": "De $R = \\dfrac{mv}{eB'}$ on tire $m = \\dfrac{eB'R}{v} = \\dfrac{1{,}6\\times10^{-19}\\times0{,}20\\times0{,}26}{2{,}0\\times10^{5}} = 4{,}2\\times10^{-26}\\ \\mathrm{kg}$."
+            },
+            {
+              "label": "$1{,}7\\times10^{-15}\\ \\mathrm{kg}$",
+              "why": "Tu as **multiplié** par $v$ au lieu de diviser : $eB'Rv = 1{,}7\\times10^{-15}$. Une masse de $10^{-15}\\ \\mathrm{kg}$ serait celle d'une poussière, pas d'un ion."
+            },
+            {
+              "label": "$6{,}2\\times10^{-25}\\ \\mathrm{kg}$",
+              "why": "Tu as divisé par $R$ au lieu de multiplier : $\\dfrac{eB'}{Rv} = 6{,}2\\times10^{-25}$. Dans $R = mv/(eB')$, le rayon est proportionnel à la masse, donc $R$ passe au numérateur de $m$."
+            },
+            {
+              "label": "$2{,}1\\times10^{-31}\\ \\mathrm{kg}$",
+              "why": "Tu as élevé $v$ au carré : $\\dfrac{eB'R}{v^2} = 2{,}1\\times10^{-31}$. C'est l'ordre de grandeur de la masse d'un électron, pas d'un ion."
+            }
+          ],
+          "hint": "Part de $R = \\dfrac{mv}{|q|B'}$ et isole $m$ avant de remplacer les valeurs. Contrôle ensuite l'ordre de grandeur en unités de masse atomique.",
+          "solution": "Dans le champ magnétique déviateur, le mouvement est circulaire uniforme de rayon\n$$R = \\frac{m\\,v}{e\\,B'} \\quad\\Longrightarrow\\quad m = \\frac{e\\,B'\\,R}{v}$$\nNumériquement :\n$$m = \\frac{1{,}6\\times10^{-19}\\times0{,}20\\times0{,}26}{2{,}0\\times10^{5}} = \\frac{8{,}32\\times10^{-21}}{2{,}0\\times10^{5}} = 4{,}2\\times10^{-26}\\ \\mathrm{kg}$$\nContrôle d'ordre de grandeur : avec $1\\ \\mathrm{u} = 1{,}66\\times10^{-27}\\ \\mathrm{kg}$,\n$$m = \\frac{4{,}16\\times10^{-26}}{1{,}66\\times10^{-27}} \\approx 25\\ \\mathrm{u}$$\nC'est bien une masse d'ion monoatomique léger (de l'ordre du magnésium) : le résultat est plausible. Un résultat qui ne tomberait pas entre $1$ et quelques centaines de $\\mathrm{u}$ signalerait une erreur de calcul.",
+          "methode": "Mesurer $R$ dans un champ $B$ connu, c'est mesurer une masse : $m = \\dfrac{|q|BR}{v}$. Convertis en $\\mathrm{u}$ pour contrôler la vraisemblance.",
+          "points": 1,
+          "ref": "pc-particule-chargee-applications-q3"
+        },
+        {
+          "notion": "Applications",
+          "difficulty": 3,
+          "statement": "Dans un spectromètre de masse, pourquoi place-t-on un sélecteur de vitesse **avant** le champ magnétique déviateur ?",
+          "options": [
+            {
+              "label": "Parce que le rayon $R = \\dfrac{mv}{|q|B}$ dépend de $v$ : sans sélecteur, des ions de même masse mais de vitesses différentes donneraient des rayons différents et les taches se chevaucheraient.",
+              "correct": true,
+              "why": "Le rayon mesure le produit $mv$, pas la masse seule. Fixer $v$ pour tous les ions est donc indispensable pour que $R$ ne dépende plus que de $m/|q|$ et que chaque isotope donne une tache nette."
+            },
+            {
+              "label": "Parce que le sélecteur accélère les ions, qui n'atteindraient pas le détecteur sans lui.",
+              "why": "Un sélecteur de vitesse ne modifie pas la valeur de la vitesse des ions qui le traversent : il est justement conçu pour que la résultante des forces y soit nulle. Il trie, il n'accélère pas."
+            },
+            {
+              "label": "Parce que le sélecteur élimine les ions négatifs, qui seraient déviés dans le mauvais sens.",
+              "why": "Le sélecteur laisse passer les ions des deux signes dès que $v = E/B$, puisque les deux forces s'inversent ensemble. Le tri des signes se fait, le cas échéant, à la source."
+            },
+            {
+              "label": "Parce que sans sélecteur le rayon $R$ ne dépendrait plus de la masse des ions.",
+              "why": "$R = mv/(|q|B)$ dépend de la masse dans tous les cas. Le problème n'est pas la disparition de $m$, mais la **dispersion des vitesses**, qui brouille la mesure."
+            }
+          ],
+          "hint": "Regarde de quelles grandeurs dépend $R = \\dfrac{mv}{|q|B}$, et demande-toi laquelle on ne maîtrise pas à la sortie de la source d'ions.",
+          "solution": "Dans la chambre de déviation, le rayon mesuré vaut\n$$R = \\frac{m\\,v}{|q|\\,B}$$\nIl dépend de **deux** inconnues : la masse $m$ et la vitesse $v$. À la sortie d'une source d'ions, les vitesses sont réparties sur un large intervalle : deux ions de même masse arriveraient alors sur le détecteur à des endroits différents, et deux isotopes voisins donneraient des taches qui se recouvrent — la mesure serait inexploitable.\n\nLe sélecteur de vitesse impose à tous les ions la même vitesse $v = E/B$, sans rien changer d'autre. Le rayon devient alors\n$$R = \\frac{m}{|q|}\\times\\frac{v}{B} = \\frac{m}{|q|}\\times\\frac{E}{B\\,B'}$$\nc'est-à-dire proportionnel au seul rapport $m/|q|$ : chaque isotope donne une tache fine à une position caractéristique, et une mesure de $R$ se traduit directement en une mesure de masse.\nContrôle : c'est exactement le schéma en deux étages des spectromètres réels — un étage qui uniformise les vitesses, un étage qui sépare les masses.",
+          "methode": "Un spectromètre mesure $R \\propto mv$ : on ne peut en déduire $m$ qu'après avoir **fixé** $v$. D'où le sélecteur en amont.",
+          "points": 1,
+          "ref": "pc-particule-chargee-applications-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le cyclotron",
+        "lesson": "Approfondissement — Particule chargée dans un champ",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-le-cyclotron",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "Le cyclotron",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le cyclotron",
+          "difficulty": 3,
+          "statement": "Dans un cyclotron, des protons ($m_p = 1{,}67\\times10^{-27}\\ \\mathrm{kg}$, $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$) décrivent des demi-cercles dans un champ magnétique uniforme $B = 1{,}0\\ \\mathrm{T}$, le rayon maximal des dees étant $R_{\\max} = 0{,}50\\ \\mathrm{m}$. La fréquence de la tension alternative à appliquer entre les dees vaut :",
+          "options": [
+            {
+              "label": "$1{,}5\\times10^{7}\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "La particule doit changer de dee à chaque demi-tour, donc $f = \\dfrac{1}{T} = \\dfrac{eB}{2\\pi m_p} = \\dfrac{1{,}6\\times10^{-19}\\times1{,}0}{2\\pi\\times1{,}67\\times10^{-27}} = 1{,}5\\times10^{7}\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$9{,}6\\times10^{7}\\ \\mathrm{Hz}$",
+              "why": "Tu as oublié le facteur $2\\pi$ et calculé $eB/m_p = 9{,}6\\times10^{7}$. Ce facteur vient du tour complet, de périmètre $2\\pi R$."
+            },
+            {
+              "label": "$6{,}0\\times10^{8}\\ \\mathrm{Hz}$",
+              "why": "Tu as **multiplié** par $2\\pi$ au lieu de diviser : $\\dfrac{2\\pi eB}{m_p} = 6{,}0\\times10^{8}$. Dans $T = \\dfrac{2\\pi m}{eB}$, le $2\\pi$ est au numérateur de la période, donc au dénominateur de la fréquence."
+            },
+            {
+              "label": "$7{,}6\\times10^{6}\\ \\mathrm{Hz}$",
+              "why": "Tu as fait intervenir le rayon : $\\dfrac{eBR_{\\max}}{2\\pi m_p} = 7{,}6\\times10^{6}$. Or la fréquence cyclotron ne dépend **ni** du rayon **ni** de la vitesse — c'est tout l'intérêt du dispositif."
+            }
+          ],
+          "hint": "La tension doit s'inverser à chaque demi-tour. Exprime la période du mouvement circulaire et demande-toi si elle dépend du rayon.",
+          "solution": "Dans chaque dee, le proton ne subit que la force magnétique : son mouvement y est circulaire uniforme de période\n$$T = \\frac{2\\pi m_p}{e\\,B}$$\nCette période est **indépendante** de la vitesse et du rayon : à chaque passage le proton va plus vite et décrit un cercle plus grand, mais il met toujours le même temps. La tension accélératrice doit donc s'inverser à intervalles réguliers $T/2$, c'est-à-dire osciller à la fréquence\n$$f = \\frac{1}{T} = \\frac{e\\,B}{2\\pi m_p} = \\frac{1{,}6\\times10^{-19}\\times1{,}0}{2\\pi\\times1{,}67\\times10^{-27}} = \\frac{1{,}6\\times10^{-19}}{1{,}049\\times10^{-26}} = 1{,}5\\times10^{7}\\ \\mathrm{Hz}$$\nsoit environ $15\\ \\mathrm{MHz}$ — une fréquence radio, ce qui est bien l'ordre de grandeur des cyclotrons réels.\nContrôle : le rayon $R_{\\max}$ ne sert pas ici ; il n'intervient que pour l'énergie finale, $v_{\\max} = \\dfrac{eBR_{\\max}}{m_p} = 4{,}8\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$. Le fait que la donnée soit inutile pour cette question est précisément le point à comprendre.",
+          "methode": "Fréquence cyclotron : $f = \\dfrac{|q|B}{2\\pi m}$. Elle ne dépend que du rapport $q/m$ et du champ — jamais du rayon ni de la vitesse.",
+          "points": 1,
+          "ref": "pc-particule-chargee-le-cyclotron-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le spectromètre de masse, en détail",
+        "lesson": "Approfondissement — Particule chargée dans un champ",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-le-spectrometre-de-masse-en-detail",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "Le spectromètre de masse, en détail",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le spectromètre de masse, en détail",
+          "difficulty": 3,
+          "statement": "Dans un spectromètre, les ions $^{20}\\mathrm{Ne^+}$ et $^{22}\\mathrm{Ne^+}$ partent du repos, sont accélérés sous la **même** tension $U$, puis entrent perpendiculairement dans le **même** champ magnétique $\\vec B$. Le rapport $\\dfrac{R_{22}}{R_{20}}$ des rayons de leurs trajectoires vaut :",
+          "options": [
+            {
+              "label": "$1{,}05$",
+              "correct": true,
+              "why": "L'accélération donne $v = \\sqrt{2eU/m}$, donc $R = \\dfrac{mv}{eB} = \\dfrac{1}{B}\\sqrt{\\dfrac{2mU}{e}} \\propto \\sqrt{m}$, d'où $\\dfrac{R_{22}}{R_{20}} = \\sqrt{\\dfrac{22}{20}} = 1{,}05$."
+            },
+            {
+              "label": "$1{,}10$",
+              "why": "Tu as pris $R \\propto m$, donc $22/20 = 1{,}10$. C'est vrai à **vitesse imposée**, mais ici c'est la tension qui est imposée : l'ion le plus lourd sort plus lentement, ce qui atténue l'écart des rayons."
+            },
+            {
+              "label": "$0{,}95$",
+              "why": "Tu as calculé $\\sqrt{20/22} = 0{,}95$, soit le rapport inverse $R_{20}/R_{22}$. L'ion le plus lourd décrit le **grand** cercle."
+            },
+            {
+              "label": "$0{,}91$",
+              "why": "Tu as calculé $20/22 = 0{,}91$ : tu as cumulé les deux erreurs, l'inversion du rapport et l'oubli de la racine carrée."
+            }
+          ],
+          "hint": "Attention : la vitesse n'est pas donnée. Calcule-la d'abord avec le théorème de l'énergie cinétique, puis reporte-la dans $R = mv/(|q|B)$.",
+          "solution": "**Étape 1 — l'accélération.** Partant du repos sous la tension $U$, le théorème de l'énergie cinétique donne $\\frac12 m v^2 = eU$, soit\n$$v = \\sqrt{\\frac{2eU}{m}}$$\nL'ion le plus lourd sort donc **moins vite**.\n\n**Étape 2 — la déviation.** En reportant dans $R = \\dfrac{mv}{eB}$ :\n$$R = \\frac{m}{eB}\\sqrt{\\frac{2eU}{m}} = \\frac{1}{B}\\sqrt{\\frac{2\\,m\\,U}{e}}$$\nLe rayon est donc proportionnel à $\\sqrt{m}$, et non à $m$ :\n$$\\frac{R_{22}}{R_{20}} = \\sqrt{\\frac{m_{22}}{m_{20}}} = \\sqrt{\\frac{22}{20}} = \\sqrt{1{,}10} = 1{,}05$$\nL'écart relatif n'est que de $5\\ \\%$, alors que les masses diffèrent de $10\\ \\%$ : le spectromètre doit être précis pour séparer deux isotopes voisins.\nContrôle : $\\sqrt{1{,}10} \\approx 1{,}05$ est cohérent avec l'approximation $\\sqrt{1+x} \\approx 1 + x/2$, qui divise par deux l'écart relatif.",
+          "methode": "Deux régimes à ne jamais confondre : vitesse imposée $\\Rightarrow R \\propto m$ ; **tension** imposée $\\Rightarrow R \\propto \\sqrt{m}$, car $v \\propto 1/\\sqrt{m}$.",
+          "points": 1,
+          "ref": "pc-particule-chargee-le-spectrometre-de-masse-en-detail-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les champs croisés",
+        "lesson": "Approfondissement — Particule chargée dans un champ",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-les-champs-croises",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "Les champs croisés",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les champs croisés",
+          "difficulty": 3,
+          "statement": "Dans un sélecteur de vitesse à champs croisés, un ion **positif** de vitesse $v = E/B$ traverse le dispositif sans être dévié. On le remplace par un ion **négatif**, de même vitesse et de même direction. Que se passe-t-il ?",
+          "options": [
+            {
+              "label": "Il traverse aussi sans déviation : les deux forces s'inversent en même temps et l'égalité $|q|E = |q|vB$ reste vérifiée.",
+              "correct": true,
+              "why": "La force électrique $q\\vec E$ et la force magnétique $q\\,\\vec v\\wedge\\vec B$ sont toutes deux proportionnelles à $q$ : changer son signe les inverse simultanément, donc leur somme reste nulle."
+            },
+            {
+              "label": "Il est dévié, car la force électrique change de sens alors que la force magnétique garde le sien.",
+              "why": "La force magnétique $q\\,\\vec v\\wedge\\vec B$ contient aussi la charge en facteur : elle s'inverse exactement comme la force électrique. Aucune des deux ne garde son sens."
+            },
+            {
+              "label": "Il traverse sans déviation seulement si sa charge a la même valeur absolue que celle de l'ion positif.",
+              "why": "La condition d'équilibre se simplifie en $v = E/B$ : ni $|q|$ ni $m$ n'y figurent. Un ion $\\mathrm{SO_4^{2-}}$ passerait aussi bien qu'un ion $\\mathrm{Na^+}$, à condition d'avoir la bonne vitesse."
+            },
+            {
+              "label": "Il est dévié, car pour une charge négative la condition de passage devient $v = -E/B$.",
+              "why": "Une condition d'équilibre s'écrit en égalant des **normes**, qui sont positives : on obtient $v = E/B$ dans tous les cas. Une vitesse négative n'a pas de sens ici."
+            }
+          ],
+          "hint": "Écris les deux forces en gardant la charge $q$ en facteur dans chacune, puis change son signe et regarde ce que devient leur somme.",
+          "solution": "Dans le sélecteur, les deux forces qui agissent sur l'ion sont\n$$\\vec F_e = q\\,\\vec E \\qquad\\text{et}\\qquad \\vec F_m = q\\,\\vec v \\wedge \\vec B$$\nLes champs sont disposés (croisés) de sorte qu'elles soient **opposées** pour l'ion positif, et l'équilibre s'écrit\n$$|q|\\,E = |q|\\,v\\,B \\quad\\Longrightarrow\\quad v = \\frac{E}{B}$$\nRemplaçons $q$ par $-q$ : les deux forces changent de sens **simultanément**, puisque la charge est en facteur dans chacune. La force électrique pointe maintenant dans l'autre direction, la force magnétique aussi, et elles restent exactement opposées, de normes toujours égales. La résultante demeure nulle : l'ion négatif traverse lui aussi en ligne droite.\nConclusion générale : la condition de passage $v = E/B$ ne contient ni le signe de la charge, ni sa valeur, ni la masse. C'est pour cela que le dispositif est un sélecteur de **vitesse**, et pour cela seulement.\nContrôle : si une seule des deux forces s'inversait, la résultante doublerait au lieu de s'annuler — l'ion négatif serait chassé violemment, ce qu'on n'observe pas dans ces dispositifs.",
+          "methode": "Dans $\\vec F_e = q\\vec E$ comme dans $\\vec F_m = q\\,\\vec v\\wedge\\vec B$, la charge est en facteur : un changement de signe retourne les deux forces à la fois et ne rompt jamais un équilibre entre elles.",
+          "points": 1,
+          "ref": "pc-particule-chargee-les-champs-croises-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le champ magnétique terrestre",
+        "lesson": "Approfondissement — Particule chargée dans un champ",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 2,
+        "target_new_questions": 0,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-particule-chargee-le-champ-magnetique-terrestre",
+      "chapter": "pc-particule-chargee",
+      "kind": "qcu",
+      "title": "Le champ magnétique terrestre",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le champ magnétique terrestre",
+          "difficulty": 3,
+          "statement": "Un proton du vent solaire ($m_p = 1{,}67\\times10^{-27}\\ \\mathrm{kg}$, $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$) arrive au voisinage de la Terre à la vitesse $v = 4{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$, perpendiculairement au champ magnétique terrestre $B = 5{,}0\\times10^{-5}\\ \\mathrm{T}$. Le rayon de sa trajectoire vaut :",
+          "options": [
+            {
+              "label": "$84\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$R = \\dfrac{m_p v}{eB} = \\dfrac{1{,}67\\times10^{-27}\\times4{,}0\\times10^{5}}{1{,}6\\times10^{-19}\\times5{,}0\\times10^{-5}} = \\dfrac{6{,}68\\times10^{-22}}{8{,}0\\times10^{-24}} = 84\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$1{,}7\\times10^{2}\\ \\mathrm{m}$",
+              "why": "Tu as calculé le **diamètre** $2R = 1{,}7\\times10^{2}\\ \\mathrm{m}$. La question porte sur le rayon."
+            },
+            {
+              "label": "$8{,}4\\times10^{-2}\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $B = 5{,}0\\times10^{-2}\\ \\mathrm{T}$ : c'est une confusion d'ordre de grandeur. Le champ terrestre vaut quelques dizaines de microteslas, soit $5{,}0\\times10^{-5}\\ \\mathrm{T}$."
+            },
+            {
+              "label": "$4{,}6\\times10^{-2}\\ \\mathrm{m}$",
+              "why": "Tu as utilisé la masse de l'électron $9{,}1\\times10^{-31}\\ \\mathrm{kg}$ : $R = 4{,}6\\times10^{-2}\\ \\mathrm{m}$. L'énoncé parle d'un proton, environ $1800$ fois plus lourd."
+            }
+          ],
+          "hint": "C'est le rayon magnétique habituel $R = \\dfrac{mv}{|q|B}$ : la seule difficulté est de garder $B$ en teslas, avec son exposant $-5$.",
+          "solution": "Le proton entrant perpendiculairement au champ, son mouvement est circulaire uniforme de rayon\n$$R = \\frac{m_p\\,v}{e\\,B} = \\frac{1{,}67\\times10^{-27}\\times4{,}0\\times10^{5}}{1{,}6\\times10^{-19}\\times5{,}0\\times10^{-5}} = \\frac{6{,}68\\times10^{-22}}{8{,}0\\times10^{-24}} = 84\\ \\mathrm{m}$$\nInterprétation : loin d'aller tout droit, le proton s'enroule autour des lignes de champ sur une échelle d'une centaine de mètres. Si sa vitesse possède en plus une composante parallèle à $\\vec B$ — composante que la force magnétique ne modifie jamais — il décrit une hélice qui suit la ligne de champ et le conduit vers les régions polaires, où ces particules excitent les atomes de la haute atmosphère : ce sont les aurores polaires.\nContrôle : on peut aussi calculer la période, $T = \\dfrac{2\\pi m_p}{eB} = 1{,}3\\times10^{-3}\\ \\mathrm{s}$, puis $R = \\dfrac{vT}{2\\pi} = \\dfrac{4{,}0\\times10^{5}\\times1{,}31\\times10^{-3}}{2\\pi} = 84\\ \\mathrm{m}$ — même résultat par une autre voie.",
+          "methode": "Le champ magnétique terrestre est de l'ordre de $5\\times10^{-5}\\ \\mathrm{T}$ : avec un champ aussi faible, les rayons $R = mv/(|q|B)$ se comptent en mètres, voire en kilomètres.",
+          "points": 1,
+          "ref": "pc-particule-chargee-le-champ-magnetique-terrestre-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-particule-chargee-probleme-1",
+      "chapter": "pc-particule-chargee",
+      "kind": "probleme",
+      "title": "Le tube cathodique : accélérer puis dévier un faisceau d'électrons",
+      "difficulty": 3,
+      "context": "Un tube cathodique de laboratoire est constitué de trois éléments alignés, placés dans le vide (figure ci-contre).\n\n**1. Le canon à électrons.** Un filament émet des électrons avec une vitesse pratiquement nulle. Ils sont accélérés entre deux plaques verticales $\\mathrm{K}$ et $\\mathrm{A}$, distantes de $d_0 = 4{,}0\\ \\mathrm{cm}$ et soumises à la tension accélératrice $U_0 = U_{\\mathrm{AK}} = 1{,}0\\ \\mathrm{kV}$, puis sortent par un petit trou percé en $\\mathrm{O}$ au centre de $\\mathrm{A}$ avec la vitesse $\\vec v_0$ horizontale.\n\n**2. Les plaques déviatrices.** En $\\mathrm{O}$, les électrons entrent **au milieu** de deux plaques horizontales $\\mathrm{P_1}$ (en haut) et $\\mathrm{P_2}$ (en bas), de longueur $\\ell = 5{,}0\\ \\mathrm{cm}$ et distantes de $d = 1{,}0\\ \\mathrm{cm}$. On applique entre elles la tension $U_1 = 50\\ \\mathrm{V}$, qui crée entre les plaques un champ $\\vec E_1$ uniforme, vertical, dirigé **vers le bas**.\n\n**3. L'écran.** Un écran fluorescent vertical est placé à la distance $D = 25\\ \\mathrm{cm}$ de la sortie des plaques. L'impact de l'électron y est repéré par sa déviation verticale $Y$ comptée depuis l'axe $\\mathrm{O}x$.\n\nOn repère le mouvement dans le repère $(\\mathrm{O}, \\vec i, \\vec j)$ : $\\mathrm{O}x$ horizontal, dans le sens de $\\vec v_0$, et $\\mathrm{O}y$ vertical **vers le haut**.\n\n**Données :** masse de l'électron $m = 9{,}1\\times10^{-31}\\ \\mathrm{kg}$ ; charge élémentaire $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$ (l'électron porte la charge $q = -e$) ; intensité de la pesanteur $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. Dans tout le problème, on néglige toute interaction entre les électrons.",
+      "figure": "particule-champ-e",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Le champ électrique uniforme",
+          "difficulty": 1,
+          "statement": "L'intensité du champ électrique uniforme qui règne entre les plaques $\\mathrm{K}$ et $\\mathrm{A}$ du canon vaut :",
+          "options": [
+            {
+              "label": "$2{,}5\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$",
+              "correct": true,
+              "why": "$E_0 = \\dfrac{U_0}{d_0} = \\dfrac{1{,}0\\times10^{3}}{4{,}0\\times10^{-2}} = 2{,}5\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$."
+            },
+            {
+              "label": "$2{,}5\\times10^{2}\\ \\mathrm{V\\,m^{-1}}$",
+              "why": "Tu as laissé $d_0$ en centimètres : $1000/4{,}0 = 250$. Il faut convertir la distance en mètres avant de diviser."
+            },
+            {
+              "label": "$4{,}0\\times10^{1}\\ \\mathrm{V\\,m^{-1}}$",
+              "why": "Tu as multiplié : $U_0\\times d_0 = 1000\\times0{,}040 = 40$. Le champ entre deux plaques est le **quotient** $U/d$."
+            },
+            {
+              "label": "$2{,}5\\times10^{5}\\ \\mathrm{V\\,m^{-1}}$",
+              "why": "Tu as pris $d_0 = 4{,}0\\ \\mathrm{mm}$ : $1000/4{,}0\\times10^{-3} = 2{,}5\\times10^{5}$. L'énoncé donne $4{,}0\\ \\mathrm{cm}$."
+            }
+          ],
+          "hint": "Entre deux plaques planes et parallèles, $E = U/d$ : commence par convertir $d_0$ en mètres.",
+          "solution": "Le champ entre deux plaques planes et parallèles est uniforme et sa valeur est\n$$E_0 = \\frac{U_0}{d_0} = \\frac{1{,}0\\times10^{3}}{4{,}0\\times10^{-2}} = 2{,}5\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$$\nComme $U_0 = U_{\\mathrm{AK}} > 0$, la plaque $\\mathrm{A}$ est au potentiel le plus élevé : $\\vec E_0$ est dirigé de $\\mathrm{A}$ vers $\\mathrm{K}$. L'électron, de charge négative, subit une force $-e\\vec E_0$ de sens opposé, donc dirigée de $\\mathrm{K}$ vers $\\mathrm{A}$ : il est bien accéléré vers le trou $\\mathrm{O}$.\nContrôle d'homogénéité : des volts par mètre, c'est bien l'unité d'un champ électrique.",
+          "methode": "$E = U/d$ : convertis toujours $d$ en mètres. Et vérifie le sens de $\\vec E$ avant de conclure sur le sens de la force.",
+          "points": 1,
+          "part": "Partie A — Accélération dans le canon à électrons",
+          "ref": "pc-particule-chargee-probleme-1-q1"
+        },
+        {
+          "notion": "Méthode 1 — Justifier que le poids est négligeable",
+          "difficulty": 1,
+          "statement": "Dans le canon, le rapport $\\dfrac{F_{\\text{électrique}}}{P}$ entre l'intensité de la force électrique et celle du poids de l'électron vaut environ :",
+          "options": [
+            {
+              "label": "$4{,}5\\times10^{14}$",
+              "correct": true,
+              "why": "$F = eE_0 = 1{,}6\\times10^{-19}\\times2{,}5\\times10^{4} = 4{,}0\\times10^{-15}\\ \\mathrm{N}$ et $P = mg = 9{,}1\\times10^{-31}\\times9{,}8 = 8{,}9\\times10^{-30}\\ \\mathrm{N}$, donc $F/P = 4{,}5\\times10^{14}$ : le poids est totalement négligeable."
+            },
+            {
+              "label": "$4{,}4\\times10^{15}$",
+              "why": "Tu as divisé $F$ par la masse $m$ et non par le poids $mg$ : $4{,}0\\times10^{-15}/9{,}1\\times10^{-31} = 4{,}4\\times10^{15}$. C'est une accélération, pas un rapport de forces."
+            },
+            {
+              "label": "$2{,}2\\times10^{-15}$",
+              "why": "Tu as calculé $P/F = 8{,}9\\times10^{-30}/4{,}0\\times10^{-15} = 2{,}2\\times10^{-15}$, c'est-à-dire l'inverse du rapport demandé."
+            },
+            {
+              "label": "$2{,}4\\times10^{11}$",
+              "why": "Tu as utilisé la masse du proton $1{,}67\\times10^{-27}\\ \\mathrm{kg}$ au lieu de celle de l'électron : le poids est alors $1835$ fois plus grand et le rapport tombe à $4{,}5\\times10^{14}/1835 = 2{,}4\\times10^{11}$."
+            }
+          ],
+          "hint": "Calcule séparément $F = eE_0$ et $P = mg$, puis forme le quotient — qui est sans unité.",
+          "solution": "Force électrique :\n$$F = e\\,E_0 = 1{,}6\\times10^{-19}\\times2{,}5\\times10^{4} = 4{,}0\\times10^{-15}\\ \\mathrm{N}$$\nPoids :\n$$P = m\\,g = 9{,}1\\times10^{-31}\\times9{,}8 = 8{,}9\\times10^{-30}\\ \\mathrm{N}$$\nRapport :\n$$\\frac{F}{P} = \\frac{4{,}0\\times10^{-15}}{8{,}9\\times10^{-30}} = 4{,}5\\times10^{14}$$\nLa force électrique est plus de $10^{14}$ fois plus intense que le poids : on peut donc négliger le poids dans tout le problème, et c'est ainsi qu'il faut le **justifier** — par un calcul, jamais par une simple affirmation.\nContrôle : le rapport est bien sans unité, et son ordre de grandeur colossal est celui qu'on trouve systématiquement pour une particule élémentaire dans un champ de laboratoire.",
+          "methode": "Pour justifier qu'on néglige le poids, calcule le rapport $F/P$ et commente-le. Au-delà de $10^{3}$, le poids ne joue plus aucun rôle.",
+          "points": 1,
+          "part": "Partie A — Accélération dans le canon à électrons",
+          "ref": "pc-particule-chargee-probleme-1-q2"
+        },
+        {
+          "notion": "Méthode 2 — L'accélération sous une tension",
+          "difficulty": 2,
+          "statement": "La vitesse $v_0$ avec laquelle l'électron sort du canon en $\\mathrm{O}$ vaut :",
+          "options": [
+            {
+              "label": "$1{,}9\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "Le théorème de l'énergie cinétique donne $\\frac12 mv_0^2 = eU_0$, donc $v_0 = \\sqrt{\\dfrac{2eU_0}{m}} = \\sqrt{3{,}52\\times10^{14}} = 1{,}9\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$1{,}3\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as oublié le facteur $2$ : $\\sqrt{eU_0/m} = 1{,}3\\times10^{7}$. Le $2$ vient du $\\frac12$ de l'énergie cinétique et passe au **numérateur**."
+            },
+            {
+              "label": "$9{,}4\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as placé le $2$ au dénominateur : $\\sqrt{eU_0/(2m)} = 9{,}4\\times10^{6}$. En isolant $v_0$ dans $\\frac12 mv_0^2 = eU_0$, le $2$ monte au numérateur."
+            },
+            {
+              "label": "$3{,}5\\times10^{14}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as oublié la racine carrée : $\\dfrac{2eU_0}{m} = 3{,}5\\times10^{14}$ est le carré de la vitesse, en $\\mathrm{m^2\\,s^{-2}}$."
+            }
+          ],
+          "hint": "Entre le filament (vitesse nulle) et $\\mathrm{O}$, seule la force électrique travaille : applique le théorème de l'énergie cinétique.",
+          "solution": "Entre le filament et le trou $\\mathrm{O}$, le poids étant négligeable, la seule force qui travaille est la force électrique, de travail $W = |q\\,U_0| = e\\,U_0$ (travail positif puisque l'électron est accéléré). Le théorème de l'énergie cinétique s'écrit\n$$\\frac12 m v_0^2 - 0 = e\\,U_0 \\quad\\Longrightarrow\\quad v_0 = \\sqrt{\\frac{2\\,e\\,U_0}{m}}$$\nNumériquement :\n$$v_0 = \\sqrt{\\frac{2\\times1{,}6\\times10^{-19}\\times1{,}0\\times10^{3}}{9{,}1\\times10^{-31}}} = \\sqrt{\\frac{3{,}2\\times10^{-16}}{9{,}1\\times10^{-31}}} = \\sqrt{3{,}52\\times10^{14}} = 1{,}9\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$$\nContrôle : $1{,}9\\times10^{7}\\ \\mathrm{m\\,s^{-1}}$ représente environ $6\\ \\%$ de la vitesse de la lumière. C'est assez faible pour que la mécanique de Newton reste légitime, et c'est l'ordre de grandeur attendu pour un électron accéléré sous $1\\ \\mathrm{kV}$.",
+          "methode": "Départ du repos sous une tension $U$ : $v = \\sqrt{\\dfrac{2|q|U}{m}}$. Le $2$ est au numérateur et la racine ne s'oublie pas.",
+          "points": 1,
+          "part": "Partie A — Accélération dans le canon à électrons",
+          "ref": "pc-particule-chargee-probleme-1-q3"
+        },
+        {
+          "notion": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+          "difficulty": 2,
+          "statement": "Entre les plaques $\\mathrm{P_1}$ et $\\mathrm{P_2}$, l'équation de la trajectoire de l'électron dans le repère $(\\mathrm{O}, \\vec i, \\vec j)$ s'écrit :",
+          "options": [
+            {
+              "label": "$y = \\dfrac{e\\,U_1}{2\\,m\\,d\\,v_0^2}\\;x^2$, avec $y > 0$ : l'électron est dévié vers la plaque $\\mathrm{P_1}$.",
+              "correct": true,
+              "why": "Le poids étant négligé, $\\vec a = \\dfrac{-e\\vec E_1}{m}$ est constante et dirigée vers le **haut** (car $\\vec E_1$ pointe vers le bas et $q = -e$), de valeur $a = \\dfrac{eU_1}{md}$. Avec $x = v_0t$ et $y = \\frac12 at^2$, on obtient $y = \\dfrac{a}{2v_0^2}x^2$."
+            },
+            {
+              "label": "$y = -\\dfrac{e\\,U_1}{2\\,m\\,d\\,v_0^2}\\;x^2$ : l'électron est dévié vers la plaque $\\mathrm{P_2}$.",
+              "why": "Tu as oublié le signe de la charge. $\\vec E_1$ est dirigé vers le bas, mais $q = -e < 0$ : la force $q\\vec E_1$ est dirigée vers le **haut**, donc $y > 0$."
+            },
+            {
+              "label": "$y = \\dfrac{e\\,U_1}{m\\,d\\,v_0^2}\\;x^2$ : la trajectoire est parabolique et l'électron monte vers $\\mathrm{P_1}$.",
+              "why": "Le sens est juste mais le coefficient est deux fois trop grand : tu as oublié le $\\frac12$ de $y = \\frac12 at^2$."
+            },
+            {
+              "label": "$y = \\dfrac{e\\,U_1}{2\\,m\\,d\\,v_0}\\;x$ : la trajectoire est rectiligne et inclinée vers $\\mathrm{P_1}$.",
+              "why": "Une accélération constante non nulle ne peut pas donner une trajectoire rectiligne quand $\\vec v_0$ lui est perpendiculaire : le terme en $x$ doit être un $x^2$."
+            }
+          ],
+          "hint": "Projette la deuxième loi de Newton sur les deux axes, écris $x(t)$ et $y(t)$, puis élimine $t$. Et surveille le signe de la charge.",
+          "solution": "Le poids étant négligeable, la seule force est $\\vec F = q\\,\\vec E_1 = -e\\,\\vec E_1$. Comme $\\vec E_1$ est dirigé vers le bas, $\\vec F$ est dirigée vers le **haut**, donc selon $+\\vec j$ :\n$$\\vec a = \\frac{e\\,E_1}{m}\\,\\vec j \\quad\\text{avec}\\quad E_1 = \\frac{U_1}{d} \\quad\\Longrightarrow\\quad a = \\frac{e\\,U_1}{m\\,d}$$\nConditions initiales en $\\mathrm{O}$ : position nulle, vitesse $v_0\\,\\vec i$. En intégrant :\n$$x(t) = v_0\\,t \\qquad y(t) = \\frac12\\,a\\,t^2$$\nEn éliminant le temps par $t = x/v_0$ :\n$$y = \\frac{a}{2\\,v_0^2}\\,x^2 = \\frac{e\\,U_1}{2\\,m\\,d\\,v_0^2}\\,x^2$$\nLa trajectoire est un arc de **parabole** de sommet $\\mathrm{O}$, tourné vers le haut : l'électron se rapproche de $\\mathrm{P_1}$.\nContrôle : la structure est celle d'un projectile lancé horizontalement, où $\\frac{q\\vec E_1}{m}$ remplace $\\vec g$. On peut aussi vérifier l'homogénéité : $\\dfrac{e U_1}{m d v_0^2}$ est en $\\mathrm{m^{-1}}$, ce qui est bien ce qu'il faut devant un $x^2$.",
+          "methode": "Trajectoire dans un condensateur : $y = \\dfrac{a}{2v_0^2}x^2$ avec $a = \\dfrac{|q|U}{md}$. Le signe de $q$ décide du côté vers lequel la particule est déviée.",
+          "points": 1,
+          "part": "Partie B — Déviation entre les plaques",
+          "ref": "pc-particule-chargee-probleme-1-q4"
+        },
+        {
+          "notion": "Méthode 3 — La déviation électrique complète",
+          "difficulty": 2,
+          "statement": "La déviation verticale $y_{\\mathrm{S}}$ de l'électron à la sortie des plaques (en $x = \\ell$) vaut :",
+          "options": [
+            {
+              "label": "$3{,}1\\ \\mathrm{mm}$",
+              "correct": true,
+              "why": "$y_{\\mathrm{S}} = \\dfrac{eU_1\\ell^2}{2mdv_0^2} = \\dfrac{U_1\\ell^2}{4\\,d\\,U_0} = \\dfrac{50\\times(5{,}0\\times10^{-2})^2}{4\\times1{,}0\\times10^{-2}\\times1{,}0\\times10^{3}} = 3{,}1\\times10^{-3}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$6{,}3\\ \\mathrm{mm}$",
+              "why": "Tu as oublié le $\\frac12$ de $y = \\frac12 at^2$ : sans ce facteur on trouve exactement le double, $6{,}3\\ \\mathrm{mm}$ — et l'électron semblerait alors heurter la plaque."
+            },
+            {
+              "label": "$63\\ \\mathrm{mm}$",
+              "why": "Tu as écrit $\\ell$ au lieu de $\\ell^2$ : $\\dfrac{eU_1\\ell}{2mdv_0^2} = 6{,}3\\times10^{-2}\\ \\mathrm{m}$. La longueur des plaques intervient au carré, par $t = \\ell/v_0$ élevé au carré."
+            },
+            {
+              "label": "$0{,}025\\ \\mathrm{mm}$",
+              "why": "Tu as échangé $\\ell$ et $d$ : $\\dfrac{U_1 d^2}{4\\ell U_0} = 0{,}025\\ \\mathrm{mm}$. C'est $\\ell$, la distance parcourue horizontalement, qui est au carré."
+            }
+          ],
+          "hint": "Calcule la durée de traversée $t = \\ell/v_0$, puis $y = \\frac12 a t^2$ avec $a = eU_1/(md)$. Vérifie ensuite que l'électron ne touche pas la plaque.",
+          "solution": "Suivant $\\mathrm{O}x$ le mouvement est uniforme, donc la durée de traversée des plaques vaut\n$$t_{\\mathrm{S}} = \\frac{\\ell}{v_0} = \\frac{5{,}0\\times10^{-2}}{1{,}875\\times10^{7}} = 2{,}67\\times10^{-9}\\ \\mathrm{s}$$\nL'accélération vaut\n$$a = \\frac{e\\,U_1}{m\\,d} = \\frac{1{,}6\\times10^{-19}\\times50}{9{,}1\\times10^{-31}\\times1{,}0\\times10^{-2}} = 8{,}8\\times10^{14}\\ \\mathrm{m\\,s^{-2}}$$\nD'où la déviation\n$$y_{\\mathrm{S}} = \\frac12\\,a\\,t_{\\mathrm{S}}^2 = \\frac12\\times8{,}8\\times10^{14}\\times(2{,}67\\times10^{-9})^2 = 3{,}1\\times10^{-3}\\ \\mathrm{m} = 3{,}1\\ \\mathrm{mm}$$\nContrôle par une autre voie : en remplaçant $v_0^2 = \\dfrac{2eU_0}{m}$ dans $y_{\\mathrm{S}} = \\dfrac{eU_1\\ell^2}{2mdv_0^2}$, les constantes $e$ et $m$ se simplifient et il reste la formule très commode\n$$y_{\\mathrm{S}} = \\frac{U_1\\,\\ell^2}{4\\,d\\,U_0} = \\frac{50\\times2{,}5\\times10^{-3}}{4\\times1{,}0\\times10^{-2}\\times1{,}0\\times10^{3}} = 3{,}1\\times10^{-3}\\ \\mathrm{m}$$\nMême valeur. Enfin $y_{\\mathrm{S}} = 3{,}1\\ \\mathrm{mm} < d/2 = 5{,}0\\ \\mathrm{mm}$ : l'électron sort effectivement des plaques.",
+          "methode": "Déviation à la sortie : $y_{\\mathrm{S}} = \\dfrac{|q|U_1\\ell^2}{2mdv_0^2}$. Termine toujours en comparant $y_{\\mathrm{S}}$ à $d/2$.",
+          "points": 1,
+          "part": "Partie B — Déviation entre les plaques",
+          "ref": "pc-particule-chargee-probleme-1-q5"
+        },
+        {
+          "notion": "Cas 2 — Déviation : $\\vec v_0$ perpendiculaire à $\\vec E$",
+          "difficulty": 3,
+          "statement": "On fait maintenant varier $U_1$, les autres grandeurs restant inchangées. La valeur maximale de $U_1$ pour que l'électron sorte encore des plaques sans les toucher vaut :",
+          "options": [
+            {
+              "label": "$80\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "La condition est $y_{\\mathrm{S}} \\le \\dfrac{d}{2}$, soit $\\dfrac{U_1\\ell^2}{4dU_0} \\le \\dfrac{d}{2}$, d'où $U_1 \\le \\dfrac{2\\,d^2\\,U_0}{\\ell^2} = \\dfrac{2\\times(1{,}0\\times10^{-2})^2\\times1{,}0\\times10^{3}}{(5{,}0\\times10^{-2})^2} = 80\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$1{,}6\\times10^{2}\\ \\mathrm{V}$",
+              "why": "Tu as écrit la condition $y_{\\mathrm{S}} \\le d$. L'électron entre **au milieu** des plaques : il ne dispose que de $d/2$, ce qui divise la tension limite par deux."
+            },
+            {
+              "label": "$40\\ \\mathrm{V}$",
+              "why": "Tu as oublié le $\\frac12$ dans $y = \\frac12 at^2$ : ta déviation est double de la vraie, donc ta tension limite est deux fois trop petite."
+            },
+            {
+              "label": "$3{,}2\\times10^{2}\\ \\mathrm{V}$",
+              "why": "Tu as pris $\\ell/2$ comme longueur de déviation : la déviation est alors $4$ fois plus faible et la tension limite $4$ fois trop grande. La déviation s'évalue sur toute la longueur $\\ell$."
+            }
+          ],
+          "hint": "Écris l'inégalité « déviation à la sortie inférieure ou égale à la demi-distance entre les plaques », puis isole $U_1$.",
+          "solution": "L'électron entrant au milieu des plaques, il peut se dévier au maximum de $d/2$ avant de heurter $\\mathrm{P_1}$. La condition s'écrit\n$$y_{\\mathrm{S}} = \\frac{U_1\\,\\ell^2}{4\\,d\\,U_0} \\le \\frac{d}{2}$$\nEn isolant $U_1$ :\n$$U_1 \\le \\frac{d}{2}\\times\\frac{4\\,d\\,U_0}{\\ell^2} = \\frac{2\\,d^2\\,U_0}{\\ell^2}$$\nsoit numériquement\n$$U_1 \\le \\frac{2\\times(1{,}0\\times10^{-2})^2\\times1{,}0\\times10^{3}}{(5{,}0\\times10^{-2})^2} = \\frac{0{,}20}{2{,}5\\times10^{-3}} = 80\\ \\mathrm{V}$$\nLa tension maximale est donc $U_1^{\\max} = 80\\ \\mathrm{V}$.\nContrôle par proportionnalité : sous $U_1 = 50\\ \\mathrm{V}$ on a trouvé $y_{\\mathrm{S}} = 3{,}125\\ \\mathrm{mm}$. Comme $y_{\\mathrm{S}}$ est proportionnelle à $U_1$, atteindre $5{,}0\\ \\mathrm{mm}$ demande\n$$U_1 = 50\\times\\frac{5{,}0}{3{,}125} = 80\\ \\mathrm{V}$$\nMême résultat, par une voie indépendante.",
+          "methode": "Dès qu'on demande « la particule sort-elle ? » ou « jusqu'à quelle tension ? », écris $y(\\ell) \\le d/2$ et isole la grandeur demandée.",
+          "points": 1,
+          "part": "Partie B — Déviation entre les plaques",
+          "ref": "pc-particule-chargee-probleme-1-q6"
+        },
+        {
+          "notion": "Méthode 3 — La déviation électrique complète",
+          "difficulty": 3,
+          "statement": "Avec $U_1 = 50\\ \\mathrm{V}$, la déviation $Y$ de l'impact sur l'écran, placé à $D = 25\\ \\mathrm{cm}$ de la sortie des plaques, vaut :",
+          "options": [
+            {
+              "label": "$3{,}4\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "Après les plaques le mouvement est rectiligne uniforme et la trajectoire extrapolée passe par le **milieu** des plaques, donc $Y = \\left(\\dfrac{\\ell}{2} + D\\right)\\tan\\alpha$ avec $\\tan\\alpha = \\dfrac{2y_{\\mathrm{S}}}{\\ell} = 0{,}125$, soit $Y = 0{,}275\\times0{,}125 = 3{,}4\\ \\mathrm{cm}$."
+            },
+            {
+              "label": "$3{,}1\\ \\mathrm{cm}$",
+              "why": "Tu as pris $Y = D\\tan\\alpha$ en oubliant le décalage $\\ell/2$ : la droite de sortie semble partir du milieu des plaques, pas de leur extrémité."
+            },
+            {
+              "label": "$3{,}8\\ \\mathrm{cm}$",
+              "why": "Tu as pris $Y = (\\ell + D)\\tan\\alpha$ : tu as compté **toute** la longueur des plaques au lieu de la demi-longueur $\\ell/2$."
+            },
+            {
+              "label": "$1{,}7\\ \\mathrm{cm}$",
+              "why": "Tu as utilisé $\\tan\\alpha = \\dfrac{y_{\\mathrm{S}}}{\\ell} = 0{,}0625$, qui est la pente de la corde et non celle de la tangente. Il manque le facteur $2$."
+            }
+          ],
+          "hint": "Hors des plaques, plus aucune force : le mouvement est rectiligne uniforme. Cherche la pente de cette droite, puis le point d'où elle semble partir.",
+          "solution": "**Étape 1 — la pente de sortie.** À la sortie des plaques, $v_x = v_0$ et $v_y = a\\,t_{\\mathrm{S}}$, donc\n$$\\tan\\alpha = \\frac{v_y}{v_0} = \\frac{a\\,t_{\\mathrm{S}}}{v_0} = \\frac{2\\,y_{\\mathrm{S}}}{\\ell} = \\frac{2\\times3{,}125\\times10^{-3}}{5{,}0\\times10^{-2}} = 0{,}125$$\n(le facteur $2$ vient de ce que la tangente à une parabole $y = kx^2$ a pour pente $2y/x$, deux fois la pente de la corde).\n\n**Étape 2 — après les plaques.** Hors du condensateur, aucune force ne s'exerce plus : le mouvement est rectiligne uniforme. La droite de sortie, prolongée vers l'arrière, coupe l'axe $\\mathrm{O}x$ au **milieu** des plaques, en $x = \\ell/2$. La distance horizontale entre ce point et l'écran vaut donc\n$$L = \\frac{\\ell}{2} + D = 2{,}5\\times10^{-2} + 0{,}25 = 0{,}275\\ \\mathrm{m}$$\n\n**Étape 3 — la déviation sur l'écran.**\n$$Y = L\\,\\tan\\alpha = 0{,}275\\times0{,}125 = 3{,}4\\times10^{-2}\\ \\mathrm{m} = 3{,}4\\ \\mathrm{cm}$$\nContrôle direct, sans utiliser la propriété du milieu : $Y = y_{\\mathrm{S}} + D\\tan\\alpha = 3{,}125\\times10^{-3} + 0{,}25\\times0{,}125 = 3{,}1\\times10^{-3} + 3{,}125\\times10^{-2} = 3{,}4\\times10^{-2}\\ \\mathrm{m}$. Les deux voies donnent la même valeur, ce qui valide au passage la propriété du milieu.",
+          "methode": "Déviation sur un écran : $Y = \\left(\\dfrac{\\ell}{2} + D\\right)\\tan\\alpha$, avec $\\tan\\alpha = \\dfrac{2y_{\\mathrm{S}}}{\\ell}$. En cas de doute, reviens à $Y = y_{\\mathrm{S}} + D\\tan\\alpha$.",
+          "points": 1,
+          "part": "Partie B — Déviation entre les plaques",
+          "ref": "pc-particule-chargee-probleme-1-q7"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-particule-chargee-probleme-2",
+      "chapter": "pc-particule-chargee",
+      "kind": "probleme",
+      "title": "Séparer les isotopes du lithium : sélecteur de vitesse et spectromètre de masse",
+      "difficulty": 3,
+      "context": "On veut séparer les deux isotopes stables du lithium à l'aide d'un spectromètre de masse. Une source produit des ions $^{6}\\mathrm{Li^+}$ et $^{7}\\mathrm{Li^+}$ animés de vitesses très variées. Le dispositif comporte deux chambres, dans lesquelles on fait le vide.\n\n**Chambre 1 — le sélecteur de vitesse.** Les ions y pénètrent horizontalement par une fente $\\mathrm{F_1}$. Il y règne un champ électrique uniforme $\\vec E$, d'intensité $E = 2{,}0\\times10^{4}\\ \\mathrm{V\\,m^{-1}}$, et un champ magnétique uniforme $\\vec B_1$, d'intensité $B_1 = 0{,}10\\ \\mathrm{T}$, **croisés** et réglés de telle sorte que la force électrique et la force magnétique soient de sens opposés. Seuls les ions non déviés franchissent la fente de sortie $\\mathrm{F_2}$ ; les autres sont arrêtés par un écran.\n\n**Chambre 2 — la déviation.** Les ions sortant de $\\mathrm{F_2}$ entrent perpendiculairement dans un champ magnétique uniforme $\\vec B_2$, d'intensité $B_2 = 0{,}50\\ \\mathrm{T}$. Ils y décrivent un demi-cercle avant de venir frapper une plaque photographique placée dans le plan de la fente $\\mathrm{F_2}$, chaque isotope en un point distinct.\n\n**Données :** charge élémentaire $e = 1{,}6\\times10^{-19}\\ \\mathrm{C}$ (les deux ions portent la charge $q = +e$) ; unité de masse atomique $1\\ \\mathrm{u} = 1{,}66\\times10^{-27}\\ \\mathrm{kg}$ ; masse de l'ion $^{6}\\mathrm{Li^+}$ : $m_6 = 6{,}015\\ \\mathrm{u}$ ; masse de l'ion $^{7}\\mathrm{Li^+}$ : $m_7 = 7{,}016\\ \\mathrm{u}$ ; intensité de la pesanteur $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. On néglige la masse des électrons arrachés devant celle des noyaux.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 5 — Le sélecteur de vitesse",
+          "difficulty": 1,
+          "statement": "La vitesse $v$ des ions qui franchissent la fente $\\mathrm{F_2}$ du sélecteur vaut :",
+          "options": [
+            {
+              "label": "$2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "L'équilibre des deux forces s'écrit $eE = e\\,v\\,B_1$, d'où $v = \\dfrac{E}{B_1} = \\dfrac{2{,}0\\times10^{4}}{0{,}10} = 2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$2{,}0\\times10^{3}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as multiplié : $E\\times B_1 = 2{,}0\\times10^{3}$. La vitesse sélectionnée est le **quotient** $E/B_1$ ; c'est $E = vB_1$ qui est un produit."
+            },
+            {
+              "label": "$2{,}0\\times10^{6}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé par $B_1^2 = 0{,}010$ : $E/B_1^2 = 2{,}0\\times10^{6}$. Le champ magnétique n'intervient qu'à la puissance un dans $F = |q|vB$."
+            },
+            {
+              "label": "$5{,}0\\times10^{-6}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $B_1/E$, le quotient inversé. Un contrôle d'homogénéité le montre : $\\mathrm{V\\,m^{-1}}$ divisé par $\\mathrm{T}$ donne des $\\mathrm{m\\,s^{-1}}$, pas l'inverse."
+            }
+          ],
+          "hint": "Un ion non dévié est un ion en équilibre : égale les normes de la force électrique et de la force magnétique.",
+          "solution": "Un ion traverse le sélecteur sans être dévié si la résultante des forces qu'il subit est nulle. Les deux forces étant de sens opposés par construction, il suffit d'égaler leurs normes :\n$$e\\,E = e\\,v\\,B_1 \\quad\\Longrightarrow\\quad v = \\frac{E}{B_1}$$\nNumériquement :\n$$v = \\frac{2{,}0\\times10^{4}}{0{,}10} = 2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$$\nLa charge $e$ se simplifie et la masse n'apparaît jamais : **les deux isotopes sortent donc avec exactement la même vitesse**, ce qui est tout l'intérêt du dispositif.\nContrôle d'homogénéité : $1\\ \\mathrm{T} = 1\\ \\mathrm{V\\,s\\,m^{-2}}$, donc $\\dfrac{\\mathrm{V\\,m^{-1}}}{\\mathrm{T}} = \\mathrm{m\\,s^{-1}}$.",
+          "methode": "Sélecteur de vitesse : $v = \\dfrac{E}{B}$. Retrouve le sens du quotient par l'homogénéité si tu hésites.",
+          "points": 1,
+          "part": "Partie A — Le sélecteur de vitesse",
+          "ref": "pc-particule-chargee-probleme-2-q1"
+        },
+        {
+          "notion": "Méthode 1 — Justifier que le poids est négligeable",
+          "difficulty": 1,
+          "statement": "Pour un ion $^{6}\\mathrm{Li^+}$ dans la chambre 2, le rapport $\\dfrac{F_{\\text{magnétique}}}{P}$ entre l'intensité de la force de Lorentz et celle du poids vaut environ :",
+          "options": [
+            {
+              "label": "$1{,}6\\times10^{11}$",
+              "correct": true,
+              "why": "$F = e\\,v\\,B_2 = 1{,}6\\times10^{-19}\\times2{,}0\\times10^{5}\\times0{,}50 = 1{,}6\\times10^{-14}\\ \\mathrm{N}$ et $P = m_6\\,g = 9{,}98\\times10^{-27}\\times9{,}8 = 9{,}8\\times10^{-26}\\ \\mathrm{N}$, donc $F/P = 1{,}6\\times10^{11}$."
+            },
+            {
+              "label": "$1{,}6\\times10^{12}$",
+              "why": "Tu as divisé $F$ par la masse $m_6$ et non par le poids $m_6\\,g$ : $1{,}6\\times10^{-14}/9{,}98\\times10^{-27} = 1{,}6\\times10^{12}$. C'est une accélération, pas un rapport de forces."
+            },
+            {
+              "label": "$6{,}1\\times10^{-12}$",
+              "why": "Tu as calculé $P/F$, c'est-à-dire l'inverse du rapport demandé."
+            },
+            {
+              "label": "$3{,}3\\times10^{10}$",
+              "why": "Tu as utilisé $B_1 = 0{,}10\\ \\mathrm{T}$ du sélecteur au lieu de $B_2 = 0{,}50\\ \\mathrm{T}$ : la force tombe à $3{,}2\\times10^{-15}\\ \\mathrm{N}$ et le rapport à $3{,}3\\times10^{10}$."
+            }
+          ],
+          "hint": "Calcule $F = evB_2$ d'un côté, $P = m_6 g$ de l'autre — après avoir converti la masse en kilogrammes.",
+          "solution": "Masse de l'ion en kilogrammes :\n$$m_6 = 6{,}015\\times1{,}66\\times10^{-27} = 9{,}98\\times10^{-27}\\ \\mathrm{kg}$$\nForce de Lorentz (la vitesse est perpendiculaire à $\\vec B_2$) :\n$$F = e\\,v\\,B_2 = 1{,}6\\times10^{-19}\\times2{,}0\\times10^{5}\\times0{,}50 = 1{,}6\\times10^{-14}\\ \\mathrm{N}$$\nPoids :\n$$P = m_6\\,g = 9{,}98\\times10^{-27}\\times9{,}8 = 9{,}8\\times10^{-26}\\ \\mathrm{N}$$\nRapport :\n$$\\frac{F}{P} = \\frac{1{,}6\\times10^{-14}}{9{,}8\\times10^{-26}} = 1{,}6\\times10^{11}$$\nLa force magnétique est plus de cent milliards de fois plus intense que le poids : on néglige donc le poids dans toute l'étude, et c'est bien par ce calcul qu'il faut le justifier.\nContrôle : le rapport est sans unité, et un ordre de grandeur de $10^{11}$ est celui qu'on obtient pour tous les ions légers dans un champ de laboratoire.",
+          "methode": "Avant toute étude de trajectoire, convertis les masses en kilogrammes, puis justifie le poids négligeable par le rapport $F/P$.",
+          "points": 1,
+          "part": "Partie A — Le sélecteur de vitesse",
+          "ref": "pc-particule-chargee-probleme-2-q2"
+        },
+        {
+          "notion": "Les champs croisés",
+          "difficulty": 2,
+          "statement": "Pourquoi les ions $^{6}\\mathrm{Li^+}$ et $^{7}\\mathrm{Li^+}$ sortent-ils du sélecteur avec la **même** vitesse, alors que leurs masses diffèrent ?",
+          "options": [
+            {
+              "label": "Parce que la condition d'équilibre $eE = e\\,v\\,B_1$ se simplifie en $v = E/B_1$, qui ne contient ni la charge ni la masse.",
+              "correct": true,
+              "why": "Les deux forces sont proportionnelles à la charge, qui se simplifie ; et la masse n'intervient nulle part, puisqu'on écrit un équilibre et non une loi de Newton avec accélération."
+            },
+            {
+              "label": "Parce que les deux isotopes ont la même charge $+e$, ce qui leur donne la même vitesse de sortie.",
+              "why": "L'égalité des charges est vraie mais ce n'est pas la raison : même avec des charges différentes, la condition resterait $v = E/B_1$, car $q$ se simplifie dans l'équilibre."
+            },
+            {
+              "label": "Parce que le champ électrique accélère l'ion le plus lourd davantage, ce qui compense l'écart de masse.",
+              "why": "Dans le sélecteur, les ions qui passent ne sont **pas** accélérés : la résultante des forces y est nulle et leur vitesse ne change pas. Il n'y a donc aucune compensation à invoquer."
+            },
+            {
+              "label": "Parce que l'écart de masse entre $^{6}\\mathrm{Li^+}$ et $^{7}\\mathrm{Li^+}$ est trop faible pour modifier la vitesse de façon mesurable.",
+              "why": "L'égalité des vitesses est **exacte**, pas approchée : elle ne dépend pas de la proximité des masses. Même des ions de masses très différentes sortiraient à la même vitesse $E/B_1$."
+            }
+          ],
+          "hint": "Écris la condition d'équilibre entre les deux forces et regarde quelles grandeurs disparaissent au moment de la simplification.",
+          "solution": "Pour un ion qui traverse le sélecteur sans déviation, la résultante des forces est nulle. En égalant les normes des deux forces opposées :\n$$|q|\\,E = |q|\\,v\\,B_1$$\nLa charge $|q|$ est en facteur des **deux** côtés : elle se simplifie. Quant à la masse, elle n'apparaît nulle part — elle n'intervient que dans $\\vec a = \\sum\\vec F/m$, et ici la somme des forces est nulle. Il reste donc\n$$v = \\frac{E}{B_1} = 2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$$\nune valeur **universelle**, identique pour $^{6}\\mathrm{Li^+}$, pour $^{7}\\mathrm{Li^+}$, et pour n'importe quel ion.\nC'est exactement la fonction du sélecteur : uniformiser les vitesses sans trier les masses, pour que le tri par masse de la chambre 2 soit exploitable.\nContrôle : si la vitesse de sortie dépendait de la masse, la mesure du rayon dans la chambre 2 ne permettrait plus de remonter à $m$, puisque $R = mv/(eB_2)$ dépend du produit $mv$.",
+          "methode": "Un équilibre de forces fait disparaître $q$ par simplification et ne contient jamais $m$ : toute condition du type $v = E/B$ est donc indépendante de la particule.",
+          "points": 1,
+          "part": "Partie A — Le sélecteur de vitesse",
+          "ref": "pc-particule-chargee-probleme-2-q3"
+        },
+        {
+          "notion": "Comparaison des deux champs",
+          "difficulty": 2,
+          "statement": "Dans la chambre 2, quelle est la nature du mouvement d'un ion et que vaut le travail de la force qu'il subit ?",
+          "options": [
+            {
+              "label": "Circulaire uniforme ; le travail de la force de Lorentz est nul, car elle est à chaque instant perpendiculaire à $\\vec v$.",
+              "correct": true,
+              "why": "$\\vec v \\perp \\vec B_2$ et $\\vec F = q\\,\\vec v\\wedge\\vec B_2$ est perpendiculaire à $\\vec v$ : son travail est nul, donc $v$ reste constante, et la force, constante en valeur et toujours centripète, impose un cercle."
+            },
+            {
+              "label": "Circulaire uniformément accéléré ; le travail de la force de Lorentz est positif, puisqu'elle courbe la trajectoire.",
+              "why": "Courber une trajectoire ne demande aucun travail : la force est perpendiculaire au déplacement, donc $W = 0$ et la valeur de la vitesse ne change pas. « Circulaire uniformément accéléré » supposerait $v$ croissante."
+            },
+            {
+              "label": "Parabolique ; le travail de la force de Lorentz est nul, car la force garde une direction fixe.",
+              "why": "La force magnétique ne garde justement pas de direction fixe : elle tourne avec $\\vec v$. C'est le champ **électrique** qui donne une force de direction fixe, et donc une parabole."
+            },
+            {
+              "label": "Rectiligne uniforme ; le travail de la force de Lorentz est nul, donc la force est nulle.",
+              "why": "Un travail nul n'est pas une force nulle : $F = evB_2 = 1{,}6\\times10^{-14}\\ \\mathrm{N}$ est bien non nulle, elle est simplement perpendiculaire au déplacement."
+            }
+          ],
+          "hint": "Commence par la direction de la force par rapport à $\\vec v$ : elle te donne le travail, puis le travail te donne la valeur de la vitesse.",
+          "solution": "La vitesse étant perpendiculaire à $\\vec B_2$, la force de Lorentz $\\vec F = e\\,\\vec v\\wedge\\vec B_2$ est :\n- perpendiculaire à $\\vec v$, donc sa puissance $\\vec F\\cdot\\vec v$ est nulle et **son travail est nul** ;\n- de norme constante $F = e\\,v\\,B_2$, puisque $v$ ne change pas de valeur.\n\nLe théorème de l'énergie cinétique donne alors $\\frac12 m v^2 = \\text{constante}$, donc $v$ constante. Une force de valeur constante, toujours perpendiculaire à la vitesse, est une force **centripète** constante : la trajectoire est un cercle, parcouru à vitesse constante. Le mouvement est **circulaire uniforme**, et son rayon se déduit de\n$$e\\,v\\,B_2 = \\frac{m v^2}{R} \\quad\\Longrightarrow\\quad R = \\frac{m\\,v}{e\\,B_2}$$\nContrôle : c'est cette propriété qui rend le dispositif utilisable. Si le champ magnétique modifiait la vitesse, le rayon mesuré ne serait plus relié simplement à la masse.",
+          "methode": "Champ magnétique : $\\vec F \\perp \\vec v \\Rightarrow W = 0 \\Rightarrow v$ constante $\\Rightarrow$ cercle uniforme. Ne confonds jamais « travail nul » et « force nulle ».",
+          "points": 1,
+          "part": "Partie B — La chambre de déviation magnétique",
+          "ref": "pc-particule-chargee-probleme-2-q4"
+        },
+        {
+          "notion": "Méthode 4 — Le mouvement circulaire magnétique",
+          "difficulty": 2,
+          "statement": "Le rayon $R_6$ de la trajectoire de l'ion $^{6}\\mathrm{Li^+}$ dans la chambre 2 vaut :",
+          "options": [
+            {
+              "label": "$2{,}50\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "$R_6 = \\dfrac{m_6 v}{eB_2} = \\dfrac{9{,}985\\times10^{-27}\\times2{,}0\\times10^{5}}{1{,}6\\times10^{-19}\\times0{,}50} = \\dfrac{1{,}997\\times10^{-21}}{8{,}0\\times10^{-20}} = 2{,}50\\times10^{-2}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$5{,}00\\ \\mathrm{cm}$",
+              "why": "Tu as calculé le **diamètre** $2R_6 = 5{,}00\\ \\mathrm{cm}$, qui est la distance entre la fente et le point d'impact — pas le rayon demandé."
+            },
+            {
+              "label": "$40{,}1\\ \\mathrm{cm}$",
+              "why": "Tu as inversé la formule et calculé $\\dfrac{eB_2}{m_6 v} = 40{,}1$, qui n'est pas une longueur mais son inverse ($\\mathrm{m^{-1}}$). Un contrôle d'unités t'aurait alerté."
+            },
+            {
+              "label": "$0{,}62\\ \\mathrm{cm}$",
+              "why": "Tu as **multiplié** par $B_2$ au lieu de diviser : $\\dfrac{m_6 v B_2}{e} = 6{,}2\\times10^{-3}\\ \\mathrm{m}$. Plus le champ est fort, plus le cercle est serré : $B_2$ est au dénominateur."
+            }
+          ],
+          "hint": "Égale la force de Lorentz et la force centripète $mv^2/R$, puis isole $R$. Garde la masse en kilogrammes.",
+          "solution": "La force de Lorentz joue le rôle de force centripète :\n$$e\\,v\\,B_2 = \\frac{m_6\\,v^2}{R_6} \\quad\\Longrightarrow\\quad R_6 = \\frac{m_6\\,v}{e\\,B_2}$$\nAvec $m_6 = 6{,}015\\times1{,}66\\times10^{-27} = 9{,}985\\times10^{-27}\\ \\mathrm{kg}$ :\n$$R_6 = \\frac{9{,}985\\times10^{-27}\\times2{,}0\\times10^{5}}{1{,}6\\times10^{-19}\\times0{,}50} = \\frac{1{,}997\\times10^{-21}}{8{,}0\\times10^{-20}} = 2{,}50\\times10^{-2}\\ \\mathrm{m} = 2{,}50\\ \\mathrm{cm}$$\nContrôle d'ordre de grandeur : quelques centimètres, c'est bien la taille d'une chambre de spectromètre de laboratoire, et le point d'impact sera à $2R_6 = 5{,}0\\ \\mathrm{cm}$ de la fente $\\mathrm{F_2}$.",
+          "methode": "$R = \\dfrac{mv}{|q|B}$. Convertis d'abord la masse en kilogrammes, et note que l'impact après un demi-tour est à la distance $2R$ de la fente d'entrée.",
+          "points": 1,
+          "part": "Partie B — La chambre de déviation magnétique",
+          "ref": "pc-particule-chargee-probleme-2-q5"
+        },
+        {
+          "notion": "Le spectromètre de masse, en détail",
+          "difficulty": 3,
+          "statement": "La distance $d_{67}$ entre les deux points d'impact des isotopes $^{6}\\mathrm{Li^+}$ et $^{7}\\mathrm{Li^+}$ sur la plaque photographique vaut :",
+          "options": [
+            {
+              "label": "$8{,}3\\ \\mathrm{mm}$",
+              "correct": true,
+              "why": "Chaque ion frappe la plaque à la distance $2R$ de la fente $\\mathrm{F_2}$, donc $d_{67} = 2R_7 - 2R_6 = 2(R_7 - R_6) = 2\\times(2{,}912 - 2{,}496)\\ \\mathrm{cm} = 8{,}3\\ \\mathrm{mm}$."
+            },
+            {
+              "label": "$4{,}2\\ \\mathrm{mm}$",
+              "why": "Tu as calculé la différence des **rayons** $R_7 - R_6 = 4{,}2\\ \\mathrm{mm}$. Après un demi-tour, chaque impact est à la distance $2R$ de la fente : la distance entre impacts vaut le double."
+            },
+            {
+              "label": "$54\\ \\mathrm{mm}$",
+              "why": "Tu as **additionné** les rayons au lieu de les retrancher : $R_6 + R_7 = 2{,}50 + 2{,}91 = 54\\ \\mathrm{mm}$. Les deux ions sont déviés du même côté, donc leurs positions d'impact se **soustraient**."
+            },
+            {
+              "label": "$42\\ \\mathrm{mm}$",
+              "why": "Tu as utilisé $B_1 = 0{,}10\\ \\mathrm{T}$ au lieu de $B_2 = 0{,}50\\ \\mathrm{T}$ : tous les rayons sont alors $5$ fois trop grands. Le champ de la chambre de déviation est $B_2$."
+            }
+          ],
+          "hint": "Chaque ion décrit un demi-cercle : à quelle distance de la fente d'entrée arrive-t-il ? Fais ensuite la différence pour les deux isotopes.",
+          "solution": "Les deux isotopes sortent du sélecteur avec la **même** vitesse $v = 2{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-1}}$. Dans la chambre 2, leurs rayons valent donc\n$$R = \\frac{m\\,v}{e\\,B_2}$$\n$$R_6 = \\frac{9{,}985\\times10^{-27}\\times2{,}0\\times10^{5}}{8{,}0\\times10^{-20}} = 2{,}496\\ \\mathrm{cm} \\qquad R_7 = \\frac{1{,}1647\\times10^{-26}\\times2{,}0\\times10^{5}}{8{,}0\\times10^{-20}} = 2{,}912\\ \\mathrm{cm}$$\nAprès un **demi-tour**, chaque ion revient dans le plan de la fente $\\mathrm{F_2}$, à la distance $2R$ de celle-ci. La distance entre les deux impacts est donc\n$$d_{67} = 2R_7 - 2R_6 = \\frac{2v}{e\\,B_2}\\,(m_7 - m_6) = 2\\times(2{,}912 - 2{,}496)\\times10^{-2} = 8{,}3\\times10^{-3}\\ \\mathrm{m}$$\nsoit $d_{67} = 8{,}3\\ \\mathrm{mm}$.\nContrôle : l'écart relatif des rayons vaut $\\dfrac{R_7-R_6}{R_6} = \\dfrac{m_7-m_6}{m_6} = \\dfrac{1{,}001}{6{,}015} = 16{,}6\\ \\%$, et $16{,}6\\ \\%$ de $2R_6 = 5{,}0\\ \\mathrm{cm}$ donne bien $8{,}3\\ \\mathrm{mm}$. Un écart de près d'un centimètre est largement mesurable : les deux isotopes sont bien séparés.",
+          "methode": "Après un demi-cercle, l'impact est à $2R$ de la fente. Pour une séparation d'isotopes, calcule donc $2(R_2 - R_1)$, jamais $R_2 - R_1$ seul.",
+          "points": 1,
+          "part": "Partie B — La chambre de déviation magnétique",
+          "ref": "pc-particule-chargee-probleme-2-q6"
+        },
+        {
+          "notion": "Le mouvement circulaire uniforme",
+          "difficulty": 3,
+          "statement": "La durée du demi-tour effectué par un ion $^{6}\\mathrm{Li^+}$ dans la chambre 2 vaut :",
+          "options": [
+            {
+              "label": "$3{,}9\\times10^{-7}\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$\\dfrac{T}{2} = \\dfrac{\\pi m_6}{eB_2} = \\dfrac{\\pi\\times9{,}985\\times10^{-27}}{8{,}0\\times10^{-20}} = 3{,}9\\times10^{-7}\\ \\mathrm{s}$ ; cette durée ne dépend pas de la vitesse."
+            },
+            {
+              "label": "$7{,}8\\times10^{-7}\\ \\mathrm{s}$",
+              "why": "Tu as calculé la période complète $T = \\dfrac{2\\pi m_6}{eB_2}$. L'ion ne décrit qu'un **demi**-cercle avant de frapper la plaque."
+            },
+            {
+              "label": "$1{,}2\\times10^{-7}\\ \\mathrm{s}$",
+              "why": "Tu as oublié le facteur $\\pi$ et calculé $\\dfrac{m_6}{eB_2} = R_6/v$ : c'est la durée qu'il faudrait pour parcourir une longueur $R_6$, pas le demi-périmètre $\\pi R_6$."
+            },
+            {
+              "label": "$4{,}6\\times10^{-7}\\ \\mathrm{s}$",
+              "why": "Tu as utilisé la masse $m_7 = 7{,}016\\ \\mathrm{u}$ de l'autre isotope. La question porte sur $^{6}\\mathrm{Li^+}$."
+            }
+          ],
+          "hint": "Exprime la durée du demi-tour comme $\\pi R/v$, puis remplace $R$ par son expression : que devient la dépendance en $v$ ?",
+          "solution": "L'ion parcourt un demi-cercle de rayon $R_6$ à la vitesse constante $v$, donc\n$$\\frac{T}{2} = \\frac{\\pi R_6}{v} = \\frac{\\pi}{v}\\times\\frac{m_6 v}{e B_2} = \\frac{\\pi\\,m_6}{e\\,B_2}$$\nLa vitesse se simplifie : **la durée du demi-tour est indépendante de la vitesse**, et donc du rayon. Numériquement :\n$$\\frac{T}{2} = \\frac{\\pi\\times9{,}985\\times10^{-27}}{1{,}6\\times10^{-19}\\times0{,}50} = \\frac{3{,}137\\times10^{-26}}{8{,}0\\times10^{-20}} = 3{,}9\\times10^{-7}\\ \\mathrm{s}$$\nContrôle par la voie directe : $\\dfrac{\\pi R_6}{v} = \\dfrac{\\pi\\times2{,}496\\times10^{-2}}{2{,}0\\times10^{5}} = 3{,}9\\times10^{-7}\\ \\mathrm{s}$ — même valeur.\nRemarque : l'ion $^{7}\\mathrm{Li^+}$, plus lourd, met plus longtemps ($4{,}6\\times10^{-7}\\ \\mathrm{s}$) car la durée est proportionnelle à $m$ ; c'est cette dépendance en $m/|q|$ qu'exploitent aussi le cyclotron et la résonance cyclotronique.",
+          "methode": "Durée d'un demi-tour magnétique : $\\dfrac{T}{2} = \\dfrac{\\pi m}{|q|B}$, indépendante de $v$ et de $R$. Le seul paramètre de la particule est $m/|q|$.",
+          "points": 1,
+          "part": "Partie B — La chambre de déviation magnétique",
+          "ref": "pc-particule-chargee-probleme-2-q7"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-particule-chargee-serie-1",
+      "title": "Mouvement d'une particule chargée dans un champ · Échauffement",
+      "description": "Les bases du chapitre : $E = U/d$, $\\vec F = q\\vec E$, $\\vec F = q\\,\\vec v\\wedge\\vec B$, parabole ou cercle. Difficultés 1 et 2, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-particule-chargee",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-particule-chargee-le-champ-electrique-uniforme-q1",
+        "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme-q1",
+        "pc-particule-chargee-cas-1-acceleration-vec-v-0-parallele-a-v-q1",
+        "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire--q1",
+        "pc-particule-chargee-la-force-de-lorentz-q1",
+        "pc-particule-chargee-le-mouvement-circulaire-uniforme-q1",
+        "pc-particule-chargee-comparaison-des-deux-champs-q1",
+        "pc-particule-chargee-applications-q1",
+        "pc-particule-chargee-le-champ-electrique-uniforme-q2",
+        "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme-q2",
+        "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire--q2",
+        "pc-particule-chargee-le-mouvement-circulaire-uniforme-q2"
+      ]
+    },
+    {
+      "slug": "pc-particule-chargee-serie-2",
+      "title": "Mouvement d'une particule chargée dans un champ · Entraînement",
+      "description": "Tout le chapitre, du champ uniforme au spectromètre : accélération sous une tension, déviation électrique, rayon magnétique, sélecteur de vitesse. Difficultés croissantes de 1 à 3.",
+      "kind": "custom",
+      "chapter": "pc-particule-chargee",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-particule-chargee-comparaison-des-deux-champs-q1",
+        "pc-particule-chargee-probleme-1-q2",
+        "pc-particule-chargee-probleme-2-q1",
+        "pc-particule-chargee-cas-1-acceleration-vec-v-0-parallele-a-v-q2",
+        "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire--q3",
+        "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme-q3",
+        "pc-particule-chargee-le-mouvement-circulaire-uniforme-q3",
+        "pc-particule-chargee-comparaison-des-deux-champs-q3",
+        "pc-particule-chargee-applications-q2",
+        "pc-particule-chargee-applications-q3",
+        "pc-particule-chargee-probleme-2-q5",
+        "pc-particule-chargee-cas-2-deviation-vec-v-0-perpendiculaire--q4"
+      ]
+    },
+    {
+      "slug": "pc-particule-chargee-serie-3",
+      "title": "Mouvement d'une particule chargée dans un champ · Type BAC",
+      "description": "Niveau examen : signe de la charge, travail de la force magnétique, $R \\propto m$ ou $R \\propto \\sqrt{m}$, cyclotron, sélecteur, et les questions finales des problèmes. Tous les pièges classiques du BAC.",
+      "kind": "custom",
+      "chapter": "pc-particule-chargee",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-particule-chargee-l-acceleration-un-cas-de-champ-uniforme-q4",
+        "pc-particule-chargee-cas-1-acceleration-vec-v-0-parallele-a-v-q3",
+        "pc-particule-chargee-la-force-de-lorentz-q2",
+        "pc-particule-chargee-comparaison-des-deux-champs-q4",
+        "pc-particule-chargee-le-mouvement-circulaire-uniforme-q4",
+        "pc-particule-chargee-les-champs-croises-q1",
+        "pc-particule-chargee-le-champ-magnetique-terrestre-q1",
+        "pc-particule-chargee-le-cyclotron-q1",
+        "pc-particule-chargee-le-spectrometre-de-masse-en-detail-q1",
+        "pc-particule-chargee-applications-q4",
+        "pc-particule-chargee-probleme-1-q6",
+        "pc-particule-chargee-probleme-1-q7"
+      ]
+    }
+  ]
+}

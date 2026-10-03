@@ -1,0 +1,1264 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "si",
+ "track": "sm_b",
+ "_scaffold": {
+  "pack": "si-smb",
+  "label": "Sciences de l'Ingénieur — SM-B",
+  "priority": "P2",
+  "chapter": {
+   "code": "si-transmettre",
+   "name": "Chaîne d'énergie — Transmettre l'énergie",
+   "domain": null,
+   "unit": null
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Les grandeurs de base",
+   "Poulies-courroie",
+   "Roues et chaîne",
+   "Les engrenages",
+   "Les trains d'engrenages",
+   "Transmettre ou transformer ?",
+   "Le système pignon-crémaillère",
+   "Le système vis-écrou",
+   "Le système bielle-manivelle",
+   "Les systèmes à connaître en résumé",
+   "Accouplements, embrayages et freins",
+   "Les assemblages mécaniques",
+   "Les éléments du dessin industriel",
+   "Le rendement, revisité",
+   "Méthode 1 — Calculer une chaîne de transmission",
+   "Méthode 2 — Le sens de rotation",
+   "Méthode 3 — Les transformations de mouvement",
+   "Méthode 4 — Remonter d'un besoin au moteur"
+  ],
+  "methodes_du_cours": [
+   "Méthode 1 — Calculer une chaîne de transmission",
+   "Méthode 2 — Le sens de rotation",
+   "Méthode 3 — Les transformations de mouvement",
+   "Méthode 4 — Remonter d'un besoin au moteur"
+  ],
+  "existing_questions_total": 6,
+  "target_new_questions": 38,
+  "suggested_figures": [
+   "si-chaine — Chaîne d'énergie + chaîne d'information",
+   "si-capteur — Capteur — chaîne d'acquisition"
+  ],
+  "sources": [
+   {
+    "annale": "si-smb-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2025-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2025-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2025-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2024-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2024-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2024-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2023-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2023-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2023-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2022-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2022-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2022-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2021-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2021-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2021-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2020-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2020-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2020-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2019-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2019-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2019-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2018-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2018-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2018-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2017-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2017-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2017-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2016-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2016-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2016-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2015-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2015-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2015-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2015-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2014-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2014-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2014-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2014-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2013-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2013-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2013-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2013-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2013-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2013-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2012-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2012-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2012-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2012-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2012-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2012-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2011-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2011-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2011-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2011-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2011-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2011-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2010-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2010-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2010-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2010-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2010-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2010-normale.pdf"
+   },
+   {
+    "annale": "si-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-si-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "si-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-si-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "si-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-si-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "si-sm-2023-normale",
+    "sujet": "annales-propres/Sujet-si-sm-2023-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les grandeurs de base",
+    "lesson": "Transmettre le mouvement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-les-grandeurs-de-base",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Les grandeurs de base",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-les-grandeurs-de-base-q1",
+     "notion": "Les grandeurs de base",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Poulies-courroie",
+    "lesson": "Transmettre le mouvement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-poulies-courroie",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Poulies-courroie",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-poulies-courroie-q1",
+     "notion": "Poulies-courroie",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Roues et chaîne",
+    "lesson": "Transmettre le mouvement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-roues-et-chaine",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Roues et chaîne",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-roues-et-chaine-q1",
+     "notion": "Roues et chaîne",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les engrenages",
+    "lesson": "Transmettre le mouvement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-les-engrenages",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Les engrenages",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-les-engrenages-q1",
+     "notion": "Les engrenages",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les trains d'engrenages",
+    "lesson": "Transmettre le mouvement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-les-trains-d-engrenages",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Les trains d'engrenages",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-les-trains-d-engrenages-q1",
+     "notion": "Les trains d'engrenages",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Transmettre ou transformer ?",
+    "lesson": "Transformer le mouvement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-transmettre-ou-transformer",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Transmettre ou transformer ?",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-transmettre-ou-transformer-q1",
+     "notion": "Transmettre ou transformer ?",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le système pignon-crémaillère",
+    "lesson": "Transformer le mouvement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-le-systeme-pignon-cremaillere",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Le système pignon-crémaillère",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-le-systeme-pignon-cremaillere-q1",
+     "notion": "Le système pignon-crémaillère",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le système vis-écrou",
+    "lesson": "Transformer le mouvement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-le-systeme-vis-ecrou",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Le système vis-écrou",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-le-systeme-vis-ecrou-q1",
+     "notion": "Le système vis-écrou",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le système bielle-manivelle",
+    "lesson": "Transformer le mouvement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-le-systeme-bielle-manivelle",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Le système bielle-manivelle",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-le-systeme-bielle-manivelle-q1",
+     "notion": "Le système bielle-manivelle",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les systèmes à connaître en résumé",
+    "lesson": "Transformer le mouvement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-les-systemes-a-connaitre-en-resume",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Les systèmes à connaître en résumé",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-les-systemes-a-connaitre-en-resume-q1",
+     "notion": "Les systèmes à connaître en résumé",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Accouplements, embrayages et freins",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-accouplements-embrayages-et-freins",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Accouplements, embrayages et freins",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-accouplements-embrayages-et-freins-q1",
+     "notion": "Accouplements, embrayages et freins",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les assemblages mécaniques",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-les-assemblages-mecaniques",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Les assemblages mécaniques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-les-assemblages-mecaniques-q1",
+     "notion": "Les assemblages mécaniques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les éléments du dessin industriel",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-les-elements-du-dessin-industriel",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Les éléments du dessin industriel",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-les-elements-du-dessin-industriel-q1",
+     "notion": "Les éléments du dessin industriel",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le rendement, revisité",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-transmettre-le-rendement-revisite",
+   "chapter": "si-transmettre",
+   "kind": "qcu",
+   "title": "Le rendement, revisité",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-le-rendement-revisite-q1",
+     "notion": "Le rendement, revisité",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "si-smb-2025-rattrapage",
+     "si-smb-2025-normale",
+     "si-smb-2024-rattrapage",
+     "si-smb-2024-normale",
+     "si-smb-2023-rattrapage",
+     "si-smb-2023-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "si-transmettre-probleme-1",
+   "chapter": "si-transmettre",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. si-smb-2025-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-transmettre-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-transmettre-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "si-smb-2025-rattrapage",
+     "si-smb-2025-normale",
+     "si-smb-2024-rattrapage",
+     "si-smb-2024-normale",
+     "si-smb-2023-rattrapage",
+     "si-smb-2023-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "si-transmettre-probleme-2",
+   "chapter": "si-transmettre",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. si-smb-2025-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-transmettre-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-transmettre-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-transmettre-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "si-transmettre-serie-1",
+   "title": "Chaîne d'énergie — Transmettre l'énergie · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "si-transmettre",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "si-transmettre-serie-2",
+   "title": "Chaîne d'énergie — Transmettre l'énergie · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "si-transmettre",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "si-transmettre-serie-3",
+   "title": "Chaîne d'énergie — Transmettre l'énergie · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "si-transmettre",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

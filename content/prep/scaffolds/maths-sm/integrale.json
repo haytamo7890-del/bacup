@@ -1,0 +1,942 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "sm_a",
+  "sm_b"
+ ],
+ "_scaffold": {
+  "pack": "maths-sm",
+  "label": "Maths — Sciences Mathématiques (A & B)",
+  "priority": "P2",
+  "chapter": {
+   "code": "integrale",
+   "name": "Calcul intégral",
+   "domain": null,
+   "unit": null
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Définition",
+   "Positivité, ordre et valeur moyenne",
+   "Intégration par parties",
+   "Intégrales de fonctions composées",
+   "Aire entre deux courbes",
+   "Volume de révolution",
+   "Fonction définie par une intégrale",
+   "Intégrale et symétries",
+   "Inégalité de la moyenne",
+   "Techniques de calcul",
+   "Encadrement d'une intégrale"
+  ],
+  "methodes_du_cours": [
+   "Techniques de calcul",
+   "Encadrement d'une intégrale"
+  ],
+  "existing_questions_total": 6,
+  "target_new_questions": 24,
+  "suggested_figures": [
+   "kepler-ellipse — Ellipse de Kepler et loi des aires"
+  ],
+  "sources": [
+   {
+    "annale": "maths-sm-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2026-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2026-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2026-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2025-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2025-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2025-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2023-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2023-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2023-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2022-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2022-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2022-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2021-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2021-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2021-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2020-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2020-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2020-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2019-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2019-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2019-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2018-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2018-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2018-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2017-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2017-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2017-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2016-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2016-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2016-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2015-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2015-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2015-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2015-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2014-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2014-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Définition",
+    "lesson": "Intégrale et propriétés",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-integrale-definition",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Définition",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-definition-q1",
+     "notion": "Définition",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Positivité, ordre et valeur moyenne",
+    "lesson": "Intégrale et propriétés",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-integrale-positivite-ordre-et-valeur-moyenne",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Positivité, ordre et valeur moyenne",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-positivite-ordre-et-valeur-moyenne-q1",
+     "notion": "Positivité, ordre et valeur moyenne",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Intégration par parties",
+    "lesson": "Techniques de calcul",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-integrale-integration-par-parties",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Intégration par parties",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-integration-par-parties-q1",
+     "notion": "Intégration par parties",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Intégrales de fonctions composées",
+    "lesson": "Techniques de calcul",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-integrale-integrales-de-fonctions-composees",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Intégrales de fonctions composées",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-integrales-de-fonctions-composees-q1",
+     "notion": "Intégrales de fonctions composées",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Aire entre deux courbes",
+    "lesson": "Applications : aires, volumes, fonctions intégrales",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-integrale-aire-entre-deux-courbes",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Aire entre deux courbes",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-aire-entre-deux-courbes-q1",
+     "notion": "Aire entre deux courbes",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Volume de révolution",
+    "lesson": "Applications : aires, volumes, fonctions intégrales",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-integrale-volume-de-revolution",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Volume de révolution",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-volume-de-revolution-q1",
+     "notion": "Volume de révolution",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Fonction définie par une intégrale",
+    "lesson": "Applications : aires, volumes, fonctions intégrales",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-integrale-fonction-definie-par-une-integrale",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Fonction définie par une intégrale",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-fonction-definie-par-une-integrale-q1",
+     "notion": "Fonction définie par une intégrale",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Intégrale et symétries",
+    "lesson": "Approfondissement : parité, moyenne, fonction intégrale",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 0,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-integrale-integrale-et-symetries",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Intégrale et symétries",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-integrale-et-symetries-q1",
+     "notion": "Intégrale et symétries",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Inégalité de la moyenne",
+    "lesson": "Approfondissement : parité, moyenne, fonction intégrale",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-integrale-inegalite-de-la-moyenne",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Inégalité de la moyenne",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-inegalite-de-la-moyenne-q1",
+     "notion": "Inégalité de la moyenne",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "maths-sm-2026-rattrapage",
+     "maths-sm-2026-normale",
+     "maths-sm-2025-rattrapage",
+     "maths-sm-2025-normale",
+     "maths-sm-2024-rattrapage",
+     "maths-sm-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "maths-integrale-probleme-1",
+   "chapter": "integrale",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. maths-sm-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-integrale-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-integrale-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "maths-sm-2026-rattrapage",
+     "maths-sm-2026-normale",
+     "maths-sm-2025-rattrapage",
+     "maths-sm-2025-normale",
+     "maths-sm-2024-rattrapage",
+     "maths-sm-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "maths-integrale-probleme-2",
+   "chapter": "integrale",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. maths-sm-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-integrale-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-integrale-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-integrale-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "maths-integrale-serie-1",
+   "title": "Calcul intégral · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "integrale",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "maths-integrale-serie-2",
+   "title": "Calcul intégral · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "integrale",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "maths-integrale-serie-3",
+   "title": "Calcul intégral · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "integrale",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

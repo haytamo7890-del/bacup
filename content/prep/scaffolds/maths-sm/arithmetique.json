@@ -1,0 +1,992 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "sm_a",
+  "sm_b"
+ ],
+ "_scaffold": {
+  "pack": "maths-sm",
+  "label": "Maths — Sciences Mathématiques (A & B)",
+  "priority": "P2",
+  "chapter": {
+   "code": "arithmetique",
+   "name": "Arithmétique dans ℤ",
+   "domain": null,
+   "unit": null
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Divisibilité et division euclidienne",
+   "Nombres premiers et décomposition",
+   "PGCD et algorithme d'Euclide",
+   "Bézout et Gauss",
+   "Congruences modulo n",
+   "Petit théorème de Fermat",
+   "Systèmes de numération",
+   "Relation PGCD - PPCM",
+   "Restes de puissances (ordre)",
+   "Congruence linéaire",
+   "Résoudre une équation diophantienne",
+   "Congruences et restes"
+  ],
+  "methodes_du_cours": [
+   "Résoudre une équation diophantienne",
+   "Congruences et restes"
+  ],
+  "existing_questions_total": 6,
+  "target_new_questions": 25,
+  "suggested_figures": [],
+  "sources": [
+   {
+    "annale": "maths-sm-2026-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2026-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2026-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2026-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2026-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2026-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2025-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2025-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2025-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2023-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2023-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2023-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2022-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2022-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2022-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2021-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2021-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2021-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2020-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2020-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2020-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2019-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2019-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2019-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2018-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2018-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2018-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2017-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2017-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2017-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2016-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2016-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2016-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-sm-2015-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-sm-2015-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2015-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-sm-2015-normale.pdf"
+   },
+   {
+    "annale": "maths-sm-2014-normale",
+    "sujet": "annales-propres/Sujet-maths-sm-2014-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Divisibilité et division euclidienne",
+    "lesson": "Divisibilité, division euclidienne, nombres premiers",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-arithmetique-divisibilite-et-division-euclidienne",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Divisibilité et division euclidienne",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-divisibilite-et-division-euclidienne-q1",
+     "notion": "Divisibilité et division euclidienne",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Nombres premiers et décomposition",
+    "lesson": "Divisibilité, division euclidienne, nombres premiers",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-arithmetique-nombres-premiers-et-decomposition",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Nombres premiers et décomposition",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-nombres-premiers-et-decomposition-q1",
+     "notion": "Nombres premiers et décomposition",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "PGCD et algorithme d'Euclide",
+    "lesson": "PGCD, théorèmes de Bézout et de Gauss",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-arithmetique-pgcd-et-algorithme-d-euclide",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "PGCD et algorithme d'Euclide",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-pgcd-et-algorithme-d-euclide-q1",
+     "notion": "PGCD et algorithme d'Euclide",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Bézout et Gauss",
+    "lesson": "PGCD, théorèmes de Bézout et de Gauss",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-arithmetique-bezout-et-gauss",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Bézout et Gauss",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-bezout-et-gauss-q1",
+     "notion": "Bézout et Gauss",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Congruences modulo n",
+    "lesson": "Congruences et systèmes de numération",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-arithmetique-congruences-modulo-n",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Congruences modulo n",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-congruences-modulo-n-q1",
+     "notion": "Congruences modulo n",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Petit théorème de Fermat",
+    "lesson": "Congruences et systèmes de numération",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-arithmetique-petit-theoreme-de-fermat",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Petit théorème de Fermat",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-petit-theoreme-de-fermat-q1",
+     "notion": "Petit théorème de Fermat",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Systèmes de numération",
+    "lesson": "Congruences et systèmes de numération",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-arithmetique-systemes-de-numeration",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Systèmes de numération",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-systemes-de-numeration-q1",
+     "notion": "Systèmes de numération",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Relation PGCD - PPCM",
+    "lesson": "Approfondissement : PPCM, ordre, congruences linéaires",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 0,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-arithmetique-relation-pgcd-ppcm",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Relation PGCD - PPCM",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-relation-pgcd-ppcm-q1",
+     "notion": "Relation PGCD - PPCM",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Restes de puissances (ordre)",
+    "lesson": "Approfondissement : PPCM, ordre, congruences linéaires",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 0,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-arithmetique-restes-de-puissances-ordre",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Restes de puissances (ordre)",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-restes-de-puissances-ordre-q1",
+     "notion": "Restes de puissances (ordre)",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Congruence linéaire",
+    "lesson": "Approfondissement : PPCM, ordre, congruences linéaires",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 0,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-arithmetique-congruence-lineaire",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Congruence linéaire",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-congruence-lineaire-q1",
+     "notion": "Congruence linéaire",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "maths-sm-2026-rattrapage",
+     "maths-sm-2026-normale",
+     "maths-sm-2025-rattrapage",
+     "maths-sm-2025-normale",
+     "maths-sm-2024-rattrapage",
+     "maths-sm-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "maths-arithmetique-probleme-1",
+   "chapter": "arithmetique",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. maths-sm-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "maths-sm-2026-rattrapage",
+     "maths-sm-2026-normale",
+     "maths-sm-2025-rattrapage",
+     "maths-sm-2025-normale",
+     "maths-sm-2024-rattrapage",
+     "maths-sm-2024-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "maths-arithmetique-probleme-2",
+   "chapter": "arithmetique",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. maths-sm-2026-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-arithmetique-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "maths-arithmetique-serie-1",
+   "title": "Arithmétique dans ℤ · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "arithmetique",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "maths-arithmetique-serie-2",
+   "title": "Arithmétique dans ℤ · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "arithmetique",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "maths-arithmetique-serie-3",
+   "title": "Arithmétique dans ℤ · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "arithmetique",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1848 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-chute-verticale",
+      "name": "Chute verticale dans un fluide",
+      "domain": "physique",
+      "unit": "Mécanique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Les trois forces en jeu",
+      "L'équation différentielle du mouvement",
+      "L'équation aux dimensions",
+      "Les deux régimes",
+      "La vitesse limite",
+      "Le temps caractéristique",
+      "La chute libre, cas limite",
+      "L'analogie avec les circuits",
+      "Résolution analytique et méthode d'Euler",
+      "Le modèle quadratique en pratique",
+      "Mesures expérimentales",
+      "Méthode 1 — Établir l'équation différentielle",
+      "Méthode 2 — Exploiter une courbe $v(t)$",
+      "Méthode 3 — Déterminer une masse volumique ou une viscosité",
+      "Méthode 4 — La méthode d'Euler",
+      "Méthode 5 — Comparer aux modèles"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Établir l'équation différentielle",
+      "Méthode 2 — Exploiter une courbe $v(t)$",
+      "Méthode 3 — Déterminer une masse volumique ou une viscosité",
+      "Méthode 4 — La méthode d'Euler",
+      "Méthode 5 — Comparer aux modèles"
+    ],
+    "existing_questions_total": 6,
+    "target_new_questions": 26,
+    "suggested_figures": [
+      "chute-fluide-forces — Bilan des forces sur un corps tombant dans un fluide",
+      "chute-fluide-vitesse — Vitesse au cours d'une chute dans un fluide",
+      "asymptote — Limite infinie en un point (asymptote verticale)",
+      "vecteurs-cinematiques — Position, vitesse et accélération d'un point mobile",
+      "oscillations-amorties — Les trois régimes d'un oscillateur mécanique amorti",
+      "rlc-regimes — Les trois régimes d'un circuit RLC (u_C au cours du temps)",
+      "vitesse-tangente — Détermination de la vitesse par la pente de la tangente",
+      "esterification-rendement — Vitesse vs rendement : effet du catalyseur et effet de l'excès de réactif"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Les trois forces en jeu",
+        "lesson": "Bilan des forces et équation du mouvement",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-les-trois-forces-en-jeu",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "Les trois forces en jeu",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Les trois forces en jeu",
+          "difficulty": 1,
+          "statement": "Une bille d'acier de rayon $r = 5{,}0\\ \\mathrm{mm}$ est totalement immergée dans de la glycérine de masse volumique $\\rho_f = 1260\\ \\mathrm{kg\\,m^{-3}}$. La masse volumique de l'acier est $\\rho_s = 7800\\ \\mathrm{kg\\,m^{-3}}$ et $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La norme de la poussée d'Archimède exercée sur la bille vaut :",
+          "options": [
+            {
+              "label": "$6{,}5\\ \\mathrm{mN}$",
+              "correct": true,
+              "why": "$V = \\tfrac{4}{3}\\pi r^3 = 5{,}24\\times10^{-7}\\ \\mathrm{m^3}$, puis $F_A = \\rho_f V g = 1260\\times5{,}24\\times10^{-7}\\times9{,}8 = 6{,}5\\times10^{-3}\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$40\\ \\mathrm{mN}$",
+              "why": "Tu as utilisé la masse volumique de l'acier : $7800\\times5{,}24\\times10^{-7}\\times9{,}8 = 40\\ \\mathrm{mN}$. C'est le poids de la bille, pas la poussée. Dans $F_A$, c'est le **fluide** déplacé qui compte."
+            },
+            {
+              "label": "$52\\ \\mathrm{mN}$",
+              "why": "Tu as pris le diamètre ($10\\ \\mathrm{mm}$) pour le rayon dans $\\tfrac{4}{3}\\pi r^3$ : le volume est alors $8$ fois trop grand, $8\\times6{,}5 = 52\\ \\mathrm{mN}$."
+            },
+            {
+              "label": "$0{,}66\\ \\mathrm{mN}$",
+              "why": "Tu as calculé $\\rho_f V = 6{,}6\\times10^{-4}$ : c'est la masse de glycérine déplacée (en kg), il manque le facteur $g$ pour obtenir une force."
+            }
+          ],
+          "hint": "La poussée d'Archimède est le poids du fluide déplacé : quel volume, et quelle masse volumique ?",
+          "solution": "Volume de la bille : $V = \\dfrac{4}{3}\\pi r^3 = \\dfrac{4}{3}\\pi (5{,}0\\times10^{-3})^3 = 5{,}24\\times10^{-7}\\ \\mathrm{m^3}$.\nPoussée d'Archimède : $F_A = \\rho_f\\,V\\,g = 1260\\times5{,}24\\times10^{-7}\\times9{,}8 = 6{,}47\\times10^{-3}\\ \\mathrm{N} \\approx 6{,}5\\ \\mathrm{mN}$.\nContrôle : le poids vaut $P = \\rho_s V g = 40\\ \\mathrm{mN}$, donc $F_A/P = \\rho_f/\\rho_s = 1260/7800 \\approx 0{,}16$. La poussée représente bien environ $16\\ \\%$ du poids — non négligeable dans un liquide.",
+          "methode": "Dans $F_A = \\rho_f V g$ : $V$ est le volume du **corps** immergé, $\\rho_f$ la masse volumique du **fluide**. Ne mélange jamais les deux.",
+          "points": 1,
+          "ref": "pc-chute-verticale-les-trois-forces-en-jeu-q1"
+        },
+        {
+          "notion": "Les trois forces en jeu",
+          "difficulty": 2,
+          "statement": "Une bille descend verticalement dans un liquide visqueux. À propos de la force de frottement fluide $\\vec{f}$ exercée par le liquide, l'affirmation exacte est :",
+          "options": [
+            {
+              "label": "Elle est opposée au vecteur vitesse et sa norme croît quand $v$ croît.",
+              "correct": true,
+              "why": "Le frottement fluide s'oppose toujours au mouvement relatif, et les modèles du programme ($f = kv$ ou $f = kv^2$) sont croissants avec $v$."
+            },
+            {
+              "label": "Elle est dirigée vers le bas et sa norme croît quand $v$ croît.",
+              "why": "Tu as mis le frottement dans le sens du mouvement. Une force qui accompagnerait la chute ferait accélérer la bille sans fin : il n'y aurait aucune vitesse limite."
+            },
+            {
+              "label": "Elle est opposée au vecteur vitesse et sa norme reste constante.",
+              "why": "Tu as traité le frottement fluide comme un frottement solide. S'il était constant, la vitesse croîtrait indéfiniment avec une accélération constante."
+            },
+            {
+              "label": "Elle est dirigée vers le haut et sa norme vaut $\\rho_f V g$.",
+              "why": "$\\rho_f V g$ est la norme de la poussée d'Archimède, qui ne dépend pas de la vitesse. Tu as confondu les deux forces exercées par le fluide."
+            }
+          ],
+          "hint": "Demande-toi ce qui se passerait, au bout d'un temps long, si le frottement était dans le sens du mouvement.",
+          "solution": "Trois forces agissent sur la bille : le poids $\\vec P = m\\vec g$ (vers le bas), la poussée d'Archimède $\\vec F_A$ (vers le haut, de norme $\\rho_f V g$, indépendante de $v$) et le frottement fluide $\\vec f$, **opposé au vecteur vitesse** donc vers le haut pendant la descente.\nSa norme est modélisée par $f = k v$ (faibles vitesses) ou $f = k v^2$ (vitesses plus grandes) : dans les deux cas elle **croît** avec $v$. C'est précisément cette croissance qui finit par équilibrer $P - F_A$ et qui crée la vitesse limite.",
+          "methode": "Trie les trois forces par ce dont elles dépendent : $P$ et $F_A$ sont constantes, seul $f$ dépend de la vitesse.",
+          "points": 1,
+          "ref": "pc-chute-verticale-les-trois-forces-en-jeu-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'équation différentielle du mouvement",
+        "lesson": "Bilan des forces et équation du mouvement",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-l-equation-differentielle-du-mouvement",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "L'équation différentielle du mouvement",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'équation différentielle du mouvement",
+          "difficulty": 1,
+          "statement": "Une bille de masse $m$ et de volume $V$ tombe dans un fluide de masse volumique $\\rho_f$. Le frottement est modélisé par $f = k v$. Sur un axe $Oz$ vertical **orienté vers le bas**, la deuxième loi de Newton donne :",
+          "options": [
+            {
+              "label": "$m\\,\\dfrac{dv}{dt} = mg - \\rho_f V g - k v$",
+              "correct": true,
+              "why": "Vers le bas : le poids compte $+mg$, la poussée et le frottement sont vers le haut donc comptent $-\\rho_f V g$ et $-kv$."
+            },
+            {
+              "label": "$m\\,\\dfrac{dv}{dt} = mg + \\rho_f V g - k v$",
+              "why": "Erreur de signe sur la poussée : $\\vec F_A$ est dirigée vers le haut, donc sa projection sur un axe descendant est **négative**."
+            },
+            {
+              "label": "$m\\,\\dfrac{dv}{dt} = mg - \\rho_f V g + k v$",
+              "why": "Erreur de signe sur le frottement : $\\vec f$ s'oppose au mouvement, donc vers le haut pendant la descente, donc projection négative."
+            },
+            {
+              "label": "$m\\,\\dfrac{dv}{dt} = mg - k v$",
+              "why": "Tu as oublié la poussée d'Archimède. Dans un liquide elle n'est pas négligeable : ici elle vaut $\\rho_f/\\rho_s$ fois le poids."
+            }
+          ],
+          "hint": "Projette chaque force sur l'axe choisi : vers le bas, le signe est $+$ ; vers le haut, le signe est $-$.",
+          "solution": "Bilan des forces : $\\vec P + \\vec F_A + \\vec f = m\\vec a$.\nProjection sur $Oz$ descendant : $\\vec P$ est dans le sens de l'axe ($+mg$), $\\vec F_A$ et $\\vec f$ sont dans le sens opposé ($-\\rho_f V g$ et $-kv$).\nD'où $m\\,\\dfrac{dv}{dt} = mg - \\rho_f V g - k v$.\nContrôle : à $t = 0$ la bille part du repos, $v = 0$, et l'équation donne $m\\,\\dfrac{dv}{dt} = mg - \\rho_f V g > 0$ : la bille accélère bien vers le bas.",
+          "methode": "Choisis ton axe, écris-le sur ta copie, puis projette **dans l'ordre** : poids, poussée, frottement. Un signe faux ici fausse tout l'exercice.",
+          "points": 1,
+          "ref": "pc-chute-verticale-l-equation-differentielle-du-mouvement-q1"
+        },
+        {
+          "notion": "L'équation différentielle du mouvement",
+          "difficulty": 2,
+          "statement": "La même équation se met sous la forme canonique $\\dfrac{dv}{dt} = A - B\\,v$. Les constantes $A$ et $B$ valent :",
+          "options": [
+            {
+              "label": "$A = g\\left(1 - \\dfrac{\\rho_f V}{m}\\right)$ et $B = \\dfrac{k}{m}$",
+              "correct": true,
+              "why": "On divise toute l'équation par $m$ : $\\dfrac{dv}{dt} = g - \\dfrac{\\rho_f V g}{m} - \\dfrac{k}{m}v$, et on factorise $g$ dans les deux premiers termes."
+            },
+            {
+              "label": "$A = g\\left(1 - \\dfrac{m}{\\rho_f V}\\right)$ et $B = \\dfrac{k}{m}$",
+              "why": "Tu as retourné le rapport : en divisant $\\rho_f V g$ par $m$, c'est $\\dfrac{\\rho_f V}{m}$ qui apparaît, pas son inverse."
+            },
+            {
+              "label": "$A = g\\left(1 - \\dfrac{\\rho_f V}{m}\\right)$ et $B = \\dfrac{m}{k}$",
+              "why": "Tu as écrit $B = m/k$ : c'est le temps caractéristique $\\tau$, pas le coefficient de $v$. Ici $B = 1/\\tau = k/m$."
+            },
+            {
+              "label": "$A = g\\,\\dfrac{\\rho_f V}{m}$ et $B = \\dfrac{k}{m}$",
+              "why": "Tu as oublié le $1$ : en divisant $mg - \\rho_f V g$ par $m$ il reste $g - \\rho_f V g/m$, donc $g$ **moins** le terme de poussée."
+            }
+          ],
+          "hint": "Divise les deux membres par $m$, puis mets $g$ en facteur dans les termes constants.",
+          "solution": "Partons de $m\\,\\dfrac{dv}{dt} = mg - \\rho_f V g - k v$ et divisons par $m$ :\n$$\\frac{dv}{dt} = g - \\frac{\\rho_f V g}{m} - \\frac{k}{m}v = g\\left(1 - \\frac{\\rho_f V}{m}\\right) - \\frac{k}{m}\\,v$$\nDonc $A = g\\left(1 - \\dfrac{\\rho_f V}{m}\\right)$ et $B = \\dfrac{k}{m}$. Comme $m = \\rho_s V$, on écrit aussi $A = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right)$.\nContrôle d'homogénéité : $A$ est en $\\mathrm{m\\,s^{-2}}$ (une accélération) et $B$ en $\\mathrm{s^{-1}}$, donc $Bv$ est bien en $\\mathrm{m\\,s^{-2}}$.",
+          "methode": "Ramène toujours l'équation à $\\dfrac{dv}{dt} = A - Bv$ : ensuite $v_\\ell = A/B$ et $\\tau = 1/B$ tombent tout seuls.",
+          "points": 1,
+          "ref": "pc-chute-verticale-l-equation-differentielle-du-mouvement-q2"
+        },
+        {
+          "notion": "L'équation différentielle du mouvement",
+          "difficulty": 2,
+          "statement": "Pour une bille de masse volumique $\\rho_s$ tombant dans un fluide de masse volumique $\\rho_f$, avec un frottement modélisé par $f = k v^2$, l'équation différentielle s'écrit (axe vertical descendant) :",
+          "options": [
+            {
+              "label": "$\\dfrac{dv}{dt} = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right) - \\dfrac{k}{m}\\,v^2$",
+              "correct": true,
+              "why": "Même bilan que dans le cas linéaire, avec $m = \\rho_s V$ donc $\\dfrac{\\rho_f V}{m} = \\dfrac{\\rho_f}{\\rho_s}$, et le frottement devient $-\\dfrac{k}{m}v^2$."
+            },
+            {
+              "label": "$\\dfrac{dv}{dt} = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right) + \\dfrac{k}{m}\\,v^2$",
+              "why": "Erreur de signe : avec un $+$ devant $v^2$, l'accélération croîtrait avec la vitesse et il n'y aurait jamais de vitesse limite."
+            },
+            {
+              "label": "$\\dfrac{dv}{dt} = g\\left(1 - \\dfrac{\\rho_s}{\\rho_f}\\right) - \\dfrac{k}{m}\\,v^2$",
+              "why": "Tu as inversé le rapport des masses volumiques. Pour une bille d'acier dans l'eau, $1 - \\rho_s/\\rho_f$ serait très négatif : la bille remonterait."
+            },
+            {
+              "label": "$\\dfrac{dv}{dt} = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right) - \\dfrac{k}{m}\\,v$",
+              "why": "Tu as gardé le modèle linéaire. L'énoncé impose $f = kv^2$, donc le terme de frottement divisé par $m$ est $\\dfrac{k}{m}v^2$."
+            }
+          ],
+          "hint": "Pars du cas linéaire et remplace seulement le terme de frottement ; utilise $m = \\rho_s V$ pour simplifier le terme de poussée.",
+          "solution": "Projection sur l'axe descendant : $m\\,\\dfrac{dv}{dt} = mg - \\rho_f V g - k v^2$.\nOn divise par $m = \\rho_s V$ : $\\dfrac{dv}{dt} = g - \\dfrac{\\rho_f V g}{\\rho_s V} - \\dfrac{k}{m}v^2 = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right) - \\dfrac{k}{m}\\,v^2$.\nContrôle : le terme constant est positif dès que $\\rho_s > \\rho_f$, ce qui est la condition pour que la bille coule.",
+          "methode": "Le terme de poussée se simplifie toujours en $\\rho_f/\\rho_s$ dès que le corps est homogène et totalement immergé.",
+          "points": 1,
+          "ref": "pc-chute-verticale-l-equation-differentielle-du-mouvement-q3"
+        },
+        {
+          "notion": "L'équation différentielle du mouvement",
+          "difficulty": 3,
+          "statement": "Une bille de polystyrène de masse volumique $\\rho_s = 20\\ \\mathrm{kg\\,m^{-3}}$ est lâchée sans vitesse **au fond** d'un bac d'eau ($\\rho_f = 1000\\ \\mathrm{kg\\,m^{-3}}$) : elle remonte. Le frottement est modélisé par $f = kv$. Sur un axe vertical orienté **vers le haut**, l'équation différentielle est :",
+          "options": [
+            {
+              "label": "$\\dfrac{dv}{dt} = g\\left(\\dfrac{\\rho_f}{\\rho_s} - 1\\right) - \\dfrac{k}{m}\\,v$",
+              "correct": true,
+              "why": "Vers le haut : $\\vec F_A$ compte $+\\rho_f V g$, le poids $-mg$, et $\\vec f$ s'oppose à la montée donc $-kv$. En divisant par $m = \\rho_s V$ on obtient ce résultat."
+            },
+            {
+              "label": "$\\dfrac{dv}{dt} = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right) - \\dfrac{k}{m}\\,v$",
+              "why": "Tu as recopié la formule de la descente sans changer d'axe. Avec $\\rho_f/\\rho_s = 50$, ce terme vaudrait $-480\\ \\mathrm{m\\,s^{-2}}$ : la bille ne démarrerait pas vers le haut."
+            },
+            {
+              "label": "$\\dfrac{dv}{dt} = -g\\left(\\dfrac{\\rho_f}{\\rho_s} - 1\\right) - \\dfrac{k}{m}\\,v$",
+              "why": "Tu as mis un signe moins devant un terme déjà positif : l'accélération initiale serait négative alors que la bille remonte."
+            },
+            {
+              "label": "$\\dfrac{dv}{dt} = g\\left(\\dfrac{\\rho_f}{\\rho_s} + 1\\right) - \\dfrac{k}{m}\\,v$",
+              "why": "Tu as ajouté le poids au lieu de le retrancher : poids et poussée sont de sens opposés, leurs projections ont des signes opposés."
+            }
+          ],
+          "hint": "Refais le bilan en projetant sur l'axe **montant** : qui est maintenant dans le sens de l'axe ?",
+          "solution": "Les trois forces sont inchangées, seul l'axe change. Sur un axe vertical ascendant :\n$$m\\,\\frac{dv}{dt} = \\rho_f V g - mg - k v$$\nEn divisant par $m = \\rho_s V$ : $\\dfrac{dv}{dt} = g\\left(\\dfrac{\\rho_f}{\\rho_s} - 1\\right) - \\dfrac{k}{m}v$.\nContrôle numérique : $\\rho_f/\\rho_s = 1000/20 = 50$, donc l'accélération initiale vaut $9{,}8\\times49 = 4{,}8\\times10^{2}\\ \\mathrm{m\\,s^{-2}}$ vers le haut — énorme, ce qui est cohérent avec un morceau de polystyrène qui jaillit de l'eau.",
+          "methode": "Le terme constant de l'équation est toujours $\\dfrac{\\text{résultante de } \\vec P \\text{ et } \\vec F_A}{m}$, projetée sur **ton** axe. Écris l'axe avant de projeter.",
+          "points": 1,
+          "ref": "pc-chute-verticale-l-equation-differentielle-du-mouvement-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'équation aux dimensions",
+        "lesson": "Bilan des forces et équation du mouvement",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-l-equation-aux-dimensions",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "L'équation aux dimensions",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'équation aux dimensions",
+          "difficulty": 1,
+          "statement": "Le frottement fluide est modélisé par $f = k\\,v$. L'unité du coefficient $k$ dans le système international est :",
+          "options": [
+            {
+              "label": "$\\mathrm{kg\\,s^{-1}}$",
+              "correct": true,
+              "why": "$k = f/v$, soit $\\mathrm{N}/(\\mathrm{m\\,s^{-1}})$. Avec $\\mathrm{N} = \\mathrm{kg\\,m\\,s^{-2}}$, il reste $\\mathrm{kg\\,s^{-1}}$."
+            },
+            {
+              "label": "$\\mathrm{kg\\,m^{-1}}$",
+              "why": "C'est l'unité de $k$ dans le modèle **quadratique** $f = kv^2$. Ici on divise $f$ par $v$ une seule fois, pas deux."
+            },
+            {
+              "label": "$\\mathrm{kg\\,s^{-2}}$",
+              "why": "Tu as divisé $\\mathrm{kg\\,m\\,s^{-2}}$ par $\\mathrm{m\\,s^{-1}}$ en oubliant que $\\mathrm{s^{-1}}$ passe au numérateur : $\\mathrm{s^{-2}}/\\mathrm{s^{-1}} = \\mathrm{s^{-1}}$."
+            },
+            {
+              "label": "$\\mathrm{kg\\,m\\,s^{-1}}$",
+              "why": "Tu as simplifié les secondes mais pas les mètres : le $\\mathrm{m}$ du newton est bien éliminé par le $\\mathrm{m}$ de $\\mathrm{m\\,s^{-1}}$."
+            }
+          ],
+          "hint": "Isole $k$ dans $f = kv$, puis remplace le newton par son expression en unités de base.",
+          "solution": "$k = \\dfrac{f}{v}$, donc $[k] = \\dfrac{\\mathrm{N}}{\\mathrm{m\\,s^{-1}}} = \\dfrac{\\mathrm{kg\\,m\\,s^{-2}}}{\\mathrm{m\\,s^{-1}}} = \\mathrm{kg\\,s^{-1}}$.\nContrôle : le temps caractéristique $\\tau = m/k$ est alors en $\\mathrm{kg}/(\\mathrm{kg\\,s^{-1}}) = \\mathrm{s}$. C'est bien un temps.",
+          "methode": "Pour toute unité d'un coefficient : isole-le, puis remplace $\\mathrm{N}$ par $\\mathrm{kg\\,m\\,s^{-2}}$ et simplifie.",
+          "points": 1,
+          "ref": "pc-chute-verticale-l-equation-aux-dimensions-q1"
+        },
+        {
+          "notion": "L'équation aux dimensions",
+          "difficulty": 2,
+          "statement": "Le frottement est maintenant modélisé par $f = k\\,v^2$. L'unité du coefficient $k$ est :",
+          "options": [
+            {
+              "label": "$\\mathrm{kg\\,m^{-1}}$",
+              "correct": true,
+              "why": "$k = f/v^2 = \\mathrm{kg\\,m\\,s^{-2}}/(\\mathrm{m^2\\,s^{-2}}) = \\mathrm{kg\\,m^{-1}}$."
+            },
+            {
+              "label": "$\\mathrm{kg\\,s^{-1}}$",
+              "why": "C'est l'unité de $k$ dans le modèle **linéaire** $f = kv$. Avec $v^2$ au dénominateur, les secondes se simplifient complètement."
+            },
+            {
+              "label": "$\\mathrm{kg\\,m^{-2}}$",
+              "why": "Tu as éliminé deux mètres au dénominateur en oubliant le $\\mathrm{m}$ du newton : $\\mathrm{m}/\\mathrm{m^2} = \\mathrm{m^{-1}}$, pas $\\mathrm{m^{-2}}$."
+            },
+            {
+              "label": "$\\mathrm{kg\\,m\\,s^{-2}}$",
+              "why": "C'est l'unité d'une force (le newton). Tu as oublié de diviser par $v^2$."
+            }
+          ],
+          "hint": "Même méthode : $k = f/v^2$, et $v^2$ s'exprime en $\\mathrm{m^2\\,s^{-2}}$.",
+          "solution": "$k = \\dfrac{f}{v^2}$, donc $[k] = \\dfrac{\\mathrm{kg\\,m\\,s^{-2}}}{\\mathrm{m^2\\,s^{-2}}} = \\mathrm{kg\\,m^{-1}}$.\nContrôle : $k v^2$ donne $\\mathrm{kg\\,m^{-1}}\\times\\mathrm{m^2\\,s^{-2}} = \\mathrm{kg\\,m\\,s^{-2}} = \\mathrm{N}$. On retrouve bien une force.",
+          "methode": "Les deux coefficients de frottement ne se comparent jamais directement : ils n'ont même pas la même unité.",
+          "points": 1,
+          "ref": "pc-chute-verticale-l-equation-aux-dimensions-q2"
+        },
+        {
+          "notion": "L'équation aux dimensions",
+          "difficulty": 2,
+          "statement": "L'équation différentielle d'une chute verticale est mise sous la forme $\\dfrac{dv}{dt} = A - B\\,v$. Les unités de $A$ et de $B$ sont :",
+          "options": [
+            {
+              "label": "$A$ en $\\mathrm{m\\,s^{-2}}$ et $B$ en $\\mathrm{s^{-1}}$",
+              "correct": true,
+              "why": "Les trois termes de l'équation ont l'unité de $dv/dt$, soit $\\mathrm{m\\,s^{-2}}$. Donc $A$ est en $\\mathrm{m\\,s^{-2}}$, et $B = (\\mathrm{m\\,s^{-2}})/(\\mathrm{m\\,s^{-1}}) = \\mathrm{s^{-1}}$."
+            },
+            {
+              "label": "$A$ en $\\mathrm{m\\,s^{-1}}$ et $B$ en $\\mathrm{s^{-1}}$",
+              "why": "Tu as donné à $A$ l'unité d'une vitesse. Mais $A$ s'ajoute à $dv/dt$, qui est une **accélération**."
+            },
+            {
+              "label": "$A$ en $\\mathrm{m\\,s^{-2}}$ et $B$ en $\\mathrm{s}$",
+              "why": "Tu as pris l'unité de $\\tau = 1/B$. Un coefficient qui multiplie une vitesse pour donner une accélération est en $\\mathrm{s^{-1}}$."
+            },
+            {
+              "label": "$A$ en $\\mathrm{m\\,s^{-2}}$ et $B$ en $\\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as donné la même unité à $A$ et à $B$ : c'est $Bv$, et non $B$, qui doit être une accélération."
+            }
+          ],
+          "hint": "Dans une somme, tous les termes ont la même unité. Commence par celle de $dv/dt$.",
+          "solution": "$dv/dt$ est une accélération, en $\\mathrm{m\\,s^{-2}}$. Dans $\\dfrac{dv}{dt} = A - Bv$, les trois termes ont donc cette unité :\n- $A$ en $\\mathrm{m\\,s^{-2}}$ ;\n- $Bv$ en $\\mathrm{m\\,s^{-2}}$, donc $B$ en $\\dfrac{\\mathrm{m\\,s^{-2}}}{\\mathrm{m\\,s^{-1}}} = \\mathrm{s^{-1}}$.\nContrôle : $v_\\ell = A/B$ est alors en $\\mathrm{m\\,s^{-2}}\\times\\mathrm{s} = \\mathrm{m\\,s^{-1}}$, et $\\tau = 1/B$ en $\\mathrm{s}$. Tout est cohérent.",
+          "methode": "Réflexe d'examen : vérifie l'homogénéité de chaque expression trouvée. Une expression non homogène est forcément fausse.",
+          "points": 1,
+          "ref": "pc-chute-verticale-l-equation-aux-dimensions-q3"
+        },
+        {
+          "notion": "L'équation aux dimensions",
+          "difficulty": 3,
+          "statement": "Aux faibles vitesses, le frottement sur une sphère de rayon $r$ obéit à la loi de Stokes $f = 6\\pi\\eta r v$, où $\\eta$ est la viscosité du fluide. L'unité de $\\eta$ est :",
+          "options": [
+            {
+              "label": "$\\mathrm{kg\\,m^{-1}\\,s^{-1}}$",
+              "correct": true,
+              "why": "$\\eta = \\dfrac{f}{6\\pi r v}$ donc $[\\eta] = \\dfrac{\\mathrm{kg\\,m\\,s^{-2}}}{\\mathrm{m}\\times\\mathrm{m\\,s^{-1}}} = \\mathrm{kg\\,m^{-1}\\,s^{-1}}$, ce qui s'écrit aussi $\\mathrm{Pa\\,s}$."
+            },
+            {
+              "label": "$\\mathrm{kg\\,m\\,s^{-1}}$",
+              "why": "Tu n'as divisé que par $v$ et oublié le rayon $r$ : il faut diviser par $r\\,v$, ce qui retire $\\mathrm{m^2\\,s^{-1}}$ et non $\\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$\\mathrm{kg\\,m^{-2}\\,s^{-1}}$",
+              "why": "Tu as retiré trois mètres au total en oubliant le $\\mathrm{m}$ contenu dans le newton : $\\mathrm{m}/(\\mathrm{m}\\times\\mathrm{m}) = \\mathrm{m^{-1}}$."
+            },
+            {
+              "label": "$\\mathrm{kg\\,m^{-1}\\,s^{-2}}$",
+              "why": "Tu as oublié de diviser par les $\\mathrm{s^{-1}}$ de la vitesse : $\\mathrm{s^{-2}}/\\mathrm{s^{-1}} = \\mathrm{s^{-1}}$."
+            }
+          ],
+          "hint": "Isole $\\eta$. Attention : $6\\pi$ est sans unité, mais $r$ et $v$ en ont toutes les deux.",
+          "solution": "De $f = 6\\pi\\eta r v$ on tire $\\eta = \\dfrac{f}{6\\pi r v}$. Le facteur $6\\pi$ est un nombre pur, donc :\n$$[\\eta] = \\frac{\\mathrm{kg\\,m\\,s^{-2}}}{\\mathrm{m}\\times\\mathrm{m\\,s^{-1}}} = \\mathrm{kg\\,m^{-1}\\,s^{-1}}$$\nContrôle : $\\mathrm{Pa\\,s} = \\mathrm{N\\,m^{-2}\\,s} = \\mathrm{kg\\,m\\,s^{-2}}\\,\\mathrm{m^{-2}}\\,\\mathrm{s} = \\mathrm{kg\\,m^{-1}\\,s^{-1}}$. L'unité usuelle $\\mathrm{Pa\\,s}$ est bien la même.",
+          "methode": "Dans une loi de frottement, identifie d'abord les facteurs **sans unité** ($6\\pi$, $\\tfrac{1}{2}$, $C_x$) : ils ne jouent aucun rôle dans l'équation aux dimensions.",
+          "points": 1,
+          "ref": "pc-chute-verticale-l-equation-aux-dimensions-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les deux régimes",
+        "lesson": "Vitesse limite & régimes",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-les-deux-regimes",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "Les deux régimes",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les deux régimes",
+          "difficulty": 1,
+          "statement": "Une bille est lâchée sans vitesse initiale dans un liquide visqueux. L'évolution de sa vitesse se décrit comme :",
+          "options": [
+            {
+              "label": "un régime transitoire où $v$ croît, puis un régime permanent où $v = v_\\ell$ est constante",
+              "correct": true,
+              "why": "Tant que $v$ est petite, $f$ est faible et la bille accélère ; quand $f$ a grandi au point d'équilibrer $P - F_A$, l'accélération s'annule et $v$ reste égale à $v_\\ell$."
+            },
+            {
+              "label": "un régime permanent où $v = v_\\ell$, puis un régime transitoire où $v$ croît",
+              "why": "Tu as inversé l'ordre. La bille part du repos : elle ne peut pas commencer à la vitesse limite."
+            },
+            {
+              "label": "un régime où $a$ croît, puis un régime où $a$ est constante et non nulle",
+              "why": "L'accélération **décroît** depuis $a_0$ et tend vers zéro : si elle restait non nulle, la vitesse ne cesserait jamais d'augmenter."
+            },
+            {
+              "label": "un régime de chute libre, puis un régime où $v$ décroît vers $v_\\ell$",
+              "why": "La vitesse ne décroît jamais ici : elle croît en restant toujours inférieure à $v_\\ell$, vers laquelle elle tend par valeurs croissantes."
+            }
+          ],
+          "hint": "Pense à l'état de la bille à $t = 0$ : quelle est sa vitesse, et quelle est son accélération ?",
+          "solution": "À $t = 0$ : $v = 0$ donc $f = 0$, et l'accélération est maximale, $a_0 = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right)$.\nEnsuite $v$ croît, donc $f$ croît, donc la résultante $P - F_A - f$ diminue : l'accélération **décroît** alors que la vitesse **croît**. C'est le **régime transitoire**.\nQuand $f$ atteint $P - F_A$, l'accélération s'annule : la vitesse ne varie plus, elle vaut $v_\\ell$. C'est le **régime permanent** (ou asymptotique).\nContrôle : la courbe $v(t)$ est croissante, concave, et admet l'asymptote horizontale $v = v_\\ell$.",
+          "methode": "Deux régimes, deux phrases : transitoire $\\Rightarrow$ $v$ croît et $a$ décroît ; permanent $\\Rightarrow$ $v = v_\\ell$ et $a = 0$.",
+          "points": 1,
+          "ref": "pc-chute-verticale-les-deux-regimes-q1"
+        },
+        {
+          "notion": "Les deux régimes",
+          "difficulty": 3,
+          "statement": "Au cours de cette chute dans le liquide, la vitesse de la bille est maximale :",
+          "options": [
+            {
+              "label": "en régime permanent, où elle est constante et égale à $v_\\ell$",
+              "correct": true,
+              "why": "La vitesse croît pendant tout le régime transitoire et plafonne à $v_\\ell$ : son maximum est donc la valeur limite, atteinte (pratiquement) en régime permanent."
+            },
+            {
+              "label": "juste après le lâcher, car c'est là que l'accélération est maximale",
+              "why": "Tu confonds vitesse maximale et accélération maximale. À $t = 0^+$ l'accélération est maximale, mais la vitesse y est presque nulle : c'est l'erreur la plus fréquente sur ce chapitre."
+            },
+            {
+              "label": "à l'instant $t = \\tau$, puis elle diminue ensuite",
+              "why": "À $t = \\tau$ la vitesse ne vaut que $63\\ \\%$ de $v_\\ell$ et continue de croître. Rien ne la fait diminuer : la résultante des forces reste dirigée vers le bas."
+            },
+            {
+              "label": "à mi-parcours, puis elle diminue jusqu'à $v_\\ell$",
+              "why": "Cela supposerait que $v$ dépasse $v_\\ell$. Or dès que $v$ approche $v_\\ell$, l'accélération tend vers zéro : $v$ ne peut pas franchir $v_\\ell$."
+            }
+          ],
+          "hint": "Regarde le signe de $\\dfrac{dv}{dt} = A - Bv$ tant que $v < v_\\ell$ : la vitesse peut-elle un jour décroître ?",
+          "solution": "L'équation $\\dfrac{dv}{dt} = A - Bv$ avec $v_\\ell = A/B$ se réécrit $\\dfrac{dv}{dt} = B\\,(v_\\ell - v)$.\nTant que $v < v_\\ell$, le second membre est **strictement positif** : la vitesse croît toujours, sans jamais dépasser $v_\\ell$. Elle est donc maximale, et constante, en régime permanent.\nContrôle : si l'on lâchait la bille avec $v_0 > v_\\ell$, le même calcul donnerait $dv/dt < 0$ et la vitesse **décroîtrait** vers $v_\\ell$. Dans les deux cas $v_\\ell$ est la valeur atteinte au bout d'un temps long.",
+          "methode": "Écris $\\dfrac{dv}{dt} = B\\,(v_\\ell - v)$ : le signe de l'accélération se lit alors d'un coup d'œil, sans résoudre l'équation.",
+          "points": 1,
+          "ref": "pc-chute-verticale-les-deux-regimes-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La vitesse limite",
+        "lesson": "Vitesse limite & régimes",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-la-vitesse-limite",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "La vitesse limite",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La vitesse limite",
+          "difficulty": 1,
+          "statement": "Pour une bille lâchée dans un fluide, l'équation différentielle s'écrit $\\dfrac{dv}{dt} = 8{,}4 - 2{,}1\\,v$ (toutes les grandeurs en unités SI). La vitesse limite vaut :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "En régime permanent $\\dfrac{dv}{dt} = 0$, donc $8{,}4 - 2{,}1\\,v_\\ell = 0$ et $v_\\ell = 8{,}4/2{,}1 = 4{,}0\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}25\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $2{,}1/8{,}4 = 0{,}25$ : le rapport est inversé. C'est $A/B$ qu'il faut former, pas $B/A$."
+            },
+            {
+              "label": "$6{,}3\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as soustrait les deux coefficients : $8{,}4 - 2{,}1 = 6{,}3$. Mais $2{,}1$ multiplie $v$, on ne peut pas le retrancher à $8{,}4$."
+            },
+            {
+              "label": "$17{,}6\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as multiplié : $8{,}4\\times2{,}1 = 17{,}6$. En annulant $dv/dt$ on obtient une division, pas un produit."
+            }
+          ],
+          "hint": "Que vaut $\\dfrac{dv}{dt}$ quand la vitesse ne varie plus ?",
+          "solution": "En régime permanent, la vitesse est constante donc $\\dfrac{dv}{dt} = 0$. L'équation devient :\n$$0 = 8{,}4 - 2{,}1\\,v_\\ell \\quad\\Longrightarrow\\quad v_\\ell = \\frac{8{,}4}{2{,}1} = 4{,}0\\ \\mathrm{m\\,s^{-1}}$$\nContrôle d'homogénéité : $A$ est en $\\mathrm{m\\,s^{-2}}$ et $B$ en $\\mathrm{s^{-1}}$, donc $A/B$ est bien en $\\mathrm{m\\,s^{-1}}$.",
+          "methode": "Ne mémorise aucune formule de $v_\\ell$ : annule $\\dfrac{dv}{dt}$ dans **ton** équation différentielle, la vitesse limite en sort toujours.",
+          "points": 1,
+          "ref": "pc-chute-verticale-la-vitesse-limite-q1"
+        },
+        {
+          "notion": "La vitesse limite",
+          "difficulty": 3,
+          "statement": "Pour une autre bille, le frottement suit le modèle quadratique et l'équation est $\\dfrac{dv}{dt} = 9{,}0 - 0{,}25\\,v^2$ (unités SI). La vitesse limite vaut :",
+          "options": [
+            {
+              "label": "$6{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "On annule $dv/dt$ : $0{,}25\\,v_\\ell^2 = 9{,}0$, donc $v_\\ell^2 = 36$ et $v_\\ell = 6{,}0\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$36\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $9{,}0/0{,}25 = 36$ mais oublié d'extraire la racine carrée : $36$ est la valeur de $v_\\ell^2$, pas de $v_\\ell$."
+            },
+            {
+              "label": "$1{,}5\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $\\sqrt{9{,}0\\times0{,}25} = 1{,}5$ : tu as multiplié au lieu de diviser avant de prendre la racine."
+            },
+            {
+              "label": "$0{,}17\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $\\sqrt{0{,}25/9{,}0} = 0{,}17$ : le rapport est inversé sous la racine."
+            }
+          ],
+          "hint": "La méthode est la même qu'en modèle linéaire — mais ici l'inconnue apparaît au carré.",
+          "solution": "En régime permanent $\\dfrac{dv}{dt} = 0$ :\n$$0 = 9{,}0 - 0{,}25\\,v_\\ell^2 \\quad\\Longrightarrow\\quad v_\\ell^2 = \\frac{9{,}0}{0{,}25} = 36 \\quad\\Longrightarrow\\quad v_\\ell = \\sqrt{36} = 6{,}0\\ \\mathrm{m\\,s^{-1}}$$\n(on garde la racine positive, la bille descend dans le sens de l'axe).\nContrôle : avec $v = 6{,}0$, le terme de frottement vaut $0{,}25\\times36 = 9{,}0$, exactement le terme constant. L'accélération est bien nulle.",
+          "methode": "Modèle linéaire $\\Rightarrow v_\\ell = A/B$ ; modèle quadratique $\\Rightarrow v_\\ell = \\sqrt{A/B}$. Dans les deux cas, pars de $\\dfrac{dv}{dt} = 0$.",
+          "points": 1,
+          "ref": "pc-chute-verticale-la-vitesse-limite-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le temps caractéristique",
+        "lesson": "Vitesse limite & régimes",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-le-temps-caracteristique",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "Le temps caractéristique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le temps caractéristique",
+          "difficulty": 1,
+          "statement": "Une bille de masse $m = 8{,}0\\ \\mathrm{g}$ tombe dans un fluide où le frottement vaut $f = k v$ avec $k = 0{,}040\\ \\mathrm{kg\\,s^{-1}}$. Le temps caractéristique $\\tau = \\dfrac{m}{k}$ vaut :",
+          "options": [
+            {
+              "label": "$0{,}20\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$\\tau = \\dfrac{8{,}0\\times10^{-3}}{0{,}040} = 0{,}20\\ \\mathrm{s}$, après conversion de la masse en kilogrammes."
+            },
+            {
+              "label": "$200\\ \\mathrm{s}$",
+              "why": "Tu as laissé la masse en grammes : $8{,}0/0{,}040 = 200$. Il faut $m = 8{,}0\\times10^{-3}\\ \\mathrm{kg}$, ce qui divise le résultat par $1000$."
+            },
+            {
+              "label": "$5{,}0\\ \\mathrm{s}$",
+              "why": "Tu as calculé $k/m = 0{,}040/(8{,}0\\times10^{-3}) = 5{,}0$ : c'est $1/\\tau$, en $\\mathrm{s^{-1}}$, pas $\\tau$."
+            },
+            {
+              "label": "$3{,}2\\times10^{-4}\\ \\mathrm{s}$",
+              "why": "Tu as multiplié : $8{,}0\\times10^{-3}\\times0{,}040 = 3{,}2\\times10^{-4}$. Or $\\tau = m/k$ est un quotient."
+            }
+          ],
+          "hint": "Convertis d'abord la masse en kilogrammes, puis divise.",
+          "solution": "$m = 8{,}0\\ \\mathrm{g} = 8{,}0\\times10^{-3}\\ \\mathrm{kg}$.\n$$\\tau = \\frac{m}{k} = \\frac{8{,}0\\times10^{-3}}{0{,}040} = 0{,}20\\ \\mathrm{s}$$\nContrôle d'unité : $\\dfrac{\\mathrm{kg}}{\\mathrm{kg\\,s^{-1}}} = \\mathrm{s}$. C'est bien un temps.",
+          "methode": "Toujours convertir en unités SI **avant** de calculer : grammes en kilogrammes, millimètres en mètres, millisecondes en secondes.",
+          "points": 1,
+          "ref": "pc-chute-verticale-le-temps-caracteristique-q1"
+        },
+        {
+          "notion": "Le temps caractéristique",
+          "difficulty": 2,
+          "statement": "Sur la courbe $v(t)$ d'une chute dans un fluide (modèle linéaire, départ au repos), la tangente à l'origine coupe l'asymptote horizontale $v = v_\\ell$ à l'instant :",
+          "options": [
+            {
+              "label": "$t = \\tau$",
+              "correct": true,
+              "why": "La tangente à l'origine a pour équation $v = a_0\\,t$ avec $a_0 = v_\\ell/\\tau$ ; elle atteint $v_\\ell$ quand $t = v_\\ell/a_0 = \\tau$."
+            },
+            {
+              "label": "$t = 5\\,\\tau$",
+              "why": "$5\\tau$ est la durée au bout de laquelle la **courbe** elle-même est pratiquement confondue avec l'asymptote, pas l'abscisse du point d'intersection de la tangente."
+            },
+            {
+              "label": "$t = \\tau/2$",
+              "why": "La tangente coupe l'asymptote exactement en $\\tau$ : à $\\tau/2$ elle n'est encore qu'à la moitié de $v_\\ell$."
+            },
+            {
+              "label": "$t = 2\\,\\tau$",
+              "why": "À $t = 2\\tau$ la tangente serait déjà à $2\\,v_\\ell$ : elle a donc coupé l'asymptote avant, en $t = \\tau$."
+            }
+          ],
+          "hint": "Écris l'équation de la tangente à l'origine, $v = a_0 t$, et cherche quand elle vaut $v_\\ell$.",
+          "solution": "La tangente à l'origine a pour pente l'accélération initiale $a_0$, et pour équation $v = a_0\\,t$.\nOr la solution analytique est $v(t) = v_\\ell\\left(1 - e^{-t/\\tau}\\right)$, dont la dérivée en $0$ vaut $\\dfrac{v_\\ell}{\\tau}$ : donc $a_0 = \\dfrac{v_\\ell}{\\tau}$.\nLa tangente atteint $v_\\ell$ pour $a_0\\,t = v_\\ell$, soit $t = \\dfrac{v_\\ell}{a_0} = \\tau$.\nContrôle : cette construction donne $\\tau = v_\\ell/a_0$, exactement la relation utilisée pour mesurer $\\tau$ sur un enregistrement.",
+          "methode": "Sur un graphe $v(t)$ : trace l'asymptote $v = v_\\ell$ et la tangente à l'origine. Leur intersection se lit en abscisse — c'est $\\tau$.",
+          "points": 1,
+          "ref": "pc-chute-verticale-le-temps-caracteristique-q2"
+        },
+        {
+          "notion": "Le temps caractéristique",
+          "difficulty": 2,
+          "statement": "Un enregistrement vidéo d'une chute dans l'huile donne une vitesse limite $v_\\ell = 1{,}2\\ \\mathrm{m\\,s^{-1}}$ et une tangente à l'origine de pente $8{,}0\\ \\mathrm{m\\,s^{-2}}$. Le temps caractéristique vaut :",
+          "options": [
+            {
+              "label": "$0{,}15\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$\\tau = \\dfrac{v_\\ell}{a_0} = \\dfrac{1{,}2}{8{,}0} = 0{,}15\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$0{,}75\\ \\mathrm{s}$",
+              "why": "Tu as donné $5\\tau = 5\\times0{,}15 = 0{,}75\\ \\mathrm{s}$ : c'est la durée du régime transitoire, pas $\\tau$. Ne confonds pas les deux."
+            },
+            {
+              "label": "$6{,}7\\ \\mathrm{s}$",
+              "why": "Tu as calculé $8{,}0/1{,}2 = 6{,}7$ : le rapport est inversé. $\\tau = v_\\ell/a_0$, une vitesse divisée par une accélération."
+            },
+            {
+              "label": "$9{,}6\\ \\mathrm{s}$",
+              "why": "Tu as multiplié : $1{,}2\\times8{,}0 = 9{,}6$. Le produit d'une vitesse par une accélération n'est pas un temps."
+            }
+          ],
+          "hint": "La pente de la tangente à l'origine, c'est $a_0$. Comment $\\tau$, $v_\\ell$ et $a_0$ sont-ils liés ?",
+          "solution": "La tangente à l'origine a pour pente $a_0 = 8{,}0\\ \\mathrm{m\\,s^{-2}}$ et coupe l'asymptote $v = v_\\ell$ à $t = \\tau$. Donc :\n$$\\tau = \\frac{v_\\ell}{a_0} = \\frac{1{,}2}{8{,}0} = 0{,}15\\ \\mathrm{s}$$\nContrôle d'homogénéité : $\\dfrac{\\mathrm{m\\,s^{-1}}}{\\mathrm{m\\,s^{-2}}} = \\mathrm{s}$.\nLe régime permanent est donc atteint en pratique au bout de $5\\tau \\approx 0{,}75\\ \\mathrm{s}$.",
+          "methode": "Sur une courbe expérimentale, $v_\\ell$ se lit sur l'asymptote et $a_0$ sur la tangente à l'origine : $\\tau = v_\\ell/a_0$ s'en déduit sans aucune donnée sur la bille.",
+          "points": 1,
+          "ref": "pc-chute-verticale-le-temps-caracteristique-q3"
+        },
+        {
+          "notion": "Le temps caractéristique",
+          "difficulty": 3,
+          "statement": "La même chute a $v_\\ell = 1{,}2\\ \\mathrm{m\\,s^{-1}}$ et $\\tau = 0{,}15\\ \\mathrm{s}$, avec la solution $v(t) = v_\\ell\\left(1 - e^{-t/\\tau}\\right)$. La vitesse à l'instant $t = \\tau$ vaut (on prend $e^{-1} = 0{,}368$) :",
+          "options": [
+            {
+              "label": "$0{,}76\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v(\\tau) = 1{,}2\\times(1 - 0{,}368) = 1{,}2\\times0{,}632 = 0{,}76\\ \\mathrm{m\\,s^{-1}}$, soit $63\\ \\%$ de $v_\\ell$."
+            },
+            {
+              "label": "$1{,}20\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as supposé que la vitesse limite est atteinte à $t = \\tau$. Elle ne l'est qu'asymptotiquement : à $\\tau$ il manque encore $37\\ \\%$."
+            },
+            {
+              "label": "$0{,}44\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $1{,}2\\times0{,}368$ : tu as utilisé $e^{-1}$ au lieu de $1 - e^{-1}$, donc tu as pris le complément de la bonne valeur."
+            },
+            {
+              "label": "$0{,}60\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris la moitié de $v_\\ell$. C'est $\\tau\\ln 2 \\approx 0{,}69\\,\\tau$ qui correspond à $v_\\ell/2$, pas $\\tau$."
+            }
+          ],
+          "hint": "Remplace $t$ par $\\tau$ dans la solution : l'exponentielle devient très simple.",
+          "solution": "À $t = \\tau$ : $v(\\tau) = v_\\ell\\left(1 - e^{-1}\\right) = 1{,}2\\times(1 - 0{,}368) = 1{,}2\\times0{,}632 = 0{,}758 \\approx 0{,}76\\ \\mathrm{m\\,s^{-1}}$.\nAutrement dit, au bout d'un temps caractéristique la bille a atteint $63\\ \\%$ de sa vitesse limite ; il faut environ $5\\tau = 0{,}75\\ \\mathrm{s}$ pour en être à $99\\ \\%$.\nContrôle : $\\tau$ ne dit rien de la durée totale de la chute, qui dépend de la hauteur de liquide traversée. Avec $v_\\ell = 1{,}2\\ \\mathrm{m\\,s^{-1}}$, une colonne de $2{,}0\\ \\mathrm{m}$ est franchie en environ $1{,}7\\ \\mathrm{s}$, soit plus de $11\\,\\tau$.",
+          "methode": "Retiens les deux repères : $63\\ \\%$ de $v_\\ell$ à $t = \\tau$, et $99\\ \\%$ à $t = 5\\tau$. Ils permettent de situer n'importe quel point de la courbe.",
+          "points": 1,
+          "ref": "pc-chute-verticale-le-temps-caracteristique-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La chute libre, cas limite",
+        "lesson": "Vitesse limite & régimes",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-la-chute-libre-cas-limite",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "La chute libre, cas limite",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La chute libre, cas limite",
+          "difficulty": 1,
+          "statement": "Par définition, un corps est en **chute libre** lorsque :",
+          "options": [
+            {
+              "label": "il n'est soumis qu'à son poids",
+              "correct": true,
+              "why": "C'est la définition : toute autre force (poussée, frottement) est soit absente, soit négligée devant le poids."
+            },
+            {
+              "label": "il n'est soumis qu'à son poids et à la poussée d'Archimède",
+              "why": "Non : dès qu'on tient compte de la poussée, l'accélération vaut $g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right)$ et non $g$. Ce n'est plus une chute libre."
+            },
+            {
+              "label": "sa vitesse reste constante au cours du mouvement",
+              "why": "C'est la description du régime permanent dans un fluide. En chute libre l'accélération vaut $g$, donc la vitesse augmente sans cesse."
+            },
+            {
+              "label": "il est lâché sans vitesse initiale",
+              "why": "La vitesse initiale ne change rien à la définition : une balle lancée vers le haut dans le vide est aussi en chute libre."
+            }
+          ],
+          "hint": "La définition porte sur les **forces** subies, pas sur la façon dont le mouvement commence.",
+          "solution": "Un corps est en chute libre lorsque le **poids est la seule force** qui s'exerce sur lui. La deuxième loi de Newton donne alors $m\\vec a = m\\vec g$, soit $\\vec a = \\vec g$ : l'accélération est indépendante de la masse.\nDans l'air, on peut souvent considérer la chute comme libre **au début** du mouvement, car $v$ est petite donc $f$ est faible, et la poussée de l'air est négligeable devant le poids pour un solide dense.\nContrôle : si la chute était libre pendant toute la descente, il n'y aurait pas de vitesse limite — et une goutte de pluie arriverait au sol à plusieurs centaines de $\\mathrm{m\\,s^{-1}}$.",
+          "methode": "« Chute libre » est une affirmation sur le **bilan des forces**, jamais sur les conditions initiales.",
+          "points": 1,
+          "ref": "pc-chute-verticale-la-chute-libre-cas-limite-q1"
+        },
+        {
+          "notion": "La chute libre, cas limite",
+          "difficulty": 2,
+          "statement": "Une bille d'acier ($\\rho_s = 7800\\ \\mathrm{kg\\,m^{-3}}$) tombe dans l'air ($\\rho_{air} = 1{,}3\\ \\mathrm{kg\\,m^{-3}}$). Le rapport $\\dfrac{F_A}{P}$ entre la poussée d'Archimède de l'air et le poids vaut :",
+          "options": [
+            {
+              "label": "$1{,}7\\times10^{-4}$",
+              "correct": true,
+              "why": "$\\dfrac{F_A}{P} = \\dfrac{\\rho_{air} V g}{\\rho_s V g} = \\dfrac{\\rho_{air}}{\\rho_s} = \\dfrac{1{,}3}{7800} = 1{,}7\\times10^{-4}$ : la poussée de l'air est négligeable."
+            },
+            {
+              "label": "$6{,}0\\times10^{3}$",
+              "why": "Tu as calculé $7800/1{,}3 = 6{,}0\\times10^{3}$ : c'est $P/F_A$, le rapport inverse. Le poids est $6000$ fois plus grand que la poussée, pas l'inverse."
+            },
+            {
+              "label": "$1{,}3\\times10^{-1}$",
+              "why": "Tu as utilisé la masse volumique de l'eau ($1000$) au lieu de celle de l'air : $1000/7800 = 0{,}13$. Dans l'eau, en effet, la poussée n'est plus négligeable."
+            },
+            {
+              "label": "$1{,}7\\times10^{-2}$",
+              "why": "Tu as multiplié par $100$ : $1{,}7\\times10^{-2}$ est la valeur du rapport **exprimée en pourcentage**, alors que la question demande le rapport lui-même."
+            }
+          ],
+          "hint": "Le volume est le même dans les deux expressions : que reste-t-il après simplification ?",
+          "solution": "$P = \\rho_s V g$ et $F_A = \\rho_{air} V g$, donc :\n$$\\frac{F_A}{P} = \\frac{\\rho_{air}}{\\rho_s} = \\frac{1{,}3}{7800} = 1{,}7\\times10^{-4}$$\nLa poussée de l'air représente $0{,}017\\ \\%$ du poids : on la néglige systématiquement pour un solide dense dans l'air.\nContrôle : dans l'eau le même calcul donnerait $1000/7800 = 0{,}13$, soit $13\\ \\%$ — là, négliger la poussée serait une faute.",
+          "methode": "Avant de négliger la poussée, calcule $\\rho_f/\\rho_s$ : négligeable dans un gaz, jamais dans un liquide.",
+          "points": 1,
+          "ref": "pc-chute-verticale-la-chute-libre-cas-limite-q2"
+        },
+        {
+          "notion": "La chute libre, cas limite",
+          "difficulty": 2,
+          "statement": "Un objet est lâché sans vitesse initiale et tombe en chute libre d'une hauteur $h = 20\\ \\mathrm{m}$ ($g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$). Sa vitesse en arrivant en bas vaut :",
+          "options": [
+            {
+              "label": "$19{,}8\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "En chute libre sans vitesse initiale, $v = \\sqrt{2gh} = \\sqrt{2\\times9{,}8\\times20} = \\sqrt{392} = 19{,}8\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$14{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $\\sqrt{gh} = \\sqrt{196} = 14{,}0$ : le facteur $2$ a été oublié sous la racine."
+            },
+            {
+              "label": "$392\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as donné $2gh = 392$, qui est la valeur de $v^2$ (en $\\mathrm{m^2\\,s^{-2}}$) : il reste à extraire la racine carrée."
+            },
+            {
+              "label": "$196\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as donné $gh = 196$ : ni le facteur $2$, ni la racine carrée n'ont été appliqués."
+            }
+          ],
+          "hint": "Utilise la relation entre vitesse et hauteur pour un mouvement uniformément accéléré partant du repos.",
+          "solution": "En chute libre, $a = g$ constante. Pour un départ au repos, $v^2 = 2\\,g\\,h$, donc :\n$$v = \\sqrt{2gh} = \\sqrt{2\\times9{,}8\\times20} = \\sqrt{392} = 19{,}8\\ \\mathrm{m\\,s^{-1}}$$\nContrôle par la durée : $h = \\tfrac{1}{2}gt^2$ donne $t = \\sqrt{2h/g} = \\sqrt{40/9{,}8} = 2{,}02\\ \\mathrm{s}$, et $v = gt = 9{,}8\\times2{,}02 = 19{,}8\\ \\mathrm{m\\,s^{-1}}$. Les deux voies concordent.\nRemarque : dans l'air, le frottement ferait en réalité plafonner cette vitesse ; le modèle de la chute libre surestime donc $v$.",
+          "methode": "Chute libre depuis le repos : $v = gt$, $h = \\tfrac{1}{2}gt^2$, $v^2 = 2gh$. Choisis celle qui relie directement les deux grandeurs de l'énoncé.",
+          "points": 1,
+          "ref": "pc-chute-verticale-la-chute-libre-cas-limite-q3"
+        },
+        {
+          "notion": "La chute libre, cas limite",
+          "difficulty": 3,
+          "statement": "Une bille de verre ($\\rho_s = 2500\\ \\mathrm{kg\\,m^{-3}}$) est lâchée sans vitesse dans l'eau ($\\rho_f = 1000\\ \\mathrm{kg\\,m^{-3}}$), avec $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. Un élève affirme que l'accélération initiale vaut $9{,}8\\ \\mathrm{m\\,s^{-2}}$. En réalité elle vaut :",
+          "options": [
+            {
+              "label": "$5{,}9\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "$a_0 = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right) = 9{,}8\\times\\left(1 - \\dfrac{1000}{2500}\\right) = 9{,}8\\times0{,}60 = 5{,}9\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$9{,}8\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "C'est précisément l'erreur de l'élève : il a négligé la poussée d'Archimède, qui vaut ici $40\\ \\%$ du poids. Dans un liquide, on ne la néglige jamais."
+            },
+            {
+              "label": "$3{,}9\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as calculé $g\\,\\dfrac{\\rho_f}{\\rho_s} = 9{,}8\\times0{,}40 = 3{,}9$ : tu as oublié le « $1 -$ », donc tu as obtenu l'accélération due à la seule poussée."
+            },
+            {
+              "label": "$16{,}3\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as divisé : $9{,}8/0{,}60 = 16{,}3$. Une accélération initiale supérieure à $g$ est impossible ici, puisque la poussée **freine** la chute."
+            }
+          ],
+          "hint": "À $t = 0$ la vitesse est nulle, donc le frottement est nul. Quelles forces restent alors ?",
+          "solution": "À $t = 0$ : $v = 0$ donc $f = 0$. Il ne reste que le poids et la poussée :\n$$m\\,a_0 = mg - \\rho_f V g \\quad\\text{avec}\\quad m = \\rho_s V$$\n$$a_0 = g\\left(1 - \\frac{\\rho_f}{\\rho_s}\\right) = 9{,}8\\times\\left(1 - \\frac{1000}{2500}\\right) = 9{,}8\\times0{,}60 = 5{,}88 \\approx 5{,}9\\ \\mathrm{m\\,s^{-2}}$$\nL'élève se trompe de $40\\ \\%$ : la chute libre n'est **pas** un bon modèle dans un liquide, même au tout début du mouvement.\nContrôle : si le corps avait la même masse volumique que l'eau, on trouverait $a_0 = 0$ — il resterait en équilibre, ce qui est bien le comportement attendu.",
+          "methode": "Deux cas à distinguer sans hésiter : dans un **gaz**, $a_0 \\approx g$ ; dans un **liquide**, $a_0 = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right)$.",
+          "points": 1,
+          "ref": "pc-chute-verticale-la-chute-libre-cas-limite-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'analogie avec les circuits",
+        "lesson": "Approfondissement — Chute verticale dans un fluide",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-l-analogie-avec-les-circuits",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "L'analogie avec les circuits",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'analogie avec les circuits",
+          "difficulty": 3,
+          "statement": "L'équation de la chute $\\dfrac{dv}{dt} + \\dfrac{v}{\\tau} = \\dfrac{v_\\ell}{\\tau}$ (avec $\\tau = m/k$) a la même forme que celle de la charge d'un condensateur $\\dfrac{du_C}{dt} + \\dfrac{u_C}{RC} = \\dfrac{E}{RC}$. Dans cette analogie :",
+          "options": [
+            {
+              "label": "$v$ correspond à $u_C$, $v_\\ell$ à $E$ et $m/k$ à $RC$",
+              "correct": true,
+              "why": "Les deux équations sont identiques terme à terme : la grandeur qui varie ($v \\leftrightarrow u_C$), sa valeur finale ($v_\\ell \\leftrightarrow E$) et le temps caractéristique ($m/k \\leftrightarrow RC$)."
+            },
+            {
+              "label": "$v$ correspond à $i$, $v_\\ell$ à $E/R$ et $m/k$ à $RC$",
+              "why": "L'intensité dans un circuit RC **décroît** de $E/R$ vers $0$ pendant la charge, alors que $v$ croît de $0$ vers $v_\\ell$. Les deux évolutions ne se correspondent pas."
+            },
+            {
+              "label": "$v$ correspond à $u_C$, $v_\\ell$ à $E$ et $m/k$ à $R/C$",
+              "why": "$R/C$ n'est pas un temps : seul le produit $RC$ est une durée. L'analogie doit associer un temps à un temps."
+            },
+            {
+              "label": "$v$ correspond à $u_C$, $v_\\ell$ à $E/R$ et $k/m$ à $RC$",
+              "why": "Deux erreurs : $E/R$ est une intensité, pas la valeur finale de $u_C$ ; et $k/m = 1/\\tau$ est l'inverse d'un temps, à comparer à $1/(RC)$."
+            }
+          ],
+          "hint": "Mets les deux équations côte à côte et identifie les termes un à un : la grandeur dérivée, son coefficient, le second membre.",
+          "solution": "Réécrivons les deux équations avec les mêmes places :\n\n| Mécanique | Électricité |\n| --- | --- |\n| $v$ | $u_C$ |\n| $v_\\ell = \\dfrac{(\\rho_s - \\rho_f)Vg}{k}$ | $E$ |\n| $\\tau = \\dfrac{m}{k}$ | $\\tau = RC$ |\n\nLa solution est donc la même dans les deux cas : $v(t) = v_\\ell\\left(1 - e^{-t/\\tau}\\right)$ et $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$.\nContrôle : à $t = \\tau$, les deux grandeurs valent $63\\ \\%$ de leur valeur finale, et le régime est établi à $5\\tau$ dans les deux cas.",
+          "methode": "Dès que tu reconnais la forme $\\dfrac{dy}{dt} + \\dfrac{y}{\\tau} = \\dfrac{y_\\infty}{\\tau}$, tu connais déjà la solution : $y = y_\\infty\\left(1 - e^{-t/\\tau}\\right)$ si $y(0) = 0$.",
+          "points": 1,
+          "ref": "pc-chute-verticale-l-analogie-avec-les-circuits-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Résolution analytique et méthode d'Euler",
+        "lesson": "Approfondissement — Chute verticale dans un fluide",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-resolution-analytique-et-methode-d-euler",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "Résolution analytique et méthode d'Euler",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Résolution analytique et méthode d'Euler",
+          "difficulty": 3,
+          "statement": "On résout $\\dfrac{dv}{dt} = 8{,}0 - 2{,}0\\,v$ (unités SI) par la méthode d'Euler, avec $v(0) = 0$ et un pas $\\Delta t = 0{,}10\\ \\mathrm{s}$, selon $v_{n+1} = v_n + \\left(\\dfrac{dv}{dt}\\right)_n \\Delta t$. La vitesse calculée à $t = 0{,}30\\ \\mathrm{s}$ vaut :",
+          "options": [
+            {
+              "label": "$1{,}95\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "Trois pas : $v_1 = 0 + 8{,}0\\times0{,}10 = 0{,}80$ ; $v_2 = 0{,}80 + 6{,}40\\times0{,}10 = 1{,}44$ ; $v_3 = 1{,}44 + 5{,}12\\times0{,}10 = 1{,}95\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$1{,}44\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu t'es arrêté après deux pas : $v_2$ correspond à $t = 0{,}20\\ \\mathrm{s}$. Pour $t = 0{,}30\\ \\mathrm{s}$ il faut un troisième pas."
+            },
+            {
+              "label": "$2{,}40\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as gardé l'accélération initiale $8{,}0\\ \\mathrm{m\\,s^{-2}}$ aux trois pas : $3\\times8{,}0\\times0{,}10 = 2{,}40$. Or il faut recalculer $dv/dt$ avec le nouveau $v_n$ à chaque pas."
+            },
+            {
+              "label": "$2{,}91\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Erreur de signe : tu as utilisé $8{,}0 + 2{,}0\\,v_n$ au lieu de $8{,}0 - 2{,}0\\,v_n$, ce qui fait croître l'accélération au lieu de la faire décroître."
+            }
+          ],
+          "hint": "Fais un tableau à trois lignes : $v_n$, puis $\\left(\\dfrac{dv}{dt}\\right)_n = 8{,}0 - 2{,}0\\,v_n$, puis $v_{n+1}$.",
+          "solution": "On applique trois fois $v_{n+1} = v_n + (8{,}0 - 2{,}0\\,v_n)\\,\\Delta t$ avec $\\Delta t = 0{,}10\\ \\mathrm{s}$ :\n\n| $n$ | $t_n$ (s) | $v_n$ ($\\mathrm{m\\,s^{-1}}$) | $(dv/dt)_n$ ($\\mathrm{m\\,s^{-2}}$) |\n| --- | --- | --- | --- |\n| $0$ | $0$ | $0$ | $8{,}00$ |\n| $1$ | $0{,}10$ | $0{,}80$ | $6{,}40$ |\n| $2$ | $0{,}20$ | $1{,}44$ | $5{,}12$ |\n| $3$ | $0{,}30$ | $1{,}95$ | $4{,}10$ |\n\nDonc $v(0{,}30\\ \\mathrm{s}) \\approx 1{,}95\\ \\mathrm{m\\,s^{-1}}$.\nContrôle : ici $\\tau = 1/2{,}0 = 0{,}50\\ \\mathrm{s}$ et $v_\\ell = 8{,}0/2{,}0 = 4{,}0\\ \\mathrm{m\\,s^{-1}}$. La solution exacte donne $v = 4{,}0\\left(1 - e^{-0{,}6}\\right) = 1{,}80\\ \\mathrm{m\\,s^{-1}}$ : la méthode d'Euler surestime légèrement, comme toujours lorsque la courbe est concave, et l'écart diminue si l'on réduit $\\Delta t$.",
+          "methode": "Méthode d'Euler : à chaque pas, **recalcule** l'accélération avec la vitesse du pas courant. Garder la même accélération est l'erreur la plus fréquente.",
+          "points": 1,
+          "ref": "pc-chute-verticale-resolution-analytique-et-methode-d-euler-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le modèle quadratique en pratique",
+        "lesson": "Approfondissement — Chute verticale dans un fluide",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-le-modele-quadratique-en-pratique",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "Le modèle quadratique en pratique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le modèle quadratique en pratique",
+          "difficulty": 3,
+          "statement": "Pour exploiter un enregistrement, on envisage deux modèles de frottement. Le modèle quadratique conduit à $\\dfrac{dv}{dt} = 12 - 0{,}75\\,v^2$ et le modèle linéaire à $\\dfrac{dv}{dt} = 12 - 0{,}75\\,v$ (unités SI). Les vitesses limites prévues sont :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{m\\,s^{-1}}$ (quadratique) et $16\\ \\mathrm{m\\,s^{-1}}$ (linéaire)",
+              "correct": true,
+              "why": "Quadratique : $v_\\ell = \\sqrt{12/0{,}75} = \\sqrt{16} = 4{,}0$. Linéaire : $v_\\ell = 12/0{,}75 = 16$."
+            },
+            {
+              "label": "$16\\ \\mathrm{m\\,s^{-1}}$ (quadratique) et $4{,}0\\ \\mathrm{m\\,s^{-1}}$ (linéaire)",
+              "why": "Tu as attribué chaque résultat au mauvais modèle : c'est le modèle **quadratique** qui fait intervenir une racine carrée, donc qui donne la plus petite valeur ici."
+            },
+            {
+              "label": "$16\\ \\mathrm{m\\,s^{-1}}$ dans les deux cas",
+              "why": "Tu as oublié la racine carrée dans le modèle quadratique : $12/0{,}75 = 16$ est la valeur de $v_\\ell^2$, pas de $v_\\ell$."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{m\\,s^{-1}}$ dans les deux cas",
+              "why": "Tu as appliqué la racine carrée aussi au modèle linéaire. Là, $v_\\ell$ s'obtient par une simple division : $12/0{,}75 = 16$."
+            }
+          ],
+          "hint": "Annule $\\dfrac{dv}{dt}$ dans chaque équation séparément, et regarde si l'inconnue apparaît au carré ou non.",
+          "solution": "**Modèle quadratique** : $0 = 12 - 0{,}75\\,v_\\ell^2$, donc $v_\\ell^2 = 16$ et $v_\\ell = 4{,}0\\ \\mathrm{m\\,s^{-1}}$.\n**Modèle linéaire** : $0 = 12 - 0{,}75\\,v_\\ell$, donc $v_\\ell = 16\\ \\mathrm{m\\,s^{-1}}$.\nLes deux modèles donnent des prévisions très différentes : c'est pourquoi on choisit le modèle en **comparant** la courbe expérimentale $v(t)$ aux deux solutions, puis on garde celui qui reproduit la vitesse limite mesurée.\nContrôle : les deux coefficients $0{,}75$ n'ont pas la même unité ($\\mathrm{m^{-1}}$ dans un cas, $\\mathrm{s^{-1}}$ dans l'autre), donc il est normal que les résultats ne soient pas comparables.",
+          "methode": "Le frottement quadratique freine beaucoup plus dès que $v > 1$ en unités SI : il donne donc une vitesse limite plus faible que le modèle linéaire de même coefficient numérique.",
+          "points": 1,
+          "ref": "pc-chute-verticale-le-modele-quadratique-en-pratique-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Mesures expérimentales",
+        "lesson": "Approfondissement — Chute verticale dans un fluide",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-chute-verticale-mesures-experimentales",
+      "chapter": "pc-chute-verticale",
+      "kind": "qcu",
+      "title": "Mesures expérimentales",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Mesures expérimentales",
+          "difficulty": 3,
+          "statement": "Une chronophotographie d'une bille tombant dans un liquide est prise à intervalles réguliers $\\theta = 40\\ \\mathrm{ms}$. Les positions mesurées sur l'axe vertical descendant sont $z_3 = 10{,}0\\ \\mathrm{cm}$ et $z_5 = 22{,}0\\ \\mathrm{cm}$. La vitesse de la bille à la position $M_4$ vaut :",
+          "options": [
+            {
+              "label": "$1{,}50\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_4 = \\dfrac{z_5 - z_3}{2\\theta} = \\dfrac{0{,}220 - 0{,}100}{2\\times0{,}040} = \\dfrac{0{,}120}{0{,}080} = 1{,}50\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$3{,}00\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé par $\\theta$ au lieu de $2\\theta$ : entre $M_3$ et $M_5$ il s'écoule **deux** intervalles, soit $0{,}080\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$150\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as laissé les positions en centimètres : $12{,}0/0{,}080 = 150$, mais le résultat est alors en $\\mathrm{cm\\,s^{-1}}$, soit $1{,}50\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$4{,}00\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as additionné les positions au lieu de les soustraire : $(0{,}220 + 0{,}100)/0{,}080 = 4{,}00$. La vitesse se calcule sur un **déplacement**."
+            }
+          ],
+          "hint": "La vitesse en un point $M_n$ s'estime avec les positions des points qui l'encadrent, et la durée qui les sépare.",
+          "solution": "La vitesse instantanée en $M_4$ s'approche par la vitesse moyenne entre les deux points voisins $M_3$ et $M_5$ :\n$$v_4 \\approx \\frac{z_5 - z_3}{t_5 - t_3} = \\frac{z_5 - z_3}{2\\,\\theta} = \\frac{0{,}220 - 0{,}100}{2\\times0{,}040} = \\frac{0{,}120}{0{,}080} = 1{,}50\\ \\mathrm{m\\,s^{-1}}$$\nContrôle d'ordre de grandeur : la bille parcourt $12{,}0\\ \\mathrm{cm}$ en $80\\ \\mathrm{ms}$, soit environ $1{,}5\\ \\mathrm{m}$ en $1\\ \\mathrm{s}$. Cohérent.\nRemarque : en répétant ce calcul pour chaque point on construit la courbe $v(t)$, dont on tire $v_\\ell$ (asymptote) et $\\tau$ (tangente à l'origine).",
+          "methode": "Vitesse en $M_n$ sur une chronophotographie : $v_n = \\dfrac{z_{n+1} - z_{n-1}}{2\\theta}$. Le facteur $2$ au dénominateur est l'oubli classique.",
+          "points": 1,
+          "ref": "pc-chute-verticale-mesures-experimentales-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-chute-verticale-probleme-1",
+      "chapter": "pc-chute-verticale",
+      "kind": "probleme",
+      "title": "Une bille d'acier dans une éprouvette d'huile",
+      "difficulty": 3,
+      "context": "On étudie la chute d'une **bille d'acier** lâchée sans vitesse initiale à la surface d'une éprouvette remplie d'huile. On repère sa position sur un axe $Oz$ vertical **orienté vers le bas**, l'origine étant le point de lâcher et $t = 0$ l'instant du lâcher.\n\nLa bille est totalement immergée pendant toute la chute. On admet que la force de frottement fluide est proportionnelle à la vitesse : $f = k\\,v$.\n\n**Données :**\n- volume de la bille : $V = 1{,}13\\times10^{-7}\\ \\mathrm{m^3}$ ;\n- masse volumique de l'acier : $\\rho_s = 7800\\ \\mathrm{kg\\,m^{-3}}$ ;\n- masse volumique de l'huile : $\\rho_f = 920\\ \\mathrm{kg\\,m^{-3}}$ ;\n- coefficient de frottement : $k = 1{,}6\\times10^{-2}\\ \\mathrm{kg\\,s^{-1}}$ ;\n- intensité de la pesanteur : $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$ ;\n- $e^{-1} = 0{,}368$.",
+      "figure": "chute-fluide-forces",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Les trois forces en jeu",
+          "difficulty": 1,
+          "statement": "La masse de la bille vaut :",
+          "options": [
+            {
+              "label": "$8{,}8\\times10^{-4}\\ \\mathrm{kg}$",
+              "correct": true,
+              "why": "$m = \\rho_s\\,V = 7800\\times1{,}13\\times10^{-7} = 8{,}81\\times10^{-4}\\ \\mathrm{kg}$."
+            },
+            {
+              "label": "$1{,}0\\times10^{-4}\\ \\mathrm{kg}$",
+              "why": "Tu as utilisé la masse volumique de l'huile : $920\\times1{,}13\\times10^{-7} = 1{,}0\\times10^{-4}\\ \\mathrm{kg}$. C'est la masse d'huile déplacée, pas celle de la bille."
+            },
+            {
+              "label": "$8{,}8\\times10^{-7}\\ \\mathrm{kg}$",
+              "why": "Tu as pris $\\rho_s = 7{,}8$ (la valeur en $\\mathrm{g\\,cm^{-3}}$) sans la convertir : $7{,}8\\times1{,}13\\times10^{-7} = 8{,}8\\times10^{-7}$, soit $1000$ fois trop petit."
+            },
+            {
+              "label": "$1{,}4\\times10^{-11}\\ \\mathrm{kg}$",
+              "why": "Tu as divisé le volume par la masse volumique : $1{,}13\\times10^{-7}/7800$. La relation est $m = \\rho\\,V$, donc une multiplication."
+            }
+          ],
+          "hint": "Quelle relation lie masse, masse volumique et volume ?",
+          "solution": "$m = \\rho_s\\,V = 7800\\times1{,}13\\times10^{-7} = 8{,}814\\times10^{-4} \\approx 8{,}8\\times10^{-4}\\ \\mathrm{kg}$.\nContrôle : cela fait environ $0{,}88\\ \\mathrm{g}$, un ordre de grandeur raisonnable pour une bille de quelques millimètres de rayon.",
+          "methode": "$m = \\rho V$ : c'est la toute première ligne de ce type d'exercice, car $m$ apparaît ensuite dans $P$, dans $\\tau$ et dans l'équation différentielle.",
+          "points": 1,
+          "part": "Partie A — Bilan des forces et mise en équation",
+          "ref": "pc-chute-verticale-probleme-1-q1"
+        },
+        {
+          "notion": "Les trois forces en jeu",
+          "difficulty": 1,
+          "statement": "La norme de la poussée d'Archimède exercée par l'huile sur la bille vaut :",
+          "options": [
+            {
+              "label": "$1{,}0\\times10^{-3}\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "$F_A = \\rho_f\\,V\\,g = 920\\times1{,}13\\times10^{-7}\\times9{,}8 = 1{,}02\\times10^{-3}\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$8{,}6\\times10^{-3}\\ \\mathrm{N}$",
+              "why": "Tu as utilisé $\\rho_s$ au lieu de $\\rho_f$ : $7800\\times1{,}13\\times10^{-7}\\times9{,}8 = 8{,}6\\times10^{-3}\\ \\mathrm{N}$. C'est le poids de la bille."
+            },
+            {
+              "label": "$7{,}6\\times10^{-3}\\ \\mathrm{N}$",
+              "why": "Tu as calculé $(\\rho_s - \\rho_f)Vg = 7{,}6\\times10^{-3}\\ \\mathrm{N}$ : c'est la résultante du poids et de la poussée, pas la poussée seule."
+            },
+            {
+              "label": "$1{,}0\\times10^{-4}\\ \\mathrm{N}$",
+              "why": "Tu as oublié le facteur $g$ : $\\rho_f V = 1{,}0\\times10^{-4}$ est la masse d'huile déplacée, en kilogrammes."
+            }
+          ],
+          "hint": "La poussée d'Archimède est le poids du volume de fluide déplacé.",
+          "solution": "$F_A = \\rho_f\\,V\\,g = 920\\times1{,}13\\times10^{-7}\\times9{,}8 = 1{,}019\\times10^{-3} \\approx 1{,}0\\times10^{-3}\\ \\mathrm{N}$.\nContrôle : $\\dfrac{F_A}{P} = \\dfrac{\\rho_f}{\\rho_s} = \\dfrac{920}{7800} = 0{,}12$. La poussée vaut $12\\ \\%$ du poids $P = 8{,}6\\times10^{-3}\\ \\mathrm{N}$ : elle n'est pas négligeable.",
+          "methode": "Dans un liquide, calcule toujours $\\rho_f/\\rho_s$ : si le rapport dépasse quelques pourcents, garder la poussée est obligatoire.",
+          "points": 1,
+          "part": "Partie A — Bilan des forces et mise en équation",
+          "ref": "pc-chute-verticale-probleme-1-q2"
+        },
+        {
+          "notion": "L'équation différentielle du mouvement",
+          "difficulty": 2,
+          "statement": "L'équation du mouvement se met sous la forme $\\dfrac{dv}{dt} = A - B\\,v$. La constante $A$ vaut :",
+          "options": [
+            {
+              "label": "$8{,}6\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "$A = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right) = 9{,}8\\times\\left(1 - \\dfrac{920}{7800}\\right) = 9{,}8\\times0{,}882 = 8{,}6\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$9{,}8\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as négligé la poussée d'Archimède, alors qu'elle vaut $12\\ \\%$ du poids : $A$ est strictement inférieur à $g$."
+            },
+            {
+              "label": "$1{,}2\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as calculé $g\\,\\dfrac{\\rho_f}{\\rho_s} = 9{,}8\\times0{,}118 = 1{,}2$ : tu as oublié le « $1 -$ », donc tu n'as gardé que la contribution de la poussée."
+            },
+            {
+              "label": "$11{,}1\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as divisé : $9{,}8/0{,}882 = 11{,}1$. Il faut multiplier $g$ par $\\left(1 - \\rho_f/\\rho_s\\right)$, ce qui donne forcément moins que $g$."
+            }
+          ],
+          "hint": "Divise l'équation de Newton par $m$, puis utilise $m = \\rho_s V$ pour simplifier le terme de poussée.",
+          "solution": "Projection sur $Oz$ descendant : $m\\,\\dfrac{dv}{dt} = mg - \\rho_f V g - k v$. En divisant par $m = \\rho_s V$ :\n$$\\frac{dv}{dt} = g\\left(1 - \\frac{\\rho_f}{\\rho_s}\\right) - \\frac{k}{m}\\,v$$\nDonc $A = 9{,}8\\times\\left(1 - \\dfrac{920}{7800}\\right) = 9{,}8\\times0{,}8821 = 8{,}64 \\approx 8{,}6\\ \\mathrm{m\\,s^{-2}}$.\nContrôle : $A$ est l'accélération à $t = 0$ (où $v = 0$) ; elle doit être inférieure à $g$ puisque la poussée freine la chute.",
+          "methode": "$A$ est toujours l'accélération initiale $a_0$ : c'est le moyen le plus rapide de la calculer ou de la vérifier.",
+          "points": 1,
+          "part": "Partie A — Bilan des forces et mise en équation",
+          "ref": "pc-chute-verticale-probleme-1-q3"
+        },
+        {
+          "notion": "Le temps caractéristique",
+          "difficulty": 2,
+          "statement": "Le temps caractéristique de ce mouvement vaut :",
+          "options": [
+            {
+              "label": "$5{,}5\\times10^{-2}\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$\\tau = \\dfrac{m}{k} = \\dfrac{8{,}81\\times10^{-4}}{1{,}6\\times10^{-2}} = 5{,}5\\times10^{-2}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$18\\ \\mathrm{s}$",
+              "why": "Tu as calculé $k/m = 18$ : c'est $B = 1/\\tau$, exprimé en $\\mathrm{s^{-1}}$, et non $\\tau$."
+            },
+            {
+              "label": "$55\\ \\mathrm{s}$",
+              "why": "Tu as laissé la masse en grammes : $0{,}881/1{,}6\\times10^{-2} = 55$. Avec $m$ en kilogrammes le résultat est $1000$ fois plus petit."
+            },
+            {
+              "label": "$1{,}4\\times10^{-5}\\ \\mathrm{s}$",
+              "why": "Tu as multiplié $m$ par $k$ au lieu de diviser : $8{,}81\\times10^{-4}\\times1{,}6\\times10^{-2} = 1{,}4\\times10^{-5}$."
+            }
+          ],
+          "hint": "Dans $\\dfrac{dv}{dt} = A - Bv$, quel lien y a-t-il entre $B$ et $\\tau$ ?",
+          "solution": "Le coefficient de $v$ est $B = \\dfrac{k}{m} = \\dfrac{1{,}6\\times10^{-2}}{8{,}814\\times10^{-4}} = 18{,}2\\ \\mathrm{s^{-1}}$, et $\\tau = \\dfrac{1}{B} = \\dfrac{m}{k}$ :\n$$\\tau = \\frac{8{,}814\\times10^{-4}}{1{,}6\\times10^{-2}} = 5{,}51\\times10^{-2}\\ \\mathrm{s}$$\nContrôle d'unité : $\\dfrac{\\mathrm{kg}}{\\mathrm{kg\\,s^{-1}}} = \\mathrm{s}$.",
+          "methode": "$\\tau = m/k$ dans le modèle linéaire : il ne dépend ni de $g$, ni de la poussée, ni de la hauteur de liquide.",
+          "points": 1,
+          "part": "Partie A — Bilan des forces et mise en équation",
+          "ref": "pc-chute-verticale-probleme-1-q4"
+        },
+        {
+          "notion": "La vitesse limite",
+          "difficulty": 2,
+          "statement": "La vitesse limite atteinte par la bille vaut :",
+          "options": [
+            {
+              "label": "$0{,}48\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "On annule $dv/dt$ : $v_\\ell = \\dfrac{A}{B} = A\\,\\tau = 8{,}64\\times5{,}51\\times10^{-2} = 0{,}48\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}54\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $P/k = 8{,}64\\times10^{-3}/1{,}6\\times10^{-2} = 0{,}54$ : tu as oublié de retrancher la poussée au poids."
+            },
+            {
+              "label": "$2{,}1\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $B/A = 18{,}2/8{,}64 = 2{,}1$ : le rapport est inversé. La vitesse limite est $A/B$."
+            },
+            {
+              "label": "$157\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as multiplié : $8{,}64\\times18{,}2 = 157$. L'annulation de $dv/dt$ conduit à une division."
+            }
+          ],
+          "hint": "Que vaut $\\dfrac{dv}{dt}$ quand la vitesse ne varie plus ? Repars de $\\dfrac{dv}{dt} = A - Bv$.",
+          "solution": "En régime permanent $\\dfrac{dv}{dt} = 0$, donc $A - B\\,v_\\ell = 0$ et :\n$$v_\\ell = \\frac{A}{B} = A\\,\\tau = 8{,}64\\times5{,}51\\times10^{-2} = 0{,}476 \\approx 0{,}48\\ \\mathrm{m\\,s^{-1}}$$\nContrôle par les forces : en régime permanent $P = F_A + k\\,v_\\ell$, donc\n$v_\\ell = \\dfrac{P - F_A}{k} = \\dfrac{8{,}638\\times10^{-3} - 1{,}019\\times10^{-3}}{1{,}6\\times10^{-2}} = \\dfrac{7{,}62\\times10^{-3}}{1{,}6\\times10^{-2}} = 0{,}476\\ \\mathrm{m\\,s^{-1}}$. Les deux voies concordent.",
+          "methode": "Deux façons d'obtenir $v_\\ell$, à savoir faire toutes les deux : annuler $dv/dt$, ou écrire l'équilibre $P = F_A + f$ en régime permanent.",
+          "points": 1,
+          "part": "Partie B — Régime permanent et résolution numérique",
+          "ref": "pc-chute-verticale-probleme-1-q5"
+        },
+        {
+          "notion": "Les deux régimes",
+          "difficulty": 3,
+          "statement": "On considère que le régime permanent est pratiquement établi au bout de $5\\,\\tau$. Cette durée vaut :",
+          "options": [
+            {
+              "label": "$0{,}28\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$5\\tau = 5\\times5{,}51\\times10^{-2} = 0{,}276 \\approx 0{,}28\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$5{,}5\\times10^{-2}\\ \\mathrm{s}$",
+              "why": "Tu as donné $\\tau$ lui-même : à cet instant la bille n'est encore qu'à $63\\ \\%$ de $v_\\ell$, le régime n'est pas établi."
+            },
+            {
+              "label": "$0{,}11\\ \\mathrm{s}$",
+              "why": "Tu as calculé $2\\tau$ au lieu de $5\\tau$ : à $2\\tau$ la vitesse n'atteint que $86\\ \\%$ de $v_\\ell$."
+            },
+            {
+              "label": "$1{,}1\\times10^{-2}\\ \\mathrm{s}$",
+              "why": "Tu as divisé $\\tau$ par $5$ au lieu de le multiplier : $5{,}51\\times10^{-2}/5 = 1{,}1\\times10^{-2}\\ \\mathrm{s}$."
+            }
+          ],
+          "hint": "Multiplie simplement, mais vérifie ensuite ce que cette durée représente par rapport à la chute entière.",
+          "solution": "$5\\tau = 5\\times5{,}51\\times10^{-2} = 0{,}276 \\approx 0{,}28\\ \\mathrm{s}$.\nInterprétation : $v(5\\tau) = v_\\ell\\left(1 - e^{-5}\\right) = 0{,}993\\,v_\\ell$, soit $99{,}3\\ \\%$ de la vitesse limite.\nContrôle très utile : pendant ces $0{,}28\\ \\mathrm{s}$, la bille parcourt au plus $v_\\ell\\times0{,}28 = 0{,}13\\ \\mathrm{m}$, soit $13\\ \\mathrm{cm}$. Dans une éprouvette de $50\\ \\mathrm{cm}$, la bille passe donc l'essentiel de sa chute en régime permanent — et $\\tau$ n'a rien à voir avec la durée totale de la chute, qui est ici de l'ordre de $0{,}5/0{,}48 \\approx 1\\ \\mathrm{s}$.",
+          "methode": "$\\tau$ fixe la durée du régime **transitoire** ($\\approx 5\\tau$) ; la durée totale de la chute, elle, dépend de la hauteur de liquide et de $v_\\ell$.",
+          "points": 1,
+          "part": "Partie B — Régime permanent et résolution numérique",
+          "ref": "pc-chute-verticale-probleme-1-q6"
+        },
+        {
+          "notion": "Résolution analytique et méthode d'Euler",
+          "difficulty": 3,
+          "statement": "On résout l'équation par la méthode d'Euler avec $v_0 = 0$ et un pas $\\Delta t = 1{,}0\\times10^{-2}\\ \\mathrm{s}$, en prenant $A = 8{,}64\\ \\mathrm{m\\,s^{-2}}$ et $B = 18{,}2\\ \\mathrm{s^{-1}}$. La vitesse calculée à $t = 2{,}0\\times10^{-2}\\ \\mathrm{s}$ vaut :",
+          "options": [
+            {
+              "label": "$0{,}157\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_1 = 0 + 8{,}64\\times10^{-2} = 0{,}0864$ ; puis $(dv/dt)_1 = 8{,}64 - 18{,}2\\times0{,}0864 = 7{,}07$ et $v_2 = 0{,}0864 + 0{,}0707 = 0{,}157\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}086\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu n'as fait qu'un seul pas : $v_1$ correspond à $t = 1{,}0\\times10^{-2}\\ \\mathrm{s}$. Pour $t = 2{,}0\\times10^{-2}\\ \\mathrm{s}$ il faut un second pas."
+            },
+            {
+              "label": "$0{,}173\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as gardé l'accélération initiale aux deux pas : $2\\times8{,}64\\times10^{-2} = 0{,}173$. Il faut recalculer $dv/dt$ avec $v_1$ avant le second pas."
+            },
+            {
+              "label": "$0{,}189\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Erreur de signe : tu as utilisé $A + B\\,v_1$ au lieu de $A - B\\,v_1$, ce qui donne $v_2 = 0{,}0864 + 0{,}103 = 0{,}189$."
+            }
+          ],
+          "hint": "Construis un tableau : $v_n$, puis $(dv/dt)_n = A - B\\,v_n$, puis $v_{n+1} = v_n + (dv/dt)_n\\,\\Delta t$.",
+          "solution": "Pas 1 : $(dv/dt)_0 = 8{,}64 - 18{,}2\\times0 = 8{,}64\\ \\mathrm{m\\,s^{-2}}$, donc $v_1 = 0 + 8{,}64\\times1{,}0\\times10^{-2} = 8{,}64\\times10^{-2}\\ \\mathrm{m\\,s^{-1}}$.\nPas 2 : $(dv/dt)_1 = 8{,}64 - 18{,}2\\times8{,}64\\times10^{-2} = 8{,}64 - 1{,}57 = 7{,}07\\ \\mathrm{m\\,s^{-2}}$, donc\n$$v_2 = 8{,}64\\times10^{-2} + 7{,}07\\times1{,}0\\times10^{-2} = 0{,}157\\ \\mathrm{m\\,s^{-1}}$$\nContrôle : la solution exacte vaut $v = v_\\ell\\left(1 - e^{-t/\\tau}\\right) = 0{,}476\\times\\left(1 - e^{-0{,}363}\\right) = 0{,}148\\ \\mathrm{m\\,s^{-1}}$. L'écart (environ $6\\ \\%$) est normal : le pas $\\Delta t$ vaut près de $\\tau/5$, ce qui est grossier. Diviser $\\Delta t$ par dix réduirait l'écart d'autant.",
+          "methode": "Choisis toujours $\\Delta t$ très petit devant $\\tau$ : c'est le seul moyen de rendre la méthode d'Euler fiable.",
+          "points": 1,
+          "part": "Partie B — Régime permanent et résolution numérique",
+          "ref": "pc-chute-verticale-probleme-1-q7"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-chute-verticale-probleme-2",
+      "chapter": "pc-chute-verticale",
+      "kind": "probleme",
+      "title": "Mesurer le coefficient de frottement d'une bille de laiton dans la glycérine",
+      "difficulty": 3,
+      "context": "Pour mesurer le coefficient de frottement fluide d'une bille dans un liquide visqueux, un groupe d'élèves lâche **sans vitesse initiale**, à la surface d'une longue éprouvette remplie de **glycérine**, une **bille de laiton** entièrement immergée pendant toute la chute.\n\nDeux repères horizontaux $R_1$ et $R_2$ sont tracés sur l'éprouvette, respectivement à $5{,}0\\ \\mathrm{cm}$ et à $30{,}0\\ \\mathrm{cm}$ sous la surface du liquide ; la distance entre les deux repères est donc $D = 25{,}0\\ \\mathrm{cm}$. Un chronomètre déclenché au passage devant $R_1$ et arrêté au passage devant $R_2$ indique $\\Delta t = 2{,}0\\ \\mathrm{s}$.\n\nLe mouvement est repéré sur un axe $Oz$ vertical **orienté vers le bas**, l'origine étant le point de lâcher et $t = 0$ l'instant du lâcher. Dans la partie A, la force de frottement fluide est modélisée par $f = k\\,v$ ; dans la partie B, on compare ce modèle au modèle quadratique $f = k'\\,v^2$.\n\n**Données :**\n- volume de la bille : $V = 2{,}68\\times10^{-7}\\ \\mathrm{m^3}$ ;\n- masse volumique du laiton : $\\rho_s = 8400\\ \\mathrm{kg\\,m^{-3}}$ ;\n- masse volumique de la glycérine : $\\rho_f = 1260\\ \\mathrm{kg\\,m^{-3}}$ ;\n- intensité de la pesanteur : $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$ ;\n- $e^{-5} = 6{,}7\\times10^{-3}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Mesures expérimentales",
+          "difficulty": 1,
+          "statement": "La vitesse de la bille entre les deux repères vaut :",
+          "options": [
+            {
+              "label": "$0{,}125\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v = \\dfrac{D}{\\Delta t} = \\dfrac{0{,}250}{2{,}0} = 0{,}125\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$12{,}5\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé $25{,}0$ par $2{,}0$ en laissant la distance en centimètres : $12{,}5$ est la vitesse en $\\mathrm{cm\\,s^{-1}}$, pas en $\\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}50\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as multiplié : $0{,}250\\times2{,}0 = 0{,}50$. Une vitesse est une distance **divisée** par une durée."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{\\Delta t}{D} = \\dfrac{2{,}0}{0{,}250} = 8{,}0$ : c'est l'inverse d'une vitesse, en $\\mathrm{s\\,m^{-1}}$."
+            }
+          ],
+          "hint": "Convertis d'abord $D$ en mètres, puis divise par la durée.",
+          "solution": "$D = 25{,}0\\ \\mathrm{cm} = 0{,}250\\ \\mathrm{m}$, donc\n$$v = \\frac{D}{\\Delta t} = \\frac{0{,}250}{2{,}0} = 0{,}125\\ \\mathrm{m\\,s^{-1}}$$\nContrôle : $0{,}125\\ \\mathrm{m\\,s^{-1}} = 12{,}5\\ \\mathrm{cm\\,s^{-1}}$, soit un peu plus de $1\\ \\mathrm{cm}$ parcouru par dixième de seconde — compatible avec les $25\\ \\mathrm{cm}$ parcourus en $2\\ \\mathrm{s}$.",
+          "methode": "Convertis les longueurs en mètres **avant** le calcul : c'est là que se perdent le plus de points sur ce genre de mesure.",
+          "points": 1,
+          "part": "Partie A — Détermination expérimentale du coefficient de frottement",
+          "ref": "pc-chute-verticale-probleme-2-q1"
+        },
+        {
+          "notion": "Les trois forces en jeu",
+          "difficulty": 1,
+          "statement": "La bille étant totalement immergée, la résultante du poids et de la poussée d'Archimède a pour norme :",
+          "options": [
+            {
+              "label": "$1{,}88\\times10^{-2}\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "$P - F_A = (\\rho_s - \\rho_f)\\,V\\,g = (8400 - 1260)\\times2{,}68\\times10^{-7}\\times9{,}8 = 1{,}88\\times10^{-2}\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$2{,}21\\times10^{-2}\\ \\mathrm{N}$",
+              "why": "Tu as calculé le poids seul : $\\rho_s V g = 8400\\times2{,}68\\times10^{-7}\\times9{,}8 = 2{,}21\\times10^{-2}\\ \\mathrm{N}$, sans retrancher la poussée."
+            },
+            {
+              "label": "$3{,}31\\times10^{-3}\\ \\mathrm{N}$",
+              "why": "Tu as calculé la poussée d'Archimède seule : $\\rho_f V g = 1260\\times2{,}68\\times10^{-7}\\times9{,}8 = 3{,}31\\times10^{-3}\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$2{,}54\\times10^{-2}\\ \\mathrm{N}$",
+              "why": "Tu as additionné les deux forces : $2{,}21\\times10^{-2} + 3{,}31\\times10^{-3} = 2{,}54\\times10^{-2}\\ \\mathrm{N}$. La poussée est dirigée vers le haut, donc elle se **retranche** au poids."
+            }
+          ],
+          "hint": "Les deux forces sont verticales et de sens opposés : factorise $V g$.",
+          "solution": "$P = \\rho_s V g = 8400\\times2{,}68\\times10^{-7}\\times9{,}8 = 2{,}206\\times10^{-2}\\ \\mathrm{N}$ (vers le bas) et\n$F_A = \\rho_f V g = 1260\\times2{,}68\\times10^{-7}\\times9{,}8 = 3{,}309\\times10^{-3}\\ \\mathrm{N}$ (vers le haut). D'où, vers le bas :\n$$P - F_A = (\\rho_s - \\rho_f)\\,V\\,g = 7140\\times2{,}68\\times10^{-7}\\times9{,}8 = 1{,}875\\times10^{-2} \\approx 1{,}88\\times10^{-2}\\ \\mathrm{N}$$\nContrôle : $\\dfrac{F_A}{P} = \\dfrac{\\rho_f}{\\rho_s} = \\dfrac{1260}{8400} = 0{,}15$, donc la résultante vaut $85\\ \\%$ du poids : $0{,}85\\times2{,}206\\times10^{-2} = 1{,}88\\times10^{-2}\\ \\mathrm{N}$. Les deux voies concordent.",
+          "methode": "Dès que le corps est immergé, écris la résultante sous la forme $(\\rho_s - \\rho_f)Vg$ : un seul calcul au lieu de deux.",
+          "points": 1,
+          "part": "Partie A — Détermination expérimentale du coefficient de frottement",
+          "ref": "pc-chute-verticale-probleme-2-q2"
+        },
+        {
+          "notion": "La vitesse limite",
+          "difficulty": 2,
+          "statement": "Les élèves admettent que la bille est déjà en régime permanent entre $R_1$ et $R_2$, donc que $v_\\ell = 0{,}125\\ \\mathrm{m\\,s^{-1}}$. Le coefficient de frottement $k$ vaut alors :",
+          "options": [
+            {
+              "label": "$0{,}150\\ \\mathrm{kg\\,s^{-1}}$",
+              "correct": true,
+              "why": "On annule $\\dfrac{dv}{dt}$ : $(\\rho_s-\\rho_f)Vg - k\\,v_\\ell = 0$, donc $k = \\dfrac{1{,}875\\times10^{-2}}{0{,}125} = 0{,}150\\ \\mathrm{kg\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}177\\ \\mathrm{kg\\,s^{-1}}$",
+              "why": "Tu as divisé le **poids seul** par $v_\\ell$ : $\\dfrac{2{,}206\\times10^{-2}}{0{,}125} = 0{,}177$. Il faut d'abord retrancher la poussée d'Archimède au poids."
+            },
+            {
+              "label": "$1{,}80\\times10^{-2}\\ \\mathrm{kg\\,s^{-1}}$",
+              "why": "Tu as divisé la **masse** par $v_\\ell$ : $\\dfrac{2{,}251\\times10^{-3}}{0{,}125} = 1{,}80\\times10^{-2}$. Tu as oublié le facteur $g$ : c'est une force, pas une masse, qui équilibre le frottement."
+            },
+            {
+              "label": "$2{,}34\\times10^{-3}\\ \\mathrm{kg\\,s^{-1}}$",
+              "why": "Tu as multiplié au lieu de diviser : $1{,}875\\times10^{-2}\\times0{,}125 = 2{,}34\\times10^{-3}$. L'équilibre $(\\rho_s-\\rho_f)Vg = k\\,v_\\ell$ conduit à une division par $v_\\ell$."
+            }
+          ],
+          "hint": "Écris l'équation différentielle, annule $\\dfrac{dv}{dt}$, puis isole $k$. Ne cherche pas de formule toute faite.",
+          "solution": "Deuxième loi de Newton projetée sur $Oz$ descendant : $m\\dfrac{dv}{dt} = P - F_A - k\\,v$, soit\n$$m\\,\\frac{dv}{dt} = (\\rho_s - \\rho_f)Vg - k\\,v$$\nEn régime permanent $\\dfrac{dv}{dt} = 0$, donc $(\\rho_s - \\rho_f)Vg = k\\,v_\\ell$ et\n$$k = \\frac{(\\rho_s - \\rho_f)Vg}{v_\\ell} = \\frac{1{,}875\\times10^{-2}}{0{,}125} = 0{,}1500\\ \\mathrm{kg\\,s^{-1}}$$\nContrôle : avec ce $k$, la force de frottement en régime permanent vaut $k\\,v_\\ell = 0{,}150\\times0{,}125 = 1{,}88\\times10^{-2}\\ \\mathrm{N}$, exactement la résultante du poids et de la poussée. L'équilibre est bien réalisé.",
+          "methode": "Mesurer $v_\\ell$, c'est mesurer $k$ : $k = \\dfrac{(\\rho_s-\\rho_f)Vg}{v_\\ell}$. C'est la méthode expérimentale standard au BAC.",
+          "points": 1,
+          "part": "Partie A — Détermination expérimentale du coefficient de frottement",
+          "ref": "pc-chute-verticale-probleme-2-q3"
+        },
+        {
+          "notion": "L'équation aux dimensions",
+          "difficulty": 2,
+          "statement": "Dans le modèle $f = k\\,v$, l'unité de $k$ dans le système international est :",
+          "options": [
+            {
+              "label": "$\\mathrm{kg\\,s^{-1}}$",
+              "correct": true,
+              "why": "$k = \\dfrac{f}{v}$, donc $[k] = \\dfrac{\\mathrm{N}}{\\mathrm{m\\,s^{-1}}} = \\dfrac{\\mathrm{kg\\,m\\,s^{-2}}}{\\mathrm{m\\,s^{-1}}} = \\mathrm{kg\\,s^{-1}}$."
+            },
+            {
+              "label": "$\\mathrm{kg\\,m^{-1}}$",
+              "why": "C'est l'unité de $k'$ dans le modèle **quadratique** $f = k'v^2$ : $\\dfrac{\\mathrm{kg\\,m\\,s^{-2}}}{\\mathrm{m^2\\,s^{-2}}} = \\mathrm{kg\\,m^{-1}}$. Tu as divisé la force par $v^2$ au lieu de $v$."
+            },
+            {
+              "label": "$\\mathrm{kg\\,s^{-2}}$",
+              "why": "Tu as divisé la force par une longueur ($\\mathrm{N\\,m^{-1}}$, l'unité d'une raideur de ressort) et non par une vitesse."
+            },
+            {
+              "label": "$\\mathrm{kg\\,m\\,s^{-1}}$",
+              "why": "Tu as **multiplié** la force par la vitesse au lieu de diviser, ce qui donne la dimension d'une quantité de mouvement."
+            }
+          ],
+          "hint": "Part de $k = f/v$ et remplace le newton par sa décomposition $\\mathrm{kg\\,m\\,s^{-2}}$.",
+          "solution": "$f = k\\,v \\Rightarrow k = \\dfrac{f}{v}$. En unités :\n$$[k] = \\frac{\\mathrm{N}}{\\mathrm{m\\,s^{-1}}} = \\frac{\\mathrm{kg\\,m\\,s^{-2}}}{\\mathrm{m\\,s^{-1}}} = \\mathrm{kg\\,s^{-1}}$$\nContrôle : le temps caractéristique $\\tau = m/k$ doit être une durée, et $\\dfrac{\\mathrm{kg}}{\\mathrm{kg\\,s^{-1}}} = \\mathrm{s}$. C'est cohérent.",
+          "methode": "Ne retiens pas l'unité de $k$ par cœur : retrouve-la en une ligne avec $k = f/v$, et vérifie-la sur $\\tau = m/k$.",
+          "points": 1,
+          "part": "Partie A — Détermination expérimentale du coefficient de frottement",
+          "ref": "pc-chute-verticale-probleme-2-q4"
+        },
+        {
+          "notion": "Le temps caractéristique",
+          "difficulty": 2,
+          "statement": "Le temps caractéristique du mouvement de cette bille vaut :",
+          "options": [
+            {
+              "label": "$1{,}50\\times10^{-2}\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$\\tau = \\dfrac{m}{k} = \\dfrac{2{,}251\\times10^{-3}}{0{,}150} = 1{,}50\\times10^{-2}\\ \\mathrm{s}$, avec $m = \\rho_s V = 2{,}251\\times10^{-3}\\ \\mathrm{kg}$."
+            },
+            {
+              "label": "$1{,}28\\times10^{-2}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $\\dfrac{v_\\ell}{g} = \\dfrac{0{,}125}{9{,}8} = 1{,}28\\times10^{-2}$. La bonne relation est $\\tau = \\dfrac{v_\\ell}{a_0}$ avec $a_0 = g\\left(1 - \\dfrac{\\rho_f}{\\rho_s}\\right) = 8{,}33\\ \\mathrm{m\\,s^{-2}}$, et non $g$."
+            },
+            {
+              "label": "$66{,}6\\ \\mathrm{s}$",
+              "why": "Tu as calculé $\\dfrac{k}{m} = 66{,}6$ : c'est $\\dfrac{1}{\\tau}$, en $\\mathrm{s^{-1}}$, donc l'inverse du temps cherché."
+            },
+            {
+              "label": "$3{,}38\\times10^{-4}\\ \\mathrm{s}$",
+              "why": "Tu as multiplié : $m\\times k = 2{,}251\\times10^{-3}\\times0{,}150 = 3{,}38\\times10^{-4}$. Dans $\\dfrac{dv}{dt} = a_0 - \\dfrac{k}{m}v$, le coefficient de $v$ est $\\dfrac{k}{m}$, donc $\\tau = \\dfrac{m}{k}$."
+            }
+          ],
+          "hint": "Calcule d'abord la masse de la bille, puis repère le coefficient de $v$ dans l'équation différentielle écrite sous la forme $\\dfrac{dv}{dt} = a_0 - \\dfrac{v}{\\tau}$.",
+          "solution": "$m = \\rho_s V = 8400\\times2{,}68\\times10^{-7} = 2{,}251\\times10^{-3}\\ \\mathrm{kg}$.\nEn divisant l'équation du mouvement par $m$ :\n$$\\frac{dv}{dt} = g\\left(1 - \\frac{\\rho_f}{\\rho_s}\\right) - \\frac{k}{m}\\,v = a_0 - \\frac{v}{\\tau}$$\ndonc $\\tau = \\dfrac{m}{k} = \\dfrac{2{,}251\\times10^{-3}}{0{,}1500} = 1{,}50\\times10^{-2}\\ \\mathrm{s}$.\nContrôle par une autre voie : $a_0 = 9{,}8\\times\\left(1 - \\dfrac{1260}{8400}\\right) = 9{,}8\\times0{,}85 = 8{,}33\\ \\mathrm{m\\,s^{-2}}$, et $\\tau = \\dfrac{v_\\ell}{a_0} = \\dfrac{0{,}125}{8{,}33} = 1{,}50\\times10^{-2}\\ \\mathrm{s}$. Les deux voies concordent.",
+          "methode": "Trois expressions du même $\\tau$ : $\\dfrac{m}{k}$, l'inverse du coefficient de $v$, et $\\dfrac{v_\\ell}{a_0}$ (abscisse du point où la tangente à l'origine coupe l'asymptote). Sers-t'en pour te contrôler.",
+          "points": 1,
+          "part": "Partie B — Régime transitoire et comparaison des deux modèles",
+          "ref": "pc-chute-verticale-probleme-2-q5"
+        },
+        {
+          "notion": "Les deux régimes",
+          "difficulty": 3,
+          "statement": "Le premier repère $R_1$ est tracé à $5{,}0\\ \\mathrm{cm}$ sous la surface. Parmi ces justifications du protocole, laquelle est correcte ?",
+          "options": [
+            {
+              "label": "Le régime permanent est établi après $5\\tau = 7{,}5\\times10^{-2}\\ \\mathrm{s}$, soit moins de $1\\ \\mathrm{cm}$ de chute : à $R_1$ la vitesse est déjà $v_\\ell$.",
+              "correct": true,
+              "why": "$5\\tau = 5\\times1{,}50\\times10^{-2} = 7{,}5\\times10^{-2}\\ \\mathrm{s}$, et la distance parcourue pendant ce transitoire est au plus $v_\\ell\\times5\\tau = 0{,}125\\times7{,}5\\times10^{-2} = 9{,}4\\times10^{-3}\\ \\mathrm{m}$, soit moins de $1\\ \\mathrm{cm} < 5{,}0\\ \\mathrm{cm}$."
+            },
+            {
+              "label": "Le régime permanent ne s'établit qu'après plusieurs dizaines de centimètres de chute, d'où l'intérêt d'éloigner $R_2$ de $R_1$.",
+              "why": "Tu confonds $\\tau$ avec la durée totale de la chute. Ici $5\\tau = 7{,}5\\times10^{-2}\\ \\mathrm{s}$ ne correspond qu'à moins de $1\\ \\mathrm{cm}$ : le transitoire est terminé bien avant $R_1$."
+            },
+            {
+              "label": "Entre $R_1$ et $R_2$ la vitesse croît encore, et $\\dfrac{D}{\\Delta t}$ donne donc la vitesse moyenne du régime transitoire.",
+              "why": "Faux : à $R_1$ la vitesse vaut déjà $99{,}3\\ \\%$ de $v_\\ell$, car $v(5\\tau) = v_\\ell\\left(1 - e^{-5}\\right)$ avec $e^{-5} = 6{,}7\\times10^{-3}$. Entre les repères la vitesse est constante, donc $\\dfrac{D}{\\Delta t} = v_\\ell$."
+            },
+            {
+              "label": "Il faut simplement que la distance $D$ entre les deux repères soit supérieure à $5\\tau$, ce qui est le cas ici.",
+              "why": "$5\\tau$ est une **durée** ($7{,}5\\times10^{-2}\\ \\mathrm{s}$) : la comparer à une longueur n'a aucun sens. Ce qu'il faut comparer à $5{,}0\\ \\mathrm{cm}$, c'est la distance $v_\\ell\\times5\\tau$ parcourue pendant le transitoire."
+            }
+          ],
+          "hint": "Convertis la durée du régime transitoire en une **distance** de chute, puis compare-la à la profondeur de $R_1$.",
+          "solution": "Durée du régime transitoire : $\\approx 5\\tau = 5\\times1{,}50\\times10^{-2} = 7{,}5\\times10^{-2}\\ \\mathrm{s}$.\nPendant cette durée la vitesse reste inférieure à $v_\\ell$, donc la distance parcourue est majorée par\n$$d < v_\\ell\\times5\\tau = 0{,}125\\times7{,}5\\times10^{-2} = 9{,}4\\times10^{-3}\\ \\mathrm{m} \\approx 9{,}4\\ \\mathrm{mm}$$\nLe calcul exact donne d'ailleurs $7{,}5\\ \\mathrm{mm}$. Dans les deux cas c'est bien moins que les $5{,}0\\ \\mathrm{cm}$ qui séparent $R_1$ de la surface : le régime permanent est atteint avant $R_1$, et la mesure $\\dfrac{D}{\\Delta t}$ donne bien $v_\\ell$.\nContrôle : à $t = 5\\tau$, $v = v_\\ell\\left(1 - e^{-5}\\right) = 0{,}125\\times(1 - 6{,}7\\times10^{-3}) = 0{,}1242\\ \\mathrm{m\\,s^{-1}}$, soit $99{,}3\\ \\%$ de $v_\\ell$.",
+          "methode": "Pour valider un protocole de ce type, transforme toujours la durée $5\\tau$ en distance $v_\\ell\\times5\\tau$ : c'est elle qu'on compare à la position du premier repère.",
+          "points": 1,
+          "part": "Partie B — Régime transitoire et comparaison des deux modèles",
+          "ref": "pc-chute-verticale-probleme-2-q6"
+        },
+        {
+          "notion": "Le modèle quadratique en pratique",
+          "difficulty": 3,
+          "statement": "Les élèves refont l'étude avec le modèle quadratique $f = k'\\,v^2$, en imposant la **même** vitesse limite mesurée $v_\\ell = 0{,}125\\ \\mathrm{m\\,s^{-1}}$. Le coefficient $k'$ vaut :",
+          "options": [
+            {
+              "label": "$1{,}20\\ \\mathrm{kg\\,m^{-1}}$",
+              "correct": true,
+              "why": "On annule $\\dfrac{dv}{dt}$ : $(\\rho_s-\\rho_f)Vg = k'v_\\ell^2$, donc $k' = \\dfrac{1{,}875\\times10^{-2}}{0{,}125^2} = \\dfrac{1{,}875\\times10^{-2}}{1{,}5625\\times10^{-2}} = 1{,}20\\ \\mathrm{kg\\,m^{-1}}$."
+            },
+            {
+              "label": "$1{,}41\\ \\mathrm{kg\\,m^{-1}}$",
+              "why": "Tu as divisé le **poids seul** par $v_\\ell^2$ : $\\dfrac{2{,}206\\times10^{-2}}{1{,}5625\\times10^{-2}} = 1{,}41$. La poussée d'Archimède doit être retranchée au poids."
+            },
+            {
+              "label": "$0{,}150\\ \\mathrm{kg\\,m^{-1}}$",
+              "why": "Tu as divisé par $v_\\ell$ et non par $v_\\ell^2$ : $0{,}150$ est le coefficient $k$ du modèle **linéaire**, et son unité est d'ailleurs $\\mathrm{kg\\,s^{-1}}$."
+            },
+            {
+              "label": "$2{,}93\\times10^{-4}\\ \\mathrm{kg\\,m^{-1}}$",
+              "why": "Tu as multiplié par $v_\\ell^2$ au lieu de diviser : $1{,}875\\times10^{-2}\\times1{,}5625\\times10^{-2} = 2{,}93\\times10^{-4}$."
+            }
+          ],
+          "hint": "Reprends exactement la même démarche qu'en A : équation différentielle, puis $\\dfrac{dv}{dt} = 0$. Seul le terme de frottement change.",
+          "solution": "Avec $f = k'v^2$, la projection sur $Oz$ descendant donne $m\\dfrac{dv}{dt} = (\\rho_s-\\rho_f)Vg - k'v^2$.\nEn régime permanent $\\dfrac{dv}{dt} = 0$, donc $(\\rho_s-\\rho_f)Vg = k'\\,v_\\ell^2$ et\n$$k' = \\frac{(\\rho_s-\\rho_f)Vg}{v_\\ell^{\\,2}} = \\frac{1{,}875\\times10^{-2}}{(0{,}125)^2} = \\frac{1{,}875\\times10^{-2}}{1{,}5625\\times10^{-2}} = 1{,}200\\ \\mathrm{kg\\,m^{-1}}$$\nContrôle : $k'v_\\ell^2 = 1{,}200\\times1{,}5625\\times10^{-2} = 1{,}88\\times10^{-2}\\ \\mathrm{N}$, bien égal à la résultante du poids et de la poussée. On remarque aussi que $k' = \\dfrac{k}{v_\\ell} = \\dfrac{0{,}150}{0{,}125} = 1{,}20$ : les deux modèles donnent la même force **à la vitesse limite** seulement. Aux vitesses plus faibles le modèle quadratique freine beaucoup moins, donc l'accélération initiale est la même mais le transitoire n'a pas la même allure. La seule mesure de $v_\\ell$ ne permet donc pas de départager les deux modèles : il faut la courbe $v(t)$ complète.",
+          "methode": "La vitesse limite seule ne choisit pas le modèle : les deux s'ajustent dessus. C'est la **forme** de la courbe $v(t)$ qui tranche.",
+          "points": 1,
+          "part": "Partie B — Régime transitoire et comparaison des deux modèles",
+          "ref": "pc-chute-verticale-probleme-2-q7"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-chute-verticale-serie-1",
+      "title": "Chute verticale dans un fluide · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-chute-verticale",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-chute-verticale-les-trois-forces-en-jeu-q1",
+        "pc-chute-verticale-l-equation-differentielle-du-mouvement-q1",
+        "pc-chute-verticale-l-equation-aux-dimensions-q1",
+        "pc-chute-verticale-les-deux-regimes-q1",
+        "pc-chute-verticale-la-vitesse-limite-q1",
+        "pc-chute-verticale-le-temps-caracteristique-q1",
+        "pc-chute-verticale-la-chute-libre-cas-limite-q1",
+        "pc-chute-verticale-les-trois-forces-en-jeu-q2",
+        "pc-chute-verticale-l-equation-differentielle-du-mouvement-q2",
+        "pc-chute-verticale-le-temps-caracteristique-q2"
+      ]
+    },
+    {
+      "slug": "pc-chute-verticale-serie-2",
+      "title": "Chute verticale dans un fluide · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-chute-verticale",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-chute-verticale-probleme-1-q1",
+        "pc-chute-verticale-probleme-2-q1",
+        "pc-chute-verticale-probleme-2-q2",
+        "pc-chute-verticale-l-equation-aux-dimensions-q2",
+        "pc-chute-verticale-l-equation-aux-dimensions-q3",
+        "pc-chute-verticale-le-temps-caracteristique-q3",
+        "pc-chute-verticale-la-chute-libre-cas-limite-q2",
+        "pc-chute-verticale-la-chute-libre-cas-limite-q3",
+        "pc-chute-verticale-probleme-2-q3",
+        "pc-chute-verticale-probleme-2-q5",
+        "pc-chute-verticale-l-analogie-avec-les-circuits-q1",
+        "pc-chute-verticale-le-modele-quadratique-en-pratique-q1"
+      ]
+    },
+    {
+      "slug": "pc-chute-verticale-serie-3",
+      "title": "Chute verticale dans un fluide · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-chute-verticale",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-chute-verticale-probleme-1-q3",
+        "pc-chute-verticale-probleme-1-q4",
+        "pc-chute-verticale-probleme-1-q5",
+        "pc-chute-verticale-probleme-2-q4",
+        "pc-chute-verticale-l-equation-differentielle-du-mouvement-q4",
+        "pc-chute-verticale-le-temps-caracteristique-q4",
+        "pc-chute-verticale-la-vitesse-limite-q2",
+        "pc-chute-verticale-mesures-experimentales-q1",
+        "pc-chute-verticale-probleme-1-q6",
+        "pc-chute-verticale-probleme-1-q7",
+        "pc-chute-verticale-probleme-2-q6",
+        "pc-chute-verticale-probleme-2-q7"
+      ]
+    }
+  ]
+}

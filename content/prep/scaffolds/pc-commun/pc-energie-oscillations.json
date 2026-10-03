@@ -1,0 +1,1949 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-energie-oscillations",
+      "name": "Aspects énergétiques des oscillations mécaniques",
+      "domain": "physique",
+      "unit": "Mécanique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Les deux réservoirs d'énergie",
+      "La conservation",
+      "Les échanges au cours d'une période",
+      "Le cas du pendule pesant",
+      "Les oscillations amorties",
+      "L'entretien des oscillations",
+      "Les oscillations forcées et la résonance",
+      "Résonances utiles et dangereuses",
+      "Le puits de potentiel",
+      "Le facteur de qualité mécanique",
+      "Le quartz, oscillateur d'exception",
+      "Les oscillateurs couplés",
+      "De la mécanique à la physique moderne",
+      "Méthode 1 — Établir l'équation par l'énergie",
+      "Méthode 2 — Calculer une vitesse par l'énergie",
+      "Méthode 3 — Exploiter des courbes d'énergie",
+      "Méthode 4 — Calculer une énergie dissipée",
+      "Méthode 5 — Le bilan de l'entretien"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Établir l'équation par l'énergie",
+      "Méthode 2 — Calculer une vitesse par l'énergie",
+      "Méthode 3 — Exploiter des courbes d'énergie",
+      "Méthode 4 — Calculer une énergie dissipée",
+      "Méthode 5 — Le bilan de l'entretien"
+    ],
+    "existing_questions_total": 7,
+    "target_new_questions": 30,
+    "suggested_figures": [
+      "oscillations-amorties — Les trois régimes d'un oscillateur mécanique amorti",
+      "energie-oscillateur — Échanges Ec / Ep dans un oscillateur harmonique",
+      "montage-rlc-libre — Montage RLC — oscillations libres (C chargé puis basculé sur L)",
+      "rlc-oscillation — Oscillations libres amorties d'un circuit RLC (régime pseudo-périodique)"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Les deux réservoirs d'énergie",
+        "lesson": "Énergie mécanique d'un oscillateur",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 3,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-les-deux-reservoirs-d-energie",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "Les deux réservoirs d'énergie",
+      "difficulty": 1,
+      "questions": [
+        {
+          "notion": "Les deux réservoirs d'énergie",
+          "difficulty": 1,
+          "statement": "Un solide accroché à un ressort de raideur $K = 20\\ \\mathrm{N\\,m^{-1}}$ est écarté de $x = 5{,}0\\ \\mathrm{cm}$ de sa position d'équilibre. Quelle est l'énergie potentielle élastique emmagasinée ?",
+          "options": [
+            {
+              "label": "$0{,}025\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$E_{pe} = \\frac12 K x^2 = 0{,}5\\times20\\times(5{,}0\\times10^{-2})^2 = 2{,}5\\times10^{-2}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$0{,}050\\ \\mathrm{J}$",
+              "why": "Tu as calculé $K x^2 = 20\\times(5{,}0\\times10^{-2})^2 = 5{,}0\\times10^{-2}\\ \\mathrm{J}$ : le facteur $\\frac12$ a été oublié."
+            },
+            {
+              "label": "$0{,}50\\ \\mathrm{J}$",
+              "why": "Tu as calculé $\\frac12 K x = 0{,}5\\times20\\times5{,}0\\times10^{-2} = 0{,}50\\ \\mathrm{J}$ : l'élongation doit être élevée au carré."
+            },
+            {
+              "label": "$250\\ \\mathrm{J}$",
+              "why": "Tu as gardé $x = 5{,}0$ en centimètres : $\\frac12\\times20\\times(5{,}0)^2 = 250$. En physique, le ressort n'accepte que des mètres."
+            }
+          ],
+          "hint": "Écris la formule, puis convertis l'élongation en mètres avant de remplacer.",
+          "solution": "L'énergie potentielle élastique se compte depuis la position d'équilibre : $$E_{pe} = \\frac12 K x^2 = \\frac12 \\times 20 \\times (5{,}0\\times10^{-2})^2 = \\frac12 \\times 20 \\times 2{,}5\\times10^{-3} = 2{,}5\\times10^{-2}\\ \\mathrm{J}.$$ Soit $E_{pe} = 0{,}025\\ \\mathrm{J} = 25\\ \\mathrm{mJ}$. Contrôle d'homogénéité : $\\mathrm{N\\,m^{-1}}\\times\\mathrm{m^2} = \\mathrm{N\\,m} = \\mathrm{J}$.",
+          "methode": "$E_{pe} = \\frac12 K x^2$ : les deux oublis classiques sont le $\\frac12$ et le carré. Convertis toujours $x$ en mètres d'abord.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-deux-reservoirs-d-energie-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La conservation",
+        "lesson": "Énergie mécanique d'un oscillateur",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-la-conservation",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "La conservation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La conservation",
+          "difficulty": 1,
+          "statement": "Un oscillateur élastique horizontal se déplace sans frottement. Que peut-on affirmer au cours du mouvement ?",
+          "options": [
+            {
+              "label": "L'énergie mécanique reste constante, $E_c$ et $E_{pe}$ s'échangeant en permanence.",
+              "correct": true,
+              "why": "Sans frottement, aucun travail ne retire d'énergie au système : $E_m = E_c + E_{pe}$ se conserve, seule la répartition entre les deux formes change."
+            },
+            {
+              "label": "L'énergie cinétique reste constante, car la vitesse est périodique.",
+              "why": "Une grandeur périodique n'est pas constante : $E_c$ est nulle aux élongations extrêmes et maximale au passage par l'équilibre."
+            },
+            {
+              "label": "L'énergie potentielle élastique reste constante, car $K$ est constante.",
+              "why": "$K$ est constante mais $x$ varie : $E_{pe} = \\frac12 K x^2$ varie donc de $0$ à $\\frac12 K X_m^2$."
+            },
+            {
+              "label": "L'énergie mécanique décroît lentement, car le ressort finit par se fatiguer.",
+              "why": "La « fatigue » du ressort n'est pas au programme : dans le modèle étudié, seule une force de frottement peut faire décroître $E_m$, et l'énoncé dit qu'il n'y en a pas."
+            }
+          ],
+          "hint": "Demande-toi quelle force, ici, pourrait retirer de l'énergie au système.",
+          "solution": "L'énergie mécanique est $E_m = E_c + E_{pe}$. Sa variation est égale au travail des forces autres que celles dont on a compté l'énergie potentielle. Ici le poids et la réaction normale ne travaillent pas (déplacement horizontal) et il n'y a pas de frottement : $\\Delta E_m = 0$, donc $E_m$ est **constante**. En revanche $E_c$ et $E_{pe}$ varient sans cesse, l'une au détriment de l'autre : c'est tout l'intérêt du chapitre.",
+          "methode": "« Pas de frottement » $\\Rightarrow$ $E_m$ constante. Cela ne veut pas dire que $E_c$ et $E_p$ sont constantes : elles s'échangent.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-la-conservation-q1"
+        },
+        {
+          "notion": "La conservation",
+          "difficulty": 2,
+          "statement": "Un solide de masse $m = 250\\ \\mathrm{g}$ oscille sans frottement sur un plan horizontal, accroché à un ressort de raideur $K = 50\\ \\mathrm{N\\,m^{-1}}$, avec une amplitude $X_m = 6{,}0\\ \\mathrm{cm}$. Quelle est sa vitesse maximale ?",
+          "options": [
+            {
+              "label": "$0{,}85\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$E_m = \\frac12 K X_m^2 = 9{,}0\\times10^{-2}\\ \\mathrm{J}$ et $v_{max} = \\sqrt{2E_m/m} = \\sqrt{0{,}18/0{,}250} = 0{,}85\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}60\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as écrit $E_m = m v_{max}^2$ sans le $\\frac12$ : $\\sqrt{9{,}0\\times10^{-2}/0{,}250} = 0{,}60\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$1{,}2\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as écrit $E_m = K X_m^2 = 0{,}18\\ \\mathrm{J}$ sans le $\\frac12$ : $\\sqrt{2\\times0{,}18/0{,}250} = 1{,}2\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}72\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu t'es arrêté à $v_{max}^2 = 2E_m/m = 0{,}72\\ \\mathrm{m^2\\,s^{-2}}$ et tu l'as lu comme une vitesse : il reste à prendre la racine carrée."
+            }
+          ],
+          "hint": "Toute l'énergie est potentielle à l'élongation maximale, toute cinétique au passage par l'équilibre.",
+          "solution": "À l'élongation maximale la vitesse est nulle, donc toute l'énergie est potentielle : $$E_m = \\frac12 K X_m^2 = \\frac12\\times50\\times(6{,}0\\times10^{-2})^2 = 9{,}0\\times10^{-2}\\ \\mathrm{J}.$$ Au passage par l'équilibre, $x = 0$ donc toute l'énergie est cinétique : $$\\frac12 m v_{max}^2 = 9{,}0\\times10^{-2} \\ \\Longrightarrow\\ v_{max} = \\sqrt{\\frac{2\\times9{,}0\\times10^{-2}}{0{,}250}} = \\sqrt{0{,}72} = 0{,}85\\ \\mathrm{m\\,s^{-1}}.$$ Contrôle par l'autre voie : $v_{max} = \\omega_0 X_m = \\sqrt{K/m}\\,X_m = \\sqrt{200}\\times6{,}0\\times10^{-2} = 0{,}85\\ \\mathrm{m\\,s^{-1}}$.",
+          "methode": "Égalise les deux situations extrêmes : $\\frac12 K X_m^2 = \\frac12 m v_{max}^2$, d'où $v_{max} = X_m\\sqrt{K/m}$.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-la-conservation-q2"
+        },
+        {
+          "notion": "La conservation",
+          "difficulty": 3,
+          "statement": "Un solide de masse $m = 0{,}50\\ \\mathrm{kg}$ est suspendu à un ressort vertical de raideur $K = 20\\ \\mathrm{N\\,m^{-1}}$. On l'écarte de $4{,}0\\ \\mathrm{cm}$ vers le bas **à partir de sa position d'équilibre** et on le lâche sans vitesse. Quelle est sa vitesse maximale ? ($g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$)",
+          "options": [
+            {
+              "label": "$0{,}25\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "En comptant l'élongation depuis l'équilibre, l'énergie potentielle totale vaut $\\frac12 K x^2$ : $v_{max} = X_m\\sqrt{K/m} = 4{,}0\\times10^{-2}\\times\\sqrt{40} = 0{,}25\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}89\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as traité le mouvement comme une chute libre, $\\frac12 m v^2 = mgh$, soit $v = \\sqrt{2\\times9{,}8\\times4{,}0\\times10^{-2}} = 0{,}89\\ \\mathrm{m\\,s^{-1}}$ : le ressort travaille aussi et s'oppose à la descente."
+            },
+            {
+              "label": "$0{,}18\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as écrit $E_m = m v_{max}^2$ sans le $\\frac12$ : avec $E_m = 1{,}6\\times10^{-2}\\ \\mathrm{J}$, cela donne $\\sqrt{1{,}6\\times10^{-2}/0{,}50} = 0{,}18\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}36\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as écrit $E_m = K X_m^2 = 3{,}2\\times10^{-2}\\ \\mathrm{J}$ sans le $\\frac12$, puis $\\sqrt{2\\times3{,}2\\times10^{-2}/0{,}50} = 0{,}36\\ \\mathrm{m\\,s^{-1}}$."
+            }
+          ],
+          "hint": "Quand on repère l'élongation depuis la position d'équilibre, le poids et la tension initiale se compensent déjà : regarde quelle formule reste.",
+          "solution": "Repérons l'élongation $x$ **depuis la position d'équilibre**. À l'équilibre la tension compense le poids ($K x_0 = mg$), et on montre que la somme de l'énergie potentielle élastique et de l'énergie potentielle de pesanteur vaut alors $\\frac12 K x^2$, à une constante près. Le bilan est donc le même que pour un oscillateur horizontal : $$\\frac12 K X_m^2 = \\frac12 m v_{max}^2 \\ \\Longrightarrow\\ v_{max} = X_m\\sqrt{\\frac{K}{m}} = 4{,}0\\times10^{-2}\\times\\sqrt{\\frac{20}{0{,}50}} = 4{,}0\\times10^{-2}\\times6{,}32 = 0{,}25\\ \\mathrm{m\\,s^{-1}}.$$ Contrôle : $E_m = \\frac12\\times20\\times(4{,}0\\times10^{-2})^2 = 1{,}6\\times10^{-2}\\ \\mathrm{J}$ et $\\frac12\\times0{,}50\\times(0{,}25)^2 = 1{,}6\\times10^{-2}\\ \\mathrm{J}$ — les deux expressions concordent.",
+          "methode": "Ressort vertical : repère toujours $x$ depuis l'équilibre. Le terme de pesanteur disparaît et tu retrouves $\\frac12 K x^2$.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-la-conservation-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les échanges au cours d'une période",
+        "lesson": "Énergie mécanique d'un oscillateur",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-les-echanges-au-cours-d-une-periode",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "Les échanges au cours d'une période",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les échanges au cours d'une période",
+          "difficulty": 1,
+          "statement": "Pour un oscillateur élastique non amorti, à quel endroit l'énergie cinétique est-elle maximale ?",
+          "options": [
+            {
+              "label": "Au passage par la position d'équilibre, où la vitesse vaut $v_{max}$.",
+              "correct": true,
+              "why": "En $x = 0$ l'énergie potentielle élastique est nulle, donc toute l'énergie mécanique est cinétique : $E_c = E_m$."
+            },
+            {
+              "label": "Aux élongations extrêmes $x = \\pm X_m$, où le ressort est le plus tendu.",
+              "why": "Aux élongations extrêmes la vitesse s'annule (le solide fait demi-tour) : c'est là que $E_c$ est **minimale** et nulle, et que $E_{pe}$ est maximale."
+            },
+            {
+              "label": "À mi-chemin entre l'équilibre et une élongation extrême.",
+              "why": "En $x = X_m/2$ l'énergie cinétique vaut les trois quarts de $E_m$ : élevée, mais pas maximale."
+            },
+            {
+              "label": "Nulle part : l'énergie cinétique garde la même valeur tout au long du mouvement.",
+              "why": "La vitesse varie de $0$ à $v_{max}$ au cours d'une période, donc $E_c = \\frac12 m v^2$ varie aussi : c'est $E_m$ qui est constante, pas $E_c$."
+            }
+          ],
+          "hint": "Où la vitesse est-elle la plus grande au cours d'une oscillation ?",
+          "solution": "L'énergie mécanique $E_m = \\frac12 m v^2 + \\frac12 K x^2$ est constante. L'énergie cinétique est donc maximale là où l'énergie potentielle élastique est minimale, c'est-à-dire en $x = 0$ : **au passage par la position d'équilibre**. On y a $E_c = E_m = \\frac12 K X_m^2 = \\frac12 m v_{max}^2$. Aux élongations extrêmes, c'est l'inverse : $v = 0$ et toute l'énergie est potentielle.",
+          "methode": "Retiens les deux positions clés : en $x = 0$ tout est cinétique ; en $x = \\pm X_m$ tout est potentiel.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-echanges-au-cours-d-une-periode-q1"
+        },
+        {
+          "notion": "Les échanges au cours d'une période",
+          "difficulty": 2,
+          "statement": "Un oscillateur élastique non amorti a une période $T_0 = 0{,}40\\ \\mathrm{s}$. Quelle est la période de variation de son énergie cinétique ?",
+          "options": [
+            {
+              "label": "$0{,}20\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "L'énergie cinétique repasse par son maximum à chaque passage par l'équilibre, soit deux fois par période : sa période est $T_0/2 = 0{,}20\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$0{,}40\\ \\mathrm{s}$",
+              "why": "Tu as recopié la période du mouvement : mais $E_c$ dépend de $v^2$, qui reprend la même valeur deux fois plus souvent que $v$."
+            },
+            {
+              "label": "$0{,}80\\ \\mathrm{s}$",
+              "why": "Tu as doublé la période au lieu de la diviser par deux : l'échange d'énergie est **plus** rapide que le mouvement, pas plus lent."
+            },
+            {
+              "label": "$0{,}10\\ \\mathrm{s}$",
+              "why": "Tu as divisé par $4$ : l'énergie cinétique passe par son maximum deux fois par période (et non quatre), donc le diviseur est $2$."
+            }
+          ],
+          "hint": "Combien de fois, en une période, le solide passe-t-il par sa position d'équilibre ?",
+          "solution": "Avec $x = X_m\\cos(\\omega_0 t)$, la vitesse est $v = -X_m\\omega_0\\sin(\\omega_0 t)$ et $$E_c = \\frac12 m X_m^2\\omega_0^2\\sin^2(\\omega_0 t) = \\frac14 m X_m^2\\omega_0^2\\,\\bigl[1 - \\cos(2\\omega_0 t)\\bigr].$$ La pulsation apparaissant dans $E_c$ est $2\\omega_0$ : la fréquence de l'échange d'énergie est **double** de celle du mouvement, donc sa période est $T_0/2 = 0{,}20\\ \\mathrm{s}$. Contrôle concret : en une période le solide passe deux fois par l'équilibre (une fois vers la droite, une fois vers la gauche) et $E_c$ y est maximale les deux fois.",
+          "methode": "$E_c$ et $E_{pe}$ oscillent à la fréquence **double** du mouvement : leur période est $T_0/2$.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-echanges-au-cours-d-une-periode-q2"
+        },
+        {
+          "notion": "Les échanges au cours d'une période",
+          "difficulty": 2,
+          "statement": "Un oscillateur élastique non amorti a pour amplitude $X_m = 5{,}0\\ \\mathrm{cm}$. Quelle fraction de l'énergie mécanique est sous forme cinétique à l'élongation $x = 2{,}5\\ \\mathrm{cm}$ ?",
+          "options": [
+            {
+              "label": "$75\\ \\%$",
+              "correct": true,
+              "why": "$E_{pe}/E_m = (x/X_m)^2 = 0{,}25$, donc $E_c/E_m = 1 - 0{,}25 = 0{,}75$."
+            },
+            {
+              "label": "$25\\ \\%$",
+              "why": "Tu as donné la part **potentielle** : $(x/X_m)^2 = 0{,}25$. L'énergie cinétique est ce qui reste."
+            },
+            {
+              "label": "$50\\ \\%$",
+              "why": "Tu as supposé que l'énergie se partage proportionnellement à $x$ : à mi-amplitude, la part potentielle serait $x/X_m = 0{,}50$. Or $E_{pe}$ varie comme $x^2$, pas comme $x$."
+            },
+            {
+              "label": "$87\\ \\%$",
+              "why": "Tu as calculé un rapport de **vitesses** : $v/v_{max} = \\sqrt{1-(x/X_m)^2} = 0{,}87$. La question porte sur le rapport des énergies, qui est le carré de celui-là."
+            }
+          ],
+          "hint": "Calcule d'abord la part potentielle, qui ne dépend que du rapport $x/X_m$.",
+          "solution": "L'énergie mécanique vaut $E_m = \\frac12 K X_m^2$ et l'énergie potentielle à l'élongation $x$ vaut $\\frac12 K x^2$, donc $$\\frac{E_{pe}}{E_m} = \\left(\\frac{x}{X_m}\\right)^2 = \\left(\\frac{2{,}5}{5{,}0}\\right)^2 = \\frac14 = 25\\ \\%.$$ Comme $E_c = E_m - E_{pe}$, il vient $E_c/E_m = 1 - 0{,}25 = 0{,}75$, soit **$75\\ \\%$**. Contrôle : la vitesse y vaut $v = v_{max}\\sqrt{0{,}75} = 0{,}87\\,v_{max}$ — elle est donc encore proche de son maximum, ce qui est cohérent avec une énergie cinétique largement majoritaire.",
+          "methode": "$E_{pe}/E_m = (x/X_m)^2$ et $E_c/E_m = 1 - (x/X_m)^2$ : raisonne toujours en rapports de carrés.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-echanges-au-cours-d-une-periode-q3"
+        },
+        {
+          "notion": "Les échanges au cours d'une période",
+          "difficulty": 3,
+          "statement": "Sur l'enregistrement des énergies d'un oscillateur élastique non amorti d'amplitude $X_m = 6{,}0\\ \\mathrm{cm}$, on repère un instant où l'énergie potentielle élastique vaut trois fois l'énergie cinétique. Quelle est alors l'élongation (en valeur absolue) ?",
+          "options": [
+            {
+              "label": "$5{,}2\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "$E_{pe} = 3E_c$ donne $E_{pe}/E_m = 3/4$, donc $(x/X_m)^2 = 0{,}75$ et $|x| = 6{,}0\\times\\frac{\\sqrt3}{2} = 5{,}2\\ \\mathrm{cm}$."
+            },
+            {
+              "label": "$4{,}5\\ \\mathrm{cm}$",
+              "why": "Tu as écrit $x/X_m = E_{pe}/E_m = 3/4$, soit $0{,}75\\times6{,}0 = 4{,}5\\ \\mathrm{cm}$ : tu as oublié que c'est $(x/X_m)^2$ qui vaut $3/4$."
+            },
+            {
+              "label": "$3{,}0\\ \\mathrm{cm}$",
+              "why": "Tu as résolu $E_c = 3E_{pe}$, c'est-à-dire $(x/X_m)^2 = 1/4$ et $|x| = 3{,}0\\ \\mathrm{cm}$ : tu as inversé les deux énergies."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{cm}$",
+              "why": "Tu as divisé l'amplitude par $3$ : $6{,}0/3 = 2{,}0\\ \\mathrm{cm}$. Le facteur $3$ porte sur les énergies, pas directement sur l'élongation."
+            }
+          ],
+          "hint": "Traduis d'abord « $E_{pe} = 3E_c$ » en une fraction de l'énergie mécanique totale.",
+          "solution": "Posons $E_{pe} = 3E_c$. Comme $E_m = E_c + E_{pe} = 4E_c$, on a $E_{pe} = \\frac34 E_m$. Or $E_{pe}/E_m = (x/X_m)^2$, donc $$\\left(\\frac{x}{X_m}\\right)^2 = \\frac34 \\ \\Longrightarrow\\ |x| = X_m\\frac{\\sqrt3}{2} = 6{,}0\\times0{,}866 = 5{,}2\\ \\mathrm{cm}.$$ Contrôle : $|x| = 5{,}2\\ \\mathrm{cm}$ est bien proche de l'amplitude $6{,}0\\ \\mathrm{cm}$, ce qui est attendu puisque l'énergie y est majoritairement potentielle.",
+          "methode": "Convertis d'abord l'énoncé en « quelle fraction de $E_m$ », puis applique $E_{pe}/E_m = (x/X_m)^2$.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-echanges-au-cours-d-une-periode-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le cas du pendule pesant",
+        "lesson": "Énergie mécanique d'un oscillateur",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-le-cas-du-pendule-pesant",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "Le cas du pendule pesant",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le cas du pendule pesant",
+          "difficulty": 1,
+          "statement": "Un pendule simple de longueur $\\ell = 0{,}80\\ \\mathrm{m}$ est écarté d'un angle $\\theta_m = 30^\\circ$ par rapport à la verticale. De quelle hauteur son centre d'inertie est-il remonté par rapport à sa position la plus basse ? ($\\cos 30^\\circ = 0{,}866$)",
+          "options": [
+            {
+              "label": "$0{,}11\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$h = \\ell(1-\\cos\\theta_m) = 0{,}80\\times(1-0{,}866) = 0{,}80\\times0{,}134 = 0{,}11\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$0{,}69\\ \\mathrm{m}$",
+              "why": "Tu as calculé $\\ell\\cos\\theta_m = 0{,}80\\times0{,}866 = 0{,}69\\ \\mathrm{m}$ : c'est la distance verticale du point de suspension au centre d'inertie, pas la hauteur regagnée."
+            },
+            {
+              "label": "$0{,}40\\ \\mathrm{m}$",
+              "why": "Tu as calculé $\\ell\\sin\\theta_m = 0{,}80\\times0{,}50 = 0{,}40\\ \\mathrm{m}$ : c'est le déplacement **horizontal**, pas vertical."
+            },
+            {
+              "label": "$0{,}42\\ \\mathrm{m}$",
+              "why": "Tu as calculé $\\ell\\,\\theta_m = 0{,}80\\times0{,}524 = 0{,}42\\ \\mathrm{m}$ (angle en radians) : c'est la longueur de l'arc parcouru, pas la dénivelée."
+            }
+          ],
+          "hint": "Fais un schéma : compare la projection verticale du fil incliné à sa longueur totale.",
+          "solution": "Prenons l'origine des altitudes à la position la plus basse du centre d'inertie. Quand le fil fait l'angle $\\theta_m$ avec la verticale, le centre d'inertie se trouve à la distance verticale $\\ell\\cos\\theta_m$ sous le point de suspension, au lieu de $\\ell$. Il est donc remonté de $$h = \\ell - \\ell\\cos\\theta_m = \\ell(1-\\cos\\theta_m) = 0{,}80\\times(1-0{,}866) = 0{,}107 \\approx 0{,}11\\ \\mathrm{m}.$$ Contrôle : pour un petit angle, $h$ doit être petit devant $\\ell$ — c'est bien le cas ($0{,}11\\ \\mathrm{m}$ contre $0{,}80\\ \\mathrm{m}$).",
+          "methode": "Pour un pendule, la hauteur regagnée est toujours $h = \\ell(1-\\cos\\theta)$, jamais $\\ell\\cos\\theta$.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-le-cas-du-pendule-pesant-q1"
+        },
+        {
+          "notion": "Le cas du pendule pesant",
+          "difficulty": 2,
+          "statement": "Le même pendule ($\\ell = 0{,}80\\ \\mathrm{m}$, $\\theta_m = 30^\\circ$) est lâché sans vitesse. Quelle est la vitesse de la bille à son passage par la position d'équilibre ? ($g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$, $\\cos 30^\\circ = 0{,}866$, frottements négligés)",
+          "options": [
+            {
+              "label": "$1{,}4\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$\\frac12 m v_{max}^2 = mg\\ell(1-\\cos\\theta_m)$ donne $v_{max} = \\sqrt{2\\times9{,}8\\times0{,}107} = 1{,}4\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as écrit $m v^2 = mgh$ sans le $\\frac12$ : $\\sqrt{9{,}8\\times0{,}107} = 1{,}0\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$3{,}7\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris $h = \\ell\\cos\\theta_m = 0{,}69\\ \\mathrm{m}$ : $\\sqrt{2\\times9{,}8\\times0{,}69} = 3{,}7\\ \\mathrm{m\\,s^{-1}}$. La hauteur regagnée est $\\ell(1-\\cos\\theta_m)$."
+            },
+            {
+              "label": "$2{,}1\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu t'es arrêté à $v_{max}^2 = 2gh = 2{,}1\\ \\mathrm{m^2\\,s^{-2}}$ et tu l'as lu comme une vitesse : il reste la racine carrée."
+            }
+          ],
+          "hint": "La masse n'intervient pas : écris la conservation de l'énergie mécanique entre les deux positions, puis simplifie.",
+          "solution": "Prenons l'origine de l'énergie potentielle de pesanteur à la position d'équilibre. À l'angle $\\theta_m$, la bille est immobile : $E_m = mg\\ell(1-\\cos\\theta_m)$. À l'équilibre, $z = 0$ : $E_m = \\frac12 m v_{max}^2$. L'énergie mécanique se conserve, donc $$\\frac12 m v_{max}^2 = mg\\ell(1-\\cos\\theta_m) \\ \\Longrightarrow\\ v_{max} = \\sqrt{2g\\ell(1-\\cos\\theta_m)}.$$ Numériquement : $v_{max} = \\sqrt{2\\times9{,}8\\times0{,}80\\times0{,}134} = \\sqrt{2{,}10} = 1{,}4\\ \\mathrm{m\\,s^{-1}}$. Contrôle : la masse a disparu, comme pour toute chute sans frottement — c'est bon signe.",
+          "methode": "Pendule lâché sans vitesse : $v_{max} = \\sqrt{2g\\ell(1-\\cos\\theta_m)}$. La masse ne joue aucun rôle.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-le-cas-du-pendule-pesant-q2"
+        },
+        {
+          "notion": "Le cas du pendule pesant",
+          "difficulty": 2,
+          "statement": "Pour le même pendule ($m = 0{,}20\\ \\mathrm{kg}$, $\\ell = 0{,}80\\ \\mathrm{m}$, $\\theta_m = 30^\\circ$, $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$, $\\cos 30^\\circ = 0{,}866$), on choisit l'origine de l'énergie potentielle de pesanteur à la position d'équilibre. Que vaut $E_{pp}$ à l'écart maximal ?",
+          "options": [
+            {
+              "label": "$0{,}21\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$E_{pp} = mg\\ell(1-\\cos\\theta_m) = 0{,}20\\times9{,}8\\times0{,}107 = 0{,}21\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$1{,}4\\ \\mathrm{J}$",
+              "why": "Tu as pris $z = \\ell\\cos\\theta_m = 0{,}69\\ \\mathrm{m}$ : $0{,}20\\times9{,}8\\times0{,}69 = 1{,}4\\ \\mathrm{J}$. La dénivelée est $\\ell(1-\\cos\\theta_m)$."
+            },
+            {
+              "label": "$0{,}78\\ \\mathrm{J}$",
+              "why": "Tu as pris $z = \\ell\\sin\\theta_m = 0{,}40\\ \\mathrm{m}$ : $0{,}20\\times9{,}8\\times0{,}40 = 0{,}78\\ \\mathrm{J}$. C'est l'écart horizontal, pas l'altitude."
+            },
+            {
+              "label": "$1{,}6\\ \\mathrm{J}$",
+              "why": "Tu as pris $z = \\ell = 0{,}80\\ \\mathrm{m}$ : $0{,}20\\times9{,}8\\times0{,}80 = 1{,}6\\ \\mathrm{J}$. Cela supposerait que la bille remonte jusqu'au niveau du point de suspension."
+            }
+          ],
+          "hint": "$E_{pp} = mgz$ où $z$ est mesurée depuis l'origine annoncée : ici la position d'équilibre.",
+          "solution": "L'origine étant à la position d'équilibre, l'altitude de la bille à l'écart maximal est $z = \\ell(1-\\cos\\theta_m) = 0{,}80\\times(1-0{,}866) = 0{,}107\\ \\mathrm{m}$. Donc $$E_{pp} = mgz = 0{,}20\\times9{,}8\\times0{,}107 = 0{,}21\\ \\mathrm{J}.$$ Contrôle : comme la bille est lâchée sans vitesse, cette valeur est aussi l'énergie mécanique totale ; on retrouve bien $v_{max} = \\sqrt{2E_m/m} = \\sqrt{2\\times0{,}21/0{,}20} = 1{,}4\\ \\mathrm{m\\,s^{-1}}$.",
+          "methode": "$E_{pp} = mgz$ n'a de sens qu'une fois l'origine annoncée. Écris-la toujours en première ligne de ta copie.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-le-cas-du-pendule-pesant-q3"
+        },
+        {
+          "notion": "Le cas du pendule pesant",
+          "difficulty": 3,
+          "statement": "On reprend ce pendule ($m = 0{,}20\\ \\mathrm{kg}$, $\\ell = 0{,}80\\ \\mathrm{m}$, $\\theta_m = 30^\\circ$, $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$, $\\cos 30^\\circ = 0{,}866$) mais on place désormais l'origine de l'énergie potentielle de pesanteur **au point de suspension $O$**. Que valent l'énergie mécanique et la vitesse maximale ?",
+          "options": [
+            {
+              "label": "$E_m = -1{,}36\\ \\mathrm{J}$ et $v_{max} = 1{,}4\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "À l'écart maximal la bille est à $z = -\\ell\\cos\\theta_m$, donc $E_m = -0{,}20\\times9{,}8\\times0{,}69 = -1{,}36\\ \\mathrm{J}$ ; la vitesse ne dépend que de la **dénivelée**, donc elle est inchangée."
+            },
+            {
+              "label": "$E_m = -1{,}57\\ \\mathrm{J}$ et $v_{max} = 1{,}4\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris $z = -\\ell = -0{,}80\\ \\mathrm{m}$ : $-0{,}20\\times9{,}8\\times0{,}80 = -1{,}57\\ \\mathrm{J}$. Mais à l'écart maximal la bille est plus haute que cela : $z = -\\ell\\cos\\theta_m$."
+            },
+            {
+              "label": "$E_m = 0{,}21\\ \\mathrm{J}$ et $v_{max} = 1{,}4\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as gardé l'origine à la position d'équilibre : avec l'origine en $O$, toutes les altitudes sont négatives et $E_m$ l'est aussi."
+            },
+            {
+              "label": "$E_m = -1{,}36\\ \\mathrm{J}$ et $v_{max} = 3{,}7\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $v = \\sqrt{2|E_m|/m} = \\sqrt{2\\times1{,}36/0{,}20} = 3{,}7\\ \\mathrm{m\\,s^{-1}}$ : cette formule ne vaut que si l'origine est prise à la position d'équilibre, là où $E_{pp} = 0$."
+            }
+          ],
+          "hint": "Change l'origine, puis demande-toi si la vitesse peut dépendre d'un choix de conventions.",
+          "solution": "**Énergie mécanique.** Avec l'origine en $O$, l'altitude de la bille à l'écart maximal vaut $z = -\\ell\\cos\\theta_m = -0{,}69\\ \\mathrm{m}$. Elle y est immobile, donc $$E_m = mgz = 0{,}20\\times9{,}8\\times(-0{,}693) = -1{,}36\\ \\mathrm{J}.$$ **Vitesse maximale.** À l'équilibre, $z' = -\\ell = -0{,}80\\ \\mathrm{m}$ et $E_m$ se conserve : $$\\frac12 m v_{max}^2 + mg(-\\ell) = mg(-\\ell\\cos\\theta_m) \\ \\Longrightarrow\\ \\frac12 v_{max}^2 = g\\ell(1-\\cos\\theta_m),$$ soit $v_{max} = 1{,}4\\ \\mathrm{m\\,s^{-1}}$, exactement comme avant. **À retenir :** la valeur de $E_m$ dépend de l'origine choisie, mais une grandeur mesurable comme la vitesse n'en dépend pas, car seule la **variation** d'énergie potentielle intervient.",
+          "methode": "Le choix de l'origine de $E_{pp}$ déplace $E_m$ d'une constante. Aucune vitesse, aucune durée n'en est modifiée.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-le-cas-du-pendule-pesant-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les oscillations amorties",
+        "lesson": "Amortissement & entretien",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-les-oscillations-amorties",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "Les oscillations amorties",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les oscillations amorties",
+          "difficulty": 2,
+          "statement": "Un pendule élastique de raideur $K = 30\\ \\mathrm{N\\,m^{-1}}$ oscille sur une table avec frottement. Son amplitude passe de $X_1 = 8{,}0\\ \\mathrm{cm}$ à $X_2 = 6{,}0\\ \\mathrm{cm}$. Quelle énergie a été dissipée entre ces deux instants ?",
+          "options": [
+            {
+              "label": "$42\\ \\mathrm{mJ}$",
+              "correct": true,
+              "why": "$|\\Delta E_m| = \\frac12 K(X_1^2 - X_2^2) = 15\\times(6{,}4 - 3{,}6)\\times10^{-3} = 4{,}2\\times10^{-2}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$84\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $K(X_1^2 - X_2^2) = 30\\times2{,}8\\times10^{-3} = 8{,}4\\times10^{-2}\\ \\mathrm{J}$ : le facteur $\\frac12$ manque."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $\\frac12 K(X_1-X_2)^2 = 15\\times(2{,}0\\times10^{-2})^2 = 6{,}0\\times10^{-3}\\ \\mathrm{J}$ : il faut la différence des carrés, pas le carré de la différence."
+            },
+            {
+              "label": "$300\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $\\frac12 K(X_1-X_2) = 15\\times2{,}0\\times10^{-2} = 0{,}30\\ \\mathrm{J}$ : tu as oublié d'élever les amplitudes au carré."
+            }
+          ],
+          "hint": "L'énergie mécanique d'un oscillateur élastique ne dépend que de son amplitude. Calcule-la deux fois.",
+          "solution": "À chaque élongation maximale la vitesse est nulle : l'énergie mécanique vaut alors $\\frac12 K X^2$. Donc $$E_{m1} = \\frac12\\times30\\times(8{,}0\\times10^{-2})^2 = 9{,}6\\times10^{-2}\\ \\mathrm{J}, \\qquad E_{m2} = \\frac12\\times30\\times(6{,}0\\times10^{-2})^2 = 5{,}4\\times10^{-2}\\ \\mathrm{J}.$$ L'énergie dissipée par les frottements est $$|\\Delta E_m| = E_{m1} - E_{m2} = 9{,}6\\times10^{-2} - 5{,}4\\times10^{-2} = 4{,}2\\times10^{-2}\\ \\mathrm{J} = 42\\ \\mathrm{mJ}.$$ Contrôle : $\\Delta E_m = W_{\\text{frottements}} < 0$, l'énergie mécanique diminue bien — cohérent avec une amplitude qui décroît.",
+          "methode": "Mesurer une amplitude, c'est mesurer une énergie : $E_m = \\frac12 K X^2$. L'énergie dissipée est la différence de ces deux énergies.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-oscillations-amorties-q1"
+        },
+        {
+          "notion": "Les oscillations amorties",
+          "difficulty": 3,
+          "statement": "Un solide ($m = 0{,}20\\ \\mathrm{kg}$) accroché à un ressort de raideur $K = 20\\ \\mathrm{N\\,m^{-1}}$ est lâché sans vitesse à $X_0 = 10{,}0\\ \\mathrm{cm}$ de l'équilibre. Il subit une force de frottement d'intensité constante $f = 0{,}40\\ \\mathrm{N}$. Quelle est son amplitude $X_1$ au premier extrême de l'autre côté ?",
+          "options": [
+            {
+              "label": "$6{,}0\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "Le bilan $\\frac12 K(X_0^2 - X_1^2) = f(X_0+X_1)$ se simplifie en $X_0 - X_1 = 2f/K = 4{,}0\\ \\mathrm{cm}$, d'où $X_1 = 6{,}0\\ \\mathrm{cm}$."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{cm}$",
+              "why": "Tu as retiré $f/K = 2{,}0\\ \\mathrm{cm}$ : le facteur $2$ a disparu en simplifiant $X_0^2 - X_1^2 = (X_0-X_1)(X_0+X_1)$."
+            },
+            {
+              "label": "$7{,}7\\ \\mathrm{cm}$",
+              "why": "Tu as compté la distance parcourue égale à $X_0$ seulement : $X_1 = \\sqrt{X_0^2 - 2fX_0/K} = 7{,}7\\ \\mathrm{cm}$. Le solide parcourt en fait $X_0 + X_1$."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{cm}$",
+              "why": "Tu as retiré $4f/K = 8{,}0\\ \\mathrm{cm}$, ce qui correspond à une oscillation **complète** (deux demi-oscillations) : on ne demande ici que la première."
+            }
+          ],
+          "hint": "Écris le bilan d'énergie entre les deux extrêmes, puis factorise $X_0^2 - X_1^2$.",
+          "solution": "Entre les deux positions extrêmes la vitesse est nulle, donc $E_m = \\frac12 K X^2$ de part et d'autre. La force de frottement, d'intensité constante et toujours opposée au déplacement, travaille sur la distance parcourue $d = X_0 + X_1$ : $$\\frac12 K X_1^2 - \\frac12 K X_0^2 = -f(X_0+X_1).$$ En factorisant, $\\frac12 K (X_0-X_1)(X_0+X_1) = f(X_0+X_1)$, et comme $X_0+X_1 \\neq 0$ : $$X_0 - X_1 = \\frac{2f}{K} = \\frac{2\\times0{,}40}{20} = 4{,}0\\times10^{-2}\\ \\mathrm{m} \\ \\Longrightarrow\\ X_1 = 10{,}0 - 4{,}0 = 6{,}0\\ \\mathrm{cm}.$$ Contrôle : l'amplitude perd la même quantité $2f/K$ à chaque demi-oscillation — la décroissance est **linéaire**, signature d'un frottement solide d'intensité constante.",
+          "methode": "Frottement constant : l'amplitude diminue de $2f/K$ à chaque demi-oscillation. Pense à factoriser la différence des carrés.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-oscillations-amorties-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'entretien des oscillations",
+        "lesson": "Amortissement & entretien",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-l-entretien-des-oscillations",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "L'entretien des oscillations",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'entretien des oscillations",
+          "difficulty": 1,
+          "statement": "Qu'est-ce qu'un dispositif d'entretien des oscillations ?",
+          "options": [
+            {
+              "label": "Un dispositif qui apporte à chaque période exactement l'énergie dissipée, de sorte que l'amplitude reste constante.",
+              "correct": true,
+              "why": "L'entretien compense les pertes période après période : $E_m$ redevient la même à chaque cycle, donc l'amplitude ne décroît plus."
+            },
+            {
+              "label": "Un dispositif qui supprime les forces de frottement agissant sur l'oscillateur.",
+              "why": "Aucun dispositif ne supprime les frottements : l'entretien les laisse agir et se contente de **compenser** l'énergie qu'ils dissipent."
+            },
+            {
+              "label": "Un dispositif qui apporte un peu plus d'énergie que les pertes, pour que l'amplitude augmente régulièrement.",
+              "why": "Cela ferait croître l'amplitude : ce n'est plus de l'entretien. Entretenir, c'est maintenir l'amplitude, donc apporter **exactement** les pertes."
+            },
+            {
+              "label": "Un dispositif qui donne toute l'énergie nécessaire au départ, puis laisse l'oscillateur libre.",
+              "why": "C'est ce qu'on fait pour des oscillations libres amorties : l'amplitude décroît alors jusqu'à l'arrêt, faute d'apport."
+            }
+          ],
+          "hint": "Pense à l'horloge à balancier : qu'est-ce que le ressort remonté lui apporte, et à quel rythme ?",
+          "solution": "Un oscillateur réel dissipe de l'énergie par frottement : son amplitude décroît. Un dispositif d'entretien (ressort moteur d'une horloge, pile d'une montre, pied qui pousse une balançoire) lui **restitue à chaque période une énergie égale à celle qui a été dissipée** : $$W_{\\text{fourni par période}} = |\\Delta E_m|_{\\text{par période}}.$$ Le bilan énergétique sur une période est alors nul, $E_m$ reprend la même valeur à chaque cycle et l'amplitude reste constante. Les oscillations gardent une période très proche de la période propre $T_0$ : on parle d'oscillations **entretenues**, et non forcées.",
+          "methode": "Entretien $\\Rightarrow$ apport = pertes sur une période. L'amplitude est constante, la période reste celle de l'oscillateur.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-l-entretien-des-oscillations-q1"
+        },
+        {
+          "notion": "L'entretien des oscillations",
+          "difficulty": 2,
+          "statement": "Un oscillateur entretenu de raideur $K = 25\\ \\mathrm{N\\,m^{-1}}$ garde une amplitude constante $X_m = 4{,}0\\ \\mathrm{cm}$. Il perd par frottement $2{,}0\\ \\%$ de son énergie mécanique à chaque période $T_0 = 0{,}50\\ \\mathrm{s}$. Quelle puissance moyenne le dispositif d'entretien doit-il fournir ?",
+          "options": [
+            {
+              "label": "$0{,}80\\ \\mathrm{mW}$",
+              "correct": true,
+              "why": "$E_m = \\frac12 K X_m^2 = 2{,}0\\times10^{-2}\\ \\mathrm{J}$, les pertes valent $2{,}0\\ \\% \\times E_m = 4{,}0\\times10^{-4}\\ \\mathrm{J}$ par période, donc $P = 4{,}0\\times10^{-4}/0{,}50 = 8{,}0\\times10^{-4}\\ \\mathrm{W}$."
+            },
+            {
+              "label": "$1{,}6\\ \\mathrm{mW}$",
+              "why": "Tu as calculé $E_m = K X_m^2 = 4{,}0\\times10^{-2}\\ \\mathrm{J}$ sans le $\\frac12$ : les pertes doublent et $P = 8{,}0\\times10^{-4}/0{,}50 = 1{,}6\\times10^{-3}\\ \\mathrm{W}$."
+            },
+            {
+              "label": "$40\\ \\mathrm{mW}$",
+              "why": "Tu as divisé l'énergie mécanique **entière** par la période : $P = 2{,}0\\times10^{-2}/0{,}50 = 4{,}0\\times10^{-2}\\ \\mathrm{W}$. Seuls $2{,}0\\ \\%$ de $E_m$ sont dissipés par période."
+            },
+            {
+              "label": "$0{,}80\\ \\mathrm{W}$",
+              "why": "La valeur $0{,}80$ est juste mais pas l'unité : $8{,}0\\times10^{-4}\\ \\mathrm{W} = 0{,}80\\ \\mathrm{mW}$, soit mille fois moins que $0{,}80\\ \\mathrm{W}$."
+            }
+          ],
+          "hint": "Calcule d'abord l'énergie perdue en une période, puis rappelle-toi qu'une puissance est une énergie divisée par une durée.",
+          "solution": "L'amplitude étant constante, l'énergie mécanique est $$E_m = \\frac12 K X_m^2 = \\frac12\\times25\\times(4{,}0\\times10^{-2})^2 = 2{,}0\\times10^{-2}\\ \\mathrm{J}.$$ L'énergie dissipée en une période vaut $2{,}0\\ \\%$ de cette valeur : $$|\\Delta E_m| = 0{,}020\\times2{,}0\\times10^{-2} = 4{,}0\\times10^{-4}\\ \\mathrm{J}.$$ Le dispositif doit fournir exactement cela à chaque période, soit une puissance moyenne $$P = \\frac{4{,}0\\times10^{-4}}{0{,}50} = 8{,}0\\times10^{-4}\\ \\mathrm{W} = 0{,}80\\ \\mathrm{mW}.$$ Contrôle d'ordre de grandeur : moins d'un milliwatt, ce qui est bien l'ordre de grandeur de la consommation d'une montre à balancier.",
+          "methode": "Puissance d'entretien $= \\dfrac{\\text{énergie dissipée par période}}{T_0}$. Calcule l'énergie d'abord, divise ensuite.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-l-entretien-des-oscillations-q2"
+        },
+        {
+          "notion": "L'entretien des oscillations",
+          "difficulty": 3,
+          "statement": "Un pendule élastique entretenu oscille avec l'amplitude constante $X_m = 5{,}0\\ \\mathrm{cm}$ en subissant une force de frottement d'intensité constante $f = 0{,}020\\ \\mathrm{N}$. Quelle énergie le dispositif d'entretien doit-il fournir à chaque période ?",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{mJ}$",
+              "correct": true,
+              "why": "En une période le solide parcourt $4X_m = 0{,}20\\ \\mathrm{m}$, donc $W = f\\times4X_m = 0{,}020\\times0{,}20 = 4{,}0\\times10^{-3}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{mJ}$",
+              "why": "Tu as compté $2X_m = 0{,}10\\ \\mathrm{m}$ : c'est la distance parcourue en une **demi**-période seulement."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{mJ}$",
+              "why": "Tu as compté $X_m = 5{,}0\\times10^{-2}\\ \\mathrm{m}$ : c'est seulement le trajet de l'extrême jusqu'à l'équilibre, soit un quart de période."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{mJ}$",
+              "why": "Tu as doublé pour « tenir compte de l'aller et du retour » en prenant $8X_m = 0{,}40\\ \\mathrm{m}$ : or $4X_m$ compte déjà l'aller **et** le retour."
+            }
+          ],
+          "hint": "Dessine le trajet du solide pendant une période complète et additionne les longueurs parcourues.",
+          "solution": "Pour maintenir l'amplitude, le dispositif doit fournir exactement l'énergie dissipée par les frottements sur une période. En une période complète, le solide va de $+X_m$ à $-X_m$ puis revient à $+X_m$ : il parcourt $$d = 4X_m = 4\\times5{,}0\\times10^{-2} = 0{,}20\\ \\mathrm{m}.$$ La force de frottement, d'intensité constante et toujours opposée au déplacement, dissipe $$|W| = f\\,d = 0{,}020\\times0{,}20 = 4{,}0\\times10^{-3}\\ \\mathrm{J} = 4{,}0\\ \\mathrm{mJ}.$$ Contrôle : sans entretien, cette perte ferait chuter l'amplitude de $4f/K$ par période ; l'apport de $4{,}0\\ \\mathrm{mJ}$ compense exactement cette chute.",
+          "methode": "Frottement constant : sur une période la distance parcourue est $4X_m$, donc l'énergie à fournir vaut $4fX_m$.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-l-entretien-des-oscillations-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les oscillations forcées et la résonance",
+        "lesson": "Amortissement & entretien",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-les-oscillations-forcees-et-la-resonance",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "Les oscillations forcées et la résonance",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les oscillations forcées et la résonance",
+          "difficulty": 1,
+          "statement": "Un oscillateur mécanique de fréquence propre $f_0$ est relié à un excitateur qui impose une fréquence $f_e$. En régime forcé établi, à quelle fréquence l'oscillateur oscille-t-il ?",
+          "options": [
+            {
+              "label": "À la fréquence $f_e$ de l'excitateur, quelle que soit la valeur de $f_0$.",
+              "correct": true,
+              "why": "En régime forcé établi, c'est l'excitateur qui impose le rythme : le résonateur oscille à $f_e$. Seule l'**amplitude** dépend de l'écart entre $f_e$ et $f_0$."
+            },
+            {
+              "label": "À sa fréquence propre $f_0$, car elle ne dépend que de $K$ et de $m$.",
+              "why": "$f_0$ reste bien la fréquence **propre** de l'oscillateur, mais en régime forcé il ne l'impose plus : c'est le cas des oscillations libres ou entretenues, pas des oscillations forcées."
+            },
+            {
+              "label": "À la moyenne des deux fréquences, $\\frac{f_0 + f_e}{2}$.",
+              "why": "Aucune moyenne n'apparaît : l'oscillateur suit intégralement l'excitateur. La fréquence de sortie est $f_e$, pas une combinaison des deux."
+            },
+            {
+              "label": "À la fréquence double $2f_e$, comme les échanges d'énergie.",
+              "why": "Tu as confondu le mouvement et l'énergie : ce sont $E_c$ et $E_p$ qui varient à la fréquence double, pas l'élongation elle-même."
+            }
+          ],
+          "hint": "Demande-toi qui, dans le dispositif, impose le rythme du mouvement.",
+          "solution": "En régime forcé établi, l'excitateur impose sa fréquence au résonateur : l'oscillateur oscille à $f_e$, **et seulement** à $f_e$. La fréquence propre $f_0$ ne disparaît pas pour autant : elle fixe la valeur de $f_e$ pour laquelle l'**amplitude** devient maximale (résonance). Retiens donc la séparation des rôles : $f_e$ gouverne la fréquence, l'écart $|f_e - f_0|$ et l'amortissement gouvernent l'amplitude.",
+          "methode": "Régime forcé : la fréquence vient de l'excitateur, l'amplitude dépend de l'écart à $f_0$.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-oscillations-forcees-et-la-resonance-q1"
+        },
+        {
+          "notion": "Les oscillations forcées et la résonance",
+          "difficulty": 2,
+          "statement": "Un solide de masse $m = 0{,}40\\ \\mathrm{kg}$ accroché à un ressort de raideur $K = 16\\ \\mathrm{N\\,m^{-1}}$ est excité par un dispositif de fréquence réglable. L'amortissement est faible. Pour quelle fréquence d'excitation l'amplitude est-elle maximale ?",
+          "options": [
+            {
+              "label": "$1{,}0\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "La résonance a lieu pour $f_e \\simeq f_0 = \\frac{1}{2\\pi}\\sqrt{K/m} = \\frac{1}{2\\pi}\\sqrt{40} = 1{,}0\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$6{,}3\\ \\mathrm{Hz}$",
+              "why": "Tu as donné la pulsation propre $\\omega_0 = \\sqrt{K/m} = 6{,}3\\ \\mathrm{rad\\,s^{-1}}$ en l'appelant fréquence : il reste à diviser par $2\\pi$."
+            },
+            {
+              "label": "$39{,}7\\ \\mathrm{Hz}$",
+              "why": "Tu as **multiplié** par $2\\pi$ au lieu de diviser : $2\\pi\\sqrt{K/m} = 39{,}7$. La fréquence est $\\omega_0/2\\pi$."
+            },
+            {
+              "label": "$0{,}025\\ \\mathrm{Hz}$",
+              "why": "Tu as inversé $m$ et $K$ sous la racine : $\\frac{1}{2\\pi}\\sqrt{m/K} = 0{,}025$. C'est $K/m$ qui a la dimension d'un carré de pulsation."
+            }
+          ],
+          "hint": "La résonance se produit quand l'excitateur travaille au voisinage de la fréquence propre : calcule-la.",
+          "solution": "L'amplitude en régime forcé est maximale quand la fréquence imposée est voisine de la fréquence propre de l'oscillateur. Or $$\\omega_0 = \\sqrt{\\frac{K}{m}} = \\sqrt{\\frac{16}{0{,}40}} = \\sqrt{40} = 6{,}32\\ \\mathrm{rad\\,s^{-1}}, \\qquad f_0 = \\frac{\\omega_0}{2\\pi} = \\frac{6{,}32}{6{,}28} = 1{,}0\\ \\mathrm{Hz}.$$ La résonance est donc obtenue pour $f_e \\simeq 1{,}0\\ \\mathrm{Hz}$. Contrôle : la période propre vaut $T_0 = 1/f_0 \\simeq 1{,}0\\ \\mathrm{s}$, ce qui est un ordre de grandeur réaliste pour un ressort de ce type.",
+          "methode": "Résonance $\\Leftrightarrow f_e \\simeq f_0 = \\frac{1}{2\\pi}\\sqrt{K/m}$. Calcule $\\omega_0$ d'abord, divise par $2\\pi$ ensuite.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-oscillations-forcees-et-la-resonance-q2"
+        },
+        {
+          "notion": "Les oscillations forcées et la résonance",
+          "difficulty": 2,
+          "statement": "On ajoute des amortisseurs à un oscillateur étudié en régime forcé, puis on relève à nouveau l'amplitude en fonction de $f_e$. Comment la courbe de résonance est-elle modifiée ?",
+          "options": [
+            {
+              "label": "L'amplitude maximale diminue et le pic s'élargit : la résonance devient floue.",
+              "correct": true,
+              "why": "Un amortissement plus fort dissipe davantage d'énergie par période : l'amplitude maximale baisse et la sélectivité en fréquence se dégrade — c'est la résonance floue."
+            },
+            {
+              "label": "L'amplitude maximale diminue et le pic se resserre : la résonance devient plus aiguë.",
+              "why": "Tu as inversé les deux mots : c'est le **faible** amortissement qui donne un pic étroit et aigu. Plus on amortit, plus le pic s'étale."
+            },
+            {
+              "label": "L'amplitude maximale est inchangée, mais le pic se déplace vers les hautes fréquences.",
+              "why": "L'amortissement agit d'abord sur la hauteur du pic, qu'il abaisse nettement ; il ne transporte pas la résonance vers les hautes fréquences."
+            },
+            {
+              "label": "L'oscillateur cesse d'osciller, quelle que soit la fréquence de l'excitateur.",
+              "why": "Tu as transposé le régime apériodique des oscillations **libres** : en régime forcé, l'excitateur impose toujours ses oscillations à la fréquence $f_e$, seule leur amplitude est réduite."
+            }
+          ],
+          "hint": "Compare deux situations extrêmes : un oscillateur presque sans frottement et un oscillateur plongé dans l'huile.",
+          "solution": "En régime forcé, l'amplitude en régime établi résulte d'un équilibre : sur une période, l'énergie fournie par l'excitateur égale l'énergie dissipée par les frottements. Si on augmente l'amortissement, les pertes sont plus grandes à amplitude donnée, donc l'équilibre s'établit à une amplitude plus faible — surtout au voisinage de $f_0$, là où l'amplitude était la plus grande. Le pic s'écrase et s'élargit : on parle de résonance **floue**. À l'inverse, un amortissement très faible donne un pic haut et étroit : résonance **aiguë**. C'est ce qui justifie les amortisseurs sur les ponts et dans les bâtiments.",
+          "methode": "Peu d'amortissement $\\Rightarrow$ résonance aiguë ; beaucoup d'amortissement $\\Rightarrow$ résonance floue, pic écrasé.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-oscillations-forcees-et-la-resonance-q3"
+        },
+        {
+          "notion": "Les oscillations forcées et la résonance",
+          "difficulty": 3,
+          "statement": "Un oscillateur élastique de fréquence propre $f_0 = 2{,}0\\ \\mathrm{Hz}$ est en résonance. On remplace le solide par un solide de masse **double**, sans changer le ressort. Pour quelle fréquence d'excitation obtient-on désormais la résonance ?",
+          "options": [
+            {
+              "label": "$1{,}4\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "$f_0 \\propto \\sqrt{1/m}$ : doubler $m$ divise $f_0$ par $\\sqrt2$, soit $2{,}0/1{,}414 = 1{,}4\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{Hz}$",
+              "why": "Tu as divisé la fréquence par $2$ : mais c'est $f_0^2$ qui est inversement proportionnel à $m$, donc $f_0$ n'est divisée que par $\\sqrt2$."
+            },
+            {
+              "label": "$2{,}8\\ \\mathrm{Hz}$",
+              "why": "Tu as **multiplié** par $\\sqrt2$ : alourdir le solide ralentit l'oscillateur, la fréquence propre doit diminuer."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{Hz}$",
+              "why": "Tu as doublé la fréquence en même temps que la masse : la masse apparaît au **dénominateur** de $K/m$, donc une masse plus grande donne une fréquence plus petite."
+            }
+          ],
+          "hint": "Écris $f_0$ en fonction de $K$ et $m$, puis regarde comment le facteur $2$ sort de la racine.",
+          "solution": "La résonance se produit toujours pour $f_e \\simeq f_0$, avec $$f_0 = \\frac{1}{2\\pi}\\sqrt{\\frac{K}{m}}.$$ En remplaçant $m$ par $2m$ à $K$ constant : $$f_0' = \\frac{1}{2\\pi}\\sqrt{\\frac{K}{2m}} = \\frac{1}{\\sqrt2}\\,f_0 = \\frac{2{,}0}{1{,}414} = 1{,}4\\ \\mathrm{Hz}.$$ Contrôle de cohérence physique : un solide plus lourd est plus difficile à mettre en mouvement, l'oscillateur est plus « lent », sa fréquence propre diminue — et c'est bien ce qu'on obtient.",
+          "methode": "Pour voir l'effet d'un facteur, écris la formule littérale : un facteur $2$ sous une racine ne vaut que $\\sqrt2$ sur le résultat.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-oscillations-forcees-et-la-resonance-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Résonances utiles et dangereuses",
+        "lesson": "Amortissement & entretien",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-resonances-utiles-et-dangereuses",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "Résonances utiles et dangereuses",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Résonances utiles et dangereuses",
+          "difficulty": 1,
+          "statement": "Pourquoi une troupe de soldats reçoit-elle l'ordre de « rompre le pas » avant de traverser une passerelle ?",
+          "options": [
+            {
+              "label": "Parce que la cadence régulière des pas pourrait exciter la passerelle près de sa fréquence propre et provoquer une résonance.",
+              "correct": true,
+              "why": "Des pas cadencés constituent un excitateur périodique : si leur fréquence s'approche de la fréquence propre de l'ouvrage, l'amplitude des oscillations devient dangereusement grande."
+            },
+            {
+              "label": "Parce que la masse totale de la troupe devient trop grande lorsque les soldats marchent groupés.",
+              "why": "Tu raisonnes sur une charge statique : le danger ici n'est pas le poids, mais le caractère **périodique** de l'excitation, qui peut amplifier les oscillations."
+            },
+            {
+              "label": "Parce que la marche cadencée augmente la fréquence propre de la passerelle jusqu'à la rupture.",
+              "why": "La fréquence propre d'un ouvrage ne dépend que de ses caractéristiques (raideur, masse) : les piétons ne la modifient pas, ils l'**excitent**."
+            },
+            {
+              "label": "Parce que les pas simultanés dissipent trop d'énergie par frottement dans les appuis de la passerelle.",
+              "why": "Tu as pensé à l'amortissement, qui au contraire **protège** l'ouvrage. Le risque vient de l'énergie apportée à chaque période, pas de celle qui est dissipée."
+            }
+          ],
+          "hint": "Demande-toi ce qu'un rythme régulier a de particulier pour un système qui possède une fréquence propre.",
+          "solution": "Une passerelle est un oscillateur mécanique : elle possède une fréquence propre $f_0$. Une troupe au pas cadencé fournit une excitation **périodique** de fréquence $f_e$ bien définie. Si $f_e$ se rapproche de $f_0$, chaque poussée arrive « au bon moment » et l'énergie s'accumule d'une période à l'autre : l'amplitude des oscillations croît fortement — c'est la résonance, qui peut aller jusqu'à l'endommagement de l'ouvrage. Rompre le pas détruit la périodicité de l'excitation et supprime donc le risque. C'est le même phénomène que l'on combat avec des amortisseurs sur les grands ponts.",
+          "methode": "Toute excitation **périodique** d'un système ayant une fréquence propre pose la question de la résonance.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-resonances-utiles-et-dangereuses-q1"
+        },
+        {
+          "notion": "Résonances utiles et dangereuses",
+          "difficulty": 2,
+          "statement": "Une passerelle piétonne a pour fréquence propre $f_0 = 1{,}8\\ \\mathrm{Hz}$. À quelle cadence de marche, exprimée en pas par minute, les piétons risquent-ils de l'exciter en résonance ?",
+          "options": [
+            {
+              "label": "$108$ pas par minute",
+              "correct": true,
+              "why": "Un pas par oscillation : la cadence vaut $f_0$ exprimée par minute, soit $1{,}8 \\times 60 = 108$ pas par minute."
+            },
+            {
+              "label": "$33$ pas par minute",
+              "why": "Tu as calculé $60/f_0 = 33$, c'est-à-dire $60\\,T_0$ : tu as divisé par la fréquence au lieu de la multiplier par $60$."
+            },
+            {
+              "label": "$1{,}8$ pas par minute",
+              "why": "Tu as recopié $f_0$ sans conversion : $1{,}8$ pas par **seconde** font $108$ pas par minute."
+            },
+            {
+              "label": "$6{,}5\\times10^{3}$ pas par minute",
+              "why": "Tu as multiplié par $3600$ : cela donne des pas par **heure**. Pour des pas par minute, le facteur est $60$."
+            }
+          ],
+          "hint": "Un pas par oscillation : convertis simplement des oscillations par seconde en oscillations par minute.",
+          "solution": "La résonance est à craindre lorsque la fréquence d'excitation égale la fréquence propre : $f_e = f_0 = 1{,}8\\ \\mathrm{Hz}$, soit $1{,}8$ pas par seconde. En une minute : $$n = 1{,}8 \\times 60 = 108 \\text{ pas par minute}.$$ Contrôle : $108$ pas par minute, c'est un peu moins de deux pas par seconde, exactement l'allure d'une marche soutenue — ce qui explique pourquoi ce risque est réel sur les passerelles piétonnes.",
+          "methode": "Convertis toujours une fréquence en « événements par minute » en multipliant par $60$, jamais en divisant.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-resonances-utiles-et-dangereuses-q2"
+        },
+        {
+          "notion": "Résonances utiles et dangereuses",
+          "difficulty": 2,
+          "statement": "On fixe des amortisseurs dans le tablier d'un pont pour limiter les oscillations provoquées par le vent. Quelle est la conséquence énergétique de ce choix ?",
+          "options": [
+            {
+              "label": "Une plus grande part de l'énergie apportée par l'excitation est dissipée, ce qui limite l'amplitude atteinte à la résonance.",
+              "correct": true,
+              "why": "En régime établi, l'énergie apportée par période égale l'énergie dissipée : si on dissipe davantage à amplitude donnée, l'équilibre s'établit à une amplitude plus faible."
+            },
+            {
+              "label": "L'énergie apportée par le vent ne pénètre plus dans l'ouvrage, qui reste donc au repos.",
+              "why": "Un amortisseur ne bloque pas l'apport d'énergie : il la convertit en chaleur. Le pont oscille encore, mais avec une amplitude réduite."
+            },
+            {
+              "label": "L'énergie mécanique du tablier devient constante, comme pour un oscillateur sans frottement.",
+              "why": "Tu as inversé le rôle de l'amortissement : il fait précisément **varier** l'énergie mécanique en la dissipant. C'est l'absence de frottement qui rend $E_m$ constante."
+            },
+            {
+              "label": "La fréquence propre du tablier augmente, ce qui l'éloigne de la fréquence du vent.",
+              "why": "Un amortisseur agit sur les pertes, pas sur la raideur ni sur la masse du tablier : la fréquence propre reste pratiquement la même."
+            }
+          ],
+          "hint": "Écris le bilan d'énergie sur une période en régime forcé établi, puis demande-toi ce que change une dissipation plus forte.",
+          "solution": "En régime forcé établi l'amplitude ne varie plus : sur une période, $$W_{\\text{fourni par l'excitateur}} = |W_{\\text{dissipé par frottement}}|.$$ Les amortisseurs augmentent la dissipation à amplitude donnée. L'égalité ci-dessus ne peut alors être satisfaite qu'à une amplitude plus petite : le pic de résonance est écrasé, la résonance devient floue. L'énergie du vent continue d'entrer dans l'ouvrage, mais elle est convertie en chaleur au lieu d'alimenter de grandes oscillations. C'est exactement le rôle d'un amortisseur de voiture, qui empêche la carrosserie de continuer à osciller après une bosse.",
+          "methode": "Régime forcé établi : apport = pertes sur une période. Augmenter les pertes, c'est abaisser l'amplitude d'équilibre.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-resonances-utiles-et-dangereuses-q3"
+        },
+        {
+          "notion": "Résonances utiles et dangereuses",
+          "difficulty": 3,
+          "statement": "Un bâtiment a pour fréquence propre $f_0 = 0{,}50\\ \\mathrm{Hz}$. Lors d'un séisme, les ondes dominantes du sol ont une période $T = 2{,}0\\ \\mathrm{s}$. Y a-t-il un risque de résonance ?",
+          "options": [
+            {
+              "label": "Oui : l'excitation a pour fréquence $1/T = 0{,}50\\ \\mathrm{Hz}$, exactement la fréquence propre du bâtiment.",
+              "correct": true,
+              "why": "La comparaison doit porter sur deux grandeurs de même nature : $f_e = 1/2{,}0 = 0{,}50\\ \\mathrm{Hz}$ égale $f_0$, le bâtiment est donc excité à sa résonance."
+            },
+            {
+              "label": "Non : $2{,}0\\ \\mathrm{s}$ et $0{,}50\\ \\mathrm{Hz}$ sont des valeurs très différentes, les deux ne coïncident pas.",
+              "why": "Tu as comparé une période à une fréquence, ce qui n'a pas de sens : convertis d'abord, et $2{,}0\\ \\mathrm{s}$ devient $0{,}50\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "Non : l'excitation a pour fréquence $2{,}0\\ \\mathrm{Hz}$, soit quatre fois la fréquence propre.",
+              "why": "Tu as lu la période $T = 2{,}0\\ \\mathrm{s}$ comme une fréquence de $2{,}0\\ \\mathrm{Hz}$ : la fréquence est $1/T$, soit $0{,}50\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "Oui, mais uniquement si l'amortissement du bâtiment est rigoureusement nul.",
+              "why": "L'amortissement abaisse l'amplitude atteinte et rend la résonance floue, mais il ne la supprime pas : le risque existe pour tout bâtiment réel."
+            }
+          ],
+          "hint": "Avant toute comparaison, ramène les deux informations à la même grandeur : deux fréquences, ou deux périodes.",
+          "solution": "Le piège est de comparer directement $T = 2{,}0\\ \\mathrm{s}$ à $f_0 = 0{,}50\\ \\mathrm{Hz}$. Convertissons : la fréquence de l'excitation vaut $$f_e = \\frac{1}{T} = \\frac{1}{2{,}0} = 0{,}50\\ \\mathrm{Hz} = f_0 .$$ L'excitation tombe donc exactement sur la fréquence propre : le bâtiment est en **résonance** et le risque est maximal. Contrôle par l'autre voie : la période propre vaut $T_0 = 1/f_0 = 2{,}0\\ \\mathrm{s}$, identique à la période du sol — les deux raisonnements concordent. C'est pour cela qu'on construit les immeubles de grande hauteur avec des fréquences propres éloignées de celles des séismes locaux, et qu'on y ajoute des amortisseurs.",
+          "methode": "Ne compare jamais une période à une fréquence : convertis d'abord avec $f = 1/T$.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-resonances-utiles-et-dangereuses-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le puits de potentiel",
+        "lesson": "Approfondissement — Aspects énergétiques",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-le-puits-de-potentiel",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "Le puits de potentiel",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le puits de potentiel",
+          "difficulty": 3,
+          "statement": "Pour un oscillateur élastique horizontal de raideur $K = 40\\ \\mathrm{N\\,m^{-1}}$, on trace la courbe $E_p(x) = \\frac12 K x^2$ (le « puits de potentiel ») et la droite horizontale $E_m = 0{,}080\\ \\mathrm{J}$. Entre quelles élongations le mouvement est-il possible ?",
+          "options": [
+            {
+              "label": "$-6{,}3\\ \\mathrm{cm} \\le x \\le +6{,}3\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "Le mouvement s'arrête là où $E_p = E_m$, car $E_c \\ge 0$ : $|x| = \\sqrt{2E_m/K} = \\sqrt{0{,}0040} = 6{,}3\\times10^{-2}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$-4{,}5\\ \\mathrm{cm} \\le x \\le +4{,}5\\ \\mathrm{cm}$",
+              "why": "Tu as résolu $K x^2 = E_m$ en oubliant le facteur $\\frac12$ : $\\sqrt{E_m/K} = 4{,}5\\times10^{-2}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$-0{,}40\\ \\mathrm{cm} \\le x \\le +0{,}40\\ \\mathrm{cm}$",
+              "why": "Tu t'es arrêté à $2E_m/K = 4{,}0\\times10^{-3}\\ \\mathrm{m^2}$ et tu l'as lu comme une longueur : il reste à prendre la racine carrée."
+            },
+            {
+              "label": "$-3{,}2\\ \\mathrm{cm} \\le x \\le +3{,}2\\ \\mathrm{cm}$",
+              "why": "Tu as divisé par $2$ la valeur trouvée, en confondant l'amplitude avec la **demi**-largeur du puits : la largeur totale est $12{,}6\\ \\mathrm{cm}$, l'amplitude en est la moitié, soit $6{,}3\\ \\mathrm{cm}$."
+            }
+          ],
+          "hint": "Où l'énergie cinétique s'annule-t-elle ? Traduis cette condition sur la courbe, puis résous.",
+          "solution": "À chaque instant $E_m = E_c + E_p$ avec $E_c = \\frac12 m v^2 \\ge 0$, donc nécessairement $$E_p(x) \\le E_m .$$ Le mouvement est donc confiné à la partie du puits située **sous** la droite $E_m$. Les bornes sont les points de rebroussement, où $E_c = 0$ et $E_p = E_m$ : $$\\frac12 K x^2 = E_m \\ \\Longrightarrow\\ |x| = \\sqrt{\\frac{2E_m}{K}} = \\sqrt{\\frac{2\\times0{,}080}{40}} = \\sqrt{4{,}0\\times10^{-3}} = 6{,}3\\times10^{-2}\\ \\mathrm{m}.$$ Le mouvement se fait donc entre $-6{,}3\\ \\mathrm{cm}$ et $+6{,}3\\ \\mathrm{cm}$ : ces bornes sont exactement les élongations extrêmes, donc $X_m = 6{,}3\\ \\mathrm{cm}$. Contrôle : $\\frac12\\times40\\times(6{,}3\\times10^{-2})^2 = 0{,}079\\ \\mathrm{J}$, on retrouve bien $E_m$.",
+          "methode": "Lire un puits de potentiel : les bornes du mouvement sont les intersections de la droite $E_m$ avec la courbe $E_p(x)$.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-le-puits-de-potentiel-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le facteur de qualité mécanique",
+        "lesson": "Approfondissement — Aspects énergétiques",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-le-facteur-de-qualite-mecanique",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "Le facteur de qualité mécanique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le facteur de qualité mécanique",
+          "difficulty": 3,
+          "statement": "On caractérise un oscillateur amorti par son facteur de qualité $Q = 2\\pi\\,\\dfrac{E_m}{|\\Delta E_m|}$, où $|\\Delta E_m|$ est l'énergie dissipée pendant une période. Un pendule élastique d'énergie $E_m = 2{,}0\\times10^{-2}\\ \\mathrm{J}$ perd $1{,}0\\ \\%$ de cette énergie à chaque période. Que vaut $Q$ ?",
+          "options": [
+            {
+              "label": "$6{,}3\\times10^{2}$",
+              "correct": true,
+              "why": "$|\\Delta E_m| = 0{,}010\\times2{,}0\\times10^{-2} = 2{,}0\\times10^{-4}\\ \\mathrm{J}$, donc $Q = 2\\pi\\times\\frac{2{,}0\\times10^{-2}}{2{,}0\\times10^{-4}} = 2\\pi\\times100 = 6{,}3\\times10^{2}$."
+            },
+            {
+              "label": "$1{,}0\\times10^{2}$",
+              "why": "Tu as calculé le rapport $E_m/|\\Delta E_m| = 100$ sans le multiplier par $2\\pi$, qui fait partie de la définition."
+            },
+            {
+              "label": "$2{,}0\\times10^{2}$",
+              "why": "Tu as écrit $Q = 2\\,E_m/|\\Delta E_m| = 200$ : le coefficient de la définition est $2\\pi$, pas $2$."
+            },
+            {
+              "label": "$6{,}3\\times10^{-2}$",
+              "why": "Tu as inversé le rapport : $2\\pi\\,|\\Delta E_m|/E_m = 6{,}3\\times10^{-2}$. Un bon oscillateur stocke beaucoup et perd peu, donc $Q$ doit être **grand**."
+            }
+          ],
+          "hint": "Commence par convertir « $1{,}0\\ \\%$ par période » en une énergie dissipée, en joules.",
+          "solution": "L'énergie dissipée pendant une période vaut $1{,}0\\ \\%$ de l'énergie stockée : $$|\\Delta E_m| = 0{,}010 \\times 2{,}0\\times10^{-2} = 2{,}0\\times10^{-4}\\ \\mathrm{J}.$$ D'où $$Q = 2\\pi\\,\\frac{E_m}{|\\Delta E_m|} = 2\\pi\\,\\frac{2{,}0\\times10^{-2}}{2{,}0\\times10^{-4}} = 2\\pi \\times 100 = 628 \\approx 6{,}3\\times10^{2}.$$ $Q$ est sans dimension, comme il doit l'être puisqu'il compare deux énergies. Interprétation utile : plus $Q$ est grand, plus l'amortissement est faible et plus la résonance de cet oscillateur sera aiguë. Contrôle : une perte de $1\\ \\%$ par période signifie qu'il faut une centaine de périodes pour perdre l'essentiel de l'énergie — un $Q$ de l'ordre de quelques centaines est donc cohérent.",
+          "methode": "$Q$ compare l'énergie stockée à l'énergie perdue par période : grand $Q$ = faible amortissement = résonance aiguë.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-le-facteur-de-qualite-mecanique-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le quartz, oscillateur d'exception",
+        "lesson": "Approfondissement — Aspects énergétiques",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-le-quartz-oscillateur-d-exception",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "Le quartz, oscillateur d'exception",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le quartz, oscillateur d'exception",
+          "difficulty": 3,
+          "statement": "Une montre à quartz, dont l'oscillateur est une lame de quartz très peu amortie, dérive de $0{,}50\\ \\mathrm{s}$ par mois (mois assimilé à $30$ jours). Quelle est la précision relative de sa fréquence, $\\left|\\Delta f / f\\right|$ ?",
+          "options": [
+            {
+              "label": "$1{,}9\\times10^{-7}$",
+              "correct": true,
+              "why": "Un mois vaut $30\\times24\\times3600 = 2{,}592\\times10^{6}\\ \\mathrm{s}$, donc $\\left|\\Delta f/f\\right| = 0{,}50/2{,}592\\times10^{6} = 1{,}9\\times10^{-7}$."
+            },
+            {
+              "label": "$5{,}8\\times10^{-6}$",
+              "why": "Tu as divisé par la durée d'**un jour** ($86\\,400\\ \\mathrm{s}$) au lieu d'un mois : $0{,}50/86\\,400 = 5{,}8\\times10^{-6}$."
+            },
+            {
+              "label": "$1{,}2\\times10^{-5}$",
+              "why": "Tu as compté le mois en **minutes** ($43\\,200\\ \\mathrm{min}$) et non en secondes : $0{,}50/43\\,200 = 1{,}2\\times10^{-5}$."
+            },
+            {
+              "label": "$1{,}7\\times10^{-2}$",
+              "why": "Tu as divisé par $30$, le nombre de **jours**, au lieu du nombre de secondes du mois : $0{,}50/30 = 1{,}7\\times10^{-2}$."
+            }
+          ],
+          "hint": "Une précision relative est un rapport de deux durées de même nature : exprime le mois en secondes.",
+          "solution": "Un retard de $0{,}50\\ \\mathrm{s}$ accumulé sur une durée $\\Delta t$ correspond à un écart relatif de durée, donc de fréquence, égal à $0{,}50/\\Delta t$. Exprimons le mois en secondes : $$\\Delta t = 30 \\times 24 \\times 3600 = 2{,}592\\times10^{6}\\ \\mathrm{s},$$ d'où $$\\left|\\frac{\\Delta f}{f}\\right| = \\frac{0{,}50}{2{,}592\\times10^{6}} = 1{,}9\\times10^{-7}.$$ Autrement dit la fréquence du quartz est connue à mieux que un millionième près. Cette stabilité vient de deux propriétés : la fréquence propre d'une lame de quartz ne dépend que de sa taille et de la façon dont elle a été taillée, et son amortissement est extrêmement faible (facteur de qualité très élevé), si bien qu'il suffit d'une puissance minuscule pour entretenir ses oscillations. Contrôle d'ordre de grandeur : $1{,}9\\times10^{-7}$ correspond à environ $6\\ \\mathrm{s}$ par an, ce qui est bien la performance annoncée d'une montre à quartz ordinaire.",
+          "methode": "Précision relative = écart accumulé divisé par la durée d'accumulation, les deux **en secondes**.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-le-quartz-oscillateur-d-exception-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les oscillateurs couplés",
+        "lesson": "Approfondissement — Aspects énergétiques",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-les-oscillateurs-couples",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "Les oscillateurs couplés",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les oscillateurs couplés",
+          "difficulty": 3,
+          "statement": "Deux pendules identiques sont reliés par un ressort souple. On lance le premier avec une énergie mécanique de $0{,}40\\ \\mathrm{J}$, le second étant immobile. Les frottements sont négligeables. Après un certain temps, on constate que le premier pendule est au repos. Que vaut alors l'énergie mécanique du second ?",
+          "options": [
+            {
+              "label": "$0{,}40\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "Sans frottement, l'énergie mécanique totale des deux pendules se conserve : si le premier n'en a plus, elle est entièrement passée au second."
+            },
+            {
+              "label": "$0{,}20\\ \\mathrm{J}$",
+              "why": "Tu as supposé un partage à parts égales : cela décrit l'instant intermédiaire, où les deux pendules oscillent avec la même amplitude, et non l'instant où le premier est à l'arrêt."
+            },
+            {
+              "label": "$0\\ \\mathrm{J}$",
+              "why": "Tu as cru que l'énergie du premier pendule avait été dissipée : sans frottement, rien n'est perdu, l'énergie est seulement **transférée** par le ressort de couplage."
+            },
+            {
+              "label": "$0{,}80\\ \\mathrm{J}$",
+              "why": "Tu as additionné l'énergie de départ et l'énergie transférée, comptant deux fois la même énergie : il n'y en a jamais eu que $0{,}40\\ \\mathrm{J}$ dans le système."
+            }
+          ],
+          "hint": "Raisonne sur le système formé par les **deux** pendules : quelle grandeur se conserve ?",
+          "solution": "Prenons comme système l'ensemble des deux pendules et du ressort de couplage. Aucune force de frottement n'y travaille, donc son énergie mécanique totale est constante : $$E_m^{(1)} + E_m^{(2)} = 0{,}40\\ \\mathrm{J} \\quad \\text{à tout instant}.$$ Le ressort de couplage ne crée ni ne détruit d'énergie : il la fait **circuler** d'un pendule à l'autre. À l'instant où le premier pendule est au repos, $E_m^{(1)} = 0$, donc $$E_m^{(2)} = 0{,}40\\ \\mathrm{J}.$$ Le transfert est complet : le second pendule oscille alors avec l'amplitude qu'avait le premier au départ, puis le mouvement s'inverse et l'énergie revient. On observe ainsi un battement : l'amplitude de chaque pendule croît et décroît lentement, en opposition. Contrôle : les deux pendules étant identiques, des amplitudes identiques correspondent bien à des énergies identiques — la symétrie du problème est respectée.",
+          "methode": "Deux oscillateurs couplés sans frottement : l'énergie totale est conservée et circule entre eux.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-les-oscillateurs-couples-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "De la mécanique à la physique moderne",
+        "lesson": "Approfondissement — Aspects énergétiques",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-energie-oscillations-de-la-mecanique-a-la-physique-moderne",
+      "chapter": "pc-energie-oscillations",
+      "kind": "qcu",
+      "title": "De la mécanique à la physique moderne",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "De la mécanique à la physique moderne",
+          "difficulty": 3,
+          "statement": "À l'échelle atomique, un oscillateur harmonique de fréquence $\\nu$ ne peut prendre que les énergies $E_n = \\left(n + \\frac12\\right)h\\nu$, avec $n$ entier positif ou nul. Pour un atome qui vibre dans un solide à $\\nu = 1{,}0\\times10^{13}\\ \\mathrm{Hz}$, quel est l'écart d'énergie entre deux niveaux consécutifs ? ($h = 6{,}63\\times10^{-34}\\ \\mathrm{J\\,s}$)",
+          "options": [
+            {
+              "label": "$6{,}6\\times10^{-21}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$E_{n+1} - E_n = h\\nu = 6{,}63\\times10^{-34}\\times1{,}0\\times10^{13} = 6{,}6\\times10^{-21}\\ \\mathrm{J}$ : le terme $\\frac12 h\\nu$ se simplifie."
+            },
+            {
+              "label": "$3{,}3\\times10^{-21}\\ \\mathrm{J}$",
+              "why": "Tu as calculé $\\frac12 h\\nu$, c'est-à-dire l'énergie du niveau fondamental $E_0$, et non l'écart entre deux niveaux."
+            },
+            {
+              "label": "$1{,}3\\times10^{-20}\\ \\mathrm{J}$",
+              "why": "Tu as calculé $2h\\nu$, l'écart entre deux niveaux séparés par un niveau intermédiaire : des niveaux **consécutifs** sont distants de $h\\nu$."
+            },
+            {
+              "label": "$6{,}6\\times10^{-47}\\ \\mathrm{J}$",
+              "why": "Tu as divisé au lieu de multiplier : $h/\\nu = 6{,}6\\times10^{-47}$. L'énergie d'un quantum est le **produit** $h\\nu$."
+            }
+          ],
+          "hint": "Écris $E_{n+1}$ et $E_n$, puis soustrais : regarde ce qui disparaît.",
+          "solution": "Écrivons les deux niveaux : $$E_{n+1} = \\left(n + 1 + \\tfrac12\\right)h\\nu, \\qquad E_n = \\left(n + \\tfrac12\\right)h\\nu .$$ Par soustraction, le terme $\\frac12 h\\nu$ et le terme $n h\\nu$ disparaissent : $$\\Delta E = E_{n+1} - E_n = h\\nu = 6{,}63\\times10^{-34}\\times1{,}0\\times10^{13} = 6{,}6\\times10^{-21}\\ \\mathrm{J}.$$ L'écart ne dépend donc pas de $n$ : les niveaux d'un oscillateur harmonique sont **également espacés**, ce qui n'est pas le cas de ceux de l'atome d'hydrogène. Deux remarques à retenir. D'abord l'oscillateur harmonique n'est pas qu'un exercice de mécanique : c'est le modèle des vibrations des atomes dans les molécules et les solides. Ensuite, à cette échelle, l'énergie ne varie plus continûment comme pour notre masse accrochée à un ressort, mais par paquets de $h\\nu$. Contrôle : $6{,}6\\times10^{-21}\\ \\mathrm{J}$ vaut environ $4\\times10^{-2}\\ \\mathrm{eV}$, l'ordre de grandeur attendu pour une vibration dans un solide.",
+          "methode": "Niveaux d'un oscillateur harmonique : également espacés de $h\\nu$. Soustrais les expressions littérales avant de calculer.",
+          "points": 1,
+          "ref": "pc-energie-oscillations-de-la-mecanique-a-la-physique-moderne-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-energie-oscillations-probleme-1",
+      "chapter": "pc-energie-oscillations",
+      "kind": "probleme",
+      "title": "Bilan énergétique d'un pendule élastique horizontal",
+      "difficulty": 3,
+      "context": "Un solide $(S)$ de masse $m = 0{,}200\\ \\mathrm{kg}$ est accroché à l'extrémité d'un ressort à spires non jointives, de raideur $K = 32\\ \\mathrm{N\\,m^{-1}}$ et de masse négligeable. L'autre extrémité du ressort est fixée à un support. Le solide se déplace sur une tige horizontale et on repère son centre d'inertie $G$ par son abscisse $x$, comptée **à partir de la position d'équilibre** $O$, sur un axe horizontal.\\n\\n**Données.** $m = 0{,}200\\ \\mathrm{kg}$ ; $K = 32\\ \\mathrm{N\\,m^{-1}}$ ; période propre $T_0 = 0{,}50\\ \\mathrm{s}$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. On choisit l'énergie potentielle élastique nulle en $O$ ; le mouvement étant horizontal, l'énergie potentielle de pesanteur reste constante et on la prend nulle.\\n\\n**Partie A.** Les frottements sont négligeables. On écarte $(S)$ de sa position d'équilibre jusqu'à $x_0 = X_m = 8{,}0\\ \\mathrm{cm}$, puis on le lâche sans vitesse initiale à l'instant $t = 0$.\\n\\n**Partie B.** On reprend la même expérience, mais $(S)$ subit maintenant une force de frottement de sens opposé au mouvement et d'intensité constante $f = 0{,}080\\ \\mathrm{N}$. On lâche encore $(S)$ sans vitesse depuis $X_0 = 8{,}0\\ \\mathrm{cm}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Les deux réservoirs d'énergie",
+          "difficulty": 1,
+          "statement": "Quelle est l'énergie mécanique de l'oscillateur à l'instant $t = 0$ ?",
+          "options": [
+            {
+              "label": "$0{,}102\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "À $t = 0$ la vitesse est nulle : $E_m = \\frac12 K X_m^2 = \\frac12\\times32\\times(8{,}0\\times10^{-2})^2 = 0{,}102\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$0{,}205\\ \\mathrm{J}$",
+              "why": "Tu as calculé $K X_m^2 = 32\\times6{,}4\\times10^{-3} = 0{,}205\\ \\mathrm{J}$ : le facteur $\\frac12$ a été oublié."
+            },
+            {
+              "label": "$1{,}28\\ \\mathrm{J}$",
+              "why": "Tu as calculé $\\frac12 K X_m = 16\\times8{,}0\\times10^{-2} = 1{,}28\\ \\mathrm{J}$ : l'élongation doit être élevée au carré."
+            },
+            {
+              "label": "$1{,}02\\times10^{3}\\ \\mathrm{J}$",
+              "why": "Tu as gardé $X_m = 8{,}0$ en centimètres : $\\frac12\\times32\\times8{,}0^2 = 1{,}02\\times10^{3}$. Il faut convertir en mètres."
+            }
+          ],
+          "hint": "À $t = 0$ le solide est immobile : une seule des deux formes d'énergie est non nulle.",
+          "solution": "À l'instant du lâcher, la vitesse est nulle donc $E_c = 0$ : toute l'énergie mécanique est potentielle élastique. Avec l'origine prise en $O$ : $$E_m = \\frac12 K X_m^2 = \\frac12 \\times 32 \\times (8{,}0\\times10^{-2})^2 = 16 \\times 6{,}4\\times10^{-3} = 0{,}102\\ \\mathrm{J}.$$ Comme les frottements sont négligés en partie A, cette valeur restera celle de $E_m$ pendant tout le mouvement. Contrôle d'homogénéité : $\\mathrm{N\\,m^{-1}} \\times \\mathrm{m^2} = \\mathrm{N\\,m} = \\mathrm{J}$.",
+          "methode": "Au lâcher sans vitesse, $E_m = \\frac12 K X_m^2$ : l'amplitude à elle seule donne l'énergie.",
+          "points": 1,
+          "part": "Partie A — L'oscillateur sans frottement",
+          "ref": "pc-energie-oscillations-probleme-1-q1"
+        },
+        {
+          "notion": "La conservation",
+          "difficulty": 1,
+          "statement": "Quelle est la vitesse maximale de $(S)$ en partie A ?",
+          "options": [
+            {
+              "label": "$1{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "Au passage par $O$ toute l'énergie est cinétique : $v_{max} = \\sqrt{2E_m/m} = \\sqrt{2\\times0{,}1024/0{,}200} = 1{,}0\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}72\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as écrit $E_m = m v_{max}^2$ sans le $\\frac12$ : $\\sqrt{0{,}1024/0{,}200} = 0{,}72\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$1{,}4\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris $E_m = K X_m^2 = 0{,}205\\ \\mathrm{J}$ sans le $\\frac12$, puis $\\sqrt{2\\times0{,}205/0{,}200} = 1{,}4\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$12{,}6\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as donné $\\omega_0 = \\sqrt{K/m} = 12{,}6\\ \\mathrm{rad\\,s^{-1}}$ : la vitesse maximale est $\\omega_0 X_m$, il manque le facteur $X_m$."
+            }
+          ],
+          "hint": "Où la vitesse est-elle maximale ? Que vaut l'énergie potentielle élastique en ce point ?",
+          "solution": "La vitesse est maximale au passage par la position d'équilibre, où $x = 0$ et donc $E_{pe} = 0$ : toute l'énergie mécanique y est cinétique. $$\\frac12 m v_{max}^2 = E_m = 0{,}1024\\ \\mathrm{J} \\ \\Longrightarrow\\ v_{max} = \\sqrt{\\frac{2\\times0{,}1024}{0{,}200}} = \\sqrt{1{,}024} = 1{,}0\\ \\mathrm{m\\,s^{-1}}.$$ Contrôle par l'autre voie : $v_{max} = \\omega_0 X_m = \\sqrt{K/m}\\;X_m = 12{,}65 \\times 8{,}0\\times10^{-2} = 1{,}0\\ \\mathrm{m\\,s^{-1}}$ — les deux méthodes concordent.",
+          "methode": "$\\frac12 K X_m^2 = \\frac12 m v_{max}^2$, soit $v_{max} = X_m\\sqrt{K/m}$.",
+          "points": 1,
+          "part": "Partie A — L'oscillateur sans frottement",
+          "ref": "pc-energie-oscillations-probleme-1-q2"
+        },
+        {
+          "notion": "Les échanges au cours d'une période",
+          "difficulty": 2,
+          "statement": "Quelle est la vitesse de $(S)$ lorsqu'il passe par l'élongation $x = 4{,}0\\ \\mathrm{cm}$ (toujours en partie A) ?",
+          "options": [
+            {
+              "label": "$0{,}88\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$E_c = E_m\\left[1 - (x/X_m)^2\\right] = 0{,}1024\\times0{,}75 = 7{,}68\\times10^{-2}\\ \\mathrm{J}$, donc $v = \\sqrt{2E_c/m} = 0{,}88\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}51\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as supposé la vitesse proportionnelle à l'élongation et pris $v_{max}/2 = 0{,}51\\ \\mathrm{m\\,s^{-1}}$ : c'est l'**énergie** qui se partage selon $(x/X_m)^2$, pas la vitesse selon $x$."
+            },
+            {
+              "label": "$0{,}62\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as trouvé le bon $E_c = 7{,}68\\times10^{-2}\\ \\mathrm{J}$ mais écrit $E_c = m v^2$ sans le $\\frac12$ : $\\sqrt{7{,}68\\times10^{-2}/0{,}200} = 0{,}62\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}72\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as écrit $E_c/E_m = 1 - x/X_m = 0{,}50$ au lieu de $1 - (x/X_m)^2$ : avec $E_c = 5{,}12\\times10^{-2}\\ \\mathrm{J}$ on obtient $0{,}72\\ \\mathrm{m\\,s^{-1}}$."
+            }
+          ],
+          "hint": "Calcule d'abord l'énergie potentielle élastique en $x = 4{,}0\\ \\mathrm{cm}$, puis déduis-en l'énergie cinétique.",
+          "solution": "L'énergie mécanique se conserve et vaut $E_m = 0{,}1024\\ \\mathrm{J}$. En $x = 4{,}0\\ \\mathrm{cm} = X_m/2$ : $$E_{pe} = \\frac12 K x^2 = 16\\times(4{,}0\\times10^{-2})^2 = 2{,}56\\times10^{-2}\\ \\mathrm{J},$$ donc $$E_c = E_m - E_{pe} = 0{,}1024 - 0{,}0256 = 7{,}68\\times10^{-2}\\ \\mathrm{J}$$ et $$v = \\sqrt{\\frac{2E_c}{m}} = \\sqrt{\\frac{2\\times7{,}68\\times10^{-2}}{0{,}200}} = \\sqrt{0{,}768} = 0{,}88\\ \\mathrm{m\\,s^{-1}}.$$ Contrôle : à la demi-amplitude, l'énergie potentielle ne représente que le quart de $E_m$ ; la vitesse reste donc proche de $v_{max}$, puisque $v/v_{max} = \\sqrt{0{,}75} = 0{,}87$. C'est bien ce qu'on observe.",
+          "methode": "Passe toujours par les énergies : $E_{pe} = \\frac12 K x^2$, puis $E_c = E_m - E_{pe}$, puis $v = \\sqrt{2E_c/m}$.",
+          "points": 1,
+          "part": "Partie A — L'oscillateur sans frottement",
+          "ref": "pc-energie-oscillations-probleme-1-q3"
+        },
+        {
+          "notion": "Méthode 4 — Calculer une énergie dissipée",
+          "difficulty": 2,
+          "statement": "En partie B, on mesure qu'après plusieurs allers-retours l'amplitude n'est plus que de $3{,}0\\ \\mathrm{cm}$. Quelle énergie les frottements ont-ils dissipée depuis le lâcher ?",
+          "options": [
+            {
+              "label": "$0{,}088\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$|\\Delta E_m| = \\frac12 K(X_0^2 - X^2) = 16\\times(6{,}4 - 0{,}9)\\times10^{-3} = 8{,}8\\times10^{-2}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$0{,}176\\ \\mathrm{J}$",
+              "why": "Tu as calculé $K(X_0^2 - X^2) = 32\\times5{,}5\\times10^{-3} = 0{,}176\\ \\mathrm{J}$ : le facteur $\\frac12$ manque."
+            },
+            {
+              "label": "$0{,}040\\ \\mathrm{J}$",
+              "why": "Tu as calculé $\\frac12 K(X_0 - X)^2 = 16\\times(5{,}0\\times10^{-2})^2 = 0{,}040\\ \\mathrm{J}$ : il faut la différence des carrés, non le carré de la différence."
+            },
+            {
+              "label": "$0{,}80\\ \\mathrm{J}$",
+              "why": "Tu as calculé $\\frac12 K(X_0 - X) = 16\\times5{,}0\\times10^{-2} = 0{,}80\\ \\mathrm{J}$ : les amplitudes doivent être élevées au carré."
+            }
+          ],
+          "hint": "À chaque élongation extrême la vitesse est nulle : l'amplitude suffit à calculer l'énergie mécanique.",
+          "solution": "Aux élongations extrêmes la vitesse est nulle, donc $E_m = \\frac12 K X^2$. Au départ et à l'arrivée : $$E_{m,0} = \\frac12\\times32\\times(8{,}0\\times10^{-2})^2 = 0{,}1024\\ \\mathrm{J}, \\qquad E_{m,1} = \\frac12\\times32\\times(3{,}0\\times10^{-2})^2 = 0{,}0144\\ \\mathrm{J}.$$ L'énergie dissipée est la perte d'énergie mécanique : $$|\\Delta E_m| = 0{,}1024 - 0{,}0144 = 8{,}8\\times10^{-2}\\ \\mathrm{J} = 88\\ \\mathrm{mJ}.$$ Contrôle : $\\Delta E_m = W_{\\text{frottements}} < 0$, l'énergie mécanique a bien diminué, en accord avec une amplitude qui décroît.",
+          "methode": "Énergie dissipée $= \\frac12 K\\left(X_{\\text{initiale}}^2 - X_{\\text{finale}}^2\\right)$ : différence des carrés, jamais carré de la différence.",
+          "points": 1,
+          "part": "Partie B — L'oscillateur amorti puis entretenu",
+          "ref": "pc-energie-oscillations-probleme-1-q4"
+        },
+        {
+          "notion": "Les oscillations amorties",
+          "difficulty": 3,
+          "statement": "Toujours en partie B, combien de demi-oscillations ont été nécessaires pour que l'amplitude passe de $8{,}0\\ \\mathrm{cm}$ à $3{,}0\\ \\mathrm{cm}$ ?",
+          "options": [
+            {
+              "label": "$10$ demi-oscillations",
+              "correct": true,
+              "why": "L'amplitude perd $2f/K = 5{,}0\\ \\mathrm{mm}$ par demi-oscillation, et $(80 - 30)/5{,}0 = 10$."
+            },
+            {
+              "label": "$20$ demi-oscillations",
+              "why": "Tu as pris une perte de $f/K = 2{,}5\\ \\mathrm{mm}$ par demi-oscillation : en factorisant $X_i^2 - X_{i+1}^2$, c'est $2f/K$ qui apparaît."
+            },
+            {
+              "label": "$16$ demi-oscillations",
+              "why": "Tu as compté les demi-oscillations jusqu'à l'arrêt complet, $80/5{,}0 = 16$, alors qu'on s'arrête à $3{,}0\\ \\mathrm{cm}$."
+            },
+            {
+              "label": "$5$ demi-oscillations",
+              "why": "Tu as utilisé la perte sur une **période** entière, $4f/K = 10\\ \\mathrm{mm}$ : tu as donc compté des périodes, et $5$ périodes font $10$ demi-oscillations."
+            }
+          ],
+          "hint": "Établis d'abord de combien l'amplitude diminue à chaque demi-oscillation, en écrivant le bilan d'énergie entre deux extrêmes successifs.",
+          "solution": "Entre deux positions extrêmes successives d'amplitudes $X_i$ et $X_{i+1}$, la vitesse est nulle de part et d'autre et le solide parcourt la distance $X_i + X_{i+1}$ : $$\\frac12 K X_{i+1}^2 - \\frac12 K X_i^2 = -f\\,(X_i + X_{i+1}).$$ En factorisant la différence des carrés puis en divisant par $(X_i + X_{i+1}) \\neq 0$ : $$X_i - X_{i+1} = \\frac{2f}{K} = \\frac{2\\times0{,}080}{32} = 5{,}0\\times10^{-3}\\ \\mathrm{m} = 5{,}0\\ \\mathrm{mm}.$$ La décroissance est donc **linéaire**. Pour passer de $80\\ \\mathrm{mm}$ à $30\\ \\mathrm{mm}$, il faut perdre $50\\ \\mathrm{mm}$, soit $$n = \\frac{50}{5{,}0} = 10 \\text{ demi-oscillations}.$$ Contrôle par l'énergie : la distance totale parcourue vaut $X_0 + 2(X_1 + \\dots + X_9) + X_{10} = 1{,}10\\ \\mathrm{m}$, et $f \\times 1{,}10 = 0{,}080\\times1{,}10 = 8{,}8\\times10^{-2}\\ \\mathrm{J}$ — exactement l'énergie dissipée trouvée à la question précédente.",
+          "methode": "Frottement d'intensité constante : l'amplitude perd $2f/K$ par demi-oscillation, donc $4f/K$ par période.",
+          "points": 1,
+          "part": "Partie B — L'oscillateur amorti puis entretenu",
+          "ref": "pc-energie-oscillations-probleme-1-q5"
+        },
+        {
+          "notion": "L'entretien des oscillations",
+          "difficulty": 3,
+          "statement": "On ajoute enfin un dispositif qui entretient les oscillations de $(S)$, en présence du même frottement $f = 0{,}080\\ \\mathrm{N}$, pour maintenir l'amplitude constante à $X_m = 8{,}0\\ \\mathrm{cm}$. Quelle puissance moyenne doit-il fournir ?",
+          "options": [
+            {
+              "label": "$51\\ \\mathrm{mW}$",
+              "correct": true,
+              "why": "En une période le solide parcourt $4X_m = 0{,}32\\ \\mathrm{m}$, donc $W = f\\times4X_m = 2{,}56\\times10^{-2}\\ \\mathrm{J}$ et $P = 2{,}56\\times10^{-2}/0{,}50 = 51\\ \\mathrm{mW}$."
+            },
+            {
+              "label": "$26\\ \\mathrm{mW}$",
+              "why": "Tu as compté une distance de $2X_m = 0{,}16\\ \\mathrm{m}$ : c'est le trajet d'une **demi**-période seulement, il faut $4X_m$ par période."
+            },
+            {
+              "label": "$13\\ \\mathrm{mW}$",
+              "why": "Tu as compté une distance de $X_m = 8{,}0\\times10^{-2}\\ \\mathrm{m}$, soit un quart de période : $f X_m/T_0 = 13\\ \\mathrm{mW}$."
+            },
+            {
+              "label": "$102\\ \\mathrm{mW}$",
+              "why": "Tu as doublé pour « tenir compte de l'aller et du retour » en prenant $8X_m$ : or $4X_m$ compte déjà l'aller **et** le retour."
+            }
+          ],
+          "hint": "Entretenir, c'est fournir à chaque période exactement l'énergie dissipée : commence par la distance parcourue en une période.",
+          "solution": "L'amplitude restant constante, le bilan énergétique sur une période est nul : le dispositif fournit exactement l'énergie dissipée par le frottement. En une période complète, $(S)$ va de $+X_m$ à $-X_m$ puis revient : $$d = 4X_m = 4\\times8{,}0\\times10^{-2} = 0{,}32\\ \\mathrm{m}.$$ L'énergie à fournir par période est donc $$W = f\\,d = 0{,}080\\times0{,}32 = 2{,}56\\times10^{-2}\\ \\mathrm{J},$$ et la puissance moyenne $$P = \\frac{W}{T_0} = \\frac{2{,}56\\times10^{-2}}{0{,}50} = 5{,}1\\times10^{-2}\\ \\mathrm{W} = 51\\ \\mathrm{mW}.$$ Contrôle de cohérence : sans entretien, l'amplitude chutait de $4f/K = 10\\ \\mathrm{mm}$ par période ; l'apport de $25{,}6\\ \\mathrm{mJ}$ par période compense exactement cette chute, et l'ordre de grandeur (quelques dizaines de milliwatts) est bien celui d'un petit moteur de laboratoire.",
+          "methode": "Puissance d'entretien $= \\dfrac{4 f X_m}{T_0}$ pour un frottement d'intensité constante.",
+          "points": 1,
+          "part": "Partie B — L'oscillateur amorti puis entretenu",
+          "ref": "pc-energie-oscillations-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-energie-oscillations-probleme-2",
+      "chapter": "pc-energie-oscillations",
+      "kind": "probleme",
+      "title": "Pendule simple : de la conservation de l'énergie au frottement",
+      "difficulty": 3,
+      "context": "Un pendule simple est constitué d'une bille de masse $m = 0{,}200\\ \\mathrm{kg}$, assimilée à un point matériel, suspendue en un point fixe $O$ par un fil inextensible de longueur $\\ell = 1{,}0\\ \\mathrm{m}$ et de masse négligeable. On note $\\theta$ l'angle que fait le fil avec la verticale.\\n\\nOn écarte le pendule d'un angle $\\theta_m = 40^\\circ$ et on l'abandonne sans vitesse initiale à l'instant $t = 0$.\\n\\n**Données.** $m = 0{,}200\\ \\mathrm{kg}$ ; $\\ell = 1{,}0\\ \\mathrm{m}$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$ ; $\\cos 40^\\circ = 0{,}766$ ; $\\sin 40^\\circ = 0{,}643$ ; $\\cos 30^\\circ = 0{,}866$ ; $\\cos 20^\\circ = 0{,}940$ ; $40^\\circ = 0{,}698\\ \\mathrm{rad}$ ; $30^\\circ = 0{,}524\\ \\mathrm{rad}$.\\n\\n**Convention.** On choisit l'**origine de l'énergie potentielle de pesanteur à la position la plus basse** de la bille, c'est-à-dire à la position d'équilibre $\\theta = 0$.\\n\\n**Partie A.** Les frottements sont négligés.\\n\\n**Partie B.** En réalité, la bille ne remonte de l'autre côté que jusqu'à l'angle $\\theta_1 = 30^\\circ$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Le cas du pendule pesant",
+          "difficulty": 1,
+          "statement": "De quelle hauteur $h$ la bille est-elle remontée, par rapport à sa position d'équilibre, lorsque le fil fait l'angle $\\theta_m = 40^\\circ$ ?",
+          "options": [
+            {
+              "label": "$0{,}23\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$h = \\ell(1 - \\cos\\theta_m) = 1{,}0\\times(1 - 0{,}766) = 0{,}234\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$0{,}77\\ \\mathrm{m}$",
+              "why": "Tu as calculé $\\ell\\cos\\theta_m = 0{,}766\\ \\mathrm{m}$ : c'est la distance verticale entre $O$ et la bille, pas la hauteur regagnée."
+            },
+            {
+              "label": "$0{,}64\\ \\mathrm{m}$",
+              "why": "Tu as calculé $\\ell\\sin\\theta_m = 0{,}643\\ \\mathrm{m}$ : c'est le déplacement **horizontal** de la bille, pas sa dénivelée."
+            },
+            {
+              "label": "$0{,}70\\ \\mathrm{m}$",
+              "why": "Tu as calculé $\\ell\\,\\theta_m = 1{,}0\\times0{,}698 = 0{,}70\\ \\mathrm{m}$ : c'est la longueur de l'arc parcouru, pas l'altitude gagnée."
+            }
+          ],
+          "hint": "Fais un schéma et compare la projection verticale du fil incliné à sa longueur totale.",
+          "solution": "Quand le fil fait l'angle $\\theta_m$ avec la verticale, la bille se trouve à la distance verticale $\\ell\\cos\\theta_m$ sous le point de suspension $O$, au lieu de $\\ell$ à l'équilibre. Elle est donc remontée de $$h = \\ell - \\ell\\cos\\theta_m = \\ell(1 - \\cos\\theta_m) = 1{,}0\\times(1 - 0{,}766) = 0{,}234 \\approx 0{,}23\\ \\mathrm{m}.$$ Contrôle : $h$ doit rester petit devant $\\ell$ pour un angle modéré — $0{,}23\\ \\mathrm{m}$ contre $1{,}0\\ \\mathrm{m}$, c'est cohérent.",
+          "methode": "Dénivelée d'un pendule : toujours $h = \\ell(1 - \\cos\\theta)$, jamais $\\ell\\cos\\theta$ ni $\\ell\\sin\\theta$.",
+          "points": 1,
+          "part": "Partie A — Le pendule sans frottement",
+          "ref": "pc-energie-oscillations-probleme-2-q1"
+        },
+        {
+          "notion": "Le cas du pendule pesant",
+          "difficulty": 2,
+          "statement": "Quelle est l'énergie mécanique du pendule à $t = 0$, avec la convention annoncée dans l'énoncé ?",
+          "options": [
+            {
+              "label": "$0{,}459\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "La bille est immobile, donc $E_m = E_{pp} = mg\\ell(1-\\cos\\theta_m) = 0{,}200\\times9{,}8\\times0{,}234 = 0{,}459\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$1{,}50\\ \\mathrm{J}$",
+              "why": "Tu as pris $z = \\ell\\cos\\theta_m = 0{,}766\\ \\mathrm{m}$ : $0{,}200\\times9{,}8\\times0{,}766 = 1{,}50\\ \\mathrm{J}$. L'altitude au-dessus de l'origine est $\\ell(1-\\cos\\theta_m)$."
+            },
+            {
+              "label": "$1{,}96\\ \\mathrm{J}$",
+              "why": "Tu as pris $z = \\ell = 1{,}0\\ \\mathrm{m}$ : $0{,}200\\times9{,}8\\times1{,}0 = 1{,}96\\ \\mathrm{J}$. Cela supposerait que la bille remonte jusqu'au niveau de $O$."
+            },
+            {
+              "label": "$1{,}26\\ \\mathrm{J}$",
+              "why": "Tu as pris $z = \\ell\\sin\\theta_m = 0{,}643\\ \\mathrm{m}$ : $0{,}200\\times9{,}8\\times0{,}643 = 1{,}26\\ \\mathrm{J}$. C'est l'écart horizontal, pas l'altitude."
+            }
+          ],
+          "hint": "À $t = 0$ la bille est immobile : une seule forme d'énergie subsiste, et son altitude se compte depuis l'origine annoncée.",
+          "solution": "L'origine de l'énergie potentielle de pesanteur est prise à la position la plus basse. À $t = 0$, la bille est à l'altitude $z = h = 0{,}234\\ \\mathrm{m}$ et sa vitesse est nulle, donc $E_c = 0$ : $$E_m = E_{pp} = mgh = 0{,}200\\times9{,}8\\times0{,}234 = 0{,}459\\ \\mathrm{J}.$$ En l'absence de frottement, cette valeur se conservera pendant tout le mouvement. Contrôle d'homogénéité : $\\mathrm{kg}\\times\\mathrm{m\\,s^{-2}}\\times\\mathrm{m} = \\mathrm{J}$.",
+          "methode": "$E_{pp} = mgz$ n'a de sens qu'une fois l'origine annoncée : écris-la en première ligne de ta copie.",
+          "points": 1,
+          "part": "Partie A — Le pendule sans frottement",
+          "ref": "pc-energie-oscillations-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 2 — Calculer une vitesse par l'énergie",
+          "difficulty": 2,
+          "statement": "Quelle est la vitesse de la bille à son passage par la position d'équilibre, en partie A ?",
+          "options": [
+            {
+              "label": "$2{,}1\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$\\frac12 m v_{max}^2 = mgh$ donne $v_{max} = \\sqrt{2g\\ell(1-\\cos\\theta_m)} = \\sqrt{2\\times9{,}8\\times0{,}234} = 2{,}1\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$3{,}9\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris $h = \\ell\\cos\\theta_m = 0{,}766\\ \\mathrm{m}$ : $\\sqrt{2\\times9{,}8\\times0{,}766} = 3{,}9\\ \\mathrm{m\\,s^{-1}}$. La dénivelée est $\\ell(1-\\cos\\theta_m)$."
+            },
+            {
+              "label": "$1{,}5\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as écrit $m v^2 = mgh$ sans le $\\frac12$ : $\\sqrt{9{,}8\\times0{,}234} = 1{,}5\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$4{,}4\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris $h = \\ell = 1{,}0\\ \\mathrm{m}$ : $\\sqrt{2\\times9{,}8\\times1{,}0} = 4{,}4\\ \\mathrm{m\\,s^{-1}}$, ce qui correspondrait à une chute depuis le niveau de $O$."
+            }
+          ],
+          "hint": "Écris la conservation de $E_m$ entre l'écart maximal et la position d'équilibre, puis simplifie par $m$.",
+          "solution": "Entre la position d'écart maximal (bille immobile, $z = h$) et la position d'équilibre ($z = 0$, vitesse maximale), l'énergie mécanique se conserve : $$mgh = \\frac12 m v_{max}^2 \\ \\Longrightarrow\\ v_{max} = \\sqrt{2gh} = \\sqrt{2g\\ell(1-\\cos\\theta_m)}.$$ Numériquement : $$v_{max} = \\sqrt{2\\times9{,}8\\times1{,}0\\times0{,}234} = \\sqrt{4{,}59} = 2{,}1\\ \\mathrm{m\\,s^{-1}}.$$ Contrôle : la masse a disparu du résultat, comme pour toute évolution sans frottement sous l'action du seul poids — c'est bon signe. Vérification par l'énergie : $\\frac12\\times0{,}200\\times(2{,}14)^2 = 0{,}459\\ \\mathrm{J}$, soit exactement $E_m$.",
+          "methode": "Pendule lâché sans vitesse : $v_{max} = \\sqrt{2g\\ell(1-\\cos\\theta_m)}$, indépendante de la masse.",
+          "points": 1,
+          "part": "Partie A — Le pendule sans frottement",
+          "ref": "pc-energie-oscillations-probleme-2-q3"
+        },
+        {
+          "notion": "Méthode 4 — Calculer une énergie dissipée",
+          "difficulty": 3,
+          "statement": "En partie B, la bille ne remonte que jusqu'à $\\theta_1 = 30^\\circ$ de l'autre côté. Quelle énergie les frottements ont-ils dissipée pendant ce premier trajet ?",
+          "options": [
+            {
+              "label": "$0{,}196\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$|\\Delta E_m| = mg\\ell\\left(\\cos\\theta_1 - \\cos\\theta_m\\right) = 0{,}200\\times9{,}8\\times(0{,}866-0{,}766) = 0{,}196\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$0{,}263\\ \\mathrm{J}$",
+              "why": "Tu as calculé $mg\\ell(1-\\cos\\theta_1) = 0{,}263\\ \\mathrm{J}$ : c'est l'énergie mécanique **restante** à $30^\\circ$, pas celle qui a été perdue."
+            },
+            {
+              "label": "$0{,}459\\ \\mathrm{J}$",
+              "why": "Tu as donné l'énergie mécanique **initiale** : la bille remonte encore à $30^\\circ$, donc une partie de cette énergie subsiste."
+            },
+            {
+              "label": "$0{,}030\\ \\mathrm{J}$",
+              "why": "Tu as fait la différence des angles avant le cosinus, $mg\\ell\\left(1-\\cos 10^\\circ\\right) = 0{,}030\\ \\mathrm{J}$ : il faut faire la différence des **cosinus**."
+            }
+          ],
+          "hint": "Calcule l'énergie mécanique dans les deux positions extrêmes — où la vitesse est nulle — et compare.",
+          "solution": "Aux deux positions extrêmes la vitesse est nulle, donc l'énergie mécanique s'y réduit à l'énergie potentielle de pesanteur : $$E_{m,0} = mg\\ell(1-\\cos\\theta_m) = 0{,}200\\times9{,}8\\times0{,}234 = 0{,}459\\ \\mathrm{J},$$ $$E_{m,1} = mg\\ell(1-\\cos\\theta_1) = 0{,}200\\times9{,}8\\times0{,}134 = 0{,}263\\ \\mathrm{J}.$$ L'énergie dissipée par les frottements est la perte d'énergie mécanique : $$|\\Delta E_m| = E_{m,0} - E_{m,1} = 0{,}459 - 0{,}263 = 0{,}196\\ \\mathrm{J}.$$ On peut l'écrire directement $|\\Delta E_m| = mg\\ell(\\cos\\theta_1 - \\cos\\theta_m)$, les termes en $1$ se simplifiant. Contrôle de signe : $\\Delta E_m = W_{\\text{frottements}} = -0{,}196\\ \\mathrm{J} < 0$, cohérent avec un angle de retour plus petit que l'angle de départ.",
+          "methode": "Énergie dissipée entre deux extrêmes : $mg\\ell$ multiplié par la **différence des cosinus** des deux angles.",
+          "points": 1,
+          "part": "Partie B — Prise en compte des frottements",
+          "ref": "pc-energie-oscillations-probleme-2-q4"
+        },
+        {
+          "notion": "Les oscillations amorties",
+          "difficulty": 3,
+          "statement": "Quelle fraction de l'énergie mécanique initiale a été dissipée pendant ce premier trajet ?",
+          "options": [
+            {
+              "label": "$43\\ \\%$",
+              "correct": true,
+              "why": "$|\\Delta E_m|/E_{m,0} = 0{,}196/0{,}459 = 0{,}43$, soit $43\\ \\%$ de l'énergie de départ."
+            },
+            {
+              "label": "$57\\ \\%$",
+              "why": "Tu as donné la part **restante** : $0{,}263/0{,}459 = 0{,}57$. La question porte sur la part dissipée, qui est le complément."
+            },
+            {
+              "label": "$10\\ \\%$",
+              "why": "Tu as divisé par $mg\\ell = 1{,}96\\ \\mathrm{J}$ au lieu de l'énergie initiale $0{,}459\\ \\mathrm{J}$ : $mg\\ell$ n'est pas l'énergie mécanique du pendule."
+            },
+            {
+              "label": "$75\\ \\%$",
+              "why": "Tu as fait le rapport des angles, $30/40 = 0{,}75$ : un rapport d'angles ne mesure pas un rapport d'énergies, qui passe par les cosinus."
+            }
+          ],
+          "hint": "Les deux énergies nécessaires ont déjà été calculées : il ne reste qu'un rapport à former, et à bien choisir le numérateur.",
+          "solution": "La part dissipée est le rapport de l'énergie perdue à l'énergie initiale : $$\\frac{|\\Delta E_m|}{E_{m,0}} = \\frac{0{,}196}{0{,}459} = 0{,}427 \\approx 43\\ \\%.$$ Contrôle : la part restante vaut alors $57\\ \\%$, et l'on vérifie $0{,}263/0{,}459 = 0{,}573$ — la somme fait bien $100\\ \\%$. On peut aussi écrire ce rapport sous forme littérale, $$\\frac{|\\Delta E_m|}{E_{m,0}} = \\frac{\\cos\\theta_1 - \\cos\\theta_m}{1 - \\cos\\theta_m} = \\frac{0{,}100}{0{,}234} = 0{,}427,$$ ce qui montre que le résultat ne dépend ni de $m$, ni de $\\ell$, ni de $g$.",
+          "methode": "Une « fraction dissipée » est toujours $|\\Delta E_m|$ divisé par l'énergie **initiale** : vérifie que part perdue + part restante $= 100\\ \\%$.",
+          "points": 1,
+          "part": "Partie B — Prise en compte des frottements",
+          "ref": "pc-energie-oscillations-probleme-2-q5"
+        },
+        {
+          "notion": "Les oscillations amorties",
+          "difficulty": 3,
+          "statement": "On modélise les frottements par une force tangentielle d'intensité constante $f$, opposée au mouvement. Quelle est sa valeur, sachant que la bille a parcouru l'arc correspondant à $\\theta_m$ puis celui correspondant à $\\theta_1$ ?",
+          "options": [
+            {
+              "label": "$0{,}16\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "La longueur parcourue est $d = \\ell(\\theta_m + \\theta_1) = 1{,}0\\times(0{,}698+0{,}524) = 1{,}22\\ \\mathrm{m}$, donc $f = 0{,}196/1{,}22 = 0{,}16\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$0{,}28\\ \\mathrm{N}$",
+              "why": "Tu n'as compté que l'arc de la descente, $\\ell\\theta_m = 0{,}698\\ \\mathrm{m}$ : $0{,}196/0{,}698 = 0{,}28\\ \\mathrm{N}$. La bille descend **puis** remonte."
+            },
+            {
+              "label": "$0{,}37\\ \\mathrm{N}$",
+              "why": "Tu n'as compté que l'arc de la remontée, $\\ell\\theta_1 = 0{,}524\\ \\mathrm{m}$ : $0{,}196/0{,}524 = 0{,}37\\ \\mathrm{N}$. Il faut additionner les deux arcs."
+            },
+            {
+              "label": "$2{,}8\\times10^{-3}\\ \\mathrm{N}$",
+              "why": "Tu as gardé les angles en degrés, $d = 1{,}0\\times70 = 70\\ \\mathrm{m}$ : la longueur d'arc $\\ell\\theta$ n'est valable qu'avec $\\theta$ en **radians**."
+            }
+          ],
+          "hint": "Le travail d'une force d'intensité constante toujours opposée au déplacement vaut $-f\\,d$ : il te faut $d$, la longueur réellement parcourue.",
+          "solution": "Une force d'intensité constante, toujours opposée au déplacement, a pour travail $W = -f\\,d$ où $d$ est la longueur du trajet. La bille descend de $\\theta_m$ jusqu'à la verticale, puis remonte jusqu'à $\\theta_1$ : $$d = \\ell\\theta_m + \\ell\\theta_1 = 1{,}0\\times(0{,}698 + 0{,}524) = 1{,}22\\ \\mathrm{m}.$$ Le théorème de l'énergie mécanique donne $\\Delta E_m = W = -f d$, donc $$f = \\frac{|\\Delta E_m|}{d} = \\frac{0{,}196}{1{,}22} = 0{,}16\\ \\mathrm{N}.$$ Contrôle d'ordre de grandeur : le poids de la bille vaut $mg = 1{,}96\\ \\mathrm{N}$, donc $f$ représente environ $8\\ \\%$ du poids — un frottement modeste, cohérent avec un pendule qui perd tout de même $43\\ \\%$ de son énergie sur un seul trajet d'un peu plus d'un mètre.",
+          "methode": "Longueur d'arc $= \\ell\\theta$ avec $\\theta$ en **radians** ; l'énergie dissipée par un frottement constant vaut $f \\times$ (distance totale parcourue).",
+          "points": 1,
+          "part": "Partie B — Prise en compte des frottements",
+          "ref": "pc-energie-oscillations-probleme-2-q6"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-energie-oscillations-serie-1",
+      "title": "Aspects énergétiques des oscillations mécaniques · Échauffement",
+      "description": "Les deux réservoirs d'énergie, la conservation sans frottement et les premiers calculs d'énergie et de vitesse.",
+      "kind": "custom",
+      "chapter": "pc-energie-oscillations",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-energie-oscillations-les-deux-reservoirs-d-energie-q1",
+        "pc-energie-oscillations-la-conservation-q1",
+        "pc-energie-oscillations-les-echanges-au-cours-d-une-periode-q1",
+        "pc-energie-oscillations-le-cas-du-pendule-pesant-q1",
+        "pc-energie-oscillations-l-entretien-des-oscillations-q1",
+        "pc-energie-oscillations-les-oscillations-forcees-et-la-resonance-q1",
+        "pc-energie-oscillations-la-conservation-q2",
+        "pc-energie-oscillations-les-echanges-au-cours-d-une-periode-q2",
+        "pc-energie-oscillations-le-cas-du-pendule-pesant-q2",
+        "pc-energie-oscillations-les-oscillations-amorties-q1"
+      ]
+    },
+    {
+      "slug": "pc-energie-oscillations-serie-2",
+      "title": "Aspects énergétiques des oscillations mécaniques · Entraînement",
+      "description": "Tout le chapitre d'un bout à l'autre : échanges d'énergie, pendule pesant, amortissement, entretien, oscillations forcées et résonance.",
+      "kind": "custom",
+      "chapter": "pc-energie-oscillations",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-energie-oscillations-resonances-utiles-et-dangereuses-q1",
+        "pc-energie-oscillations-le-cas-du-pendule-pesant-q1",
+        "pc-energie-oscillations-les-echanges-au-cours-d-une-periode-q3",
+        "pc-energie-oscillations-le-cas-du-pendule-pesant-q3",
+        "pc-energie-oscillations-l-entretien-des-oscillations-q2",
+        "pc-energie-oscillations-les-oscillations-forcees-et-la-resonance-q2",
+        "pc-energie-oscillations-les-oscillations-forcees-et-la-resonance-q3",
+        "pc-energie-oscillations-resonances-utiles-et-dangereuses-q2",
+        "pc-energie-oscillations-resonances-utiles-et-dangereuses-q3",
+        "pc-energie-oscillations-la-conservation-q3",
+        "pc-energie-oscillations-les-echanges-au-cours-d-une-periode-q4",
+        "pc-energie-oscillations-les-oscillations-amorties-q2"
+      ]
+    },
+    {
+      "slug": "pc-energie-oscillations-serie-3",
+      "title": "Aspects énergétiques des oscillations mécaniques · Type BAC",
+      "description": "Les questions les plus exigeantes : bilans énergétiques complets, énergie dissipée, entretien et pièges classiques de l'examen.",
+      "kind": "custom",
+      "chapter": "pc-energie-oscillations",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-energie-oscillations-probleme-1-q4",
+        "pc-energie-oscillations-probleme-2-q3",
+        "pc-energie-oscillations-probleme-1-q5",
+        "pc-energie-oscillations-probleme-1-q6",
+        "pc-energie-oscillations-probleme-2-q4",
+        "pc-energie-oscillations-probleme-2-q5",
+        "pc-energie-oscillations-probleme-2-q6",
+        "pc-energie-oscillations-le-cas-du-pendule-pesant-q4",
+        "pc-energie-oscillations-l-entretien-des-oscillations-q3",
+        "pc-energie-oscillations-le-puits-de-potentiel-q1",
+        "pc-energie-oscillations-le-facteur-de-qualite-mecanique-q1",
+        "pc-energie-oscillations-de-la-mecanique-a-la-physique-moderne-q1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2675 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-onde-periodique",
+      "name": "Ondes mécaniques progressives périodiques",
+      "domain": "physique",
+      "unit": "Ondes"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Onde progressive périodique",
+      "Les deux périodicités",
+      "La relation fondamentale",
+      "Deux points dans le même état vibratoire",
+      "Le lien avec le retard",
+      "Compter les points en phase",
+      "Le phénomène",
+      "La condition de diffraction",
+      "Les caractéristiques de l'onde diffractée",
+      "Le montage expérimental",
+      "Milieu dispersif",
+      "Retour sur la diffraction : l'étalement angulaire",
+      "Superposition et interférences",
+      "Le dispositif",
+      "Mesurer la longueur d'onde",
+      "Le stroboscope",
+      "Exploiter le montage",
+      "Type 1 — Exploiter un graphe",
+      "Type 2 — Appliquer $\\lambda = vT$",
+      "Type 3 — Déterminer l'état de phase",
+      "Type 4 — Changement de milieu",
+      "Type 5 — Questions de cours sur la diffraction"
+    ],
+    "methodes_du_cours": [
+      "Type 1 — Exploiter un graphe",
+      "Type 2 — Appliquer $\\lambda = vT$",
+      "Type 3 — Déterminer l'état de phase",
+      "Type 4 — Changement de milieu",
+      "Type 5 — Questions de cours sur la diffraction"
+    ],
+    "existing_questions_total": 9,
+    "target_new_questions": 50,
+    "suggested_figures": [
+      "onde-phase — Points en phase (λ) et en opposition de phase (λ/2)",
+      "onde-transversale — Onde transversale périodique — instantané, longueur d'onde λ",
+      "diffraction — Diffraction par une fente de largeur a",
+      "diffraction-ecran — Figure de diffraction par une fente de largeur a",
+      "cuve-ondes — Cuve à ondes — ondes circulaires"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Onde progressive périodique",
+        "lesson": "Périodicité — période et longueur d'onde",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-onde-progressive-periodique",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Onde progressive périodique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Onde progressive périodique",
+          "difficulty": 1,
+          "statement": "Une onde progressive est dite **périodique** lorsque :",
+          "options": [
+            {
+              "label": "la source reproduit indéfiniment le même mouvement à intervalles de temps égaux",
+              "correct": true,
+              "why": "C'est la source qui impose la périodicité : son mouvement se répète, donc la perturbation aussi."
+            },
+            {
+              "label": "la perturbation revient à son point de départ après un aller-retour",
+              "why": "Ce serait une **réflexion**, phénomène tout à fait différent de la périodicité."
+            },
+            {
+              "label": "l'amplitude de la perturbation est constante au cours du temps",
+              "why": "Une amplitude constante ne suffit pas : il faut que le mouvement se **répète**."
+            },
+            {
+              "label": "la célérité de l'onde est la même en tout point du milieu",
+              "why": "C'est vrai dans tout milieu homogène, périodique ou non : ce n'est pas le critère."
+            }
+          ],
+          "hint": "Qu'est-ce qui, dans le dispositif, se répète pour que l'onde soit périodique ?",
+          "solution": "Une onde progressive périodique naît d'une source dont le mouvement est **périodique** : la source répète indéfiniment le même mouvement, et chaque point du milieu, atteint à son tour, répète ce même mouvement avec son propre retard.",
+          "methode": "Onde périodique $\\Leftrightarrow$ **source périodique**. Une perturbation unique et brève donne une onde progressive, mais pas périodique.",
+          "points": 1,
+          "ref": "pc-onde-periodique-onde-progressive-periodique-q1"
+        },
+        {
+          "notion": "Onde progressive périodique",
+          "difficulty": 2,
+          "statement": "Une onde progressive périodique se propage sur une corde. Un point $M$ du milieu :",
+          "options": [
+            {
+              "label": "oscille indéfiniment autour de sa position d'équilibre, tant que la source vibre",
+              "correct": true,
+              "why": "Chaque point reproduit le mouvement périodique de la source, donc oscille sans s'arrêter."
+            },
+            {
+              "label": "effectue un seul aller-retour, puis reste au repos",
+              "why": "Ce serait le cas pour une perturbation **unique** : ici la source vibre sans cesse."
+            },
+            {
+              "label": "se déplace peu à peu dans le sens de propagation de l'onde",
+              "why": "Aucun point du milieu n'est transporté : le mouvement reste local."
+            },
+            {
+              "label": "oscille avec une amplitude qui croît au cours du temps",
+              "why": "L'amplitude est imposée par la source : elle ne croît pas spontanément."
+            }
+          ],
+          "hint": "Si la source ne s'arrête jamais, que fait chaque point atteint par l'onde ?",
+          "solution": "Chaque point du milieu reproduit le mouvement de la source, avec son retard propre. Comme la source vibre **indéfiniment**, chaque point **oscille indéfiniment** autour de sa position d'équilibre, avec la même période et la même amplitude que la source (en l'absence d'amortissement).",
+          "methode": "Onde progressive **unique** : chaque point fait un aller-retour. Onde progressive **périodique** : chaque point oscille en permanence.",
+          "points": 1,
+          "ref": "pc-onde-periodique-onde-progressive-periodique-q2"
+        },
+        {
+          "notion": "Onde progressive périodique",
+          "difficulty": 3,
+          "statement": "On double la fréquence de la source, sans rien changer au milieu. Qu'advient-il de la longueur d'onde et de la célérité ?",
+          "options": [
+            {
+              "label": "la célérité est inchangée et la longueur d'onde est divisée par deux",
+              "correct": true,
+              "why": "La célérité ne dépend que du milieu ; comme $\\lambda = v/f$, doubler $f$ divise $\\lambda$ par deux."
+            },
+            {
+              "label": "la célérité double et la longueur d'onde est inchangée",
+              "why": "La célérité est une propriété du **milieu** : la source ne peut pas la modifier."
+            },
+            {
+              "label": "la célérité et la longueur d'onde doublent toutes les deux",
+              "why": "Si $v$ et $f$ doublaient tous les deux, $\\lambda = v/f$ resterait constante — mais $v$ ne change pas."
+            },
+            {
+              "label": "la célérité est inchangée et la longueur d'onde double",
+              "why": "Erreur de sens : $\\lambda$ est **inversement** proportionnelle à $f$ à célérité fixée."
+            }
+          ],
+          "hint": "Demande-toi d'abord laquelle des trois grandeurs $v$, $f$ et $\\lambda$ est imposée par le milieu, et laquelle est imposée par la source.",
+          "solution": "Deux grandeurs sont imposées de l'extérieur : la **fréquence** par la source, la **célérité** par le milieu. La longueur d'onde, elle, est une **conséquence** des deux :\n$$\\lambda = \\frac{v}{f} = v\\,T$$\nDoubler $f$ à $v$ constante divise donc $\\lambda$ par deux.",
+          "methode": "Répartition des rôles : $f$ vient de la **source**, $v$ vient du **milieu**, $\\lambda$ se **calcule**. C'est la clé de presque toutes les questions du chapitre.",
+          "points": 1,
+          "ref": "pc-onde-periodique-onde-progressive-periodique-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les deux périodicités",
+        "lesson": "Périodicité — période et longueur d'onde",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-les-deux-periodicites",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Les deux périodicités",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les deux périodicités",
+          "difficulty": 1,
+          "statement": "La **double périodicité** d'une onde progressive périodique signifie que :",
+          "options": [
+            {
+              "label": "le phénomène se répète dans le **temps** avec la période $T$ et dans l'**espace** avec la période $\\lambda$",
+              "correct": true,
+              "why": "Une périodicité temporelle pour chaque point, une périodicité spatiale pour l'instantané du milieu."
+            },
+            {
+              "label": "l'onde possède deux fréquences différentes",
+              "why": "Il n'y a qu'une seule fréquence, celle de la source : la seconde périodicité est **spatiale**."
+            },
+            {
+              "label": "l'onde se propage dans deux directions opposées",
+              "why": "Cela décrirait deux ondes, ou une réflexion : rien à voir avec la double périodicité."
+            },
+            {
+              "label": "chaque point du milieu oscille deux fois par période",
+              "why": "Chaque point effectue **une** oscillation complète par période."
+            }
+          ],
+          "hint": "Il y a deux façons de regarder une onde : filmer un seul point, ou photographier tout le milieu à un instant donné.",
+          "solution": "Une onde progressive périodique présente **deux** périodicités :\n\n- **temporelle** : si l'on suit **un seul point**, son élongation se répète toutes les périodes $T$ ;\n- **spatiale** : si l'on photographie **tout le milieu** à un instant donné, la forme se répète tous les $\\lambda$.\n\nLa longueur d'onde $\\lambda$ est donc la **période spatiale** de l'onde.",
+          "methode": "Un point dans le temps $\\to T$. Le milieu dans l'espace $\\to \\lambda$. Sache toujours dire si un graphe est un **enregistrement** (axe des temps) ou un **instantané** (axe des distances).",
+          "points": 1,
+          "ref": "pc-onde-periodique-les-deux-periodicites-q1"
+        },
+        {
+          "notion": "Les deux périodicités",
+          "difficulty": 2,
+          "statement": "On dispose de deux graphes. Sur le premier, l'axe des abscisses est gradué en secondes ; sur le second, en centimètres. On peut y lire respectivement :",
+          "options": [
+            {
+              "label": "la période $T$ sur le premier, la longueur d'onde $\\lambda$ sur le second",
+              "correct": true,
+              "why": "L'unité de l'abscisse décide : des secondes donnent une durée, des centimètres une distance."
+            },
+            {
+              "label": "la longueur d'onde $\\lambda$ sur le premier, la période $T$ sur le second",
+              "why": "Tu as inversé : une période se lit sur un axe de **temps**."
+            },
+            {
+              "label": "la période $T$ sur les deux, exprimée dans deux unités différentes",
+              "why": "Un centimètre n'est pas une unité de temps : le second graphe donne bien une distance."
+            },
+            {
+              "label": "la célérité $v$ sur le premier, la fréquence $f$ sur le second",
+              "why": "Ni l'une ni l'autre ne se lit directement : ce sont des grandeurs qu'on **calcule** ensuite."
+            }
+          ],
+          "hint": "Regarde uniquement l'unité portée sur l'axe des abscisses.",
+          "solution": "Le premier graphe est un **enregistrement** : on suit un point donné au cours du temps, et l'on y lit la **période temporelle** $T$ en secondes. Le second est un **instantané** (une « photo ») du milieu à une date fixée, et l'on y lit la **période spatiale** $\\lambda$ en centimètres.\n\nUne fois les deux connues, la célérité s'en déduit : $v = \\lambda / T$.",
+          "methode": "Premier réflexe devant un graphe d'ondes : **lire l'unité de l'abscisse**. Elle dit si tu lis $T$ ou $\\lambda$.",
+          "points": 1,
+          "ref": "pc-onde-periodique-les-deux-periodicites-q2"
+        },
+        {
+          "notion": "Les deux périodicités",
+          "difficulty": 3,
+          "statement": "Sur l'instantané d'une corde, on mesure $3\\lambda$ sur une distance de $12\\ \\mathrm{cm}$, et la source vibre à $50\\ \\mathrm{Hz}$. La célérité vaut :",
+          "options": [
+            {
+              "label": "$2{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$\\lambda = 12/3 = 4{,}0\\ \\mathrm{cm}$, puis $v = \\lambda f = 0{,}040 \\times 50 = 2{,}0\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as utilisé $12\\ \\mathrm{cm}$ comme longueur d'onde, sans la diviser par les trois périodes mesurées."
+            },
+            {
+              "label": "$0{,}67\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé une fois de trop par $3$ : après $\\lambda = 12/3 = 4{,}0\\ \\mathrm{cm}$, il ne reste qu'à multiplier par $f$."
+            },
+            {
+              "label": "$1{,}25\\times10^{3}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $f/\\lambda$ au lieu de $\\lambda f$ : le résultat n'est pas homogène à une vitesse."
+            }
+          ],
+          "hint": "La mesure porte sur **trois** longueurs d'onde : commence par en déduire une seule.",
+          "solution": "On mesure $3\\lambda = 12\\ \\mathrm{cm}$, donc $\\lambda = 4{,}0\\ \\mathrm{cm} = 4{,}0\\times10^{-2}\\ \\mathrm{m}$.\nPuis $v = \\lambda\\,f = 4{,}0\\times10^{-2} \\times 50 = 2{,}0\\ \\mathrm{m\\,s^{-1}}$.",
+          "methode": "En TP on mesure **plusieurs** longueurs d'onde d'un coup pour réduire l'incertitude : n'oublie jamais de diviser par leur nombre.",
+          "points": 1,
+          "ref": "pc-onde-periodique-les-deux-periodicites-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La relation fondamentale",
+        "lesson": "Périodicité — période et longueur d'onde",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-la-relation-fondamentale",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "La relation fondamentale",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La relation fondamentale",
+          "difficulty": 1,
+          "statement": "Une onde de célérité $v = 0{,}40\\ \\mathrm{m\\,s^{-1}}$ est créée par une source de fréquence $f = 20\\ \\mathrm{Hz}$. Sa longueur d'onde vaut :",
+          "options": [
+            {
+              "label": "$2{,}0\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "$\\lambda = \\dfrac{v}{f} = \\dfrac{0{,}40}{20} = 2{,}0\\times10^{-2}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{m}$",
+              "why": "Tu as multiplié $v$ par $f$ : il faut **diviser** la célérité par la fréquence."
+            },
+            {
+              "label": "$50\\ \\mathrm{m}$",
+              "why": "Tu as calculé $f/v$ : le résultat n'est pas une longueur."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{mm}$",
+              "why": "Erreur de puissance de dix : $0{,}40/20 = 2{,}0\\times10^{-2}\\ \\mathrm{m}$, soit $2{,}0\\ \\mathrm{cm}$."
+            }
+          ],
+          "hint": "La longueur d'onde est la distance parcourue par l'onde pendant **une** période.",
+          "solution": "La longueur d'onde est la distance parcourue pendant une période :\n$$\\lambda = v\\,T = \\frac{v}{f} = \\frac{0{,}40}{20} = 2{,}0\\times10^{-2}\\ \\mathrm{m} = 2{,}0\\ \\mathrm{cm}$$",
+          "methode": "$\\lambda = vT = v/f$. Contrôle d'homogénéité : des $\\mathrm{m\\,s^{-1}}$ divisés par des $\\mathrm{s^{-1}}$ donnent bien des mètres.",
+          "points": 1,
+          "ref": "pc-onde-periodique-la-relation-fondamentale-q1"
+        },
+        {
+          "notion": "La relation fondamentale",
+          "difficulty": 2,
+          "statement": "Une onde a pour longueur d'onde $\\lambda = 3{,}0\\ \\mathrm{cm}$ et pour période $T = 25\\ \\mathrm{ms}$. Sa célérité vaut :",
+          "options": [
+            {
+              "label": "$1{,}2\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v = \\dfrac{\\lambda}{T} = \\dfrac{3{,}0\\times10^{-2}}{25\\times10^{-3}} = 1{,}2\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$1{,}2\\times10^{2}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as gardé $\\lambda$ en centimètres : $3{,}0/25\\times10^{-3} = 120$, mais en $\\mathrm{cm\\,s^{-1}}$."
+            },
+            {
+              "label": "$7{,}5\\times10^{-4}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as multiplié $\\lambda$ par $T$ au lieu de diviser."
+            },
+            {
+              "label": "$0{,}83\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $T/\\lambda$ : le résultat est l'inverse d'une vitesse."
+            }
+          ],
+          "hint": "Convertis d'abord les deux grandeurs en unités SI, puis applique $v = \\lambda/T$.",
+          "solution": "$\\lambda = 3{,}0\\ \\mathrm{cm} = 3{,}0\\times10^{-2}\\ \\mathrm{m}$ et $T = 25\\ \\mathrm{ms} = 25\\times10^{-3}\\ \\mathrm{s}$, donc\n$$v = \\frac{\\lambda}{T} = \\frac{3{,}0\\times10^{-2}}{25\\times10^{-3}} = 1{,}2\\ \\mathrm{m\\,s^{-1}}$$",
+          "methode": "Deux conversions à faire **avant** le calcul : les $\\mathrm{cm}$ en $\\mathrm{m}$, les $\\mathrm{ms}$ en $\\mathrm{s}$. C'est là que se perdent le plus de points.",
+          "points": 1,
+          "ref": "pc-onde-periodique-la-relation-fondamentale-q2"
+        },
+        {
+          "notion": "La relation fondamentale",
+          "difficulty": 3,
+          "statement": "Une onde ultrasonore de fréquence $40\\ \\mathrm{kHz}$ passe de l'air ($v = 3{,}4\\times10^{2}\\ \\mathrm{m\\,s^{-1}}$) dans l'eau ($v = 1{,}5\\times10^{3}\\ \\mathrm{m\\,s^{-1}}$). Que deviennent sa fréquence et sa longueur d'onde ?",
+          "options": [
+            {
+              "label": "la fréquence est inchangée, la longueur d'onde est multipliée par $4{,}4$",
+              "correct": true,
+              "why": "La fréquence est imposée par la source ; $\\lambda = v/f$ suit donc la célérité, multipliée par $1500/340 = 4{,}4$."
+            },
+            {
+              "label": "la fréquence est multipliée par $4{,}4$, la longueur d'onde est inchangée",
+              "why": "C'est l'inverse : jamais le milieu ne modifie la fréquence, qui vient de la **source**."
+            },
+            {
+              "label": "la fréquence et la longueur d'onde sont toutes deux multipliées par $4{,}4$",
+              "why": "La fréquence ne change **jamais** lors d'un changement de milieu."
+            },
+            {
+              "label": "la fréquence et la longueur d'onde sont toutes deux inchangées",
+              "why": "Si $v$ change et $f$ pas, alors $\\lambda = v/f$ **doit** changer."
+            }
+          ],
+          "hint": "Une seule des trois grandeurs $f$, $v$, $\\lambda$ est imposée par la source et traverse donc la frontière sans changer.",
+          "solution": "Au passage d'un milieu à un autre :\n\n- la **fréquence** est imposée par la source : elle est **conservée** ;\n- la **célérité** change, car elle est une propriété du milieu ;\n- la **longueur d'onde** suit : $\\lambda = v/f$.\n\nIci $\\lambda_{air} = \\dfrac{340}{40\\times10^{3}} = 8{,}5\\ \\mathrm{mm}$ et $\\lambda_{eau} = \\dfrac{1500}{40\\times10^{3}} = 37{,}5\\ \\mathrm{mm}$, soit un facteur $\\dfrac{1500}{340} = 4{,}4$.",
+          "methode": "**La fréquence ne change jamais de milieu ; la longueur d'onde, toujours.** C'est le réflexe attendu à toute question de changement de milieu.",
+          "points": 1,
+          "ref": "pc-onde-periodique-la-relation-fondamentale-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Deux points dans le même état vibratoire",
+        "lesson": "Phase : points en phase et en opposition",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-deux-points-dans-le-meme-etat-vibratoire",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Deux points dans le même état vibratoire",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Deux points dans le même état vibratoire",
+          "difficulty": 1,
+          "statement": "Deux points d'un milieu vibrent dans le **même état vibratoire** lorsque la distance qui les sépare vaut :",
+          "options": [
+            {
+              "label": "$d = k\\lambda$, avec $k$ entier",
+              "correct": true,
+              "why": "Un décalage d'un nombre entier de longueurs d'onde laisse les deux points dans le même état."
+            },
+            {
+              "label": "$d = (2k+1)\\dfrac{\\lambda}{2}$, avec $k$ entier",
+              "why": "C'est la condition d'**opposition** de phase, pas d'accord de phase."
+            },
+            {
+              "label": "$d = \\dfrac{\\lambda}{2}$ exactement",
+              "why": "Cette distance met justement les deux points en **opposition** de phase."
+            },
+            {
+              "label": "$d = k\\dfrac{\\lambda}{2}$, avec $k$ entier",
+              "why": "Cette condition inclut les demi-longueurs d'onde impaires, qui donnent l'opposition de phase."
+            }
+          ],
+          "hint": "La longueur d'onde est la période **spatiale** : quel décalage laisse une fonction périodique inchangée ?",
+          "solution": "$\\lambda$ étant la période spatiale de l'onde, deux points séparés d'un nombre **entier** de longueurs d'onde ont à chaque instant la même élongation et la même vitesse : ils sont **en phase**.\n$$d = k\\lambda \\quad (k \\in \\mathbb{N})$$",
+          "methode": "En phase : $d = k\\lambda$. En opposition : $d = (2k+1)\\lambda/2$. Calcule toujours le rapport $d/\\lambda$ : **entier** $\\to$ en phase, **demi-entier** $\\to$ opposition.",
+          "points": 1,
+          "ref": "pc-onde-periodique-deux-points-dans-le-meme-etat-vibratoire-q1"
+        },
+        {
+          "notion": "Deux points dans le même état vibratoire",
+          "difficulty": 2,
+          "statement": "La longueur d'onde vaut $\\lambda = 2{,}5\\ \\mathrm{cm}$. Deux points distants de $10\\ \\mathrm{cm}$ sont :",
+          "options": [
+            {
+              "label": "en phase, car $d = 4\\lambda$",
+              "correct": true,
+              "why": "$10/2{,}5 = 4$, un entier : les deux points sont en phase."
+            },
+            {
+              "label": "en opposition de phase, car $d$ vaut quatre demi-longueurs d'onde",
+              "why": "Quatre demi-longueurs d'onde font $2\\lambda$, donc un nombre **entier** de $\\lambda$ : c'est encore l'accord de phase."
+            },
+            {
+              "label": "ni en phase ni en opposition de phase",
+              "why": "Le rapport $d/\\lambda$ vaut exactement $4$ : le cas est parfaitement déterminé."
+            },
+            {
+              "label": "en phase, car $10\\ \\mathrm{cm}$ est un nombre entier de centimètres",
+              "why": "Le centimètre n'est pas la bonne référence : c'est le rapport $d/\\lambda$ qui décide, et non le fait que $d$ tombe rond."
+            }
+          ],
+          "hint": "Calcule le rapport $d/\\lambda$ et regarde s'il tombe sur un entier.",
+          "solution": "$\\dfrac{d}{\\lambda} = \\dfrac{10}{2{,}5} = 4$. Le rapport est un **entier**, donc $d = 4\\lambda$ : les deux points sont **en phase**. Ils ont à tout instant la même élongation et se déplacent dans le même sens.",
+          "methode": "Un seul calcul suffit : $d/\\lambda$. Entier $\\to$ phase ; demi-entier $\\to$ opposition ; ni l'un ni l'autre $\\to$ aucun des deux cas.",
+          "points": 1,
+          "ref": "pc-onde-periodique-deux-points-dans-le-meme-etat-vibratoire-q2"
+        },
+        {
+          "notion": "Deux points dans le même état vibratoire",
+          "difficulty": 2,
+          "statement": "Avec $\\lambda = 2{,}0\\ \\mathrm{cm}$, laquelle de ces distances place deux points en **opposition de phase** ?",
+          "options": [
+            {
+              "label": "$3{,}0\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "$3{,}0/2{,}0 = 1{,}5$, un demi-entier : c'est bien l'opposition de phase."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{cm}$",
+              "why": "$d = \\lambda$ : les deux points sont en **phase**."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{cm}$",
+              "why": "$d = 2\\lambda$ : encore l'accord de phase."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{cm}$",
+              "why": "$d = 3\\lambda$ : toujours l'accord de phase."
+            }
+          ],
+          "hint": "Divise chaque distance par $\\lambda$ et cherche celle qui donne un nombre **demi-entier**.",
+          "solution": "Il faut $\\dfrac{d}{\\lambda} = k + \\dfrac{1}{2}$. Les rapports valent respectivement $1{,}5$ ; $1$ ; $2$ ; $3$. Seul $3{,}0\\ \\mathrm{cm}$ donne $1{,}5$, soit $d = \\dfrac{3\\lambda}{2} = (2\\times1+1)\\dfrac{\\lambda}{2}$ : les deux points sont en **opposition de phase**, toujours de part et d'autre de la position d'équilibre.",
+          "methode": "Les multiples **entiers** de $\\lambda$ donnent la phase ; les multiples **impairs** de $\\lambda/2$ donnent l'opposition. $2\\lambda$, $3\\lambda$, $4\\lambda$ sont tous des cas d'accord.",
+          "points": 1,
+          "ref": "pc-onde-periodique-deux-points-dans-le-meme-etat-vibratoire-q3"
+        },
+        {
+          "notion": "Deux points dans le même état vibratoire",
+          "difficulty": 3,
+          "statement": "Une source vibre à $f = 50\\ \\mathrm{Hz}$ dans un milieu où $v = 1{,}5\\ \\mathrm{m\\,s^{-1}}$. Deux points distants de $7{,}5\\ \\mathrm{cm}$ sont :",
+          "options": [
+            {
+              "label": "en opposition de phase",
+              "correct": true,
+              "why": "$\\lambda = 1{,}5/50 = 3{,}0\\ \\mathrm{cm}$ et $7{,}5/3{,}0 = 2{,}5$, un demi-entier."
+            },
+            {
+              "label": "en phase",
+              "why": "Le rapport $d/\\lambda$ vaut $2{,}5$ et non un entier : les points ne sont pas en phase."
+            },
+            {
+              "label": "ni en phase ni en opposition de phase",
+              "why": "$2{,}5$ est un **demi-entier** : le cas de l'opposition de phase est exactement réalisé."
+            },
+            {
+              "label": "en phase, car $7{,}5\\ \\mathrm{cm}$ est un multiple de $1{,}5$",
+              "why": "$1{,}5$ est ici une **célérité** en $\\mathrm{m\\,s^{-1}}$, pas une longueur : la comparaison n'a pas de sens."
+            }
+          ],
+          "hint": "Il te manque $\\lambda$ : calcule-la d'abord à partir de $v$ et $f$.",
+          "solution": "$\\lambda = \\dfrac{v}{f} = \\dfrac{1{,}5}{50} = 3{,}0\\times10^{-2}\\ \\mathrm{m} = 3{,}0\\ \\mathrm{cm}$.\nPuis $\\dfrac{d}{\\lambda} = \\dfrac{7{,}5}{3{,}0} = 2{,}5 = 2 + \\dfrac{1}{2}$ : un demi-entier, donc $d = \\dfrac{5\\lambda}{2}$. Les deux points sont en **opposition de phase**.",
+          "methode": "Quand $\\lambda$ n'est pas donnée, elle est presque toujours la **première** chose à calculer. Ensuite, tout se joue sur le rapport $d/\\lambda$.",
+          "points": 1,
+          "ref": "pc-onde-periodique-deux-points-dans-le-meme-etat-vibratoire-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le lien avec le retard",
+        "lesson": "Phase : points en phase et en opposition",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-le-lien-avec-le-retard",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Le lien avec le retard",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le lien avec le retard",
+          "difficulty": 1,
+          "statement": "Un point $M$ est à $d = 12\\ \\mathrm{cm}$ de la source, dans un milieu où $v = 0{,}60\\ \\mathrm{m\\,s^{-1}}$. Le retard de $M$ vaut :",
+          "options": [
+            {
+              "label": "$0{,}20\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$\\tau = \\dfrac{d}{v} = \\dfrac{0{,}12}{0{,}60} = 0{,}20\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$5{,}0\\ \\mathrm{s}$",
+              "why": "Tu as calculé $v/d$ au lieu de $d/v$."
+            },
+            {
+              "label": "$7{,}2\\times10^{-2}\\ \\mathrm{s}$",
+              "why": "Tu as multiplié $d$ par $v$ au lieu de diviser."
+            },
+            {
+              "label": "$0{,}20\\ \\mathrm{ms}$",
+              "why": "Le calcul est juste mais l'unité est mille fois trop petite."
+            }
+          ],
+          "hint": "Le retard est le temps que met l'onde pour aller de la source jusqu'à $M$ — n'oublie pas de convertir les centimètres.",
+          "solution": "$d = 12\\ \\mathrm{cm} = 0{,}12\\ \\mathrm{m}$, donc $\\tau = \\dfrac{d}{v} = \\dfrac{0{,}12}{0{,}60} = 0{,}20\\ \\mathrm{s}$.",
+          "methode": "$\\tau = d/v$, exactement comme pour une onde non périodique : la périodicité ne change rien à cette formule.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-lien-avec-le-retard-q1"
+        },
+        {
+          "notion": "Le lien avec le retard",
+          "difficulty": 2,
+          "statement": "La longueur d'onde vaut $\\lambda = 4{,}0\\ \\mathrm{cm}$ et le point $M$ est à $d = 12\\ \\mathrm{cm}$ de la source. Le retard de $M$ s'exprime par :",
+          "options": [
+            {
+              "label": "$\\tau = 3T$",
+              "correct": true,
+              "why": "$d = 12/4{,}0 = 3\\lambda$, et l'onde parcourt $\\lambda$ en une période : le retard vaut donc $3T$."
+            },
+            {
+              "label": "$\\tau = \\dfrac{T}{3}$",
+              "why": "Tu as inversé : trois longueurs d'onde demandent **plus** de temps, pas moins."
+            },
+            {
+              "label": "$\\tau = 12\\,T$",
+              "why": "Tu as pris $d$ en centimètres pour un nombre de longueurs d'onde : il faut diviser par $\\lambda$."
+            },
+            {
+              "label": "$\\tau = 1{,}5\\,T$",
+              "why": "Tu as divisé par $2\\lambda$ au lieu de $\\lambda$."
+            }
+          ],
+          "hint": "Combien de longueurs d'onde y a-t-il dans $12\\ \\mathrm{cm}$ ? Et combien de temps l'onde met-elle pour parcourir **une** longueur d'onde ?",
+          "solution": "L'onde parcourt exactement $\\lambda$ pendant une période $T$. Or $d = \\dfrac{12}{4{,}0}\\lambda = 3\\lambda$, donc le retard vaut\n$$\\tau = \\frac{d}{v} = \\frac{3\\lambda}{v} = 3T$$",
+          "methode": "Passerelle à retenir : $d = k\\lambda \\Leftrightarrow \\tau = kT$. C'est elle qui relie la condition de phase au retard.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-lien-avec-le-retard-q2"
+        },
+        {
+          "notion": "Le lien avec le retard",
+          "difficulty": 2,
+          "statement": "Une onde de période $T = 20\\ \\mathrm{ms}$ se propage à $v = 2{,}0\\ \\mathrm{m\\,s^{-1}}$. Le retard d'un point situé à $16\\ \\mathrm{cm}$ de la source vaut :",
+          "options": [
+            {
+              "label": "$80\\ \\mathrm{ms}$, soit $4\\,T$",
+              "correct": true,
+              "why": "$\\tau = 0{,}16/2{,}0 = 8{,}0\\times10^{-2}\\ \\mathrm{s} = 80\\ \\mathrm{ms}$, et $80/20 = 4$ périodes."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{ms}$, soit $0{,}4\\,T$",
+              "why": "Erreur de puissance de dix : $0{,}16/2{,}0 = 0{,}080\\ \\mathrm{s}$, et non $0{,}0080\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$0{,}32\\ \\mathrm{s}$, soit $16\\,T$",
+              "why": "Tu as multiplié la distance par la célérité au lieu de diviser."
+            },
+            {
+              "label": "$12{,}5\\ \\mathrm{s}$, soit $625\\,T$",
+              "why": "Tu as calculé $v/d$ : le résultat n'est pas un temps de propagation."
+            }
+          ],
+          "hint": "Calcule d'abord le retard en secondes, puis compare-le à la période pour l'exprimer en nombre de périodes.",
+          "solution": "$\\tau = \\dfrac{d}{v} = \\dfrac{0{,}16}{2{,}0} = 8{,}0\\times10^{-2}\\ \\mathrm{s} = 80\\ \\mathrm{ms}$.\nEn périodes : $\\dfrac{\\tau}{T} = \\dfrac{80}{20} = 4$, donc $\\tau = 4T$.\n\n**Contrôle** : $\\lambda = vT = 2{,}0 \\times 20\\times10^{-3} = 4{,}0\\ \\mathrm{cm}$, et $16/4{,}0 = 4$ : on retrouve bien $4\\lambda$ et $4T$.",
+          "methode": "Exprimer le retard **en périodes** est souvent l'étape qui débloque la question suivante : un retard de $kT$ signifie que le point est en phase avec la source.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-lien-avec-le-retard-q3"
+        },
+        {
+          "notion": "Le lien avec le retard",
+          "difficulty": 3,
+          "statement": "Pour qu'un point $M$ reproduise **au même instant** le mouvement exact de la source, il faut que :",
+          "options": [
+            {
+              "label": "le retard de $M$ soit un multiple entier de la période, c'est-à-dire $d$ un multiple entier de $\\lambda$",
+              "correct": true,
+              "why": "Si $\\tau = kT$, alors $y_M(t) = y_S(t - kT) = y_S(t)$, puisque le mouvement de la source est périodique."
+            },
+            {
+              "label": "le retard de $M$ soit nul, ce qui n'est possible qu'en $M = S$",
+              "why": "Un retard non nul mais multiple de $T$ suffit : la périodicité du mouvement fait le reste."
+            },
+            {
+              "label": "le retard de $M$ soit un multiple impair de la demi-période",
+              "why": "Cette condition met $M$ en **opposition** de phase avec la source."
+            },
+            {
+              "label": "la distance $d$ soit inférieure à une longueur d'onde",
+              "why": "La distance peut être aussi grande qu'on veut, pourvu qu'elle soit un multiple de $\\lambda$."
+            }
+          ],
+          "hint": "Écris $y_M(t) = y_S(t - \\tau)$ et demande-toi pour quels $\\tau$ cette expression redonne $y_S(t)$.",
+          "solution": "Le mouvement de $M$ s'écrit $y_M(t) = y_S(t - \\tau)$. Comme le mouvement de la source est **périodique** de période $T$, on a $y_S(t - kT) = y_S(t)$ pour tout entier $k$. Donc\n$$\\tau = kT \\quad\\Longleftrightarrow\\quad d = k\\lambda \\quad\\Longleftrightarrow\\quad M \\text{ en phase avec } S$$\nC'est toute la portée de la périodicité : un point **très éloigné** peut être exactement en phase avec la source.",
+          "methode": "C'est la **périodicité du mouvement** qui rend l'accord de phase possible à distance. Sans elle, tout point serait simplement en retard.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-lien-avec-le-retard-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Compter les points en phase",
+        "lesson": "Phase : points en phase et en opposition",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-compter-les-points-en-phase",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Compter les points en phase",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Compter les points en phase",
+          "difficulty": 2,
+          "statement": "Une source $S$ vibre à $25\\ \\mathrm{Hz}$ et l'onde se propage à $0{,}50\\ \\mathrm{m\\,s^{-1}}$. Combien de points sont en phase avec $S$ sur les $60\\ \\mathrm{cm}$ qui suivent $S$, extrémité comprise et $S$ exclue ?",
+          "options": [
+            {
+              "label": "$30$ points",
+              "correct": true,
+              "why": "$\\lambda = 2{,}0\\ \\mathrm{cm}$, et les points en phase sont à $2, 4, \\dots, 60\\ \\mathrm{cm}$, soit $60/2 = 30$ points."
+            },
+            {
+              "label": "$29$ points",
+              "why": "Tu as exclu le point situé à $60\\ \\mathrm{cm}$, alors que l'énoncé précise « extrémité comprise »."
+            },
+            {
+              "label": "$31$ points",
+              "why": "Tu as compté $S$ lui-même, alors que l'énoncé l'exclut."
+            },
+            {
+              "label": "$60$ points",
+              "why": "Tu as compté un point par centimètre : les points en phase sont espacés de $\\lambda = 2{,}0\\ \\mathrm{cm}$."
+            }
+          ],
+          "hint": "Calcule $\\lambda$, puis compte combien de fois elle tient dans $60\\ \\mathrm{cm}$ — en lisant bien qui est inclus et qui est exclu.",
+          "solution": "$\\lambda = \\dfrac{v}{f} = \\dfrac{0{,}50}{25} = 2{,}0\\times10^{-2}\\ \\mathrm{m} = 2{,}0\\ \\mathrm{cm}$.\nLes points en phase avec $S$ sont à $d = k\\lambda$, soit $2, 4, 6, \\dots, 60\\ \\mathrm{cm}$. Comme $S$ ($k = 0$) est exclu et l'extrémité incluse, $k$ va de $1$ à $\\dfrac{60}{2{,}0} = 30$ : il y a **$30$ points**.",
+          "methode": "Trois étapes : $\\lambda$, puis $k_{max} = L/\\lambda$, puis **relis l'énoncé** pour savoir si les extrémités comptent. C'est là qu'on gagne ou perd le point.",
+          "points": 1,
+          "ref": "pc-onde-periodique-compter-les-points-en-phase-q1"
+        },
+        {
+          "notion": "Compter les points en phase",
+          "difficulty": 3,
+          "statement": "Sur cette même corde ($\\lambda = 2{,}0\\ \\mathrm{cm}$), deux points distants de $5{,}0\\ \\mathrm{cm}$ sont :",
+          "options": [
+            {
+              "label": "en opposition de phase, car $d = 2{,}5\\lambda$",
+              "correct": true,
+              "why": "$5{,}0/2{,}0 = 2{,}5$, un demi-entier : les deux points sont en opposition de phase."
+            },
+            {
+              "label": "en phase, car $5{,}0\\ \\mathrm{cm}$ contient un nombre entier de centimètres",
+              "why": "Le centimètre n'a rien à voir : c'est le rapport $d/\\lambda$ qui décide, et il vaut $2{,}5$."
+            },
+            {
+              "label": "ni en phase ni en opposition de phase",
+              "why": "Un rapport de $2{,}5$ est exactement un demi-entier : l'opposition de phase est réalisée."
+            },
+            {
+              "label": "en phase, car $2{,}5$ est un nombre rationnel",
+              "why": "Il faut un **entier** pour l'accord de phase, pas simplement un rationnel."
+            }
+          ],
+          "hint": "Un seul calcul : $d/\\lambda$. Puis classe le résultat — entier, demi-entier, ou ni l'un ni l'autre.",
+          "solution": "$\\dfrac{d}{\\lambda} = \\dfrac{5{,}0}{2{,}0} = 2{,}5 = 2 + \\dfrac{1}{2}$.\nC'est un demi-entier : $d = \\dfrac{5\\lambda}{2} = (2\\times2+1)\\dfrac{\\lambda}{2}$, donc les deux points sont en **opposition de phase**. Quand l'un est au sommet, l'autre est au creux.",
+          "methode": "Classement systématique du rapport $d/\\lambda$ : $\\{1, 2, 3, \\dots\\} \\to$ phase · $\\{0{,}5\\ ;\\ 1{,}5\\ ;\\ 2{,}5\\ ;\\ \\dots\\} \\to$ opposition · tout le reste $\\to$ aucun des deux.",
+          "points": 1,
+          "ref": "pc-onde-periodique-compter-les-points-en-phase-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le phénomène",
+        "lesson": "Diffraction des ondes mécaniques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-le-phenomene",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Le phénomène",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le phénomène",
+          "difficulty": 1,
+          "statement": "La diffraction est le phénomène par lequel :",
+          "options": [
+            {
+              "label": "une onde s'étale après avoir franchi une ouverture ou rencontré un obstacle de dimension comparable à sa longueur d'onde",
+              "correct": true,
+              "why": "C'est la définition : l'ouverture se comporte comme une nouvelle source qui rayonne dans toutes les directions."
+            },
+            {
+              "label": "une onde change de direction en passant d'un milieu à un autre",
+              "why": "C'est la **réfraction**, qui suppose un changement de milieu."
+            },
+            {
+              "label": "une onde revient en arrière après avoir rencontré un obstacle",
+              "why": "C'est la **réflexion**."
+            },
+            {
+              "label": "deux ondes se superposent et donnent des zones d'amplitude renforcée ou nulle",
+              "why": "Ce sont les **interférences**, qui exigent deux sources."
+            }
+          ],
+          "hint": "Un seul de ces quatre phénomènes ne demande ni second milieu, ni seconde onde, ni retour en arrière.",
+          "solution": "La **diffraction** est l'étalement d'une onde au franchissement d'une ouverture — ou au passage près d'un obstacle — dont la dimension est **comparable à la longueur d'onde** ou plus petite. Derrière l'ouverture, l'onde ne poursuit plus en ligne droite : elle se propage dans toutes les directions, comme si l'ouverture était elle-même une source.",
+          "methode": "Quatre phénomènes à ne pas confondre : **diffraction** (une ouverture), **réfraction** (deux milieux), **réflexion** (un obstacle renvoie), **interférences** (deux ondes).",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-phenomene-q1"
+        },
+        {
+          "notion": "Le phénomène",
+          "difficulty": 2,
+          "statement": "Lors de la diffraction d'une onde, qu'est-ce qui change ?",
+          "options": [
+            {
+              "label": "la direction de propagation seule : fréquence, longueur d'onde et célérité sont conservées",
+              "correct": true,
+              "why": "Le milieu n'a pas changé, donc ni $v$ ni $f$ ; et $\\lambda = v/f$ reste donc lui aussi inchangé."
+            },
+            {
+              "label": "la longueur d'onde augmente, car l'onde s'étale",
+              "why": "L'étalement est **géométrique** : il ne modifie pas la période spatiale de l'onde."
+            },
+            {
+              "label": "la fréquence diminue, car l'onde perd de l'énergie",
+              "why": "La fréquence est imposée par la source et n'est jamais modifiée par la diffraction."
+            },
+            {
+              "label": "la célérité diminue au passage de l'ouverture",
+              "why": "La célérité ne dépend que du milieu, qui est le même avant et après l'ouverture."
+            }
+          ],
+          "hint": "L'onde change-t-elle de **milieu** en franchissant la fente ?",
+          "solution": "L'onde reste dans le **même milieu** : sa célérité $v$ est donc inchangée. Sa fréquence $f$ est imposée par la source : elle est inchangée aussi. Comme $\\lambda = v/f$, la **longueur d'onde est également conservée**. Seule la **géométrie** de la propagation change : l'onde qui arrivait plane repart en s'étalant.",
+          "methode": "En diffraction, **rien ne change sauf la direction**. C'est la question de cours la plus fréquente du chapitre : $f$, $v$ et $\\lambda$ sont tous conservés.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-phenomene-q2"
+        },
+        {
+          "notion": "Le phénomène",
+          "difficulty": 2,
+          "statement": "L'observation de la diffraction de la lumière met en évidence :",
+          "options": [
+            {
+              "label": "le caractère **ondulatoire** de la lumière",
+              "correct": true,
+              "why": "Seule une onde se diffracte : un flux de particules traverserait la fente en ligne droite."
+            },
+            {
+              "label": "le caractère **corpusculaire** de la lumière",
+              "why": "C'est l'effet photoélectrique qui met en évidence l'aspect corpusculaire, pas la diffraction."
+            },
+            {
+              "label": "la nature **électromagnétique** de la lumière",
+              "why": "La diffraction se produit aussi pour les ondes mécaniques : elle ne dit rien de la nature électromagnétique."
+            },
+            {
+              "label": "la propagation **rectiligne** de la lumière",
+              "why": "C'est exactement le contraire : la diffraction est la mise en défaut de la propagation rectiligne."
+            }
+          ],
+          "hint": "Quel comportement, impossible pour un jet de particules, observe-t-on derrière la fente ?",
+          "solution": "Derrière une fente très fine, la lumière ne forme pas l'image géométrique de la fente mais une **figure étalée** de taches. Un flux de particules se propageant en ligne droite ne pourrait pas produire cela. La diffraction met donc en évidence le caractère **ondulatoire** de la lumière — et c'est sur elle que repose la mesure des longueurs d'onde lumineuses.",
+          "methode": "Diffraction et interférences $\\to$ aspect **ondulatoire**. Effet photoélectrique $\\to$ aspect **corpusculaire**. La lumière a les deux.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-phenomene-q3"
+        },
+        {
+          "notion": "Le phénomène",
+          "difficulty": 3,
+          "statement": "Une onde de longueur d'onde $\\lambda = 2{,}0\\ \\mathrm{cm}$ rencontre successivement une ouverture de $10\\ \\mathrm{cm}$, puis une ouverture de $2{,}0\\ \\mathrm{cm}$. Dans quel cas la diffraction est-elle nettement observable ?",
+          "options": [
+            {
+              "label": "pour l'ouverture de $2{,}0\\ \\mathrm{cm}$, comparable à $\\lambda$",
+              "correct": true,
+              "why": "La diffraction est d'autant plus marquée que l'ouverture est proche de $\\lambda$, ou plus petite."
+            },
+            {
+              "label": "pour l'ouverture de $10\\ \\mathrm{cm}$, qui laisse passer davantage d'énergie",
+              "why": "L'énergie transmise n'est pas le critère : c'est le rapport entre la largeur de l'ouverture et $\\lambda$."
+            },
+            {
+              "label": "pour les deux de la même façon, puisque l'onde est la même",
+              "why": "Le phénomène dépend de l'ouverture autant que de l'onde : $10\\ \\mathrm{cm}$ est cinq fois $\\lambda$."
+            },
+            {
+              "label": "pour aucune des deux, car $\\lambda$ est trop grande",
+              "why": "Une grande longueur d'onde **favorise** la diffraction : il suffit d'une ouverture assez fine."
+            }
+          ],
+          "hint": "Compare chaque largeur d'ouverture à la longueur d'onde : le critère est un **rapport**, pas une valeur absolue.",
+          "solution": "La diffraction devient nette lorsque la largeur $a$ de l'ouverture est de l'ordre de $\\lambda$ ou plus petite.\n\n- Pour $a = 10\\ \\mathrm{cm}$ : $a/\\lambda = 5$, l'onde poursuit à peu près en ligne droite et la diffraction reste discrète.\n- Pour $a = 2{,}0\\ \\mathrm{cm}$ : $a/\\lambda = 1$, l'ouverture se comporte comme une source ponctuelle et l'onde s'étale largement.\n\nLa diffraction est donc nette pour l'ouverture de $2{,}0\\ \\mathrm{cm}$.",
+          "methode": "Le critère n'est jamais la taille seule, mais le **rapport $a/\\lambda$**. Retiens : $a \\lesssim \\lambda$ $\\to$ diffraction nette.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-phenomene-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La condition de diffraction",
+        "lesson": "Diffraction des ondes mécaniques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-la-condition-de-diffraction",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "La condition de diffraction",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La condition de diffraction",
+          "difficulty": 1,
+          "statement": "Pour observer nettement la diffraction, la largeur $a$ de l'ouverture doit être :",
+          "options": [
+            {
+              "label": "de l'ordre de la longueur d'onde, ou plus petite",
+              "correct": true,
+              "why": "C'est la condition : $a \\lesssim \\lambda$."
+            },
+            {
+              "label": "très grande devant la longueur d'onde",
+              "why": "Dans ce cas l'onde poursuit pratiquement en ligne droite : la diffraction est négligeable."
+            },
+            {
+              "label": "exactement égale à la longueur d'onde",
+              "why": "L'égalité n'est pas requise : la condition porte sur l'**ordre de grandeur**."
+            },
+            {
+              "label": "indépendante de la longueur d'onde",
+              "why": "C'est précisément la comparaison entre $a$ et $\\lambda$ qui décide du phénomène."
+            }
+          ],
+          "hint": "La condition est une comparaison entre deux longueurs.",
+          "solution": "La diffraction est d'autant plus marquée que le rapport $\\dfrac{\\lambda}{a}$ est grand. On observe donc nettement le phénomène lorsque\n$$a \\lesssim \\lambda$$\nc'est-à-dire pour une ouverture de l'ordre de la longueur d'onde ou plus étroite. Si $a \\gg \\lambda$, l'onde se propage sensiblement en ligne droite.",
+          "methode": "Condition de diffraction : $a \\lesssim \\lambda$. C'est un ordre de grandeur, jamais une égalité.",
+          "points": 1,
+          "ref": "pc-onde-periodique-la-condition-de-diffraction-q1"
+        },
+        {
+          "notion": "La condition de diffraction",
+          "difficulty": 2,
+          "statement": "Une lumière de longueur d'onde $\\lambda = 600\\ \\mathrm{nm}$ tombe sur deux fentes, l'une de largeur $1{,}0\\ \\mathrm{\\mu m}$, l'autre de $1{,}0\\ \\mathrm{mm}$. La diffraction est nettement observable :",
+          "options": [
+            {
+              "label": "pour la fente de $1{,}0\\ \\mathrm{\\mu m}$",
+              "correct": true,
+              "why": "$1{,}0\\ \\mathrm{\\mu m} = 1{,}0\\times10^{-6}\\ \\mathrm{m}$, du même ordre que $\\lambda = 6{,}0\\times10^{-7}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "pour la fente de $1{,}0\\ \\mathrm{mm}$",
+              "why": "$1{,}0\\ \\mathrm{mm}$ vaut environ $1700$ fois $\\lambda$ : l'étalement est alors imperceptible."
+            },
+            {
+              "label": "pour les deux fentes de la même façon",
+              "why": "Les deux largeurs diffèrent d'un facteur $1000$ : elles ne se comparent pas du tout à $\\lambda$ de la même manière."
+            },
+            {
+              "label": "pour aucune des deux, car $\\lambda$ est bien trop petite",
+              "why": "Une fente de $1\\ \\mathrm{\\mu m}$ suffit largement : c'est l'ordre de grandeur de $\\lambda$."
+            }
+          ],
+          "hint": "Convertis tout en mètres et compare chaque largeur à $\\lambda$ en puissances de dix.",
+          "solution": "$\\lambda = 600\\ \\mathrm{nm} = 6{,}0\\times10^{-7}\\ \\mathrm{m}$.\n\n- Fente de $1{,}0\\ \\mathrm{\\mu m} = 1{,}0\\times10^{-6}\\ \\mathrm{m}$ : $a/\\lambda = 1{,}7$, donc $a$ est du même ordre que $\\lambda$ et la diffraction est nette.\n- Fente de $1{,}0\\ \\mathrm{mm} = 1{,}0\\times10^{-3}\\ \\mathrm{m}$ : $a/\\lambda \\approx 1{,}7\\times10^{3}$, la diffraction est négligeable.",
+          "methode": "Travaille toujours en **puissances de dix** : $\\mathrm{nm} = 10^{-9}$, $\\mathrm{\\mu m} = 10^{-6}$, $\\mathrm{mm} = 10^{-3}$. La diffraction de la lumière visible demande des fentes de l'ordre du micromètre.",
+          "points": 1,
+          "ref": "pc-onde-periodique-la-condition-de-diffraction-q2"
+        },
+        {
+          "notion": "La condition de diffraction",
+          "difficulty": 3,
+          "statement": "Par une porte ouverte, on **entend** une conversation venant d'une pièce voisine sans voir la personne qui parle. Pourquoi ?",
+          "options": [
+            {
+              "label": "parce que la longueur d'onde du son est de l'ordre du mètre, comparable à la porte, alors que celle de la lumière est un million de fois plus petite",
+              "correct": true,
+              "why": "Le son est fortement diffracté par une ouverture de taille métrique ; la lumière ne l'est pas du tout."
+            },
+            {
+              "label": "parce que le son traverse les murs alors que la lumière en est arrêtée",
+              "why": "L'énoncé décrit ce qui se passe **par l'ouverture** : la diffraction, pas la transmission à travers le mur."
+            },
+            {
+              "label": "parce que le son est une onde et la lumière un flux de particules",
+              "why": "La lumière est aussi une onde, et elle se diffracte : simplement à une échelle bien plus petite."
+            },
+            {
+              "label": "parce que le son se propage plus vite que la lumière dans l'air",
+              "why": "C'est l'inverse, et la célérité n'intervient pas dans la condition de diffraction."
+            }
+          ],
+          "hint": "Calcule l'ordre de grandeur de la longueur d'onde d'un son audible, puis compare-le à la largeur d'une porte.",
+          "solution": "Pour un son de $340\\ \\mathrm{Hz}$ dans l'air : $\\lambda = \\dfrac{340}{340} = 1\\ \\mathrm{m}$, soit l'ordre de grandeur d'une porte. La condition $a \\lesssim \\lambda$ est donc à peu près satisfaite : le son est fortement **diffracté** et se répand dans toute la pièce voisine.\n\nPour la lumière visible, $\\lambda \\approx 5\\times10^{-7}\\ \\mathrm{m}$, soit environ **deux millions de fois** plus petit qu'une porte : la diffraction est totalement négligeable et la lumière se propage en ligne droite, si bien qu'on ne voit que ce qui est dans l'alignement de l'ouverture.",
+          "methode": "La diffraction est **partout** — mais elle n'est visible que quand l'obstacle a la bonne échelle. Sons : le mètre. Lumière : le micromètre.",
+          "points": 1,
+          "ref": "pc-onde-periodique-la-condition-de-diffraction-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les caractéristiques de l'onde diffractée",
+        "lesson": "Diffraction des ondes mécaniques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-les-caracteristiques-de-l-onde-diffracte",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Les caractéristiques de l'onde diffractée",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les caractéristiques de l'onde diffractée",
+          "difficulty": 1,
+          "statement": "L'écart angulaire $\\theta$ de la tache centrale de diffraction, pour une fente de largeur $a$, s'exprime par :",
+          "options": [
+            {
+              "label": "$\\theta = \\dfrac{\\lambda}{a}$",
+              "correct": true,
+              "why": "L'écart angulaire croît avec $\\lambda$ et décroît quand la fente s'élargit."
+            },
+            {
+              "label": "$\\theta = \\dfrac{a}{\\lambda}$",
+              "why": "Cette expression **augmenterait** avec la largeur de la fente : c'est le contraire de ce qu'on observe."
+            },
+            {
+              "label": "$\\theta = \\lambda\\,a$",
+              "why": "Un produit de deux longueurs n'est pas un angle."
+            },
+            {
+              "label": "$\\theta = \\dfrac{\\lambda}{2a}$",
+              "why": "Le facteur $2$ intervient dans la **largeur** de la tache, pas dans l'écart angulaire."
+            }
+          ],
+          "hint": "Plus la fente est fine, plus l'onde s'étale : l'expression doit traduire cela.",
+          "solution": "L'écart angulaire — le demi-angle d'ouverture du faisceau diffracté — vaut, pour de petits angles,\n$$\\theta = \\frac{\\lambda}{a}$$\navec $\\theta$ en radians. Il **augmente** si $\\lambda$ augmente et **diminue** si la fente s'élargit, ce qui correspond bien à l'observation.",
+          "methode": "$\\theta = \\lambda/a$ en **radians**. Vérifie toujours le sens de variation : fente plus fine $\\Rightarrow$ tache plus large.",
+          "points": 1,
+          "ref": "pc-onde-periodique-les-caracteristiques-de-l-onde-diffracte-q1"
+        },
+        {
+          "notion": "Les caractéristiques de l'onde diffractée",
+          "difficulty": 2,
+          "statement": "Un laser de longueur d'onde $\\lambda = 633\\ \\mathrm{nm}$ éclaire une fente de largeur $a = 0{,}10\\ \\mathrm{mm}$. L'écart angulaire vaut :",
+          "options": [
+            {
+              "label": "$6{,}3\\times10^{-3}\\ \\mathrm{rad}$",
+              "correct": true,
+              "why": "$\\theta = \\dfrac{633\\times10^{-9}}{0{,}10\\times10^{-3}} = 6{,}33\\times10^{-3}\\ \\mathrm{rad}$."
+            },
+            {
+              "label": "$1{,}6\\times10^{2}\\ \\mathrm{rad}$",
+              "why": "Tu as calculé $a/\\lambda$ : un angle de $160\\ \\mathrm{rad}$ n'a aucun sens physique."
+            },
+            {
+              "label": "$6{,}3\\times10^{-11}\\ \\mathrm{rad}$",
+              "why": "Tu as multiplié $\\lambda$ par $a$ au lieu de diviser."
+            },
+            {
+              "label": "$6{,}3\\ \\mathrm{rad}$",
+              "why": "Erreur de puissance de dix : $10^{-9}/10^{-4} = 10^{-5}$, et non $10^{-2}$."
+            }
+          ],
+          "hint": "Convertis $\\lambda$ et $a$ en mètres avant de faire le quotient, et surveille les puissances de dix.",
+          "solution": "$\\lambda = 633\\ \\mathrm{nm} = 6{,}33\\times10^{-7}\\ \\mathrm{m}$ et $a = 0{,}10\\ \\mathrm{mm} = 1{,}0\\times10^{-4}\\ \\mathrm{m}$, donc\n$$\\theta = \\frac{\\lambda}{a} = \\frac{6{,}33\\times10^{-7}}{1{,}0\\times10^{-4}} = 6{,}3\\times10^{-3}\\ \\mathrm{rad}$$\nUn angle de quelques milliradians : c'est bien l'ordre de grandeur observé sur un banc d'optique.",
+          "methode": "Contrôle d'ordre de grandeur : en diffraction de la lumière visible, $\\theta$ vaut typiquement quelques **milliradians**. Un résultat supérieur à $1\\ \\mathrm{rad}$ signale une erreur.",
+          "points": 1,
+          "ref": "pc-onde-periodique-les-caracteristiques-de-l-onde-diffracte-q2"
+        },
+        {
+          "notion": "Les caractéristiques de l'onde diffractée",
+          "difficulty": 2,
+          "statement": "La largeur $L$ de la tache centrale observée sur un écran situé à la distance $D$ de la fente s'exprime par :",
+          "options": [
+            {
+              "label": "$L = \\dfrac{2\\lambda D}{a}$",
+              "correct": true,
+              "why": "La tache s'étend de $-\\theta$ à $+\\theta$, donc sur $2D\\theta = 2\\lambda D/a$."
+            },
+            {
+              "label": "$L = \\dfrac{\\lambda D}{a}$",
+              "why": "Il manque le facteur $2$ : la tache s'étale **de part et d'autre** de l'axe."
+            },
+            {
+              "label": "$L = \\dfrac{2\\lambda a}{D}$",
+              "why": "Tu as échangé $a$ et $D$ : éloigner l'écran doit **élargir** la tache."
+            },
+            {
+              "label": "$L = \\dfrac{2 a D}{\\lambda}$",
+              "why": "Cette expression diminuerait quand $\\lambda$ augmente : c'est le contraire de l'observation."
+            }
+          ],
+          "hint": "La tache s'étend symétriquement de part et d'autre de l'axe, sur un demi-angle $\\theta$ vu depuis la fente.",
+          "solution": "Pour de petits angles, la demi-largeur de la tache vaut $D\\theta$. Comme la tache est symétrique par rapport à l'axe,\n$$L = 2D\\theta = \\frac{2\\lambda D}{a}$$\nLa tache est donc d'autant plus large que l'écran est **loin**, que la longueur d'onde est **grande**, et que la fente est **fine**.",
+          "methode": "$L = \\dfrac{2\\lambda D}{a}$. Le facteur $2$ est l'erreur la plus courante : la tache est **de part et d'autre** de l'axe.",
+          "points": 1,
+          "ref": "pc-onde-periodique-les-caracteristiques-de-l-onde-diffracte-q3"
+        },
+        {
+          "notion": "Les caractéristiques de l'onde diffractée",
+          "difficulty": 3,
+          "statement": "Sans rien changer d'autre, on remplace la fente par une fente **deux fois plus étroite**. La tache centrale :",
+          "options": [
+            {
+              "label": "devient deux fois plus large",
+              "correct": true,
+              "why": "$L = 2\\lambda D/a$ : diviser $a$ par deux double $L$."
+            },
+            {
+              "label": "devient deux fois plus étroite",
+              "why": "Tu as supposé $L$ proportionnelle à $a$ : elle lui est **inversement** proportionnelle."
+            },
+            {
+              "label": "garde la même largeur, seule son intensité diminue",
+              "why": "L'intensité diminue effectivement, mais la largeur change aussi — et c'est l'effet principal."
+            },
+            {
+              "label": "disparaît, car la fente est trop étroite pour laisser passer la lumière",
+              "why": "Plus la fente est étroite, plus la diffraction est **marquée** : la tache s'étale au contraire."
+            }
+          ],
+          "hint": "Regarde où se trouve $a$ dans l'expression de $L$ : au numérateur ou au dénominateur ?",
+          "solution": "Dans $L = \\dfrac{2\\lambda D}{a}$, la largeur $L$ est **inversement proportionnelle** à $a$. Remplacer $a$ par $a/2$ donne donc une tache **deux fois plus large**.\n\nCe résultat est contre-intuitif au premier abord — on s'attend à ce qu'une fente plus étroite donne une trace plus fine — et c'est exactement ce qui fait de la diffraction une preuve du caractère ondulatoire de la lumière.",
+          "methode": "Fente **deux fois plus fine** $\\Rightarrow$ tache **deux fois plus large**. Retiens la proportionnalité inverse, c'est le piège favori du chapitre.",
+          "points": 1,
+          "ref": "pc-onde-periodique-les-caracteristiques-de-l-onde-diffracte-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le montage expérimental",
+        "lesson": "Diffraction des ondes mécaniques",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-le-montage-experimental",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Le montage expérimental",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le montage expérimental",
+          "difficulty": 1,
+          "statement": "Le montage classique d'étude de la diffraction de la lumière comporte, dans cet ordre :",
+          "options": [
+            {
+              "label": "une source laser, une fente fine de largeur connue, puis un écran placé à une distance mesurée",
+              "correct": true,
+              "why": "Trois éléments : la source monochromatique, l'obstacle diffractant, et l'écran d'observation."
+            },
+            {
+              "label": "une source laser, un écran, puis une fente fine",
+              "why": "L'ordre est impossible : la fente doit être **avant** l'écran pour que la figure s'y forme."
+            },
+            {
+              "label": "une lampe à incandescence, une fente fine, puis un écran",
+              "why": "Une lampe blanche donnerait une figure irisée et floue : il faut une source **monochromatique**."
+            },
+            {
+              "label": "une source laser, une lentille convergente, puis un écran",
+              "why": "Une lentille forme une image : elle ne produit pas de diffraction observable de cette manière."
+            }
+          ],
+          "hint": "Quelle propriété la source doit-elle avoir pour qu'une longueur d'onde unique soit mesurable ?",
+          "solution": "Le montage comporte :\n\n1. une **source laser**, dont la lumière est monochromatique — une seule longueur d'onde — et très directive ;\n2. une **fente** de largeur $a$ connue, de l'ordre de quelques centièmes de millimètre ;\n3. un **écran** à une distance $D$ mesurée, où l'on observe la figure de diffraction.\n\nAvec une lampe blanche, chaque longueur d'onde donnerait sa propre figure et elles se recouvriraient : aucune mesure ne serait possible.",
+          "methode": "La source doit être **monochromatique** : c'est la condition pour que la mesure de $L$ donne **une** longueur d'onde.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-montage-experimental-q1"
+        },
+        {
+          "notion": "Le montage expérimental",
+          "difficulty": 2,
+          "statement": "Sur l'écran, la figure de diffraction par une fente **verticale** se présente comme :",
+          "options": [
+            {
+              "label": "une série de taches alignées **horizontalement**, la centrale étant la plus large et la plus lumineuse",
+              "correct": true,
+              "why": "L'étalement se fait perpendiculairement à la fente : une fente verticale étale la lumière horizontalement."
+            },
+            {
+              "label": "une série de taches alignées **verticalement**, dans le prolongement de la fente",
+              "why": "L'étalement est **perpendiculaire** à la fente, pas dans sa direction."
+            },
+            {
+              "label": "un ensemble d'anneaux concentriques autour du centre",
+              "why": "Ce sont des anneaux que donne un **trou** circulaire, pas une fente."
+            },
+            {
+              "label": "une seule tache lumineuse, image géométrique de la fente",
+              "why": "C'est ce qu'on observerait **sans** diffraction : la figure étalée en est justement la réfutation."
+            }
+          ],
+          "hint": "Dans quelle direction l'onde est-elle contrainte par la fente, et dans quelle direction s'étale-t-elle ?",
+          "solution": "La fente ne limite l'onde que dans la direction **perpendiculaire** à sa longueur : c'est donc dans cette direction que la diffraction produit l'étalement. Une fente **verticale** donne une figure étalée **horizontalement** : une tache centrale large et intense, encadrée de taches secondaires de plus en plus faibles.\n\nC'est la tache **centrale** que l'on mesure, car c'est la seule dont les bords soient nets.",
+          "methode": "L'étalement est toujours **perpendiculaire** à la fente. Fente verticale $\\to$ figure horizontale, et réciproquement.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-montage-experimental-q2"
+        },
+        {
+          "notion": "Le montage expérimental",
+          "difficulty": 2,
+          "statement": "On éloigne l'écran, en doublant la distance $D$, sans rien changer d'autre. La largeur de la tache centrale :",
+          "options": [
+            {
+              "label": "double",
+              "correct": true,
+              "why": "$L = 2\\lambda D/a$ est **proportionnelle** à $D$."
+            },
+            {
+              "label": "est divisée par deux",
+              "why": "Tu as supposé $L$ inversement proportionnelle à $D$ : c'est $a$ qui est au dénominateur, pas $D$."
+            },
+            {
+              "label": "ne change pas, car l'écart angulaire est inchangé",
+              "why": "L'écart angulaire est bien inchangé — mais c'est justement pour cela que la tache s'élargit quand on s'éloigne."
+            },
+            {
+              "label": "quadruple",
+              "why": "La relation est linéaire en $D$, pas quadratique."
+            }
+          ],
+          "hint": "L'écart angulaire ne dépend pas de $D$. Que devient alors la largeur mesurée sur l'écran quand on s'éloigne ?",
+          "solution": "L'écart angulaire $\\theta = \\lambda/a$ ne dépend pas de la position de l'écran. Mais la largeur mesurée **sur** l'écran, elle, vaut $L = 2D\\theta$ : elle est **proportionnelle** à $D$. Doubler $D$ double donc $L$.\n\nC'est ce qui rend la mesure précise en pratique : en éloignant l'écran, on obtient une tache assez large pour être mesurée au millimètre près.",
+          "methode": "$\\theta$ ne dépend **que** de l'onde et de la fente. $L$ dépend en plus de $D$. Distinguer les deux évite la moitié des erreurs du chapitre.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-montage-experimental-q3"
+        },
+        {
+          "notion": "Le montage expérimental",
+          "difficulty": 3,
+          "statement": "Un laser éclaire une fente de largeur $a = 8{,}0\\times10^{-2}\\ \\mathrm{mm}$. Sur un écran placé à $D = 2{,}5\\ \\mathrm{m}$, la tache centrale mesure $L = 3{,}8\\ \\mathrm{cm}$. La longueur d'onde du laser vaut :",
+          "options": [
+            {
+              "label": "$6{,}1\\times10^{2}\\ \\mathrm{nm}$",
+              "correct": true,
+              "why": "$\\lambda = \\dfrac{aL}{2D} = \\dfrac{8{,}0\\times10^{-5}\\times3{,}8\\times10^{-2}}{2\\times2{,}5} = 6{,}1\\times10^{-7}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$1{,}2\\times10^{3}\\ \\mathrm{nm}$",
+              "why": "Tu as oublié de diviser par $2$ : la tache s'étend de part et d'autre de l'axe."
+            },
+            {
+              "label": "$3{,}0\\times10^{2}\\ \\mathrm{nm}$",
+              "why": "Tu as divisé par $4$ au lieu de $2$, ou compté deux fois le facteur $2$."
+            },
+            {
+              "label": "$6{,}1\\times10^{5}\\ \\mathrm{nm}$",
+              "why": "Tu n'as pas converti la largeur de la fente : $8{,}0\\times10^{-2}\\ \\mathrm{mm} = 8{,}0\\times10^{-5}\\ \\mathrm{m}$, et non $8{,}0\\times10^{-2}\\ \\mathrm{m}$."
+            }
+          ],
+          "hint": "Isole $\\lambda$ dans la relation $L = 2\\lambda D / a$, puis convertis tout en mètres avant de calculer.",
+          "solution": "De $L = \\dfrac{2\\lambda D}{a}$ on tire\n$$\\lambda = \\frac{a\\,L}{2D} = \\frac{8{,}0\\times10^{-5} \\times 3{,}8\\times10^{-2}}{2 \\times 2{,}5} = \\frac{3{,}04\\times10^{-6}}{5{,}0} = 6{,}1\\times10^{-7}\\ \\mathrm{m}$$\nsoit $\\lambda = 6{,}1\\times10^{2}\\ \\mathrm{nm} = 610\\ \\mathrm{nm}$ : une lumière **orange-rouge**, cohérente avec un laser courant.",
+          "methode": "Mesure de $\\lambda$ par diffraction : $\\lambda = \\dfrac{aL}{2D}$. Contrôle final obligatoire — le visible va de $400$ à $800\\ \\mathrm{nm}$.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-montage-experimental-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le dispositif",
+        "lesson": "Observer les ondes : la cuve à ondes",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-le-dispositif",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Le dispositif",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le dispositif",
+          "difficulty": 1,
+          "statement": "Une cuve à ondes est constituée :",
+          "options": [
+            {
+              "label": "d'une cuve d'eau de faible profondeur, d'un vibreur, d'une lampe placée au-dessus et d'un écran en dessous",
+              "correct": true,
+              "why": "L'ombre des rides, projetée sur l'écran, rend visible une onde qu'on ne verrait pas autrement."
+            },
+            {
+              "label": "d'une cuve d'eau profonde et d'un vibreur, sans dispositif d'éclairage",
+              "why": "Sans éclairage, les rides ne sont pas exploitables ; et la profondeur doit être **faible** et uniforme."
+            },
+            {
+              "label": "d'un tube rempli d'air et d'un haut-parleur à une extrémité",
+              "why": "Ce serait un dispositif d'étude des ondes **sonores**, pas une cuve à ondes."
+            },
+            {
+              "label": "d'une corde tendue entre un vibreur et une masse",
+              "why": "C'est le dispositif d'étude des ondes à **une** dimension, sur une corde."
+            }
+          ],
+          "hint": "La cuve sert à étudier des ondes à deux dimensions : comment rend-on des rides d'eau visibles ?",
+          "solution": "Une **cuve à ondes** comporte une cuve d'eau de **faible profondeur** et de fond transparent, un **vibreur** portant une pointe ou une règle, une **lampe** au-dessus et un **écran** en dessous. Les rides jouent le rôle de petites lentilles : leur projection sur l'écran forme des zones claires et sombres qui reproduisent la figure d'onde, invisible à l'œil nu sur l'eau.",
+          "methode": "La cuve à ondes est le dispositif des ondes à **deux dimensions** : ondes circulaires, rectilignes, diffraction, interférences.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-dispositif-q1"
+        },
+        {
+          "notion": "Le dispositif",
+          "difficulty": 2,
+          "statement": "Dans une cuve à ondes, on remplace la **pointe** vibrante par une **règle** vibrante. Les rides observées deviennent :",
+          "options": [
+            {
+              "label": "rectilignes et parallèles à la règle, au lieu de circulaires",
+              "correct": true,
+              "why": "La forme des surfaces d'onde reproduit celle de la source : une source étendue rectiligne donne des fronts rectilignes."
+            },
+            {
+              "label": "circulaires, mais de plus grand rayon",
+              "why": "Les fronts circulaires sont produits par une source **ponctuelle** : une règle ne peut pas en donner."
+            },
+            {
+              "label": "rectilignes et perpendiculaires à la règle",
+              "why": "Les fronts sont **parallèles** à la source qui les engendre, pas perpendiculaires."
+            },
+            {
+              "label": "inchangées : seule leur amplitude augmente",
+              "why": "La géométrie des fronts change du tout au tout en changeant la forme de la source."
+            }
+          ],
+          "hint": "La forme des surfaces d'onde reproduit celle de la source. Quelle forme a une règle ?",
+          "solution": "Les surfaces d'onde épousent la géométrie de la source :\n\n- une **pointe** est une source quasi ponctuelle : elle engendre des rides **circulaires** centrées sur elle ;\n- une **règle** vibrante est une source rectiligne : elle engendre des rides **rectilignes et parallèles** à la règle.\n\nLes ondes rectilignes servent notamment à étudier la diffraction, car elles arrivent sur la fente comme un front plan.",
+          "methode": "Source ponctuelle $\\to$ fronts circulaires. Source rectiligne $\\to$ fronts rectilignes **parallèles** à la source.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-dispositif-q2"
+        },
+        {
+          "notion": "Le dispositif",
+          "difficulty": 3,
+          "statement": "Pourquoi exige-t-on que l'eau de la cuve soit de **faible profondeur et uniforme** ?",
+          "options": [
+            {
+              "label": "parce que la célérité des ondes à la surface de l'eau dépend de la profondeur : une profondeur uniforme garantit une célérité constante",
+              "correct": true,
+              "why": "Sans cela, l'onde changerait de célérité d'un point à l'autre et les fronts se déformeraient."
+            },
+            {
+              "label": "parce qu'une eau profonde absorberait toute l'énergie de l'onde",
+              "why": "Ce n'est pas l'absorption qui pose problème, mais la **variation de célérité** avec la profondeur."
+            },
+            {
+              "label": "parce qu'il faut que l'eau reste transparente pour la projection",
+              "why": "La transparence ne dépend pas de la profondeur dans ces proportions."
+            },
+            {
+              "label": "parce que la fréquence de l'onde dépend de la profondeur de l'eau",
+              "why": "La fréquence est imposée par le **vibreur** : elle ne dépend jamais du milieu."
+            }
+          ],
+          "hint": "Quelle grandeur, parmi $f$, $v$ et $\\lambda$, est fixée par le milieu — et de quoi dépend-elle pour une onde de surface ?",
+          "solution": "Pour une onde à la surface de l'eau **peu profonde**, la célérité dépend de la **profondeur** : elle croît quand l'eau est plus profonde. Si la profondeur variait d'un point à l'autre de la cuve, la célérité varierait aussi, les fronts d'onde se déformeraient et toute mesure de longueur d'onde deviendrait ininterprétable.\n\nUne profondeur **faible et uniforme** garantit une célérité constante, donc des fronts réguliers et une longueur d'onde bien définie.",
+          "methode": "Profondeur de l'eau = propriété du **milieu** $\\Rightarrow$ elle fixe $v$, donc $\\lambda = v/f$. C'est le levier que les exercices utilisent pour faire varier $\\lambda$ à fréquence constante.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-dispositif-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Mesurer la longueur d'onde",
+        "lesson": "Observer les ondes : la cuve à ondes",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-mesurer-la-longueur-d-onde",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Mesurer la longueur d'onde",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Mesurer la longueur d'onde",
+          "difficulty": 2,
+          "statement": "Sur une photographie de la cuve, on mesure $8{,}0\\ \\mathrm{cm}$ entre la **première** et la **neuvième** ride circulaire. La longueur d'onde vaut :",
+          "options": [
+            {
+              "label": "$1{,}0\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "Entre la $1^{re}$ et la $9^{e}$ ride il y a $8$ intervalles, donc $\\lambda = 8{,}0/8 = 1{,}0\\ \\mathrm{cm}$."
+            },
+            {
+              "label": "$0{,}89\\ \\mathrm{cm}$",
+              "why": "Tu as divisé par $9$, le **nombre de rides**, au lieu de $8$, le nombre d'**intervalles**."
+            },
+            {
+              "label": "$1{,}1\\ \\mathrm{cm}$",
+              "why": "Tu as divisé par $7$ : entre la $1^{re}$ et la $9^{e}$ ride, il y a bien $9 - 1 = 8$ intervalles."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{cm}$",
+              "why": "C'est la distance totale mesurée : il faut la ramener à **un seul** intervalle."
+            }
+          ],
+          "hint": "Compte les **intervalles** entre les rides, et non les rides elles-mêmes.",
+          "solution": "La longueur d'onde est la distance entre deux rides **consécutives**. Entre la $1^{re}$ et la $9^{e}$ ride, il y a $9 - 1 = 8$ intervalles, donc\n$$\\lambda = \\frac{8{,}0}{8} = 1{,}0\\ \\mathrm{cm}$$\nOn mesure sur plusieurs intervalles à la fois précisément pour diviser l'incertitude de lecture par leur nombre.",
+          "methode": "Erreur n°1 du chapitre : diviser par le nombre de **rides** au lieu du nombre d'**intervalles**. De la ride $n$ à la ride $p$, il y a $p - n$ intervalles.",
+          "points": 1,
+          "ref": "pc-onde-periodique-mesurer-la-longueur-d-onde-q1"
+        },
+        {
+          "notion": "Mesurer la longueur d'onde",
+          "difficulty": 3,
+          "statement": "Le vibreur de cette cuve fonctionne à $f = 30\\ \\mathrm{Hz}$. Avec $\\lambda = 1{,}0\\ \\mathrm{cm}$, la célérité des ondes vaut :",
+          "options": [
+            {
+              "label": "$0{,}30\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v = \\lambda f = 1{,}0\\times10^{-2} \\times 30 = 0{,}30\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$30\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as gardé $\\lambda$ en centimètres : $1{,}0 \\times 30 = 30$, mais en $\\mathrm{cm\\,s^{-1}}$, soit $0{,}30\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$3{,}3\\times10^{-4}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $\\lambda/f$ : des mètres **multipliés** par des secondes, ce n'est pas une vitesse. Il faut $\\lambda \\times f$."
+            },
+            {
+              "label": "$3{,}0\\times10^{3}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $f/\\lambda$ : le résultat n'est pas homogène à une vitesse."
+            }
+          ],
+          "hint": "Convertis d'abord la longueur d'onde en mètres, puis applique la relation qui lie $v$, $\\lambda$ et $f$.",
+          "solution": "$\\lambda = 1{,}0\\ \\mathrm{cm} = 1{,}0\\times10^{-2}\\ \\mathrm{m}$, donc\n$$v = \\lambda\\,f = 1{,}0\\times10^{-2} \\times 30 = 0{,}30\\ \\mathrm{m\\,s^{-1}}$$\n**Contrôle d'ordre de grandeur** : quelques dizaines de centimètres par seconde, ce qui correspond bien à ce qu'on observe à l'œil dans une cuve à ondes.",
+          "methode": "Protocole complet de mesure : **stroboscope** $\\to f$ · **photo et intervalles** $\\to \\lambda$ · puis $v = \\lambda f$.",
+          "points": 1,
+          "ref": "pc-onde-periodique-mesurer-la-longueur-d-onde-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le stroboscope",
+        "lesson": "Observer les ondes : la cuve à ondes",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-le-stroboscope",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Le stroboscope",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le stroboscope",
+          "difficulty": 1,
+          "statement": "Un stroboscope est un dispositif qui :",
+          "options": [
+            {
+              "label": "émet des éclairs brefs à une fréquence réglable, de façon à n'éclairer le phénomène qu'à des instants choisis",
+              "correct": true,
+              "why": "On ne voit alors que des instantanés successifs, ce qui permet de figer ou de ralentir le mouvement apparent."
+            },
+            {
+              "label": "éclaire le phénomène en continu avec une lumière très intense",
+              "why": "Un éclairage continu montrerait le mouvement réel, trop rapide pour être analysé."
+            },
+            {
+              "label": "mesure directement la fréquence de l'onde sans éclairage",
+              "why": "Le stroboscope n'est pas un fréquencemètre : c'est l'observateur qui conclut à partir de ce qu'il voit."
+            },
+            {
+              "label": "ralentit réellement le mouvement du vibreur",
+              "why": "Le mouvement réel est inchangé : seul le mouvement **apparent** est modifié."
+            }
+          ],
+          "hint": "Que fait exactement la lampe d'un stroboscope, et à quoi cela sert-il pour un phénomène trop rapide ?",
+          "solution": "Un **stroboscope** produit des éclairs très brefs à une fréquence $f_e$ réglable. L'observateur ne voit le phénomène qu'aux instants des éclairs : il perçoit une succession d'**instantanés**. En choisissant bien $f_e$, on peut faire paraître le phénomène immobile ou très ralenti, alors que **rien n'est changé dans la réalité**.",
+          "methode": "Le stroboscope ne modifie que ce qu'on **voit**, jamais ce qui **se passe**. C'est un piège de rédaction classique.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-stroboscope-q1"
+        },
+        {
+          "notion": "Le stroboscope",
+          "difficulty": 2,
+          "statement": "L'onde de la cuve paraît **immobile** lorsque la période des éclairs $T_e$ est telle que :",
+          "options": [
+            {
+              "label": "$T_e = k\\,T$, avec $k$ entier et $T$ la période de l'onde",
+              "correct": true,
+              "why": "Entre deux éclairs, l'onde avance exactement $k$ longueurs d'onde : la figure paraît inchangée."
+            },
+            {
+              "label": "$T_e = \\dfrac{T}{k}$, avec $k$ entier",
+              "why": "Des éclairs plus rapprochés que la période montreraient l'onde à des états différents."
+            },
+            {
+              "label": "$T_e = (2k+1)\\dfrac{T}{2}$, avec $k$ entier",
+              "why": "Entre deux éclairs, l'onde aurait avancé d'un nombre **demi-entier** de longueurs d'onde : la figure paraîtrait décalée."
+            },
+            {
+              "label": "$T_e$ aussi petite que possible",
+              "why": "Des éclairs très rapprochés donnent au contraire l'impression d'un éclairage continu."
+            }
+          ],
+          "hint": "Pour que la figure paraisse identique d'un éclair au suivant, de combien de longueurs d'onde l'onde doit-elle avoir avancé ?",
+          "solution": "Entre deux éclairs séparés de $T_e$, l'onde avance de $v\\,T_e$. La figure paraît **inchangée** si cette distance est un nombre **entier** de longueurs d'onde :\n$$v\\,T_e = k\\lambda = k\\,v\\,T \\quad\\Longrightarrow\\quad T_e = k\\,T \\quad\\Longleftrightarrow\\quad f = k\\,f_e$$\nL'onde continue bien sûr d'avancer : elle est simplement photographiée chaque fois dans la même configuration.",
+          "methode": "Immobilité apparente : $T_e = kT$, soit $f = k f_e$. **L'onde n'est pas arrêtée, elle est échantillonnée.**",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-stroboscope-q2"
+        },
+        {
+          "notion": "Le stroboscope",
+          "difficulty": 2,
+          "statement": "Une onde de fréquence $f = 24\\ \\mathrm{Hz}$ est observée au stroboscope. La **plus grande** fréquence d'éclairs donnant l'immobilité apparente est :",
+          "options": [
+            {
+              "label": "$24\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "L'immobilité exige $f = k f_e$, donc $f_e = f/k$ : la plus grande valeur correspond à $k = 1$."
+            },
+            {
+              "label": "$48\\ \\mathrm{Hz}$",
+              "why": "Il faudrait $k = 1/2$, qui n'est pas entier : avec $f_e = 48\\ \\mathrm{Hz}$, l'onde n'avance que d'une demi-longueur d'onde entre deux éclairs."
+            },
+            {
+              "label": "$12\\ \\mathrm{Hz}$",
+              "why": "C'est bien une fréquence d'immobilité ($k = 2$), mais pas la plus **grande**."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{Hz}$",
+              "why": "C'est encore une fréquence d'immobilité ($k = 3$), mais plus petite encore."
+            }
+          ],
+          "hint": "Écris la condition sous la forme $f_e = f/k$ et cherche quel entier $k$ rend $f_e$ maximale.",
+          "solution": "La condition d'immobilité apparente s'écrit $f = k\\,f_e$, soit $f_e = \\dfrac{f}{k}$ avec $k$ entier non nul. Les fréquences possibles sont donc $24$ ; $12$ ; $8{,}0$ ; $6{,}0\\ \\mathrm{Hz}$… La plus **grande** correspond à $k = 1$ : $f_e = f = 24\\ \\mathrm{Hz}$.\n\nC'est cette propriété qui fait du stroboscope un **instrument de mesure** : la plus grande fréquence d'éclairs donnant l'immobilité est exactement la fréquence de l'onde.",
+          "methode": "**La plus grande fréquence d'immobilité apparente est la fréquence de l'onde elle-même.** C'est ainsi qu'on mesure $f$ dans une cuve à ondes.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-stroboscope-q3"
+        },
+        {
+          "notion": "Le stroboscope",
+          "difficulty": 3,
+          "statement": "On règle la fréquence des éclairs **légèrement en dessous** de la fréquence de l'onde. On observe alors :",
+          "options": [
+            {
+              "label": "un mouvement apparent très lent, dans le **même** sens que la propagation réelle",
+              "correct": true,
+              "why": "Entre deux éclairs, l'onde avance un peu **plus** d'une longueur d'onde : la figure paraît décalée vers l'avant."
+            },
+            {
+              "label": "un mouvement apparent très lent, en sens **inverse** de la propagation réelle",
+              "why": "C'est ce qu'on obtient avec des éclairs légèrement **plus** rapides que l'onde."
+            },
+            {
+              "label": "une immobilité parfaite, comme si $f_e = f$",
+              "why": "L'immobilité exige l'égalité exacte : un léger écart produit justement le défilement lent."
+            },
+            {
+              "label": "un brouillage complet de la figure, sans mouvement identifiable",
+              "why": "Le brouillage apparaît pour des fréquences quelconques, pas pour un écart léger autour de $f$."
+            }
+          ],
+          "hint": "Si $f_e$ est un peu plus petite que $f$, alors $T_e$ est un peu plus **grande** que $T$ : de combien l'onde avance-t-elle entre deux éclairs ?",
+          "solution": "Si $f_e$ est légèrement inférieure à $f$, alors $T_e$ est légèrement **supérieure** à $T$. Entre deux éclairs, l'onde parcourt $v\\,T_e$, soit un peu **plus** d'une longueur d'onde. À chaque éclair, la figure apparaît donc décalée d'une petite distance **dans le sens de propagation** : on voit l'onde avancer au ralenti, dans son sens réel.\n\nSymétriquement, si $f_e$ est légèrement **supérieure** à $f$, l'onde avance un peu **moins** de $\\lambda$ entre deux éclairs et paraît reculer — c'est le même effet qui fait parfois tourner les roues à l'envers au cinéma.",
+          "methode": "$f_e$ un peu **sous** $f$ $\\to$ défilement lent dans le **bon** sens. $f_e$ un peu **au-dessus** $\\to$ défilement lent **à l'envers**.",
+          "points": 1,
+          "ref": "pc-onde-periodique-le-stroboscope-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Exploiter le montage",
+        "lesson": "Observer les ondes : la cuve à ondes",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-exploiter-le-montage",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Exploiter le montage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Exploiter le montage",
+          "difficulty": 1,
+          "statement": "Dans un protocole complet d'étude en cuve à ondes, l'ordre logique des mesures est :",
+          "options": [
+            {
+              "label": "mesurer $f$ au stroboscope, mesurer $\\lambda$ sur une photographie, puis calculer $v = \\lambda f$",
+              "correct": true,
+              "why": "Les deux grandeurs mesurables directement sont $f$ et $\\lambda$ ; la célérité s'en déduit."
+            },
+            {
+              "label": "mesurer $v$ au chronomètre, mesurer $f$, puis calculer $\\lambda$",
+              "why": "La célérité d'une onde de surface est bien trop faible et les rides trop nombreuses pour un chronométrage fiable."
+            },
+            {
+              "label": "mesurer $\\lambda$ et $v$, puis calculer $f$",
+              "why": "La fréquence est la grandeur la plus simple à obtenir, par le stroboscope : il serait absurde de la déduire."
+            },
+            {
+              "label": "mesurer $v$ et $f$ au stroboscope, puis calculer $\\lambda$",
+              "why": "Le stroboscope ne donne que la **fréquence** : il ne mesure pas de célérité."
+            }
+          ],
+          "hint": "Parmi $f$, $\\lambda$ et $v$, lesquelles se mesurent **directement** avec le matériel de la cuve ?",
+          "solution": "Deux grandeurs se mesurent directement :\n\n- la **fréquence** $f$, par la plus grande fréquence d'éclairs donnant l'immobilité apparente ;\n- la **longueur d'onde** $\\lambda$, en mesurant plusieurs intervalles entre rides sur une photographie.\n\nLa **célérité** ne se mesure pas directement : on la calcule par $v = \\lambda f$. C'est tout l'intérêt du dispositif.",
+          "methode": "Cuve à ondes : on **mesure** $f$ et $\\lambda$, on **calcule** $v$. Jamais l'inverse.",
+          "points": 1,
+          "ref": "pc-onde-periodique-exploiter-le-montage-q1"
+        },
+        {
+          "notion": "Exploiter le montage",
+          "difficulty": 2,
+          "statement": "Au stroboscope, la plus grande fréquence d'éclairs donnant l'immobilité est $20\\ \\mathrm{Hz}$. Sur la photographie, on mesure $6{,}0\\ \\mathrm{cm}$ entre la première et la sixième ride. La longueur d'onde vaut :",
+          "options": [
+            {
+              "label": "$1{,}2\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "Il y a $6 - 1 = 5$ intervalles, donc $\\lambda = 6{,}0/5 = 1{,}2\\ \\mathrm{cm}$."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{cm}$",
+              "why": "Tu as divisé par $6$, le nombre de rides, au lieu de $5$, le nombre d'intervalles."
+            },
+            {
+              "label": "$1{,}5\\ \\mathrm{cm}$",
+              "why": "Tu as divisé par $4$ : de la $1^{re}$ à la $6^{e}$ ride, il y a $5$ intervalles."
+            },
+            {
+              "label": "$0{,}30\\ \\mathrm{cm}$",
+              "why": "Tu as divisé par $20$, la fréquence, qui n'intervient pas dans la mesure de $\\lambda$."
+            }
+          ],
+          "hint": "La fréquence ne sert pas ici : seule compte le comptage des intervalles.",
+          "solution": "De la première à la sixième ride, il y a $6 - 1 = 5$ intervalles de $\\lambda$ chacun, donc\n$$\\lambda = \\frac{6{,}0}{5} = 1{,}2\\ \\mathrm{cm}$$\nLa fréquence lue au stroboscope servira à l'étape suivante, pour la célérité.",
+          "methode": "Une mesure à la fois : $\\lambda$ vient de la **photo**, $f$ du **stroboscope**. Ne mélange pas les deux dans un même calcul.",
+          "points": 1,
+          "ref": "pc-onde-periodique-exploiter-le-montage-q2"
+        },
+        {
+          "notion": "Exploiter le montage",
+          "difficulty": 2,
+          "statement": "Avec $f = 20\\ \\mathrm{Hz}$ et $\\lambda = 1{,}2\\ \\mathrm{cm}$, la célérité des ondes dans cette cuve vaut :",
+          "options": [
+            {
+              "label": "$0{,}24\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v = \\lambda f = 1{,}2\\times10^{-2} \\times 20 = 0{,}24\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$24\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as laissé $\\lambda$ en centimètres : le résultat est en $\\mathrm{cm\\,s^{-1}}$."
+            },
+            {
+              "label": "$16{,}7\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $f/\\lambda$ avec $\\lambda$ en centimètres : le résultat n'est pas une vitesse."
+            },
+            {
+              "label": "$6{,}0\\times10^{-4}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé $\\lambda$ par $f$ au lieu de multiplier."
+            }
+          ],
+          "hint": "Convertis $\\lambda$ en mètres, puis multiplie par la fréquence.",
+          "solution": "$v = \\lambda\\,f = 1{,}2\\times10^{-2} \\times 20 = 0{,}24\\ \\mathrm{m\\,s^{-1}}$, soit $24\\ \\mathrm{cm\\,s^{-1}}$ — l'ordre de grandeur attendu pour une onde de surface dans quelques millimètres d'eau.",
+          "methode": "$v = \\lambda f$. Convertis **avant** de multiplier, et termine par un contrôle d'ordre de grandeur.",
+          "points": 1,
+          "ref": "pc-onde-periodique-exploiter-le-montage-q3"
+        },
+        {
+          "notion": "Exploiter le montage",
+          "difficulty": 3,
+          "statement": "On diminue la profondeur de l'eau de la cuve, sans toucher au vibreur. Que devient la figure observée ?",
+          "options": [
+            {
+              "label": "les rides se resserrent : la célérité diminue donc $\\lambda$ diminue, la fréquence restant imposée par le vibreur",
+              "correct": true,
+              "why": "Profondeur plus faible $\\Rightarrow$ $v$ plus petite ; à $f$ constante, $\\lambda = v/f$ diminue."
+            },
+            {
+              "label": "les rides s'écartent, car l'onde a plus de mal à se propager",
+              "why": "Une célérité plus faible donne au contraire une longueur d'onde plus **petite** à fréquence fixée."
+            },
+            {
+              "label": "la figure est inchangée, car le vibreur n'a pas été modifié",
+              "why": "Le vibreur fixe la **fréquence**, mais la profondeur fixe la **célérité** — donc $\\lambda$ change."
+            },
+            {
+              "label": "la fréquence des rides diminue, ce qui les écarte",
+              "why": "La fréquence ne dépend jamais du milieu : elle reste celle du vibreur."
+            }
+          ],
+          "hint": "Répartis les rôles : quelle grandeur le vibreur impose-t-il, et laquelle la profondeur impose-t-elle ?",
+          "solution": "Le vibreur impose la **fréquence** $f$, qui ne change pas. La profondeur de l'eau est une propriété du **milieu** : la réduire diminue la **célérité** $v$ des ondes de surface. Comme\n$$\\lambda = \\frac{v}{f}$$\nla longueur d'onde **diminue** : les rides se **resserrent**.\n\nC'est exactement le mécanisme qui fait se resserrer les vagues quand elles approchent d'une plage, et qui finit par les faire déferler.",
+          "methode": "Le triangle du chapitre : $f$ vient de la **source**, $v$ du **milieu**, $\\lambda = v/f$ subit les deux. Toute question de ce type se règle avec lui.",
+          "points": 1,
+          "ref": "pc-onde-periodique-exploiter-le-montage-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Milieu dispersif",
+        "lesson": "Approfondissement",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-milieu-dispersif",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Milieu dispersif",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Milieu dispersif",
+          "difficulty": 3,
+          "statement": "On qualifie la surface de l'eau de milieu **dispersif** pour les ondes. Cela signifie que :",
+          "options": [
+            {
+              "label": "la célérité des ondes y dépend de leur **fréquence**",
+              "correct": true,
+              "why": "C'est la définition d'un milieu dispersif : deux ondes de fréquences différentes n'y voyagent pas à la même vitesse."
+            },
+            {
+              "label": "la célérité des ondes y dépend de leur **amplitude**",
+              "why": "L'amplitude n'intervient pas : la dispersion concerne la dépendance en **fréquence**."
+            },
+            {
+              "label": "l'amplitude des ondes y diminue au cours de la propagation",
+              "why": "C'est l'**amortissement** ou l'atténuation géométrique, un phénomène distinct de la dispersion."
+            },
+            {
+              "label": "les ondes y changent de fréquence en se propageant",
+              "why": "La fréquence d'une onde ne change jamais au cours de la propagation dans un milieu donné."
+            }
+          ],
+          "hint": "Le mot vise une dépendance de la célérité : une dépendance en quoi ?",
+          "solution": "Un milieu est **dispersif** lorsque la célérité des ondes qui s'y propagent dépend de leur **fréquence**. La surface de l'eau en est l'exemple type ; l'air, pour le son, ne l'est pratiquement pas.\n\n**La conséquence est importante.** Une perturbation brève contient de nombreuses fréquences. Dans un milieu **non dispersif**, elles voyagent toutes à la même vitesse et la perturbation garde sa forme. Dans un milieu **dispersif**, elles se propagent à des vitesses différentes et la perturbation se **déforme** et s'étale en avançant.\n\nC'est pourquoi la notion de longueur d'onde ne prend tout son sens que pour une onde **sinusoïdale**, de fréquence unique : dans un milieu dispersif, une onde qui n'aurait pas une fréquence bien définie n'aurait pas de longueur d'onde bien définie non plus.",
+          "methode": "**Dispersif = la célérité dépend de la fréquence.** Ne le confonds ni avec l'amortissement, ni avec un changement de fréquence — qui n'existe pas.",
+          "points": 1,
+          "ref": "pc-onde-periodique-milieu-dispersif-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Retour sur la diffraction : l'étalement angulaire",
+        "lesson": "Approfondissement",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-retour-sur-la-diffraction-l-etalement-an",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Retour sur la diffraction : l'étalement angulaire",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Retour sur la diffraction : l'étalement angulaire",
+          "difficulty": 3,
+          "statement": "On rétrécit progressivement une fente éclairée par un laser, jusqu'à ce que sa largeur devienne **plus petite** que la longueur d'onde. Que prévoit la relation $\\theta = \\lambda/a$, et qu'observe-t-on ?",
+          "options": [
+            {
+              "label": "elle prévoit $\\theta > 1\\ \\mathrm{rad}$, un étalement si grand que l'approximation des petits angles cesse d'être valable, et l'on observe effectivement un étalement considérable",
+              "correct": true,
+              "why": "La relation reste qualitativement juste — plus la fente est fine, plus l'onde s'étale — mais $L = 2\\lambda D/a$ n'est plus exploitable."
+            },
+            {
+              "label": "elle prévoit $\\theta > 1\\ \\mathrm{rad}$, ce qui est impossible : la diffraction cesse alors",
+              "why": "Un angle supérieur au radian n'a rien d'impossible : c'est seulement l'**approximation** $\\tan\\theta \\approx \\theta$ qui tombe."
+            },
+            {
+              "label": "elle prévoit un étalement nul, et l'onde ne passe plus",
+              "why": "C'est le contraire : $\\theta = \\lambda/a$ **augmente** quand $a$ diminue."
+            },
+            {
+              "label": "elle prévoit un étalement inchangé, car $\\theta$ ne dépend que de $\\lambda$",
+              "why": "$\\theta$ dépend des **deux** grandeurs : $\\lambda$ au numérateur et $a$ au dénominateur."
+            }
+          ],
+          "hint": "Calcule l'ordre de grandeur de $\\theta = \\lambda/a$ quand $a$ devient plus petit que $\\lambda$, puis demande-toi quelle hypothèse du cours cela met en défaut.",
+          "solution": "Quand $a$ devient inférieure à $\\lambda$, le rapport $\\lambda/a$ dépasse $1$ et l'angle prévu dépasse le radian. Or les relations du cours ont été établies dans l'**approximation des petits angles** : $\\sin\\theta \\approx \\tan\\theta \\approx \\theta$. Cette approximation s'effondre, et avec elle la formule $L = \\dfrac{2\\lambda D}{a}$, qui donnerait une largeur de tache absurde.\n\nCe qui reste vrai, c'est la **tendance** : plus la fente est fine, plus l'onde s'étale. À la limite, la fente se comporte comme une source ponctuelle rayonnant dans tout le demi-espace, et l'on ne distingue plus de « tache centrale » mesurable.\n\n**La morale** : $\\theta = \\lambda/a$ et $L = 2\\lambda D/a$ ne sont valables que pour $\\lambda \\ll a$, c'est-à-dire précisément dans le domaine où l'on fait les mesures au laboratoire.",
+          "methode": "Toute formule a un domaine de validité. Ici : **petits angles**, donc $\\lambda \\ll a$. Un résultat donnant $\\theta \\gtrsim 1\\ \\mathrm{rad}$ doit t'alerter.",
+          "points": 1,
+          "ref": "pc-onde-periodique-retour-sur-la-diffraction-l-etalement-an-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Superposition et interférences",
+        "lesson": "Approfondissement",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-onde-periodique-superposition-et-interferences",
+      "chapter": "pc-onde-periodique",
+      "kind": "qcu",
+      "title": "Superposition et interférences",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Superposition et interférences",
+          "difficulty": 3,
+          "statement": "Deux pointes vibrant **en phase** à la même fréquence sont plongées dans une cuve à ondes. En un point $M$ tel que la différence des distances aux deux sources vaut $\\delta = 2{,}5\\lambda$, on observe :",
+          "options": [
+            {
+              "label": "une amplitude **nulle** : les deux ondes y arrivent en opposition de phase",
+              "correct": true,
+              "why": "$\\delta = 2{,}5\\lambda$ est un multiple **impair** de $\\lambda/2$ : les deux contributions s'annulent en permanence."
+            },
+            {
+              "label": "une amplitude **maximale** : les deux ondes s'y renforcent",
+              "why": "Le renforcement demande $\\delta = k\\lambda$, avec $k$ **entier** : ici $\\delta/\\lambda = 2{,}5$."
+            },
+            {
+              "label": "une amplitude égale à celle d'une seule onde, les deux se compensant à moitié",
+              "why": "La superposition donne soit un renforcement, soit une annulation : jamais une compensation partielle en un point fixe."
+            },
+            {
+              "label": "une amplitude qui varie au cours du temps entre zéro et le maximum",
+              "why": "En un point donné, le caractère constructif ou destructif est **permanent** : il ne change pas au cours du temps."
+            }
+          ],
+          "hint": "Calcule $\\delta/\\lambda$ : entier ou demi-entier ? La conclusion est la même que pour l'état de phase de deux points.",
+          "solution": "Les deux sources vibrant en phase, ce qui décide en $M$ est la **différence de marche** $\\delta = |SM_1 - SM_2|$ :\n\n- $\\delta = k\\lambda$ (entier) : les deux ondes arrivent **en phase**, elles se renforcent — **interférence constructive**, amplitude maximale ;\n- $\\delta = (2k+1)\\dfrac{\\lambda}{2}$ (demi-entier) : elles arrivent en **opposition de phase**, elles s'annulent — **interférence destructive**, amplitude nulle.\n\nIci $\\dfrac{\\delta}{\\lambda} = 2{,}5 = 2 + \\dfrac{1}{2}$, un demi-entier : l'amplitude en $M$ est **nulle**, et elle le reste en permanence.\n\nDans la cuve, l'ensemble de ces points dessine des lignes fixes, alternativement très agitées et parfaitement calmes : c'est la **figure d'interférences**.",
+          "methode": "Interférences : tout se joue sur $\\delta/\\lambda$ — **entier** $\\to$ constructif, **demi-entier** $\\to$ destructif. C'est le même critère que pour l'état de phase de deux points d'une même onde.",
+          "points": 1,
+          "ref": "pc-onde-periodique-superposition-et-interferences-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-onde-periodique-probleme-1",
+      "chapter": "pc-onde-periodique",
+      "kind": "probleme",
+      "title": "Des ultrasons à la lumière : deux mesures par les ondes",
+      "difficulty": 3,
+      "context": "**Partie A.** Pour évaluer l'épaisseur $L$ de la couche de glace d'un lac gelé, on pose à sa surface une sonde qui émet des ultrasons de fréquence $f = 40\\ \\mathrm{kHz}$ et reçoit les échos. La sonde enregistre deux signaux de retour : le premier réfléchi par la **face supérieure** de la glace, le second par le **fond** de la couche. Le retard entre ces deux échos vaut $\\tau = 0{,}25\\ \\mathrm{ms}$. Célérité des ultrasons dans la glace : $v = 3{,}2\\times10^{3}\\ \\mathrm{m\\,s^{-1}}$.\n\n**Partie B.** Un laser de longueur d'onde $\\lambda$ inconnue éclaire une fente de largeur $a = 6{,}0\\times10^{-2}\\ \\mathrm{mm}$. Sur un écran placé à $D = 3{,}0\\ \\mathrm{m}$, la tache centrale mesure $L' = 5{,}3\\ \\mathrm{cm}$.",
+      "figure": "diffraction",
+      "origin": {
+        "type": "annale",
+        "ref": "pc-svt-2026-rattrapage",
+        "exercise": "Exercice 1",
+        "reexpressed": true
+      },
+      "questions": [
+        {
+          "notion": "Onde progressive périodique",
+          "difficulty": 1,
+          "statement": "L'onde ultrasonore émise par la sonde est :",
+          "options": [
+            {
+              "label": "une onde mécanique progressive périodique, car la sonde vibre de façon entretenue dans un milieu matériel",
+              "correct": true,
+              "why": "Elle a besoin de la glace pour se propager, et la source vibre périodiquement à $40\\ \\mathrm{kHz}$."
+            },
+            {
+              "label": "une onde mécanique progressive, mais non périodique, car la sonde n'émet qu'une impulsion",
+              "why": "L'énoncé donne une **fréquence** de $40\\ \\mathrm{kHz}$ : la source vibre donc périodiquement."
+            },
+            {
+              "label": "une onde électromagnétique, car elle est produite par un appareil électronique",
+              "why": "L'électronique produit la vibration, mais l'onde qui se propage est **mécanique** : elle exige un milieu matériel."
+            },
+            {
+              "label": "une onde mécanique dont la fréquence est imposée par la glace",
+              "why": "La fréquence est toujours imposée par la **source**, jamais par le milieu."
+            }
+          ],
+          "hint": "Deux critères à vérifier : l'onde a-t-elle besoin de matière, et la source se répète-t-elle ?",
+          "solution": "L'onde ultrasonore est une onde de compression-dilatation qui exige un **milieu matériel** : c'est une onde **mécanique**. La source vibre à $40\\ \\mathrm{kHz}$, donc de façon **périodique** et entretenue : l'onde est **progressive périodique**.",
+          "methode": "Onde mécanique $\\Rightarrow$ milieu matériel obligatoire. Onde périodique $\\Rightarrow$ source périodique. Les deux critères sont indépendants.",
+          "points": 1,
+          "part": "Partie A — Épaisseur d'une couche de glace par ultrasons",
+          "ref": "pc-onde-periodique-probleme-1-q1"
+        },
+        {
+          "notion": "La relation fondamentale",
+          "difficulty": 1,
+          "statement": "La longueur d'onde de ces ultrasons dans la glace vaut :",
+          "options": [
+            {
+              "label": "$8{,}0\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "$\\lambda = \\dfrac{v}{f} = \\dfrac{3{,}2\\times10^{3}}{40\\times10^{3}} = 8{,}0\\times10^{-2}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{mm}$",
+              "why": "Erreur de puissance de dix : $3{,}2\\times10^{3}/4{,}0\\times10^{4} = 8{,}0\\times10^{-2}\\ \\mathrm{m}$, soit $8{,}0\\ \\mathrm{cm}$."
+            },
+            {
+              "label": "$1{,}3\\times10^{8}\\ \\mathrm{m}$",
+              "why": "Tu as multiplié $v$ par $f$ au lieu de diviser."
+            },
+            {
+              "label": "$12{,}5\\ \\mathrm{m}$",
+              "why": "Tu as calculé $f/v$ : le résultat n'est pas une longueur d'onde plausible."
+            }
+          ],
+          "hint": "La longueur d'onde est la distance parcourue pendant une période : $\\lambda = v/f$.",
+          "solution": "$\\lambda = \\dfrac{v}{f} = \\dfrac{3{,}2\\times10^{3}}{40\\times10^{3}} = 8{,}0\\times10^{-2}\\ \\mathrm{m} = 8{,}0\\ \\mathrm{cm}$.\n\nCette valeur est bien **petite devant l'épaisseur** que l'on cherche à mesurer, ce qui est la condition pour que la méthode des échos fonctionne.",
+          "methode": "Après tout calcul de $\\lambda$, compare-la à la dimension de l'objet étudié : c'est ce rapport qui décide si la mesure est possible.",
+          "points": 1,
+          "part": "Partie A — Épaisseur d'une couche de glace par ultrasons",
+          "ref": "pc-onde-periodique-probleme-1-q2"
+        },
+        {
+          "notion": "Le lien avec le retard",
+          "difficulty": 2,
+          "statement": "En notant $L$ l'épaisseur de la glace, le retard $\\tau$ entre les deux échos s'écrit :",
+          "options": [
+            {
+              "label": "$\\tau = \\dfrac{2L}{v}$",
+              "correct": true,
+              "why": "L'onde qui atteint le fond parcourt $L$ à l'aller **et** $L$ au retour : $2L$ de plus que celle réfléchie en surface."
+            },
+            {
+              "label": "$\\tau = \\dfrac{L}{v}$",
+              "why": "Tu as oublié le trajet de **retour** : l'écho revient vers la sonde."
+            },
+            {
+              "label": "$\\tau = \\dfrac{L}{2v}$",
+              "why": "Le facteur $2$ multiplie la distance, il ne la divise pas."
+            },
+            {
+              "label": "$\\tau = 2Lv$",
+              "why": "Ce n'est pas homogène à une durée : des mètres multipliés par des $\\mathrm{m\\,s^{-1}}$ ne donnent pas des secondes."
+            }
+          ],
+          "hint": "Compare les deux trajets : que parcourt de plus l'onde réfléchie par le fond, par rapport à celle réfléchie en surface ?",
+          "solution": "Le premier écho est renvoyé par la **surface** : il n'a pratiquement pas traversé la glace. Le second traverse l'épaisseur $L$ à l'aller, se réfléchit sur le fond, puis la retraverse au retour : il parcourt donc $2L$ de plus. D'où\n$$\\tau = \\frac{2L}{v}$$",
+          "methode": "Toute mesure par **écho** — sonar, échographie, contrôle non destructif — comporte un **aller-retour** : le facteur $2$ est obligatoire.",
+          "points": 1,
+          "part": "Partie A — Épaisseur d'une couche de glace par ultrasons",
+          "ref": "pc-onde-periodique-probleme-1-q3"
+        },
+        {
+          "notion": "Le lien avec le retard",
+          "difficulty": 2,
+          "statement": "L'épaisseur de la couche de glace vaut donc :",
+          "options": [
+            {
+              "label": "$0{,}40\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$L = \\dfrac{v\\tau}{2} = \\dfrac{3{,}2\\times10^{3} \\times 0{,}25\\times10^{-3}}{2} = 0{,}40\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$0{,}80\\ \\mathrm{m}$",
+              "why": "Tu as oublié de diviser par $2$ : $v\\tau$ est la distance **aller-retour**, pas l'épaisseur."
+            },
+            {
+              "label": "$0{,}20\\ \\mathrm{m}$",
+              "why": "Tu as divisé par $4$ : le facteur à appliquer est $1/2$."
+            },
+            {
+              "label": "$7{,}8\\times10^{-8}\\ \\mathrm{m}$",
+              "why": "Tu as calculé $\\tau/v$ au lieu de $v\\tau$."
+            }
+          ],
+          "hint": "Isole $L$ dans la relation de la question précédente, puis convertis les millisecondes en secondes.",
+          "solution": "De $\\tau = \\dfrac{2L}{v}$ on tire\n$$L = \\frac{v\\,\\tau}{2} = \\frac{3{,}2\\times10^{3} \\times 0{,}25\\times10^{-3}}{2} = \\frac{0{,}80}{2} = 0{,}40\\ \\mathrm{m}$$\nLa couche de glace mesure $40\\ \\mathrm{cm}$.\n\n**Contrôle** : $\\lambda = 8{,}0\\ \\mathrm{cm}$ est bien cinq fois plus petit que $L$, donc la mesure a un sens.",
+          "methode": "$L = \\dfrac{v\\tau}{2}$ pour toute mesure par écho. Le facteur $2$ oublié est l'erreur la plus fréquente de ce type d'exercice.",
+          "points": 1,
+          "part": "Partie A — Épaisseur d'une couche de glace par ultrasons",
+          "ref": "pc-onde-periodique-probleme-1-q4"
+        },
+        {
+          "notion": "Type 4 — Changement de milieu",
+          "difficulty": 3,
+          "statement": "Sous la glace se trouve de l'eau liquide, où la célérité des ultrasons vaut $1{,}5\\times10^{3}\\ \\mathrm{m\\,s^{-1}}$. En passant de la glace à l'eau, l'onde ultrasonore :",
+          "options": [
+            {
+              "label": "conserve sa fréquence de $40\\ \\mathrm{kHz}$, et sa longueur d'onde devient $3{,}8\\ \\mathrm{cm}$",
+              "correct": true,
+              "why": "La fréquence est imposée par la source ; $\\lambda = v/f = 1500/40\\,000 = 3{,}8\\times10^{-2}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "conserve sa longueur d'onde de $8{,}0\\ \\mathrm{cm}$, et sa fréquence devient $19\\ \\mathrm{kHz}$",
+              "why": "C'est la **fréquence** qui est conservée, jamais la longueur d'onde."
+            },
+            {
+              "label": "conserve sa fréquence et sa longueur d'onde, car le milieu reste de l'eau sous une autre forme",
+              "why": "La glace et l'eau liquide ont des célérités très différentes : $\\lambda$ **doit** changer."
+            },
+            {
+              "label": "voit sa fréquence et sa longueur d'onde toutes deux divisées par $2{,}1$",
+              "why": "La fréquence ne change **jamais** au passage d'un milieu à un autre."
+            }
+          ],
+          "hint": "Une seule des trois grandeurs traverse la frontière sans changer. Identifie-la, puis calcule la deuxième.",
+          "solution": "Au franchissement d'une frontière entre deux milieux :\n\n- la **fréquence** est imposée par la source : elle reste $f = 40\\ \\mathrm{kHz}$ ;\n- la **célérité** change : elle passe de $3{,}2\\times10^{3}$ à $1{,}5\\times10^{3}\\ \\mathrm{m\\,s^{-1}}$ ;\n- la **longueur d'onde** suit : $\\lambda_{eau} = \\dfrac{1{,}5\\times10^{3}}{40\\times10^{3}} = 3{,}8\\times10^{-2}\\ \\mathrm{m} = 3{,}8\\ \\mathrm{cm}$.\n\nLa longueur d'onde est donc divisée par $\\dfrac{3200}{1500} = 2{,}1$, comme la célérité.",
+          "methode": "**Fréquence conservée, célérité imposée par le milieu, longueur d'onde calculée.** $\\lambda$ varie exactement comme $v$.",
+          "points": 1,
+          "part": "Partie A — Épaisseur d'une couche de glace par ultrasons",
+          "ref": "pc-onde-periodique-probleme-1-q5"
+        },
+        {
+          "notion": "Le montage expérimental",
+          "difficulty": 3,
+          "statement": "Dans la partie B, le phénomène observé sur l'écran et la conclusion qu'on en tire sont :",
+          "options": [
+            {
+              "label": "la diffraction, qui met en évidence le caractère ondulatoire de la lumière",
+              "correct": true,
+              "why": "Seule une onde s'étale en franchissant une fente fine : la figure observée l'atteste."
+            },
+            {
+              "label": "la réfraction, qui met en évidence le changement de milieu",
+              "why": "Il n'y a pas de second milieu transparent : la lumière traverse une **ouverture**, elle n'est pas réfractée."
+            },
+            {
+              "label": "la diffraction, qui met en évidence le caractère corpusculaire de la lumière",
+              "why": "Le phénomène est bien la diffraction, mais elle démontre l'aspect **ondulatoire** : l'aspect corpusculaire se révèle par l'effet photoélectrique."
+            },
+            {
+              "label": "les interférences, qui mettent en évidence la superposition de deux ondes",
+              "why": "Les interférences exigent **deux** sources ou deux fentes : ici il n'y en a qu'une."
+            }
+          ],
+          "hint": "Compte les ouvertures et compte les milieux traversés : cela élimine trois des quatre propositions.",
+          "solution": "Une **seule** fente, un **seul** milieu : le phénomène est la **diffraction**. La lumière ne forme pas l'image géométrique de la fente mais une figure **étalée** — une tache centrale large encadrée de taches secondaires — ce qu'un flux de particules rectilignes ne pourrait produire. La diffraction met donc en évidence le caractère **ondulatoire** de la lumière.",
+          "methode": "Une fente $\\to$ diffraction. Deux fentes $\\to$ interférences. Deux milieux $\\to$ réfraction. Compter avant de nommer évite la confusion.",
+          "points": 1,
+          "part": "Partie B — Longueur d'onde d'un laser par diffraction",
+          "ref": "pc-onde-periodique-probleme-1-q6"
+        },
+        {
+          "notion": "Type 5 — Questions de cours sur la diffraction",
+          "difficulty": 3,
+          "statement": "La longueur d'onde du laser vaut :",
+          "options": [
+            {
+              "label": "$5{,}3\\times10^{2}\\ \\mathrm{nm}$",
+              "correct": true,
+              "why": "$\\lambda = \\dfrac{a L'}{2D} = \\dfrac{6{,}0\\times10^{-5} \\times 5{,}3\\times10^{-2}}{2\\times3{,}0} = 5{,}3\\times10^{-7}\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$1{,}1\\times10^{3}\\ \\mathrm{nm}$",
+              "why": "Tu as oublié le facteur $2$ : la tache centrale s'étend **de part et d'autre** de l'axe."
+            },
+            {
+              "label": "$2{,}7\\times10^{2}\\ \\mathrm{nm}$",
+              "why": "Tu as divisé par $4$ au lieu de $2$ : ce serait un ultraviolet, invisible à l'œil."
+            },
+            {
+              "label": "$5{,}3\\times10^{5}\\ \\mathrm{nm}$",
+              "why": "Tu n'as pas converti la largeur de la fente : $6{,}0\\times10^{-2}\\ \\mathrm{mm} = 6{,}0\\times10^{-5}\\ \\mathrm{m}$. Aucun laser n'émet dans ce domaine."
+            }
+          ],
+          "hint": "Pars de $L' = \\dfrac{2\\lambda D}{a}$, isole $\\lambda$, convertis tout en mètres — puis vérifie que le résultat tombe dans le visible.",
+          "solution": "De $L' = \\dfrac{2\\lambda D}{a}$ on tire\n$$\\lambda = \\frac{a\\,L'}{2D} = \\frac{6{,}0\\times10^{-5} \\times 5{,}3\\times10^{-2}}{2 \\times 3{,}0} = \\frac{3{,}18\\times10^{-6}}{6{,}0} = 5{,}3\\times10^{-7}\\ \\mathrm{m}$$\nsoit $\\lambda = 530\\ \\mathrm{nm}$ : une lumière **verte**, parfaitement cohérente avec un laser vert de laboratoire.\n\n**Contrôle indispensable** : le domaine visible s'étend d'environ $400$ à $800\\ \\mathrm{nm}$. Un résultat en dehors signale une erreur de facteur ou de puissance de dix.",
+          "methode": "$\\lambda = \\dfrac{aL}{2D}$, puis **contrôle systématique** : le visible est entre $400$ et $800\\ \\mathrm{nm}$. C'est le garde-fou qui rattrape le facteur $2$ oublié.",
+          "points": 1,
+          "part": "Partie B — Longueur d'onde d'un laser par diffraction",
+          "ref": "pc-onde-periodique-probleme-1-q7"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-onde-periodique-probleme-2",
+      "chapter": "pc-onde-periodique",
+      "kind": "probleme",
+      "title": "Étude complète d'une onde dans une cuve à ondes",
+      "difficulty": 3,
+      "context": "Une pointe fixée à un vibreur frappe périodiquement la surface de l'eau d'une cuve à ondes au point $S$. On éclaire le dispositif avec un **stroboscope** et l'on constate que la **plus grande** fréquence d'éclairs donnant l'immobilité apparente des rides est $f_e = 20\\ \\mathrm{Hz}$.\n\nSur une photographie de la cuve, on mesure $6{,}0\\ \\mathrm{cm}$ entre la **première** et la **onzième** ride circulaire.\n\nOn considère enfin un point $M$ de la surface, situé à $d = 3{,}9\\ \\mathrm{cm}$ de $S$.",
+      "figure": "cuve-ondes",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Le dispositif",
+          "difficulty": 1,
+          "statement": "Les rides observées dans cette cuve sont :",
+          "options": [
+            {
+              "label": "circulaires et centrées sur $S$, car la pointe est une source quasi ponctuelle",
+              "correct": true,
+              "why": "Les surfaces d'onde épousent la géométrie de la source : une pointe donne des cercles."
+            },
+            {
+              "label": "rectilignes et parallèles, car l'eau est plane",
+              "why": "Des fronts rectilignes s'obtiennent avec une **règle** vibrante, pas avec une pointe."
+            },
+            {
+              "label": "circulaires mais centrées sur le bord de la cuve",
+              "why": "Le centre des surfaces d'onde est la **source**, donc $S$."
+            },
+            {
+              "label": "de forme variable, car la profondeur de l'eau n'est pas uniforme",
+              "why": "On prend justement soin d'avoir une profondeur **uniforme**, pour que la célérité soit constante."
+            }
+          ],
+          "hint": "Quelle est la forme de la source, et que devient cette forme pour les surfaces d'onde ?",
+          "solution": "Une pointe est une source quasi **ponctuelle** : les points atteints au même instant forment des **cercles centrés sur $S$**. Ces rides circulaires, projetées sur l'écran par l'éclairage, constituent la figure observée.",
+          "methode": "Source ponctuelle $\\to$ rides **circulaires**. Source rectiligne $\\to$ rides **rectilignes parallèles** à la source.",
+          "points": 1,
+          "part": "Partie A — Mesurer la fréquence et la longueur d'onde",
+          "ref": "pc-onde-periodique-probleme-2-q1"
+        },
+        {
+          "notion": "Le stroboscope",
+          "difficulty": 1,
+          "statement": "La fréquence de l'onde produite par le vibreur vaut :",
+          "options": [
+            {
+              "label": "$20\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "La **plus grande** fréquence d'éclairs donnant l'immobilité correspond à $k = 1$, donc $f = f_e$."
+            },
+            {
+              "label": "$40\\ \\mathrm{Hz}$",
+              "why": "Ce serait $f = 2 f_e$ : mais alors $f_e = 20\\ \\mathrm{Hz}$ ne serait pas la plus grande fréquence d'immobilité, $40\\ \\mathrm{Hz}$ le serait."
+            },
+            {
+              "label": "$10\\ \\mathrm{Hz}$",
+              "why": "Avec $f = 10\\ \\mathrm{Hz}$, l'immobilité apparaîtrait pour $f_e = 10\\ \\mathrm{Hz}$ au plus, pas pour $20\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "on ne peut pas la déterminer sans connaître la longueur d'onde",
+              "why": "Le stroboscope donne la fréquence **à lui seul** : c'est tout l'intérêt de la mesure."
+            }
+          ],
+          "hint": "L'immobilité exige $f = k f_e$. Quel entier $k$ correspond à la **plus grande** valeur possible de $f_e$ ?",
+          "solution": "L'immobilité apparente se produit lorsque $f = k\\,f_e$ avec $k$ entier, soit $f_e = f/k$. Les valeurs possibles de $f_e$ sont donc $f$, $f/2$, $f/3$… et la **plus grande** est obtenue pour $k = 1$ : elle vaut exactement $f$.\n\nDonc $f = 20\\ \\mathrm{Hz}$.",
+          "methode": "**La plus grande fréquence d'éclairs donnant l'immobilité est la fréquence de l'onde.** C'est la méthode de mesure de $f$ au stroboscope.",
+          "points": 1,
+          "part": "Partie A — Mesurer la fréquence et la longueur d'onde",
+          "ref": "pc-onde-periodique-probleme-2-q2"
+        },
+        {
+          "notion": "Mesurer la longueur d'onde",
+          "difficulty": 2,
+          "statement": "La longueur d'onde des rides vaut :",
+          "options": [
+            {
+              "label": "$6{,}0\\ \\mathrm{mm}$",
+              "correct": true,
+              "why": "De la $1^{re}$ à la $11^{e}$ ride il y a $10$ intervalles : $\\lambda = 6{,}0/10 = 0{,}60\\ \\mathrm{cm}$."
+            },
+            {
+              "label": "$5{,}5\\ \\mathrm{mm}$",
+              "why": "Tu as divisé par $11$, le nombre de **rides**, au lieu de $10$, le nombre d'**intervalles**."
+            },
+            {
+              "label": "$6{,}7\\ \\mathrm{mm}$",
+              "why": "Tu as divisé par $9$ : de la ride $1$ à la ride $11$, il y a $11 - 1 = 10$ intervalles."
+            },
+            {
+              "label": "$60\\ \\mathrm{mm}$",
+              "why": "C'est la distance totale mesurée, pas un seul intervalle."
+            }
+          ],
+          "hint": "De la ride $n$ à la ride $p$, combien y a-t-il d'intervalles ?",
+          "solution": "La longueur d'onde est la distance entre deux rides **consécutives**. De la première à la onzième, il y a $11 - 1 = 10$ intervalles :\n$$\\lambda = \\frac{6{,}0}{10} = 0{,}60\\ \\mathrm{cm} = 6{,}0\\ \\mathrm{mm}$$",
+          "methode": "Nombre d'intervalles $=$ nombre de rides $-\\ 1$. Mesurer sur dix intervalles divise l'incertitude par dix.",
+          "points": 1,
+          "part": "Partie A — Mesurer la fréquence et la longueur d'onde",
+          "ref": "pc-onde-periodique-probleme-2-q3"
+        },
+        {
+          "notion": "Exploiter le montage",
+          "difficulty": 2,
+          "statement": "La célérité des ondes à la surface de cette eau vaut :",
+          "options": [
+            {
+              "label": "$0{,}12\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v = \\lambda f = 6{,}0\\times10^{-3} \\times 20 = 0{,}12\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$1{,}2\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Erreur de puissance de dix : $6{,}0\\times10^{-3} \\times 20 = 1{,}2\\times10^{-1}$, et non $1{,}2$."
+            },
+            {
+              "label": "$3{,}0\\times10^{-4}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé $\\lambda$ par $f$ au lieu de multiplier."
+            },
+            {
+              "label": "$3{,}3\\times10^{3}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $f/\\lambda$ : le résultat, voisin de la célérité du son dans un solide, est absurde pour une ride d'eau."
+            }
+          ],
+          "hint": "Tu disposes maintenant de $f$ et de $\\lambda$ : la célérité s'en déduit par un simple produit.",
+          "solution": "$v = \\lambda\\,f = 6{,}0\\times10^{-3} \\times 20 = 0{,}12\\ \\mathrm{m\\,s^{-1}}$, soit $12\\ \\mathrm{cm\\,s^{-1}}$.\n\nC'est bien l'ordre de grandeur observable à l'œil nu dans une cuve, et c'est ce qui rend l'expérience possible : une onde plus rapide exigerait tout autre chose qu'un stroboscope de laboratoire.",
+          "methode": "La célérité dans une cuve à ondes ne se **mesure** pas : elle se **calcule** par $v = \\lambda f$, après avoir mesuré $f$ et $\\lambda$ séparément.",
+          "points": 1,
+          "part": "Partie B — Exploiter les mesures",
+          "ref": "pc-onde-periodique-probleme-2-q4"
+        },
+        {
+          "notion": "Type 3 — Déterminer l'état de phase",
+          "difficulty": 3,
+          "statement": "Le point $M$, situé à $d = 3{,}9\\ \\mathrm{cm}$ de $S$, vibre :",
+          "options": [
+            {
+              "label": "en opposition de phase avec $S$, car $d = 6{,}5\\,\\lambda$",
+              "correct": true,
+              "why": "$3{,}9/0{,}60 = 6{,}5$, un demi-entier : $M$ est en opposition de phase avec la source."
+            },
+            {
+              "label": "en phase avec $S$, car $d$ contient un nombre entier de millimètres",
+              "why": "Le millimètre n'a rien à voir : seul compte le rapport $d/\\lambda$, qui vaut $6{,}5$."
+            },
+            {
+              "label": "ni en phase ni en opposition de phase avec $S$",
+              "why": "$6{,}5$ est exactement un demi-entier : l'opposition de phase est réalisée."
+            },
+            {
+              "label": "en phase avec $S$, car $6{,}5$ est supérieur à $1$",
+              "why": "La valeur du rapport n'a pas d'importance, seule compte sa **nature** : entier ou demi-entier."
+            }
+          ],
+          "hint": "Calcule $d/\\lambda$ et classe le résultat : entier, demi-entier, ou ni l'un ni l'autre.",
+          "solution": "$\\dfrac{d}{\\lambda} = \\dfrac{3{,}9}{0{,}60} = 6{,}5 = 6 + \\dfrac{1}{2}$.\n\nC'est un **demi-entier** : $d = \\dfrac{13\\lambda}{2} = (2\\times6+1)\\dfrac{\\lambda}{2}$. Le point $M$ vibre donc en **opposition de phase** avec $S$ : quand la source est à son maximum, $M$ est à son minimum.",
+          "methode": "Un seul calcul décide de tout : $d/\\lambda$. Entier $\\to$ phase · demi-entier $\\to$ opposition · autre $\\to$ ni l'un ni l'autre.",
+          "points": 1,
+          "part": "Partie B — Exploiter les mesures",
+          "ref": "pc-onde-periodique-probleme-2-q5"
+        },
+        {
+          "notion": "Le lien avec le retard",
+          "difficulty": 3,
+          "statement": "Le retard du point $M$ par rapport à la source vaut :",
+          "options": [
+            {
+              "label": "$0{,}33\\ \\mathrm{s}$, soit $6{,}5\\,T$",
+              "correct": true,
+              "why": "$\\tau = d/v = 0{,}039/0{,}12 = 0{,}325\\ \\mathrm{s}$, et $T = 1/20 = 0{,}050\\ \\mathrm{s}$, donc $\\tau = 6{,}5\\,T$."
+            },
+            {
+              "label": "$0{,}050\\ \\mathrm{s}$, soit $1\\,T$",
+              "why": "$0{,}050\\ \\mathrm{s}$ est la **période** de l'onde, pas le retard de $M$."
+            },
+            {
+              "label": "$3{,}1\\ \\mathrm{s}$, soit $62\\,T$",
+              "why": "Tu as calculé $v/d$ au lieu de $d/v$."
+            },
+            {
+              "label": "$4{,}7\\times10^{-3}\\ \\mathrm{s}$, soit $0{,}094\\,T$",
+              "why": "Tu as multiplié $d$ par $v$ au lieu de diviser."
+            }
+          ],
+          "hint": "Calcule d'abord le retard en secondes, puis compare-le à la période — le résultat doit confirmer la question précédente.",
+          "solution": "$\\tau = \\dfrac{d}{v} = \\dfrac{3{,}9\\times10^{-2}}{0{,}12} = 0{,}325\\ \\mathrm{s}$.\n\nLa période vaut $T = \\dfrac{1}{f} = \\dfrac{1}{20} = 0{,}050\\ \\mathrm{s}$, donc\n$$\\frac{\\tau}{T} = \\frac{0{,}325}{0{,}050} = 6{,}5$$\nLe retard vaut $6{,}5\\,T$ — un nombre **demi-entier** de périodes, ce qui confirme l'opposition de phase trouvée à la question précédente. Les deux approches, spatiale ($d/\\lambda$) et temporelle ($\\tau/T$), donnent nécessairement le même nombre.",
+          "methode": "$\\dfrac{d}{\\lambda} = \\dfrac{\\tau}{T}$, **toujours**. Calcule les deux quand tu peux : c'est un contrôle gratuit de ton résultat.",
+          "points": 1,
+          "part": "Partie B — Exploiter les mesures",
+          "ref": "pc-onde-periodique-probleme-2-q6"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-onde-periodique-serie-1",
+      "title": "Ondes mécaniques progressives périodiques · Échauffement",
+      "description": "Les bases : double périodicité, $\\lambda = vT$, phase, diffraction et cuve à ondes.",
+      "kind": "custom",
+      "chapter": "pc-onde-periodique",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-onde-periodique-onde-progressive-periodique-q1",
+        "pc-onde-periodique-les-deux-periodicites-q1",
+        "pc-onde-periodique-la-relation-fondamentale-q1",
+        "pc-onde-periodique-deux-points-dans-le-meme-etat-vibratoire-q1",
+        "pc-onde-periodique-le-lien-avec-le-retard-q1",
+        "pc-onde-periodique-le-phenomene-q1",
+        "pc-onde-periodique-la-condition-de-diffraction-q1",
+        "pc-onde-periodique-les-caracteristiques-de-l-onde-diffracte-q1",
+        "pc-onde-periodique-le-stroboscope-q1",
+        "pc-onde-periodique-le-dispositif-q1",
+        "pc-onde-periodique-la-relation-fondamentale-q2",
+        "pc-onde-periodique-les-deux-periodicites-q2"
+      ]
+    },
+    {
+      "slug": "pc-onde-periodique-serie-2",
+      "title": "Ondes mécaniques progressives périodiques · Entraînement",
+      "description": "Toutes les notions : mesures en cuve, état de phase, retard et diffraction.",
+      "kind": "custom",
+      "chapter": "pc-onde-periodique",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-onde-periodique-le-montage-experimental-q1",
+        "pc-onde-periodique-exploiter-le-montage-q1",
+        "pc-onde-periodique-deux-points-dans-le-meme-etat-vibratoire-q2",
+        "pc-onde-periodique-deux-points-dans-le-meme-etat-vibratoire-q3",
+        "pc-onde-periodique-le-lien-avec-le-retard-q2",
+        "pc-onde-periodique-compter-les-points-en-phase-q1",
+        "pc-onde-periodique-les-caracteristiques-de-l-onde-diffracte-q3",
+        "pc-onde-periodique-mesurer-la-longueur-d-onde-q1",
+        "pc-onde-periodique-exploiter-le-montage-q2",
+        "pc-onde-periodique-exploiter-le-montage-q3",
+        "pc-onde-periodique-le-stroboscope-q3",
+        "pc-onde-periodique-la-relation-fondamentale-q3"
+      ]
+    },
+    {
+      "slug": "pc-onde-periodique-serie-3",
+      "title": "Ondes mécaniques progressives périodiques · Type BAC",
+      "description": "Niveau examen : mesures par écho, diffraction quantitative, dispersion et interférences.",
+      "kind": "custom",
+      "chapter": "pc-onde-periodique",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-onde-periodique-probleme-1-q1",
+        "pc-onde-periodique-probleme-2-q2",
+        "pc-onde-periodique-probleme-1-q3",
+        "pc-onde-periodique-probleme-2-q4",
+        "pc-onde-periodique-probleme-1-q5",
+        "pc-onde-periodique-probleme-1-q7",
+        "pc-onde-periodique-probleme-2-q6",
+        "pc-onde-periodique-milieu-dispersif-q1",
+        "pc-onde-periodique-retour-sur-la-diffraction-l-etalement-an-q1",
+        "pc-onde-periodique-superposition-et-interferences-q1",
+        "pc-onde-periodique-le-phenomene-q4",
+        "pc-onde-periodique-compter-les-points-en-phase-q2"
+      ]
+    }
+  ]
+}

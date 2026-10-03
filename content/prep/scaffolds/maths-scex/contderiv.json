@@ -1,0 +1,3332 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "pc",
+  "svt"
+ ],
+ "_scaffold": {
+  "pack": "maths-scex",
+  "label": "Maths — Sciences Expérimentales (PC + SVT)",
+  "priority": "P1",
+  "chapter": {
+   "code": "contderiv",
+   "name": "Continuité, dérivation et étude de fonctions",
+   "domain": null,
+   "unit": null
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Limite finie ou infinie en un point",
+   "Limites à gauche et à droite",
+   "Limites à l'infini",
+   "Limites de référence",
+   "Opérations sur les limites",
+   "Les formes indéterminées",
+   "Techniques de levée",
+   "Limites par comparaison",
+   "Théorème d'encadrement",
+   "Limite d'une fonction composée",
+   "Application aux suites",
+   "Continuité en un point",
+   "Continuité sur un intervalle et opérations",
+   "Prolongement par continuité",
+   "Image d'un intervalle et théorème des valeurs intermédiaires",
+   "Fonction réciproque",
+   "Théorème des valeurs intermédiaires",
+   "Image d'un intervalle et d'un segment",
+   "Image d'un intervalle par une fonction monotone",
+   "Conséquences des limites trigonométriques",
+   "Fonction racine n-ième et puissances rationnelles",
+   "Nombre dérivé et tangente",
+   "Dérivabilité à gauche et à droite",
+   "Dérivées usuelles et opérations",
+   "Dérivée d'une composée et d'une réciproque",
+   "Dérivabilité et nombre dérivé",
+   "Sens de variation",
+   "Extremums",
+   "Convexité et points d'inflexion",
+   "Branches infinies et asymptotes",
+   "Dérivée d'une fonction réciproque",
+   "Démontrer une inégalité : la méthode de l'étude de fonction",
+   "Utiliser la stricte monotonie",
+   "Encadrer une fonction sur un intervalle",
+   "Application : inégalités et suites",
+   "Définition et premières propriétés",
+   "Propriétés algébriques",
+   "Étude de la fonction",
+   "Dérivée de $\\ln u$",
+   "Équations et inéquations",
+   "Logarithme décimal",
+   "Définition",
+   "Dérivée de $\\mathrm{e}^{u}$",
+   "Fonctions puissances",
+   "Notion de primitive",
+   "Primitives des fonctions usuelles",
+   "Équations différentielles $y' = ay + b$",
+   "Équations différentielles $y'' + ay' + by = 0$",
+   "Interprétation géométrique de la dérivabilité",
+   "Branches infinies (classification complète)",
+   "Symétries et position relative",
+   "Type 1 — Lever une indétermination",
+   "Type 2 — Étudier la continuité en un point",
+   "Type 3 — Prouver l'existence et l'unicité d'une solution",
+   "Type 4 — Étude complète d'une fonction",
+   "Type 5 — Démontrer une inégalité",
+   "Type 1 — Résoudre une équation logarithmique",
+   "Type 2 — Résoudre une équation exponentielle",
+   "Type 3 — Lever une indétermination avec $\\ln$ ou $\\mathrm{e}^{x}$",
+   "Type 4 — Étudier une fonction avec $\\ln$ ou $\\mathrm{e}^{x}$",
+   "Type 5 — Déterminer une primitive",
+   "Type 6 — Résoudre une équation différentielle"
+  ],
+  "methodes_du_cours": [
+   "Type 1 — Lever une indétermination",
+   "Type 2 — Étudier la continuité en un point",
+   "Type 3 — Prouver l'existence et l'unicité d'une solution",
+   "Type 4 — Étude complète d'une fonction",
+   "Type 5 — Démontrer une inégalité",
+   "Type 1 — Résoudre une équation logarithmique",
+   "Type 2 — Résoudre une équation exponentielle",
+   "Type 3 — Lever une indétermination avec $\\ln$ ou $\\mathrm{e}^{x}$",
+   "Type 4 — Étudier une fonction avec $\\ln$ ou $\\mathrm{e}^{x}$",
+   "Type 5 — Déterminer une primitive",
+   "Type 6 — Résoudre une équation différentielle"
+  ],
+  "existing_questions_total": 12,
+  "target_new_questions": 174,
+  "suggested_figures": [
+   "asymptote — Limite infinie en un point (asymptote verticale)",
+   "convexite-inflexion — Convexité, concavité et point d'inflexion",
+   "dosage-derivee — Dosage pH-métrique : méthode de la dérivée (pic de dpH/dV à V_E)"
+  ],
+  "sources": [
+   {
+    "annale": "maths-pc-2026-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2026-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2026-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2025-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2025-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2025-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2024-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2024-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2024-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2023-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2023-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2023-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2022-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2022-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2022-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2021-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2021-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2021-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2020-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2020-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2020-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2019-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2019-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2019-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2018-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2018-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2018-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2017-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2017-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2017-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2016-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2016-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2015-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2015-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2015-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2014-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2014-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2014-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2026-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2026-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2026-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2025-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2025-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2025-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2025-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2024-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2024-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2024-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2024-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2023-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2023-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2023-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2023-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2022-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2022-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2022-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2022-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2021-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2021-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2021-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2021-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2020-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2020-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2020-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2020-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2019-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2019-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2019-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2019-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2018-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2018-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2018-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2018-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2017-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2017-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2017-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2017-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2016-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2016-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2016-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2015-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2015-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2015-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2014-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2014-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2014-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2014-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Limites par comparaison",
+    "lesson": "Comparaison & fonction composée",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-limites-par-comparaison",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Limites par comparaison",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-limites-par-comparaison-q1",
+     "notion": "Limites par comparaison",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Théorème d'encadrement",
+    "lesson": "Comparaison & fonction composée",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-theoreme-d-encadrement",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Théorème d'encadrement",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-theoreme-d-encadrement-q1",
+     "notion": "Théorème d'encadrement",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Limite d'une fonction composée",
+    "lesson": "Comparaison & fonction composée",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-limite-d-une-fonction-composee",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Limite d'une fonction composée",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-limite-d-une-fonction-composee-q1",
+     "notion": "Limite d'une fonction composée",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Application aux suites",
+    "lesson": "Comparaison & fonction composée",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-application-aux-suites",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Application aux suites",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-application-aux-suites-q1",
+     "notion": "Application aux suites",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Continuité en un point",
+    "lesson": "Continuité & prolongement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-continuite-en-un-point",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Continuité en un point",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-continuite-en-un-point-q1",
+     "notion": "Continuité en un point",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Continuité sur un intervalle et opérations",
+    "lesson": "Continuité & prolongement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-continuite-sur-un-intervalle-et-operatio",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Continuité sur un intervalle et opérations",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-continuite-sur-un-intervalle-et-operatio-q1",
+     "notion": "Continuité sur un intervalle et opérations",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Prolongement par continuité",
+    "lesson": "Continuité & prolongement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-prolongement-par-continuite",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Prolongement par continuité",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-prolongement-par-continuite-q1",
+     "notion": "Prolongement par continuité",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Image d'un intervalle et théorème des valeurs intermédiaires",
+    "lesson": "Continuité & prolongement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-image-d-un-intervalle-et-theoreme-des-va",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Image d'un intervalle et théorème des valeurs intermédiaires",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-image-d-un-intervalle-et-theoreme-des-va-q1",
+     "notion": "Image d'un intervalle et théorème des valeurs intermédiaires",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Fonction réciproque",
+    "lesson": "Continuité & prolongement",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-fonction-reciproque",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Fonction réciproque",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-fonction-reciproque-q1",
+     "notion": "Fonction réciproque",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Dérivabilité et nombre dérivé",
+    "lesson": "Variations, extremums et convexité",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-derivabilite-et-nombre-derive",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dérivabilité et nombre dérivé",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-derivabilite-et-nombre-derive-q1",
+     "notion": "Dérivabilité et nombre dérivé",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Sens de variation",
+    "lesson": "Variations, extremums et convexité",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-sens-de-variation",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Sens de variation",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-sens-de-variation-q1",
+     "notion": "Sens de variation",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Extremums",
+    "lesson": "Variations, extremums et convexité",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-extremums",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Extremums",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-extremums-q1",
+     "notion": "Extremums",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Convexité et points d'inflexion",
+    "lesson": "Variations, extremums et convexité",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-convexite-et-points-d-inflexion",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Convexité et points d'inflexion",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-convexite-et-points-d-inflexion-q1",
+     "notion": "Convexité et points d'inflexion",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Branches infinies et asymptotes",
+    "lesson": "Variations, extremums et convexité",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-branches-infinies-et-asymptotes",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Branches infinies et asymptotes",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-branches-infinies-et-asymptotes-q1",
+     "notion": "Branches infinies et asymptotes",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Dérivée d'une fonction réciproque",
+    "lesson": "Variations, extremums et convexité",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-derivee-d-une-fonction-reciproque",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dérivée d'une fonction réciproque",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-derivee-d-une-fonction-reciproque-q1",
+     "notion": "Dérivée d'une fonction réciproque",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Définition et premières propriétés",
+    "lesson": "Fonction logarithme népérien",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-definition-et-premieres-proprietes",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Définition et premières propriétés",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-definition-et-premieres-proprietes-q1",
+     "notion": "Définition et premières propriétés",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Propriétés algébriques",
+    "lesson": "Fonction logarithme népérien",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-proprietes-algebriques",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Propriétés algébriques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-proprietes-algebriques-q1",
+     "notion": "Propriétés algébriques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Étude de la fonction",
+    "lesson": "Fonction logarithme népérien",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-etude-de-la-fonction",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Étude de la fonction",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-etude-de-la-fonction-q1",
+     "notion": "Étude de la fonction",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Dérivée de $\\ln u$",
+    "lesson": "Fonction logarithme népérien",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-derivee-de-ln-u",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dérivée de $\\ln u$",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-derivee-de-ln-u-q1",
+     "notion": "Dérivée de $\\ln u$",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Équations et inéquations",
+    "lesson": "Fonction logarithme népérien",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-equations-et-inequations",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Équations et inéquations",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-equations-et-inequations-q1",
+     "notion": "Équations et inéquations",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Logarithme décimal",
+    "lesson": "Fonction logarithme népérien",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-logarithme-decimal",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Logarithme décimal",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-logarithme-decimal-q1",
+     "notion": "Logarithme décimal",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Définition",
+    "lesson": "Fonction exponentielle",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-definition",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Définition",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-definition-q1",
+     "notion": "Définition",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Dérivée de $\\mathrm{e}^{u}$",
+    "lesson": "Fonction exponentielle",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-derivee-de-mathrm-e-u",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dérivée de $\\mathrm{e}^{u}$",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-derivee-de-mathrm-e-u-q1",
+     "notion": "Dérivée de $\\mathrm{e}^{u}$",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Fonctions puissances",
+    "lesson": "Fonction exponentielle",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-fonctions-puissances",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Fonctions puissances",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-fonctions-puissances-q1",
+     "notion": "Fonctions puissances",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Notion de primitive",
+    "lesson": "Primitives et équations différentielles",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-notion-de-primitive",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Notion de primitive",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-notion-de-primitive-q1",
+     "notion": "Notion de primitive",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Primitives des fonctions usuelles",
+    "lesson": "Primitives et équations différentielles",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-primitives-des-fonctions-usuelles",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Primitives des fonctions usuelles",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-primitives-des-fonctions-usuelles-q1",
+     "notion": "Primitives des fonctions usuelles",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Équations différentielles $y' = ay + b$",
+    "lesson": "Primitives et équations différentielles",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-equations-differentielles-y-ay-b",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Équations différentielles $y' = ay + b$",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-equations-differentielles-y-ay-b-q1",
+     "notion": "Équations différentielles $y' = ay + b$",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Équations différentielles $y'' + ay' + by = 0$",
+    "lesson": "Primitives et équations différentielles",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-equations-differentielles-y-ay-by-0",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Équations différentielles $y'' + ay' + by = 0$",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-equations-differentielles-y-ay-by-0-q1",
+     "notion": "Équations différentielles $y'' + ay' + by = 0$",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Démontrer une inégalité : la méthode de l'étude de fonction",
+    "lesson": "Variations et inégalités",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-demontrer-une-inegalite-la-methode-de-l-",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Démontrer une inégalité : la méthode de l'étude de fonction",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-demontrer-une-inegalite-la-methode-de-l--q1",
+     "notion": "Démontrer une inégalité : la méthode de l'étude de fonction",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Utiliser la stricte monotonie",
+    "lesson": "Variations et inégalités",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-utiliser-la-stricte-monotonie",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Utiliser la stricte monotonie",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-utiliser-la-stricte-monotonie-q1",
+     "notion": "Utiliser la stricte monotonie",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Encadrer une fonction sur un intervalle",
+    "lesson": "Variations et inégalités",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-encadrer-une-fonction-sur-un-intervalle",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Encadrer une fonction sur un intervalle",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-encadrer-une-fonction-sur-un-intervalle-q1",
+     "notion": "Encadrer une fonction sur un intervalle",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Application : inégalités et suites",
+    "lesson": "Variations et inégalités",
+    "role": "cours",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-application-inegalites-et-suites",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Application : inégalités et suites",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-application-inegalites-et-suites-q1",
+     "notion": "Application : inégalités et suites",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Limite finie ou infinie en un point",
+    "lesson": "Limite d'une fonction & limites usuelles",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-limite-finie-ou-infinie-en-un-point",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Limite finie ou infinie en un point",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-limite-finie-ou-infinie-en-un-point-q1",
+     "notion": "Limite finie ou infinie en un point",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Limites à gauche et à droite",
+    "lesson": "Limite d'une fonction & limites usuelles",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-limites-a-gauche-et-a-droite",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Limites à gauche et à droite",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-limites-a-gauche-et-a-droite-q1",
+     "notion": "Limites à gauche et à droite",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Limites à l'infini",
+    "lesson": "Limite d'une fonction & limites usuelles",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-limites-a-l-infini",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Limites à l'infini",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-limites-a-l-infini-q1",
+     "notion": "Limites à l'infini",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Limites de référence",
+    "lesson": "Limite d'une fonction & limites usuelles",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-limites-de-reference",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Limites de référence",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-limites-de-reference-q1",
+     "notion": "Limites de référence",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Opérations sur les limites",
+    "lesson": "Opérations & formes indéterminées",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-operations-sur-les-limites",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Opérations sur les limites",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-operations-sur-les-limites-q1",
+     "notion": "Opérations sur les limites",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les formes indéterminées",
+    "lesson": "Opérations & formes indéterminées",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-les-formes-indeterminees",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Les formes indéterminées",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-les-formes-indeterminees-q1",
+     "notion": "Les formes indéterminées",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Techniques de levée",
+    "lesson": "Opérations & formes indéterminées",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-techniques-de-levee",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Techniques de levée",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-techniques-de-levee-q1",
+     "notion": "Techniques de levée",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Théorème des valeurs intermédiaires",
+    "lesson": "TVI, image d'un intervalle & fonction réciproque",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-theoreme-des-valeurs-intermediaires",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Théorème des valeurs intermédiaires",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-theoreme-des-valeurs-intermediaires-q1",
+     "notion": "Théorème des valeurs intermédiaires",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Image d'un intervalle et d'un segment",
+    "lesson": "TVI, image d'un intervalle & fonction réciproque",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-image-d-un-intervalle-et-d-un-segment",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Image d'un intervalle et d'un segment",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-image-d-un-intervalle-et-d-un-segment-q1",
+     "notion": "Image d'un intervalle et d'un segment",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Nombre dérivé et tangente",
+    "lesson": "Dérivabilité et dérivée",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-nombre-derive-et-tangente",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Nombre dérivé et tangente",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-nombre-derive-et-tangente-q1",
+     "notion": "Nombre dérivé et tangente",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Dérivabilité à gauche et à droite",
+    "lesson": "Dérivabilité et dérivée",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-derivabilite-a-gauche-et-a-droite",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dérivabilité à gauche et à droite",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-derivabilite-a-gauche-et-a-droite-q1",
+     "notion": "Dérivabilité à gauche et à droite",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Dérivées usuelles et opérations",
+    "lesson": "Dérivabilité et dérivée",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-derivees-usuelles-et-operations",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dérivées usuelles et opérations",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-derivees-usuelles-et-operations-q1",
+     "notion": "Dérivées usuelles et opérations",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Dérivée d'une composée et d'une réciproque",
+    "lesson": "Dérivabilité et dérivée",
+    "role": "cours",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-derivee-d-une-composee-et-d-une-reciproq",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dérivée d'une composée et d'une réciproque",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-derivee-d-une-composee-et-d-une-reciproq-q1",
+     "notion": "Dérivée d'une composée et d'une réciproque",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Image d'un intervalle par une fonction monotone",
+    "lesson": "Approfondissement : image d'un intervalle, racine n-ième",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-image-d-un-intervalle-par-une-fonction-m",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Image d'un intervalle par une fonction monotone",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-image-d-un-intervalle-par-une-fonction-m-q1",
+     "notion": "Image d'un intervalle par une fonction monotone",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Conséquences des limites trigonométriques",
+    "lesson": "Approfondissement : image d'un intervalle, racine n-ième",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-consequences-des-limites-trigonometrique",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Conséquences des limites trigonométriques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-consequences-des-limites-trigonometrique-q1",
+     "notion": "Conséquences des limites trigonométriques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Fonction racine n-ième et puissances rationnelles",
+    "lesson": "Approfondissement : image d'un intervalle, racine n-ième",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-fonction-racine-n-ieme-et-puissances-rat",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Fonction racine n-ième et puissances rationnelles",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-fonction-racine-n-ieme-et-puissances-rat-q1",
+     "notion": "Fonction racine n-ième et puissances rationnelles",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Interprétation géométrique de la dérivabilité",
+    "lesson": "Approfondissement : dérivabilité, branches & symétries",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-interpretation-geometrique-de-la-derivab",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Interprétation géométrique de la dérivabilité",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-interpretation-geometrique-de-la-derivab-q1",
+     "notion": "Interprétation géométrique de la dérivabilité",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Branches infinies (classification complète)",
+    "lesson": "Approfondissement : dérivabilité, branches & symétries",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-branches-infinies-classification-complet",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Branches infinies (classification complète)",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-branches-infinies-classification-complet-q1",
+     "notion": "Branches infinies (classification complète)",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Symétries et position relative",
+    "lesson": "Approfondissement : dérivabilité, branches & symétries",
+    "role": "approfondissement",
+    "bac_frequency": null,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-contderiv-symetries-et-position-relative",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Symétries et position relative",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-symetries-et-position-relative-q1",
+     "notion": "Symétries et position relative",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "maths-pc-2026-normale",
+     "maths-pc-2025-rattrapage",
+     "maths-pc-2025-normale",
+     "maths-pc-2024-rattrapage",
+     "maths-pc-2024-normale",
+     "maths-pc-2023-rattrapage"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "maths-contderiv-probleme-1",
+   "chapter": "contderiv",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. maths-pc-2026-normale",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "maths-pc-2026-normale",
+     "maths-pc-2025-rattrapage",
+     "maths-pc-2025-normale",
+     "maths-pc-2024-rattrapage",
+     "maths-pc-2024-normale",
+     "maths-pc-2023-rattrapage"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "maths-contderiv-probleme-2",
+   "chapter": "contderiv",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. maths-pc-2026-normale",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-contderiv-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "maths-contderiv-serie-1",
+   "title": "Continuité, dérivation et étude de fonctions · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "contderiv",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "maths-contderiv-serie-2",
+   "title": "Continuité, dérivation et étude de fonctions · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "contderiv",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "maths-contderiv-serie-3",
+   "title": "Continuité, dérivation et étude de fonctions · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "contderiv",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "pc",
+ "track": null,
+ "_scaffold": {
+  "note": "EXEMPLE DE RÉFÉRENCE (gold standard) — le niveau de qualité attendu pour chaque fichier. Chapitre : Dipôle RC (pc-rc). Contenu original Bac Up."
+ },
+ "exercises": [
+  {
+   "ref": "pc-rc-la-constante-de-temps",
+   "chapter": "pc-rc",
+   "kind": "qcu",
+   "title": "La constante de temps",
+   "difficulty": 1,
+   "origin": { "type": "original" },
+   "questions": [
+    {
+     "ref": "pc-rc-la-constante-de-temps-q1",
+     "notion": "La constante de temps",
+     "difficulty": 1,
+     "statement": "Un dipôle RC est formé d'un conducteur ohmique $R = 2{,}0\\ \\mathrm{k\\Omega}$ et d'un condensateur $C = 5{,}0\\ \\mu\\mathrm{F}$. Sa constante de temps vaut :",
+     "options": [
+      { "label": "$\\tau = 10\\ \\mathrm{ms}$", "correct": true, "why": "$\\tau = RC$ en unités SI : $2{,}0\\times10^{3}\\times5{,}0\\times10^{-6} = 1{,}0\\times10^{-2}\\ \\mathrm{s}$." },
+      { "label": "$\\tau = 10\\ \\mathrm{s}$", "why": "Tu as multiplié 2,0 par 5,0 sans convertir kΩ et µF en unités SI." },
+      { "label": "$\\tau = 2{,}5\\times10^{-9}\\ \\mathrm{s}$", "why": "Tu as calculé $C/R$ au lieu de $R\\times C$." },
+      { "label": "$\\tau = 4{,}0\\times10^{8}\\ \\mathrm{s}$", "why": "Tu as calculé $R/C$ : ce n'est pas homogène à un temps." }
+     ],
+     "hint": "La constante de temps est le produit de $R$ et de $C$, exprimés en Ω et en F.",
+     "solution": "$\\tau = RC = 2{,}0\\times10^{3}\\ \\Omega \\times 5{,}0\\times10^{-6}\\ \\mathrm{F} = 1{,}0\\times10^{-2}\\ \\mathrm{s} = 10\\ \\mathrm{ms}$.",
+     "methode": "Convertis toujours en SI avant de calculer (k = $10^{3}$, µ = $10^{-6}$), puis vérifie l'ordre de grandeur : un circuit RC de TP a un $\\tau$ de l'ordre de la milliseconde.",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "ref": "pc-rc-la-charge-du-condensateur",
+   "chapter": "pc-rc",
+   "kind": "qcu",
+   "title": "La charge du condensateur",
+   "difficulty": 2,
+   "origin": { "type": "original" },
+   "questions": [
+    {
+     "ref": "pc-rc-la-charge-du-condensateur-q1",
+     "notion": "La charge du condensateur",
+     "difficulty": 2,
+     "statement": "Un condensateur initialement déchargé est chargé sous une tension $E$ à travers $R$. À la date $t = \\tau$, la tension $u_C$ vaut environ :",
+     "options": [
+      { "label": "$0{,}63\\,E$", "correct": true, "why": "$u_C(\\tau) = E(1 - e^{-1}) \\approx 0{,}63\\,E$." },
+      { "label": "$0{,}37\\,E$", "why": "C'est la valeur à $t = \\tau$ pour une décharge, pas pour une charge." },
+      { "label": "$E/2$", "why": "$E/2$ est atteint à $t = \\tau\\ln 2 \\approx 0{,}69\\,\\tau$, pas à $\\tau$." },
+      { "label": "$E$", "why": "Le régime permanent n'est atteint qu'après environ $5\\tau$." }
+     ],
+     "hint": "Remplace $t$ par $\\tau$ dans $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$.",
+     "solution": "$u_C(\\tau) = E\\left(1 - e^{-1}\\right) = E(1 - 0{,}37) \\approx 0{,}63\\,E$.",
+     "methode": "Repères à connaître : à $\\tau$ → 63 % (charge) ou 37 % (décharge) ; à $5\\tau$ → plus de 99 % : régime permanent.",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "ref": "pc-rc-la-decharge-du-condensateur",
+   "chapter": "pc-rc",
+   "kind": "qcu",
+   "title": "La décharge du condensateur",
+   "difficulty": 3,
+   "origin": { "type": "original" },
+   "questions": [
+    {
+     "ref": "pc-rc-la-decharge-du-condensateur-q1",
+     "notion": "La décharge du condensateur",
+     "difficulty": 3,
+     "statement": "Un condensateur chargé sous $E$ se décharge dans un conducteur ohmique ($u_C(t) = E\\,e^{-t/\\tau}$). Au bout de quelle durée $u_C$ devient-elle égale à 1 % de $E$ ?",
+     "options": [
+      { "label": "$t = \\tau \\ln 100 \\approx 4{,}6\\,\\tau$", "correct": true, "why": "$e^{-t/\\tau} = 0{,}01 \\Rightarrow t = \\tau\\ln 100 \\approx 4{,}6\\,\\tau$." },
+      { "label": "$t = \\tau \\ln 2$", "why": "C'est la durée pour descendre à 50 % de $E$, pas à 1 %." },
+      { "label": "$t = 100\\,\\tau$", "why": "La décroissance est exponentielle, pas linéaire : on n'attend pas 100 fois $\\tau$." },
+      { "label": "$t = \\tau/100$", "why": "Tu as divisé au lieu de passer au logarithme." }
+     ],
+     "hint": "Écris $E\\,e^{-t/\\tau} = 0{,}01\\,E$ puis passe au logarithme népérien.",
+     "solution": "$e^{-t/\\tau} = \\dfrac{1}{100} \\Rightarrow -\\dfrac{t}{\\tau} = -\\ln 100 \\Rightarrow t = \\tau\\ln 100 \\approx 4{,}6\\,\\tau$. C'est pour cela qu'on considère la décharge terminée après environ $5\\tau$.",
+     "methode": "Pour trouver une date à partir d'une valeur : isole l'exponentielle, puis applique $\\ln$ des deux côtés.",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "ref": "pc-rc-probleme-1",
+   "chapter": "pc-rc",
+   "kind": "probleme",
+   "title": "Identifier un condensateur par sa charge",
+   "difficulty": 3,
+   "figure": "rc-charge",
+   "origin": { "type": "original" },
+   "context": "On charge un condensateur de capacité $C$ inconnue à travers un conducteur ohmique $R = 1{,}0\\ \\mathrm{k\\Omega}$, avec un générateur idéal de tension $E = 12\\ \\mathrm{V}$. Le condensateur est initialement déchargé. Sur l'enregistrement de $u_C(t)$, la tangente à l'origine coupe l'asymptote horizontale $u = 12\\ \\mathrm{V}$ à la date $t = 2{,}2\\ \\mathrm{ms}$.",
+   "questions": [
+    {
+     "ref": "pc-rc-probleme-1-q1",
+     "part": "Partie A — Étude théorique",
+     "notion": "Le montage et la mise en équation",
+     "difficulty": 1,
+     "statement": "L'équation différentielle vérifiée par $u_C$ pendant la charge est :",
+     "options": [
+      { "label": "$RC\\,\\dfrac{du_C}{dt} + u_C = E$", "correct": true, "why": "Loi d'additivité : $u_R + u_C = E$ avec $u_R = Ri = RC\\,\\dfrac{du_C}{dt}$." },
+      { "label": "$RC\\,\\dfrac{du_C}{dt} + u_C = 0$", "why": "C'est l'équation de la décharge (générateur absent)." },
+      { "label": "$RC\\,\\dfrac{du_C}{dt} - u_C = E$", "why": "Erreur de signe : les tensions $u_R$ et $u_C$ s'additionnent." },
+      { "label": "$\\dfrac{du_C}{dt} + RC\\,u_C = E$", "why": "$RC$ multiplie la dérivée, pas $u_C$ : vérifie l'homogénéité." }
+     ],
+     "hint": "Écris la loi d'additivité des tensions, puis exprime $i$ en fonction de $u_C$.",
+     "solution": "$u_R + u_C = E$, $u_R = Ri$ et $i = \\dfrac{dq}{dt} = C\\dfrac{du_C}{dt}$, d'où $RC\\dfrac{du_C}{dt} + u_C = E$.",
+     "methode": "Établir une équation différentielle : 1) loi d'additivité, 2) lois des dipôles, 3) $i = C\\,du_C/dt$, 4) ne garder que $u_C$.",
+     "points": 1
+    },
+    {
+     "ref": "pc-rc-probleme-1-q2",
+     "part": "Partie A — Étude théorique",
+     "notion": "Déterminer $\\tau$ graphiquement",
+     "difficulty": 2,
+     "statement": "D'après l'enregistrement, la constante de temps du circuit vaut :",
+     "options": [
+      { "label": "$\\tau = 2{,}2\\ \\mathrm{ms}$", "correct": true, "why": "La tangente à l'origine coupe l'asymptote $u = E$ à $t = \\tau$." },
+      { "label": "$\\tau = 1{,}1\\ \\mathrm{ms}$", "why": "Pas de facteur 1/2 : c'est directement l'abscisse du point d'intersection." },
+      { "label": "$\\tau = 11\\ \\mathrm{ms}$", "why": "11 ms correspond à $5\\tau$, la fin du régime transitoire." },
+      { "label": "$\\tau = 12\\ \\mathrm{ms}$", "why": "12 est la valeur de $E$ en volts, pas une date." }
+     ],
+     "hint": "Où la tangente à l'origine coupe-t-elle l'asymptote ?",
+     "solution": "Par construction, la tangente à l'origine coupe l'asymptote $u = E$ à la date $t = \\tau$ : $\\tau = 2{,}2\\ \\mathrm{ms}$.",
+     "methode": "Deux lectures graphiques de $\\tau$ : tangente à l'origine ∩ asymptote, ou date où $u_C = 0{,}63\\,E$.",
+     "points": 1
+    },
+    {
+     "ref": "pc-rc-probleme-1-q3",
+     "part": "Partie B — Exploitation",
+     "notion": "La constante de temps",
+     "difficulty": 2,
+     "statement": "On en déduit la capacité du condensateur :",
+     "options": [
+      { "label": "$C = 2{,}2\\ \\mu\\mathrm{F}$", "correct": true, "why": "$C = \\tau/R = 2{,}2\\times10^{-3}/1{,}0\\times10^{3} = 2{,}2\\times10^{-6}\\ \\mathrm{F}$." },
+      { "label": "$C = 2{,}2\\ \\mathrm{mF}$", "why": "Tu n'as pas converti $R$ : 1,0 kΩ = $10^{3}$ Ω." },
+      { "label": "$C = 2{,}2\\ \\mathrm{nF}$", "why": "Erreur de puissance de 10 : $10^{-3}/10^{3} = 10^{-6}$." },
+      { "label": "$C = 4{,}5\\times10^{5}\\ \\mathrm{F}$", "why": "Tu as calculé $R/\\tau$ au lieu de $\\tau/R$." }
+     ],
+     "hint": "Isole $C$ dans $\\tau = RC$.",
+     "solution": "$C = \\dfrac{\\tau}{R} = \\dfrac{2{,}2\\times10^{-3}}{1{,}0\\times10^{3}} = 2{,}2\\times10^{-6}\\ \\mathrm{F} = 2{,}2\\ \\mu\\mathrm{F}$.",
+     "points": 1
+    },
+    {
+     "ref": "pc-rc-probleme-1-q4",
+     "part": "Partie B — Exploitation",
+     "notion": "Énergie emmagasinée",
+     "difficulty": 3,
+     "statement": "L'énergie emmagasinée dans le condensateur en fin de charge vaut environ :",
+     "options": [
+      { "label": "$1{,}6\\times10^{-4}\\ \\mathrm{J}$", "correct": true, "why": "$\\mathcal{E} = \\tfrac12 C E^{2} = \\tfrac12\\times2{,}2\\times10^{-6}\\times12^{2} \\approx 1{,}6\\times10^{-4}\\ \\mathrm{J}$." },
+      { "label": "$3{,}2\\times10^{-4}\\ \\mathrm{J}$", "why": "Tu as oublié le facteur $\\tfrac12$." },
+      { "label": "$1{,}3\\times10^{-5}\\ \\mathrm{J}$", "why": "Tu as utilisé $E$ au lieu de $E^{2}$." },
+      { "label": "$0\\ \\mathrm{J}$", "why": "Un condensateur chargé stocke bien de l'énergie : $\\tfrac12 C u_C^{2}$ avec $u_C = E$." }
+     ],
+     "hint": "En fin de charge, $u_C = E$. Quelle est l'expression de l'énergie d'un condensateur ?",
+     "solution": "En régime permanent $u_C = E$, donc $\\mathcal{E} = \\tfrac12 C E^{2} = 0{,}5\\times2{,}2\\times10^{-6}\\times144 \\approx 1{,}6\\times10^{-4}\\ \\mathrm{J}$.",
+     "methode": "Énergie d'un condensateur : $\\mathcal{E} = \\tfrac12 C u_C^{2}$ (en J, avec $C$ en F et $u_C$ en V).",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "pc-rc-serie-exemple",
+   "title": "Dipôle RC · L'essentiel pour le BAC",
+   "description": "Les 7 réflexes du chapitre, du calcul de τ au bilan d'énergie.",
+   "kind": "custom",
+   "chapter": "pc-rc",
+   "difficulty": 2,
+   "xp_bonus": 40,
+   "position": 100,
+   "published": true,
+   "questions": [
+    "pc-rc-la-constante-de-temps-q1",
+    "pc-rc-la-charge-du-condensateur-q1",
+    "pc-rc-probleme-1-q1",
+    "pc-rc-probleme-1-q2",
+    "pc-rc-probleme-1-q3",
+    "pc-rc-la-decharge-du-condensateur-q1",
+    "pc-rc-probleme-1-q4"
+   ]
+  }
+ ]
+}

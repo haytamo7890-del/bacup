@@ -1,0 +1,3108 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-rc",
+      "name": "Dipôle RC",
+      "domain": "physique",
+      "unit": "Électricité"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Constitution et symbole",
+      "La relation charge–tension",
+      "Intensité et charge : la relation dérivée",
+      "Énergie emmagasinée",
+      "Associations de condensateurs",
+      "Le montage et la mise en équation",
+      "La charge du condensateur",
+      "La décharge du condensateur",
+      "Résoudre soi-même l'équation différentielle",
+      "La constante de temps",
+      "Déterminer $\\tau$ graphiquement",
+      "Influence de $R$ et de $C$",
+      "Bilan énergétique de la charge",
+      "Réponse à un échelon : le point de vue général",
+      "Charge à courant constant",
+      "Le circuit RC comme filtre",
+      "Retour sur le rendement de 50 %",
+      "Mesures et incertitudes",
+      "Le montage",
+      "Le protocole",
+      "Réglages et lecture de l'oscilloscope",
+      "Exploitation d'un relevé",
+      "Sources d'erreur",
+      "Méthode 1 — Établir l'équation différentielle",
+      "Méthode 2 — Vérifier une solution proposée",
+      "Méthode 3 — Exploiter un oscillogramme",
+      "Méthode 4 — La linéarisation de la décharge",
+      "Méthode 5 — Le bilan d'énergie"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Établir l'équation différentielle",
+      "Méthode 2 — Vérifier une solution proposée",
+      "Méthode 3 — Exploiter un oscillogramme",
+      "Méthode 4 — La linéarisation de la décharge",
+      "Méthode 5 — Le bilan d'énergie"
+    ],
+    "existing_questions_total": 8,
+    "target_new_questions": 59,
+    "suggested_figures": [
+      "rc-charge — Charge d'un condensateur — u_C(t) croît vers E, constante de temps τ",
+      "rc-decharge — Décharge d'un condensateur — u_C(t) décroît",
+      "montage-rlc-libre — Montage RLC — oscillations libres (C chargé puis basculé sur L)"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Le montage et la mise en équation",
+        "lesson": "Charge et décharge du dipôle RC",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-le-montage-et-la-mise-en-equation",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Le montage et la mise en équation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le montage et la mise en équation",
+          "difficulty": 1,
+          "statement": "Dans un dipôle RC, l'intensité du courant qui charge le condensateur s'exprime en fonction de $u_C$ par :",
+          "options": [
+            {
+              "label": "$i = C\\,\\dfrac{du_C}{dt}$",
+              "correct": true,
+              "why": "$i = \\dfrac{dq}{dt}$ et $q = C\\,u_C$ avec $C$ constante, donc $i = C\\,\\dfrac{du_C}{dt}$."
+            },
+            {
+              "label": "$i = \\dfrac{1}{C}\\,\\dfrac{du_C}{dt}$",
+              "why": "Tu as divisé par $C$ au lieu de multiplier : dans $q = C u_C$, c'est $C$ qui multiplie la tension."
+            },
+            {
+              "label": "$i = C\\,u_C$",
+              "why": "$C\\,u_C$ est la charge $q$ (en coulombs), pas une intensité : il manque la dérivation par rapport au temps."
+            },
+            {
+              "label": "$i = \\dfrac{du_C}{dt}$",
+              "why": "Tu as oublié le facteur $C$ : sans lui la relation n'est même pas homogène (des V/s face à des A)."
+            }
+          ],
+          "hint": "Partis de $i = dq/dt$ et remplace $q$ par son expression en fonction de $u_C$.",
+          "solution": "Par définition $i = \\dfrac{dq}{dt}$. Pour un condensateur de capacité constante, $q = C\\,u_C$, donc $i = \\dfrac{d(C u_C)}{dt} = C\\,\\dfrac{du_C}{dt}$. Contrôle d'homogénéité : $\\mathrm{F}\\times\\mathrm{V\\,s^{-1}} = \\mathrm{C\\,V^{-1}}\\times\\mathrm{V\\,s^{-1}} = \\mathrm{C\\,s^{-1}} = \\mathrm{A}$.",
+          "methode": "C'est LA relation à écrire en premier dans tout exercice de RC : elle permet d'éliminer $i$ et de ne garder que $u_C$.",
+          "points": 1,
+          "ref": "pc-rc-le-montage-et-la-mise-en-equation-q1"
+        },
+        {
+          "notion": "Le montage et la mise en équation",
+          "difficulty": 2,
+          "statement": "Un générateur idéal de tension de f.é.m. $E$, un conducteur ohmique $R$ et un condensateur $C$ initialement déchargé sont en série. L'équation différentielle vérifiée par $u_C$ est :",
+          "options": [
+            {
+              "label": "$RC\\,\\dfrac{du_C}{dt} + u_C = E$",
+              "correct": true,
+              "why": "Loi d'additivité : $u_R + u_C = E$, avec $u_R = R\\,i = RC\\,\\dfrac{du_C}{dt}$."
+            },
+            {
+              "label": "$RC\\,\\dfrac{du_C}{dt} + u_C = 0$",
+              "why": "C'est l'équation de la décharge : ici le générateur impose un second membre égal à $E$."
+            },
+            {
+              "label": "$RC\\,\\dfrac{du_C}{dt} - u_C = E$",
+              "why": "Erreur de signe : dans un circuit série orienté dans le sens du courant, $u_R$ et $u_C$ s'ajoutent."
+            },
+            {
+              "label": "$\\dfrac{du_C}{dt} + RC\\,u_C = E$",
+              "why": "Tu as déplacé le facteur $RC$ : il multiplie la dérivée, sinon l'équation n'est pas homogène."
+            }
+          ],
+          "hint": "Écris la loi d'additivité des tensions, puis remplace $i$ par $C\\,du_C/dt$.",
+          "solution": "Loi d'additivité des tensions : $u_R + u_C = E$. Or $u_R = R\\,i$ et $i = C\\,\\dfrac{du_C}{dt}$, d'où $RC\\,\\dfrac{du_C}{dt} + u_C = E$. Contrôle : $RC$ est un temps, donc $RC\\,du_C/dt$ est bien une tension, comme $u_C$ et $E$.",
+          "methode": "Méthode en 4 temps : 1) additivité des tensions ; 2) loi d'Ohm ; 3) $i = C\\,du_C/dt$ ; 4) ne garder que $u_C$.",
+          "points": 1,
+          "ref": "pc-rc-le-montage-et-la-mise-en-equation-q2"
+        },
+        {
+          "notion": "Le montage et la mise en équation",
+          "difficulty": 3,
+          "statement": "Pour le même circuit série $(E, R, C)$, l'équation différentielle écrite sur la **charge** $q$ du condensateur est :",
+          "options": [
+            {
+              "label": "$R\\,\\dfrac{dq}{dt} + \\dfrac{q}{C} = E$",
+              "correct": true,
+              "why": "On remplace $u_C = q/C$ et $i = dq/dt$ dans $R\\,i + u_C = E$."
+            },
+            {
+              "label": "$R\\,\\dfrac{dq}{dt} + C\\,q = E$",
+              "why": "Tu as multiplié par $C$ au lieu de diviser : $u_C = q/C$, donc c'est $q/C$ qui apparaît."
+            },
+            {
+              "label": "$RC\\,\\dfrac{dq}{dt} + q = E$",
+              "why": "Le second membre n'est plus homogène : à gauche des coulombs, à droite des volts. Il faudrait $q = CE$ à droite."
+            },
+            {
+              "label": "$\\dfrac{1}{R}\\,\\dfrac{dq}{dt} + \\dfrac{q}{C} = E$",
+              "why": "Tu as divisé par $R$ : la loi d'Ohm donne $u_R = R\\,i$, donc $R$ multiplie $dq/dt$."
+            }
+          ],
+          "hint": "Reprends $u_R + u_C = E$ mais exprime cette fois tout avec $q$ : $u_C = q/C$ et $i = dq/dt$.",
+          "solution": "$u_R + u_C = E$ avec $u_R = R\\,i = R\\,\\dfrac{dq}{dt}$ et $u_C = \\dfrac{q}{C}$, donc $R\\,\\dfrac{dq}{dt} + \\dfrac{q}{C} = E$. Contrôle : en multipliant toute l'équation par $C$ on retrouve $RC\\,\\dfrac{du_C}{dt} + u_C = E$, les deux écritures sont équivalentes.",
+          "methode": "Choisis ta variable au départ ($u_C$ ou $q$) et reste cohérent : $q = C u_C$ permet de passer de l'une à l'autre.",
+          "points": 1,
+          "ref": "pc-rc-le-montage-et-la-mise-en-equation-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La charge du condensateur",
+        "lesson": "Charge et décharge du dipôle RC",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-la-charge-du-condensateur",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "La charge du condensateur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La charge du condensateur",
+          "difficulty": 1,
+          "statement": "Un condensateur initialement déchargé est chargé à travers $R$ sous une f.é.m. $E$ : $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$. À la date $t = 0$, $u_C$ vaut :",
+          "options": [
+            {
+              "label": "$0$",
+              "correct": true,
+              "why": "$u_C(0) = E(1 - e^{0}) = E(1-1) = 0$, conforme à un condensateur déchargé."
+            },
+            {
+              "label": "$E$",
+              "why": "$E$ est la valeur limite atteinte en régime permanent, pas la valeur initiale."
+            },
+            {
+              "label": "$E/2$",
+              "why": "$E/2$ est atteint plus tard, à $t = \\tau\\ln 2 \\approx 0{,}69\\,\\tau$."
+            },
+            {
+              "label": "$0{,}63\\,E$",
+              "why": "$0{,}63\\,E$ est la valeur à $t = \\tau$, pas à $t = 0$."
+            }
+          ],
+          "hint": "Remplace $t$ par $0$ dans l'expression, et souviens-toi que $e^{0} = 1$.",
+          "solution": "$u_C(0) = E\\left(1 - e^{0}\\right) = E(1 - 1) = 0\\ \\mathrm{V}$. C'est cohérent avec l'énoncé : le condensateur est initialement déchargé, donc $q(0) = 0$ et $u_C(0) = q(0)/C = 0$.",
+          "methode": "Vérifie toujours une solution proposée sur ses deux bornes : $t = 0$ doit redonner la condition initiale, $t \\to \\infty$ le régime permanent.",
+          "points": 1,
+          "ref": "pc-rc-la-charge-du-condensateur-q1"
+        },
+        {
+          "notion": "La charge du condensateur",
+          "difficulty": 2,
+          "statement": "Un condensateur déchargé, de capacité $C = 4{,}7\\ \\mu\\mathrm{F}$, est chargé à travers $R = 10\\ \\mathrm{k\\Omega}$ sous $E = 6{,}0\\ \\mathrm{V}$. À la date $t = \\tau$, la tension $u_C$ vaut :",
+          "options": [
+            {
+              "label": "$3{,}8\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$u_C(\\tau) = E(1 - e^{-1}) = 6{,}0 \\times 0{,}63 = 3{,}8\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$2{,}2\\ \\mathrm{V}$",
+              "why": "Tu as pris $0{,}37\\,E = 0{,}37\\times6{,}0 = 2{,}2\\ \\mathrm{V}$ : c'est le repère de la **décharge**, pas de la charge."
+            },
+            {
+              "label": "$3{,}0\\ \\mathrm{V}$",
+              "why": "Tu as pris $E/2 = 3{,}0\\ \\mathrm{V}$, valeur atteinte à $t = \\tau\\ln 2 \\approx 0{,}69\\,\\tau$ et non à $t = \\tau$."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as pris $E$ : le régime permanent n'est atteint qu'après environ $5\\tau$."
+            }
+          ],
+          "hint": "Le repère de la charge à $t = \\tau$ est universel : il ne dépend ni de $R$ ni de $C$.",
+          "solution": "$u_C(\\tau) = E\\left(1 - e^{-1}\\right) = 6{,}0 \\times (1 - 0{,}368) = 6{,}0 \\times 0{,}632 \\approx 3{,}8\\ \\mathrm{V}$. Remarque : les valeurs de $R$ et de $C$ ne servent pas ici, elles ne fixent que la **date** $\\tau = RC = 47\\ \\mathrm{ms}$.",
+          "methode": "Repères à savoir par cœur : charge à $t=\\tau$ → $63\\,\\%$ de $E$ ; décharge à $t=\\tau$ → $37\\,\\%$ de $U_0$.",
+          "points": 1,
+          "ref": "pc-rc-la-charge-du-condensateur-q2"
+        },
+        {
+          "notion": "La charge du condensateur",
+          "difficulty": 2,
+          "statement": "Un condensateur déchargé est chargé à travers $R = 2{,}0\\ \\mathrm{k\\Omega}$ sous $E = 12\\ \\mathrm{V}$. L'intensité du courant juste après la fermeture de l'interrupteur, à $t = 0^{+}$, vaut :",
+          "options": [
+            {
+              "label": "$6{,}0\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "À $t=0^{+}$, $u_C = 0$ donc $u_R = E$ et $i = E/R = 12/2{,}0\\times10^{3} = 6{,}0\\times10^{-3}\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$0\\ \\mathrm{mA}$",
+              "why": "Tu as confondu $t = 0^{+}$ et le régime permanent : à $t=0^{+}$ toute la f.é.m. est aux bornes de $R$, le courant est au contraire **maximal**."
+            },
+            {
+              "label": "$2{,}2\\ \\mathrm{mA}$",
+              "why": "Tu as appliqué le facteur $0{,}37$ : $0{,}37\\times6{,}0 = 2{,}2\\ \\mathrm{mA}$, ce qui est la valeur de $i$ à $t=\\tau$, pas à $t=0^{+}$."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{A}$",
+              "why": "Tu n'as pas converti la résistance : $2{,}0\\ \\mathrm{k\\Omega} = 2{,}0\\times10^{3}\\ \\Omega$, et $12/2{,}0 = 6{,}0$ donne des ampères au lieu de milliampères."
+            }
+          ],
+          "hint": "Que vaut $u_C$ juste après la fermeture ? Déduis-en la tension aux bornes de $R$.",
+          "solution": "La tension $u_C$ est continue : $u_C(0^{+}) = u_C(0^{-}) = 0$. La loi d'additivité donne alors $u_R(0^{+}) = E$, donc $i(0^{+}) = \\dfrac{E}{R} = \\dfrac{12}{2{,}0\\times10^{3}} = 6{,}0\\times10^{-3}\\ \\mathrm{A} = 6{,}0\\ \\mathrm{mA}$. Contrôle : c'est bien la plus grande valeur que $i$ prendra, puisque $i$ décroît ensuite vers $0$.",
+          "methode": "Au début d'une charge, le condensateur déchargé se comporte comme un fil : $i_{\\max} = E/R$. À la fin, il se comporte comme un interrupteur ouvert : $i = 0$.",
+          "points": 1,
+          "ref": "pc-rc-la-charge-du-condensateur-q3"
+        },
+        {
+          "notion": "La charge du condensateur",
+          "difficulty": 3,
+          "statement": "Au cours d'une charge, quelle durée faut-il attendre pour que $u_C$ atteigne $90\\ \\%$ de $E$ ?",
+          "options": [
+            {
+              "label": "$t \\approx 2{,}3\\,\\tau$",
+              "correct": true,
+              "why": "$1 - e^{-t/\\tau} = 0{,}90 \\Rightarrow e^{-t/\\tau} = 0{,}10 \\Rightarrow t = \\tau\\ln 10 \\approx 2{,}3\\,\\tau$."
+            },
+            {
+              "label": "$t \\approx 0{,}90\\,\\tau$",
+              "why": "Tu as supposé la croissance proportionnelle au temps : $90\\ \\%$ de $E$ ne s'atteint pas à $90\\ \\%$ de $\\tau$, la croissance est exponentielle."
+            },
+            {
+              "label": "$t \\approx 5\\,\\tau$",
+              "why": "À $5\\tau$ on est déjà à $99{,}3\\ \\%$ de $E$ : c'est bien plus que $90\\ \\%$, donc trop tard."
+            },
+            {
+              "label": "$t \\approx 0{,}11\\,\\tau$",
+              "why": "Tu as écrit $t = -\\tau\\ln(0{,}90)$ en oubliant le $1-$ : l'exponentielle à isoler vaut $0{,}10$, pas $0{,}90$."
+            }
+          ],
+          "hint": "Isole d'abord $e^{-t/\\tau}$, puis applique le logarithme népérien.",
+          "solution": "On cherche $t$ tel que $E\\left(1 - e^{-t/\\tau}\\right) = 0{,}90\\,E$, soit $e^{-t/\\tau} = 0{,}10$. En passant au logarithme : $-\\dfrac{t}{\\tau} = \\ln(0{,}10) = -\\ln 10$, donc $t = \\tau\\ln 10 \\approx 2{,}30\\,\\tau$. Contrôle : $2{,}3\\,\\tau$ est bien entre $\\tau$ ($63\\ \\%$) et $5\\tau$ ($99{,}3\\ \\%$).",
+          "methode": "Pour une date à partir d'un pourcentage : écris l'équation, isole l'exponentielle, puis $\\ln$ des deux côtés.",
+          "points": 1,
+          "ref": "pc-rc-la-charge-du-condensateur-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La décharge du condensateur",
+        "lesson": "Charge et décharge du dipôle RC",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-la-decharge-du-condensateur",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "La décharge du condensateur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La décharge du condensateur",
+          "difficulty": 1,
+          "statement": "Un condensateur chargé sous $U_0 = 10{,}0\\ \\mathrm{V}$ se décharge dans un conducteur ohmique : $u_C(t) = U_0\\,e^{-t/\\tau}$. À la date $t = \\tau$, $u_C$ vaut :",
+          "options": [
+            {
+              "label": "$3{,}7\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$u_C(\\tau) = U_0\\,e^{-1} = 10{,}0\\times0{,}368 \\approx 3{,}7\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$6{,}3\\ \\mathrm{V}$",
+              "why": "Tu as pris $0{,}63\\,U_0$ : ce repère est celui de la **charge**, alors qu'ici la tension décroît."
+            },
+            {
+              "label": "$5{,}0\\ \\mathrm{V}$",
+              "why": "Tu as pris $U_0/2$, atteint à $t = \\tau\\ln 2 \\approx 0{,}69\\,\\tau$ et non à $t = \\tau$."
+            },
+            {
+              "label": "$0\\ \\mathrm{V}$",
+              "why": "La décharge n'est considérée comme terminée qu'après environ $5\\tau$ : à $t=\\tau$ il reste encore $37\\ \\%$ de $U_0$."
+            }
+          ],
+          "hint": "Remplace $t$ par $\\tau$ : l'exponentielle devient $e^{-1}$.",
+          "solution": "$u_C(\\tau) = U_0\\,e^{-1} = 10{,}0 \\times 0{,}368 = 3{,}68 \\approx 3{,}7\\ \\mathrm{V}$. Contrôle : la valeur doit être inférieure à $U_0/2 = 5{,}0\\ \\mathrm{V}$, puisque $\\tau > \\tau\\ln 2$.",
+          "methode": "Décharge : $37\\ \\%$ de $U_0$ à $t=\\tau$, $50\\ \\%$ à $0{,}69\\,\\tau$, moins de $1\\ \\%$ à $5\\tau$.",
+          "points": 1,
+          "ref": "pc-rc-la-decharge-du-condensateur-q1"
+        },
+        {
+          "notion": "La décharge du condensateur",
+          "difficulty": 2,
+          "statement": "Un condensateur se décharge dans un conducteur ohmique avec une constante de temps $\\tau = 20\\ \\mathrm{ms}$. La tension $u_C$ est réduite de moitié au bout de :",
+          "options": [
+            {
+              "label": "$14\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$e^{-t/\\tau} = 0{,}5 \\Rightarrow t = \\tau\\ln 2 = 20\\times0{,}693 = 13{,}9 \\approx 14\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$10\\ \\mathrm{ms}$",
+              "why": "Tu as pris $\\tau/2$ : diviser la tension par 2 ne revient pas à diviser la durée par 2, la décroissance est exponentielle."
+            },
+            {
+              "label": "$20\\ \\mathrm{ms}$",
+              "why": "Tu as pris $\\tau$ lui-même : à $t = \\tau$ il ne reste que $37\\ \\%$ de $U_0$, donc on est déjà passé sous la moitié."
+            },
+            {
+              "label": "$7{,}4\\ \\mathrm{ms}$",
+              "why": "Tu as calculé $0{,}37\\,\\tau = 0{,}37\\times20 = 7{,}4\\ \\mathrm{ms}$ : le facteur $0{,}37$ s'applique à la tension, pas à la date."
+            }
+          ],
+          "hint": "Écris $U_0 e^{-t/\\tau} = U_0/2$ et simplifie par $U_0$ avant de passer au logarithme.",
+          "solution": "$U_0\\,e^{-t/\\tau} = \\dfrac{U_0}{2} \\Rightarrow e^{-t/\\tau} = \\dfrac{1}{2} \\Rightarrow t = \\tau\\ln 2 = 20\\times10^{-3}\\times0{,}693 = 1{,}39\\times10^{-2}\\ \\mathrm{s} \\approx 14\\ \\mathrm{ms}$. Contrôle : la moitié est atteinte avant $\\tau$, puisqu'à $\\tau$ il ne reste que $37\\ \\%$ ; $14\\ \\mathrm{ms} < 20\\ \\mathrm{ms}$, c'est cohérent.",
+          "methode": "La « demi-durée » d'une décharge RC vaut $t_{1/2} = \\tau\\ln 2 \\approx 0{,}69\\,\\tau$ : elle ne dépend pas de $U_0$.",
+          "points": 1,
+          "ref": "pc-rc-la-decharge-du-condensateur-q2"
+        },
+        {
+          "notion": "La décharge du condensateur",
+          "difficulty": 2,
+          "statement": "Un condensateur chargé sous $U_0 = 6{,}0\\ \\mathrm{V}$ est brusquement relié à un conducteur ohmique $R = 1{,}5\\ \\mathrm{k\\Omega}$. L'intensité du courant de décharge juste après, à $t = 0^{+}$, a pour valeur absolue :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$u_C$ est continue, donc $|u_R(0^{+})| = U_0$ et $|i| = U_0/R = 6{,}0/1{,}5\\times10^{3} = 4{,}0\\times10^{-3}\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$0\\ \\mathrm{mA}$",
+              "why": "Tu as pris la valeur de fin de décharge : à $t=0^{+}$ la tension aux bornes de $R$ vaut $U_0$, le courant est **maximal**."
+            },
+            {
+              "label": "$1{,}5\\ \\mathrm{mA}$",
+              "why": "Tu as multiplié par $0{,}37$ : $0{,}37\\times4{,}0 = 1{,}5\\ \\mathrm{mA}$ est la valeur à $t=\\tau$, pas à $t=0^{+}$."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{A}$",
+              "why": "Tu n'as pas converti la résistance : $6{,}0/1{,}5 = 4{,}0$ seulement si $R$ est en ohms, or $1{,}5\\ \\mathrm{k\\Omega} = 1{,}5\\times10^{3}\\ \\Omega$."
+            }
+          ],
+          "hint": "Juste après la fermeture, toute la tension initiale du condensateur se retrouve aux bornes de $R$.",
+          "solution": "La continuité de $u_C$ donne $u_C(0^{+}) = U_0 = 6{,}0\\ \\mathrm{V}$. Le conducteur ohmique étant seul dans la boucle, $|u_R| = 6{,}0\\ \\mathrm{V}$ et $|i(0^{+})| = \\dfrac{U_0}{R} = \\dfrac{6{,}0}{1{,}5\\times10^{3}} = 4{,}0\\times10^{-3}\\ \\mathrm{A} = 4{,}0\\ \\mathrm{mA}$. Contrôle : c'est la valeur maximale, $|i|$ décroît ensuite en $e^{-t/\\tau}$.",
+          "methode": "Au début d'une décharge, $|i_{\\max}| = U_0/R$ ; le courant décroît ensuite avec la même constante de temps que $u_C$.",
+          "points": 1,
+          "ref": "pc-rc-la-decharge-du-condensateur-q3"
+        },
+        {
+          "notion": "La décharge du condensateur",
+          "difficulty": 3,
+          "statement": "On trace $\\ln\\!\\left(u_C\\right)$ en fonction du temps pendant une décharge : on obtient une droite de pente $-25\\ \\mathrm{s^{-1}}$. La constante de temps du circuit vaut :",
+          "options": [
+            {
+              "label": "$40\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$\\ln u_C = \\ln U_0 - t/\\tau$ : la pente vaut $-1/\\tau$, donc $\\tau = 1/25 = 0{,}040\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$25\\ \\mathrm{ms}$",
+              "why": "Tu as recopié la valeur de la pente : la pente vaut $-1/\\tau$ et non $-\\tau$, il faut prendre l'inverse."
+            },
+            {
+              "label": "$80\\ \\mathrm{ms}$",
+              "why": "Tu as doublé le résultat : aucun facteur 2 n'intervient, $\\tau = 1/|\\text{pente}|$ directement."
+            },
+            {
+              "label": "$400\\ \\mathrm{ms}$",
+              "why": "Erreur de puissance de dix : $1/25 = 0{,}040\\ \\mathrm{s} = 40\\ \\mathrm{ms}$, et non $0{,}40\\ \\mathrm{s}$."
+            }
+          ],
+          "hint": "Prends le logarithme népérien de $u_C(t) = U_0\\,e^{-t/\\tau}$ et identifie la pente de la droite obtenue.",
+          "solution": "$u_C = U_0\\,e^{-t/\\tau}$ donne $\\ln u_C = \\ln U_0 - \\dfrac{t}{\\tau}$ : c'est une droite d'ordonnée à l'origine $\\ln U_0$ et de pente $a = -\\dfrac{1}{\\tau}$. Donc $\\tau = -\\dfrac{1}{a} = \\dfrac{1}{25} = 4{,}0\\times10^{-2}\\ \\mathrm{s} = 40\\ \\mathrm{ms}$. Contrôle d'unité : la pente est en $\\mathrm{s^{-1}}$, son inverse est bien une durée.",
+          "methode": "La linéarisation $\\ln u_C = f(t)$ transforme l'exponentielle en droite : $\\tau$ se lit comme l'inverse de la valeur absolue de la pente.",
+          "points": 1,
+          "ref": "pc-rc-la-decharge-du-condensateur-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Résoudre soi-même l'équation différentielle",
+        "lesson": "Charge et décharge du dipôle RC",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-resoudre-soi-meme-l-equation-differentie",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Résoudre soi-même l'équation différentielle",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Résoudre soi-même l'équation différentielle",
+          "difficulty": 1,
+          "statement": "On cherche la solution de $RC\\,\\dfrac{du_C}{dt} + u_C = E$ sous la forme $u_C(t) = A\\,e^{-t/RC} + B$. En reportant dans l'équation, on trouve :",
+          "options": [
+            {
+              "label": "$B = E$",
+              "correct": true,
+              "why": "Le terme en $A$ disparaît, et il reste $B = E$ : $B$ est la valeur du régime permanent."
+            },
+            {
+              "label": "$B = 0$",
+              "why": "$B = 0$ ne satisfait pas l'équation : il resterait $0 = E$, ce qui est faux tant que $E \\neq 0$."
+            },
+            {
+              "label": "$B = E/2$",
+              "why": "Aucun facteur $1/2$ n'apparaît : le report donne directement $B = E$."
+            },
+            {
+              "label": "$B = -E$",
+              "why": "Erreur de signe : c'est $A$ qui vaut $-E$ une fois la condition initiale utilisée, pas $B$."
+            }
+          ],
+          "hint": "Calcule $du_C/dt$, remplace dans l'équation, et regarde quels termes se simplifient.",
+          "solution": "Avec $u_C = A\\,e^{-t/RC} + B$ on a $\\dfrac{du_C}{dt} = -\\dfrac{A}{RC}e^{-t/RC}$, donc $RC\\,\\dfrac{du_C}{dt} = -A\\,e^{-t/RC}$. L'équation devient $-A\\,e^{-t/RC} + A\\,e^{-t/RC} + B = E$, soit $B = E$. Contrôle : quand $t \\to \\infty$, $u_C \\to B$, et le régime permanent vaut bien $E$.",
+          "methode": "La constante additive $B$ d'une solution de ce type est toujours la valeur du régime permanent.",
+          "points": 1,
+          "ref": "pc-rc-resoudre-soi-meme-l-equation-differentie-q1"
+        },
+        {
+          "notion": "Résoudre soi-même l'équation différentielle",
+          "difficulty": 2,
+          "statement": "Toujours avec $u_C(t) = A\\,e^{-t/RC} + E$, la condition initiale « condensateur initialement déchargé » impose :",
+          "options": [
+            {
+              "label": "$A = -E$",
+              "correct": true,
+              "why": "$u_C(0) = A + E = 0$ donne $A = -E$, d'où $u_C = E\\left(1 - e^{-t/RC}\\right)$."
+            },
+            {
+              "label": "$A = E$",
+              "why": "Avec $A = +E$ on obtiendrait $u_C(0) = 2E$, ce qui est impossible pour un condensateur déchargé."
+            },
+            {
+              "label": "$A = 0$",
+              "why": "Avec $A = 0$, $u_C$ serait constante et égale à $E$ : il n'y aurait aucun régime transitoire."
+            },
+            {
+              "label": "$A = -E/2$",
+              "why": "Cela donnerait $u_C(0) = E/2$ : le condensateur serait déjà à demi chargé, contrairement à l'énoncé."
+            }
+          ],
+          "hint": "Écris la condition $u_C(0) = 0$ en remplaçant $t$ par $0$ dans l'expression.",
+          "solution": "$u_C(0) = A\\,e^{0} + E = A + E$. Le condensateur étant initialement déchargé, $u_C(0) = 0$, donc $A = -E$ et finalement $u_C(t) = E\\left(1 - e^{-t/RC}\\right)$. Contrôle : $t \\to \\infty$ donne $u_C \\to E$, le régime permanent attendu.",
+          "methode": "Ordre de travail : 1) forme générale, 2) report dans l'équation pour la constante additive, 3) condition initiale pour l'amplitude.",
+          "points": 1,
+          "ref": "pc-rc-resoudre-soi-meme-l-equation-differentie-q2"
+        },
+        {
+          "notion": "Résoudre soi-même l'équation différentielle",
+          "difficulty": 2,
+          "statement": "On veut vérifier que $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$, avec $\\tau = RC$, est bien solution. En calculant $RC\\,\\dfrac{du_C}{dt} + u_C$, on obtient :",
+          "options": [
+            {
+              "label": "$E$",
+              "correct": true,
+              "why": "$RC\\,\\dfrac{du_C}{dt} = E\\,e^{-t/\\tau}$ et $u_C = E - E\\,e^{-t/\\tau}$ : la somme vaut $E$, l'équation est vérifiée."
+            },
+            {
+              "label": "$0$",
+              "why": "Ce serait le résultat pour la décharge : ici les deux exponentielles se compensent et il **reste** le terme constant $E$."
+            },
+            {
+              "label": "$E\\,e^{-t/\\tau}$",
+              "why": "Tu as oublié d'ajouter $u_C$ : son terme $-E\\,e^{-t/\\tau}$ annule justement l'exponentielle."
+            },
+            {
+              "label": "$2E - E\\,e^{-t/\\tau}$",
+              "why": "Tu as pris $RC\\,du_C/dt = E$ au lieu de $E\\,e^{-t/\\tau}$ : la dérivée d'une exponentielle garde son exponentielle."
+            }
+          ],
+          "hint": "Dérive, multiplie par $RC = \\tau$, puis ajoute $u_C$ et regarde ce qui se simplifie.",
+          "solution": "$\\dfrac{du_C}{dt} = E\\times\\dfrac{1}{\\tau}e^{-t/\\tau}$, donc $RC\\,\\dfrac{du_C}{dt} = \\tau\\times\\dfrac{E}{\\tau}e^{-t/\\tau} = E\\,e^{-t/\\tau}$. En ajoutant $u_C = E - E\\,e^{-t/\\tau}$ : $E\\,e^{-t/\\tau} + E - E\\,e^{-t/\\tau} = E$. On retrouve le second membre : la fonction est bien solution. Contrôle supplémentaire : $u_C(0) = 0$, la condition initiale est respectée.",
+          "methode": "Vérifier une solution proposée = la dériver, la reporter, et contrôler **aussi** la condition initiale.",
+          "points": 1,
+          "ref": "pc-rc-resoudre-soi-meme-l-equation-differentie-q3"
+        },
+        {
+          "notion": "Résoudre soi-même l'équation différentielle",
+          "difficulty": 3,
+          "statement": "Un condensateur déjà chargé sous $4{,}0\\ \\mathrm{V}$ est relié, à $t = 0$, à un générateur de f.é.m. $E = 12\\ \\mathrm{V}$ à travers $R$. La solution de l'équation différentielle est :",
+          "options": [
+            {
+              "label": "$u_C(t) = 12 - 8{,}0\\,e^{-t/\\tau}$",
+              "correct": true,
+              "why": "Régime permanent $12\\ \\mathrm{V}$ et $u_C(0) = 12 - 8{,}0 = 4{,}0\\ \\mathrm{V}$ : les deux conditions sont satisfaites."
+            },
+            {
+              "label": "$u_C(t) = 12\\left(1 - e^{-t/\\tau}\\right)$",
+              "why": "Cette expression donne $u_C(0) = 0$ : elle ignore la charge initiale de $4{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$u_C(t) = 4{,}0\\,e^{-t/\\tau}$",
+              "why": "Cette expression tend vers $0$ : elle décrit une décharge, alors qu'ici le générateur charge le condensateur jusqu'à $12\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$u_C(t) = 12 + 8{,}0\\,e^{-t/\\tau}$",
+              "why": "Erreur de signe : cela donnerait $u_C(0) = 20\\ \\mathrm{V}$, soit une tension initiale supérieure à $E$."
+            }
+          ],
+          "hint": "L'équation différentielle est la même : seule la constante $A$ change. Utilise $u_C(0) = 4{,}0\\ \\mathrm{V}$.",
+          "solution": "L'équation reste $RC\\,\\dfrac{du_C}{dt} + u_C = E$, donc $u_C = A\\,e^{-t/\\tau} + E$ avec $E = 12\\ \\mathrm{V}$. La condition initiale $u_C(0) = 4{,}0\\ \\mathrm{V}$ donne $A + 12 = 4{,}0$, soit $A = -8{,}0\\ \\mathrm{V}$. D'où $u_C(t) = 12 - 8{,}0\\,e^{-t/\\tau}$, en volts. Contrôle : $u_C$ croît de $4{,}0\\ \\mathrm{V}$ vers $12\\ \\mathrm{V}$, ce qui est bien le comportement attendu.",
+          "methode": "Forme générale utile : $u_C(t) = u_\\infty + \\left(u_C(0) - u_\\infty\\right)e^{-t/\\tau}$, valable pour toute charge ou décharge en RC.",
+          "points": 1,
+          "ref": "pc-rc-resoudre-soi-meme-l-equation-differentie-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La constante de temps",
+        "lesson": "Constante de temps & énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 3,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-la-constante-de-temps",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "La constante de temps",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "La constante de temps",
+          "difficulty": 2,
+          "statement": "Un dipôle RC associe $R = 22\\ \\mathrm{k\\Omega}$ et $C = 470\\ \\mathrm{nF}$. Sa constante de temps vaut :",
+          "options": [
+            {
+              "label": "$10\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$\\tau = RC = 22\\times10^{3}\\times470\\times10^{-9} = 1{,}03\\times10^{-2}\\ \\mathrm{s} \\approx 10\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$10\\ \\mathrm{s}$",
+              "why": "Tu as lu $470\\ \\mu\\mathrm{F}$ au lieu de $470\\ \\mathrm{nF}$ : $22\\times10^{3}\\times470\\times10^{-6} = 10{,}3\\ \\mathrm{s}$, soit $10^{3}$ fois trop."
+            },
+            {
+              "label": "$2{,}1\\times10^{-11}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $C/R = 470\\times10^{-9}/22\\times10^{3}$ au lieu du produit $R\\times C$."
+            },
+            {
+              "label": "$4{,}7\\times10^{10}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $R/C = 22\\times10^{3}/470\\times10^{-9}$ : ce quotient n'est pas homogène à une durée."
+            }
+          ],
+          "hint": "Convertis d'abord en unités SI : $\\mathrm{k} = 10^{3}$ et $\\mathrm{n} = 10^{-9}$.",
+          "solution": "$\\tau = R\\,C = 22\\times10^{3}\\ \\Omega \\times 470\\times10^{-9}\\ \\mathrm{F} = 1{,}034\\times10^{-2}\\ \\mathrm{s} \\approx 10\\ \\mathrm{ms}$. Contrôle d'homogénéité : $\\Omega\\times\\mathrm{F} = \\dfrac{\\mathrm{V}}{\\mathrm{A}}\\times\\dfrac{\\mathrm{C}}{\\mathrm{V}} = \\dfrac{\\mathrm{C}}{\\mathrm{A}} = \\mathrm{s}$ : $\\tau$ est bien une durée.",
+          "methode": "Toujours en SI avant de multiplier, puis contrôle d'ordre de grandeur : un dipôle RC de TP a un $\\tau$ de l'ordre de la milliseconde.",
+          "points": 1,
+          "ref": "pc-rc-la-constante-de-temps-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Déterminer $\\tau$ graphiquement",
+        "lesson": "Constante de temps & énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-determiner-tau-graphiquement",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Déterminer $\\tau$ graphiquement",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Déterminer $\\tau$ graphiquement",
+          "difficulty": 1,
+          "statement": "Sur la courbe de charge $u_C(t)$ d'un dipôle RC, la tangente à l'origine coupe l'asymptote horizontale $u = E$ :",
+          "options": [
+            {
+              "label": "à la date $t = \\tau$",
+              "correct": true,
+              "why": "C'est la définition graphique de la constante de temps : abscisse de ce point d'intersection."
+            },
+            {
+              "label": "à la date $t = 5\\tau$",
+              "why": "$5\\tau$ marque la fin pratique du régime transitoire sur la courbe elle-même, pas l'intersection de la tangente."
+            },
+            {
+              "label": "à la date $t = \\tau/2$",
+              "why": "Aucun facteur $1/2$ n'intervient : l'abscisse du point d'intersection est $\\tau$ exactement."
+            },
+            {
+              "label": "à la date $t = \\tau\\ln 2$",
+              "why": "$\\tau\\ln 2$ est la date où $u_C$ atteint $E/2$, elle ne concerne pas la tangente à l'origine."
+            }
+          ],
+          "hint": "La pente de la tangente à l'origine vaut $E/\\tau$ : à quelle date une droite de cette pente partant de $0$ atteint-elle $E$ ?",
+          "solution": "La pente à l'origine vaut $\\left(\\dfrac{du_C}{dt}\\right)_{t=0} = \\dfrac{E}{\\tau}$. La tangente a donc pour équation $u = \\dfrac{E}{\\tau}t$ ; elle atteint $u = E$ quand $\\dfrac{E}{\\tau}t = E$, c'est-à-dire $t = \\tau$.",
+          "methode": "Deux lectures graphiques de $\\tau$ : tangente à l'origine $\\cap$ asymptote, ou date où $u_C$ vaut $63\\ \\%$ de $E$ (charge).",
+          "points": 1,
+          "ref": "pc-rc-determiner-tau-graphiquement-q1"
+        },
+        {
+          "notion": "Déterminer $\\tau$ graphiquement",
+          "difficulty": 2,
+          "statement": "On veut lire $\\tau$ sur la courbe de charge d'un dipôle RC alimenté sous $E = 5{,}0\\ \\mathrm{V}$, en utilisant le repère des $63\\ \\%$. On cherche la date à laquelle $u_C$ vaut :",
+          "options": [
+            {
+              "label": "$3{,}2\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$0{,}63\\times5{,}0 = 3{,}2\\ \\mathrm{V}$ : l'abscisse de ce point de la courbe est $\\tau$."
+            },
+            {
+              "label": "$1{,}9\\ \\mathrm{V}$",
+              "why": "Tu as utilisé $0{,}37\\times5{,}0 = 1{,}9\\ \\mathrm{V}$, qui est le repère de la décharge et non de la charge."
+            },
+            {
+              "label": "$2{,}5\\ \\mathrm{V}$",
+              "why": "Tu as pris $E/2 = 2{,}5\\ \\mathrm{V}$, atteint à $0{,}69\\,\\tau$ : la lecture donnerait une date trop petite."
+            },
+            {
+              "label": "$4{,}3\\ \\mathrm{V}$",
+              "why": "Tu as pris $0{,}87\\times5{,}0 = 4{,}3\\ \\mathrm{V}$, qui correspond à $t = 2\\tau$ et non à $t = \\tau$."
+            }
+          ],
+          "hint": "Le repère de la charge à $t = \\tau$ s'exprime en pourcentage de $E$.",
+          "solution": "$u_C(\\tau) = E\\left(1 - e^{-1}\\right) = 0{,}632\\times5{,}0 = 3{,}16 \\approx 3{,}2\\ \\mathrm{V}$. On repère ce point sur la courbe et on lit son abscisse : c'est $\\tau$. Contrôle : on vérifie bien $E/2 < 3{,}2\\ \\mathrm{V} < E$.",
+          "methode": "Calcule d'abord la valeur $0{,}63\\,E$ (charge) ou $0{,}37\\,U_0$ (décharge), puis descends sur l'axe des temps.",
+          "points": 1,
+          "ref": "pc-rc-determiner-tau-graphiquement-q2"
+        },
+        {
+          "notion": "Déterminer $\\tau$ graphiquement",
+          "difficulty": 2,
+          "statement": "Un condensateur chargé sous $U_0 = 8{,}0\\ \\mathrm{V}$ se décharge dans $R = 3{,}0\\ \\mathrm{k\\Omega}$. Sur l'enregistrement, $u_C$ passe par $3{,}0\\ \\mathrm{V}$ à la date $t = 12\\ \\mathrm{ms}$. La capacité du condensateur vaut :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mu\\mathrm{F}$",
+              "correct": true,
+              "why": "$3{,}0\\ \\mathrm{V} \\approx 0{,}37\\times8{,}0$, donc $\\tau = 12\\ \\mathrm{ms}$ et $C = \\tau/R = 12\\times10^{-3}/3{,}0\\times10^{3} = 4{,}0\\times10^{-6}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{mF}$",
+              "why": "Tu n'as pas converti $R$ : $12\\times10^{-3}/3{,}0 = 4{,}0\\times10^{-3}$, alors que $3{,}0\\ \\mathrm{k\\Omega} = 3{,}0\\times10^{3}\\ \\Omega$."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{nF}$",
+              "why": "Erreur de puissance de dix : $10^{-3}/10^{3} = 10^{-6}$, donc le résultat est en microfarads."
+            },
+            {
+              "label": "$2{,}5\\times10^{5}\\ \\mathrm{F}$",
+              "why": "Tu as calculé $R/\\tau = 3{,}0\\times10^{3}/12\\times10^{-3}$ au lieu de $\\tau/R$."
+            }
+          ],
+          "hint": "Compare $3{,}0\\ \\mathrm{V}$ à $U_0$ : quel pourcentage reconnais-tu ? Déduis $\\tau$, puis isole $C$ dans $\\tau = RC$.",
+          "solution": "$\\dfrac{3{,}0}{8{,}0} = 0{,}375 \\approx 0{,}37$ : la date donnée est donc $t = \\tau$, soit $\\tau = 12\\ \\mathrm{ms}$. Puis $C = \\dfrac{\\tau}{R} = \\dfrac{12\\times10^{-3}}{3{,}0\\times10^{3}} = 4{,}0\\times10^{-6}\\ \\mathrm{F} = 4{,}0\\ \\mu\\mathrm{F}$. Contrôle : $\\tau = RC = 3{,}0\\times10^{3}\\times4{,}0\\times10^{-6} = 1{,}2\\times10^{-2}\\ \\mathrm{s}$, on retombe sur $12\\ \\mathrm{ms}$.",
+          "methode": "Le repère des $37\\ \\%$ sert aussi dans l'autre sens : il transforme une lecture de tension en mesure de $\\tau$.",
+          "points": 1,
+          "ref": "pc-rc-determiner-tau-graphiquement-q3"
+        },
+        {
+          "notion": "Déterminer $\\tau$ graphiquement",
+          "difficulty": 3,
+          "statement": "Sur l'enregistrement de la charge d'un dipôle RC sous $E = 6{,}0\\ \\mathrm{V}$, on mesure la pente de la tangente à l'origine : $1{,}5\\times10^{3}\\ \\mathrm{V\\,s^{-1}}$. La constante de temps vaut :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "La pente à l'origine vaut $E/\\tau$, donc $\\tau = E/\\text{pente} = 6{,}0/1{,}5\\times10^{3} = 4{,}0\\times10^{-3}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$0{,}67\\ \\mathrm{ms}$",
+              "why": "Tu as pris la pente pour $1/\\tau$ : $1/1{,}5\\times10^{3} = 6{,}7\\times10^{-4}\\ \\mathrm{s}$. Le facteur $E$ manque."
+            },
+            {
+              "label": "$250\\ \\mathrm{s}$",
+              "why": "Tu as calculé $\\text{pente}/E = 1{,}5\\times10^{3}/6{,}0 = 250$, qui est en $\\mathrm{s^{-1}}$ et non en secondes."
+            },
+            {
+              "label": "$9{,}0\\times10^{3}\\ \\mathrm{s}$",
+              "why": "Tu as multiplié : $6{,}0\\times1{,}5\\times10^{3} = 9{,}0\\times10^{3}$, alors qu'il faut diviser $E$ par la pente."
+            }
+          ],
+          "hint": "Dérive $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$ en $t = 0$ : que vaut cette dérivée en fonction de $E$ et de $\\tau$ ?",
+          "solution": "$\\dfrac{du_C}{dt} = \\dfrac{E}{\\tau}e^{-t/\\tau}$, donc à $t = 0$ la pente vaut $\\dfrac{E}{\\tau}$. D'où $\\tau = \\dfrac{E}{\\text{pente}} = \\dfrac{6{,}0}{1{,}5\\times10^{3}} = 4{,}0\\times10^{-3}\\ \\mathrm{s} = 4{,}0\\ \\mathrm{ms}$. Contrôle par l'autre lecture : la tangente d'équation $u = 1{,}5\\times10^{3}\\,t$ atteint $6{,}0\\ \\mathrm{V}$ pour $t = 4{,}0\\ \\mathrm{ms}$ — c'est bien l'abscisse d'intersection avec l'asymptote.",
+          "methode": "Pente initiale $= E/\\tau$ en charge, $= -U_0/\\tau$ en décharge : une pente mesurée donne donc directement $\\tau$.",
+          "points": 1,
+          "ref": "pc-rc-determiner-tau-graphiquement-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Influence de $R$ et de $C$",
+        "lesson": "Constante de temps & énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-influence-de-r-et-de-c",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Influence de $R$ et de $C$",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Influence de $R$ et de $C$",
+          "difficulty": 1,
+          "statement": "Dans un dipôle RC, on double la valeur de $R$ sans changer $C$ ni $E$. La charge du condensateur :",
+          "options": [
+            {
+              "label": "devient deux fois plus lente, car $\\tau$ est doublée",
+              "correct": true,
+              "why": "$\\tau = RC$ est proportionnelle à $R$ : doubler $R$ double $\\tau$, donc allonge le régime transitoire."
+            },
+            {
+              "label": "devient deux fois plus rapide, car $\\tau$ est divisée par deux",
+              "why": "Tu as inversé la dépendance : $\\tau$ est **proportionnelle** à $R$, pas inversement proportionnelle."
+            },
+            {
+              "label": "garde la même durée, car seul $C$ intervient dans $\\tau$",
+              "why": "$\\tau = RC$ dépend des **deux** grandeurs : $R$ intervient autant que $C$."
+            },
+            {
+              "label": "devient quatre fois plus lente, car $\\tau$ est multipliée par quatre",
+              "why": "La dépendance est linéaire, pas quadratique : $\\tau$ est simplement multipliée par deux."
+            }
+          ],
+          "hint": "Écris $\\tau = RC$ et regarde comment $\\tau$ varie quand $R$ est multipliée par deux.",
+          "solution": "$\\tau = RC$. Si $R$ devient $2R$ à $C$ constante, alors $\\tau$ devient $2\\tau$ : toutes les durées caractéristiques (la date du repère $63\\ \\%$, la fin du transitoire à $5\\tau$) sont doublées, la charge est deux fois plus lente. En revanche la valeur finale reste $E$ : $R$ ne change que la durée.",
+          "methode": "Sépare toujours deux questions : « quelle valeur finale ? » (fixée par $E$) et « en combien de temps ? » (fixé par $\\tau = RC$).",
+          "points": 1,
+          "ref": "pc-rc-influence-de-r-et-de-c-q1"
+        },
+        {
+          "notion": "Influence de $R$ et de $C$",
+          "difficulty": 2,
+          "statement": "Un dipôle RC a une constante de temps $\\tau = 12\\ \\mathrm{ms}$. On divise $R$ par deux et on triple $C$. La nouvelle constante de temps vaut :",
+          "options": [
+            {
+              "label": "$18\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$\\tau' = \\dfrac{R}{2}\\times3C = \\dfrac{3}{2}RC = 1{,}5\\times12 = 18\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as inversé les deux facteurs : $\\dfrac{2}{3}\\times12 = 8{,}0\\ \\mathrm{ms}$, c'est-à-dire $2R$ et $C/3$."
+            },
+            {
+              "label": "$72\\ \\mathrm{ms}$",
+              "why": "Tu as multiplié par $2$ au lieu de diviser : $2\\times3\\times12 = 72\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$12\\ \\mathrm{ms}$",
+              "why": "Tu as supposé que les deux modifications se compensaient, mais $\\dfrac{1}{2}\\times3 = 1{,}5 \\neq 1$."
+            }
+          ],
+          "hint": "Multiplie les deux coefficients avant de les appliquer à $\\tau$.",
+          "solution": "$\\tau' = R'C' = \\left(\\dfrac{R}{2}\\right)(3C) = \\dfrac{3}{2}RC = 1{,}5\\,\\tau = 1{,}5\\times12 = 18\\ \\mathrm{ms}$. Contrôle : $C$ est triplée et $R$ seulement divisée par deux, l'effet de $C$ domine, donc $\\tau$ doit augmenter — c'est bien le cas.",
+          "methode": "Quand plusieurs grandeurs changent, calcule le **facteur global** ($\\times\\tfrac12 \\times 3 = \\times 1{,}5$) avant toute valeur numérique.",
+          "points": 1,
+          "ref": "pc-rc-influence-de-r-et-de-c-q2"
+        },
+        {
+          "notion": "Influence de $R$ et de $C$",
+          "difficulty": 2,
+          "statement": "On double la valeur de $R$ dans un circuit série $(E, R, C)$, sans modifier $E$ ni $C$. En régime permanent, la tension aux bornes du condensateur vaut :",
+          "options": [
+            {
+              "label": "$E$, comme avant",
+              "correct": true,
+              "why": "En régime permanent $i = 0$, donc $u_R = R\\,i = 0$ quelle que soit $R$, et $u_C = E$."
+            },
+            {
+              "label": "$E/2$, car la tension se partage entre $R$ et $C$",
+              "why": "Ce partage n'existe qu'en régime transitoire : en permanent $i = 0$ donc $u_R = 0$, et $R$ n'absorbe plus rien."
+            },
+            {
+              "label": "$2E$, car $R$ a doublé",
+              "why": "Un dipôle passif ne peut pas produire une tension supérieure à la f.é.m. du générateur."
+            },
+            {
+              "label": "$0{,}63\\,E$, car $R$ fixe la valeur finale",
+              "why": "$0{,}63\\,E$ est la valeur atteinte à $t = \\tau$, pas la valeur finale, et $R$ ne fixe pas la valeur finale."
+            }
+          ],
+          "hint": "Que vaut l'intensité du courant en régime permanent ? Déduis-en $u_R$.",
+          "solution": "En régime permanent, $u_C$ est constante donc $i = C\\,\\dfrac{du_C}{dt} = 0$. Alors $u_R = R\\,i = 0\\ \\mathrm{V}$, et la loi d'additivité $u_R + u_C = E$ donne $u_C = E$, indépendamment de $R$. Doubler $R$ ne change donc que la **durée** du régime transitoire ($\\tau$ doublée), pas la valeur finale.",
+          "methode": "Régime permanent en RC : $i = 0$, le condensateur se comporte comme un interrupteur ouvert et $u_C = E$.",
+          "points": 1,
+          "ref": "pc-rc-influence-de-r-et-de-c-q3"
+        },
+        {
+          "notion": "Influence de $R$ et de $C$",
+          "difficulty": 3,
+          "statement": "Avec $R = 500\\ \\Omega$, on veut que la charge du condensateur soit pratiquement terminée (au bout de $5\\tau$) en moins de $1{,}0\\ \\mathrm{ms}$. La capacité doit vérifier :",
+          "options": [
+            {
+              "label": "$C \\leqslant 0{,}40\\ \\mu\\mathrm{F}$",
+              "correct": true,
+              "why": "$5\\tau \\leqslant 1{,}0\\ \\mathrm{ms}$ donne $\\tau \\leqslant 0{,}20\\ \\mathrm{ms}$, puis $C \\leqslant \\tau/R = 0{,}20\\times10^{-3}/500 = 4{,}0\\times10^{-7}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$C \\leqslant 2{,}0\\ \\mu\\mathrm{F}$",
+              "why": "Tu as oublié de diviser par $5$ : tu as pris $\\tau = 1{,}0\\ \\mathrm{ms}$, ce qui donne $1{,}0\\times10^{-3}/500 = 2{,}0\\times10^{-6}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$C \\leqslant 0{,}080\\ \\mu\\mathrm{F}$",
+              "why": "Tu as divisé une seconde fois par $5$ : $4{,}0\\times10^{-7}/5 = 8{,}0\\times10^{-8}\\ \\mathrm{F}$. Le facteur $5$ n'intervient qu'une fois."
+            },
+            {
+              "label": "$C \\leqslant 0{,}10\\ \\mathrm{F}$",
+              "why": "Tu as multiplié $\\tau$ par $R$ : $0{,}20\\times10^{-3}\\times500 = 0{,}10$, alors qu'il faut diviser."
+            }
+          ],
+          "hint": "Traduis d'abord « terminée en moins de $1{,}0\\ \\mathrm{ms}$ » en une condition sur $\\tau$, puis sur $C$.",
+          "solution": "La charge est pratiquement terminée au bout de $5\\tau$ : la condition s'écrit $5\\tau \\leqslant 1{,}0\\times10^{-3}\\ \\mathrm{s}$, soit $\\tau \\leqslant 2{,}0\\times10^{-4}\\ \\mathrm{s}$. Comme $\\tau = RC$, il vient $C \\leqslant \\dfrac{\\tau}{R} = \\dfrac{2{,}0\\times10^{-4}}{500} = 4{,}0\\times10^{-7}\\ \\mathrm{F} = 0{,}40\\ \\mu\\mathrm{F}$. Contrôle : avec $C = 0{,}40\\ \\mu\\mathrm{F}$, $\\tau = 500\\times4{,}0\\times10^{-7} = 2{,}0\\times10^{-4}\\ \\mathrm{s}$ et $5\\tau = 1{,}0\\ \\mathrm{ms}$ : la limite est bien atteinte.",
+          "methode": "Un cahier des charges sur une **durée** se traduit d'abord en condition sur $\\tau$ (souvent via $5\\tau$), puis sur $R$ ou $C$.",
+          "points": 1,
+          "ref": "pc-rc-influence-de-r-et-de-c-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Bilan énergétique de la charge",
+        "lesson": "Constante de temps & énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-bilan-energetique-de-la-charge",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Bilan énergétique de la charge",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Bilan énergétique de la charge",
+          "difficulty": 1,
+          "statement": "Un condensateur $C = 10\\ \\mu\\mathrm{F}$ est chargé complètement sous $E = 20\\ \\mathrm{V}$. L'énergie qu'il emmagasine vaut :",
+          "options": [
+            {
+              "label": "$2{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$E_e = \\tfrac12 C E^{2} = 0{,}5\\times10\\times10^{-6}\\times20^{2} = 2{,}0\\times10^{-3}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$4{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "why": "Tu as oublié le facteur $\\tfrac12$ : $10\\times10^{-6}\\times400 = 4{,}0\\times10^{-3}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$1{,}0\\times10^{-4}\\ \\mathrm{J}$",
+              "why": "Tu as utilisé $E$ et non $E^{2}$ : $0{,}5\\times10\\times10^{-6}\\times20 = 1{,}0\\times10^{-4}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$2{,}0\\times10^{3}\\ \\mathrm{J}$",
+              "why": "Tu n'as pas converti la capacité : $0{,}5\\times10\\times400 = 2{,}0\\times10^{3}$, en oubliant le facteur $10^{-6}$ du microfarad."
+            }
+          ],
+          "hint": "En fin de charge, $u_C = E$. Écris l'énergie d'un condensateur et convertis $C$ en farads.",
+          "solution": "En fin de charge $u_C = E = 20\\ \\mathrm{V}$, donc $E_e = \\tfrac12 C u_C^{2} = 0{,}5\\times10\\times10^{-6}\\times(20)^{2} = 0{,}5\\times10^{-5}\\times400 = 2{,}0\\times10^{-3}\\ \\mathrm{J}$. Contrôle d'ordre de grandeur : quelques millijoules pour un condensateur de TP, c'est cohérent.",
+          "methode": "$E_e = \\tfrac12 C u_C^{2}$ : $C$ en farads, $u_C$ en volts, résultat en joules. Le $\\tfrac12$ et le carré sont les deux oublis classiques.",
+          "points": 1,
+          "ref": "pc-rc-bilan-energetique-de-la-charge-q1"
+        },
+        {
+          "notion": "Bilan énergétique de la charge",
+          "difficulty": 2,
+          "statement": "Pour le même dipôle ($C = 10\\ \\mu\\mathrm{F}$, $E = 20\\ \\mathrm{V}$), l'énergie totale fournie par le générateur pendant la charge complète vaut :",
+          "options": [
+            {
+              "label": "$4{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$W_g = q_{\\max}E = (CE)E = CE^{2} = 10\\times10^{-6}\\times400 = 4{,}0\\times10^{-3}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$2{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "why": "C'est l'énergie **emmagasinée** $\\tfrac12 CE^{2}$, soit la moitié seulement de ce que fournit le générateur."
+            },
+            {
+              "label": "$8{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "why": "Tu as pris $2CE^{2}$ : la charge finale vaut $q = CE$, donc $W_g = CE^{2}$, sans facteur $2$."
+            },
+            {
+              "label": "$1{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "why": "Tu as pris $\\tfrac14 CE^{2}$ : le générateur fournit $CE^{2}$, pas le quart."
+            }
+          ],
+          "hint": "Le générateur fournit $W_g = E\\,q$ où $q$ est la charge totale qui a traversé le circuit.",
+          "solution": "Pendant toute la charge, la charge qui traverse le générateur est $q_{\\max} = C\\,E$. Le générateur, de f.é.m. constante $E$, fournit donc $W_g = q_{\\max}\\,E = C\\,E^{2} = 10\\times10^{-6}\\times(20)^{2} = 4{,}0\\times10^{-3}\\ \\mathrm{J}$. Contrôle : c'est bien le double de l'énergie emmagasinée $2{,}0\\times10^{-3}\\ \\mathrm{J}$ — la différence est dissipée par effet Joule dans $R$.",
+          "methode": "Bilan d'une charge complète : $W_{\\text{générateur}} = CE^{2}$, dont $\\tfrac12 CE^{2}$ stockée et $\\tfrac12 CE^{2}$ dissipée dans $R$.",
+          "points": 1,
+          "ref": "pc-rc-bilan-energetique-de-la-charge-q2"
+        },
+        {
+          "notion": "Bilan énergétique de la charge",
+          "difficulty": 2,
+          "statement": "Le même condensateur $C = 10\\ \\mu\\mathrm{F}$ est maintenant chargé sous $E' = 40\\ \\mathrm{V}$ au lieu de $20\\ \\mathrm{V}$. L'énergie emmagasinée en fin de charge vaut :",
+          "options": [
+            {
+              "label": "$8{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$E_e \\propto E^{2}$ : doubler $E$ multiplie l'énergie par $4$, soit $4\\times2{,}0\\times10^{-3} = 8{,}0\\times10^{-3}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$4{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "why": "Tu as seulement doublé l'énergie : l'énergie dépend du **carré** de la tension, donc le facteur est $4$."
+            },
+            {
+              "label": "$2{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "why": "C'est la valeur sous $20\\ \\mathrm{V}$ : l'énergie change bien quand la tension de charge change."
+            },
+            {
+              "label": "$1{,}6\\times10^{-2}\\ \\mathrm{J}$",
+              "why": "Tu as multiplié par $8$ (comme un cube) : la dépendance est quadratique, le facteur est $4$."
+            }
+          ],
+          "hint": "Regarde la puissance à laquelle $u_C$ intervient dans $E_e = \\tfrac12 C u_C^{2}$.",
+          "solution": "$E_e' = \\tfrac12 C E'^{2} = 0{,}5\\times10\\times10^{-6}\\times(40)^{2} = 0{,}5\\times10^{-5}\\times1600 = 8{,}0\\times10^{-3}\\ \\mathrm{J}$. Contrôle par le rapport : $\\dfrac{E_e'}{E_e} = \\left(\\dfrac{40}{20}\\right)^{2} = 4$, et $4\\times2{,}0\\times10^{-3} = 8{,}0\\times10^{-3}\\ \\mathrm{J}$ : les deux voies concordent.",
+          "methode": "Dès qu'une grandeur est au carré, raisonne en **rapport** : tension $\\times 2$ → énergie $\\times 4$.",
+          "points": 1,
+          "ref": "pc-rc-bilan-energetique-de-la-charge-q3"
+        },
+        {
+          "notion": "Bilan énergétique de la charge",
+          "difficulty": 3,
+          "statement": "Au cours d'une charge complète d'un condensateur à travers un conducteur ohmique, la part de l'énergie fournie par le générateur qui finit stockée dans le condensateur vaut :",
+          "options": [
+            {
+              "label": "$50\\ \\%$, quelle que soit la valeur de $R$",
+              "correct": true,
+              "why": "$W_g = CE^{2}$ et $E_e = \\tfrac12 CE^{2}$ : le rapport vaut exactement $\\tfrac12$, et $R$ ne figure dans aucune des deux."
+            },
+            {
+              "label": "$63\\ \\%$, comme la valeur de $u_C$ à $t = \\tau$",
+              "why": "Le repère $63\\ \\%$ porte sur une **tension** à une date donnée, il n'a rien à voir avec un bilan d'énergie global."
+            },
+            {
+              "label": "$37\\ \\%$, comme la valeur de $u_C$ à $t = \\tau$ en décharge",
+              "why": "Le facteur $0{,}37$ concerne lui aussi une tension, et de plus la décharge, pas la charge."
+            },
+            {
+              "label": "une part d'autant plus faible que $R$ est grande",
+              "why": "Les pertes Joule valent $\\tfrac12 CE^{2}$, indépendamment de $R$ : une grande $R$ allonge la charge mais réduit d'autant le courant."
+            }
+          ],
+          "hint": "Compare l'énergie emmagasinée $\\tfrac12 CE^{2}$ à l'énergie fournie $CE^{2}$ : $R$ apparaît-elle quelque part ?",
+          "solution": "Pendant une charge complète, le générateur fournit $W_g = CE^{2}$ et le condensateur stocke $E_e = \\tfrac12 CE^{2}$. Le rendement vaut donc $\\dfrac{E_e}{W_g} = \\dfrac{1}{2} = 50\\ \\%$, et le reste, $\\tfrac12 CE^{2}$, est dissipé par effet Joule dans $R$. Aucune de ces trois énergies ne dépend de $R$ : augmenter $R$ ralentit la charge et diminue l'intensité, mais l'énergie dissipée reste la même.",
+          "methode": "Résultat à retenir : une charge de condensateur à travers une résistance a un rendement de $50\\ \\%$, indépendant de $R$.",
+          "points": 1,
+          "ref": "pc-rc-bilan-energetique-de-la-charge-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Constitution et symbole",
+        "lesson": "Le condensateur",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-constitution-et-symbole",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Constitution et symbole",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Constitution et symbole",
+          "difficulty": 1,
+          "statement": "Un condensateur est constitué de :",
+          "options": [
+            {
+              "label": "deux armatures conductrices séparées par un isolant appelé diélectrique",
+              "correct": true,
+              "why": "C'est exactement sa structure : deux conducteurs en regard, séparés par un matériau isolant."
+            },
+            {
+              "label": "deux armatures conductrices reliées entre elles par un fil métallique",
+              "why": "Si les armatures étaient reliées par un conducteur, le condensateur serait court-circuité et ne pourrait rien stocker."
+            },
+            {
+              "label": "un enroulement de fil conducteur autour d'un noyau de fer",
+              "why": "C'est la description d'une bobine (inductance), pas d'un condensateur."
+            },
+            {
+              "label": "un barreau de matériau semi-conducteur dopé sur ses deux faces",
+              "why": "C'est la structure d'une diode, qui ne stocke pas de charge sur des armatures."
+            }
+          ],
+          "hint": "Pense à ce qui doit empêcher les charges accumulées de passer d'une armature à l'autre.",
+          "solution": "Un condensateur est formé de deux surfaces conductrices (les **armatures**) placées face à face et séparées par un **isolant** (le diélectrique). Les charges $+q$ et $-q$ s'accumulent sur les deux armatures sans pouvoir traverser l'isolant : c'est ce qui permet le stockage de charge et donc d'énergie.",
+          "methode": "Retiens la structure « conducteur – isolant – conducteur » : c'est elle qui explique pourquoi aucun courant ne traverse réellement un condensateur.",
+          "points": 1,
+          "ref": "pc-rc-constitution-et-symbole-q1"
+        },
+        {
+          "notion": "Constitution et symbole",
+          "difficulty": 2,
+          "statement": "La capacité d'un condensateur s'exprime en farad. Le farad est équivalent à :",
+          "options": [
+            {
+              "label": "$1\\ \\mathrm{C\\,V^{-1}}$",
+              "correct": true,
+              "why": "De $q = C\\,u_C$ on tire $C = q/u_C$, donc $\\mathrm{F} = \\mathrm{C/V}$."
+            },
+            {
+              "label": "$1\\ \\mathrm{V\\,C^{-1}}$",
+              "why": "Tu as inversé le quotient : $C = q/u_C$ et non $u_C/q$."
+            },
+            {
+              "label": "$1\\ \\mathrm{C\\,V}$",
+              "why": "Le produit $q\\,u_C$ a la dimension d'une énergie (en joules), pas d'une capacité."
+            },
+            {
+              "label": "$1\\ \\mathrm{A\\,V^{-1}}$",
+              "why": "$\\mathrm{A/V}$ est l'unité d'une conductance (le siemens), car elle vient de $i = u/R$."
+            }
+          ],
+          "hint": "Isole $C$ dans la relation charge–tension et lis les unités.",
+          "solution": "$q = C\\,u_C \\Rightarrow C = \\dfrac{q}{u_C}$, donc $1\\ \\mathrm{F} = 1\\ \\mathrm{C\\,V^{-1}}$ : un condensateur de $1\\ \\mathrm{F}$ prend une charge de $1\\ \\mathrm{C}$ sous $1\\ \\mathrm{V}$. Contrôle : on retrouve alors $\\Omega\\times\\mathrm{F} = \\dfrac{\\mathrm{V}}{\\mathrm{A}}\\times\\dfrac{\\mathrm{C}}{\\mathrm{V}} = \\mathrm{s}$, ce qui valide $\\tau = RC$ en secondes.",
+          "methode": "Pour retrouver une unité, part toujours de la relation de définition et isole la grandeur cherchée.",
+          "points": 1,
+          "ref": "pc-rc-constitution-et-symbole-q2"
+        },
+        {
+          "notion": "Constitution et symbole",
+          "difficulty": 2,
+          "statement": "Un condensateur porte l'indication $4700\\ \\mu\\mathrm{F}$. Sa capacité, en unité SI, vaut :",
+          "options": [
+            {
+              "label": "$4{,}7\\times10^{-3}\\ \\mathrm{F}$",
+              "correct": true,
+              "why": "$4700\\ \\mu\\mathrm{F} = 4700\\times10^{-6}\\ \\mathrm{F} = 4{,}7\\times10^{-3}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$4{,}7\\ \\mathrm{F}$",
+              "why": "Tu as oublié le préfixe micro : il faut multiplier par $10^{-6}$, pas par $10^{-3}$."
+            },
+            {
+              "label": "$4{,}7\\times10^{-6}\\ \\mathrm{F}$",
+              "why": "Tu as traité l'indication comme $4{,}7\\ \\mu\\mathrm{F}$ : il y a bien $4700$ microfarads, soit mille fois plus."
+            },
+            {
+              "label": "$4{,}7\\times10^{-9}\\ \\mathrm{F}$",
+              "why": "Tu as pris le préfixe nano : $4700\\ \\mathrm{nF}$ vaudrait $4{,}7\\ \\mu\\mathrm{F}$, ce n'est pas l'indication donnée."
+            }
+          ],
+          "hint": "$1\\ \\mu\\mathrm{F} = 10^{-6}\\ \\mathrm{F}$ : applique ce facteur à $4700$.",
+          "solution": "$C = 4700\\ \\mu\\mathrm{F} = 4700\\times10^{-6}\\ \\mathrm{F} = 4{,}7\\times10^{-3}\\ \\mathrm{F}$, soit $4{,}7\\ \\mathrm{mF}$. Contrôle d'ordre de grandeur : les condensateurs électrochimiques d'alimentation valent couramment quelques millifarads, c'est cohérent.",
+          "methode": "Convertis toujours en écriture scientifique : $\\mathrm{m} = 10^{-3}$, $\\mu = 10^{-6}$, $\\mathrm{n} = 10^{-9}$, $\\mathrm{p} = 10^{-12}$.",
+          "points": 1,
+          "ref": "pc-rc-constitution-et-symbole-q3"
+        },
+        {
+          "notion": "Constitution et symbole",
+          "difficulty": 3,
+          "statement": "Dans un circuit série $(E, R, C)$, une fois le régime permanent établi, le condensateur se comporte comme :",
+          "options": [
+            {
+              "label": "un interrupteur ouvert : $i = 0$ et $u_C = E$",
+              "correct": true,
+              "why": "$u_C$ est devenue constante, donc $i = C\\,du_C/dt = 0$ : plus aucun courant ne circule, et $u_R = 0$ donne $u_C = E$."
+            },
+            {
+              "label": "un fil de résistance nulle : $u_C = 0$ et $i = E/R$",
+              "why": "Ce serait le comportement à $t = 0^{+}$, quand le condensateur est encore déchargé, pas en régime permanent."
+            },
+            {
+              "label": "un conducteur ohmique de résistance $R$ : $u_C = E/2$",
+              "why": "Un condensateur n'est pas un conducteur ohmique : il n'y a pas de relation $u = R\\,i$ à ses bornes."
+            },
+            {
+              "label": "un générateur qui débite un courant constant $E/R$",
+              "why": "Un condensateur ne peut pas débiter indéfiniment : la charge stockée est finie, et ici $u_C$ ne varie plus."
+            }
+          ],
+          "hint": "En régime permanent, $u_C$ ne varie plus. Que devient alors $i = C\\,du_C/dt$ ?",
+          "solution": "En régime permanent, $u_C$ est constante donc $\\dfrac{du_C}{dt} = 0$ et $i = C\\,\\dfrac{du_C}{dt} = 0$. Un dipôle traversé par un courant nul alors qu'il supporte une tension se comporte comme un interrupteur ouvert. La loi d'additivité donne alors $u_R = R\\times0 = 0$ puis $u_C = E$. Contrôle : la charge finale vaut $q = CE$, valeur maximale compatible avec le générateur.",
+          "methode": "Les deux comportements extrêmes du condensateur : à $t = 0^{+}$ déchargé → fil ; en régime permanent → interrupteur ouvert.",
+          "points": 1,
+          "ref": "pc-rc-constitution-et-symbole-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La relation charge–tension",
+        "lesson": "Le condensateur",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-la-relation-chargetension",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "La relation charge–tension",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La relation charge–tension",
+          "difficulty": 2,
+          "statement": "Un condensateur de capacité $C = 4{,}7\\ \\mu\\mathrm{F}$ est soumis à la tension $u_C = 12\\ \\mathrm{V}$. La charge portée par son armature positive vaut :",
+          "options": [
+            {
+              "label": "$5{,}6\\times10^{-5}\\ \\mathrm{C}$",
+              "correct": true,
+              "why": "$q = C\\,u_C = 4{,}7\\times10^{-6}\\times12 = 5{,}64\\times10^{-5}\\ \\mathrm{C}$."
+            },
+            {
+              "label": "$2{,}6\\times10^{6}\\ \\mathrm{C}$",
+              "why": "Tu as calculé $u_C/C = 12/4{,}7\\times10^{-6}$ au lieu du produit $C\\,u_C$."
+            },
+            {
+              "label": "$3{,}9\\times10^{-7}\\ \\mathrm{C}$",
+              "why": "Tu as calculé $C/u_C = 4{,}7\\times10^{-6}/12$ : c'est un quotient, pas la charge."
+            },
+            {
+              "label": "$56\\ \\mathrm{C}$",
+              "why": "Tu n'as pas converti la capacité : $4{,}7\\times12 = 56$, en oubliant le facteur $10^{-6}$ du microfarad."
+            }
+          ],
+          "hint": "La relation charge–tension est un produit. Convertis d'abord $C$ en farads.",
+          "solution": "$q = C\\,u_C = 4{,}7\\times10^{-6}\\ \\mathrm{F} \\times 12\\ \\mathrm{V} = 5{,}64\\times10^{-5}\\ \\mathrm{C} \\approx 5{,}6\\times10^{-5}\\ \\mathrm{C}$, soit environ $56\\ \\mu\\mathrm{C}$. Contrôle d'ordre de grandeur : quelques dizaines de microcoulombs, ce qui est typique d'un condensateur de TP.",
+          "methode": "$q = C\\,u_C$ : trois grandeurs, deux connues suffisent. Convertis en F, V et C avant tout calcul.",
+          "points": 1,
+          "ref": "pc-rc-la-relation-chargetension-q1"
+        },
+        {
+          "notion": "La relation charge–tension",
+          "difficulty": 3,
+          "statement": "Sous une tension de $15\\ \\mathrm{V}$, un condensateur porte une charge $q = 33\\ \\mu\\mathrm{C}$. Sa capacité vaut :",
+          "options": [
+            {
+              "label": "$2{,}2\\ \\mu\\mathrm{F}$",
+              "correct": true,
+              "why": "$C = q/u_C = 33\\times10^{-6}/15 = 2{,}2\\times10^{-6}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$4{,}5\\times10^{5}\\ \\mathrm{F}$",
+              "why": "Tu as calculé $u_C/q = 15/33\\times10^{-6}$ : c'est l'inverse de la capacité."
+            },
+            {
+              "label": "$0{,}50\\ \\mathrm{mF}$",
+              "why": "Tu as multiplié : $33\\times10^{-6}\\times15 = 4{,}95\\times10^{-4}$, alors que $C = q/u_C$ est un quotient."
+            },
+            {
+              "label": "$2{,}2\\ \\mathrm{F}$",
+              "why": "Tu as divisé $33$ par $15$ sans tenir compte du préfixe : $33\\ \\mu\\mathrm{C} = 33\\times10^{-6}\\ \\mathrm{C}$."
+            }
+          ],
+          "hint": "Isole $C$ dans $q = C\\,u_C$, puis convertis les microcoulombs en coulombs.",
+          "solution": "$C = \\dfrac{q}{u_C} = \\dfrac{33\\times10^{-6}}{15} = 2{,}2\\times10^{-6}\\ \\mathrm{F} = 2{,}2\\ \\mu\\mathrm{F}$. Contrôle par la voie directe : $q = 2{,}2\\times10^{-6}\\times15 = 3{,}3\\times10^{-5}\\ \\mathrm{C} = 33\\ \\mu\\mathrm{C}$, on retombe sur l'énoncé.",
+          "methode": "Après avoir isolé une grandeur, refais le calcul dans l'autre sens : c'est le contrôle le plus rapide.",
+          "points": 1,
+          "ref": "pc-rc-la-relation-chargetension-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Intensité et charge : la relation dérivée",
+        "lesson": "Le condensateur",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-intensite-et-charge-la-relation-derivee",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Intensité et charge : la relation dérivée",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Intensité et charge : la relation dérivée",
+          "difficulty": 1,
+          "statement": "La charge d'un condensateur est liée à l'intensité du courant qui l'alimente par :",
+          "options": [
+            {
+              "label": "$i = \\dfrac{dq}{dt}$",
+              "correct": true,
+              "why": "C'est la définition de l'intensité : le débit de charge électrique à travers une section du circuit."
+            },
+            {
+              "label": "$i = \\dfrac{q}{t}$",
+              "why": "Ce quotient ne donne qu'une intensité **moyenne** : ici $q$ varie, il faut la dérivée instantanée."
+            },
+            {
+              "label": "$q = \\dfrac{di}{dt}$",
+              "why": "Tu as échangé les rôles de $q$ et de $i$ : c'est l'intensité qui est la dérivée de la charge."
+            },
+            {
+              "label": "$i = q\\,t$",
+              "why": "Ce produit n'est pas homogène : des $\\mathrm{C\\,s}$ au lieu des $\\mathrm{C\\,s^{-1}} = \\mathrm{A}$."
+            }
+          ],
+          "hint": "Comment définit-on l'intensité du courant à partir de la charge qui traverse le circuit ?",
+          "solution": "Par définition, $i = \\dfrac{dq}{dt}$ : l'intensité instantanée est la dérivée de la charge par rapport au temps. Combinée à $q = C\\,u_C$, elle donne la relation centrale du dipôle RC : $i = C\\,\\dfrac{du_C}{dt}$. Contrôle d'unité : $\\mathrm{C\\,s^{-1}} = \\mathrm{A}$.",
+          "methode": "Dans un circuit RC, écris systématiquement la chaîne $i = \\dfrac{dq}{dt} = C\\,\\dfrac{du_C}{dt}$ avant toute autre chose.",
+          "points": 1,
+          "ref": "pc-rc-intensite-et-charge-la-relation-derivee-q1"
+        },
+        {
+          "notion": "Intensité et charge : la relation dérivée",
+          "difficulty": 2,
+          "statement": "À un instant donné de la charge d'un condensateur $C = 5{,}0\\ \\mu\\mathrm{F}$, la tension $u_C$ croît au taux $\\dfrac{du_C}{dt} = 400\\ \\mathrm{V\\,s^{-1}}$. L'intensité du courant vaut alors :",
+          "options": [
+            {
+              "label": "$2{,}0\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$i = C\\,\\dfrac{du_C}{dt} = 5{,}0\\times10^{-6}\\times400 = 2{,}0\\times10^{-3}\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$8{,}0\\times10^{7}\\ \\mathrm{A}$",
+              "why": "Tu as calculé $\\dfrac{du_C/dt}{C} = 400/5{,}0\\times10^{-6}$ au lieu de multiplier par $C$."
+            },
+            {
+              "label": "$1{,}3\\times10^{-8}\\ \\mathrm{A}$",
+              "why": "Tu as calculé $\\dfrac{C}{du_C/dt} = 5{,}0\\times10^{-6}/400$ : le quotient est inversé."
+            },
+            {
+              "label": "$2{,}0\\times10^{3}\\ \\mathrm{A}$",
+              "why": "Tu n'as pas converti la capacité : $5{,}0\\times400 = 2{,}0\\times10^{3}$, en oubliant le facteur $10^{-6}$."
+            }
+          ],
+          "hint": "Applique directement $i = C\\,du_C/dt$, avec $C$ en farads.",
+          "solution": "$i = C\\,\\dfrac{du_C}{dt} = 5{,}0\\times10^{-6}\\ \\mathrm{F}\\times400\\ \\mathrm{V\\,s^{-1}} = 2{,}0\\times10^{-3}\\ \\mathrm{A} = 2{,}0\\ \\mathrm{mA}$. Contrôle d'homogénéité : $\\mathrm{F\\times V\\,s^{-1}} = \\mathrm{C\\,s^{-1}} = \\mathrm{A}$, c'est bien une intensité, et quelques milliampères est un ordre de grandeur réaliste.",
+          "methode": "La pente de la courbe $u_C(t)$ te donne l'intensité : $i = C\\times(\\text{pente})$. À pente nulle, courant nul.",
+          "points": 1,
+          "ref": "pc-rc-intensite-et-charge-la-relation-derivee-q2"
+        },
+        {
+          "notion": "Intensité et charge : la relation dérivée",
+          "difficulty": 3,
+          "statement": "Pendant la **décharge** d'un condensateur, on conserve l'orientation du circuit choisie pour la charge et la relation $i = C\\,\\dfrac{du_C}{dt}$. L'intensité $i$ est alors :",
+          "options": [
+            {
+              "label": "négative, car $u_C$ est une fonction décroissante du temps",
+              "correct": true,
+              "why": "$u_C$ décroît, donc $du_C/dt < 0$ ; comme $C > 0$, on a $i < 0$ : le courant circule en sens inverse de l'orientation choisie."
+            },
+            {
+              "label": "positive, car une décharge fait circuler un courant réel",
+              "why": "Un courant circule effectivement, mais son **signe** dépend de l'orientation : avec celle de la charge, $i$ est négative."
+            },
+            {
+              "label": "nulle, car le générateur a été débranché du circuit",
+              "why": "Le condensateur chargé joue lui-même le rôle de source pendant la décharge : un courant circule bien."
+            },
+            {
+              "label": "positive, puis négative une fois $u_C$ passée sous $U_0/2$",
+              "why": "Le signe de $du_C/dt$ ne change pas au cours de la décharge : $u_C$ décroît de façon monotone."
+            }
+          ],
+          "hint": "Regarde le signe de $du_C/dt$ pendant la décharge, et souviens-toi que $C$ est toujours positive.",
+          "solution": "Pendant la décharge, $u_C(t) = U_0\\,e^{-t/\\tau}$ est décroissante : $\\dfrac{du_C}{dt} = -\\dfrac{U_0}{\\tau}e^{-t/\\tau} < 0$. Comme $C > 0$, $i = C\\,\\dfrac{du_C}{dt}$ est négative à chaque instant. Interprétation : avec l'orientation choisie pour la charge, le courant de décharge circule dans le sens opposé, et le signe $-$ le traduit. Si l'on souhaite une intensité positive, il suffit d'orienter le circuit dans l'autre sens, ce qui donne $i = -C\\,du_C/dt$.",
+          "methode": "Un signe négatif pour $i$ n'est pas une erreur : il indique que le courant réel circule à l'inverse de l'orientation choisie sur le schéma.",
+          "points": 1,
+          "ref": "pc-rc-intensite-et-charge-la-relation-derivee-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Énergie emmagasinée",
+        "lesson": "Le condensateur",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-energie-emmagasinee",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Énergie emmagasinée",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Énergie emmagasinée",
+          "difficulty": 1,
+          "statement": "Un condensateur de capacité $C = 2{,}0\\ \\mu\\mathrm{F}$ est chargé sous $u_C = 50\\ \\mathrm{V}$. L'énergie qu'il emmagasine vaut :",
+          "options": [
+            {
+              "label": "$2{,}5\\times10^{-3}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$E_e = \\tfrac12 C u_C^{2} = 0{,}5\\times2{,}0\\times10^{-6}\\times50^{2} = 2{,}5\\times10^{-3}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$5{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "why": "Tu as oublié le facteur $\\tfrac12$ : $2{,}0\\times10^{-6}\\times2500 = 5{,}0\\times10^{-3}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$5{,}0\\times10^{-5}\\ \\mathrm{J}$",
+              "why": "Tu as utilisé $u_C$ et non $u_C^{2}$ : $0{,}5\\times2{,}0\\times10^{-6}\\times50 = 5{,}0\\times10^{-5}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$2{,}5\\times10^{3}\\ \\mathrm{J}$",
+              "why": "Tu n'as pas converti la capacité : $0{,}5\\times2{,}0\\times2500 = 2{,}5\\times10^{3}$, le facteur $10^{-6}$ manque."
+            }
+          ],
+          "hint": "Écris $E_e = \\tfrac12 C u_C^{2}$ et convertis la capacité en farads avant de calculer.",
+          "solution": "$E_e = \\tfrac12 C u_C^{2} = 0{,}5\\times2{,}0\\times10^{-6}\\ \\mathrm{F}\\times(50\\ \\mathrm{V})^{2} = 0{,}5\\times2{,}0\\times10^{-6}\\times2500 = 2{,}5\\times10^{-3}\\ \\mathrm{J}$. Contrôle d'ordre de grandeur : quelques millijoules, ce qui est cohérent pour un condensateur de quelques microfarads sous quelques dizaines de volts.",
+          "methode": "Trois points de vigilance dans $E_e = \\tfrac12 C u_C^{2}$ : le $\\tfrac12$, le carré, et la conversion de $C$ en farads.",
+          "points": 1,
+          "ref": "pc-rc-energie-emmagasinee-q1"
+        },
+        {
+          "notion": "Énergie emmagasinée",
+          "difficulty": 2,
+          "statement": "On double la tension aux bornes du même condensateur ($C = 2{,}0\\ \\mu\\mathrm{F}$), qui passe de $50\\ \\mathrm{V}$ à $100\\ \\mathrm{V}$. L'énergie emmagasinée vaut maintenant :",
+          "options": [
+            {
+              "label": "$1{,}0\\times10^{-2}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$E_e \\propto u_C^{2}$ : doubler $u_C$ quadruple l'énergie, soit $4\\times2{,}5\\times10^{-3} = 1{,}0\\times10^{-2}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$5{,}0\\times10^{-3}\\ \\mathrm{J}$",
+              "why": "Tu as seulement doublé l'énergie : la dépendance est quadratique, le facteur est $4$ et non $2$."
+            },
+            {
+              "label": "$2{,}5\\times10^{-3}\\ \\mathrm{J}$",
+              "why": "C'est la valeur sous $50\\ \\mathrm{V}$ : l'énergie stockée change bien quand la tension change."
+            },
+            {
+              "label": "$2{,}0\\times10^{-2}\\ \\mathrm{J}$",
+              "why": "Tu as multiplié par $8$ : la tension intervient au carré, donc le facteur est $2^{2} = 4$."
+            }
+          ],
+          "hint": "Quel facteur multiplicatif subit $u_C^{2}$ quand $u_C$ est multipliée par $2$ ?",
+          "solution": "$E_e' = \\tfrac12 C u_C'^{2} = 0{,}5\\times2{,}0\\times10^{-6}\\times(100)^{2} = 0{,}5\\times2{,}0\\times10^{-6}\\times10^{4} = 1{,}0\\times10^{-2}\\ \\mathrm{J}$. Contrôle par le rapport : $\\dfrac{E_e'}{E_e} = \\left(\\dfrac{100}{50}\\right)^{2} = 4$, et $4\\times2{,}5\\times10^{-3} = 1{,}0\\times10^{-2}\\ \\mathrm{J}$ : les deux méthodes concordent.",
+          "methode": "Face à une variation, le raisonnement en rapport est plus rapide et plus sûr que de tout recalculer.",
+          "points": 1,
+          "ref": "pc-rc-energie-emmagasinee-q2"
+        },
+        {
+          "notion": "Énergie emmagasinée",
+          "difficulty": 3,
+          "statement": "Un condensateur chargé sous $U_0$ se décharge dans un conducteur ohmique. À la date $t = \\tau$, la fraction de l'énergie initiale qu'il contient encore vaut environ :",
+          "options": [
+            {
+              "label": "$14\\ \\%$",
+              "correct": true,
+              "why": "$u_C(\\tau) = 0{,}37\\,U_0$ et $E_e \\propto u_C^{2}$, donc la fraction d'énergie vaut $e^{-2} = 0{,}135$, soit environ $14\\ \\%$."
+            },
+            {
+              "label": "$37\\ \\%$",
+              "why": "Tu as appliqué à l'énergie le facteur qui concerne la **tension** : l'énergie varie comme le carré de $u_C$."
+            },
+            {
+              "label": "$63\\ \\%$",
+              "why": "$63\\ \\%$ est le repère de la charge pour la tension : il n'intervient ni ici, ni pour une énergie."
+            },
+            {
+              "label": "$50\\ \\%$",
+              "why": "La moitié de l'énergie est atteinte plus tôt, à $t = \\tfrac{\\tau}{2}\\ln 2 \\approx 0{,}35\\,\\tau$, pas à $t = \\tau$."
+            }
+          ],
+          "hint": "L'énergie varie comme le **carré** de la tension : applique le carré au facteur $0{,}37$.",
+          "solution": "À $t = \\tau$, $u_C(\\tau) = U_0\\,e^{-1}$. L'énergie vaut alors $E_e(\\tau) = \\tfrac12 C\\left(U_0 e^{-1}\\right)^{2} = \\tfrac12 C U_0^{2}\\,e^{-2}$, soit une fraction $e^{-2} = 0{,}135$ de l'énergie initiale $\\tfrac12 CU_0^{2}$ : environ $14\\ \\%$. Contrôle : $0{,}37^{2} = 0{,}137$, on retrouve bien la même valeur, et il est normal que l'énergie chute plus vite que la tension.",
+          "methode": "Dès qu'une grandeur dépend du carré d'une autre, applique le carré au facteur de décroissance : $0{,}37 \\to 0{,}14$.",
+          "points": 1,
+          "ref": "pc-rc-energie-emmagasinee-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Associations de condensateurs",
+        "lesson": "Le condensateur",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-associations-de-condensateurs",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Associations de condensateurs",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Associations de condensateurs",
+          "difficulty": 1,
+          "statement": "Deux condensateurs de capacités $C_1 = 2{,}0\\ \\mu\\mathrm{F}$ et $C_2 = 3{,}0\\ \\mu\\mathrm{F}$ sont associés en **parallèle**. La capacité équivalente vaut :",
+          "options": [
+            {
+              "label": "$5{,}0\\ \\mu\\mathrm{F}$",
+              "correct": true,
+              "why": "En parallèle les capacités s'ajoutent : $C_{eq} = C_1 + C_2 = 2{,}0 + 3{,}0 = 5{,}0\\ \\mu\\mathrm{F}$."
+            },
+            {
+              "label": "$1{,}2\\ \\mu\\mathrm{F}$",
+              "why": "Tu as appliqué la formule de l'association en **série** : $\\dfrac{C_1C_2}{C_1+C_2} = \\dfrac{6{,}0}{5{,}0} = 1{,}2\\ \\mu\\mathrm{F}$."
+            },
+            {
+              "label": "$6{,}0\\ \\mu\\mathrm{F}$",
+              "why": "Tu as multiplié les deux capacités : $2{,}0\\times3{,}0 = 6{,}0$, alors qu'en parallèle on les additionne."
+            },
+            {
+              "label": "$1{,}0\\ \\mu\\mathrm{F}$",
+              "why": "Tu as soustrait : $3{,}0 - 2{,}0 = 1{,}0$, aucune association ne correspond à une différence."
+            }
+          ],
+          "hint": "En parallèle, les deux condensateurs ont la même tension et les charges s'ajoutent.",
+          "solution": "En parallèle, $u_C$ est commune et $q = q_1 + q_2 = C_1u_C + C_2u_C = (C_1+C_2)u_C$. Donc $C_{eq} = C_1 + C_2 = 2{,}0 + 3{,}0 = 5{,}0\\ \\mu\\mathrm{F}$. Contrôle : la capacité équivalente est plus grande que chacune des deux, ce qui est toujours le cas en parallèle.",
+          "methode": "Parallèle → les capacités s'ajoutent (c'est l'inverse des résistances). Vérifie : $C_{eq} > \\max(C_1, C_2)$.",
+          "points": 1,
+          "ref": "pc-rc-associations-de-condensateurs-q1"
+        },
+        {
+          "notion": "Associations de condensateurs",
+          "difficulty": 2,
+          "statement": "Les mêmes condensateurs $C_1 = 2{,}0\\ \\mu\\mathrm{F}$ et $C_2 = 3{,}0\\ \\mu\\mathrm{F}$ sont maintenant associés en **série**. La capacité équivalente vaut :",
+          "options": [
+            {
+              "label": "$1{,}2\\ \\mu\\mathrm{F}$",
+              "correct": true,
+              "why": "$\\dfrac{1}{C_{eq}} = \\dfrac{1}{2{,}0} + \\dfrac{1}{3{,}0} = 0{,}833\\ \\mu\\mathrm{F^{-1}}$, donc $C_{eq} = 1{,}2\\ \\mu\\mathrm{F}$."
+            },
+            {
+              "label": "$5{,}0\\ \\mu\\mathrm{F}$",
+              "why": "Tu as additionné les capacités : c'est la formule du **parallèle**, pas de la série."
+            },
+            {
+              "label": "$0{,}83\\ \\mu\\mathrm{F}$",
+              "why": "Tu t'es arrêté à $\\dfrac{1}{C_1}+\\dfrac{1}{C_2} = 0{,}83$ : il reste à prendre l'inverse de cette somme."
+            },
+            {
+              "label": "$6{,}0\\ \\mu\\mathrm{F}$",
+              "why": "Tu as multiplié $2{,}0$ par $3{,}0$ sans diviser par la somme : la formule produit/somme comporte les deux."
+            }
+          ],
+          "hint": "En série, écris la somme des inverses, puis n'oublie pas de prendre l'inverse du résultat.",
+          "solution": "$\\dfrac{1}{C_{eq}} = \\dfrac{1}{C_1} + \\dfrac{1}{C_2} = \\dfrac{1}{2{,}0} + \\dfrac{1}{3{,}0} = 0{,}500 + 0{,}333 = 0{,}833\\ \\mu\\mathrm{F^{-1}}$, donc $C_{eq} = \\dfrac{1}{0{,}833} = 1{,}2\\ \\mu\\mathrm{F}$. Contrôle : en série la capacité équivalente est plus petite que la plus petite des deux ($1{,}2 < 2{,}0$), c'est toujours vrai.",
+          "methode": "Série → somme des inverses, puis inverse de la somme. Contrôle immédiat : $C_{eq} < \\min(C_1, C_2)$.",
+          "points": 1,
+          "ref": "pc-rc-associations-de-condensateurs-q2"
+        },
+        {
+          "notion": "Associations de condensateurs",
+          "difficulty": 2,
+          "statement": "Trois condensateurs identiques de capacité $C = 6{,}0\\ \\mu\\mathrm{F}$ sont associés en série. La capacité équivalente vaut :",
+          "options": [
+            {
+              "label": "$2{,}0\\ \\mu\\mathrm{F}$",
+              "correct": true,
+              "why": "$\\dfrac{1}{C_{eq}} = \\dfrac{3}{C}$, donc $C_{eq} = \\dfrac{C}{3} = \\dfrac{6{,}0}{3} = 2{,}0\\ \\mu\\mathrm{F}$."
+            },
+            {
+              "label": "$18\\ \\mu\\mathrm{F}$",
+              "why": "Tu as additionné les trois capacités : $3\\times6{,}0 = 18\\ \\mu\\mathrm{F}$ serait le résultat en **parallèle**."
+            },
+            {
+              "label": "$0{,}50\\ \\mu\\mathrm{F}$",
+              "why": "Tu t'es arrêté à $\\dfrac{3}{C} = \\dfrac{3}{6{,}0} = 0{,}50\\ \\mu\\mathrm{F^{-1}}$ sans prendre l'inverse."
+            },
+            {
+              "label": "$6{,}0\\ \\mu\\mathrm{F}$",
+              "why": "Associer des condensateurs en série diminue la capacité : elle ne peut pas rester égale à $C$."
+            }
+          ],
+          "hint": "Avec $n$ condensateurs identiques en série, la somme des inverses se simplifie beaucoup.",
+          "solution": "$\\dfrac{1}{C_{eq}} = \\dfrac{1}{C}+\\dfrac{1}{C}+\\dfrac{1}{C} = \\dfrac{3}{C}$, donc $C_{eq} = \\dfrac{C}{3} = \\dfrac{6{,}0}{3} = 2{,}0\\ \\mu\\mathrm{F}$. Contrôle : $C_{eq} < C$, conforme à une association série, et $n$ condensateurs identiques en parallèle auraient au contraire donné $nC = 18\\ \\mu\\mathrm{F}$.",
+          "methode": "$n$ condensateurs identiques : $C_{eq} = nC$ en parallèle, $C_{eq} = C/n$ en série.",
+          "points": 1,
+          "ref": "pc-rc-associations-de-condensateurs-q3"
+        },
+        {
+          "notion": "Associations de condensateurs",
+          "difficulty": 3,
+          "statement": "Deux condensateurs $C_1 = 1{,}0\\ \\mu\\mathrm{F}$ et $C_2 = 2{,}0\\ \\mu\\mathrm{F}$, initialement déchargés, sont associés en série et soumis à une tension totale $U = 9{,}0\\ \\mathrm{V}$. La tension aux bornes de $C_1$ vaut :",
+          "options": [
+            {
+              "label": "$6{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "En série les charges sont égales : $u_1 = q/C_1$ et $u_2 = q/C_2$ donnent $u_1 = 2u_2$, donc $u_1 = 6{,}0\\ \\mathrm{V}$ et $u_2 = 3{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$3{,}0\\ \\mathrm{V}$",
+              "why": "Tu as réparti la tension proportionnellement aux capacités : c'est l'inverse, $u = q/C$ donne la plus grande tension au plus petit condensateur."
+            },
+            {
+              "label": "$4{,}5\\ \\mathrm{V}$",
+              "why": "Tu as partagé la tension à parts égales : cela ne vaudrait que si les deux capacités étaient identiques."
+            },
+            {
+              "label": "$9{,}0\\ \\mathrm{V}$",
+              "why": "Tu as attribué toute la tension à $C_1$ : il reste nécessairement une part pour $C_2$, qui est aussi chargé."
+            }
+          ],
+          "hint": "Quelle grandeur est commune à deux condensateurs en série : la tension ou la charge ?",
+          "solution": "En série, les deux condensateurs portent la **même** charge $q$. Alors $u_1 = \\dfrac{q}{C_1}$, $u_2 = \\dfrac{q}{C_2}$ et $u_1 + u_2 = U$. Avec $C_{eq} = \\dfrac{C_1C_2}{C_1+C_2} = \\dfrac{2{,}0}{3{,}0} = 0{,}67\\ \\mu\\mathrm{F}$, on a $q = C_{eq}U = 0{,}67\\times10^{-6}\\times9{,}0 = 6{,}0\\times10^{-6}\\ \\mathrm{C}$. D'où $u_1 = \\dfrac{6{,}0\\times10^{-6}}{1{,}0\\times10^{-6}} = 6{,}0\\ \\mathrm{V}$ et $u_2 = \\dfrac{6{,}0\\times10^{-6}}{2{,}0\\times10^{-6}} = 3{,}0\\ \\mathrm{V}$. Contrôle : $6{,}0 + 3{,}0 = 9{,}0\\ \\mathrm{V}$, la somme redonne bien $U$.",
+          "methode": "En série : charge commune, tensions inversement proportionnelles aux capacités. En parallèle : tension commune, charges proportionnelles aux capacités.",
+          "points": 1,
+          "ref": "pc-rc-associations-de-condensateurs-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le montage",
+        "lesson": "Étude expérimentale du dipôle RC",
+        "role": "experimental",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 1
+        }
+      },
+      "ref": "pc-rc-le-montage",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Le montage",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Le montage",
+          "difficulty": 1,
+          "statement": "Dans le montage série générateur – conducteur ohmique $R$ – condensateur $C$, pour visualiser $u_C(t)$ à l'oscilloscope on branche :",
+          "options": [
+            {
+              "label": "l'entrée $Y_A$ sur l'armature reliée à $R$ et la masse sur l'autre armature",
+              "correct": true,
+              "why": "L'oscilloscope mesure la tension entre son entrée et sa masse : ses deux bornes doivent donc encadrer le condensateur."
+            },
+            {
+              "label": "l'entrée $Y_A$ et la masse aux deux bornes du conducteur ohmique $R$",
+              "why": "Tu visualiserais $u_R$, donc l'image du courant $i = u_R/R$, et non la tension du condensateur."
+            },
+            {
+              "label": "l'entrée $Y_A$ et la masse aux deux bornes du générateur",
+              "why": "Tu visualiserais la f.é.m. $E$, qui est constante : la courbe serait une droite horizontale."
+            },
+            {
+              "label": "l'entrée $Y_A$ sur l'armature reliée à $R$ et la masse sur le pôle $+$ du générateur",
+              "why": "Entre ces deux points on lit $-u_R$, et non $u_C$ : la masse n'est pas placée sur la bonne armature."
+            }
+          ],
+          "hint": "L'oscilloscope affiche toujours la tension entre son entrée et sa masse : où faut-il donc placer ces deux bornes ?",
+          "solution": "Pour afficher $u_C$, il faut que l'entrée et la masse de l'oscilloscope soient exactement les deux bornes du condensateur : entrée $Y_A$ sur l'armature reliée à $R$, masse sur l'autre armature. On place donc le condensateur juste avant la masse du montage, pour que la masse de l'oscilloscope et celle du circuit coïncident.",
+          "methode": "Règle du branchement : la masse de l'oscilloscope est **imposée**. Place le dipôle à visualiser directement contre la masse du circuit.",
+          "points": 1,
+          "ref": "pc-rc-le-montage-q1"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 2,
+          "statement": "Dans ce même montage, pour obtenir aussi l'allure de l'intensité $i(t)$ à l'oscilloscope, on visualise :",
+          "options": [
+            {
+              "label": "$u_R$ sur une seconde voie, puis on calcule $i = u_R/R$",
+              "correct": true,
+              "why": "L'oscilloscope ne mesure que des tensions ; $u_R = R\\,i$ est proportionnelle à $i$, donc son allure est celle de $i$."
+            },
+            {
+              "label": "$u_C$ sur une seconde voie, puis on calcule $i = u_C/R$",
+              "why": "$u_C/R$ n'a aucun sens physique ici : la loi d'Ohm s'applique au conducteur ohmique, pas au condensateur."
+            },
+            {
+              "label": "la f.é.m. $E$ sur une seconde voie, puis on calcule $i = E/R$",
+              "why": "$E/R$ n'est la valeur de $i$ qu'à $t = 0^{+}$ : ensuite $u_R$ diminue alors que $E$ reste constante."
+            },
+            {
+              "label": "$u_C$ sur une seconde voie, puis on calcule $i = C\\,u_C$",
+              "why": "$C\\,u_C$ est la charge $q$, en coulombs, et non une intensité : il faudrait dériver."
+            }
+          ],
+          "hint": "Un oscilloscope ne mesure que des tensions. Quelle tension du circuit est proportionnelle à $i$ ?",
+          "solution": "Un oscilloscope affiche uniquement des tensions. Pour obtenir $i$, on visualise la tension aux bornes du conducteur ohmique : $u_R = R\\,i$, donc $i = \\dfrac{u_R}{R}$. La courbe $u_R(t)$ a exactement l'allure de $i(t)$, à un facteur $R$ près. On peut aussi retrouver $i$ à partir de $u_C$, mais il faut alors dériver : $i = C\\,du_C/dt$, ce qui est beaucoup moins précis graphiquement.",
+          "methode": "Pour « voir » un courant à l'oscilloscope, visualise la tension aux bornes d'une résistance connue et divise par $R$.",
+          "points": 1,
+          "ref": "pc-rc-le-montage-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le protocole",
+        "lesson": "Étude expérimentale du dipôle RC",
+        "role": "experimental",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 1
+        }
+      },
+      "ref": "pc-rc-le-protocole",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Le protocole",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Le protocole",
+          "difficulty": 1,
+          "statement": "Avant de déclencher l'enregistrement de la charge d'un condensateur, l'opération indispensable est :",
+          "options": [
+            {
+              "label": "court-circuiter brièvement les armatures du condensateur pour le décharger",
+              "correct": true,
+              "why": "C'est ce qui garantit la condition initiale $u_C(0) = 0$, sur laquelle repose la solution $u_C = E(1-e^{-t/\\tau})$."
+            },
+            {
+              "label": "régler la f.é.m. du générateur à sa valeur maximale",
+              "why": "La valeur de $E$ fixe l'amplitude de la courbe, mais ne garantit pas la condition initiale cherchée."
+            },
+            {
+              "label": "remplacer le conducteur ohmique par un fil de résistance négligeable",
+              "why": "La charge serait alors quasi instantanée : on ne pourrait plus observer le régime transitoire ni mesurer $\\tau$."
+            },
+            {
+              "label": "inverser les bornes du condensateur pour annuler sa charge",
+              "why": "Inverser les bornes change le signe de la tension mais ne supprime pas la charge accumulée."
+            }
+          ],
+          "hint": "La solution $u_C = E\\left(1-e^{-t/\\tau}\\right)$ repose sur une hypothèse précise à $t = 0$.",
+          "solution": "La solution $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right)$ n'est valable que si $u_C(0) = 0$, c'est-à-dire si le condensateur est initialement **déchargé**. On le décharge donc en reliant brièvement ses deux armatures par un fil (ou en fermant un interrupteur de décharge) juste avant l'enregistrement. Sinon la courbe partirait d'une valeur non nulle et toutes les exploitations (repère $63\\ \\%$, tangente à l'origine) seraient fausses.",
+          "methode": "Avant toute mesure sur un RC, vérifie la condition initiale : un condensateur mal déchargé fausse toute la série de mesures.",
+          "points": 1,
+          "ref": "pc-rc-le-protocole-q1"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 2,
+          "statement": "On alimente un dipôle RC de constante de temps $\\tau = 2{,}0\\ \\mathrm{ms}$ par un générateur de signal **carré**, de façon à observer une charge puis une décharge complètes à chaque période. La fréquence maximale utilisable est :",
+          "options": [
+            {
+              "label": "$50\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "Il faut $5\\tau$ pour la charge et $5\\tau$ pour la décharge, soit $T \\geqslant 10\\tau = 20\\ \\mathrm{ms}$, donc $f \\leqslant 1/20\\times10^{-3} = 50\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$100\\ \\mathrm{Hz}$",
+              "why": "Tu as pris $T = 5\\tau = 10\\ \\mathrm{ms}$ : ces $5\\tau$ ne couvrent que la charge, il faut autant pour la décharge."
+            },
+            {
+              "label": "$500\\ \\mathrm{Hz}$",
+              "why": "Tu as pris $T = \\tau = 2{,}0\\ \\mathrm{ms}$ : à $t = \\tau$ la charge n'est qu'à $63\\ \\%$, elle est loin d'être terminée."
+            },
+            {
+              "label": "$25\\ \\mathrm{Hz}$",
+              "why": "Tu as pris $T = 20\\tau = 40\\ \\mathrm{ms}$ : c'est utilisable, mais ce n'est pas la fréquence **maximale**, $T = 10\\tau$ suffit déjà."
+            }
+          ],
+          "hint": "Combien de temps faut-il pour une charge pratiquement complète ? Et pour une période entière du signal carré ?",
+          "solution": "Une charge est pratiquement terminée au bout de $5\\tau$ ; la décharge demande autant. Sur une période du signal carré, il faut donc $T \\geqslant 5\\tau + 5\\tau = 10\\tau = 10\\times2{,}0 = 20\\ \\mathrm{ms}$. La fréquence doit donc vérifier $f = \\dfrac{1}{T} \\leqslant \\dfrac{1}{20\\times10^{-3}} = 50\\ \\mathrm{Hz}$ : la fréquence maximale utilisable est $50\\ \\mathrm{Hz}$. Contrôle : à $50\\ \\mathrm{Hz}$, chaque demi-période vaut $10\\ \\mathrm{ms} = 5\\tau$, exactement ce qu'il faut.",
+          "methode": "Règle de TP : $T \\geqslant 10\\tau$ pour voir une charge et une décharge complètes avec un signal carré.",
+          "points": 1,
+          "ref": "pc-rc-le-protocole-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Réglages et lecture de l'oscilloscope",
+        "lesson": "Étude expérimentale du dipôle RC",
+        "role": "experimental",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 1
+        }
+      },
+      "ref": "pc-rc-reglages-et-lecture-de-l-oscilloscope",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Réglages et lecture de l'oscilloscope",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Réglages et lecture de l'oscilloscope",
+          "difficulty": 1,
+          "statement": "La sensibilité verticale d'un oscilloscope est réglée sur $2{,}0\\ \\mathrm{V/div}$. En régime permanent, la trace de $u_C$ se situe $3{,}0$ divisions au-dessus de la ligne de zéro. La tension $u_C$ vaut :",
+          "options": [
+            {
+              "label": "$6{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$u_C = (\\text{nombre de divisions}) \\times (\\text{sensibilité}) = 3{,}0\\times2{,}0 = 6{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$1{,}5\\ \\mathrm{V}$",
+              "why": "Tu as divisé les divisions par la sensibilité : $3{,}0/2{,}0 = 1{,}5$, alors qu'il faut multiplier."
+            },
+            {
+              "label": "$0{,}67\\ \\mathrm{V}$",
+              "why": "Tu as calculé $2{,}0/3{,}0 = 0{,}67$ : le quotient est en plus inversé."
+            },
+            {
+              "label": "$5{,}0\\ \\mathrm{V}$",
+              "why": "Tu as additionné : $3{,}0 + 2{,}0 = 5{,}0$, alors que la lecture est un produit."
+            }
+          ],
+          "hint": "La sensibilité verticale s'exprime en volts **par** division : c'est un facteur de conversion.",
+          "solution": "La sensibilité verticale donne la tension correspondant à une division : $u_C = 3{,}0\\ \\mathrm{div} \\times 2{,}0\\ \\mathrm{V/div} = 6{,}0\\ \\mathrm{V}$. Contrôle d'unité : $\\mathrm{div}\\times\\mathrm{V/div} = \\mathrm{V}$, c'est bien une tension.",
+          "methode": "Lecture d'oscilloscope : toujours (nombre de divisions) $\\times$ (sensibilité). L'unité du calibre te dit quoi multiplier.",
+          "points": 1,
+          "ref": "pc-rc-reglages-et-lecture-de-l-oscilloscope-q1"
+        },
+        {
+          "notion": "Réglages et lecture de l'oscilloscope",
+          "difficulty": 2,
+          "statement": "Le balayage horizontal est réglé sur $5{,}0\\ \\mathrm{ms/div}$. Sur l'écran, la charge du condensateur paraît pratiquement terminée au bout de $4{,}0$ divisions. La constante de temps du circuit vaut :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "La durée lue est $4{,}0\\times5{,}0 = 20\\ \\mathrm{ms}$, et elle correspond à $5\\tau$, donc $\\tau = 20/5 = 4{,}0\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$20\\ \\mathrm{ms}$",
+              "why": "Tu as pris la durée totale pour $\\tau$ : une charge « terminée » correspond à $5\\tau$, pas à $\\tau$."
+            },
+            {
+              "label": "$100\\ \\mathrm{ms}$",
+              "why": "Tu as multiplié par $5$ au lieu de diviser : $5\\times20 = 100\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$0{,}80\\ \\mathrm{ms}$",
+              "why": "Tu as divisé deux fois par $5$ : $20/25 = 0{,}80\\ \\mathrm{ms}$, alors que le facteur $5$ n'intervient qu'une fois."
+            }
+          ],
+          "hint": "Convertis d'abord les divisions en millisecondes, puis demande-toi à combien de $\\tau$ correspond une charge terminée.",
+          "solution": "Durée lue : $\\Delta t = 4{,}0\\ \\mathrm{div}\\times5{,}0\\ \\mathrm{ms/div} = 20\\ \\mathrm{ms}$. Une charge est considérée comme terminée au bout de $5\\tau$, donc $5\\tau = 20\\ \\mathrm{ms}$ et $\\tau = 4{,}0\\ \\mathrm{ms}$. Contrôle : à $t = \\tau = 4{,}0\\ \\mathrm{ms}$, soit $0{,}8$ division, la courbe doit être à $63\\ \\%$ de sa valeur finale — ce qui se vérifie à l'écran.",
+          "methode": "Deux étapes à ne pas confondre : la conversion divisions → durée, puis l'interprétation physique de cette durée ($\\tau$, $5\\tau$…).",
+          "points": 1,
+          "ref": "pc-rc-reglages-et-lecture-de-l-oscilloscope-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Exploitation d'un relevé",
+        "lesson": "Étude expérimentale du dipôle RC",
+        "role": "experimental",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 1
+        }
+      },
+      "ref": "pc-rc-exploitation-d-un-releve",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Exploitation d'un relevé",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Exploitation d'un relevé",
+          "difficulty": 1,
+          "statement": "Lors de la charge d'un condensateur, on relève : $u_C = 0\\ \\mathrm{V}$ à $t = 0$ ; $5{,}7\\ \\mathrm{V}$ à $t = 15\\ \\mathrm{ms}$ ; $8{,}3\\ \\mathrm{V}$ à $t = 40\\ \\mathrm{ms}$ ; $8{,}9\\ \\mathrm{V}$ à $t = 60\\ \\mathrm{ms}$ ; $9{,}0\\ \\mathrm{V}$ à $t = 100\\ \\mathrm{ms}$ et au-delà. La f.é.m. du générateur vaut :",
+          "options": [
+            {
+              "label": "$9{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "En régime permanent $i = 0$ donc $u_R = 0$ et $u_C = E$ : la valeur limite du relevé est la f.é.m."
+            },
+            {
+              "label": "$5{,}7\\ \\mathrm{V}$",
+              "why": "$5{,}7\\ \\mathrm{V}$ est la valeur atteinte à $t = \\tau$, soit $63\\ \\%$ de $E$, et non $E$."
+            },
+            {
+              "label": "$8{,}9\\ \\mathrm{V}$",
+              "why": "C'est une valeur du régime transitoire, encore inférieure à la valeur limite atteinte ensuite."
+            },
+            {
+              "label": "$18\\ \\mathrm{V}$",
+              "why": "Tu as doublé la valeur limite : la tension finale du condensateur est égale à $E$, pas à $E/2$."
+            }
+          ],
+          "hint": "Que vaut $u_C$ quand le régime permanent est atteint ?",
+          "solution": "En régime permanent, $u_C$ ne varie plus donc $i = C\\,du_C/dt = 0$, d'où $u_R = R\\,i = 0$ et la loi d'additivité donne $u_C = E$. Le relevé se stabilise à $9{,}0\\ \\mathrm{V}$ : donc $E = 9{,}0\\ \\mathrm{V}$. Contrôle : $0{,}63\\times9{,}0 = 5{,}7\\ \\mathrm{V}$, exactement la valeur relevée à $t = 15\\ \\mathrm{ms}$, ce qui confirme la lecture.",
+          "methode": "Dans un relevé de charge, la valeur limite de $u_C$ donne directement $E$ : c'est l'asymptote horizontale de la courbe.",
+          "points": 1,
+          "ref": "pc-rc-exploitation-d-un-releve-q1"
+        },
+        {
+          "notion": "Exploitation d'un relevé",
+          "difficulty": 2,
+          "statement": "Dans le même relevé ($E = 9{,}0\\ \\mathrm{V}$, $u_C = 5{,}7\\ \\mathrm{V}$ à $t = 15\\ \\mathrm{ms}$), le condensateur a une capacité $C = 3{,}3\\ \\mu\\mathrm{F}$. La résistance du conducteur ohmique vaut :",
+          "options": [
+            {
+              "label": "$4{,}5\\ \\mathrm{k\\Omega}$",
+              "correct": true,
+              "why": "$5{,}7 \\approx 0{,}63\\times9{,}0$ donc $\\tau = 15\\ \\mathrm{ms}$, puis $R = \\tau/C = 15\\times10^{-3}/3{,}3\\times10^{-6} = 4{,}5\\times10^{3}\\ \\Omega$."
+            },
+            {
+              "label": "$4{,}5\\ \\Omega$",
+              "why": "Tu as divisé $15$ par $3{,}3$ sans tenir compte des préfixes : $15\\ \\mathrm{ms}$ et $3{,}3\\ \\mu\\mathrm{F}$ donnent un facteur $10^{3}$."
+            },
+            {
+              "label": "$2{,}2\\times10^{-4}\\ \\Omega$",
+              "why": "Tu as calculé $C/\\tau = 3{,}3\\times10^{-6}/15\\times10^{-3}$ au lieu de $\\tau/C$."
+            },
+            {
+              "label": "$5{,}0\\times10^{-8}\\ \\Omega$",
+              "why": "Tu as multiplié : $15\\times10^{-3}\\times3{,}3\\times10^{-6} = 5{,}0\\times10^{-8}$, alors que $R = \\tau/C$."
+            }
+          ],
+          "hint": "Reconnais le repère des $63\\ \\%$ dans le relevé pour trouver $\\tau$, puis isole $R$ dans $\\tau = RC$.",
+          "solution": "$0{,}63\\times9{,}0 = 5{,}7\\ \\mathrm{V}$ : la date $t = 15\\ \\mathrm{ms}$ est donc $t = \\tau$, soit $\\tau = 15\\ \\mathrm{ms}$. Puis $R = \\dfrac{\\tau}{C} = \\dfrac{15\\times10^{-3}}{3{,}3\\times10^{-6}} = 4{,}5\\times10^{3}\\ \\Omega = 4{,}5\\ \\mathrm{k\\Omega}$. Contrôle : $\\tau = RC = 4{,}5\\times10^{3}\\times3{,}3\\times10^{-6} = 1{,}5\\times10^{-2}\\ \\mathrm{s} = 15\\ \\mathrm{ms}$, on retombe sur la lecture.",
+          "methode": "Exploiter un relevé : 1) l'asymptote donne $E$ ; 2) le repère $0{,}63\\,E$ donne $\\tau$ ; 3) $\\tau = RC$ donne la grandeur manquante.",
+          "points": 1,
+          "ref": "pc-rc-exploitation-d-un-releve-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Sources d'erreur",
+        "lesson": "Étude expérimentale du dipôle RC",
+        "role": "experimental",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 1
+        }
+      },
+      "ref": "pc-rc-sources-d-erreur",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Sources d'erreur",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 1,
+          "statement": "On mesure la décharge d'un condensateur en gardant branché un voltmètre à ses bornes. La constante de temps mesurée est systématiquement **plus petite** que $RC$ parce que :",
+          "options": [
+            {
+              "label": "le voltmètre, en dérivation sur le condensateur, offre un second chemin de décharge et diminue la résistance équivalente",
+              "correct": true,
+              "why": "Deux résistances en parallèle donnent une résistance équivalente plus petite que chacune d'elles, donc $\\tau = R_{eq}C$ diminue."
+            },
+            {
+              "label": "le voltmètre consomme une partie de la charge du condensateur, ce qui diminue sa capacité $C$",
+              "why": "La capacité est une caractéristique géométrique du condensateur : elle ne dépend pas du courant qui le traverse."
+            },
+            {
+              "label": "le voltmètre ajoute sa résistance interne en série avec $R$, ce qui augmente la résistance du circuit",
+              "why": "Un voltmètre se branche en **dérivation**, pas en série : les résistances ne s'additionnent donc pas."
+            },
+            {
+              "label": "le voltmètre introduit un retard d'affichage qui décale toutes les dates de mesure",
+              "why": "Un décalage de dates translaterait la courbe mais ne modifierait pas la pente, donc pas $\\tau$."
+            }
+          ],
+          "hint": "Comment un voltmètre se branche-t-il, et quel est l'effet de deux résistances en dérivation ?",
+          "solution": "Un voltmètre se branche en dérivation aux bornes du condensateur : sa résistance interne $R_V$ se retrouve **en parallèle** avec $R$. La résistance équivalente $R_{eq} = \\dfrac{R\\,R_V}{R+R_V}$ est plus petite que $R$, donc $\\tau_{\\text{mesurée}} = R_{eq}C < RC$. L'erreur est d'autant plus faible que $R_V$ est grande devant $R$ : d'où l'intérêt d'un voltmètre (ou d'un oscilloscope) de très grande résistance d'entrée.",
+          "methode": "Tout appareil branché en dérivation « charge » le circuit : compare toujours sa résistance interne à celle du dipôle étudié.",
+          "points": 1,
+          "ref": "pc-rc-sources-d-erreur-q1"
+        },
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 2,
+          "statement": "Un condensateur $C = 1{,}0\\ \\mu\\mathrm{F}$ se décharge dans $R = 10\\ \\mathrm{k\\Omega}$, mais un voltmètre de résistance interne $R_V = 100\\ \\mathrm{k\\Omega}$ reste branché à ses bornes. La constante de temps réellement observée vaut :",
+          "options": [
+            {
+              "label": "$9{,}1\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$R_{eq} = \\dfrac{10\\times100}{110} = 9{,}1\\ \\mathrm{k\\Omega}$ et $\\tau = R_{eq}C = 9{,}1\\times10^{3}\\times1{,}0\\times10^{-6} = 9{,}1\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$10\\ \\mathrm{ms}$",
+              "why": "Tu as négligé le voltmètre : les deux résistances en parallèle donnent $9{,}1\\ \\mathrm{k\\Omega}$ et non $10\\ \\mathrm{k\\Omega}$."
+            },
+            {
+              "label": "$110\\ \\mathrm{ms}$",
+              "why": "Tu as additionné les résistances comme en série : $10 + 100 = 110\\ \\mathrm{k\\Omega}$, or le voltmètre est en dérivation."
+            },
+            {
+              "label": "$100\\ \\mathrm{ms}$",
+              "why": "Tu n'as gardé que $R_V = 100\\ \\mathrm{k\\Omega}$ : $R$ reste pourtant dans le circuit, en parallèle."
+            }
+          ],
+          "hint": "Calcule d'abord la résistance équivalente de $R$ et $R_V$ **en parallèle**, puis multiplie par $C$.",
+          "solution": "$R$ et $R_V$ sont en parallèle : $R_{eq} = \\dfrac{R\\,R_V}{R+R_V} = \\dfrac{10\\times10^{3}\\times100\\times10^{3}}{110\\times10^{3}} = 9{,}09\\times10^{3}\\ \\Omega$. Alors $\\tau = R_{eq}\\,C = 9{,}09\\times10^{3}\\times1{,}0\\times10^{-6} = 9{,}1\\times10^{-3}\\ \\mathrm{s} = 9{,}1\\ \\mathrm{ms}$, au lieu de $10\\ \\mathrm{ms}$ attendues : l'écart relatif est de $9\\ \\%$. Contrôle : $R_{eq}$ doit être inférieure à la plus petite des deux résistances, et $9{,}1 < 10$, c'est cohérent.",
+          "methode": "Deux résistances en parallèle : $R_{eq} = \\dfrac{R_1R_2}{R_1+R_2}$, toujours plus petite que la plus petite des deux.",
+          "points": 1,
+          "ref": "pc-rc-sources-d-erreur-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Réponse à un échelon : le point de vue général",
+        "lesson": "Approfondissement — Dipôle RC",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-reponse-a-un-echelon-le-point-de-vue-gen",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Réponse à un échelon : le point de vue général",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Réponse à un échelon : le point de vue général",
+          "difficulty": 3,
+          "statement": "Un condensateur déjà chargé sous $4{,}0\\ \\mathrm{V}$ est brusquement relié, à $t = 0$, à un générateur de f.é.m. $E = 10{,}0\\ \\mathrm{V}$ à travers $R = 2{,}0\\ \\mathrm{k\\Omega}$. L'intensité du courant à $t = 0^{+}$ vaut :",
+          "options": [
+            {
+              "label": "$3{,}0\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$u_C$ est continue donc $u_C(0^{+}) = 4{,}0\\ \\mathrm{V}$, d'où $u_R = 10{,}0 - 4{,}0 = 6{,}0\\ \\mathrm{V}$ et $i = 6{,}0/2{,}0\\times10^{3} = 3{,}0\\ \\mathrm{mA}$."
+            },
+            {
+              "label": "$5{,}0\\ \\mathrm{mA}$",
+              "why": "Tu as pris $E/R = 10{,}0/2{,}0\\times10^{3}$ : cela suppose $u_C(0^{+}) = 0$, alors que le condensateur était déjà chargé."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{mA}$",
+              "why": "Tu as pris $4{,}0/2{,}0\\times10^{3}$ : c'est la tension du condensateur, pas celle qui s'applique à $R$."
+            },
+            {
+              "label": "$7{,}0\\ \\mathrm{mA}$",
+              "why": "Tu as **additionné** les tensions : $(10{,}0+4{,}0)/2{,}0\\times10^{3}$, alors que la tension du condensateur s'oppose à celle du générateur."
+            }
+          ],
+          "hint": "La tension aux bornes d'un condensateur ne peut pas sauter : que vaut $u_C$ juste après la fermeture ?",
+          "solution": "La tension $u_C$ est une fonction **continue** du temps : $u_C(0^{+}) = u_C(0^{-}) = 4{,}0\\ \\mathrm{V}$. La loi d'additivité donne alors $u_R(0^{+}) = E - u_C(0^{+}) = 10{,}0 - 4{,}0 = 6{,}0\\ \\mathrm{V}$, donc $i(0^{+}) = \\dfrac{u_R}{R} = \\dfrac{6{,}0}{2{,}0\\times10^{3}} = 3{,}0\\times10^{-3}\\ \\mathrm{A} = 3{,}0\\ \\mathrm{mA}$. Contrôle : si le condensateur était déchargé on trouverait $5{,}0\\ \\mathrm{mA}$ ; une charge initiale non nulle doit bien réduire le courant initial.",
+          "methode": "Réponse à un échelon : $u_C$ est continue, $i$ peut sauter. Le courant initial vaut $\\dfrac{E - u_C(0)}{R}$.",
+          "points": 1,
+          "ref": "pc-rc-reponse-a-un-echelon-le-point-de-vue-gen-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Charge à courant constant",
+        "lesson": "Approfondissement — Dipôle RC",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-charge-a-courant-constant",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Charge à courant constant",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Charge à courant constant",
+          "difficulty": 3,
+          "statement": "Un condensateur $C = 10\\ \\mu\\mathrm{F}$, initialement déchargé, est chargé par un générateur de **courant constant** $I = 2{,}0\\ \\mu\\mathrm{A}$. La durée nécessaire pour que $u_C$ atteigne $5{,}0\\ \\mathrm{V}$ est :",
+          "options": [
+            {
+              "label": "$25\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$u_C = \\dfrac{I\\,t}{C}$ donc $t = \\dfrac{C\\,u_C}{I} = \\dfrac{10\\times10^{-6}\\times5{,}0}{2{,}0\\times10^{-6}} = 25\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{s}$",
+              "why": "Tu as calculé $\\dfrac{I\\,u_C}{C} = \\dfrac{2{,}0\\times10^{-6}\\times5{,}0}{10\\times10^{-6}}$ : tu as échangé $I$ et $C$."
+            },
+            {
+              "label": "$2{,}5\\times10^{11}\\ \\mathrm{s}$",
+              "why": "Tu as calculé $\\dfrac{u_C}{I\\,C}$ : tu as divisé par $C$ au lieu de multiplier."
+            },
+            {
+              "label": "$1{,}0\\times10^{-10}\\ \\mathrm{s}$",
+              "why": "Tu as calculé le produit $C\\,u_C\\,I$ : il faut **diviser** par $I$, pas multiplier."
+            }
+          ],
+          "hint": "À courant constant, $q$ croît proportionnellement au temps : écris $q = I\\,t$ puis utilise $q = C\\,u_C$.",
+          "solution": "Le courant étant constant, la charge accumulée vaut $q = I\\,t$ (pas de dérivée à résoudre). Or $q = C\\,u_C$, donc $u_C(t) = \\dfrac{I\\,t}{C}$ : la tension croît **linéairement**, et non exponentiellement. On en tire $t = \\dfrac{C\\,u_C}{I} = \\dfrac{10\\times10^{-6}\\times5{,}0}{2{,}0\\times10^{-6}} = 25\\ \\mathrm{s}$. Contrôle : $q = I\\,t = 2{,}0\\times10^{-6}\\times25 = 5{,}0\\times10^{-5}\\ \\mathrm{C}$, et $u_C = q/C = 5{,}0\\times10^{-5}/10\\times10^{-6} = 5{,}0\\ \\mathrm{V}$, conforme à l'énoncé.",
+          "methode": "Charge à courant **constant** → rampe de tension $u_C = It/C$ (droite), pas d'exponentielle et pas de constante de temps.",
+          "points": 1,
+          "ref": "pc-rc-charge-a-courant-constant-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le circuit RC comme filtre",
+        "lesson": "Approfondissement — Dipôle RC",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-le-circuit-rc-comme-filtre",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Le circuit RC comme filtre",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le circuit RC comme filtre",
+          "difficulty": 3,
+          "statement": "On applique à l'entrée d'un dipôle RC de constante de temps $\\tau = 10\\ \\mathrm{ms}$ un signal carré de période $T = 0{,}10\\ \\mathrm{ms}$, d'amplitude $E$. La tension $u_C$ aux bornes du condensateur :",
+          "options": [
+            {
+              "label": "varie très peu et reste proche de la valeur moyenne du signal d'entrée",
+              "correct": true,
+              "why": "$T \\ll \\tau$ : à chaque alternance le condensateur n'a le temps de se charger que d'une fraction négligeable, il lisse donc le signal."
+            },
+            {
+              "label": "reproduit fidèlement le signal carré d'entrée, alternance par alternance",
+              "why": "Ce serait le cas si $T \\gg \\tau$ (typiquement $T \\geqslant 10\\tau$) : le condensateur aurait alors le temps de se charger et de se décharger complètement."
+            },
+            {
+              "label": "reste nulle, car le condensateur n'a pas le temps de se charger du tout",
+              "why": "Le condensateur se charge un peu à chaque alternance : au bout de quelques $\\tau$ la tension moyenne s'établit, elle n'est pas nulle."
+            },
+            {
+              "label": "devient un signal carré de même période mais d'amplitude double",
+              "why": "Un dipôle RC est passif : il ne peut en aucun cas amplifier l'amplitude du signal d'entrée."
+            }
+          ],
+          "hint": "Compare $T$ et $\\tau$ : pendant une demi-période, de quelle fraction de $\\tau$ le condensateur dispose-t-il ?",
+          "solution": "Ici $\\tau = 10\\ \\mathrm{ms}$ et $T = 0{,}10\\ \\mathrm{ms}$, donc $T = \\tau/100$ : chaque alternance ne dure que $\\tau/200$. Pendant une durée aussi courte devant $\\tau$, $u_C$ ne peut varier que très peu, puisque $\\dfrac{du_C}{dt}$ reste bornée. Le condensateur se charge un peu, se décharge un peu, et $u_C$ se stabilise autour de la valeur **moyenne** du signal d'entrée, avec une faible ondulation : le dipôle RC joue un rôle de **lissage**. Contrôle du cas inverse : si l'on prenait $T = 100\\ \\tau$, $u_C$ suivrait au contraire le signal carré avec des charges et décharges complètes.",
+          "methode": "Compare toujours $T$ à $\\tau$ : $T \\ll \\tau$ → le RC lisse (valeur moyenne) ; $T \\gg \\tau$ → $u_C$ suit le signal d'entrée.",
+          "points": 1,
+          "ref": "pc-rc-le-circuit-rc-comme-filtre-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Retour sur le rendement de 50 %",
+        "lesson": "Approfondissement — Dipôle RC",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-retour-sur-le-rendement-de-50",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Retour sur le rendement de 50 %",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Retour sur le rendement de 50 %",
+          "difficulty": 3,
+          "statement": "On remplace le conducteur ohmique $R$ d'un circuit de charge $(E, R, C)$ par un conducteur ohmique $2R$, sans changer $E$ ni $C$. L'énergie dissipée par effet Joule pendant la **charge complète** :",
+          "options": [
+            {
+              "label": "reste la même, égale à $\\tfrac12 CE^{2}$",
+              "correct": true,
+              "why": "Bilan : le générateur fournit $CE^{2}$, le condensateur en stocke $\\tfrac12 CE^{2}$ ; la différence, $\\tfrac12 CE^{2}$, ne dépend pas de $R$."
+            },
+            {
+              "label": "est doublée, car la résistance est doublée",
+              "why": "Tu as raisonné sur $\\mathcal{P} = R\\,i^{2}$ à courant fixé, mais l'intensité est elle aussi divisée par deux : les deux effets se compensent."
+            },
+            {
+              "label": "est divisée par deux, car le courant est deux fois plus faible",
+              "why": "Le courant est bien deux fois plus faible, mais la charge dure deux fois plus longtemps : au total l'énergie dissipée est inchangée."
+            },
+            {
+              "label": "est multipliée par quatre, car l'énergie dissipée varie comme $R^{2}$",
+              "why": "L'énergie dissipée ne dépend pas du tout de $R$ ; aucune dépendance en $R^{2}$ n'apparaît dans le bilan."
+            }
+          ],
+          "hint": "Écris le bilan d'énergie global de la charge : $R$ apparaît-elle dans l'une des trois énergies ?",
+          "solution": "Pendant une charge complète, le générateur fournit $W_g = q_{\\max}E = CE^{2}$ et le condensateur emmagasine $E_e = \\tfrac12 CE^{2}$. Par conservation de l'énergie, l'énergie dissipée dans le conducteur ohmique vaut $W_J = W_g - E_e = \\tfrac12 CE^{2}$, expression dans laquelle $R$ ne figure pas : elle est donc **inchangée** si l'on remplace $R$ par $2R$. Interprétation : avec $2R$ la puissance instantanée $R\\,i^{2}$ est plus faible (car $i$ est divisée par deux et $i^{2}$ par quatre, pour un facteur $R$ de deux seulement, soit une puissance divisée par deux), mais la charge dure deux fois plus longtemps : le produit, donc l'énergie, est le même.",
+          "methode": "Retiens le bilan universel de la charge d'un condensateur : $CE^{2}$ fourni, $\\tfrac12 CE^{2}$ stocké, $\\tfrac12 CE^{2}$ dissipé — toujours, quelle que soit $R$.",
+          "points": 1,
+          "ref": "pc-rc-retour-sur-le-rendement-de-50-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Mesures et incertitudes",
+        "lesson": "Approfondissement — Dipôle RC",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rc-mesures-et-incertitudes",
+      "chapter": "pc-rc",
+      "kind": "qcu",
+      "title": "Mesures et incertitudes",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Mesures et incertitudes",
+          "difficulty": 3,
+          "statement": "Sur un oscillogramme de charge, on mesure la durée du régime transitoire : $5\\tau = 21\\ \\mathrm{ms}$, avec une incertitude de lecture de $1\\ \\mathrm{ms}$ sur cette durée. Le résultat de la mesure de la constante de temps s'écrit :",
+          "options": [
+            {
+              "label": "$\\tau = 4{,}2\\ \\mathrm{ms}$ avec une incertitude de $0{,}2\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$\\tau = 21/5 = 4{,}2\\ \\mathrm{ms}$ et l'incertitude se divise par le même facteur : $1/5 = 0{,}2\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$\\tau = 4{,}2\\ \\mathrm{ms}$ avec une incertitude de $1\\ \\mathrm{ms}$",
+              "why": "Tu as divisé la valeur mais pas l'incertitude : une division par $5$ réduit aussi l'incertitude absolue d'un facteur $5$."
+            },
+            {
+              "label": "$\\tau = 21\\ \\mathrm{ms}$ avec une incertitude de $1\\ \\mathrm{ms}$",
+              "why": "Tu as oublié de diviser par $5$ : la durée mesurée est $5\\tau$, pas $\\tau$."
+            },
+            {
+              "label": "$\\tau = 4{,}2\\ \\mathrm{ms}$ avec une incertitude de $5\\ \\mathrm{ms}$",
+              "why": "Tu as multiplié l'incertitude par $5$ au lieu de la diviser : elle serait alors plus grande que la valeur mesurée."
+            }
+          ],
+          "hint": "Si une grandeur est divisée par un nombre exact, que devient son incertitude absolue ?",
+          "solution": "La durée mesurée est $D = 5\\tau = 21\\ \\mathrm{ms}$ avec $U(D) = 1\\ \\mathrm{ms}$. Comme $\\tau = \\dfrac{D}{5}$ et que le facteur $5$ est exact, l'incertitude absolue se divise par le même facteur : $U(\\tau) = \\dfrac{U(D)}{5} = \\dfrac{1}{5} = 0{,}2\\ \\mathrm{ms}$. On écrit donc $\\tau = 4{,}2\\ \\mathrm{ms}$ avec $U(\\tau) = 0{,}2\\ \\mathrm{ms}$. Contrôle par l'incertitude **relative**, qui doit être conservée : $\\dfrac{1}{21} = 4{,}8\\ \\%$ et $\\dfrac{0{,}2}{4{,}2} = 4{,}8\\ \\%$ — les deux coïncident.",
+          "methode": "Multiplier ou diviser une mesure par un nombre exact multiplie ou divise son incertitude absolue d'autant ; l'incertitude **relative**, elle, ne change pas.",
+          "points": 1,
+          "ref": "pc-rc-mesures-et-incertitudes-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-rc-probleme-1",
+      "chapter": "pc-rc",
+      "kind": "probleme",
+      "title": "Identifier un condensateur à partir de sa courbe de charge",
+      "difficulty": 3,
+      "context": "Pour vérifier la valeur d'un condensateur dont l'étiquette est illisible, on réalise le montage série suivant : un générateur idéal de tension de f.é.m. $E = 6{,}0\\ \\mathrm{V}$, un interrupteur $K$, un conducteur ohmique de résistance $R = 1{,}0\\ \\mathrm{k\\Omega}$ et le condensateur de capacité $C$ inconnue. Le condensateur est **initialement déchargé**. À la date $t = 0$ on ferme $K$ et un système d'acquisition enregistre la tension $u_C(t)$ aux bornes du condensateur. Sur l'enregistrement obtenu, la courbe croît vers une asymptote horizontale et la **tangente à l'origine coupe cette asymptote à la date $t = 4{,}7\\ \\mathrm{ms}$**. Données : $e^{-1} = 0{,}37$ ; $e^{-2} = 0{,}14$.",
+      "figure": "rc-charge",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Le montage et la mise en équation",
+          "difficulty": 1,
+          "statement": "L'équation différentielle vérifiée par $u_C$ pendant la charge est :",
+          "options": [
+            {
+              "label": "$RC\\,\\dfrac{du_C}{dt} + u_C = E$",
+              "correct": true,
+              "why": "Additivité des tensions $u_R + u_C = E$ avec $u_R = R\\,i = RC\\,\\dfrac{du_C}{dt}$."
+            },
+            {
+              "label": "$RC\\,\\dfrac{du_C}{dt} + u_C = 0$",
+              "why": "C'est l'équation de la décharge : ici le générateur impose un second membre $E$."
+            },
+            {
+              "label": "$RC\\,\\dfrac{du_C}{dt} - u_C = E$",
+              "why": "Erreur de signe : dans le circuit série orienté dans le sens du courant, $u_R$ et $u_C$ s'ajoutent."
+            },
+            {
+              "label": "$R\\,\\dfrac{du_C}{dt} + \\dfrac{u_C}{C} = E$",
+              "why": "Tu as écrit $i = du_C/dt$ puis $u_C = q/C$ : ici la variable est $u_C$, donc $i = C\\,du_C/dt$."
+            }
+          ],
+          "hint": "Loi d'additivité des tensions, puis remplace $i$ par son expression en fonction de $u_C$.",
+          "solution": "Dans le circuit série, $u_R + u_C = E$. Avec $u_R = R\\,i$ et $i = C\\,\\dfrac{du_C}{dt}$, il vient $RC\\,\\dfrac{du_C}{dt} + u_C = E$. Contrôle : chaque terme est bien une tension, car $RC$ est une durée.",
+          "methode": "Mise en équation en 4 temps : additivité des tensions, loi d'Ohm, $i = C\\,du_C/dt$, puis une seule inconnue.",
+          "points": 1,
+          "part": "Partie A — Étude théorique et lecture graphique",
+          "ref": "pc-rc-probleme-1-q1"
+        },
+        {
+          "notion": "La charge du condensateur",
+          "difficulty": 1,
+          "statement": "La solution de cette équation différentielle, compte tenu de la condition initiale, s'écrit :",
+          "options": [
+            {
+              "label": "$u_C(t) = 6{,}0\\left(1 - e^{-t/\\tau}\\right)$, en volts",
+              "correct": true,
+              "why": "$u_C(0) = 0$ (condensateur déchargé) et $u_C \\to E = 6{,}0\\ \\mathrm{V}$ quand $t$ croît : les deux conditions sont vérifiées."
+            },
+            {
+              "label": "$u_C(t) = 6{,}0\\,e^{-t/\\tau}$, en volts",
+              "why": "Cette expression part de $6{,}0\\ \\mathrm{V}$ et tend vers $0$ : elle décrit une décharge, pas une charge."
+            },
+            {
+              "label": "$u_C(t) = 6{,}0\\left(1 + e^{-t/\\tau}\\right)$, en volts",
+              "why": "Cette expression donne $u_C(0) = 12\\ \\mathrm{V}$, soit le double de la f.é.m. : impossible."
+            },
+            {
+              "label": "$u_C(t) = 6{,}0 - \\dfrac{t}{\\tau}$, en volts",
+              "why": "Cette expression est affine et deviendrait négative : la charge d'un RC est exponentielle, pas linéaire."
+            }
+          ],
+          "hint": "Vérifie chaque proposition sur deux points : sa valeur à $t = 0$ et sa limite quand $t \\to \\infty$.",
+          "solution": "La solution générale est $u_C = A\\,e^{-t/\\tau} + E$. La condition initiale $u_C(0) = 0$ donne $A = -E$, d'où $u_C(t) = E\\left(1 - e^{-t/\\tau}\\right) = 6{,}0\\left(1 - e^{-t/\\tau}\\right)$ en volts. Contrôle : à $t = 0$ on trouve $0\\ \\mathrm{V}$, et la limite vaut $6{,}0\\ \\mathrm{V}$ : les deux conditions physiques sont respectées.",
+          "methode": "Teste toujours une solution proposée sur $t = 0$ et sur $t \\to \\infty$ : deux tests suffisent souvent à éliminer trois propositions.",
+          "points": 1,
+          "part": "Partie A — Étude théorique et lecture graphique",
+          "ref": "pc-rc-probleme-1-q2"
+        },
+        {
+          "notion": "Déterminer $\\tau$ graphiquement",
+          "difficulty": 2,
+          "statement": "D'après l'enregistrement, la constante de temps du circuit vaut :",
+          "options": [
+            {
+              "label": "$\\tau = 4{,}7\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "La tangente à l'origine, de pente $E/\\tau$, coupe l'asymptote $u = E$ exactement à la date $t = \\tau$."
+            },
+            {
+              "label": "$\\tau = 2{,}4\\ \\mathrm{ms}$",
+              "why": "Tu as divisé par deux : aucun facteur $1/2$ n'intervient, l'abscisse du point d'intersection **est** $\\tau$."
+            },
+            {
+              "label": "$\\tau = 24\\ \\mathrm{ms}$",
+              "why": "$24\\ \\mathrm{ms}$ correspond à $5\\tau$, c'est-à-dire à la fin du régime transitoire, pas à l'intersection de la tangente."
+            },
+            {
+              "label": "$\\tau = 6{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as recopié la valeur de $E$ : $6{,}0$ est une tension en volts, pas une durée."
+            }
+          ],
+          "hint": "Où la tangente à l'origine coupe-t-elle l'asymptote horizontale ?",
+          "solution": "La pente de la tangente à l'origine vaut $\\left(\\dfrac{du_C}{dt}\\right)_{0} = \\dfrac{E}{\\tau}$, donc cette tangente a pour équation $u = \\dfrac{E}{\\tau}t$ ; elle atteint $u = E$ pour $t = \\tau$. L'énoncé donne cette abscisse : $\\tau = 4{,}7\\ \\mathrm{ms}$. Contrôle par l'autre lecture : $u_C(\\tau) = 0{,}63\\times6{,}0 = 3{,}8\\ \\mathrm{V}$ doit se lire sur la courbe à cette même date.",
+          "methode": "Deux lectures graphiques de $\\tau$ : tangente à l'origine $\\cap$ asymptote, ou date où $u_C = 0{,}63\\,E$.",
+          "points": 1,
+          "part": "Partie A — Étude théorique et lecture graphique",
+          "ref": "pc-rc-probleme-1-q3"
+        },
+        {
+          "notion": "La constante de temps",
+          "difficulty": 2,
+          "statement": "On en déduit la capacité du condensateur :",
+          "options": [
+            {
+              "label": "$C = 4{,}7\\ \\mu\\mathrm{F}$",
+              "correct": true,
+              "why": "$C = \\tau/R = 4{,}7\\times10^{-3}/1{,}0\\times10^{3} = 4{,}7\\times10^{-6}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$C = 4{,}7\\ \\mathrm{mF}$",
+              "why": "Tu n'as pas converti $R$ : $4{,}7\\times10^{-3}/1{,}0 = 4{,}7\\times10^{-3}$, or $1{,}0\\ \\mathrm{k\\Omega} = 1{,}0\\times10^{3}\\ \\Omega$."
+            },
+            {
+              "label": "$C = 4{,}7\\ \\mathrm{nF}$",
+              "why": "Erreur de puissance de dix : $10^{-3}/10^{3} = 10^{-6}$, le résultat est donc en microfarads."
+            },
+            {
+              "label": "$C = 2{,}1\\times10^{5}\\ \\mathrm{F}$",
+              "why": "Tu as calculé $R/\\tau = 1{,}0\\times10^{3}/4{,}7\\times10^{-3}$ au lieu de $\\tau/R$."
+            }
+          ],
+          "hint": "Isole $C$ dans $\\tau = RC$ en travaillant en unités SI.",
+          "solution": "$C = \\dfrac{\\tau}{R} = \\dfrac{4{,}7\\times10^{-3}}{1{,}0\\times10^{3}} = 4{,}7\\times10^{-6}\\ \\mathrm{F} = 4{,}7\\ \\mu\\mathrm{F}$. Contrôle : $\\tau = RC = 1{,}0\\times10^{3}\\times4{,}7\\times10^{-6} = 4{,}7\\times10^{-3}\\ \\mathrm{s}$, on retrouve bien la lecture graphique. L'étiquette illisible correspondait donc à une valeur normalisée courante, $4{,}7\\ \\mu\\mathrm{F}$.",
+          "methode": "Mesurer $\\tau$ puis appliquer $C = \\tau/R$ (ou $R = \\tau/C$) est la méthode standard pour identifier un composant inconnu.",
+          "points": 1,
+          "part": "Partie A — Étude théorique et lecture graphique",
+          "ref": "pc-rc-probleme-1-q4"
+        },
+        {
+          "notion": "Intensité et charge : la relation dérivée",
+          "difficulty": 2,
+          "statement": "L'intensité du courant dans le circuit juste après la fermeture de $K$, à $t = 0^{+}$, vaut :",
+          "options": [
+            {
+              "label": "$6{,}0\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$u_C$ est continue donc $u_C(0^{+}) = 0$, d'où $u_R = E$ et $i = E/R = 6{,}0/1{,}0\\times10^{3} = 6{,}0\\times10^{-3}\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$0\\ \\mathrm{mA}$",
+              "why": "Tu as pris la valeur du régime permanent : à $t = 0^{+}$ le condensateur est déchargé et le courant est au contraire **maximal**."
+            },
+            {
+              "label": "$3{,}8\\ \\mathrm{mA}$",
+              "why": "Tu as utilisé $0{,}63\\,E$ au lieu de $E$ : à $t = 0^{+}$ la tension aux bornes de $R$ vaut $E$ tout entière."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{A}$",
+              "why": "Tu n'as pas converti la résistance : $6{,}0/1{,}0 = 6{,}0$ n'est valable que si $R$ est exprimée en ohms."
+            }
+          ],
+          "hint": "Que vaut $u_C$ juste après la fermeture ? Déduis-en la tension aux bornes de $R$, puis $i$.",
+          "solution": "La tension $u_C$ est continue : $u_C(0^{+}) = 0$. L'additivité donne $u_R(0^{+}) = E = 6{,}0\\ \\mathrm{V}$, donc $i(0^{+}) = \\dfrac{E}{R} = \\dfrac{6{,}0}{1{,}0\\times10^{3}} = 6{,}0\\times10^{-3}\\ \\mathrm{A} = 6{,}0\\ \\mathrm{mA}$. Contrôle par l'autre voie : $i(0) = C\\left(\\dfrac{du_C}{dt}\\right)_{0} = C\\dfrac{E}{\\tau} = 4{,}7\\times10^{-6}\\times\\dfrac{6{,}0}{4{,}7\\times10^{-3}} = 6{,}0\\times10^{-3}\\ \\mathrm{A}$ : les deux méthodes concordent.",
+          "methode": "$i(0^{+}) = E/R$ au début d'une charge, $i = 0$ en régime permanent : ce sont les deux valeurs extrêmes à savoir citer.",
+          "points": 1,
+          "part": "Partie B — Courant et bilan d'énergie",
+          "ref": "pc-rc-probleme-1-q5"
+        },
+        {
+          "notion": "Énergie emmagasinée",
+          "difficulty": 3,
+          "statement": "L'énergie emmagasinée par le condensateur à la fin de la charge vaut :",
+          "options": [
+            {
+              "label": "$8{,}5\\times10^{-5}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$E_e = \\tfrac12 CE^{2} = 0{,}5\\times4{,}7\\times10^{-6}\\times(6{,}0)^{2} = 8{,}46\\times10^{-5}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$1{,}7\\times10^{-4}\\ \\mathrm{J}$",
+              "why": "Tu as oublié le facteur $\\tfrac12$ : $4{,}7\\times10^{-6}\\times36 = 1{,}7\\times10^{-4}\\ \\mathrm{J}$ est l'énergie fournie par le générateur."
+            },
+            {
+              "label": "$1{,}4\\times10^{-5}\\ \\mathrm{J}$",
+              "why": "Tu as utilisé $E$ et non $E^{2}$ : $0{,}5\\times4{,}7\\times10^{-6}\\times6{,}0 = 1{,}4\\times10^{-5}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$3{,}4\\times10^{-5}\\ \\mathrm{J}$",
+              "why": "Tu as pris $u_C = 0{,}63\\,E = 3{,}8\\ \\mathrm{V}$ : en **fin** de charge $u_C$ vaut $E$, pas $0{,}63\\,E$."
+            }
+          ],
+          "hint": "En fin de charge, quelle est la valeur de $u_C$ ? Reporte-la dans l'expression de l'énergie du condensateur.",
+          "solution": "En régime permanent $u_C = E = 6{,}0\\ \\mathrm{V}$, donc $E_e = \\tfrac12 C u_C^{2} = 0{,}5\\times4{,}7\\times10^{-6}\\times36 = 8{,}46\\times10^{-5}\\ \\mathrm{J} \\approx 8{,}5\\times10^{-5}\\ \\mathrm{J}$. Contrôle d'ordre de grandeur : quelques dizaines de microjoules pour un condensateur de quelques microfarads sous quelques volts, c'est cohérent.",
+          "methode": "$E_e = \\tfrac12 C u_C^{2}$ : attention au $\\tfrac12$, au carré, et à la valeur de $u_C$ à l'instant demandé.",
+          "points": 1,
+          "part": "Partie B — Courant et bilan d'énergie",
+          "ref": "pc-rc-probleme-1-q6"
+        },
+        {
+          "notion": "Bilan énergétique de la charge",
+          "difficulty": 3,
+          "statement": "Pendant cette charge complète, l'énergie dissipée par effet Joule dans le conducteur ohmique vaut :",
+          "options": [
+            {
+              "label": "$8{,}5\\times10^{-5}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "Le générateur fournit $CE^{2} = 1{,}7\\times10^{-4}\\ \\mathrm{J}$ et le condensateur en stocke la moitié : la différence, $8{,}5\\times10^{-5}\\ \\mathrm{J}$, est dissipée."
+            },
+            {
+              "label": "$1{,}7\\times10^{-4}\\ \\mathrm{J}$",
+              "why": "C'est l'énergie **totale** fournie par le générateur : la moitié a été stockée dans le condensateur."
+            },
+            {
+              "label": "$0\\ \\mathrm{J}$",
+              "why": "Le conducteur ohmique est traversé par un courant pendant tout le régime transitoire : il dissipe nécessairement de l'énergie."
+            },
+            {
+              "label": "$4{,}2\\times10^{-5}\\ \\mathrm{J}$",
+              "why": "Tu as pris le quart de l'énergie fournie : le bilan donne exactement la moitié, soit $\\tfrac12 CE^{2}$."
+            }
+          ],
+          "hint": "Fais le bilan : énergie fournie par le générateur, énergie stockée dans le condensateur, et différence.",
+          "solution": "Le générateur fournit $W_g = q_{\\max}E = CE^{2} = 4{,}7\\times10^{-6}\\times36 = 1{,}69\\times10^{-4}\\ \\mathrm{J}$. Le condensateur en stocke $E_e = \\tfrac12 CE^{2} = 8{,}46\\times10^{-5}\\ \\mathrm{J}$. Par conservation de l'énergie, l'énergie dissipée vaut $W_J = W_g - E_e = 1{,}69\\times10^{-4} - 8{,}46\\times10^{-5} = 8{,}5\\times10^{-5}\\ \\mathrm{J}$, soit exactement $\\tfrac12 CE^{2}$ : la charge d'un condensateur à travers un conducteur ohmique a un rendement de $50\\ \\%$, et ce résultat ne dépend pas de $R$.",
+          "methode": "Bilan universel de la charge : $CE^{2}$ fourni $=$ $\\tfrac12 CE^{2}$ stocké $+$ $\\tfrac12 CE^{2}$ dissipé, quelle que soit $R$.",
+          "points": 1,
+          "part": "Partie B — Courant et bilan d'énergie",
+          "ref": "pc-rc-probleme-1-q7"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-rc-probleme-2",
+      "chapter": "pc-rc",
+      "kind": "probleme",
+      "title": "Décharge d'un condensateur et linéarisation",
+      "difficulty": 3,
+      "context": "Un condensateur de capacité $C$ inconnue est d'abord chargé complètement sous la tension $U_0 = 12{,}0\\ \\mathrm{V}$. À la date $t = 0$, on le relie à un conducteur ohmique de résistance $R = 4{,}7\\ \\mathrm{k\\Omega}$ et on enregistre la tension $u_C(t)$ à ses bornes. Pour exploiter l'enregistrement, on construit le graphe de $\\ln\\!\\left(u_C\\right)$ en fonction du temps ($u_C$ exprimée en volts) : on obtient une **droite de pente $-100\\ \\mathrm{s^{-1}}$**, d'ordonnée à l'origine $\\ln(12{,}0)$. Données : $e^{-1} = 0{,}37$ ; $\\ln 2 = 0{,}69$.",
+      "figure": "rc-decharge",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "La décharge du condensateur",
+          "difficulty": 1,
+          "statement": "L'équation différentielle vérifiée par $u_C$ pendant la décharge est :",
+          "options": [
+            {
+              "label": "$RC\\,\\dfrac{du_C}{dt} + u_C = 0$",
+              "correct": true,
+              "why": "La boucle ne contient plus que $R$ et $C$ : $u_R + u_C = 0$ avec $u_R = RC\\,\\dfrac{du_C}{dt}$."
+            },
+            {
+              "label": "$RC\\,\\dfrac{du_C}{dt} + u_C = U_0$",
+              "why": "Tu as gardé un second membre : il n'y a plus de générateur dans la boucle pendant la décharge."
+            },
+            {
+              "label": "$RC\\,\\dfrac{du_C}{dt} = u_C$",
+              "why": "Erreur de signe : avec cette équation $u_C$ croîtrait exponentiellement au lieu de décroître."
+            },
+            {
+              "label": "$\\dfrac{du_C}{dt} + RC\\,u_C = 0$",
+              "why": "Tu as déplacé le facteur $RC$ : il multiplie la dérivée, sinon l'équation n'est plus homogène."
+            }
+          ],
+          "hint": "Quels dipôles restent dans la boucle pendant la décharge ? Écris l'additivité des tensions pour cette boucle.",
+          "solution": "Pendant la décharge, le circuit ne comporte que le condensateur et le conducteur ohmique : $u_R + u_C = 0$. Avec $u_R = R\\,i = RC\\,\\dfrac{du_C}{dt}$, on obtient $RC\\,\\dfrac{du_C}{dt} + u_C = 0$. Contrôle : cette équation impose $\\dfrac{du_C}{dt} = -\\dfrac{u_C}{RC} < 0$, donc une tension décroissante, ce qui est bien une décharge.",
+          "methode": "L'équation de la décharge est celle de la charge avec un second membre nul : c'est la seule différence.",
+          "points": 1,
+          "part": "Partie A — Décharge et exploitation de la linéarisation",
+          "ref": "pc-rc-probleme-2-q1"
+        },
+        {
+          "notion": "Résoudre soi-même l'équation différentielle",
+          "difficulty": 1,
+          "statement": "La solution de cette équation, avec la condition initiale de l'énoncé, s'écrit :",
+          "options": [
+            {
+              "label": "$u_C(t) = 12{,}0\\,e^{-t/\\tau}$, en volts",
+              "correct": true,
+              "why": "$u_C(0) = 12{,}0\\ \\mathrm{V}$ et $u_C \\to 0$ : les deux conditions de la décharge sont satisfaites."
+            },
+            {
+              "label": "$u_C(t) = 12{,}0\\left(1 - e^{-t/\\tau}\\right)$, en volts",
+              "why": "Cette expression part de $0$ et croît vers $12{,}0\\ \\mathrm{V}$ : c'est une charge, pas une décharge."
+            },
+            {
+              "label": "$u_C(t) = 12{,}0\\,e^{+t/\\tau}$, en volts",
+              "why": "Avec un exposant positif la tension divergerait : le signe de l'exposant doit être négatif."
+            },
+            {
+              "label": "$u_C(t) = 12{,}0 - \\dfrac{t}{\\tau}$, en volts",
+              "why": "Cette décroissance est linéaire, alors que la solution de l'équation est exponentielle."
+            }
+          ],
+          "hint": "Cherche la solution sous la forme $A\\,e^{-t/\\tau}$ puis identifie $A$ grâce à $u_C(0)$.",
+          "solution": "La solution de $RC\\,\\dfrac{du_C}{dt} + u_C = 0$ est de la forme $u_C = A\\,e^{-t/\\tau}$ avec $\\tau = RC$. La condition initiale $u_C(0) = U_0 = 12{,}0\\ \\mathrm{V}$ donne $A = 12{,}0\\ \\mathrm{V}$, d'où $u_C(t) = 12{,}0\\,e^{-t/\\tau}$ en volts. Contrôle : l'énoncé indique une ordonnée à l'origine $\\ln(12{,}0)$ pour le graphe de $\\ln u_C$, ce qui correspond exactement à $u_C(0) = 12{,}0\\ \\mathrm{V}$.",
+          "methode": "Décharge : $u_C = U_0\\,e^{-t/\\tau}$. L'amplitude $U_0$ est toujours la valeur initiale de la tension.",
+          "points": 1,
+          "part": "Partie A — Décharge et exploitation de la linéarisation",
+          "ref": "pc-rc-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 4 — La linéarisation de la décharge",
+          "difficulty": 2,
+          "statement": "D'après la pente de la droite $\\ln\\!\\left(u_C\\right) = f(t)$, la constante de temps vaut :",
+          "options": [
+            {
+              "label": "$\\tau = 10\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$\\ln u_C = \\ln U_0 - t/\\tau$ : la pente vaut $-1/\\tau$, donc $\\tau = 1/100 = 1{,}0\\times10^{-2}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$\\tau = 100\\ \\mathrm{ms}$",
+              "why": "Tu as recopié la valeur numérique de la pente : il faut prendre son inverse, $1/100 = 0{,}010\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$\\tau = 1{,}0\\ \\mathrm{ms}$",
+              "why": "Erreur de puissance de dix : $1/100 = 0{,}010\\ \\mathrm{s} = 10\\ \\mathrm{ms}$, et non $0{,}0010\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$\\tau = 6{,}9\\ \\mathrm{ms}$",
+              "why": "Tu as multiplié par $\\ln 2$ : ce facteur sert à passer de $\\tau$ à la demi-durée, il n'intervient pas ici."
+            }
+          ],
+          "hint": "Prends le logarithme népérien de $u_C(t) = U_0\\,e^{-t/\\tau}$ et identifie la pente de la droite obtenue.",
+          "solution": "$u_C = U_0\\,e^{-t/\\tau}$ donne $\\ln u_C = \\ln U_0 - \\dfrac{t}{\\tau}$ : c'est bien une droite, d'ordonnée à l'origine $\\ln U_0 = \\ln(12{,}0)$ et de pente $a = -\\dfrac{1}{\\tau}$. Donc $\\tau = -\\dfrac{1}{a} = \\dfrac{1}{100} = 1{,}0\\times10^{-2}\\ \\mathrm{s} = 10\\ \\mathrm{ms}$. Contrôle d'unité : la pente est en $\\mathrm{s^{-1}}$, son inverse est une durée.",
+          "methode": "La linéarisation redresse l'exponentielle : $\\tau$ est l'inverse de la valeur absolue de la pente de $\\ln u_C = f(t)$.",
+          "points": 1,
+          "part": "Partie A — Décharge et exploitation de la linéarisation",
+          "ref": "pc-rc-probleme-2-q3"
+        },
+        {
+          "notion": "La constante de temps",
+          "difficulty": 2,
+          "statement": "On en déduit la capacité du condensateur :",
+          "options": [
+            {
+              "label": "$C = 2{,}1\\ \\mu\\mathrm{F}$",
+              "correct": true,
+              "why": "$C = \\tau/R = 1{,}0\\times10^{-2}/4{,}7\\times10^{3} = 2{,}13\\times10^{-6}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$C = 2{,}1\\ \\mathrm{mF}$",
+              "why": "Tu n'as pas converti $R$ : $1{,}0\\times10^{-2}/4{,}7 = 2{,}1\\times10^{-3}$, or $4{,}7\\ \\mathrm{k\\Omega} = 4{,}7\\times10^{3}\\ \\Omega$."
+            },
+            {
+              "label": "$C = 2{,}1\\ \\mathrm{nF}$",
+              "why": "Erreur de puissance de dix : $10^{-2}/10^{3} = 10^{-5}$, donc le résultat est de l'ordre du microfarad."
+            },
+            {
+              "label": "$C = 4{,}7\\times10^{5}\\ \\mathrm{F}$",
+              "why": "Tu as calculé $R/\\tau = 4{,}7\\times10^{3}/1{,}0\\times10^{-2}$ au lieu de $\\tau/R$."
+            }
+          ],
+          "hint": "Isole $C$ dans $\\tau = RC$, en unités SI.",
+          "solution": "$C = \\dfrac{\\tau}{R} = \\dfrac{1{,}0\\times10^{-2}}{4{,}7\\times10^{3}} = 2{,}13\\times10^{-6}\\ \\mathrm{F} \\approx 2{,}1\\ \\mu\\mathrm{F}$. Contrôle : $\\tau = RC = 4{,}7\\times10^{3}\\times2{,}13\\times10^{-6} = 1{,}0\\times10^{-2}\\ \\mathrm{s}$, on retrouve bien $10\\ \\mathrm{ms}$.",
+          "methode": "Une fois $\\tau$ mesurée, $C = \\tau/R$ (ou $R = \\tau/C$) donne la grandeur inconnue du dipôle.",
+          "points": 1,
+          "part": "Partie A — Décharge et exploitation de la linéarisation",
+          "ref": "pc-rc-probleme-2-q4"
+        },
+        {
+          "notion": "La décharge du condensateur",
+          "difficulty": 2,
+          "statement": "À la date $t = 10\\ \\mathrm{ms}$, la tension aux bornes du condensateur vaut :",
+          "options": [
+            {
+              "label": "$4{,}4\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$t = \\tau$, donc $u_C = U_0\\,e^{-1} = 12{,}0\\times0{,}37 = 4{,}4\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$7{,}6\\ \\mathrm{V}$",
+              "why": "Tu as utilisé $0{,}63\\,U_0 = 7{,}6\\ \\mathrm{V}$ : ce repère est celui de la charge, alors qu'ici la tension décroît."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as pris $U_0/2$, atteint à $t = \\tau\\ln 2 = 6{,}9\\ \\mathrm{ms}$ et non à $t = \\tau = 10\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$0\\ \\mathrm{V}$",
+              "why": "La décharge n'est pratiquement terminée qu'au bout de $5\\tau = 50\\ \\mathrm{ms}$ : à $10\\ \\mathrm{ms}$ il reste $37\\ \\%$ de $U_0$."
+            }
+          ],
+          "hint": "Compare la date demandée à la constante de temps que tu viens de déterminer.",
+          "solution": "On a trouvé $\\tau = 10\\ \\mathrm{ms}$ : la date demandée est donc exactement $t = \\tau$. Alors $u_C(\\tau) = U_0\\,e^{-1} = 12{,}0\\times0{,}37 = 4{,}44 \\approx 4{,}4\\ \\mathrm{V}$. Contrôle par la droite : $\\ln u_C = \\ln(12{,}0) - 100\\times0{,}010 = 2{,}48 - 1 = 1{,}48$, et $e^{1{,}48} = 4{,}4$ : les deux voies concordent.",
+          "methode": "Repère de la décharge : à $t = \\tau$ il reste $37\\ \\%$ de $U_0$ ; à $5\\tau$, moins de $1\\ \\%$.",
+          "points": 1,
+          "part": "Partie A — Décharge et exploitation de la linéarisation",
+          "ref": "pc-rc-probleme-2-q5"
+        },
+        {
+          "notion": "Associations de condensateurs",
+          "difficulty": 3,
+          "statement": "On remplace le condensateur par **deux** condensateurs identiques, de capacité $C = 2{,}1\\ \\mu\\mathrm{F}$ chacune, montés en parallèle, sans changer $R$. La nouvelle constante de temps vaut :",
+          "options": [
+            {
+              "label": "$20\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "En parallèle $C_{eq} = 2C$, donc $\\tau' = R\\times2C = 2\\tau = 2\\times10 = 20\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$5{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as appliqué la formule de l'association **série** ($C_{eq} = C/2$) : en parallèle les capacités s'ajoutent."
+            },
+            {
+              "label": "$10\\ \\mathrm{ms}$",
+              "why": "Tu as supposé la constante de temps inchangée : ajouter un condensateur en parallèle double la capacité équivalente."
+            },
+            {
+              "label": "$40\\ \\mathrm{ms}$",
+              "why": "Tu as multiplié par $4$ : $\\tau = RC$ est proportionnelle à $C_{eq}$, qui n'est que doublée."
+            }
+          ],
+          "hint": "Calcule d'abord la capacité équivalente des deux condensateurs en parallèle, puis applique $\\tau = R\\,C_{eq}$.",
+          "solution": "En parallèle, $C_{eq} = C + C = 2C = 4{,}3\\ \\mu\\mathrm{F}$. Donc $\\tau' = R\\,C_{eq} = 4{,}7\\times10^{3}\\times4{,}3\\times10^{-6} = 2{,}0\\times10^{-2}\\ \\mathrm{s} = 20\\ \\mathrm{ms}$, soit le double de $\\tau$. Contrôle : une capacité plus grande stocke plus de charge, la décharge doit donc être plus lente — c'est bien le cas.",
+          "methode": "Parallèle → $C_{eq} = C_1+C_2$, donc $\\tau$ augmente. Série → $C_{eq} < \\min(C_1,C_2)$, donc $\\tau$ diminue.",
+          "points": 1,
+          "part": "Partie B — Modifier le circuit",
+          "ref": "pc-rc-probleme-2-q6"
+        },
+        {
+          "notion": "Influence de $R$ et de $C$",
+          "difficulty": 3,
+          "statement": "On garde ces deux condensateurs en parallèle et on souhaite retrouver la constante de temps initiale de $10\\ \\mathrm{ms}$. Il faut remplacer $R$ par :",
+          "options": [
+            {
+              "label": "$2{,}35\\ \\mathrm{k\\Omega}$",
+              "correct": true,
+              "why": "$\\tau = R'\\times2C$ doit valoir $RC$, donc $R' = R/2 = 4{,}7/2 = 2{,}35\\ \\mathrm{k\\Omega}$."
+            },
+            {
+              "label": "$9{,}4\\ \\mathrm{k\\Omega}$",
+              "why": "Tu as doublé $R$ : la capacité ayant déjà doublé, doubler $R$ multiplierait $\\tau$ par $4$."
+            },
+            {
+              "label": "$4{,}7\\ \\mathrm{k\\Omega}$",
+              "why": "Garder la même résistance laisse $\\tau' = 20\\ \\mathrm{ms}$ : il faut compenser le doublement de la capacité."
+            },
+            {
+              "label": "$1{,}18\\ \\mathrm{k\\Omega}$",
+              "why": "Tu as divisé $R$ par $4$ : cela donnerait $\\tau = 1{,}18\\times10^{3}\\times4{,}3\\times10^{-6} = 5{,}0\\ \\mathrm{ms}$, deux fois trop court."
+            }
+          ],
+          "hint": "Écris la condition $R'\\,C_{eq} = R\\,C$ et isole $R'$.",
+          "solution": "On veut $\\tau' = R'\\,C_{eq} = R'\\times2C = \\tau = R\\,C$, soit $R' = \\dfrac{R}{2} = \\dfrac{4{,}7\\times10^{3}}{2} = 2{,}35\\times10^{3}\\ \\Omega = 2{,}35\\ \\mathrm{k\\Omega}$. Contrôle : $\\tau' = 2{,}35\\times10^{3}\\times4{,}3\\times10^{-6} = 1{,}0\\times10^{-2}\\ \\mathrm{s} = 10\\ \\mathrm{ms}$, la valeur initiale est bien retrouvée.",
+          "methode": "$\\tau = RC$ est un produit : toute multiplication de $C$ se compense par la division inverse de $R$.",
+          "points": 1,
+          "part": "Partie B — Modifier le circuit",
+          "ref": "pc-rc-probleme-2-q7"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-rc-serie-1",
+      "title": "Dipôle RC · Échauffement",
+      "description": "Les réflexes de base du dipôle RC : constitution, $q = Cu_C$, $i = C\\,du_C/dt$, repères à $\\tau$, calcul de $\\tau = RC$ et première énergie.",
+      "kind": "custom",
+      "chapter": "pc-rc",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-rc-constitution-et-symbole-q1",
+        "pc-rc-intensite-et-charge-la-relation-derivee-q1",
+        "pc-rc-la-charge-du-condensateur-q1",
+        "pc-rc-la-decharge-du-condensateur-q1",
+        "pc-rc-determiner-tau-graphiquement-q1",
+        "pc-rc-energie-emmagasinee-q1",
+        "pc-rc-la-constante-de-temps-q1",
+        "pc-rc-constitution-et-symbole-q3",
+        "pc-rc-la-relation-chargetension-q1",
+        "pc-rc-la-charge-du-condensateur-q2",
+        "pc-rc-la-decharge-du-condensateur-q2",
+        "pc-rc-influence-de-r-et-de-c-q2"
+      ]
+    },
+    {
+      "slug": "pc-rc-serie-2",
+      "title": "Dipôle RC · Entraînement",
+      "description": "Tout le chapitre en douze questions : mise en équation, résolution, lectures graphiques, montage et protocole de TP, associations et bilan d'énergie.",
+      "kind": "custom",
+      "chapter": "pc-rc",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-rc-le-montage-et-la-mise-en-equation-q1",
+        "pc-rc-resoudre-soi-meme-l-equation-differentie-q1",
+        "pc-rc-associations-de-condensateurs-q1",
+        "pc-rc-le-protocole-q1",
+        "pc-rc-le-montage-et-la-mise-en-equation-q2",
+        "pc-rc-resoudre-soi-meme-l-equation-differentie-q3",
+        "pc-rc-determiner-tau-graphiquement-q3",
+        "pc-rc-reglages-et-lecture-de-l-oscilloscope-q2",
+        "pc-rc-exploitation-d-un-releve-q2",
+        "pc-rc-bilan-energetique-de-la-charge-q2",
+        "pc-rc-associations-de-condensateurs-q2",
+        "pc-rc-sources-d-erreur-q2"
+      ]
+    },
+    {
+      "slug": "pc-rc-serie-3",
+      "title": "Dipôle RC · Type BAC",
+      "description": "Niveau examen : pièges classiques, linéarisation, continuité de $u_C$, charge à courant constant, rendement de 50 % et incertitudes.",
+      "kind": "custom",
+      "chapter": "pc-rc",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-rc-probleme-1-q3",
+        "pc-rc-probleme-2-q3",
+        "pc-rc-probleme-1-q5",
+        "pc-rc-le-montage-et-la-mise-en-equation-q3",
+        "pc-rc-la-charge-du-condensateur-q4",
+        "pc-rc-la-decharge-du-condensateur-q4",
+        "pc-rc-reponse-a-un-echelon-le-point-de-vue-gen-q1",
+        "pc-rc-charge-a-courant-constant-q1",
+        "pc-rc-retour-sur-le-rendement-de-50-q1",
+        "pc-rc-mesures-et-incertitudes-q1",
+        "pc-rc-probleme-1-q7",
+        "pc-rc-probleme-2-q7"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3045 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-rl",
+      "name": "Dipôle RL",
+      "domain": "physique",
+      "unit": "Électricité"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Constitution et grandeurs caractéristiques",
+      "Le phénomène d'auto-induction",
+      "La relation tension–intensité",
+      "Énergie emmagasinée",
+      "Le montage et la mise en équation",
+      "Établissement du courant",
+      "Rupture du courant",
+      "Récapitulatif",
+      "La constante de temps",
+      "Déterminer $\\tau$ et $L$ graphiquement",
+      "Influence de $L$ et de $R$",
+      "Bilan énergétique",
+      "La forme générale, une fois pour toutes",
+      "La surtension de rupture, quantifiée",
+      "Associations de bobines",
+      "Inductance et géométrie",
+      "Mesures et incertitudes",
+      "Le RL face au RC : la synthèse",
+      "Le montage",
+      "Le protocole",
+      "Le choix des calibres",
+      "Exploitation d'un relevé",
+      "Sources d'erreur",
+      "Méthode 1 — Établir l'équation différentielle",
+      "Méthode 2 — Vérifier une solution et identifier les constantes",
+      "Méthode 3 — Exploiter un oscillogramme de $u_R$",
+      "Méthode 4 — Linéariser la rupture",
+      "Méthode 5 — Le bilan d'énergie"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Établir l'équation différentielle",
+      "Méthode 2 — Vérifier une solution et identifier les constantes",
+      "Méthode 3 — Exploiter un oscillogramme de $u_R$",
+      "Méthode 4 — Linéariser la rupture",
+      "Méthode 5 — Le bilan d'énergie"
+    ],
+    "existing_questions_total": 8,
+    "target_new_questions": 56,
+    "suggested_figures": [
+      "rl-etablissement — Établissement du courant dans une bobine — i(t) croît vers E/R",
+      "rl-rupture — Rupture du courant dans un dipôle RL : i décroît, τ = L/R",
+      "dosage-conductimetrique — Dosage conductimétrique : rupture de pente à l'équivalence"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Le montage et la mise en équation",
+        "lesson": "Établissement et rupture du courant",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-le-montage-et-la-mise-en-equation",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Le montage et la mise en équation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le montage et la mise en équation",
+          "difficulty": 1,
+          "statement": "Un générateur de f.é.m. $E$ (résistance interne négligeable) alimente, à travers un interrupteur, un conducteur ohmique $R$ en série avec une bobine $(L,\\ r)$. Quelle équation différentielle vérifie l'intensité $i$ après la fermeture ?",
+          "options": [
+            {
+              "label": "$L\\,\\dfrac{di}{dt} + (R+r)\\,i = E$",
+              "correct": true,
+              "why": "La loi des mailles $E = R\\,i + r\\,i + L\\,\\frac{di}{dt}$ se réarrange exactement ainsi : les deux résistances se somment."
+            },
+            {
+              "label": "$L\\,\\dfrac{di}{dt} + R\\,i = E$",
+              "why": "Tu as oublié la résistance $r$ de la bobine : elle est en série avec $R$ et compte tout autant dans la maille."
+            },
+            {
+              "label": "$L\\,\\dfrac{di}{dt} - (R+r)\\,i = E$",
+              "why": "Tu as mis un signe moins : les tensions $R\\,i$, $r\\,i$ et $L\\,\\frac{di}{dt}$ sont toutes trois des tensions de récepteurs, donc toutes du même signe."
+            },
+            {
+              "label": "$(R+r)\\,\\dfrac{di}{dt} + L\\,i = E$",
+              "why": "Tu as échangé $L$ et $R+r$. C'est l'inductance qui multiplie la dérivée, et les résistances qui multiplient l'intensité."
+            }
+          ],
+          "hint": "Écris la loi des mailles en exprimant chaque tension, puis regroupe les termes en $i$.",
+          "solution": "La loi des mailles donne $E = u_R + u_L$ avec $u_R = R\\,i$ et $u_L = r\\,i + L\\,\\dfrac{di}{dt}$. Donc $E = R\\,i + r\\,i + L\\,\\dfrac{di}{dt}$, soit $$L\\,\\frac{di}{dt} + (R+r)\\,i = E.$$ Contrôle : en régime permanent $\\frac{di}{dt}=0$ et l'équation redonne $I_{\\max} = \\dfrac{E}{R+r}$, ce qui est bien la loi d'Ohm appliquée à la résistance totale.",
+          "methode": "Dans un circuit RL, note toujours la résistance totale $R+r$ dès la mise en équation : c'est elle, et non $R$, qui apparaît partout ensuite.",
+          "points": 1,
+          "ref": "pc-rl-le-montage-et-la-mise-en-equation-q1"
+        },
+        {
+          "notion": "Le montage et la mise en équation",
+          "difficulty": 2,
+          "statement": "On met l'équation différentielle du dipôle RL sous la forme canonique $\\dfrac{di}{dt} + \\dfrac{i}{\\tau} = \\dfrac{E}{L}$. Quelle est l'expression de $\\tau$ ?",
+          "options": [
+            {
+              "label": "$\\tau = \\dfrac{L}{R+r}$",
+              "correct": true,
+              "why": "En divisant $L\\,\\frac{di}{dt} + (R+r)\\,i = E$ par $L$, le coefficient de $i$ devient $\\frac{R+r}{L} = \\frac{1}{\\tau}$."
+            },
+            {
+              "label": "$\\tau = \\dfrac{L}{R}$",
+              "why": "C'est l'expression valable seulement pour une bobine idéale ($r=0$). Dès que la bobine a une résistance, c'est $R+r$ qu'il faut mettre au dénominateur."
+            },
+            {
+              "label": "$\\tau = \\dfrac{R+r}{L}$",
+              "why": "Tu as pris l'inverse : $\\frac{R+r}{L}$ s'exprime en $\\mathrm{s^{-1}}$, ce n'est donc pas une durée."
+            },
+            {
+              "label": "$\\tau = L\\,(R+r)$",
+              "why": "Tu as multiplié au lieu de diviser : $L\\,(R+r)$ s'exprime en $\\Omega^{2}\\cdot\\mathrm{s}$ et n'est pas homogène à un temps."
+            }
+          ],
+          "hint": "Divise toute l'équation par $L$ et identifie le coefficient qui multiplie $i$.",
+          "solution": "Partons de $L\\,\\dfrac{di}{dt} + (R+r)\\,i = E$ et divisons par $L$ : $$\\frac{di}{dt} + \\frac{R+r}{L}\\,i = \\frac{E}{L}.$$ En comparant à la forme canonique, $\\dfrac{1}{\\tau} = \\dfrac{R+r}{L}$, donc $\\tau = \\dfrac{L}{R+r}$. Contrôle d'homogénéité : $1\\ \\mathrm{H} = 1\\ \\Omega\\cdot\\mathrm{s}$, donc $\\dfrac{\\mathrm{H}}{\\Omega} = \\mathrm{s}$.",
+          "methode": "Mets toujours l'équation sous la forme $\\frac{di}{dt} + \\frac{i}{\\tau} = \\text{constante}$ : $\\tau$ se lit alors directement comme l'inverse du coefficient de $i$.",
+          "points": 1,
+          "ref": "pc-rl-le-montage-et-la-mise-en-equation-q2"
+        },
+        {
+          "notion": "Le montage et la mise en équation",
+          "difficulty": 3,
+          "statement": "Dans un circuit série $E = 6{,}0\\ \\mathrm{V}$, $R = 90\\ \\Omega$ et bobine $(L = 0{,}20\\ \\mathrm{H},\\ r = 10\\ \\Omega)$. Quelle est la constante de temps du circuit ?",
+          "options": [
+            {
+              "label": "$\\tau = 2{,}0\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$\\tau = \\dfrac{L}{R+r} = \\dfrac{0{,}20}{90+10} = \\dfrac{0{,}20}{100} = 2{,}0\\times 10^{-3}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$\\tau = 2{,}2\\ \\mathrm{ms}$",
+              "why": "Tu as calculé $\\dfrac{L}{R} = \\dfrac{0{,}20}{90} = 2{,}2\\ \\mathrm{ms}$ : c'est **le** piège du chapitre, tu as oublié la résistance $r$ de la bobine."
+            },
+            {
+              "label": "$\\tau = 20\\ \\mathrm{ms}$",
+              "why": "Tu as calculé $\\dfrac{L}{r} = \\dfrac{0{,}20}{10} = 20\\ \\mathrm{ms}$ : tu n'as gardé que la résistance de la bobine au lieu de la résistance totale."
+            },
+            {
+              "label": "$\\tau = 20\\ \\mathrm{s}$",
+              "why": "Tu as calculé $L\\,(R+r) = 0{,}20 \\times 100 = 20$ : tu as multiplié au lieu de diviser."
+            }
+          ],
+          "hint": "Quelle est la résistance totale que le courant doit traverser dans cette maille ?",
+          "solution": "La résistance totale du circuit est $R + r = 90 + 10 = 100\\ \\Omega$. Donc $$\\tau = \\frac{L}{R+r} = \\frac{0{,}20}{100} = 2{,}0\\times 10^{-3}\\ \\mathrm{s} = 2{,}0\\ \\mathrm{ms}.$$ Contrôle : le régime permanent sera atteint vers $5\\tau = 10\\ \\mathrm{ms}$, et l'intensité finale vaudra $I_{\\max} = \\dfrac{6{,}0}{100} = 60\\ \\mathrm{mA}$.",
+          "methode": "Avant de calculer $\\tau$, écris explicitement $R+r$ et sa valeur numérique : tu ne pourras plus oublier $r$.",
+          "points": 1,
+          "ref": "pc-rl-le-montage-et-la-mise-en-equation-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Établissement du courant",
+        "lesson": "Établissement et rupture du courant",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-etablissement-du-courant",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Établissement du courant",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Établissement du courant",
+          "difficulty": 1,
+          "statement": "Quelle est la solution de l'équation $L\\,\\dfrac{di}{dt} + (R+r)\\,i = E$ avec la condition initiale $i(0) = 0$ ?",
+          "options": [
+            {
+              "label": "$i(t) = \\dfrac{E}{R+r}\\left(1 - e^{-t/\\tau}\\right)$",
+              "correct": true,
+              "why": "Cette fonction est nulle en $t=0$ et tend vers $\\frac{E}{R+r}$ : elle vérifie la condition initiale et le régime permanent."
+            },
+            {
+              "label": "$i(t) = \\dfrac{E}{R+r}\\,e^{-t/\\tau}$",
+              "why": "C'est la loi de la **rupture** du courant : elle part de $\\frac{E}{R+r}$ et tend vers $0$, l'inverse de ce qu'on observe à la fermeture."
+            },
+            {
+              "label": "$i(t) = \\dfrac{E}{R}\\left(1 - e^{-t/\\tau}\\right)$",
+              "why": "Tu as oublié $r$ dans la valeur finale : le régime permanent donne $I_{\\max} = \\frac{E}{R+r}$, imposé par la résistance totale."
+            },
+            {
+              "label": "$i(t) = \\dfrac{E}{R+r}\\left(1 + e^{-t/\\tau}\\right)$",
+              "why": "Avec un signe $+$, on aurait $i(0) = \\frac{2E}{R+r}$ : la condition initiale $i(0)=0$ n'est pas respectée."
+            }
+          ],
+          "hint": "Teste chaque expression en $t = 0$ puis quand $t$ devient très grand.",
+          "solution": "La solution se compose de la solution particulière constante $I_{\\max} = \\dfrac{E}{R+r}$ et d'une exponentielle décroissante : $i(t) = I_{\\max} + A\\,e^{-t/\\tau}$. La condition $i(0)=0$ donne $A = -I_{\\max}$, d'où $$i(t) = \\frac{E}{R+r}\\left(1 - e^{-t/\\tau}\\right),\\qquad \\tau = \\frac{L}{R+r}.$$ Contrôle : en $t=0$, $i=0$ ; quand $t \\to \\infty$, $i \\to \\frac{E}{R+r}$.",
+          "methode": "Pour reconnaître la bonne solution, vérifie toujours deux choses : la valeur à $t=0$ et la valeur limite.",
+          "points": 1,
+          "ref": "pc-rl-etablissement-du-courant-q1"
+        },
+        {
+          "notion": "Établissement du courant",
+          "difficulty": 2,
+          "statement": "Circuit série : $E = 12\\ \\mathrm{V}$, $R = 140\\ \\Omega$, bobine $(L = 0{,}60\\ \\mathrm{H},\\ r = 10\\ \\Omega)$. Quelle est l'intensité du courant à l'instant $t = 4{,}0\\ \\mathrm{ms}$ après la fermeture ?",
+          "options": [
+            {
+              "label": "$i = 51\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$I_{\\max} = \\frac{12}{150} = 80\\ \\mathrm{mA}$ et $\\tau = \\frac{0{,}60}{150} = 4{,}0\\ \\mathrm{ms}$, donc $i(\\tau) = 80\\,(1-e^{-1}) = 51\\ \\mathrm{mA}$."
+            },
+            {
+              "label": "$i = 29\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $I_{\\max}\\,e^{-1} = 80 \\times 0{,}368 = 29\\ \\mathrm{mA}$ : tu as appliqué la loi de la rupture au lieu de celle de l'établissement."
+            },
+            {
+              "label": "$i = 80\\ \\mathrm{mA}$",
+              "why": "Tu as donné $I_{\\max}$ : à $t = \\tau$ le régime permanent n'est pas atteint, il ne l'est qu'au bout d'environ $5\\tau = 20\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$i = 54\\ \\mathrm{mA}$",
+              "why": "Tu as pris $I_{\\max} = \\frac{E}{R} = \\frac{12}{140} = 86\\ \\mathrm{mA}$ puis $86\\,(1-e^{-1}) = 54\\ \\mathrm{mA}$ : tu as oublié $r$ dans l'intensité maximale."
+            }
+          ],
+          "hint": "Calcule d'abord $I_{\\max}$ et $\\tau$, puis compare $t$ à $\\tau$.",
+          "solution": "Résistance totale : $R+r = 150\\ \\Omega$. Donc $I_{\\max} = \\dfrac{E}{R+r} = \\dfrac{12}{150} = 0{,}080\\ \\mathrm{A} = 80\\ \\mathrm{mA}$ et $\\tau = \\dfrac{L}{R+r} = \\dfrac{0{,}60}{150} = 4{,}0\\times 10^{-3}\\ \\mathrm{s}$. L'instant demandé est donc $t = \\tau$ exactement : $$i(\\tau) = 80\\times\\left(1-e^{-1}\\right) = 80 \\times 0{,}632 = 50{,}6 \\approx 51\\ \\mathrm{mA}.$$ Contrôle : à $t=\\tau$ on doit retrouver $63\\ \\%$ de $I_{\\max}$, et $\\frac{51}{80} = 0{,}63$.",
+          "methode": "Repère toujours si l'instant demandé est un multiple simple de $\\tau$ : la réponse se lit alors avec $63\\ \\%$, $86\\ \\%$, $95\\ \\%$ sans calculatrice.",
+          "points": 1,
+          "ref": "pc-rl-etablissement-du-courant-q2"
+        },
+        {
+          "notion": "Établissement du courant",
+          "difficulty": 3,
+          "statement": "Même circuit : $E = 12\\ \\mathrm{V}$, $R+r = 150\\ \\Omega$, $L = 0{,}60\\ \\mathrm{H}$. Quelle est la pente de la tangente à l'origine de la courbe $i(t)$ ?",
+          "options": [
+            {
+              "label": "$20\\ \\mathrm{A\\,s^{-1}}$",
+              "correct": true,
+              "why": "À $t=0$, $i=0$ donc l'équation $L\\frac{di}{dt}+(R+r)i=E$ donne $\\left(\\frac{di}{dt}\\right)_0 = \\frac{E}{L} = \\frac{12}{0{,}60} = 20\\ \\mathrm{A\\,s^{-1}}$."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{A\\,s^{-1}}$",
+              "why": "Tu as calculé la pente moyenne $\\dfrac{I_{\\max}}{5\\tau} = \\dfrac{0{,}080}{0{,}020} = 4{,}0$ sur toute la durée du transitoire, ce qui n'est pas la tangente à l'origine."
+            },
+            {
+              "label": "$0{,}050\\ \\mathrm{A\\,s^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{L}{E} = \\dfrac{0{,}60}{12} = 0{,}050$ : tu as inversé le rapport, la pente vaut $E/L$."
+            },
+            {
+              "label": "$0{,}080\\ \\mathrm{A\\,s^{-1}}$",
+              "why": "Tu as donné la valeur de $I_{\\max} = 80\\ \\mathrm{mA}$ : c'est une intensité, pas une pente."
+            }
+          ],
+          "hint": "Écris l'équation différentielle à l'instant $t=0$, où $i$ est encore nulle.",
+          "solution": "À $t = 0^{+}$ l'intensité est nulle, donc $(R+r)\\,i = 0$ et l'équation $L\\,\\dfrac{di}{dt} + (R+r)\\,i = E$ se réduit à $L\\left(\\dfrac{di}{dt}\\right)_{0} = E$, soit $$\\left(\\frac{di}{dt}\\right)_{0} = \\frac{E}{L} = \\frac{12}{0{,}60} = 20\\ \\mathrm{A\\,s^{-1}}.$$ Contrôle par une autre voie : la tangente à l'origine coupe l'asymptote $I_{\\max}$ à $t=\\tau$, donc sa pente vaut aussi $\\dfrac{I_{\\max}}{\\tau} = \\dfrac{0{,}080}{4{,}0\\times10^{-3}} = 20\\ \\mathrm{A\\,s^{-1}}$. Les deux méthodes concordent.",
+          "methode": "La pente à l'origine vaut $E/L$, et elle vaut aussi $I_{\\max}/\\tau$ : utilise la seconde forme pour contrôler la première.",
+          "points": 1,
+          "ref": "pc-rl-etablissement-du-courant-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Rupture du courant",
+        "lesson": "Établissement et rupture du courant",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-rupture-du-courant",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Rupture du courant",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Rupture du courant",
+          "difficulty": 1,
+          "statement": "Une bobine parcourue par un courant d'intensité $I_0$ est brusquement déconnectée du générateur, le circuit se refermant sur les résistances $R$ et $r$. Quelle est alors la loi d'évolution de $i$ ?",
+          "options": [
+            {
+              "label": "$i(t) = I_0\\,e^{-t/\\tau}$ avec $\\tau = \\dfrac{L}{R+r}$",
+              "correct": true,
+              "why": "Sans générateur l'équation devient $L\\frac{di}{dt}+(R+r)i=0$, dont la solution partant de $I_0$ est l'exponentielle décroissante."
+            },
+            {
+              "label": "$i(t) = I_0\\left(1-e^{-t/\\tau}\\right)$ avec $\\tau = \\dfrac{L}{R+r}$",
+              "why": "Cette loi part de $0$ : c'est celle de l'établissement. À la rupture, $i$ part de $I_0$ et décroît."
+            },
+            {
+              "label": "$i(t) = I_0\\,e^{-t/\\tau}$ avec $\\tau = \\dfrac{L}{R}$",
+              "why": "La forme est bonne mais la constante de temps est fausse : la résistance $r$ de la bobine fait toujours partie de la maille de décharge."
+            },
+            {
+              "label": "$i(t) = I_0\\left(1 - \\dfrac{t}{\\tau}\\right)$ avec $\\tau = \\dfrac{L}{R+r}$",
+              "why": "Tu as remplacé l'exponentielle par une décroissance linéaire : l'intensité s'annulerait alors exactement à $t=\\tau$, ce qui n'est pas observé."
+            }
+          ],
+          "hint": "Que devient l'équation différentielle quand on supprime le générateur, c'est-à-dire quand $E = 0$ ?",
+          "solution": "Une fois le générateur hors circuit, la loi des mailles s'écrit $0 = (R+r)\\,i + L\\,\\dfrac{di}{dt}$, soit $L\\,\\dfrac{di}{dt} + (R+r)\\,i = 0$. Sa solution est $i(t) = I_0\\,e^{-t/\\tau}$ avec $\\tau = \\dfrac{L}{R+r}$, où $I_0$ est l'intensité qui circulait juste avant la rupture — elle ne peut pas sauter, le courant dans une bobine étant continu. Contrôle : $i(0)=I_0$ et $i \\to 0$ quand $t \\to \\infty$.",
+          "methode": "Rupture dans un circuit RL : même constante de temps $\\tau = L/(R+r)$ que l'établissement, mais exponentielle décroissante partant de $I_0$.",
+          "points": 1,
+          "ref": "pc-rl-rupture-du-courant-q1"
+        },
+        {
+          "notion": "Rupture du courant",
+          "difficulty": 2,
+          "statement": "À la rupture, l'intensité initiale valait $I_0 = 120\\ \\mathrm{mA}$ et la constante de temps du circuit est $\\tau = 5{,}0\\ \\mathrm{ms}$. Quelle est l'intensité à $t = 10\\ \\mathrm{ms}$ ?",
+          "options": [
+            {
+              "label": "$i = 16\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$t = 2\\tau$, donc $i = 120\\,e^{-2} = 120 \\times 0{,}135 = 16\\ \\mathrm{mA}$."
+            },
+            {
+              "label": "$i = 44\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $I_0\\,e^{-1} = 120 \\times 0{,}368 = 44\\ \\mathrm{mA}$ : c'est la valeur à $t=\\tau$, or ici $t = 2\\tau$."
+            },
+            {
+              "label": "$i = 104\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $I_0\\left(1-e^{-2}\\right) = 120 \\times 0{,}865 = 104\\ \\mathrm{mA}$ : tu as utilisé la loi de l'établissement au lieu de celle de la rupture."
+            },
+            {
+              "label": "$i = 60\\ \\mathrm{mA}$",
+              "why": "Tu as pris $I_0/2 = 60\\ \\mathrm{mA}$ en croyant que l'intensité est divisée par deux au bout de $2\\tau$ ; ce n'est pas le cas, la décroissance est exponentielle."
+            }
+          ],
+          "hint": "Exprime d'abord $t$ en nombre de constantes de temps.",
+          "solution": "$\\dfrac{t}{\\tau} = \\dfrac{10}{5{,}0} = 2$, donc $$i = I_0\\,e^{-2} = 120 \\times 0{,}1353 = 16{,}2 \\approx 16\\ \\mathrm{mA}.$$ Contrôle : il reste $13{,}5\\ \\%$ de $I_0$, ce qui est cohérent avec les $37\\ \\%$ attendus à $t=\\tau$ puis $0{,}37 \\times 0{,}37 = 0{,}135$ à $t = 2\\tau$.",
+          "methode": "Convertis toujours l'instant en multiple de $\\tau$ : les exponentielles $e^{-1}=0{,}37$, $e^{-2}=0{,}14$, $e^{-3}=0{,}050$ se retiennent.",
+          "points": 1,
+          "ref": "pc-rl-rupture-du-courant-q2"
+        },
+        {
+          "notion": "Rupture du courant",
+          "difficulty": 3,
+          "statement": "Un dipôle RL de constante de temps $\\tau = 5{,}0\\ \\mathrm{ms}$ subit une rupture du courant. Au bout de combien de temps l'intensité n'est-elle plus que de $10\\ \\%$ de sa valeur initiale $I_0$ ?",
+          "options": [
+            {
+              "label": "$t = 12\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$0{,}10 = e^{-t/\\tau}$ donne $t = \\tau\\ln 10 = 5{,}0 \\times 2{,}30 = 11{,}5 \\approx 12\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$t = 5{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as répondu $t=\\tau$ : à cet instant il reste $37\\ \\%$ de $I_0$, pas $10\\ \\%$."
+            },
+            {
+              "label": "$t = 0{,}50\\ \\mathrm{ms}$",
+              "why": "Tu as multiplié $\\tau$ par $0{,}10$ : la relation entre $i$ et $t$ est exponentielle, pas proportionnelle."
+            },
+            {
+              "label": "$t = 25\\ \\mathrm{ms}$",
+              "why": "Tu as pris $5\\tau$, la durée conventionnelle du régime transitoire ; mais à $5\\tau$ il ne reste déjà plus que $0{,}67\\ \\%$ de $I_0$."
+            }
+          ],
+          "hint": "Pose $i/I_0 = 0{,}10$ dans la loi de rupture, puis passe au logarithme népérien.",
+          "solution": "On cherche $t$ tel que $\\dfrac{i}{I_0} = e^{-t/\\tau} = 0{,}10$. En prenant le logarithme népérien : $-\\dfrac{t}{\\tau} = \\ln 0{,}10 = -\\ln 10$, donc $$t = \\tau\\,\\ln 10 = 5{,}0\\times 10^{-3} \\times 2{,}303 = 1{,}15\\times 10^{-2}\\ \\mathrm{s} \\approx 12\\ \\mathrm{ms}.$$ Contrôle par encadrement : à $2\\tau = 10\\ \\mathrm{ms}$ il reste $13{,}5\\ \\%$ et à $3\\tau = 15\\ \\mathrm{ms}$ il reste $5{,}0\\ \\%$ ; les $10\\ \\%$ tombent bien entre les deux.",
+          "methode": "Pour un « au bout de combien de temps » dans une exponentielle, isole l'exponentielle puis prends $\\ln$ : $t = \\tau\\ln\\!\\left(\\frac{I_0}{i}\\right)$.",
+          "points": 1,
+          "ref": "pc-rl-rupture-du-courant-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Récapitulatif",
+        "lesson": "Établissement et rupture du courant",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-recapitulatif",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Récapitulatif",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Récapitulatif",
+          "difficulty": 1,
+          "statement": "Au bout de combien de temps considère-t-on, par convention, que le régime permanent est atteint dans un dipôle RL de constante de temps $\\tau$ ?",
+          "options": [
+            {
+              "label": "au bout d'environ $5\\tau$",
+              "correct": true,
+              "why": "À $t=5\\tau$, $e^{-5} = 0{,}0067$ : l'écart à la valeur finale est inférieur à $1\\ \\%$, ce qui est indétectable à l'oscilloscope."
+            },
+            {
+              "label": "au bout d'environ $\\tau$",
+              "why": "À $t=\\tau$ l'intensité n'a atteint que $63\\ \\%$ de sa valeur finale : le régime est encore franchement transitoire."
+            },
+            {
+              "label": "au bout d'environ $2\\tau$",
+              "why": "À $t=2\\tau$ il manque encore $14\\ \\%$ de $I_{\\max}$ : c'est insuffisant pour parler de régime permanent."
+            },
+            {
+              "label": "au bout d'environ $50\\tau$",
+              "why": "Tu as largement surestimé : dès $5\\tau$ l'écart est inférieur à $1\\ \\%$, attendre dix fois plus longtemps n'apporte rien."
+            }
+          ],
+          "hint": "Calcule ce qu'il reste de l'écart à la valeur finale après quelques constantes de temps.",
+          "solution": "L'écart à la valeur finale décroît comme $e^{-t/\\tau}$. À $t = 5\\tau$, $e^{-5} = 6{,}7\\times 10^{-3}$, soit moins de $1\\ \\%$ : on considère alors le régime permanent atteint. Contrôle : à $3\\tau$ il reste $5\\ \\%$, à $5\\tau$ seulement $0{,}67\\ \\%$.",
+          "methode": "Retiens les trois repères : $63\\ \\%$ à $\\tau$, $95\\ \\%$ à $3\\tau$, $99\\ \\%$ à $5\\tau$.",
+          "points": 1,
+          "ref": "pc-rl-recapitulatif-q1"
+        },
+        {
+          "notion": "Récapitulatif",
+          "difficulty": 2,
+          "statement": "Au moment de la fermeture de l'interrupteur d'un circuit série $(R,\\ L,\\ r)$, quelle grandeur subit une discontinuité, c'est-à-dire un saut brusque ?",
+          "options": [
+            {
+              "label": "la tension aux bornes de la bobine",
+              "correct": true,
+              "why": "Elle passe de $0$ à $E$ instantanément, car $L\\,\\frac{di}{dt}$ peut sauter alors que $i$, lui, ne peut pas."
+            },
+            {
+              "label": "l'intensité du courant dans le circuit",
+              "why": "L'intensité dans une bobine est nécessairement continue : c'est le principe même qui gouverne tout le chapitre."
+            },
+            {
+              "label": "la tension aux bornes du conducteur ohmique",
+              "why": "Puisque $u_R = R\\,i$ et que $i$ est continue, $u_R$ est continue elle aussi : elle part de zéro et croît progressivement."
+            },
+            {
+              "label": "l'énergie magnétique emmagasinée par la bobine",
+              "why": "Elle vaut $\\frac{1}{2}L i^{2}$ : comme $i$ est continue, l'énergie est continue et part de zéro."
+            }
+          ],
+          "hint": "Demande-toi laquelle de ces grandeurs se déduit directement de $i$ — celles-là sont continues.",
+          "solution": "Dans une bobine, l'intensité est une fonction **continue** du temps : $i(0^{-}) = i(0^{+}) = 0$. Par conséquent $u_R = R\\,i$ et $E_m = \\frac{1}{2}L i^{2}$ sont continues et partent de zéro. En revanche la loi des mailles impose $u_L = E - u_R$, qui vaut donc $E$ juste après la fermeture alors qu'elle était nulle juste avant : c'est bien $u_L$ qui saute. Contrôle : ce saut est exactement le terme $L\\left(\\frac{di}{dt}\\right)_0 = L\\cdot\\frac{E}{L} = E$.",
+          "methode": "Dans un circuit RL, le repère est simple : $i$ (et tout ce qui s'en déduit) est continue, $u_L$ peut sauter.",
+          "points": 1,
+          "ref": "pc-rl-recapitulatif-q2"
+        },
+        {
+          "notion": "Récapitulatif",
+          "difficulty": 2,
+          "statement": "Circuit série $E = 6{,}0\\ \\mathrm{V}$, $R = 90\\ \\Omega$, bobine $(L = 0{,}20\\ \\mathrm{H},\\ r = 10\\ \\Omega)$. En régime permanent, quelle est la tension aux bornes de la bobine ?",
+          "options": [
+            {
+              "label": "$u_L = 0{,}60\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$I_{\\max} = \\frac{6{,}0}{100} = 60\\ \\mathrm{mA}$ et, en régime permanent, $u_L = r\\,I_{\\max} = 10 \\times 0{,}060 = 0{,}60\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$u_L = 0\\ \\mathrm{V}$",
+              "why": "Tu as traité la bobine comme idéale. Avec $r = 10\\ \\Omega$ il subsiste $u_L = r\\,I_{\\max} = 0{,}60\\ \\mathrm{V}$ : c'est le second grand piège du chapitre."
+            },
+            {
+              "label": "$u_L = 5{,}4\\ \\mathrm{V}$",
+              "why": "Tu as calculé $R\\,I_{\\max} = 90 \\times 0{,}060 = 5{,}4\\ \\mathrm{V}$ : c'est la tension aux bornes du conducteur ohmique, pas celle de la bobine."
+            },
+            {
+              "label": "$u_L = 6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as donné $E$ : c'est la tension aux bornes de la bobine à $t = 0^{+}$, quand $i = 0$, et non en régime permanent."
+            }
+          ],
+          "hint": "En régime permanent la bobine n'est plus qu'une résistance $r$ : commence par calculer $I_{\\max}$.",
+          "solution": "Résistance totale $R+r = 100\\ \\Omega$, donc $I_{\\max} = \\dfrac{E}{R+r} = \\dfrac{6{,}0}{100} = 0{,}060\\ \\mathrm{A}$. En régime permanent $\\frac{di}{dt}=0$ et $$u_L = r\\,I_{\\max} = 10 \\times 0{,}060 = 0{,}60\\ \\mathrm{V}.$$ Contrôle par la maille : $u_R = 90 \\times 0{,}060 = 5{,}4\\ \\mathrm{V}$ et $5{,}4 + 0{,}60 = 6{,}0\\ \\mathrm{V} = E$.",
+          "methode": "Contrôle systématique : la somme $u_R + u_L$ doit redonner $E$. Si tu as trouvé $u_L = 0$, cette somme ne colle plus.",
+          "points": 1,
+          "ref": "pc-rl-recapitulatif-q3"
+        },
+        {
+          "notion": "Récapitulatif",
+          "difficulty": 3,
+          "statement": "Sur un oscillogramme de $u_R$ pendant l'établissement du courant, on lit un palier à $4{,}5\\ \\mathrm{V}$ et une tangente à l'origine qui coupe ce palier à $t = 3{,}0\\ \\mathrm{ms}$. On sait que $R = 90\\ \\Omega$ et $E = 6{,}0\\ \\mathrm{V}$. Quelle est la résistance $r$ de la bobine ?",
+          "options": [
+            {
+              "label": "$r = 30\\ \\Omega$",
+              "correct": true,
+              "why": "Le palier donne $I_{\\max} = \\frac{4{,}5}{90} = 0{,}050\\ \\mathrm{A}$, puis $R+r = \\frac{E}{I_{\\max}} = \\frac{6{,}0}{0{,}050} = 120\\ \\Omega$, donc $r = 120-90 = 30\\ \\Omega$."
+            },
+            {
+              "label": "$r = 0\\ \\Omega$",
+              "why": "Tu as supposé la bobine idéale ; mais alors le palier de $u_R$ vaudrait $E = 6{,}0\\ \\mathrm{V}$, et non $4{,}5\\ \\mathrm{V}$ : la mesure le contredit."
+            },
+            {
+              "label": "$r = 120\\ \\Omega$",
+              "why": "Tu as donné la résistance totale $R+r = 120\\ \\Omega$ sans en retrancher $R = 90\\ \\Omega$."
+            },
+            {
+              "label": "$r = 90\\ \\Omega$",
+              "why": "Tu as calculé $\\dfrac{4{,}5}{0{,}050} = 90\\ \\Omega$ : ce rapport redonne simplement $R$, puisque le palier de $u_R$ vaut justement $R\\,I_{\\max}$."
+            }
+          ],
+          "hint": "Le palier de $u_R$ te donne $I_{\\max}$ ; combine-le ensuite avec $E$ pour obtenir la résistance totale.",
+          "solution": "**Étape 1 — l'intensité finale.** Le palier de $u_R$ correspond au régime permanent : $I_{\\max} = \\dfrac{u_{R,\\text{palier}}}{R} = \\dfrac{4{,}5}{90} = 0{,}050\\ \\mathrm{A}$. **Étape 2 — la résistance totale.** En régime permanent $E = (R+r)\\,I_{\\max}$, donc $R+r = \\dfrac{6{,}0}{0{,}050} = 120\\ \\Omega$. **Étape 3 —** $r = 120 - 90 = 30\\ \\Omega$. Contrôle : la tangente à l'origine coupe le palier à $t = \\tau = 3{,}0\\ \\mathrm{ms}$, donc $L = \\tau\\,(R+r) = 3{,}0\\times10^{-3}\\times 120 = 0{,}36\\ \\mathrm{H}$, et la tension de la bobine en régime permanent vaut $r\\,I_{\\max} = 1{,}5\\ \\mathrm{V}$, qui complète bien les $4{,}5\\ \\mathrm{V}$ jusqu'à $E = 6{,}0\\ \\mathrm{V}$.",
+          "methode": "Un palier de $u_R$ inférieur à $E$ est la signature d'une bobine résistante : la différence $E - u_{R,\\text{palier}}$ vaut $r\\,I_{\\max}$.",
+          "points": 1,
+          "ref": "pc-rl-recapitulatif-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La constante de temps",
+        "lesson": "Constante de temps & énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-la-constante-de-temps",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "La constante de temps",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La constante de temps",
+          "difficulty": 2,
+          "statement": "En utilisant la relation de définition $u = L\\,\\dfrac{di}{dt}$, à quelle unité le henry est-il équivalent ?",
+          "options": [
+            {
+              "label": "$1\\ \\mathrm{H} = 1\\ \\Omega\\cdot\\mathrm{s}$",
+              "correct": true,
+              "why": "$L = u\\,\\dfrac{dt}{di}$ s'exprime en $\\mathrm{V\\,s\\,A^{-1}}$, et comme $1\\ \\mathrm{V\\,A^{-1}} = 1\\ \\Omega$, on obtient $\\Omega\\cdot\\mathrm{s}$."
+            },
+            {
+              "label": "$1\\ \\mathrm{H} = 1\\ \\Omega\\cdot\\mathrm{s^{-1}}$",
+              "why": "Tu as inversé la seconde : $L$ est un rapport tension/(variation d'intensité par seconde), ce qui **multiplie** par une seconde."
+            },
+            {
+              "label": "$1\\ \\mathrm{H} = 1\\ \\Omega\\cdot\\mathrm{s^{2}}$",
+              "why": "Tu as compté deux fois la seconde : il n'y a qu'une seule dérivation par rapport au temps dans $u = L\\,\\frac{di}{dt}$."
+            },
+            {
+              "label": "$1\\ \\mathrm{H} = 1\\ \\mathrm{V\\,A^{-1}}$",
+              "why": "Tu as oublié la seconde et tu as simplement retrouvé l'ohm : $\\mathrm{V\\,A^{-1}} = \\Omega$, ce qui est l'unité d'une résistance, pas d'une inductance."
+            }
+          ],
+          "hint": "Isole $L$ dans $u = L\\,\\frac{di}{dt}$ et remplace chaque grandeur par son unité.",
+          "solution": "De $u = L\\,\\dfrac{di}{dt}$ on tire $L = \\dfrac{u}{di/dt}$, dont l'unité est $\\dfrac{\\mathrm{V}}{\\mathrm{A\\,s^{-1}}} = \\mathrm{V\\,s\\,A^{-1}}$. Or $\\dfrac{\\mathrm{V}}{\\mathrm{A}} = \\Omega$, donc $$1\\ \\mathrm{H} = 1\\ \\Omega\\cdot\\mathrm{s}.$$ Contrôle — c'est exactement ce qui rend $\\tau$ homogène à un temps : $\\left[\\dfrac{L}{R+r}\\right] = \\dfrac{\\Omega\\cdot\\mathrm{s}}{\\Omega} = \\mathrm{s}$.",
+          "methode": "Retiens $1\\ \\mathrm{H} = 1\\ \\Omega\\cdot\\mathrm{s}$ : l'homogénéité de $\\tau = L/(R+r)$ devient immédiate, et c'est souvent une question du barème.",
+          "points": 1,
+          "ref": "pc-rl-la-constante-de-temps-q1"
+        },
+        {
+          "notion": "La constante de temps",
+          "difficulty": 3,
+          "statement": "Sur un circuit série comportant un conducteur ohmique $R = 190\\ \\Omega$ et une bobine $(L,\\ r = 10\\ \\Omega)$, on mesure une constante de temps $\\tau = 4{,}0\\ \\mathrm{ms}$. Quelle est l'inductance $L$ de la bobine ?",
+          "options": [
+            {
+              "label": "$L = 0{,}80\\ \\mathrm{H}$",
+              "correct": true,
+              "why": "De $\\tau = \\frac{L}{R+r}$ on tire $L = \\tau\\,(R+r) = 4{,}0\\times10^{-3} \\times 200 = 0{,}80\\ \\mathrm{H}$."
+            },
+            {
+              "label": "$L = 0{,}76\\ \\mathrm{H}$",
+              "why": "Tu as calculé $\\tau\\,R = 4{,}0\\times10^{-3} \\times 190 = 0{,}76\\ \\mathrm{H}$ : tu as oublié d'ajouter la résistance $r$ de la bobine."
+            },
+            {
+              "label": "$L = 0{,}040\\ \\mathrm{H}$",
+              "why": "Tu as calculé $\\tau\\,r = 4{,}0\\times10^{-3} \\times 10 = 0{,}040\\ \\mathrm{H}$ : tu n'as retenu que la résistance de la bobine au lieu de la résistance totale."
+            },
+            {
+              "label": "$L = 2{,}0\\times 10^{-5}\\ \\mathrm{H}$",
+              "why": "Tu as calculé $\\dfrac{\\tau}{R+r} = \\dfrac{4{,}0\\times10^{-3}}{200} = 2{,}0\\times10^{-5}$ : la relation $\\tau = \\frac{L}{R+r}$ se retourne en un produit, pas en un quotient."
+            }
+          ],
+          "hint": "Pars de $\\tau = \\frac{L}{R+r}$ et isole $L$ ; n'oublie aucune des deux résistances.",
+          "solution": "La résistance totale vaut $R + r = 190 + 10 = 200\\ \\Omega$. De $\\tau = \\dfrac{L}{R+r}$ on tire $$L = \\tau\\,(R+r) = 4{,}0\\times10^{-3} \\times 200 = 0{,}80\\ \\mathrm{H}.$$ Contrôle d'homogénéité : $\\mathrm{s}\\times\\Omega = \\Omega\\cdot\\mathrm{s} = \\mathrm{H}$, l'unité est bien celle d'une inductance.",
+          "methode": "Pour remonter à $L$ depuis une mesure de $\\tau$, écris d'abord la valeur numérique de $R+r$ : c'est le seul endroit où l'on perd des points.",
+          "points": 1,
+          "ref": "pc-rl-la-constante-de-temps-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Déterminer $\\tau$ et $L$ graphiquement",
+        "lesson": "Constante de temps & énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-determiner-tau-et-l-graphiquement",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Déterminer $\\tau$ et $L$ graphiquement",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Déterminer $\\tau$ et $L$ graphiquement",
+          "difficulty": 1,
+          "statement": "Sur la courbe d'établissement du courant $i(t)$ dans un dipôle RL, à quelle fraction de $I_{\\max}$ lit-on l'instant $t = \\tau$ ?",
+          "options": [
+            {
+              "label": "à $63\\ \\%$ de $I_{\\max}$",
+              "correct": true,
+              "why": "$i(\\tau) = I_{\\max}\\left(1-e^{-1}\\right) = 0{,}632\\,I_{\\max}$."
+            },
+            {
+              "label": "à $37\\ \\%$ de $I_{\\max}$",
+              "why": "$37\\ \\%$ est le repère de la **rupture** : à l'établissement il reste $37\\ \\%$ à parcourir, donc on en a fait $63\\ \\%$."
+            },
+            {
+              "label": "à $50\\ \\%$ de $I_{\\max}$",
+              "why": "Tu as pris la moitié ; la demi-valeur est atteinte à $t = \\tau\\ln 2 = 0{,}69\\,\\tau$, pas à $t=\\tau$."
+            },
+            {
+              "label": "à $100\\ \\%$ de $I_{\\max}$",
+              "why": "Tu as confondu $\\tau$ avec la durée du régime transitoire : $I_{\\max}$ n'est pratiquement atteint qu'au bout de $5\\tau$."
+            }
+          ],
+          "hint": "Remplace $t$ par $\\tau$ dans $i = I_{\\max}\\left(1-e^{-t/\\tau}\\right)$.",
+          "solution": "En posant $t=\\tau$ dans $i(t) = I_{\\max}\\left(1-e^{-t/\\tau}\\right)$, on obtient $i(\\tau) = I_{\\max}\\left(1-e^{-1}\\right) = I_{\\max}\\times 0{,}632$, soit **$63\\ \\%$ de $I_{\\max}$**. Contrôle : la fraction manquante est $e^{-1} = 37\\ \\%$, qui est précisément le repère utilisé à la rupture.",
+          "methode": "Un seul couple de repères à retenir : $63\\ \\%$ atteints à l'établissement, $37\\ \\%$ restants à la rupture, les deux à $t=\\tau$.",
+          "points": 1,
+          "ref": "pc-rl-determiner-tau-et-l-graphiquement-q1"
+        },
+        {
+          "notion": "Déterminer $\\tau$ et $L$ graphiquement",
+          "difficulty": 2,
+          "statement": "Sur l'enregistrement de la rupture du courant dans une bobine, on lit $I_0 = 80\\ \\mathrm{mA}$. Quelle ordonnée faut-il repérer pour déterminer graphiquement $\\tau$ ?",
+          "options": [
+            {
+              "label": "$i = 30\\ \\mathrm{mA}$, soit $37\\ \\%$ de $I_0$",
+              "correct": true,
+              "why": "À $t=\\tau$, $i = I_0\\,e^{-1} = 80 \\times 0{,}368 = 29{,}4 \\approx 30\\ \\mathrm{mA}$ : l'abscisse de ce point est $\\tau$."
+            },
+            {
+              "label": "$i = 50\\ \\mathrm{mA}$, soit $63\\ \\%$ de $I_0$",
+              "why": "Tu as utilisé le repère de l'établissement : à la rupture, à $t=\\tau$, il **reste** $37\\ \\%$ de $I_0$, il n'en a pas été atteint $63\\ \\%$."
+            },
+            {
+              "label": "$i = 40\\ \\mathrm{mA}$, soit $50\\ \\%$ de $I_0$",
+              "why": "La demi-valeur est atteinte à $t = \\tau\\ln 2 = 0{,}69\\,\\tau$ : en lisant à $40\\ \\mathrm{mA}$ tu sous-estimerais $\\tau$ d'environ $30\\ \\%$."
+            },
+            {
+              "label": "$i = 11\\ \\mathrm{mA}$, soit $14\\ \\%$ de $I_0$",
+              "why": "Tu as pris $e^{-2} = 0{,}135$ : l'abscisse de ce point est $2\\tau$, pas $\\tau$."
+            }
+          ],
+          "hint": "À $t=\\tau$, quelle fraction de $I_0$ subsiste lors d'une décroissance exponentielle ?",
+          "solution": "Lors de la rupture, $i(t) = I_0\\,e^{-t/\\tau}$ donc $i(\\tau) = I_0\\,e^{-1} = 0{,}368\\,I_0 = 0{,}368 \\times 80 = 29{,}4 \\approx 30\\ \\mathrm{mA}$. On repère donc l'ordonnée $30\\ \\mathrm{mA}$ sur la courbe et on lit l'abscisse correspondante : c'est $\\tau$. Contrôle par une seconde méthode : la tangente à la courbe en $t=0$ coupe l'axe des abscisses, lui aussi, à $t=\\tau$.",
+          "methode": "Deux lectures indépendantes de $\\tau$ à la rupture : l'ordonnée $0{,}37\\,I_0$, et la tangente à l'origine qui coupe l'axe des temps.",
+          "points": 1,
+          "ref": "pc-rl-determiner-tau-et-l-graphiquement-q2"
+        },
+        {
+          "notion": "Déterminer $\\tau$ et $L$ graphiquement",
+          "difficulty": 2,
+          "statement": "Lors de l'établissement du courant, où la tangente à l'origine de la courbe $i(t)$ coupe-t-elle l'asymptote horizontale $i = I_{\\max}$ ?",
+          "options": [
+            {
+              "label": "à l'abscisse $t = \\tau$",
+              "correct": true,
+              "why": "La tangente a pour équation $i = \\frac{I_{\\max}}{\\tau}\\,t$ ; elle atteint $I_{\\max}$ quand $t = \\tau$."
+            },
+            {
+              "label": "à l'abscisse $t = 5\\tau$",
+              "why": "Tu as confondu la construction géométrique avec la durée pratique du régime transitoire : la tangente coupe l'asymptote bien plus tôt, à $t=\\tau$."
+            },
+            {
+              "label": "à l'abscisse $t = \\tau\\ln 2$",
+              "why": "$\\tau\\ln 2 = 0{,}69\\,\\tau$ est l'instant où $i$ atteint la moitié de $I_{\\max}$, ce qui n'a rien à voir avec l'intersection de la tangente et de l'asymptote."
+            },
+            {
+              "label": "à l'abscisse $t = 2\\tau$",
+              "why": "Tu as doublé la bonne valeur : la pente initiale $I_{\\max}/\\tau$ conduit à l'asymptote en exactement une constante de temps."
+            }
+          ],
+          "hint": "Écris l'équation de la tangente à l'origine, puis cherche où elle vaut $I_{\\max}$.",
+          "solution": "La pente à l'origine vaut $\\left(\\dfrac{di}{dt}\\right)_0 = \\dfrac{E}{L} = \\dfrac{I_{\\max}}{\\tau}$, puisque $I_{\\max} = \\dfrac{E}{R+r}$ et $\\tau = \\dfrac{L}{R+r}$. La tangente a donc pour équation $i = \\dfrac{I_{\\max}}{\\tau}\\,t$, et elle vaut $I_{\\max}$ lorsque $t = \\tau$. Contrôle : c'est la méthode graphique la plus précise, car elle n'utilise que deux droites et pas la lecture d'une fraction.",
+          "methode": "Construis la tangente à l'origine et l'asymptote : leur intersection donne $\\tau$ en abscisse, à l'établissement comme à la rupture.",
+          "points": 1,
+          "ref": "pc-rl-determiner-tau-et-l-graphiquement-q3"
+        },
+        {
+          "notion": "Déterminer $\\tau$ et $L$ graphiquement",
+          "difficulty": 3,
+          "statement": "Pour exploiter la rupture du courant, on trace $\\ln i$ en fonction du temps : on obtient une droite de pente $-250\\ \\mathrm{s^{-1}}$. Le circuit comporte $R = 190\\ \\Omega$ et une bobine $(L,\\ r = 10\\ \\Omega)$. Quelle est l'inductance $L$ ?",
+          "options": [
+            {
+              "label": "$L = 0{,}80\\ \\mathrm{H}$",
+              "correct": true,
+              "why": "La pente vaut $-\\frac{1}{\\tau}$, donc $\\tau = \\frac{1}{250} = 4{,}0\\ \\mathrm{ms}$ et $L = \\tau\\,(R+r) = 4{,}0\\times10^{-3}\\times200 = 0{,}80\\ \\mathrm{H}$."
+            },
+            {
+              "label": "$L = 0{,}76\\ \\mathrm{H}$",
+              "why": "Tu as bien trouvé $\\tau = 4{,}0\\ \\mathrm{ms}$ mais tu as écrit $L = \\tau\\,R = 0{,}76\\ \\mathrm{H}$ : la résistance $r$ de la bobine manque."
+            },
+            {
+              "label": "$L = 1{,}8\\ \\mathrm{H}$",
+              "why": "Tu as introduit un facteur $\\ln 10$ en écrivant $\\tau = \\frac{\\ln 10}{250} = 9{,}2\\ \\mathrm{ms}$ : sur un graphe de $\\ln i$ (logarithme népérien) la pente vaut directement $-1/\\tau$, sans aucun facteur."
+            },
+            {
+              "label": "$L = 1{,}25\\ \\mathrm{H}$",
+              "why": "Tu as divisé la pente par la résistance totale, $\\frac{250}{200} = 1{,}25$ : il faut d'abord inverser la pente pour obtenir $\\tau$, puis multiplier par $R+r$."
+            }
+          ],
+          "hint": "Prends le logarithme de $i = I_0 e^{-t/\\tau}$ : que vaut alors la pente de la droite obtenue ?",
+          "solution": "En passant au logarithme népérien dans $i(t) = I_0\\,e^{-t/\\tau}$ : $$\\ln i = \\ln I_0 - \\frac{t}{\\tau}.$$ C'est une droite de pente $-\\dfrac{1}{\\tau}$. De $-\\dfrac{1}{\\tau} = -250\\ \\mathrm{s^{-1}}$ on tire $\\tau = \\dfrac{1}{250} = 4{,}0\\times10^{-3}\\ \\mathrm{s}$, puis $$L = \\tau\\,(R+r) = 4{,}0\\times10^{-3}\\times 200 = 0{,}80\\ \\mathrm{H}.$$ Contrôle : avec $\\tau = 4{,}0\\ \\mathrm{ms}$, l'intensité doit être tombée à $37\\ \\%$ au bout de $4{,}0\\ \\mathrm{ms}$, ce qu'on peut vérifier sur la courbe brute.",
+          "methode": "La linéarisation $\\ln i = \\ln I_0 - t/\\tau$ est la méthode la plus précise : la pente donne $-1/\\tau$ et l'ordonnée à l'origine donne $\\ln I_0$.",
+          "points": 1,
+          "ref": "pc-rl-determiner-tau-et-l-graphiquement-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Influence de $L$ et de $R$",
+        "lesson": "Constante de temps & énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-influence-de-l-et-de-r",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Influence de $L$ et de $R$",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Influence de $L$ et de $R$",
+          "difficulty": 1,
+          "statement": "Dans un dipôle RL, on remplace la bobine par une autre de même résistance $r$ mais d'inductance deux fois plus grande. Comment évolue la durée du régime transitoire ?",
+          "options": [
+            {
+              "label": "elle est deux fois plus longue, car $\\tau$ double",
+              "correct": true,
+              "why": "$\\tau = \\frac{L}{R+r}$ est proportionnelle à $L$ : doubler $L$ double $\\tau$, donc double la durée $5\\tau$."
+            },
+            {
+              "label": "elle est deux fois plus courte, car $\\tau$ est divisée par deux",
+              "why": "Tu as inversé la dépendance : $L$ est au **numérateur** de $\\tau$, une bobine plus inductive freine davantage le courant."
+            },
+            {
+              "label": "elle est inchangée, car $\\tau$ ne dépend que des résistances",
+              "why": "C'est faux pour le dipôle RL : $\\tau = \\frac{L}{R+r}$ dépend bien de l'inductance. Tu as peut-être pensé à $I_{\\max}$, qui lui ne dépend que de $E$ et des résistances."
+            },
+            {
+              "label": "elle est quatre fois plus longue, car $\\tau$ est proportionnelle à $L^{2}$",
+              "why": "Tu as mis $L$ au carré : la constante de temps est proportionnelle à $L$ à la puissance un."
+            }
+          ],
+          "hint": "Regarde où se trouve $L$ dans l'expression de $\\tau$.",
+          "solution": "La constante de temps vaut $\\tau = \\dfrac{L}{R+r}$ : elle est proportionnelle à $L$. En doublant $L$ à $R$ et $r$ inchangés, on double $\\tau$, donc on double aussi la durée pratique du régime transitoire, $5\\tau$. Contrôle : la valeur finale $I_{\\max} = \\dfrac{E}{R+r}$ ne contient pas $L$ et reste donc la même — seule la rapidité change.",
+          "methode": "Dans un RL : $L$ agit sur la **durée** seulement, les résistances agissent à la fois sur la durée et sur l'intensité finale.",
+          "points": 1,
+          "ref": "pc-rl-influence-de-l-et-de-r-q1"
+        },
+        {
+          "notion": "Influence de $L$ et de $R$",
+          "difficulty": 2,
+          "statement": "Dans un dipôle RL alimenté par une f.é.m. $E$ constante, on double la résistance totale $R+r$ sans changer $L$. Que deviennent la constante de temps et l'intensité finale ?",
+          "options": [
+            {
+              "label": "$\\tau$ est divisée par deux et $I_{\\max}$ est divisée par deux",
+              "correct": true,
+              "why": "$\\tau = \\frac{L}{R+r}$ et $I_{\\max} = \\frac{E}{R+r}$ : les deux sont inversement proportionnelles à $R+r$."
+            },
+            {
+              "label": "$\\tau$ est divisée par deux et $I_{\\max}$ est inchangée",
+              "why": "Tu as oublié que $I_{\\max} = \\frac{E}{R+r}$ dépend aussi de la résistance totale : doubler $R+r$ divise bien le courant final par deux."
+            },
+            {
+              "label": "$\\tau$ est doublée et $I_{\\max}$ est divisée par deux",
+              "why": "Tu as traité $\\tau$ comme dans un circuit RC, où $\\tau = RC$ augmente avec $R$. Dans un RL, $R+r$ est au dénominateur : $\\tau$ diminue."
+            },
+            {
+              "label": "$\\tau$ est doublée et $I_{\\max}$ est inchangée",
+              "why": "Double erreur : $R+r$ est au dénominateur de $\\tau$ **et** de $I_{\\max}$, donc les deux grandeurs diminuent."
+            }
+          ],
+          "hint": "Écris les deux expressions $\\tau = \\frac{L}{R+r}$ et $I_{\\max} = \\frac{E}{R+r}$ avant de conclure.",
+          "solution": "On a $\\tau = \\dfrac{L}{R+r}$ et $I_{\\max} = \\dfrac{E}{R+r}$ : la résistance totale figure au dénominateur des deux. En la doublant, $\\tau$ et $I_{\\max}$ sont tous deux divisés par deux. Contrôle : l'énergie finale emmagasinée $\\frac{1}{2}L I_{\\max}^{2}$ est, elle, divisée par quatre.",
+          "methode": "Souviens-toi que dans un RL la résistance totale gouverne les deux grandeurs : plus de résistance, c'est moins de courant **et** plus vite.",
+          "points": 1,
+          "ref": "pc-rl-influence-de-l-et-de-r-q2"
+        },
+        {
+          "notion": "Influence de $L$ et de $R$",
+          "difficulty": 2,
+          "statement": "Deux bobines de même résistance $r$ mais d'inductances $L_1 < L_2$ sont placées tour à tour dans le même circuit $(E,\\ R)$. Comment comparer les deux courbes $i(t)$ obtenues lors de l'établissement ?",
+          "options": [
+            {
+              "label": "elles atteignent la même valeur finale, mais la courbe de $L_2$ monte plus lentement",
+              "correct": true,
+              "why": "$I_{\\max} = \\frac{E}{R+r}$ ne dépend pas de $L$, tandis que $\\tau = \\frac{L}{R+r}$ est plus grande pour $L_2$."
+            },
+            {
+              "label": "la courbe de $L_2$ monte plus lentement et vers une valeur finale plus faible",
+              "why": "Tu as fait dépendre $I_{\\max}$ de $L$ : or $I_{\\max} = \\frac{E}{R+r}$ ne contient pas $L$, les deux paliers sont identiques."
+            },
+            {
+              "label": "elles atteignent la même valeur finale, mais la courbe de $L_2$ monte plus rapidement",
+              "why": "Tu as inversé l'effet de $L$ : une inductance plus grande s'oppose davantage à la variation du courant, donc ralentit la montée."
+            },
+            {
+              "label": "les deux courbes sont identiques, car seule la résistance totale compte",
+              "why": "Cela serait vrai pour la valeur finale, mais pas pour la rapidité : $\\tau = \\frac{L}{R+r}$ dépend bien de $L$."
+            }
+          ],
+          "hint": "Sépare clairement ce qui fixe le palier de ce qui fixe la rapidité.",
+          "solution": "Le palier est imposé par le régime permanent : $I_{\\max} = \\dfrac{E}{R+r}$, identique pour les deux bobines puisque $E$, $R$ et $r$ sont les mêmes. La rapidité est imposée par $\\tau = \\dfrac{L}{R+r}$, plus grande pour $L_2$. Les deux courbes partent donc de zéro avec des pentes initiales $E/L$ différentes, mais rejoignent la même asymptote. Contrôle : la pente à l'origine $E/L_2$ est plus faible que $E/L_1$, ce qui confirme la montée plus lente.",
+          "methode": "Face à deux courbes d'établissement, lis d'abord les paliers (qui renseignent sur $R+r$), puis les $\\tau$ (qui renseignent sur $L$).",
+          "points": 1,
+          "ref": "pc-rl-influence-de-l-et-de-r-q3"
+        },
+        {
+          "notion": "Influence de $L$ et de $R$",
+          "difficulty": 3,
+          "statement": "Deux circuits sont alimentés par la même f.é.m. $E = 12\\ \\mathrm{V}$ et contiennent la même bobine $L = 0{,}40\\ \\mathrm{H}$ : le circuit A a une résistance totale de $200\\ \\Omega$, le circuit B de $400\\ \\Omega$. Lequel atteint le premier $90\\ \\%$ de sa propre intensité finale, et à quel instant ?",
+          "options": [
+            {
+              "label": "le circuit B, à $t \\approx 2{,}3\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$\\tau_B = \\frac{0{,}40}{400} = 1{,}0\\ \\mathrm{ms}$ et $t = \\tau_B\\ln 10 = 2{,}3\\ \\mathrm{ms}$, contre $4{,}6\\ \\mathrm{ms}$ pour A."
+            },
+            {
+              "label": "le circuit A, à $t \\approx 4{,}6\\ \\mathrm{ms}$",
+              "why": "Tu as bien calculé l'instant pour A ($\\tau_A\\ln 10 = 4{,}6\\ \\mathrm{ms}$) mais c'est B, de plus grande résistance, qui est le plus rapide : $\\tau$ diminue quand $R+r$ augmente."
+            },
+            {
+              "label": "le circuit B, à $t \\approx 1{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as donné $\\tau_B$ : à $t=\\tau_B$ on n'est qu'à $63\\ \\%$ de $I_{\\max}$, il faut $\\tau_B\\ln 10$ pour atteindre $90\\ \\%$."
+            },
+            {
+              "label": "le circuit B, à $t \\approx 5{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as pris $5\\tau_B = 5{,}0\\ \\mathrm{ms}$, qui correspond à $99\\ \\%$ de $I_{\\max}$ et non à $90\\ \\%$."
+            }
+          ],
+          "hint": "Calcule séparément les deux constantes de temps, puis résous $1-e^{-t/\\tau} = 0{,}90$.",
+          "solution": "**Constantes de temps :** $\\tau_A = \\dfrac{0{,}40}{200} = 2{,}0\\ \\mathrm{ms}$ et $\\tau_B = \\dfrac{0{,}40}{400} = 1{,}0\\ \\mathrm{ms}$. B est donc deux fois plus rapide. **Instant cherché :** $1-e^{-t/\\tau} = 0{,}90$ donne $e^{-t/\\tau} = 0{,}10$, soit $t = \\tau\\ln 10 = 2{,}303\\,\\tau$. Pour B : $t = 2{,}303 \\times 1{,}0 = 2{,}3\\ \\mathrm{ms}$ (et $4{,}6\\ \\mathrm{ms}$ pour A). Contrôle : $2{,}3\\ \\mathrm{ms}$ est bien compris entre $2\\tau_B$ ($86\\ \\%$) et $3\\tau_B$ ($95\\ \\%$).",
+          "methode": "Pour un pourcentage de $I_{\\max}$ à l'établissement, raisonne sur ce qui **reste** : $1-x$ en fraction, puis $t = \\tau\\ln\\frac{1}{1-x}$.",
+          "points": 1,
+          "ref": "pc-rl-influence-de-l-et-de-r-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Bilan énergétique",
+        "lesson": "Constante de temps & énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-bilan-energetique",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Bilan énergétique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Bilan énergétique",
+          "difficulty": 1,
+          "statement": "En régime permanent dans un dipôle RL, que devient la totalité de l'énergie fournie par le générateur ?",
+          "options": [
+            {
+              "label": "elle est entièrement dissipée par effet Joule dans $R$ et $r$",
+              "correct": true,
+              "why": "L'énergie magnétique $\\frac{1}{2}L I_{\\max}^{2}$ est constante, donc elle n'absorbe plus rien : tout part en chaleur."
+            },
+            {
+              "label": "elle continue de s'accumuler dans la bobine sous forme magnétique",
+              "why": "En régime permanent $i$ est constante, donc $E_m = \\frac{1}{2}L i^{2}$ est constante : la bobine ne stocke plus rien de nouveau."
+            },
+            {
+              "label": "elle se répartit à parts égales entre l'effet Joule et l'énergie magnétique",
+              "why": "C'est une répartition qui existe pendant le transitoire, mais pas en régime permanent où le stockage magnétique est terminé."
+            },
+            {
+              "label": "elle est nulle, car le générateur ne débite plus en régime permanent",
+              "why": "Le générateur débite au contraire un courant constant $I_{\\max} = \\frac{E}{R+r}$ et fournit la puissance $E\\,I_{\\max}$."
+            }
+          ],
+          "hint": "L'énergie magnétique varie-t-elle encore lorsque l'intensité est constante ?",
+          "solution": "En régime permanent, $i = I_{\\max}$ est constante, donc $E_m = \\frac{1}{2}L I_{\\max}^{2}$ est constante : sa dérivée est nulle et la bobine n'échange plus d'énergie. Le bilan de puissance $E\\,i = (R+r)\\,i^{2} + \\dfrac{dE_m}{dt}$ se réduit alors à $E\\,I_{\\max} = (R+r)\\,I_{\\max}^{2}$ : **toute** la puissance fournie est dissipée par effet Joule dans $R$ et dans $r$. Contrôle : c'est bien pour cela qu'une bobine alimentée en continu chauffe.",
+          "methode": "Écris systématiquement le bilan $E\\,i = (R+r)\\,i^{2} + L\\,i\\,\\frac{di}{dt}$ : le dernier terme disparaît en régime permanent.",
+          "points": 1,
+          "ref": "pc-rl-bilan-energetique-q1"
+        },
+        {
+          "notion": "Bilan énergétique",
+          "difficulty": 2,
+          "statement": "Une bobine d'inductance $L = 0{,}50\\ \\mathrm{H}$ atteint en régime permanent une intensité $I_{\\max} = 0{,}40\\ \\mathrm{A}$. Quelle énergie magnétique a-t-elle alors emmagasinée ?",
+          "options": [
+            {
+              "label": "$E_m = 40\\ \\mathrm{mJ}$",
+              "correct": true,
+              "why": "$E_m = \\frac{1}{2}\\times 0{,}50 \\times (0{,}40)^{2} = 4{,}0\\times10^{-2}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$E_m = 100\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $\\frac{1}{2}L\\,I_{\\max} = \\frac{1}{2}\\times0{,}50\\times0{,}40 = 0{,}10\\ \\mathrm{J}$ : l'intensité doit être élevée au carré."
+            },
+            {
+              "label": "$E_m = 80\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $L\\,I_{\\max}^{2} = 0{,}50\\times(0{,}40)^{2} = 0{,}080\\ \\mathrm{J}$ : il manque le facteur $\\frac{1}{2}$."
+            },
+            {
+              "label": "$E_m = 20\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $\\frac{1}{2}L^{2}I_{\\max}^{2} = \\frac{1}{2}\\times(0{,}50)^{2}\\times(0{,}40)^{2} = 0{,}020\\ \\mathrm{J}$ : tu as élevé $L$ au carré en plus de $I_{\\max}$."
+            }
+          ],
+          "hint": "Applique $E_m = \\frac{1}{2}L i^{2}$ en calculant $i^{2}$ à part.",
+          "solution": "$E_m = \\dfrac{1}{2}L\\,I_{\\max}^{2} = \\dfrac{1}{2}\\times 0{,}50 \\times (0{,}40)^{2} = \\dfrac{1}{2}\\times0{,}50\\times0{,}160 = 4{,}0\\times10^{-2}\\ \\mathrm{J} = 40\\ \\mathrm{mJ}$. Contrôle : c'est cette énergie, et elle seule, qu'il faudra évacuer à l'ouverture du circuit — d'où l'étincelle si aucun chemin n'est prévu.",
+          "methode": "Calcule $i^{2}$ d'abord, puis multiplie par $L$, puis par $\\frac{1}{2}$ : trois étapes séparées, zéro erreur.",
+          "points": 1,
+          "ref": "pc-rl-bilan-energetique-q2"
+        },
+        {
+          "notion": "Bilan énergétique",
+          "difficulty": 2,
+          "statement": "On provoque la rupture du courant dans un dipôle RL, la bobine se refermant sur les résistances $R$ et $r$. Que devient l'énergie magnétique qu'elle avait emmagasinée ?",
+          "options": [
+            {
+              "label": "elle est intégralement dissipée par effet Joule dans $R$ et dans $r$",
+              "correct": true,
+              "why": "Le générateur est hors circuit : le seul mode d'échange restant est l'effet Joule, et l'énergie $\\frac{1}{2}L I_0^{2}$ y passe en totalité."
+            },
+            {
+              "label": "elle est renvoyée au générateur, qui la restitue au réseau",
+              "why": "Le générateur n'est plus dans la maille après l'ouverture de l'interrupteur : il ne peut rien recevoir."
+            },
+            {
+              "label": "elle disparaît instantanément au moment de l'ouverture",
+              "why": "Une énergie ne disparaît pas. De plus $i$ étant continue, $E_m = \\frac{1}{2}L i^{2}$ décroît progressivement, sur une durée de l'ordre de $5\\tau$."
+            },
+            {
+              "label": "elle est convertie en énergie électrostatique stockée dans le circuit",
+              "why": "Il n'y a pas de condensateur ici : sans dipôle capacitif, aucun stockage électrostatique n'est possible."
+            }
+          ],
+          "hint": "Après l'ouverture, quels dipôles restent dans la maille, et que savent-ils faire de l'énergie ?",
+          "solution": "Après la rupture, la maille ne contient plus que la bobine et les résistances. L'équation $L\\,\\dfrac{di}{dt} + (R+r)\\,i = 0$, multipliée par $i$, s'écrit $$\\frac{d}{dt}\\!\\left(\\frac{1}{2}L i^{2}\\right) = -(R+r)\\,i^{2},$$ c'est-à-dire : la diminution de l'énergie magnétique alimente exactement la dissipation Joule. En intégrant de $0$ à l'infini, l'énergie dissipée vaut $\\frac{1}{2}L I_0^{2}$ : toute l'énergie magnétique initiale. Contrôle : la décroissance dure environ $5\\tau$, elle n'est pas instantanée.",
+          "methode": "À la rupture, le bilan est immédiat : énergie dissipée totale $=\\frac{1}{2}L I_0^{2}$, quelle que soit la façon dont elle se répartit dans le temps.",
+          "points": 1,
+          "ref": "pc-rl-bilan-energetique-q3"
+        },
+        {
+          "notion": "Bilan énergétique",
+          "difficulty": 3,
+          "statement": "Circuit série $E = 12\\ \\mathrm{V}$, résistance totale $R+r = 200\\ \\Omega$, $L = 0{,}40\\ \\mathrm{H}$. À l'instant $t = \\tau$ de l'établissement, quelle est la puissance qui sert à emmagasiner de l'énergie magnétique ?",
+          "options": [
+            {
+              "label": "$0{,}17\\ \\mathrm{W}$",
+              "correct": true,
+              "why": "$i(\\tau) = 0{,}0379\\ \\mathrm{A}$ et $\\left(\\frac{di}{dt}\\right)_\\tau = \\frac{E}{L}e^{-1} = 11{,}0\\ \\mathrm{A\\,s^{-1}}$, donc $L\\,i\\,\\frac{di}{dt} = 0{,}40\\times0{,}0379\\times11{,}0 = 0{,}17\\ \\mathrm{W}$."
+            },
+            {
+              "label": "$0{,}29\\ \\mathrm{W}$",
+              "why": "Tu as calculé la puissance Joule $(R+r)\\,i^{2} = 200\\times(0{,}0379)^{2} = 0{,}29\\ \\mathrm{W}$ : c'est l'autre part du bilan, celle qui est perdue en chaleur."
+            },
+            {
+              "label": "$0{,}46\\ \\mathrm{W}$",
+              "why": "Tu as calculé la puissance totale fournie par le générateur $E\\,i = 12\\times0{,}0379 = 0{,}46\\ \\mathrm{W}$, qui est la **somme** de la part Joule et de la part magnétique."
+            },
+            {
+              "label": "$0{,}72\\ \\mathrm{W}$",
+              "why": "Tu as pris $i = I_{\\max} = 0{,}060\\ \\mathrm{A}$ et la pente à l'origine $\\frac{E}{L} = 30\\ \\mathrm{A\\,s^{-1}}$ : ces deux valeurs ne coexistent jamais, car quand $i$ est maximale la pente est nulle."
+            }
+          ],
+          "hint": "Pars du bilan $E\\,i = (R+r)\\,i^{2} + L\\,i\\,\\frac{di}{dt}$ et identifie le terme de stockage.",
+          "solution": "**Valeurs à $t=\\tau$ :** $I_{\\max} = \\dfrac{12}{200} = 0{,}060\\ \\mathrm{A}$, $i(\\tau) = I_{\\max}(1-e^{-1}) = 0{,}0379\\ \\mathrm{A}$, et en dérivant $i(t)$ : $\\dfrac{di}{dt} = \\dfrac{E}{L}e^{-t/\\tau}$, donc $\\left(\\dfrac{di}{dt}\\right)_{\\tau} = \\dfrac{12}{0{,}40}\\,e^{-1} = 30\\times0{,}368 = 11{,}0\\ \\mathrm{A\\,s^{-1}}$. **Puissance de stockage :** $$\\mathcal{P}_m = L\\,i\\,\\frac{di}{dt} = 0{,}40 \\times 0{,}0379 \\times 11{,}0 = 0{,}167 \\approx 0{,}17\\ \\mathrm{W}.$$ **Contrôle par le bilan :** puissance Joule $= 200\\times(0{,}0379)^{2} = 0{,}288\\ \\mathrm{W}$, et $0{,}288 + 0{,}167 = 0{,}455\\ \\mathrm{W} = E\\,i = 12\\times0{,}0379$. Le bilan se referme exactement.",
+          "methode": "Le bilan de puissance $E\\,i = (R+r)\\,i^{2} + L\\,i\\,\\frac{di}{dt}$ sert aussi de vérification : la somme des deux parts doit redonner $E\\,i$.",
+          "points": 1,
+          "ref": "pc-rl-bilan-energetique-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Constitution et grandeurs caractéristiques",
+        "lesson": "La bobine",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-constitution-et-grandeurs-caracteristiqu",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Constitution et grandeurs caractéristiques",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Constitution et grandeurs caractéristiques",
+          "difficulty": 1,
+          "statement": "Dans le système international, quelle est l'unité de l'inductance $L$ d'une bobine ?",
+          "options": [
+            {
+              "label": "le henry, de symbole $\\mathrm{H}$",
+              "correct": true,
+              "why": "Par définition $u = L\\,\\frac{di}{dt}$, donc $L$ s'exprime en $\\mathrm{V\\,s\\,A^{-1}}$, unité baptisée henry ($\\mathrm{H}$)."
+            },
+            {
+              "label": "le tesla, de symbole $\\mathrm{T}$",
+              "why": "Le tesla est l'unité du champ magnétique $B$, pas celle de l'inductance de la bobine qui le crée."
+            },
+            {
+              "label": "le weber, de symbole $\\mathrm{Wb}$",
+              "why": "Le weber est l'unité du flux magnétique $\\Phi = L\\,i$ ; tu as confondu le flux avec le coefficient $L$ qui le relie à $i$."
+            },
+            {
+              "label": "le farad, de symbole $\\mathrm{F}$",
+              "why": "Le farad est l'unité de la capacité $C$ d'un condensateur : tu as transposé le dipôle RC au dipôle RL."
+            }
+          ],
+          "hint": "Repars de la relation de définition $u = L\\,\\frac{di}{dt}$ et regarde quelles unités elle impose.",
+          "solution": "La relation de définition de l'inductance est $u = L\\,\\frac{di}{dt}$. Donc $L = u\\,\\frac{dt}{di}$ s'exprime en $\\mathrm{V\\,s\\,A^{-1}}$. Cette unité porte le nom de **henry**, de symbole $\\mathrm{H}$. Contrôle : comme $\\mathrm{V\\,A^{-1}} = \\Omega$, on a aussi $1\\ \\mathrm{H} = 1\\ \\Omega\\cdot\\mathrm{s}$, ce qui rendra $L/(R+r)$ homogène à un temps.",
+          "methode": "Pour retrouver l'unité d'une grandeur, pars toujours de sa relation de définition, jamais de ta mémoire.",
+          "points": 1,
+          "ref": "pc-rl-constitution-et-grandeurs-caracteristiqu-q1"
+        },
+        {
+          "notion": "Constitution et grandeurs caractéristiques",
+          "difficulty": 2,
+          "statement": "Une bobine portant les indications $L = 0{,}50\\ \\mathrm{H}$ et $r = 8{,}0\\ \\Omega$ est branchée seule aux bornes d'un générateur de tension continue $U = 6{,}0\\ \\mathrm{V}$. Quelle est l'intensité du courant en régime permanent ?",
+          "options": [
+            {
+              "label": "$I = 0{,}75\\ \\mathrm{A}$",
+              "correct": true,
+              "why": "En régime permanent $\\frac{di}{dt} = 0$, donc $U = r\\,I$ et $I = \\dfrac{6{,}0}{8{,}0} = 0{,}75\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$I = 12\\ \\mathrm{A}$",
+              "why": "Tu as divisé $U$ par $L$ : $\\frac{6{,}0}{0{,}50} = 12$. Mais $L$ n'est pas une résistance, c'est $r$ qui limite le courant en régime permanent."
+            },
+            {
+              "label": "$I = 48\\ \\mathrm{A}$",
+              "why": "Tu as multiplié : $6{,}0 \\times 8{,}0 = 48$. La loi d'Ohm en régime permanent donne $I = U/r$, pas $U \\times r$."
+            },
+            {
+              "label": "$I = 0\\ \\mathrm{A}$",
+              "why": "Tu as cru qu'une bobine bloque le courant continu. C'est faux : en régime permanent elle se comporte comme un simple conducteur ohmique de résistance $r$."
+            }
+          ],
+          "hint": "En régime permanent l'intensité ne varie plus : que devient alors le terme $L\\,\\frac{di}{dt}$ ?",
+          "solution": "La tension aux bornes d'une bobine s'écrit $u = r\\,i + L\\,\\frac{di}{dt}$. En régime permanent $i$ est constante, donc $\\frac{di}{dt} = 0$ et il reste $U = r\\,I$. D'où $I = \\dfrac{U}{r} = \\dfrac{6{,}0}{8{,}0} = 0{,}75\\ \\mathrm{A}$. Contrôle : avec $0{,}75\\ \\mathrm{A}$ dans $8{,}0\\ \\Omega$ on retrouve bien $8{,}0 \\times 0{,}75 = 6{,}0\\ \\mathrm{V}$.",
+          "methode": "En régime permanent, remplace mentalement la bobine par un conducteur ohmique de résistance $r$ : l'inductance $L$ ne joue plus aucun rôle.",
+          "points": 1,
+          "ref": "pc-rl-constitution-et-grandeurs-caracteristiqu-q2"
+        },
+        {
+          "notion": "Constitution et grandeurs caractéristiques",
+          "difficulty": 2,
+          "statement": "En régime permanent, comment se comporte une bobine d'inductance $L$ et de résistance $r$ non nulle ?",
+          "options": [
+            {
+              "label": "comme un conducteur ohmique de résistance $r$, avec $u_L = r\\,i$",
+              "correct": true,
+              "why": "En régime permanent $\\frac{di}{dt} = 0$ dans $u_L = r\\,i + L\\,\\frac{di}{dt}$, il ne reste que $u_L = r\\,i$."
+            },
+            {
+              "label": "comme un fil de résistance nulle, avec $u_L = 0$",
+              "why": "Tu as traité la bobine comme idéale. Dès que $r \\neq 0$, la tension $u_L = r\\,i$ est non nulle en régime permanent."
+            },
+            {
+              "label": "comme un interrupteur ouvert, avec $i = 0$",
+              "why": "Tu as transposé le comportement du condensateur en régime permanent : c'est lui qui bloque le courant continu, pas la bobine."
+            },
+            {
+              "label": "comme un générateur de f.é.m. $e = L\\,\\frac{di}{dt}$",
+              "why": "La f.é.m. auto-induite n'existe que pendant le régime transitoire : en régime permanent $\\frac{di}{dt} = 0$ donc $e = 0$."
+            }
+          ],
+          "hint": "Écris $u_L = r\\,i + L\\,\\frac{di}{dt}$ puis annule le terme qui contient la dérivée.",
+          "solution": "La relation générale est $u_L = r\\,i + L\\,\\frac{di}{dt}$. En régime permanent l'intensité est constante, donc $\\frac{di}{dt} = 0$ et $u_L = r\\,i$ : la bobine est équivalente à un conducteur ohmique de résistance $r$. Contrôle : si on mesurait $u_L$ au voltmètre en régime permanent, on lirait exactement $r\\,i$, ce qui permet justement de déterminer $r$.",
+          "methode": "Deux réflexes à ne jamais confondre : en régime permanent la bobine devient la résistance $r$, le condensateur devient un interrupteur ouvert.",
+          "points": 1,
+          "ref": "pc-rl-constitution-et-grandeurs-caracteristiqu-q3"
+        },
+        {
+          "notion": "Constitution et grandeurs caractéristiques",
+          "difficulty": 3,
+          "statement": "Un circuit série comporte un générateur de f.é.m. $E = 12\\ \\mathrm{V}$ (résistance interne négligeable), un conducteur ohmique $R = 85\\ \\Omega$ et une bobine $(L,\\ r)$. En régime permanent, un voltmètre aux bornes de la bobine indique $u_L = 1{,}8\\ \\mathrm{V}$ et on sait que $r = 15\\ \\Omega$. Quelle est l'intensité du courant ?",
+          "options": [
+            {
+              "label": "$I = 0{,}12\\ \\mathrm{A}$",
+              "correct": true,
+              "why": "En régime permanent $u_L = r\\,I$, donc $I = \\dfrac{1{,}8}{15} = 0{,}12\\ \\mathrm{A}$ ; on vérifie avec $\\dfrac{E}{R+r} = \\dfrac{12}{100} = 0{,}12\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$I = 0{,}14\\ \\mathrm{A}$",
+              "why": "Tu as calculé $\\dfrac{E}{R} = \\dfrac{12}{85} = 0{,}14\\ \\mathrm{A}$ : tu as oublié que la résistance $r$ de la bobine s'ajoute à $R$."
+            },
+            {
+              "label": "$I = 0{,}80\\ \\mathrm{A}$",
+              "why": "Tu as calculé $\\dfrac{E}{r} = \\dfrac{12}{15} = 0{,}80\\ \\mathrm{A}$ : tu as pris la seule résistance de la bobine au lieu de la résistance totale $R + r$."
+            },
+            {
+              "label": "$I = 0{,}018\\ \\mathrm{A}$",
+              "why": "Tu as calculé $\\dfrac{u_L}{R+r} = \\dfrac{1{,}8}{100} = 0{,}018\\ \\mathrm{A}$ : la tension de la bobine ne doit être divisée que par $r$, car elle n'existe qu'à ses bornes."
+            }
+          ],
+          "hint": "Tu disposes de deux chemins : $u_L = r\\,I$, ou la loi des mailles avec $R+r$. Les deux doivent donner le même résultat.",
+          "solution": "**Par la bobine :** en régime permanent $u_L = r\\,I$, donc $I = \\dfrac{u_L}{r} = \\dfrac{1{,}8}{15} = 0{,}12\\ \\mathrm{A}$. **Contrôle par la maille :** $E = (R+r)\\,I$ donne $I = \\dfrac{12}{85+15} = \\dfrac{12}{100} = 0{,}12\\ \\mathrm{A}$. Les deux voies concordent, et au passage $u_R = 85 \\times 0{,}12 = 10{,}2\\ \\mathrm{V}$ avec $10{,}2 + 1{,}8 = 12\\ \\mathrm{V} = E$.",
+          "methode": "Quand un énoncé donne $u_L$ en régime permanent, c'est un cadeau : $r = u_L/I$ ou $I = u_L/r$ en une ligne, et la maille sert de vérification.",
+          "points": 1,
+          "ref": "pc-rl-constitution-et-grandeurs-caracteristiqu-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le phénomène d'auto-induction",
+        "lesson": "La bobine",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-le-phenomene-d-auto-induction",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Le phénomène d'auto-induction",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le phénomène d'auto-induction",
+          "difficulty": 1,
+          "statement": "Quelle est l'expression de la force électromotrice $e$ auto-induite dans une bobine d'inductance $L$ parcourue par un courant d'intensité $i$ ?",
+          "options": [
+            {
+              "label": "$e = -L\\,\\dfrac{di}{dt}$",
+              "correct": true,
+              "why": "C'est la définition de l'auto-induction : la f.é.m. est proportionnelle à la vitesse de variation de $i$, avec un signe moins qui traduit l'opposition."
+            },
+            {
+              "label": "$e = -L\\,i$",
+              "why": "Tu as oublié la dérivée : un courant constant, même intense, ne crée aucune f.é.m. auto-induite."
+            },
+            {
+              "label": "$e = -\\dfrac{1}{L}\\,\\dfrac{di}{dt}$",
+              "why": "Tu as inversé $L$. Une grande inductance s'oppose davantage à la variation du courant, donc $L$ doit multiplier $\\frac{di}{dt}$, pas le diviser."
+            },
+            {
+              "label": "$e = -L\\,\\dfrac{d^2i}{dt^2}$",
+              "why": "Tu as dérivé deux fois. L'auto-induction répond à la variation de $i$, pas à la variation de cette variation."
+            }
+          ],
+          "hint": "Quelle grandeur doit varier pour qu'une f.é.m. apparaisse dans la bobine ?",
+          "solution": "Le flux propre à travers la bobine vaut $\\Phi = L\\,i$. La loi de l'induction donne $e = -\\dfrac{d\\Phi}{dt} = -L\\,\\dfrac{di}{dt}$ puisque $L$ est constante. Contrôle : si $i$ est constante, $e = 0$, ce qui est bien ce qu'on observe en régime permanent.",
+          "methode": "Retiens le couple $\\Phi = L\\,i$ puis $e = -\\frac{d\\Phi}{dt}$ : toute l'auto-induction en découle.",
+          "points": 1,
+          "ref": "pc-rl-le-phenomene-d-auto-induction-q1"
+        },
+        {
+          "notion": "Le phénomène d'auto-induction",
+          "difficulty": 2,
+          "statement": "On ferme l'interrupteur d'un circuit $(R,\\ L,\\ r)$ alimenté par un générateur : l'intensité $i$ se met à croître. Quel est l'effet de la f.é.m. auto-induite ?",
+          "options": [
+            {
+              "label": "elle s'oppose à la croissance de $i$ et retarde l'établissement du courant",
+              "correct": true,
+              "why": "C'est la loi de modération : le signe moins de $e = -L\\,\\frac{di}{dt}$ fait que l'induction contrarie toujours la variation qui lui donne naissance."
+            },
+            {
+              "label": "elle accélère la croissance de $i$ et raccourcit le régime transitoire",
+              "why": "Tu as oublié le signe moins. Si l'induction renforçait la cause qui la produit, le courant divergerait : c'est physiquement impossible."
+            },
+            {
+              "label": "elle est nulle tant que le régime permanent n'est pas atteint",
+              "why": "C'est exactement l'inverse : $e$ est maximale juste après la fermeture, quand $\\frac{di}{dt}$ est le plus grand, et nulle en régime permanent."
+            },
+            {
+              "label": "elle fixe la valeur finale de $i$ à $E/L$",
+              "why": "Tu as mélangé deux choses : la valeur finale est imposée par les résistances, $I_{\\max} = E/(R+r)$, et $E/L$ est la pente initiale, pas une intensité."
+            }
+          ],
+          "hint": "Pense à la loi de modération : l'induction contrarie toujours la cause qui la produit.",
+          "solution": "Pendant l'établissement, $i$ croît donc $\\frac{di}{dt} > 0$ et $e = -L\\,\\frac{di}{dt} < 0$ : la f.é.m. auto-induite est **opposée** au sens du courant que le générateur veut imposer. Elle freine donc la montée de $i$, et c'est précisément ce retard qu'on mesure par la constante de temps $\\tau = \\dfrac{L}{R+r}$. Contrôle : en régime permanent $\\frac{di}{dt} = 0$, $e = 0$, et plus rien ne freine le courant, qui vaut $E/(R+r)$.",
+          "methode": "Loi de modération : l'effet de l'induction s'oppose toujours à la cause qui lui donne naissance. C'est vrai à la fermeture comme à l'ouverture.",
+          "points": 1,
+          "ref": "pc-rl-le-phenomene-d-auto-induction-q2"
+        },
+        {
+          "notion": "Le phénomène d'auto-induction",
+          "difficulty": 2,
+          "statement": "Dans une bobine d'inductance $L = 0{,}25\\ \\mathrm{H}$, l'intensité passe de $0$ à $0{,}40\\ \\mathrm{A}$ de façon linéaire en $5{,}0\\ \\mathrm{ms}$. Quelle est la valeur absolue de la f.é.m. auto-induite pendant cette phase ?",
+          "options": [
+            {
+              "label": "$|e| = 20\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$\\frac{di}{dt} = \\dfrac{0{,}40}{5{,}0\\times 10^{-3}} = 80\\ \\mathrm{A\\,s^{-1}}$, donc $|e| = 0{,}25 \\times 80 = 20\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$|e| = 80\\ \\mathrm{V}$",
+              "why": "Tu as donné la valeur de $\\frac{di}{dt} = 80\\ \\mathrm{A\\,s^{-1}}$ et tu l'as écrite en volts : il reste à la multiplier par $L$."
+            },
+            {
+              "label": "$|e| = 0{,}10\\ \\mathrm{V}$",
+              "why": "Tu as calculé $L \\times \\Delta i = 0{,}25 \\times 0{,}40 = 0{,}10$ : tu as oublié de diviser par la durée $\\Delta t$."
+            },
+            {
+              "label": "$|e| = 3{,}1\\times 10^{-3}\\ \\mathrm{V}$",
+              "why": "Tu as calculé $\\dfrac{L}{\\Delta i/\\Delta t} = \\dfrac{0{,}25}{80} = 3{,}1\\times 10^{-3}$ : tu as divisé $L$ par la pente au lieu de l'y multiplier."
+            }
+          ],
+          "hint": "Commence par calculer la pente $\\frac{di}{dt}$ en $\\mathrm{A\\,s^{-1}}$, et seulement ensuite multiplie par $L$.",
+          "solution": "La variation est linéaire, donc $\\dfrac{di}{dt} = \\dfrac{\\Delta i}{\\Delta t} = \\dfrac{0{,}40}{5{,}0 \\times 10^{-3}} = 80\\ \\mathrm{A\\,s^{-1}}$. Alors $|e| = L\\,\\left|\\dfrac{di}{dt}\\right| = 0{,}25 \\times 80 = 20\\ \\mathrm{V}$. Contrôle d'ordre de grandeur : $20\\ \\mathrm{V}$ pour une variation de moins d'un demi-ampère en quelques millisecondes — c'est bien ce qui rend les surtensions de rupture si dangereuses.",
+          "methode": "Convertis toujours $\\Delta t$ en secondes avant de calculer $\\frac{di}{dt}$ : c'est là que se perdent les facteurs $10^{3}$.",
+          "points": 1,
+          "ref": "pc-rl-le-phenomene-d-auto-induction-q3"
+        },
+        {
+          "notion": "Le phénomène d'auto-induction",
+          "difficulty": 3,
+          "statement": "On ouvre brusquement l'interrupteur d'un circuit où une bobine est parcourue par un courant. Pourquoi observe-t-on une étincelle entre les bornes de l'interrupteur ?",
+          "options": [
+            {
+              "label": "parce que l'intensité dans la bobine ne peut pas s'annuler instantanément : $\\left|\\frac{di}{dt}\\right|$ devient énorme et fait apparaître une surtension",
+              "correct": true,
+              "why": "L'intensité est une fonction continue du temps dans une bobine ; forcer $i$ à tomber à zéro en un temps très court donne $|e| = L\\left|\\frac{di}{dt}\\right|$ très grand, d'où le claquage de l'air."
+            },
+            {
+              "label": "parce que la tension du générateur se retrouve intégralement aux bornes de l'interrupteur",
+              "why": "Cela ne donnerait que quelques volts, très loin de la tension de claquage de l'air : la surtension observée dépasse largement $E$."
+            },
+            {
+              "label": "parce que l'énergie électrique stockée dans la bobine est $\\frac{1}{2}L i^2$ et qu'une énergie ne peut pas disparaître",
+              "why": "L'argument énergétique explique qu'il faut bien dissiper $\\frac{1}{2}L I_0^2$, mais pas la valeur énorme de la tension : c'est la discontinuité imposée à $i$, donc $\\frac{di}{dt}$, qui la crée."
+            },
+            {
+              "label": "parce que la résistance $r$ de la bobine devient infinie à l'ouverture",
+              "why": "La résistance $r$ est une caractéristique du fil de la bobine : elle ne change pas quand on ouvre l'interrupteur."
+            }
+          ],
+          "hint": "Demande-toi quelle grandeur, dans une bobine, ne peut jamais subir de saut.",
+          "solution": "Dans une bobine, l'intensité du courant est **continue** : elle ne peut pas passer de $I_0$ à $0$ en un temps nul. En ouvrant l'interrupteur on tente précisément d'imposer cette discontinuité ; la bobine répond par une f.é.m. $|e| = L\\left|\\dfrac{di}{dt}\\right|$ qui prend une valeur très grande, suffisante pour ioniser l'air et faire passer le courant sous forme d'étincelle. **Remède :** on place une diode de roue libre (ou un conducteur ohmique) en parallèle sur la bobine, pour offrir au courant un chemin où il peut décroître progressivement.",
+          "methode": "Dans un circuit RL, c'est l'intensité qui est continue ; dans un circuit RC, c'est la tension du condensateur. Toute rupture brutale de ces grandeurs signale une surtension.",
+          "points": 1,
+          "ref": "pc-rl-le-phenomene-d-auto-induction-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La relation tension–intensité",
+        "lesson": "La bobine",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-la-relation-tensionintensite",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "La relation tension–intensité",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La relation tension–intensité",
+          "difficulty": 1,
+          "statement": "Quelle relation lie la tension $u_L$ aux bornes d'une bobine $(L,\\ r)$ à l'intensité $i$ qui la traverse, en convention récepteur ?",
+          "options": [
+            {
+              "label": "$u_L = r\\,i + L\\,\\dfrac{di}{dt}$",
+              "correct": true,
+              "why": "La bobine se comporte comme l'association en série de sa résistance $r$ et de son inductance pure $L$ : les deux tensions s'ajoutent."
+            },
+            {
+              "label": "$u_L = L\\,\\dfrac{di}{dt}$",
+              "why": "C'est la relation d'une bobine **idéale**. Dès que $r \\neq 0$, il manque le terme $r\\,i$, et donc toute la tension du régime permanent."
+            },
+            {
+              "label": "$u_L = r\\,i - L\\,\\dfrac{di}{dt}$",
+              "why": "Tu as confondu la tension $u_L$ avec la f.é.m. auto-induite $e = -L\\,\\frac{di}{dt}$ : en convention récepteur les deux termes s'ajoutent."
+            },
+            {
+              "label": "$u_L = r\\,\\dfrac{di}{dt} + L\\,i$",
+              "why": "Tu as échangé les rôles de $r$ et de $L$. C'est $r$ qui multiplie $i$ (loi d'Ohm) et $L$ qui multiplie $\\frac{di}{dt}$."
+            }
+          ],
+          "hint": "Pense à la bobine comme à deux dipôles en série : un conducteur ohmique $r$ et une inductance pure $L$.",
+          "solution": "Une bobine réelle est modélisée par une inductance pure $L$ en série avec un conducteur ohmique de résistance $r$. En convention récepteur, les tensions s'additionnent : $u_L = r\\,i + L\\,\\dfrac{di}{dt}$. Contrôle sur les deux cas limites : en régime permanent $\\frac{di}{dt}=0$ et $u_L = r\\,i$ ; à l'instant initial de l'établissement $i=0$ et $u_L = L\\,\\frac{di}{dt}$.",
+          "methode": "Écris systématiquement les deux termes de $u_L$, puis annule celui qui disparaît dans la situation étudiée. Ne pars jamais de $u_L = L\\,\\frac{di}{dt}$ sans avoir vérifié que $r = 0$.",
+          "points": 1,
+          "ref": "pc-rl-la-relation-tensionintensite-q1"
+        },
+        {
+          "notion": "La relation tension–intensité",
+          "difficulty": 2,
+          "statement": "Une bobine de résistance $r = 12\\ \\Omega$ est traversée par un courant d'intensité constante $i = 0{,}30\\ \\mathrm{A}$. Quelle est la tension à ses bornes ?",
+          "options": [
+            {
+              "label": "$u_L = 3{,}6\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "L'intensité est constante donc $\\frac{di}{dt}=0$ : il reste $u_L = r\\,i = 12 \\times 0{,}30 = 3{,}6\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$u_L = 0\\ \\mathrm{V}$",
+              "why": "Tu as appliqué la relation de la bobine **idéale**. Ici $r = 12\\ \\Omega \\neq 0$, donc la tension vaut $r\\,i$ et n'est pas nulle."
+            },
+            {
+              "label": "$u_L = 40\\ \\mathrm{V}$",
+              "why": "Tu as calculé $\\dfrac{r}{i} = \\dfrac{12}{0{,}30} = 40$ : la loi d'Ohm s'écrit $u = r\\,i$, c'est un produit."
+            },
+            {
+              "label": "$u_L = 0{,}025\\ \\mathrm{V}$",
+              "why": "Tu as calculé $\\dfrac{i}{r} = \\dfrac{0{,}30}{12} = 0{,}025$ : tu as divisé l'intensité par la résistance au lieu de les multiplier."
+            }
+          ],
+          "hint": "Que vaut $\\frac{di}{dt}$ lorsque l'intensité est constante ?",
+          "solution": "L'intensité est constante, donc $\\dfrac{di}{dt} = 0$ et la relation $u_L = r\\,i + L\\,\\dfrac{di}{dt}$ se réduit à $u_L = r\\,i = 12 \\times 0{,}30 = 3{,}6\\ \\mathrm{V}$. Contrôle : $3{,}6\\ \\mathrm{V}$ pour $12\\ \\Omega$ redonne bien $0{,}30\\ \\mathrm{A}$ par la loi d'Ohm.",
+          "methode": "Dès que l'énoncé dit « intensité constante » ou « régime permanent », barre le terme $L\\,\\frac{di}{dt}$ et applique la loi d'Ohm à $r$.",
+          "points": 1,
+          "ref": "pc-rl-la-relation-tensionintensite-q2"
+        },
+        {
+          "notion": "La relation tension–intensité",
+          "difficulty": 3,
+          "statement": "Dans un circuit série constitué d'un générateur $E = 9{,}0\\ \\mathrm{V}$, d'un conducteur ohmique $R = 180\\ \\Omega$ et d'une bobine $(L,\\ r = 20\\ \\Omega)$, on ferme l'interrupteur à $t = 0$. Quelle est la tension aux bornes de la bobine juste après la fermeture ?",
+          "options": [
+            {
+              "label": "$u_L = 9{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "À $t = 0^{+}$ l'intensité est encore nulle (continuité du courant dans la bobine), donc $u_R = R\\,i = 0$ et la loi des mailles donne $u_L = E = 9{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$u_L = 0\\ \\mathrm{V}$",
+              "why": "Tu as écrit $u_L = r\\,i$ avec $i = 0$, en oubliant le terme $L\\,\\frac{di}{dt}$ : c'est justement lui qui est maximal à cet instant."
+            },
+            {
+              "label": "$u_L = 8{,}1\\ \\mathrm{V}$",
+              "why": "Tu as appliqué un diviseur de tension $E\\,\\dfrac{R}{R+r} = 9{,}0 \\times \\dfrac{180}{200} = 8{,}1\\ \\mathrm{V}$, ce qui est la tension de $R$ en régime permanent, pas celle de la bobine à $t=0^{+}$."
+            },
+            {
+              "label": "$u_L = 0{,}90\\ \\mathrm{V}$",
+              "why": "Tu as calculé $r\\,I_{\\max} = 20 \\times \\dfrac{9{,}0}{200} = 0{,}90\\ \\mathrm{V}$ : c'est la tension de la bobine en **régime permanent**, à la fin du transitoire, pas au début."
+            }
+          ],
+          "hint": "Quelle grandeur est continue à la fermeture de l'interrupteur ? Déduis-en $u_R$ à $t = 0^{+}$.",
+          "solution": "L'intensité dans une bobine est une fonction continue du temps : comme $i(0^{-}) = 0$, on a aussi $i(0^{+}) = 0$. Donc $u_R(0^{+}) = R \\times 0 = 0$ et la loi des mailles $E = u_R + u_L$ donne $u_L(0^{+}) = E = 9{,}0\\ \\mathrm{V}$. Contrôle : ce $9{,}0\\ \\mathrm{V}$ est bien $L\\,\\left(\\frac{di}{dt}\\right)_{0}$, c'est-à-dire la pente initiale $\\left(\\frac{di}{dt}\\right)_0 = E/L$ multipliée par $L$. À l'autre extrémité du transitoire, $u_L$ est retombée à $r\\,I_{\\max} = 0{,}90\\ \\mathrm{V}$.",
+          "methode": "À $t = 0^{+}$ dans un circuit RL : $i = 0$, donc toute la tension du générateur se retrouve aux bornes de la bobine.",
+          "points": 1,
+          "ref": "pc-rl-la-relation-tensionintensite-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Énergie emmagasinée",
+        "lesson": "La bobine",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-energie-emmagasinee",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Énergie emmagasinée",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Énergie emmagasinée",
+          "difficulty": 1,
+          "statement": "Quelle est l'expression de l'énergie magnétique emmagasinée par une bobine d'inductance $L$ parcourue par un courant d'intensité $i$ ?",
+          "options": [
+            {
+              "label": "$E_m = \\dfrac{1}{2}L\\,i^{2}$",
+              "correct": true,
+              "why": "C'est l'expression de l'énergie magnétique : elle croît comme le carré de l'intensité."
+            },
+            {
+              "label": "$E_m = \\dfrac{1}{2}L^{2}\\,i$",
+              "why": "Tu as mis le carré sur $L$ au lieu de $i$. C'est l'intensité qui est élevée au carré, par analogie avec $\\frac{1}{2}C u^2$ du condensateur."
+            },
+            {
+              "label": "$E_m = L\\,i^{2}$",
+              "why": "Tu as oublié le facteur $\\frac{1}{2}$, qui provient de l'intégration de la puissance $L\\,i\\,\\frac{di}{dt}$."
+            },
+            {
+              "label": "$E_m = \\dfrac{1}{2}\\dfrac{i^{2}}{L}$",
+              "why": "Tu as divisé par $L$ au lieu de multiplier : à intensité donnée, une grande inductance stocke **plus** d'énergie, pas moins."
+            }
+          ],
+          "hint": "Pense à l'analogie avec le condensateur : $\\frac{1}{2}C u^2$ devient quoi pour la bobine ?",
+          "solution": "La puissance reçue par l'inductance pure vaut $p = L\\,i\\,\\dfrac{di}{dt} = \\dfrac{d}{dt}\\!\\left(\\dfrac{1}{2}L\\,i^{2}\\right)$. L'énergie emmagasinée est donc $E_m = \\dfrac{1}{2}L\\,i^{2}$. Contrôle d'homogénéité : $\\mathrm{H}\\cdot\\mathrm{A}^{2} = \\Omega\\cdot\\mathrm{s}\\cdot\\mathrm{A}^{2} = \\mathrm{W}\\cdot\\mathrm{s} = \\mathrm{J}$.",
+          "methode": "Mémorise les deux énergies ensemble : $\\frac{1}{2}C u^{2}$ pour le condensateur (tension), $\\frac{1}{2}L i^{2}$ pour la bobine (intensité).",
+          "points": 1,
+          "ref": "pc-rl-energie-emmagasinee-q1"
+        },
+        {
+          "notion": "Énergie emmagasinée",
+          "difficulty": 2,
+          "statement": "Une bobine d'inductance $L = 0{,}40\\ \\mathrm{H}$ est parcourue par un courant d'intensité $I = 0{,}15\\ \\mathrm{A}$. Quelle énergie magnétique a-t-elle emmagasinée ?",
+          "options": [
+            {
+              "label": "$E_m = 4{,}5\\ \\mathrm{mJ}$",
+              "correct": true,
+              "why": "$E_m = \\frac{1}{2} \\times 0{,}40 \\times (0{,}15)^{2} = 4{,}5 \\times 10^{-3}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$E_m = 30\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $\\frac{1}{2}L\\,I = \\frac{1}{2}\\times 0{,}40 \\times 0{,}15 = 30\\ \\mathrm{mJ}$ : tu as oublié d'élever $I$ au carré."
+            },
+            {
+              "label": "$E_m = 9{,}0\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $L\\,I^{2} = 0{,}40 \\times (0{,}15)^{2} = 9{,}0\\ \\mathrm{mJ}$ : tu as oublié le facteur $\\frac{1}{2}$."
+            },
+            {
+              "label": "$E_m = 1{,}8\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $\\frac{1}{2}L^{2}I^{2} = \\frac{1}{2}\\times(0{,}40)^{2}\\times(0{,}15)^{2} = 1{,}8\\ \\mathrm{mJ}$ : tu as élevé $L$ au carré en même temps que $I$."
+            }
+          ],
+          "hint": "Élève bien l'intensité au carré, et garde le facteur $\\frac{1}{2}$.",
+          "solution": "$E_m = \\dfrac{1}{2}L\\,I^{2} = \\dfrac{1}{2} \\times 0{,}40 \\times (0{,}15)^{2} = \\dfrac{1}{2} \\times 0{,}40 \\times 2{,}25\\times 10^{-2} = 4{,}5\\times 10^{-3}\\ \\mathrm{J} = 4{,}5\\ \\mathrm{mJ}$. Contrôle d'ordre de grandeur : quelques millijoules, ce qui est l'ordre attendu pour une bobine de laboratoire sous un courant de $150\\ \\mathrm{mA}$.",
+          "methode": "Dans $\\frac{1}{2}L i^{2}$, calcule d'abord $i^{2}$ séparément : c'est l'étape où l'on perd le plus de points.",
+          "points": 1,
+          "ref": "pc-rl-energie-emmagasinee-q2"
+        },
+        {
+          "notion": "Énergie emmagasinée",
+          "difficulty": 3,
+          "statement": "Lors de l'établissement du courant dans un dipôle RL, quelle fraction de l'énergie magnétique finale la bobine a-t-elle emmagasinée à l'instant $t = \\tau$ ?",
+          "options": [
+            {
+              "label": "environ $40\\ \\%$",
+              "correct": true,
+              "why": "À $t=\\tau$, $i = I_{\\max}(1-e^{-1}) = 0{,}632\\,I_{\\max}$ ; comme $E_m \\propto i^{2}$, la fraction vaut $(0{,}632)^{2} = 0{,}40$."
+            },
+            {
+              "label": "environ $63\\ \\%$",
+              "why": "Tu as donné la fraction de l'**intensité** atteinte à $t=\\tau$. L'énergie étant proportionnelle à $i^{2}$, il faut élever cette fraction au carré."
+            },
+            {
+              "label": "environ $86\\ \\%$",
+              "why": "Tu as cru que $\\left(1-e^{-1}\\right)^{2}$ valait $1-e^{-2} = 0{,}865$. Or le carré d'une différence fait apparaître un double produit : $(1-e^{-1})^{2} = 1-2e^{-1}+e^{-2} = 0{,}40$."
+            },
+            {
+              "label": "environ $14\\ \\%$",
+              "why": "Tu as calculé $e^{-2} = 0{,}135$, c'est-à-dire la fraction d'énergie qui **manque** encore si l'on suivait à tort la loi de la rupture."
+            }
+          ],
+          "hint": "Écris d'abord $i(\\tau)$ en fonction de $I_{\\max}$, puis souviens-toi que l'énergie varie comme le carré de l'intensité.",
+          "solution": "À $t=\\tau$ l'intensité vaut $i(\\tau) = I_{\\max}\\left(1-e^{-1}\\right) = 0{,}632\\,I_{\\max}$. L'énergie magnétique étant $E_m = \\frac{1}{2}L i^{2}$, le rapport cherché est $\\dfrac{E_m(\\tau)}{E_m(\\infty)} = \\left(\\dfrac{i(\\tau)}{I_{\\max}}\\right)^{2} = (0{,}632)^{2} = 0{,}400$, soit **$40\\ \\%$**. Contrôle : la montée en énergie est donc en retard sur la montée en courant, ce qui est logique puisque la fonction carré écrase les petites valeurs.",
+          "methode": "Toute question sur une fraction d'énergie se traite en deux temps : la fraction d'intensité d'abord, son carré ensuite.",
+          "points": 1,
+          "ref": "pc-rl-energie-emmagasinee-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le montage",
+        "lesson": "Étude expérimentale du dipôle RL",
+        "role": "experimental",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 1
+        }
+      },
+      "ref": "pc-rl-le-montage",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Le montage",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Le montage",
+          "difficulty": 1,
+          "statement": "Pour suivre à l'oscilloscope l'évolution de l'intensité $i$ dans un dipôle RL, aux bornes de quel dipôle branche-t-on la voie de mesure ?",
+          "options": [
+            {
+              "label": "aux bornes du conducteur ohmique $R$, car $u_R = R\\,i$",
+              "correct": true,
+              "why": "La tension aux bornes d'un conducteur ohmique est proportionnelle à l'intensité : la courbe de $u_R$ a exactement la forme de celle de $i$."
+            },
+            {
+              "label": "aux bornes de la bobine, car $u_L = L\\,\\dfrac{di}{dt}$",
+              "why": "La tension de la bobine dépend de la **dérivée** de $i$ (et de $r\\,i$) : sa courbe n'a pas la même forme que celle de $i$."
+            },
+            {
+              "label": "aux bornes du générateur, car il impose l'intensité du circuit",
+              "why": "La tension du générateur est constante pendant tout l'établissement : elle ne renseigne en rien sur l'évolution de $i$."
+            },
+            {
+              "label": "aux bornes de l'interrupteur, car c'est lui qui déclenche le régime transitoire",
+              "why": "Une fois fermé, l'interrupteur a une tension nulle à ses bornes : il n'y a rien à y observer."
+            }
+          ],
+          "hint": "Quelle est la seule tension du circuit qui soit, à chaque instant, proportionnelle à $i$ ?",
+          "solution": "Dans un conducteur ohmique, la loi d'Ohm $u_R = R\\,i$ est valable à chaque instant : la courbe $u_R(t)$ est donc une image fidèle de $i(t)$, à un facteur $R$ près. On lit alors $i = \\dfrac{u_R}{R}$. Contrôle : le palier de $u_R$ divisé par $R$ doit redonner $I_{\\max} = \\dfrac{E}{R+r}$.",
+          "methode": "L'oscilloscope ne mesure que des tensions : pour voir un courant, place un conducteur ohmique connu en série et observe sa tension.",
+          "points": 1,
+          "ref": "pc-rl-le-montage-q1"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 2,
+          "statement": "On veut observer de façon stable, et de manière répétée, l'établissement puis la rupture du courant dans un dipôle RL à l'oscilloscope. Quel dispositif d'alimentation utilise-t-on ?",
+          "options": [
+            {
+              "label": "un générateur basse fréquence délivrant une tension en créneaux",
+              "correct": true,
+              "why": "Chaque front montant provoque un établissement et chaque front descendant une rupture : le phénomène se répète périodiquement et l'oscilloscope peut le synchroniser."
+            },
+            {
+              "label": "un générateur de tension continue associé à un interrupteur manuel",
+              "why": "Un seul transitoire de quelques millisecondes, déclenché à la main, n'est pas reproductible : l'oscilloscope ne peut pas le synchroniser de façon stable."
+            },
+            {
+              "label": "un générateur basse fréquence délivrant une tension sinusoïdale",
+              "why": "Une tension sinusoïdale impose un régime forcé permanent : on n'observe plus l'établissement du courant à partir de zéro."
+            },
+            {
+              "label": "une pile de f.é.m. constante, sans aucun interrupteur",
+              "why": "Sans coupure, le circuit reste en régime permanent : il n'y a aucun transitoire à observer."
+            }
+          ],
+          "hint": "Pour qu'un oscilloscope affiche une courbe stable, le phénomène doit être périodique. Comment rendre le transitoire périodique ?",
+          "solution": "On alimente le dipôle RL par un générateur basse fréquence (GBF) délivrant une tension **en créneaux** entre $0$ et $E$. Chaque front montant déclenche un établissement du courant, chaque front descendant une rupture, et le phénomène se reproduit à chaque période : l'oscilloscope affiche alors une courbe fixe, exploitable. **Condition à respecter :** la demi-période doit être nettement supérieure à $5\\tau$, sinon le régime permanent n'est pas atteint entre deux basculements.",
+          "methode": "Pour étudier un régime transitoire à l'oscilloscope, utilise un GBF en créneaux et vérifie que la demi-période dépasse $5\\tau$.",
+          "points": 1,
+          "ref": "pc-rl-le-montage-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le protocole",
+        "lesson": "Étude expérimentale du dipôle RL",
+        "role": "experimental",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 1
+        }
+      },
+      "ref": "pc-rl-le-protocole",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Le protocole",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Le protocole",
+          "difficulty": 1,
+          "statement": "Comment mesure-t-on, dans la pratique, la résistance $r$ d'une bobine ?",
+          "options": [
+            {
+              "label": "à l'ohmmètre, la bobine étant débranchée du circuit",
+              "correct": true,
+              "why": "L'ohmmètre fait circuler un courant continu : en régime continu la bobine n'est qu'un conducteur ohmique, l'appareil lit donc directement $r$."
+            },
+            {
+              "label": "à l'ohmmètre, la bobine restant branchée dans le circuit alimenté",
+              "why": "On ne mesure jamais une résistance sur un circuit sous tension : l'ohmmètre lirait une valeur fausse et pourrait être endommagé."
+            },
+            {
+              "label": "à l'inductancemètre, qui donne $L$ et $r$ en une seule mesure",
+              "why": "Un inductancemètre mesure l'inductance $L$ ; la résistance $r$ se mesure, elle, à l'ohmmètre."
+            },
+            {
+              "label": "en divisant la tension du générateur par l'intensité du régime permanent",
+              "why": "Ce rapport donne $R+r$, la résistance totale, et non $r$ seule : il faudrait encore en retrancher $R$."
+            }
+          ],
+          "hint": "En courant continu, à quoi se réduit une bobine ?",
+          "solution": "L'ohmmètre impose un courant continu. Or en régime continu $\\dfrac{di}{dt}=0$, donc la bobine se comporte exactement comme un conducteur ohmique de résistance $r$ : l'ohmmètre affiche $r$. On prend soin de débrancher la bobine du reste du montage, pour que l'appareil ne mesure que ce dipôle. Contrôle : la valeur lue doit être faible, de l'ordre de quelques ohms à quelques dizaines d'ohms pour une bobine de laboratoire.",
+          "methode": "Un ohmmètre mesure toujours un dipôle isolé et non alimenté : c'est la première chose que le barème vérifie.",
+          "points": 1,
+          "ref": "pc-rl-le-protocole-q1"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 2,
+          "statement": "On a déterminé $\\tau = 2{,}0\\ \\mathrm{ms}$ pour un dipôle RL. Combien de temps faut-il attendre après la fermeture de l'interrupteur avant de relever la valeur du palier d'intensité, si l'on s'en tient au critère usuel $5\\tau$ ?",
+          "options": [
+            {
+              "label": "$10\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$5\\tau = 5 \\times 2{,}0 = 10\\ \\mathrm{ms}$, durée au bout de laquelle il ne manque plus que $0{,}67\\ \\%$ de $I_{\\max}$."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as attendu seulement $\\tau$ : l'intensité n'aurait atteint que $63\\ \\%$ du palier, et la mesure serait fausse de plus d'un tiers."
+            },
+            {
+              "label": "$0{,}40\\ \\mathrm{ms}$",
+              "why": "Tu as divisé $\\tau$ par $5$ au lieu de le multiplier : $0{,}40\\ \\mathrm{ms}$ correspond à $0{,}2\\,\\tau$, soit $18\\ \\%$ du palier seulement."
+            },
+            {
+              "label": "$10\\ \\mathrm{s}$",
+              "why": "Tu as oublié que $\\tau$ est exprimée en millisecondes : $5 \\times 2{,}0\\ \\mathrm{ms}$ fait $10\\ \\mathrm{ms}$, soit mille fois moins."
+            }
+          ],
+          "hint": "Le critère usuel de fin du régime transitoire s'écrit avec un multiple simple de $\\tau$.",
+          "solution": "Le régime permanent est considéré atteint au bout de $5\\tau$, car l'écart relatif restant est $e^{-5} = 6{,}7\\times10^{-3}$, soit moins de $1\\ \\%$. Ici $$5\\tau = 5 \\times 2{,}0\\ \\mathrm{ms} = 10\\ \\mathrm{ms}.$$ Contrôle : à $3\\tau = 6{,}0\\ \\mathrm{ms}$ il manque encore $5\\ \\%$, ce qui serait visible sur l'oscillogramme ; à $10\\ \\mathrm{ms}$ la courbe est plate.",
+          "methode": "Avant toute lecture de palier, vérifie que le temps écoulé dépasse $5\\tau$ — et garde $\\tau$ en secondes pour éviter les erreurs de puissance de dix.",
+          "points": 1,
+          "ref": "pc-rl-le-protocole-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le choix des calibres",
+        "lesson": "Étude expérimentale du dipôle RL",
+        "role": "experimental",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 1
+        }
+      },
+      "ref": "pc-rl-le-choix-des-calibres",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Le choix des calibres",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Le choix des calibres",
+          "difficulty": 1,
+          "statement": "Un dipôle RL a une constante de temps $\\tau = 2{,}0\\ \\mathrm{ms}$. L'écran de l'oscilloscope compte $10$ divisions horizontales. Quelle base de temps choisir pour voir tout le régime transitoire en remplissant l'écran ?",
+          "options": [
+            {
+              "label": "$1\\ \\mathrm{ms}$ par division",
+              "correct": true,
+              "why": "Le transitoire dure $5\\tau = 10\\ \\mathrm{ms}$ ; avec $1\\ \\mathrm{ms}$ par division, ces $10\\ \\mathrm{ms}$ occupent exactement les $10$ divisions."
+            },
+            {
+              "label": "$0{,}1\\ \\mathrm{ms}$ par division",
+              "why": "L'écran ne couvrirait que $1{,}0\\ \\mathrm{ms}$, soit $0{,}5\\,\\tau$ : on ne verrait que le tout début de la montée."
+            },
+            {
+              "label": "$10\\ \\mathrm{ms}$ par division",
+              "why": "L'écran couvrirait $100\\ \\mathrm{ms}$ : le transitoire serait écrasé sur la première division et illisible."
+            },
+            {
+              "label": "$1\\ \\mathrm{s}$ par division",
+              "why": "L'écran couvrirait $10\\ \\mathrm{s}$, soit cinq mille fois la durée du transitoire : on ne verrait qu'un front vertical."
+            }
+          ],
+          "hint": "Estime d'abord la durée totale du phénomène à observer, puis divise-la par le nombre de divisions.",
+          "solution": "La durée à observer est celle du régime transitoire, soit environ $5\\tau = 5 \\times 2{,}0 = 10\\ \\mathrm{ms}$. Pour la répartir sur les $10$ divisions horizontales : $$\\text{base de temps} = \\frac{10\\ \\mathrm{ms}}{10\\ \\text{div}} = 1\\ \\mathrm{ms/div}.$$ Contrôle : $\\tau$ occupe alors $2$ divisions, ce qui permet une lecture précise de la tangente à l'origine.",
+          "methode": "Règle de réglage : durée du phénomène divisée par le nombre de divisions. Pour un transitoire, la durée à prendre est $5\\tau$.",
+          "points": 1,
+          "ref": "pc-rl-le-choix-des-calibres-q1"
+        },
+        {
+          "notion": "Le choix des calibres",
+          "difficulty": 2,
+          "statement": "Dans un circuit $E = 6{,}0\\ \\mathrm{V}$, $R = 90\\ \\Omega$, bobine $(L,\\ r = 10\\ \\Omega)$, on observe $u_R$ sur un écran de $8$ divisions verticales. Quelle sensibilité verticale choisir ?",
+          "options": [
+            {
+              "label": "$1\\ \\mathrm{V}$ par division",
+              "correct": true,
+              "why": "Le palier vaut $u_R = R\\,I_{\\max} = 90 \\times \\frac{6{,}0}{100} = 5{,}4\\ \\mathrm{V}$, soit $5{,}4$ divisions : le signal occupe bien l'écran sans le dépasser."
+            },
+            {
+              "label": "$2\\ \\mathrm{V}$ par division",
+              "why": "Le palier n'occuperait que $\\frac{5{,}4}{2} = 2{,}7$ divisions sur $8$ : la courbe serait tassée et la lecture imprécise."
+            },
+            {
+              "label": "$0{,}5\\ \\mathrm{V}$ par division",
+              "why": "Le palier demanderait $\\frac{5{,}4}{0{,}5} = 10{,}8$ divisions alors qu'il n'y en a que $8$ : le signal sortirait de l'écran."
+            },
+            {
+              "label": "$5\\ \\mathrm{V}$ par division",
+              "why": "Le palier n'occuperait que $1{,}1$ division : la courbe serait quasiment plate sur l'axe et inexploitable."
+            }
+          ],
+          "hint": "Calcule d'abord la valeur maximale de $u_R$, puis cherche la sensibilité qui l'approche des $8$ divisions sans les dépasser.",
+          "solution": "**Valeur maximale du signal :** $I_{\\max} = \\dfrac{E}{R+r} = \\dfrac{6{,}0}{100} = 0{,}060\\ \\mathrm{A}$, donc $u_{R,\\max} = R\\,I_{\\max} = 90 \\times 0{,}060 = 5{,}4\\ \\mathrm{V}$. **Choix :** avec $1\\ \\mathrm{V/div}$, le palier occupe $5{,}4$ des $8$ divisions disponibles — c'est le meilleur compromis entre amplitude et absence de saturation. Contrôle : le calibre immédiatement plus sensible ($0{,}5\\ \\mathrm{V/div}$) demanderait $10{,}8$ divisions et saturerait.",
+          "methode": "Choisis toujours le calibre le plus sensible qui laisse le signal **dans** l'écran : calcule la valeur maximale avant de régler.",
+          "points": 1,
+          "ref": "pc-rl-le-choix-des-calibres-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Exploitation d'un relevé",
+        "lesson": "Étude expérimentale du dipôle RL",
+        "role": "experimental",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 1
+        }
+      },
+      "ref": "pc-rl-exploitation-d-un-releve",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Exploitation d'un relevé",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Exploitation d'un relevé",
+          "difficulty": 1,
+          "statement": "Sur l'oscillogramme de $u_R$ lors d'un établissement du courant, le palier se situe à $4{,}0\\ \\mathrm{V}$ et le conducteur ohmique vaut $R = 80\\ \\Omega$. Quelle est l'intensité maximale du courant ?",
+          "options": [
+            {
+              "label": "$I_{\\max} = 50\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$I_{\\max} = \\dfrac{u_{R,\\text{palier}}}{R} = \\dfrac{4{,}0}{80} = 0{,}050\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$I_{\\max} = 320\\ \\mathrm{mA}$",
+              "why": "Tu as multiplié : $4{,}0 \\times 80 = 320$. La loi d'Ohm donne $i = u/R$, c'est un quotient."
+            },
+            {
+              "label": "$I_{\\max} = 20\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $\\dfrac{R}{u} = \\dfrac{80}{4{,}0} = 20$ : tu as inversé le quotient de la loi d'Ohm."
+            },
+            {
+              "label": "$I_{\\max} = 0{,}050\\ \\mathrm{mA}$",
+              "why": "Le calcul $\\frac{4{,}0}{80} = 0{,}050$ est juste mais il est en ampères : en milliampères cela fait $50\\ \\mathrm{mA}$, pas $0{,}050\\ \\mathrm{mA}$."
+            }
+          ],
+          "hint": "Le palier correspond au régime permanent : applique simplement la loi d'Ohm au conducteur ohmique.",
+          "solution": "Au palier, le régime permanent est atteint et la loi d'Ohm donne $$I_{\\max} = \\frac{u_{R,\\text{palier}}}{R} = \\frac{4{,}0}{80} = 0{,}050\\ \\mathrm{A} = 50\\ \\mathrm{mA}.$$ Contrôle : si l'on connaissait $E$, on pourrait en déduire $R+r = E/I_{\\max}$ et donc $r$ — c'est l'enchaînement classique de l'exploitation d'un relevé.",
+          "methode": "Convertis toujours le résultat dans l'unité demandée, et vérifie le facteur $10^{3}$ entre A et mA.",
+          "points": 1,
+          "ref": "pc-rl-exploitation-d-un-releve-q1"
+        },
+        {
+          "notion": "Exploitation d'un relevé",
+          "difficulty": 2,
+          "statement": "Sur le même oscillogramme, la tangente à l'origine coupe le palier à $t = 2{,}5\\ \\mathrm{ms}$. La bobine a pour résistance $r = 20\\ \\Omega$ et le conducteur ohmique vaut toujours $R = 80\\ \\Omega$. Quelle est l'inductance de la bobine ?",
+          "options": [
+            {
+              "label": "$L = 0{,}25\\ \\mathrm{H}$",
+              "correct": true,
+              "why": "L'intersection de la tangente à l'origine et du palier donne $\\tau = 2{,}5\\ \\mathrm{ms}$, donc $L = \\tau\\,(R+r) = 2{,}5\\times10^{-3}\\times100 = 0{,}25\\ \\mathrm{H}$."
+            },
+            {
+              "label": "$L = 0{,}20\\ \\mathrm{H}$",
+              "why": "Tu as calculé $\\tau\\,R = 2{,}5\\times10^{-3}\\times80 = 0{,}20\\ \\mathrm{H}$ : tu as oublié d'ajouter la résistance $r$ de la bobine."
+            },
+            {
+              "label": "$L = 2{,}5\\times10^{-5}\\ \\mathrm{H}$",
+              "why": "Tu as calculé $\\dfrac{\\tau}{R+r} = \\dfrac{2{,}5\\times10^{-3}}{100} = 2{,}5\\times10^{-5}$ : la relation $\\tau = \\frac{L}{R+r}$ se retourne en un produit, pas en un quotient."
+            },
+            {
+              "label": "$L = 1{,}25\\ \\mathrm{H}$",
+              "why": "Tu as pris $5\\tau = 12{,}5\\ \\mathrm{ms}$ au lieu de $\\tau$ : l'intersection de la tangente avec le palier donne directement $\\tau$, pas la durée du régime transitoire."
+            }
+          ],
+          "hint": "Que représente exactement l'abscisse du point d'intersection entre la tangente à l'origine et le palier ?",
+          "solution": "La tangente à l'origine de la courbe d'établissement coupe l'asymptote (le palier) à l'abscisse $t = \\tau$ : on lit donc directement $\\tau = 2{,}5\\ \\mathrm{ms}$. Avec $R + r = 80 + 20 = 100\\ \\Omega$ : $$L = \\tau\\,(R+r) = 2{,}5\\times10^{-3} \\times 100 = 0{,}25\\ \\mathrm{H}.$$ Contrôle d'homogénéité : $\\mathrm{s}\\times\\Omega = \\Omega\\cdot\\mathrm{s} = \\mathrm{H}$. Contrôle de cohérence : avec $I_{\\max} = 50\\ \\mathrm{mA}$ lu au palier, la f.é.m. vaut $E = (R+r)\\,I_{\\max} = 5{,}0\\ \\mathrm{V}$, et la pente initiale $\\frac{E}{L} = \\frac{5{,}0}{0{,}25} = 20\\ \\mathrm{A\\,s^{-1}}$ redonne bien $\\frac{I_{\\max}}{\\tau} = \\frac{0{,}050}{2{,}5\\times10^{-3}} = 20\\ \\mathrm{A\\,s^{-1}}$.",
+          "methode": "Convertis $\\tau$ en secondes et écris la valeur de $R+r$ avant de calculer $L = \\tau\\,(R+r)$ : ce sont les deux seules sources d'erreur.",
+          "points": 1,
+          "ref": "pc-rl-exploitation-d-un-releve-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Sources d'erreur",
+        "lesson": "Étude expérimentale du dipôle RL",
+        "role": "experimental",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 1
+        }
+      },
+      "ref": "pc-rl-sources-d-erreur",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Sources d'erreur",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 1,
+          "statement": "Un élève néglige la résistance $r$ de la bobine et calcule la constante de temps par $L/R$. Quelle est la conséquence sur sa valeur de $\\tau$ ?",
+          "options": [
+            {
+              "label": "il surestime $\\tau$, car $\\dfrac{L}{R} > \\dfrac{L}{R+r}$",
+              "correct": true,
+              "why": "En oubliant $r$ on diminue le dénominateur, donc on augmente le quotient : la valeur calculée est trop grande."
+            },
+            {
+              "label": "il sous-estime $\\tau$, car il oublie une partie de la résistance",
+              "why": "Oublier une résistance **diminue** le dénominateur de $L/(R+r)$, ce qui **augmente** le résultat : il surestime donc $\\tau$."
+            },
+            {
+              "label": "cela n'a aucun effet, car $r$ est toujours négligeable devant $R$",
+              "why": "Ce n'est vrai que si $r \\ll R$ ; dans les montages d'examen $r$ vaut souvent $10$ à $20\\ \\%$ de $R$, et l'erreur n'est pas négligeable."
+            },
+            {
+              "label": "il surestime $\\tau$, car il oublie aussi que $I_{\\max}$ dépend de $L$",
+              "why": "La conclusion sur $\\tau$ est la bonne mais la raison est fausse : $I_{\\max} = \\frac{E}{R+r}$ ne dépend pas de $L$."
+            }
+          ],
+          "hint": "Compare les deux quotients $\\frac{L}{R}$ et $\\frac{L}{R+r}$ : lequel est le plus grand ?",
+          "solution": "Comme $r > 0$, on a $R + r > R$ donc $\\dfrac{L}{R+r} < \\dfrac{L}{R}$ : la valeur calculée en négligeant $r$ est **plus grande** que la valeur réelle, l'élève surestime $\\tau$. Exemple chiffré : avec $L = 0{,}20\\ \\mathrm{H}$, $R = 90\\ \\Omega$ et $r = 10\\ \\Omega$, la vraie valeur est $2{,}0\\ \\mathrm{ms}$ alors que $L/R$ donne $2{,}2\\ \\mathrm{ms}$, soit $11\\ \\%$ d'écart. Contrôle : l'erreur relative vaut $\\dfrac{r}{R}$ au premier ordre, ici $\\dfrac{10}{90} = 11\\ \\%$.",
+          "methode": "Avant tout calcul de $\\tau$, pose-toi la question : la bobine a-t-elle une résistance ? Si oui, $R+r$ partout.",
+          "points": 1,
+          "ref": "pc-rl-sources-d-erreur-q1"
+        },
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 2,
+          "statement": "On détermine une inductance par $L = \\tau\\,(R+r)$. La constante de temps est connue à $5\\ \\%$ près et la résistance totale à $2\\ \\%$ près. En composant les incertitudes relatives par leur somme, quelle est l'incertitude relative sur $L$ ?",
+          "options": [
+            {
+              "label": "$7\\ \\%$",
+              "correct": true,
+              "why": "Pour un produit, les incertitudes relatives s'ajoutent : $\\frac{\\Delta L}{L} = \\frac{\\Delta\\tau}{\\tau} + \\frac{\\Delta(R+r)}{R+r} = 5\\ \\% + 2\\ \\% = 7\\ \\%$."
+            },
+            {
+              "label": "$5\\ \\%$",
+              "why": "Tu n'as gardé que l'incertitude sur $\\tau$ et ignoré celle sur la résistance, qui contribue pourtant elle aussi au produit."
+            },
+            {
+              "label": "$3\\ \\%$",
+              "why": "Tu as soustrait les deux incertitudes : une incertitude ne peut jamais diminuer quand on multiplie par une grandeur elle-même incertaine."
+            },
+            {
+              "label": "$10\\ \\%$",
+              "why": "Tu as calculé $2 \\times 5\\ \\% = 10\\ \\%$, comme si $\\tau$ apparaissait au carré : ici $\\tau$ et $R+r$ interviennent chacun à la puissance un."
+            }
+          ],
+          "hint": "Pour un produit de deux grandeurs, comment se combinent les incertitudes relatives ?",
+          "solution": "Pour un produit $L = \\tau\\,(R+r)$, les incertitudes relatives s'ajoutent : $$\\frac{\\Delta L}{L} = \\frac{\\Delta \\tau}{\\tau} + \\frac{\\Delta (R+r)}{R+r} = 5\\ \\% + 2\\ \\% = 7\\ \\%.$$ Contrôle : l'incertitude sur $L$ est forcément supérieure à la plus grande des deux incertitudes de départ, ce qui écarte d'emblée toute réponse inférieure à $5\\ \\%$.",
+          "methode": "Produit ou quotient : on **ajoute** les incertitudes relatives. Puissance $n$ : on multiplie l'incertitude relative par $n$.",
+          "points": 1,
+          "ref": "pc-rl-sources-d-erreur-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La forme générale, une fois pour toutes",
+        "lesson": "Approfondissement — Dipôle RL",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-la-forme-generale-une-fois-pour-toutes",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "La forme générale, une fois pour toutes",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La forme générale, une fois pour toutes",
+          "difficulty": 3,
+          "statement": "Toute grandeur $x$ régie par une équation du premier ordre évolue selon $x(t) = x_{\\infty} + \\left(x_0 - x_{\\infty}\\right)e^{-t/\\tau}$. Une bobine est déjà parcourue par $i_0 = 20\\ \\mathrm{mA}$ quand on modifie l'alimentation : la nouvelle intensité finale est $I_{\\infty} = 80\\ \\mathrm{mA}$ et $\\tau = 5{,}0\\ \\mathrm{ms}$. Que vaut $i$ à $t = 5{,}0\\ \\mathrm{ms}$ ?",
+          "options": [
+            {
+              "label": "$i = 58\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$i = 80 + (20-80)e^{-1} = 80 - 60 \\times 0{,}368 = 80 - 22 = 58\\ \\mathrm{mA}$."
+            },
+            {
+              "label": "$i = 51\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $I_{\\infty}\\left(1-e^{-1}\\right) = 80\\times0{,}632 = 51\\ \\mathrm{mA}$ : tu as oublié que l'intensité ne partait pas de zéro mais de $20\\ \\mathrm{mA}$."
+            },
+            {
+              "label": "$i = 42\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $i_0 + (I_{\\infty}-i_0)e^{-1} = 20 + 60\\times0{,}368 = 42\\ \\mathrm{mA}$ : tu as mis l'exponentielle devant l'écart au lieu de la mettre devant l'écart **initial** vu depuis la valeur finale."
+            },
+            {
+              "label": "$i = 71\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $i_0 + I_{\\infty}\\left(1-e^{-1}\\right) = 20 + 51 = 71\\ \\mathrm{mA}$ : tu as ajouté la condition initiale à la montée complète, ce qui compte deux fois le même courant."
+            }
+          ],
+          "hint": "Identifie bien $x_0$ et $x_{\\infty}$, puis remarque que $t = \\tau$ exactement.",
+          "solution": "Ici $x_0 = i_0 = 20\\ \\mathrm{mA}$ et $x_{\\infty} = I_{\\infty} = 80\\ \\mathrm{mA}$. À $t = \\tau$ : $$i(\\tau) = 80 + (20-80)\\,e^{-1} = 80 - 60 \\times 0{,}3679 = 80 - 22{,}1 = 57{,}9 \\approx 58\\ \\mathrm{mA}.$$ Contrôle : l'écart initial à la valeur finale est $60\\ \\mathrm{mA}$ ; à $t=\\tau$ il doit en rester $37\\ \\%$, soit $22\\ \\mathrm{mA}$ — et $80-22 = 58\\ \\mathrm{mA}$. La formule et le raisonnement sur l'écart concordent.",
+          "methode": "Une seule formule pour tous les régimes du premier ordre : valeur finale $+$ écart initial $\\times\\,e^{-t/\\tau}$. Vérifie-la toujours en $t=0$.",
+          "points": 1,
+          "ref": "pc-rl-la-forme-generale-une-fois-pour-toutes-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La surtension de rupture, quantifiée",
+        "lesson": "Approfondissement — Dipôle RL",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-la-surtension-de-rupture-quantifiee",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "La surtension de rupture, quantifiée",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La surtension de rupture, quantifiée",
+          "difficulty": 3,
+          "statement": "Un dipôle RL ($E = 6{,}0\\ \\mathrm{V}$, résistance totale $R+r = 100\\ \\Omega$ dont $r = 10\\ \\Omega$) est en régime permanent. Un voltmètre de résistance interne $R' = 10\\ \\mathrm{k\\Omega}$ est branché en parallèle sur la bobine. À l'ouverture de l'interrupteur, le courant de la bobine est contraint de passer par ce voltmètre. Quelle tension apparaît alors à ses bornes, juste après l'ouverture ?",
+          "options": [
+            {
+              "label": "$600\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "L'intensité dans la bobine est continue, donc $I_0 = \\frac{6{,}0}{100} = 60\\ \\mathrm{mA}$ traverse encore $R'$ : $u = R'\\,I_0 = 10^{4}\\times0{,}060 = 600\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as supposé que la tension ne peut pas dépasser celle du générateur. C'est faux : la bobine se comporte en générateur transitoire et la tension peut dépasser $E$ de plusieurs ordres de grandeur."
+            },
+            {
+              "label": "$0{,}60\\ \\mathrm{V}$",
+              "why": "Tu as calculé $r\\,I_0 = 10 \\times 0{,}060 = 0{,}60\\ \\mathrm{V}$ : c'est la tension de la bobine **en régime permanent**, avant l'ouverture, et non celle qui apparaît aux bornes de $R'$."
+            },
+            {
+              "label": "$6{,}0\\times10^{-6}\\ \\mathrm{V}$",
+              "why": "Tu as calculé $\\dfrac{I_0}{R'} = \\dfrac{0{,}060}{10^{4}} = 6{,}0\\times10^{-6}$ : la loi d'Ohm donne $u = R'\\,i$, c'est un produit."
+            }
+          ],
+          "hint": "Quelle grandeur ne peut pas sauter à l'ouverture ? Applique ensuite la loi d'Ohm au seul chemin restant.",
+          "solution": "**Avant l'ouverture :** $I_0 = \\dfrac{E}{R+r} = \\dfrac{6{,}0}{100} = 0{,}060\\ \\mathrm{A}$. **Juste après :** l'intensité dans la bobine est continue, donc elle vaut encore $0{,}060\\ \\mathrm{A}$, et le seul chemin disponible est le voltmètre $R'$. La loi d'Ohm donne $$u = R'\\,I_0 = 10 \\times 10^{3} \\times 0{,}060 = 600\\ \\mathrm{V}.$$ Contrôle : le facteur de surtension est $\\dfrac{R'}{R+r} = \\dfrac{10^{4}}{100} = 100$, et $100 \\times 6{,}0 = 600\\ \\mathrm{V}$. C'est précisément cette surtension qui détruit les composants, et qu'une diode de roue libre supprime en offrant au courant un chemin de faible résistance.",
+          "methode": "Surtension de rupture : garde $I_0$ (continu), puis multiplie-le par la résistance du nouveau chemin. Plus ce chemin est résistant, plus la surtension est grande.",
+          "points": 1,
+          "ref": "pc-rl-la-surtension-de-rupture-quantifiee-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Associations de bobines",
+        "lesson": "Approfondissement — Dipôle RL",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 1,
+        "target_new_questions": 0,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-associations-de-bobines",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Associations de bobines",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Associations de bobines",
+          "difficulty": 3,
+          "statement": "Deux bobines sans couplage magnétique, $(L_1 = 0{,}30\\ \\mathrm{H},\\ r_1 = 6{,}0\\ \\Omega)$ et $(L_2 = 0{,}10\\ \\mathrm{H},\\ r_2 = 4{,}0\\ \\Omega)$, sont montées en série avec un conducteur ohmique $R = 90\\ \\Omega$. Quelle est la constante de temps du circuit ?",
+          "options": [
+            {
+              "label": "$\\tau = 4{,}0\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "En série et sans couplage, $L_{\\text{eq}} = 0{,}40\\ \\mathrm{H}$ et $r_{\\text{eq}} = 10\\ \\Omega$, donc $\\tau = \\frac{0{,}40}{90+10} = 4{,}0\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$\\tau = 4{,}4\\ \\mathrm{ms}$",
+              "why": "Tu as calculé $\\dfrac{L_{\\text{eq}}}{R} = \\dfrac{0{,}40}{90} = 4{,}4\\ \\mathrm{ms}$ : tu as oublié les résistances $r_1$ et $r_2$ des deux bobines."
+            },
+            {
+              "label": "$\\tau = 3{,}0\\ \\mathrm{ms}$",
+              "why": "Tu n'as gardé que la plus grande inductance : $\\dfrac{0{,}30}{100} = 3{,}0\\ \\mathrm{ms}$. En série, les inductances s'ajoutent, elles ne se remplacent pas."
+            },
+            {
+              "label": "$\\tau = 0{,}75\\ \\mathrm{ms}$",
+              "why": "Tu as appliqué la formule des résistances en parallèle, $\\dfrac{L_1L_2}{L_1+L_2} = 0{,}075\\ \\mathrm{H}$, alors que les bobines sont en **série** : les inductances s'additionnent."
+            }
+          ],
+          "hint": "En série, comment se combinent les inductances ? Et les résistances ?",
+          "solution": "Sans couplage magnétique, deux bobines en série sont équivalentes à une seule bobine de caractéristiques $$L_{\\text{eq}} = L_1 + L_2 = 0{,}30 + 0{,}10 = 0{,}40\\ \\mathrm{H},\\qquad r_{\\text{eq}} = r_1 + r_2 = 6{,}0 + 4{,}0 = 10\\ \\Omega.$$ La résistance totale du circuit est donc $R + r_{\\text{eq}} = 100\\ \\Omega$ et $$\\tau = \\frac{L_{\\text{eq}}}{R + r_{\\text{eq}}} = \\frac{0{,}40}{100} = 4{,}0\\times10^{-3}\\ \\mathrm{s} = 4{,}0\\ \\mathrm{ms}.$$ Contrôle : $\\tau$ doit être supérieure à celle qu'on obtiendrait avec la seule bobine $L_1$ dans le même circuit ($3{,}0\\ \\mathrm{ms}$), ce qui est bien le cas puisqu'on a ajouté de l'inductance.",
+          "methode": "En série, inductances **et** résistances s'ajoutent, comme pour des résistances : $L_{\\text{eq}} = \\sum L_i$ et $r_{\\text{eq}} = \\sum r_i$.",
+          "points": 1,
+          "ref": "pc-rl-associations-de-bobines-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Inductance et géométrie",
+        "lesson": "Approfondissement — Dipôle RL",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-inductance-et-geometrie",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Inductance et géométrie",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Inductance et géométrie",
+          "difficulty": 3,
+          "statement": "L'inductance d'un solénoïde est $L = \\mu_0\\,\\dfrac{N^{2}S}{\\ell}$. On remplace un solénoïde par un autre de même longueur $\\ell$ et de même section $S$, mais comportant $2N$ spires, sa résistance restant négligeable devant celle du reste du circuit. Par quel facteur la constante de temps du circuit est-elle multipliée ?",
+          "options": [
+            {
+              "label": "par $4$",
+              "correct": true,
+              "why": "$L \\propto N^{2}$, donc doubler $N$ multiplie $L$ par $4$ ; comme $\\tau = \\frac{L}{R+r}$ est proportionnelle à $L$, elle est aussi multipliée par $4$."
+            },
+            {
+              "label": "par $2$",
+              "why": "Tu as traité $L$ comme proportionnelle à $N$ : la formule contient $N^{2}$, donc doubler $N$ quadruple $L$."
+            },
+            {
+              "label": "par $8$",
+              "why": "Tu as utilisé $N^{3}$ : l'exposant de $N$ dans $L = \\mu_0\\frac{N^{2}S}{\\ell}$ est $2$, pas $3$."
+            },
+            {
+              "label": "par $16$",
+              "why": "Tu as élevé au carré le facteur $4$ : $L$ est multipliée par $4$, et $\\tau$ étant proportionnelle à $L$, elle l'est aussi par $4$ et non par $4^{2}$."
+            }
+          ],
+          "hint": "Regarde la puissance de $N$ dans l'expression de $L$, puis rappelle-toi comment $\\tau$ dépend de $L$.",
+          "solution": "L'inductance est proportionnelle au carré du nombre de spires : $\\dfrac{L'}{L} = \\left(\\dfrac{2N}{N}\\right)^{2} = 4$, puisque $S$ et $\\ell$ sont inchangés. Comme $\\tau = \\dfrac{L}{R+r}$ et que la résistance totale ne change pratiquement pas, $$\\frac{\\tau'}{\\tau} = \\frac{L'}{L} = 4.$$ Contrôle : l'intensité finale $I_{\\max} = \\dfrac{E}{R+r}$ ne contient pas $L$, elle est donc inchangée — seule la durée du transitoire est quadruplée.",
+          "methode": "Dans toute question de proportionnalité, repère l'exposant de la grandeur modifiée avant de conclure : $N^{2}$ donne un facteur $4$ quand $N$ double.",
+          "points": 1,
+          "ref": "pc-rl-inductance-et-geometrie-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Mesures et incertitudes",
+        "lesson": "Approfondissement — Dipôle RL",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-mesures-et-incertitudes",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Mesures et incertitudes",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Mesures et incertitudes",
+          "difficulty": 3,
+          "statement": "On mesure $\\tau = 5{,}0\\ \\mathrm{ms}$ avec une incertitude de $0{,}2\\ \\mathrm{ms}$, et $R+r = 200\\ \\Omega$ avec une incertitude de $6\\ \\Omega$. En composant les incertitudes relatives par leur somme, quel résultat faut-il annoncer pour $L = \\tau\\,(R+r)$ ?",
+          "options": [
+            {
+              "label": "$L = (1{,}00 \\pm 0{,}07)\\ \\mathrm{H}$",
+              "correct": true,
+              "why": "$L = 5{,}0\\times10^{-3}\\times200 = 1{,}00\\ \\mathrm{H}$ et $\\frac{\\Delta L}{L} = \\frac{0{,}2}{5{,}0} + \\frac{6}{200} = 4\\ \\% + 3\\ \\% = 7\\ \\%$, donc $\\Delta L = 0{,}07\\ \\mathrm{H}$."
+            },
+            {
+              "label": "$L = (1{,}00 \\pm 0{,}04)\\ \\mathrm{H}$",
+              "why": "Tu n'as retenu que l'incertitude sur $\\tau$ ($4\\ \\%$) : celle sur la résistance totale ($3\\ \\%$) doit s'y ajouter."
+            },
+            {
+              "label": "$L = (1{,}00 \\pm 0{,}03)\\ \\mathrm{H}$",
+              "why": "Tu n'as retenu que l'incertitude sur $R+r$ ($3\\ \\%$) : celle sur $\\tau$ ($4\\ \\%$), pourtant la plus grande, doit s'y ajouter."
+            },
+            {
+              "label": "$L = (1{,}00 \\pm 0{,}01)\\ \\mathrm{H}$",
+              "why": "Tu as soustrait les incertitudes relatives, $4\\ \\% - 3\\ \\% = 1\\ \\%$ : pour un produit elles s'ajoutent toujours."
+            }
+          ],
+          "hint": "Calcule d'abord les deux incertitudes relatives en pourcentage, puis applique-les à la valeur de $L$.",
+          "solution": "**Valeur :** $L = \\tau\\,(R+r) = 5{,}0\\times10^{-3} \\times 200 = 1{,}00\\ \\mathrm{H}$. **Incertitudes relatives :** $\\dfrac{\\Delta\\tau}{\\tau} = \\dfrac{0{,}2}{5{,}0} = 4{,}0\\ \\%$ et $\\dfrac{\\Delta(R+r)}{R+r} = \\dfrac{6}{200} = 3{,}0\\ \\%$. Pour un produit elles s'ajoutent : $\\dfrac{\\Delta L}{L} = 7{,}0\\ \\%$. **Incertitude absolue :** $\\Delta L = 0{,}070 \\times 1{,}00 = 0{,}07\\ \\mathrm{H}$, d'où $$L = (1{,}00 \\pm 0{,}07)\\ \\mathrm{H}.$$ Contrôle : l'incertitude annoncée doit encadrer toutes les valeurs compatibles, de $5{,}0-0{,}2 = 4{,}8\\ \\mathrm{ms}$ avec $194\\ \\Omega$ ($L = 0{,}931\\ \\mathrm{H}$) à $5{,}2\\ \\mathrm{ms}$ avec $206\\ \\Omega$ ($L = 1{,}071\\ \\mathrm{H}$) : l'intervalle $[0{,}93\\,;\\,1{,}07]$ est bien celui qu'on annonce.",
+          "methode": "Toujours trois étapes : la valeur, les incertitudes relatives en pourcentage, puis l'incertitude absolue — et arrondis $\\Delta L$ à un seul chiffre significatif.",
+          "points": 1,
+          "ref": "pc-rl-mesures-et-incertitudes-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le RL face au RC : la synthèse",
+        "lesson": "Approfondissement — Dipôle RL",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rl-le-rl-face-au-rc-la-synthese",
+      "chapter": "pc-rl",
+      "kind": "qcu",
+      "title": "Le RL face au RC : la synthèse",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le RL face au RC : la synthèse",
+          "difficulty": 3,
+          "statement": "On dispose d'un circuit RC (constante $\\tau = RC$) et d'un circuit RL (constante $\\tau = \\dfrac{L}{R+r}$). Dans les deux cas, on augmente la résistance $R$. Comment évoluent les deux constantes de temps ?",
+          "options": [
+            {
+              "label": "celle du RC augmente, celle du RL diminue",
+              "correct": true,
+              "why": "$R$ est au numérateur de $RC$ mais au dénominateur de $\\frac{L}{R+r}$ : les deux circuits réagissent en sens opposés."
+            },
+            {
+              "label": "les deux augmentent",
+              "why": "C'est vrai pour le RC mais faux pour le RL : dans $\\frac{L}{R+r}$, la résistance est au dénominateur, donc $\\tau$ diminue."
+            },
+            {
+              "label": "les deux diminuent",
+              "why": "C'est vrai pour le RL mais faux pour le RC : dans $\\tau = RC$, la résistance est au numérateur, donc $\\tau$ augmente."
+            },
+            {
+              "label": "celle du RC diminue, celle du RL augmente",
+              "why": "Tu as inversé les deux rôles : $R$ est au numérateur pour le RC et au dénominateur pour le RL, pas le contraire."
+            }
+          ],
+          "hint": "Dans chacune des deux expressions, où se trouve $R$ : au numérateur ou au dénominateur ?",
+          "solution": "**Circuit RC :** $\\tau = R\\,C$, la résistance est au numérateur — augmenter $R$ ralentit la charge, donc **augmente** $\\tau$. **Circuit RL :** $\\tau = \\dfrac{L}{R+r}$, la résistance est au dénominateur — augmenter $R$ **diminue** $\\tau$. Contrôle physique : dans un RC, c'est $R$ qui limite le courant qui remplit le condensateur, donc plus de $R$ signifie plus lent ; dans un RL, c'est la résistance qui impose la valeur finale du courant, qu'on atteint d'autant plus vite qu'elle est grande. Autre point de comparaison utile : dans un RC la **tension** du condensateur est continue, dans un RL c'est l'**intensité** de la bobine.",
+          "methode": "Mémorise les deux constantes ensemble, avec leur sens de variation opposé : $\\tau_{RC} = RC$ croît avec $R$, $\\tau_{RL} = \\frac{L}{R+r}$ décroît avec $R$.",
+          "points": 1,
+          "ref": "pc-rl-le-rl-face-au-rc-la-synthese-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-rl-probleme-1",
+      "chapter": "pc-rl",
+      "kind": "probleme",
+      "title": "Caractériser une bobine à partir d'un oscillogramme",
+      "difficulty": 3,
+      "context": "On réalise le montage série suivant : un générateur de tension continue de f.é.m. $E = 12\\ \\mathrm{V}$ et de résistance interne négligeable, un interrupteur $K$, un conducteur ohmique de résistance $R = 180\\ \\Omega$ et une bobine d'inductance $L$ et de résistance $r$, toutes deux inconnues.\n\nÀ l'instant $t = 0$ on ferme $K$ et on enregistre la tension $u_R$ aux bornes du conducteur ohmique. L'oscillogramme montre :\n- un **palier** (régime permanent) à $u_R = 10{,}8\\ \\mathrm{V}$ ;\n- une **tangente à l'origine** qui coupe ce palier à l'instant $t = 4{,}0\\ \\mathrm{ms}$.\n\nDans la partie B, on ouvre $K$ une fois le régime permanent établi ; la bobine se retrouve alors en série avec le conducteur ohmique $R$ seul, hors du générateur.\n\nDonnées : $e^{-0{,}5} = 0{,}607$ ; $e^{-1} = 0{,}368$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 1 — Établir l'équation différentielle",
+          "difficulty": 1,
+          "statement": "Après la fermeture de $K$, quelle équation différentielle vérifie l'intensité $i$ du courant ?",
+          "options": [
+            {
+              "label": "$L\\,\\dfrac{di}{dt} + (R+r)\\,i = E$",
+              "correct": true,
+              "why": "La loi des mailles $E = R\\,i + r\\,i + L\\,\\frac{di}{dt}$ regroupe les deux résistances en $R+r$."
+            },
+            {
+              "label": "$L\\,\\dfrac{di}{dt} + R\\,i = E$",
+              "why": "Tu as oublié la résistance $r$ de la bobine, alors qu'elle est en série avec $R$ dans la même maille."
+            },
+            {
+              "label": "$(R+r)\\,\\dfrac{di}{dt} + L\\,i = E$",
+              "why": "Tu as échangé $L$ et $R+r$ : l'inductance multiplie la dérivée, les résistances multiplient l'intensité."
+            },
+            {
+              "label": "$L\\,\\dfrac{di}{dt} + (R+r)\\,i = 0$",
+              "why": "Tu as écrit l'équation de la **rupture** : ici le générateur est présent, le second membre vaut $E$."
+            }
+          ],
+          "hint": "Exprime $u_R$ et $u_L$ en fonction de $i$, puis écris la loi des mailles.",
+          "solution": "La loi des mailles donne $E = u_R + u_L$ avec $u_R = R\\,i$ et $u_L = r\\,i + L\\,\\dfrac{di}{dt}$, d'où $$L\\,\\frac{di}{dt} + (R+r)\\,i = E.$$ Contrôle : en régime permanent $\\frac{di}{dt}=0$ et on retrouve $I_{\\max} = \\frac{E}{R+r}$.",
+          "methode": "Dans un circuit RL, écris toujours $u_L$ avec ses deux termes avant d'appliquer la loi des mailles.",
+          "points": 1,
+          "part": "Partie A — Établissement du courant",
+          "ref": "pc-rl-probleme-1-q1"
+        },
+        {
+          "notion": "Établissement du courant",
+          "difficulty": 1,
+          "statement": "Déduire du palier la valeur de l'intensité maximale $I_{\\max}$ du courant.",
+          "options": [
+            {
+              "label": "$I_{\\max} = 60\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "Au palier la loi d'Ohm donne $I_{\\max} = \\dfrac{u_R}{R} = \\dfrac{10{,}8}{180} = 0{,}060\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$I_{\\max} = 67\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $\\dfrac{E}{R} = \\dfrac{12}{180} = 0{,}067\\ \\mathrm{A}$ : cela revient à supposer $r = 0$, ce que le palier contredit."
+            },
+            {
+              "label": "$I_{\\max} = 17\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $\\dfrac{R}{u_R} = \\dfrac{180}{10{,}8} = 16{,}7$ : tu as inversé le quotient de la loi d'Ohm."
+            },
+            {
+              "label": "$I_{\\max} = 0{,}060\\ \\mathrm{mA}$",
+              "why": "La valeur $0{,}060$ est juste, mais elle est en ampères : cela fait $60\\ \\mathrm{mA}$ et non $0{,}060\\ \\mathrm{mA}$."
+            }
+          ],
+          "hint": "Le palier correspond au régime permanent ; applique la loi d'Ohm au conducteur ohmique.",
+          "solution": "Au palier, $u_R = R\\,I_{\\max}$ donc $$I_{\\max} = \\frac{u_R}{R} = \\frac{10{,}8}{180} = 0{,}060\\ \\mathrm{A} = 60\\ \\mathrm{mA}.$$ Contrôle : cette valeur est inférieure à $E/R = 67\\ \\mathrm{mA}$, ce qui est attendu puisque la bobine ajoute sa propre résistance.",
+          "methode": "Une mesure de $u_R$ est toujours une mesure déguisée de $i$ : divise par $R$.",
+          "points": 1,
+          "part": "Partie A — Établissement du courant",
+          "ref": "pc-rl-probleme-1-q2"
+        },
+        {
+          "notion": "Constitution et grandeurs caractéristiques",
+          "difficulty": 2,
+          "statement": "En déduire la résistance $r$ de la bobine.",
+          "options": [
+            {
+              "label": "$r = 20\\ \\Omega$",
+              "correct": true,
+              "why": "En régime permanent $E = (R+r)\\,I_{\\max}$, donc $R+r = \\dfrac{12}{0{,}060} = 200\\ \\Omega$ et $r = 200 - 180 = 20\\ \\Omega$."
+            },
+            {
+              "label": "$r = 0\\ \\Omega$",
+              "why": "Tu as supposé la bobine idéale ; mais alors le palier de $u_R$ vaudrait $E = 12\\ \\mathrm{V}$, et non $10{,}8\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$r = 200\\ \\Omega$",
+              "why": "Tu as donné la résistance totale $R+r$ sans en retrancher $R = 180\\ \\Omega$."
+            },
+            {
+              "label": "$r = 180\\ \\Omega$",
+              "why": "Tu as calculé $\\dfrac{u_R}{I_{\\max}} = \\dfrac{10{,}8}{0{,}060} = 180\\ \\Omega$ : ce rapport redonne $R$, puisque le palier de $u_R$ vaut justement $R\\,I_{\\max}$."
+            }
+          ],
+          "hint": "Applique la loi d'Ohm à la maille entière en régime permanent, puis retranche $R$.",
+          "solution": "En régime permanent la bobine n'est plus qu'une résistance $r$, donc $E = (R+r)\\,I_{\\max}$ et $$R + r = \\frac{E}{I_{\\max}} = \\frac{12}{0{,}060} = 200\\ \\Omega \\quad\\Longrightarrow\\quad r = 200 - 180 = 20\\ \\Omega.$$ Contrôle : la tension de la bobine en régime permanent vaut alors $r\\,I_{\\max} = 20 \\times 0{,}060 = 1{,}2\\ \\mathrm{V}$, et $10{,}8 + 1{,}2 = 12\\ \\mathrm{V} = E$.",
+          "methode": "La différence $E - u_{R,\\text{palier}}$ est exactement $r\\,I_{\\max}$ : c'est la voie la plus rapide pour obtenir $r$.",
+          "points": 1,
+          "part": "Partie A — Établissement du courant",
+          "ref": "pc-rl-probleme-1-q3"
+        },
+        {
+          "notion": "Méthode 3 — Exploiter un oscillogramme de $u_R$",
+          "difficulty": 2,
+          "statement": "En déduire l'inductance $L$ de la bobine.",
+          "options": [
+            {
+              "label": "$L = 0{,}80\\ \\mathrm{H}$",
+              "correct": true,
+              "why": "La tangente à l'origine coupe le palier à $t = \\tau$, donc $\\tau = 4{,}0\\ \\mathrm{ms}$ et $L = \\tau\\,(R+r) = 4{,}0\\times10^{-3}\\times200 = 0{,}80\\ \\mathrm{H}$."
+            },
+            {
+              "label": "$L = 0{,}72\\ \\mathrm{H}$",
+              "why": "Tu as calculé $\\tau\\,R = 4{,}0\\times10^{-3}\\times180 = 0{,}72\\ \\mathrm{H}$ : tu as oublié d'inclure $r = 20\\ \\Omega$."
+            },
+            {
+              "label": "$L = 0{,}080\\ \\mathrm{H}$",
+              "why": "Tu as calculé $\\tau\\,r = 4{,}0\\times10^{-3}\\times20 = 0{,}080\\ \\mathrm{H}$ : tu n'as gardé que la résistance de la bobine."
+            },
+            {
+              "label": "$L = 2{,}0\\times10^{-5}\\ \\mathrm{H}$",
+              "why": "Tu as calculé $\\dfrac{\\tau}{R+r}$ : la relation $\\tau = \\frac{L}{R+r}$ se retourne en un produit, pas en un quotient."
+            }
+          ],
+          "hint": "Que vaut l'abscisse du point où la tangente à l'origine coupe le palier ?",
+          "solution": "La tangente à l'origine coupe l'asymptote à $t = \\tau$, donc $\\tau = 4{,}0\\ \\mathrm{ms}$. Avec $R+r = 200\\ \\Omega$ : $$L = \\tau\\,(R+r) = 4{,}0\\times10^{-3} \\times 200 = 0{,}80\\ \\mathrm{H}.$$ Contrôle : la pente initiale doit valoir $\\dfrac{E}{L} = \\dfrac{12}{0{,}80} = 15\\ \\mathrm{A\\,s^{-1}}$, et aussi $\\dfrac{I_{\\max}}{\\tau} = \\dfrac{0{,}060}{4{,}0\\times10^{-3}} = 15\\ \\mathrm{A\\,s^{-1}}$ : les deux voies concordent.",
+          "methode": "Enchaînement standard : palier $\\to I_{\\max}$, puis $E/I_{\\max} \\to R+r$, puis tangente $\\to \\tau$, puis $L = \\tau(R+r)$.",
+          "points": 1,
+          "part": "Partie A — Établissement du courant",
+          "ref": "pc-rl-probleme-1-q4"
+        },
+        {
+          "notion": "Établissement du courant",
+          "difficulty": 2,
+          "statement": "Quelle est l'intensité du courant à l'instant $t = 2{,}0\\ \\mathrm{ms}$ ?",
+          "options": [
+            {
+              "label": "$i = 24\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$\\frac{t}{\\tau} = 0{,}5$, donc $i = 60\\,(1 - e^{-0{,}5}) = 60 \\times 0{,}393 = 23{,}6\\ \\mathrm{mA}$."
+            },
+            {
+              "label": "$i = 36\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $I_{\\max}\\,e^{-0{,}5} = 60 \\times 0{,}607 = 36{,}4\\ \\mathrm{mA}$ : tu as appliqué la loi de la rupture au lieu de celle de l'établissement."
+            },
+            {
+              "label": "$i = 38\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $I_{\\max}\\left(1-e^{-1}\\right) = 60 \\times 0{,}632 = 37{,}9\\ \\mathrm{mA}$ : cela correspond à $t = \\tau = 4{,}0\\ \\mathrm{ms}$, pas à $t = 2{,}0\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$i = 30\\ \\mathrm{mA}$",
+              "why": "Tu as pris la moitié de $I_{\\max}$ parce que $t = \\tau/2$ : la montée est exponentielle, elle n'est pas proportionnelle au temps."
+            }
+          ],
+          "hint": "Exprime d'abord $t/\\tau$, puis utilise la valeur de $e^{-0{,}5}$ fournie.",
+          "solution": "On a $\\dfrac{t}{\\tau} = \\dfrac{2{,}0}{4{,}0} = 0{,}5$, donc $$i = I_{\\max}\\left(1 - e^{-0{,}5}\\right) = 0{,}060 \\times (1 - 0{,}607) = 0{,}060 \\times 0{,}393 = 2{,}36\\times10^{-2}\\ \\mathrm{A} \\approx 24\\ \\mathrm{mA}.$$ Contrôle : $24\\ \\mathrm{mA}$ représente $39\\ \\%$ de $I_{\\max}$, valeur bien comprise entre $0$ et les $63\\ \\%$ atteints à $t=\\tau$.",
+          "methode": "Calcule toujours le rapport $t/\\tau$ avant de toucher à l'exponentielle.",
+          "points": 1,
+          "part": "Partie A — Établissement du courant",
+          "ref": "pc-rl-probleme-1-q5"
+        },
+        {
+          "notion": "Méthode 5 — Le bilan d'énergie",
+          "difficulty": 3,
+          "statement": "Quelle énergie magnétique la bobine a-t-elle emmagasinée en régime permanent, juste avant l'ouverture de $K$ ?",
+          "options": [
+            {
+              "label": "$E_m = 1{,}44\\ \\mathrm{mJ}$",
+              "correct": true,
+              "why": "$E_m = \\frac{1}{2}L\\,I_{\\max}^{2} = \\frac{1}{2}\\times0{,}80\\times(0{,}060)^{2} = 1{,}44\\times10^{-3}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$E_m = 24\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $\\frac{1}{2}L\\,I_{\\max} = \\frac{1}{2}\\times0{,}80\\times0{,}060 = 24\\ \\mathrm{mJ}$ : l'intensité doit être élevée au carré."
+            },
+            {
+              "label": "$E_m = 2{,}9\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $L\\,I_{\\max}^{2} = 0{,}80\\times(0{,}060)^{2} = 2{,}88\\ \\mathrm{mJ}$ : il manque le facteur $\\frac{1}{2}$."
+            },
+            {
+              "label": "$E_m = 1{,}44\\ \\mathrm{kJ}$",
+              "why": "Tu as gardé l'intensité en milliampères : $\\frac{1}{2}\\times0{,}80\\times60^{2} = 1\\,440$. Il faut convertir $I_{\\max}$ en ampères."
+            }
+          ],
+          "hint": "Utilise $E_m = \\frac{1}{2}L i^{2}$ avec $i$ en ampères.",
+          "solution": "$$E_m = \\frac{1}{2}L\\,I_{\\max}^{2} = \\frac{1}{2}\\times 0{,}80 \\times (0{,}060)^{2} = \\frac{1}{2}\\times0{,}80\\times3{,}6\\times10^{-3} = 1{,}44\\times10^{-3}\\ \\mathrm{J} = 1{,}44\\ \\mathrm{mJ}.$$ Contrôle : c'est exactement cette énergie qui sera dissipée par effet Joule dans $R$ et $r$ pendant la rupture — rien de plus, rien de moins.",
+          "methode": "Avant tout calcul d'énergie magnétique, convertis l'intensité en ampères : l'erreur de $10^{6}$ est immédiate sinon.",
+          "points": 1,
+          "part": "Partie B — Rupture et bilan d'énergie",
+          "ref": "pc-rl-probleme-1-q6"
+        },
+        {
+          "notion": "Méthode 4 — Linéariser la rupture",
+          "difficulty": 3,
+          "statement": "Après l'ouverture de $K$, on relève $i(t)$ pendant la rupture et l'on trace $\\ln i$ en fonction du temps. Quelle est la pente de la droite obtenue ?",
+          "options": [
+            {
+              "label": "$-2{,}5\\times10^{2}\\ \\mathrm{s^{-1}}$",
+              "correct": true,
+              "why": "La loi $i = I_{\\max}e^{-t/\\tau}$ donne $\\ln i = \\ln I_{\\max} - \\frac{t}{\\tau}$, donc la pente vaut $-\\frac{1}{\\tau} = -\\frac{R+r}{L} = -\\frac{200}{0{,}80} = -250\\ \\mathrm{s^{-1}}$."
+            },
+            {
+              "label": "$-2{,}3\\times10^{2}\\ \\mathrm{s^{-1}}$",
+              "why": "Tu as calculé $-\\dfrac{R}{L} = -\\dfrac{180}{0{,}80} = -225\\ \\mathrm{s^{-1}}$ : tu as oublié la résistance $r = 20\\ \\Omega$ de la bobine."
+            },
+            {
+              "label": "$-5{,}8\\times10^{2}\\ \\mathrm{s^{-1}}$",
+              "why": "Tu as multiplié par $\\ln 10$ : $-\\dfrac{\\ln 10}{\\tau} = -576\\ \\mathrm{s^{-1}}$. Sur un graphe de $\\ln i$ (logarithme népérien) aucun facteur de conversion n'intervient."
+            },
+            {
+              "label": "$-4{,}0\\times10^{-3}\\ \\mathrm{s^{-1}}$",
+              "why": "Tu as donné $-\\tau = -4{,}0\\ \\mathrm{ms}$ : la pente est $-\\dfrac{1}{\\tau}$, c'est-à-dire l'inverse, et elle s'exprime en $\\mathrm{s^{-1}}$."
+            }
+          ],
+          "hint": "Prends le logarithme népérien de la loi de rupture et identifie le coefficient de $t$.",
+          "solution": "Pendant la rupture, $i(t) = I_{\\max}\\,e^{-t/\\tau}$ avec $\\tau = \\dfrac{L}{R+r} = \\dfrac{0{,}80}{200} = 4{,}0\\ \\mathrm{ms}$ (la maille contient toujours $R$ et $r$). En passant au logarithme népérien : $$\\ln i = \\ln I_{\\max} - \\frac{t}{\\tau}.$$ C'est une droite de pente $$-\\frac{1}{\\tau} = -\\frac{R+r}{L} = -\\frac{200}{0{,}80} = -2{,}5\\times10^{2}\\ \\mathrm{s^{-1}}.$$ Contrôle : l'ordonnée à l'origine doit valoir $\\ln(0{,}060) = -2{,}81$, et la droite doit couper l'axe des abscisses lorsque $i = 1\\ \\mathrm{A}$, donc pour un $t$ négatif — ce qui est cohérent avec une droite décroissante partant de $i < 1\\ \\mathrm{A}$.",
+          "methode": "Linéariser une exponentielle : $\\ln i$ en fonction de $t$ donne une droite de pente $-1/\\tau$ et d'ordonnée à l'origine $\\ln I_0$.",
+          "points": 1,
+          "part": "Partie B — Rupture et bilan d'énergie",
+          "ref": "pc-rl-probleme-1-q7"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-rl-probleme-2",
+      "chapter": "pc-rl",
+      "kind": "probleme",
+      "title": "L'électroaimant d'un relais et le danger de la coupure",
+      "difficulty": 3,
+      "context": "Un atelier utilise un relais dont la bobine, assimilée à un dipôle d'inductance $L = 0{,}12\\ \\mathrm{H}$ et de résistance $r = 20\\ \\Omega$, est alimentée en série avec un conducteur ohmique de protection $R = 40\\ \\Omega$ par un générateur de f.é.m. $E = 6{,}0\\ \\mathrm{V}$ et de résistance interne négligeable. Un interrupteur $K$ permet la mise sous tension.\n\nÀ l'instant $t = 0$ on ferme $K$ ; on attend ensuite que le régime permanent soit établi. Dans la partie B, on ouvre $K$. Deux situations sont envisagées : la bobine reste refermée sur $R$ (le courant peut décroître dans la maille $R + r$), ou bien le courant est contraint de passer par un appareil de résistance $R' = 2{,}0\\ \\mathrm{k\\Omega}$ branché en parallèle sur la bobine.\n\nDonnées : $e^{-1} = 0{,}368$ ; $\\ln 2 = 0{,}693$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "La relation tension–intensité",
+          "difficulty": 1,
+          "statement": "Quelle est la tension aux bornes de la bobine juste après la fermeture de $K$ ?",
+          "options": [
+            {
+              "label": "$u_L = 6{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "À $t = 0^{+}$ l'intensité est encore nulle, donc $u_R = 0$ et la loi des mailles donne $u_L = E = 6{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$u_L = 0\\ \\mathrm{V}$",
+              "why": "Tu as écrit $u_L = r\\,i$ avec $i = 0$, en oubliant le terme $L\\,\\frac{di}{dt}$, qui est justement maximal à cet instant."
+            },
+            {
+              "label": "$u_L = 2{,}0\\ \\mathrm{V}$",
+              "why": "Tu as calculé $r\\,I_{\\max} = 20 \\times 0{,}10 = 2{,}0\\ \\mathrm{V}$ : c'est la tension de la bobine en régime **permanent**, pas à $t = 0^{+}$."
+            },
+            {
+              "label": "$u_L = 4{,}0\\ \\mathrm{V}$",
+              "why": "Tu as calculé $R\\,I_{\\max} = 40 \\times 0{,}10 = 4{,}0\\ \\mathrm{V}$ : c'est la tension du conducteur ohmique en régime permanent."
+            }
+          ],
+          "hint": "Quelle grandeur est continue à la fermeture ? Déduis-en $u_R$ à $t = 0^{+}$.",
+          "solution": "L'intensité dans une bobine est continue, donc $i(0^{+}) = i(0^{-}) = 0$. Alors $u_R = R\\,i = 0$ et la loi des mailles $E = u_R + u_L$ donne $$u_L(0^{+}) = E = 6{,}0\\ \\mathrm{V}.$$ Contrôle : ce $6{,}0\\ \\mathrm{V}$ vaut $L\\left(\\frac{di}{dt}\\right)_0$, donc la pente initiale est $\\frac{E}{L} = \\frac{6{,}0}{0{,}12} = 50\\ \\mathrm{A\\,s^{-1}}$.",
+          "methode": "À $t = 0^{+}$ dans un circuit RL : $i = 0$, donc toute la f.é.m. se retrouve aux bornes de la bobine.",
+          "points": 1,
+          "part": "Partie A — Mise sous tension de l'électroaimant",
+          "ref": "pc-rl-probleme-2-q1"
+        },
+        {
+          "notion": "Méthode 2 — Vérifier une solution et identifier les constantes",
+          "difficulty": 2,
+          "statement": "On cherche la solution sous la forme $i(t) = A\\left(1 - e^{-\\alpha t}\\right)$. En l'injectant dans l'équation différentielle, que valent les constantes $A$ et $\\alpha$ ?",
+          "options": [
+            {
+              "label": "$A = 0{,}10\\ \\mathrm{A}$ et $\\alpha = 5{,}0\\times10^{2}\\ \\mathrm{s^{-1}}$",
+              "correct": true,
+              "why": "$A = \\frac{E}{R+r} = \\frac{6{,}0}{60} = 0{,}10\\ \\mathrm{A}$ et $\\alpha = \\frac{R+r}{L} = \\frac{60}{0{,}12} = 500\\ \\mathrm{s^{-1}}$."
+            },
+            {
+              "label": "$A = 0{,}15\\ \\mathrm{A}$ et $\\alpha = 3{,}3\\times10^{2}\\ \\mathrm{s^{-1}}$",
+              "why": "Tu as calculé $\\frac{E}{R} = 0{,}15\\ \\mathrm{A}$ et $\\frac{R}{L} = 333\\ \\mathrm{s^{-1}}$ : tu as oublié la résistance $r = 20\\ \\Omega$ de la bobine dans les deux constantes."
+            },
+            {
+              "label": "$A = 0{,}30\\ \\mathrm{A}$ et $\\alpha = 1{,}7\\times10^{2}\\ \\mathrm{s^{-1}}$",
+              "why": "Tu as calculé $\\frac{E}{r} = 0{,}30\\ \\mathrm{A}$ et $\\frac{r}{L} = 167\\ \\mathrm{s^{-1}}$ : tu n'as gardé que la résistance de la bobine au lieu de la résistance totale."
+            },
+            {
+              "label": "$A = 0{,}10\\ \\mathrm{A}$ et $\\alpha = 2{,}0\\times10^{-3}\\ \\mathrm{s^{-1}}$",
+              "why": "La valeur de $A$ est juste, mais tu as donné $\\tau = 2{,}0\\ \\mathrm{ms}$ au lieu de $\\alpha = \\frac{1}{\\tau}$ : $\\alpha$ est l'inverse d'un temps."
+            }
+          ],
+          "hint": "Dérive la forme proposée, reporte $i$ et $\\frac{di}{dt}$ dans l'équation, puis identifie les termes constants et les termes en $e^{-\\alpha t}$.",
+          "solution": "Avec $i = A\\left(1-e^{-\\alpha t}\\right)$ on a $\\dfrac{di}{dt} = A\\,\\alpha\\,e^{-\\alpha t}$. En reportant dans $L\\,\\dfrac{di}{dt} + (R+r)\\,i = E$ : $$L A \\alpha\\,e^{-\\alpha t} + (R+r)A - (R+r)A\\,e^{-\\alpha t} = E.$$ Cette égalité doit être vraie à tout instant, donc les deux groupes s'identifient séparément : le terme constant donne $(R+r)A = E$, soit $A = \\dfrac{E}{R+r} = \\dfrac{6{,}0}{60} = 0{,}10\\ \\mathrm{A}$ ; le terme en $e^{-\\alpha t}$ donne $LA\\alpha = (R+r)A$, soit $\\alpha = \\dfrac{R+r}{L} = \\dfrac{60}{0{,}12} = 5{,}0\\times10^{2}\\ \\mathrm{s^{-1}}$. Contrôle : $\\dfrac{1}{\\alpha} = 2{,}0\\times10^{-3}\\ \\mathrm{s}$, qui est bien la constante de temps $\\tau = \\dfrac{L}{R+r}$.",
+          "methode": "Pour vérifier une solution, dérive, reporte, puis identifie **séparément** le terme constant et le terme exponentiel : chacun donne une constante.",
+          "points": 1,
+          "part": "Partie A — Mise sous tension de l'électroaimant",
+          "ref": "pc-rl-probleme-2-q2"
+        },
+        {
+          "notion": "Établissement du courant",
+          "difficulty": 2,
+          "statement": "La constante de temps du circuit vaut donc $\\tau = \\dfrac{L}{R+r} = 2{,}0\\ \\mathrm{ms}$. Quelle est l'intensité du courant une constante de temps après la fermeture de $K$ ?",
+          "options": [
+            {
+              "label": "$i = 63\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$I_{\\max} = \\frac{6{,}0}{60} = 0{,}10\\ \\mathrm{A}$ et $t = \\tau$, donc $i = 0{,}10\\,(1-0{,}368) = 63\\ \\mathrm{mA}$."
+            },
+            {
+              "label": "$i = 37\\ \\mathrm{mA}$",
+              "why": "Tu as calculé $I_{\\max}\\,e^{-1} = 100 \\times 0{,}368 = 37\\ \\mathrm{mA}$ : c'est la loi de la rupture, pas celle de l'établissement."
+            },
+            {
+              "label": "$i = 100\\ \\mathrm{mA}$",
+              "why": "Tu as donné $I_{\\max}$ : à $t = \\tau$ le régime permanent n'est pas atteint, il faut attendre environ $5\\tau = 10\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$i = 50\\ \\mathrm{mA}$",
+              "why": "Tu as pris la moitié de $I_{\\max}$ : la demi-valeur est atteinte à $t = \\tau\\ln 2 = 1{,}4\\ \\mathrm{ms}$, et non à $t = \\tau$."
+            }
+          ],
+          "hint": "Calcule $I_{\\max}$, puis utilise la valeur fournie de $e^{-1}$.",
+          "solution": "$I_{\\max} = \\dfrac{E}{R+r} = \\dfrac{6{,}0}{60} = 0{,}10\\ \\mathrm{A}$. L'instant demandé est $t = \\tau$, donc $$i(\\tau) = I_{\\max}\\left(1 - e^{-1}\\right) = 0{,}10 \\times (1-0{,}368) = 0{,}0632\\ \\mathrm{A} \\approx 63\\ \\mathrm{mA}.$$ Contrôle : c'est bien $63\\ \\%$ de $I_{\\max}$, le repère caractéristique de $t = \\tau$ à l'établissement.",
+          "methode": "Repère si l'instant demandé est un multiple simple de $\\tau$ : la réponse se lit alors directement en pourcentage de $I_{\\max}$.",
+          "points": 1,
+          "part": "Partie A — Mise sous tension de l'électroaimant",
+          "ref": "pc-rl-probleme-2-q3"
+        },
+        {
+          "notion": "Récapitulatif",
+          "difficulty": 2,
+          "statement": "En régime permanent, quelle est la tension aux bornes de la bobine ?",
+          "options": [
+            {
+              "label": "$u_L = 2{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "En régime permanent $\\frac{di}{dt}=0$, donc $u_L = r\\,I_{\\max} = 20 \\times 0{,}10 = 2{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$u_L = 0\\ \\mathrm{V}$",
+              "why": "Tu as traité la bobine comme idéale. Avec $r = 20\\ \\Omega$ il subsiste $u_L = r\\,I_{\\max} = 2{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$u_L = 4{,}0\\ \\mathrm{V}$",
+              "why": "Tu as calculé $R\\,I_{\\max} = 40 \\times 0{,}10 = 4{,}0\\ \\mathrm{V}$ : c'est la tension aux bornes du conducteur ohmique de protection."
+            },
+            {
+              "label": "$u_L = 6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as donné $E$ : c'est la tension de la bobine à $t = 0^{+}$, quand $i = 0$, et non en régime permanent."
+            }
+          ],
+          "hint": "En régime permanent, à quel dipôle simple la bobine est-elle équivalente ?",
+          "solution": "En régime permanent $\\frac{di}{dt} = 0$ et la bobine se réduit à un conducteur ohmique de résistance $r$ : $$u_L = r\\,I_{\\max} = 20 \\times 0{,}10 = 2{,}0\\ \\mathrm{V}.$$ Contrôle par la maille : $u_R = 40 \\times 0{,}10 = 4{,}0\\ \\mathrm{V}$ et $4{,}0 + 2{,}0 = 6{,}0\\ \\mathrm{V} = E$.",
+          "methode": "Vérifie toujours que $u_R + u_L = E$ : si tu as écrit $u_L = 0$, la somme ne colle plus.",
+          "points": 1,
+          "part": "Partie A — Mise sous tension de l'électroaimant",
+          "ref": "pc-rl-probleme-2-q4"
+        },
+        {
+          "notion": "Énergie emmagasinée",
+          "difficulty": 3,
+          "statement": "Quelle énergie magnétique la bobine a-t-elle emmagasinée en régime permanent ?",
+          "options": [
+            {
+              "label": "$E_m = 0{,}60\\ \\mathrm{mJ}$",
+              "correct": true,
+              "why": "$E_m = \\frac{1}{2}L\\,I_{\\max}^{2} = \\frac{1}{2}\\times0{,}12\\times(0{,}10)^{2} = 6{,}0\\times10^{-4}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$E_m = 6{,}0\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $\\frac{1}{2}L\\,I_{\\max} = \\frac{1}{2}\\times0{,}12\\times0{,}10 = 6{,}0\\times10^{-3}\\ \\mathrm{J}$ : l'intensité doit être élevée au carré."
+            },
+            {
+              "label": "$E_m = 1{,}2\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $L\\,I_{\\max}^{2} = 0{,}12\\times(0{,}10)^{2} = 1{,}2\\times10^{-3}\\ \\mathrm{J}$ : il manque le facteur $\\frac{1}{2}$."
+            },
+            {
+              "label": "$E_m = 0{,}072\\ \\mathrm{mJ}$",
+              "why": "Tu as calculé $\\frac{1}{2}L^{2}I_{\\max}^{2} = \\frac{1}{2}\\times(0{,}12)^{2}\\times(0{,}10)^{2} = 7{,}2\\times10^{-5}\\ \\mathrm{J}$ : tu as élevé $L$ au carré en plus de $I_{\\max}$."
+            }
+          ],
+          "hint": "Applique $E_m = \\frac{1}{2}L i^{2}$ en calculant $i^{2}$ séparément.",
+          "solution": "$$E_m = \\frac{1}{2}L\\,I_{\\max}^{2} = \\frac{1}{2}\\times 0{,}12 \\times (0{,}10)^{2} = \\frac{1}{2}\\times0{,}12\\times1{,}0\\times10^{-2} = 6{,}0\\times10^{-4}\\ \\mathrm{J} = 0{,}60\\ \\mathrm{mJ}.$$ Contrôle d'ordre de grandeur : moins d'un millijoule, et pourtant c'est assez pour créer une étincelle destructrice, car cette énergie peut être libérée en quelques microsecondes.",
+          "methode": "$E_m$ se calcule en trois temps : $i^{2}$, puis $\\times L$, puis $\\times\\frac{1}{2}$ — et toujours avec $i$ en ampères.",
+          "points": 1,
+          "part": "Partie B — Coupure de l'alimentation",
+          "ref": "pc-rl-probleme-2-q5"
+        },
+        {
+          "notion": "Rupture du courant",
+          "difficulty": 3,
+          "statement": "On ouvre $K$, la bobine restant refermée sur $R$. Au bout de combien de temps l'énergie magnétique n'est-elle plus que du quart de sa valeur initiale ?",
+          "options": [
+            {
+              "label": "$t = 1{,}4\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$E_m \\propto i^{2}$, donc $E_m/4$ correspond à $i = I_{\\max}/2$, atteint en $t = \\tau\\ln 2 = 2{,}0\\times0{,}693 = 1{,}4\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$t = 2{,}8\\ \\mathrm{ms}$",
+              "why": "Tu as cherché $i = I_{\\max}/4$, c'est-à-dire $t = \\tau\\ln 4 = 2{,}8\\ \\mathrm{ms}$ : tu as oublié que l'énergie varie comme le **carré** de l'intensité."
+            },
+            {
+              "label": "$t = 2{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as répondu $t = \\tau$ : à cet instant $i = 0{,}37\\,I_{\\max}$, donc $E_m$ est tombée à $13{,}5\\ \\%$ — déjà en dessous du quart."
+            },
+            {
+              "label": "$t = 0{,}50\\ \\mathrm{ms}$",
+              "why": "Tu as pris $\\tau/4$ : la décroissance est exponentielle, le temps n'est pas proportionnel à la fraction d'énergie restante."
+            }
+          ],
+          "hint": "Traduis d'abord « énergie divisée par quatre » en une condition sur $i$.",
+          "solution": "Comme $E_m = \\frac{1}{2}L i^{2}$, avoir $E_m = \\dfrac{E_{m,0}}{4}$ équivaut à $i = \\dfrac{I_{\\max}}{2}$. La loi de rupture $i = I_{\\max}\\,e^{-t/\\tau}$ donne alors $e^{-t/\\tau} = \\dfrac{1}{2}$, soit $$t = \\tau\\,\\ln 2 = 2{,}0\\times10^{-3}\\times0{,}693 = 1{,}39\\times10^{-3}\\ \\mathrm{s} \\approx 1{,}4\\ \\mathrm{ms}.$$ Contrôle : à $t = \\tau = 2{,}0\\ \\mathrm{ms}$ on aurait $E_m = (0{,}368)^{2} = 13{,}5\\ \\%$ de l'énergie initiale, donc déjà moins du quart — l'instant cherché est bien antérieur à $\\tau$.",
+          "methode": "Pour l'énergie, passe d'abord à l'intensité : une énergie divisée par $n$ correspond à une intensité divisée par $\\sqrt{n}$.",
+          "points": 1,
+          "part": "Partie B — Coupure de l'alimentation",
+          "ref": "pc-rl-probleme-2-q6"
+        },
+        {
+          "notion": "La surtension de rupture, quantifiée",
+          "difficulty": 3,
+          "statement": "On ouvre maintenant $K$ alors que le courant est contraint de passer par l'appareil de résistance $R' = 2{,}0\\ \\mathrm{k\\Omega}$ monté en parallèle sur la bobine. Quelle tension apparaît aux bornes de cet appareil juste après l'ouverture ?",
+          "options": [
+            {
+              "label": "$200\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "L'intensité dans la bobine est continue : elle vaut encore $0{,}10\\ \\mathrm{A}$ et traverse $R'$, d'où $u = R'\\,I_{\\max} = 2{,}0\\times10^{3}\\times0{,}10 = 200\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as supposé que la tension ne peut pas dépasser $E$ : c'est faux, la bobine impose la continuité du courant et la tension s'ajuste à la résistance du chemin."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{V}$",
+              "why": "Tu as calculé $r\\,I_{\\max} = 20 \\times 0{,}10 = 2{,}0\\ \\mathrm{V}$, la tension de la bobine avant l'ouverture, et non celle qui apparaît aux bornes de $R'$."
+            },
+            {
+              "label": "$5{,}0\\times10^{-5}\\ \\mathrm{V}$",
+              "why": "Tu as calculé $\\dfrac{I_{\\max}}{R'} = \\dfrac{0{,}10}{2{,}0\\times10^{3}} = 5{,}0\\times10^{-5}$ : la loi d'Ohm donne $u = R'\\,i$, c'est un produit."
+            }
+          ],
+          "hint": "Quelle grandeur ne peut pas subir de saut à l'ouverture ? Applique ensuite la loi d'Ohm au nouveau chemin du courant.",
+          "solution": "L'intensité dans la bobine est continue : juste après l'ouverture elle vaut encore $I_{\\max} = 0{,}10\\ \\mathrm{A}$. Ce courant n'a plus qu'un chemin, l'appareil $R'$, donc $$u = R'\\,I_{\\max} = 2{,}0\\times10^{3} \\times 0{,}10 = 200\\ \\mathrm{V}.$$ Contrôle : le facteur de surtension est $\\dfrac{R'}{R+r} = \\dfrac{2000}{60} = 33$, et $33 \\times 6{,}0 = 200\\ \\mathrm{V}$. C'est pourquoi on protège systématiquement la bobine d'un relais par une **diode de roue libre** : elle offre au courant un chemin de très faible résistance, ce qui limite la surtension à moins d'un volt.",
+          "methode": "Surtension de rupture : la tension vaut $R_{\\text{chemin}} \\times I_0$. Plus le chemin imposé est résistant, plus la surtension est grande.",
+          "points": 1,
+          "part": "Partie B — Coupure de l'alimentation",
+          "ref": "pc-rl-probleme-2-q7"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-rl-serie-1",
+      "title": "Dipôle RL · Échauffement",
+      "description": "Les réflexes de base du dipôle RL : unités, relation $u_L = r\\,i + L\\,\\frac{di}{dt}$, lois d'établissement et de rupture, et le régime permanent où la bobine n'est plus qu'une résistance $r$.",
+      "kind": "custom",
+      "chapter": "pc-rl",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-rl-constitution-et-grandeurs-caracteristiqu-q1",
+        "pc-rl-le-phenomene-d-auto-induction-q1",
+        "pc-rl-la-relation-tensionintensite-q1",
+        "pc-rl-energie-emmagasinee-q1",
+        "pc-rl-le-montage-et-la-mise-en-equation-q1",
+        "pc-rl-etablissement-du-courant-q1",
+        "pc-rl-rupture-du-courant-q1",
+        "pc-rl-sources-d-erreur-q1",
+        "pc-rl-constitution-et-grandeurs-caracteristiqu-q2",
+        "pc-rl-la-relation-tensionintensite-q2",
+        "pc-rl-recapitulatif-q3"
+      ]
+    },
+    {
+      "slug": "pc-rl-serie-2",
+      "title": "Dipôle RL · Entraînement",
+      "description": "Le cœur du chapitre : lectures graphiques de $\\tau$ ($63\\ \\%$, $37\\ \\%$, tangente à l'origine), influence de $L$ et de $R+r$, énergie magnétique et exploitation d'un oscillogramme.",
+      "kind": "custom",
+      "chapter": "pc-rl",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-rl-recapitulatif-q1",
+        "pc-rl-determiner-tau-et-l-graphiquement-q1",
+        "pc-rl-influence-de-l-et-de-r-q1",
+        "pc-rl-bilan-energetique-q1",
+        "pc-rl-exploitation-d-un-releve-q1",
+        "pc-rl-le-montage-q1",
+        "pc-rl-la-constante-de-temps-q1",
+        "pc-rl-determiner-tau-et-l-graphiquement-q2",
+        "pc-rl-influence-de-l-et-de-r-q2",
+        "pc-rl-bilan-energetique-q2",
+        "pc-rl-le-choix-des-calibres-q2",
+        "pc-rl-probleme-1-q5"
+      ]
+    },
+    {
+      "slug": "pc-rl-serie-3",
+      "title": "Dipôle RL · Type BAC",
+      "description": "Niveau examen, pièges compris : $\\tau = \\frac{L}{R+r}$ et non $L/R$, $u_L = r\\,i \\neq 0$ en régime permanent, linéarisation de la rupture, bilan de puissance et surtension d'ouverture.",
+      "kind": "custom",
+      "chapter": "pc-rl",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-rl-le-montage-et-la-mise-en-equation-q3",
+        "pc-rl-la-constante-de-temps-q2",
+        "pc-rl-etablissement-du-courant-q3",
+        "pc-rl-rupture-du-courant-q3",
+        "pc-rl-recapitulatif-q4",
+        "pc-rl-determiner-tau-et-l-graphiquement-q4",
+        "pc-rl-influence-de-l-et-de-r-q4",
+        "pc-rl-bilan-energetique-q4",
+        "pc-rl-la-forme-generale-une-fois-pour-toutes-q1",
+        "pc-rl-la-surtension-de-rupture-quantifiee-q1",
+        "pc-rl-probleme-1-q7",
+        "pc-rl-probleme-2-q6"
+      ]
+    }
+  ]
+}

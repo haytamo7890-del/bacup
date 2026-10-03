@@ -1,0 +1,1984 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-noyau-energie",
+      "name": "Noyaux, masse et énergie",
+      "domain": "physique",
+      "unit": "Transformations nucléaires"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "L'équivalence masse–énergie",
+      "Le défaut de masse",
+      "Énergie de liaison",
+      "La courbe d'Aston",
+      "Le bilan d'énergie d'une réaction nucléaire",
+      "La fission nucléaire",
+      "La fusion nucléaire",
+      "Comparaison et ordres de grandeur",
+      "La réaction en chaîne et son contrôle",
+      "La fusion : dans les étoiles et sur Terre",
+      "Les déchets et la question des durées",
+      "Applications et bilan",
+      "Méthode 1 — Calculer $\\Delta m$, $E_{\\ell}$ et $E_{\\ell}/A$",
+      "Méthode 2 — Classer des noyaux par stabilité",
+      "Méthode 3 — Bilan d'énergie par les masses",
+      "Méthode 4 — Bilan d'énergie par les énergies de liaison",
+      "Méthode 5 — Passer de l'échelle du noyau à l'échelle du gramme"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Calculer $\\Delta m$, $E_{\\ell}$ et $E_{\\ell}/A$",
+      "Méthode 2 — Classer des noyaux par stabilité",
+      "Méthode 3 — Bilan d'énergie par les masses",
+      "Méthode 4 — Bilan d'énergie par les énergies de liaison",
+      "Méthode 5 — Passer de l'échelle du noyau à l'échelle du gramme"
+    ],
+    "existing_questions_total": 5,
+    "target_new_questions": 31,
+    "suggested_figures": [
+      "chute-fluide-forces — Bilan des forces sur un corps tombant dans un fluide",
+      "pendule-elastique — Pendule élastique horizontal (masse-ressort)"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "L'équivalence masse–énergie",
+        "lesson": "Défaut de masse & énergie de liaison",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-l-equivalence-masseenergie",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "L'équivalence masse–énergie",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "L'équivalence masse–énergie",
+          "difficulty": 1,
+          "statement": "Un corps a une masse $m = 1{,}0\\ \\mathrm{g}$. En prenant $c = 3{,}0\\times10^{8}\\ \\mathrm{m\\,s^{-1}}$, son énergie de masse vaut :",
+          "options": [
+            {
+              "label": "$9{,}0\\times10^{13}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$E = mc^{2} = 1{,}0\\times10^{-3}\\times(3{,}0\\times10^{8})^{2} = 9{,}0\\times10^{13}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$3{,}0\\times10^{5}\\ \\mathrm{J}$",
+              "why": "Tu as multiplié par $c$ au lieu de $c^{2}$ : $1{,}0\\times10^{-3}\\times3{,}0\\times10^{8} = 3{,}0\\times10^{5}$."
+            },
+            {
+              "label": "$9{,}0\\times10^{16}\\ \\mathrm{J}$",
+              "why": "Tu as oublié de convertir le gramme en kilogramme : tu as calculé $1{,}0\\times c^{2}$ au lieu de $1{,}0\\times10^{-3}\\times c^{2}$."
+            },
+            {
+              "label": "$8{,}1\\times10^{30}\\ \\mathrm{J}$",
+              "why": "Tu as élevé $c^{2}$ au carré une seconde fois : $1{,}0\\times10^{-3}\\times c^{4} = 8{,}1\\times10^{30}$."
+            }
+          ],
+          "hint": "Écris la relation d'équivalence masse–énergie, puis surveille deux choses : l'unité de $m$ et la puissance de $c$.",
+          "solution": "La relation d'Einstein donne $E = mc^{2}$. Il faut d'abord convertir la masse en kilogrammes : $m = 1{,}0\\ \\mathrm{g} = 1{,}0\\times10^{-3}\\ \\mathrm{kg}$.\n$$E = 1{,}0\\times10^{-3}\\times(3{,}0\\times10^{8})^{2} = 1{,}0\\times10^{-3}\\times9{,}0\\times10^{16} = 9{,}0\\times10^{13}\\ \\mathrm{J}$$\nContrôle de l'ordre de grandeur : $1\\ \\mathrm{g}$ de matière vaut environ $10^{14}\\ \\mathrm{J}$, soit la consommation annuelle d'électricité de plusieurs milliers de foyers. C'est bien l'ordre de grandeur colossal attendu.",
+          "methode": "Dans $E = mc^{2}$, la masse est **toujours** en kilogrammes et $c$ est **toujours** au carré : $c^{2} = 9{,}0\\times10^{16}$ en unités SI.",
+          "points": 1,
+          "ref": "pc-noyau-energie-l-equivalence-masseenergie-q1"
+        },
+        {
+          "notion": "L'équivalence masse–énergie",
+          "difficulty": 2,
+          "statement": "Un noyau a une masse $m = 4{,}0015\\ \\mathrm{u}$. En utilisant la correspondance $1\\ \\mathrm{u} = 931{,}5\\ \\mathrm{MeV}/c^{2}$, son énergie de masse vaut :",
+          "options": [
+            {
+              "label": "$3{,}727\\times10^{3}\\ \\mathrm{MeV}$",
+              "correct": true,
+              "why": "$E = 4{,}0015\\times931{,}5 = 3{,}727\\times10^{3}\\ \\mathrm{MeV}$ : la correspondance se multiplie."
+            },
+            {
+              "label": "$4{,}296\\times10^{-3}\\ \\mathrm{MeV}$",
+              "why": "Tu as divisé par $931{,}5$ au lieu de multiplier : $4{,}0015/931{,}5 = 4{,}296\\times10^{-3}$."
+            },
+            {
+              "label": "$5{,}972\\times10^{-10}\\ \\mathrm{MeV}$",
+              "why": "Tu as calculé $mc^{2}$ en joules ($5{,}972\\times10^{-10}\\ \\mathrm{J}$) et tu es resté en joules sans diviser par $1{,}602\\times10^{-13}$."
+            },
+            {
+              "label": "$3{,}472\\times10^{6}\\ \\mathrm{MeV}$",
+              "why": "Tu as appliqué le facteur $931{,}5$ deux fois : $4{,}0015\\times931{,}5^{2} = 3{,}472\\times10^{6}$."
+            }
+          ],
+          "hint": "La correspondance $1\\ \\mathrm{u} = 931{,}5\\ \\mathrm{MeV}/c^{2}$ s'emploie comme un facteur de conversion : une masse en u fois $931{,}5$ donne directement une énergie en MeV.",
+          "solution": "La correspondance $1\\ \\mathrm{u} = 931{,}5\\ \\mathrm{MeV}/c^{2}$ signifie que $1\\ \\mathrm{u}$ de masse correspond à $931{,}5\\ \\mathrm{MeV}$ d'énergie. Donc :\n$$E = m \\times 931{,}5 = 4{,}0015\\times931{,}5 = 3727{,}4\\ \\mathrm{MeV} \\approx 3{,}727\\times10^{3}\\ \\mathrm{MeV}$$\nContrôle par l'autre voie : $m = 4{,}0015\\times1{,}6605\\times10^{-27} = 6{,}645\\times10^{-27}\\ \\mathrm{kg}$, puis $E = 6{,}645\\times10^{-27}\\times(2{,}998\\times10^{8})^{2} = 5{,}972\\times10^{-10}\\ \\mathrm{J}$, soit $5{,}972\\times10^{-10}/1{,}602\\times10^{-13} = 3{,}73\\times10^{3}\\ \\mathrm{MeV}$. Les deux voies concordent.",
+          "methode": "Masse en u $\\times\\ 931{,}5$ = énergie en MeV. C'est le raccourci qui évite de passer par les kilogrammes et les joules.",
+          "points": 1,
+          "ref": "pc-noyau-energie-l-equivalence-masseenergie-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le défaut de masse",
+        "lesson": "Défaut de masse & énergie de liaison",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-le-defaut-de-masse",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "Le défaut de masse",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le défaut de masse",
+          "difficulty": 1,
+          "statement": "Pour un noyau $^{A}_{Z}X$ de masse $m_{noyau}$, le défaut de masse s'écrit :",
+          "options": [
+            {
+              "label": "$\\Delta m = Z\\,m_p + (A-Z)\\,m_n - m_{noyau}$",
+              "correct": true,
+              "why": "On retranche la masse du noyau à la masse de ses $Z$ protons et $A-Z$ neutrons **séparés** : la différence est positive."
+            },
+            {
+              "label": "$\\Delta m = m_{noyau} - \\big(Z\\,m_p + (A-Z)\\,m_n\\big)$",
+              "why": "Tu as inversé le sens de la soustraction : avec cette écriture $\\Delta m$ serait négatif, alors que le défaut de masse est positif par définition."
+            },
+            {
+              "label": "$\\Delta m = Z\\,m_p + A\\,m_n - m_{noyau}$",
+              "why": "Tu as compté $A$ neutrons au lieu de $A-Z$ : le noyau contient $A$ **nucléons** en tout, dont seulement $A-Z$ neutrons."
+            },
+            {
+              "label": "$\\Delta m = Z\\,m_p + (A-Z)\\,m_n + m_{noyau}$",
+              "why": "Tu as additionné la masse du noyau au lieu de la retrancher : un défaut de masse est un **écart** entre deux masses."
+            }
+          ],
+          "hint": "Le défaut de masse mesure ce que le noyau a « perdu » en se formant : compare la masse des nucléons libres à celle du noyau constitué.",
+          "solution": "Les nucléons séparés et au repos ont pour masse totale $Z\\,m_p + (A-Z)\\,m_n$ ($Z$ protons et $A-Z$ neutrons). Une fois liés dans le noyau, leur masse totale n'est plus que $m_{noyau}$, qui est **inférieure**. Le défaut de masse est cet écart :\n$$\\Delta m = Z\\,m_p + (A-Z)\\,m_n - m_{noyau} > 0$$\nContrôle : écrit dans cet ordre, $\\Delta m$ est bien positif, ce qui est cohérent avec une énergie de liaison $E_{\\ell} = \\Delta m\\,c^{2}$ positive.",
+          "methode": "Toujours « nucléons libres **moins** noyau » : l'ordre de la soustraction est ce qui garantit $\\Delta m > 0$.",
+          "points": 1,
+          "ref": "pc-noyau-energie-le-defaut-de-masse-q1"
+        },
+        {
+          "notion": "Le défaut de masse",
+          "difficulty": 2,
+          "statement": "On donne $m_p = 1{,}00728\\ \\mathrm{u}$, $m_n = 1{,}00866\\ \\mathrm{u}$ et $m(^{4}_{2}\\mathrm{He}) = 4{,}00150\\ \\mathrm{u}$. Le défaut de masse du noyau d'hélium 4 vaut :",
+          "options": [
+            {
+              "label": "$0{,}03038\\ \\mathrm{u}$",
+              "correct": true,
+              "why": "$\\Delta m = 2(1{,}00728) + 2(1{,}00866) - 4{,}00150 = 4{,}03188 - 4{,}00150 = 0{,}03038\\ \\mathrm{u}$."
+            },
+            {
+              "label": "$4{,}03188\\ \\mathrm{u}$",
+              "why": "C'est la masse des $4$ nucléons séparés : tu as oublié de lui retrancher la masse du noyau."
+            },
+            {
+              "label": "$0{,}02762\\ \\mathrm{u}$",
+              "why": "Tu as utilisé la masse du proton pour les quatre nucléons : $4(1{,}00728) - 4{,}00150 = 0{,}02762$. Or le noyau contient $2$ protons et $2$ neutrons."
+            },
+            {
+              "label": "$-0{,}03038\\ \\mathrm{u}$",
+              "why": "Tu as calculé $m_{noyau}$ moins la masse des nucléons : la soustraction va dans l'autre sens."
+            }
+          ],
+          "hint": "Le noyau $^{4}_{2}\\mathrm{He}$ a $Z = 2$ et $A = 4$ : combien de protons, combien de neutrons ?",
+          "solution": "Le noyau $^{4}_{2}\\mathrm{He}$ contient $Z = 2$ protons et $A - Z = 4 - 2 = 2$ neutrons.\n$$\\Delta m = 2\\,m_p + 2\\,m_n - m(^{4}_{2}\\mathrm{He})$$\n$$\\Delta m = 2(1{,}00728) + 2(1{,}00866) - 4{,}00150 = 2{,}01456 + 2{,}01732 - 4{,}00150$$\n$$\\Delta m = 4{,}03188 - 4{,}00150 = 0{,}03038\\ \\mathrm{u}$$\nContrôle : $\\Delta m$ est positif et vaut moins de $1\\ \\%$ de la masse du noyau, ce qui est l'ordre de grandeur habituel d'un défaut de masse.",
+          "methode": "Pose d'abord la somme $Z\\,m_p + (A-Z)\\,m_n$ en entier, puis retranche $m_{noyau}$ : séparer les deux étapes évite les erreurs de comptage.",
+          "points": 1,
+          "ref": "pc-noyau-energie-le-defaut-de-masse-q2"
+        },
+        {
+          "notion": "Le défaut de masse",
+          "difficulty": 2,
+          "statement": "Le noyau de lithium 7 a pour masse $m(^{7}_{3}\\mathrm{Li}) = 7{,}01435\\ \\mathrm{u}$, avec $m_p = 1{,}00728\\ \\mathrm{u}$, $m_n = 1{,}00866\\ \\mathrm{u}$ et $1\\ \\mathrm{u} = 1{,}6605\\times10^{-27}\\ \\mathrm{kg}$. Son défaut de masse, exprimé en kilogrammes, vaut :",
+          "options": [
+            {
+              "label": "$7{,}00\\times10^{-29}\\ \\mathrm{kg}$",
+              "correct": true,
+              "why": "$\\Delta m = 3(1{,}00728)+4(1{,}00866)-7{,}01435 = 0{,}04213\\ \\mathrm{u}$, puis $0{,}04213\\times1{,}6605\\times10^{-27} = 7{,}00\\times10^{-29}\\ \\mathrm{kg}$."
+            },
+            {
+              "label": "$2{,}54\\times10^{25}\\ \\mathrm{kg}$",
+              "why": "Tu as divisé par $1{,}6605\\times10^{-27}$ au lieu de multiplier : $0{,}04213/1{,}6605\\times10^{-27} = 2{,}54\\times10^{25}$, une masse absurde pour un noyau."
+            },
+            {
+              "label": "$5{,}09\\times10^{-27}\\ \\mathrm{kg}$",
+              "why": "Tu as compté $7$ neutrons au lieu de $4$ : $3\\,m_p + 7\\,m_n - 7{,}01435 = 3{,}068\\ \\mathrm{u}$, soit $5{,}09\\times10^{-27}\\ \\mathrm{kg}$."
+            },
+            {
+              "label": "$1{,}16\\times10^{-26}\\ \\mathrm{kg}$",
+              "why": "Tu as converti la masse du noyau elle-même : $7{,}01435\\times1{,}6605\\times10^{-27} = 1{,}16\\times10^{-26}\\ \\mathrm{kg}$, et non son défaut de masse."
+            }
+          ],
+          "hint": "Deux étapes : d'abord $\\Delta m$ en unités de masse atomique, ensuite la conversion en kilogrammes.",
+          "solution": "Le noyau $^{7}_{3}\\mathrm{Li}$ contient $3$ protons et $7 - 3 = 4$ neutrons.\n$$\\Delta m = 3(1{,}00728) + 4(1{,}00866) - 7{,}01435 = 3{,}02184 + 4{,}03464 - 7{,}01435 = 0{,}04213\\ \\mathrm{u}$$\nConversion en kilogrammes :\n$$\\Delta m = 0{,}04213\\times1{,}6605\\times10^{-27} = 6{,}996\\times10^{-29} \\approx 7{,}00\\times10^{-29}\\ \\mathrm{kg}$$\nContrôle : la masse du noyau est $1{,}16\\times10^{-26}\\ \\mathrm{kg}$ ; le défaut de masse en est environ $0{,}6\\ \\%$, ce qui est bien un faible écart.",
+          "methode": "Convertir une masse en u vers les kilogrammes : on **multiplie** par $1{,}6605\\times10^{-27}$. Si ton résultat n'est pas minuscule, tu as divisé.",
+          "points": 1,
+          "ref": "pc-noyau-energie-le-defaut-de-masse-q3"
+        },
+        {
+          "notion": "Le défaut de masse",
+          "difficulty": 3,
+          "statement": "Le défaut de masse d'un noyau est toujours **strictement positif**. Quelle est la bonne explication ?",
+          "options": [
+            {
+              "label": "Les nucléons liés dans le noyau sont globalement moins massiques que les mêmes nucléons séparés, car leur formation a libéré de l'énergie.",
+              "correct": true,
+              "why": "C'est exactement le contenu physique de $E = mc^{2}$ : l'énergie libérée à la formation du noyau s'est « payée » sur la masse, d'où $m_{noyau} < Z\\,m_p + (A-Z)\\,m_n$."
+            },
+            {
+              "label": "La masse du neutron est supérieure à celle du proton, donc la somme des masses des nucléons dépasse celle du noyau.",
+              "why": "L'écart $m_n > m_p$ n'a rien à voir : le défaut de masse resterait positif même si proton et neutron avaient exactement la même masse."
+            },
+            {
+              "label": "On a toujours $Z < A$, donc la somme $Z\\,m_p + (A-Z)\\,m_n$ comporte plus de termes que $m_{noyau}$.",
+              "why": "Le nombre de termes d'une somme ne décide pas de son signe : les deux membres comparés sont deux masses totales du même nombre $A$ de nucléons."
+            },
+            {
+              "label": "Par convention, on prend la valeur absolue de la différence entre les deux masses.",
+              "why": "Aucune valeur absolue n'intervient : la différence est **naturellement** positive, et c'est précisément ce fait expérimental qui révèle l'énergie de liaison."
+            }
+          ],
+          "hint": "Demande-toi ce que devient l'énergie libérée au moment où les nucléons s'assemblent, et où cette énergie est « prélevée ».",
+          "solution": "Quand $Z$ protons et $A-Z$ neutrons libres s'assemblent pour former un noyau, le système **libère** de l'énergie (c'est l'énergie de liaison). Or, d'après l'équivalence masse–énergie, toute énergie perdue par un système correspond à une perte de masse :\n$$\\Delta E = \\Delta m\\,c^{2}$$\nLe noyau formé est donc moins massique que ses nucléons séparés, et\n$$\\Delta m = Z\\,m_p + (A-Z)\\,m_n - m_{noyau} > 0$$\nContrôle : si $\\Delta m$ était négatif, le noyau se dissocierait spontanément en nucléons libres ; or les noyaux stables existent. Le signe positif est donc cohérent avec l'existence de la matière.",
+          "methode": "Défaut de masse positif $\\Leftrightarrow$ la formation du noyau libère de l'énergie $\\Leftrightarrow$ le noyau est plus « léger » que ses morceaux.",
+          "points": 1,
+          "ref": "pc-noyau-energie-le-defaut-de-masse-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Énergie de liaison",
+        "lesson": "Défaut de masse & énergie de liaison",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-energie-de-liaison",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "Énergie de liaison",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Énergie de liaison",
+          "difficulty": 1,
+          "statement": "L'énergie de liaison $E_{\\ell}$ d'un noyau est :",
+          "options": [
+            {
+              "label": "l'énergie qu'il faut fournir au noyau au repos pour le séparer en tous ses nucléons libres et au repos",
+              "correct": true,
+              "why": "C'est la définition : $E_{\\ell} = \\Delta m\\,c^{2}$, l'énergie équivalente au défaut de masse, à fournir pour défaire le noyau."
+            },
+            {
+              "label": "l'énergie libérée lorsque le noyau se désintègre spontanément en émettant une particule",
+              "why": "Cette énergie-là est celle d'une désintégration radioactive ; elle vaut quelques MeV, alors que $E_{\\ell}$ atteint plusieurs centaines de MeV pour un noyau lourd."
+            },
+            {
+              "label": "l'énergie de masse totale du noyau, c'est-à-dire $m_{noyau}\\,c^{2}$",
+              "why": "Tu as pris la masse du noyau au lieu de son **défaut** de masse : $m_{noyau}\\,c^{2}$ est de l'ordre de $10^{5}\\ \\mathrm{MeV}$, mille fois plus que $E_{\\ell}$."
+            },
+            {
+              "label": "l'énergie qu'il faut fournir pour arracher un seul nucléon au noyau",
+              "why": "Celle-là est voisine de $E_{\\ell}/A$, l'énergie de liaison **par nucléon**, et non de $E_{\\ell}$ qui concerne la dissociation complète."
+            }
+          ],
+          "hint": "Pense à ce que la grandeur permet de faire au noyau : l'écorner, ou le défaire entièrement ?",
+          "solution": "Les nucléons séparés sont plus massiques que le noyau d'une quantité $\\Delta m$. Pour ramener le noyau à l'état de nucléons libres, il faut donc lui fournir l'énergie équivalente à ce défaut de masse :\n$$E_{\\ell} = \\Delta m\\,c^{2}$$\nC'est l'énergie de **dissociation complète** du noyau. Réciproquement, c'est l'énergie libérée lors de sa formation à partir de ses nucléons.\nContrôle : pour l'hélium 4, $E_{\\ell} \\approx 28\\ \\mathrm{MeV}$ alors que $m\\,c^{2} \\approx 3{,}7\\times10^{3}\\ \\mathrm{MeV}$. Les deux grandeurs ne se confondent pas.",
+          "methode": "$E_{\\ell}$ se calcule **toujours** à partir du défaut de masse, jamais de la masse du noyau.",
+          "points": 1,
+          "ref": "pc-noyau-energie-energie-de-liaison-q1"
+        },
+        {
+          "notion": "Énergie de liaison",
+          "difficulty": 2,
+          "statement": "Le défaut de masse du noyau d'hélium 4 vaut $\\Delta m = 0{,}03038\\ \\mathrm{u}$. On prend $1\\ \\mathrm{u} = 1{,}6605\\times10^{-27}\\ \\mathrm{kg}$ et $c = 2{,}998\\times10^{8}\\ \\mathrm{m\\,s^{-1}}$. Son énergie de liaison, en joules, vaut :",
+          "options": [
+            {
+              "label": "$4{,}53\\times10^{-12}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$\\Delta m = 0{,}03038\\times1{,}6605\\times10^{-27} = 5{,}04\\times10^{-29}\\ \\mathrm{kg}$, puis $E_{\\ell} = 5{,}04\\times10^{-29}\\times(2{,}998\\times10^{8})^{2} = 4{,}53\\times10^{-12}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$1{,}51\\times10^{-20}\\ \\mathrm{J}$",
+              "why": "Tu as multiplié par $c$ au lieu de $c^{2}$ : $5{,}04\\times10^{-29}\\times2{,}998\\times10^{8} = 1{,}51\\times10^{-20}$."
+            },
+            {
+              "label": "$5{,}04\\times10^{-29}\\ \\mathrm{J}$",
+              "why": "Tu as oublié le facteur $c^{2}$ : $5{,}04\\times10^{-29}$ est le défaut de masse en kilogrammes, pas une énergie."
+            },
+            {
+              "label": "$4{,}08\\times10^{5}\\ \\mathrm{J}$",
+              "why": "Tu as élevé $c^{2}$ au carré une seconde fois : $5{,}04\\times10^{-29}\\times c^{4} = 4{,}08\\times10^{5}$."
+            }
+          ],
+          "hint": "Deux étapes : convertis d'abord $\\Delta m$ en kilogrammes, puis applique $E_{\\ell} = \\Delta m\\,c^{2}$ en unités SI.",
+          "solution": "Conversion du défaut de masse en kilogrammes :\n$$\\Delta m = 0{,}03038\\times1{,}6605\\times10^{-27} = 5{,}045\\times10^{-29}\\ \\mathrm{kg}$$\nPuis l'énergie de liaison :\n$$E_{\\ell} = \\Delta m\\,c^{2} = 5{,}045\\times10^{-29}\\times(2{,}998\\times10^{8})^{2} = 5{,}045\\times10^{-29}\\times8{,}988\\times10^{16}$$\n$$E_{\\ell} = 4{,}53\\times10^{-12}\\ \\mathrm{J}$$\nContrôle par la voie des MeV : $0{,}03038\\times931{,}5 = 28{,}3\\ \\mathrm{MeV}$, soit $28{,}3\\times1{,}602\\times10^{-13} = 4{,}53\\times10^{-12}\\ \\mathrm{J}$. Les deux voies donnent le même résultat.",
+          "methode": "Voie SI : u $\\to$ kg, puis $\\times c^{2}$ pour des joules. Voie rapide : u $\\times\\ 931{,}5$ pour des MeV. Ne mélange jamais les deux.",
+          "points": 1,
+          "ref": "pc-noyau-energie-energie-de-liaison-q2"
+        },
+        {
+          "notion": "Énergie de liaison",
+          "difficulty": 2,
+          "statement": "L'énergie de liaison du noyau de fer $^{56}_{26}\\mathrm{Fe}$ vaut $E_{\\ell} = 492{,}3\\ \\mathrm{MeV}$. Son énergie de liaison par nucléon vaut :",
+          "options": [
+            {
+              "label": "$8{,}79\\ \\mathrm{MeV}$ par nucléon",
+              "correct": true,
+              "why": "$E_{\\ell}/A = 492{,}3/56 = 8{,}79\\ \\mathrm{MeV}$ par nucléon : on divise par le nombre de **nucléons** $A = 56$."
+            },
+            {
+              "label": "$18{,}93\\ \\mathrm{MeV}$ par nucléon",
+              "why": "Tu as divisé par $Z = 26$ : $492{,}3/26 = 18{,}93$. Il faut diviser par $A$, qui compte protons **et** neutrons."
+            },
+            {
+              "label": "$16{,}41\\ \\mathrm{MeV}$ par nucléon",
+              "why": "Tu as divisé par le nombre de neutrons $N = A - Z = 30$ : $492{,}3/30 = 16{,}41$. Les protons comptent aussi."
+            },
+            {
+              "label": "$2{,}757\\times10^{4}\\ \\mathrm{MeV}$ par nucléon",
+              "why": "Tu as multiplié par $56$ au lieu de diviser : $492{,}3\\times56 = 2{,}757\\times10^{4}$."
+            }
+          ],
+          "hint": "« Par nucléon » indique par quoi diviser : combien le noyau de fer 56 compte-t-il de nucléons ?",
+          "solution": "Le noyau $^{56}_{26}\\mathrm{Fe}$ compte $A = 56$ nucléons ($26$ protons et $30$ neutrons). L'énergie de liaison par nucléon est donc :\n$$\\frac{E_{\\ell}}{A} = \\frac{492{,}3}{56} = 8{,}79\\ \\mathrm{MeV}\\ \\text{par nucléon}$$\nContrôle : la valeur maximale de $E_{\\ell}/A$ dans la nature est voisine de $8{,}8\\ \\mathrm{MeV}$ par nucléon, atteinte justement autour de $A \\approx 60$. Le fer 56 est au sommet de la stabilité, le résultat est cohérent.",
+          "methode": "$E_{\\ell}/A$ se divise toujours par $A$, le nombre de **masse**, jamais par $Z$ ni par $N$.",
+          "points": 1,
+          "ref": "pc-noyau-energie-energie-de-liaison-q3"
+        },
+        {
+          "notion": "Énergie de liaison",
+          "difficulty": 3,
+          "statement": "Le noyau d'oxygène 16 a pour masse $m(^{16}_{8}\\mathrm{O}) = 15{,}99052\\ \\mathrm{u}$, avec $m_p = 1{,}00728\\ \\mathrm{u}$, $m_n = 1{,}00866\\ \\mathrm{u}$ et $1\\ \\mathrm{u} = 931{,}5\\ \\mathrm{MeV}/c^{2}$. Son énergie de liaison par nucléon vaut :",
+          "options": [
+            {
+              "label": "$7{,}98\\ \\mathrm{MeV}$ par nucléon",
+              "correct": true,
+              "why": "$\\Delta m = 0{,}13700\\ \\mathrm{u}$, donc $E_{\\ell} = 0{,}13700\\times931{,}5 = 127{,}6\\ \\mathrm{MeV}$ et $E_{\\ell}/A = 127{,}6/16 = 7{,}98$."
+            },
+            {
+              "label": "$127{,}6\\ \\mathrm{MeV}$ par nucléon",
+              "why": "C'est $E_{\\ell}$, l'énergie de liaison **totale** : tu as oublié de la diviser par $A = 16$."
+            },
+            {
+              "label": "$15{,}95\\ \\mathrm{MeV}$ par nucléon",
+              "why": "Tu as divisé par $Z = 8$ : $127{,}6/8 = 15{,}95$. Le dénominateur est $A = 16$, pas le nombre de protons."
+            },
+            {
+              "label": "$8{,}56\\times10^{-3}\\ \\mathrm{MeV}$ par nucléon",
+              "why": "Tu as bien divisé $\\Delta m$ par $A$ ($0{,}13700/16 = 8{,}56\\times10^{-3}$) mais tu as oublié de multiplier par $931{,}5$ pour obtenir des MeV."
+            }
+          ],
+          "hint": "Trois étapes dans l'ordre : $\\Delta m$, puis $E_{\\ell}$ en MeV, puis la division par $A$. Ne saute aucune des deux conversions.",
+          "solution": "Le noyau $^{16}_{8}\\mathrm{O}$ contient $8$ protons et $8$ neutrons.\n$$\\Delta m = 8(1{,}00728) + 8(1{,}00866) - 15{,}99052 = 8{,}05824 + 8{,}06928 - 15{,}99052 = 0{,}13700\\ \\mathrm{u}$$\n$$E_{\\ell} = \\Delta m \\times 931{,}5 = 0{,}13700\\times931{,}5 = 127{,}6\\ \\mathrm{MeV}$$\n$$\\frac{E_{\\ell}}{A} = \\frac{127{,}6}{16} = 7{,}98\\ \\mathrm{MeV}\\ \\text{par nucléon}$$\nContrôle : la valeur obtenue est un peu inférieure au maximum de $8{,}8\\ \\mathrm{MeV}$ par nucléon atteint vers $A \\approx 60$, ce qui est attendu pour un noyau léger comme l'oxygène 16.",
+          "methode": "Méthode en trois temps : $\\Delta m$ (en u) $\\to$ $E_{\\ell}$ (en MeV, $\\times 931{,}5$) $\\to$ $E_{\\ell}/A$ (en MeV par nucléon, $\\div A$).",
+          "points": 1,
+          "ref": "pc-noyau-energie-energie-de-liaison-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La courbe d'Aston",
+        "lesson": "Défaut de masse & énergie de liaison",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-la-courbe-d-aston",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "La courbe d'Aston",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La courbe d'Aston",
+          "difficulty": 1,
+          "statement": "La courbe d'Aston est le graphe de :",
+          "options": [
+            {
+              "label": "$-E_{\\ell}/A$ en fonction du nombre de masse $A$",
+              "correct": true,
+              "why": "C'est la convention de la courbe d'Aston : on porte l'**opposé** de l'énergie de liaison par nucléon, ce qui place les noyaux les plus stables au fond du creux."
+            },
+            {
+              "label": "$E_{\\ell}/A$ en fonction du nombre de masse $A$",
+              "why": "Tu as oublié le signe moins : avec $+E_{\\ell}/A$ on obtient une courbe en cloche, et les noyaux stables sont alors au **sommet**, pas au creux."
+            },
+            {
+              "label": "$E_{\\ell}/A$ en fonction du numéro atomique $Z$",
+              "why": "Deux erreurs : le signe, et l'abscisse. La courbe d'Aston est tracée en fonction de $A$, pas de $Z$."
+            },
+            {
+              "label": "$\\Delta m$ en fonction du nombre de masse $A$",
+              "why": "Le défaut de masse brut croît sans cesse avec $A$ ; il ne permet pas de comparer les stabilités, d'où l'usage de $E_{\\ell}/A$."
+            }
+          ],
+          "hint": "Pourquoi dit-on que les noyaux les plus stables sont « au creux » de la courbe d'Aston ? Cela renseigne sur le signe porté en ordonnée.",
+          "solution": "La courbe d'Aston porte en abscisse le nombre de masse $A$ et en ordonnée la grandeur $-E_{\\ell}/A$, exprimée en MeV par nucléon.\nCe choix du signe moins est commode : plus un noyau est stable, plus son $E_{\\ell}/A$ est **grand**, donc plus $-E_{\\ell}/A$ est **petit**. Les noyaux les plus stables se retrouvent ainsi tout en bas de la courbe, au fond d'une « vallée » — d'où l'image du creux de stabilité.\nContrôle : pour le fer 56, $E_{\\ell}/A = 8{,}79\\ \\mathrm{MeV}$ par nucléon, donc l'ordonnée vaut $-8{,}79$, la plus basse de toute la courbe. Cohérent.",
+          "methode": "Courbe d'Aston : ordonnée $-E_{\\ell}/A$, abscisse $A$. Le minimum de la courbe = le maximum de stabilité.",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-courbe-d-aston-q1"
+        },
+        {
+          "notion": "La courbe d'Aston",
+          "difficulty": 2,
+          "statement": "Sur la courbe d'Aston, les noyaux les plus stables se situent :",
+          "options": [
+            {
+              "label": "au fond du creux de la courbe, pour $A$ voisin de $60$ (fer, nickel)",
+              "correct": true,
+              "why": "C'est là que $E_{\\ell}/A$ est maximale, environ $8{,}8\\ \\mathrm{MeV}$ par nucléon : ces noyaux sont les plus difficiles à défaire, nucléon par nucléon."
+            },
+            {
+              "label": "à l'extrémité droite de la courbe, du côté des noyaux lourds ($A$ voisin de $235$)",
+              "why": "Ces noyaux ont une énergie de liaison **totale** énorme, mais leur $E_{\\ell}/A$ n'est que de $7{,}6\\ \\mathrm{MeV}$ par nucléon : c'est pourquoi ils peuvent subir la fission."
+            },
+            {
+              "label": "à l'extrémité gauche de la courbe, du côté des noyaux très légers ($A < 20$)",
+              "why": "Au contraire, les noyaux très légers ont une faible $E_{\\ell}/A$ ; c'est précisément ce qui rend leur fusion énergétiquement favorable."
+            },
+            {
+              "label": "sur toute la partie plate de la courbe, où $E_{\\ell}/A$ est le même pour tous les noyaux",
+              "why": "La courbe n'est jamais plate au point d'égaliser les stabilités : $E_{\\ell}/A$ varie de $1$ à $8{,}8\\ \\mathrm{MeV}$ par nucléon selon le noyau."
+            }
+          ],
+          "hint": "Le critère de stabilité est $E_{\\ell}/A$. Où cette grandeur est-elle maximale sur la courbe ?",
+          "solution": "Le critère de stabilité d'un noyau est son énergie de liaison **par nucléon** $E_{\\ell}/A$ : plus elle est grande, plus il faut d'énergie pour arracher chaque nucléon, donc plus le noyau est stable.\nSur la courbe d'Aston (tracée en $-E_{\\ell}/A$), ce maximum de $E_{\\ell}/A$ correspond au **minimum** de l'ordonnée, c'est-à-dire au fond du creux, atteint pour $A \\approx 60$ : le fer et le nickel.\nConséquence directe : de part et d'autre de ce creux, les noyaux ont intérêt à s'en rapprocher. Les noyaux légers le font par **fusion**, les noyaux lourds par **fission**, et les deux transformations libèrent de l'énergie.\nContrôle : $E_{\\ell}/A$ vaut $7{,}07$ pour l'hélium 4, $8{,}79$ pour le fer 56 et $7{,}59$ pour l'uranium 235. Le maximum est bien au milieu, vers $A \\approx 60$.",
+          "methode": "Retiens le repère $A \\approx 60$ (fer, nickel) et $E_{\\ell}/A \\approx 8{,}8\\ \\mathrm{MeV}$ par nucléon : c'est le sommet de la stabilité nucléaire.",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-courbe-d-aston-q2"
+        },
+        {
+          "notion": "La courbe d'Aston",
+          "difficulty": 3,
+          "statement": "On donne $E_{\\ell}(^{56}_{26}\\mathrm{Fe}) = 492{,}3\\ \\mathrm{MeV}$ et $E_{\\ell}(^{235}_{92}\\mathrm{U}) = 1784\\ \\mathrm{MeV}$. Lequel de ces deux noyaux est le plus stable ?",
+          "options": [
+            {
+              "label": "le fer 56, car $E_{\\ell}/A = 8{,}79\\ \\mathrm{MeV}$ par nucléon contre $7{,}59$ pour l'uranium 235",
+              "correct": true,
+              "why": "$492{,}3/56 = 8{,}79$ et $1784/235 = 7{,}59$ : le critère de stabilité est bien $E_{\\ell}/A$, et il est plus grand pour le fer."
+            },
+            {
+              "label": "l'uranium 235, car son énergie de liaison $1784\\ \\mathrm{MeV}$ est bien supérieure à $492{,}3\\ \\mathrm{MeV}$",
+              "why": "Tu as comparé les énergies de liaison **totales** : tout gros noyau en a une grande puisqu'il a beaucoup de nucléons. Il faut comparer les $E_{\\ell}/A$."
+            },
+            {
+              "label": "l'uranium 235, car il contient plus de nucléons, donc davantage de liaisons entre nucléons",
+              "why": "Le nombre de liaisons ne mesure pas la stabilité : ce qui compte est l'énergie à fournir **par nucléon**, et elle est plus faible pour l'uranium."
+            },
+            {
+              "label": "les deux sont aussi stables, car leurs énergies de liaison sont proportionnelles à leurs nombres de masse",
+              "why": "La proportionnalité est fausse : $492{,}3/56 = 8{,}79$ alors que $1784/235 = 7{,}59$. Les deux rapports diffèrent nettement."
+            }
+          ],
+          "hint": "Un noyau de $235$ nucléons aura forcément une grande $E_{\\ell}$ totale. Quelle grandeur permet alors une comparaison honnête ?",
+          "solution": "Comparer des énergies de liaison totales n'a pas de sens : elles croissent avec le nombre de nucléons. Le critère de stabilité est l'énergie de liaison **par nucléon**.\n$$\\frac{E_{\\ell}}{A}(\\mathrm{Fe}) = \\frac{492{,}3}{56} = 8{,}79\\ \\mathrm{MeV}\\ \\text{par nucléon}$$\n$$\\frac{E_{\\ell}}{A}(\\mathrm{U}) = \\frac{1784}{235} = 7{,}59\\ \\mathrm{MeV}\\ \\text{par nucléon}$$\nComme $8{,}79 > 7{,}59$, le fer 56 est le plus stable des deux.\nContrôle par la courbe d'Aston : le fer ($A = 56$) est au fond du creux, l'uranium ($A = 235$) est sur la branche de droite, plus haut. C'est bien le fer le plus stable, et c'est pourquoi l'uranium peut libérer de l'énergie par fission.",
+          "methode": "Pour juger une stabilité, **jamais** $E_{\\ell}$ : toujours $E_{\\ell}/A$. C'est le piège le plus fréquent du chapitre.",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-courbe-d-aston-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le bilan d'énergie d'une réaction nucléaire",
+        "lesson": "Fission, fusion & bilan d'énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-le-bilan-d-energie-d-une-reaction-nuclea",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "Le bilan d'énergie d'une réaction nucléaire",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le bilan d'énergie d'une réaction nucléaire",
+          "difficulty": 1,
+          "statement": "On pose $\\Delta m = \\sum m_{produits} - \\sum m_{réactifs}$ pour une réaction nucléaire. Cette réaction est exoénergétique (elle libère de l'énergie) lorsque :",
+          "options": [
+            {
+              "label": "$\\Delta m < 0$, et l'énergie libérée vaut $|\\Delta E| = |\\Delta m|\\,c^{2}$",
+              "correct": true,
+              "why": "Les produits sont alors moins massiques que les réactifs : la masse manquante est emportée sous forme d'énergie, d'où $|\\Delta E| = |\\Delta m|\\,c^{2}$."
+            },
+            {
+              "label": "$\\Delta m > 0$, et l'énergie libérée vaut $|\\Delta E| = \\Delta m\\,c^{2}$",
+              "why": "Tu as inversé le signe : si les produits sont **plus** massiques que les réactifs, il a fallu **fournir** de l'énergie. La réaction serait endoénergétique."
+            },
+            {
+              "label": "$\\Delta m = 0$, car la masse se conserve dans toute réaction nucléaire",
+              "why": "La masse ne se conserve pas dans une réaction nucléaire : c'est justement sa variation qui mesure l'énergie échangée."
+            },
+            {
+              "label": "la somme des nombres de masse $A$ des produits est inférieure à celle des réactifs",
+              "why": "Le nombre de masse $A$ est **toujours** conservé (loi de Soddy) : cette condition ne peut jamais être réalisée."
+            }
+          ],
+          "hint": "Si la réaction donne de l'énergie au milieu extérieur, le système a perdu de l'énergie. Que devient alors sa masse ?",
+          "solution": "Une réaction nucléaire exoénergétique cède de l'énergie au milieu extérieur. D'après l'équivalence masse–énergie, cette perte d'énergie se traduit par une perte de masse du système :\n$$\\Delta m = \\sum m_{produits} - \\sum m_{réactifs} < 0$$\net l'énergie libérée, qui est une grandeur positive, vaut :\n$$|\\Delta E| = |\\Delta m|\\,c^{2}$$\nContrôle : les nombres de masse $A$ et de charge $Z$, eux, se conservent toujours. C'est bien la **masse** (en u ou en kg) qui varie, pas le nombre de nucléons.",
+          "methode": "Convention à fixer une fois pour toutes : $\\Delta m$ = produits moins réactifs. $\\Delta m < 0$ $\\Rightarrow$ la réaction libère de l'énergie.",
+          "points": 1,
+          "ref": "pc-noyau-energie-le-bilan-d-energie-d-une-reaction-nuclea-q1"
+        },
+        {
+          "notion": "Le bilan d'énergie d'une réaction nucléaire",
+          "difficulty": 2,
+          "statement": "On considère la réaction $^{7}_{3}\\mathrm{Li} + ^{1}_{1}\\mathrm{H} \\longrightarrow 2\\,^{4}_{2}\\mathrm{He}$, avec $m(^{7}_{3}\\mathrm{Li}) = 7{,}01435\\ \\mathrm{u}$, $m_p = 1{,}00728\\ \\mathrm{u}$, $m(^{4}_{2}\\mathrm{He}) = 4{,}00150\\ \\mathrm{u}$ et $1\\ \\mathrm{u} = 931{,}5\\ \\mathrm{MeV}/c^{2}$. L'énergie libérée vaut :",
+          "options": [
+            {
+              "label": "$17{,}35\\ \\mathrm{MeV}$",
+              "correct": true,
+              "why": "$\\Delta m = 2(4{,}00150) - (7{,}01435 + 1{,}00728) = -0{,}01863\\ \\mathrm{u}$, donc $|\\Delta E| = 0{,}01863\\times931{,}5 = 17{,}35\\ \\mathrm{MeV}$."
+            },
+            {
+              "label": "$2{,}00\\times10^{-5}\\ \\mathrm{MeV}$",
+              "why": "Tu as divisé $|\\Delta m|$ par $931{,}5$ au lieu de multiplier : $0{,}01863/931{,}5 = 2{,}00\\times10^{-5}$."
+            },
+            {
+              "label": "$2{,}78\\times10^{-12}\\ \\mathrm{MeV}$",
+              "why": "Tu as calculé l'énergie en joules ($2{,}78\\times10^{-12}\\ \\mathrm{J}$) sans la convertir en MeV : il reste à diviser par $1{,}602\\times10^{-13}$."
+            },
+            {
+              "label": "$7{,}472\\times10^{3}\\ \\mathrm{MeV}$",
+              "why": "Tu as converti la masse **totale** des réactifs ($8{,}02163\\times931{,}5$) au lieu de la **variation** de masse de la réaction."
+            }
+          ],
+          "hint": "Calcule d'abord $\\Delta m$ en n'oubliant pas le coefficient $2$ devant l'hélium, puis convertis sa valeur absolue avec $931{,}5$.",
+          "solution": "Variation de masse de la réaction (produits moins réactifs) :\n$$\\Delta m = 2\\,m(^{4}_{2}\\mathrm{He}) - \\big(m(^{7}_{3}\\mathrm{Li}) + m_p\\big) = 2(4{,}00150) - (7{,}01435 + 1{,}00728)$$\n$$\\Delta m = 8{,}00300 - 8{,}02163 = -0{,}01863\\ \\mathrm{u}$$\n$\\Delta m$ est négatif : la réaction est bien exoénergétique. L'énergie libérée vaut :\n$$|\\Delta E| = |\\Delta m| \\times 931{,}5 = 0{,}01863\\times931{,}5 = 17{,}35\\ \\mathrm{MeV}$$\nContrôle de l'ordre de grandeur : quelques dizaines de MeV pour une réaction de fusion de noyaux légers, c'est exactement ce qu'on attend.",
+          "methode": "N'oublie jamais les coefficients stœchiométriques dans la somme des masses : ici $2\\,m(^{4}\\mathrm{He})$, pas $m(^{4}\\mathrm{He})$.",
+          "points": 1,
+          "ref": "pc-noyau-energie-le-bilan-d-energie-d-une-reaction-nuclea-q2"
+        },
+        {
+          "notion": "Le bilan d'énergie d'une réaction nucléaire",
+          "difficulty": 2,
+          "statement": "Pour la même réaction $^{7}_{3}\\mathrm{Li} + ^{1}_{1}\\mathrm{H} \\longrightarrow 2\\,^{4}_{2}\\mathrm{He}$, on donne $E_{\\ell}(^{7}_{3}\\mathrm{Li}) = 39{,}24\\ \\mathrm{MeV}$ et $E_{\\ell}(^{4}_{2}\\mathrm{He}) = 28{,}30\\ \\mathrm{MeV}$. Un nucléon isolé comme le proton n'a pas d'énergie de liaison. L'énergie libérée vaut :",
+          "options": [
+            {
+              "label": "$17{,}36\\ \\mathrm{MeV}$",
+              "correct": true,
+              "why": "$\\sum E_{\\ell}(produits) - \\sum E_{\\ell}(réactifs) = 2(28{,}30) - 39{,}24 = 56{,}60 - 39{,}24 = 17{,}36\\ \\mathrm{MeV}$."
+            },
+            {
+              "label": "$-10{,}94\\ \\mathrm{MeV}$",
+              "why": "Tu as oublié qu'il se forme **deux** noyaux d'hélium : $28{,}30 - 39{,}24 = -10{,}94$ au lieu de $2(28{,}30) - 39{,}24$."
+            },
+            {
+              "label": "$-17{,}36\\ \\mathrm{MeV}$",
+              "why": "Tu as fait réactifs moins produits : avec les énergies de liaison, l'énergie libérée est produits moins réactifs."
+            },
+            {
+              "label": "$95{,}84\\ \\mathrm{MeV}$",
+              "why": "Tu as additionné les énergies de liaison ($56{,}60 + 39{,}24$) au lieu de les soustraire."
+            }
+          ],
+          "hint": "Avec cette méthode, l'énergie libérée est le **gain** d'énergie de liaison entre l'état final et l'état initial. Compte bien le nombre de noyaux d'hélium formés.",
+          "solution": "Méthode par les énergies de liaison : l'énergie libérée est le gain d'énergie de liaison du système.\n$$|\\Delta E| = \\sum E_{\\ell}(produits) - \\sum E_{\\ell}(réactifs)$$\nIl se forme deux noyaux d'hélium 4, et le proton réactif n'a pas d'énergie de liaison :\n$$|\\Delta E| = 2\\times28{,}30 - 39{,}24 = 56{,}60 - 39{,}24 = 17{,}36\\ \\mathrm{MeV}$$\nContrôle : la méthode par les masses donnait $17{,}35\\ \\mathrm{MeV}$ pour la même réaction. Les deux voies concordent à l'arrondi près, ce qui valide le calcul.",
+          "methode": "Deux voies pour la même énergie : par les masses ($|\\Delta m|\\times931{,}5$) ou par les énergies de liaison ($\\sum E_{\\ell}$ produits moins réactifs). Choisis celle dont l'énoncé te donne les données.",
+          "points": 1,
+          "ref": "pc-noyau-energie-le-bilan-d-energie-d-une-reaction-nuclea-q3"
+        },
+        {
+          "notion": "Le bilan d'énergie d'une réaction nucléaire",
+          "difficulty": 3,
+          "statement": "La réaction $^{7}_{3}\\mathrm{Li} + ^{1}_{1}\\mathrm{H} \\longrightarrow 2\\,^{4}_{2}\\mathrm{He}$ libère $17{,}35\\ \\mathrm{MeV}$ et consomme un noyau de lithium 7. On prend $M(^{7}\\mathrm{Li}) = 7{,}0\\ \\mathrm{g\\,mol^{-1}}$, $N_A = 6{,}02\\times10^{23}\\ \\mathrm{mol^{-1}}$ et $1\\ \\mathrm{MeV} = 1{,}602\\times10^{-13}\\ \\mathrm{J}$. L'énergie libérée par $1{,}0\\ \\mathrm{g}$ de lithium 7 vaut :",
+          "options": [
+            {
+              "label": "$2{,}39\\times10^{11}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$N = (1{,}0/7{,}0)\\times6{,}02\\times10^{23} = 8{,}60\\times10^{22}$ noyaux, puis $8{,}60\\times10^{22}\\times17{,}35\\times1{,}602\\times10^{-13} = 2{,}39\\times10^{11}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$1{,}49\\times10^{24}\\ \\mathrm{J}$",
+              "why": "Tu as laissé le résultat en MeV ($1{,}49\\times10^{24}\\ \\mathrm{MeV}$) sans le multiplier par $1{,}602\\times10^{-13}$ pour passer aux joules."
+            },
+            {
+              "label": "$1{,}67\\times10^{12}\\ \\mathrm{J}$",
+              "why": "Tu as pris $N = N_A$ directement, en oubliant de diviser la masse par la masse molaire : $1{,}0\\ \\mathrm{g}$ de lithium 7, ce n'est pas une mole mais $0{,}14\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$3{,}97\\times10^{-13}\\ \\mathrm{J}$",
+              "why": "Tu as oublié le nombre d'Avogadro : tu as multiplié par le nombre de **moles** ($0{,}14$) au lieu du nombre de **noyaux**."
+            }
+          ],
+          "hint": "Trois étapes : nombre de moles, nombre de noyaux, puis énergie totale convertie en joules.",
+          "solution": "Nombre de noyaux de lithium 7 dans $1{,}0\\ \\mathrm{g}$ :\n$$N = \\frac{m}{M}\\,N_A = \\frac{1{,}0}{7{,}0}\\times6{,}02\\times10^{23} = 8{,}60\\times10^{22}\\ \\text{noyaux}$$\nChaque noyau consommé libère $17{,}35\\ \\mathrm{MeV}$, soit au total :\n$$E = 8{,}60\\times10^{22}\\times17{,}35 = 1{,}49\\times10^{24}\\ \\mathrm{MeV}$$\n$$E = 1{,}49\\times10^{24}\\times1{,}602\\times10^{-13} = 2{,}39\\times10^{11}\\ \\mathrm{J}$$\nContrôle : la combustion de $1{,}0\\ \\mathrm{g}$ de charbon libère environ $3\\times10^{4}\\ \\mathrm{J}$. Le rapport est de l'ordre de $10^{7}$, ce qui correspond bien à l'écart attendu entre réaction nucléaire et réaction chimique.",
+          "methode": "Passer du noyau au gramme : $N = \\dfrac{m}{M}N_A$, puis $E = N\\times E_{\\text{une réaction}}$, et seulement à la fin la conversion MeV $\\to$ J.",
+          "points": 1,
+          "ref": "pc-noyau-energie-le-bilan-d-energie-d-une-reaction-nuclea-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La fission nucléaire",
+        "lesson": "Fission, fusion & bilan d'énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-la-fission-nucleaire",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "La fission nucléaire",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La fission nucléaire",
+          "difficulty": 1,
+          "statement": "La fission nucléaire est :",
+          "options": [
+            {
+              "label": "la rupture d'un noyau lourd, provoquée par un neutron, en deux noyaux de masses moyennes et quelques neutrons",
+              "correct": true,
+              "why": "C'est la définition : la fission est **provoquée** (par un neutron), elle part d'un noyau lourd et produit deux fragments de masses voisines plus des neutrons."
+            },
+            {
+              "label": "la réunion de deux noyaux légers en un noyau plus lourd",
+              "why": "Tu as décrit la **fusion**, qui est la transformation inverse et concerne les noyaux légers."
+            },
+            {
+              "label": "la désintégration spontanée d'un noyau lourd avec émission d'une particule $\\alpha$",
+              "why": "C'est la radioactivité $\\alpha$ : elle est **spontanée** et ne produit qu'un noyau fils et un noyau d'hélium, pas deux fragments de masses voisines."
+            },
+            {
+              "label": "l'arrachement d'un ou plusieurs électrons au cortège électronique d'un atome lourd",
+              "why": "C'est l'ionisation, un phénomène qui ne concerne que les électrons : le noyau n'y est pas modifié."
+            }
+          ],
+          "hint": "Trois mots clés distinguent la fission : « provoquée », « noyau lourd », « deux fragments ».",
+          "solution": "La fission est la rupture d'un noyau lourd (uranium 235, plutonium 239) sous l'impact d'un neutron, en deux noyaux de masses moyennes accompagnés de deux ou trois neutrons. Exemple :\n$$^{235}_{92}\\mathrm{U} + ^{1}_{0}\\mathrm{n} \\longrightarrow\\ ^{139}_{54}\\mathrm{Xe} + ^{94}_{38}\\mathrm{Sr} + 3\\,^{1}_{0}\\mathrm{n}$$\nElle est **provoquée** et non spontanée : c'est ce qui la distingue d'une désintégration radioactive. Les neutrons émis peuvent provoquer de nouvelles fissions : c'est la réaction en chaîne.\nContrôle sur l'exemple : $A$ : $235 + 1 = 236$ et $139 + 94 + 3 = 236$ ; $Z$ : $92 = 54 + 38$. Les lois de conservation sont respectées.",
+          "methode": "Fission = noyau **lourd** cassé par un neutron. Fusion = noyaux **légers** réunis. Ne confonds jamais les deux sens.",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-fission-nucleaire-q1"
+        },
+        {
+          "notion": "La fission nucléaire",
+          "difficulty": 2,
+          "statement": "Dans la fission $^{235}_{92}\\mathrm{U} + ^{1}_{0}\\mathrm{n} \\longrightarrow\\ ^{139}_{54}\\mathrm{Xe} + ^{A}_{Z}X + 3\\,^{1}_{0}\\mathrm{n}$, le noyau $^{A}_{Z}X$ est :",
+          "options": [
+            {
+              "label": "$^{94}_{38}X$",
+              "correct": true,
+              "why": "Conservation de $A$ : $236 = 139 + A + 3$ donne $A = 94$. Conservation de $Z$ : $92 = 54 + Z + 0$ donne $Z = 38$."
+            },
+            {
+              "label": "$^{97}_{38}X$",
+              "why": "Tu as oublié les $3$ neutrons émis dans le bilan de $A$ : $236 - 139 = 97$, alors qu'il faut encore retirer $3$."
+            },
+            {
+              "label": "$^{93}_{38}X$",
+              "why": "Tu as oublié le neutron incident parmi les réactifs : $235 - 139 - 3 = 93$, alors que le membre de gauche totalise $A = 236$."
+            },
+            {
+              "label": "$^{94}_{35}X$",
+              "why": "Tu as retiré une charge pour chacun des $3$ neutrons émis : $92 - 54 - 3 = 35$. Or le neutron n'est pas chargé, son $Z$ vaut $0$."
+            }
+          ],
+          "hint": "Écris les deux lois de conservation séparément, en comptant bien **tous** les termes de chaque côté, neutrons inclus.",
+          "solution": "Les lois de conservation de Soddy s'appliquent de part et d'autre de la flèche.\nConservation du nombre de masse $A$ :\n$$235 + 1 = 139 + A + 3\\times1 \\quad\\Longrightarrow\\quad 236 = 142 + A \\quad\\Longrightarrow\\quad A = 94$$\nConservation du nombre de charge $Z$ (le neutron a $Z = 0$) :\n$$92 + 0 = 54 + Z + 3\\times0 \\quad\\Longrightarrow\\quad Z = 38$$\nLe noyau cherché est donc $^{94}_{38}X$ : il s'agit du strontium 94.\nContrôle : $139 + 94 + 3 = 236$ et $54 + 38 = 92$. Les deux bilans sont bouclés.",
+          "methode": "Dans un bilan nucléaire, traite $A$ et $Z$ comme deux équations indépendantes, et n'oublie aucun neutron : il compte pour $1$ en $A$ et pour $0$ en $Z$.",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-fission-nucleaire-q2"
+        },
+        {
+          "notion": "La fission nucléaire",
+          "difficulty": 3,
+          "statement": "Pour la fission $^{235}_{92}\\mathrm{U} + ^{1}_{0}\\mathrm{n} \\longrightarrow\\ ^{139}_{54}\\mathrm{Xe} + ^{94}_{38}\\mathrm{Sr} + 3\\,^{1}_{0}\\mathrm{n}$, on donne les énergies de liaison par nucléon : $7{,}591\\ \\mathrm{MeV}$ pour l'uranium 235, $8{,}39$ pour le xénon 139 et $8{,}59$ pour le strontium 94. Les neutrons n'ont pas d'énergie de liaison. L'énergie libérée vaut :",
+          "options": [
+            {
+              "label": "$189{,}8\\ \\mathrm{MeV}$",
+              "correct": true,
+              "why": "$(139\\times8{,}39 + 94\\times8{,}59) - 235\\times7{,}591 = 1973{,}7 - 1783{,}9 = 189{,}8\\ \\mathrm{MeV}$."
+            },
+            {
+              "label": "$9{,}39\\ \\mathrm{MeV}$",
+              "why": "Tu as soustrait les $E_{\\ell}/A$ entre elles ($8{,}39 + 8{,}59 - 7{,}591$) : il faut d'abord multiplier chaque $E_{\\ell}/A$ par le $A$ correspondant pour obtenir des $E_{\\ell}$ totales."
+            },
+            {
+              "label": "$3{,}758\\times10^{3}\\ \\mathrm{MeV}$",
+              "why": "Tu as additionné les énergies de liaison ($1973{,}7 + 1783{,}9$) au lieu de les soustraire."
+            },
+            {
+              "label": "$-189{,}8\\ \\mathrm{MeV}$",
+              "why": "Tu as fait réactifs moins produits : avec les énergies de liaison, l'énergie libérée est produits moins réactifs."
+            }
+          ],
+          "hint": "Attention : les données sont des $E_{\\ell}/A$, pas des $E_{\\ell}$. Repasse aux énergies de liaison totales avant tout bilan.",
+          "solution": "Les données sont des énergies de liaison **par nucléon** : il faut d'abord les multiplier par le nombre de masse de chaque noyau.\n$$E_{\\ell}(^{139}\\mathrm{Xe}) = 139\\times8{,}39 = 1166{,}2\\ \\mathrm{MeV}$$\n$$E_{\\ell}(^{94}\\mathrm{Sr}) = 94\\times8{,}59 = 807{,}5\\ \\mathrm{MeV}$$\n$$E_{\\ell}(^{235}\\mathrm{U}) = 235\\times7{,}591 = 1783{,}9\\ \\mathrm{MeV}$$\nL'énergie libérée est le gain d'énergie de liaison :\n$$|\\Delta E| = (1166{,}2 + 807{,}5) - 1783{,}9 = 1973{,}7 - 1783{,}9 = 189{,}8\\ \\mathrm{MeV}$$\nContrôle : une fission d'uranium 235 libère environ $200\\ \\mathrm{MeV}$, valeur classique du cours. Le résultat est du bon ordre.",
+          "methode": "Quand l'énoncé donne des $E_{\\ell}/A$, commence **toujours** par $E_{\\ell} = A\\times(E_{\\ell}/A)$ pour chaque noyau. Un bilan ne se fait jamais sur des grandeurs « par nucléon ».",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-fission-nucleaire-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La fusion nucléaire",
+        "lesson": "Fission, fusion & bilan d'énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-la-fusion-nucleaire",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "La fusion nucléaire",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La fusion nucléaire",
+          "difficulty": 1,
+          "statement": "Pour que deux noyaux légers fusionnent, il faut :",
+          "options": [
+            {
+              "label": "une température très élevée, pour que leur énergie cinétique leur permette de vaincre la répulsion électrique",
+              "correct": true,
+              "why": "Les deux noyaux sont chargés positivement et se repoussent : seule une très grande agitation thermique (plusieurs millions de degrés) permet de les approcher assez près."
+            },
+            {
+              "label": "un neutron lent, qui vient amorcer la réaction en pénétrant dans l'un des noyaux",
+              "why": "C'est le mécanisme de la **fission**, pas de la fusion : la fusion n'a pas besoin de projectile, mais de vitesse pour les noyaux eux-mêmes."
+            },
+            {
+              "label": "une pression très basse, pour que les noyaux se déplacent sans se gêner",
+              "why": "C'est l'inverse : il faut une densité élevée pour multiplier les chances de rencontre entre noyaux."
+            },
+            {
+              "label": "un catalyseur, qui abaisse l'énergie nécessaire au rapprochement des noyaux",
+              "why": "Les catalyseurs agissent sur les réactions chimiques, qui mettent en jeu les électrons. Ils n'ont aucun effet sur une réaction nucléaire."
+            }
+          ],
+          "hint": "Deux noyaux portent des charges de même signe. Qu'est-ce qui les empêche de se rapprocher, et comment le surmonter ?",
+          "solution": "Deux noyaux portent des charges électriques positives : à mesure qu'ils se rapprochent, la répulsion électrique entre eux augmente très fortement. Pour qu'ils arrivent assez près pour que l'interaction forte prenne le relais et les lie, il faut qu'ils arrivent l'un sur l'autre avec une très grande énergie cinétique.\nOn l'obtient en portant la matière à très haute température (plusieurs dizaines de millions de kelvins) : la matière est alors à l'état de **plasma**.\nContrôle : c'est exactement la condition réalisée au cœur du Soleil, où la fusion de l'hydrogène se produit à environ $1{,}5\\times10^{7}\\ \\mathrm{K}$.",
+          "methode": "Fusion = vaincre la répulsion électrique. La condition est donc **thermique** : très haute température, et densité suffisante.",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-fusion-nucleaire-q1"
+        },
+        {
+          "notion": "La fusion nucléaire",
+          "difficulty": 2,
+          "statement": "Dans la réaction de fusion $^{2}_{1}\\mathrm{H} + ^{2}_{1}\\mathrm{H} \\longrightarrow\\ ^{3}_{2}\\mathrm{He} + ^{A}_{Z}X$, la particule $^{A}_{Z}X$ est :",
+          "options": [
+            {
+              "label": "$^{1}_{0}\\mathrm{n}$, un neutron",
+              "correct": true,
+              "why": "Conservation de $A$ : $2 + 2 = 3 + A$ donne $A = 1$. Conservation de $Z$ : $1 + 1 = 2 + Z$ donne $Z = 0$ : c'est un neutron."
+            },
+            {
+              "label": "$^{1}_{1}\\mathrm{H}$, un proton",
+              "why": "Tu as bien trouvé $A = 1$, mais pas $Z$ : le bilan de charge $1 + 1 = 2 + Z$ impose $Z = 0$, pas $Z = 1$."
+            },
+            {
+              "label": "$^{0}_{-1}\\mathrm{e}$, un électron",
+              "why": "Le nombre de masse ne serait pas conservé : $2 + 2 = 4$ à gauche contre $3 + 0 = 3$ à droite."
+            },
+            {
+              "label": "$^{4}_{2}\\mathrm{He}$, un noyau d'hélium 4",
+              "why": "Le nombre de masse ne serait pas conservé : il faudrait $3 + 4 = 7$ à droite, contre $4$ à gauche."
+            }
+          ],
+          "hint": "Applique les deux lois de conservation ($A$ puis $Z$) : elles déterminent entièrement la particule manquante.",
+          "solution": "Conservation du nombre de masse :\n$$2 + 2 = 3 + A \\quad\\Longrightarrow\\quad A = 1$$\nConservation du nombre de charge :\n$$1 + 1 = 2 + Z \\quad\\Longrightarrow\\quad Z = 0$$\nLa particule de nombre de masse $1$ et de charge nulle est le neutron $^{1}_{0}\\mathrm{n}$. La réaction s'écrit donc :\n$$^{2}_{1}\\mathrm{H} + ^{2}_{1}\\mathrm{H} \\longrightarrow\\ ^{3}_{2}\\mathrm{He} + ^{1}_{0}\\mathrm{n}$$\nContrôle : $A$ : $4 = 4$ ; $Z$ : $2 = 2$. Les deux bilans sont bouclés.",
+          "methode": "Deux inconnues, deux équations : $A$ et $Z$ se déterminent séparément, puis on identifie la particule ($Z = 0$ et $A = 1$ $\\Rightarrow$ neutron).",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-fusion-nucleaire-q2"
+        },
+        {
+          "notion": "La fusion nucléaire",
+          "difficulty": 2,
+          "statement": "Pour la réaction $^{2}_{1}\\mathrm{H} + ^{2}_{1}\\mathrm{H} \\longrightarrow\\ ^{3}_{2}\\mathrm{He} + ^{1}_{0}\\mathrm{n}$, on donne $m(^{2}_{1}\\mathrm{H}) = 2{,}01355\\ \\mathrm{u}$, $m(^{3}_{2}\\mathrm{He}) = 3{,}01493\\ \\mathrm{u}$, $m_n = 1{,}00866\\ \\mathrm{u}$ et $1\\ \\mathrm{u} = 931{,}5\\ \\mathrm{MeV}/c^{2}$. L'énergie libérée vaut :",
+          "options": [
+            {
+              "label": "$3{,}27\\ \\mathrm{MeV}$",
+              "correct": true,
+              "why": "$\\Delta m = (3{,}01493 + 1{,}00866) - 2(2{,}01355) = -0{,}00351\\ \\mathrm{u}$, donc $|\\Delta E| = 0{,}00351\\times931{,}5 = 3{,}27\\ \\mathrm{MeV}$."
+            },
+            {
+              "label": "$3{,}51\\times10^{-3}\\ \\mathrm{MeV}$",
+              "why": "C'est $|\\Delta m|$ exprimé en u : tu as oublié de multiplier par $931{,}5$ pour obtenir une énergie en MeV."
+            },
+            {
+              "label": "$1{,}872\\times10^{3}\\ \\mathrm{MeV}$",
+              "why": "Tu n'as compté qu'**un seul** noyau de deutérium parmi les réactifs : $(3{,}01493 + 1{,}00866 - 2{,}01355)\\times931{,}5 = 1{,}872\\times10^{3}$."
+            },
+            {
+              "label": "$3{,}751\\times10^{3}\\ \\mathrm{MeV}$",
+              "why": "Tu as converti la masse totale des réactifs ($2\\times2{,}01355 = 4{,}02710\\ \\mathrm{u}$) au lieu de la variation de masse."
+            }
+          ],
+          "hint": "Attention au coefficient : il y a **deux** noyaux de deutérium du côté des réactifs.",
+          "solution": "Variation de masse de la réaction (produits moins réactifs) :\n$$\\Delta m = \\big(m(^{3}_{2}\\mathrm{He}) + m_n\\big) - 2\\,m(^{2}_{1}\\mathrm{H}) = (3{,}01493 + 1{,}00866) - 2(2{,}01355)$$\n$$\\Delta m = 4{,}02359 - 4{,}02710 = -0{,}00351\\ \\mathrm{u}$$\n$\\Delta m < 0$ : la réaction libère de l'énergie.\n$$|\\Delta E| = 0{,}00351\\times931{,}5 = 3{,}27\\ \\mathrm{MeV}$$\nContrôle : la variation de masse ne représente que $0{,}09\\ \\%$ de la masse des réactifs, et l'énergie obtenue est de quelques MeV — ordre de grandeur typique d'une réaction de fusion de noyaux très légers.",
+          "methode": "Repère les coefficients de l'équation **avant** de sommer les masses : $2\\,^{2}_{1}\\mathrm{H}$ signifie deux fois la masse du deutérium.",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-fusion-nucleaire-q3"
+        },
+        {
+          "notion": "La fusion nucléaire",
+          "difficulty": 3,
+          "statement": "La fusion de deux noyaux légers libère de l'énergie. Pourquoi ?",
+          "options": [
+            {
+              "label": "parce que le noyau formé a une énergie de liaison **par nucléon** plus grande que celles des noyaux de départ",
+              "correct": true,
+              "why": "Le système gagne en énergie de liaison par nucléon en se rapprochant du creux de la courbe d'Aston ; ce gain est libéré vers l'extérieur."
+            },
+            {
+              "label": "parce que le noyau formé est plus massique que la somme des masses des noyaux de départ",
+              "why": "Tu as inversé le sens : si les produits étaient plus massiques, on aurait $\\Delta m > 0$ et la réaction **consommerait** de l'énergie."
+            },
+            {
+              "label": "parce que le nombre total de nucléons diminue, et la masse des nucléons disparus se transforme en énergie",
+              "why": "Le nombre de masse $A$ est toujours conservé : aucun nucléon ne disparaît. C'est la masse des nucléons **liés** qui diminue, pas leur nombre."
+            },
+            {
+              "label": "parce que les noyaux légers sont radioactifs et se désintègrent au moment de la rencontre",
+              "why": "Le deutérium et l'hélium 3 ne sont pas radioactifs, et la fusion n'est pas une désintégration : c'est une réaction provoquée entre deux noyaux."
+            }
+          ],
+          "hint": "Place les noyaux de départ et le noyau formé sur la courbe d'Aston : lequel est le plus proche du creux ?",
+          "solution": "Sur la courbe d'Aston, les noyaux très légers ont une faible énergie de liaison par nucléon. En fusionnant, ils forment un noyau plus lourd, situé plus près du creux de stabilité ($A \\approx 60$), donc de $E_{\\ell}/A$ plus grande.\nLe système gagne ainsi de l'énergie de liaison, et ce gain est libéré vers le milieu extérieur :\n$$|\\Delta E| = \\sum E_{\\ell}(produits) - \\sum E_{\\ell}(réactifs) > 0$$\nDe manière équivalente, le noyau formé est moins massique que la somme des noyaux de départ : $\\Delta m < 0$ et $|\\Delta E| = |\\Delta m|\\,c^{2}$.\nContrôle numérique sur la fusion deutérium–deutérium : $E_{\\ell}/A$ passe de $1{,}11\\ \\mathrm{MeV}$ par nucléon pour le deutérium à $2{,}57$ pour l'hélium 3. La valeur augmente bien, et la réaction libère effectivement $3{,}27\\ \\mathrm{MeV}$.",
+          "methode": "Fusion comme fission : l'énergie est libérée parce que les produits ont une $E_{\\ell}/A$ **plus grande** que les réactifs. C'est le seul critère à retenir.",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-fusion-nucleaire-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Comparaison et ordres de grandeur",
+        "lesson": "Fission, fusion & bilan d'énergie",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-comparaison-et-ordres-de-grandeur",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "Comparaison et ordres de grandeur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Comparaison et ordres de grandeur",
+          "difficulty": 1,
+          "statement": "Une réaction nucléaire met en jeu quelques MeV par noyau, une réaction chimique quelques eV par molécule. L'énergie libérée par une réaction nucléaire est donc, par rapport à une réaction chimique :",
+          "options": [
+            {
+              "label": "environ $10^{6}$ fois plus grande",
+              "correct": true,
+              "why": "$1\\ \\mathrm{MeV} = 10^{6}\\ \\mathrm{eV}$ : le rapport entre « quelques MeV » et « quelques eV » est bien de l'ordre du million."
+            },
+            {
+              "label": "environ $10^{3}$ fois plus grande",
+              "why": "Tu as pris $1\\ \\mathrm{MeV} = 10^{3}\\ \\mathrm{eV}$. Le préfixe « méga » vaut $10^{6}$, pas $10^{3}$ ; $10^{3}\\ \\mathrm{eV}$, c'est le keV."
+            },
+            {
+              "label": "environ $10^{6}$ fois plus petite",
+              "why": "Tu as inversé le sens du rapport : le MeV est l'unité **grande**, l'eV la petite."
+            },
+            {
+              "label": "du même ordre de grandeur",
+              "why": "Non : tout l'intérêt énergétique du nucléaire vient précisément de cet écart d'un facteur $10^{6}$ par particule transformée."
+            }
+          ],
+          "hint": "Compare simplement les deux unités : combien d'électron-volts dans un mégaélectron-volt ?",
+          "solution": "Une réaction nucléaire libère quelques MeV par noyau transformé, une réaction chimique quelques eV par molécule. Comme\n$$1\\ \\mathrm{MeV} = 10^{6}\\ \\mathrm{eV}$$\nle rapport des énergies mises en jeu est de l'ordre de $10^{6}$ : une réaction nucléaire libère environ un million de fois plus d'énergie, à nombre de particules transformées égal.\nContrôle : $1{,}0\\ \\mathrm{g}$ d'uranium 235 libère environ $7{,}4\\times10^{10}\\ \\mathrm{J}$ par fission, contre $3\\times10^{4}\\ \\mathrm{J}$ pour $1{,}0\\ \\mathrm{g}$ de charbon brûlé. Le rapport est de l'ordre de quelques $10^{6}$, cohérent.",
+          "methode": "Retiens les deux échelles : le MeV pour le noyau, l'eV pour la molécule. Un facteur $10^{6}$ sépare la chimie du nucléaire.",
+          "points": 1,
+          "ref": "pc-noyau-energie-comparaison-et-ordres-de-grandeur-q1"
+        },
+        {
+          "notion": "Comparaison et ordres de grandeur",
+          "difficulty": 2,
+          "statement": "La fission d'un noyau d'uranium 235 libère environ $190\\ \\mathrm{MeV}$ (pour $236$ nucléons engagés) ; la fusion $^{2}_{1}\\mathrm{H} + ^{3}_{1}\\mathrm{H} \\longrightarrow\\ ^{4}_{2}\\mathrm{He} + ^{1}_{0}\\mathrm{n}$ libère $17{,}60\\ \\mathrm{MeV}$ (pour $5$ nucléons engagés). Rapportée au nucléon, la réaction la plus énergétique est :",
+          "options": [
+            {
+              "label": "la fusion : $17{,}60/5 = 3{,}52\\ \\mathrm{MeV}$ par nucléon, contre $190/236 = 0{,}81$ pour la fission",
+              "correct": true,
+              "why": "En divisant chaque énergie par le nombre de nucléons engagés, la fusion l'emporte d'un facteur voisin de $4$."
+            },
+            {
+              "label": "la fission : $190\\ \\mathrm{MeV}$ est bien supérieur à $17{,}60\\ \\mathrm{MeV}$",
+              "why": "Tu as comparé les énergies **totales** sans les rapporter au nucléon, alors que la question porte explicitement sur l'énergie par nucléon."
+            },
+            {
+              "label": "la fission : $190/2 = 95\\ \\mathrm{MeV}$ par nucléon, puisqu'elle produit deux fragments",
+              "why": "Tu as divisé par le nombre de **fragments** au lieu du nombre de nucléons : il faut diviser par $236$, pas par $2$."
+            },
+            {
+              "label": "les deux réactions libèrent la même énergie par nucléon",
+              "why": "Non : $3{,}52$ et $0{,}81\\ \\mathrm{MeV}$ par nucléon diffèrent d'un facteur $4$ environ."
+            }
+          ],
+          "hint": "Divise chaque énergie libérée par le nombre de nucléons que la réaction met en jeu, puis compare les deux valeurs.",
+          "solution": "Pour comparer honnêtement deux réactions de « tailles » très différentes, on rapporte l'énergie libérée au nombre de nucléons engagés.\nFission de l'uranium 235 ($235 + 1 = 236$ nucléons) :\n$$\\frac{190}{236} = 0{,}81\\ \\mathrm{MeV}\\ \\text{par nucléon}$$\nFusion deutérium–tritium ($2 + 3 = 5$ nucléons) :\n$$\\frac{17{,}60}{5} = 3{,}52\\ \\mathrm{MeV}\\ \\text{par nucléon}$$\nLa fusion libère donc environ $3{,}52/0{,}81 \\approx 4{,}3$ fois plus d'énergie par nucléon que la fission.\nContrôle par la courbe d'Aston : entre les noyaux très légers et l'hélium 4, $E_{\\ell}/A$ fait un bond beaucoup plus grand qu'entre l'uranium et ses fragments. Le résultat est cohérent avec la forme de la courbe.",
+          "methode": "Dès qu'on compare deux réactions nucléaires, ramène tout « par nucléon » : c'est la seule comparaison qui ait un sens physique.",
+          "points": 1,
+          "ref": "pc-noyau-energie-comparaison-et-ordres-de-grandeur-q2"
+        },
+        {
+          "notion": "Comparaison et ordres de grandeur",
+          "difficulty": 3,
+          "statement": "La fission de $1{,}0\\ \\mathrm{g}$ d'uranium 235 libère $7{,}8\\times10^{10}\\ \\mathrm{J}$ ; la combustion de $1{,}0\\ \\mathrm{g}$ de charbon libère $3{,}3\\times10^{4}\\ \\mathrm{J}$. Le rapport de la première énergie à la seconde vaut :",
+          "options": [
+            {
+              "label": "$2{,}4\\times10^{6}$",
+              "correct": true,
+              "why": "$7{,}8\\times10^{10}/3{,}3\\times10^{4} = 2{,}4\\times10^{6}$ : un gramme d'uranium vaut plus de deux millions de grammes de charbon."
+            },
+            {
+              "label": "$4{,}2\\times10^{-7}$",
+              "why": "Tu as calculé le rapport inverse ($3{,}3\\times10^{4}/7{,}8\\times10^{10}$) : l'énoncé demande la première énergie divisée par la seconde."
+            },
+            {
+              "label": "$2{,}6\\times10^{15}$",
+              "why": "Tu as multiplié les deux énergies au lieu d'en faire le quotient : $7{,}8\\times10^{10}\\times3{,}3\\times10^{4} = 2{,}6\\times10^{15}$."
+            },
+            {
+              "label": "$7{,}8\\times10^{6}$",
+              "why": "Tu n'as divisé que par $10^{4}$, en oubliant le facteur $3{,}3$ du dénominateur."
+            }
+          ],
+          "hint": "Un simple quotient, mais surveille l'ordre des deux termes et n'oublie aucun des deux facteurs du dénominateur.",
+          "solution": "Le rapport demandé est :\n$$\\frac{E_{\\text{uranium}}}{E_{\\text{charbon}}} = \\frac{7{,}8\\times10^{10}}{3{,}3\\times10^{4}} = 2{,}4\\times10^{6}$$\nUn gramme d'uranium 235 fissionné libère donc environ $2{,}4$ millions de fois plus d'énergie qu'un gramme de charbon brûlé.\nContrôle : ce rapport est bien de l'ordre de $10^{6}$, exactement le facteur attendu entre l'échelle du MeV (nucléaire) et celle de l'eV (chimique). Autrement dit, pour remplacer $1{,}0\\ \\mathrm{g}$ d'uranium il faudrait environ $2{,}4$ tonnes de charbon.",
+          "methode": "Un rapport d'énergies est sans unité : vérifie toujours son ordre de grandeur contre le rapport des unités en jeu (MeV / eV $= 10^{6}$ ici).",
+          "points": 1,
+          "ref": "pc-noyau-energie-comparaison-et-ordres-de-grandeur-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La réaction en chaîne et son contrôle",
+        "lesson": "Approfondissement — Noyaux, masse et énergie",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-la-reaction-en-chaine-et-son-controle",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "La réaction en chaîne et son contrôle",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La réaction en chaîne et son contrôle",
+          "difficulty": 3,
+          "statement": "Dans un réacteur nucléaire, les barres de contrôle (en bore ou en cadmium) que l'on enfonce plus ou moins dans le cœur servent à :",
+          "options": [
+            {
+              "label": "absorber une partie des neutrons, de façon qu'en moyenne un seul neutron par fission provoque une nouvelle fission",
+              "correct": true,
+              "why": "C'est la condition d'une réaction en chaîne **contrôlée** : en ajustant l'absorption, on maintient le facteur de multiplication des neutrons égal à $1$."
+            },
+            {
+              "label": "ralentir les neutrons rapides issus des fissions, pour les rendre plus efficaces",
+              "why": "C'est le rôle du **modérateur** (eau, graphite), pas celui des barres de contrôle, qui au contraire retirent des neutrons du jeu."
+            },
+            {
+              "label": "évacuer vers le circuit secondaire la chaleur dégagée par les fissions",
+              "why": "C'est le rôle du **fluide caloporteur** qui circule dans le cœur ; les barres ne transportent pas l'énergie."
+            },
+            {
+              "label": "arrêter les rayonnements $\\gamma$ émis, pour qu'ils ne sortent pas du réacteur",
+              "why": "C'est le rôle des enceintes de confinement en béton et en acier, qui entourent le cœur."
+            }
+          ],
+          "hint": "Une réaction en chaîne s'emballe si chaque fission en provoque plus d'une. Sur quoi faut-il agir pour que ce nombre reste égal à $1$ ?",
+          "solution": "Chaque fission d'uranium 235 libère deux ou trois neutrons, capables de provoquer chacun une nouvelle fission : c'est la **réaction en chaîne**. Si le nombre moyen de fissions provoquées par fission est supérieur à $1$, le nombre de fissions croît de façon exponentielle et la réaction s'emballe.\nPour maintenir une puissance stable, il faut que ce nombre moyen soit **exactement égal à $1$**. Les barres de contrôle, faites de matériaux fortement absorbeurs de neutrons (bore, cadmium), sont enfoncées plus ou moins profondément dans le cœur pour retirer juste le nombre de neutrons nécessaire.\nContrôle : enfoncer davantage les barres fait baisser la puissance, les retirer la fait monter, et les enfoncer complètement arrête le réacteur. Ce comportement est bien celui d'un dispositif d'absorption des neutrons.",
+          "methode": "Dans un réacteur, distingue les trois organes : **modérateur** (ralentit les neutrons), **barres de contrôle** (en absorbent), **caloporteur** (évacue l'énergie).",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-reaction-en-chaine-et-son-controle-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La fusion : dans les étoiles et sur Terre",
+        "lesson": "Approfondissement — Noyaux, masse et énergie",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-la-fusion-dans-les-etoiles-et-sur-terre",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "La fusion : dans les étoiles et sur Terre",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La fusion : dans les étoiles et sur Terre",
+          "difficulty": 3,
+          "statement": "La fusion se produit en permanence au cœur du Soleil, mais la maîtriser sur Terre dans un réacteur reste très difficile. Pourquoi ?",
+          "options": [
+            {
+              "label": "parce qu'il faut maintenir un plasma à des dizaines de millions de degrés, assez dense et assez longtemps, alors qu'aucune paroi matérielle ne peut le contenir",
+              "correct": true,
+              "why": "Dans le Soleil, c'est la gravité qui confine et comprime le plasma ; sur Terre il faut la remplacer par des champs magnétiques intenses ou des lasers, ce qui est le vrai verrou technologique."
+            },
+            {
+              "label": "parce que le deutérium et le tritium ne se rencontrent pas sur Terre et doivent être importés",
+              "why": "Le deutérium est abondant dans l'eau des océans et le tritium se produit à partir du lithium : l'approvisionnement n'est pas la difficulté principale."
+            },
+            {
+              "label": "parce que la fusion ne libère de l'énergie qu'en l'absence de pesanteur, condition impossible à réaliser sur Terre",
+              "why": "La pesanteur n'intervient pas dans le bilan d'énergie d'une réaction nucléaire : celui-ci ne dépend que des masses des noyaux."
+            },
+            {
+              "label": "parce que la fusion exige une pression extrêmement faible, que l'on ne sait pas atteindre",
+              "why": "C'est l'inverse : il faut une densité et une pression **élevées** pour multiplier les rencontres entre noyaux."
+            }
+          ],
+          "hint": "Qu'est-ce qui, dans le Soleil, maintient la matière comprimée et chaude en son centre ? Peut-on reproduire cela dans une machine ?",
+          "solution": "La fusion exige que les noyaux se rencontrent avec une énergie cinétique suffisante pour vaincre leur répulsion électrique : il faut donc un gaz totalement ionisé (un **plasma**) porté à plusieurs dizaines de millions de kelvins, suffisamment dense, et maintenu dans cet état assez longtemps pour que les réactions soient nombreuses.\nAu centre du Soleil, c'est l'énorme champ de gravité de l'étoile qui assure ce confinement, de façon naturelle et permanente. Sur Terre, aucun matériau ne résiste à de telles températures et aucune paroi ne peut toucher le plasma. Il faut donc le confiner **sans contact** : par des champs magnétiques intenses (confinement magnétique, type tokamak) ou par des impulsions laser (confinement inertiel).\nContrôle : la difficulté est bien de nature technologique et non énergétique, puisque le bilan de masse de la réaction, lui, est largement favorable ($17{,}6\\ \\mathrm{MeV}$ pour la fusion deutérium–tritium).",
+          "methode": "Trois conditions pour la fusion : température très élevée, densité suffisante, durée de confinement suffisante. Dans une étoile, la gravité les assure ; sur Terre, il faut les fabriquer.",
+          "points": 1,
+          "ref": "pc-noyau-energie-la-fusion-dans-les-etoiles-et-sur-terre-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les déchets et la question des durées",
+        "lesson": "Approfondissement — Noyaux, masse et énergie",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-les-dechets-et-la-question-des-durees",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "Les déchets et la question des durées",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les déchets et la question des durées",
+          "difficulty": 3,
+          "statement": "Un déchet radioactif contient un nucléide de demi-vie $t_{1/2} = 24\\,000$ ans. On considère qu'il n'est plus dangereux lorsque son activité est tombée en dessous du millième de sa valeur initiale. La durée de stockage nécessaire est de l'ordre de :",
+          "options": [
+            {
+              "label": "$2{,}4\\times10^{5}$ ans, soit une dizaine de demi-vies",
+              "correct": true,
+              "why": "Dix demi-vies divisent l'activité par $2^{10} = 1024 > 1000$ : il faut donc $10\\times24\\,000 = 2{,}4\\times10^{5}$ ans."
+            },
+            {
+              "label": "$2{,}4\\times10^{4}$ ans, soit une seule demi-vie",
+              "why": "Une demi-vie ne divise l'activité que par $2$, pas par $1000$ : on est encore à $50\\ \\%$ de l'activité initiale."
+            },
+            {
+              "label": "$4{,}8\\times10^{4}$ ans, soit deux demi-vies",
+              "why": "Deux demi-vies divisent l'activité par $2^{2} = 4$ seulement : il reste encore $25\\ \\%$ de l'activité initiale."
+            },
+            {
+              "label": "$2{,}4\\times10^{7}$ ans, soit mille demi-vies",
+              "why": "Tu as confondu « diviser l'activité par $1000$ » et « attendre $1000$ demi-vies » : c'est le nombre de demi-vies $n$ qui vérifie $2^{n} > 1000$, soit $n = 10$."
+            }
+          ],
+          "hint": "Chaque demi-vie divise l'activité par $2$. Combien de fois faut-il diviser par $2$ pour descendre sous le millième ?",
+          "solution": "Après $n$ demi-vies, l'activité a été divisée par $2^{n}$ :\n$$\\frac{a}{a_0} = \\frac{1}{2^{n}}$$\nOn cherche $n$ tel que $2^{n} > 1000$. Comme $2^{9} = 512$ et $2^{10} = 1024$, il faut $n = 10$ demi-vies.\n$$\\Delta t = 10\\times t_{1/2} = 10\\times24\\,000 = 2{,}4\\times10^{5}\\ \\text{ans}$$\nContrôle : $a/a_0 = 1/1024 \\approx 9{,}8\\times10^{-4}$, bien inférieur à $10^{-3}$. C'est cette durée de l'ordre de quelques centaines de milliers d'années qui impose le stockage géologique profond des déchets à vie longue.",
+          "methode": "Repère utile : $10$ demi-vies divisent l'activité par environ $1000$, et $20$ demi-vies par environ un million. Cela évite tout calcul d'exponentielle.",
+          "points": 1,
+          "ref": "pc-noyau-energie-les-dechets-et-la-question-des-durees-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Applications et bilan",
+        "lesson": "Approfondissement — Noyaux, masse et énergie",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-noyau-energie-applications-et-bilan",
+      "chapter": "pc-noyau-energie",
+      "kind": "qcu",
+      "title": "Applications et bilan",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Applications et bilan",
+          "difficulty": 3,
+          "statement": "Une centrale nucléaire fournit une puissance électrique $P_e = 900\\ \\mathrm{MW}$ avec un rendement de $33\\ \\%$. Chaque fission d'un noyau d'uranium 235 libère $190\\ \\mathrm{MeV}$. On prend $M(^{235}\\mathrm{U}) = 235\\ \\mathrm{g\\,mol^{-1}}$, $N_A = 6{,}02\\times10^{23}\\ \\mathrm{mol^{-1}}$, $1\\ \\mathrm{MeV} = 1{,}602\\times10^{-13}\\ \\mathrm{J}$ et une journée $= 8{,}64\\times10^{4}\\ \\mathrm{s}$. La masse d'uranium 235 consommée en une journée vaut :",
+          "options": [
+            {
+              "label": "$3{,}0\\ \\mathrm{kg}$",
+              "correct": true,
+              "why": "$E_{th} = (900/0{,}33)\\times10^{6}\\times8{,}64\\times10^{4} = 2{,}36\\times10^{14}\\ \\mathrm{J}$, soit $7{,}74\\times10^{24}$ fissions et $m = 7{,}74\\times10^{24}/6{,}02\\times10^{23}\\times235 = 3{,}0\\times10^{3}\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{kg}$",
+              "why": "Tu as utilisé l'énergie **électrique** ($7{,}78\\times10^{13}\\ \\mathrm{J}$) au lieu de l'énergie thermique : il faut d'abord diviser par le rendement $0{,}33$."
+            },
+            {
+              "label": "$0{,}33\\ \\mathrm{kg}$",
+              "why": "Tu as **multiplié** par le rendement au lieu de diviser : la puissance thermique est plus grande que la puissance électrique, pas plus petite."
+            },
+            {
+              "label": "$3{,}0\\times10^{6}\\ \\mathrm{kg}$",
+              "why": "Tu as pris $1\\ \\mathrm{MeV} = 1{,}602\\times10^{-19}\\ \\mathrm{J}$ : c'est la valeur de l'électron-volt, celle du mégaélectron-volt est $10^{6}$ fois plus grande."
+            }
+          ],
+          "hint": "Quatre étapes : puissance thermique, énergie thermique du jour, nombre de fissions, puis masse via $N_A$.",
+          "solution": "La puissance thermique du cœur se déduit du rendement :\n$$P_{th} = \\frac{P_e}{\\eta} = \\frac{900\\times10^{6}}{0{,}33} = 2{,}73\\times10^{9}\\ \\mathrm{W}$$\nÉnergie thermique produite en une journée :\n$$E_{th} = P_{th}\\,\\Delta t = 2{,}73\\times10^{9}\\times8{,}64\\times10^{4} = 2{,}36\\times10^{14}\\ \\mathrm{J}$$\nÉnergie libérée par une fission, en joules :\n$$E_1 = 190\\times1{,}602\\times10^{-13} = 3{,}04\\times10^{-11}\\ \\mathrm{J}$$\nNombre de fissions, donc de noyaux consommés :\n$$N = \\frac{E_{th}}{E_1} = \\frac{2{,}36\\times10^{14}}{3{,}04\\times10^{-11}} = 7{,}74\\times10^{24}$$\nMasse correspondante :\n$$m = \\frac{N}{N_A}\\,M = \\frac{7{,}74\\times10^{24}}{6{,}02\\times10^{23}}\\times235 = 3{,}0\\times10^{3}\\ \\mathrm{g} = 3{,}0\\ \\mathrm{kg}$$\nContrôle : $1{,}0\\ \\mathrm{g}$ d'uranium 235 libère environ $7{,}8\\times10^{10}\\ \\mathrm{J}$ ; pour $2{,}36\\times10^{14}\\ \\mathrm{J}$ il faut donc $2{,}36\\times10^{14}/7{,}8\\times10^{10} \\approx 3{,}0\\times10^{3}\\ \\mathrm{g}$. Les deux voies concordent. À comparer aux milliers de tonnes de charbon qu'une centrale thermique brûle chaque jour.",
+          "methode": "Rendement : on **divise** l'énergie utile par $\\eta$ pour remonter à l'énergie consommée. Puis le chemin est toujours le même : énergie totale $\\to$ nombre de noyaux $\\to$ masse par $N_A$.",
+          "points": 1,
+          "ref": "pc-noyau-energie-applications-et-bilan-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-noyau-energie-probleme-1",
+      "chapter": "pc-noyau-energie",
+      "kind": "probleme",
+      "title": "Fission de l'uranium 235 : du noyau au gramme de combustible",
+      "difficulty": 3,
+      "context": "Dans le cœur d'un réacteur nucléaire, un neutron lent frappe un noyau d'uranium 235 et le casse en deux noyaux de masses moyennes. On étudie la voie de fission suivante :\n$$^{235}_{92}\\mathrm{U} + ^{1}_{0}\\mathrm{n} \\longrightarrow\\ ^{148}_{57}\\mathrm{La} + ^{A}_{Z}X + 3\\,^{1}_{0}\\mathrm{n}$$\n\nOn veut d'abord caractériser le noyau d'uranium 235 lui-même, puis chiffrer l'énergie que sa fission libère, du noyau unique jusqu'au gramme de combustible.\n\n**Données**\n\n- masse du noyau d'uranium 235 : $m(^{235}_{92}\\mathrm{U}) = 234{,}9934\\ \\mathrm{u}$\n- masse du proton : $m_p = 1{,}00728\\ \\mathrm{u}$ ; masse du neutron : $m_n = 1{,}00866\\ \\mathrm{u}$\n- $1\\ \\mathrm{u} = 931{,}5\\ \\mathrm{MeV}/c^{2}$ ; $1\\ \\mathrm{u} = 1{,}6605\\times10^{-27}\\ \\mathrm{kg}$ ; $1\\ \\mathrm{MeV} = 1{,}602\\times10^{-13}\\ \\mathrm{J}$ ; $c = 2{,}998\\times10^{8}\\ \\mathrm{m\\,s^{-1}}$\n- lecture de la courbe d'Aston : les **deux noyaux fils** ont une énergie de liaison par nucléon moyenne $E_{\\ell}/A = 8{,}40\\ \\mathrm{MeV}$ par nucléon ; les neutrons libres, eux, n'ont pas d'énergie de liaison\n- $M(^{235}\\mathrm{U}) = 235\\ \\mathrm{g\\,mol^{-1}}$ ; $N_A = 6{,}02\\times10^{23}\\ \\mathrm{mol^{-1}}$\n- combustible chimique de comparaison : la combustion de $1{,}0\\ \\mathrm{g}$ de butane libère $4{,}6\\times10^{4}\\ \\mathrm{J}$",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "La fission nucléaire",
+          "difficulty": 1,
+          "statement": "D'après les lois de conservation de Soddy appliquées à l'équation de l'énoncé, le noyau $^{A}_{Z}X$ est :",
+          "options": [
+            {
+              "label": "$^{85}_{35}X$",
+              "correct": true,
+              "why": "Conservation du nombre de nucléons : $A = 235+1-148-3 = 85$. Conservation de la charge : $Z = 92+0-57 = 35$."
+            },
+            {
+              "label": "$^{88}_{35}X$",
+              "why": "Tu as oublié les 3 neutrons émis dans le bilan des nucléons : $236-148 = 88$. Ces neutrons emportent bien $3$ nucléons."
+            },
+            {
+              "label": "$^{84}_{35}X$",
+              "why": "Tu as oublié le neutron incident à gauche : tu as fait $235-148-3 = 84$ au lieu de $236-148-3$."
+            },
+            {
+              "label": "$^{35}_{85}X$",
+              "why": "Tu as inversé $A$ et $Z$ : dans la notation $^{A}_{Z}X$, le nombre du haut compte les nucléons et celui du bas les protons."
+            }
+          ],
+          "hint": "Écris deux égalités séparées : une sur la somme des nombres de nucléons, une sur la somme des charges. Le neutron incident compte à gauche.",
+          "solution": "**Nombre de nucléons** : $235 + 1 = 148 + A + 3\\times1$, donc $A = 236-151 = 85$.\n**Charge** : $92 + 0 = 57 + Z + 3\\times0$, donc $Z = 35$.\nLe noyau fils est $^{85}_{35}\\mathrm{Br}$, un noyau de brome. Contrôle : $148+85+3 = 236$ nucléons à droite, comme à gauche.",
+          "methode": "Les deux lois de Soddy donnent deux équations indépendantes : commence toujours par les nucléons, puis par la charge. Les neutrons libres comptent dans $A$, jamais dans $Z$.",
+          "points": 1,
+          "part": "Partie A — Le noyau d'uranium 235",
+          "ref": "pc-noyau-energie-probleme-1-q1"
+        },
+        {
+          "notion": "Le défaut de masse",
+          "difficulty": 1,
+          "statement": "Le défaut de masse du noyau d'uranium 235 vaut :",
+          "options": [
+            {
+              "label": "$1{,}9147\\ \\mathrm{u}$",
+              "correct": true,
+              "why": "$\\Delta m = 92\\times1{,}00728 + 143\\times1{,}00866 - 234{,}9934 = 92{,}66976 + 144{,}23838 - 234{,}9934 = 1{,}9147\\ \\mathrm{u}$."
+            },
+            {
+              "label": "$1{,}8444\\ \\mathrm{u}$",
+              "why": "Tu as pris $143$ protons et $92$ neutrons : $143\\times1{,}00728 + 92\\times1{,}00866 - 234{,}9934 = 1{,}8444$. C'est $Z = 92$ qui donne le nombre de protons."
+            },
+            {
+              "label": "$-1{,}9147\\ \\mathrm{u}$",
+              "why": "Tu as calculé $m_{noyau} - [Z m_p + (A-Z) m_n]$ : la soustraction se fait dans l'autre sens, et le défaut de masse est toujours positif."
+            },
+            {
+              "label": "$94{,}7115\\ \\mathrm{u}$",
+              "why": "Tu as compté $A = 235$ neutrons **en plus** des $92$ protons : $92\\times1{,}00728 + 235\\times1{,}00866 - 234{,}9934 = 94{,}7115$. Le nombre de neutrons est $A-Z = 143$."
+            }
+          ],
+          "hint": "Compte d'abord les protons et les neutrons séparément : $Z$ protons, $A-Z$ neutrons. Puis retranche la masse du noyau.",
+          "solution": "Le noyau $^{235}_{92}\\mathrm{U}$ contient $Z = 92$ protons et $A-Z = 235-92 = 143$ neutrons.\n$$\\Delta m = 92\\,m_p + 143\\,m_n - m(^{235}_{92}\\mathrm{U})$$\n$$\\Delta m = 92\\times1{,}00728 + 143\\times1{,}00866 - 234{,}9934$$\n$$\\Delta m = 92{,}66976 + 144{,}23838 - 234{,}9934 = 1{,}9147\\ \\mathrm{u}$$\nContrôle : $\\Delta m$ est positif et vaut moins de $1\\ \\%$ de la masse du noyau, ce qui est l'ordre de grandeur attendu.",
+          "methode": "$\\Delta m = Z m_p + (A-Z) m_n - m_{noyau}$ : les nucléons **séparés** d'abord, le noyau **ensuite**. Le résultat doit sortir positif, sinon tu as inversé la soustraction.",
+          "points": 1,
+          "part": "Partie A — Le noyau d'uranium 235",
+          "ref": "pc-noyau-energie-probleme-1-q2"
+        },
+        {
+          "notion": "Énergie de liaison",
+          "difficulty": 2,
+          "statement": "L'énergie de liaison par nucléon du noyau d'uranium 235 vaut :",
+          "options": [
+            {
+              "label": "$7{,}590\\ \\mathrm{MeV}$ par nucléon",
+              "correct": true,
+              "why": "$E_{\\ell} = 1{,}9147\\times931{,}5 = 1783{,}6\\ \\mathrm{MeV}$, puis $E_{\\ell}/A = 1783{,}6/235 = 7{,}590$."
+            },
+            {
+              "label": "$1{,}784\\times10^{3}\\ \\mathrm{MeV}$ par nucléon",
+              "why": "C'est $E_{\\ell} = 1783{,}6\\ \\mathrm{MeV}$, l'énergie de liaison **totale** : tu as oublié de diviser par $A = 235$."
+            },
+            {
+              "label": "$19{,}39\\ \\mathrm{MeV}$ par nucléon",
+              "why": "Tu as divisé par $Z = 92$ : $1783{,}6/92 = 19{,}39$. Le dénominateur est le nombre de nucléons $A = 235$, pas le nombre de protons."
+            },
+            {
+              "label": "$8{,}148\\times10^{-3}\\ \\mathrm{MeV}$ par nucléon",
+              "why": "Tu as divisé $\\Delta m$ par $A$ ($1{,}9147/235 = 8{,}148\\times10^{-3}$) sans multiplier par $931{,}5$ pour passer en MeV."
+            }
+          ],
+          "hint": "Deux opérations à enchaîner dans le bon ordre : d'abord les unités (u $\\to$ MeV), ensuite la division par le nombre de nucléons.",
+          "solution": "$$E_{\\ell} = \\Delta m\\,c^{2} = 1{,}9147\\times931{,}5 = 1783{,}6\\ \\mathrm{MeV}$$\n$$\\frac{E_{\\ell}}{A} = \\frac{1783{,}6}{235} = 7{,}590\\ \\mathrm{MeV}\\ \\text{par nucléon}$$\nContrôle : la valeur est nettement inférieure au maximum de $8{,}8\\ \\mathrm{MeV}$ par nucléon atteint vers $A \\approx 60$, ce qui est attendu pour un noyau lourd — et c'est précisément ce qui rend sa fission possible.",
+          "methode": "Trois temps, jamais dans un autre ordre : $\\Delta m$ (en u) $\\to$ $E_{\\ell}$ (en MeV, $\\times\\,931{,}5$) $\\to$ $E_{\\ell}/A$ (en MeV par nucléon, $\\div\\,A$).",
+          "points": 1,
+          "part": "Partie A — Le noyau d'uranium 235",
+          "ref": "pc-noyau-energie-probleme-1-q3"
+        },
+        {
+          "notion": "Méthode 4 — Bilan d'énergie par les énergies de liaison",
+          "difficulty": 2,
+          "statement": "En raisonnant sur les énergies de liaison, l'énergie libérée par la fission d'**un** noyau d'uranium 235 vaut :",
+          "options": [
+            {
+              "label": "$1{,}74\\times10^{2}\\ \\mathrm{MeV}$",
+              "correct": true,
+              "why": "Les noyaux fils comptent $148+85 = 233$ nucléons liés : $E_{\\ell}(\\text{fils}) = 233\\times8{,}40 = 1957{,}2\\ \\mathrm{MeV}$, et $1957{,}2 - 1783{,}6 = 173{,}6\\ \\mathrm{MeV}$."
+            },
+            {
+              "label": "$1{,}99\\times10^{2}\\ \\mathrm{MeV}$",
+              "why": "Tu as compté $236$ nucléons dans les noyaux fils : $236\\times8{,}40 - 1783{,}6 = 198{,}8$. Les $3$ neutrons émis restent libres, les fils n'en comptent que $233$."
+            },
+            {
+              "label": "$1{,}90\\times10^{2}\\ \\mathrm{MeV}$",
+              "why": "Tu as multiplié l'écart par nucléon par $235$ : $(8{,}40-7{,}590)\\times235 = 190{,}4$. Il faut faire la différence des énergies de liaison **totales**, et les nucléons liés après la fission ne sont que $233$."
+            },
+            {
+              "label": "$1{,}96\\times10^{3}\\ \\mathrm{MeV}$",
+              "why": "C'est $E_{\\ell}$ des seuls noyaux fils ($233\\times8{,}40 = 1957{,}2\\ \\mathrm{MeV}$) : tu as oublié de retrancher l'énergie de liaison de l'uranium 235."
+            }
+          ],
+          "hint": "L'énergie libérée est le gain d'énergie de liaison. Compte précisément combien de nucléons sont **liés** après la réaction.",
+          "solution": "L'énergie libérée est l'augmentation de l'énergie de liaison totale :\n$$|\\Delta E| = E_{\\ell}(\\text{produits}) - E_{\\ell}(\\text{réactifs})$$\nAprès la fission, les nucléons liés sont ceux du lanthane et du brome, soit $148+85 = 233$ nucléons (les $3$ neutrons émis sont libres, donc sans énergie de liaison) :\n$$E_{\\ell}(\\text{produits}) = 233\\times8{,}40 = 1957{,}2\\ \\mathrm{MeV}$$\nAvant la fission, seul l'uranium 235 est lié : $E_{\\ell}(\\text{réactifs}) = 1783{,}6\\ \\mathrm{MeV}$.\n$$|\\Delta E| = 1957{,}2 - 1783{,}6 = 173{,}6 \\approx 1{,}74\\times10^{2}\\ \\mathrm{MeV}$$\nContrôle : l'ordre de grandeur de quelques centaines de MeV par fission est bien celui annoncé pour l'uranium 235.",
+          "methode": "Bilan par les énergies de liaison : $|\\Delta E| = \\sum E_{\\ell}(\\text{produits}) - \\sum E_{\\ell}(\\text{réactifs})$. Les nucléons libres (neutrons, protons) ne comptent dans aucune des deux sommes.",
+          "points": 1,
+          "part": "Partie B — L'énergie libérée par la fission",
+          "ref": "pc-noyau-energie-probleme-1-q4"
+        },
+        {
+          "notion": "Méthode 5 — Passer de l'échelle du noyau à l'échelle du gramme",
+          "difficulty": 3,
+          "statement": "Chaque fission libérant $173{,}6\\ \\mathrm{MeV}$, l'énergie libérée par la fission complète de $1{,}0\\ \\mathrm{g}$ d'uranium 235 vaut :",
+          "options": [
+            {
+              "label": "$7{,}1\\times10^{10}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$N = \\frac{1{,}0}{235}\\times6{,}02\\times10^{23} = 2{,}56\\times10^{21}$ noyaux, puis $E = 2{,}56\\times10^{21}\\times173{,}6\\times1{,}602\\times10^{-13} = 7{,}1\\times10^{10}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$4{,}4\\times10^{23}\\ \\mathrm{J}$",
+              "why": "Tu es resté en MeV : $2{,}56\\times10^{21}\\times173{,}6 = 4{,}4\\times10^{23}\\ \\mathrm{MeV}$. Il reste à multiplier par $1{,}602\\times10^{-13}$ pour avoir des joules."
+            },
+            {
+              "label": "$2{,}8\\times10^{-11}\\ \\mathrm{J}$",
+              "why": "Tu as seulement converti l'énergie d'**une** fission : $173{,}6\\times1{,}602\\times10^{-13} = 2{,}8\\times10^{-11}\\ \\mathrm{J}$. Tu as oublié de multiplier par le nombre $N$ de noyaux du gramme."
+            },
+            {
+              "label": "$1{,}7\\times10^{13}\\ \\mathrm{J}$",
+              "why": "Tu as pris $N = N_A = 6{,}02\\times10^{23}$ : $1{,}0\\ \\mathrm{g}$ d'uranium 235 ne contient pas une mole mais $1{,}0/235$ mol, soit $235$ fois moins de noyaux."
+            }
+          ],
+          "hint": "Trois facteurs à enchaîner : combien de noyaux dans $1{,}0\\ \\mathrm{g}$, combien de MeV par noyau, combien de joules par MeV.",
+          "solution": "**Nombre de noyaux** dans $1{,}0\\ \\mathrm{g}$ :\n$$N = \\frac{m}{M}\\,N_A = \\frac{1{,}0}{235}\\times6{,}02\\times10^{23} = 2{,}56\\times10^{21}\\ \\text{noyaux}$$\n**Énergie totale**, en convertissant les MeV en joules :\n$$E = N\\times173{,}6\\times1{,}602\\times10^{-13} = 2{,}56\\times10^{21}\\times2{,}78\\times10^{-11}$$\n$$E = 7{,}1\\times10^{10}\\ \\mathrm{J}$$\nContrôle : c'est de l'ordre de $7\\times10^{7}\\ \\mathrm{kJ}$ pour un seul gramme, soit l'énergie de plusieurs tonnes de combustible chimique — l'ordre de grandeur attendu pour une réaction nucléaire.",
+          "methode": "Du noyau au gramme : $E = \\frac{m}{M}\\,N_A \\times E_{\\text{un noyau}}$, et n'oublie jamais la conversion $1\\ \\mathrm{MeV} = 1{,}602\\times10^{-13}\\ \\mathrm{J}$ avant d'annoncer des joules.",
+          "points": 1,
+          "part": "Partie B — L'énergie libérée par la fission",
+          "ref": "pc-noyau-energie-probleme-1-q5"
+        },
+        {
+          "notion": "Comparaison et ordres de grandeur",
+          "difficulty": 3,
+          "statement": "Quelle masse de butane faudrait-il brûler pour libérer la même énergie que $7{,}1\\times10^{10}\\ \\mathrm{J}$, c'est-à-dire la fission de $1{,}0\\ \\mathrm{g}$ d'uranium 235 ?",
+          "options": [
+            {
+              "label": "$1{,}5\\times10^{3}\\ \\mathrm{kg}$",
+              "correct": true,
+              "why": "$m = \\frac{7{,}1\\times10^{10}}{4{,}6\\times10^{4}} = 1{,}5\\times10^{6}\\ \\mathrm{g}$, soit $1{,}5\\times10^{3}\\ \\mathrm{kg}$ — environ une tonne et demie."
+            },
+            {
+              "label": "$1{,}5\\times10^{6}\\ \\mathrm{kg}$",
+              "why": "Tu as bien trouvé $1{,}5\\times10^{6}$, mais c'est un résultat en **grammes** : il faut encore diviser par $1000$ pour l'exprimer en kilogrammes."
+            },
+            {
+              "label": "$1{,}5\\ \\mathrm{kg}$",
+              "why": "Tu as divisé par $4{,}6\\times10^{7}$ : tu as pris la donnée pour $4{,}6\\times10^{4}\\ \\mathrm{kJ}$ par gramme alors qu'elle est en joules par gramme."
+            },
+            {
+              "label": "$6{,}5\\times10^{-7}\\ \\mathrm{kg}$",
+              "why": "Tu as calculé le rapport dans l'autre sens, $\\frac{4{,}6\\times10^{4}}{7{,}1\\times10^{10}}$ : la masse cherchée est l'énergie à fournir divisée par l'énergie libérée **par gramme** de butane."
+            }
+          ],
+          "hint": "Une énergie divisée par une énergie par gramme donne une masse en grammes. Surveille la conversion finale en kilogrammes.",
+          "solution": "Le butane libère $4{,}6\\times10^{4}\\ \\mathrm{J}$ par gramme. Pour obtenir $7{,}1\\times10^{10}\\ \\mathrm{J}$ :\n$$m = \\frac{E}{e_{butane}} = \\frac{7{,}1\\times10^{10}}{4{,}6\\times10^{4}} = 1{,}5\\times10^{6}\\ \\mathrm{g}$$\n$$m = 1{,}5\\times10^{3}\\ \\mathrm{kg}$$\nAutrement dit, $1{,}0\\ \\mathrm{g}$ d'uranium 235 remplace environ $1{,}5$ tonne de butane : un facteur voisin de $1{,}5\\times10^{6}$, conforme au rapport MeV/eV entre énergies nucléaires et énergies chimiques.\nContrôle : le rapport $\\frac{7{,}1\\times10^{10}}{4{,}6\\times10^{4}} \\approx 1{,}5\\times10^{6}$ est bien de l'ordre du million, comme attendu.",
+          "methode": "Pour comparer un combustible nucléaire et un combustible chimique, ramène toujours les deux à la **même masse** (ou la même énergie), puis conclus sur le facteur $\\approx 10^{6}$.",
+          "points": 1,
+          "part": "Partie B — L'énergie libérée par la fission",
+          "ref": "pc-noyau-energie-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-noyau-energie-probleme-2",
+      "chapter": "pc-noyau-energie",
+      "kind": "probleme",
+      "title": "Fusion deutérium-tritium et courbe d'Aston",
+      "difficulty": 3,
+      "context": "Les réacteurs de fusion expérimentaux exploitent la réaction entre un noyau de **deutérium** $^{2}_{1}\\mathrm{H}$ et un noyau de **tritium** $^{3}_{1}\\mathrm{H}$, portés à très haute température sous forme de plasma :\n$$^{2}_{1}\\mathrm{H} + ^{A}_{Z}X \\longrightarrow\\ ^{4}_{2}\\mathrm{He} + ^{1}_{0}\\mathrm{n}$$\n\nOn étudie la stabilité des noyaux en jeu à l'aide de la courbe d'Aston, puis l'énergie libérée, jusqu'à l'échelle d'un réacteur délivrant une puissance thermique $P = 500\\ \\mathrm{MW}$.\n\n**Données**\n\n- $m(^{2}_{1}\\mathrm{H}) = 2{,}01355\\ \\mathrm{u}$ ; $m(^{3}_{1}\\mathrm{H}) = 3{,}01550\\ \\mathrm{u}$ ; $m(^{4}_{2}\\mathrm{He}) = 4{,}00150\\ \\mathrm{u}$\n- $m_p = 1{,}00728\\ \\mathrm{u}$ ; $m_n = 1{,}00866\\ \\mathrm{u}$\n- $1\\ \\mathrm{u} = 931{,}5\\ \\mathrm{MeV}/c^{2}$ ; $1\\ \\mathrm{u} = 1{,}6605\\times10^{-27}\\ \\mathrm{kg}$ ; $1\\ \\mathrm{MeV} = 1{,}602\\times10^{-13}\\ \\mathrm{J}$ ; $c = 2{,}998\\times10^{8}\\ \\mathrm{m\\,s^{-1}}$\n- $M(^{2}\\mathrm{H}) = 2{,}0\\ \\mathrm{g\\,mol^{-1}}$ ; $N_A = 6{,}02\\times10^{23}\\ \\mathrm{mol^{-1}}$ ; une journée $= 8{,}64\\times10^{4}\\ \\mathrm{s}$\n- repères lus sur la courbe d'Aston : $E_{\\ell}/A$ croît jusqu'à un maximum voisin de $8{,}8\\ \\mathrm{MeV}$ par nucléon vers $A \\approx 60$, puis décroît jusqu'à $7{,}59\\ \\mathrm{MeV}$ par nucléon pour l'uranium 235",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "La fusion nucléaire",
+          "difficulty": 1,
+          "statement": "En appliquant les lois de conservation de Soddy à l'équation de l'énoncé, le noyau $^{A}_{Z}X$ est :",
+          "options": [
+            {
+              "label": "$^{3}_{1}\\mathrm{H}$",
+              "correct": true,
+              "why": "Nucléons : $A = 4+1-2 = 3$. Charge : $Z = 2+0-1 = 1$. C'est bien le tritium annoncé dans l'énoncé."
+            },
+            {
+              "label": "$^{2}_{1}\\mathrm{H}$",
+              "why": "Tu as oublié le neutron du membre de droite : $A = 4+1-2 = 3$, et non $4-2 = 2$."
+            },
+            {
+              "label": "$^{3}_{2}\\mathrm{He}$",
+              "why": "Tu as gardé $Z = 2$ : le deutérium apporte déjà une charge à gauche, donc $Z = 2+0-1 = 1$."
+            },
+            {
+              "label": "$^{3}_{0}\\mathrm{n}$",
+              "why": "Tu as écrit $Z = 1-1 = 0$ : la conservation de la charge donne $Z_X = Z_{He} + Z_n - Z_D = 2+0-1 = 1$, pas $0$."
+            }
+          ],
+          "hint": "Isole l'inconnue : ce qui manque à gauche est la différence entre le total de droite et le deutérium. Fais-le d'abord sur $A$, puis sur $Z$.",
+          "solution": "**Nombre de nucléons** : $2 + A = 4 + 1$, donc $A = 3$.\n**Charge** : $1 + Z = 2 + 0$, donc $Z = 1$.\nLe noyau manquant est $^{3}_{1}\\mathrm{H}$, le tritium — un isotope de l'hydrogène à un proton et deux neutrons. Contrôle : $2+3 = 5 = 4+1$, les nucléons sont bien conservés.",
+          "methode": "Dans une équation nucléaire à trou, écris les deux conservations sous forme d'équations à une inconnue ; le signe du terme inconnu dépend du côté où il se trouve.",
+          "points": 1,
+          "part": "Partie A — Le combustible et sa stabilité",
+          "ref": "pc-noyau-energie-probleme-2-q1"
+        },
+        {
+          "notion": "Le défaut de masse",
+          "difficulty": 1,
+          "statement": "Le défaut de masse du noyau de tritium $^{3}_{1}\\mathrm{H}$ vaut :",
+          "options": [
+            {
+              "label": "$9{,}10\\times10^{-3}\\ \\mathrm{u}$",
+              "correct": true,
+              "why": "$\\Delta m = 1{,}00728 + 2\\times1{,}00866 - 3{,}01550 = 3{,}02460 - 3{,}01550 = 9{,}10\\times10^{-3}\\ \\mathrm{u}$."
+            },
+            {
+              "label": "$7{,}72\\times10^{-3}\\ \\mathrm{u}$",
+              "why": "Tu as pris $2$ protons et $1$ neutron : $2\\times1{,}00728 + 1{,}00866 - 3{,}01550 = 7{,}72\\times10^{-3}$. Pour $^{3}_{1}\\mathrm{H}$, c'est $1$ proton et $2$ neutrons."
+            },
+            {
+              "label": "$6{,}34\\times10^{-3}\\ \\mathrm{u}$",
+              "why": "Tu as compté $3$ protons : $3\\times1{,}00728 - 3{,}01550 = 6{,}34\\times10^{-3}$. Le tritium n'a qu'un seul proton, $Z = 1$."
+            },
+            {
+              "label": "$-9{,}10\\times10^{-3}\\ \\mathrm{u}$",
+              "why": "Tu as calculé $m_{noyau} - [m_p + 2m_n]$ : la soustraction va dans l'autre sens, et le défaut de masse est toujours positif."
+            }
+          ],
+          "hint": "Pour $^{3}_{1}\\mathrm{H}$, repère bien $Z$ et $A-Z$ avant tout calcul : c'est là que se joue la question.",
+          "solution": "Le noyau $^{3}_{1}\\mathrm{H}$ contient $Z = 1$ proton et $A-Z = 2$ neutrons.\n$$\\Delta m = m_p + 2\\,m_n - m(^{3}_{1}\\mathrm{H})$$\n$$\\Delta m = 1{,}00728 + 2\\times1{,}00866 - 3{,}01550 = 3{,}02460 - 3{,}01550$$\n$$\\Delta m = 9{,}10\\times10^{-3}\\ \\mathrm{u}$$\nContrôle : $\\Delta m$ est positif et vaut environ $0{,}3\\ \\%$ de la masse du noyau — un noyau très légèrement lié, ce qui est normal pour un noyau aussi léger.",
+          "methode": "Avant d'écrire $\\Delta m$, note toujours « $Z$ protons, $A-Z$ neutrons » sur ton brouillon : l'erreur la plus fréquente est d'échanger ces deux nombres.",
+          "points": 1,
+          "part": "Partie A — Le combustible et sa stabilité",
+          "ref": "pc-noyau-energie-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 2 — Classer des noyaux par stabilité",
+          "difficulty": 2,
+          "statement": "Les défauts de masse valent $\\Delta m(^{3}_{1}\\mathrm{H}) = 9{,}10\\times10^{-3}\\ \\mathrm{u}$ et $\\Delta m(^{4}_{2}\\mathrm{He}) = 3{,}038\\times10^{-2}\\ \\mathrm{u}$. Lequel de ces deux noyaux est le plus stable ?",
+          "options": [
+            {
+              "label": "l'hélium 4, avec $E_{\\ell}/A = 7{,}07\\ \\mathrm{MeV}$ par nucléon contre $2{,}83$ pour le tritium",
+              "correct": true,
+              "why": "$E_{\\ell}(\\mathrm{He}) = 3{,}038\\times10^{-2}\\times931{,}5 = 28{,}30\\ \\mathrm{MeV}$ soit $28{,}30/4 = 7{,}07$ ; $E_{\\ell}(\\mathrm{T}) = 8{,}48\\ \\mathrm{MeV}$ soit $8{,}48/3 = 2{,}83$."
+            },
+            {
+              "label": "le tritium, avec $E_{\\ell}/A = 2{,}83\\ \\mathrm{MeV}$ par nucléon contre $7{,}07$ pour l'hélium 4",
+              "why": "Tes deux rapports sont bons, mais tu as retenu le plus petit : le noyau le plus stable est celui dont $E_{\\ell}/A$ est le plus **grand**."
+            },
+            {
+              "label": "l'hélium 4, avec $E_{\\ell}/A = 28{,}30\\ \\mathrm{MeV}$ par nucléon contre $8{,}48$ pour le tritium",
+              "why": "Tu annonces comme « par nucléon » les énergies de liaison **totales** $28{,}30$ et $8{,}48\\ \\mathrm{MeV}$ : il reste à diviser par $A$, ce qui donne $7{,}07$ et $2{,}83\\ \\mathrm{MeV}$ par nucléon."
+            },
+            {
+              "label": "le tritium, car il a moins de nucléons à maintenir liés",
+              "why": "Le nombre de nucléons n'est pas un critère de stabilité : on compare $E_{\\ell}/A$, qui vaut $2{,}83\\ \\mathrm{MeV}$ par nucléon pour le tritium contre $7{,}07$ pour l'hélium 4."
+            }
+          ],
+          "hint": "Le critère de stabilité n'est ni $\\Delta m$, ni $E_{\\ell}$, mais le rapport de $E_{\\ell}$ au nombre de nucléons.",
+          "solution": "Pour chaque noyau : $E_{\\ell} = \\Delta m \\times 931{,}5$, puis $E_{\\ell}/A$.\n**Tritium** : $E_{\\ell} = 9{,}10\\times10^{-3}\\times931{,}5 = 8{,}48\\ \\mathrm{MeV}$, donc $E_{\\ell}/A = 8{,}48/3 = 2{,}83\\ \\mathrm{MeV}$ par nucléon.\n**Hélium 4** : $E_{\\ell} = 3{,}038\\times10^{-2}\\times931{,}5 = 28{,}30\\ \\mathrm{MeV}$, donc $E_{\\ell}/A = 28{,}30/4 = 7{,}07\\ \\mathrm{MeV}$ par nucléon.\n$7{,}07 > 2{,}83$ : **l'hélium 4 est beaucoup plus stable que le tritium**.\nContrôle : c'est bien ce que montre la courbe d'Aston, où $^{4}_{2}\\mathrm{He}$ est un noyau remarquablement lié pour sa petite taille — et c'est la raison même pour laquelle la fusion deutérium-tritium libère de l'énergie.",
+          "methode": "Pour classer des noyaux : $\\Delta m \\to E_{\\ell} \\to E_{\\ell}/A$, puis **le plus grand $E_{\\ell}/A$ gagne**. Jamais $\\Delta m$ seul, jamais $E_{\\ell}$ seul.",
+          "points": 1,
+          "part": "Partie A — Le combustible et sa stabilité",
+          "ref": "pc-noyau-energie-probleme-2-q3"
+        },
+        {
+          "notion": "Méthode 3 — Bilan d'énergie par les masses",
+          "difficulty": 2,
+          "statement": "L'énergie libérée par une réaction de fusion deutérium-tritium vaut :",
+          "options": [
+            {
+              "label": "$17{,}60\\ \\mathrm{MeV}$",
+              "correct": true,
+              "why": "$\\Delta m = (4{,}00150+1{,}00866) - (2{,}01355+3{,}01550) = -1{,}889\\times10^{-2}\\ \\mathrm{u}$, donc $|\\Delta E| = 1{,}889\\times10^{-2}\\times931{,}5 = 17{,}60\\ \\mathrm{MeV}$."
+            },
+            {
+              "label": "$9{,}57\\times10^{2}\\ \\mathrm{MeV}$",
+              "why": "Tu as oublié le neutron parmi les produits : $(4{,}00150 - 5{,}02905)\\times931{,}5$ donne $957\\ \\mathrm{MeV}$. Le neutron émis a une masse et compte dans le bilan."
+            },
+            {
+              "label": "$1{,}89\\times10^{-2}\\ \\mathrm{MeV}$",
+              "why": "Tu t'es arrêté au défaut de masse $|\\Delta m| = 1{,}889\\times10^{-2}\\ \\mathrm{u}$ : il reste à le multiplier par $931{,}5\\ \\mathrm{MeV}/c^{2}$."
+            },
+            {
+              "label": "$3{,}52\\ \\mathrm{MeV}$",
+              "why": "Tu as divisé par les $5$ nucléons engagés : $17{,}60/5 = 3{,}52$. La question demande l'énergie libérée par réaction, pas par nucléon."
+            }
+          ],
+          "hint": "Fais la somme des masses à droite, la somme des masses à gauche, et soustrais dans cet ordre. Le signe du résultat te dira si la réaction libère de l'énergie.",
+          "solution": "$$\\Delta m = \\big[m(^{4}_{2}\\mathrm{He}) + m_n\\big] - \\big[m(^{2}_{1}\\mathrm{H}) + m(^{3}_{1}\\mathrm{H})\\big]$$\n$$\\Delta m = (4{,}00150 + 1{,}00866) - (2{,}01355 + 3{,}01550) = 5{,}01016 - 5{,}02905$$\n$$\\Delta m = -1{,}889\\times10^{-2}\\ \\mathrm{u}$$\n$\\Delta m < 0$ : la réaction est **exoénergétique**, et l'énergie libérée vaut\n$$|\\Delta E| = |\\Delta m|\\,c^{2} = 1{,}889\\times10^{-2}\\times931{,}5 = 17{,}60\\ \\mathrm{MeV}$$\nContrôle par les énergies de liaison : $E_{\\ell}(^{4}_{2}\\mathrm{He}) - E_{\\ell}(^{2}_{1}\\mathrm{H}) - E_{\\ell}(^{3}_{1}\\mathrm{H}) = 28{,}30 - 2{,}23 - 8{,}48 = 17{,}59\\ \\mathrm{MeV}$ : les deux voies concordent à l'arrondi près.",
+          "methode": "Bilan par les masses : $\\Delta m = \\sum m_{produits} - \\sum m_{réactifs}$, puis $|\\Delta E| = |\\Delta m|\\,c^{2}$. N'oublie aucune particule émise, neutron compris.",
+          "points": 1,
+          "part": "Partie B — L'énergie libérée et l'échelle du réacteur",
+          "ref": "pc-noyau-energie-probleme-2-q4"
+        },
+        {
+          "notion": "La courbe d'Aston",
+          "difficulty": 3,
+          "statement": "On passe de $E_{\\ell}/A = 2{,}83\\ \\mathrm{MeV}$ par nucléon pour le tritium à $7{,}07$ pour l'hélium 4, et la courbe d'Aston culmine vers $8{,}8\\ \\mathrm{MeV}$ par nucléon à $A \\approx 60$ avant de redescendre à $7{,}59$ pour l'uranium 235. Qu'est-ce que cette allure permet d'affirmer ?",
+          "options": [
+            {
+              "label": "la fusion de noyaux très légers et la fission de noyaux très lourds libèrent toutes deux de l'énergie, car les deux rapprochent les nucléons du maximum de $E_{\\ell}/A$",
+              "correct": true,
+              "why": "Les deux extrémités de la courbe sont moins liées que son sommet : toute réaction qui fait croître $E_{\\ell}/A$ libère la différence."
+            },
+            {
+              "label": "seule la fusion libère de l'énergie, car elle part des noyaux les moins liés par nucléon",
+              "why": "La fission part aussi d'un noyau moins lié que ses produits ($7{,}59$ pour l'uranium contre environ $8{,}4$ pour les fils) : elle libère donc aussi de l'énergie."
+            },
+            {
+              "label": "la fusion de deux noyaux de fer libérerait encore plus d'énergie, puisque le fer est le noyau le plus lié par nucléon",
+              "why": "Au-delà du maximum, $E_{\\ell}/A$ **décroît** : fusionner deux noyaux de fer donnerait un noyau moins lié par nucléon, donc une réaction qui consomme de l'énergie au lieu d'en libérer."
+            },
+            {
+              "label": "la fusion et la fission libèrent la même énergie par nucléon, puisque les deux rejoignent le sommet de la courbe",
+              "why": "Les dénivelés sont très inégaux : la fusion deutérium-tritium gagne $17{,}60/5 = 3{,}52\\ \\mathrm{MeV}$ par nucléon, la fission de l'uranium 235 moins de $1\\ \\mathrm{MeV}$ par nucléon."
+            }
+          ],
+          "hint": "Regarde où se situent le tritium, l'hélium et l'uranium sur la courbe, et dans quel sens il faut se déplacer pour gagner en énergie de liaison par nucléon.",
+          "solution": "La courbe d'Aston porte $-E_{\\ell}/A$ en fonction de $A$ : les noyaux les plus stables, ceux dont $E_{\\ell}/A$ est le plus grand, occupent le fond du creux vers $A \\approx 60$.\n- Les noyaux **très légers** (tritium, deutérium) sont faiblement liés : les **fusionner** vers l'hélium 4 fait passer $E_{\\ell}/A$ de $2{,}83$ à $7{,}07\\ \\mathrm{MeV}$ par nucléon, donc libère de l'énergie.\n- Les noyaux **très lourds** (uranium 235, $7{,}59\\ \\mathrm{MeV}$ par nucléon) sont également en retrait du maximum : les **casser** en deux noyaux moyens, mieux liés, libère aussi de l'énergie.\nLes deux réactions vont donc dans le même sens, chacune depuis son extrémité de la courbe, et l'énergie libérée est à chaque fois le gain d'énergie de liaison totale.\nContrôle : le gain par nucléon est bien plus grand côté fusion ($3{,}52\\ \\mathrm{MeV}$ par nucléon) que côté fission ($< 1\\ \\mathrm{MeV}$ par nucléon), ce qui explique l'intérêt scientifique de la fusion.",
+          "methode": "Une réaction nucléaire libère de l'énergie dès que les produits ont un $E_{\\ell}/A$ plus grand que les réactifs : on se rapproche du creux de la courbe d'Aston, qu'on vienne de la gauche ou de la droite.",
+          "points": 1,
+          "part": "Partie B — L'énergie libérée et l'échelle du réacteur",
+          "ref": "pc-noyau-energie-probleme-2-q5"
+        },
+        {
+          "notion": "Méthode 5 — Passer de l'échelle du noyau à l'échelle du gramme",
+          "difficulty": 3,
+          "statement": "Chaque noyau de deutérium consommé libère $17{,}60\\ \\mathrm{MeV}$. L'énergie libérée par $1{,}0\\ \\mathrm{g}$ de deutérium entièrement consommé vaut :",
+          "options": [
+            {
+              "label": "$8{,}5\\times10^{11}\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$N = \\frac{1{,}0}{2{,}0}\\times6{,}02\\times10^{23} = 3{,}01\\times10^{23}$ noyaux, puis $E = 3{,}01\\times10^{23}\\times17{,}60\\times1{,}602\\times10^{-13} = 8{,}5\\times10^{11}\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$1{,}7\\times10^{12}\\ \\mathrm{J}$",
+              "why": "Tu as pris $M = 1{,}0\\ \\mathrm{g\\,mol^{-1}}$, celle de l'hydrogène ordinaire : le deutérium a $M = 2{,}0\\ \\mathrm{g\\,mol^{-1}}$, donc deux fois moins de noyaux par gramme."
+            },
+            {
+              "label": "$5{,}3\\times10^{24}\\ \\mathrm{J}$",
+              "why": "Tu es resté en MeV : $3{,}01\\times10^{23}\\times17{,}60 = 5{,}3\\times10^{24}\\ \\mathrm{MeV}$. Il faut encore multiplier par $1{,}602\\times10^{-13}$."
+            },
+            {
+              "label": "$1{,}7\\times10^{11}\\ \\mathrm{J}$",
+              "why": "Tu as divisé par les $5$ nucléons de la réaction : chaque noyau de deutérium participe à une réaction complète qui libère $17{,}60\\ \\mathrm{MeV}$, pas $3{,}52$."
+            }
+          ],
+          "hint": "Compte les noyaux de deutérium contenus dans $1{,}0\\ \\mathrm{g}$ : c'est la masse molaire du deutérium, pas celle de l'hydrogène, qui intervient.",
+          "solution": "**Nombre de noyaux de deutérium** dans $1{,}0\\ \\mathrm{g}$ :\n$$N = \\frac{m}{M}\\,N_A = \\frac{1{,}0}{2{,}0}\\times6{,}02\\times10^{23} = 3{,}01\\times10^{23}\\ \\text{noyaux}$$\nChaque noyau consommé correspond à une réaction, donc à $17{,}60\\ \\mathrm{MeV}$ :\n$$E = 3{,}01\\times10^{23}\\times17{,}60\\times1{,}602\\times10^{-13} = 8{,}5\\times10^{11}\\ \\mathrm{J}$$\nContrôle : c'est environ $12$ fois l'énergie obtenue par la fission de $1{,}0\\ \\mathrm{g}$ d'uranium 235 ($7{,}1\\times10^{10}\\ \\mathrm{J}$), ce qui est cohérent avec un gain par nucléon bien plus élevé pour la fusion.",
+          "methode": "Du noyau au gramme : $E = \\frac{m}{M}\\,N_A \\times E_{\\text{une réaction}}$. Vérifie toujours que la masse molaire employée est celle de **l'isotope** nommé dans l'énoncé.",
+          "points": 1,
+          "part": "Partie B — L'énergie libérée et l'échelle du réacteur",
+          "ref": "pc-noyau-energie-probleme-2-q6"
+        },
+        {
+          "notion": "L'équivalence masse–énergie",
+          "difficulty": 3,
+          "statement": "Le réacteur délivre une puissance thermique $P = 500\\ \\mathrm{MW}$ pendant une journée. La masse totale qui a « disparu » dans le plasma pendant cette journée vaut :",
+          "options": [
+            {
+              "label": "$4{,}8\\times10^{-4}\\ \\mathrm{kg}$",
+              "correct": true,
+              "why": "$E = 500\\times10^{6}\\times8{,}64\\times10^{4} = 4{,}32\\times10^{13}\\ \\mathrm{J}$, donc $\\Delta m = E/c^{2} = 4{,}32\\times10^{13}/(2{,}998\\times10^{8})^{2} = 4{,}8\\times10^{-4}\\ \\mathrm{kg}$."
+            },
+            {
+              "label": "$1{,}4\\times10^{5}\\ \\mathrm{kg}$",
+              "why": "Tu as divisé par $c$ et non par $c^{2}$ : $4{,}32\\times10^{13}/2{,}998\\times10^{8} = 1{,}4\\times10^{5}$, qui n'est même pas une masse."
+            },
+            {
+              "label": "$5{,}6\\times10^{-9}\\ \\mathrm{kg}$",
+              "why": "Tu as divisé la puissance par $c^{2}$ sans la multiplier par la durée : $500\\times10^{6}/c^{2} = 5{,}6\\times10^{-9}\\ \\mathrm{kg}$ est la perte de masse en **une seule seconde**."
+            },
+            {
+              "label": "$3{,}9\\times10^{30}\\ \\mathrm{kg}$",
+              "why": "Tu as multiplié l'énergie par $c^{2}$ au lieu de diviser : la relation $E = \\Delta m\\,c^{2}$ s'inverse en $\\Delta m = E/c^{2}$."
+            }
+          ],
+          "hint": "Deux étapes : l'énergie thermique produite en une journée, puis la masse équivalente. Attention à l'ordre de la division.",
+          "solution": "**Énergie produite en une journée** :\n$$E = P\\,\\Delta t = 500\\times10^{6}\\times8{,}64\\times10^{4} = 4{,}32\\times10^{13}\\ \\mathrm{J}$$\n**Masse équivalente**, par $E = \\Delta m\\,c^{2}$ :\n$$\\Delta m = \\frac{E}{c^{2}} = \\frac{4{,}32\\times10^{13}}{(2{,}998\\times10^{8})^{2}} = \\frac{4{,}32\\times10^{13}}{8{,}99\\times10^{16}}$$\n$$\\Delta m = 4{,}8\\times10^{-4}\\ \\mathrm{kg} = 0{,}48\\ \\mathrm{g}$$\nMoins d'un demi-gramme de masse converti en énergie suffit à alimenter le réacteur pendant une journée entière.\nContrôle : $1{,}0\\ \\mathrm{g}$ de masse convertie correspond à $9\\times10^{13}\\ \\mathrm{J}$ ; ici il faut $4{,}32\\times10^{13}\\ \\mathrm{J}$, soit environ la moitié d'un gramme — cohérent.",
+          "methode": "Dès qu'une énergie est donnée et qu'on demande une masse, écris $\\Delta m = E/c^{2}$ en SI (joules, kg, $\\mathrm{m\\,s^{-1}}$) et contrôle avec le repère « $1\\ \\mathrm{g} \\leftrightarrow 9\\times10^{13}\\ \\mathrm{J}$ ».",
+          "points": 1,
+          "part": "Partie B — L'énergie libérée et l'échelle du réacteur",
+          "ref": "pc-noyau-energie-probleme-2-q7"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-noyau-energie-serie-1",
+      "title": "Noyaux, masse et énergie · Échauffement",
+      "description": "Les bases du chapitre : masse, énergie, défaut de masse — pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-noyau-energie",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-noyau-energie-l-equivalence-masseenergie-q1",
+        "pc-noyau-energie-le-defaut-de-masse-q1",
+        "pc-noyau-energie-energie-de-liaison-q1",
+        "pc-noyau-energie-la-courbe-d-aston-q1",
+        "pc-noyau-energie-le-bilan-d-energie-d-une-reaction-nuclea-q1",
+        "pc-noyau-energie-la-fission-nucleaire-q1",
+        "pc-noyau-energie-la-fusion-nucleaire-q1",
+        "pc-noyau-energie-comparaison-et-ordres-de-grandeur-q1",
+        "pc-noyau-energie-probleme-1-q2",
+        "pc-noyau-energie-probleme-2-q2",
+        "pc-noyau-energie-l-equivalence-masseenergie-q2",
+        "pc-noyau-energie-le-defaut-de-masse-q2"
+      ]
+    },
+    {
+      "slug": "pc-noyau-energie-serie-2",
+      "title": "Noyaux, masse et énergie · Entraînement",
+      "description": "Le cœur du chapitre : défaut de masse, énergie de liaison, bilans de fission et de fusion.",
+      "kind": "custom",
+      "chapter": "pc-noyau-energie",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-noyau-energie-probleme-1-q1",
+        "pc-noyau-energie-probleme-2-q1",
+        "pc-noyau-energie-le-defaut-de-masse-q3",
+        "pc-noyau-energie-energie-de-liaison-q2",
+        "pc-noyau-energie-energie-de-liaison-q3",
+        "pc-noyau-energie-la-courbe-d-aston-q2",
+        "pc-noyau-energie-le-bilan-d-energie-d-une-reaction-nuclea-q2",
+        "pc-noyau-energie-la-fission-nucleaire-q2",
+        "pc-noyau-energie-la-fusion-nucleaire-q3",
+        "pc-noyau-energie-comparaison-et-ordres-de-grandeur-q2",
+        "pc-noyau-energie-probleme-1-q4",
+        "pc-noyau-energie-probleme-2-q4"
+      ]
+    },
+    {
+      "slug": "pc-noyau-energie-serie-3",
+      "title": "Noyaux, masse et énergie · Type BAC",
+      "description": "Au niveau de l'examen : raisonnements sur la courbe d'Aston, passage au gramme, pièges classiques.",
+      "kind": "custom",
+      "chapter": "pc-noyau-energie",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-noyau-energie-probleme-1-q3",
+        "pc-noyau-energie-probleme-2-q3",
+        "pc-noyau-energie-le-defaut-de-masse-q4",
+        "pc-noyau-energie-energie-de-liaison-q4",
+        "pc-noyau-energie-la-courbe-d-aston-q3",
+        "pc-noyau-energie-le-bilan-d-energie-d-une-reaction-nuclea-q4",
+        "pc-noyau-energie-la-fission-nucleaire-q3",
+        "pc-noyau-energie-comparaison-et-ordres-de-grandeur-q3",
+        "pc-noyau-energie-probleme-1-q5",
+        "pc-noyau-energie-probleme-1-q6",
+        "pc-noyau-energie-probleme-2-q6",
+        "pc-noyau-energie-probleme-2-q7"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1812 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-oscillateurs",
+      "name": "Oscillateurs mécaniques",
+      "domain": "physique",
+      "unit": "Mécanique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Le dispositif",
+      "L'équation différentielle — cas horizontal",
+      "Le cas vertical",
+      "Vitesse et accélération",
+      "Le pendule de torsion",
+      "Le pendule pesant",
+      "Le pendule simple",
+      "L'analogie universelle",
+      "Au-delà des petites oscillations",
+      "Le portrait de phase",
+      "Mesures de précision",
+      "Méthode 1 — Établir l'équation différentielle",
+      "Méthode 2 — Déterminer $X_m$ et $\\varphi$",
+      "Méthode 3 — Exploiter une courbe $x(t)$",
+      "Méthode 4 — Déterminer $g$, $K$, $J_\\Delta$ ou $C$",
+      "Méthode 5 — Prévoir l'effet d'une modification"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Établir l'équation différentielle",
+      "Méthode 2 — Déterminer $X_m$ et $\\varphi$",
+      "Méthode 3 — Exploiter une courbe $x(t)$",
+      "Méthode 4 — Déterminer $g$, $K$, $J_\\Delta$ ou $C$",
+      "Méthode 5 — Prévoir l'effet d'une modification"
+    ],
+    "existing_questions_total": 6,
+    "target_new_questions": 26,
+    "suggested_figures": [
+      "pendule-elastique — Pendule élastique horizontal (masse-ressort)",
+      "pendule-torsion — Pendule de torsion",
+      "pendule-pesant — Pendule pesant"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Le dispositif",
+        "lesson": "Pendule élastique (masse-ressort)",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-le-dispositif",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "Le dispositif",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le dispositif",
+          "difficulty": 1,
+          "statement": "Un solide est accroché à un ressort de raideur $K = 20\\ \\mathrm{N\\,m^{-1}}$. On l'écarte de sa position d'équilibre d'une distance $x = 4{,}0\\ \\mathrm{cm}$. Quelle est la valeur de la force de rappel exercée par le ressort ?",
+          "options": [
+            {
+              "label": "$0{,}80\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "La force de rappel est $\\vec{F} = -K\\,x\\,\\vec{i}$, donc sa valeur est $K|x| = 20\\times4{,}0\\times10^{-2} = 0{,}80\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$80\\ \\mathrm{N}$",
+              "why": "Tu as multiplié $20$ par $4{,}0$ sans convertir les centimètres en mètres : $20\\times4{,}0 = 80$. La raideur est en $\\mathrm{N\\,m^{-1}}$, l'allongement doit donc être en mètres."
+            },
+            {
+              "label": "$5{,}0\\times10^{2}\\ \\mathrm{N}$",
+              "why": "Tu as calculé $\\dfrac{K}{x} = \\dfrac{20}{4{,}0\\times10^{-2}} = 5{,}0\\times10^{2}$ : la force est le **produit** $K\\,x$, pas un quotient."
+            },
+            {
+              "label": "$2{,}0\\times10^{-3}\\ \\mathrm{N}$",
+              "why": "Tu as calculé $\\dfrac{x}{K} = \\dfrac{4{,}0\\times10^{-2}}{20} = 2{,}0\\times10^{-3}$ : tu as inversé le produit $K\\,x$."
+            }
+          ],
+          "hint": "Écris d'abord la loi de Hooke, puis convertis l'allongement en mètres avant de multiplier.",
+          "solution": "La force de rappel d'un ressort de raideur $K$ étiré (ou comprimé) de $x$ vaut, en valeur, $$F = K\\,|x| = 20\\times4{,}0\\times10^{-2} = 0{,}80\\ \\mathrm{N}.$$ Elle est toujours dirigée **vers** la position d'équilibre, d'où l'écriture vectorielle $\\vec{F} = -K\\,x\\,\\vec{i}$ quand $\\vec{i}$ est orienté dans le sens des $x$ croissants. Contrôle : un ressort de $20\\ \\mathrm{N\\,m^{-1}}$ tiré de $1\\ \\mathrm{m}$ donnerait $20\\ \\mathrm{N}$ ; pour $4\\ \\mathrm{cm}$, soit $25$ fois moins, on attend bien $0{,}8\\ \\mathrm{N}$.",
+          "methode": "Loi de Hooke : $F = K\\,|x|$, avec $K$ en $\\mathrm{N\\,m^{-1}}$ et $x$ **en mètres**.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-dispositif-q1"
+        },
+        {
+          "notion": "Le dispositif",
+          "difficulty": 2,
+          "statement": "Parmi les équations différentielles suivantes, laquelle est celle d'un **oscillateur harmonique** de pulsation propre $\\omega_0$ ?",
+          "options": [
+            {
+              "label": "$\\ddot{x} + \\omega_0^{2}\\,x = 0$",
+              "correct": true,
+              "why": "C'est la définition même de l'oscillateur harmonique : sa solution est $x = X_m\\cos\\left(\\omega_0 t + \\varphi\\right)$, sinusoïdale de période $T_0 = \\dfrac{2\\pi}{\\omega_0}$."
+            },
+            {
+              "label": "$\\ddot{x} + \\omega_0\\,x = 0$",
+              "why": "Tu as écrit $\\omega_0$ au lieu de $\\omega_0^{2}$. Vérifie avec les unités : $\\ddot{x}$ est en $\\mathrm{m\\,s^{-2}}$ et $x$ en $\\mathrm{m}$, le coefficient doit donc être en $\\mathrm{s^{-2}}$, c'est-à-dire un carré de pulsation."
+            },
+            {
+              "label": "$\\ddot{x} - \\omega_0^{2}\\,x = 0$",
+              "why": "Tu as mis un signe moins. Avec ce signe la solution est en $e^{\\pm\\omega_0 t}$ : la grandeur s'éloigne indéfiniment de l'équilibre au lieu d'osciller."
+            },
+            {
+              "label": "$\\dot{x} + \\omega_0^{2}\\,x = 0$",
+              "why": "Tu n'as écrit qu'une dérivée **première**. Cette équation donne une décroissance exponentielle (comme dans un circuit RC), pas des oscillations."
+            }
+          ],
+          "hint": "Regarde l'ordre de la dérivée, le signe, et vérifie l'homogénéité du coefficient devant $x$.",
+          "solution": "Un oscillateur harmonique est un système dont l'écart $x$ à l'équilibre vérifie $$\\ddot{x} + \\omega_0^{2}\\,x = 0,$$ où $\\omega_0$ est la **pulsation propre**. Sa solution générale s'écrit $x(t) = X_m\\cos\\!\\left(\\dfrac{2\\pi}{T_0}t + \\varphi\\right)$ avec $\\dfrac{2\\pi}{T_0} = \\omega_0$ : $X_m$ est l'amplitude, $T_0$ la période propre et $\\varphi$ la phase à l'origine. Contrôle d'homogénéité : $[\\ddot{x}] = \\mathrm{m\\,s^{-2}}$ et $[x] = \\mathrm{m}$, donc le coefficient devant $x$ est bien en $\\mathrm{s^{-2}}$ — c'est $\\omega_0^{2}$ et non $\\omega_0$.",
+          "methode": "Signature d'un oscillateur harmonique : dérivée **seconde**, signe **plus**, coefficient en $\\mathrm{s^{-2}}$ égal à $\\omega_0^{2}$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-dispositif-q2"
+        },
+        {
+          "notion": "Le dispositif",
+          "difficulty": 2,
+          "statement": "Un pendule élastique écarté de $X_m = 2{,}0\\ \\mathrm{cm}$ oscille avec une période propre $T_0 = 0{,}80\\ \\mathrm{s}$. On refait l'expérience en l'écartant cette fois de $4{,}0\\ \\mathrm{cm}$, sans rien changer d'autre. Que vaut la nouvelle période propre ?",
+          "options": [
+            {
+              "label": "$0{,}80\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$T_0 = 2\\pi\\sqrt{\\dfrac{m}{K}}$ ne contient **pas** l'amplitude : c'est l'isochronisme des oscillations. Doubler $X_m$ ne change rien à la période."
+            },
+            {
+              "label": "$1{,}6\\ \\mathrm{s}$",
+              "why": "Tu as doublé la période parce que l'amplitude a doublé : $2\\times0{,}80 = 1{,}6\\ \\mathrm{s}$. Or la période propre est indépendante de l'amplitude."
+            },
+            {
+              "label": "$1{,}1\\ \\mathrm{s}$",
+              "why": "Tu as multiplié par $\\sqrt{2}$ : $0{,}80\\times\\sqrt{2} = 1{,}1\\ \\mathrm{s}$. C'est ce que donnerait une période proportionnelle à $\\sqrt{X_m}$, ce qui n'est pas le cas."
+            },
+            {
+              "label": "$0{,}40\\ \\mathrm{s}$",
+              "why": "Tu as divisé par $2$ : $\\dfrac{0{,}80}{2} = 0{,}40\\ \\mathrm{s}$, en pensant que le solide va plus vite avec une grande amplitude. Il parcourt effectivement plus de chemin, mais plus vite aussi : la durée reste la même."
+            }
+          ],
+          "hint": "Quelles grandeurs apparaissent dans l'expression de $T_0$ pour un pendule élastique ? L'amplitude y figure-t-elle ?",
+          "solution": "Pour un pendule élastique, $$T_0 = 2\\pi\\sqrt{\\frac{m}{K}}.$$ Seules la masse $m$ et la raideur $K$ interviennent : la période propre est **indépendante de l'amplitude**. C'est la propriété d'**isochronisme des oscillations**, et elle reste vraie tant que le ressort travaille dans son domaine d'élasticité. La nouvelle période vaut donc encore $T_0 = 0{,}80\\ \\mathrm{s}$. Contrôle : en doublant $X_m$ on double aussi la vitesse maximale $v_{max} = X_m\\omega_0$ ; la distance parcourue et la vitesse étant toutes deux doublées, la durée d'un aller-retour ne change pas.",
+          "methode": "$T_0$ d'un pendule élastique ne dépend que de $m$ et $K$ : ni de l'amplitude, ni de $g$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-dispositif-q3"
+        },
+        {
+          "notion": "Le dispositif",
+          "difficulty": 3,
+          "statement": "L'abscisse d'un pendule élastique, en unités du système international, s'écrit $x(t) = 3{,}0\\times10^{-2}\\cos\\!\\left(10\\pi\\,t + \\dfrac{\\pi}{3}\\right)$. Quelles sont son amplitude $X_m$ et sa période propre $T_0$ ?",
+          "options": [
+            {
+              "label": "$X_m = 3{,}0\\ \\mathrm{cm}$ et $T_0 = 0{,}20\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "Le facteur devant le cosinus est l'amplitude : $X_m = 3{,}0\\times10^{-2}\\ \\mathrm{m} = 3{,}0\\ \\mathrm{cm}$. Le coefficient de $t$ est $\\omega_0 = 10\\pi\\ \\mathrm{rad\\,s^{-1}}$, donc $T_0 = \\dfrac{2\\pi}{10\\pi} = 0{,}20\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$X_m = 3{,}0\\ \\mathrm{cm}$ et $T_0 = 0{,}63\\ \\mathrm{s}$",
+              "why": "Tu as pris $\\omega_0 = 10$ au lieu de $10\\pi$ : $\\dfrac{2\\pi}{10} = 0{,}63\\ \\mathrm{s}$. Le $\\pi$ fait partie de la pulsation."
+            },
+            {
+              "label": "$X_m = 3{,}0\\ \\mathrm{cm}$ et $T_0 = 5{,}0\\ \\mathrm{s}$",
+              "why": "Tu as calculé $\\dfrac{\\omega_0}{2\\pi} = \\dfrac{10\\pi}{2\\pi} = 5{,}0$ : c'est la **fréquence** propre en $\\mathrm{Hz}$, pas la période. La période en est l'inverse."
+            },
+            {
+              "label": "$X_m = 3{,}0\\ \\mathrm{m}$ et $T_0 = 0{,}20\\ \\mathrm{s}$",
+              "why": "La période est juste, mais tu as oublié que l'énoncé est en unités SI : $3{,}0\\times10^{-2}\\ \\mathrm{m}$ fait $3{,}0\\ \\mathrm{cm}$, et non $3{,}0\\ \\mathrm{m}$."
+            }
+          ],
+          "hint": "Identifie terme à terme avec $x = X_m\\cos\\!\\left(\\dfrac{2\\pi}{T_0}t + \\varphi\\right)$, puis isole $T_0$.",
+          "solution": "On identifie avec la forme générale $x(t) = X_m\\cos\\!\\left(\\dfrac{2\\pi}{T_0}t + \\varphi\\right)$ : $$X_m = 3{,}0\\times10^{-2}\\ \\mathrm{m} = 3{,}0\\ \\mathrm{cm}, \\qquad \\omega_0 = \\frac{2\\pi}{T_0} = 10\\pi\\ \\mathrm{rad\\,s^{-1}}, \\qquad \\varphi = \\frac{\\pi}{3}\\ \\mathrm{rad}.$$ D'où $$T_0 = \\frac{2\\pi}{\\omega_0} = \\frac{2\\pi}{10\\pi} = 0{,}20\\ \\mathrm{s}.$$ Contrôle : la fréquence propre vaut $f_0 = \\dfrac{1}{T_0} = 5{,}0\\ \\mathrm{Hz}$, et on retrouve bien $\\omega_0 = 2\\pi f_0 = 10\\pi\\ \\mathrm{rad\\,s^{-1}}$. À $t = 0$, $x(0) = 3{,}0\\times10^{-2}\\cos\\dfrac{\\pi}{3} = 1{,}5\\ \\mathrm{cm}$ : le solide ne part donc pas d'une position extrême.",
+          "methode": "Dans $X_m\\cos(\\omega_0 t + \\varphi)$ : le facteur devant le cosinus est $X_m$, le coefficient de $t$ est $\\omega_0$, et $T_0 = \\dfrac{2\\pi}{\\omega_0}$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-dispositif-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'équation différentielle — cas horizontal",
+        "lesson": "Pendule élastique (masse-ressort)",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 3,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-l-equation-differentielle-cas-horizontal",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "L'équation différentielle — cas horizontal",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "L'équation différentielle — cas horizontal",
+          "difficulty": 2,
+          "statement": "Un solide de masse $m = 0{,}20\\ \\mathrm{kg}$ glisse sans frottement sur un banc horizontal, relié à un ressort de raideur $K = 80\\ \\mathrm{N\\,m^{-1}}$. La deuxième loi de Newton donne $m\\ddot{x} = -K x$. Quelle est la période propre des oscillations ?",
+          "options": [
+            {
+              "label": "$0{,}31\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "L'équation s'écrit $\\ddot{x} + \\dfrac{K}{m}x = 0$, donc $\\omega_0 = \\sqrt{\\dfrac{K}{m}}$ et $T_0 = 2\\pi\\sqrt{\\dfrac{m}{K}} = 2\\pi\\sqrt{\\dfrac{0{,}20}{80}} = 2\\pi\\times0{,}050 = 0{,}31\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$1{,}3\\times10^{2}\\ \\mathrm{s}$",
+              "why": "Tu as inversé le rapport sous la racine : $2\\pi\\sqrt{\\dfrac{K}{m}} = 2\\pi\\sqrt{400} = 1{,}3\\times10^{2}$. Sous la racine de $T_0$, c'est la masse **au numérateur** et la raideur au dénominateur."
+            },
+            {
+              "label": "$0{,}050\\ \\mathrm{s}$",
+              "why": "Tu as oublié le facteur $2\\pi$ : $\\sqrt{\\dfrac{m}{K}} = 0{,}050\\ \\mathrm{s}$ n'est pas la période, il reste à la multiplier par $2\\pi$."
+            },
+            {
+              "label": "$0{,}16\\ \\mathrm{s}$",
+              "why": "Tu as écrit $\\pi$ au lieu de $2\\pi$ : $\\pi\\sqrt{\\dfrac{m}{K}} = 0{,}16\\ \\mathrm{s}$, c'est-à-dire une demi-période."
+            }
+          ],
+          "hint": "Mets d'abord l'équation sous la forme $\\ddot{x} + \\omega_0^{2}x = 0$ pour lire $\\omega_0^{2}$, puis passe à la période.",
+          "solution": "On divise $m\\ddot{x} = -Kx$ par $m$ et on regroupe : $$\\ddot{x} + \\frac{K}{m}\\,x = 0.$$ Par identification avec $\\ddot{x} + \\omega_0^{2}x = 0$ : $\\omega_0^{2} = \\dfrac{K}{m} = \\dfrac{80}{0{,}20} = 4{,}0\\times10^{2}\\ \\mathrm{s^{-2}}$, soit $\\omega_0 = 20\\ \\mathrm{rad\\,s^{-1}}$. D'où $$T_0 = \\frac{2\\pi}{\\omega_0} = 2\\pi\\sqrt{\\frac{m}{K}} = 2\\pi\\sqrt{\\frac{0{,}20}{80}} = 2\\pi\\times0{,}050 = 0{,}31\\ \\mathrm{s}.$$ Contrôle d'homogénéité : $\\dfrac{m}{K}$ s'exprime en $\\dfrac{\\mathrm{kg}}{\\mathrm{N\\,m^{-1}}} = \\mathrm{s^{2}}$, sa racine est bien une durée. Un ressort raide ($K$ grand) et une masse faible donnent une période courte : c'est cohérent.",
+          "methode": "Divise par $m$ pour faire apparaître $\\omega_0^{2} = \\dfrac{K}{m}$, puis $T_0 = 2\\pi\\sqrt{\\dfrac{m}{K}}$ — la masse **en haut** sous la racine.",
+          "points": 1,
+          "ref": "pc-oscillateurs-l-equation-differentielle-cas-horizontal-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le cas vertical",
+        "lesson": "Pendule élastique (masse-ressort)",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-le-cas-vertical",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "Le cas vertical",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le cas vertical",
+          "difficulty": 1,
+          "statement": "On suspend un solide de masse $m = 250\\ \\mathrm{g}$ à un ressort vertical ; à l'équilibre, le ressort s'est allongé de $\\Delta\\ell_0 = 5{,}0\\ \\mathrm{cm}$. Que vaut la raideur $K$ du ressort ? (On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$.)",
+          "options": [
+            {
+              "label": "$49\\ \\mathrm{N\\,m^{-1}}$",
+              "correct": true,
+              "why": "À l'équilibre $K\\,\\Delta\\ell_0 = mg$, donc $K = \\dfrac{mg}{\\Delta\\ell_0} = \\dfrac{0{,}250\\times9{,}8}{5{,}0\\times10^{-2}} = 49\\ \\mathrm{N\\,m^{-1}}$."
+            },
+            {
+              "label": "$4{,}9\\times10^{4}\\ \\mathrm{N\\,m^{-1}}$",
+              "why": "Tu as laissé la masse en grammes : $\\dfrac{250\\times9{,}8}{5{,}0\\times10^{-2}} = 4{,}9\\times10^{4}$. La masse doit être en kilogrammes."
+            },
+            {
+              "label": "$0{,}49\\ \\mathrm{N\\,m^{-1}}$",
+              "why": "Tu as laissé l'allongement en centimètres : $\\dfrac{0{,}250\\times9{,}8}{5{,}0} = 0{,}49$. L'allongement doit être converti en mètres."
+            },
+            {
+              "label": "$2{,}0\\times10^{-2}\\ \\mathrm{N\\,m^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{\\Delta\\ell_0}{mg} = \\dfrac{5{,}0\\times10^{-2}}{0{,}250\\times9{,}8} = 2{,}0\\times10^{-2}$ : tu as inversé la relation d'équilibre."
+            }
+          ],
+          "hint": "Écris la condition d'équilibre du solide suspendu : poids et tension du ressort se compensent.",
+          "solution": "À l'équilibre, le solide suspendu est soumis à son poids $mg$ et à la tension du ressort $K\\,\\Delta\\ell_0$, de sens opposés et de mêmes valeurs : $$K\\,\\Delta\\ell_0 = mg \\quad\\Longrightarrow\\quad K = \\frac{mg}{\\Delta\\ell_0} = \\frac{0{,}250\\times9{,}8}{5{,}0\\times10^{-2}} = \\frac{2{,}45}{5{,}0\\times10^{-2}} = 49\\ \\mathrm{N\\,m^{-1}}.$$ Contrôle : avec ce $K$, l'allongement produit par $1\\ \\mathrm{kg}$ serait $\\dfrac{9{,}8}{49} = 0{,}20\\ \\mathrm{m}$, soit $20\\ \\mathrm{cm}$ — un ordre de grandeur réaliste pour un ressort de travaux pratiques.",
+          "methode": "Ressort vertical à l'équilibre : $K\\,\\Delta\\ell_0 = mg$. C'est la façon la plus simple de mesurer $K$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-cas-vertical-q1"
+        },
+        {
+          "notion": "Le cas vertical",
+          "difficulty": 2,
+          "statement": "Le même solide ($m = 250\\ \\mathrm{g}$) oscille verticalement au bout de ce ressort de raideur $K = 49\\ \\mathrm{N\\,m^{-1}}$. Quelle est la période propre de ses oscillations ?",
+          "options": [
+            {
+              "label": "$0{,}45\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$T_0 = 2\\pi\\sqrt{\\dfrac{m}{K}} = 2\\pi\\sqrt{\\dfrac{0{,}250}{49}} = 2\\pi\\times7{,}14\\times10^{-2} = 0{,}45\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$88\\ \\mathrm{s}$",
+              "why": "Tu as inversé le rapport : $2\\pi\\sqrt{\\dfrac{K}{m}} = 2\\pi\\sqrt{196} = 88$. Sous la racine de $T_0$, la masse est au numérateur."
+            },
+            {
+              "label": "$7{,}1\\times10^{-2}\\ \\mathrm{s}$",
+              "why": "Tu as oublié le facteur $2\\pi$ : $\\sqrt{\\dfrac{m}{K}} = 7{,}1\\times10^{-2}\\ \\mathrm{s}$ doit encore être multiplié par $2\\pi$."
+            },
+            {
+              "label": "$0{,}22\\ \\mathrm{s}$",
+              "why": "Tu as utilisé $\\pi$ au lieu de $2\\pi$ : $\\pi\\sqrt{\\dfrac{m}{K}} = 0{,}22\\ \\mathrm{s}$, soit la moitié de la période."
+            }
+          ],
+          "hint": "La formule du pendule élastique est la même qu'à l'horizontale : le poids ne modifie pas la période.",
+          "solution": "Pour un pendule élastique vertical, en repérant $x$ **à partir de la position d'équilibre**, le poids est exactement compensé par la tension d'équilibre et l'équation reste $\\ddot{x} + \\dfrac{K}{m}x = 0$. Donc $$T_0 = 2\\pi\\sqrt{\\frac{m}{K}} = 2\\pi\\sqrt{\\frac{0{,}250}{49}} = 2\\pi\\times7{,}14\\times10^{-2} = 0{,}45\\ \\mathrm{s}.$$ Contrôle par une autre voie : comme $K = \\dfrac{mg}{\\Delta\\ell_0}$, on a aussi $T_0 = 2\\pi\\sqrt{\\dfrac{\\Delta\\ell_0}{g}} = 2\\pi\\sqrt{\\dfrac{5{,}0\\times10^{-2}}{9{,}8}} = 0{,}45\\ \\mathrm{s}$ : les deux chemins donnent la même valeur.",
+          "methode": "Vertical ou horizontal, $T_0 = 2\\pi\\sqrt{\\dfrac{m}{K}}$ : la même formule, à condition de compter $x$ depuis l'équilibre.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-cas-vertical-q2"
+        },
+        {
+          "notion": "Le cas vertical",
+          "difficulty": 2,
+          "statement": "Un solide oscille au bout d'un ressort **vertical**. On repère son abscisse $x$ sur un axe vertical descendant, **l'origine étant prise à la position d'équilibre**. Quelle est son équation différentielle ?",
+          "options": [
+            {
+              "label": "$\\ddot{x} + \\dfrac{K}{m}\\,x = 0$",
+              "correct": true,
+              "why": "À l'équilibre $K\\Delta\\ell_0 = mg$ ; en écrivant la deuxième loi de Newton pour un écart $x$, le terme $mg$ et le terme $K\\Delta\\ell_0$ se compensent et il ne reste que $-Kx$. Le poids a disparu de l'équation."
+            },
+            {
+              "label": "$\\ddot{x} + \\dfrac{K}{m}\\,x = g$",
+              "why": "Tu as gardé le poids en second membre. Il est déjà compensé par la tension d'équilibre du ressort, puisque l'origine de $x$ est prise à la position d'équilibre."
+            },
+            {
+              "label": "$\\ddot{x} + \\dfrac{K}{m}\\left(x + \\Delta\\ell_0\\right) = 0$",
+              "why": "Tu as compté l'allongement total depuis le ressort **à vide**, mais sans retirer le poids. Soit on repère depuis l'équilibre et le poids disparaît, soit on repère depuis le ressort à vide et il faut garder $+g$ : ici l'énoncé impose la première convention."
+            },
+            {
+              "label": "$\\ddot{x} + \\dfrac{m}{K}\\,x = 0$",
+              "why": "Tu as inversé le coefficient : $\\dfrac{m}{K}$ s'exprime en $\\mathrm{s^{2}}$, alors que le coefficient devant $x$ doit être en $\\mathrm{s^{-2}}$. C'est $\\dfrac{K}{m}$ qui vaut $\\omega_0^{2}$."
+            }
+          ],
+          "hint": "Écris la deuxième loi de Newton, puis remplace $mg$ par son expression tirée de la condition d'équilibre.",
+          "solution": "Soit $x$ l'écart à la position d'équilibre, mesuré sur l'axe vertical descendant. L'allongement du ressort vaut alors $\\Delta\\ell_0 + x$ et la deuxième loi de Newton s'écrit $$m\\ddot{x} = mg - K\\left(\\Delta\\ell_0 + x\\right).$$ Or la condition d'équilibre donne $K\\Delta\\ell_0 = mg$ : les deux termes constants s'annulent, et il reste $$m\\ddot{x} = -Kx \\quad\\Longrightarrow\\quad \\ddot{x} + \\frac{K}{m}\\,x = 0.$$ C'est exactement l'équation du cas horizontal : $\\omega_0 = \\sqrt{\\dfrac{K}{m}}$ et $T_0 = 2\\pi\\sqrt{\\dfrac{m}{K}}$. Contrôle : si le poids subsistait dans l'équation, la position d'équilibre ne serait pas $x = 0$, ce qui contredirait l'énoncé.",
+          "methode": "Ressort vertical : repère $x$ depuis l'équilibre, utilise $K\\Delta\\ell_0 = mg$, et le poids disparaît de l'équation.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-cas-vertical-q3"
+        },
+        {
+          "notion": "Le cas vertical",
+          "difficulty": 3,
+          "statement": "On suspend une masse inconnue à un ressort de raideur inconnue : à l'équilibre, le ressort s'allonge de $\\Delta\\ell_0 = 4{,}0\\ \\mathrm{cm}$. Sans connaître ni $m$ ni $K$, quelle est la période propre des oscillations verticales ? (On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$.)",
+          "options": [
+            {
+              "label": "$0{,}40\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "Comme $\\dfrac{m}{K} = \\dfrac{\\Delta\\ell_0}{g}$, on obtient $T_0 = 2\\pi\\sqrt{\\dfrac{\\Delta\\ell_0}{g}} = 2\\pi\\sqrt{\\dfrac{4{,}0\\times10^{-2}}{9{,}8}} = 2\\pi\\times6{,}39\\times10^{-2} = 0{,}40\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{s}$",
+              "why": "Tu as laissé l'allongement en centimètres : $2\\pi\\sqrt{\\dfrac{4{,}0}{9{,}8}} = 4{,}0\\ \\mathrm{s}$. Il faut convertir $\\Delta\\ell_0$ en mètres."
+            },
+            {
+              "label": "$3{,}9\\ \\mathrm{s}$",
+              "why": "Tu as multiplié au lieu de diviser : $2\\pi\\sqrt{\\Delta\\ell_0\\,g} = 2\\pi\\sqrt{0{,}392} = 3{,}9$. Dans $T_0$, l'allongement est au numérateur et $g$ au dénominateur."
+            },
+            {
+              "label": "$6{,}4\\times10^{-2}\\ \\mathrm{s}$",
+              "why": "Tu as oublié le facteur $2\\pi$ : $\\sqrt{\\dfrac{\\Delta\\ell_0}{g}} = 6{,}4\\times10^{-2}\\ \\mathrm{s}$ doit encore être multiplié par $2\\pi$."
+            }
+          ],
+          "hint": "Utilise la condition d'équilibre pour exprimer le rapport $\\dfrac{m}{K}$ sans connaître $m$ ni $K$ séparément.",
+          "solution": "La période ne dépend que du rapport $\\dfrac{m}{K}$, et la condition d'équilibre le fournit : $$K\\,\\Delta\\ell_0 = mg \\quad\\Longrightarrow\\quad \\frac{m}{K} = \\frac{\\Delta\\ell_0}{g}.$$ Donc $$T_0 = 2\\pi\\sqrt{\\frac{m}{K}} = 2\\pi\\sqrt{\\frac{\\Delta\\ell_0}{g}} = 2\\pi\\sqrt{\\frac{4{,}0\\times10^{-2}}{9{,}8}} = 2\\pi\\times6{,}39\\times10^{-2} = 0{,}40\\ \\mathrm{s}.$$ Contrôle : la formule est identique à celle du pendule simple de longueur $\\Delta\\ell_0$. Un allongement de $4\\ \\mathrm{cm}$ correspondrait à un pendule simple de $4\\ \\mathrm{cm}$, très court, donc très rapide — $0{,}4\\ \\mathrm{s}$ est cohérent. Noter que $T_0$ **ne dépend pas de $g$** pour un pendule élastique : ici $g$ n'apparaît que parce qu'on a remplacé $\\dfrac{m}{K}$ par $\\dfrac{\\Delta\\ell_0}{g}$, et un changement de $g$ changerait aussi $\\Delta\\ell_0$.",
+          "methode": "Un seul allongement à l'équilibre suffit : $\\dfrac{m}{K} = \\dfrac{\\Delta\\ell_0}{g}$, donc $T_0 = 2\\pi\\sqrt{\\dfrac{\\Delta\\ell_0}{g}}$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-cas-vertical-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Vitesse et accélération",
+        "lesson": "Pendule élastique (masse-ressort)",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-vitesse-et-acceleration",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "Vitesse et accélération",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Vitesse et accélération",
+          "difficulty": 1,
+          "statement": "Un pendule élastique oscille avec une amplitude $X_m = 5{,}0\\ \\mathrm{cm}$ et une période propre $T_0 = 0{,}40\\ \\mathrm{s}$. Quelle est la valeur maximale de sa vitesse ?",
+          "options": [
+            {
+              "label": "$0{,}79\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_{max} = X_m\\,\\omega_0 = X_m\\dfrac{2\\pi}{T_0} = 5{,}0\\times10^{-2}\\times\\dfrac{2\\pi}{0{,}40} = 5{,}0\\times10^{-2}\\times15{,}7 = 0{,}79\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$0{,}13\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{X_m}{T_0} = \\dfrac{5{,}0\\times10^{-2}}{0{,}40} = 0{,}13$ : tu as oublié le facteur $2\\pi$ qui relie $T_0$ à la pulsation $\\omega_0$."
+            },
+            {
+              "label": "$0{,}31\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $2\\pi X_m = 2\\pi\\times5{,}0\\times10^{-2} = 0{,}31$ : tu as oublié de diviser par $T_0$ pour former $\\omega_0 = \\dfrac{2\\pi}{T_0}$."
+            },
+            {
+              "label": "$12\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as utilisé $\\omega_0^{2}$ au lieu de $\\omega_0$ : $X_m\\,\\omega_0^{2} = 5{,}0\\times10^{-2}\\times247 = 12$. Cette quantité est l'accélération maximale, pas la vitesse."
+            }
+          ],
+          "hint": "Dérive $x = X_m\\cos(\\omega_0 t + \\varphi)$ par rapport au temps, puis cherche le maximum du sinus.",
+          "solution": "En dérivant $x(t) = X_m\\cos\\!\\left(\\omega_0 t + \\varphi\\right)$ on obtient $$v(t) = \\dot{x}(t) = -X_m\\,\\omega_0\\sin\\!\\left(\\omega_0 t + \\varphi\\right),$$ dont la valeur maximale est $v_{max} = X_m\\,\\omega_0$. Avec $\\omega_0 = \\dfrac{2\\pi}{T_0} = \\dfrac{2\\pi}{0{,}40} = 15{,}7\\ \\mathrm{rad\\,s^{-1}}$ : $$v_{max} = 5{,}0\\times10^{-2}\\times15{,}7 = 0{,}79\\ \\mathrm{m\\,s^{-1}}.$$ Contrôle d'ordre de grandeur : le solide parcourt $4X_m = 20\\ \\mathrm{cm}$ par période de $0{,}40\\ \\mathrm{s}$, soit une vitesse **moyenne** de $0{,}50\\ \\mathrm{m\\,s^{-1}}$ ; la vitesse maximale doit être un peu supérieure, et $0{,}79\\ \\mathrm{m\\,s^{-1}}$ l'est bien.",
+          "methode": "$v_{max} = X_m\\,\\omega_0$ avec $\\omega_0 = \\dfrac{2\\pi}{T_0}$ : convertis $X_m$ en mètres avant de multiplier.",
+          "points": 1,
+          "ref": "pc-oscillateurs-vitesse-et-acceleration-q1"
+        },
+        {
+          "notion": "Vitesse et accélération",
+          "difficulty": 2,
+          "statement": "Le même pendule élastique ($T_0 = 0{,}40\\ \\mathrm{s}$) passe par la position d'abscisse $x = 2{,}0\\ \\mathrm{cm}$. Quelle est alors son accélération ?",
+          "options": [
+            {
+              "label": "$-4{,}9\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "L'équation différentielle donne directement $a = -\\omega_0^{2}x$, avec $\\omega_0^{2} = \\left(\\dfrac{2\\pi}{0{,}40}\\right)^{2} = 247\\ \\mathrm{s^{-2}}$ : $a = -247\\times2{,}0\\times10^{-2} = -4{,}9\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$+4{,}9\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "La valeur est bonne mais le signe est faux : tu as oublié le signe moins de $a = -\\omega_0^{2}x$. L'accélération est toujours dirigée **vers** la position d'équilibre, donc de signe opposé à $x$."
+            },
+            {
+              "label": "$-0{,}31\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as utilisé $\\omega_0$ au lieu de $\\omega_0^{2}$ : $-15{,}7\\times2{,}0\\times10^{-2} = -0{,}31$. L'accélération est proportionnelle au **carré** de la pulsation."
+            },
+            {
+              "label": "$-4{,}9\\times10^{2}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as laissé l'abscisse en centimètres : $-247\\times2{,}0 = -4{,}9\\times10^{2}$. Il faut convertir $x$ en mètres."
+            }
+          ],
+          "hint": "Pas besoin de connaître la phase : l'équation différentielle relie directement $a$ et $x$.",
+          "solution": "L'équation différentielle de l'oscillateur harmonique, $\\ddot{x} + \\omega_0^{2}x = 0$, se relit $$a = \\ddot{x} = -\\omega_0^{2}\\,x.$$ Avec $\\omega_0 = \\dfrac{2\\pi}{T_0} = 15{,}7\\ \\mathrm{rad\\,s^{-1}}$, donc $\\omega_0^{2} = 247\\ \\mathrm{s^{-2}}$ : $$a = -247\\times2{,}0\\times10^{-2} = -4{,}9\\ \\mathrm{m\\,s^{-2}}.$$ Contrôle : le signe est opposé à celui de $x$, comme attendu pour une force de rappel ; et avec $m = 0{,}10\\ \\mathrm{kg}$ par exemple, cela correspondrait à une force $K|x| = m|a| = 0{,}49\\ \\mathrm{N}$, un ordre de grandeur raisonnable.",
+          "methode": "$a = -\\omega_0^{2}x$ : relation immédiate entre accélération et abscisse, sans passer par la phase.",
+          "points": 1,
+          "ref": "pc-oscillateurs-vitesse-et-acceleration-q2"
+        },
+        {
+          "notion": "Vitesse et accélération",
+          "difficulty": 2,
+          "statement": "À l'instant $t = 0$, on écarte un pendule élastique de $X_m$ dans le sens positif de l'axe puis on le lâche **sans vitesse**. Quelle est la phase à l'origine $\\varphi$ dans $x = X_m\\cos\\!\\left(\\dfrac{2\\pi}{T_0}t + \\varphi\\right)$ ?",
+          "options": [
+            {
+              "label": "$\\varphi = 0\\ \\mathrm{rad}$",
+              "correct": true,
+              "why": "À $t=0$ : $x(0) = X_m\\cos\\varphi = X_m$ impose $\\cos\\varphi = 1$, et $v(0) = -X_m\\omega_0\\sin\\varphi = 0$ impose $\\sin\\varphi = 0$. Les deux conditions donnent $\\varphi = 0$."
+            },
+            {
+              "label": "$\\varphi = \\pi\\ \\mathrm{rad}$",
+              "why": "Avec $\\varphi = \\pi$ on a bien $v(0) = 0$, mais $x(0) = X_m\\cos\\pi = -X_m$ : le solide partirait du côté **négatif** de l'axe, ce qui contredit l'énoncé."
+            },
+            {
+              "label": "$\\varphi = \\dfrac{\\pi}{2}\\ \\mathrm{rad}$",
+              "why": "Avec $\\varphi = \\dfrac{\\pi}{2}$ on a $x(0) = 0$ et $|v(0)| = X_m\\omega_0$ : c'est le cas d'un solide **lancé depuis la position d'équilibre**, pas celui d'un lâcher sans vitesse."
+            },
+            {
+              "label": "$\\varphi = -\\dfrac{\\pi}{2}\\ \\mathrm{rad}$",
+              "why": "Avec $\\varphi = -\\dfrac{\\pi}{2}$ on a aussi $x(0) = 0$ : le solide démarrerait de l'équilibre avec une vitesse maximale, cette fois dans l'autre sens. Ce n'est pas un lâcher sans vitesse."
+            }
+          ],
+          "hint": "Écris les deux conditions initiales, sur $x(0)$ **et** sur $v(0)$ : une seule ne suffit pas à fixer $\\varphi$.",
+          "solution": "On impose les deux conditions initiales à $$x(t) = X_m\\cos\\!\\left(\\omega_0 t + \\varphi\\right), \\qquad v(t) = -X_m\\,\\omega_0\\sin\\!\\left(\\omega_0 t + \\varphi\\right).$$ Lâcher sans vitesse depuis l'élongation maximale positive signifie $x(0) = +X_m$ et $v(0) = 0$, donc $$\\cos\\varphi = 1 \\quad\\text{et}\\quad \\sin\\varphi = 0 \\quad\\Longrightarrow\\quad \\varphi = 0\\ \\mathrm{rad}.$$ Le mouvement s'écrit donc simplement $x(t) = X_m\\cos\\!\\left(\\dfrac{2\\pi}{T_0}t\\right)$. Contrôle : à $t = \\dfrac{T_0}{2}$ on trouve $x = -X_m$, l'autre position extrême — c'est bien ce qu'on observe.",
+          "methode": "Deux conditions initiales, deux équations : $x(0)$ fixe $\\cos\\varphi$, $v(0)$ fixe $\\sin\\varphi$. Les deux ensemble donnent $\\varphi$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-vitesse-et-acceleration-q3"
+        },
+        {
+          "notion": "Vitesse et accélération",
+          "difficulty": 3,
+          "statement": "Pour un pendule élastique, on mesure une vitesse maximale $v_{max} = 0{,}50\\ \\mathrm{m\\,s^{-1}}$ et une accélération maximale $a_{max} = 2{,}0\\ \\mathrm{m\\,s^{-2}}$. Quelle est la période propre $T_0$ ?",
+          "options": [
+            {
+              "label": "$1{,}6\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "De $v_{max} = X_m\\omega_0$ et $a_{max} = X_m\\omega_0^{2}$ on tire $\\omega_0 = \\dfrac{a_{max}}{v_{max}} = 4{,}0\\ \\mathrm{rad\\,s^{-1}}$, donc $T_0 = \\dfrac{2\\pi}{4{,}0} = 1{,}6\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$25\\ \\mathrm{s}$",
+              "why": "Tu as inversé le rapport : avec $\\omega_0 = \\dfrac{v_{max}}{a_{max}} = 0{,}25$ on obtient $\\dfrac{2\\pi}{0{,}25} = 25\\ \\mathrm{s}$. C'est $\\dfrac{a_{max}}{v_{max}}$ qui est une pulsation, car $a_{max} = v_{max}\\,\\omega_0$."
+            },
+            {
+              "label": "$0{,}25\\ \\mathrm{s}$",
+              "why": "Tu as donné $\\dfrac{v_{max}}{a_{max}} = 0{,}25\\ \\mathrm{s}$, c'est-à-dire $\\dfrac{1}{\\omega_0}$ : il reste à multiplier par $2\\pi$ pour obtenir la période."
+            },
+            {
+              "label": "$0{,}79\\ \\mathrm{s}$",
+              "why": "Tu as utilisé $\\pi$ au lieu de $2\\pi$ : $\\dfrac{\\pi}{4{,}0} = 0{,}79\\ \\mathrm{s}$, soit une demi-période."
+            }
+          ],
+          "hint": "Exprime $v_{max}$ et $a_{max}$ en fonction de $X_m$ et $\\omega_0$, puis forme le rapport qui élimine $X_m$.",
+          "solution": "En dérivant deux fois $x = X_m\\cos(\\omega_0 t + \\varphi)$ : $$v_{max} = X_m\\,\\omega_0, \\qquad a_{max} = X_m\\,\\omega_0^{2}.$$ Le rapport élimine l'amplitude : $$\\omega_0 = \\frac{a_{max}}{v_{max}} = \\frac{2{,}0}{0{,}50} = 4{,}0\\ \\mathrm{rad\\,s^{-1}} \\quad\\Longrightarrow\\quad T_0 = \\frac{2\\pi}{\\omega_0} = \\frac{2\\pi}{4{,}0} = 1{,}6\\ \\mathrm{s}.$$ Contrôle : l'amplitude vaut alors $X_m = \\dfrac{v_{max}}{\\omega_0} = \\dfrac{0{,}50}{4{,}0} = 0{,}125\\ \\mathrm{m}$, et on vérifie $a_{max} = X_m\\omega_0^{2} = 0{,}125\\times16 = 2{,}0\\ \\mathrm{m\\,s^{-2}}$ : conforme à l'énoncé. Contrôle d'homogénéité : $\\dfrac{\\mathrm{m\\,s^{-2}}}{\\mathrm{m\\,s^{-1}}} = \\mathrm{s^{-1}}$, c'est bien une pulsation.",
+          "methode": "$\\dfrac{a_{max}}{v_{max}} = \\omega_0$ et $\\dfrac{v_{max}^{2}}{a_{max}} = X_m$ : deux mesures suffisent à tout déterminer.",
+          "points": 1,
+          "ref": "pc-oscillateurs-vitesse-et-acceleration-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le pendule de torsion",
+        "lesson": "Pendule de torsion & pendule pesant",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-le-pendule-de-torsion",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "Le pendule de torsion",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le pendule de torsion",
+          "difficulty": 1,
+          "statement": "Un pendule de torsion est formé d'un disque de moment d'inertie $J_\\Delta = 2{,}0\\times10^{-3}\\ \\mathrm{kg\\,m^{2}}$ suspendu à un fil de constante de torsion $C = 5{,}0\\times10^{-2}\\ \\mathrm{N\\,m\\,rad^{-1}}$. Quelle est sa période propre ?",
+          "options": [
+            {
+              "label": "$1{,}26\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{C}} = 2\\pi\\sqrt{\\dfrac{2{,}0\\times10^{-3}}{5{,}0\\times10^{-2}}} = 2\\pi\\sqrt{4{,}0\\times10^{-2}} = 2\\pi\\times0{,}20 = 1{,}26\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$31\\ \\mathrm{s}$",
+              "why": "Tu as inversé le rapport sous la racine : $2\\pi\\sqrt{\\dfrac{C}{J_\\Delta}} = 2\\pi\\sqrt{25} = 31$. Le moment d'inertie joue le rôle de la masse : il est **au numérateur**."
+            },
+            {
+              "label": "$0{,}20\\ \\mathrm{s}$",
+              "why": "Tu as oublié le facteur $2\\pi$ : $\\sqrt{\\dfrac{J_\\Delta}{C}} = 0{,}20\\ \\mathrm{s}$ doit encore être multiplié par $2\\pi$."
+            },
+            {
+              "label": "$0{,}63\\ \\mathrm{s}$",
+              "why": "Tu as écrit $\\pi$ au lieu de $2\\pi$ : $\\pi\\sqrt{\\dfrac{J_\\Delta}{C}} = 0{,}63\\ \\mathrm{s}$, soit une demi-période."
+            }
+          ],
+          "hint": "Le pendule de torsion est l'analogue en rotation du pendule élastique : remplace $m$ par $J_\\Delta$ et $K$ par $C$.",
+          "solution": "L'équation différentielle du pendule de torsion est $J_\\Delta\\ddot{\\theta} = -C\\theta$, soit $\\ddot{\\theta} + \\dfrac{C}{J_\\Delta}\\theta = 0$ : c'est un oscillateur harmonique de pulsation propre $\\omega_0 = \\sqrt{\\dfrac{C}{J_\\Delta}}$, donc $$T_0 = 2\\pi\\sqrt{\\frac{J_\\Delta}{C}} = 2\\pi\\sqrt{\\frac{2{,}0\\times10^{-3}}{5{,}0\\times10^{-2}}} = 2\\pi\\sqrt{4{,}0\\times10^{-2}} = 2\\pi\\times0{,}20 = 1{,}26\\ \\mathrm{s}.$$ Contrôle d'homogénéité : $\\dfrac{\\mathrm{kg\\,m^{2}}}{\\mathrm{N\\,m\\,rad^{-1}}} = \\mathrm{s^{2}}$, sa racine est bien une durée. La période propre ne dépend pas de l'amplitude angulaire : l'isochronisme vaut aussi ici, et à toute amplitude puisque le couple de rappel $-C\\theta$ est exactement proportionnel à $\\theta$.",
+          "methode": "$T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{C}}$ : $J_\\Delta$ remplace $m$, $C$ remplace $K$ — et $J_\\Delta$ est au numérateur.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-pendule-de-torsion-q1"
+        },
+        {
+          "notion": "Le pendule de torsion",
+          "difficulty": 2,
+          "statement": "On remplace le disque de ce pendule de torsion ($T_0 = 1{,}26\\ \\mathrm{s}$) par un disque de moment d'inertie **quatre fois plus grand**, sans changer le fil. Quelle est la nouvelle période propre ?",
+          "options": [
+            {
+              "label": "$2{,}5\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$T_0 \\propto \\sqrt{J_\\Delta}$, donc multiplier $J_\\Delta$ par $4$ multiplie $T_0$ par $\\sqrt{4} = 2$ : $2\\times1{,}26 = 2{,}5\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$5{,}0\\ \\mathrm{s}$",
+              "why": "Tu as multiplié la période par $4$ : $4\\times1{,}26 = 5{,}0\\ \\mathrm{s}$. Mais $J_\\Delta$ est **sous une racine carrée** : c'est $\\sqrt{4} = 2$ qu'il faut appliquer."
+            },
+            {
+              "label": "$1{,}8\\ \\mathrm{s}$",
+              "why": "Tu as multiplié par $\\sqrt{2}$ : $1{,}26\\times\\sqrt{2} = 1{,}8\\ \\mathrm{s}$. C'est ce que donnerait un moment d'inertie **doublé**, pas quadruplé."
+            },
+            {
+              "label": "$0{,}63\\ \\mathrm{s}$",
+              "why": "Tu as divisé par $2$ : $\\dfrac{1{,}26}{2} = 0{,}63\\ \\mathrm{s}$. Un disque plus difficile à mettre en rotation oscille plus **lentement**, donc la période augmente."
+            }
+          ],
+          "hint": "Dans $T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{C}}$, comment un facteur $4$ sur $J_\\Delta$ ressort-il de la racine ?",
+          "solution": "La période propre vaut $T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{C}}$, donc $T_0$ est proportionnelle à $\\sqrt{J_\\Delta}$ à $C$ constant. En remplaçant $J_\\Delta$ par $4J_\\Delta$ : $$T_0' = 2\\pi\\sqrt{\\frac{4J_\\Delta}{C}} = 2\\,T_0 = 2\\times1{,}26 = 2{,}5\\ \\mathrm{s}.$$ Contrôle direct : avec $J_\\Delta' = 8{,}0\\times10^{-3}\\ \\mathrm{kg\\,m^{2}}$ et $C = 5{,}0\\times10^{-2}\\ \\mathrm{N\\,m\\,rad^{-1}}$, $T_0' = 2\\pi\\sqrt{0{,}16} = 2\\pi\\times0{,}40 = 2{,}5\\ \\mathrm{s}$ : même résultat. Le sens physique est clair : plus le disque est « lourd à tourner », plus l'oscillation est lente.",
+          "methode": "Dans une racine carrée, un facteur $4$ sur la grandeur devient un facteur $2$ sur la période.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-pendule-de-torsion-q2"
+        },
+        {
+          "notion": "Le pendule de torsion",
+          "difficulty": 3,
+          "statement": "Pour mesurer la constante de torsion d'un fil, on y suspend un disque de moment d'inertie $J_\\Delta = 2{,}0\\times10^{-3}\\ \\mathrm{kg\\,m^{2}}$ et l'on chronomètre **10 oscillations** : elles durent $12{,}6\\ \\mathrm{s}$. Que vaut $C$ ?",
+          "options": [
+            {
+              "label": "$5{,}0\\times10^{-2}\\ \\mathrm{N\\,m\\,rad^{-1}}$",
+              "correct": true,
+              "why": "$T_0 = \\dfrac{12{,}6}{10} = 1{,}26\\ \\mathrm{s}$, puis $C = \\dfrac{4\\pi^{2}J_\\Delta}{T_0^{2}} = \\dfrac{4\\pi^{2}\\times2{,}0\\times10^{-3}}{1{,}26^{2}} = 5{,}0\\times10^{-2}\\ \\mathrm{N\\,m\\,rad^{-1}}$."
+            },
+            {
+              "label": "$5{,}0\\times10^{-4}\\ \\mathrm{N\\,m\\,rad^{-1}}$",
+              "why": "Tu as utilisé la durée totale $12{,}6\\ \\mathrm{s}$ comme période : $\\dfrac{4\\pi^{2}\\times2{,}0\\times10^{-3}}{12{,}6^{2}} = 5{,}0\\times10^{-4}$. Il faut d'abord diviser par les $10$ oscillations."
+            },
+            {
+              "label": "$2{,}0\\times10^{1}\\ \\mathrm{N\\,m\\,rad^{-1}}$",
+              "why": "Tu as inversé la formule : $\\dfrac{T_0^{2}}{4\\pi^{2}J_\\Delta} = 2{,}0\\times10^{1}$. En partant de $T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{C}}$, c'est $C$ qui se retrouve au dénominateur, donc $C = \\dfrac{4\\pi^{2}J_\\Delta}{T_0^{2}}$."
+            },
+            {
+              "label": "$1{,}3\\times10^{-3}\\ \\mathrm{N\\,m\\,rad^{-1}}$",
+              "why": "Tu as oublié le facteur $4\\pi^{2}$ : $\\dfrac{J_\\Delta}{T_0^{2}} = 1{,}3\\times10^{-3}$. En élevant $T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{C}}$ au carré, le $2\\pi$ devient $4\\pi^{2}$."
+            }
+          ],
+          "hint": "Commence par la période d'**une** oscillation, puis élève la formule au carré pour isoler $C$.",
+          "solution": "Dix oscillations durent $12{,}6\\ \\mathrm{s}$, donc $$T_0 = \\frac{12{,}6}{10} = 1{,}26\\ \\mathrm{s}.$$ En élevant $T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{C}}$ au carré : $T_0^{2} = 4\\pi^{2}\\dfrac{J_\\Delta}{C}$, d'où $$C = \\frac{4\\pi^{2}J_\\Delta}{T_0^{2}} = \\frac{4\\pi^{2}\\times2{,}0\\times10^{-3}}{(1{,}26)^{2}} = \\frac{7{,}90\\times10^{-2}}{1{,}59} = 5{,}0\\times10^{-2}\\ \\mathrm{N\\,m\\,rad^{-1}}.$$ Contrôle inverse : avec $C = 5{,}0\\times10^{-2}$, on retrouve $T_0 = 2\\pi\\sqrt{\\dfrac{2{,}0\\times10^{-3}}{5{,}0\\times10^{-2}}} = 1{,}26\\ \\mathrm{s}$, donc $10\\,T_0 = 12{,}6\\ \\mathrm{s}$ : cohérent avec la mesure.",
+          "methode": "Chronométrer $n$ oscillations : $T_0 = \\dfrac{t}{n}$ d'abord. Puis élève au carré : $C = \\dfrac{4\\pi^{2}J_\\Delta}{T_0^{2}}$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-pendule-de-torsion-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le pendule pesant",
+        "lesson": "Pendule de torsion & pendule pesant",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-le-pendule-pesant",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "Le pendule pesant",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le pendule pesant",
+          "difficulty": 1,
+          "statement": "Un pendule pesant de masse $m = 0{,}50\\ \\mathrm{kg}$ a un moment d'inertie $J_\\Delta = 4{,}0\\times10^{-2}\\ \\mathrm{kg\\,m^{2}}$ par rapport à son axe de rotation, et son centre d'inertie est à la distance $d = 0{,}20\\ \\mathrm{m}$ de cet axe. Pour de petites oscillations, $T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{m\\,g\\,d}}$. Que vaut $T_0$ ? (On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$.)",
+          "options": [
+            {
+              "label": "$1{,}27\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$m\\,g\\,d = 0{,}50\\times9{,}8\\times0{,}20 = 0{,}98\\ \\mathrm{N\\,m}$, donc $T_0 = 2\\pi\\sqrt{\\dfrac{4{,}0\\times10^{-2}}{0{,}98}} = 2\\pi\\times0{,}202 = 1{,}27\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$31\\ \\mathrm{s}$",
+              "why": "Tu as inversé le rapport sous la racine : $2\\pi\\sqrt{\\dfrac{m\\,g\\,d}{J_\\Delta}} = 2\\pi\\sqrt{24{,}5} = 31$. Le moment d'inertie est **au numérateur**."
+            },
+            {
+              "label": "$0{,}20\\ \\mathrm{s}$",
+              "why": "Tu as oublié le facteur $2\\pi$ : $\\sqrt{\\dfrac{J_\\Delta}{m\\,g\\,d}} = 0{,}20\\ \\mathrm{s}$ doit encore être multiplié par $2\\pi$."
+            },
+            {
+              "label": "$0{,}63\\ \\mathrm{s}$",
+              "why": "Tu as écrit $\\pi$ au lieu de $2\\pi$ : $\\pi\\sqrt{\\dfrac{J_\\Delta}{m\\,g\\,d}} = 0{,}63\\ \\mathrm{s}$, soit une demi-période."
+            }
+          ],
+          "hint": "Calcule d'abord le produit $m\\,g\\,d$ au dénominateur, puis applique la formule sans oublier le $2\\pi$.",
+          "solution": "Le dénominateur vaut $$m\\,g\\,d = 0{,}50\\times9{,}8\\times0{,}20 = 0{,}98\\ \\mathrm{N\\,m}.$$ Donc $$T_0 = 2\\pi\\sqrt{\\frac{J_\\Delta}{m\\,g\\,d}} = 2\\pi\\sqrt{\\frac{4{,}0\\times10^{-2}}{0{,}98}} = 2\\pi\\sqrt{4{,}08\\times10^{-2}} = 2\\pi\\times0{,}202 = 1{,}27\\ \\mathrm{s}.$$ Contrôle d'homogénéité : $\\dfrac{\\mathrm{kg\\,m^{2}}}{\\mathrm{N\\,m}} = \\mathrm{s^{2}}$, la racine est bien une durée. Contrôle d'ordre de grandeur : un pendule simple de même période aurait pour longueur $\\ell = \\dfrac{g\\,T_0^{2}}{4\\pi^{2}} = 0{,}40\\ \\mathrm{m}$, ce qui est plausible pour un solide dont le centre d'inertie est à $20\\ \\mathrm{cm}$ de l'axe.",
+          "methode": "$T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{m\\,g\\,d}}$ : calcule le produit $m\\,g\\,d$ en une fois, puis la racine, puis $\\times 2\\pi$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-pendule-pesant-q1"
+        },
+        {
+          "notion": "Le pendule pesant",
+          "difficulty": 2,
+          "statement": "Pour un pendule pesant écarté d'un angle $\\theta$ par rapport à sa position d'équilibre, quelle est l'équation différentielle du mouvement **après** l'approximation des petites oscillations ?",
+          "options": [
+            {
+              "label": "$\\ddot{\\theta} + \\dfrac{m\\,g\\,d}{J_\\Delta}\\,\\theta = 0$",
+              "correct": true,
+              "why": "Le théorème du moment cinétique donne $J_\\Delta\\ddot{\\theta} = -m\\,g\\,d\\sin\\theta$ ; en remplaçant $\\sin\\theta$ par $\\theta$ (en radians) on obtient bien un oscillateur harmonique de pulsation $\\omega_0 = \\sqrt{\\dfrac{m\\,g\\,d}{J_\\Delta}}$."
+            },
+            {
+              "label": "$\\ddot{\\theta} + \\dfrac{m\\,g\\,d}{J_\\Delta}\\,\\sin\\theta = 0$",
+              "why": "C'est l'équation **exacte**, écrite avant l'approximation. L'énoncé demande l'équation obtenue **après** avoir remplacé $\\sin\\theta$ par $\\theta$ : tant que $\\sin\\theta$ subsiste, l'équation n'est pas celle d'un oscillateur harmonique."
+            },
+            {
+              "label": "$\\ddot{\\theta} + \\dfrac{J_\\Delta}{m\\,g\\,d}\\,\\theta = 0$",
+              "why": "Tu as inversé le coefficient : $\\dfrac{J_\\Delta}{m\\,g\\,d}$ s'exprime en $\\mathrm{s^{2}}$, alors que le coefficient devant $\\theta$ doit être en $\\mathrm{s^{-2}}$ pour valoir $\\omega_0^{2}$."
+            },
+            {
+              "label": "$\\ddot{\\theta} - \\dfrac{m\\,g\\,d}{J_\\Delta}\\,\\theta = 0$",
+              "why": "Tu as perdu le signe moins du moment du poids. Avec ce signe la solution est exponentielle et le pendule s'écarterait indéfiniment : il n'oscillerait pas."
+            }
+          ],
+          "hint": "Pars du théorème du moment cinétique appliqué à l'axe de rotation, puis utilise $\\sin\\theta \\simeq \\theta$ pour $\\theta$ petit en radians.",
+          "solution": "Le théorème du moment cinétique appliqué à l'axe $\\Delta$ ne retient que le moment du poids, la réaction de l'axe ayant un moment nul : $$J_\\Delta\\,\\ddot{\\theta} = -m\\,g\\,d\\,\\sin\\theta.$$ Pour de **petites** oscillations, $\\theta$ étant exprimé en radians, $\\sin\\theta \\simeq \\theta$, et il reste $$\\ddot{\\theta} + \\frac{m\\,g\\,d}{J_\\Delta}\\,\\theta = 0,$$ équation d'un oscillateur harmonique de pulsation propre $\\omega_0 = \\sqrt{\\dfrac{m\\,g\\,d}{J_\\Delta}}$ et de période $T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{m\\,g\\,d}}$. Contrôle d'homogénéité : $\\dfrac{m\\,g\\,d}{J_\\Delta}$ est en $\\dfrac{\\mathrm{N\\,m}}{\\mathrm{kg\\,m^{2}}} = \\mathrm{s^{-2}}$, c'est bien un $\\omega_0^{2}$. Attention : sans l'approximation, la période dépend de l'amplitude et l'isochronisme est perdu.",
+          "methode": "Moment cinétique $\\to$ $J_\\Delta\\ddot{\\theta} = -m\\,g\\,d\\sin\\theta$ ; l'approximation $\\sin\\theta\\simeq\\theta$ est **ce qui** rend l'oscillateur harmonique.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-pendule-pesant-q2"
+        },
+        {
+          "notion": "Le pendule pesant",
+          "difficulty": 3,
+          "statement": "On mesure la période propre d'un pendule pesant : $T_0 = 1{,}5\\ \\mathrm{s}$. Sa masse est $m = 0{,}80\\ \\mathrm{kg}$ et son centre d'inertie est à $d = 0{,}25\\ \\mathrm{m}$ de l'axe. Quel est son moment d'inertie $J_\\Delta$ ? (On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$.)",
+          "options": [
+            {
+              "label": "$1{,}1\\times10^{-1}\\ \\mathrm{kg\\,m^{2}}$",
+              "correct": true,
+              "why": "De $T_0^{2} = 4\\pi^{2}\\dfrac{J_\\Delta}{m\\,g\\,d}$ on tire $J_\\Delta = \\dfrac{T_0^{2}\\,m\\,g\\,d}{4\\pi^{2}} = \\dfrac{(1{,}5)^{2}\\times1{,}96}{4\\pi^{2}} = 1{,}1\\times10^{-1}\\ \\mathrm{kg\\,m^{2}}$."
+            },
+            {
+              "label": "$3{,}4\\times10^{1}\\ \\mathrm{kg\\,m^{2}}$",
+              "why": "Tu as inversé le rapport : $\\dfrac{4\\pi^{2}\\,m\\,g\\,d}{T_0^{2}} = \\dfrac{4\\pi^{2}\\times1{,}96}{2{,}25} = 3{,}4\\times10^{1}$. Comme $J_\\Delta$ est au numérateur de la formule de $T_0$, il est aussi au numérateur une fois isolé — avec $4\\pi^{2}$ **au dénominateur**."
+            },
+            {
+              "label": "$4{,}4\\ \\mathrm{kg\\,m^{2}}$",
+              "why": "Tu as oublié de diviser par $4\\pi^{2}$ : $T_0^{2}\\,m\\,g\\,d = 2{,}25\\times1{,}96 = 4{,}4$. Le carré de $2\\pi$ vaut $4\\pi^{2} \\simeq 39{,}5$, on ne peut pas le négliger."
+            },
+            {
+              "label": "$7{,}0\\times10^{-1}\\ \\mathrm{kg\\,m^{2}}$",
+              "why": "Tu as divisé par $2\\pi$ au lieu de $4\\pi^{2}$ : $\\dfrac{4{,}41}{2\\pi} = 7{,}0\\times10^{-1}$. En élevant $T_0$ au carré, le facteur $2\\pi$ devient $4\\pi^{2}$."
+            }
+          ],
+          "hint": "Élève la formule de $T_0$ au carré, puis isole $J_\\Delta$ en faisant attention au devenir du facteur $2\\pi$.",
+          "solution": "On part de $T_0 = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{m\\,g\\,d}}$ et on élève au carré : $$T_0^{2} = 4\\pi^{2}\\,\\frac{J_\\Delta}{m\\,g\\,d} \\quad\\Longrightarrow\\quad J_\\Delta = \\frac{T_0^{2}\\,m\\,g\\,d}{4\\pi^{2}}.$$ Avec $m\\,g\\,d = 0{,}80\\times9{,}8\\times0{,}25 = 1{,}96\\ \\mathrm{N\\,m}$ : $$J_\\Delta = \\frac{(1{,}5)^{2}\\times1{,}96}{4\\pi^{2}} = \\frac{4{,}41}{39{,}5} = 1{,}1\\times10^{-1}\\ \\mathrm{kg\\,m^{2}}.$$ Contrôle inverse : $T_0 = 2\\pi\\sqrt{\\dfrac{0{,}112}{1{,}96}} = 2\\pi\\times0{,}239 = 1{,}5\\ \\mathrm{s}$, on retombe sur la mesure. Contrôle d'ordre de grandeur : pour une masse de $0{,}8\\ \\mathrm{kg}$ répartie à quelques dizaines de centimètres de l'axe, $J_\\Delta$ de l'ordre de $0{,}1\\ \\mathrm{kg\\,m^{2}}$ est tout à fait plausible.",
+          "methode": "Pour isoler une grandeur sous une racine : élève **toute** la formule au carré ; $2\\pi$ devient alors $4\\pi^{2}$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-pendule-pesant-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le pendule simple",
+        "lesson": "Pendule de torsion & pendule pesant",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-le-pendule-simple",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "Le pendule simple",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le pendule simple",
+          "difficulty": 1,
+          "statement": "Un pendule simple est formé d'une petite bille suspendue à un fil inextensible de longueur $\\ell = 0{,}80\\ \\mathrm{m}$. Pour de petites oscillations, quelle est sa période propre ? (On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$.)",
+          "options": [
+            {
+              "label": "$1{,}80\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$T_0 = 2\\pi\\sqrt{\\dfrac{\\ell}{g}} = 2\\pi\\sqrt{\\dfrac{0{,}80}{9{,}8}} = 2\\pi\\times0{,}286 = 1{,}80\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$22\\ \\mathrm{s}$",
+              "why": "Tu as calculé $2\\pi\\sqrt{\\dfrac{g}{\\ell}} = 2\\pi\\sqrt{12{,}25} = 22\\ \\mathrm{s}$ : tu as inversé $\\ell$ et $g$ sous la racine. C'est $\\ell$ qui est **au numérateur**."
+            },
+            {
+              "label": "$0{,}90\\ \\mathrm{s}$",
+              "why": "Tu as calculé $\\pi\\sqrt{\\dfrac{\\ell}{g}} = 0{,}90\\ \\mathrm{s}$ : tu as pris $\\pi$ au lieu de $2\\pi$ devant la racine."
+            },
+            {
+              "label": "$0{,}51\\ \\mathrm{s}$",
+              "why": "Tu as calculé $2\\pi\\dfrac{\\ell}{g} = 2\\pi\\times0{,}0816 = 0{,}51\\ \\mathrm{s}$ : tu as oublié la racine carrée."
+            }
+          ],
+          "hint": "Écris la formule du pendule simple en vérifiant quelle grandeur est au numérateur sous la racine, puis remplace.",
+          "solution": "Aux petites oscillations, le pendule simple est un oscillateur harmonique de période propre $$T_0 = 2\\pi\\sqrt{\\frac{\\ell}{g}} = 2\\pi\\sqrt{\\frac{0{,}80}{9{,}8}} = 2\\pi\\times 0{,}286 = 1{,}80\\ \\mathrm{s}.$$ Contrôle du sens physique : un fil de $1\\ \\mathrm{m}$ donne environ $2{,}0\\ \\mathrm{s}$ (c'est le pendule qui « bat la seconde » à la demi-période) ; avec $0{,}80\\ \\mathrm{m}$, un peu moins long, on attend bien un peu moins de $2\\ \\mathrm{s}$.",
+          "methode": "$T_0 = 2\\pi\\sqrt{\\dfrac{\\ell}{g}}$ : la **longueur en haut**, $g$ en bas. Vérifie l'ordre de grandeur avec le repère $\\ell = 1\\ \\mathrm{m} \\Rightarrow T_0 \\simeq 2\\ \\mathrm{s}$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-pendule-simple-q1"
+        },
+        {
+          "notion": "Le pendule simple",
+          "difficulty": 2,
+          "statement": "Un pendule simple a sur Terre une période propre $T_0 = 2{,}0\\ \\mathrm{s}$. On emporte le même pendule sur la Lune, où $g_L = 1{,}6\\ \\mathrm{m\\,s^{-2}}$ (sur Terre $g_T = 9{,}8\\ \\mathrm{m\\,s^{-2}}$). Quelle est sa période propre sur la Lune ?",
+          "options": [
+            {
+              "label": "$4{,}9\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$T_L = T_0\\sqrt{\\dfrac{g_T}{g_L}} = 2{,}0\\times\\sqrt{\\dfrac{9{,}8}{1{,}6}} = 2{,}0\\times2{,}47 = 4{,}9\\ \\mathrm{s}$ : la pesanteur étant plus faible, le pendule est plus lent."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{s}$",
+              "why": "Tu as répondu que $T_0$ ne dépend pas de $g$ : c'est vrai pour le pendule **élastique**, pas pour le pendule simple, dont la formule $2\\pi\\sqrt{\\ell/g}$ contient $g$."
+            },
+            {
+              "label": "$0{,}81\\ \\mathrm{s}$",
+              "why": "Tu as calculé $2{,}0\\times\\sqrt{\\dfrac{g_L}{g_T}} = 2{,}0\\times0{,}404 = 0{,}81\\ \\mathrm{s}$ : tu as inversé le rapport. Comme $g$ est au **dénominateur**, $g$ plus petit donne $T_0$ plus **grande**."
+            },
+            {
+              "label": "$12\\ \\mathrm{s}$",
+              "why": "Tu as calculé $2{,}0\\times\\dfrac{g_T}{g_L} = 2{,}0\\times6{,}1 = 12\\ \\mathrm{s}$ : tu as oublié la racine carrée sur le rapport des $g$."
+            }
+          ],
+          "hint": "La longueur du fil ne change pas : forme le rapport $\\dfrac{T_L}{T_T}$ et vois ce qu'il reste.",
+          "solution": "On écrit la formule deux fois et on divise, ce qui élimine $\\ell$ : $$\\frac{T_L}{T_T} = \\frac{2\\pi\\sqrt{\\ell/g_L}}{2\\pi\\sqrt{\\ell/g_T}} = \\sqrt{\\frac{g_T}{g_L}} = \\sqrt{\\frac{9{,}8}{1{,}6}} = 2{,}47,$$ donc $T_L = 2{,}0\\times2{,}47 = 4{,}9\\ \\mathrm{s}$. Contrôle : la pesanteur lunaire est environ $6$ fois plus faible, la période doit être $\\sqrt{6}\\simeq2{,}5$ fois plus grande — c'est bien ce qu'on obtient.",
+          "methode": "Pour un « que devient $T_0$ si… », fais le **rapport** des deux formules : tout ce qui ne change pas disparaît.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-pendule-simple-q2"
+        },
+        {
+          "notion": "Le pendule simple",
+          "difficulty": 2,
+          "statement": "On veut réaliser un pendule simple « qui bat la seconde », c'est-à-dire dont la période propre vaut exactement $T_0 = 2{,}0\\ \\mathrm{s}$. Quelle longueur de fil faut-il ? (On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$.)",
+          "options": [
+            {
+              "label": "$0{,}99\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "De $T_0 = 2\\pi\\sqrt{\\ell/g}$ on tire $\\ell = \\dfrac{g\\,T_0^{2}}{4\\pi^{2}} = \\dfrac{9{,}8\\times4{,}0}{39{,}5} = 0{,}99\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$0{,}50\\ \\mathrm{m}$",
+              "why": "Tu as calculé $\\dfrac{g\\,T_0}{4\\pi^{2}} = \\dfrac{9{,}8\\times2{,}0}{39{,}5} = 0{,}50\\ \\mathrm{m}$ : tu as oublié de mettre $T_0$ **au carré** en élevant la formule au carré."
+            },
+            {
+              "label": "$6{,}2\\ \\mathrm{m}$",
+              "why": "Tu as calculé $\\dfrac{g\\,T_0^{2}}{2\\pi} = \\dfrac{39{,}2}{6{,}28} = 6{,}2\\ \\mathrm{m}$ : en élevant au carré, $2\\pi$ devient $4\\pi^{2}$, pas $2\\pi$."
+            },
+            {
+              "label": "$1{,}0\\times10^{-2}\\ \\mathrm{m}$",
+              "why": "Tu as calculé $\\dfrac{T_0^{2}}{4\\pi^{2}g} = \\dfrac{4{,}0}{39{,}5\\times9{,}8} = 1{,}0\\times10^{-2}\\ \\mathrm{m}$ : tu as mis $g$ au dénominateur alors qu'il passe au numérateur."
+            }
+          ],
+          "hint": "Élève toute l'égalité au carré, puis isole $\\ell$ ; surveille ce que devient le facteur $2\\pi$.",
+          "solution": "On part de $T_0 = 2\\pi\\sqrt{\\dfrac{\\ell}{g}}$ et on élève au carré : $T_0^{2} = 4\\pi^{2}\\dfrac{\\ell}{g}$, d'où $$\\ell = \\frac{g\\,T_0^{2}}{4\\pi^{2}} = \\frac{9{,}8\\times(2{,}0)^{2}}{4\\pi^{2}} = \\frac{39{,}2}{39{,}5} = 0{,}99\\ \\mathrm{m}.$$ Contrôle en revenant en avant : $2\\pi\\sqrt{0{,}99/9{,}8} = 2{,}0\\ \\mathrm{s}$. C'est le fameux « pendule qui bat la seconde », long d'environ un mètre.",
+          "methode": "Pour isoler une grandeur sous une racine, élève **toute** la formule au carré : $2\\pi$ devient $4\\pi^{2}$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-pendule-simple-q3"
+        },
+        {
+          "notion": "Le pendule simple",
+          "difficulty": 3,
+          "statement": "Un pendule simple de longueur $\\ell = 1{,}0\\ \\mathrm{m}$ porte une bille de masse $m = 50\\ \\mathrm{g}$. On remplace la bille par une bille de $200\\ \\mathrm{g}$ **et** on double l'amplitude angulaire de départ, en restant dans le domaine des petites oscillations. Que devient la période propre ? (On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$.)",
+          "options": [
+            {
+              "label": "Elle ne change pas : $T_0 = 2{,}0\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$T_0 = 2\\pi\\sqrt{\\ell/g} = 2\\pi\\sqrt{1{,}0/9{,}8} = 2{,}0\\ \\mathrm{s}$ : cette expression ne contient **ni** la masse **ni** l'amplitude."
+            },
+            {
+              "label": "Elle est multipliée par $2$ : $T_0 = 4{,}0\\ \\mathrm{s}$",
+              "why": "Tu as écrit $\\sqrt{m_2/m_1} = \\sqrt{4} = 2$, donc $2\\times2{,}0 = 4{,}0\\ \\mathrm{s}$ : tu as appliqué le raisonnement du pendule **élastique** ($T_0 = 2\\pi\\sqrt{m/K}$). Dans le pendule simple, la masse ne figure pas."
+            },
+            {
+              "label": "Elle est multipliée par $4$ : $T_0 = 8{,}0\\ \\mathrm{s}$",
+              "why": "Tu as multiplié directement par le rapport des masses $\\dfrac{200}{50} = 4$, donc $4\\times2{,}0 = 8{,}0\\ \\mathrm{s}$ : la masse n'intervient pas, et même pour le pendule élastique elle intervient sous une racine."
+            },
+            {
+              "label": "Elle est multipliée par $\\sqrt{2}$ : $T_0 = 2{,}8\\ \\mathrm{s}$",
+              "why": "Tu as fait dépendre $T_0$ de l'amplitude en écrivant $\\sqrt{2}\\times2{,}0 = 2{,}8\\ \\mathrm{s}$ : aux petites oscillations, la période est au contraire **indépendante** de l'amplitude (isochronisme des petites oscillations)."
+            }
+          ],
+          "hint": "Regarde quelles grandeurs figurent — et lesquelles ne figurent pas — dans l'expression de $T_0$ du pendule simple.",
+          "solution": "La période propre du pendule simple aux petites oscillations vaut $$T_0 = 2\\pi\\sqrt{\\frac{\\ell}{g}} = 2\\pi\\sqrt{\\frac{1{,}0}{9{,}8}} = 2{,}0\\ \\mathrm{s}.$$ Seules $\\ell$ et $g$ y figurent. Changer la masse ne change rien : c'est le pendant du pendule élastique, dont la période ne dépend pas de $g$. Changer l'amplitude ne change rien non plus : c'est l'**isochronisme des petites oscillations**. La période reste donc $2{,}0\\ \\mathrm{s}$. Contrôle : l'énoncé précise « en restant dans les petites oscillations », ce qui garantit que l'approximation $\\sin\\theta\\simeq\\theta$ tient toujours.",
+          "methode": "Mémorise les deux indépendances croisées : pendule élastique indépendant de $g$, pendule simple indépendant de $m$ — et les deux indépendants de l'amplitude aux petites oscillations.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-pendule-simple-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'analogie universelle",
+        "lesson": "Approfondissement — Oscillateurs mécaniques",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-l-analogie-universelle",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "L'analogie universelle",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'analogie universelle",
+          "difficulty": 3,
+          "statement": "On dispose d'un pendule élastique de masse $m = 0{,}40\\ \\mathrm{kg}$ et de raideur $K = 25\\ \\mathrm{N\\,m^{-1}}$. On veut construire un pendule de torsion ayant **exactement la même période propre**, avec un disque de moment d'inertie $J_\\Delta = 8{,}0\\times10^{-3}\\ \\mathrm{kg\\,m^{2}}$. Quelle constante de torsion $C$ doit avoir le fil ?",
+          "options": [
+            {
+              "label": "$0{,}50\\ \\mathrm{N\\,m\\,rad^{-1}}$",
+              "correct": true,
+              "why": "L'égalité des périodes impose $\\dfrac{J_\\Delta}{C} = \\dfrac{m}{K}$, donc $C = \\dfrac{K\\,J_\\Delta}{m} = \\dfrac{25\\times8{,}0\\times10^{-3}}{0{,}40} = 0{,}50\\ \\mathrm{N\\,m\\,rad^{-1}}$."
+            },
+            {
+              "label": "$1{,}3\\times10^{-4}\\ \\mathrm{N\\,m\\,rad^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{m\\,J_\\Delta}{K} = \\dfrac{0{,}40\\times8{,}0\\times10^{-3}}{25} = 1{,}3\\times10^{-4}$ : tu as échangé $m$ et $K$. Dans l'analogie, $K$ correspond à $C$ et $m$ à $J_\\Delta$, donc $K$ monte au numérateur."
+            },
+            {
+              "label": "$1{,}3\\times10^{3}\\ \\mathrm{N\\,m\\,rad^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{K\\,m}{J_\\Delta} = \\dfrac{25\\times0{,}40}{8{,}0\\times10^{-3}} = 1{,}3\\times10^{3}$ : tu as placé $J_\\Delta$ au dénominateur, alors que $J_\\Delta$ joue le rôle de la masse et reste au numérateur."
+            },
+            {
+              "label": "$8{,}0\\times10^{-4}\\ \\mathrm{N\\,m\\,rad^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{J_\\Delta}{K\\,m} = \\dfrac{8{,}0\\times10^{-3}}{25\\times0{,}40} = 8{,}0\\times10^{-4}$ : tu as mis $K$ **et** $m$ au dénominateur au lieu de ne descendre que $m$."
+            }
+          ],
+          "hint": "Écris les deux périodes propres, pose leur égalité, puis simplifie le $2\\pi$ et élève au carré.",
+          "solution": "Les deux oscillateurs ont pour périodes propres $T_0 = 2\\pi\\sqrt{\\dfrac{m}{K}}$ et $T_0' = 2\\pi\\sqrt{\\dfrac{J_\\Delta}{C}}$. Imposer $T_0' = T_0$ revient, après simplification par $2\\pi$ et élévation au carré, à $$\\frac{J_\\Delta}{C} = \\frac{m}{K} \\quad\\Longrightarrow\\quad C = \\frac{K\\,J_\\Delta}{m} = \\frac{25\\times8{,}0\\times10^{-3}}{0{,}40} = 0{,}50\\ \\mathrm{N\\,m\\,rad^{-1}}.$$ Contrôle numérique par les deux côtés : $2\\pi\\sqrt{0{,}40/25} = 0{,}79\\ \\mathrm{s}$ et $2\\pi\\sqrt{8{,}0\\times10^{-3}/0{,}50} = 0{,}79\\ \\mathrm{s}$ — les deux périodes coïncident bien.",
+          "methode": "L'analogie du chapitre : $m \\leftrightarrow J_\\Delta$ (l'inertie) et $K \\leftrightarrow C$ (le rappel). Toute formule en $m$ et $K$ se transpose en remplaçant ces deux couples.",
+          "points": 1,
+          "ref": "pc-oscillateurs-l-analogie-universelle-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Au-delà des petites oscillations",
+        "lesson": "Approfondissement — Oscillateurs mécaniques",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 1,
+        "target_new_questions": 0,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-au-dela-des-petites-oscillations",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "Au-delà des petites oscillations",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Au-delà des petites oscillations",
+          "difficulty": 3,
+          "statement": "La formule $T_0 = 2\\pi\\sqrt{\\dfrac{\\ell}{g}}$ d'un pendule simple n'est établie qu'après l'approximation $\\sin\\theta \\simeq \\theta$. On lâche maintenant le pendule d'un angle de $60^\\circ$. Que peut-on dire de la période réelle $T$ du mouvement ?",
+          "options": [
+            {
+              "label": "$T$ est **plus grande** que $2\\pi\\sqrt{\\ell/g}$, et elle dépend de l'amplitude",
+              "correct": true,
+              "why": "Hors des petites oscillations le moment de rappel $-mg\\ell\\sin\\theta$ est plus faible que $-mg\\ell\\,\\theta$ : le rappel s'affaiblit, donc le mouvement est plus lent. Pour $60^\\circ$, $T$ dépasse $T_0$ d'environ $7\\ \\%$."
+            },
+            {
+              "label": "$T$ est **plus petite** que $2\\pi\\sqrt{\\ell/g}$, et elle dépend de l'amplitude",
+              "why": "Tu as le bon constat — la période dépend alors de l'amplitude — mais le mauvais sens. Comme $\\sin\\theta < \\theta$, le rappel réel est plus **faible** que le rappel du modèle linéaire, donc le pendule met plus de temps, pas moins."
+            },
+            {
+              "label": "$T$ reste égale à $2\\pi\\sqrt{\\ell/g}$, car la période ne dépend jamais de l'amplitude",
+              "why": "Tu as étendu l'isochronisme à tous les angles. L'isochronisme n'est **pas** une loi générale : c'est une conséquence de l'approximation $\\sin\\theta\\simeq\\theta$, qui n'est valable que pour les petits angles."
+            },
+            {
+              "label": "$T$ n'est plus définie, car le mouvement cesse d'être périodique",
+              "why": "Tu as confondu grande amplitude et amortissement. Sans frottement, le mouvement reste parfaitement périodique à $60^\\circ$ : il n'est simplement plus sinusoïdal, donc plus harmonique."
+            }
+          ],
+          "hint": "Compare $\\sin\\theta$ et $\\theta$ pour $\\theta = 60^\\circ$ en radians, et demande-toi si le moment de rappel est renforcé ou affaibli.",
+          "solution": "L'équation exacte du pendule simple est $\\ddot\\theta + \\dfrac{g}{\\ell}\\sin\\theta = 0$ : elle n'est **pas** celle d'un oscillateur harmonique. Le modèle harmonique remplace $\\sin\\theta$ par $\\theta$, ce qui n'est licite que pour $\\theta$ petit. Pour $\\theta_0 = 60^\\circ = 1{,}05\\ \\mathrm{rad}$, on a $\\sin\\theta_0 = 0{,}87 < 1{,}05$ : le couple de rappel réel est plus faible que celui du modèle, le pendule est donc **plus lent**. Le premier terme du développement donne $$T \\simeq T_0\\left(1 + \\frac{\\theta_0^{2}}{16}\\right) = T_0\\left(1 + \\frac{1{,}05^{2}}{16}\\right) \\simeq 1{,}07\\,T_0,$$ soit environ $7\\ \\%$ de plus ; le mouvement reste périodique, mais il n'est plus sinusoïdal et sa période dépend de l'amplitude. Contrôle : si on fait tendre $\\theta_0$ vers $0$, le facteur correctif tend vers $1$ et on retrouve bien $T_0$.",
+          "methode": "Au BAC, écris toujours « aux petites oscillations » avant d'utiliser $2\\pi\\sqrt{\\ell/g}$ : l'isochronisme est une **conséquence** de l'approximation $\\sin\\theta\\simeq\\theta$, pas une propriété générale.",
+          "points": 1,
+          "ref": "pc-oscillateurs-au-dela-des-petites-oscillations-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le portrait de phase",
+        "lesson": "Approfondissement — Oscillateurs mécaniques",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-le-portrait-de-phase",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "Le portrait de phase",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le portrait de phase",
+          "difficulty": 3,
+          "statement": "Le portrait de phase d'un oscillateur est la courbe donnant la vitesse $v$ en fonction de l'abscisse $x$. Pour un pendule élastique **non amorti** d'amplitude $X_m = 4{,}0\\ \\mathrm{cm}$ et de période propre $T_0 = 0{,}50\\ \\mathrm{s}$, ce portrait est l'ellipse d'équation $\\dfrac{x^{2}}{X_m^{2}} + \\dfrac{v^{2}}{v_{max}^{2}} = 1$. Quels sont ses deux demi-axes ?",
+          "options": [
+            {
+              "label": "$4{,}0\\times10^{-2}\\ \\mathrm{m}$ selon $x$ et $0{,}50\\ \\mathrm{m\\,s^{-1}}$ selon $v$",
+              "correct": true,
+              "why": "Le demi-axe selon $x$ est $X_m = 4{,}0\\times10^{-2}\\ \\mathrm{m}$ et celui selon $v$ est $v_{max} = X_m\\,\\omega_0 = 4{,}0\\times10^{-2}\\times\\dfrac{2\\pi}{0{,}50} = 4{,}0\\times10^{-2}\\times12{,}6 = 0{,}50\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$4{,}0\\times10^{-2}\\ \\mathrm{m}$ selon $x$ et $8{,}0\\times10^{-2}\\ \\mathrm{m\\,s^{-1}}$ selon $v$",
+              "why": "Tu as pris la fréquence $f_0 = \\dfrac{1}{T_0} = 2{,}0\\ \\mathrm{Hz}$ au lieu de la pulsation : $4{,}0\\times10^{-2}\\times2{,}0 = 8{,}0\\times10^{-2}$. Dans $v_{max} = X_m\\omega_0$, c'est $\\omega_0 = 2\\pi f_0$ qui intervient."
+            },
+            {
+              "label": "$4{,}0\\times10^{-2}\\ \\mathrm{m}$ selon $x$ et $3{,}2\\times10^{-3}\\ \\mathrm{m\\,s^{-1}}$ selon $v$",
+              "why": "Tu as calculé $\\dfrac{X_m}{\\omega_0} = \\dfrac{4{,}0\\times10^{-2}}{12{,}6} = 3{,}2\\times10^{-3}$ : tu as divisé par $\\omega_0$ au lieu de multiplier."
+            },
+            {
+              "label": "$4{,}0\\times10^{-2}\\ \\mathrm{m}$ selon $x$ et $6{,}3\\ \\mathrm{m\\,s^{-1}}$ selon $v$",
+              "why": "Tu as calculé $X_m\\,\\omega_0^{2} = 4{,}0\\times10^{-2}\\times158 = 6{,}3$ : c'est l'accélération maximale $a_{max}$ (en $\\mathrm{m\\,s^{-2}}$), pas la vitesse maximale."
+            }
+          ],
+          "hint": "Le demi-axe horizontal se lit directement dans l'énoncé ; pour le demi-axe vertical, dérive $x(t)$ et prends le maximum.",
+          "solution": "Avec $x = X_m\\cos(\\omega_0 t + \\varphi)$, on obtient $v = \\dot x = -X_m\\,\\omega_0\\sin(\\omega_0 t + \\varphi)$, donc $|v|$ est au plus $v_{max} = X_m\\,\\omega_0$. Ici $$\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{0{,}50} = 12{,}6\\ \\mathrm{rad\\,s^{-1}}, \\qquad v_{max} = 4{,}0\\times10^{-2}\\times12{,}6 = 0{,}50\\ \\mathrm{m\\,s^{-1}}.$$ L'ellipse a donc pour demi-axes $4{,}0\\times10^{-2}\\ \\mathrm{m}$ selon $x$ et $0{,}50\\ \\mathrm{m\\,s^{-1}}$ selon $v$ : elle est **fermée**, ce qui traduit la conservation de l'énergie mécanique. S'il y avait des frottements, la courbe serait une spirale rentrante. Contrôle : en éliminant le temps entre $x$ et $v$ grâce à $\\cos^{2}+\\sin^{2}=1$, on retrouve exactement l'équation d'ellipse donnée dans l'énoncé.",
+          "methode": "Portrait de phase : ellipse fermée $\\Rightarrow$ oscillateur harmonique non amorti ; spirale rentrante $\\Rightarrow$ régime pseudo-périodique. Les demi-axes valent $X_m$ et $X_m\\omega_0$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-le-portrait-de-phase-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Mesures de précision",
+        "lesson": "Approfondissement — Oscillateurs mécaniques",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-oscillateurs-mesures-de-precision",
+      "chapter": "pc-oscillateurs",
+      "kind": "qcu",
+      "title": "Mesures de précision",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Mesures de précision",
+          "difficulty": 3,
+          "statement": "Pour mesurer la période propre d'un pendule, un élève chronomètre d'abord **une seule** oscillation : il lit $1{,}8\\ \\mathrm{s}$. Son temps de réaction au déclenchement et à l'arrêt lui donne une incertitude de $0{,}2\\ \\mathrm{s}$ sur toute durée lue. Il recommence en chronométrant **20 oscillations** : il lit $36{,}4\\ \\mathrm{s}$, toujours à $0{,}2\\ \\mathrm{s}$ près. Quel résultat la seconde méthode donne-t-elle pour $T_0$ ?",
+          "options": [
+            {
+              "label": "$T_0 = 1{,}82\\ \\mathrm{s}$, à $0{,}01\\ \\mathrm{s}$ près",
+              "correct": true,
+              "why": "$T_0 = \\dfrac{36{,}4}{20} = 1{,}82\\ \\mathrm{s}$, et la division par $20$ s'applique aussi à l'incertitude : $\\dfrac{0{,}2}{20} = 0{,}01\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$T_0 = 1{,}82\\ \\mathrm{s}$, à $0{,}2\\ \\mathrm{s}$ près",
+              "why": "Tu as bien divisé la durée par $20$ mais tu as gardé l'incertitude telle quelle. Or l'incertitude de $0{,}2\\ \\mathrm{s}$ porte sur la durée **totale** : elle se divise elle aussi par $20$, et c'est précisément ce qui fait tout l'intérêt de la méthode."
+            },
+            {
+              "label": "$T_0 = 36{,}4\\ \\mathrm{s}$, à $0{,}2\\ \\mathrm{s}$ près",
+              "why": "Tu as pris la durée totale des $20$ oscillations pour la période. Une période est la durée d'**une seule** oscillation : il faut diviser par le nombre d'oscillations."
+            },
+            {
+              "label": "$T_0 = 1{,}82\\ \\mathrm{s}$, à $4{,}0\\ \\mathrm{s}$ près",
+              "why": "Tu as calculé $0{,}2\\times20 = 4{,}0\\ \\mathrm{s}$ : tu as multiplié l'incertitude par le nombre d'oscillations au lieu de la diviser. Une telle incertitude serait d'ailleurs absurde, plus grande que la période elle-même."
+            }
+          ],
+          "hint": "La durée lue et son incertitude subissent **la même** opération : regarde laquelle, puis applique-la aux deux.",
+          "solution": "En chronométrant $n = 20$ oscillations, on mesure la durée $t = n\\,T_0$, donc $$T_0 = \\frac{t}{n} = \\frac{36{,}4}{20} = 1{,}82\\ \\mathrm{s}.$$ L'incertitude de lecture porte sur $t$ ; comme $T_0 = t/n$, elle se divise par le même $n$ : $$\\Delta T_0 = \\frac{\\Delta t}{n} = \\frac{0{,}2}{20} = 0{,}01\\ \\mathrm{s}.$$ On annonce donc $T_0 = (1{,}82 \\pm 0{,}01)\\ \\mathrm{s}$. Contrôle en comparant les deux méthodes : la première donnait $T_0 = (1{,}8 \\pm 0{,}2)\\ \\mathrm{s}$, soit $11\\ \\%$ d'incertitude relative ; la seconde descend à $0{,}5\\ \\%$, vingt fois mieux, pour exactement le même chronomètre.",
+          "methode": "Chronomètre toujours $n$ oscillations, jamais une seule : la durée **et** son incertitude se divisent par $n$, donc l'incertitude relative est divisée par $n$.",
+          "points": 1,
+          "ref": "pc-oscillateurs-mesures-de-precision-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-oscillateurs-probleme-1",
+      "chapter": "pc-oscillateurs",
+      "kind": "probleme",
+      "title": "Étude d'un pendule élastique horizontal",
+      "difficulty": 3,
+      "context": "Un solide $(S)$, de masse $m = 200\\ \\mathrm{g}$ et assimilé à son centre d'inertie $G$, peut glisser **sans frottement**\nsur un banc à coussin d'air horizontal. Il est accroché à l'extrémité d'un ressort à spires non jointives,\nde masse négligeable et de raideur $K$ inconnue ; l'autre extrémité du ressort est fixée à un support immobile.\n\nOn repère la position de $G$ par son abscisse $x$ sur un axe horizontal $(O, \\vec{i})$ dont **l'origine $O$ coïncide\navec la position d'équilibre** de $(S)$.\n\nMesures effectuées en séance :\n- On écarte $(S)$ de sa position d'équilibre jusqu'à l'abscisse $x = +3{,}0\\ \\mathrm{cm}$, puis on le **lâche sans vitesse initiale**\n  à la date $t = 0$.\n- À l'aide d'un chronomètre, on mesure la durée de **20 oscillations** complètes : $t_{20} = 12{,}6\\ \\mathrm{s}$.\n\nDonnées : $m = 200\\ \\mathrm{g}$ ; $X_m = 3{,}0\\ \\mathrm{cm}$ ; $t_{20} = 12{,}6\\ \\mathrm{s}$ ; $\\pi^{2} = 9{,}87$ ;\non prendra $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$ si nécessaire.",
+      "figure": "pendule-elastique",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Mesures de précision",
+          "difficulty": 1,
+          "statement": "Déterminer la période propre $T_0$ des oscillations de $(S)$.",
+          "options": [
+            {
+              "label": "$T_0 = 0{,}630\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$T_0 = \\dfrac{t_{20}}{20} = \\dfrac{12{,}6}{20} = 0{,}630\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$T_0 = 12{,}6\\ \\mathrm{s}$",
+              "why": "Tu as gardé la durée des $20$ oscillations. Une période est la durée d'**une** oscillation : il faut diviser par $20$."
+            },
+            {
+              "label": "$T_0 = 2{,}52\\ \\mathrm{s}$",
+              "why": "Tu as divisé par $5$ au lieu de $20$ : $\\dfrac{12{,}6}{5} = 2{,}52\\ \\mathrm{s}$. Le nombre d'oscillations chronométrées est bien $20$."
+            },
+            {
+              "label": "$T_0 = 1{,}26\\ \\mathrm{s}$",
+              "why": "Tu as divisé par $10$ au lieu de $20$ : $\\dfrac{12{,}6}{10} = 1{,}26\\ \\mathrm{s}$. Relis le nombre d'oscillations de l'énoncé."
+            }
+          ],
+          "hint": "Une période, c'est la durée d'une seule oscillation complète.",
+          "solution": "Les $20$ oscillations durent $t_{20} = 20\\,T_0$, donc $$T_0 = \\frac{t_{20}}{20} = \\frac{12{,}6}{20} = 0{,}630\\ \\mathrm{s}.$$ Contrôle : $20\\times0{,}630 = 12{,}6\\ \\mathrm{s}$, on retombe bien sur la durée mesurée.",
+          "methode": "Chronométrer $n$ oscillations puis diviser par $n$ : c'est la mesure de période la plus précise au lycée.",
+          "points": 1,
+          "part": "Partie A — Mesure de la période propre et de la raideur",
+          "ref": "pc-oscillateurs-probleme-1-q1"
+        },
+        {
+          "notion": "Le dispositif",
+          "difficulty": 1,
+          "statement": "En déduire la pulsation propre $\\omega_0$ de l'oscillateur.",
+          "options": [
+            {
+              "label": "$\\omega_0 = 9{,}97\\ \\mathrm{rad\\,s^{-1}}$",
+              "correct": true,
+              "why": "$\\omega_0 = \\dfrac{2\\pi}{T_0} = \\dfrac{2\\pi}{0{,}630} = 9{,}97\\ \\mathrm{rad\\,s^{-1}}$."
+            },
+            {
+              "label": "$\\omega_0 = 1{,}59\\ \\mathrm{rad\\,s^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{1}{T_0} = \\dfrac{1}{0{,}630} = 1{,}59$ : c'est la **fréquence** $f_0$ en $\\mathrm{Hz}$. La pulsation est $\\omega_0 = 2\\pi f_0$."
+            },
+            {
+              "label": "$\\omega_0 = 4{,}98\\ \\mathrm{rad\\,s^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{\\pi}{T_0} = \\dfrac{\\pi}{0{,}630} = 4{,}98$ : tu as pris $\\pi$ au lieu de $2\\pi$ au numérateur."
+            },
+            {
+              "label": "$\\omega_0 = 0{,}100\\ \\mathrm{rad\\,s^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{T_0}{2\\pi} = \\dfrac{0{,}630}{6{,}28} = 0{,}100$ : tu as inversé le quotient. Une pulsation est en $\\mathrm{rad\\,s^{-1}}$, donc $T_0$ doit être au dénominateur."
+            }
+          ],
+          "hint": "Pulsation et période sont liées par le tour complet, c'est-à-dire par $2\\pi$.",
+          "solution": "Une oscillation complète correspond à une variation de phase de $2\\pi\\ \\mathrm{rad}$ pendant la durée $T_0$, donc $$\\omega_0 = \\frac{2\\pi}{T_0} = \\frac{2\\pi}{0{,}630} = 9{,}97\\ \\mathrm{rad\\,s^{-1}}.$$ Contrôle dimensionnel : des radians divisés par des secondes donnent bien des $\\mathrm{rad\\,s^{-1}}$.",
+          "methode": "Ne confonds pas les trois : $T_0$ en $\\mathrm{s}$, $f_0 = 1/T_0$ en $\\mathrm{Hz}$, $\\omega_0 = 2\\pi/T_0$ en $\\mathrm{rad\\,s^{-1}}$.",
+          "points": 1,
+          "part": "Partie A — Mesure de la période propre et de la raideur",
+          "ref": "pc-oscillateurs-probleme-1-q2"
+        },
+        {
+          "notion": "Méthode 4 — Déterminer $g$, $K$, $J_\\Delta$ ou $C$",
+          "difficulty": 2,
+          "statement": "En appliquant la deuxième loi de Newton à $(S)$ on obtient $m\\ddot{x} = -K\\,x$. Déterminer la raideur $K$ du ressort à partir de la mesure de $T_0$.",
+          "options": [
+            {
+              "label": "$K = 19{,}9\\ \\mathrm{N\\,m^{-1}}$",
+              "correct": true,
+              "why": "$T_0 = 2\\pi\\sqrt{\\dfrac{m}{K}}$ donne $K = \\dfrac{4\\pi^{2}m}{T_0^{2}} = \\dfrac{4\\times9{,}87\\times0{,}200}{0{,}630^{2}} = 19{,}9\\ \\mathrm{N\\,m^{-1}}$."
+            },
+            {
+              "label": "$K = 5{,}03\\times10^{-2}\\ \\mathrm{N\\,m^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{T_0^{2}}{4\\pi^{2}m} = \\dfrac{0{,}397}{7{,}90} = 5{,}03\\times10^{-2}$ : tu as inversé la formule. Une raideur plus grande donne une période plus **courte**, donc $T_0^{2}$ doit être au dénominateur."
+            },
+            {
+              "label": "$K = 3{,}17\\ \\mathrm{N\\,m^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{2\\pi m}{T_0^{2}} = \\dfrac{6{,}28\\times0{,}200}{0{,}397} = 3{,}17$ : en élevant la formule au carré, le facteur $2\\pi$ devient $4\\pi^{2}$, pas $2\\pi$."
+            },
+            {
+              "label": "$K = 4{,}97\\times10^{-2}\\ \\mathrm{N\\,m^{-1}}$",
+              "why": "Tu as utilisé $t_{20} = 12{,}6\\ \\mathrm{s}$ au lieu de $T_0$ : $\\dfrac{4\\pi^{2}\\times0{,}200}{12{,}6^{2}} = 4{,}97\\times10^{-2}$. La formule exige la période d'**une** oscillation."
+            }
+          ],
+          "hint": "Divise l'équation différentielle par $m$ pour identifier $\\omega_0^{2}$, puis exprime $K$ à partir de $T_0$.",
+          "solution": "En divisant $m\\ddot{x} = -K\\,x$ par $m$ on obtient $\\ddot{x} + \\dfrac{K}{m}x = 0$, donc $\\omega_0^{2} = \\dfrac{K}{m}$ et $T_0 = 2\\pi\\sqrt{\\dfrac{m}{K}}$. En élevant au carré et en isolant $K$ : $$K = \\frac{4\\pi^{2}m}{T_0^{2}} = \\frac{4\\times9{,}87\\times0{,}200}{(0{,}630)^{2}} = \\frac{7{,}90}{0{,}397} = 19{,}9\\ \\mathrm{N\\,m^{-1}}.$$ On peut aussi passer par $\\omega_0$ : $K = m\\,\\omega_0^{2} = 0{,}200\\times(9{,}97)^{2} = 19{,}9\\ \\mathrm{N\\,m^{-1}}$ — même résultat, ce qui confirme le calcul. Un ressort d'environ $20\\ \\mathrm{N\\,m^{-1}}$ est un ressort de TP tout à fait courant.",
+          "methode": "Pour remonter à $K$ (ou à $m$), élève $T_0 = 2\\pi\\sqrt{m/K}$ au carré, puis isole : $K = \\dfrac{4\\pi^{2}m}{T_0^{2}}$.",
+          "points": 1,
+          "part": "Partie A — Mesure de la période propre et de la raideur",
+          "ref": "pc-oscillateurs-probleme-1-q3"
+        },
+        {
+          "notion": "Méthode 2 — Déterminer $X_m$ et $\\varphi$",
+          "difficulty": 2,
+          "statement": "Écrire l'équation horaire $x(t)$ du mouvement de $(S)$, en unités du système international, en tenant compte des conditions initiales de l'énoncé.",
+          "options": [
+            {
+              "label": "$x(t) = 3{,}0\\times10^{-2}\\cos\\!\\left(9{,}97\\,t\\right)$",
+              "correct": true,
+              "why": "À $t=0$ : $x(0) = +X_m$ donne $\\cos\\varphi = 1$ et $v(0) = 0$ donne $\\sin\\varphi = 0$, donc $\\varphi = 0$ ; avec $X_m = 3{,}0\\times10^{-2}\\ \\mathrm{m}$ et $\\omega_0 = 9{,}97\\ \\mathrm{rad\\,s^{-1}}$."
+            },
+            {
+              "label": "$x(t) = 3{,}0\\times10^{-2}\\cos\\!\\left(9{,}97\\,t + \\pi\\right)$",
+              "why": "Tu as pris $\\varphi = \\pi$, ce qui donne $x(0) = -X_m = -3{,}0\\ \\mathrm{cm}$ : le solide serait lâché du côté négatif. Or l'énoncé le lâche en $x = +3{,}0\\ \\mathrm{cm}$."
+            },
+            {
+              "label": "$x(t) = 3{,}0\\times10^{-2}\\cos\\!\\left(9{,}97\\,t + \\dfrac{\\pi}{2}\\right)$",
+              "why": "Tu as pris $\\varphi = \\dfrac{\\pi}{2}$, ce qui donne $x(0) = 0$ : le solide partirait de sa position d'équilibre, et non de l'abscisse $+X_m$."
+            },
+            {
+              "label": "$x(t) = 3{,}0\\cos\\!\\left(9{,}97\\,t\\right)$",
+              "why": "La phase est juste, mais tu as laissé l'amplitude en centimètres. En unités du système international, $X_m = 3{,}0\\ \\mathrm{cm} = 3{,}0\\times10^{-2}\\ \\mathrm{m}$."
+            }
+          ],
+          "hint": "Traduis les deux conditions initiales : l'une fixe $\\cos\\varphi$, l'autre fixe $\\sin\\varphi$.",
+          "solution": "La solution générale est $x(t) = X_m\\cos(\\omega_0 t + \\varphi)$, et $v(t) = -X_m\\,\\omega_0\\sin(\\omega_0 t + \\varphi)$. À $t = 0$ le solide est lâché en $x = +X_m$ **sans vitesse** : $$x(0) = X_m\\cos\\varphi = +X_m \\;\\Rightarrow\\; \\cos\\varphi = 1, \\qquad v(0) = -X_m\\omega_0\\sin\\varphi = 0 \\;\\Rightarrow\\; \\sin\\varphi = 0,$$ d'où $\\varphi = 0\\ \\mathrm{rad}$. Avec $X_m = 3{,}0\\times10^{-2}\\ \\mathrm{m}$ et $\\omega_0 = 9{,}97\\ \\mathrm{rad\\,s^{-1}}$ : $$x(t) = 3{,}0\\times10^{-2}\\cos(9{,}97\\,t)\\quad (\\mathrm{m}).$$ Contrôle : à $t = 0$ la formule donne bien $3{,}0\\times10^{-2}\\ \\mathrm{m}$, et la dérivée y est nulle.",
+          "methode": "« Lâché sans vitesse depuis l'élongation maximale positive » $\\Rightarrow$ $\\varphi = 0$. C'est le cas le plus fréquent au BAC.",
+          "points": 1,
+          "part": "Partie B — Équation horaire et grandeurs cinématiques",
+          "ref": "pc-oscillateurs-probleme-1-q4"
+        },
+        {
+          "notion": "Vitesse et accélération",
+          "difficulty": 3,
+          "statement": "Calculer la valeur de la vitesse maximale de $(S)$ au cours de son mouvement.",
+          "options": [
+            {
+              "label": "$v_{max} = 0{,}299\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_{max} = X_m\\,\\omega_0 = 3{,}0\\times10^{-2}\\times9{,}97 = 0{,}299\\ \\mathrm{m\\,s^{-1}}$, atteinte au passage par $x = 0$."
+            },
+            {
+              "label": "$v_{max} = 2{,}98\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $X_m\\,\\omega_0^{2} = 3{,}0\\times10^{-2}\\times99{,}5 = 2{,}98$ : c'est l'accélération maximale $a_{max}$, en $\\mathrm{m\\,s^{-2}}$, pas la vitesse."
+            },
+            {
+              "label": "$v_{max} = 4{,}76\\times10^{-2}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{X_m}{T_0} = \\dfrac{3{,}0\\times10^{-2}}{0{,}630} = 4{,}76\\times10^{-2}$ : c'est une vitesse moyenne approximative, pas le maximum. Il faut $v_{max} = X_m\\,\\omega_0$."
+            },
+            {
+              "label": "$v_{max} = 3{,}01\\times10^{-3}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{X_m}{\\omega_0} = \\dfrac{3{,}0\\times10^{-2}}{9{,}97} = 3{,}01\\times10^{-3}$ : tu as divisé par $\\omega_0$ au lieu de multiplier."
+            }
+          ],
+          "hint": "Dérive l'équation horaire : le maximum de la vitesse est le facteur qui multiplie le sinus.",
+          "solution": "En dérivant $x(t) = X_m\\cos(\\omega_0 t)$ on obtient $v(t) = -X_m\\,\\omega_0\\sin(\\omega_0 t)$. Comme $|\\sin| \\le 1$, la valeur maximale de la vitesse est $$v_{max} = X_m\\,\\omega_0 = 3{,}0\\times10^{-2}\\times9{,}97 = 0{,}299\\ \\mathrm{m\\,s^{-1}} \\simeq 0{,}30\\ \\mathrm{m\\,s^{-1}}.$$ Elle est atteinte chaque fois que le solide passe par la position d'équilibre $x = 0$, là où la force de rappel est nulle. Contrôle par l'énergie : à l'élongation maximale toute l'énergie est élastique, $\\tfrac12 K X_m^{2} = \\tfrac12\\times19{,}9\\times(3{,}0\\times10^{-2})^{2} = 8{,}95\\times10^{-3}\\ \\mathrm{J}$ ; en $x=0$ elle est entièrement cinétique, donc $v_{max} = \\sqrt{\\dfrac{2\\times8{,}95\\times10^{-3}}{0{,}200}} = 0{,}299\\ \\mathrm{m\\,s^{-1}}$ — les deux voies concordent.",
+          "methode": "Les trois maxima s'enchaînent par $\\omega_0$ : $x_{max} = X_m$, $v_{max} = X_m\\omega_0$, $a_{max} = X_m\\omega_0^{2}$.",
+          "points": 1,
+          "part": "Partie B — Équation horaire et grandeurs cinématiques",
+          "ref": "pc-oscillateurs-probleme-1-q5"
+        },
+        {
+          "notion": "L'équation différentielle — cas horizontal",
+          "difficulty": 3,
+          "statement": "À quelle date $(S)$ passe-t-il, pour la **première** fois, par sa position d'équilibre $x = 0$ ?",
+          "options": [
+            {
+              "label": "$t = 0{,}158\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "Il faut $\\cos(9{,}97\\,t) = 0$, donc $9{,}97\\,t = \\dfrac{\\pi}{2}$ : $t = \\dfrac{T_0}{4} = \\dfrac{0{,}630}{4} = 0{,}158\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$t = 0{,}315\\ \\mathrm{s}$",
+              "why": "Tu as pris $t = \\dfrac{T_0}{2} = 0{,}315\\ \\mathrm{s}$ : au bout d'une demi-période le solide est à l'autre extrémité, en $x = -X_m$, et il a déjà traversé $x=0$ avant."
+            },
+            {
+              "label": "$t = 0{,}630\\ \\mathrm{s}$",
+              "why": "Tu as pris $t = T_0 = 0{,}630\\ \\mathrm{s}$ : au bout d'une période entière le solide est **revenu** en $x = +X_m$. Il est passé par $x = 0$ deux fois entre-temps."
+            },
+            {
+              "label": "$t = 0{,}0788\\ \\mathrm{s}$",
+              "why": "Tu as pris $t = \\dfrac{T_0}{8} = 0{,}0788\\ \\mathrm{s}$ : c'est la date où $x = \\dfrac{X_m}{\\sqrt{2}}$, donc le solide n'a parcouru qu'une partie du chemin jusqu'à $x = 0$."
+            }
+          ],
+          "hint": "Cherche la plus petite date positive annulant le cosinus, puis traduis-la en fraction de $T_0$.",
+          "solution": "On annule l'équation horaire : $x(t) = 3{,}0\\times10^{-2}\\cos(9{,}97\\,t) = 0$ exige $\\cos(9{,}97\\,t) = 0$, soit $9{,}97\\,t = \\dfrac{\\pi}{2} + k\\pi$ avec $k$ entier. La première date positive correspond à $k = 0$ : $$t = \\frac{\\pi}{2\\times9{,}97} = \\frac{\\pi}{2\\omega_0} = \\frac{T_0}{4} = \\frac{0{,}630}{4} = 0{,}158\\ \\mathrm{s}.$$ C'est cohérent avec la lecture du mouvement : parti de l'élongation maximale, le solide atteint la position d'équilibre après un **quart** de période — et c'est précisément là que sa vitesse vaut $v_{max} = 0{,}299\\ \\mathrm{m\\,s^{-1}}$. Contrôle : $9{,}97\\times0{,}158 = 1{,}57 = \\dfrac{\\pi}{2}$, le cosinus est bien nul.",
+          "methode": "Repères à connaître pour $\\varphi = 0$ : $x = X_m$ à $t=0$, $x=0$ à $T_0/4$, $x = -X_m$ à $T_0/2$, retour à $T_0$.",
+          "points": 1,
+          "part": "Partie B — Équation horaire et grandeurs cinématiques",
+          "ref": "pc-oscillateurs-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-oscillateurs-probleme-2",
+      "chapter": "pc-oscillateurs",
+      "kind": "probleme",
+      "title": "Le pendule simple comme instrument de mesure",
+      "difficulty": 3,
+      "context": "Pour déterminer expérimentalement l'intensité du champ de pesanteur $g$ dans son lycée, un groupe d'élèves réalise\nun **pendule simple** : une petite bille d'acier de masse $m = 100\\ \\mathrm{g}$, assimilée à un point matériel, est\nsuspendue à un fil inextensible de masse négligeable et de longueur $\\ell = 0{,}90\\ \\mathrm{m}$.\n\nOn écarte le pendule d'un petit angle $\\theta_0$ par rapport à la verticale, puis on le lâche sans vitesse initiale.\nLes frottements sont d'abord supposés négligeables. Dans ces conditions le pendule est un oscillateur harmonique\nde période propre\n$$T_0 = 2\\pi\\sqrt{\\frac{\\ell}{g}}.$$\n\nMesure effectuée : la durée de **20 oscillations** complètes vaut $t_{20} = 38{,}0\\ \\mathrm{s}$.\n\nDonnées : $m = 100\\ \\mathrm{g}$ ; $\\ell = 0{,}90\\ \\mathrm{m}$ ; $t_{20} = 38{,}0\\ \\mathrm{s}$ ; $\\pi^{2} = 9{,}87$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Mesures de précision",
+          "difficulty": 1,
+          "statement": "Déterminer la période propre $T_0$ du pendule.",
+          "options": [
+            {
+              "label": "$T_0 = 1{,}90\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$T_0 = \\dfrac{t_{20}}{20} = \\dfrac{38{,}0}{20} = 1{,}90\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$T_0 = 38{,}0\\ \\mathrm{s}$",
+              "why": "Tu as gardé la durée totale des $20$ oscillations : la période est la durée d'**une seule** oscillation."
+            },
+            {
+              "label": "$T_0 = 3{,}80\\ \\mathrm{s}$",
+              "why": "Tu as divisé par $10$ au lieu de $20$ : $\\dfrac{38{,}0}{10} = 3{,}80\\ \\mathrm{s}$. L'énoncé indique bien $20$ oscillations."
+            },
+            {
+              "label": "$T_0 = 0{,}526\\ \\mathrm{s}$",
+              "why": "Tu as calculé $\\dfrac{20}{38{,}0} = 0{,}526$ : c'est la **fréquence** en $\\mathrm{Hz}$, c'est-à-dire l'inverse de la période."
+            }
+          ],
+          "hint": "Vingt oscillations durent vingt fois une oscillation.",
+          "solution": "La durée mesurée vaut $t_{20} = 20\\,T_0$, donc $$T_0 = \\frac{t_{20}}{20} = \\frac{38{,}0}{20} = 1{,}90\\ \\mathrm{s}.$$ Contrôle d'ordre de grandeur : un fil de $0{,}90\\ \\mathrm{m}$ est proche du mètre, on attend une période proche de $2\\ \\mathrm{s}$ — c'est le cas.",
+          "methode": "Diviser la durée de $n$ oscillations par $n$ : la méthode standard, et la plus précise.",
+          "points": 1,
+          "part": "Partie A — Mesure de l'intensité de la pesanteur",
+          "ref": "pc-oscillateurs-probleme-2-q1"
+        },
+        {
+          "notion": "Le pendule simple",
+          "difficulty": 1,
+          "statement": "On refait exactement la même mesure en remplaçant la bille d'acier de $100\\ \\mathrm{g}$ par une bille de plomb de $300\\ \\mathrm{g}$, de même taille, accrochée au même fil. Que lit-on pour $t_{20}$ ?",
+          "options": [
+            {
+              "label": "$t_{20} = 38{,}0\\ \\mathrm{s}$, inchangée",
+              "correct": true,
+              "why": "$T_0 = 2\\pi\\sqrt{\\ell/g}$ ne contient pas la masse : la période, et donc la durée de $20$ oscillations, ne changent pas."
+            },
+            {
+              "label": "$t_{20} = 65{,}8\\ \\mathrm{s}$",
+              "why": "Tu as écrit $\\sqrt{3}\\times38{,}0 = 65{,}8\\ \\mathrm{s}$, en appliquant la dépendance en $\\sqrt{m}$ du pendule **élastique**. Pour le pendule simple, $m$ n'apparaît pas dans la formule."
+            },
+            {
+              "label": "$t_{20} = 114\\ \\mathrm{s}$",
+              "why": "Tu as multiplié par le rapport des masses : $3\\times38{,}0 = 114\\ \\mathrm{s}$. La masse n'intervient pas ici, et même pour le pendule élastique elle n'intervient que sous une racine."
+            },
+            {
+              "label": "$t_{20} = 21{,}9\\ \\mathrm{s}$",
+              "why": "Tu as écrit $\\dfrac{38{,}0}{\\sqrt{3}} = 21{,}9\\ \\mathrm{s}$, en supposant qu'une bille plus lourde oscille plus vite. La masse est absente de $T_0 = 2\\pi\\sqrt{\\ell/g}$ : elle n'accélère ni ne ralentit le pendule."
+            }
+          ],
+          "hint": "Regarde simplement quelles lettres figurent dans l'expression de $T_0$ du pendule simple.",
+          "solution": "La période propre du pendule simple aux petites oscillations ne dépend que de la longueur du fil et de la pesanteur : $T_0 = 2\\pi\\sqrt{\\dfrac{\\ell}{g}}$. La masse de la bille n'y figure pas, donc $T_0 = 1{,}90\\ \\mathrm{s}$ et $t_{20} = 20\\times1{,}90 = 38{,}0\\ \\mathrm{s}$ comme avant. Explication physique : le poids, moteur du mouvement, est proportionnel à $m$, mais l'inertie qui s'y oppose l'est aussi ; la masse se simplifie dans l'équation du mouvement. Contrôle : c'est justement cette indépendance qui permet d'utiliser le pendule pour mesurer $g$ sans jamais peser la bille.",
+          "methode": "Pendule simple : $T_0$ indépendante de $m$ et de l'amplitude. Pendule élastique : $T_0$ indépendante de $g$ et de l'amplitude.",
+          "points": 1,
+          "part": "Partie A — Mesure de l'intensité de la pesanteur",
+          "ref": "pc-oscillateurs-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 4 — Déterminer $g$, $K$, $J_\\Delta$ ou $C$",
+          "difficulty": 2,
+          "statement": "Déduire de la mesure la valeur de l'intensité de la pesanteur $g$ au lieu de l'expérience.",
+          "options": [
+            {
+              "label": "$g = 9{,}84\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "$T_0 = 2\\pi\\sqrt{\\dfrac{\\ell}{g}}$ donne $g = \\dfrac{4\\pi^{2}\\ell}{T_0^{2}} = \\dfrac{4\\times9{,}87\\times0{,}90}{1{,}90^{2}} = 9{,}84\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$g = 1{,}57\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as calculé $\\dfrac{2\\pi\\ell}{T_0^{2}} = \\dfrac{6{,}28\\times0{,}90}{3{,}61} = 1{,}57$ : en élevant la formule au carré, $2\\pi$ devient $4\\pi^{2}$, pas $2\\pi$."
+            },
+            {
+              "label": "$g = 1{,}58\\times10^{2}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as calculé $\\dfrac{4\\pi^{2}T_0^{2}}{\\ell} = \\dfrac{39{,}5\\times3{,}61}{0{,}90} = 1{,}58\\times10^{2}$ : tu as échangé $\\ell$ et $T_0^{2}$. C'est $\\ell$ qui monte au numérateur."
+            },
+            {
+              "label": "$g = 2{,}46\\times10^{-2}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as utilisé $t_{20} = 38{,}0\\ \\mathrm{s}$ au lieu de $T_0$ : $\\dfrac{4\\pi^{2}\\times0{,}90}{38{,}0^{2}} = 2{,}46\\times10^{-2}$. La formule réclame la période d'une seule oscillation."
+            }
+          ],
+          "hint": "Élève la formule au carré pour faire disparaître la racine, puis isole $g$.",
+          "solution": "On part de $T_0 = 2\\pi\\sqrt{\\dfrac{\\ell}{g}}$ ; en élevant au carré, $T_0^{2} = 4\\pi^{2}\\dfrac{\\ell}{g}$, d'où $$g = \\frac{4\\pi^{2}\\ell}{T_0^{2}} = \\frac{4\\times9{,}87\\times0{,}90}{(1{,}90)^{2}} = \\frac{35{,}53}{3{,}61} = 9{,}84\\ \\mathrm{m\\,s^{-2}}.$$ Contrôle en revenant en avant : $2\\pi\\sqrt{0{,}90/9{,}84} = 1{,}90\\ \\mathrm{s}$, on retrouve la mesure. La valeur obtenue est très proche de la valeur de référence $9{,}8\\ \\mathrm{m\\,s^{-2}}$ : la mesure est bonne. C'est le principe du **gravimètre à pendule**.",
+          "methode": "Pour mesurer $g$ avec un pendule simple : chronomètre $n$ oscillations, puis $g = \\dfrac{4\\pi^{2}\\ell}{T_0^{2}}$.",
+          "points": 1,
+          "part": "Partie A — Mesure de l'intensité de la pesanteur",
+          "ref": "pc-oscillateurs-probleme-2-q3"
+        },
+        {
+          "notion": "Méthode 5 — Prévoir l'effet d'une modification",
+          "difficulty": 2,
+          "statement": "Sans refaire de mesure, prévoir la période propre $T_0'$ du même pendule si l'on raccourcit le fil à $\\ell' = 0{,}40\\ \\mathrm{m}$.",
+          "options": [
+            {
+              "label": "$T_0' = 1{,}27\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$\\dfrac{T_0'}{T_0} = \\sqrt{\\dfrac{\\ell'}{\\ell}} = \\sqrt{\\dfrac{0{,}40}{0{,}90}} = 0{,}667$, donc $T_0' = 1{,}90\\times0{,}667 = 1{,}27\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$T_0' = 0{,}844\\ \\mathrm{s}$",
+              "why": "Tu as multiplié par le rapport des longueurs sans racine : $1{,}90\\times\\dfrac{0{,}40}{0{,}90} = 0{,}844\\ \\mathrm{s}$. La longueur intervient sous une racine carrée."
+            },
+            {
+              "label": "$T_0' = 2{,}85\\ \\mathrm{s}$",
+              "why": "Tu as calculé $1{,}90\\times\\sqrt{\\dfrac{0{,}90}{0{,}40}} = 1{,}90\\times1{,}50 = 2{,}85\\ \\mathrm{s}$ : tu as inversé le rapport. Un fil plus **court** oscille plus **vite**, donc $T_0'$ doit être inférieure à $T_0$."
+            },
+            {
+              "label": "$T_0' = 1{,}90\\ \\mathrm{s}$",
+              "why": "Tu as supposé la période inchangée. La longueur du fil est au contraire la seule grandeur, avec $g$, dont $T_0$ dépende : la changer change nécessairement la période."
+            }
+          ],
+          "hint": "Forme le rapport des deux périodes : $g$ disparaît, il ne reste que les longueurs.",
+          "solution": "En écrivant la formule pour les deux longueurs et en divisant, $g$ s'élimine : $$\\frac{T_0'}{T_0} = \\sqrt{\\frac{\\ell'}{\\ell}} = \\sqrt{\\frac{0{,}40}{0{,}90}} = \\sqrt{0{,}444} = 0{,}667,$$ donc $T_0' = 1{,}90\\times0{,}667 = 1{,}27\\ \\mathrm{s}$. Contrôle par le calcul direct avec la valeur mesurée $g = 9{,}84\\ \\mathrm{m\\,s^{-2}}$ : $2\\pi\\sqrt{0{,}40/9{,}84} = 1{,}27\\ \\mathrm{s}$ — les deux méthodes concordent. Le fil est divisé par $2{,}25$, la période par $\\sqrt{2{,}25} = 1{,}5$ : raccourcir le fil accélère bien le pendule.",
+          "methode": "« Que devient $T_0$ si… » : passe par le **rapport** des deux formules. Un facteur $k$ sous la racine devient $\\sqrt{k}$ sur la période.",
+          "points": 1,
+          "part": "Partie B — Les limites du modèle harmonique",
+          "ref": "pc-oscillateurs-probleme-2-q4"
+        },
+        {
+          "notion": "Au-delà des petites oscillations",
+          "difficulty": 3,
+          "statement": "Les élèves refont la mesure en lâchant cette fois le pendule (fil de $0{,}90\\ \\mathrm{m}$) d'un angle de $50^\\circ$, les frottements restant négligeables. Qu'observent-ils pour la durée de $20$ oscillations ?",
+          "options": [
+            {
+              "label": "Une durée un peu **supérieure** à $38{,}0\\ \\mathrm{s}$, de l'ordre de $40\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "À $50^\\circ$ l'approximation $\\sin\\theta\\simeq\\theta$ tombe : comme $\\sin\\theta < \\theta$, le moment de rappel est plus faible que dans le modèle, le pendule est plus lent. Le terme correctif $1 + \\dfrac{\\theta_0^{2}}{16}$ donne environ $+5\\ \\%$, soit $T \\simeq 1{,}99\\ \\mathrm{s}$ et $t_{20} \\simeq 39{,}8\\ \\mathrm{s}$."
+            },
+            {
+              "label": "Une durée un peu **inférieure** à $38{,}0\\ \\mathrm{s}$, de l'ordre de $36\\ \\mathrm{s}$",
+              "why": "Tu vois bien que la période change avec l'amplitude, mais tu te trompes de sens. Comme $\\sin\\theta < \\theta$, le rappel réel est plus **faible** que le rappel linéaire : le pendule ralentit, il n'accélère pas."
+            },
+            {
+              "label": "Exactement $38{,}0\\ \\mathrm{s}$, car la période ne dépend jamais de l'amplitude",
+              "why": "Tu as appliqué l'isochronisme hors de son domaine. L'isochronisme découle de l'approximation $\\sin\\theta\\simeq\\theta$ : à $50^\\circ$, cette approximation n'est plus acceptable et la période dépend de l'amplitude."
+            },
+            {
+              "label": "Une durée plus courte à chaque oscillation, car l'amplitude diminue",
+              "why": "Tu décris un amortissement, mais l'énoncé précise que les frottements sont négligeables : l'amplitude ne diminue pas. Le mouvement reste périodique, simplement non sinusoïdal."
+            }
+          ],
+          "hint": "Compare $\\sin(50^\\circ)$ à $50^\\circ$ exprimé en radians, et demande-toi si le rappel est renforcé ou affaibli.",
+          "solution": "L'équation exacte du pendule simple est $\\ddot\\theta + \\dfrac{g}{\\ell}\\sin\\theta = 0$ : elle n'est harmonique qu'après l'approximation $\\sin\\theta \\simeq \\theta$, réservée aux petits angles. Pour $\\theta_0 = 50^\\circ = 0{,}873\\ \\mathrm{rad}$, on a $\\sin\\theta_0 = 0{,}766 < 0{,}873$ : le couple de rappel réel est plus faible, le mouvement est donc **plus lent** et sa période dépend de l'amplitude. Le premier terme du développement donne $$T \\simeq T_0\\left(1 + \\frac{\\theta_0^{2}}{16}\\right) = 1{,}90\\times\\left(1 + \\frac{0{,}873^{2}}{16}\\right) = 1{,}90\\times1{,}048 = 1{,}99\\ \\mathrm{s},$$ soit $t_{20} \\simeq 39{,}8\\ \\mathrm{s}$ : environ $5\\ \\%$ de plus que les $38{,}0\\ \\mathrm{s}$ mesurés aux petits angles. Contrôle : si $\\theta_0 \\to 0$, le facteur correctif tend vers $1$ et l'on retrouve $T_0$ — le modèle harmonique est bien le cas limite. Conclusion pratique : pour mesurer $g$ avec un pendule, il faut impérativement travailler à **petite** amplitude.",
+          "methode": "« Petites oscillations » n'est pas une formule de politesse : au-delà d'une dizaine de degrés, la période augmente avec l'amplitude.",
+          "points": 1,
+          "part": "Partie B — Les limites du modèle harmonique",
+          "ref": "pc-oscillateurs-probleme-2-q5"
+        },
+        {
+          "notion": "Le portrait de phase",
+          "difficulty": 3,
+          "statement": "On reprend les petites oscillations, mais on tient compte cette fois des frottements de l'air. Un dispositif trace le portrait de phase du pendule, c'est-à-dire la courbe $\\dot\\theta$ en fonction de $\\theta$. Quelle est l'allure de cette courbe, et que vaut la pseudo-période ?",
+          "options": [
+            {
+              "label": "Une spirale qui converge vers l'origine ; la pseudo-période est voisine de $1{,}90\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "L'amplitude décroît à chaque aller-retour, donc la courbe ne se referme pas et se resserre vers l'origine (le pendule finit immobile en $\\theta = 0$, $\\dot\\theta = 0$). Pour un amortissement faible, la pseudo-période reste très proche de la période propre $T_0 = 1{,}90\\ \\mathrm{s}$."
+            },
+            {
+              "label": "Une ellipse fermée ; la pseudo-période est voisine de $1{,}90\\ \\mathrm{s}$",
+              "why": "L'ellipse fermée est le portrait de phase de l'oscillateur **non** amorti : elle traduit la conservation de l'énergie mécanique. Avec frottements, l'énergie diminue et la courbe ne peut pas se refermer sur elle-même."
+            },
+            {
+              "label": "Une spirale qui s'éloigne de l'origine ; la pseudo-période est voisine de $1{,}90\\ \\mathrm{s}$",
+              "why": "Une spirale divergente signifierait une amplitude croissante, donc une énergie mécanique qui augmente d'elle-même. Les frottements ne peuvent que **dissiper** de l'énergie."
+            },
+            {
+              "label": "Une courbe qui rejoint l'origine sans jamais la contourner ; il n'y a pas de pseudo-période",
+              "why": "C'est le portrait de phase du régime **apériodique**, obtenu quand l'amortissement est fort : le pendule revient à l'équilibre sans osciller. Les frottements de l'air sur une bille d'acier sont au contraire faibles, et on observe bien des oscillations de moins en moins amples."
+            }
+          ],
+          "hint": "Demande-toi ce que devient l'énergie mécanique à chaque oscillation, et comment cela se traduit sur la taille de la courbe.",
+          "solution": "Sans frottement, l'énergie mécanique est constante et le point $(\\theta, \\dot\\theta)$ repasse indéfiniment par les mêmes états : le portrait de phase est une courbe **fermée**, une ellipse. Avec les frottements de l'air, l'énergie mécanique diminue à chaque oscillation, donc l'amplitude angulaire et la vitesse maximale diminuent aussi : le point ne revient jamais exactement à son état précédent et décrit une **spirale** qui se resserre vers l'origine, c'est-à-dire vers l'état de repos $\\theta = 0$, $\\dot\\theta = 0$. C'est le régime **pseudo-périodique**. L'amortissement de l'air sur une bille d'acier est faible : la durée séparant deux passages successifs dans le même sens, la pseudo-période $T$, reste pratiquement égale à la période propre $T_0 = 1{,}90\\ \\mathrm{s}$. Contrôle du cas extrême : si l'on plongeait le pendule dans l'huile, l'amortissement deviendrait fort, le régime serait **apériodique** et il n'y aurait plus ni oscillation ni pseudo-période.",
+          "methode": "Lecture d'un portrait de phase : ellipse fermée $\\Rightarrow$ non amorti ; spirale rentrante $\\Rightarrow$ pseudo-périodique ; courbe qui rejoint l'origine sans tourner $\\Rightarrow$ apériodique.",
+          "points": 1,
+          "part": "Partie B — Les limites du modèle harmonique",
+          "ref": "pc-oscillateurs-probleme-2-q6"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-oscillateurs-serie-1",
+      "title": "Oscillateurs mécaniques · Échauffement",
+      "description": "Les réflexes de base : loi de Hooke, reconnaître l'équation d'un oscillateur harmonique, et appliquer les quatre formules de période propre du chapitre.",
+      "kind": "custom",
+      "chapter": "pc-oscillateurs",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-oscillateurs-le-dispositif-q1",
+        "pc-oscillateurs-le-cas-vertical-q1",
+        "pc-oscillateurs-vitesse-et-acceleration-q1",
+        "pc-oscillateurs-le-pendule-de-torsion-q1",
+        "pc-oscillateurs-le-pendule-pesant-q1",
+        "pc-oscillateurs-le-pendule-simple-q1",
+        "pc-oscillateurs-le-dispositif-q2",
+        "pc-oscillateurs-le-cas-vertical-q2",
+        "pc-oscillateurs-vitesse-et-acceleration-q2",
+        "pc-oscillateurs-le-pendule-simple-q2"
+      ]
+    },
+    {
+      "slug": "pc-oscillateurs-serie-2",
+      "title": "Oscillateurs mécaniques · Entraînement",
+      "description": "Tout le chapitre d'un bout à l'autre : équations différentielles, cas vertical, conditions initiales, les quatre oscillateurs et la mesure soignée d'une période.",
+      "kind": "custom",
+      "chapter": "pc-oscillateurs",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-oscillateurs-probleme-1-q2",
+        "pc-oscillateurs-probleme-2-q2",
+        "pc-oscillateurs-le-dispositif-q3",
+        "pc-oscillateurs-l-equation-differentielle-cas-horizontal-q1",
+        "pc-oscillateurs-le-cas-vertical-q3",
+        "pc-oscillateurs-vitesse-et-acceleration-q3",
+        "pc-oscillateurs-le-pendule-de-torsion-q2",
+        "pc-oscillateurs-le-pendule-pesant-q2",
+        "pc-oscillateurs-le-pendule-simple-q3",
+        "pc-oscillateurs-probleme-1-q4",
+        "pc-oscillateurs-le-dispositif-q4",
+        "pc-oscillateurs-mesures-de-precision-q1"
+      ]
+    },
+    {
+      "slug": "pc-oscillateurs-serie-3",
+      "title": "Oscillateurs mécaniques · Type BAC",
+      "description": "Le niveau de l'épreuve nationale : remonter à $g$, $K$, $J_\\Delta$ ou $C$, prévoir l'effet d'une modification, et déjouer les pièges sur l'amplitude, la masse et les petites oscillations.",
+      "kind": "custom",
+      "chapter": "pc-oscillateurs",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-oscillateurs-probleme-2-q3",
+        "pc-oscillateurs-probleme-2-q4",
+        "pc-oscillateurs-le-cas-vertical-q4",
+        "pc-oscillateurs-vitesse-et-acceleration-q4",
+        "pc-oscillateurs-le-pendule-de-torsion-q3",
+        "pc-oscillateurs-le-pendule-pesant-q3",
+        "pc-oscillateurs-le-pendule-simple-q4",
+        "pc-oscillateurs-l-analogie-universelle-q1",
+        "pc-oscillateurs-au-dela-des-petites-oscillations-q1",
+        "pc-oscillateurs-le-portrait-de-phase-q1",
+        "pc-oscillateurs-probleme-1-q5",
+        "pc-oscillateurs-probleme-1-q6"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1926 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "pc",
+  "svt"
+ ],
+ "_scaffold": {
+  "pack": "maths-scex",
+  "label": "Maths — Sciences Expérimentales (PC + SVT)",
+  "priority": "P1",
+  "chapter": {
+   "code": "suites",
+   "name": "Suites numériques",
+   "domain": null,
+   "unit": null
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Suites numériques : vocabulaire",
+   "Les deux modes de définition",
+   "Le raisonnement par récurrence",
+   "Sens de variation et monotonie",
+   "Suites majorées, minorées, bornées",
+   "Suites arithmétiques",
+   "Suites géométriques",
+   "Sommes de termes consécutifs",
+   "Comparaison des deux modèles",
+   "Limite finie : suite convergente",
+   "Limite infinie et absence de limite",
+   "Les limites de référence",
+   "Opérations sur les limites",
+   "Lever une forme indéterminée",
+   "Limite d'une suite composée",
+   "Théorèmes de comparaison",
+   "Théorème d'encadrement (les gendarmes)",
+   "Convergence monotone",
+   "Limite et fonction continue",
+   "Le problème posé",
+   "La méthode complète, sur un exemple",
+   "Suites arithmético-géométriques",
+   "Suites homographiques",
+   "Sommes de termes et limites de sommes",
+   "Applications concrètes",
+   "Étape 1 — La stabilité de l'intervalle",
+   "Étape 2 — La monotonie",
+   "Étape 3 — Le calcul de la limite",
+   "Type 1 — Démontrer une formule par récurrence",
+   "Type 2 — Lever une indétermination",
+   "Type 3 — Étudier une suite récurrente en entier",
+   "Type 4 — Calculer une somme de termes",
+   "Type 5 — Encadrer pour conclure"
+  ],
+  "methodes_du_cours": [
+   "Étape 1 — La stabilité de l'intervalle",
+   "Étape 2 — La monotonie",
+   "Étape 3 — Le calcul de la limite",
+   "Type 1 — Démontrer une formule par récurrence",
+   "Type 2 — Lever une indétermination",
+   "Type 3 — Étudier une suite récurrente en entier",
+   "Type 4 — Calculer une somme de termes",
+   "Type 5 — Encadrer pour conclure"
+  ],
+  "existing_questions_total": 6,
+  "target_new_questions": 82,
+  "suggested_figures": [
+   "suite-monotone-bornee — Suite croissante majorée — convergence monotone",
+   "asymptote — Limite infinie en un point (asymptote verticale)",
+   "suite-escalier — Suite récurrente u(n+1)=f(u(n)) — construction en escalier"
+  ],
+  "sources": [
+   {
+    "annale": "maths-pc-2026-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2026-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2026-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2025-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2025-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2025-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2024-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2024-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2024-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2023-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2023-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2023-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2022-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2022-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2022-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2021-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2021-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2021-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2020-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2020-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2020-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2019-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2019-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2019-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2018-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2018-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2018-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2017-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2017-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2017-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2016-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2016-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2015-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2015-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2015-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2014-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2014-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2014-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2026-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2026-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2026-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2025-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2025-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2025-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2025-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2024-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2024-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2024-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2024-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2023-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2023-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2023-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2023-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2022-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2022-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2022-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2022-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2021-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2021-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2021-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2021-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2020-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2020-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2020-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2020-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2019-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2019-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2019-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2019-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2018-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2018-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2018-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2018-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2017-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2017-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2017-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2017-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2016-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2016-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2016-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2015-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2015-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2015-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2014-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2014-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2014-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2014-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Suites numériques : vocabulaire",
+    "lesson": "Récurrence et généralités",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-suites-numeriques-vocabulaire",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Suites numériques : vocabulaire",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-suites-numeriques-vocabulaire-q1",
+     "notion": "Suites numériques : vocabulaire",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les deux modes de définition",
+    "lesson": "Récurrence et généralités",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-les-deux-modes-de-definition",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Les deux modes de définition",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-les-deux-modes-de-definition-q1",
+     "notion": "Les deux modes de définition",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le raisonnement par récurrence",
+    "lesson": "Récurrence et généralités",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-le-raisonnement-par-recurrence",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le raisonnement par récurrence",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-le-raisonnement-par-recurrence-q1",
+     "notion": "Le raisonnement par récurrence",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Sens de variation et monotonie",
+    "lesson": "Récurrence et généralités",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-sens-de-variation-et-monotonie",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Sens de variation et monotonie",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-sens-de-variation-et-monotonie-q1",
+     "notion": "Sens de variation et monotonie",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Suites majorées, minorées, bornées",
+    "lesson": "Récurrence et généralités",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-suites-majorees-minorees-bornees",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Suites majorées, minorées, bornées",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-suites-majorees-minorees-bornees-q1",
+     "notion": "Suites majorées, minorées, bornées",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Suites arithmétiques",
+    "lesson": "Suites arithmétiques et géométriques",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-suites-arithmetiques",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Suites arithmétiques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-suites-arithmetiques-q1",
+     "notion": "Suites arithmétiques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Suites géométriques",
+    "lesson": "Suites arithmétiques et géométriques",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-suites-geometriques",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Suites géométriques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-suites-geometriques-q1",
+     "notion": "Suites géométriques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Sommes de termes consécutifs",
+    "lesson": "Suites arithmétiques et géométriques",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-sommes-de-termes-consecutifs",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Sommes de termes consécutifs",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-sommes-de-termes-consecutifs-q1",
+     "notion": "Sommes de termes consécutifs",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Comparaison des deux modèles",
+    "lesson": "Suites arithmétiques et géométriques",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-comparaison-des-deux-modeles",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Comparaison des deux modèles",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-comparaison-des-deux-modeles-q1",
+     "notion": "Comparaison des deux modèles",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Limite finie : suite convergente",
+    "lesson": "Limite d'une suite",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-limite-finie-suite-convergente",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Limite finie : suite convergente",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-limite-finie-suite-convergente-q1",
+     "notion": "Limite finie : suite convergente",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Limite infinie et absence de limite",
+    "lesson": "Limite d'une suite",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-limite-infinie-et-absence-de-limite",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Limite infinie et absence de limite",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-limite-infinie-et-absence-de-limite-q1",
+     "notion": "Limite infinie et absence de limite",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les limites de référence",
+    "lesson": "Limite d'une suite",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-les-limites-de-reference",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Les limites de référence",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-les-limites-de-reference-q1",
+     "notion": "Les limites de référence",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Opérations sur les limites",
+    "lesson": "Limite d'une suite",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-operations-sur-les-limites",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Opérations sur les limites",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-operations-sur-les-limites-q1",
+     "notion": "Opérations sur les limites",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Lever une forme indéterminée",
+    "lesson": "Limite d'une suite",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-lever-une-forme-indeterminee",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Lever une forme indéterminée",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-lever-une-forme-indeterminee-q1",
+     "notion": "Lever une forme indéterminée",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Limite d'une suite composée",
+    "lesson": "Limite d'une suite",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-limite-d-une-suite-composee",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Limite d'une suite composée",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-limite-d-une-suite-composee-q1",
+     "notion": "Limite d'une suite composée",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Théorèmes de comparaison",
+    "lesson": "Théorèmes de convergence",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-theoremes-de-comparaison",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Théorèmes de comparaison",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-theoremes-de-comparaison-q1",
+     "notion": "Théorèmes de comparaison",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Théorème d'encadrement (les gendarmes)",
+    "lesson": "Théorèmes de convergence",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-theoreme-d-encadrement-les-gendarmes",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Théorème d'encadrement (les gendarmes)",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-theoreme-d-encadrement-les-gendarmes-q1",
+     "notion": "Théorème d'encadrement (les gendarmes)",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Convergence monotone",
+    "lesson": "Théorèmes de convergence",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-convergence-monotone",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Convergence monotone",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-convergence-monotone-q1",
+     "notion": "Convergence monotone",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Limite et fonction continue",
+    "lesson": "Théorèmes de convergence",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-limite-et-fonction-continue",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Limite et fonction continue",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-limite-et-fonction-continue-q1",
+     "notion": "Limite et fonction continue",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le problème posé",
+    "lesson": "Suites récurrentes $u_{n+1}=f(u_n)$",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-le-probleme-pose",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le problème posé",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-le-probleme-pose-q1",
+     "notion": "Le problème posé",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La méthode complète, sur un exemple",
+    "lesson": "Suites récurrentes $u_{n+1}=f(u_n)$",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-la-methode-complete-sur-un-exemple",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "La méthode complète, sur un exemple",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-la-methode-complete-sur-un-exemple-q1",
+     "notion": "La méthode complète, sur un exemple",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Suites arithmético-géométriques",
+    "lesson": "Approfondissement : arithmético-géométriques & séries",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 1,
+    "target_new_questions": 0,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-suites-arithmetico-geometriques",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Suites arithmético-géométriques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-suites-arithmetico-geometriques-q1",
+     "notion": "Suites arithmético-géométriques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Suites homographiques",
+    "lesson": "Approfondissement : arithmético-géométriques & séries",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-suites-homographiques",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Suites homographiques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-suites-homographiques-q1",
+     "notion": "Suites homographiques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Sommes de termes et limites de sommes",
+    "lesson": "Approfondissement : arithmético-géométriques & séries",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 1,
+    "target_new_questions": 0,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-sommes-de-termes-et-limites-de-sommes",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Sommes de termes et limites de sommes",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-sommes-de-termes-et-limites-de-sommes-q1",
+     "notion": "Sommes de termes et limites de sommes",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Applications concrètes",
+    "lesson": "Approfondissement : arithmético-géométriques & séries",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-suites-applications-concretes",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Applications concrètes",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-applications-concretes-q1",
+     "notion": "Applications concrètes",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "maths-pc-2026-normale",
+     "maths-pc-2025-rattrapage",
+     "maths-pc-2025-normale",
+     "maths-pc-2024-rattrapage",
+     "maths-pc-2024-normale",
+     "maths-pc-2023-rattrapage"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "maths-suites-probleme-1",
+   "chapter": "suites",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. maths-pc-2026-normale",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-suites-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-suites-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "maths-pc-2026-normale",
+     "maths-pc-2025-rattrapage",
+     "maths-pc-2025-normale",
+     "maths-pc-2024-rattrapage",
+     "maths-pc-2024-normale",
+     "maths-pc-2023-rattrapage"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "maths-suites-probleme-2",
+   "chapter": "suites",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. maths-pc-2026-normale",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-suites-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-suites-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-suites-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "maths-suites-serie-1",
+   "title": "Suites numériques · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "suites",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "maths-suites-serie-2",
+   "title": "Suites numériques · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "suites",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "maths-suites-serie-3",
+   "title": "Suites numériques · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "suites",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

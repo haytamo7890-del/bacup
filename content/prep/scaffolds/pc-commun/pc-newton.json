@@ -1,0 +1,1922 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-newton",
+      "name": "Lois de Newton",
+      "domain": "physique",
+      "unit": "Mécanique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Le préalable : référentiel et système",
+      "Première loi : le principe d'inertie",
+      "Deuxième loi : la relation fondamentale",
+      "Troisième loi : actions réciproques",
+      "Les trois vecteurs",
+      "La base de Frenet",
+      "Les mouvements de référence",
+      "La méthode générale",
+      "Quantité de mouvement et systèmes",
+      "Les référentiels non galiléens",
+      "Masse inerte et masse grave",
+      "Les limites de la mécanique de Newton",
+      "Méthode 1 — Le bilan des forces",
+      "Méthode 2 — Dériver ou intégrer les équations horaires",
+      "Méthode 3 — Exploiter un enregistrement",
+      "Méthode 4 — Les systèmes liés",
+      "Méthode 5 — Exploiter une phase à vitesse constante"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Le bilan des forces",
+      "Méthode 2 — Dériver ou intégrer les équations horaires",
+      "Méthode 3 — Exploiter un enregistrement",
+      "Méthode 4 — Les systèmes liés",
+      "Méthode 5 — Exploiter une phase à vitesse constante"
+    ],
+    "existing_questions_total": 8,
+    "target_new_questions": 28,
+    "suggested_figures": [],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Le préalable : référentiel et système",
+        "lesson": "Les trois lois de Newton",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-le-prealable-referentiel-et-systeme",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "Le préalable : référentiel et système",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le préalable : référentiel et système",
+          "difficulty": 1,
+          "statement": "Un voyageur est assis, immobile sur son siège, dans un train qui roule en ligne droite à vitesse constante. Dans le **référentiel du train**, le mouvement de ce voyageur est :",
+          "options": [
+            {
+              "label": "un état de repos",
+              "correct": true,
+              "why": "Dans le référentiel du train, les coordonnées du voyageur ne varient pas au cours du temps : il est au repos. Un mouvement n'existe que par rapport à un référentiel donné."
+            },
+            {
+              "label": "un mouvement rectiligne uniforme",
+              "why": "Tu as décrit le mouvement dans le référentiel **terrestre**, pas dans celui du train. C'est précisément l'erreur de ne pas préciser le référentiel avant de nommer un mouvement."
+            },
+            {
+              "label": "un mouvement rectiligne uniformément varié",
+              "why": "Un mouvement uniformément varié suppose une accélération non nulle. Ici le train roule à vitesse constante et, dans son référentiel, le voyageur ne bouge pas du tout."
+            },
+            {
+              "label": "un mouvement circulaire uniforme",
+              "why": "Rien n'est circulaire dans cette situation : la voie est rectiligne et, dans le référentiel du train, le voyageur garde la même position."
+            }
+          ],
+          "hint": "Demande-toi si les coordonnées du voyageur changent dans le repère fixé au wagon.",
+          "solution": "Un mouvement ne se définit jamais seul : il se définit **par rapport à un référentiel**.\nDans le référentiel du train, le voyageur garde exactement la même position : il est au **repos**.\nDans le référentiel terrestre, le même voyageur est en translation rectiligne uniforme à la vitesse du train.\nContrôle : les deux descriptions sont toutes les deux exactes — elles ne se contredisent pas, elles correspondent à deux référentiels différents.",
+          "methode": "Avant de nommer un mouvement, écris toujours « dans le référentiel … ». Sans référentiel, la phrase n'a pas de sens.",
+          "points": 1,
+          "ref": "pc-newton-le-prealable-referentiel-et-systeme-q1"
+        },
+        {
+          "notion": "Le préalable : référentiel et système",
+          "difficulty": 2,
+          "statement": "Un livre est posé, immobile, sur une table horizontale. On choisit comme système **le livre seul**. Le bilan des forces extérieures à retenir est :",
+          "options": [
+            {
+              "label": "le poids du livre et la réaction de la table sur le livre",
+              "correct": true,
+              "why": "Seules comptent les forces exercées **sur** le système par des corps extérieurs : la Terre (le poids) et la table (la réaction). Elles se compensent, le livre reste immobile."
+            },
+            {
+              "label": "le poids du livre, la réaction de la table sur le livre et l'action du livre sur la table",
+              "why": "Tu as ajouté une force exercée **par** le système sur un corps extérieur. Elle ne s'applique pas au livre, donc elle n'entre pas dans son bilan."
+            },
+            {
+              "label": "le poids du livre et le poids de la table",
+              "why": "Le poids de la table s'applique à la table, pas au livre. Une force n'entre dans le bilan que si elle s'exerce sur le système choisi."
+            },
+            {
+              "label": "le poids du livre seul, la table n'exerçant aucune force",
+              "why": "Si la table n'exerçait rien, la somme des forces se réduirait au poids et le livre tomberait. La table exerce bien une réaction, verticale et vers le haut."
+            }
+          ],
+          "hint": "Trie les forces selon une seule question : « cette force s'exerce-t-elle **sur** le livre ? »",
+          "solution": "On délimite le système : **le livre**. Tout le reste (Terre, table, air) est extérieur.\nForces extérieures appliquées au livre :\n- le poids $\\vec P$, exercé par la Terre, vertical vers le bas ;\n- la réaction $\\vec R$, exercée par la table, verticale vers le haut.\nL'action du livre sur la table existe bien (troisième loi), mais elle s'exerce **sur la table** : elle appartient au bilan de la table, pas à celui du livre.\nContrôle : le livre est immobile, donc $\\vec P + \\vec R = \\vec 0$, soit $R = P$. Deux forces suffisent, et c'est cohérent.",
+          "methode": "Une force du bilan a toujours la forme « exercée **par** l'extérieur **sur** le système ». Si tu lis « par le système », raye-la.",
+          "points": 1,
+          "ref": "pc-newton-le-prealable-referentiel-et-systeme-q2"
+        },
+        {
+          "notion": "Le préalable : référentiel et système",
+          "difficulty": 3,
+          "statement": "Parmi les quatre situations suivantes, celle dans laquelle le référentiel proposé **ne peut pas** être considéré comme galiléen est :",
+          "options": [
+            {
+              "label": "le référentiel d'un manège en rotation, pour l'étude d'une bille posée sur son plateau",
+              "correct": true,
+              "why": "Un référentiel en rotation est accéléré : une bille posée sur le plateau y est au repos à l'instant initial alors que la somme des forces réelles n'est pas nulle. Le principe d'inertie y est violé."
+            },
+            {
+              "label": "le référentiel terrestre, pour l'étude de la chute d'une bille sur quelques mètres",
+              "why": "Sur une durée courte et une distance faible, la rotation de la Terre est négligeable : le référentiel terrestre est l'exemple standard de référentiel galiléen approché au lycée."
+            },
+            {
+              "label": "le référentiel géocentrique, pour l'étude du mouvement de la Lune autour de la Terre",
+              "why": "Le référentiel géocentrique est considéré comme galiléen pour les mouvements des satellites de la Terre, dont la Lune. C'est le choix attendu dans ce cas."
+            },
+            {
+              "label": "le référentiel héliocentrique, pour l'étude du mouvement de Mars autour du Soleil",
+              "why": "Le référentiel héliocentrique est le référentiel galiléen de référence pour les mouvements des planètes autour du Soleil."
+            }
+          ],
+          "hint": "Un référentiel galiléen est un référentiel dans lequel le principe d'inertie est vérifié. Que se passe-t-il s'il tourne ?",
+          "solution": "Un référentiel est **galiléen** si le principe d'inertie y est vérifié : tout système isolé ou pseudo-isolé y reste au repos ou en translation rectiligne uniforme.\nLe référentiel d'un manège **tourne** : il est accéléré par rapport au référentiel terrestre. Une bille posée sur le plateau se met à glisser alors que la somme des forces réelles qui s'exercent sur elle est nulle (ou compensée). Le principe d'inertie n'y tient pas : ce référentiel n'est pas galiléen.\nLes trois autres (terrestre sur une courte durée, géocentrique pour la Lune, héliocentrique pour les planètes) sont les référentiels galiléens usuels du programme.\nContrôle : le caractère galiléen dépend toujours du **mouvement étudié** — le référentiel terrestre convient pour une chute de bille, pas pour un courant marin de plusieurs milliers de kilomètres.",
+          "methode": "Repère le mot « rotation » ou « accélération » : un référentiel qui tourne ou qui accélère n'est jamais galiléen.",
+          "points": 1,
+          "ref": "pc-newton-le-prealable-referentiel-et-systeme-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Première loi : le principe d'inertie",
+        "lesson": "Les trois lois de Newton",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-premiere-loi-le-principe-d-inertie",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "Première loi : le principe d'inertie",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Première loi : le principe d'inertie",
+          "difficulty": 1,
+          "statement": "Un palet glisse sans frottement sur un plateau horizontal : son centre d'inertie décrit une droite à vitesse constante. D'après la première loi de Newton, on peut affirmer que :",
+          "options": [
+            {
+              "label": "la somme des forces extérieures appliquées au palet est nulle",
+              "correct": true,
+              "why": "C'est exactement l'énoncé de la première loi : centre d'inertie au repos ou en translation rectiligne uniforme $\\Leftrightarrow$ $\\sum\\vec F = \\vec 0$. Le palet est pseudo-isolé."
+            },
+            {
+              "label": "aucune force ne s'exerce sur le palet",
+              "why": "C'est le piège le plus fréquent du chapitre. Le poids et la réaction du plateau s'exercent bien sur le palet : ils ne sont pas nuls, ils se **compensent**."
+            },
+            {
+              "label": "la somme des forces extérieures est dirigée dans le sens du mouvement",
+              "why": "Une somme des forces non nulle imposerait une accélération ($\\sum\\vec F = m\\vec a_G$) et la vitesse ne serait pas constante. Ici elle est nulle."
+            },
+            {
+              "label": "le poids du palet est nul sur un plateau horizontal",
+              "why": "Le poids $P = mg$ ne dépend pas de l'orientation du support : il reste vertical et non nul. C'est la réaction du plateau qui l'équilibre."
+            }
+          ],
+          "hint": "Distingue « chaque force est nulle » de « la somme des forces est nulle ».",
+          "solution": "Le centre d'inertie du palet est en translation rectiligne uniforme dans le référentiel terrestre, supposé galiléen. La première loi de Newton donne donc :\n$$\\sum \\vec F_{\\text{ext}} = \\vec 0$$\nDétail du bilan : le poids $\\vec P$ (vertical, vers le bas) et la réaction normale $\\vec R$ du plateau (verticale, vers le haut), de même norme. Il n'y a pas de frottement, donc rien selon le mouvement.\nLe palet n'est pas **isolé** (des forces s'exercent sur lui), il est **pseudo-isolé** (elles se compensent).\nContrôle : si vraiment aucune force ne s'exerçait, le palet ne resterait pas sur le plateau — il n'y aurait rien pour compenser la gravité.",
+          "methode": "« Mouvement rectiligne uniforme » se traduit par $\\sum\\vec F = \\vec 0$, jamais par « pas de force ».",
+          "points": 1,
+          "ref": "pc-newton-premiere-loi-le-principe-d-inertie-q1"
+        },
+        {
+          "notion": "Première loi : le principe d'inertie",
+          "difficulty": 2,
+          "statement": "On enregistre les positions successives du centre d'inertie d'un mobile autoporteur sur une table horizontale soufflante, toutes les $\\tau = 40\\ \\mathrm{ms}$. Les positions sont alignées et séparées d'une distance constante $d = 1{,}2\\ \\mathrm{cm}$. On en déduit que :",
+          "options": [
+            {
+              "label": "le mouvement est rectiligne uniforme, de vitesse $v = 0{,}30\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "Des intervalles égaux en des durées égales signifient une vitesse constante : $v = d/\\tau = 1{,}2\\times10^{-2}/40\\times10^{-3} = 0{,}30\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "le mouvement est rectiligne uniforme, de vitesse $v = 30\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as oublié de convertir $1{,}2\\ \\mathrm{cm}$ en mètres : $1{,}2/0{,}040 = 30$. Un mobile autoporteur à $30\\ \\mathrm{m\\,s^{-1}}$, soit $108\\ \\mathrm{km\\,h^{-1}}$, est impossible sur une table de laboratoire."
+            },
+            {
+              "label": "le mouvement est rectiligne uniforme, de vitesse $v = 3{,}0\\times10^{-4}\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as gardé $\\tau = 40$ au lieu de $0{,}040\\ \\mathrm{s}$ : $1{,}2\\times10^{-2}/40 = 3{,}0\\times10^{-4}$. Les millisecondes doivent être converties en secondes."
+            },
+            {
+              "label": "le mouvement est rectiligne uniformément accéléré, de vitesse moyenne $v = 0{,}30\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Des intervalles **égaux** traduisent une vitesse constante. Un mouvement accéléré donnerait des intervalles de plus en plus grands sur l'enregistrement."
+            }
+          ],
+          "hint": "Convertis d'abord $d$ en mètres et $\\tau$ en secondes, puis regarde si les intervalles sont égaux ou croissants.",
+          "solution": "Lecture de l'enregistrement : les points sont **alignés** (trajectoire rectiligne) et **équidistants** (même distance en des durées égales), donc le mouvement est rectiligne **uniforme**.\nConversions : $d = 1{,}2\\ \\mathrm{cm} = 1{,}2\\times10^{-2}\\ \\mathrm{m}$ et $\\tau = 40\\ \\mathrm{ms} = 4{,}0\\times10^{-2}\\ \\mathrm{s}$.\n$$v = \\frac{d}{\\tau} = \\frac{1{,}2\\times10^{-2}}{4{,}0\\times10^{-2}} = 0{,}30\\ \\mathrm{m\\,s^{-1}}$$\nLa première loi s'applique à l'envers : puisque le centre d'inertie est en translation rectiligne uniforme, $\\sum\\vec F = \\vec 0$, le mobile est pseudo-isolé (le coussin d'air supprime les frottements).\nContrôle : $0{,}30\\ \\mathrm{m\\,s^{-1}}$, c'est environ $1\\ \\mathrm{km\\,h^{-1}}$ — l'ordre de grandeur attendu pour un mobile lancé à la main.",
+          "methode": "Sur un enregistrement : points équidistants $\\to$ uniforme ; intervalles croissants $\\to$ accéléré. Puis $v = d/\\tau$ en unités SI.",
+          "points": 1,
+          "ref": "pc-newton-premiere-loi-le-principe-d-inertie-q2"
+        },
+        {
+          "notion": "Première loi : le principe d'inertie",
+          "difficulty": 3,
+          "statement": "Un skieur de masse $m = 72\\ \\mathrm{kg}$ descend une piste rectiligne inclinée de $\\alpha = 12°$ sur l'horizontale, **à vitesse constante**. On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La force de frottement, parallèle à la piste, a pour norme :",
+          "options": [
+            {
+              "label": "$1{,}5\\times10^{2}\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "À vitesse constante, $\\sum\\vec F = \\vec 0$. En projetant sur la pente : $f = mg\\sin\\alpha = 72\\times9{,}8\\times\\sin12° = 147\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$6{,}9\\times10^{2}\\ \\mathrm{N}$",
+              "why": "Tu as échangé sinus et cosinus : $72\\times9{,}8\\times\\cos12° = 690\\ \\mathrm{N}$. C'est la composante du poids **normale** à la piste, équilibrée par la réaction du sol, pas par le frottement."
+            },
+            {
+              "label": "$3{,}4\\times10^{3}\\ \\mathrm{N}$",
+              "why": "Tu as divisé par $\\sin\\alpha$ au lieu de multiplier : $72\\times9{,}8/\\sin12° = 3{,}4\\times10^{3}\\ \\mathrm{N}$. La projection d'un vecteur est toujours une multiplication par un cosinus ou un sinus."
+            },
+            {
+              "label": "$1{,}5\\times10^{1}\\ \\mathrm{N}$",
+              "why": "Tu as pris $P = m = 72\\ \\mathrm{N}$ en oubliant le facteur $g$ : $72\\times\\sin12° = 15\\ \\mathrm{N}$. Une masse en kilogrammes n'est pas une force."
+            }
+          ],
+          "hint": "Vitesse constante $\\Rightarrow$ somme des forces nulle. Projette sur la ligne de plus grande pente : quel facteur accompagne $mg$ ?",
+          "solution": "Système : le skieur. Référentiel terrestre, supposé galiléen. Forces : le poids $\\vec P$, la réaction normale $\\vec R$ de la neige, le frottement $\\vec f$ opposé au mouvement (donc vers le haut de la pente).\nLe mouvement est rectiligne uniforme, donc d'après la première loi : $\\vec P + \\vec R + \\vec f = \\vec 0$.\nProjection sur l'axe de la ligne de plus grande pente, orienté vers le bas :\n$$mg\\sin\\alpha - f = 0 \\quad\\Longrightarrow\\quad f = mg\\sin\\alpha$$\n$f = 72\\times9{,}8\\times\\sin12° = 705{,}6\\times0{,}2079 = 146{,}7 \\approx 1{,}5\\times10^{2}\\ \\mathrm{N}$.\nContrôle : le poids total vaut $706\\ \\mathrm{N}$ et $\\sin12° \\approx 0{,}21$ ; le frottement représente donc environ $21\\ \\%$ du poids — un ordre de grandeur plausible pour des skis sur la neige.",
+          "methode": "Sur un plan incliné d'angle $\\alpha$ : $mg\\sin\\alpha$ **le long** de la pente, $mg\\cos\\alpha$ **perpendiculairement**. Retiens que $\\sin$ va avec la pente.",
+          "points": 1,
+          "ref": "pc-newton-premiere-loi-le-principe-d-inertie-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Deuxième loi : la relation fondamentale",
+        "lesson": "Les trois lois de Newton",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-deuxieme-loi-la-relation-fondamentale",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "Deuxième loi : la relation fondamentale",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Deuxième loi : la relation fondamentale",
+          "difficulty": 2,
+          "statement": "Un wagonnet de masse $m = 250\\ \\mathrm{kg}$, posé sur un rail horizontal, est soumis à une résultante des forces extérieures horizontale, constante, de norme $\\sum F = 400\\ \\mathrm{N}$. La norme de l'accélération de son centre d'inertie vaut :",
+          "options": [
+            {
+              "label": "$1{,}6\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "La deuxième loi donne $\\sum\\vec F = m\\vec a_G$, donc $a_G = \\sum F/m = 400/250 = 1{,}6\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$0{,}63\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as calculé $m/\\sum F = 250/400 = 0{,}63$ : le rapport est inversé. Dans $\\sum\\vec F = m\\vec a_G$, c'est la force qu'on divise par la masse."
+            },
+            {
+              "label": "$1{,}0\\times10^{5}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as multiplié au lieu de diviser : $400\\times250 = 1{,}0\\times10^{5}$. Une accélération de $10^{5}\\ \\mathrm{m\\,s^{-2}}$ est absurde pour un wagonnet."
+            },
+            {
+              "label": "$0{,}16\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as divisé par le poids $mg = 250\\times9{,}8 = 2450\\ \\mathrm{N}$ au lieu de la masse : $400/2450 = 0{,}16$. La deuxième loi fait intervenir la masse en kilogrammes."
+            }
+          ],
+          "hint": "Écris la deuxième loi de Newton, puis isole l'accélération. Attention à ce que tu mets au dénominateur.",
+          "solution": "Système : le wagonnet. Référentiel terrestre, supposé galiléen.\nDeuxième loi de Newton :\n$$\\sum \\vec F_{\\text{ext}} = m\\,\\vec a_G$$\nEn norme, la résultante étant horizontale et le mouvement rectiligne :\n$$a_G = \\frac{\\sum F}{m} = \\frac{400}{250} = 1{,}6\\ \\mathrm{m\\,s^{-2}}$$\nLe vecteur $\\vec a_G$ a la **même direction et le même sens** que $\\sum\\vec F$, donc l'accélération est horizontale, dirigée dans le sens de la résultante.\nContrôle par l'inverse : $m\\,a_G = 250\\times1{,}6 = 400\\ \\mathrm{N}$, on retrouve bien la résultante donnée.",
+          "methode": "$a_G = \\sum F/m$ : la force au numérateur, la **masse** (en kg, jamais le poids) au dénominateur.",
+          "points": 1,
+          "ref": "pc-newton-deuxieme-loi-la-relation-fondamentale-q1"
+        },
+        {
+          "notion": "Deuxième loi : la relation fondamentale",
+          "difficulty": 3,
+          "statement": "Une voiture roule en ligne droite vers l'est et **freine** régulièrement jusqu'à l'arrêt. Pendant le freinage, le vecteur somme des forces extérieures qui s'exercent sur elle est :",
+          "options": [
+            {
+              "label": "dirigé vers l'ouest, c'est-à-dire opposé au vecteur vitesse",
+              "correct": true,
+              "why": "La deuxième loi impose à $\\sum\\vec F$ la direction et le sens de $\\vec a_G$. Pendant un freinage, la vitesse diminue : $\\vec a_G$ est opposé à $\\vec v$, donc $\\sum\\vec F$ aussi."
+            },
+            {
+              "label": "dirigé vers l'est, c'est-à-dire dans le sens du vecteur vitesse",
+              "why": "C'est le piège classique : tu as aligné la force sur le **mouvement**. La deuxième loi l'aligne sur l'**accélération**, qui pointe ici vers l'arrière puisque la vitesse décroît."
+            },
+            {
+              "label": "nul, car la trajectoire reste rectiligne",
+              "why": "Une trajectoire rectiligne n'impose rien sur la norme de la vitesse. Si $\\sum\\vec F$ était nul, la vitesse resterait constante et la voiture ne s'arrêterait jamais."
+            },
+            {
+              "label": "perpendiculaire au vecteur vitesse, vers le centre de la Terre",
+              "why": "Tu as donné la direction du poids seul. Le poids est équilibré par la réaction de la route ; la résultante, elle, est horizontale et dirigée vers l'arrière."
+            }
+          ],
+          "hint": "$\\sum\\vec F$ est colinéaire et de même sens que $\\vec a_G$, pas que $\\vec v$. Dans quel sens pointe $\\vec a_G$ quand $v$ diminue ?",
+          "solution": "Système : la voiture. Référentiel terrestre, supposé galiléen. Prenons un axe $Ox$ horizontal orienté vers l'est, dans le sens du mouvement.\nLa vitesse est positive et **décroissante**, donc $a_x = \\dfrac{dv_x}{dt} < 0$ : le vecteur $\\vec a_G$ est dirigé vers l'ouest.\nLa deuxième loi de Newton, $\\sum\\vec F = m\\,\\vec a_G$, impose à la résultante la **même direction et le même sens** que l'accélération (la masse est un scalaire positif). Donc $\\sum\\vec F$ est dirigé vers l'ouest : c'est la résultante des forces de freinage.\nContrôle : ce sont bien les freins et la route qui exercent cette action vers l'arrière. Rien ne « pousse » la voiture vers l'avant pendant le freinage.",
+          "methode": "Ne lie jamais la force au mouvement : lie-la à l'**accélération**. Vitesse qui diminue $\\Rightarrow$ force vers l'arrière.",
+          "points": 1,
+          "ref": "pc-newton-deuxieme-loi-la-relation-fondamentale-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Troisième loi : actions réciproques",
+        "lesson": "Les trois lois de Newton",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-troisieme-loi-actions-reciproques",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "Troisième loi : actions réciproques",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Troisième loi : actions réciproques",
+          "difficulty": 1,
+          "statement": "Un livre de masse $m = 1{,}2\\ \\mathrm{kg}$ est posé, en équilibre, sur une table horizontale ($g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$). La force exercée par le livre sur la table a pour norme :",
+          "options": [
+            {
+              "label": "$12\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "Le livre est en équilibre donc $R = P = mg = 1{,}2\\times9{,}8 = 11{,}8\\ \\mathrm{N}$. La troisième loi donne $F_{\\text{livre/table}} = R = 12\\ \\mathrm{N}$, dirigée vers le bas."
+            },
+            {
+              "label": "$0\\ \\mathrm{N}$",
+              "why": "Tu as conclu de l'équilibre que le livre n'exerce rien. L'équilibre porte sur la **somme** des forces appliquées au livre ; l'action du livre sur la table vaut bien $12\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$1{,}2\\ \\mathrm{N}$",
+              "why": "Tu as confondu masse et poids : $1{,}2$ est la masse en kilogrammes. Le poids vaut $mg = 12\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$24\\ \\mathrm{N}$",
+              "why": "Tu as additionné le poids et la réaction, $2mg = 24\\ \\mathrm{N}$, comme si les deux s'appliquaient à la table. Seule l'opposée de $\\vec R$ s'exerce sur la table."
+            }
+          ],
+          "hint": "Trouve d'abord la réaction de la table sur le livre, puis applique la troisième loi.",
+          "solution": "**Étape 1 — système : le livre.** Il est en équilibre, donc $\\vec P + \\vec R = \\vec 0$ et $R = P = mg = 1{,}2\\times9{,}8 = 11{,}76\\ \\mathrm{N}$.\n**Étape 2 — troisième loi de Newton.** Les actions entre le livre et la table sont réciproques :\n$$\\vec F_{\\text{livre/table}} = -\\,\\vec F_{\\text{table/livre}} = -\\,\\vec R$$\nSa norme vaut donc $11{,}76 \\approx 12\\ \\mathrm{N}$ et elle est dirigée **vers le bas**.\nContrôle : c'est la valeur qu'afficherait une balance placée sous le livre, et c'est bien $mg$ : cohérent.",
+          "methode": "Pour trouver l'action du système sur son support : calcule d'abord la réaction du support sur le système, puis change le sens.",
+          "points": 1,
+          "ref": "pc-newton-troisieme-loi-actions-reciproques-q1"
+        },
+        {
+          "notion": "Troisième loi : actions réciproques",
+          "difficulty": 2,
+          "statement": "Une petite bille de masse $m_1 = 20\\ \\mathrm{g}$ vient heurter une boule de pétanque de masse $m_2 = 700\\ \\mathrm{g}$ posée au sol. Pendant le choc, à propos des deux forces d'interaction :",
+          "options": [
+            {
+              "label": "elles ont la même norme et des sens opposés, quelles que soient les masses",
+              "correct": true,
+              "why": "La troisième loi s'écrit $\\vec F_{1/2} = -\\vec F_{2/1}$ : même norme, même direction, sens opposés. Elle est vraie en toute circonstance, les masses n'y figurent pas."
+            },
+            {
+              "label": "la force exercée par la boule sur la bille est $35$ fois plus grande",
+              "why": "C'est le piège de la « grosse masse qui pousse plus fort » : tu as utilisé $m_2/m_1 = 700/20 = 35$. Les masses n'interviennent pas dans la troisième loi, seulement dans les accélérations."
+            },
+            {
+              "label": "la force exercée par la bille sur la boule est $35$ fois plus grande",
+              "why": "Même erreur, dans l'autre sens : tu as appliqué le rapport $700/20 = 35$ aux forces. Les deux normes sont rigoureusement égales."
+            },
+            {
+              "label": "elles ont la même norme, la même direction et le même sens",
+              "why": "Tu as oublié le signe moins de $\\vec F_{1/2} = -\\vec F_{2/1}$. Deux forces de même sens ne s'opposeraient pas : il n'y aurait plus d'interaction."
+            }
+          ],
+          "hint": "Relis l'énoncé de la troisième loi : y vois-tu apparaître une masse ?",
+          "solution": "Troisième loi de Newton (principe des actions réciproques) : pour deux corps $A$ et $B$ en interaction,\n$$\\vec F_{A/B} = -\\,\\vec F_{B/A}$$\nLes deux forces ont **la même norme**, la même droite d'action et des **sens opposés**. Cette loi est vraie que les corps soient au repos ou en mouvement, et quelles que soient leurs masses.\nCe qui diffère, c'est l'effet : avec $F$ identique, la deuxième loi donne $a_1 = F/m_1$ et $a_2 = F/m_2$, donc $a_1/a_2 = m_2/m_1 = 35$. La bille est $35$ fois plus accélérée que la boule.\nContrôle : c'est bien ce qu'on observe — la bille rebondit violemment, la boule bouge à peine. Forces égales, accélérations très inégales.",
+          "methode": "Troisième loi : les **forces** sont égales en norme. Ce sont les **accélérations** qui dépendent des masses.",
+          "points": 1,
+          "ref": "pc-newton-troisieme-loi-actions-reciproques-q2"
+        },
+        {
+          "notion": "Troisième loi : actions réciproques",
+          "difficulty": 3,
+          "statement": "Sur une patinoire horizontale, les frottements étant négligeables, un patineur A de masse $m_A = 60\\ \\mathrm{kg}$ pousse un patineur B de masse $m_B = 40\\ \\mathrm{kg}$. Pendant la poussée, B acquiert une accélération de norme $a_B = 3{,}0\\ \\mathrm{m\\,s^{-2}}$. La norme de l'accélération de A vaut :",
+          "options": [
+            {
+              "label": "$2{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "$F = m_B a_B = 40\\times3{,}0 = 120\\ \\mathrm{N}$ ; la troisième loi donne la même norme sur A, donc $a_A = 120/60 = 2{,}0\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$3{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as supposé les accélérations égales. La troisième loi impose l'égalité des **forces**, pas des accélérations : $a_A = F/m_A$ est plus petite car $m_A$ est plus grande."
+            },
+            {
+              "label": "$4{,}5\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as multiplié par $m_A/m_B$ au lieu de diviser : $3{,}0\\times60/40 = 4{,}5$. Le patineur le plus lourd est le **moins** accéléré, donc $a_A < a_B$."
+            },
+            {
+              "label": "$1{,}2\\times10^{2}\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu t'es arrêté à la force $F = m_B a_B = 120\\ \\mathrm{N}$ et tu l'as écrite en $\\mathrm{m\\,s^{-2}}$. Il reste à la diviser par $m_A = 60\\ \\mathrm{kg}$."
+            }
+          ],
+          "hint": "Passe par la force d'interaction : calcule-la du côté de B, puis sers-t'en du côté de A.",
+          "solution": "**Côté B.** Système : le patineur B. La seule force horizontale est l'action de A sur B. Deuxième loi en projection sur l'horizontale :\n$$F_{A/B} = m_B\\,a_B = 40\\times3{,}0 = 120\\ \\mathrm{N}$$\n**Troisième loi.** $\\vec F_{B/A} = -\\vec F_{A/B}$, donc $F_{B/A} = 120\\ \\mathrm{N}$ également, mais dirigée en sens inverse : A part en arrière.\n**Côté A.** Système : le patineur A. Deuxième loi :\n$$a_A = \\frac{F_{B/A}}{m_A} = \\frac{120}{60} = 2{,}0\\ \\mathrm{m\\,s^{-2}}$$\nContrôle : $\\dfrac{a_A}{a_B} = \\dfrac{2{,}0}{3{,}0} = \\dfrac{40}{60} = \\dfrac{m_B}{m_A}$. Le rapport des accélérations est bien l'inverse du rapport des masses.",
+          "methode": "Interaction entre deux corps : calcule $F$ là où tu connais $m$ et $a$, transporte-la par la troisième loi, puis divise par l'autre masse.",
+          "points": 1,
+          "ref": "pc-newton-troisieme-loi-actions-reciproques-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les trois vecteurs",
+        "lesson": "Vecteurs cinématiques & méthode",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-les-trois-vecteurs",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "Les trois vecteurs",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les trois vecteurs",
+          "difficulty": 1,
+          "statement": "Le mouvement rectiligne d'un mobile est décrit, dans le référentiel terrestre, par l'équation horaire de la vitesse $v(t) = 2{,}5\\,t + 1{,}0$ (en unités SI). La valeur de l'accélération du centre d'inertie est :",
+          "options": [
+            {
+              "label": "$2{,}5\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "Par définition $a = \\dfrac{dv}{dt}$ : la dérivée de $2{,}5\\,t + 1{,}0$ vaut $2{,}5$, constante. Le mouvement est uniformément varié."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as lu l'ordonnée à l'origine : $1{,}0$ est la vitesse initiale $v_0$, en $\\mathrm{m\\,s^{-1}}$. L'accélération est le **coefficient de $t$**, pas le terme constant."
+            },
+            {
+              "label": "$3{,}5\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as calculé $v(1{,}0) = 2{,}5 + 1{,}0 = 3{,}5$ : c'est une **vitesse**, en $\\mathrm{m\\,s^{-1}}$. Confondre $v$ et $a$ est l'erreur la plus fréquente du chapitre."
+            },
+            {
+              "label": "$1{,}25\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as divisé le coefficient par $2$ : $2{,}5/2 = 1{,}25$. Le facteur $\\frac12$ n'apparaît que dans l'équation de la **position** $x = \\frac12 at^2 + v_0t + x_0$."
+            }
+          ],
+          "hint": "L'accélération est la dérivée de la vitesse par rapport au temps. Que vaut la dérivée d'une fonction affine ?",
+          "solution": "Référentiel terrestre, supposé galiléen. Par définition du vecteur accélération :\n$$\\vec a = \\frac{d\\vec v}{dt}$$\nEn projection sur l'axe du mouvement :\n$$a = \\frac{dv}{dt} = \\frac{d}{dt}\\big(2{,}5\\,t + 1{,}0\\big) = 2{,}5\\ \\mathrm{m\\,s^{-2}}$$\nL'accélération est **constante** : le mouvement est rectiligne uniformément varié. Le terme $1{,}0\\ \\mathrm{m\\,s^{-1}}$ est la vitesse à $t = 0$, c'est-à-dire $v_0$.\nContrôle : entre $t = 0$ et $t = 2{,}0\\ \\mathrm{s}$, la vitesse passe de $1{,}0$ à $6{,}0\\ \\mathrm{m\\,s^{-1}}$, soit une variation de $5{,}0\\ \\mathrm{m\\,s^{-1}}$ en $2{,}0\\ \\mathrm{s}$ : $2{,}5\\ \\mathrm{m\\,s^{-2}}$ — cohérent.",
+          "methode": "Dans $v(t) = at + v_0$, l'accélération est le coefficient de $t$ et $v_0$ le terme constant. Vérifie toujours l'unité annoncée.",
+          "points": 1,
+          "ref": "pc-newton-les-trois-vecteurs-q1"
+        },
+        {
+          "notion": "Les trois vecteurs",
+          "difficulty": 2,
+          "statement": "Un mobile se déplace sur un axe $Ox$ et son abscisse vérifie $x(t) = 2{,}0\\,t^{2} + 3{,}0\\,t$ (en unités SI, avec $x$ en mètres et $t$ en secondes). La valeur de la vitesse de son centre d'inertie à l'instant $t = 2{,}0\\ \\mathrm{s}$ est :",
+          "options": [
+            {
+              "label": "$11\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v(t) = \\dfrac{dx}{dt} = 4{,}0\\,t + 3{,}0$, donc $v(2{,}0) = 4{,}0\\times2{,}0 + 3{,}0 = 11\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as oublié de dériver le terme $3{,}0\\,t$ : tu as écrit $v = 4{,}0\\,t$, soit $4{,}0\\times2{,}0 = 8{,}0$. La dérivée de $3{,}0\\,t$ vaut $3{,}0$, elle ne disparaît pas."
+            },
+            {
+              "label": "$7{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé la vitesse **moyenne** depuis le départ : $x(2{,}0)/2{,}0 = 14/2{,}0 = 7{,}0$. La question porte sur la vitesse **instantanée**, qui est la dérivée."
+            },
+            {
+              "label": "$14\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé la position $x(2{,}0) = 2{,}0\\times4{,}0 + 3{,}0\\times2{,}0 = 14\\ \\mathrm{m}$ et tu l'as donnée en $\\mathrm{m\\,s^{-1}}$. Il faut dériver avant de remplacer $t$."
+            }
+          ],
+          "hint": "Dérive d'abord l'expression littérale de $x(t)$, puis seulement remplace $t$ par $2{,}0\\ \\mathrm{s}$.",
+          "solution": "Référentiel terrestre, supposé galiléen, repère $(O,\\vec i)$.\nLe vecteur vitesse est la dérivée du vecteur position : $\\vec v = \\dfrac{d\\overrightarrow{OG}}{dt}$. En projection sur $Ox$ :\n$$v(t) = \\frac{dx}{dt} = \\frac{d}{dt}\\big(2{,}0\\,t^{2} + 3{,}0\\,t\\big) = 4{,}0\\,t + 3{,}0$$\nÀ $t = 2{,}0\\ \\mathrm{s}$ :\n$$v(2{,}0) = 4{,}0\\times2{,}0 + 3{,}0 = 11\\ \\mathrm{m\\,s^{-1}}$$\nOn remarque au passage que $a = \\dfrac{dv}{dt} = 4{,}0\\ \\mathrm{m\\,s^{-2}}$, constante : le mouvement est uniformément accéléré, avec $v_0 = 3{,}0\\ \\mathrm{m\\,s^{-1}}$.\nContrôle : $v = at + v_0 = 4{,}0\\times2{,}0 + 3{,}0 = 11\\ \\mathrm{m\\,s^{-1}}$ — on retrouve la même valeur par la formule du MRUV.",
+          "methode": "Position $\\to$ vitesse $\\to$ accélération : une dérivation à chaque flèche. Dérive l'expression **littérale** d'abord, remplace ensuite.",
+          "points": 1,
+          "ref": "pc-newton-les-trois-vecteurs-q2"
+        },
+        {
+          "notion": "Les trois vecteurs",
+          "difficulty": 3,
+          "statement": "Dans un repère orthonormé $(O,\\vec i,\\vec j)$, le centre d'inertie d'un mobile a pour coordonnées $x(t) = 4{,}0\\,t$ et $y(t) = 5{,}0\\,t^{2}$ (en unités SI). La valeur de sa vitesse à l'instant $t = 1{,}0\\ \\mathrm{s}$ est :",
+          "options": [
+            {
+              "label": "$10{,}8\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_x = 4{,}0$ et $v_y = 10{,}0\\,t = 10{,}0$ à $t = 1{,}0\\ \\mathrm{s}$ ; les deux composantes étant perpendiculaires, $v = \\sqrt{4{,}0^{2} + 10{,}0^{2}} = \\sqrt{116} = 10{,}8\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$14{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as additionné les composantes : $4{,}0 + 10{,}0 = 14{,}0$. Les composantes d'un vecteur s'ajoutent **vectoriellement** : la norme se calcule par le théorème de Pythagore."
+            },
+            {
+              "label": "$10{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu n'as gardé que $v_y = 10{,}0\\ \\mathrm{m\\,s^{-1}}$ et oublié $v_x = 4{,}0\\ \\mathrm{m\\,s^{-1}}$. Le mobile avance aussi horizontalement, la norme est donc plus grande que $10{,}0$."
+            },
+            {
+              "label": "$6{,}4\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris $v_y = y(1{,}0) = 5{,}0$ au lieu de $\\dfrac{dy}{dt} = 10{,}0$ : $\\sqrt{4{,}0^{2} + 5{,}0^{2}} = 6{,}4$. Il faut dériver $y(t)$ avant de remplacer $t$."
+            }
+          ],
+          "hint": "Dérive chaque coordonnée séparément pour obtenir $v_x$ et $v_y$, puis utilise $v = \\sqrt{v_x^{2} + v_y^{2}}$.",
+          "solution": "Référentiel terrestre, supposé galiléen, repère $(O,\\vec i,\\vec j)$.\nLe vecteur vitesse s'obtient en dérivant chaque coordonnée du vecteur position :\n$$v_x = \\frac{dx}{dt} = 4{,}0\\ \\mathrm{m\\,s^{-1}} \\qquad v_y = \\frac{dy}{dt} = 10{,}0\\,t$$\nÀ $t = 1{,}0\\ \\mathrm{s}$ : $v_x = 4{,}0\\ \\mathrm{m\\,s^{-1}}$ et $v_y = 10{,}0\\ \\mathrm{m\\,s^{-1}}$.\nLes axes étant orthogonaux, la norme vaut :\n$$v = \\sqrt{v_x^{2} + v_y^{2}} = \\sqrt{16 + 100} = \\sqrt{116} = 10{,}8\\ \\mathrm{m\\,s^{-1}}$$\nContrôle : la norme doit être comprise entre la plus grande composante ($10{,}0$) et leur somme ($14{,}0$) ; $10{,}8$ respecte bien cet encadrement.\nOn note aussi $a_x = 0$ et $a_y = 10{,}0\\ \\mathrm{m\\,s^{-2}}$ : l'accélération est constante et verticale.",
+          "methode": "En deux dimensions : dérive coordonnée par coordonnée, puis Pythagore pour la norme. Jamais une somme de composantes.",
+          "points": 1,
+          "ref": "pc-newton-les-trois-vecteurs-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La base de Frenet",
+        "lesson": "Vecteurs cinématiques & méthode",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-la-base-de-frenet",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "La base de Frenet",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La base de Frenet",
+          "difficulty": 1,
+          "statement": "Un point décrit un cercle de rayon $r = 2{,}0\\ \\mathrm{m}$ d'un mouvement circulaire **uniforme** à la vitesse $v = 6{,}0\\ \\mathrm{m\\,s^{-1}}$. Dans la base de Frenet, la valeur de son accélération est :",
+          "options": [
+            {
+              "label": "$18\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "Le mouvement est uniforme donc $a_T = \\dfrac{dv}{dt} = 0$ ; il reste $a = a_N = \\dfrac{v^{2}}{r} = \\dfrac{6{,}0^{2}}{2{,}0} = 18\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$0\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as conclu de « uniforme » que l'accélération est nulle. Seule la composante **tangentielle** $\\dfrac{dv}{dt}$ s'annule : la direction de $\\vec v$ change, donc $a_N = \\dfrac{v^{2}}{r} \\ne 0$."
+            },
+            {
+              "label": "$3{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as calculé $v/r = 6{,}0/2{,}0 = 3{,}0$ : c'est la vitesse angulaire $\\omega$, en $\\mathrm{rad\\,s^{-1}}$. L'accélération normale est $v^{2}/r$, le carré est indispensable."
+            },
+            {
+              "label": "$9{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as divisé par le diamètre $2r = 4{,}0\\ \\mathrm{m}$ : $36/4{,}0 = 9{,}0$. La formule $a_N = v^{2}/r$ fait intervenir le **rayon**, pas le diamètre."
+            }
+          ],
+          "hint": "Décompose $\\vec a$ en $a_T\\vec u_T + a_N\\vec u_N$. Laquelle des deux composantes est nulle quand la vitesse garde la même valeur ?",
+          "solution": "Dans la base de Frenet $(\\vec u_T, \\vec u_N)$, le vecteur accélération se décompose en :\n$$\\vec a = \\frac{dv}{dt}\\,\\vec u_T + \\frac{v^{2}}{r}\\,\\vec u_N$$\nLe mouvement est circulaire **uniforme** : la valeur de la vitesse est constante, donc\n$$a_T = \\frac{dv}{dt} = 0$$\nIl ne reste que la composante normale, dirigée vers le centre du cercle :\n$$a = a_N = \\frac{v^{2}}{r} = \\frac{6{,}0^{2}}{2{,}0} = \\frac{36}{2{,}0} = 18\\ \\mathrm{m\\,s^{-2}}$$\nContrôle : avec $\\omega = v/r = 3{,}0\\ \\mathrm{rad\\,s^{-1}}$, on a aussi $a_N = \\omega^{2} r = 9{,}0\\times2{,}0 = 18\\ \\mathrm{m\\,s^{-2}}$ — même résultat par une autre voie.",
+          "methode": "Mouvement circulaire uniforme : $a_T = 0$ mais $a_N = v^{2}/r \\ne 0$. « Uniforme » ne veut jamais dire « accélération nulle ».",
+          "points": 1,
+          "ref": "pc-newton-la-base-de-frenet-q1"
+        },
+        {
+          "notion": "La base de Frenet",
+          "difficulty": 2,
+          "statement": "Un mobile parcourt une trajectoire circulaire de rayon $r = 2{,}0\\ \\mathrm{m}$. À un instant donné, la valeur de sa vitesse est $v = 4{,}0\\ \\mathrm{m\\,s^{-1}}$ et elle augmente au taux $\\dfrac{dv}{dt} = 6{,}0\\ \\mathrm{m\\,s^{-2}}$. La valeur de son accélération à cet instant est :",
+          "options": [
+            {
+              "label": "$10{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "$a_T = 6{,}0$ et $a_N = v^{2}/r = 16/2{,}0 = 8{,}0$ ; les deux composantes sont perpendiculaires, donc $a = \\sqrt{6{,}0^{2} + 8{,}0^{2}} = 10{,}0\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$14{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as additionné les deux composantes : $6{,}0 + 8{,}0 = 14{,}0$. $\\vec u_T$ et $\\vec u_N$ sont perpendiculaires : la norme s'obtient par Pythagore, pas par une somme."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu n'as gardé que $a_N = v^{2}/r = 8{,}0\\ \\mathrm{m\\,s^{-2}}$. Mais ici la vitesse **varie**, donc $a_T = 6{,}0\\ \\mathrm{m\\,s^{-2}}$ n'est pas nulle et doit être comptée."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu n'as gardé que $a_T = \\dfrac{dv}{dt} = 6{,}0\\ \\mathrm{m\\,s^{-2}}$. Sur une trajectoire courbe, la composante normale $v^{2}/r = 8{,}0\\ \\mathrm{m\\,s^{-2}}$ n'est jamais nulle."
+            }
+          ],
+          "hint": "Calcule séparément $a_T = \\dfrac{dv}{dt}$ et $a_N = \\dfrac{v^{2}}{r}$, puis rappelle-toi que $\\vec u_T \\perp \\vec u_N$.",
+          "solution": "Dans la base de Frenet :\n$$\\vec a = \\underbrace{\\frac{dv}{dt}}_{a_T}\\,\\vec u_T + \\underbrace{\\frac{v^{2}}{r}}_{a_N}\\,\\vec u_N$$\nComposante tangentielle : $a_T = 6{,}0\\ \\mathrm{m\\,s^{-2}}$ (donnée, positive car la vitesse augmente).\nComposante normale :\n$$a_N = \\frac{v^{2}}{r} = \\frac{4{,}0^{2}}{2{,}0} = 8{,}0\\ \\mathrm{m\\,s^{-2}}$$\nLes vecteurs $\\vec u_T$ et $\\vec u_N$ étant orthogonaux :\n$$a = \\sqrt{a_T^{2} + a_N^{2}} = \\sqrt{36 + 64} = \\sqrt{100} = 10{,}0\\ \\mathrm{m\\,s^{-2}}$$\nContrôle : la norme est nécessairement comprise entre la plus grande composante ($8{,}0$) et leur somme ($14{,}0$) ; $10{,}0$ est bien dans cet intervalle.",
+          "methode": "Deux composantes de Frenet non nulles $\\Rightarrow$ $a = \\sqrt{a_T^{2} + a_N^{2}}$. $a_T$ dit si on accélère, $a_N$ dit qu'on tourne.",
+          "points": 1,
+          "ref": "pc-newton-la-base-de-frenet-q2"
+        },
+        {
+          "notion": "La base de Frenet",
+          "difficulty": 3,
+          "statement": "Une voiture de masse $m = 900\\ \\mathrm{kg}$ prend un virage circulaire horizontal de rayon $r = 50\\ \\mathrm{m}$ à la vitesse **constante** $v = 15\\ \\mathrm{m\\,s^{-1}}$. On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La valeur de la somme des forces extérieures qu'elle subit est :",
+          "options": [
+            {
+              "label": "$4{,}1\\times10^{3}\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "$a = a_N = v^{2}/r = 225/50 = 4{,}5\\ \\mathrm{m\\,s^{-2}}$, puis $\\sum F = m\\,a = 900\\times4{,}5 = 4{,}05\\times10^{3} \\approx 4{,}1\\times10^{3}\\ \\mathrm{N}$, dirigée vers le centre du virage."
+            },
+            {
+              "label": "$0\\ \\mathrm{N}$",
+              "why": "Tu as appliqué le principe d'inertie à cause du mot « constante ». Mais la **direction** de $\\vec v$ change dans le virage : le mouvement n'est pas rectiligne, donc $\\vec a \\ne \\vec 0$ et $\\sum\\vec F \\ne \\vec 0$."
+            },
+            {
+              "label": "$8{,}8\\times10^{3}\\ \\mathrm{N}$",
+              "why": "Tu as calculé le poids $mg = 900\\times9{,}8 = 8{,}8\\times10^{3}\\ \\mathrm{N}$. Il est vertical et exactement équilibré par la réaction normale de la route : il ne constitue pas la résultante."
+            },
+            {
+              "label": "$2{,}7\\times10^{2}\\ \\mathrm{N}$",
+              "why": "Tu as calculé $m\\,v/r = 900\\times15/50 = 2{,}7\\times10^{2}$ en oubliant le carré. L'accélération normale est $v^{2}/r$, pas $v/r$ (qui est la vitesse angulaire)."
+            }
+          ],
+          "hint": "Le mot « constante » porte sur la valeur de la vitesse, pas sur sa direction. Que vaut $a_N$ dans un virage ?",
+          "solution": "Système : la voiture. Référentiel terrestre, supposé galiléen. Base de Frenet au point où se trouve la voiture.\nLa **valeur** de la vitesse est constante, donc $a_T = \\dfrac{dv}{dt} = 0$. En revanche la trajectoire est courbe, donc la composante normale subsiste :\n$$a = a_N = \\frac{v^{2}}{r} = \\frac{15^{2}}{50} = \\frac{225}{50} = 4{,}5\\ \\mathrm{m\\,s^{-2}}$$\nDeuxième loi de Newton :\n$$\\sum\\vec F_{\\mathrm{ext}} = m\\,\\vec a \\quad\\Longrightarrow\\quad \\sum F = 900\\times4{,}5 = 4\\,050\\ \\mathrm{N} \\approx 4{,}1\\times10^{3}\\ \\mathrm{N}$$\nCette résultante est **horizontale, dirigée vers le centre du virage** : c'est la composante tangentielle au sol des forces de contact (l'adhérence des pneus). Le poids et la réaction normale, verticaux, se compensent.\nContrôle : $\\sum F / (mg) = 4\\,050/8\\,820 \\approx 0{,}46$. Il faut donc un coefficient d'adhérence d'au moins $0{,}46$ — plausible sur route sèche, mais insuffisant sur du verglas, ce qui explique les sorties de route en virage.",
+          "methode": "« Vitesse constante » + trajectoire courbe $\\Rightarrow$ $\\sum\\vec F = m\\,\\dfrac{v^{2}}{r}\\,\\vec u_N$, dirigée vers le centre. La force n'est nulle qu'en ligne droite.",
+          "points": 1,
+          "ref": "pc-newton-la-base-de-frenet-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les mouvements de référence",
+        "lesson": "Vecteurs cinématiques & méthode",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-les-mouvements-de-reference",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "Les mouvements de référence",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les mouvements de référence",
+          "difficulty": 1,
+          "statement": "Un mobile est en mouvement rectiligne uniformément varié d'accélération $a = 2{,}0\\ \\mathrm{m\\,s^{-2}}$ ; à $t = 0$ sa vitesse vaut $v_0 = 3{,}0\\ \\mathrm{m\\,s^{-1}}$. Sa vitesse à l'instant $t = 5{,}0\\ \\mathrm{s}$ est :",
+          "options": [
+            {
+              "label": "$13\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "L'équation de la vitesse d'un MRUV est $v = at + v_0$, donc $v = 2{,}0\\times5{,}0 + 3{,}0 = 13\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$10\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as oublié la vitesse initiale : $at = 2{,}0\\times5{,}0 = 10$. L'équation complète est $v = at + v_0$, et ici $v_0 = 3{,}0\\ \\mathrm{m\\,s^{-1}}$ n'est pas nulle."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as écrit $v = \\frac12 at + v_0 = \\frac12\\times2{,}0\\times5{,}0 + 3{,}0 = 8{,}0$. Le facteur $\\frac12$ appartient à l'équation de la **position**, jamais à celle de la vitesse."
+            },
+            {
+              "label": "$40\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé la position $x = \\frac12 at^{2} + v_0t = 25 + 15 = 40\\ \\mathrm{m}$ et tu l'as donnée en $\\mathrm{m\\,s^{-1}}$. C'est une distance, pas une vitesse."
+            }
+          ],
+          "hint": "Écris les deux équations horaires du MRUV côte à côte : laquelle contient le facteur $\\frac12$ ?",
+          "solution": "Référentiel terrestre, supposé galiléen, axe orienté dans le sens du mouvement.\nLe mouvement est rectiligne uniformément varié : l'accélération est constante. Les deux équations horaires sont\n$$v(t) = at + v_0 \\qquad\\text{et}\\qquad x(t) = \\tfrac12 at^{2} + v_0t + x_0$$\nLa question porte sur la vitesse, donc on utilise la première :\n$$v(5{,}0) = 2{,}0\\times5{,}0 + 3{,}0 = 10 + 3{,}0 = 13\\ \\mathrm{m\\,s^{-1}}$$\nContrôle par la relation indépendante du temps : $x$ parcouru $= \\frac12\\times2{,}0\\times25 + 3{,}0\\times5{,}0 = 40\\ \\mathrm{m}$, et $v^{2} = v_0^{2} + 2a\\,\\Delta x = 9{,}0 + 2\\times2{,}0\\times40 = 169$, soit $v = 13\\ \\mathrm{m\\,s^{-1}}$ — cohérent.",
+          "methode": "MRUV : $v = at + v_0$ (sans $\\frac12$) et $x = \\frac12at^{2} + v_0t + x_0$ (avec $\\frac12$). Vérifie l'unité de ce que tu as trouvé.",
+          "points": 1,
+          "ref": "pc-newton-les-mouvements-de-reference-q1"
+        },
+        {
+          "notion": "Les mouvements de référence",
+          "difficulty": 2,
+          "statement": "Une voiture roulant à $v_0 = 20\\ \\mathrm{m\\,s^{-1}}$ freine avec une décélération constante de valeur $a = 5{,}0\\ \\mathrm{m\\,s^{-2}}$ jusqu'à l'arrêt complet. La distance de freinage est :",
+          "options": [
+            {
+              "label": "$40\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "La relation indépendante du temps donne $0 - v_0^{2} = -2a\\,d$, donc $d = \\dfrac{v_0^{2}}{2a} = \\dfrac{400}{10} = 40\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$80\\ \\mathrm{m}$",
+              "why": "Tu as oublié le facteur $2$ : $v_0^{2}/a = 400/5{,}0 = 80$. La relation est $v^{2} - v_0^{2} = 2a(x - x_0)$, le $2$ ne s'enlève pas."
+            },
+            {
+              "label": "$200\\ \\mathrm{m}$",
+              "why": "Tu as calculé $v_0^{2}/2 = 400/2 = 200$ en oubliant de diviser par l'accélération. Sans division par $a$, le résultat n'a même pas la dimension d'une longueur."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{m}$",
+              "why": "Tu as calculé la **durée** du freinage $t = v_0/a = 20/5{,}0 = 4{,}0\\ \\mathrm{s}$ et tu l'as écrite en mètres. Il reste à en déduire la distance."
+            }
+          ],
+          "hint": "Tu ne connais pas la durée du freinage : utilise la relation qui lie $v$, $v_0$, $a$ et la distance, sans le temps.",
+          "solution": "Système : la voiture. Référentiel terrestre, supposé galiléen. Axe $Ox$ orienté dans le sens du mouvement, origine au début du freinage.\nLe freinage est uniforme, donc $a_x = -5{,}0\\ \\mathrm{m\\,s^{-2}}$ (opposé à la vitesse). La relation indépendante du temps s'écrit :\n$$v^{2} - v_0^{2} = 2a_x\\,(x - x_0)$$\nÀ l'arrêt $v = 0$ et $x - x_0 = d$ :\n$$0 - 20^{2} = 2\\times(-5{,}0)\\times d \\quad\\Longrightarrow\\quad d = \\frac{v_0^{2}}{2a} = \\frac{400}{10} = 40\\ \\mathrm{m}$$\nContrôle par le temps : $t = v_0/a = 20/5{,}0 = 4{,}0\\ \\mathrm{s}$, puis $d = \\frac12 a t^{2} = \\frac12\\times5{,}0\\times16 = 40\\ \\mathrm{m}$ — même valeur par une autre voie.\nRemarque utile : $d$ varie comme $v_0^{2}$. En doublant la vitesse, la distance de freinage est **quadruplée**.",
+          "methode": "Pas de temps dans l'énoncé $\\Rightarrow$ utilise $v^{2} - v_0^{2} = 2a(x - x_0)$. Avec le temps, utilise $v = at+v_0$ et $x = \\frac12at^{2}+v_0t+x_0$.",
+          "points": 1,
+          "ref": "pc-newton-les-mouvements-de-reference-q2"
+        },
+        {
+          "notion": "Les mouvements de référence",
+          "difficulty": 2,
+          "statement": "Un point situé à la distance $r = 0{,}30\\ \\mathrm{m}$ de l'axe d'une roue tourne d'un mouvement circulaire uniforme à la fréquence de rotation $n = 300$ tours par minute. La valeur de sa vitesse est :",
+          "options": [
+            {
+              "label": "$9{,}4\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$n = 300/60 = 5{,}0$ tours par seconde, donc $\\omega = 2\\pi n = 31{,}4\\ \\mathrm{rad\\,s^{-1}}$ et $v = \\omega r = 31{,}4\\times0{,}30 = 9{,}4\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$31\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu t'es arrêté à la vitesse angulaire $\\omega = 31\\ \\mathrm{rad\\,s^{-1}}$ et tu l'as donnée en $\\mathrm{m\\,s^{-1}}$. Il reste à multiplier par le rayon : $v = \\omega r$."
+            },
+            {
+              "label": "$1{,}5\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris $\\omega = 5{,}0$ en oubliant le facteur $2\\pi$ : $5{,}0\\times0{,}30 = 1{,}5$. Un tour correspond à $2\\pi$ radians, d'où $\\omega = 2\\pi n$."
+            },
+            {
+              "label": "$90\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as multiplié directement $300\\times0{,}30 = 90$ sans convertir les tours par minute ni introduire $2\\pi$. Les minutes doivent devenir des secondes."
+            }
+          ],
+          "hint": "Convertis d'abord les tours par minute en tours par seconde, puis passe aux radians par seconde avant d'utiliser $v = \\omega r$.",
+          "solution": "Référentiel terrestre, supposé galiléen. Le point décrit un cercle de rayon $r = 0{,}30\\ \\mathrm{m}$ d'un mouvement circulaire uniforme.\nConversion de la fréquence de rotation :\n$$n = \\frac{300\\ \\text{tours}}{1\\ \\mathrm{min}} = \\frac{300}{60} = 5{,}0\\ \\text{tours par seconde}$$\nVitesse angulaire :\n$$\\omega = 2\\pi n = 2\\pi\\times5{,}0 = 31{,}4\\ \\mathrm{rad\\,s^{-1}}$$\nVitesse linéaire :\n$$v = \\omega\\,r = 31{,}4\\times0{,}30 = 9{,}4\\ \\mathrm{m\\,s^{-1}}$$\nContrôle par le périmètre : la période vaut $T = 1/n = 0{,}20\\ \\mathrm{s}$ et le périmètre $2\\pi r = 1{,}88\\ \\mathrm{m}$ ; donc $v = 1{,}88/0{,}20 = 9{,}4\\ \\mathrm{m\\,s^{-1}}$ — cohérent.",
+          "methode": "Mouvement circulaire : $\\omega = 2\\pi n$ avec $n$ en tours **par seconde**, puis $v = \\omega r$. Deux conversions à ne pas sauter.",
+          "points": 1,
+          "ref": "pc-newton-les-mouvements-de-reference-q3"
+        },
+        {
+          "notion": "Les mouvements de référence",
+          "difficulty": 3,
+          "statement": "Sur l'enregistrement $v(t)$ d'un mobile en mouvement rectiligne, les points s'alignent sur une droite passant par $(0{,}20\\ \\mathrm{s}\\,;\\ 1{,}6\\ \\mathrm{m\\,s^{-1}})$ et $(0{,}60\\ \\mathrm{s}\\,;\\ 4{,}0\\ \\mathrm{m\\,s^{-1}})$. L'accélération et la vitesse initiale du mobile valent :",
+          "options": [
+            {
+              "label": "$a = 6{,}0\\ \\mathrm{m\\,s^{-2}}$ et $v_0 = 0{,}40\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "La pente vaut $a = \\dfrac{4{,}0 - 1{,}6}{0{,}60 - 0{,}20} = \\dfrac{2{,}4}{0{,}40} = 6{,}0\\ \\mathrm{m\\,s^{-2}}$, puis $v_0 = 1{,}6 - 6{,}0\\times0{,}20 = 0{,}40\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$a = 6{,}0\\ \\mathrm{m\\,s^{-2}}$ et $v_0 = 1{,}6\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris la vitesse du premier point pour $v_0$. Mais ce point est à $t = 0{,}20\\ \\mathrm{s}$, pas à $t = 0$ : il faut prolonger la droite jusqu'à $t = 0$."
+            },
+            {
+              "label": "$a = 8{,}0\\ \\mathrm{m\\,s^{-2}}$ et $v_0 = 0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé la pente comme $1{,}6/0{,}20 = 8{,}0$, c'est-à-dire en supposant que la droite passe par l'origine. Une pente se calcule toujours avec $\\Delta v/\\Delta t$ entre deux points de la droite."
+            },
+            {
+              "label": "$a = 0{,}17\\ \\mathrm{m\\,s^{-2}}$ et $v_0 = 0{,}40\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as inversé la pente : $\\Delta t/\\Delta v = 0{,}40/2{,}4 = 0{,}17$. L'accélération est la variation de **vitesse** divisée par la durée, donc $\\Delta v/\\Delta t$."
+            }
+          ],
+          "hint": "L'accélération est la pente de la droite $v(t)$. Attention : le premier point relevé n'est pas forcément à $t = 0$.",
+          "solution": "Le graphe $v(t)$ est une **droite** : l'accélération est constante, le mouvement est rectiligne uniformément varié, et $v(t) = at + v_0$.\n**Accélération = pente de la droite.** Avec les deux points donnés :\n$$a = \\frac{\\Delta v}{\\Delta t} = \\frac{4{,}0 - 1{,}6}{0{,}60 - 0{,}20} = \\frac{2{,}4}{0{,}40} = 6{,}0\\ \\mathrm{m\\,s^{-2}}$$\n**Vitesse initiale = ordonnée à l'origine.** On reporte un point dans $v = at + v_0$ :\n$$1{,}6 = 6{,}0\\times0{,}20 + v_0 \\quad\\Longrightarrow\\quad v_0 = 1{,}6 - 1{,}2 = 0{,}40\\ \\mathrm{m\\,s^{-1}}$$\nContrôle avec le second point : $6{,}0\\times0{,}60 + 0{,}40 = 3{,}6 + 0{,}40 = 4{,}0\\ \\mathrm{m\\,s^{-1}}$ — la droite passe bien par les deux points relevés.",
+          "methode": "Sur un graphe $v(t)$ : la **pente** donne $a$, l'**ordonnée à l'origine** donne $v_0$. Ne confonds jamais un point relevé avec l'origine.",
+          "points": 1,
+          "ref": "pc-newton-les-mouvements-de-reference-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La méthode générale",
+        "lesson": "Vecteurs cinématiques & méthode",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-la-methode-generale",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "La méthode générale",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La méthode générale",
+          "difficulty": 1,
+          "statement": "Pour résoudre un exercice de dynamique, l'ordre correct des étapes de la méthode générale est :",
+          "options": [
+            {
+              "label": "définir le système, choisir le référentiel galiléen, faire le bilan des forces extérieures, appliquer la deuxième loi, projeter sur les axes",
+              "correct": true,
+              "why": "C'est la méthode du cours : on dit **sur quoi** on travaille, **dans quoi** on l'observe, **ce qui agit** sur lui, puis on écrit la relation vectorielle et on la projette en dernier."
+            },
+            {
+              "label": "faire le bilan des forces extérieures, définir le système, choisir le référentiel galiléen, projeter sur les axes, appliquer la deuxième loi",
+              "why": "Tu as mis le bilan des forces en premier. Impossible : une force est « exercée **sur** le système », donc le système doit être défini avant de pouvoir dresser le bilan."
+            },
+            {
+              "label": "choisir le référentiel galiléen, projeter sur les axes, définir le système, faire le bilan des forces extérieures, appliquer la deuxième loi",
+              "why": "Tu projettes en deuxième étape. Or on ne projette qu'une **relation vectorielle déjà écrite** : la projection vient toujours après $\\sum\\vec F = m\\vec a_G$."
+            },
+            {
+              "label": "définir le système, faire le bilan des forces extérieures, appliquer la deuxième loi, projeter sur les axes, choisir le référentiel galiléen",
+              "why": "Tu as repoussé le référentiel à la fin. Or $\\sum\\vec F = m\\vec a_G$ n'est valable que **dans un référentiel galiléen** : il faut l'avoir choisi avant d'écrire la loi."
+            }
+          ],
+          "hint": "Demande-toi quelle étape est impossible à faire si la précédente n'a pas été faite.",
+          "solution": "La méthode générale de résolution d'un problème de dynamique comporte cinq étapes, dans cet ordre :\n1. **Définir le système** étudié (le solide, ou l'ensemble de solides) — sans quoi on ne sait pas de quelles forces parler.\n2. **Choisir le référentiel** et le supposer galiléen — c'est la condition de validité des lois de Newton.\n3. **Faire le bilan des forces extérieures**, c'est-à-dire exercées **par l'extérieur sur le système**.\n4. **Appliquer la deuxième loi de Newton** : $\\sum\\vec F_{\\mathrm{ext}} = m\\,\\vec a_G$ (relation **vectorielle**).\n5. **Projeter** sur les axes bien choisis pour obtenir des équations entre nombres.\nContrôle : chaque étape rend la suivante possible. Si on inverse deux étapes, l'une des deux devient impossible à écrire — c'est le test le plus simple pour retrouver l'ordre.",
+          "methode": "Système $\\to$ référentiel $\\to$ bilan $\\to$ deuxième loi $\\to$ projection. La projection est **toujours** la dernière étape.",
+          "points": 1,
+          "ref": "pc-newton-la-methode-generale-q1"
+        },
+        {
+          "notion": "La méthode générale",
+          "difficulty": 2,
+          "statement": "Un solide de masse $m = 5{,}0\\ \\mathrm{kg}$ glisse **sans frottement** sur un plan incliné d'un angle $\\alpha = 30°$ par rapport à l'horizontale. On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La valeur de l'accélération de son centre d'inertie est :",
+          "options": [
+            {
+              "label": "$4{,}9\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "En projetant $\\sum\\vec F = m\\vec a_G$ sur la ligne de plus grande pente : $mg\\sin\\alpha = ma$, donc $a = g\\sin\\alpha = 9{,}8\\times0{,}50 = 4{,}9\\ \\mathrm{m\\,s^{-2}}$ (la masse se simplifie)."
+            },
+            {
+              "label": "$8{,}5\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as échangé sinus et cosinus : $g\\cos30° = 9{,}8\\times0{,}866 = 8{,}5$. C'est $g\\cos\\alpha$ qui intervient sur la **normale** au plan, là où le mouvement est nul."
+            },
+            {
+              "label": "$9{,}8\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as pris $a = g$, comme en chute libre verticale. Sur un plan incliné, seule la composante $mg\\sin\\alpha$ du poids accélère le solide : $a < g$ toujours."
+            },
+            {
+              "label": "$25\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as calculé $mg\\sin\\alpha = 5{,}0\\times9{,}8\\times0{,}50 = 24{,}5\\ \\mathrm{N}$ : c'est la **force** motrice, pas l'accélération. Il reste à diviser par $m = 5{,}0\\ \\mathrm{kg}$."
+            }
+          ],
+          "hint": "Projette le poids sur la ligne de plus grande pente. Le facteur qui accompagne $mg$ est-il un sinus ou un cosinus ?",
+          "solution": "**Système** : le solide. **Référentiel** : terrestre, supposé galiléen.\n**Bilan des forces** : le poids $\\vec P$ (vertical, vers le bas) et la réaction $\\vec R$ du plan, **normale** au plan puisqu'il n'y a pas de frottement.\n**Deuxième loi de Newton** : $\\vec P + \\vec R = m\\,\\vec a_G$.\n**Projection** sur un axe $Ox$ porté par la ligne de plus grande pente et orienté vers le bas (la réaction, perpendiculaire, a une projection nulle sur cet axe) :\n$$mg\\sin\\alpha + 0 = m\\,a \\quad\\Longrightarrow\\quad a = g\\sin\\alpha$$\n$$a = 9{,}8\\times\\sin 30° = 9{,}8\\times0{,}50 = 4{,}9\\ \\mathrm{m\\,s^{-2}}$$\nLa masse disparaît : **tous** les solides glissant sans frottement sur ce plan ont la même accélération.\nContrôle sur les cas limites : si $\\alpha = 0$ (plan horizontal), $a = 0$ ; si $\\alpha = 90°$ (chute libre), $a = g$. La formule $a = g\\sin\\alpha$ passe les deux tests.",
+          "methode": "Plan incliné : $mg\\sin\\alpha$ **le long** de la pente, $mg\\cos\\alpha$ **perpendiculairement**. Sans frottement, $a = g\\sin\\alpha$, sans la masse.",
+          "points": 1,
+          "ref": "pc-newton-la-methode-generale-q2"
+        },
+        {
+          "notion": "La méthode générale",
+          "difficulty": 3,
+          "statement": "Un solide de masse $m = 2{,}0\\ \\mathrm{kg}$ est lâché sans vitesse initiale sur un plan incliné d'un angle $\\alpha = 20°$ ; il subit une force de frottement constante de valeur $f = 3{,}0\\ \\mathrm{N}$, parallèle au plan. On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La valeur de l'accélération de son centre d'inertie pendant la descente est :",
+          "options": [
+            {
+              "label": "$1{,}9\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "Projection sur la pente, orientée vers le bas : $mg\\sin\\alpha - f = ma$, donc $a = g\\sin\\alpha - \\dfrac{f}{m} = 3{,}35 - 1{,}5 = 1{,}9\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$3{,}4\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as oublié le frottement : $g\\sin\\alpha = 9{,}8\\times0{,}342 = 3{,}4$. Le frottement s'oppose au mouvement, il réduit l'accélération."
+            },
+            {
+              "label": "$4{,}9\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as **ajouté** le frottement : $g\\sin\\alpha + f/m = 3{,}35 + 1{,}5 = 4{,}9$. En descente, $\\vec f$ est dirigée vers le **haut** de la pente : sa projection est négative."
+            },
+            {
+              "label": "$7{,}7\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as échangé sinus et cosinus : $g\\cos\\alpha - f/m = 9{,}21 - 1{,}5 = 7{,}7$. Le terme $g\\cos\\alpha$ concerne la normale au plan, pas la direction du mouvement."
+            }
+          ],
+          "hint": "Oriente l'axe dans le sens du mouvement et demande-toi, pour chaque force, si sa projection est positive ou négative.",
+          "solution": "**Système** : le solide. **Référentiel** : terrestre, supposé galiléen.\n**Bilan des forces** : le poids $\\vec P$, la réaction normale $\\vec R_N$ du plan, et le frottement $\\vec f$ (parallèle au plan, **opposé au mouvement**, donc dirigé vers le haut de la pente puisque le solide descend).\n**Deuxième loi** : $\\vec P + \\vec R_N + \\vec f = m\\,\\vec a_G$.\n**Projection** sur la ligne de plus grande pente, orientée vers le bas :\n$$mg\\sin\\alpha - f = m\\,a \\quad\\Longrightarrow\\quad a = g\\sin\\alpha - \\frac{f}{m}$$\n$$a = 9{,}8\\times\\sin 20° - \\frac{3{,}0}{2{,}0} = 3{,}35 - 1{,}50 = 1{,}85 \\approx 1{,}9\\ \\mathrm{m\\,s^{-2}}$$\nContrôle de cohérence : $a > 0$, le solide accélère bien vers le bas. On peut aussi vérifier la condition de démarrage : il faut $mg\\sin\\alpha = 6{,}7\\ \\mathrm{N} > f = 3{,}0\\ \\mathrm{N}$, ce qui est le cas. Si $f$ avait dépassé $6{,}7\\ \\mathrm{N}$, le solide serait resté immobile.",
+          "methode": "Plan incliné avec frottement : $a = g\\sin\\alpha \\mp \\dfrac{f}{m}$ — signe $-$ en descente, signe $+$ en montée. Oriente l'axe, puis projette force par force.",
+          "points": 1,
+          "ref": "pc-newton-la-methode-generale-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Quantité de mouvement et systèmes",
+        "lesson": "Approfondissement — Lois de Newton",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-quantite-de-mouvement-et-systemes",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "Quantité de mouvement et systèmes",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Quantité de mouvement et systèmes",
+          "difficulty": 3,
+          "statement": "Sur un banc à coussin d'air horizontal (frottements négligeables), un chariot A de masse $m_A = 0{,}20\\ \\mathrm{kg}$ arrive à la vitesse $v_A = 3{,}0\\ \\mathrm{m\\,s^{-1}}$ sur un chariot B de masse $m_B = 0{,}40\\ \\mathrm{kg}$ immobile. Après le choc, les deux chariots restent **accrochés**. La valeur de leur vitesse commune est :",
+          "options": [
+            {
+              "label": "$1{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "Le système $\\{A+B\\}$ est pseudo-isolé, donc sa quantité de mouvement se conserve : $m_Av_A = (m_A+m_B)v'$, d'où $v' = \\dfrac{0{,}20\\times3{,}0}{0{,}60} = 1{,}0\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$3{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as supposé que la **vitesse** se conserve. C'est la quantité de mouvement $\\vec p = m\\vec v$ qui se conserve : la masse en mouvement a triplé, la vitesse est donc divisée par trois."
+            },
+            {
+              "label": "$1{,}5\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as fait la moyenne des deux vitesses : $(3{,}0 + 0)/2 = 1{,}5$. Cette moyenne ne serait exacte que si les deux masses étaient **égales** ; ici $m_B = 2\\,m_A$."
+            },
+            {
+              "label": "$0{,}60\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu t'es arrêté à $p = m_Av_A = 0{,}60\\ \\mathrm{kg\\,m\\,s^{-1}}$ et tu l'as écrit en $\\mathrm{m\\,s^{-1}}$. Il reste à diviser par la masse totale $m_A + m_B = 0{,}60\\ \\mathrm{kg}$."
+            }
+          ],
+          "hint": "Que vaut la quantité de mouvement du système avant le choc ? Et après, quelle masse est en mouvement ?",
+          "solution": "**Système** : l'ensemble $\\{A + B\\}$. **Référentiel** : terrestre, supposé galiléen. Axe horizontal orienté dans le sens du mouvement de A.\n**Bilan des forces extérieures** : les poids et les réactions du coussin d'air se compensent, les frottements sont négligeables. Le système est donc **pseudo-isolé** et\n$$\\sum\\vec F_{\\mathrm{ext}} = \\frac{d\\vec p}{dt} = \\vec 0 \\quad\\Longrightarrow\\quad \\vec p = \\overrightarrow{\\text{const}}$$\nLes forces d'interaction entre A et B pendant le choc sont **intérieures** au système : d'après la troisième loi elles s'annulent deux à deux et ne modifient pas $\\vec p$.\n**Conservation de la quantité de mouvement** entre juste avant et juste après le choc :\n$$m_Av_A + m_B\\times 0 = (m_A + m_B)\\,v'$$\n$$v' = \\frac{m_Av_A}{m_A + m_B} = \\frac{0{,}20\\times3{,}0}{0{,}20 + 0{,}40} = \\frac{0{,}60}{0{,}60} = 1{,}0\\ \\mathrm{m\\,s^{-1}}$$\nContrôle : $p$ avant $= 0{,}60\\ \\mathrm{kg\\,m\\,s^{-1}}$, $p$ après $= 0{,}60\\times1{,}0 = 0{,}60\\ \\mathrm{kg\\,m\\,s^{-1}}$ — identiques. Et $v' < v_A$, ce qui est attendu puisque la masse en mouvement a augmenté.",
+          "methode": "Choc sur un système pseudo-isolé : écris $\\vec p$ avant $=\\ \\vec p$ après, avec $\\vec p = m\\vec v$. Ce sont les quantités de mouvement qui s'additionnent, jamais les vitesses.",
+          "points": 1,
+          "ref": "pc-newton-quantite-de-mouvement-et-systemes-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les référentiels non galiléens",
+        "lesson": "Approfondissement — Lois de Newton",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-les-referentiels-non-galileens",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "Les référentiels non galiléens",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les référentiels non galiléens",
+          "difficulty": 3,
+          "statement": "Un bus roule en ligne droite ; une bille est posée, immobile, sur son plancher horizontal très lisse. Le chauffeur freine brusquement et la bille part vers l'avant du bus. L'interprétation correcte de cette observation est :",
+          "options": [
+            {
+              "label": "dans le référentiel du bus, qui est accéléré donc non galiléen, la bille se met en mouvement alors qu'aucune force horizontale ne s'exerce sur elle : le principe d'inertie n'y est pas vérifié",
+              "correct": true,
+              "why": "C'est exactement la définition : un référentiel est non galiléen quand on y observe une mise en mouvement sans force réelle pour l'expliquer. Le bus freine, il est accéléré par rapport au sol."
+            },
+            {
+              "label": "dans le référentiel du bus, une force horizontale réelle dirigée vers l'avant s'exerce sur la bille et la met en mouvement",
+              "why": "Tu as inventé une force : aucun corps (ni le sol, ni l'air, ni un contact) ne pousse la bille vers l'avant. Ce que tu observes vient du choix d'un référentiel non galiléen, pas d'une force."
+            },
+            {
+              "label": "dans le référentiel terrestre, la bille accélère vers l'avant, donc la somme des forces qu'elle subit est dirigée vers l'avant",
+              "why": "Dans le référentiel terrestre la bille **garde** sa vitesse : le plancher lisse glisse sous elle. Elle n'accélère pas — c'est le bus qui ralentit. La somme des forces horizontales est bien nulle."
+            },
+            {
+              "label": "le principe d'inertie reste vérifié dans le référentiel du bus, puisque la bille y était immobile juste avant le freinage",
+              "why": "Le principe d'inertie ne se vérifie pas à un seul instant : il exige que le système **reste** au repos ou en translation rectiligne uniforme. Ici la bille démarre, donc il est violé."
+            }
+          ],
+          "hint": "Décris la situation deux fois : une fois dans le référentiel terrestre, une fois dans celui du bus. Dans lequel la bille garde-t-elle sa vitesse ?",
+          "solution": "**Dans le référentiel terrestre**, supposé galiléen : la bille subit son poids et la réaction du plancher, qui se compensent ; les frottements sont négligeables. Donc $\\sum\\vec F = \\vec 0$ et, d'après la première loi, la bille **conserve** son vecteur vitesse. C'est le bus qui ralentit : le plancher glisse en arrière sous la bille, ce qui donne l'impression que la bille avance.\n**Dans le référentiel du bus** : le bus freine, il est donc accéléré par rapport au référentiel terrestre. Dans ce référentiel, la bille passe du repos à un mouvement vers l'avant alors que le bilan des forces réelles reste nul ($\\vec P + \\vec R = \\vec 0$). La première loi de Newton est donc **violée** : le référentiel du bus n'est pas galiléen.\n**Conclusion** : les lois de Newton ne s'appliquent telles quelles que dans un référentiel galiléen. Un référentiel en accélération (freinage, démarrage, virage, rotation) ne l'est pas.\nContrôle : la même analyse explique pourquoi on est « plaqué » vers l'extérieur dans un virage, ou pourquoi un pendule accroché dans un wagon qui démarre s'incline vers l'arrière.",
+          "methode": "Observation inexplicable par les forces réelles ? Vérifie si ton référentiel accélère ou tourne. Si oui, il n'est pas galiléen — reviens au référentiel terrestre.",
+          "points": 1,
+          "ref": "pc-newton-les-referentiels-non-galileens-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Masse inerte et masse grave",
+        "lesson": "Approfondissement — Lois de Newton",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-masse-inerte-et-masse-grave",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "Masse inerte et masse grave",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Masse inerte et masse grave",
+          "difficulty": 3,
+          "statement": "Un chariot de masse $m = 120\\ \\mathrm{kg}$ est poussé horizontalement, sans frottement, par une résultante horizontale constante de valeur $60\\ \\mathrm{N}$. On réalise la même expérience sur la Terre ($g_T = 9{,}8\\ \\mathrm{m\\,s^{-2}}$) puis sur la Lune ($g_L = 1{,}6\\ \\mathrm{m\\,s^{-2}}$). La valeur de l'accélération obtenue est :",
+          "options": [
+            {
+              "label": "$0{,}50\\ \\mathrm{m\\,s^{-2}}$ sur la Lune comme sur la Terre",
+              "correct": true,
+              "why": "La deuxième loi s'écrit $\\sum\\vec F = m\\,\\vec a_G$ où $m$ est la **masse inerte**, qui ne dépend pas du lieu : $a = 60/120 = 0{,}50\\ \\mathrm{m\\,s^{-2}}$ dans les deux cas."
+            },
+            {
+              "label": "$3{,}1\\ \\mathrm{m\\,s^{-2}}$ sur la Lune, soit $6{,}1$ fois celle obtenue sur la Terre",
+              "why": "Tu as « allégé » le chariot en calculant $120\\times1{,}6/9{,}8 = 19{,}6\\ \\mathrm{kg}$, puis $60/19{,}6 = 3{,}1$. C'est le **poids** qui change de planète, pas la masse en kilogrammes."
+            },
+            {
+              "label": "$0{,}31\\ \\mathrm{m\\,s^{-2}}$ sur la Lune, soit $1{,}6$ fois moins que sur la Terre",
+              "why": "Tu as divisé l'accélération terrestre par $g_L$ : $0{,}50/1{,}6 = 0{,}31$. Mais $g_L$ n'apparaît nulle part dans $\\sum\\vec F = m\\vec a_G$ : la résultante est horizontale, la pesanteur locale n'intervient pas."
+            },
+            {
+              "label": "$0{,}082\\ \\mathrm{m\\,s^{-2}}$ sur la Lune, soit $6{,}1$ fois moins que sur la Terre",
+              "why": "Tu as au contraire alourdi le chariot : $120\\times9{,}8/1{,}6 = 735\\ \\mathrm{kg}$, puis $60/735 = 0{,}082$. La masse d'un corps garde la même valeur en kilogrammes partout dans l'Univers."
+            }
+          ],
+          "hint": "Repère ce qui change d'une planète à l'autre : est-ce la masse en kilogrammes, ou le poids en newtons ?",
+          "solution": "**Système** : le chariot. **Référentiel** : celui du sol (terrestre ou lunaire), supposé galiléen.\n**Bilan des forces** : le poids $\\vec P$ et la réaction normale $\\vec R$ du sol, **verticaux**, qui se compensent ; la résultante horizontale $\\vec F$ de valeur $60\\ \\mathrm{N}$.\n**Deuxième loi**, en projection sur l'horizontale :\n$$F = m\\,a \\quad\\Longrightarrow\\quad a = \\frac{F}{m} = \\frac{60}{120} = 0{,}50\\ \\mathrm{m\\,s^{-2}}$$\nLa masse $m$ qui figure dans la deuxième loi est la **masse inerte** : elle mesure la résistance du corps à toute variation de vitesse. C'est une grandeur **propre au corps**, identique sur la Terre, sur la Lune ou dans l'espace.\nCe qui change d'un astre à l'autre, c'est le **poids** $P = m\\,g$ : $P_T = 120\\times9{,}8 = 1{,}2\\times10^{3}\\ \\mathrm{N}$ contre $P_L = 120\\times1{,}6 = 1{,}9\\times10^{2}\\ \\mathrm{N}$. La masse grave de $120\\ \\mathrm{kg}$ est inchangée ; seul $g$ diffère.\nContrôle : l'expérience de Newton est donc la même partout. Sur la Lune, un astronaute « pèse » six fois moins mais il est **aussi difficile** de le faire démarrer ou de l'arrêter horizontalement — c'est précisément ce que signifie l'égalité des masses inerte et grave.",
+          "methode": "Masse inerte (dans $\\sum\\vec F = m\\vec a_G$) = masse grave (dans $P = mg$), en kilogrammes, identiques partout. Seul $g$ dépend de l'astre.",
+          "points": 1,
+          "ref": "pc-newton-masse-inerte-et-masse-grave-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les limites de la mécanique de Newton",
+        "lesson": "Approfondissement — Lois de Newton",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-newton-les-limites-de-la-mecanique-de-newton",
+      "chapter": "pc-newton",
+      "kind": "qcu",
+      "title": "Les limites de la mécanique de Newton",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les limites de la mécanique de Newton",
+          "difficulty": 3,
+          "statement": "On donne la célérité de la lumière dans le vide $c = 3{,}0\\times10^{8}\\ \\mathrm{m\\,s^{-1}}$. Parmi les quatre études suivantes, celle pour laquelle la mécanique de Newton **cesse** d'être valable est :",
+          "options": [
+            {
+              "label": "le mouvement d'un électron accéléré jusqu'à $0{,}90\\,c$ dans un accélérateur de particules",
+              "correct": true,
+              "why": "À $v = 0{,}90\\,c$, la vitesse est comparable à celle de la lumière : il faut la mécanique **relativiste**. La mécanique de Newton n'est valable que si $v \\ll c$."
+            },
+            {
+              "label": "le mouvement d'un satellite artificiel en orbite autour de la Terre à $8{,}0\\ \\mathrm{km\\,s^{-1}}$",
+              "why": "$8{,}0\\ \\mathrm{km\\,s^{-1}}$ ne représente que $2{,}7\\times10^{-5}\\,c$ : c'est négligeable devant $c$. C'est justement avec les lois de Newton qu'on calcule les orbites des satellites."
+            },
+            {
+              "label": "le mouvement d'un camion de $20\\ \\mathrm{t}$ roulant à $90\\ \\mathrm{km\\,h^{-1}}$ sur une autoroute",
+              "why": "Une grande masse ne gêne en rien la mécanique de Newton. Ses limites sont fixées par la **vitesse** (comparée à $c$) et par l'**échelle** (atomique), jamais par la masse."
+            },
+            {
+              "label": "le mouvement d'une goutte de pluie qui tombe dans l'air en subissant des frottements",
+              "why": "Les frottements de l'air se traitent très bien avec $\\sum\\vec F = m\\vec a_G$ : c'est un exercice classique du programme. Ce n'est pas une limite de la théorie."
+            }
+          ],
+          "hint": "Compare chaque vitesse à $c$, et demande-toi aussi à quelle échelle (macroscopique ou atomique) se place l'étude.",
+          "solution": "La mécanique de Newton est une théorie d'une très grande portée, mais elle a **deux domaines de validité** à respecter :\n- **vitesses faibles devant celle de la lumière** ($v \\ll c$) : au-delà, il faut la mécanique relativiste d'Einstein ;\n- **échelle macroscopique** : à l'échelle de l'atome, il faut la mécanique quantique.\nExaminons les quatre propositions :\n- Électron à $0{,}90\\,c$ : $v/c = 0{,}90$, la condition $v \\ll c$ est **violée**. C'est bien le cas où la mécanique de Newton échoue.\n- Satellite à $8{,}0\\ \\mathrm{km\\,s^{-1}}$ : $v/c = \\dfrac{8{,}0\\times10^{3}}{3{,}0\\times10^{8}} = 2{,}7\\times10^{-5}$, donc $v \\ll c$ : Newton convient.\n- Camion de $20\\ \\mathrm{t}$ à $90\\ \\mathrm{km\\,h^{-1}} = 25\\ \\mathrm{m\\,s^{-1}}$ : objet macroscopique, $v/c \\approx 10^{-7}$ : Newton convient.\n- Goutte de pluie avec frottements : objet macroscopique, vitesse de quelques $\\mathrm{m\\,s^{-1}}$ : Newton convient (c'est l'étude de la chute dans un fluide).\nContrôle : retiens le seuil usuel $v \\lesssim 0{,}1\\,c$ pour appliquer Newton sans correction notable. Seul l'électron à $0{,}90\\,c$ dépasse ce seuil.",
+          "methode": "Avant d'appliquer Newton, pose deux questions : « $v$ est-elle très petite devant $c$ ? » et « l'objet est-il macroscopique ? ». Masse et frottements ne sont jamais des limites.",
+          "points": 1,
+          "ref": "pc-newton-les-limites-de-la-mecanique-de-newton-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-newton-probleme-1",
+      "chapter": "pc-newton",
+      "kind": "probleme",
+      "title": "Lancement d'un chariot puis montée d'un plan incliné",
+      "difficulty": 3,
+      "context": "Un chariot de masse $m = 0{,}60\\ \\mathrm{kg}$ est étudié dans le référentiel terrestre, supposé galiléen. On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$ et on néglige l'action de l'air.\n\n**Partie A.** Le chariot est posé sur un banc à coussin d'air **horizontal** : les frottements y sont négligeables. À l'instant $t = 0$, le chariot est au repos à l'origine $O$ d'un axe $Ox$ horizontal orienté dans le sens du mouvement. Un fil tendu, parallèle à l'axe, exerce sur le chariot une force $\\vec F$ **constante**, de valeur $F = 1{,}8\\ \\mathrm{N}$. Le fil est coupé à l'instant $t_1 = 3{,}0\\ \\mathrm{s}$.\n\n**Partie B.** Le chariot quitte alors le banc horizontal avec la vitesse acquise $v_1$ et aborde, sans choc et sans perte de vitesse, un plan incliné d'un angle $\\alpha = 15°$ par rapport à l'horizontale. Sur ce plan, le chariot subit une force de frottement $\\vec f$, parallèle au plan, de valeur **constante** $f = 0{,}45\\ \\mathrm{N}$ et toujours opposée au mouvement.\n\nDonnées : $m = 0{,}60\\ \\mathrm{kg}$ ; $F = 1{,}8\\ \\mathrm{N}$ ; $t_1 = 3{,}0\\ \\mathrm{s}$ ; $\\alpha = 15°$ ; $f = 0{,}45\\ \\mathrm{N}$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$ ; $\\sin 15° = 0{,}259$ ; $\\cos 15° = 0{,}966$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 1 — Le bilan des forces",
+          "difficulty": 1,
+          "statement": "**A.1.** Le bilan des forces extérieures appliquées au chariot pendant la phase de traction est :",
+          "options": [
+            {
+              "label": "le poids du chariot, la réaction normale du banc et la force de traction $\\vec F$",
+              "correct": true,
+              "why": "Trois forces s'exercent **sur** le chariot : la Terre (le poids), le banc (la réaction, normale car le coussin d'air supprime les frottements) et le fil (la force $\\vec F$)."
+            },
+            {
+              "label": "la force de traction $\\vec F$ seule, puisque le banc est à coussin d'air",
+              "why": "Le coussin d'air supprime les **frottements**, pas la réaction normale : sans elle, rien n'équilibrerait le poids et le chariot tomberait."
+            },
+            {
+              "label": "le poids du chariot, la réaction normale du banc, la force $\\vec F$ et une force d'inertie opposée au mouvement",
+              "why": "Tu as ajouté une « force d'inertie » : elle n'existe pas dans un référentiel galiléen. Le référentiel terrestre est ici supposé galiléen, le bilan se limite aux forces réelles."
+            },
+            {
+              "label": "le poids du chariot, la force de traction $\\vec F$ et l'action du chariot sur le banc",
+              "why": "L'action du chariot sur le banc s'exerce **sur le banc** : elle appartient au bilan du banc. Et tu as oublié la réaction du banc **sur** le chariot."
+            }
+          ],
+          "hint": "Pour chaque force, pose une seule question : « s'exerce-t-elle **sur** le chariot, et par quel corps extérieur ? »",
+          "solution": "**Système** : le chariot. **Référentiel** : terrestre, supposé galiléen.\n**Bilan des forces extérieures**, c'est-à-dire exercées par l'extérieur **sur** le chariot :\n- le poids $\\vec P$, exercé par la Terre, vertical vers le bas, de valeur $P = mg = 0{,}60\\times9{,}8 = 5{,}9\\ \\mathrm{N}$ ;\n- la réaction $\\vec R$ du banc, **normale** au banc (le coussin d'air rend les frottements négligeables), verticale vers le haut ;\n- la force de traction $\\vec F$, exercée par le fil, horizontale, de valeur $1{,}8\\ \\mathrm{N}$.\nL'action du chariot sur le banc existe bien (troisième loi), mais elle s'exerce sur le banc : elle est hors du bilan.\nContrôle : le mouvement reste horizontal, donc $\\vec P$ et $\\vec R$ se compensent et seule $\\vec F$ a une projection non nulle sur $Ox$ — un bilan cohérent avec le mouvement observé.",
+          "methode": "Une force du bilan s'écrit toujours « exercée **par** l'extérieur **sur** le système ». Pas de force d'inertie en référentiel galiléen.",
+          "points": 1,
+          "part": "Partie A — Traction sur un banc horizontal",
+          "ref": "pc-newton-probleme-1-q1"
+        },
+        {
+          "notion": "Deuxième loi : la relation fondamentale",
+          "difficulty": 1,
+          "statement": "**A.2.** La valeur de l'accélération du centre d'inertie du chariot pendant la phase de traction est :",
+          "options": [
+            {
+              "label": "$3{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "Le poids et la réaction se compensent ; la deuxième loi projetée sur $Ox$ donne $F = ma$, donc $a = 1{,}8/0{,}60 = 3{,}0\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$0{,}33\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as inversé le rapport : $m/F = 0{,}60/1{,}8 = 0{,}33$. Dans $\\sum\\vec F = m\\vec a_G$, c'est la force qu'on divise par la masse."
+            },
+            {
+              "label": "$1{,}5\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as écrit $a = F/(2m) = 1{,}8/1{,}2 = 1{,}5$. Le facteur $\\frac12$ appartient à l'équation de la position $x = \\frac12at^{2}$, pas à la deuxième loi."
+            },
+            {
+              "label": "$0{,}31\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as divisé par le poids $mg = 5{,}9\\ \\mathrm{N}$ au lieu de la masse : $1{,}8/5{,}9 = 0{,}31$. La deuxième loi fait intervenir la masse en kilogrammes."
+            }
+          ],
+          "hint": "Projette la deuxième loi sur l'axe horizontal. Combien de forces ont une projection non nulle sur cet axe ?",
+          "solution": "**Deuxième loi de Newton** appliquée au chariot : $\\vec P + \\vec R + \\vec F = m\\,\\vec a_G$.\n**Projection sur l'axe vertical** (mouvement horizontal, donc $a$ vertical nul) : $R - P = 0$, soit $R = mg = 5{,}9\\ \\mathrm{N}$.\n**Projection sur $Ox$** ($\\vec P$ et $\\vec R$ sont verticaux, leurs projections sont nulles) :\n$$F = m\\,a \\quad\\Longrightarrow\\quad a = \\frac{F}{m} = \\frac{1{,}8}{0{,}60} = 3{,}0\\ \\mathrm{m\\,s^{-2}}$$\nL'accélération est **constante** : le mouvement est rectiligne uniformément varié.\nContrôle à l'envers : $m\\,a = 0{,}60\\times3{,}0 = 1{,}8\\ \\mathrm{N}$ — on retrouve la valeur de $F$.",
+          "methode": "Projette toujours la deuxième loi sur **deux** axes : la normale donne $R$, l'axe du mouvement donne $a$.",
+          "points": 1,
+          "part": "Partie A — Traction sur un banc horizontal",
+          "ref": "pc-newton-probleme-1-q2"
+        },
+        {
+          "notion": "Méthode 2 — Dériver ou intégrer les équations horaires",
+          "difficulty": 2,
+          "statement": "**A.3.** La distance parcourue par le chariot entre $t = 0$ et l'instant $t_1 = 3{,}0\\ \\mathrm{s}$ où le fil est coupé est :",
+          "options": [
+            {
+              "label": "$13{,}5\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "Mouvement uniformément varié avec $v_0 = 0$ et $x_0 = 0$ : $x = \\frac12at^{2} = \\frac12\\times3{,}0\\times3{,}0^{2} = 13{,}5\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$27\\ \\mathrm{m}$",
+              "why": "Tu as oublié le facteur $\\frac12$ : $at_1^{2} = 3{,}0\\times9{,}0 = 27$. L'équation de la position d'un MRUV est $x = \\frac12at^{2} + v_0t + x_0$."
+            },
+            {
+              "label": "$4{,}5\\ \\mathrm{m}$",
+              "why": "Tu as écrit $x = \\frac12at$ au lieu de $\\frac12at^{2}$ : $\\frac12\\times3{,}0\\times3{,}0 = 4{,}5$. Il manque un facteur $t$ ; cette expression n'a pas la dimension d'une longueur."
+            },
+            {
+              "label": "$9{,}0\\ \\mathrm{m}$",
+              "why": "Tu as calculé la vitesse $v_1 = at_1 = 9{,}0\\ \\mathrm{m\\,s^{-1}}$ et tu l'as donnée en mètres. C'est la confusion classique entre $v$ et $x$."
+            }
+          ],
+          "hint": "Intègre deux fois l'accélération, ou écris directement l'équation horaire de la position en tenant compte de $v_0 = 0$ et $x_0 = 0$.",
+          "solution": "L'accélération est constante, égale à $a = 3{,}0\\ \\mathrm{m\\,s^{-2}}$. En intégrant :\n$$v(t) = a\\,t + v_0 = 3{,}0\\,t \\qquad (v_0 = 0)$$\n$$x(t) = \\tfrac12 a\\,t^{2} + v_0t + x_0 = \\tfrac12\\times3{,}0\\,t^{2} = 1{,}5\\,t^{2} \\qquad (x_0 = 0)$$\nÀ l'instant $t_1 = 3{,}0\\ \\mathrm{s}$ :\n$$x_1 = 1{,}5\\times3{,}0^{2} = 1{,}5\\times9{,}0 = 13{,}5\\ \\mathrm{m}$$\nContrôle par la vitesse moyenne : le mouvement partant du repos avec une accélération constante, la vitesse moyenne vaut $\\dfrac{0 + v_1}{2} = \\dfrac{9{,}0}{2} = 4{,}5\\ \\mathrm{m\\,s^{-1}}$, et $4{,}5\\times3{,}0 = 13{,}5\\ \\mathrm{m}$ — même résultat.",
+          "methode": "Départ du repos à l'origine : $x = \\frac12at^{2}$ et $v = at$. Vérifie l'unité de ta réponse avant de l'écrire.",
+          "points": 1,
+          "part": "Partie A — Traction sur un banc horizontal",
+          "ref": "pc-newton-probleme-1-q3"
+        },
+        {
+          "notion": "Les mouvements de référence",
+          "difficulty": 2,
+          "statement": "**A.4.** La valeur de la vitesse $v_1$ du chariot à l'instant où le fil est coupé est :",
+          "options": [
+            {
+              "label": "$9{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v = at + v_0$ avec $v_0 = 0$, donc $v_1 = 3{,}0\\times3{,}0 = 9{,}0\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$4{,}5\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as écrit $v = \\frac12 at_1 = 4{,}5$. Le facteur $\\frac12$ n'est que dans l'équation de la position. (C'est en revanche la vitesse **moyenne** de la phase, pas la vitesse finale.)"
+            },
+            {
+              "label": "$13{,}5\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as repris la distance parcourue $x_1 = 13{,}5\\ \\mathrm{m}$ et tu l'as donnée en $\\mathrm{m\\,s^{-1}}$. Une position n'est pas une vitesse."
+            },
+            {
+              "label": "$81\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu t'es arrêté à $v_1^{2} = 2a\\,x_1 = 2\\times3{,}0\\times13{,}5 = 81\\ \\mathrm{m^{2}\\,s^{-2}}$ sans extraire la racine carrée."
+            }
+          ],
+          "hint": "Tu connais $a$ et $t_1$ : une seule équation horaire suffit. Tu peux ensuite vérifier avec la relation qui ne contient pas le temps.",
+          "solution": "Le mouvement est rectiligne uniformément varié avec $a = 3{,}0\\ \\mathrm{m\\,s^{-2}}$ et $v_0 = 0$ :\n$$v(t) = a\\,t \\quad\\Longrightarrow\\quad v_1 = 3{,}0\\times3{,}0 = 9{,}0\\ \\mathrm{m\\,s^{-1}}$$\nContrôle par la relation indépendante du temps, avec $x_1 = 13{,}5\\ \\mathrm{m}$ trouvé à la question précédente :\n$$v_1^{2} - v_0^{2} = 2a\\,(x_1 - x_0) = 2\\times3{,}0\\times13{,}5 = 81 \\quad\\Longrightarrow\\quad v_1 = \\sqrt{81} = 9{,}0\\ \\mathrm{m\\,s^{-1}}$$\nLes deux voies donnent la même valeur. Ordre de grandeur : $9{,}0\\ \\mathrm{m\\,s^{-1}} \\approx 32\\ \\mathrm{km\\,h^{-1}}$, plausible pour un chariot tiré pendant $3\\ \\mathrm{s}$ sans frottement.",
+          "methode": "Deux chemins pour une vitesse : $v = at + v_0$ si tu as le temps, $v^{2} - v_0^{2} = 2a\\Delta x$ si tu as la distance. Utilise l'un et vérifie avec l'autre.",
+          "points": 1,
+          "part": "Partie A — Traction sur un banc horizontal",
+          "ref": "pc-newton-probleme-1-q4"
+        },
+        {
+          "notion": "Méthode 1 — Le bilan des forces",
+          "difficulty": 2,
+          "statement": "**B.1.** Pendant la montée du plan incliné, la valeur de l'accélération du centre d'inertie du chariot est :",
+          "options": [
+            {
+              "label": "$3{,}3\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "En montée, le poids et le frottement freinent tous deux : $a = g\\sin\\alpha + \\dfrac{f}{m} = 9{,}8\\times0{,}259 + \\dfrac{0{,}45}{0{,}60} = 2{,}54 + 0{,}75 = 3{,}3\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$2{,}5\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as oublié le frottement : $g\\sin\\alpha = 9{,}8\\times0{,}259 = 2{,}5$. La force $\\vec f$ existe sur ce plan et freine aussi le chariot."
+            },
+            {
+              "label": "$1{,}8\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as retranché le frottement : $g\\sin\\alpha - f/m = 2{,}54 - 0{,}75 = 1{,}8$. À la **montée**, $\\vec f$ est dirigée vers le bas de la pente comme la composante du poids : les deux s'ajoutent."
+            },
+            {
+              "label": "$10{,}2\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as échangé sinus et cosinus : $g\\cos\\alpha + f/m = 9{,}47 + 0{,}75 = 10{,}2$. Le terme $g\\cos\\alpha$ concerne la **normale** au plan, où le mouvement est nul."
+            }
+          ],
+          "hint": "Le chariot monte : dans quel sens est dirigée la force de frottement ? Et la composante du poids selon la pente ?",
+          "solution": "**Système** : le chariot. **Référentiel** : terrestre, supposé galiléen. Axe $Ox'$ porté par la ligne de plus grande pente, orienté **vers le haut**, dans le sens du mouvement.\n**Bilan des forces** : le poids $\\vec P$, la réaction normale $\\vec R_N$, et le frottement $\\vec f$ opposé au mouvement, donc dirigé **vers le bas** de la pente.\n**Deuxième loi** : $\\vec P + \\vec R_N + \\vec f = m\\,\\vec a_G$.\n**Projection sur $Ox'$** :\n$$-mg\\sin\\alpha - f = m\\,a_{x'}$$\n$$a_{x'} = -\\left(g\\sin\\alpha + \\frac{f}{m}\\right) = -\\left(9{,}8\\times0{,}259 + \\frac{0{,}45}{0{,}60}\\right) = -(2{,}54 + 0{,}75) = -3{,}29\\ \\mathrm{m\\,s^{-2}}$$\nLa projection est négative : le mouvement est **uniformément retardé**, le chariot ralentit. Sa valeur est $3{,}3\\ \\mathrm{m\\,s^{-2}}$.\nContrôle : cette valeur est bien supérieure à $g\\sin\\alpha = 2{,}5\\ \\mathrm{m\\,s^{-2}}$, ce qui est attendu puisque le frottement s'ajoute au freinage.",
+          "methode": "Montée : poids et frottement freinent ensemble, $a = g\\sin\\alpha + f/m$. Descente : ils s'opposent, $a = g\\sin\\alpha - f/m$.",
+          "points": 1,
+          "part": "Partie B — Montée du plan incliné",
+          "ref": "pc-newton-probleme-1-q5"
+        },
+        {
+          "notion": "Les mouvements de référence",
+          "difficulty": 3,
+          "statement": "**B.2.** La distance parcourue par le chariot sur le plan incliné avant de s'arrêter est :",
+          "options": [
+            {
+              "label": "$12\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$d = \\dfrac{v_1^{2}}{2a} = \\dfrac{9{,}0^{2}}{2\\times3{,}29} = \\dfrac{81}{6{,}57} = 12\\ \\mathrm{m}$, avec $a = 3{,}29\\ \\mathrm{m\\,s^{-2}}$ trouvé en B.1."
+            },
+            {
+              "label": "$16\\ \\mathrm{m}$",
+              "why": "Tu as négligé le frottement et utilisé $a = g\\sin\\alpha = 2{,}54\\ \\mathrm{m\\,s^{-2}}$ : $81/5{,}07 = 16\\ \\mathrm{m}$. Avec frottement, le chariot s'arrête **plus tôt**."
+            },
+            {
+              "label": "$23\\ \\mathrm{m}$",
+              "why": "Tu as retranché le frottement au lieu de l'ajouter, soit $a = 1{,}79\\ \\mathrm{m\\,s^{-2}}$ : $81/3{,}57 = 23\\ \\mathrm{m}$. À la montée, $\\vec f$ s'ajoute à $mg\\sin\\alpha$."
+            },
+            {
+              "label": "$1{,}4\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $v_1$ au lieu de $v_1^{2}$ : $9{,}0/6{,}57 = 1{,}4$. La relation est $v^{2} - v_1^{2} = -2a\\,d$, la vitesse y est au **carré**."
+            }
+          ],
+          "hint": "Tu ne connais pas la durée de la montée : utilise la relation entre les carrés des vitesses et la distance, avec l'accélération de B.1.",
+          "solution": "Sur le plan incliné le mouvement est rectiligne uniformément retardé, avec $a = 3{,}29\\ \\mathrm{m\\,s^{-2}}$ (valeur trouvée en B.1), vitesse initiale $v_1 = 9{,}0\\ \\mathrm{m\\,s^{-1}}$ et vitesse finale nulle.\nRelation indépendante du temps, sur l'axe orienté vers le haut :\n$$v^{2} - v_1^{2} = 2\\,a_{x'}\\,d \\quad\\text{avec}\\quad v = 0 \\ \\text{et}\\ a_{x'} = -3{,}29\\ \\mathrm{m\\,s^{-2}}$$\n$$d = \\frac{v_1^{2}}{2\\times3{,}29} = \\frac{81}{6{,}57} = 12{,}3 \\approx 12\\ \\mathrm{m}$$\nContrôle par le temps : la durée de la montée vaut $t = v_1/a = 9{,}0/3{,}29 = 2{,}7\\ \\mathrm{s}$, et la vitesse moyenne $v_1/2 = 4{,}5\\ \\mathrm{m\\,s^{-1}}$ ; d'où $d = 4{,}5\\times2{,}7 = 12\\ \\mathrm{m}$ — même résultat.\nVérification de cohérence : sans frottement, on aurait trouvé $16\\ \\mathrm{m}$. Le frottement raccourcit bien la montée.",
+          "methode": "Vitesse initiale, vitesse finale, accélération, distance : si le temps est absent, c'est $v^{2} - v_0^{2} = 2a(x - x_0)$.",
+          "points": 1,
+          "part": "Partie B — Montée du plan incliné",
+          "ref": "pc-newton-probleme-1-q6"
+        },
+        {
+          "notion": "Méthode 1 — Le bilan des forces",
+          "difficulty": 3,
+          "statement": "**B.3.** Pendant la montée, la valeur de la réaction normale exercée par le plan incliné sur le chariot est :",
+          "options": [
+            {
+              "label": "$5{,}7\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "Le mouvement est parallèle au plan, donc l'accélération n'a pas de composante normale : $R_N = mg\\cos\\alpha = 0{,}60\\times9{,}8\\times0{,}966 = 5{,}7\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$5{,}9\\ \\mathrm{N}$",
+              "why": "Tu as pris $R_N = mg = 0{,}60\\times9{,}8 = 5{,}9\\ \\mathrm{N}$, ce qui n'est vrai que sur un plan **horizontal**. Sur un plan incliné, seule la composante $mg\\cos\\alpha$ est à équilibrer."
+            },
+            {
+              "label": "$1{,}5\\ \\mathrm{N}$",
+              "why": "Tu as échangé sinus et cosinus : $mg\\sin\\alpha = 0{,}60\\times9{,}8\\times0{,}259 = 1{,}5\\ \\mathrm{N}$. C'est la composante du poids **selon la pente**, pas selon la normale."
+            },
+            {
+              "label": "$5{,}2\\ \\mathrm{N}$",
+              "why": "Tu as retranché le frottement : $mg\\cos\\alpha - f = 5{,}68 - 0{,}45 = 5{,}2\\ \\mathrm{N}$. Or $\\vec f$ est **parallèle** au plan : sa projection sur la normale est nulle."
+            }
+          ],
+          "hint": "Projette la deuxième loi sur la **normale** au plan. Que vaut la composante de $\\vec a_G$ selon cet axe, et celle de $\\vec f$ ?",
+          "solution": "**Système** : le chariot. **Référentiel** : terrestre, supposé galiléen. On choisit deux axes : $Ox'$ selon la ligne de plus grande pente (orienté vers le haut) et $Oy'$ selon la normale au plan (orienté vers l'extérieur).\nLe chariot reste **sur** le plan : sa trajectoire est rectiligne et parallèle au plan, donc le vecteur accélération est porté par $Ox'$ et sa composante selon $Oy'$ est **nulle**.\n**Projection de la deuxième loi sur $Oy'$** :\n- le poids : $-mg\\cos\\alpha$ ;\n- la réaction normale : $+R_N$ ;\n- le frottement $\\vec f$ : parallèle au plan, donc projection **nulle** sur la normale.\n$$R_N - mg\\cos\\alpha = m\\times 0 \\quad\\Longrightarrow\\quad R_N = mg\\cos\\alpha$$\n$$R_N = 0{,}60\\times9{,}8\\times0{,}966 = 5{,}68 \\approx 5{,}7\\ \\mathrm{N}$$\nContrôle sur les cas limites : si $\\alpha = 0$, $R_N = mg = 5{,}9\\ \\mathrm{N}$ (plan horizontal) ; si $\\alpha = 90°$, $R_N = 0$ (le plan est vertical, il ne porte plus rien). La formule $R_N = mg\\cos\\alpha$ passe les deux tests.\nRemarque : $R_N$ est la **même** à la montée et à la descente, car $\\vec f$ change de sens mais reste parallèle au plan.",
+          "methode": "La réaction normale se trouve **toujours** en projetant sur la normale, avec une accélération nulle selon cet axe. Une force parallèle au plan n'y intervient pas.",
+          "points": 1,
+          "part": "Partie B — Montée du plan incliné",
+          "ref": "pc-newton-probleme-1-q7"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-newton-probleme-2",
+      "chapter": "pc-newton",
+      "kind": "probleme",
+      "title": "Deux chariots poussés l'un derrière l'autre",
+      "difficulty": 3,
+      "context": "Sur une piste rectiligne **horizontale**, un chariot A de masse $m_A = 3{,}0\\ \\mathrm{kg}$ est en contact avec un chariot B de masse $m_B = 2{,}0\\ \\mathrm{kg}$ placé devant lui. On exerce sur A une force $\\vec F$ horizontale, **constante**, de valeur $F = 10\\ \\mathrm{N}$, dirigée vers B. Les deux chariots restent constamment en contact et se déplacent donc avec la **même** accélération.\n\nL'étude est menée dans le référentiel terrestre, supposé galiléen. On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$ et on néglige l'action de l'air. On note $\\vec F_{A/B}$ l'action de A sur B et $\\vec F_{B/A}$ l'action de B sur A.\n\n**Partie A.** La piste est un rail à coussin d'air : les frottements sont **négligeables**.\n\n**Partie B.** On remplace le rail par une piste rugueuse. Chaque chariot subit alors une force de frottement horizontale, **constante** et opposée au mouvement : $f_A = 1{,}3\\ \\mathrm{N}$ sur A et $f_B = 1{,}2\\ \\mathrm{N}$ sur B. La force $\\vec F$ garde la même valeur $F = 10\\ \\mathrm{N}$, et les deux chariots partent du repos.\n\nDonnées : $m_A = 3{,}0\\ \\mathrm{kg}$ ; $m_B = 2{,}0\\ \\mathrm{kg}$ ; $F = 10\\ \\mathrm{N}$ ; $f_A = 1{,}3\\ \\mathrm{N}$ ; $f_B = 1{,}2\\ \\mathrm{N}$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 4 — Les systèmes liés",
+          "difficulty": 1,
+          "statement": "**A.1.** En prenant pour système l'ensemble $\\{A + B\\}$, la valeur de l'accélération commune des deux chariots est :",
+          "options": [
+            {
+              "label": "$2{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "Pour le système $\\{A+B\\}$, les actions mutuelles sont intérieures : seule $\\vec F$ compte horizontalement, donc $a = \\dfrac{F}{m_A + m_B} = \\dfrac{10}{5{,}0} = 2{,}0\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$3{,}3\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu n'as gardé que la masse de A : $10/3{,}0 = 3{,}3$. Or $\\vec F$ doit mettre en mouvement les **deux** chariots : la masse à considérer est $m_A + m_B$."
+            },
+            {
+              "label": "$5{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as divisé par la masse de B seul : $10/2{,}0 = 5{,}0$. La force $\\vec F$ est appliquée sur A et accélère l'ensemble des deux chariots."
+            },
+            {
+              "label": "$0{,}50\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as inversé le rapport : $(m_A + m_B)/F = 5{,}0/10 = 0{,}50$. Dans $\\sum\\vec F = m\\vec a_G$, c'est la force qu'on divise par la masse."
+            }
+          ],
+          "hint": "Choisis l'ensemble des deux chariots comme système : quelles forces horizontales lui sont alors **extérieures** ?",
+          "solution": "**Système** : l'ensemble $\\{A + B\\}$, de masse totale $m_A + m_B = 5{,}0\\ \\mathrm{kg}$. **Référentiel** : terrestre, supposé galiléen. Axe $Ox$ horizontal, orienté dans le sens du mouvement.\n**Bilan des forces extérieures** : les poids et les réactions normales (verticaux, qui se compensent) et la force $\\vec F$. Les actions $\\vec F_{A/B}$ et $\\vec F_{B/A}$ sont **intérieures** au système : d'après la troisième loi elles sont opposées et leur somme est nulle, elles n'entrent pas dans le bilan.\n**Deuxième loi**, en projection sur $Ox$ :\n$$F = (m_A + m_B)\\,a \\quad\\Longrightarrow\\quad a = \\frac{F}{m_A + m_B} = \\frac{10}{3{,}0 + 2{,}0} = 2{,}0\\ \\mathrm{m\\,s^{-2}}$$\nContrôle : $(m_A + m_B)\\,a = 5{,}0\\times2{,}0 = 10\\ \\mathrm{N}$ — on retrouve bien la valeur de $F$.",
+          "methode": "Systèmes liés : prends d'abord l'**ensemble** pour obtenir $a$ — les actions mutuelles disparaissent du bilan.",
+          "points": 1,
+          "part": "Partie A — Deux chariots sur un rail sans frottement",
+          "ref": "pc-newton-probleme-2-q1"
+        },
+        {
+          "notion": "Méthode 1 — Le bilan des forces",
+          "difficulty": 1,
+          "statement": "**A.2.** Le bilan des forces extérieures appliquées au seul chariot B est :",
+          "options": [
+            {
+              "label": "le poids de B, la réaction normale du rail sur B et l'action $\\vec F_{A/B}$ de A sur B",
+              "correct": true,
+              "why": "Trois corps extérieurs agissent **sur** B : la Terre (le poids), le rail (la réaction normale) et le chariot A (l'action de contact $\\vec F_{A/B}$)."
+            },
+            {
+              "label": "le poids de B, la réaction normale du rail sur B et la force $\\vec F$",
+              "why": "La force $\\vec F$ est appliquée **sur A**, pas sur B. B n'est poussé que par A : c'est $\\vec F_{A/B}$ qui figure dans son bilan, et sa valeur n'est pas celle de $\\vec F$."
+            },
+            {
+              "label": "l'action $\\vec F_{A/B}$ de A sur B seule, les forces verticales se compensant",
+              "why": "Deux forces qui se compensent **restent** dans le bilan : c'est leur somme qui est nulle, pas leur existence. Le bilan doit citer toutes les forces appliquées à B."
+            },
+            {
+              "label": "le poids de B, la réaction normale du rail sur B et l'action $\\vec F_{B/A}$ de B sur A",
+              "why": "Tu as inscrit $\\vec F_{B/A}$, qui s'exerce **sur A** : elle appartient au bilan de A. Dans celui de B figure sa réciproque $\\vec F_{A/B}$."
+            }
+          ],
+          "hint": "Quel corps extérieur pousse réellement B ? Relis le sens de lecture des indices dans $\\vec F_{A/B}$.",
+          "solution": "**Système** : le chariot B seul. **Référentiel** : terrestre, supposé galiléen.\nOn ne retient que les forces exercées **par l'extérieur sur B** :\n- le poids $\\vec P_B$, exercé par la Terre, vertical vers le bas, de valeur $m_Bg = 2{,}0\\times9{,}8 = 20\\ \\mathrm{N}$ ;\n- la réaction normale $\\vec R_B$ du rail (pas de frottement en partie A), verticale vers le haut ;\n- l'action de contact $\\vec F_{A/B}$ exercée par A, horizontale, dirigée vers l'avant.\nLa force $\\vec F$ est appliquée **sur A** : elle n'apparaît pas ici. L'action $\\vec F_{B/A}$ s'exerce **sur A** : elle appartient au bilan de A, pas à celui de B.\nContrôle : B est accéléré horizontalement, donc son bilan doit comporter exactement **une** force horizontale non compensée — c'est bien le cas avec $\\vec F_{A/B}$.",
+          "methode": "Lis l'indice d'une force comme une phrase : $\\vec F_{A/B}$ = « exercée par A sur B ». Elle entre dans le bilan de B, jamais dans celui de A.",
+          "points": 1,
+          "part": "Partie A — Deux chariots sur un rail sans frottement",
+          "ref": "pc-newton-probleme-2-q2"
+        },
+        {
+          "notion": "Troisième loi : actions réciproques",
+          "difficulty": 2,
+          "statement": "**A.3.** La valeur de l'action $\\vec F_{A/B}$ exercée par le chariot A sur le chariot B est :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "Deuxième loi appliquée à B seul : $F_{A/B} = m_B\\,a = 2{,}0\\times2{,}0 = 4{,}0\\ \\mathrm{N}$, avec $a = 2{,}0\\ \\mathrm{m\\,s^{-2}}$ trouvé en A.1."
+            },
+            {
+              "label": "$10\\ \\mathrm{N}$",
+              "why": "Tu as transmis la force $\\vec F$ entière à B. Impossible : une partie de $\\vec F$ sert à accélérer A lui-même. Seule la fraction $m_B\\,a = 4{,}0\\ \\mathrm{N}$ passe à B."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{N}$",
+              "why": "Tu as utilisé la masse de A : $m_A\\,a = 3{,}0\\times2{,}0 = 6{,}0\\ \\mathrm{N}$. C'est la résultante sur A, pas l'action de A sur B : la force qui accélère B dépend de la masse **de B**."
+            },
+            {
+              "label": "$20\\ \\mathrm{N}$",
+              "why": "Tu as multiplié $F$ par $m_B$ : $10\\times2{,}0 = 20$. L'opération correcte est $m_B\\,a$ : c'est l'**accélération**, non la force, qu'on multiplie par la masse."
+            }
+          ],
+          "hint": "Isole B comme système. Quelle est la seule force horizontale de son bilan, et quelle accélération subit-il ?",
+          "solution": "**Système** : le chariot B seul. **Référentiel** : terrestre, supposé galiléen. Axe $Ox$ dans le sens du mouvement.\nSon accélération est celle de l'ensemble, trouvée en A.1 : $a = 2{,}0\\ \\mathrm{m\\,s^{-2}}$.\n**Deuxième loi**, projetée sur $Ox$ (le poids et la réaction normale sont verticaux) :\n$$F_{A/B} = m_B\\,a = 2{,}0\\times2{,}0 = 4{,}0\\ \\mathrm{N}$$\nContrôle en isolant A : son bilan horizontal comporte $\\vec F$ et $\\vec F_{B/A}$, donc $F - F_{B/A} = m_A\\,a$, soit $F_{B/A} = 10 - 3{,}0\\times2{,}0 = 4{,}0\\ \\mathrm{N}$. La troisième loi est bien vérifiée : $F_{A/B} = F_{B/A} = 4{,}0\\ \\mathrm{N}$.\nRemarque : la fraction de $\\vec F$ transmise à B vaut $\\dfrac{m_B}{m_A+m_B} = \\dfrac{2{,}0}{5{,}0} = 40\\ \\%$ — exactement la proportion de masse qu'il représente.",
+          "methode": "Pour une force de liaison : isole **le solide situé après la liaison** et écris $\\sum F = m a$ sur lui seul.",
+          "points": 1,
+          "part": "Partie A — Deux chariots sur un rail sans frottement",
+          "ref": "pc-newton-probleme-2-q3"
+        },
+        {
+          "notion": "Troisième loi : actions réciproques",
+          "difficulty": 2,
+          "statement": "**A.4.** L'action $\\vec F_{B/A}$ exercée par le chariot B sur le chariot A a pour valeur et pour sens :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{N}$, dirigée vers l'arrière, en sens opposé au mouvement",
+              "correct": true,
+              "why": "Troisième loi : $\\vec F_{B/A} = -\\vec F_{A/B}$. Même valeur $4{,}0\\ \\mathrm{N}$, sens opposé : A pousse B vers l'avant, B repousse A vers l'arrière."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{N}$, dirigée vers l'avant, dans le sens du mouvement",
+              "why": "Tu as la bonne valeur mais tu as oublié le signe moins de $\\vec F_{B/A} = -\\vec F_{A/B}$. Deux forces de même sens ne constitueraient pas une interaction."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{N}$, dirigée vers l'arrière, en sens opposé au mouvement",
+              "why": "Tu as calculé $m_A\\,a = 6{,}0\\ \\mathrm{N}$ : c'est la **résultante** sur A, qui vaut $F - F_{B/A} = 10 - 4{,}0 = 6{,}0\\ \\mathrm{N}$, et non l'action de B sur A."
+            },
+            {
+              "label": "$0\\ \\mathrm{N}$, car B est seulement poussé et ne pousse rien en retour",
+              "why": "Aucune action n'est à sens unique. Si B n'exerçait rien sur A, A serait accéléré à $10/3{,}0 = 3{,}3\\ \\mathrm{m\\,s^{-2}}$, et non à $2{,}0\\ \\mathrm{m\\,s^{-2}}$ : les deux chariots se sépareraient."
+            }
+          ],
+          "hint": "Applique la troisième loi à partir du résultat de A.3, et prends garde au signe de la relation.",
+          "solution": "Les chariots A et B sont en interaction de contact. La **troisième loi de Newton** (principe des actions réciproques) s'écrit :\n$$\\vec F_{B/A} = -\\,\\vec F_{A/B}$$\nLes deux forces ont donc la **même valeur**, la même droite d'action, et des **sens opposés**. Avec $F_{A/B} = 4{,}0\\ \\mathrm{N}$ (question A.3) :\n$$F_{B/A} = 4{,}0\\ \\mathrm{N},\\ \\text{dirigée vers l'arrière}$$\nContrôle en isolant A : $F - F_{B/A} = 10 - 4{,}0 = 6{,}0\\ \\mathrm{N}$, et $m_A\\,a = 3{,}0\\times2{,}0 = 6{,}0\\ \\mathrm{N}$. L'égalité est vérifiée — c'est bien parce que B « freine » A que celui-ci n'accélère qu'à $2{,}0\\ \\mathrm{m\\,s^{-2}}$ au lieu de $3{,}3\\ \\mathrm{m\\,s^{-2}}$.\nÀ retenir : les valeurs sont égales **quelles que soient les masses**. Ce sont les résultantes qui diffèrent ($6{,}0\\ \\mathrm{N}$ sur A, $4{,}0\\ \\mathrm{N}$ sur B), dans le rapport des masses.",
+          "methode": "Troisième loi : égalité des **valeurs**, opposition des sens. Ne confonds pas l'action de liaison avec la résultante des forces sur le solide.",
+          "points": 1,
+          "part": "Partie A — Deux chariots sur un rail sans frottement",
+          "ref": "pc-newton-probleme-2-q4"
+        },
+        {
+          "notion": "Méthode 4 — Les systèmes liés",
+          "difficulty": 2,
+          "statement": "**B.1.** Sur la piste rugueuse, la valeur de l'accélération commune des deux chariots est :",
+          "options": [
+            {
+              "label": "$1{,}5\\ \\mathrm{m\\,s^{-2}}$",
+              "correct": true,
+              "why": "Pour le système $\\{A+B\\}$ : $F - f_A - f_B = (m_A+m_B)\\,a$, donc $a = \\dfrac{10 - 1{,}3 - 1{,}2}{5{,}0} = \\dfrac{7{,}5}{5{,}0} = 1{,}5\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as repris le résultat de la partie A, en oubliant les frottements. Ils sont extérieurs au système $\\{A+B\\}$ et réduisent l'accélération."
+            },
+            {
+              "label": "$1{,}7\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu n'as retranché que $f_A$ : $(10 - 1{,}3)/5{,}0 = 1{,}7$. Les **deux** frottements sont extérieurs au système $\\{A+B\\}$, il faut retrancher $f_A$ et $f_B$."
+            },
+            {
+              "label": "$2{,}5\\ \\mathrm{m\\,s^{-2}}$",
+              "why": "Tu as divisé par la seule masse de A : $7{,}5/3{,}0 = 2{,}5$. Si le système choisi est $\\{A+B\\}$, la masse à mettre au dénominateur est $m_A + m_B = 5{,}0\\ \\mathrm{kg}$."
+            }
+          ],
+          "hint": "Garde l'ensemble $\\{A+B\\}$ comme système. Combien de forces de frottement lui sont extérieures ?",
+          "solution": "**Système** : l'ensemble $\\{A + B\\}$, de masse $5{,}0\\ \\mathrm{kg}$. **Référentiel** : terrestre, supposé galiléen. Axe $Ox$ dans le sens du mouvement.\n**Bilan des forces extérieures horizontales** : la force $\\vec F$ (vers l'avant), le frottement $\\vec f_A$ sur A et le frottement $\\vec f_B$ sur B (tous deux vers l'arrière, exercés par la piste). Les actions mutuelles $\\vec F_{A/B}$ et $\\vec F_{B/A}$ restent **intérieures** au système.\n**Deuxième loi**, projetée sur $Ox$ :\n$$F - f_A - f_B = (m_A + m_B)\\,a$$\n$$a = \\frac{10 - 1{,}3 - 1{,}2}{3{,}0 + 2{,}0} = \\frac{7{,}5}{5{,}0} = 1{,}5\\ \\mathrm{m\\,s^{-2}}$$\nContrôle : $1{,}5 < 2{,}0\\ \\mathrm{m\\,s^{-2}}$ — l'accélération diminue bien par rapport à la partie A, ce qui est attendu avec des frottements. Et $(m_A+m_B)\\,a = 5{,}0\\times1{,}5 = 7{,}5\\ \\mathrm{N}$, égale à la résultante $F - f_A - f_B$.",
+          "methode": "Système $\\{A+B\\}$ : additionne les masses et retranche **tous** les frottements subis par l'un comme par l'autre.",
+          "points": 1,
+          "part": "Partie B — La même poussée sur une piste rugueuse",
+          "ref": "pc-newton-probleme-2-q5"
+        },
+        {
+          "notion": "Méthode 4 — Les systèmes liés",
+          "difficulty": 3,
+          "statement": "**B.2.** Sur la piste rugueuse, la valeur de l'action $\\vec F_{A/B}$ exercée par A sur B est :",
+          "options": [
+            {
+              "label": "$4{,}2\\ \\mathrm{N}$",
+              "correct": true,
+              "why": "Deuxième loi sur B seul : $F_{A/B} - f_B = m_B\\,a$, donc $F_{A/B} = m_B\\,a + f_B = 2{,}0\\times1{,}5 + 1{,}2 = 4{,}2\\ \\mathrm{N}$."
+            },
+            {
+              "label": "$3{,}0\\ \\mathrm{N}$",
+              "why": "Tu as oublié le frottement sur B : $m_B\\,a = 3{,}0\\ \\mathrm{N}$. Pour accélérer B, A doit à la fois vaincre $f_B$ **et** fournir $m_B a$."
+            },
+            {
+              "label": "$1{,}8\\ \\mathrm{N}$",
+              "why": "Tu as retranché $f_B$ : $m_B\\,a - f_B = 3{,}0 - 1{,}2 = 1{,}8$. Comme $\\vec f_B$ s'oppose au mouvement, l'isolement de B donne $F_{A/B} - f_B = m_Ba$, donc $f_B$ s'**ajoute**."
+            },
+            {
+              "label": "$7{,}5\\ \\mathrm{N}$",
+              "why": "Tu as donné la résultante sur l'ensemble, $F - f_A - f_B = 7{,}5\\ \\mathrm{N}$. L'action de A sur B est une force de liaison : elle s'obtient en isolant B seul."
+            }
+          ],
+          "hint": "Isole B. Son bilan horizontal contient maintenant deux forces : laquelle le pousse, laquelle le freine ?",
+          "solution": "**Système** : le chariot B seul. **Référentiel** : terrestre, supposé galiléen. Axe $Ox$ dans le sens du mouvement. Son accélération est $a = 1{,}5\\ \\mathrm{m\\,s^{-2}}$ (question B.1).\n**Bilan horizontal** : l'action $\\vec F_{A/B}$ (vers l'avant) et le frottement $\\vec f_B = 1{,}2\\ \\mathrm{N}$ (vers l'arrière).\n**Deuxième loi**, projetée sur $Ox$ :\n$$F_{A/B} - f_B = m_B\\,a \\quad\\Longrightarrow\\quad F_{A/B} = m_B\\,a + f_B = 2{,}0\\times1{,}5 + 1{,}2 = 3{,}0 + 1{,}2 = 4{,}2\\ \\mathrm{N}$$\nContrôle en isolant A, avec la troisième loi $F_{B/A} = F_{A/B}$ :\n$$F - f_A - F_{B/A} = m_A\\,a \\quad\\Longrightarrow\\quad F_{B/A} = 10 - 1{,}3 - 3{,}0\\times1{,}5 = 10 - 1{,}3 - 4{,}5 = 4{,}2\\ \\mathrm{N}$$\nLes deux isolements donnent la même valeur : le calcul est cohérent.\nRemarque : l'action de liaison est passée de $4{,}0\\ \\mathrm{N}$ (partie A) à $4{,}2\\ \\mathrm{N}$, car A doit en plus faire glisser B contre son frottement.",
+          "methode": "Force de liaison : isole le solide **derrière** la liaison et écris sa deuxième loi. Vérifie toujours en isolant l'autre solide.",
+          "points": 1,
+          "part": "Partie B — La même poussée sur une piste rugueuse",
+          "ref": "pc-newton-probleme-2-q6"
+        },
+        {
+          "notion": "Méthode 2 — Dériver ou intégrer les équations horaires",
+          "difficulty": 3,
+          "statement": "**B.3.** Partant du repos sur la piste rugueuse, la distance parcourue par les chariots lorsque leur vitesse atteint $6{,}0\\ \\mathrm{m\\,s^{-1}}$ est :",
+          "options": [
+            {
+              "label": "$12\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "Avec $a = 1{,}5\\ \\mathrm{m\\,s^{-2}}$ et $v_0 = 0$ : $d = \\dfrac{v^{2}}{2a} = \\dfrac{36}{3{,}0} = 12\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$24\\ \\mathrm{m}$",
+              "why": "Tu as oublié le facteur $2$ au dénominateur : $v^{2}/a = 36/1{,}5 = 24$. La relation est $v^{2} - v_0^{2} = 2a(x - x_0)$."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{m}$",
+              "why": "Tu as calculé la **durée** $t = v/a = 6{,}0/1{,}5 = 4{,}0\\ \\mathrm{s}$ et tu l'as écrite en mètres. Il reste à en déduire la distance."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $v$ au lieu de $v^{2}$ : $6{,}0/3{,}0 = 2{,}0$. Dans la relation indépendante du temps, la vitesse apparaît au **carré**."
+            }
+          ],
+          "hint": "Aucune durée n'est donnée dans l'énoncé : utilise la relation du MRUV qui ne contient pas le temps, avec l'accélération de B.1.",
+          "solution": "Le mouvement est rectiligne uniformément varié avec $a = 1{,}5\\ \\mathrm{m\\,s^{-2}}$ (question B.1), $v_0 = 0$ et $x_0 = 0$.\n**Relation indépendante du temps** :\n$$v^{2} - v_0^{2} = 2a\\,(x - x_0) \\quad\\Longrightarrow\\quad d = \\frac{v^{2}}{2a} = \\frac{6{,}0^{2}}{2\\times1{,}5} = \\frac{36}{3{,}0} = 12\\ \\mathrm{m}$$\nContrôle par les équations horaires : $t = \\dfrac{v}{a} = \\dfrac{6{,}0}{1{,}5} = 4{,}0\\ \\mathrm{s}$, puis $d = \\tfrac12 a t^{2} = \\tfrac12\\times1{,}5\\times16 = 12\\ \\mathrm{m}$ — même résultat par une autre voie.\nComparaison avec la partie A : sans frottement, $a = 2{,}0\\ \\mathrm{m\\,s^{-2}}$ et il n'aurait fallu que $36/4{,}0 = 9{,}0\\ \\mathrm{m}$ pour atteindre la même vitesse. Les frottements allongent bien la distance de lancement.",
+          "methode": "Pas de temps dans l'énoncé $\\Rightarrow$ $v^{2} - v_0^{2} = 2a\\,\\Delta x$. Avec le temps $\\Rightarrow$ $v = at + v_0$ et $x = \\frac12at^{2} + v_0t + x_0$.",
+          "points": 1,
+          "part": "Partie B — La même poussée sur une piste rugueuse",
+          "ref": "pc-newton-probleme-2-q7"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-newton-serie-1",
+      "title": "Lois de Newton · Échauffement",
+      "description": "Dix questions d'application directe pour installer les réflexes : référentiel, système, bilan des forces, les trois vecteurs, base de Frenet et équations du MRUV.",
+      "kind": "custom",
+      "chapter": "pc-newton",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-newton-le-prealable-referentiel-et-systeme-q1",
+        "pc-newton-premiere-loi-le-principe-d-inertie-q1",
+        "pc-newton-troisieme-loi-actions-reciproques-q1",
+        "pc-newton-les-trois-vecteurs-q1",
+        "pc-newton-la-base-de-frenet-q1",
+        "pc-newton-les-mouvements-de-reference-q1",
+        "pc-newton-la-methode-generale-q1",
+        "pc-newton-le-prealable-referentiel-et-systeme-q2",
+        "pc-newton-premiere-loi-le-principe-d-inertie-q2",
+        "pc-newton-deuxieme-loi-la-relation-fondamentale-q1"
+      ]
+    },
+    {
+      "slug": "pc-newton-serie-2",
+      "title": "Lois de Newton · Entraînement",
+      "description": "Douze questions qui balaient tout le chapitre : dérivation des équations horaires, base de Frenet, plan incliné, troisième loi, quantité de mouvement et référentiels non galiléens.",
+      "kind": "custom",
+      "chapter": "pc-newton",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-newton-troisieme-loi-actions-reciproques-q1",
+        "pc-newton-les-trois-vecteurs-q2",
+        "pc-newton-la-base-de-frenet-q2",
+        "pc-newton-les-mouvements-de-reference-q2",
+        "pc-newton-les-mouvements-de-reference-q3",
+        "pc-newton-la-methode-generale-q2",
+        "pc-newton-troisieme-loi-actions-reciproques-q2",
+        "pc-newton-deuxieme-loi-la-relation-fondamentale-q1",
+        "pc-newton-le-prealable-referentiel-et-systeme-q3",
+        "pc-newton-premiere-loi-le-principe-d-inertie-q3",
+        "pc-newton-quantite-de-mouvement-et-systemes-q1",
+        "pc-newton-les-referentiels-non-galileens-q1"
+      ]
+    },
+    {
+      "slug": "pc-newton-serie-3",
+      "title": "Lois de Newton · Type BAC",
+      "description": "Douze questions de niveau examen, construites autour des sous-questions les plus exigeantes des deux problèmes : plan incliné avec frottement, systèmes liés, réaction normale et limites de la mécanique de Newton.",
+      "kind": "custom",
+      "chapter": "pc-newton",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-newton-probleme-1-q3",
+        "pc-newton-probleme-1-q5",
+        "pc-newton-probleme-2-q3",
+        "pc-newton-probleme-2-q5",
+        "pc-newton-probleme-1-q6",
+        "pc-newton-probleme-1-q7",
+        "pc-newton-probleme-2-q6",
+        "pc-newton-probleme-2-q7",
+        "pc-newton-la-methode-generale-q3",
+        "pc-newton-deuxieme-loi-la-relation-fondamentale-q2",
+        "pc-newton-masse-inerte-et-masse-grave-q1",
+        "pc-newton-les-limites-de-la-mecanique-de-newton-q1"
+      ]
+    }
+  ]
+}

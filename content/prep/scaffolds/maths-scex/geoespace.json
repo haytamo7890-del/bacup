@@ -1,0 +1,1385 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "pc",
+  "svt"
+ ],
+ "_scaffold": {
+  "pack": "maths-scex",
+  "label": "Maths — Sciences Expérimentales (PC + SVT)",
+  "priority": "P1",
+  "chapter": {
+   "code": "geoespace",
+   "name": "Produit scalaire et géométrie dans l'espace",
+   "domain": null,
+   "unit": null
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "Définition et expressions",
+   "Orthogonalité",
+   "Calculer un angle",
+   "Projection et applications",
+   "Équation cartésienne d'un plan",
+   "Représentation paramétrique d'une droite",
+   "Distance d'un point à un plan",
+   "Sphères",
+   "Positions relatives d'un plan et d'une sphère",
+   "Définition",
+   "Propriétés",
+   "Angles : au-delà du calcul direct",
+   "Positions relatives : la synthèse",
+   "Projeté orthogonal",
+   "Ensembles de points",
+   "Application 1 — Aire d'un triangle",
+   "Application 2 — Équation d'un plan par trois points",
+   "Application 3 — Distance d'un point à une droite",
+   "Type 1 — Calculs vectoriels de base",
+   "Type 2 — Déterminer une équation de plan",
+   "Type 3 — Intersections",
+   "Type 4 — Distances",
+   "Type 5 — Sphères et positions relatives"
+  ],
+  "methodes_du_cours": [
+   "Application 1 — Aire d'un triangle",
+   "Application 2 — Équation d'un plan par trois points",
+   "Application 3 — Distance d'un point à une droite",
+   "Type 1 — Calculs vectoriels de base",
+   "Type 2 — Déterminer une équation de plan",
+   "Type 3 — Intersections",
+   "Type 4 — Distances",
+   "Type 5 — Sphères et positions relatives"
+  ],
+  "existing_questions_total": 6,
+  "target_new_questions": 42,
+  "suggested_figures": [
+   "complexe-rotation — Rotation de centre Ω et d'angle θ",
+   "cinetique — Suivi cinétique — [réactif] décroît, [produit] croît, avec t½"
+  ],
+  "sources": [
+   {
+    "annale": "maths-pc-2026-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2026-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2026-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2025-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2025-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2025-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2024-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2024-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2024-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2023-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2023-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2023-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2022-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2022-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2022-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2021-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2021-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2021-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2020-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2020-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2020-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2019-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2019-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2019-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2018-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2018-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2018-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2017-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2017-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2017-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2016-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2016-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2015-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2015-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2015-normale.pdf"
+   },
+   {
+    "annale": "maths-pc-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-maths-pc-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-pc-2014-normale",
+    "sujet": "annales-propres/Sujet-maths-pc-2014-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-pc-2014-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2026-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2026-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2026-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2025-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2025-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2025-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2025-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2024-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2024-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2024-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2024-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2023-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2023-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2023-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2023-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2022-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2022-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2022-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2022-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2021-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2021-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2021-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2021-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2020-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2020-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2020-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2020-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2019-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2019-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2019-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2019-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2018-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2018-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2018-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2018-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2017-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2017-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2017-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2017-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2016-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2016-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2016-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2015-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2015-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2015-normale.pdf"
+   },
+   {
+    "annale": "maths-svt-2014-rattrapage",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "maths-svt-2014-normale",
+    "sujet": "annales-a-uploader/maths-svt/Sujet-maths-svt-2014-normale.pdf",
+    "corrige": "corriges-propres/maths/Corrige-maths-svt-2014-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Définition et expressions",
+    "lesson": "Produit scalaire dans l'espace",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 2,
+    "target_new_questions": 2,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-definition-et-expressions",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Définition et expressions",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-definition-et-expressions-q1",
+     "notion": "Définition et expressions",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Orthogonalité",
+    "lesson": "Produit scalaire dans l'espace",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-orthogonalite",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Orthogonalité",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-orthogonalite-q1",
+     "notion": "Orthogonalité",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Calculer un angle",
+    "lesson": "Produit scalaire dans l'espace",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-calculer-un-angle",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Calculer un angle",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-calculer-un-angle-q1",
+     "notion": "Calculer un angle",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Projection et applications",
+    "lesson": "Produit scalaire dans l'espace",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-projection-et-applications",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Projection et applications",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-projection-et-applications-q1",
+     "notion": "Projection et applications",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Équation cartésienne d'un plan",
+    "lesson": "Plans, droites et sphères",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-equation-cartesienne-d-un-plan",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Équation cartésienne d'un plan",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-equation-cartesienne-d-un-plan-q1",
+     "notion": "Équation cartésienne d'un plan",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Représentation paramétrique d'une droite",
+    "lesson": "Plans, droites et sphères",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-representation-parametrique-d-une-droite",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Représentation paramétrique d'une droite",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-representation-parametrique-d-une-droite-q1",
+     "notion": "Représentation paramétrique d'une droite",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Distance d'un point à un plan",
+    "lesson": "Plans, droites et sphères",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-distance-d-un-point-a-un-plan",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Distance d'un point à un plan",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-distance-d-un-point-a-un-plan-q1",
+     "notion": "Distance d'un point à un plan",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Sphères",
+    "lesson": "Plans, droites et sphères",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-spheres",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Sphères",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-spheres-q1",
+     "notion": "Sphères",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Positions relatives d'un plan et d'une sphère",
+    "lesson": "Plans, droites et sphères",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-positions-relatives-d-un-plan-et-d-une-s",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Positions relatives d'un plan et d'une sphère",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-positions-relatives-d-un-plan-et-d-une-s-q1",
+     "notion": "Positions relatives d'un plan et d'une sphère",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Définition",
+    "lesson": "Produit vectoriel",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-definition",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Définition",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-definition-q1",
+     "notion": "Définition",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Propriétés",
+    "lesson": "Produit vectoriel",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-proprietes",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Propriétés",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-proprietes-q1",
+     "notion": "Propriétés",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Angles : au-delà du calcul direct",
+    "lesson": "Approfondissement : angle, positions relatives, distance",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-angles-au-dela-du-calcul-direct",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Angles : au-delà du calcul direct",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-angles-au-dela-du-calcul-direct-q1",
+     "notion": "Angles : au-delà du calcul direct",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Positions relatives : la synthèse",
+    "lesson": "Approfondissement : angle, positions relatives, distance",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-positions-relatives-la-synthese",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Positions relatives : la synthèse",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-positions-relatives-la-synthese-q1",
+     "notion": "Positions relatives : la synthèse",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Projeté orthogonal",
+    "lesson": "Approfondissement : angle, positions relatives, distance",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-projete-orthogonal",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Projeté orthogonal",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-projete-orthogonal-q1",
+     "notion": "Projeté orthogonal",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Ensembles de points",
+    "lesson": "Approfondissement : angle, positions relatives, distance",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "maths-geoespace-ensembles-de-points",
+   "chapter": "geoespace",
+   "kind": "qcu",
+   "title": "Ensembles de points",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-ensembles-de-points-q1",
+     "notion": "Ensembles de points",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "maths-pc-2026-normale",
+     "maths-pc-2025-rattrapage",
+     "maths-pc-2025-normale",
+     "maths-pc-2024-rattrapage",
+     "maths-pc-2024-normale",
+     "maths-pc-2023-rattrapage"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "maths-geoespace-probleme-1",
+   "chapter": "geoespace",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. maths-pc-2026-normale",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "maths-pc-2026-normale",
+     "maths-pc-2025-rattrapage",
+     "maths-pc-2025-normale",
+     "maths-pc-2024-rattrapage",
+     "maths-pc-2024-normale",
+     "maths-pc-2023-rattrapage"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "maths-geoespace-probleme-2",
+   "chapter": "geoespace",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. maths-pc-2026-normale",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "maths-geoespace-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "maths-geoespace-serie-1",
+   "title": "Produit scalaire et géométrie dans l'espace · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "geoespace",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "maths-geoespace-serie-2",
+   "title": "Produit scalaire et géométrie dans l'espace · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "geoespace",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "maths-geoespace-serie-3",
+   "title": "Produit scalaire et géométrie dans l'espace · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "geoespace",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

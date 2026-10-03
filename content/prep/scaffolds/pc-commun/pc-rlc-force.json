@@ -1,0 +1,2212 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-rlc-force",
+      "name": "Circuit RLC en régime sinusoïdal forcé",
+      "domain": "physique",
+      "unit": "Électricité"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Excitateur et résonateur",
+      "Grandeurs efficaces",
+      "Notation et déphasage",
+      "Le diagramme de Fresnel",
+      "Nature du circuit",
+      "Le phénomène",
+      "L'acuité de la résonance",
+      "La surtension",
+      "La puissance",
+      "Retour sur le diagramme de Fresnel",
+      "Comportement asymptotique et filtrage",
+      "Résonance de charge et résonance de tension",
+      "Analogie mécanique",
+      "Améliorer le facteur de puissance",
+      "Méthode 1 — Calculer $Z$, $I$ et $\\varphi$",
+      "Méthode 2 — Déterminer $L$, $C$ ou $r$ par la résonance",
+      "Méthode 3 — Exploiter une courbe de résonance",
+      "Méthode 4 — Exploiter un oscillogramme à deux voies",
+      "Méthode 5 — Bande passante, facteur de qualité et puissance"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Calculer $Z$, $I$ et $\\varphi$",
+      "Méthode 2 — Déterminer $L$, $C$ ou $r$ par la résonance",
+      "Méthode 3 — Exploiter une courbe de résonance",
+      "Méthode 4 — Exploiter un oscillogramme à deux voies",
+      "Méthode 5 — Bande passante, facteur de qualité et puissance"
+    ],
+    "existing_questions_total": 7,
+    "target_new_questions": 35,
+    "suggested_figures": [
+      "montage-rsf — Montage RLC en régime sinusoïdal forcé (GBF)",
+      "resonance-intensite — Courbe de résonance d'intensité I(f), maximum à f₀",
+      "rlc-regimes — Les trois régimes d'un circuit RLC (u_C au cours du temps)",
+      "montage-rc — Montage d'un circuit RC"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Excitateur et résonateur",
+        "lesson": "Régime sinusoïdal forcé & impédance",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-excitateur-et-resonateur",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Excitateur et résonateur",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Excitateur et résonateur",
+          "difficulty": 1,
+          "statement": "Un générateur basse fréquence (GBF) impose la tension $u(t)=U\\sqrt{2}\\cos(2\\pi N t)$ aux bornes d'un circuit $(R,L,C)$ série. À quelle fréquence oscille l'intensité $i$ dans le circuit ?",
+          "options": [
+            {
+              "label": "À la fréquence $N$ imposée par le GBF",
+              "correct": true,
+              "why": "En régime sinusoïdal forcé, le GBF est l'**excitateur** et le circuit $(R,L,C)$ le **résonateur** : le résonateur oscille à la fréquence de l'excitateur, donc $i$ oscille à la fréquence $N$."
+            },
+            {
+              "label": "À sa fréquence propre $N_0=\\dfrac{1}{2\\pi\\sqrt{LC}}$",
+              "why": "$N_0$ est la fréquence des oscillations **libres** (GBF débranché). En régime forcé, le circuit ne choisit plus sa fréquence : il subit celle du générateur."
+            },
+            {
+              "label": "À la fréquence $N+N_0$, somme des deux",
+              "why": "Les fréquences ne s'additionnent pas. Le régime forcé est sinusoïdal à **une seule** fréquence, celle du GBF."
+            },
+            {
+              "label": "À la fréquence $\\sqrt{N\\,N_0}$, moyenne des deux",
+              "why": "Aucune moyenne n'intervient : le résonateur recopie exactement la fréquence de l'excitateur, sans la mélanger avec $N_0$."
+            }
+          ],
+          "hint": "Demande-toi lequel des deux dipôles impose sa fréquence à l'autre.",
+          "solution": "Le GBF impose la tension $u(t)=U\\sqrt{2}\\cos(2\\pi N t)$ : c'est l'**excitateur**. Le circuit $(R,L,C)$ subit cette tension : c'est le **résonateur**. En régime sinusoïdal forcé, toutes les grandeurs du circuit ($i$, $u_R$, $u_L$, $u_C$) sont sinusoïdales **à la fréquence $N$ de l'excitateur**. La fréquence propre $N_0$ ne disparaît pas pour autant : elle intervient dans la **valeur** de l'amplitude de $i$ (c'est elle qui fixe la résonance), mais pas dans la fréquence de $i$.",
+          "methode": "Régime forcé : la fréquence vient toujours du générateur ; la fréquence propre, elle, ne sert qu'à savoir si on est près de la résonance.",
+          "points": 1,
+          "ref": "pc-rlc-force-excitateur-et-resonateur-q1"
+        },
+        {
+          "notion": "Excitateur et résonateur",
+          "difficulty": 2,
+          "statement": "Un circuit $(R,L,C)$ série de fréquence propre $N_0 = 250\\ \\mathrm{Hz}$ est alimenté par un GBF réglé sur la fréquence $N = 100\\ \\mathrm{Hz}$. Quelle est la période du courant qui traverse le circuit ?",
+          "options": [
+            {
+              "label": "$T = 10\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "Le courant oscille à la fréquence imposée $N = 100\\ \\mathrm{Hz}$, donc $T = \\frac{1}{N} = \\frac{1}{100} = 1{,}0\\times10^{-2}\\ \\mathrm{s} = 10\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$T = 4{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as utilisé la fréquence propre : $\\frac{1}{250} = 4{,}0\\ \\mathrm{ms}$. C'est la période des oscillations **libres**, pas celle du régime forcé."
+            },
+            {
+              "label": "$T = 2{,}9\\ \\mathrm{ms}$",
+              "why": "Tu as additionné les fréquences : $\\frac{1}{100+250} = 2{,}9\\ \\mathrm{ms}$. Les fréquences ne s'additionnent pas en régime forcé."
+            },
+            {
+              "label": "$T = 6{,}0\\ \\mathrm{ms}$",
+              "why": "Tu as soustrait les deux périodes : $10 - 4{,}0 = 6{,}0\\ \\mathrm{ms}$. Ce calcul n'a aucun sens physique ici."
+            }
+          ],
+          "hint": "Quelle fréquence impose le GBF ? C'est la seule qui compte pour la période de $i$.",
+          "solution": "En régime sinusoïdal forcé, l'intensité oscille à la fréquence de l'excitateur : $N = 100\\ \\mathrm{Hz}$. Donc $$T = \\frac{1}{N} = \\frac{1}{100\\ \\mathrm{Hz}} = 1{,}0\\times10^{-2}\\ \\mathrm{s} = 10\\ \\mathrm{ms}.$$ La donnée $N_0 = 250\\ \\mathrm{Hz}$ sert seulement à situer le régime : comme $N < N_0$, le circuit est en-dessous de la résonance. Contrôle : $100\\ \\mathrm{Hz}$ est de l'ordre de la centaine de hertz, une période de l'ordre de la dizaine de millisecondes est donc cohérente.",
+          "methode": "Avant tout calcul de période en régime forcé, repère la fréquence du GBF : $T=1/N$, jamais $1/N_0$.",
+          "points": 1,
+          "ref": "pc-rlc-force-excitateur-et-resonateur-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Grandeurs efficaces",
+        "lesson": "Régime sinusoïdal forcé & impédance",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-grandeurs-efficaces",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Grandeurs efficaces",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Grandeurs efficaces",
+          "difficulty": 1,
+          "statement": "Un GBF délivre $u(t) = U_m\\cos(\\omega t)$ avec $U_m = 12\\ \\mathrm{V}$. Que lit un voltmètre en mode alternatif branché à ses bornes ?",
+          "options": [
+            {
+              "label": "$U = 8{,}5\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "Un voltmètre en alternatif affiche la valeur **efficace** : $U = \\frac{U_m}{\\sqrt{2}} = \\frac{12}{\\sqrt{2}} = 8{,}5\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$U = 12\\ \\mathrm{V}$",
+              "why": "Tu as donné la valeur **maximale**. Le voltmètre en mode alternatif n'affiche jamais $U_m$, mais $U_m/\\sqrt{2}$."
+            },
+            {
+              "label": "$U = 17\\ \\mathrm{V}$",
+              "why": "Tu as **multiplié** par $\\sqrt{2}$ : $12\\times\\sqrt{2} = 17\\ \\mathrm{V}$. La valeur efficace est toujours plus petite que la valeur maximale, il faut diviser."
+            },
+            {
+              "label": "$U = 6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as divisé par $2$ : $12/2 = 6{,}0\\ \\mathrm{V}$. Le facteur de conversion est $\\sqrt{2}\\approx 1{,}41$, pas $2$."
+            }
+          ],
+          "hint": "Un appareil de mesure en alternatif donne toujours la même famille de valeurs : laquelle ?",
+          "solution": "Les appareils de mesure (voltmètre, ampèremètre) en mode alternatif affichent des valeurs **efficaces**. Ici $$U = \\frac{U_m}{\\sqrt{2}} = \\frac{12\\ \\mathrm{V}}{1{,}414} = 8{,}5\\ \\mathrm{V}.$$ Contrôle : $8{,}5\\times\\sqrt{2} = 12\\ \\mathrm{V}$, on retombe bien sur $U_m$.",
+          "methode": "Oscilloscope $\\rightarrow$ valeurs maximales ; voltmètre et ampèremètre $\\rightarrow$ valeurs efficaces. Le passage se fait en divisant par $\\sqrt{2}$.",
+          "points": 1,
+          "ref": "pc-rlc-force-grandeurs-efficaces-q1"
+        },
+        {
+          "notion": "Grandeurs efficaces",
+          "difficulty": 2,
+          "statement": "Un voltmètre branché aux bornes d'un GBF indique $U = 6{,}0\\ \\mathrm{V}$. Quelle amplitude $U_m$ observera-t-on à l'oscilloscope ?",
+          "options": [
+            {
+              "label": "$U_m = 8{,}5\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "On remonte de l'efficace au maximum en multipliant : $U_m = U\\sqrt{2} = 6{,}0\\times1{,}414 = 8{,}5\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$U_m = 6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as recopié la valeur efficace. L'amplitude observée à l'écran est strictement plus grande que la valeur efficace."
+            },
+            {
+              "label": "$U_m = 4{,}2\\ \\mathrm{V}$",
+              "why": "Tu as **divisé** par $\\sqrt{2}$ : $6{,}0/\\sqrt{2} = 4{,}2\\ \\mathrm{V}$. Ici le sens est l'inverse : on part de l'efficace, donc on multiplie."
+            },
+            {
+              "label": "$U_m = 12\\ \\mathrm{V}$",
+              "why": "Tu as multiplié par $2$ : $6{,}0\\times2 = 12\\ \\mathrm{V}$. Le facteur est $\\sqrt{2}\\approx1{,}41$, pas $2$."
+            }
+          ],
+          "hint": "Écris la relation $U = U_m/\\sqrt{2}$, puis isole $U_m$.",
+          "solution": "De $U = \\dfrac{U_m}{\\sqrt{2}}$ on tire $$U_m = U\\sqrt{2} = 6{,}0\\times\\sqrt{2} = 8{,}5\\ \\mathrm{V}.$$ L'oscilloscope montrera donc une sinusoïde d'amplitude $8{,}5\\ \\mathrm{V}$, soit $17\\ \\mathrm{V}$ de crête à crête. Contrôle : $8{,}5/\\sqrt{2} = 6{,}0\\ \\mathrm{V}$, on retrouve la lecture du voltmètre.",
+          "methode": "Efficace $\\rightarrow$ maximale : on **multiplie** par $\\sqrt{2}$. Maximale $\\rightarrow$ efficace : on **divise**. Vérifie toujours que l'efficace est la plus petite des deux.",
+          "points": 1,
+          "ref": "pc-rlc-force-grandeurs-efficaces-q2"
+        },
+        {
+          "notion": "Grandeurs efficaces",
+          "difficulty": 3,
+          "statement": "À l'oscilloscope, la tension $u$ aux bornes d'un GBF occupe $6{,}0$ divisions **de crête à crête** sur une sensibilité verticale de $2{,}0\\ \\mathrm{V/div}$. Quelle valeur efficace $U$ un voltmètre indiquerait-il ?",
+          "options": [
+            {
+              "label": "$U = 4{,}2\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "La tension crête à crête vaut $6{,}0\\times2{,}0 = 12\\ \\mathrm{V}$, donc $U_m = 12/2 = 6{,}0\\ \\mathrm{V}$ et $U = 6{,}0/\\sqrt{2} = 4{,}2\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$U = 8{,}5\\ \\mathrm{V}$",
+              "why": "Tu as pris les $12\\ \\mathrm{V}$ crête à crête pour l'amplitude : $12/\\sqrt{2} = 8{,}5\\ \\mathrm{V}$. L'amplitude, c'est la **moitié** de la hauteur crête à crête."
+            },
+            {
+              "label": "$U = 6{,}0\\ \\mathrm{V}$",
+              "why": "Tu t'es arrêté à l'amplitude $U_m = 6{,}0\\ \\mathrm{V}$. Il reste à diviser par $\\sqrt{2}$ pour obtenir la valeur efficace."
+            },
+            {
+              "label": "$U = 12\\ \\mathrm{V}$",
+              "why": "Tu as donné la tension crête à crête $U_{pp} = 12\\ \\mathrm{V}$ telle quelle, sans la diviser ni par $2$ ni par $\\sqrt{2}$."
+            }
+          ],
+          "hint": "Trois étapes : hauteur crête à crête, puis amplitude, puis valeur efficace.",
+          "solution": "Hauteur crête à crête : $U_{pp} = 6{,}0\\ \\mathrm{div}\\times2{,}0\\ \\mathrm{V/div} = 12\\ \\mathrm{V}$. L'amplitude en est la moitié : $$U_m = \\frac{U_{pp}}{2} = 6{,}0\\ \\mathrm{V},\\qquad U = \\frac{U_m}{\\sqrt{2}} = \\frac{6{,}0}{1{,}414} = 4{,}2\\ \\mathrm{V}.$$ Contrôle : on peut aussi écrire directement $U = \\dfrac{U_{pp}}{2\\sqrt{2}} = \\dfrac{12}{2{,}83} = 4{,}2\\ \\mathrm{V}$, même résultat.",
+          "methode": "Sur un oscillogramme, compte d'abord les divisions **de crête à crête**, divise par $2$ pour l'amplitude, puis par $\\sqrt{2}$ pour l'efficace.",
+          "points": 1,
+          "ref": "pc-rlc-force-grandeurs-efficaces-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Notation et déphasage",
+        "lesson": "Régime sinusoïdal forcé & impédance",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-notation-et-dephasage",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Notation et déphasage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Notation et déphasage",
+          "difficulty": 1,
+          "statement": "Dans un circuit $(R,L,C)$ série en régime sinusoïdal forcé, $\\varphi$ désigne le déphasage de $u$ par rapport à $i$. Quelle est l'expression de $\\tan\\varphi$ ?",
+          "options": [
+            {
+              "label": "$\\tan\\varphi = \\dfrac{L\\omega - \\dfrac{1}{C\\omega}}{R}$",
+              "correct": true,
+              "why": "C'est la relation du cours : au numérateur la **différence** des réactances, au dénominateur la résistance totale $R$ (incluant $r$ de la bobine)."
+            },
+            {
+              "label": "$\\tan\\varphi = \\dfrac{R}{L\\omega - \\dfrac{1}{C\\omega}}$",
+              "why": "Tu as pris l'inverse. Dans le triangle de Fresnel, le côté **opposé** à $\\varphi$ est la différence des réactances et le côté adjacent est $R$ : c'est donc la différence qui va au numérateur."
+            },
+            {
+              "label": "$\\tan\\varphi = \\dfrac{\\dfrac{1}{C\\omega} - L\\omega}{R}$",
+              "why": "Tu as inversé le signe du numérateur. Avec cette expression, un circuit inductif ($L\\omega>\\frac{1}{C\\omega}$) donnerait $\\varphi<0$, ce qui est faux."
+            },
+            {
+              "label": "$\\tan\\varphi = \\dfrac{L\\omega + \\dfrac{1}{C\\omega}}{R}$",
+              "why": "Tu as additionné les réactances. $\\vec{U_L}$ et $\\vec{U_C}$ sont en **opposition de phase** : leurs contributions se retranchent, elles ne s'ajoutent pas."
+            }
+          ],
+          "hint": "Pense au triangle rectangle du diagramme de Fresnel : quel côté est opposé à $\\varphi$ ?",
+          "solution": "Dans le diagramme de Fresnel construit avec $i$ comme référence, le vecteur $\\vec{U}$ a pour composante le long de l'axe $R\\,I$ et perpendiculairement $\\left(L\\omega-\\frac{1}{C\\omega}\\right)I$. L'angle $\\varphi$ entre $\\vec U$ et l'axe vérifie donc $$\\tan\\varphi = \\frac{\\left(L\\omega-\\frac{1}{C\\omega}\\right)I}{R\\,I} = \\frac{L\\omega-\\frac{1}{C\\omega}}{R}.$$ Contrôle de cohérence : si $L\\omega = \\frac{1}{C\\omega}$ (résonance), on trouve $\\tan\\varphi = 0$, donc $\\varphi = 0$ — c'est bien ce qu'on attend.",
+          "methode": "Retiens le triangle $\\left(R,\\ L\\omega-\\frac{1}{C\\omega},\\ Z\\right)$ : il donne d'un coup $Z$, $\\tan\\varphi$ et $\\cos\\varphi$.",
+          "points": 1,
+          "ref": "pc-rlc-force-notation-et-dephasage-q1"
+        },
+        {
+          "notion": "Notation et déphasage",
+          "difficulty": 2,
+          "statement": "Dans un circuit $(R,L,C)$ série, la résistance totale vaut $R = 30\\ \\Omega$, et à la fréquence de travail $L\\omega = 80\\ \\Omega$ et $\\dfrac{1}{C\\omega} = 40\\ \\Omega$. Quelle est la valeur du déphasage $\\varphi$ de $u$ par rapport à $i$ ?",
+          "options": [
+            {
+              "label": "$\\varphi \\approx +53^{\\circ}$",
+              "correct": true,
+              "why": "$\\tan\\varphi = \\frac{80-40}{30} = \\frac{40}{30} = 1{,}33$, donc $\\varphi = \\arctan(1{,}33) = +53^{\\circ}$ (positif : circuit inductif)."
+            },
+            {
+              "label": "$\\varphi \\approx -53^{\\circ}$",
+              "why": "Tu as inversé le signe. Ici $L\\omega > \\frac{1}{C\\omega}$, le numérateur est positif, donc $\\varphi > 0$ : $u$ est en avance sur $i$."
+            },
+            {
+              "label": "$\\varphi \\approx +37^{\\circ}$",
+              "why": "Tu as pris le rapport à l'envers : $\\arctan\\!\\left(\\frac{30}{40}\\right) = 37^{\\circ}$. C'est $R$ qui est au dénominateur, pas la différence des réactances."
+            },
+            {
+              "label": "$\\varphi \\approx +76^{\\circ}$",
+              "why": "Tu as **additionné** les réactances : $\\arctan\\!\\left(\\frac{80+40}{30}\\right) = \\arctan(4) = 76^{\\circ}$. Or $\\vec{U_L}$ et $\\vec{U_C}$ sont opposés, il faut soustraire."
+            }
+          ],
+          "hint": "Calcule d'abord $L\\omega - \\frac{1}{C\\omega}$, puis divise par $R$ avant de prendre l'arc tangente.",
+          "solution": "La différence des réactances vaut $L\\omega - \\dfrac{1}{C\\omega} = 80 - 40 = 40\\ \\Omega$. Donc $$\\tan\\varphi = \\frac{40}{30} = 1{,}33 \\quad\\Longrightarrow\\quad \\varphi = +53^{\\circ} \\approx +0{,}93\\ \\mathrm{rad}.$$ Contrôle : $Z = \\sqrt{30^2+40^2} = 50\\ \\Omega$ et $\\cos\\varphi = \\frac{R}{Z} = \\frac{30}{50} = 0{,}60$ ; or $\\cos 53^{\\circ} = 0{,}60$. Les deux voies concordent.",
+          "methode": "Garde toujours le signe de $L\\omega - \\frac{1}{C\\omega}$ : il donne à lui seul le signe de $\\varphi$ et la nature du circuit.",
+          "points": 1,
+          "ref": "pc-rlc-force-notation-et-dephasage-q2"
+        },
+        {
+          "notion": "Notation et déphasage",
+          "difficulty": 2,
+          "statement": "Sur un oscilloscope à deux voies, la voie $Y_1$ montre $u$ et la voie $Y_2$ montre $u_R$ (donc $i$). On mesure une période $T = 20\\ \\mathrm{ms}$ et un décalage horizontal $\\Delta t = 2{,}5\\ \\mathrm{ms}$ entre les deux courbes. Quelle est la valeur absolue du déphasage $\\varphi$ ?",
+          "options": [
+            {
+              "label": "$|\\varphi| = 45^{\\circ}$",
+              "correct": true,
+              "why": "$|\\varphi| = 360^{\\circ}\\times\\frac{\\Delta t}{T} = 360\\times\\frac{2{,}5}{20} = 45^{\\circ}$ : un décalage d'un huitième de période fait un huitième de tour."
+            },
+            {
+              "label": "$|\\varphi| = 90^{\\circ}$",
+              "why": "Tu as divisé par une **demi**-période : $360\\times\\frac{2{,}5}{10} = 90^{\\circ}$. Le dénominateur doit être la période entière $T = 20\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$|\\varphi| = 12{,}5^{\\circ}$",
+              "why": "Tu as calculé $100\\times\\frac{\\Delta t}{T} = 12{,}5$ : c'est le pourcentage de période, pas un angle. Pour un angle en degrés, le facteur est $360$."
+            },
+            {
+              "label": "$|\\varphi| = 315^{\\circ}$",
+              "why": "Tu as compté le décalage dans l'autre sens ($360-45$). Dans un circuit $(R,L,C)$ série, $|\\varphi|$ ne dépasse jamais $90^{\\circ}$ : un tel résultat doit t'alerter."
+            }
+          ],
+          "hint": "Une période entière correspond à $360^{\\circ}$. Fais une simple proportion.",
+          "solution": "Une période $T$ correspond à un tour complet, soit $360^{\\circ}$ (ou $2\\pi\\ \\mathrm{rad}$). Le décalage $\\Delta t$ correspond donc à $$|\\varphi| = 360^{\\circ}\\times\\frac{\\Delta t}{T} = 360\\times\\frac{2{,}5\\ \\mathrm{ms}}{20\\ \\mathrm{ms}} = 45^{\\circ},$$ soit $|\\varphi| = \\dfrac{2\\pi\\,\\Delta t}{T} = \\dfrac{\\pi}{4} \\approx 0{,}79\\ \\mathrm{rad}$. Contrôle : $2{,}5$ ms, c'est $T/8$ ; et $360^{\\circ}/8 = 45^{\\circ}$.",
+          "methode": "Oscillogramme à deux voies : $|\\varphi| = 2\\pi\\frac{\\Delta t}{T}$ en radians, ou $360\\frac{\\Delta t}{T}$ en degrés. Mesure $\\Delta t$ et $T$ dans la **même** unité.",
+          "points": 1,
+          "ref": "pc-rlc-force-notation-et-dephasage-q3"
+        },
+        {
+          "notion": "Notation et déphasage",
+          "difficulty": 3,
+          "statement": "Dans un circuit $(R,L,C)$ série, $u(t) = 8{,}0\\sqrt{2}\\cos(2\\pi\\,50\\,t)$ en volts et $i(t) = 0{,}40\\sqrt{2}\\cos\\!\\left(2\\pi\\,50\\,t - \\dfrac{\\pi}{3}\\right)$ en ampères. Quelle est la résistance totale $R$ du circuit ?",
+          "options": [
+            {
+              "label": "$R = 10\\ \\Omega$",
+              "correct": true,
+              "why": "$Z = \\frac{U}{I} = \\frac{8{,}0}{0{,}40} = 20\\ \\Omega$ et $\\varphi = +\\frac{\\pi}{3}$, donc $R = Z\\cos\\varphi = 20\\times\\cos 60^{\\circ} = 20\\times0{,}50 = 10\\ \\Omega$."
+            },
+            {
+              "label": "$R = 20\\ \\Omega$",
+              "why": "Tu as pris $R = Z = 20\\ \\Omega$ en oubliant le facteur $\\cos\\varphi$. L'égalité $R = Z$ n'est vraie qu'à la résonance, où $\\varphi = 0$."
+            },
+            {
+              "label": "$R = 17\\ \\Omega$",
+              "why": "Tu as utilisé le sinus : $20\\times\\sin 60^{\\circ} = 17\\ \\Omega$. Cette valeur est celle de $L\\omega - \\frac{1}{C\\omega}$, pas celle de $R$."
+            },
+            {
+              "label": "$R = 40\\ \\Omega$",
+              "why": "Tu as **divisé** par $\\cos\\varphi$ : $\\frac{20}{0{,}50} = 40\\ \\Omega$. Comme $\\cos\\varphi \\le 1$, on a toujours $R \\le Z$ : il faut multiplier."
+            }
+          ],
+          "hint": "Lis d'abord $U$, $I$ et $\\varphi$ dans les deux expressions, puis utilise $\\cos\\varphi = R/Z$.",
+          "solution": "Les deux expressions sont écrites sous la forme $X\\sqrt{2}\\cos(\\dots)$, donc $U = 8{,}0\\ \\mathrm{V}$ et $I = 0{,}40\\ \\mathrm{A}$ sont déjà des valeurs **efficaces**. L'impédance vaut $$Z = \\frac{U}{I} = \\frac{8{,}0}{0{,}40} = 20\\ \\Omega.$$ L'intensité est en retard de $\\frac{\\pi}{3}$ sur la tension, donc $\\varphi = +\\frac{\\pi}{3} = 60^{\\circ}$ et $$R = Z\\cos\\varphi = 20\\times\\cos 60^{\\circ} = 10\\ \\Omega.$$ Contrôle : la partie réactive vaut $Z\\sin\\varphi = 20\\times0{,}866 = 17{,}3\\ \\Omega$, et $\\sqrt{10^2+17{,}3^2} = 20\\ \\Omega$ : on retrouve bien $Z$.",
+          "methode": "Quand $u$ et $i$ sont donnés sous forme $X\\sqrt{2}\\cos(\\dots)$, les amplitudes lues sont les valeurs **efficaces** : $Z=U/I$ directement, sans conversion.",
+          "points": 1,
+          "ref": "pc-rlc-force-notation-et-dephasage-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le diagramme de Fresnel",
+        "lesson": "Régime sinusoïdal forcé & impédance",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-le-diagramme-de-fresnel",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Le diagramme de Fresnel",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le diagramme de Fresnel",
+          "difficulty": 1,
+          "statement": "On construit le diagramme de Fresnel d'un circuit $(R,L,C)$ série. Quel vecteur est porté par l'axe de référence (l'axe des phases de $i$) ?",
+          "options": [
+            {
+              "label": "$\\vec{U_R}$, car $u_R$ est en phase avec $i$",
+              "correct": true,
+              "why": "Dans un conducteur ohmique $u_R = R\\,i$ : la tension est proportionnelle à l'intensité, donc **en phase** avec elle. Son vecteur est porté par l'axe de référence."
+            },
+            {
+              "label": "$\\vec{U_L}$, car la bobine impose la phase",
+              "why": "$u_L$ est en avance de $\\frac{\\pi}{2}$ sur $i$ (bobine idéale) : son vecteur est perpendiculaire à l'axe, pas porté par lui."
+            },
+            {
+              "label": "$\\vec{U_C}$, car le condensateur impose la phase",
+              "why": "$u_C$ est en retard de $\\frac{\\pi}{2}$ sur $i$ : son vecteur est perpendiculaire à l'axe, dirigé vers le bas."
+            },
+            {
+              "label": "$\\vec{U}$, car c'est la tension du générateur",
+              "why": "$\\vec{U}$ fait justement l'angle $\\varphi$ avec l'axe de référence : c'est l'inconnue de la construction, pas sa référence."
+            }
+          ],
+          "hint": "Quelle est la seule tension qui soit toujours en phase avec l'intensité ?",
+          "solution": "On choisit $i$ comme référence de phase. Comme $u_R = R\\,i$, la tension $u_R$ est en phase avec $i$ : $\\vec{U_R}$ est donc porté par l'axe de référence, de longueur $R\\,I$. On place ensuite $\\vec{U_L}$ en avance de $\\frac{\\pi}{2}$ (vers le haut, longueur $L\\omega I$), $\\vec{U_C}$ en retard de $\\frac{\\pi}{2}$ (vers le bas, longueur $\\frac{I}{C\\omega}$), et $\\vec U$ est leur somme vectorielle.",
+          "methode": "Commence **toujours** la construction par $\\vec{U_R}$ sur l'axe horizontal : tout le reste se place par rapport à lui.",
+          "points": 1,
+          "ref": "pc-rlc-force-le-diagramme-de-fresnel-q1"
+        },
+        {
+          "notion": "Le diagramme de Fresnel",
+          "difficulty": 2,
+          "statement": "Dans un circuit $(R,L,C)$ série, trois voltmètres indiquent : $U_R = 6{,}0\\ \\mathrm{V}$ aux bornes de la résistance totale, $U_L = 12\\ \\mathrm{V}$ aux bornes de la bobine (supposée idéale) et $U_C = 4{,}0\\ \\mathrm{V}$ aux bornes du condensateur. Quelle est la tension efficace $U$ aux bornes du générateur ?",
+          "options": [
+            {
+              "label": "$U = 10\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$U = \\sqrt{U_R^2 + (U_L-U_C)^2} = \\sqrt{6{,}0^2 + 8{,}0^2} = \\sqrt{100} = 10\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$U = 22\\ \\mathrm{V}$",
+              "why": "Tu as additionné les trois valeurs efficaces : $6{,}0+12+4{,}0 = 22\\ \\mathrm{V}$. Les valeurs efficaces ne s'additionnent pas, seuls les **vecteurs** de Fresnel s'additionnent."
+            },
+            {
+              "label": "$U = 14\\ \\mathrm{V}$",
+              "why": "Tu as sommé les trois carrés : $\\sqrt{6{,}0^2+12^2+4{,}0^2} = \\sqrt{196} = 14\\ \\mathrm{V}$. Il faut d'abord **retrancher** $U_C$ à $U_L$, car ces deux tensions sont en opposition de phase."
+            },
+            {
+              "label": "$U = 2{,}0\\ \\mathrm{V}$",
+              "why": "Tu as fait $12 - 4{,}0 - 6{,}0 = 2{,}0\\ \\mathrm{V}$, c'est-à-dire une soustraction pure. $U_R$ est **perpendiculaire** à $U_L-U_C$ : on applique Pythagore, pas une soustraction."
+            }
+          ],
+          "hint": "$\\vec{U_L}$ et $\\vec{U_C}$ sont colinéaires et opposés ; leur résultante est perpendiculaire à $\\vec{U_R}$.",
+          "solution": "Sur le diagramme, $\\vec{U_L}$ et $\\vec{U_C}$ sont tous deux perpendiculaires à $\\vec{U_R}$ et de sens opposés : leur somme est un vecteur vertical de longueur $|U_L - U_C| = |12-4{,}0| = 8{,}0\\ \\mathrm{V}$. Le triangle formé avec $\\vec{U_R}$ est rectangle, donc $$U = \\sqrt{U_R^2+(U_L-U_C)^2} = \\sqrt{36+64} = \\sqrt{100} = 10\\ \\mathrm{V}.$$ Contrôle : le triangle $(6;8;10)$ est le triangle pythagoricien classique, et $\\cos\\varphi = \\frac{6{,}0}{10} = 0{,}60$, soit $\\varphi = 53^{\\circ} > 0$ — cohérent avec $U_L > U_C$ (circuit inductif).",
+          "methode": "Loi des mailles en sinusoïdal : $U^2 = U_R^2 + (U_L-U_C)^2$. Jamais une somme de valeurs efficaces.",
+          "points": 1,
+          "ref": "pc-rlc-force-le-diagramme-de-fresnel-q2"
+        },
+        {
+          "notion": "Le diagramme de Fresnel",
+          "difficulty": 2,
+          "statement": "Sur le diagramme de Fresnel d'un circuit $(R,L,C)$ série, le vecteur $\\vec{U}$ se trouve **au-dessus** de l'axe de référence porté par $\\vec{U_R}$. Qu'en déduis-tu ?",
+          "options": [
+            {
+              "label": "$U_L > U_C$, donc $L\\omega > \\dfrac{1}{C\\omega}$ : le circuit est inductif et $\\varphi > 0$",
+              "correct": true,
+              "why": "$\\vec U$ ne peut pointer vers le haut que si la résultante verticale $\\vec{U_L}+\\vec{U_C}$ est dirigée vers le haut, donc si $U_L > U_C$, c'est-à-dire $L\\omega > \\frac{1}{C\\omega}$ : $\\varphi > 0$ et $u$ est en avance sur $i$."
+            },
+            {
+              "label": "$U_C > U_L$, donc $\\dfrac{1}{C\\omega} > L\\omega$ : le circuit est capacitif et $\\varphi < 0$",
+              "why": "Dans ce cas la résultante verticale serait dirigée vers le **bas** et $\\vec U$ se trouverait sous l'axe. La position décrite dit l'inverse."
+            },
+            {
+              "label": "$U_L = U_C$, donc $L\\omega = \\dfrac{1}{C\\omega}$ : le circuit est à la résonance et $\\varphi = 0$",
+              "why": "À la résonance, $\\vec U$ serait **confondu** avec l'axe de référence, ni au-dessus ni en dessous."
+            },
+            {
+              "label": "$U_R > U_L$, donc la résistance l'emporte : le circuit est purement résistif",
+              "why": "La position de $\\vec U$ au-dessus ou en dessous de l'axe ne dépend pas de $U_R$, qui est justement porté par cet axe. Elle ne renseigne que sur le signe de $U_L - U_C$."
+            }
+          ],
+          "hint": "Qu'est-ce qui, dans la construction, pousse $\\vec U$ vers le haut plutôt que vers le bas ?",
+          "solution": "$\\vec U = \\vec{U_R} + \\vec{U_L} + \\vec{U_C}$. La composante horizontale est toujours $R\\,I > 0$ ; la composante verticale vaut $\\left(L\\omega - \\frac{1}{C\\omega}\\right)I$, c'est-à-dire $U_L - U_C$. Si $\\vec U$ est au-dessus de l'axe, cette composante est positive : $U_L > U_C$, soit $L\\omega > \\frac{1}{C\\omega}$. Le circuit est alors **inductif**, $\\tan\\varphi > 0$ donc $\\varphi > 0$ : la tension $u$ est en avance sur l'intensité $i$. Comme $L\\omega$ croît et $\\frac{1}{C\\omega}$ décroît avec la fréquence, cela signifie aussi que l'on travaille **au-dessus** de la fréquence de résonance.",
+          "methode": "Le côté où penche $\\vec U$ donne directement la nature du circuit : au-dessus $\\rightarrow$ inductif, en dessous $\\rightarrow$ capacitif, sur l'axe $\\rightarrow$ résonance.",
+          "points": 1,
+          "ref": "pc-rlc-force-le-diagramme-de-fresnel-q3"
+        },
+        {
+          "notion": "Le diagramme de Fresnel",
+          "difficulty": 3,
+          "statement": "Un circuit série comporte un conducteur ohmique $R_0 = 50\\ \\Omega$, une bobine $(L, r)$ et un condensateur. À la fréquence de travail, l'impédance du circuit vaut $Z = 100\\ \\Omega$ et le facteur de puissance $\\cos\\varphi = 0{,}80$. Quelle est la résistance $r$ de la bobine ?",
+          "options": [
+            {
+              "label": "$r = 30\\ \\Omega$",
+              "correct": true,
+              "why": "La résistance totale vaut $R = Z\\cos\\varphi = 100\\times0{,}80 = 80\\ \\Omega$, et $R = R_0 + r$, donc $r = 80 - 50 = 30\\ \\Omega$."
+            },
+            {
+              "label": "$r = 80\\ \\Omega$",
+              "why": "Tu t'es arrêté à la résistance **totale** $R = 80\\ \\Omega$ sans en retrancher $R_0$. Or $R$ contient les deux résistances en série."
+            },
+            {
+              "label": "$r = 50\\ \\Omega$",
+              "why": "Tu as retranché $R_0$ à l'impédance : $100 - 50 = 50\\ \\Omega$. Mais $Z$ n'est pas une résistance : il faut d'abord la projeter avec $\\cos\\varphi$."
+            },
+            {
+              "label": "$r = 10\\ \\Omega$",
+              "why": "Tu as utilisé le sinus : $100\\times0{,}60 - 50 = 10\\ \\Omega$. $Z\\sin\\varphi = 60\\ \\Omega$ est la partie réactive $L\\omega-\\frac{1}{C\\omega}$, pas une résistance."
+            }
+          ],
+          "hint": "Le facteur de puissance relie $Z$ à la résistance **totale** du circuit. N'oublie pas que cette résistance se partage entre $R_0$ et $r$.",
+          "solution": "Par définition $\\cos\\varphi = \\dfrac{R}{Z}$ où $R$ est la résistance **totale** du circuit, donc $$R = Z\\cos\\varphi = 100\\times0{,}80 = 80\\ \\Omega.$$ Comme le conducteur ohmique et la bobine sont en série, $R = R_0 + r$, d'où $$r = R - R_0 = 80 - 50 = 30\\ \\Omega.$$ Contrôle : la partie réactive vaut $Z\\sin\\varphi = 100\\times0{,}60 = 60\\ \\Omega$, et $\\sqrt{80^2+60^2} = 100\\ \\Omega$ : on retrouve bien $Z$.",
+          "methode": "Dans $Z=\\sqrt{R^2+\\left(L\\omega-\\frac{1}{C\\omega}\\right)^2}$ et dans $\\cos\\varphi = R/Z$, le $R$ est **toujours** la résistance totale $R_0+r$.",
+          "points": 1,
+          "ref": "pc-rlc-force-le-diagramme-de-fresnel-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Nature du circuit",
+        "lesson": "Régime sinusoïdal forcé & impédance",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-nature-du-circuit",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Nature du circuit",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Nature du circuit",
+          "difficulty": 1,
+          "statement": "Dans un circuit $(R,L,C)$ série en régime sinusoïdal forcé, on constate que $L\\omega > \\dfrac{1}{C\\omega}$. Comment qualifie-t-on ce circuit ?",
+          "options": [
+            {
+              "label": "Inductif : $\\varphi > 0$ et $u$ est en avance sur $i$",
+              "correct": true,
+              "why": "$\\tan\\varphi = \\frac{L\\omega-\\frac{1}{C\\omega}}{R} > 0$ donc $\\varphi>0$ : la bobine l'emporte, le circuit se comporte comme une bobine et $u$ est en avance sur $i$."
+            },
+            {
+              "label": "Capacitif : $\\varphi < 0$ et $u$ est en retard sur $i$",
+              "why": "C'est le cas opposé, celui où $\\frac{1}{C\\omega} > L\\omega$. Ici c'est la réactance de la bobine qui domine."
+            },
+            {
+              "label": "Résistif : $\\varphi = 0$ et $u$ est en phase avec $i$",
+              "why": "Cela exige l'**égalité** $L\\omega = \\frac{1}{C\\omega}$ (résonance). L'énoncé donne une inégalité stricte."
+            },
+            {
+              "label": "Inductif : $\\varphi < 0$ et $u$ est en retard sur $i$",
+              "why": "La nature est bonne, mais le signe est faux : un circuit inductif a $\\tan\\varphi>0$, donc $\\varphi>0$ et $u$ en **avance**."
+            }
+          ],
+          "hint": "Regarde le signe du numérateur de $\\tan\\varphi$.",
+          "solution": "Si $L\\omega > \\dfrac{1}{C\\omega}$, alors $L\\omega - \\dfrac{1}{C\\omega} > 0$ et $\\tan\\varphi = \\dfrac{L\\omega-\\frac{1}{C\\omega}}{R} > 0$. Comme $|\\varphi| < \\frac{\\pi}{2}$, on en déduit $\\varphi > 0$ : la tension $u$ est **en avance** sur l'intensité $i$, exactement comme pour une bobine seule. On dit que le circuit est **inductif**. Puisque $L\\omega$ croît avec la fréquence et $\\frac{1}{C\\omega}$ décroît, cette situation correspond à $N > N_0$.",
+          "methode": "Compare $L\\omega$ et $\\frac{1}{C\\omega}$ : le plus grand des deux donne son nom au circuit (inductif ou capacitif).",
+          "points": 1,
+          "ref": "pc-rlc-force-nature-du-circuit-q1"
+        },
+        {
+          "notion": "Nature du circuit",
+          "difficulty": 2,
+          "statement": "Un circuit série comporte $L = 0{,}20\\ \\mathrm{H}$ et $C = 10\\ \\mathrm{\\mu F}$. Le GBF est réglé sur $N = 100\\ \\mathrm{Hz}$. Quelle est la nature du circuit ?",
+          "options": [
+            {
+              "label": "Capacitif, car $\\dfrac{1}{C\\omega} = 159\\ \\Omega$ est supérieur à $L\\omega = 126\\ \\Omega$",
+              "correct": true,
+              "why": "$\\omega = 2\\pi\\times100 = 628\\ \\mathrm{rad\\,s^{-1}}$, donc $L\\omega = 0{,}20\\times628 = 126\\ \\Omega$ et $\\frac{1}{C\\omega} = \\frac{1}{10^{-5}\\times628} = 159\\ \\Omega$ : le condensateur domine."
+            },
+            {
+              "label": "Inductif, car $L\\omega = 159\\ \\Omega$ est supérieur à $\\dfrac{1}{C\\omega} = 126\\ \\Omega$",
+              "why": "Tu as échangé les deux valeurs : c'est $\\frac{1}{C\\omega}$ qui vaut $159\\ \\Omega$ et $L\\omega$ qui vaut $126\\ \\Omega$. Refais les deux calculs séparément."
+            },
+            {
+              "label": "Inductif, car $L\\omega = 126\\ \\Omega$ est très supérieur à $\\dfrac{1}{C\\omega} = 1{,}6\\times10^{-4}\\ \\Omega$",
+              "why": "Tu as oublié de convertir : avec $C = 10\\ \\mathrm{F}$ au lieu de $10\\ \\mathrm{\\mu F}$, on obtient $\\frac{1}{C\\omega} = \\frac{1}{10\\times628} = 1{,}6\\times10^{-4}\\ \\Omega$. Il faut écrire $C = 10\\times10^{-6}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "Résistif, car $L\\omega$ et $\\dfrac{1}{C\\omega}$ sont trop proches pour être distingués",
+              "why": "$126\\ \\Omega$ et $159\\ \\Omega$ diffèrent de plus de $20\\ \\%$ : l'écart n'est pas négligeable. Le circuit n'est résistif que si les deux réactances sont **exactement** égales."
+            }
+          ],
+          "hint": "Calcule $\\omega = 2\\pi N$, puis les deux réactances séparément avant de les comparer.",
+          "solution": "On calcule d'abord la pulsation : $\\omega = 2\\pi N = 2\\pi\\times100 = 628\\ \\mathrm{rad\\,s^{-1}}$. Puis $$L\\omega = 0{,}20\\times628 = 1{,}26\\times10^{2}\\ \\Omega,\\qquad \\frac{1}{C\\omega} = \\frac{1}{10\\times10^{-6}\\times628} = 1{,}59\\times10^{2}\\ \\Omega.$$ Comme $\\frac{1}{C\\omega} > L\\omega$, le circuit est **capacitif** : $\\varphi<0$, $u$ est en retard sur $i$. Contrôle par la fréquence propre : $N_0 = \\frac{1}{2\\pi\\sqrt{LC}} = \\frac{1}{2\\pi\\sqrt{0{,}20\\times10^{-5}}} = 113\\ \\mathrm{Hz}$. On a bien $N = 100\\ \\mathrm{Hz} < N_0$, ce qui confirme le caractère capacitif.",
+          "methode": "Pour trancher la nature d'un circuit, calcule les deux réactances en ohms et compare-les : c'est plus sûr que de raisonner de tête.",
+          "points": 1,
+          "ref": "pc-rlc-force-nature-du-circuit-q2"
+        },
+        {
+          "notion": "Nature du circuit",
+          "difficulty": 2,
+          "statement": "Un circuit $(R,L,C)$ série a pour fréquence propre $N_0 = 500\\ \\mathrm{Hz}$. Le GBF est réglé sur $N = 300\\ \\mathrm{Hz}$. Que peut-on affirmer ?",
+          "options": [
+            {
+              "label": "Le circuit est capacitif : $\\varphi < 0$ et $u$ est en retard sur $i$",
+              "correct": true,
+              "why": "Pour $N<N_0$, $L\\omega$ n'a pas encore atteint $\\frac{1}{C\\omega}$ : la réactance capacitive domine, donc $\\varphi<0$ et $u$ est en retard sur $i$."
+            },
+            {
+              "label": "Le circuit est inductif : $\\varphi > 0$ et $u$ est en avance sur $i$",
+              "why": "C'est le cas $N>N_0$. Ici $N = 300\\ \\mathrm{Hz}$ est **inférieur** à $N_0$, la bobine ne domine donc pas encore."
+            },
+            {
+              "label": "Le circuit est résistif : $\\varphi = 0$ et $u$ est en phase avec $i$",
+              "why": "Cela n'arrive qu'à $N = N_0 = 500\\ \\mathrm{Hz}$. À $300\\ \\mathrm{Hz}$ on est loin de la résonance."
+            },
+            {
+              "label": "Le circuit est capacitif : $\\varphi > 0$ et $u$ est en avance sur $i$",
+              "why": "La nature est bonne, mais le signe est faux : un circuit capacitif a $\\tan\\varphi<0$, donc $\\varphi<0$ et $u$ en **retard** sur $i$."
+            }
+          ],
+          "hint": "Quand la fréquence augmente, laquelle des deux réactances grandit ? Laquelle diminue ?",
+          "solution": "$L\\omega = 2\\pi N L$ **croît** avec la fréquence, tandis que $\\dfrac{1}{C\\omega} = \\dfrac{1}{2\\pi N C}$ **décroît**. Les deux se croisent exactement à $N = N_0$. Donc : pour $N < N_0$, $\\dfrac{1}{C\\omega} > L\\omega$, le circuit est **capacitif** ($\\varphi<0$, $u$ en retard sur $i$) ; pour $N > N_0$ il est inductif. Ici $N = 300\\ \\mathrm{Hz} < 500\\ \\mathrm{Hz}$ : le circuit est capacitif.",
+          "methode": "Retiens la règle de position : $N<N_0 \\Rightarrow$ capacitif ; $N=N_0 \\Rightarrow$ résistif ; $N>N_0 \\Rightarrow$ inductif.",
+          "points": 1,
+          "ref": "pc-rlc-force-nature-du-circuit-q3"
+        },
+        {
+          "notion": "Nature du circuit",
+          "difficulty": 3,
+          "statement": "Un circuit série comporte $L = 0{,}10\\ \\mathrm{H}$ et $C = 10\\ \\mathrm{\\mu F}$, alimenté à la fréquence $N = 200\\ \\mathrm{Hz}$. Quelle est la nature du circuit et la valeur de $X = L\\omega - \\dfrac{1}{C\\omega}$ ?",
+          "options": [
+            {
+              "label": "Inductif, $X = +46\\ \\Omega$",
+              "correct": true,
+              "why": "$\\omega = 2\\pi\\times200 = 1{,}26\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$ : $L\\omega = 126\\ \\Omega$, $\\frac{1}{C\\omega} = 79{,}6\\ \\Omega$, donc $X = +46\\ \\Omega > 0$ : circuit inductif."
+            },
+            {
+              "label": "Capacitif, $X = -480\\ \\Omega$",
+              "why": "Tu as pris $\\omega = N = 200\\ \\mathrm{rad\\,s^{-1}}$ en oubliant le facteur $2\\pi$ : cela donne $20 - 500 = -480\\ \\Omega$. La pulsation vaut $2\\pi N$, soit $1{,}26\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$."
+            },
+            {
+              "label": "Inductif, $X = +205\\ \\Omega$",
+              "why": "Tu as **additionné** les deux réactances : $126 + 79{,}6 = 205\\ \\Omega$. $X$ est une différence, car $\\vec{U_L}$ et $\\vec{U_C}$ sont en opposition de phase."
+            },
+            {
+              "label": "Capacitif, $X = -46\\ \\Omega$",
+              "why": "Tu as calculé $\\frac{1}{C\\omega} - L\\omega$ au lieu de $L\\omega - \\frac{1}{C\\omega}$ : la valeur absolue est bonne mais le signe est inversé, et la conclusion sur la nature l'est aussi."
+            }
+          ],
+          "hint": "Attention : la pulsation n'est pas la fréquence. Calcule $\\omega = 2\\pi N$ avant toute chose.",
+          "solution": "Pulsation : $\\omega = 2\\pi N = 2\\pi\\times200 = 1{,}26\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$. Réactances : $$L\\omega = 0{,}10\\times1256 = 1{,}26\\times10^{2}\\ \\Omega, \\qquad \\frac{1}{C\\omega} = \\frac{1}{10^{-5}\\times1256} = 79{,}6\\ \\Omega.$$ Donc $X = 126 - 79{,}6 = +46\\ \\Omega$ : positif, le circuit est **inductif**. Contrôle : $N_0 = \\frac{1}{2\\pi\\sqrt{LC}} = \\frac{1}{2\\pi\\sqrt{10^{-6}}} = 159\\ \\mathrm{Hz}$ ; comme $N = 200\\ \\mathrm{Hz} > N_0$, le circuit doit effectivement être inductif.",
+          "methode": "Écris $\\omega = 2\\pi N$ au brouillon dès la lecture de l'énoncé : le facteur $2\\pi$ oublié est l'erreur la plus coûteuse du chapitre.",
+          "points": 1,
+          "ref": "pc-rlc-force-nature-du-circuit-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le phénomène",
+        "lesson": "Résonance d'intensité",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-le-phenomene",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Le phénomène",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le phénomène",
+          "difficulty": 1,
+          "statement": "Un circuit $(R,L,C)$ série est à la résonance d'intensité. Quelle proposition est exacte ?",
+          "options": [
+            {
+              "label": "$Z = R$ : l'impédance est **minimale**, $I$ est maximale et $\\varphi = 0$",
+              "correct": true,
+              "why": "À la résonance $L\\omega_0 = \\frac{1}{C\\omega_0}$, donc $Z = \\sqrt{R^2+0} = R$, la plus petite valeur possible ; comme $I = U/Z$, $I$ est maximale, et $\\tan\\varphi = 0$ donne $\\varphi = 0$."
+            },
+            {
+              "label": "$Z$ est **maximale**, $I$ est minimale et $\\varphi = 0$",
+              "why": "Tu as inversé le sens de variation de $Z$. Le terme $\\left(L\\omega-\\frac{1}{C\\omega}\\right)^2$ s'annule à la résonance : $Z$ atteint son **minimum**, pas son maximum."
+            },
+            {
+              "label": "$Z = R$ : l'impédance est minimale, $I$ est maximale et $\\varphi = \\dfrac{\\pi}{2}$",
+              "why": "Les deux premières affirmations sont justes, mais $\\varphi = \\frac{\\pi}{2}$ est faux : avec $Z = R$, $\\cos\\varphi = \\frac{R}{Z} = 1$, donc $\\varphi = 0$."
+            },
+            {
+              "label": "$Z = 0$ : l'impédance s'annule, $I$ est maximale et $\\varphi = 0$",
+              "why": "L'impédance ne s'annule pas : seule la partie réactive disparaît. Il reste $Z = R$, qui est non nul (et qui inclut la résistance $r$ de la bobine)."
+            }
+          ],
+          "hint": "Écris $Z = \\sqrt{R^2+\\left(L\\omega-\\frac{1}{C\\omega}\\right)^2}$ et annule le terme entre parenthèses.",
+          "solution": "À la résonance d'intensité, $L\\omega_0 = \\dfrac{1}{C\\omega_0}$. L'expression de l'impédance devient $$Z = \\sqrt{R^2 + \\left(L\\omega_0-\\frac{1}{C\\omega_0}\\right)^2} = \\sqrt{R^2} = R.$$ C'est la plus petite valeur que $Z$ puisse prendre, car le terme retiré est un carré, donc positif ou nul. Par conséquent $I = \\dfrac{U}{Z} = \\dfrac{U}{R}$ est **maximale**, et $\\tan\\varphi = 0$ donne $\\varphi = 0$ : le circuit se comporte comme une **résistance pure**, $u$ et $i$ sont en phase.",
+          "methode": "À la résonance, remplace mentalement tout le circuit par la seule résistance totale $R = R_0+r$ : $Z=R$, $I=U/R$, $\\varphi=0$, $\\cos\\varphi=1$.",
+          "points": 1,
+          "ref": "pc-rlc-force-le-phenomene-q1"
+        },
+        {
+          "notion": "Le phénomène",
+          "difficulty": 2,
+          "statement": "Un circuit $(R,L,C)$ série comporte $L = 0{,}10\\ \\mathrm{H}$ et $C = 10\\ \\mathrm{\\mu F}$. Quelle est sa fréquence de résonance $N_0$ ?",
+          "options": [
+            {
+              "label": "$N_0 = 1{,}59\\times10^{2}\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "$N_0 = \\frac{1}{2\\pi\\sqrt{LC}}$ avec $LC = 0{,}10\\times10^{-5} = 10^{-6}\\ \\mathrm{s^2}$, donc $\\sqrt{LC} = 10^{-3}\\ \\mathrm{s}$ et $N_0 = \\frac{1}{2\\pi\\times10^{-3}} = 159\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$N_0 = 1{,}00\\times10^{3}\\ \\mathrm{Hz}$",
+              "why": "Tu as donné $\\omega_0 = \\frac{1}{\\sqrt{LC}} = 1000$, qui est une **pulsation** en $\\mathrm{rad\\,s^{-1}}$. Pour obtenir la fréquence, il faut encore diviser par $2\\pi$."
+            },
+            {
+              "label": "$N_0 = 6{,}28\\times10^{3}\\ \\mathrm{Hz}$",
+              "why": "Tu as **multiplié** par $2\\pi$ au lieu de diviser : $2\\pi\\times1000 = 6{,}28\\times10^{3}$. Dans $N_0 = \\frac{\\omega_0}{2\\pi}$, le $2\\pi$ est au dénominateur."
+            },
+            {
+              "label": "$N_0 = 1{,}59\\times10^{5}\\ \\mathrm{Hz}$",
+              "why": "Tu as oublié la racine carrée : $\\frac{1}{2\\pi LC} = \\frac{1}{2\\pi\\times10^{-6}} = 1{,}59\\times10^{5}$. La formule est $N_0 = \\frac{1}{2\\pi\\sqrt{LC}}$."
+            }
+          ],
+          "hint": "Calcule d'abord le produit $LC$, puis sa racine carrée, et seulement ensuite divise par $2\\pi$.",
+          "solution": "Produit : $LC = 0{,}10\\ \\mathrm{H}\\times10\\times10^{-6}\\ \\mathrm{F} = 1{,}0\\times10^{-6}\\ \\mathrm{s^2}$, donc $\\sqrt{LC} = 1{,}0\\times10^{-3}\\ \\mathrm{s}$. Alors $$\\omega_0 = \\frac{1}{\\sqrt{LC}} = 1{,}0\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}, \\qquad N_0 = \\frac{\\omega_0}{2\\pi} = \\frac{1000}{6{,}28} = 1{,}59\\times10^{2}\\ \\mathrm{Hz}.$$ Contrôle : à l'inverse, $2\\pi N_0\\,\\sqrt{LC} = 6{,}28\\times159\\times10^{-3} = 1{,}00$ — l'égalité est bien vérifiée.",
+          "methode": "Enchaîne toujours dans cet ordre : $LC$, puis $\\sqrt{LC}$, puis $\\omega_0 = 1/\\sqrt{LC}$, puis $N_0 = \\omega_0/2\\pi$. Trois étapes, trois pièges évités.",
+          "points": 1,
+          "ref": "pc-rlc-force-le-phenomene-q2"
+        },
+        {
+          "notion": "Le phénomène",
+          "difficulty": 2,
+          "statement": "On veut qu'un circuit série contenant une bobine d'inductance $L = 0{,}50\\ \\mathrm{H}$ entre en résonance à la fréquence $N_0 = 100\\ \\mathrm{Hz}$. Quelle capacité $C$ faut-il choisir ?",
+          "options": [
+            {
+              "label": "$C = 5{,}1\\ \\mathrm{\\mu F}$",
+              "correct": true,
+              "why": "De $N_0 = \\frac{1}{2\\pi\\sqrt{LC}}$ on tire $C = \\frac{1}{L(2\\pi N_0)^2} = \\frac{1}{0{,}50\\times(628)^2} = 5{,}1\\times10^{-6}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$C = 1{,}3\\ \\mathrm{\\mu F}$",
+              "why": "Tu as échangé $L$ et $C$ : $\\frac{L}{(2\\pi N_0)^2} = \\frac{0{,}50}{394\\,800} = 1{,}3\\times10^{-6}$. Dans la formule, $L$ et $C$ sont au même niveau sous la racine, mais c'est bien $C$ qu'on isole au dénominateur."
+            },
+            {
+              "label": "$C = 2{,}0\\times10^{2}\\ \\mathrm{\\mu F}$",
+              "why": "Tu as pris $\\omega_0 = N_0 = 100$ en oubliant le facteur $2\\pi$ : $\\frac{1}{0{,}50\\times100^2} = 2{,}0\\times10^{-4}\\ \\mathrm{F}$."
+            },
+            {
+              "label": "$C = 3{,}2\\times10^{3}\\ \\mathrm{\\mu F}$",
+              "why": "Tu as oublié le carré : $\\frac{1}{0{,}50\\times628} = 3{,}2\\times10^{-3}\\ \\mathrm{F}$. La pulsation apparaît au carré, car $\\omega_0^2 = \\frac{1}{LC}$."
+            }
+          ],
+          "hint": "Part de $\\omega_0^2 = \\dfrac{1}{LC}$ : c'est la forme la plus commode pour isoler $C$.",
+          "solution": "La condition de résonance s'écrit $\\omega_0^2 = \\dfrac{1}{LC}$ avec $\\omega_0 = 2\\pi N_0 = 628\\ \\mathrm{rad\\,s^{-1}}$. On isole $C$ : $$C = \\frac{1}{L\\,\\omega_0^2} = \\frac{1}{0{,}50\\times(628)^2} = \\frac{1}{0{,}50\\times3{,}95\\times10^{5}} = 5{,}1\\times10^{-6}\\ \\mathrm{F} = 5{,}1\\ \\mathrm{\\mu F}.$$ Contrôle : avec ces valeurs, $\\sqrt{LC} = \\sqrt{0{,}50\\times5{,}1\\times10^{-6}} = 1{,}59\\times10^{-3}\\ \\mathrm{s}$ et $N_0 = \\frac{1}{2\\pi\\times1{,}59\\times10^{-3}} = 100\\ \\mathrm{Hz}$ : l'objectif est atteint.",
+          "methode": "Pour accorder un circuit, passe par $\\omega_0 = 2\\pi N_0$ puis $C = \\frac{1}{L\\omega_0^2}$ : deux lignes, sans jamais manipuler la racine.",
+          "points": 1,
+          "ref": "pc-rlc-force-le-phenomene-q3"
+        },
+        {
+          "notion": "Le phénomène",
+          "difficulty": 3,
+          "statement": "À la résonance, un circuit série composé d'un conducteur ohmique $R_0 = 10\\ \\Omega$, d'une bobine $(L, r)$ et d'un condensateur est parcouru par un courant d'intensité efficace $I = 0{,}20\\ \\mathrm{A}$ sous une tension efficace $U = 6{,}0\\ \\mathrm{V}$. Quelle est la résistance $r$ de la bobine ?",
+          "options": [
+            {
+              "label": "$r = 20\\ \\Omega$",
+              "correct": true,
+              "why": "À la résonance $Z = R_0+r = \\frac{U}{I} = \\frac{6{,}0}{0{,}20} = 30\\ \\Omega$, donc $r = 30 - 10 = 20\\ \\Omega$."
+            },
+            {
+              "label": "$r = 30\\ \\Omega$",
+              "why": "Tu t'es arrêté à $Z = 30\\ \\Omega$, qui est la résistance **totale**. Il faut encore en retrancher $R_0 = 10\\ \\Omega$."
+            },
+            {
+              "label": "$r = 32\\ \\Omega$",
+              "why": "Tu as pris $U$ pour une valeur maximale : $\\frac{6{,}0\\sqrt{2}}{0{,}20} - 10 = 32\\ \\Omega$. L'énoncé donne déjà la valeur **efficace**, il n'y a pas de conversion à faire."
+            },
+            {
+              "label": "$r = 11\\ \\Omega$",
+              "why": "Tu as pris $I$ pour une valeur maximale : $\\frac{6{,}0}{0{,}20\\sqrt{2}} - 10 = 11\\ \\Omega$. L'énoncé donne déjà l'intensité **efficace**."
+            }
+          ],
+          "hint": "Que devient l'impédance à la résonance ? Et de quoi est faite la résistance totale ?",
+          "solution": "À la résonance, la partie réactive s'annule et l'impédance se réduit à la résistance totale : $$Z = R_0 + r = \\frac{U}{I} = \\frac{6{,}0\\ \\mathrm{V}}{0{,}20\\ \\mathrm{A}} = 30\\ \\Omega.$$ D'où $$r = 30 - 10 = 20\\ \\Omega.$$ Contrôle par la puissance : $P = U I\\cos\\varphi = 6{,}0\\times0{,}20\\times1 = 1{,}2\\ \\mathrm{W}$, et $(R_0+r)I^2 = 30\\times0{,}20^2 = 1{,}2\\ \\mathrm{W}$. Les deux voies donnent le même résultat.",
+          "methode": "La résonance est la situation la plus commode pour mesurer une résistance : $U/I$ y donne directement $R_0+r$, sans aucun déphasage à connaître.",
+          "points": 1,
+          "ref": "pc-rlc-force-le-phenomene-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'acuité de la résonance",
+        "lesson": "Résonance d'intensité",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 4,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-l-acuite-de-la-resonance",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "L'acuité de la résonance",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "L'acuité de la résonance",
+          "difficulty": 2,
+          "statement": "La courbe de résonance d'un circuit $(R,L,C)$ série présente un maximum à $N_0 = 500\\ \\mathrm{Hz}$ et sa bande passante à $-3\\ \\mathrm{dB}$ s'étend de $N_1 = 475\\ \\mathrm{Hz}$ à $N_2 = 525\\ \\mathrm{Hz}$. Quel est le facteur de qualité $Q$ du circuit ?",
+          "options": [
+            {
+              "label": "$Q = 10$",
+              "correct": true,
+              "why": "La largeur de bande vaut $\\Delta N = N_2 - N_1 = 525 - 475 = 50\\ \\mathrm{Hz}$, donc $Q = \\frac{N_0}{\\Delta N} = \\frac{500}{50} = 10$."
+            },
+            {
+              "label": "$Q = 20$",
+              "why": "Tu n'as utilisé qu'une demi-largeur : $\\frac{500}{525-500} = 20$. La bande passante est la largeur **totale** $N_2-N_1$, pas l'écart au sommet."
+            },
+            {
+              "label": "$Q = 7{,}1$",
+              "why": "Tu as divisé par $\\sqrt{2}$ : $\\frac{10}{1{,}414} = 7{,}1$. Le $\\sqrt{2}$ sert à définir les bornes de la bande passante ($I = I_{max}/\\sqrt{2}$), il n'intervient pas dans $Q = N_0/\\Delta N$."
+            },
+            {
+              "label": "$Q = 0{,}10$",
+              "why": "Tu as pris le rapport inverse : $\\frac{\\Delta N}{N_0} = \\frac{50}{500} = 0{,}10$. Un facteur de qualité élevé correspond à une bande **étroite**, donc $N_0$ va au numérateur."
+            }
+          ],
+          "hint": "Calcule d'abord la largeur de la bande passante, puis compare-la à la fréquence de résonance.",
+          "solution": "La bande passante à $-3\\ \\mathrm{dB}$ est l'intervalle de fréquences pour lesquelles $I \\ge \\dfrac{I_{max}}{\\sqrt{2}}$. Sa largeur vaut $$\\Delta N = N_2 - N_1 = 525 - 475 = 50\\ \\mathrm{Hz}.$$ Le facteur de qualité est le rapport $$Q = \\frac{N_0}{\\Delta N} = \\frac{500}{50} = 10.$$ Contrôle de cohérence : la bande passante est centrée sur $N_0$ ($475$ et $525$ sont symétriques autour de $500$) et ne représente que $10\\ \\%$ de $N_0$ : la résonance est **aiguë**, ce que confirme un $Q$ nettement supérieur à $1$.",
+          "methode": "$Q = \\frac{N_0}{\\Delta N}$ : bande étroite $\\rightarrow$ $Q$ grand $\\rightarrow$ résonance aiguë. Si tu trouves $Q<1$ avec une bande étroite, tu as inversé le rapport.",
+          "points": 1,
+          "ref": "pc-rlc-force-l-acuite-de-la-resonance-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La surtension",
+        "lesson": "Résonance d'intensité",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-la-surtension",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "La surtension",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La surtension",
+          "difficulty": 1,
+          "statement": "À quelle condition observe-t-on, à la résonance, une surtension aux bornes de la bobine et du condensateur ?",
+          "options": [
+            {
+              "label": "Lorsque le facteur de qualité vérifie $Q > 1$",
+              "correct": true,
+              "why": "À la résonance, $U_L = U_C = Q\\,U$. Ces tensions dépassent donc celle du générateur dès que $Q > 1$."
+            },
+            {
+              "label": "Lorsque le facteur de qualité vérifie $Q < 1$",
+              "why": "C'est le cas contraire : avec $Q<1$, les tensions $U_L$ et $U_C$ sont **inférieures** à $U$, il n'y a pas de surtension."
+            },
+            {
+              "label": "Lorsque la résistance totale $R$ du circuit est grande",
+              "why": "$Q = \\frac{L\\omega_0}{R}$ : une grande résistance **diminue** $Q$ et supprime la surtension. C'est d'ailleurs ainsi qu'on s'en protège."
+            },
+            {
+              "label": "Lorsque la fréquence du GBF est très supérieure à $N_0$",
+              "why": "Loin de la résonance, l'intensité est faible et il n'y a pas de surtension. Le phénomène se produit précisément **à** la résonance."
+            }
+          ],
+          "hint": "Compare $U_L$ (ou $U_C$) à la tension $U$ du générateur à la résonance.",
+          "solution": "À la résonance, l'intensité vaut $I = \\dfrac{U}{R}$ et la tension efficace aux bornes du condensateur $$U_C = \\frac{I}{C\\omega_0} = \\frac{U}{R\\,C\\,\\omega_0} = \\frac{L\\omega_0}{R}\\,U = Q\\,U,$$ en utilisant $\\frac{1}{C\\omega_0} = L\\omega_0$. De même $U_L = L\\omega_0 I = Q\\,U$. Il y a donc **surtension** ($U_C > U$ et $U_L > U$) si et seulement si $Q > 1$. C'est un danger réel : avec $Q = 50$ et $U = 6\\ \\mathrm{V}$, le condensateur subirait $300\\ \\mathrm{V}$.",
+          "methode": "Retiens la relation $U_L = U_C = Q\\,U$ à la résonance : elle répond d'un coup à toutes les questions de surtension.",
+          "points": 1,
+          "ref": "pc-rlc-force-la-surtension-q1"
+        },
+        {
+          "notion": "La surtension",
+          "difficulty": 2,
+          "statement": "Un circuit $(R,L,C)$ série de facteur de qualité $Q = 5{,}0$ est alimenté à sa fréquence de résonance par un GBF délivrant $U = 6{,}0\\ \\mathrm{V}$ (valeur efficace). Quelle tension efficace $U_C$ mesure-t-on aux bornes du condensateur ?",
+          "options": [
+            {
+              "label": "$U_C = 30\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "À la résonance $U_C = Q\\,U = 5{,}0\\times6{,}0 = 30\\ \\mathrm{V}$ : il y a surtension d'un facteur $5$."
+            },
+            {
+              "label": "$U_C = 6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as supposé $U_C = U$. La loi des mailles porte sur des **vecteurs** de Fresnel : à la résonance $\\vec{U_L}$ et $\\vec{U_C}$ s'annulent mutuellement, ce qui autorise $U_C$ à dépasser largement $U$."
+            },
+            {
+              "label": "$U_C = 1{,}2\\ \\mathrm{V}$",
+              "why": "Tu as **divisé** par $Q$ : $\\frac{6{,}0}{5{,}0} = 1{,}2\\ \\mathrm{V}$. La relation est $U_C = Q\\,U$, une multiplication."
+            },
+            {
+              "label": "$U_C = 42\\ \\mathrm{V}$",
+              "why": "Tu as multiplié en plus par $\\sqrt{2}$ : $5{,}0\\times6{,}0\\times1{,}414 = 42\\ \\mathrm{V}$. C'est l'amplitude $U_{Cm}$, alors que la question porte sur la valeur **efficace**."
+            }
+          ],
+          "hint": "Quelle relation lie $U_C$, $Q$ et $U$ exactement à la résonance ?",
+          "solution": "À la résonance, $I = \\dfrac{U}{R}$ et $$U_C = \\frac{I}{C\\omega_0} = L\\omega_0 I = \\frac{L\\omega_0}{R}U = Q\\,U = 5{,}0\\times6{,}0 = 30\\ \\mathrm{V}.$$ Comme $Q = 5{,}0 > 1$, il y a bien **surtension** : le condensateur supporte cinq fois la tension du générateur. Contrôle : la bobine subit la même valeur $U_L = 30\\ \\mathrm{V}$, et la somme vectorielle $\\vec{U_L}+\\vec{U_C}$ est nulle (tensions opposées), si bien que $U = U_R = 6{,}0\\ \\mathrm{V}$ : la loi des mailles est respectée.",
+          "methode": "Dès qu'on parle de surtension, écris $U_L = U_C = Q\\,U$ et vérifie que $Q>1$.",
+          "points": 1,
+          "ref": "pc-rlc-force-la-surtension-q2"
+        },
+        {
+          "notion": "La surtension",
+          "difficulty": 2,
+          "statement": "À la résonance, deux voltmètres branchés aux bornes de la bobine (idéale) et du condensateur d'un circuit série indiquent tous deux $24\\ \\mathrm{V}$, alors que le GBF ne délivre que $6{,}0\\ \\mathrm{V}$. Comment expliquer que la loi des mailles soit malgré tout respectée ?",
+          "options": [
+            {
+              "label": "$u_L$ et $u_C$ sont en opposition de phase : à chaque instant leur somme est nulle, et il reste $u = u_R$",
+              "correct": true,
+              "why": "À la résonance $U_L = U_C$ et ces deux tensions sont opposées à chaque instant : $u_L + u_C = 0$. La loi des mailles donne alors $u = u_R$, soit $U = U_R = 6{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "Les voltmètres indiquent des valeurs maximales, pas efficaces : les $24\\ \\mathrm{V}$ ne sont pas comparables aux $6{,}0\\ \\mathrm{V}$",
+              "why": "Un voltmètre en mode alternatif affiche toujours une valeur **efficace**. Les trois lectures sont donc homogènes, et l'explication est ailleurs."
+            },
+            {
+              "label": "La loi des mailles ne s'applique pas en régime sinusoïdal forcé",
+              "why": "Elle s'applique à chaque instant, sans exception : $u = u_R+u_L+u_C$. Ce qui ne s'additionne pas, ce sont les **valeurs efficaces**."
+            },
+            {
+              "label": "Le condensateur restitue l'énergie qu'il a reçue, ce qui annule sa tension en moyenne",
+              "why": "La valeur **moyenne** de $u_C$ est bien nulle, comme celle de toute grandeur sinusoïdale, mais cela ne dit rien sur sa valeur efficace de $24\\ \\mathrm{V}$. L'explication vient de l'opposition de phase entre $u_L$ et $u_C$."
+            }
+          ],
+          "hint": "Compare les phases de $u_L$ et de $u_C$ sur le diagramme de Fresnel à la résonance.",
+          "solution": "La loi des mailles s'écrit à chaque instant $u = u_R + u_L + u_C$. Or $u_L$ est en avance de $\\frac{\\pi}{2}$ sur $i$ et $u_C$ en retard de $\\frac{\\pi}{2}$ : ces deux tensions sont en **opposition de phase**. À la résonance, elles ont de plus la même valeur efficace ($U_L = U_C = Q\\,U$), donc $u_L(t) + u_C(t) = 0$ à tout instant. Il reste $u = u_R$, c'est-à-dire $U = U_R = 6{,}0\\ \\mathrm{V}$. Sur le diagramme de Fresnel, $\\vec{U_L}$ et $\\vec{U_C}$ sont deux vecteurs verticaux opposés de même longueur : leur somme est le vecteur nul, et $\\vec U$ se confond avec $\\vec{U_R}$. Contrôle : le facteur de qualité vaut ici $Q = \\frac{24}{6{,}0} = 4{,}0$.",
+          "methode": "En sinusoïdal, additionne des **vecteurs**, jamais des valeurs efficaces. Deux tensions de $24\\ \\mathrm{V}$ opposées donnent bien $0\\ \\mathrm{V}$.",
+          "points": 1,
+          "ref": "pc-rlc-force-la-surtension-q3"
+        },
+        {
+          "notion": "La surtension",
+          "difficulty": 3,
+          "statement": "Un circuit série contient $L = 0{,}10\\ \\mathrm{H}$ et $C = 10\\ \\mathrm{\\mu F}$. Quelle valeur minimale faut-il donner à la résistance totale $R$ pour qu'aucune surtension n'apparaisse à la résonance ?",
+          "options": [
+            {
+              "label": "$R \\ge 1{,}0\\times10^{2}\\ \\Omega$",
+              "correct": true,
+              "why": "La condition $Q \\le 1$ s'écrit $\\frac{L\\omega_0}{R}\\le1$, soit $R \\ge L\\omega_0 = \\sqrt{\\frac{L}{C}} = \\sqrt{\\frac{0{,}10}{10^{-5}}} = 1{,}0\\times10^{2}\\ \\Omega$."
+            },
+            {
+              "label": "$R \\ge 6{,}3\\times10^{2}\\ \\Omega$",
+              "why": "Tu as glissé un facteur $2\\pi$ en trop : $0{,}10\\times2\\pi\\times1000 = 6{,}3\\times10^{2}\\ \\Omega$. Dans $Q = \\frac{L\\omega_0}{R}$, c'est la **pulsation** $\\omega_0 = 1000\\ \\mathrm{rad\\,s^{-1}}$ qui intervient, déjà."
+            },
+            {
+              "label": "$R \\ge 1{,}0\\times10^{4}\\ \\Omega$",
+              "why": "Tu as oublié la racine carrée : $\\frac{L}{C} = \\frac{0{,}10}{10^{-5}} = 1{,}0\\times10^{4}$. Or $L\\omega_0 = \\frac{L}{\\sqrt{LC}} = \\sqrt{\\frac{L}{C}}$."
+            },
+            {
+              "label": "$R \\ge 1{,}0\\times10^{-2}\\ \\Omega$",
+              "why": "Tu as pris $\\sqrt{\\frac{C}{L}} = \\sqrt{10^{-4}} = 1{,}0\\times10^{-2}$, c'est-à-dire le rapport inversé. Un tel seuil n'imposerait rien du tout."
+            }
+          ],
+          "hint": "Écris la condition $Q \\le 1$ avec $Q = \\frac{L\\omega_0}{R}$, puis exprime $L\\omega_0$ en fonction de $L$ et $C$ seulement.",
+          "solution": "La surtension disparaît lorsque $Q \\le 1$, soit $$\\frac{L\\omega_0}{R} \\le 1 \\quad\\Longleftrightarrow\\quad R \\ge L\\omega_0.$$ Comme $\\omega_0 = \\dfrac{1}{\\sqrt{LC}}$, on a $L\\omega_0 = \\dfrac{L}{\\sqrt{LC}} = \\sqrt{\\dfrac{L}{C}}$, donc $$R \\ge \\sqrt{\\frac{0{,}10\\ \\mathrm{H}}{10\\times10^{-6}\\ \\mathrm{F}}} = \\sqrt{1{,}0\\times10^{4}} = 1{,}0\\times10^{2}\\ \\Omega.$$ Contrôle direct : $\\omega_0 = \\frac{1}{\\sqrt{10^{-6}}} = 1000\\ \\mathrm{rad\\,s^{-1}}$ et $L\\omega_0 = 0{,}10\\times1000 = 100\\ \\Omega$ — même valeur. Avec $R = 100\\ \\Omega$ on obtient $Q = 1$, donc $U_L = U_C = U$ : la limite exacte.",
+          "methode": "La grandeur $\\sqrt{L/C}$, en ohms, est la réactance commune de $L$ et $C$ à la résonance. Compare-la à $R$ pour connaître $Q$ d'un coup d'œil.",
+          "points": 1,
+          "ref": "pc-rlc-force-la-surtension-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La puissance",
+        "lesson": "Résonance d'intensité",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-la-puissance",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "La puissance",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La puissance",
+          "difficulty": 1,
+          "statement": "Quelle est l'expression de la puissance **moyenne** consommée par un circuit $(R,L,C)$ série en régime sinusoïdal forcé ?",
+          "options": [
+            {
+              "label": "$P = U\\,I\\cos\\varphi$",
+              "correct": true,
+              "why": "C'est la définition : le produit des valeurs efficaces, corrigé par le facteur de puissance $\\cos\\varphi = \\frac{R}{Z}$."
+            },
+            {
+              "label": "$P = U\\,I$",
+              "why": "C'est la puissance **apparente** (en voltampères). Elle ne vaut la puissance moyenne qu'à la résonance, où $\\cos\\varphi = 1$."
+            },
+            {
+              "label": "$P = U\\,I\\sin\\varphi$",
+              "why": "Tu as pris le sinus. C'est la puissance **réactive**, celle qui est échangée sans être consommée ; la puissance moyenne dissipée fait intervenir le cosinus."
+            },
+            {
+              "label": "$P = \\dfrac{U\\,I}{\\cos\\varphi}$",
+              "why": "Tu as divisé par $\\cos\\varphi$. Comme $\\cos\\varphi \\le 1$, cela donnerait $P \\ge U I$ : le circuit consommerait plus que la puissance apparente, ce qui est impossible."
+            }
+          ],
+          "hint": "Quelle grandeur, dans le circuit, est la seule à consommer réellement de l'énergie ?",
+          "solution": "Seule la résistance totale dissipe de l'énergie (effet Joule) ; la bobine et le condensateur l'échangent sans la consommer. La puissance moyenne vaut donc $$P = U\\,I\\cos\\varphi \\quad\\text{avec}\\quad \\cos\\varphi = \\frac{R}{Z},$$ ce que l'on peut aussi écrire $P = \\dfrac{U}{Z}\\,I\\,R = R\\,I^2$ : on retrouve bien la puissance Joule dans la résistance totale.",
+          "methode": "Deux expressions équivalentes, à choisir selon les données : $P = UI\\cos\\varphi$ si tu connais $\\varphi$, $P = R\\,I^2$ si tu connais $R$.",
+          "points": 1,
+          "ref": "pc-rlc-force-la-puissance-q1"
+        },
+        {
+          "notion": "La puissance",
+          "difficulty": 2,
+          "statement": "Un circuit $(R,L,C)$ série est alimenté sous $U = 10\\ \\mathrm{V}$ ; l'ampèremètre indique $I = 0{,}20\\ \\mathrm{A}$ et le facteur de puissance vaut $\\cos\\varphi = 0{,}60$. Quelle est la puissance moyenne consommée ?",
+          "options": [
+            {
+              "label": "$P = 1{,}2\\ \\mathrm{W}$",
+              "correct": true,
+              "why": "$P = U I\\cos\\varphi = 10\\times0{,}20\\times0{,}60 = 1{,}2\\ \\mathrm{W}$."
+            },
+            {
+              "label": "$P = 2{,}0\\ \\mathrm{W}$",
+              "why": "Tu as oublié le facteur de puissance : $10\\times0{,}20 = 2{,}0$. C'est la puissance **apparente** en $\\mathrm{V\\,A}$, pas la puissance consommée."
+            },
+            {
+              "label": "$P = 1{,}6\\ \\mathrm{W}$",
+              "why": "Tu as utilisé le sinus : $\\sin\\varphi = 0{,}80$ et $10\\times0{,}20\\times0{,}80 = 1{,}6$. La puissance moyenne fait intervenir le **cosinus**."
+            },
+            {
+              "label": "$P = 3{,}3\\ \\mathrm{W}$",
+              "why": "Tu as divisé par $\\cos\\varphi$ : $\\frac{2{,}0}{0{,}60} = 3{,}3$. Le facteur de puissance **réduit** la puissance consommée, il la multiplie."
+            }
+          ],
+          "hint": "Applique directement la formule de la puissance moyenne, sans oublier le troisième facteur.",
+          "solution": "$$P = U\\,I\\,\\cos\\varphi = 10\\ \\mathrm{V}\\times0{,}20\\ \\mathrm{A}\\times0{,}60 = 1{,}2\\ \\mathrm{W}.$$ Contrôle par l'autre voie : $Z = \\frac{U}{I} = 50\\ \\Omega$ et $R = Z\\cos\\varphi = 30\\ \\Omega$, donc $P = R I^2 = 30\\times0{,}20^2 = 1{,}2\\ \\mathrm{W}$. Les deux expressions concordent.",
+          "methode": "Trois facteurs dans $P = UI\\cos\\varphi$ : compte-les avant de valider ton résultat.",
+          "points": 1,
+          "ref": "pc-rlc-force-la-puissance-q2"
+        },
+        {
+          "notion": "La puissance",
+          "difficulty": 2,
+          "statement": "Dans le même circuit que précédemment, la résistance totale vaut $R = 30\\ \\Omega$ et l'intensité efficace $I = 0{,}20\\ \\mathrm{A}$. Retrouve la puissance moyenne par la voie de l'effet Joule.",
+          "options": [
+            {
+              "label": "$P = 1{,}2\\ \\mathrm{W}$",
+              "correct": true,
+              "why": "$P = R\\,I^2 = 30\\times(0{,}20)^2 = 30\\times0{,}040 = 1{,}2\\ \\mathrm{W}$, en accord avec $U I\\cos\\varphi$."
+            },
+            {
+              "label": "$P = 6{,}0\\ \\mathrm{W}$",
+              "why": "Tu as oublié le carré : $30\\times0{,}20 = 6{,}0$. L'intensité intervient au carré dans la puissance Joule."
+            },
+            {
+              "label": "$P = 2{,}4\\ \\mathrm{W}$",
+              "why": "Tu as utilisé l'intensité **maximale** : $30\\times(0{,}20\\sqrt{2})^2 = 30\\times0{,}080 = 2{,}4\\ \\mathrm{W}$. La formule $P = R I^2$ exige la valeur **efficace**, c'est tout l'intérêt de cette grandeur."
+            },
+            {
+              "label": "$P = 0{,}60\\ \\mathrm{W}$",
+              "why": "Tu as divisé par $2$ en croyant corriger un passage du maximum à l'efficace. Avec $I$ efficace, aucune correction n'est nécessaire."
+            }
+          ],
+          "hint": "Dans $P = R\\,I^2$, quelle valeur de l'intensité faut-il utiliser ?",
+          "solution": "La puissance moyenne est entièrement dissipée par effet Joule dans la résistance totale : $$P = R\\,I^2 = 30\\ \\Omega\\times(0{,}20\\ \\mathrm{A})^2 = 1{,}2\\ \\mathrm{W}.$$ C'est exactement la valeur trouvée par $P = UI\\cos\\varphi = 10\\times0{,}20\\times0{,}60$. Contrôle : la cohérence des deux voies vient de $R = Z\\cos\\varphi$ et $U = Z I$, donc $UI\\cos\\varphi = Z I^2\\cos\\varphi = R I^2$.",
+          "methode": "La valeur efficace est **définie** pour que $P = R I^2$ s'écrive comme en continu : n'y ajoute jamais de $\\sqrt{2}$ ni de facteur $\\frac12$.",
+          "points": 1,
+          "ref": "pc-rlc-force-la-puissance-q3"
+        },
+        {
+          "notion": "La puissance",
+          "difficulty": 3,
+          "statement": "Un circuit série de résistance totale $R = 25\\ \\Omega$ est alimenté sous une tension efficace $U = 10\\ \\mathrm{V}$ et réglé **à sa fréquence de résonance**. Quelle puissance moyenne consomme-t-il ?",
+          "options": [
+            {
+              "label": "$P = 4{,}0\\ \\mathrm{W}$",
+              "correct": true,
+              "why": "À la résonance $\\cos\\varphi = 1$ et $Z = R$, donc $I = \\frac{U}{R} = 0{,}40\\ \\mathrm{A}$ et $P = U I = \\frac{U^2}{R} = \\frac{100}{25} = 4{,}0\\ \\mathrm{W}$."
+            },
+            {
+              "label": "$P = 2{,}0\\ \\mathrm{W}$",
+              "why": "Tu as appliqué $P = \\frac{U_m^2}{2R}$ mais avec la valeur **efficace** à la place de $U_m$ : $\\frac{100}{2\\times25} = 2{,}0\\ \\mathrm{W}$. Cette formule en $\\frac12$ n'est valable qu'avec l'amplitude."
+            },
+            {
+              "label": "$P = 8{,}0\\ \\mathrm{W}$",
+              "why": "Tu as utilisé la tension **maximale** : $\\frac{(10\\sqrt{2})^2}{25} = \\frac{200}{25} = 8{,}0\\ \\mathrm{W}$. La formule $P = \\frac{U^2}{R}$ réclame la valeur efficace."
+            },
+            {
+              "label": "$P = 0{,}40\\ \\mathrm{W}$",
+              "why": "Tu as calculé $\\frac{U}{R} = 0{,}40$, qui est l'**intensité** en ampères, et tu l'as donnée en watts. Il reste à la multiplier par $U$."
+            }
+          ],
+          "hint": "À la résonance, par quoi se simplifie l'expression $P = U I\\cos\\varphi$ ?",
+          "solution": "À la résonance, $Z = R$ et $\\varphi = 0$ donc $\\cos\\varphi = 1$. L'intensité efficace vaut $$I = \\frac{U}{Z} = \\frac{U}{R} = \\frac{10}{25} = 0{,}40\\ \\mathrm{A},$$ et la puissance moyenne $$P = U\\,I\\,\\cos\\varphi = U\\,I = \\frac{U^2}{R} = \\frac{(10)^2}{25} = 4{,}0\\ \\mathrm{W}.$$ Contrôle : $R I^2 = 25\\times0{,}40^2 = 4{,}0\\ \\mathrm{W}$. C'est la puissance **maximale** que ce circuit puisse consommer sous $10\\ \\mathrm{V}$, puisque $I$ y est maximale et $\\cos\\varphi$ y vaut $1$.",
+          "methode": "À la résonance, le circuit est une résistance pure : $P = \\frac{U^2}{R}$, et c'est le maximum de puissance atteignable à $U$ fixée.",
+          "points": 1,
+          "ref": "pc-rlc-force-la-puissance-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Retour sur le diagramme de Fresnel",
+        "lesson": "Approfondissement — RLC en régime sinusoïdal forcé",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-retour-sur-le-diagramme-de-fresnel",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Retour sur le diagramme de Fresnel",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Retour sur le diagramme de Fresnel",
+          "difficulty": 3,
+          "statement": "Un circuit série comporte un conducteur ohmique de résistance totale $R$, une bobine supposée idéale et un condensateur. Trois voltmètres indiquent $U = 13\\ \\mathrm{V}$ aux bornes du GBF, $U_R = 5{,}0\\ \\mathrm{V}$ et $U_C = 4{,}0\\ \\mathrm{V}$. Quelle est la tension efficace $U_L$ aux bornes de la bobine ?",
+          "options": [
+            {
+              "label": "$U_L = 16\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "La relation de Fresnel donne $U^2 = U_R^2 + (U_L-U_C)^2$, donc $|U_L-U_C| = \\sqrt{13^2-5{,}0^2} = \\sqrt{144} = 12\\ \\mathrm{V}$. La racine $U_L = 4{,}0-12 = -8{,}0\\ \\mathrm{V}$ est impossible (une valeur efficace est positive), il reste $U_L = 4{,}0+12 = 16\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$U_L = 4{,}0\\ \\mathrm{V}$",
+              "why": "Tu as additionné les valeurs efficaces : $U_L = U - U_R - U_C = 13-5{,}0-4{,}0 = 4{,}0\\ \\mathrm{V}$. En sinusoïdal, la loi des mailles s'additionne **vectoriellement**, pas en valeurs efficaces."
+            },
+            {
+              "label": "$U_L = 12\\ \\mathrm{V}$",
+              "why": "Tu t'es arrêté à $|U_L-U_C| = \\sqrt{13^2-5{,}0^2} = 12\\ \\mathrm{V}$ : c'est la **différence** $U_L-U_C$, il reste à y ajouter $U_C = 4{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$U_L = 18\\ \\mathrm{V}$",
+              "why": "Tu as mis un $+$ sous la racine : $\\sqrt{13^2+5{,}0^2} = 13{,}9$, puis $4{,}0+13{,}9 \\approx 18\\ \\mathrm{V}$. Dans $U^2 = U_R^2+(U_L-U_C)^2$, c'est $U$ qui est l'hypoténuse : on **retire** $U_R^2$ de $U^2$."
+            }
+          ],
+          "hint": "Place $\\vec{U_R}$ sur l'axe de référence, puis $\\vec{U_L}$ et $\\vec{U_C}$ verticaux et opposés : le triangle rectangle te donne une équation sur $U_L-U_C$.",
+          "solution": "Sur le diagramme de Fresnel, $\\vec{U_R}$ est porté par l'axe de référence (en phase avec $i$), $\\vec{U_L}$ est vertical vers le haut et $\\vec{U_C}$ vertical vers le bas. Le triangle rectangle donne\n$$U^2 = U_R^2 + \\left(U_L - U_C\\right)^2 .$$\nD'où $$\\left(U_L-U_C\\right)^2 = 13^2 - 5{,}0^2 = 169 - 25 = 144 \\quad\\Longrightarrow\\quad U_L - U_C = \\pm 12\\ \\mathrm{V}.$$\nLe signe $-$ conduirait à $U_L = 4{,}0 - 12 = -8{,}0\\ \\mathrm{V}$, ce qui est exclu : une valeur efficace est toujours positive. On retient donc\n$$U_L = U_C + 12 = 4{,}0 + 12 = 16\\ \\mathrm{V}.$$\nComme $U_L > U_C$, le circuit est **inductif** et $\\vec U$ est au-dessus de l'axe de référence, avec $\\cos\\varphi = \\dfrac{U_R}{U} = \\dfrac{5{,}0}{13} = 0{,}38$. Contrôle : $\\sqrt{5{,}0^2+(16-4{,}0)^2} = \\sqrt{25+144} = 13\\ \\mathrm{V}$, on retrouve bien la tension du GBF.",
+          "methode": "Le diagramme de Fresnel du circuit série, c'est toujours le même triangle rectangle : côtés $U_R$ et $|U_L-U_C|$, hypoténuse $U$. Une racine négative se rejette d'office.",
+          "points": 1,
+          "ref": "pc-rlc-force-retour-sur-le-diagramme-de-fresnel-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Comportement asymptotique et filtrage",
+        "lesson": "Approfondissement — RLC en régime sinusoïdal forcé",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-comportement-asymptotique-et-filtrage",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Comportement asymptotique et filtrage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Comportement asymptotique et filtrage",
+          "difficulty": 3,
+          "statement": "Un circuit série de résistance totale $R = 25\\ \\Omega$ contient une bobine idéale $L = 0{,}20\\ \\mathrm{H}$ et un condensateur $C = 1{,}0\\ \\mathrm{\\mu F}$ ; sa fréquence propre vaut $N_0 = 356\\ \\mathrm{Hz}$. Le GBF délivre une tension efficace constante $U = 6{,}0\\ \\mathrm{V}$ et on le règle **très en dessous** de la résonance, à $N = 50\\ \\mathrm{Hz}$. Que lit l'ampèremètre ?",
+          "options": [
+            {
+              "label": "$I = 1{,}9\\times10^{-3}\\ \\mathrm{A}$",
+              "correct": true,
+              "why": "À $50\\ \\mathrm{Hz}$ : $L\\omega = 0{,}20\\times314 = 63\\ \\Omega$ et $\\frac{1}{C\\omega} = 3{,}2\\times10^{3}\\ \\Omega$, donc $Z = \\sqrt{25^2+(63-3183)^2} \\approx 3{,}1\\times10^{3}\\ \\Omega$ et $I = \\frac{6{,}0}{3120} = 1{,}9\\times10^{-3}\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$I = 2{,}4\\times10^{-1}\\ \\mathrm{A}$",
+              "why": "Tu as pris $Z = R$ : $\\frac{6{,}0}{25} = 0{,}24\\ \\mathrm{A}$. Mais $Z = R$ n'est vrai qu'**à la résonance** ; à $50\\ \\mathrm{Hz}$ on est très loin de $N_0$ et le terme réactif écrase $R$."
+            },
+            {
+              "label": "$I = 8{,}9\\times10^{-2}\\ \\mathrm{A}$",
+              "why": "Tu as écrit la réactance du condensateur $C\\omega = 3{,}1\\times10^{-4}\\ \\Omega$ au lieu de $\\frac{1}{C\\omega}$ : il reste $Z = \\sqrt{25^2+62{,}8^2} = 68\\ \\Omega$ et $\\frac{6{,}0}{68} = 8{,}9\\times10^{-2}\\ \\mathrm{A}$."
+            },
+            {
+              "label": "$I = 6{,}2\\times10^{-7}\\ \\mathrm{A}$",
+              "why": "Tu as oublié la racine carrée : $R^2+\\left(L\\omega-\\frac{1}{C\\omega}\\right)^2 = 9{,}7\\times10^{6}$, et $\\frac{6{,}0}{9{,}7\\times10^{6}} = 6{,}2\\times10^{-7}$. Cette quantité est en $\\Omega^2$, pas en $\\Omega$."
+            }
+          ],
+          "hint": "Compare $L\\omega$ et $\\frac{1}{C\\omega}$ à $50\\ \\mathrm{Hz}$ : lequel des deux est écrasant ? C'est lui qui fixe l'impédance.",
+          "solution": "À $N = 50\\ \\mathrm{Hz}$, $\\omega = 2\\pi\\times50 = 3{,}14\\times10^{2}\\ \\mathrm{rad\\,s^{-1}}$, donc\n$$L\\omega = 0{,}20\\times314 = 63\\ \\Omega, \\qquad \\frac{1}{C\\omega} = \\frac{1}{1{,}0\\times10^{-6}\\times314} = 3{,}2\\times10^{3}\\ \\Omega.$$\nLa réactance du condensateur est $50$ fois plus grande que celle de la bobine : c'est elle qui impose tout.\n$$Z = \\sqrt{R^2+\\left(L\\omega-\\frac{1}{C\\omega}\\right)^2} = \\sqrt{25^2+(-3{,}12\\times10^{3})^2} = 3{,}1\\times10^{3}\\ \\Omega$$\n$$I = \\frac{U}{Z} = \\frac{6{,}0}{3{,}12\\times10^{3}} = 1{,}9\\times10^{-3}\\ \\mathrm{A} = 1{,}9\\ \\mathrm{mA}.$$\nContrôle et interprétation : à la résonance on aurait $I_{max} = \\frac{U}{R} = \\frac{6{,}0}{25} = 0{,}24\\ \\mathrm{A}$, soit $125$ fois plus. Aux basses fréquences le condensateur se comporte presque comme un interrupteur ouvert et bloque le courant ; aux très hautes fréquences c'est la bobine qui joue ce rôle, car $L\\omega$ devient énorme. Le circuit $(R,L,C)$ série ne laisse donc passer le courant que dans une bande de fréquences autour de $N_0$ : c'est un **filtre passe-bande**.",
+          "methode": "Loin de la résonance, néglige $R$ et ne garde que la plus grande des deux réactances : $Z \\approx \\frac{1}{C\\omega}$ en basse fréquence, $Z \\approx L\\omega$ en haute fréquence.",
+          "points": 1,
+          "ref": "pc-rlc-force-comportement-asymptotique-et-filtrage-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Résonance de charge et résonance de tension",
+        "lesson": "Approfondissement — RLC en régime sinusoïdal forcé",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-resonance-de-charge-et-resonance-de-tens",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Résonance de charge et résonance de tension",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Résonance de charge et résonance de tension",
+          "difficulty": 3,
+          "statement": "Un circuit $(R,L,C)$ série de facteur de qualité $Q = 4{,}0$ est alimenté par un GBF de tension efficace $U$ **constante** dont on fait varier la fréquence $N$. On suit à la fois l'intensité efficace $I$ et la tension efficace $U_C$ aux bornes du condensateur. Quelle affirmation est exacte ?",
+          "options": [
+            {
+              "label": "$I$ est maximale exactement à $N_0$, alors que $U_C$ passe par son maximum à une fréquence un peu **inférieure** à $N_0$ (ici environ $0{,}98\\,N_0$).",
+              "correct": true,
+              "why": "$I = \\frac{U}{Z}$ est maximale quand $Z$ est minimale, c'est-à-dire exactement à $N_0$. Mais $U_C = \\frac{I}{C\\omega}$ : le facteur $\\frac{1}{C\\omega}$ décroît quand $N$ augmente, il déplace donc le maximum de $U_C$ légèrement **avant** $N_0$."
+            },
+            {
+              "label": "$I$, $U_C$ et $U_L$ sont maximales exactement à la même fréquence $N_0$, quelle que soit la valeur de $Q$.",
+              "why": "C'est seulement une très bonne approximation quand $Q$ est grand. Comme $U_C = \\frac{I}{C\\omega}$ et $U_L = L\\omega I$, les deux facteurs $\\frac{1}{C\\omega}$ et $L\\omega$ déplacent les maximums de part et d'autre de $N_0$ ; l'écart est d'autant plus net que $Q$ est petit."
+            },
+            {
+              "label": "$U_C$ passe par son maximum un peu au-dessus de $N_0$, et $U_L$ un peu en dessous de $N_0$.",
+              "why": "C'est exactement l'inverse. $\\frac{1}{C\\omega}$ **décroît** avec la fréquence : le maximum de $U_C$ est en dessous de $N_0$. $L\\omega$ **croît** avec la fréquence : le maximum de $U_L$ est au-dessus de $N_0$."
+            },
+            {
+              "label": "La courbe $U_C(N)$ ne présente de maximum que si $Q < \\frac{1}{\\sqrt{2}} \\approx 0{,}71$, ce qui n'est pas le cas ici.",
+              "why": "La condition est inversée : un maximum de $U_C$ n'apparaît que si $Q > \\frac{1}{\\sqrt{2}}$. Avec $Q = 4{,}0$, la résonance de charge existe bien — et elle est même très marquée, avec $U_{C,max} \\approx 4{,}0\\,U$."
+            }
+          ],
+          "hint": "Écris $U_C$ comme le produit de deux facteurs dépendant de la fréquence, et demande-toi si maximiser un produit revient à maximiser un seul de ses facteurs.",
+          "solution": "Il faut distinguer deux résonances.\n\n**Résonance d'intensité.** $I = \\dfrac{U}{Z}$ avec $Z = \\sqrt{R^2+\\left(L\\omega-\\frac{1}{C\\omega}\\right)^2}$. L'impédance est minimale, et donc $I$ maximale, quand $L\\omega = \\dfrac{1}{C\\omega}$, soit **exactement** à $\\omega_0 = \\dfrac{1}{\\sqrt{LC}}$. Là, $Z = R$, $I_{max} = \\dfrac{U}{R}$ et $\\varphi = 0$.\n\n**Résonance de charge (ou de tension) aux bornes du condensateur.** La charge vaut $q = C\\,u_C$, donc étudier $U_C$ revient à étudier l'amplitude de la charge. Or\n$$U_C = \\frac{I}{C\\omega} = \\frac{U}{C\\omega\\,Z}.$$\nCe n'est plus $Z$ seule qu'il faut minimiser, mais le produit $C\\omega\\,Z$. Comme $\\frac{1}{C\\omega}$ diminue quand la fréquence augmente, le maximum de $U_C$ est atteint **un peu avant** $N_0$. On montre que cette fréquence vaut $N_C = N_0\\sqrt{1-\\frac{1}{2Q^2}}$, soit ici $N_C = N_0\\sqrt{1-\\frac{1}{32}} = 0{,}984\\,N_0$ : à peine $1{,}6\\ \\%$ en dessous de $N_0$. Symétriquement, $U_L = L\\omega I$ est maximale un peu **après** $N_0$.\n\nContrôle et retenue pratique : plus $Q$ est grand, plus ces trois fréquences se confondent. Au BAC, avec un circuit peu amorti, on confond les résonances de charge et d'intensité ; mais la résonance d'**intensité** est la seule qui tombe rigoureusement à $N_0$, et c'est elle qu'on repère au maximum de l'ampèremètre.",
+          "methode": "Un seul maximum est exactement en $N_0$ : celui de $I$. Dès qu'une grandeur s'écrit $I$ multipliée par une réactance, son maximum se décale — vers le bas pour $U_C$, vers le haut pour $U_L$.",
+          "points": 1,
+          "ref": "pc-rlc-force-resonance-de-charge-et-resonance-de-tens-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Analogie mécanique",
+        "lesson": "Approfondissement — RLC en régime sinusoïdal forcé",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-analogie-mecanique",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Analogie mécanique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Analogie mécanique",
+          "difficulty": 3,
+          "statement": "Un oscillateur mécanique (masse $m$, ressort de raideur $k$, frottement visqueux de coefficient $h$) est soumis à une force excitatrice sinusoïdale d'amplitude $F_m$ constante. Par analogie avec le circuit $(R,L,C)$ série ($m \\leftrightarrow L$, $h \\leftrightarrow R$, $\\frac{1}{k} \\leftrightarrow C$, $v \\leftrightarrow i$), il présente une résonance de vitesse à $N_0 = \\frac{1}{2\\pi}\\sqrt{\\frac{k}{m}}$, d'amplitude $v_m = \\frac{F_m}{h}$ et de facteur de qualité $Q = \\frac{m\\omega_0}{h}$. On **double** le coefficient de frottement $h$, tout le reste étant inchangé. Qu'observe-t-on ?",
+          "options": [
+            {
+              "label": "$v_m$ est divisée par $2$, $Q$ est divisé par $2$, et la fréquence de résonance reste égale à $N_0$.",
+              "correct": true,
+              "why": "$v_m = \\frac{F_m}{h}$ et $Q = \\frac{m\\omega_0}{h}$ sont tous deux inversement proportionnels à $h$ : ils sont divisés par $2$. Et $N_0 = \\frac{1}{2\\pi}\\sqrt{\\frac{k}{m}}$ ne contient pas $h$ — exactement comme $I_{max} = \\frac{U}{R}$, $Q = \\frac{L\\omega_0}{R}$ et $N_0 = \\frac{1}{2\\pi\\sqrt{LC}}$ dans le circuit."
+            },
+            {
+              "label": "$v_m$ est divisée par $2$, $Q$ reste inchangé, et la fréquence de résonance reste égale à $N_0$.",
+              "why": "Tu as oublié que $h$ figure aussi dans $Q = \\frac{m\\omega_0}{h}$ : doubler $h$ divise $Q$ par $2$, donc la résonance devient deux fois plus floue et la bande passante deux fois plus large. C'est l'analogue de doubler $R$, qui divise $Q = \\frac{L\\omega_0}{R}$ par $2$."
+            },
+            {
+              "label": "$v_m$ est divisée par $4$, $Q$ est divisé par $2$, et la fréquence de résonance reste égale à $N_0$.",
+              "why": "Tu as raisonné sur l'énergie cinétique maximale, qui varie comme $v_m^2$ et est bien divisée par $4$. La question porte sur la **vitesse** : $v_m = \\frac{F_m}{h}$ n'est divisée que par $2$."
+            },
+            {
+              "label": "$v_m$ est divisée par $2$, $Q$ est divisé par $2$, et la fréquence de résonance est elle aussi divisée par $2$.",
+              "why": "La fréquence de résonance ne dépend pas de l'amortissement : $N_0 = \\frac{1}{2\\pi}\\sqrt{\\frac{k}{m}}$ ne contient ni $h$ ni $F_m$. L'amortissement change la **hauteur** et la **largeur** du pic, jamais sa position — tout comme $R$ ne déplace pas $N_0 = \\frac{1}{2\\pi\\sqrt{LC}}$."
+            }
+          ],
+          "hint": "Repère dans quelles expressions $h$ apparaît, et dans lesquelles il n'apparaît pas.",
+          "solution": "L'analogie électromécanique associe la masse $m$ à l'inductance $L$, le coefficient de frottement $h$ à la résistance $R$, l'inverse de la raideur $\\frac{1}{k}$ à la capacité $C$, la vitesse $v$ à l'intensité $i$ et la force excitatrice $F$ à la tension $u$. Les trois grandeurs demandées se lisent donc directement sur leurs analogues électriques.\n\n- **Amplitude à la résonance** : $v_m = \\dfrac{F_m}{h}$, analogue de $I_{max} = \\dfrac{U}{R}$. Si $h$ double, $v_m$ est **divisée par 2**.\n- **Facteur de qualité** : $Q = \\dfrac{m\\omega_0}{h}$, analogue de $Q = \\dfrac{L\\omega_0}{R}$. Si $h$ double, $Q$ est **divisé par 2** : la bande passante $\\Delta N = \\dfrac{N_0}{Q}$ est deux fois plus large, la résonance est plus floue.\n- **Position du pic** : $N_0 = \\dfrac{1}{2\\pi}\\sqrt{\\dfrac{k}{m}}$, analogue de $N_0 = \\dfrac{1}{2\\pi\\sqrt{LC}}$. Aucune des deux expressions ne contient l'amortissement : la fréquence de résonance **ne bouge pas**.\n\nContrôle : la puissance moyenne fournie à la résonance passe de $\\dfrac{F_{eff}^2}{h}$ à $\\dfrac{F_{eff}^2}{2h}$, elle est divisée par $2$ comme $v_m$ — cohérent avec $P = \\dfrac{U^2}{R}$ dans le circuit.",
+          "methode": "Traduis d'abord la question en langage électrique ($m\\to L$, $h\\to R$, $k\\to\\frac1C$), réponds sur le circuit, puis retraduis : c'est plus sûr que de retenir les formules mécaniques.",
+          "points": 1,
+          "ref": "pc-rlc-force-analogie-mecanique-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Améliorer le facteur de puissance",
+        "lesson": "Approfondissement — RLC en régime sinusoïdal forcé",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-rlc-force-ameliorer-le-facteur-de-puissance",
+      "chapter": "pc-rlc-force",
+      "kind": "qcu",
+      "title": "Améliorer le facteur de puissance",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Améliorer le facteur de puissance",
+          "difficulty": 3,
+          "statement": "Un dipôle série comporte un conducteur ohmique et une bobine d'inductance $L = 0{,}15\\ \\mathrm{H}$ ; il est alimenté sous la fréquence $N = 50\\ \\mathrm{Hz}$ et son facteur de puissance est nettement inférieur à $1$. On place **en série** un condensateur de capacité $C$ pour porter le facteur de puissance à $1$. Quelle valeur faut-il donner à $C$ ?",
+          "options": [
+            {
+              "label": "$C = 68\\ \\mathrm{\\mu F}$",
+              "correct": true,
+              "why": "$\\cos\\varphi = 1$ exige $L\\omega = \\frac{1}{C\\omega}$, soit $C = \\frac{1}{L\\omega^2} = \\frac{1}{0{,}15\\times(314)^2} = 6{,}8\\times10^{-5}\\ \\mathrm{F} = 68\\ \\mathrm{\\mu F}$."
+            },
+            {
+              "label": "$C = 4{,}2\\times10^{2}\\ \\mathrm{\\mu F}$",
+              "why": "Tu as écrit $\\omega^2 = 2\\pi N^2 = 2\\pi\\times50^2 = 1{,}57\\times10^{4}$ au lieu de $(2\\pi N)^2$ : $\\frac{1}{0{,}15\\times1{,}57\\times10^{4}} = 4{,}2\\times10^{-4}\\ \\mathrm{F}$. Le carré porte sur **tout** $2\\pi N$."
+            },
+            {
+              "label": "$C = 2{,}7\\times10^{3}\\ \\mathrm{\\mu F}$",
+              "why": "Tu as utilisé la fréquence au lieu de la pulsation : $\\frac{1}{0{,}15\\times50^2} = 2{,}7\\times10^{-3}\\ \\mathrm{F}$. Dans $L\\omega$ et $\\frac{1}{C\\omega}$ c'est toujours $\\omega = 2\\pi N$ qui intervient."
+            },
+            {
+              "label": "$C = 2{,}1\\times10^{4}\\ \\mathrm{\\mu F}$",
+              "why": "Tu as résolu $\\frac{1}{C} = L\\omega$ et oublié un $\\omega$ : $\\frac{1}{0{,}15\\times314} = 2{,}1\\times10^{-2}\\ \\mathrm{F}$. La condition est $\\frac{1}{C\\omega} = L\\omega$, donc $C = \\frac{1}{L\\omega^2}$."
+            }
+          ],
+          "hint": "Un facteur de puissance égal à $1$ signifie $\\varphi = 0$ : écris la condition correspondante sur $L\\omega$ et $\\frac{1}{C\\omega}$.",
+          "solution": "Le facteur de puissance est $\\cos\\varphi = \\dfrac{R}{Z}$. Il vaut $1$ lorsque $Z = R$, c'est-à-dire lorsque le terme réactif s'annule :\n$$L\\omega - \\frac{1}{C\\omega} = 0 \\quad\\Longleftrightarrow\\quad L\\omega = \\frac{1}{C\\omega} \\quad\\Longleftrightarrow\\quad C = \\frac{1}{L\\omega^2}.$$\nC'est exactement la condition de résonance : on amène le circuit à résonner à la fréquence du réseau. Avec $\\omega = 2\\pi\\times50 = 3{,}14\\times10^{2}\\ \\mathrm{rad\\,s^{-1}}$ :\n$$C = \\frac{1}{0{,}15\\times(3{,}14\\times10^{2})^2} = \\frac{1}{0{,}15\\times9{,}87\\times10^{4}} = \\frac{1}{1{,}48\\times10^{4}} = 6{,}8\\times10^{-5}\\ \\mathrm{F} = 68\\ \\mathrm{\\mu F}.$$\nContrôle : avec cette capacité, $\\dfrac{1}{C\\omega} = \\dfrac{1}{6{,}8\\times10^{-5}\\times314} = 47\\ \\Omega$, et $L\\omega = 0{,}15\\times314 = 47\\ \\Omega$ — les deux réactances se compensent bien.\n\nIntérêt : à tension $U$ et puissance utile fixées, $P = UI\\cos\\varphi$ montre que plus $\\cos\\varphi$ est proche de $1$, plus l'intensité $I$ nécessaire est faible, donc moins il y a de pertes par effet Joule dans les câbles. C'est pour cela qu'on compense l'effet inductif par un condensateur.",
+          "methode": "« Facteur de puissance égal à 1 » = « circuit à la résonance ». Écris $L\\omega = \\frac{1}{C\\omega}$ et isole l'inconnue : $C = \\frac{1}{L\\omega^2}$ ou $L = \\frac{1}{C\\omega^2}$.",
+          "points": 1,
+          "ref": "pc-rlc-force-ameliorer-le-facteur-de-puissance-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-rlc-force-probleme-1",
+      "chapter": "pc-rlc-force",
+      "kind": "probleme",
+      "title": "Un circuit (R, L, C) série, du régime quelconque à la résonance",
+      "difficulty": 3,
+      "context": "On étudie un circuit $(R,L,C)$ série en régime sinusoïdal forcé. Un générateur basse fréquence (GBF) impose entre ses bornes une tension alternative sinusoïdale $u(t)$ de **valeur efficace constante** $U = 6{,}0\\ \\mathrm{V}$ et de fréquence $N$ réglable.\n\nLe circuit comporte, en série :\n- un conducteur ohmique de résistance $R_0 = 15\\ \\Omega$ ;\n- une bobine d'inductance $L = 0{,}10\\ \\mathrm{H}$ et de résistance $r = 5{,}0\\ \\Omega$ ;\n- un condensateur de capacité $C = 10\\ \\mathrm{\\mu F}$, soit $C = 1{,}0\\times10^{-5}\\ \\mathrm{F}$.\n\nUn ampèremètre placé en série mesure l'intensité efficace $I$ ; des voltmètres permettent de mesurer les tensions efficaces aux bornes de chaque dipôle. On note $\\varphi$ le déphasage de $u$ par rapport à $i$, et $R = R_0 + r$ la résistance totale du circuit.\n\nOn prendra $\\pi^2 \\approx 9{,}87$ et on donnera les résultats avec deux chiffres significatifs.",
+      "figure": "montage-rsf",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 1 — Calculer $Z$, $I$ et $\\varphi$",
+          "difficulty": 1,
+          "statement": "Partie A — Le circuit à la fréquence $N = 50\\ \\mathrm{Hz}$ : calculer la pulsation $\\omega$ du courant, puis la réactance du condensateur $\\dfrac{1}{C\\omega}$.",
+          "options": [
+            {
+              "label": "$\\omega = 3{,}1\\times10^{2}\\ \\mathrm{rad\\,s^{-1}}$ et $\\dfrac{1}{C\\omega} = 3{,}2\\times10^{2}\\ \\Omega$",
+              "correct": true,
+              "why": "$\\omega = 2\\pi N = 2\\pi\\times50 = 3{,}1\\times10^{2}\\ \\mathrm{rad\\,s^{-1}}$, puis $\\frac{1}{C\\omega} = \\frac{1}{1{,}0\\times10^{-5}\\times314} = 3{,}2\\times10^{2}\\ \\Omega$."
+            },
+            {
+              "label": "$\\omega = 3{,}1\\times10^{2}\\ \\mathrm{rad\\,s^{-1}}$ et $\\dfrac{1}{C\\omega} = 2{,}0\\times10^{3}\\ \\Omega$",
+              "why": "Tu as remplacé $\\omega$ par $N$ dans la réactance : $\\frac{1}{1{,}0\\times10^{-5}\\times50} = 2{,}0\\times10^{3}\\ \\Omega$. La pulsation est bien $314\\ \\mathrm{rad\\,s^{-1}}$, utilise-la."
+            },
+            {
+              "label": "$\\omega = 3{,}1\\times10^{2}\\ \\mathrm{rad\\,s^{-1}}$ et $\\dfrac{1}{C\\omega} = 5{,}0\\times10^{3}\\ \\Omega$",
+              "why": "Tu as utilisé la période $T = \\frac{1}{50} = 0{,}020\\ \\mathrm{s}$ au lieu de la pulsation : $\\frac{1}{1{,}0\\times10^{-5}\\times0{,}020} = 5{,}0\\times10^{3}\\ \\Omega$."
+            },
+            {
+              "label": "$\\omega = 3{,}1\\times10^{2}\\ \\mathrm{rad\\,s^{-1}}$ et $\\dfrac{1}{C\\omega} = 3{,}1\\times10^{-3}\\ \\Omega$",
+              "why": "Tu as calculé $C\\omega = 1{,}0\\times10^{-5}\\times314 = 3{,}1\\times10^{-3}$ et non son inverse. La réactance du condensateur est $\\frac{1}{C\\omega}$, en ohms."
+            }
+          ],
+          "hint": "La pulsation se calcule avec $\\omega = 2\\pi N$ ; reporte-la ensuite telle quelle dans $\\frac{1}{C\\omega}$, avec $C$ en farads.",
+          "solution": "La fréquence imposée par le GBF est $N = 50\\ \\mathrm{Hz}$, donc\n$$\\omega = 2\\pi N = 2\\pi\\times50 = 3{,}14\\times10^{2}\\ \\mathrm{rad\\,s^{-1}}.$$\nLa réactance du condensateur vaut alors\n$$\\frac{1}{C\\omega} = \\frac{1}{1{,}0\\times10^{-5}\\times3{,}14\\times10^{2}} = \\frac{1}{3{,}14\\times10^{-3}} = 3{,}2\\times10^{2}\\ \\Omega.$$\nContrôle d'unité : $\\frac{1}{\\mathrm{F}\\cdot\\mathrm{s^{-1}}} = \\frac{\\mathrm{s}}{\\mathrm{F}} = \\Omega$, c'est bien une résistance.",
+          "methode": "Convertis toujours $C$ en farads et $L$ en henrys avant de calculer une réactance ; une réactance s'exprime en ohms.",
+          "points": 1,
+          "part": "Partie A — Le circuit à la fréquence $N = 50\\ \\mathrm{Hz}$",
+          "ref": "pc-rlc-force-probleme-1-q1"
+        },
+        {
+          "notion": "Nature du circuit",
+          "difficulty": 1,
+          "statement": "Partie A — Le circuit à la fréquence $N = 50\\ \\mathrm{Hz}$ : calculer $L\\omega$ et en déduire la nature du circuit.",
+          "options": [
+            {
+              "label": "$L\\omega = 31\\ \\Omega$ ; comme $L\\omega < \\dfrac{1}{C\\omega}$, le circuit est **capacitif**",
+              "correct": true,
+              "why": "$L\\omega = 0{,}10\\times314 = 31\\ \\Omega$, à comparer aux $3{,}2\\times10^{2}\\ \\Omega$ du condensateur : $L\\omega < \\frac{1}{C\\omega}$, donc $\\varphi < 0$ et le circuit est capacitif."
+            },
+            {
+              "label": "$L\\omega = 31\\ \\Omega$ ; comme le circuit contient une bobine, il est **inductif**",
+              "why": "La valeur de $L\\omega$ est juste, mais la conclusion non : la nature du circuit ne vient pas de la présence d'une bobine, elle vient de la **comparaison** de $L\\omega$ et de $\\frac{1}{C\\omega}$. Ici c'est le condensateur qui domine."
+            },
+            {
+              "label": "$L\\omega = 5{,}0\\ \\Omega$ ; comme $L\\omega < \\dfrac{1}{C\\omega}$, le circuit est **capacitif**",
+              "why": "Tu as calculé $L\\times N = 0{,}10\\times50 = 5{,}0$ au lieu de $L\\omega$. C'est la pulsation $\\omega = 314\\ \\mathrm{rad\\,s^{-1}}$ qu'il faut employer : $L\\omega = 31\\ \\Omega$."
+            },
+            {
+              "label": "$L\\omega = 3{,}1\\times10^{-4}\\ \\Omega$ ; comme $L\\omega < \\dfrac{1}{C\\omega}$, le circuit est **capacitif**",
+              "why": "Tu as divisé par $\\omega$ au lieu de multiplier : $\\frac{0{,}10}{314} = 3{,}1\\times10^{-4}$. La réactance de la bobine est le **produit** $L\\omega$."
+            }
+          ],
+          "hint": "La nature du circuit se lit sur le signe de $L\\omega - \\frac{1}{C\\omega}$, jamais sur la liste des composants.",
+          "solution": "La réactance de la bobine vaut\n$$L\\omega = 0{,}10\\times3{,}14\\times10^{2} = 31\\ \\Omega.$$\nOn la compare à celle du condensateur, $\\frac{1}{C\\omega} = 3{,}2\\times10^{2}\\ \\Omega$ :\n$$L\\omega - \\frac{1}{C\\omega} = 31 - 318 = -2{,}9\\times10^{2}\\ \\Omega < 0 .$$\nLe terme réactif est négatif, donc $\\tan\\varphi < 0$ et $\\varphi < 0$ : **le circuit est capacitif**, la tension $u$ est en retard sur l'intensité $i$.\n\nContrôle : la fréquence propre du circuit vaut $N_0 = \\frac{1}{2\\pi\\sqrt{LC}} = 1{,}6\\times10^{2}\\ \\mathrm{Hz}$ (voir la partie B). Comme $N = 50\\ \\mathrm{Hz} < N_0$, on est en dessous de la résonance, et c'est bien le condensateur qui l'emporte : les deux raisonnements concordent.",
+          "methode": "Deux façons de conclure, à utiliser l'une pour vérifier l'autre : comparer $L\\omega$ à $\\frac{1}{C\\omega}$, ou comparer $N$ à $N_0$ ($N<N_0$ : capacitif).",
+          "points": 1,
+          "part": "Partie A — Le circuit à la fréquence $N = 50\\ \\mathrm{Hz}$",
+          "ref": "pc-rlc-force-probleme-1-q2"
+        },
+        {
+          "notion": "Méthode 1 — Calculer $Z$, $I$ et $\\varphi$",
+          "difficulty": 2,
+          "statement": "Partie A — Le circuit à la fréquence $N = 50\\ \\mathrm{Hz}$ : calculer l'impédance $Z$ du circuit et l'intensité efficace $I$ lue par l'ampèremètre.",
+          "options": [
+            {
+              "label": "$Z = 2{,}9\\times10^{2}\\ \\Omega$ et $I = 21\\ \\mathrm{mA}$",
+              "correct": true,
+              "why": "$Z = \\sqrt{R^2+\\left(L\\omega-\\frac{1}{C\\omega}\\right)^2} = \\sqrt{20^2+(-287)^2} = 2{,}9\\times10^{2}\\ \\Omega$, donc $I = \\frac{6{,}0}{288} = 2{,}1\\times10^{-2}\\ \\mathrm{A} = 21\\ \\mathrm{mA}$."
+            },
+            {
+              "label": "$Z = 3{,}1\\times10^{2}\\ \\Omega$ et $I = 20\\ \\mathrm{mA}$",
+              "why": "Tu as additionné sans passer par le théorème de Pythagore : $20 + 287 = 307\\ \\Omega$, d'où $\\frac{6{,}0}{307} = 20\\ \\mathrm{mA}$. Résistance et réactance sont **perpendiculaires** sur le diagramme de Fresnel, elles se composent par $\\sqrt{R^2+X^2}$."
+            },
+            {
+              "label": "$Z = 3{,}5\\times10^{2}\\ \\Omega$ et $I = 17\\ \\mathrm{mA}$",
+              "why": "Tu as **ajouté** les deux réactances au lieu de les retrancher : $\\sqrt{20^2+(31+318)^2} = 350\\ \\Omega$ et $\\frac{6{,}0}{350} = 17\\ \\mathrm{mA}$. Bobine et condensateur agissent en sens opposés, d'où le signe $-$."
+            },
+            {
+              "label": "$Z = 20\\ \\Omega$ et $I = 3{,}0\\times10^{2}\\ \\mathrm{mA}$",
+              "why": "Tu as pris $Z = R = 20\\ \\Omega$, ce qui n'est vrai qu'à la résonance : $\\frac{6{,}0}{20} = 0{,}30\\ \\mathrm{A}$. À $50\\ \\mathrm{Hz}$ on est loin de $N_0$, le terme réactif est largement dominant."
+            }
+          ],
+          "hint": "N'oublie pas que la résistance totale comprend celle de la bobine, puis applique $Z = \\sqrt{R^2 + \\left(L\\omega - \\frac{1}{C\\omega}\\right)^2}$.",
+          "solution": "La résistance totale du circuit est\n$$R = R_0 + r = 15 + 5{,}0 = 20\\ \\Omega.$$\nL'impédance vaut\n$$Z = \\sqrt{R^2+\\left(L\\omega-\\frac{1}{C\\omega}\\right)^2} = \\sqrt{20^2+\\left(31-318\\right)^2} = \\sqrt{400+8{,}23\\times10^{4}} = 2{,}9\\times10^{2}\\ \\Omega.$$\nLa loi d'Ohm en régime sinusoïdal forcé donne\n$$I = \\frac{U}{Z} = \\frac{6{,}0}{2{,}88\\times10^{2}} = 2{,}1\\times10^{-2}\\ \\mathrm{A} = 21\\ \\mathrm{mA}.$$\nContrôle : $R = 20\\ \\Omega$ est négligeable devant $|X| = 287\\ \\Omega$, donc $Z \\approx |X| = 287\\ \\Omega$ et $I \\approx \\frac{6{,}0}{287} = 21\\ \\mathrm{mA}$ — l'approximation confirme le calcul exact.",
+          "methode": "Dans un circuit $(R,L,C)$ série, $R$ est **toujours** la somme de toutes les résistances, celle de la bobine comprise. L'oublier fausse $Z$, $I$, $\\cos\\varphi$ et $P$ d'un coup.",
+          "points": 1,
+          "part": "Partie A — Le circuit à la fréquence $N = 50\\ \\mathrm{Hz}$",
+          "ref": "pc-rlc-force-probleme-1-q3"
+        },
+        {
+          "notion": "La puissance",
+          "difficulty": 2,
+          "statement": "Partie A — Le circuit à la fréquence $N = 50\\ \\mathrm{Hz}$ : calculer le facteur de puissance $\\cos\\varphi$ et la puissance moyenne $P$ consommée par le circuit.",
+          "options": [
+            {
+              "label": "$\\cos\\varphi = 0{,}070$ et $P = 8{,}7\\ \\mathrm{mW}$",
+              "correct": true,
+              "why": "$\\cos\\varphi = \\frac{R}{Z} = \\frac{20}{288} = 0{,}070$, puis $P = UI\\cos\\varphi = 6{,}0\\times2{,}09\\times10^{-2}\\times0{,}070 = 8{,}7\\times10^{-3}\\ \\mathrm{W}$."
+            },
+            {
+              "label": "$\\cos\\varphi = 0{,}070$ et $P = 1{,}3\\times10^{2}\\ \\mathrm{mW}$",
+              "why": "Tu as oublié le facteur de puissance : $UI = 6{,}0\\times2{,}09\\times10^{-2} = 0{,}13\\ \\mathrm{W}$. Ce produit est la puissance **apparente** ; la puissance moyenne vaut $UI\\cos\\varphi$."
+            },
+            {
+              "label": "$\\cos\\varphi = 1{,}0$ et $P = 1{,}8\\times10^{3}\\ \\mathrm{mW}$",
+              "why": "Tu as supposé le circuit à la résonance : $\\cos\\varphi = 1$ et $P = \\frac{U^2}{R} = \\frac{36}{20} = 1{,}8\\ \\mathrm{W}$. Or à $50\\ \\mathrm{Hz}$ le circuit est très désaccordé et $\\cos\\varphi$ ne vaut que $0{,}070$."
+            },
+            {
+              "label": "$\\cos\\varphi = 0{,}070$ et $P = 6{,}5\\ \\mathrm{mW}$",
+              "why": "Tu n'as compté que le conducteur ohmique : $R_0 I^2 = 15\\times(2{,}09\\times10^{-2})^2 = 6{,}5\\times10^{-3}\\ \\mathrm{W}$. La bobine dissipe aussi dans sa résistance $r$, il faut $R = R_0+r = 20\\ \\Omega$."
+            }
+          ],
+          "hint": "Le facteur de puissance se lit directement sur l'impédance ; pour la puissance, tu disposes de deux expressions équivalentes — utilise la seconde comme vérification.",
+          "solution": "Le facteur de puissance est le rapport de la résistance totale à l'impédance :\n$$\\cos\\varphi = \\frac{R}{Z} = \\frac{20}{2{,}88\\times10^{2}} = 0{,}070 .$$\nIl est très faible : le circuit, loin de sa résonance, est presque purement réactif. La puissance moyenne consommée vaut\n$$P = U\\,I\\cos\\varphi = 6{,}0\\times2{,}09\\times10^{-2}\\times0{,}070 = 8{,}7\\times10^{-3}\\ \\mathrm{W} = 8{,}7\\ \\mathrm{mW}.$$\nContrôle par l'effet Joule : seule la résistance consomme de la puissance en moyenne, donc\n$$P = R\\,I^2 = 20\\times(2{,}09\\times10^{-2})^2 = 8{,}7\\times10^{-3}\\ \\mathrm{W}.$$\nLes deux voies donnent le même résultat. Remarque : $\\varphi$ est négatif ici ($\\tan\\varphi = \\frac{-287}{20} = -14$, soit $\\varphi \\approx -86^{\\circ}$), mais $\\cos\\varphi$ reste positif — la puissance moyenne consommée ne peut pas être négative.",
+          "methode": "Deux expressions de la puissance moyenne : $P = UI\\cos\\varphi$ et $P = RI^2$. Calcule-la par l'une, vérifie-la par l'autre.",
+          "points": 1,
+          "part": "Partie A — Le circuit à la fréquence $N = 50\\ \\mathrm{Hz}$",
+          "ref": "pc-rlc-force-probleme-1-q4"
+        },
+        {
+          "notion": "Le phénomène",
+          "difficulty": 2,
+          "statement": "Partie B — Étude de la résonance d'intensité : calculer la fréquence $N_0$ pour laquelle l'ampèremètre indique une intensité maximale.",
+          "options": [
+            {
+              "label": "$N_0 = 1{,}6\\times10^{2}\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "$N_0 = \\frac{1}{2\\pi\\sqrt{LC}} = \\frac{1}{2\\pi\\sqrt{0{,}10\\times1{,}0\\times10^{-5}}} = \\frac{1}{2\\pi\\times1{,}0\\times10^{-3}} = 1{,}6\\times10^{2}\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$N_0 = 1{,}0\\times10^{3}\\ \\mathrm{Hz}$",
+              "why": "Tu as donné la **pulsation** propre $\\omega_0 = \\frac{1}{\\sqrt{LC}} = 1{,}0\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$ en la prenant pour une fréquence. Il reste à diviser par $2\\pi$."
+            },
+            {
+              "label": "$N_0 = 6{,}3\\times10^{3}\\ \\mathrm{Hz}$",
+              "why": "Tu as **multiplié** par $2\\pi$ au lieu de diviser : $2\\pi\\times1{,}0\\times10^{3} = 6{,}3\\times10^{3}$. La relation est $N_0 = \\frac{\\omega_0}{2\\pi}$."
+            },
+            {
+              "label": "$N_0 = 1{,}6\\times10^{-4}\\ \\mathrm{Hz}$",
+              "why": "Tu as calculé $\\frac{\\sqrt{LC}}{2\\pi} = \\frac{1{,}0\\times10^{-3}}{6{,}28} = 1{,}6\\times10^{-4}$, c'est-à-dire l'inverse de la bonne expression. $\\sqrt{LC}$ est au **dénominateur**."
+            }
+          ],
+          "hint": "L'intensité est maximale quand l'impédance est minimale : écris cette condition sur $L\\omega$ et $\\frac{1}{C\\omega}$.",
+          "solution": "L'intensité efficace $I = \\dfrac{U}{Z}$ est maximale quand $Z$ est minimale. Or\n$$Z = \\sqrt{R^2+\\left(L\\omega-\\frac{1}{C\\omega}\\right)^2}$$\nest minimale lorsque le terme réactif s'annule :\n$$L\\omega_0 = \\frac{1}{C\\omega_0} \\quad\\Longleftrightarrow\\quad \\omega_0^2 = \\frac{1}{LC} \\quad\\Longleftrightarrow\\quad \\omega_0 = \\frac{1}{\\sqrt{LC}}.$$\nNumériquement $\\sqrt{LC} = \\sqrt{0{,}10\\times1{,}0\\times10^{-5}} = \\sqrt{1{,}0\\times10^{-6}} = 1{,}0\\times10^{-3}\\ \\mathrm{s}$, donc $\\omega_0 = 1{,}0\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$ et\n$$N_0 = \\frac{\\omega_0}{2\\pi} = \\frac{1{,}0\\times10^{3}}{6{,}28} = 1{,}6\\times10^{2}\\ \\mathrm{Hz}.$$\nC'est la **résonance d'intensité** : $Z = R$, $I$ est maximale et $\\varphi = 0$. Contrôle : $N = 50\\ \\mathrm{Hz}$ est bien inférieure à $N_0 = 159\\ \\mathrm{Hz}$, ce qui confirme le caractère capacitif trouvé dans la partie A.",
+          "methode": "$\\omega_0 = \\frac{1}{\\sqrt{LC}}$ est une **pulsation** (en $\\mathrm{rad\\,s^{-1}}$). Pour une fréquence, divise par $2\\pi$ ; vérifie l'ordre de grandeur avant de conclure.",
+          "points": 1,
+          "part": "Partie B — Étude de la résonance d'intensité",
+          "ref": "pc-rlc-force-probleme-1-q5"
+        },
+        {
+          "notion": "Méthode 2 — Déterminer $L$, $C$ ou $r$ par la résonance",
+          "difficulty": 3,
+          "statement": "Partie B — Étude de la résonance d'intensité : à la résonance, quelles valeurs indiquent l'ampèremètre et le voltmètre branché aux bornes du **conducteur ohmique seul** ?",
+          "options": [
+            {
+              "label": "$I_{max} = 0{,}30\\ \\mathrm{A}$ et $U_{R_0} = 4{,}5\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "À la résonance $Z = R = 20\\ \\Omega$, donc $I_{max} = \\frac{6{,}0}{20} = 0{,}30\\ \\mathrm{A}$, puis $U_{R_0} = R_0 I_{max} = 15\\times0{,}30 = 4{,}5\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$I_{max} = 0{,}40\\ \\mathrm{A}$ et $U_{R_0} = 6{,}0\\ \\mathrm{V}$",
+              "why": "Tu as oublié la résistance de la bobine : $\\frac{6{,}0}{15} = 0{,}40\\ \\mathrm{A}$, puis $15\\times0{,}40 = 6{,}0\\ \\mathrm{V}$. À la résonance $Z = R_0 + r = 20\\ \\Omega$, pas $R_0$."
+            },
+            {
+              "label": "$I_{max} = 0{,}30\\ \\mathrm{A}$ et $U_{R_0} = 6{,}0\\ \\mathrm{V}$",
+              "why": "L'intensité est juste, mais à la résonance c'est la tension aux bornes de **l'ensemble résistif** ($R_0$ et $r$) qui vaut $U = 6{,}0\\ \\mathrm{V}$. Aux bornes de $R_0$ seul il ne reste que $R_0 I_{max} = 4{,}5\\ \\mathrm{V}$ ; les $1{,}5\\ \\mathrm{V}$ manquants sont aux bornes de $r$, à l'intérieur de la bobine."
+            },
+            {
+              "label": "$I_{max} = 21\\ \\mathrm{mA}$ et $U_{R_0} = 0{,}31\\ \\mathrm{V}$",
+              "why": "Tu as repris l'intensité calculée à $50\\ \\mathrm{Hz}$ : $15\\times2{,}09\\times10^{-2} = 0{,}31\\ \\mathrm{V}$. À la résonance l'impédance chute de $288\\ \\Omega$ à $20\\ \\Omega$ et l'intensité est multipliée par $14$."
+            }
+          ],
+          "hint": "À la résonance l'impédance prend sa valeur minimale. Attention à bien distinguer la résistance **totale** de celle du seul conducteur ohmique.",
+          "solution": "À la résonance, le terme réactif s'annule et l'impédance se réduit à la résistance totale :\n$$Z = R = R_0 + r = 20\\ \\Omega \\quad\\Longrightarrow\\quad I_{max} = \\frac{U}{R} = \\frac{6{,}0}{20} = 0{,}30\\ \\mathrm{A}.$$\nLa tension efficace aux bornes du conducteur ohmique seul vaut alors\n$$U_{R_0} = R_0\\,I_{max} = 15\\times0{,}30 = 4{,}5\\ \\mathrm{V}.$$\nContrôle par la loi des mailles en valeurs efficaces, licite uniquement parce que $\\varphi = 0$ : à la résonance $u_L$ et $u_C$ s'annulent mutuellement et il reste $U = U_{R_0} + U_r$, avec $U_r = r I_{max} = 5{,}0\\times0{,}30 = 1{,}5\\ \\mathrm{V}$. On a bien $4{,}5 + 1{,}5 = 6{,}0\\ \\mathrm{V}$.\n\nC'est d'ailleurs la **méthode de mesure de $r$** : on règle le GBF à la résonance, on lit $I_{max}$ et on en tire $r = \\dfrac{U}{I_{max}} - R_0$.",
+          "methode": "À la résonance, $\\frac{U}{I_{max}}$ donne la résistance **totale** : c'est le moyen le plus simple de mesurer la résistance $r$ d'une bobine.",
+          "points": 1,
+          "part": "Partie B — Étude de la résonance d'intensité",
+          "ref": "pc-rlc-force-probleme-1-q6"
+        },
+        {
+          "notion": "Méthode 5 — Bande passante, facteur de qualité et puissance",
+          "difficulty": 3,
+          "statement": "Partie B — Étude de la résonance d'intensité : calculer la puissance moyenne consommée par le circuit à la résonance, ainsi que son facteur de puissance.",
+          "options": [
+            {
+              "label": "$P = 1{,}8\\ \\mathrm{W}$ et $\\cos\\varphi = 1$",
+              "correct": true,
+              "why": "À la résonance $\\varphi = 0$ donc $\\cos\\varphi = 1$, et $P = UI_{max} = 6{,}0\\times0{,}30 = 1{,}8\\ \\mathrm{W}$. Vérification : $RI_{max}^2 = 20\\times0{,}30^2 = 1{,}8\\ \\mathrm{W}$."
+            },
+            {
+              "label": "$P = 2{,}4\\ \\mathrm{W}$ et $\\cos\\varphi = 1$",
+              "why": "Tu as oublié la résistance de la bobine : $\\frac{U^2}{R_0} = \\frac{36}{15} = 2{,}4\\ \\mathrm{W}$. La puissance se dissipe dans la résistance **totale** : $\\frac{U^2}{R} = \\frac{36}{20} = 1{,}8\\ \\mathrm{W}$."
+            },
+            {
+              "label": "$P = 0{,}90\\ \\mathrm{W}$ et $\\cos\\varphi = 1$",
+              "why": "Tu as glissé un facteur $\\frac{1}{2}$ : $\\frac{UI_{max}}{2} = 0{,}90\\ \\mathrm{W}$. Ce $\\frac{1}{2}$ n'apparaît que si l'on travaille avec les **amplitudes** $U_m$ et $I_m$ ; ici $U$ et $I$ sont déjà des valeurs efficaces."
+            },
+            {
+              "label": "$P = 1{,}8\\ \\mathrm{W}$ et $\\cos\\varphi = 5{,}0$",
+              "why": "La puissance est juste, mais tu as confondu le facteur de puissance avec le facteur de qualité $Q = \\frac{L\\omega_0}{R} = \\frac{100}{20} = 5{,}0$. Un cosinus ne peut pas dépasser $1$ : à la résonance $\\cos\\varphi = 1$ exactement."
+            }
+          ],
+          "hint": "À la résonance, que vaut le déphasage ? Déduis-en le facteur de puissance, puis choisis l'expression de $P$ la plus directe.",
+          "solution": "À la résonance, $L\\omega_0 = \\dfrac{1}{C\\omega_0}$ donc $\\tan\\varphi = 0$ et $\\varphi = 0$ : le circuit se comporte comme une simple résistance et\n$$\\cos\\varphi = 1 .$$\nC'est la valeur maximale possible : le transfert de puissance est optimal. La puissance moyenne vaut\n$$P = U\\,I_{max}\\cos\\varphi = 6{,}0\\times0{,}30\\times1 = 1{,}8\\ \\mathrm{W}.$$\nDouble contrôle : par l'effet Joule, $P = R\\,I_{max}^2 = 20\\times(0{,}30)^2 = 1{,}8\\ \\mathrm{W}$ ; et par la tension, $P = \\dfrac{U^2}{R} = \\dfrac{(6{,}0)^2}{20} = 1{,}8\\ \\mathrm{W}$. Les trois voies concordent.\n\nComparaison avec la partie A : à $50\\ \\mathrm{Hz}$ le circuit ne consommait que $8{,}7\\ \\mathrm{mW}$ ; à la résonance il consomme $1{,}8\\ \\mathrm{W}$, soit environ $200$ fois plus, pour la même tension d'alimentation. C'est tout l'intérêt d'accorder un circuit sur la fréquence de l'excitateur.",
+          "methode": "À la résonance, $\\cos\\varphi = 1$ et la puissance moyenne est maximale : $P_{max} = UI_{max} = \\frac{U^2}{R}$. C'est la valeur la plus rapide à écrire le jour de l'examen.",
+          "points": 1,
+          "part": "Partie B — Étude de la résonance d'intensité",
+          "ref": "pc-rlc-force-probleme-1-q7"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-rlc-force-probleme-2",
+      "chapter": "pc-rlc-force",
+      "kind": "probleme",
+      "title": "Déterminer r, Q et la bande passante d'un circuit (R, L, C) série",
+      "difficulty": 3,
+      "context": "Pour étudier une bobine, on monte en série un GBF, un conducteur ohmique de résistance $R_0 = 85\\ \\Omega$, une bobine d'inductance $L = 0{,}20\\ \\mathrm{H}$ et de résistance $r$ **inconnue**, et un condensateur de capacité $C = 1{,}0\\ \\mathrm{\\mu F} = 1{,}0\\times10^{-6}\\ \\mathrm{F}$. Le GBF délivre une tension de valeur efficace **constante** $U = 4{,}0\\ \\mathrm{V}$ et de fréquence $N$ réglable. On note $R = R_0 + r$ la résistance totale et $\\varphi$ le déphasage de $u$ par rapport à $i$.\n\n**Première série de mesures (partie A).** La fréquence est fixée. Un oscilloscope bicourbe reçoit la tension $u$ du GBF sur la voie $Y_1$ et la tension $u_{R_0}$ aux bornes du conducteur ohmique sur la voie $Y_2$ ($u_{R_0}$ est en phase avec $i$). Le balayage horizontal est réglé sur $1{,}0\\ \\mathrm{ms/div}$. On relève :\n- une période complète occupe $5{,}0$ divisions ;\n- les deux courbes sont décalées horizontalement de $1{,}1$ division, la courbe de la voie $Y_1$ passant par son maximum **après** celle de la voie $Y_2$.\n\n**Seconde série de mesures (partie B).** On fait varier la fréquence et on trace la courbe $I(N)$. Elle présente un maximum $I_{max} = 40\\ \\mathrm{mA}$.\n\nOn donnera les résultats avec deux chiffres significatifs.",
+      "figure": "resonance-intensite",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 4 — Exploiter un oscillogramme à deux voies",
+          "difficulty": 1,
+          "statement": "Partie A — Lecture de l'oscillogramme : déterminer la période $T$ et la fréquence $N$ de la tension délivrée par le GBF.",
+          "options": [
+            {
+              "label": "$T = 5{,}0\\ \\mathrm{ms}$ et $N = 2{,}0\\times10^{2}\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "$T = 5{,}0\\ \\mathrm{div}\\times1{,}0\\ \\mathrm{ms/div} = 5{,}0\\ \\mathrm{ms}$, donc $N = \\frac{1}{T} = \\frac{1}{5{,}0\\times10^{-3}} = 2{,}0\\times10^{2}\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$T = 5{,}0\\ \\mathrm{s}$ et $N = 0{,}20\\ \\mathrm{Hz}$",
+              "why": "Tu as oublié que le balayage est gradué en **millisecondes** par division : $T = 5{,}0\\ \\mathrm{ms} = 5{,}0\\times10^{-3}\\ \\mathrm{s}$, et non $5{,}0\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$T = 10\\ \\mathrm{ms}$ et $N = 1{,}0\\times10^{2}\\ \\mathrm{Hz}$",
+              "why": "Tu as traité les $5{,}0$ divisions comme une **demi**-période. L'énoncé précise qu'il s'agit d'une période complète : $T = 5{,}0\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$T = 5{,}0\\ \\mathrm{ms}$ et $N = 1{,}3\\times10^{3}\\ \\mathrm{Hz}$",
+              "why": "Tu as calculé la pulsation $\\omega = \\frac{2\\pi}{T} = 1{,}3\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$ et tu l'as notée en hertz. La fréquence est $N = \\frac{1}{T}$, sans $2\\pi$."
+            }
+          ],
+          "hint": "Une durée à l'oscilloscope se lit en multipliant le nombre de divisions par la sensibilité horizontale ; convertis ensuite en secondes avant de prendre l'inverse.",
+          "solution": "La sensibilité horizontale (balayage) vaut $1{,}0\\ \\mathrm{ms/div}$ et la période occupe $5{,}0$ divisions :\n$$T = 5{,}0 \\times 1{,}0 = 5{,}0\\ \\mathrm{ms} = 5{,}0\\times10^{-3}\\ \\mathrm{s}.$$\nLa fréquence est l'inverse de la période :\n$$N = \\frac{1}{T} = \\frac{1}{5{,}0\\times10^{-3}} = 2{,}0\\times10^{2}\\ \\mathrm{Hz}.$$\nOn en déduit la pulsation, utile pour la suite :\n$$\\omega = 2\\pi N = 2\\pi\\times200 = 1{,}3\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}.$$\nContrôle d'ordre de grandeur : $200\\ \\mathrm{Hz}$ est une fréquence typique de GBF en travaux pratiques, et $5\\ \\mathrm{ms}$ une période bien visible sur $10$ divisions d'écran.",
+          "methode": "À l'oscilloscope : $T = (\\text{nombre de divisions})\\times(\\text{balayage})$. Convertis en secondes **avant** de calculer $N = \\frac{1}{T}$.",
+          "points": 1,
+          "part": "Partie A — Lecture de l'oscillogramme",
+          "ref": "pc-rlc-force-probleme-2-q1"
+        },
+        {
+          "notion": "Nature du circuit",
+          "difficulty": 2,
+          "statement": "Partie A — Lecture de l'oscillogramme : calculer les réactances $L\\omega$ et $\\dfrac{1}{C\\omega}$ à cette fréquence, et en déduire la nature du circuit.",
+          "options": [
+            {
+              "label": "$L\\omega = 2{,}5\\times10^{2}\\ \\Omega$ et $\\dfrac{1}{C\\omega} = 8{,}0\\times10^{2}\\ \\Omega$ : le circuit est **capacitif**",
+              "correct": true,
+              "why": "Avec $\\omega = 2\\pi\\times200 = 1{,}26\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$ : $L\\omega = 0{,}20\\times1257 = 2{,}5\\times10^{2}\\ \\Omega$ et $\\frac{1}{C\\omega} = \\frac{1}{10^{-6}\\times1257} = 8{,}0\\times10^{2}\\ \\Omega$. Comme $L\\omega < \\frac{1}{C\\omega}$, le circuit est capacitif."
+            },
+            {
+              "label": "$L\\omega = 2{,}5\\times10^{2}\\ \\Omega$ et $\\dfrac{1}{C\\omega} = 8{,}0\\times10^{2}\\ \\Omega$ : le circuit est **inductif**",
+              "why": "Les deux réactances sont justes, mais la comparaison est inversée : $2{,}5\\times10^{2} < 8{,}0\\times10^{2}$, c'est donc le **condensateur** qui domine et le circuit est capacitif, avec $\\varphi < 0$."
+            },
+            {
+              "label": "$L\\omega = 40\\ \\Omega$ et $\\dfrac{1}{C\\omega} = 5{,}0\\times10^{3}\\ \\Omega$ : le circuit est **capacitif**",
+              "why": "Tu as employé la fréquence au lieu de la pulsation dans les deux réactances : $0{,}20\\times200 = 40$ et $\\frac{1}{10^{-6}\\times200} = 5{,}0\\times10^{3}$. Il faut $\\omega = 2\\pi N = 1{,}26\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$."
+            },
+            {
+              "label": "$L\\omega = 2{,}5\\times10^{2}\\ \\Omega$ et $\\dfrac{1}{C\\omega} = 1{,}3\\times10^{-3}\\ \\Omega$ : le circuit est **inductif**",
+              "why": "Tu as calculé $C\\omega = 10^{-6}\\times1257 = 1{,}3\\times10^{-3}$ au lieu de son inverse. La réactance du condensateur est $\\frac{1}{C\\omega} = 8{,}0\\times10^{2}\\ \\Omega$, et elle l'emporte largement."
+            }
+          ],
+          "hint": "Calcule d'abord $\\omega = 2\\pi N$, puis les deux réactances séparément ; la plus grande des deux impose la nature du circuit.",
+          "solution": "La pulsation vaut $\\omega = 2\\pi N = 2\\pi\\times200 = 1{,}26\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$. Les deux réactances sont alors\n$$L\\omega = 0{,}20\\times1{,}26\\times10^{3} = 2{,}5\\times10^{2}\\ \\Omega, \\qquad \\frac{1}{C\\omega} = \\frac{1}{1{,}0\\times10^{-6}\\times1{,}26\\times10^{3}} = 8{,}0\\times10^{2}\\ \\Omega.$$\nLe terme réactif vaut\n$$L\\omega - \\frac{1}{C\\omega} = 251 - 796 = -5{,}4\\times10^{2}\\ \\Omega < 0 .$$\nComme $\\tan\\varphi = \\dfrac{L\\omega-\\frac{1}{C\\omega}}{R}$ et que $R > 0$, on a $\\tan\\varphi < 0$ donc $\\varphi < 0$ : **le circuit est capacitif** et la tension $u$ est en retard sur l'intensité $i$.\n\nContrôle : la réactance du condensateur est plus de trois fois celle de la bobine, on est donc nettement en dessous de la résonance. La partie B confirmera $N_0 = 3{,}6\\times10^{2}\\ \\mathrm{Hz} > 200\\ \\mathrm{Hz}$.",
+          "methode": "La nature du circuit ne dépend que du signe de $L\\omega-\\frac{1}{C\\omega}$ : aucune résistance n'intervient, inutile de connaître $R$ ou $r$.",
+          "points": 1,
+          "part": "Partie A — Lecture de l'oscillogramme",
+          "ref": "pc-rlc-force-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 4 — Exploiter un oscillogramme à deux voies",
+          "difficulty": 2,
+          "statement": "Partie A — Lecture de l'oscillogramme : déterminer la valeur absolue du déphasage $|\\varphi|$ et préciser la nature du circuit.",
+          "options": [
+            {
+              "label": "$|\\varphi| = 79^{\\circ}$ ; $u$ est en **retard** sur $i$, le circuit est capacitif",
+              "correct": true,
+              "why": "$|\\varphi| = 360^{\\circ}\\times\\frac{\\Delta t}{T} = 360\\times\\frac{1{,}1}{5{,}0} = 79^{\\circ}$. Comme $u$ atteint son maximum après $u_{R_0}$ (donc après $i$), $u$ est en retard : $\\varphi < 0$, circuit capacitif."
+            },
+            {
+              "label": "$|\\varphi| = 79^{\\circ}$ ; $u$ est en **avance** sur $i$, le circuit est inductif",
+              "why": "La valeur est juste, le sens non : l'énoncé dit que la voie $Y_1$ ($u$) passe par son maximum **après** la voie $Y_2$ ($i$), donc $u$ est en retard. Le calcul le confirme : $\\frac{1}{C\\omega} = 796\\ \\Omega > L\\omega = 251\\ \\Omega$, le circuit est capacitif."
+            },
+            {
+              "label": "$|\\varphi| = 40^{\\circ}$ ; $u$ est en **retard** sur $i$, le circuit est capacitif",
+              "why": "Tu as écrit $|\\varphi| = 180^{\\circ}\\times\\frac{\\Delta t}{T} = 180\\times0{,}22 = 40^{\\circ}$. Une période entière correspond à $360^{\\circ}$ (soit $2\\pi\\ \\mathrm{rad}$), pas à $180^{\\circ}$."
+            },
+            {
+              "label": "$|\\varphi| = 1{,}4^{\\circ}$ ; $u$ est en **retard** sur $i$, le circuit est capacitif",
+              "why": "Tu as calculé $|\\varphi| = 2\\pi\\frac{\\Delta t}{T} = 1{,}4$ — mais c'est un résultat en **radians**. Converti en degrés, $1{,}4\\ \\mathrm{rad} = 1{,}4\\times\\frac{180}{\\pi} = 79^{\\circ}$."
+            }
+          ],
+          "hint": "Une période entière correspond à un tour complet. Pour le sens, regarde quelle courbe atteint son maximum la première.",
+          "solution": "Le décalage horizontal vaut $\\Delta t = 1{,}1\\ \\mathrm{div}\\times1{,}0\\ \\mathrm{ms/div} = 1{,}1\\ \\mathrm{ms}$. Une période complète correspond à $2\\pi\\ \\mathrm{rad}$, soit $360^{\\circ}$, donc\n$$|\\varphi| = 2\\pi\\,\\frac{\\Delta t}{T} = 2\\pi\\times\\frac{1{,}1}{5{,}0} = 1{,}4\\ \\mathrm{rad} = 360^{\\circ}\\times\\frac{1{,}1}{5{,}0} = 79^{\\circ}.$$\nLa voie $Y_2$ porte $u_{R_0}$, qui est en phase avec $i$. Comme $u$ (voie $Y_1$) atteint son maximum **après** $i$, la tension est en **retard** sur l'intensité : $\\varphi < 0$, soit $\\varphi = -79^{\\circ}$. Le circuit est **capacitif**.\n\nContrôle de cohérence : la partie A a donné $L\\omega-\\dfrac{1}{C\\omega} = -5{,}4\\times10^{2}\\ \\Omega$, un terme réactif négatif — on retrouve bien $\\varphi < 0$. De plus $|\\varphi| = 79^{\\circ}$ est proche de $90^{\\circ}$, ce qui est normal puisque $|\\tan\\varphi| = \\dfrac{544}{R}$ est grand : la réactance écrase la résistance totale du circuit.",
+          "methode": "Déphasage à l'oscilloscope : $|\\varphi| = 2\\pi\\frac{\\Delta t}{T}$ en radians, ou $360^{\\circ}\\frac{\\Delta t}{T}$ en degrés. Le signe vient de l'ordre des maximums, pas du calcul.",
+          "points": 1,
+          "part": "Partie A — Lecture de l'oscillogramme",
+          "ref": "pc-rlc-force-probleme-2-q3"
+        },
+        {
+          "notion": "Le phénomène",
+          "difficulty": 2,
+          "statement": "Partie B — Exploitation de la courbe de résonance : calculer la fréquence $N_0$ à laquelle la courbe $I(N)$ présente son maximum.",
+          "options": [
+            {
+              "label": "$N_0 = 3{,}6\\times10^{2}\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "$\\sqrt{LC} = \\sqrt{0{,}20\\times1{,}0\\times10^{-6}} = 4{,}47\\times10^{-4}\\ \\mathrm{s}$, donc $N_0 = \\frac{1}{2\\pi\\times4{,}47\\times10^{-4}} = 3{,}6\\times10^{2}\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$N_0 = 2{,}2\\times10^{3}\\ \\mathrm{Hz}$",
+              "why": "Tu as donné la pulsation propre $\\omega_0 = \\frac{1}{\\sqrt{LC}} = 2{,}2\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$ en la prenant pour une fréquence. Il faut encore diviser par $2\\pi$."
+            },
+            {
+              "label": "$N_0 = 1{,}4\\times10^{4}\\ \\mathrm{Hz}$",
+              "why": "Tu as multiplié par $2\\pi$ au lieu de diviser : $\\frac{2\\pi}{\\sqrt{LC}} = 1{,}4\\times10^{4}$. La relation correcte est $N_0 = \\frac{1}{2\\pi\\sqrt{LC}}$."
+            },
+            {
+              "label": "$N_0 = 0{,}36\\ \\mathrm{Hz}$",
+              "why": "Tu as oublié de convertir $C$ en farads : avec $C = 1{,}0$ au lieu de $1{,}0\\times10^{-6}$, $\\frac{1}{2\\pi\\sqrt{0{,}20}} = 0{,}36\\ \\mathrm{Hz}$. Le facteur $10^{-6}$ sous la racine déplace le résultat de $10^{3}$."
+            }
+          ],
+          "hint": "Le maximum d'intensité correspond à l'annulation du terme réactif ; $L$ et $C$ suffisent à le localiser.",
+          "solution": "La courbe $I(N)$ atteint son maximum à la résonance d'intensité, lorsque $L\\omega_0 = \\dfrac{1}{C\\omega_0}$, soit $\\omega_0 = \\dfrac{1}{\\sqrt{LC}}$ :\n$$\\sqrt{LC} = \\sqrt{0{,}20\\times1{,}0\\times10^{-6}} = \\sqrt{2{,}0\\times10^{-7}} = 4{,}5\\times10^{-4}\\ \\mathrm{s},$$\n$$\\omega_0 = \\frac{1}{4{,}47\\times10^{-4}} = 2{,}2\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}, \\qquad N_0 = \\frac{\\omega_0}{2\\pi} = \\frac{2{,}24\\times10^{3}}{6{,}28} = 3{,}6\\times10^{2}\\ \\mathrm{Hz}.$$\nContrôle : $N_0 = 356\\ \\mathrm{Hz}$ est supérieure aux $200\\ \\mathrm{Hz}$ de la partie A, ce qui confirme le caractère **capacitif** trouvé à cette fréquence ($N < N_0$). Noter que $N_0$ ne dépend ni de $R$, ni de $U$ : seuls $L$ et $C$ la fixent.",
+          "methode": "$N_0 = \\frac{1}{2\\pi\\sqrt{LC}}$ ne dépend que de $L$ et $C$. Compare ensuite $N$ à $N_0$ pour vérifier la nature du circuit trouvée autrement.",
+          "points": 1,
+          "part": "Partie B — Exploitation de la courbe de résonance",
+          "ref": "pc-rlc-force-probleme-2-q4"
+        },
+        {
+          "notion": "Méthode 2 — Déterminer $L$, $C$ ou $r$ par la résonance",
+          "difficulty": 2,
+          "statement": "Partie B — Exploitation de la courbe de résonance : déduire de la courbe de résonance la résistance $r$ de la bobine.",
+          "options": [
+            {
+              "label": "$r = 15\\ \\Omega$",
+              "correct": true,
+              "why": "À la résonance $Z = R$, donc $R = \\frac{U}{I_{max}} = \\frac{4{,}0}{40\\times10^{-3}} = 1{,}0\\times10^{2}\\ \\Omega$, puis $r = R - R_0 = 100 - 85 = 15\\ \\Omega$."
+            },
+            {
+              "label": "$r = 1{,}0\\times10^{2}\\ \\Omega$",
+              "why": "Tu t'es arrêté à la résistance **totale** $R = \\frac{U}{I_{max}} = 1{,}0\\times10^{2}\\ \\Omega$. Il reste à en retirer le conducteur ohmique : $r = R - R_0 = 15\\ \\Omega$."
+            },
+            {
+              "label": "$r = 56\\ \\Omega$",
+              "why": "Tu as traité les $40\\ \\mathrm{mA}$ comme une amplitude et divisé par $\\sqrt{2}$ : $\\frac{4{,}0}{0{,}0283} = 141\\ \\Omega$, puis $141-85 = 56\\ \\Omega$. Une courbe de résonance $I(N)$ donne l'intensité **efficace**, celle que lit l'ampèremètre."
+            },
+            {
+              "label": "$r = 85\\ \\Omega$",
+              "why": "Tu as recopié la valeur de $R_0$. La résistance totale est $R = \\frac{U}{I_{max}} = 1{,}0\\times10^{2}\\ \\Omega$, donc la bobine n'en apporte que $r = 100-85 = 15\\ \\Omega$."
+            }
+          ],
+          "hint": "Au sommet de la courbe, l'impédance prend une valeur particulièrement simple. Écris-la, puis isole $r$.",
+          "solution": "Au sommet de la courbe de résonance, le terme réactif s'annule et l'impédance se réduit à la résistance totale :\n$$Z_{min} = R = R_0 + r .$$\nLa loi d'Ohm donne donc\n$$R = \\frac{U}{I_{max}} = \\frac{4{,}0}{40\\times10^{-3}} = 1{,}0\\times10^{2}\\ \\Omega,$$\nd'où\n$$r = R - R_0 = 1{,}0\\times10^{2} - 85 = 15\\ \\Omega .$$\nContrôle : avec $r = 15\\ \\Omega$, la tension efficace aux bornes du conducteur ohmique à la résonance vaut $U_{R_0} = R_0 I_{max} = 85\\times0{,}040 = 3{,}4\\ \\mathrm{V}$ et celle aux bornes de $r$ vaut $r I_{max} = 0{,}60\\ \\mathrm{V}$ ; leur somme fait bien $4{,}0\\ \\mathrm{V} = U$, comme l'exige la loi des mailles à la résonance ($u_L$ et $u_C$ s'y compensent).",
+          "methode": "La résonance est le seul point où $\\frac{U}{I}$ donne directement une résistance. C'est la mesure standard de $r$ : $r = \\frac{U}{I_{max}} - R_0$.",
+          "points": 1,
+          "part": "Partie B — Exploitation de la courbe de résonance",
+          "ref": "pc-rlc-force-probleme-2-q5"
+        },
+        {
+          "notion": "Méthode 3 — Exploiter une courbe de résonance",
+          "difficulty": 3,
+          "statement": "Partie B — Exploitation de la courbe de résonance : calculer le facteur de qualité $Q$ du circuit.",
+          "options": [
+            {
+              "label": "$Q = 4{,}5$",
+              "correct": true,
+              "why": "$Q = \\frac{L\\omega_0}{R} = \\frac{0{,}20\\times2{,}24\\times10^{3}}{1{,}0\\times10^{2}} = 4{,}5$. Autre voie : $Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}} = \\frac{447}{100} = 4{,}5$."
+            },
+            {
+              "label": "$Q = 0{,}71$",
+              "why": "Tu as remplacé la pulsation par la fréquence : $\\frac{L N_0}{R} = \\frac{0{,}20\\times356}{100} = 0{,}71$. Dans $Q = \\frac{L\\omega_0}{R}$ c'est bien $\\omega_0 = 2\\pi N_0 = 2{,}24\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$ qui intervient."
+            },
+            {
+              "label": "$Q = 0{,}22$",
+              "why": "Tu as pris le rapport inverse : $\\frac{R}{L\\omega_0} = \\frac{100}{447} = 0{,}22$. Un circuit peu résistant doit avoir un $Q$ **grand** ; place $L\\omega_0$ au numérateur."
+            },
+            {
+              "label": "$Q = 4{,}5\\times10^{2}$",
+              "why": "Tu as calculé $\\sqrt{\\frac{L}{C}} = \\sqrt{\\frac{0{,}20}{1{,}0\\times10^{-6}}} = 4{,}5\\times10^{2}\\ \\Omega$ et oublié de diviser par $R$. Cette quantité est une réactance en ohms, pas un nombre sans dimension."
+            }
+          ],
+          "hint": "Le facteur de qualité compare la réactance de la bobine à la résonance à la résistance totale du circuit. Vérifie que ton résultat est bien sans unité.",
+          "solution": "Le facteur de qualité d'un circuit $(R,L,C)$ série s'écrit\n$$Q = \\frac{L\\omega_0}{R} = \\frac{1}{R\\,C\\omega_0} = \\frac{1}{R}\\sqrt{\\frac{L}{C}} .$$\nAvec $\\omega_0 = 2{,}24\\times10^{3}\\ \\mathrm{rad\\,s^{-1}}$ et $R = 1{,}0\\times10^{2}\\ \\Omega$ :\n$$Q = \\frac{0{,}20\\times2{,}24\\times10^{3}}{1{,}0\\times10^{2}} = \\frac{447}{100} = 4{,}5 .$$\nContrôle par la troisième expression, qui évite de passer par $\\omega_0$ :\n$$Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}} = \\frac{1}{100}\\sqrt{\\frac{0{,}20}{1{,}0\\times10^{-6}}} = \\frac{1}{100}\\times447 = 4{,}5 .$$\nLes deux voies concordent, et $Q$ est bien un nombre **sans unité** (rapport de deux ohms). Comme $Q > 1$, la résonance est aiguë et on observera une surtension aux bornes du condensateur et de la bobine.",
+          "methode": "Mémorise la forme $Q = \\frac{1}{R}\\sqrt{\\frac{L}{C}}$ : elle donne $Q$ sans calculer $\\omega_0$, et elle sert de contrôle à $\\frac{L\\omega_0}{R}$.",
+          "points": 1,
+          "part": "Partie B — Exploitation de la courbe de résonance",
+          "ref": "pc-rlc-force-probleme-2-q6"
+        },
+        {
+          "notion": "Méthode 5 — Bande passante, facteur de qualité et puissance",
+          "difficulty": 3,
+          "statement": "Partie B — Exploitation de la courbe de résonance : calculer la largeur $\\Delta N$ de la bande passante du circuit.",
+          "options": [
+            {
+              "label": "$\\Delta N = 80\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "$\\Delta N = \\frac{N_0}{Q} = \\frac{356}{4{,}47} = 80\\ \\mathrm{Hz}$. La bande passante s'étend alors d'environ $3{,}2\\times10^{2}\\ \\mathrm{Hz}$ à $4{,}0\\times10^{2}\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$\\Delta N = 40\\ \\mathrm{Hz}$",
+              "why": "Tu as calculé la **demi**-largeur $\\frac{N_0}{2Q} = 40\\ \\mathrm{Hz}$, c'est-à-dire l'écart entre $N_0$ et une borne. La bande passante est la largeur totale $N_2 - N_1$, soit le double."
+            },
+            {
+              "label": "$\\Delta N = 1{,}6\\times10^{3}\\ \\mathrm{Hz}$",
+              "why": "Tu as multiplié au lieu de diviser : $N_0\\times Q = 356\\times4{,}47 = 1{,}6\\times10^{3}\\ \\mathrm{Hz}$. Un $Q$ grand doit donner une bande **étroite**, donc $Q$ va au dénominateur."
+            },
+            {
+              "label": "$\\Delta N = 1{,}3\\times10^{-2}\\ \\mathrm{Hz}$",
+              "why": "Tu as inversé le rapport : $\\frac{Q}{N_0} = \\frac{4{,}47}{356} = 1{,}3\\times10^{-2}$. Ce résultat n'est même pas en hertz — contrôle toujours l'unité avant de conclure."
+            }
+          ],
+          "hint": "Relie la bande passante au facteur de qualité et à la fréquence de résonance ; vérifie ensuite que la largeur obtenue est bien plus petite que $N_0$.",
+          "solution": "La bande passante à $-3\\ \\mathrm{dB}$ est l'intervalle de fréquences $[N_1 ; N_2]$ pour lesquelles\n$$I \\ge \\frac{I_{max}}{\\sqrt{2}} = \\frac{40}{1{,}414} = 28\\ \\mathrm{mA}.$$\nSa largeur est reliée au facteur de qualité par $Q = \\dfrac{N_0}{\\Delta N}$, d'où\n$$\\Delta N = \\frac{N_0}{Q} = \\frac{3{,}56\\times10^{2}}{4{,}47} = 80\\ \\mathrm{Hz}.$$\nLa bande passante est pratiquement centrée sur $N_0$, elle s'étend donc approximativement de\n$$N_1 \\approx N_0 - \\frac{\\Delta N}{2} = 356-40 = 3{,}2\\times10^{2}\\ \\mathrm{Hz} \\quad\\text{à}\\quad N_2 \\approx N_0 + \\frac{\\Delta N}{2} = 356+40 = 4{,}0\\times10^{2}\\ \\mathrm{Hz}.$$\nContrôle : $\\Delta N = 80\\ \\mathrm{Hz}$ ne représente que $22\\ \\%$ de $N_0$, la résonance est donc assez aiguë — cohérent avec $Q = 4{,}5 > 1$. Autre contrôle : $\\Delta N$ peut aussi s'obtenir par $\\Delta\\omega = \\dfrac{R}{L} = \\dfrac{100}{0{,}20} = 5{,}0\\times10^{2}\\ \\mathrm{rad\\,s^{-1}}$, soit $\\Delta N = \\dfrac{500}{6{,}28} = 80\\ \\mathrm{Hz}$ : même valeur.",
+          "methode": "$\\Delta N = \\frac{N_0}{Q} = \\frac{R}{2\\pi L}$ : deux expressions pour une même largeur, à utiliser l'une pour vérifier l'autre.",
+          "points": 1,
+          "part": "Partie B — Exploitation de la courbe de résonance",
+          "ref": "pc-rlc-force-probleme-2-q7"
+        },
+        {
+          "notion": "La surtension",
+          "difficulty": 3,
+          "statement": "Partie B — Exploitation de la courbe de résonance : calculer la tension efficace $U_C$ aux bornes du condensateur à la résonance et conclure.",
+          "options": [
+            {
+              "label": "$U_C = 18\\ \\mathrm{V}$ : il y a surtension, car $Q > 1$",
+              "correct": true,
+              "why": "$U_C = Q\\,U = 4{,}47\\times4{,}0 = 18\\ \\mathrm{V}$. Vérification directe : $U_C = \\frac{I_{max}}{C\\omega_0} = \\frac{0{,}040}{1{,}0\\times10^{-6}\\times2240} = 18\\ \\mathrm{V}$, soit $4{,}5$ fois la tension du GBF."
+            },
+            {
+              "label": "$U_C = 4{,}0\\ \\mathrm{V}$ : il n'y a pas de surtension",
+              "why": "Tu as supposé que le condensateur supporte la tension du GBF. C'est faux : $U_C = \\frac{I}{C\\omega_0}$ et à la résonance $I$ est maximale, ce qui donne $U_C = QU = 18\\ \\mathrm{V}$. La loi des mailles est respectée parce que $u_L$ et $u_C$ sont en opposition de phase."
+            },
+            {
+              "label": "$U_C = 80\\ \\mathrm{V}$ : il y a surtension, car $Q > 1$",
+              "why": "Tu as élevé $Q$ au carré : $Q^2U = 4{,}47^2\\times4{,}0 = 80\\ \\mathrm{V}$. La relation est $U_C = Q\\,U$, sans carré — le carré n'apparaît que dans les énergies."
+            },
+            {
+              "label": "$U_C = 0{,}89\\ \\mathrm{V}$ : il n'y a pas de surtension",
+              "why": "Tu as divisé au lieu de multiplier : $\\frac{U}{Q} = \\frac{4{,}0}{4{,}47} = 0{,}89\\ \\mathrm{V}$. Avec $Q > 1$, la tension aux bornes du condensateur est forcément **supérieure** à celle du générateur."
+            }
+          ],
+          "hint": "À la résonance, la tension aux bornes du condensateur se déduit de $U$ par un seul facteur. Lequel ?",
+          "solution": "À la résonance, $I_{max} = \\dfrac{U}{R}$ et la tension efficace aux bornes du condensateur vaut\n$$U_C = \\frac{I_{max}}{C\\omega_0} = \\frac{U}{R\\,C\\omega_0} = Q\\,U .$$\nNumériquement\n$$U_C = 4{,}47\\times4{,}0 = 18\\ \\mathrm{V}.$$\nContrôle par la voie directe : $U_C = \\dfrac{I_{max}}{C\\omega_0} = \\dfrac{0{,}040}{1{,}0\\times10^{-6}\\times2{,}24\\times10^{3}} = \\dfrac{0{,}040}{2{,}24\\times10^{-3}} = 18\\ \\mathrm{V}$. Même valeur.\n\nComme $Q = 4{,}5 > 1$, on a $U_C > U$ : c'est le **phénomène de surtension**. La tension aux bornes du condensateur est ici $4{,}5$ fois celle du générateur, bien que celui-ci ne délivre que $4{,}0\\ \\mathrm{V}$. Il n'y a pas de contradiction avec la loi des mailles : $u_L$ et $u_C$ sont en opposition de phase et de même valeur efficace à la résonance, leur somme instantanée est nulle, et il reste $u = u_{R_0}+u_r$.\n\n**Conséquence pratique** : le condensateur doit supporter au moins $18\\ \\mathrm{V}$ efficaces, soit une amplitude de $18\\sqrt{2} = 25\\ \\mathrm{V}$. Choisir un condensateur sur la seule tension du générateur exposerait à son claquage.",
+          "methode": "À la résonance, $U_L = U_C = Q\\,U$. Si $Q>1$, il y a surtension : c'est le danger classique du circuit accordé.",
+          "points": 1,
+          "part": "Partie B — Exploitation de la courbe de résonance",
+          "ref": "pc-rlc-force-probleme-2-q8"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-rlc-force-serie-1",
+      "title": "Circuit RLC en régime sinusoïdal forcé · Échauffement",
+      "description": "Excitateur et résonateur, valeurs efficaces, diagramme de Fresnel, résonance : les réflexes de base du chapitre, une étape à la fois.",
+      "kind": "custom",
+      "chapter": "pc-rlc-force",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-rlc-force-excitateur-et-resonateur-q1",
+        "pc-rlc-force-grandeurs-efficaces-q1",
+        "pc-rlc-force-notation-et-dephasage-q1",
+        "pc-rlc-force-le-diagramme-de-fresnel-q1",
+        "pc-rlc-force-nature-du-circuit-q1",
+        "pc-rlc-force-le-phenomene-q1",
+        "pc-rlc-force-la-surtension-q1",
+        "pc-rlc-force-la-puissance-q1",
+        "pc-rlc-force-grandeurs-efficaces-q2",
+        "pc-rlc-force-le-phenomene-q2"
+      ]
+    },
+    {
+      "slug": "pc-rlc-force-serie-2",
+      "title": "Circuit RLC en régime sinusoïdal forcé · Entraînement",
+      "description": "Impédance, déphasage, nature du circuit, fréquence de résonance, facteur de qualité, surtension et puissance : toutes les notions du chapitre en calculs guidés.",
+      "kind": "custom",
+      "chapter": "pc-rlc-force",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-rlc-force-excitateur-et-resonateur-q2",
+        "pc-rlc-force-notation-et-dephasage-q2",
+        "pc-rlc-force-le-diagramme-de-fresnel-q2",
+        "pc-rlc-force-nature-du-circuit-q2",
+        "pc-rlc-force-le-phenomene-q3",
+        "pc-rlc-force-l-acuite-de-la-resonance-q1",
+        "pc-rlc-force-la-surtension-q2",
+        "pc-rlc-force-la-puissance-q2",
+        "pc-rlc-force-la-puissance-q3",
+        "pc-rlc-force-la-surtension-q3",
+        "pc-rlc-force-analogie-mecanique-q1",
+        "pc-rlc-force-comportement-asymptotique-et-filtrage-q1"
+      ]
+    },
+    {
+      "slug": "pc-rlc-force-serie-3",
+      "title": "Circuit RLC en régime sinusoïdal forcé · Type BAC",
+      "description": "Niveau épreuve nationale : exploitation d'un oscillogramme et d'une courbe de résonance, détermination de r, facteur de qualité, bande passante, surtension et compensation du facteur de puissance.",
+      "kind": "custom",
+      "chapter": "pc-rlc-force",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-rlc-force-probleme-1-q4",
+        "pc-rlc-force-probleme-2-q3",
+        "pc-rlc-force-probleme-1-q6",
+        "pc-rlc-force-probleme-1-q7",
+        "pc-rlc-force-probleme-2-q6",
+        "pc-rlc-force-probleme-2-q7",
+        "pc-rlc-force-probleme-2-q8",
+        "pc-rlc-force-le-diagramme-de-fresnel-q4",
+        "pc-rlc-force-nature-du-circuit-q4",
+        "pc-rlc-force-retour-sur-le-diagramme-de-fresnel-q1",
+        "pc-rlc-force-resonance-de-charge-et-resonance-de-tens-q1",
+        "pc-rlc-force-ameliorer-le-facteur-de-puissance-q1"
+      ]
+    }
+  ]
+}

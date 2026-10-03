@@ -1,0 +1,1371 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "si",
+ "track": "sm_b",
+ "_scaffold": {
+  "pack": "si-smb",
+  "label": "Sciences de l'Ingénieur — SM-B",
+  "priority": "P2",
+  "chapter": {
+   "code": "si-convertir",
+   "name": "Chaîne d'énergie — Convertir l'énergie",
+   "domain": null,
+   "unit": null
+  },
+  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+  "notions": [
+   "La fonction Convertir",
+   "Les vérins",
+   "Caractéristiques et performances d'un vérin",
+   "Les autres actionneurs pneumatiques",
+   "Constitution",
+   "Les trois équations caractéristiques",
+   "Inversion du sens de rotation",
+   "Le bilan de puissance",
+   "Le moteur asynchrone triphasé",
+   "Pourquoi la fcem existe",
+   "MCC ou moteur asynchrone ?",
+   "Le couplage étoile ou triangle",
+   "Les limites des vérins",
+   "Le schéma équivalent de l'induit",
+   "Le bilan de puissance, en schéma",
+   "Le schéma de commande",
+   "Méthode 1 — Résoudre un problème de MCC",
+   "Méthode 2 — Résoudre un problème de moteur asynchrone",
+   "Méthode 3 — Dimensionner et choisir un actionneur"
+  ],
+  "methodes_du_cours": [
+   "Méthode 1 — Résoudre un problème de MCC",
+   "Méthode 2 — Résoudre un problème de moteur asynchrone",
+   "Méthode 3 — Dimensionner et choisir un actionneur"
+  ],
+  "existing_questions_total": 6,
+  "target_new_questions": 46,
+  "suggested_figures": [
+   "moteur-cc — Moteur à courant continu — schéma de principe",
+   "si-chaine — Chaîne d'énergie + chaîne d'information",
+   "si-capteur — Capteur — chaîne d'acquisition"
+  ],
+  "sources": [
+   {
+    "annale": "si-smb-2025-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2025-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2025-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2025-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2025-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2025-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2024-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2024-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2024-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2023-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2023-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2023-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2023-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2022-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2022-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2022-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2022-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2022-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2022-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2021-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2021-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2021-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2021-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2021-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2021-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2020-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2020-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2020-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2020-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2020-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2020-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2019-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2019-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2019-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2019-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2019-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2019-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2018-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2018-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2018-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2018-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2018-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2018-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2017-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2017-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2017-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2017-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2017-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2017-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2016-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2016-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2016-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2016-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2016-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2016-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2015-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2015-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2015-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2015-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2015-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2015-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2014-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2014-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2014-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2014-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2014-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2014-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2013-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2013-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2013-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2013-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2013-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2013-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2012-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2012-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2012-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2012-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2012-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2012-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2011-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2011-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2011-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2011-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2011-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2011-normale.pdf"
+   },
+   {
+    "annale": "si-smb-2010-rattrapage",
+    "sujet": "annales-propres/Sujet-si-smb-2010-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2010-rattrapage.pdf"
+   },
+   {
+    "annale": "si-smb-2010-normale",
+    "sujet": "annales-propres/Sujet-si-smb-2010-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-smb-2010-normale.pdf"
+   },
+   {
+    "annale": "si-sm-2024-rattrapage",
+    "sujet": "annales-propres/Sujet-si-sm-2024-rattrapage.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-sm-2024-rattrapage.pdf"
+   },
+   {
+    "annale": "si-sm-2024-normale",
+    "sujet": "annales-propres/Sujet-si-sm-2024-normale.pdf",
+    "corrige": "corriges-propres/si/Corrige-si-sm-2024-normale.pdf"
+   },
+   {
+    "annale": "si-sm-2023-rattrapage",
+    "sujet": "annales-propres/Sujet-si-sm-2023-rattrapage.pdf"
+   },
+   {
+    "annale": "si-sm-2023-normale",
+    "sujet": "annales-propres/Sujet-si-sm-2023-normale.pdf"
+   }
+  ],
+  "forbidden_sources": [
+   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  ]
+ },
+ "exercises": [
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "La fonction Convertir",
+    "lesson": "Les actionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 3,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-la-fonction-convertir",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "La fonction Convertir",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-la-fonction-convertir-q1",
+     "notion": "La fonction Convertir",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les vérins",
+    "lesson": "Les actionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-les-verins",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Les vérins",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-les-verins-q1",
+     "notion": "Les vérins",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Caractéristiques et performances d'un vérin",
+    "lesson": "Les actionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-caracteristiques-et-performances-d-un-ve",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Caractéristiques et performances d'un vérin",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-caracteristiques-et-performances-d-un-ve-q1",
+     "notion": "Caractéristiques et performances d'un vérin",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les autres actionneurs pneumatiques",
+    "lesson": "Les actionneurs",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-les-autres-actionneurs-pneumatiques",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Les autres actionneurs pneumatiques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-les-autres-actionneurs-pneumatiques-q1",
+     "notion": "Les autres actionneurs pneumatiques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Constitution",
+    "lesson": "Le moteur à courant continu",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-constitution",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Constitution",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-constitution-q1",
+     "notion": "Constitution",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les trois équations caractéristiques",
+    "lesson": "Le moteur à courant continu",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 1,
+    "target_new_questions": 3,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-les-trois-equations-caracteristiques",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Les trois équations caractéristiques",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-les-trois-equations-caracteristiques-q1",
+     "notion": "Les trois équations caractéristiques",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Inversion du sens de rotation",
+    "lesson": "Le moteur à courant continu",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-inversion-du-sens-de-rotation",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Inversion du sens de rotation",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-inversion-du-sens-de-rotation-q1",
+     "notion": "Inversion du sens de rotation",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le bilan de puissance",
+    "lesson": "Le moteur à courant continu",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-le-bilan-de-puissance",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Le bilan de puissance",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-le-bilan-de-puissance-q1",
+     "notion": "Le bilan de puissance",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le moteur asynchrone triphasé",
+    "lesson": "Le moteur à courant continu",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-le-moteur-asynchrone-triphase",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Le moteur asynchrone triphasé",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-le-moteur-asynchrone-triphase-q1",
+     "notion": "Le moteur asynchrone triphasé",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le schéma équivalent de l'induit",
+    "lesson": "Le moteur à courant continu : schéma",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-le-schema-equivalent-de-l-induit",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Le schéma équivalent de l'induit",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-le-schema-equivalent-de-l-induit-q1",
+     "notion": "Le schéma équivalent de l'induit",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le bilan de puissance, en schéma",
+    "lesson": "Le moteur à courant continu : schéma",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-le-bilan-de-puissance-en-schema",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Le bilan de puissance, en schéma",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-le-bilan-de-puissance-en-schema-q1",
+     "notion": "Le bilan de puissance, en schéma",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le schéma de commande",
+    "lesson": "Le moteur à courant continu : schéma",
+    "role": "cours",
+    "bac_frequency": 3,
+    "existing_questions": 0,
+    "target_new_questions": 4,
+    "difficulty_mix": {
+     "1": 1,
+     "2": 2,
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-le-schema-de-commande",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Le schéma de commande",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-le-schema-de-commande-q1",
+     "notion": "Le schéma de commande",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Pourquoi la fcem existe",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-pourquoi-la-fcem-existe",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Pourquoi la fcem existe",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-pourquoi-la-fcem-existe-q1",
+     "notion": "Pourquoi la fcem existe",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "MCC ou moteur asynchrone ?",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-mcc-ou-moteur-asynchrone",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "MCC ou moteur asynchrone ?",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-mcc-ou-moteur-asynchrone-q1",
+     "notion": "MCC ou moteur asynchrone ?",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Le couplage étoile ou triangle",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-le-couplage-etoile-ou-triangle",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Le couplage étoile ou triangle",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-le-couplage-etoile-ou-triangle-q1",
+     "notion": "Le couplage étoile ou triangle",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "notion": "Les limites des vérins",
+    "lesson": "Approfondissement",
+    "role": "approfondissement",
+    "bac_frequency": 2,
+    "existing_questions": 0,
+    "target_new_questions": 1,
+    "difficulty_mix": {
+     "3": 1
+    }
+   },
+   "ref": "si-convertir-les-limites-des-verins",
+   "chapter": "si-convertir",
+   "kind": "qcu",
+   "title": "Les limites des vérins",
+   "difficulty": 2,
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-les-limites-des-verins-q1",
+     "notion": "Les limites des vérins",
+     "difficulty": 2,
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "si-smb-2025-rattrapage",
+     "si-smb-2025-normale",
+     "si-smb-2024-rattrapage",
+     "si-smb-2024-normale",
+     "si-smb-2023-rattrapage",
+     "si-smb-2023-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "si-convertir-probleme-1",
+   "chapter": "si-convertir",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 1",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. si-smb-2025-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-probleme-1-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-convertir-probleme-1-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-convertir-probleme-1-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  },
+  {
+   "_todo": true,
+   "_brief": {
+    "type": "Problème type BAC guidé",
+    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+    "source_suggestions": [
+     "si-smb-2025-rattrapage",
+     "si-smb-2025-normale",
+     "si-smb-2024-rattrapage",
+     "si-smb-2024-normale",
+     "si-smb-2023-rattrapage",
+     "si-smb-2023-normale"
+    ],
+    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+   },
+   "ref": "si-convertir-probleme-2",
+   "chapter": "si-convertir",
+   "kind": "probleme",
+   "title": "TODO — titre court du problème 2",
+   "difficulty": 3,
+   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
+   "figure": "",
+   "origin": {
+    "type": "annale",
+    "ref": "TODO ex. si-smb-2025-rattrapage",
+    "exercise": "TODO ex. Exercice 2",
+    "reexpressed": true
+   },
+   "questions": [
+    {
+     "_todo": true,
+     "ref": "si-convertir-probleme-2-q1",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 1,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-convertir-probleme-2-q2",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 2,
+     "part": "Partie A",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    },
+    {
+     "_todo": true,
+     "ref": "si-convertir-probleme-2-q3",
+     "notion": "TODO — un titre exact de _scaffold.notions",
+     "difficulty": 3,
+     "part": "Partie B",
+     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
+     "options": [
+      {
+       "label": "TODO bonne réponse",
+       "correct": true,
+       "why": "TODO — pourquoi c'est juste (1 phrase)"
+      },
+      {
+       "label": "TODO piège n°1 (erreur fréquente)",
+       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
+      },
+      {
+       "label": "TODO piège n°2",
+       "why": "TODO"
+      },
+      {
+       "label": "TODO piège n°3",
+       "why": "TODO"
+      }
+     ],
+     "hint": "TODO — un indice qui oriente sans donner la réponse",
+     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
+     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
+     "points": 1
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "_todo": true,
+   "slug": "si-convertir-serie-1",
+   "title": "Chaîne d'énergie — Convertir l'énergie · Échauffement",
+   "description": "Les bases du chapitre, pour démarrer en confiance.",
+   "kind": "custom",
+   "chapter": "si-convertir",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "si-convertir-serie-2",
+   "title": "Chaîne d'énergie — Convertir l'énergie · Entraînement",
+   "description": "Le cœur du chapitre, toutes les notions.",
+   "kind": "custom",
+   "chapter": "si-convertir",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  },
+  {
+   "_todo": true,
+   "slug": "si-convertir-serie-3",
+   "title": "Chaîne d'énergie — Convertir l'énergie · Type BAC",
+   "description": "Des questions au niveau de l'examen, pièges compris.",
+   "kind": "custom",
+   "chapter": "si-convertir",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
+   ]
+  }
+ ]
+}

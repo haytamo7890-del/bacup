@@ -1,0 +1,2835 @@
+{
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-champ-pesanteur",
+      "name": "Mouvements plans dans un champ de pesanteur",
+      "domain": "physique",
+      "unit": "Mécanique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "La situation",
+      "Les équations horaires",
+      "L'équation de la trajectoire",
+      "Le vecteur vitesse au cours du vol",
+      "Les grandeurs caractéristiques",
+      "Le sommet et la flèche",
+      "Le temps de vol et la portée",
+      "L'angle de portée maximale",
+      "Le tir depuis une hauteur",
+      "La parabole de sûreté",
+      "L'influence de la résistance de l'air",
+      "L'effet Magnus",
+      "Le mouvement dans un champ uniforme quelconque",
+      "Le dispositif",
+      "Exploiter le tableau de mesures",
+      "Exemple complet",
+      "Vérifier la conservation de l'énergie",
+      "Sources d'erreur",
+      "Méthode 1 — Établir les équations horaires",
+      "Méthode 2 — Le projectile passe-t-il au-dessus d'un obstacle ?",
+      "Méthode 3 — Retrouver $v_0$ ou $\\alpha$ à partir d'un point atteint",
+      "Méthode 4 — Utiliser l'énergie",
+      "Méthode 5 — Exploiter une chronophotographie"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Établir les équations horaires",
+      "Méthode 2 — Le projectile passe-t-il au-dessus d'un obstacle ?",
+      "Méthode 3 — Retrouver $v_0$ ou $\\alpha$ à partir d'un point atteint",
+      "Méthode 4 — Utiliser l'énergie",
+      "Méthode 5 — Exploiter une chronophotographie"
+    ],
+    "existing_questions_total": 5,
+    "target_new_questions": 55,
+    "suggested_figures": [
+      "projectile — Mouvement d'un projectile — trajectoire parabolique",
+      "projectile-portee — Flèche, portée et temps de vol d'un projectile",
+      "chronophoto-projectile — Chronophotographie d'un projectile",
+      "particule-champ-b — Mouvement circulaire dans un champ magnétique",
+      "pendule-pesant — Pendule pesant",
+      "retard-temporel — Retard temporel : M reproduit le mouvement de S avec τ = d/c"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
+  },
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "La situation",
+        "lesson": "Mouvement d'un projectile",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-la-situation",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "La situation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La situation",
+          "difficulty": 1,
+          "statement": "Un projectile de masse $m$ est lancé dans le champ de pesanteur uniforme, les frottements de l'air étant négligés. Pendant tout le vol, le vecteur accélération de son centre d'inertie est :",
+          "options": [
+            {
+              "label": "$\\vec a = \\vec g$ : vertical, vers le bas, de norme $9{,}8\\ \\mathrm{m\\,s^{-2}}$, quelle que soit $m$",
+              "correct": true,
+              "why": "La deuxième loi de Newton donne $m\\vec a = \\vec P = m\\vec g$, donc $\\vec a = \\vec g$ : la masse se simplifie et ne joue aucun rôle."
+            },
+            {
+              "label": "$\\vec a = m\\vec g$ : vertical, vers le bas, de norme proportionnelle à $m$",
+              "why": "Tu as oublié de diviser par $m$. $m\\vec g$ est une **force** (en newtons) ; une accélération s'exprime en $\\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$\\vec a$ est porté par $\\vec v_0$ : il garde la direction du lancement",
+              "why": "Tu confonds vitesse et accélération. $\\vec a$ a la direction de la **force** appliquée, c'est-à-dire du poids, pas celle de $\\vec v_0$."
+            },
+            {
+              "label": "$\\vec a = \\vec 0$ au sommet, $\\vec a = \\vec g$ ailleurs sur la trajectoire",
+              "why": "Au sommet c'est $v_y$ qui s'annule, pas $\\vec a$. Le poids ne disparaît jamais : $\\vec a = \\vec g$ en permanence."
+            }
+          ],
+          "hint": "Écris la deuxième loi de Newton en ne gardant que le poids, puis simplifie.",
+          "solution": "Le système est le projectile, le référentiel terrestre supposé galiléen. Les frottements étant négligés, la seule force est le poids $\\vec P = m\\vec g$.\nDeuxième loi de Newton : $\\sum \\vec F = m\\vec a$, donc $m\\vec g = m\\vec a$ et $\\vec a = \\vec g$.\nLe vecteur accélération est donc constant : vertical, vers le bas, de norme $9{,}8\\ \\mathrm{m\\,s^{-2}}$. Contrôle : la masse a disparu de l'équation, ce qui explique que deux projectiles de masses différentes lancés de la même façon suivent la même trajectoire.",
+          "methode": "Dès que le poids est la seule force, écris $\\vec a = \\vec g$ avant tout calcul : c'est le point de départ de tout le chapitre.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-la-situation-q1"
+        },
+        {
+          "notion": "La situation",
+          "difficulty": 2,
+          "statement": "Un projectile est lancé avec une vitesse initiale de norme $v_0 = 20\\ \\mathrm{m\\,s^{-1}}$ faisant l'angle $\\alpha = 30^\\circ$ avec l'horizontale. Dans le repère $(O;\\vec i,\\vec j)$ avec $\\vec i$ horizontal dans le sens du tir et $\\vec j$ vertical vers le haut, les composantes de $\\vec v_0$ sont :",
+          "options": [
+            {
+              "label": "$v_{0x} = 17{,}3\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = 10{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_{0x} = v_0\\cos\\alpha = 20\\times\\cos 30^\\circ = 17{,}3\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = v_0\\sin\\alpha = 20\\times 0{,}500 = 10{,}0\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$v_{0x} = 10{,}0\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = 17{,}3\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as échangé sinus et cosinus. L'angle $\\alpha$ est mesuré **depuis l'horizontale** : c'est donc le cosinus qui donne la composante horizontale."
+            },
+            {
+              "label": "$v_{0x} = 17{,}3\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = -10{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Erreur de signe : le projectile part **vers le haut**, donc $v_{0y} > 0$ avec $\\vec j$ orienté vers le haut. Le signe moins n'apparaît que dans $a_y = -g$."
+            },
+            {
+              "label": "$v_{0x} = 20{,}0\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = 10{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris $v_{0x} = v_0$ sans projeter. On aurait alors $v_{0x}^2 + v_{0y}^2 = 500 > v_0^2 = 400$ : impossible."
+            }
+          ],
+          "hint": "Projette $\\vec v_0$ sur les deux axes : l'angle est mesuré à partir de l'horizontale.",
+          "solution": "$v_{0x} = v_0\\cos\\alpha = 20\\times\\cos 30^\\circ = 20\\times 0{,}866 = 17{,}3\\ \\mathrm{m\\,s^{-1}}$.\n$v_{0y} = v_0\\sin\\alpha = 20\\times\\sin 30^\\circ = 20\\times 0{,}500 = 10{,}0\\ \\mathrm{m\\,s^{-1}}$.\nContrôle : $\\sqrt{17{,}3^2 + 10{,}0^2} = \\sqrt{299{,}3 + 100{,}0} = 20{,}0\\ \\mathrm{m\\,s^{-1}} = v_0$. La projection est cohérente.",
+          "methode": "Angle compté depuis l'horizontale : $\\cos$ pour l'horizontale, $\\sin$ pour la verticale. Vérifie toujours par $v_{0x}^2+v_{0y}^2 = v_0^2$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-la-situation-q2"
+        },
+        {
+          "notion": "La situation",
+          "difficulty": 2,
+          "statement": "Deux billes, l'une de masse $m_1 = 20\\ \\mathrm{g}$, l'autre de masse $m_2 = 200\\ \\mathrm{g}$, sont lancées du même point avec la même vitesse initiale $\\vec v_0$ (même norme, même angle). Les frottements sont négligés. On observe que :",
+          "options": [
+            {
+              "label": "les deux billes suivent exactement la même trajectoire et ont la même portée",
+              "correct": true,
+              "why": "L'équation du mouvement $\\vec a = \\vec g$ ne contient pas $m$ : à mêmes conditions initiales, mêmes équations horaires, donc même trajectoire."
+            },
+            {
+              "label": "la bille de $200\\ \\mathrm{g}$ a une portée dix fois plus grande",
+              "why": "Tu as supposé la portée proportionnelle à la masse. Or $x_P = \\dfrac{v_0^2\\sin 2\\alpha}{g}$ ne contient aucune masse."
+            },
+            {
+              "label": "la bille de $20\\ \\mathrm{g}$ a une portée dix fois plus grande",
+              "why": "Tu as supposé la portée inversement proportionnelle à la masse, comme si $\\vec a = \\vec P/m$ gardait un $m$ au dénominateur. Le poids valant $m\\vec g$, le $m$ se simplifie."
+            },
+            {
+              "label": "les deux billes ont la même portée mais la plus lourde monte moins haut",
+              "why": "La flèche $y_S = \\dfrac{v_0^2\\sin^2\\alpha}{2g}$ ne contient pas $m$ non plus : les deux billes atteignent la même hauteur."
+            }
+          ],
+          "hint": "Reprends l'équation du mouvement : la masse y figure-t-elle encore ?",
+          "solution": "Bilan des forces : le poids seul, $\\vec P = m\\vec g$. La deuxième loi de Newton donne $m\\vec a = m\\vec g$, soit $\\vec a = \\vec g$ : l'équation du mouvement ne dépend pas de la masse.\nLes conditions initiales (position et $\\vec v_0$) étant identiques, les deux billes ont les mêmes équations horaires $x(t)$ et $y(t)$, donc la même trajectoire, la même flèche et la même portée.\nContrôle : $x_P = \\dfrac{v_0^2\\sin 2\\alpha}{g}$ et $y_S = \\dfrac{v_0^2\\sin^2\\alpha}{2g}$ ne contiennent ni $m_1$ ni $m_2$. C'est seulement avec frottements que la masse réapparaît.",
+          "methode": "Sans frottement, la masse ne figure dans aucun résultat de ce chapitre. Si ta réponse contient $m$, tu t'es trompé.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-la-situation-q3"
+        },
+        {
+          "notion": "La situation",
+          "difficulty": 3,
+          "statement": "Pour justifier que le mouvement du projectile est **plan**, on ajoute un axe $Oz$ horizontal, perpendiculaire au plan contenant $\\vec v_0$ et $\\vec g$. Le raisonnement correct est :",
+          "options": [
+            {
+              "label": "$a_z = 0$ et $v_{0z} = 0$, donc $z(t) = 0$ : le mouvement reste dans le plan $xOy$",
+              "correct": true,
+              "why": "La projection de $\\vec a = \\vec g$ sur $Oz$ donne $a_z = 0$ ; avec $v_{0z} = 0$ et $z(0) = 0$, deux intégrations donnent $z(t) = 0$ à chaque instant."
+            },
+            {
+              "label": "le poids est vertical, donc le mouvement est plan quelle que soit la direction de $\\vec v_0$",
+              "why": "Affirmation trop forte : si $\\vec v_0$ avait une composante selon $Oz$, on aurait $z(t) = v_{0z}\\,t \\ne 0$. C'est bien le choix du plan **contenant $\\vec v_0$** qui rend $v_{0z} = 0$."
+            },
+            {
+              "label": "le champ de pesanteur est uniforme, donc toute trajectoire y est plane",
+              "why": "L'uniformité de $\\vec g$ assure seulement que $\\vec a$ est constant. Sans la condition $v_{0z} = 0$, le mouvement pourrait se faire dans un autre plan ; c'est cette condition qui fixe le plan."
+            },
+            {
+              "label": "le mouvement n'est plan que si $\\alpha = 45^\\circ$, sinon la trajectoire est gauche",
+              "why": "$45^\\circ$ est l'angle de portée maximale, il n'a rien à voir avec la planéité. La trajectoire est plane pour tout $\\alpha$."
+            }
+          ],
+          "hint": "Projette $\\vec a = \\vec g$ sur l'axe perpendiculaire, puis intègre deux fois en utilisant les conditions initiales.",
+          "solution": "Projection de $\\vec a = \\vec g$ sur $Oz$ : $a_z = 0$, car $\\vec g$ n'a aucune composante selon $Oz$.\nUne première intégration donne $v_z(t) = v_{0z}$. Comme le plan $xOy$ a été choisi de façon à contenir $\\vec v_0$, on a $v_{0z} = 0$, donc $v_z(t) = 0$.\nUne seconde intégration donne $z(t) = z(0) = 0$ : le point reste à chaque instant dans le plan $xOy$, le mouvement est donc plan.\nContrôle : le raisonnement utilise deux ingrédients, $a_z = 0$ (dû au poids) **et** $v_{0z} = 0$ (dû au choix du plan). Retirer l'un des deux suffit à le casser.",
+          "methode": "Pour prouver qu'un mouvement est plan : montre que l'accélération et la vitesse initiale n'ont pas de composante hors du plan choisi.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-la-situation-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les équations horaires",
+        "lesson": "Mouvement d'un projectile",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-les-equations-horaires",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Les équations horaires",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les équations horaires",
+          "difficulty": 1,
+          "statement": "Un projectile est lancé à la date $t = 0$ depuis l'origine $O$ avec la vitesse $\\vec v_0$ faisant l'angle $\\alpha$ avec l'horizontale ; l'axe $Oy$ est vertical vers le haut. Les composantes du vecteur vitesse à la date $t$ sont :",
+          "options": [
+            {
+              "label": "$v_x = v_0\\cos\\alpha$ et $v_y = -g\\,t + v_0\\sin\\alpha$",
+              "correct": true,
+              "why": "$a_x = 0$ donne $v_x$ constant égal à $v_0\\cos\\alpha$ ; $a_y = -g$ donne $v_y = -g\\,t + v_0\\sin\\alpha$ par primitivation."
+            },
+            {
+              "label": "$v_x = v_0\\cos\\alpha$ et $v_y = g\\,t + v_0\\sin\\alpha$",
+              "why": "Erreur de signe : avec $Oy$ vers le haut, $a_y = -g$, donc la primitive est $-g\\,t + v_0\\sin\\alpha$. Avec ton expression $v_y$ ne s'annulerait jamais et il n'y aurait pas de sommet."
+            },
+            {
+              "label": "$v_x = -g\\,t + v_0\\cos\\alpha$ et $v_y = v_0\\sin\\alpha$",
+              "why": "Tu as mis l'accélération sur l'axe horizontal. Or le poids est vertical : $a_x = 0$, donc c'est $v_x$ qui reste constant."
+            },
+            {
+              "label": "$v_x = v_0\\sin\\alpha$ et $v_y = -g\\,t + v_0\\cos\\alpha$",
+              "why": "Tu as échangé sinus et cosinus. L'angle étant mesuré depuis l'horizontale, $v_{0x} = v_0\\cos\\alpha$."
+            }
+          ],
+          "hint": "Projette $\\vec a = \\vec g$ sur les deux axes, puis cherche une primitive en utilisant $\\vec v(0) = \\vec v_0$.",
+          "solution": "Projection de $\\vec a = \\vec g$ : $a_x = 0$ et $a_y = -g$ (axe $Oy$ vers le haut).\nSur $Ox$ : $v_x$ est constante, donc $v_x(t) = v_{0x} = v_0\\cos\\alpha$ — le mouvement est **uniforme** selon $Ox$.\nSur $Oy$ : $v_y(t) = -g\\,t + v_{0y} = -g\\,t + v_0\\sin\\alpha$ — le mouvement est **uniformément varié** selon $Oy$.\nContrôle : à $t = 0$ on retrouve bien $(v_0\\cos\\alpha\\,;\\,v_0\\sin\\alpha)$, c'est-à-dire $\\vec v_0$.",
+          "methode": "Toujours dans cet ordre : $\\vec a = \\vec g$, projection, primitive pour $\\vec v$, primitive pour la position. Chaque constante vient d'une condition initiale.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-les-equations-horaires-q1"
+        },
+        {
+          "notion": "Les équations horaires",
+          "difficulty": 2,
+          "statement": "Un ballon est lancé depuis le sol avec $v_0 = 12\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 55^\\circ$, avec $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. À la date $t = 0{,}80\\ \\mathrm{s}$, ses coordonnées sont :",
+          "options": [
+            {
+              "label": "$x = 5{,}5\\ \\mathrm{m}$ et $y = 4{,}7\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$x = v_0\\cos\\alpha\\,t = 6{,}88\\times 0{,}80 = 5{,}5\\ \\mathrm{m}$ et $y = -4{,}9\\times 0{,}64 + 9{,}83\\times 0{,}80 = -3{,}14 + 7{,}86 = 4{,}7\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$x = 9{,}6\\ \\mathrm{m}$ et $y = 4{,}7\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $v_0$ au lieu de $v_0\\cos\\alpha$ : $12\\times 0{,}80 = 9{,}6\\ \\mathrm{m}$. Seule la composante horizontale fait avancer le ballon selon $Ox$."
+            },
+            {
+              "label": "$x = 5{,}5\\ \\mathrm{m}$ et $y = 11{,}0\\ \\mathrm{m}$",
+              "why": "Erreur de signe sur $g$ : $+4{,}9\\times 0{,}64 + 7{,}86 = 11{,}0\\ \\mathrm{m}$. Avec $Oy$ vers le haut, le terme en $t^2$ est négatif."
+            },
+            {
+              "label": "$x = 5{,}5\\ \\mathrm{m}$ et $y = 1{,}6\\ \\mathrm{m}$",
+              "why": "Tu as oublié le facteur $\\tfrac12$ : $-9{,}8\\times 0{,}64 + 7{,}86 = 1{,}6\\ \\mathrm{m}$. La primitive de $-g$ deux fois donne $-\\tfrac12 g t^2$."
+            }
+          ],
+          "hint": "Calcule d'abord les deux composantes de $\\vec v_0$, puis applique $x = v_0\\cos\\alpha\\,t$ et $y = -\\tfrac12 g t^2 + v_0\\sin\\alpha\\,t$.",
+          "solution": "Composantes initiales : $v_0\\cos 55^\\circ = 12\\times 0{,}5736 = 6{,}88\\ \\mathrm{m\\,s^{-1}}$ et $v_0\\sin 55^\\circ = 12\\times 0{,}8192 = 9{,}83\\ \\mathrm{m\\,s^{-1}}$.\n$x(0{,}80) = 6{,}88\\times 0{,}80 = 5{,}51\\ \\mathrm{m} \\approx 5{,}5\\ \\mathrm{m}$.\n$y(0{,}80) = -\\tfrac12\\times 9{,}8\\times 0{,}80^2 + 9{,}83\\times 0{,}80 = -3{,}14 + 7{,}86 = 4{,}73\\ \\mathrm{m} \\approx 4{,}7\\ \\mathrm{m}$.\nContrôle : la date du sommet est $t_S = 9{,}83/9{,}8 = 1{,}00\\ \\mathrm{s}$ et la flèche $y_S = 9{,}83^2/(2\\times 9{,}8) = 4{,}93\\ \\mathrm{m}$. À $t = 0{,}80\\ \\mathrm{s}$ le ballon monte encore et $4{,}7 < 4{,}93$ : cohérent.",
+          "methode": "Écris les deux équations horaires avec les valeurs numériques **avant** de remplacer $t$ : tu évites ainsi d'oublier $\\cos\\alpha$ ou le $\\tfrac12$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-les-equations-horaires-q2"
+        },
+        {
+          "notion": "Les équations horaires",
+          "difficulty": 3,
+          "statement": "Les équations horaires d'un projectile lancé depuis l'origine sont, en unités SI, $x(t) = 8{,}5\\,t$ et $y(t) = -4{,}9\\,t^2 + 6{,}0\\,t$. La vitesse initiale et l'angle de tir valent :",
+          "options": [
+            {
+              "label": "$v_0 = 10{,}4\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 35^\\circ$",
+              "correct": true,
+              "why": "$v_0\\cos\\alpha = 8{,}5$ et $v_0\\sin\\alpha = 6{,}0$, donc $v_0 = \\sqrt{8{,}5^2+6{,}0^2} = 10{,}4\\ \\mathrm{m\\,s^{-1}}$ et $\\tan\\alpha = 6{,}0/8{,}5$, soit $\\alpha = 35^\\circ$."
+            },
+            {
+              "label": "$v_0 = 14{,}5\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 35^\\circ$",
+              "why": "Tu as **additionné** les composantes : $8{,}5 + 6{,}0 = 14{,}5$. Il faut composer par le théorème de Pythagore, pas additionner."
+            },
+            {
+              "label": "$v_0 = 10{,}4\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 55^\\circ$",
+              "why": "Tu as inversé le rapport : $\\tan\\alpha = 8{,}5/6{,}0$ donne $55^\\circ$. Or $\\tan\\alpha = v_{0y}/v_{0x} = 6{,}0/8{,}5$."
+            },
+            {
+              "label": "$v_0 = 6{,}0\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 35^\\circ$",
+              "why": "Tu as confondu $v_0$ avec $v_0\\sin\\alpha = 6{,}0\\ \\mathrm{m\\,s^{-1}}$, qui n'est que la composante verticale initiale."
+            }
+          ],
+          "hint": "Identifie terme à terme avec $x = v_0\\cos\\alpha\\,t$ et $y = -\\tfrac12 g t^2 + v_0\\sin\\alpha\\,t$.",
+          "solution": "Par identification : $v_0\\cos\\alpha = 8{,}5\\ \\mathrm{m\\,s^{-1}}$ et $v_0\\sin\\alpha = 6{,}0\\ \\mathrm{m\\,s^{-1}}$.\nNorme : $v_0 = \\sqrt{8{,}5^2 + 6{,}0^2} = \\sqrt{72{,}25 + 36{,}0} = \\sqrt{108{,}25} = 10{,}4\\ \\mathrm{m\\,s^{-1}}$.\nAngle : $\\tan\\alpha = \\dfrac{6{,}0}{8{,}5} = 0{,}706$, donc $\\alpha = 35^\\circ$.\nContrôle : le coefficient de $t^2$ vaut $-4{,}9 = -\\tfrac12\\times 9{,}8$, ce qui confirme $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$ et la cohérence des équations.",
+          "methode": "Pour remonter aux conditions initiales : le coefficient de $t$ dans $x$ donne $v_0\\cos\\alpha$, celui de $t$ dans $y$ donne $v_0\\sin\\alpha$ ; ensuite Pythagore et arctangente.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-les-equations-horaires-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'équation de la trajectoire",
+        "lesson": "Mouvement d'un projectile",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-l-equation-de-la-trajectoire",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "L'équation de la trajectoire",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'équation de la trajectoire",
+          "difficulty": 2,
+          "statement": "Un projectile part de l'origine avec $v_0 = 10\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 30^\\circ$, avec $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. L'équation de sa trajectoire est :",
+          "options": [
+            {
+              "label": "$y = -0{,}0653\\,x^2 + 0{,}577\\,x$",
+              "correct": true,
+              "why": "$\\dfrac{g}{2v_0^2\\cos^2\\alpha} = \\dfrac{9{,}8}{2\\times 100\\times 0{,}750} = 0{,}0653\\ \\mathrm{m^{-1}}$ et $\\tan 30^\\circ = 0{,}577$."
+            },
+            {
+              "label": "$y = -0{,}0490\\,x^2 + 0{,}577\\,x$",
+              "why": "Tu as oublié $\\cos^2\\alpha$ au dénominateur : $9{,}8/(2\\times 100) = 0{,}0490$. Or $t = x/(v_0\\cos\\alpha)$, et l'élévation au carré fait apparaître $\\cos^2\\alpha$."
+            },
+            {
+              "label": "$y = -0{,}0653\\,x^2 + 0{,}500\\,x$",
+              "why": "Tu as écrit $\\sin\\alpha = 0{,}500$ au lieu de $\\tan\\alpha$. Le terme linéaire vaut $v_0\\sin\\alpha \\times \\dfrac{1}{v_0\\cos\\alpha} = \\tan\\alpha$."
+            },
+            {
+              "label": "$y = +0{,}0653\\,x^2 + 0{,}577\\,x$",
+              "why": "Erreur de signe : avec un $x^2$ positif la courbe monterait indéfiniment. Le terme en $x^2$ vient de $-\\tfrac12 g t^2$, il est négatif."
+            }
+          ],
+          "hint": "Exprime $t$ en fonction de $x$ à partir de $x = v_0\\cos\\alpha\\,t$, puis remplace dans $y(t)$.",
+          "solution": "De $x = v_0\\cos\\alpha\\,t$ on tire $t = \\dfrac{x}{v_0\\cos\\alpha}$.\nEn remplaçant dans $y = -\\tfrac12 g t^2 + v_0\\sin\\alpha\\,t$ : $y = -\\dfrac{g}{2v_0^2\\cos^2\\alpha}\\,x^2 + x\\tan\\alpha$.\nNumériquement : $\\cos^2 30^\\circ = 0{,}750$, donc $\\dfrac{9{,}8}{2\\times 100\\times 0{,}750} = 0{,}0653\\ \\mathrm{m^{-1}}$, et $\\tan 30^\\circ = 0{,}577$. D'où $y = -0{,}0653\\,x^2 + 0{,}577\\,x$.\nContrôle : la portée prévue par cette équation est $x_P = 0{,}577/0{,}0653 = 8{,}84\\ \\mathrm{m}$, et la formule directe donne $\\dfrac{v_0^2\\sin 60^\\circ}{g} = \\dfrac{100\\times 0{,}866}{9{,}8} = 8{,}84\\ \\mathrm{m}$. Les deux concordent.",
+          "methode": "La trajectoire s'obtient en éliminant $t$ : $t = x/(v_0\\cos\\alpha)$ puis substitution. Retiens la forme $y = -\\dfrac{g}{2v_0^2\\cos^2\\alpha}x^2 + x\\tan\\alpha + y_0$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-l-equation-de-la-trajectoire-q1"
+        },
+        {
+          "notion": "L'équation de la trajectoire",
+          "difficulty": 3,
+          "statement": "Un ballon est frappé depuis le sol avec $v_0 = 14\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 50^\\circ$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. Un mur vertical de hauteur $4{,}0\\ \\mathrm{m}$ se trouve à $x = 12\\ \\mathrm{m}$ du point de frappe. Le ballon :",
+          "options": [
+            {
+              "label": "passe $1{,}6\\ \\mathrm{m}$ au-dessus du sommet du mur",
+              "correct": true,
+              "why": "$y(12) = -0{,}0605\\times 144 + 1{,}192\\times 12 = -8{,}71 + 14{,}30 = 5{,}59\\ \\mathrm{m}$, soit $5{,}59 - 4{,}0 = 1{,}6\\ \\mathrm{m}$ au-dessus."
+            },
+            {
+              "label": "passe $6{,}7\\ \\mathrm{m}$ au-dessus du sommet du mur",
+              "why": "Tu as oublié $\\cos^2\\alpha$ : avec $9{,}8/(2\\times 196) = 0{,}0250$ on trouve $y = 10{,}7\\ \\mathrm{m}$, soit $6{,}7\\ \\mathrm{m}$ de marge. Le coefficient correct est $0{,}0605\\ \\mathrm{m^{-1}}$."
+            },
+            {
+              "label": "arrive $3{,}5\\ \\mathrm{m}$ sous le sommet du mur",
+              "why": "Tu as utilisé $\\sin 50^\\circ = 0{,}766$ au lieu de $\\tan 50^\\circ = 1{,}192$ dans le terme linéaire : $y = -8{,}71 + 9{,}19 = 0{,}48\\ \\mathrm{m}$, soit $3{,}5\\ \\mathrm{m}$ sous le sommet."
+            },
+            {
+              "label": "passe $19{,}0\\ \\mathrm{m}$ au-dessus du sommet du mur",
+              "why": "Erreur de signe sur le terme en $x^2$ : $+8{,}71 + 14{,}30 = 23{,}0\\ \\mathrm{m}$, soit $19{,}0\\ \\mathrm{m}$ de marge. Une hauteur de $23\\ \\mathrm{m}$ est d'ailleurs impossible, car la flèche n'est que de $5{,}9\\ \\mathrm{m}$."
+            }
+          ],
+          "hint": "Calcule $y$ pour $x = 12\\ \\mathrm{m}$ avec l'équation de la trajectoire, puis compare à $4{,}0\\ \\mathrm{m}$.",
+          "solution": "Coefficients : $\\cos 50^\\circ = 0{,}6428$ donc $\\cos^2 50^\\circ = 0{,}4132$, et $\\dfrac{g}{2v_0^2\\cos^2\\alpha} = \\dfrac{9{,}8}{2\\times 196\\times 0{,}4132} = 0{,}0605\\ \\mathrm{m^{-1}}$ ; $\\tan 50^\\circ = 1{,}192$.\nTrajectoire : $y = -0{,}0605\\,x^2 + 1{,}192\\,x$.\nPour $x = 12\\ \\mathrm{m}$ : $y = -0{,}0605\\times 144 + 1{,}192\\times 12 = -8{,}71 + 14{,}30 = 5{,}59\\ \\mathrm{m}$.\nComme $5{,}59\\ \\mathrm{m} > 4{,}0\\ \\mathrm{m}$, le ballon franchit le mur avec une marge de $1{,}6\\ \\mathrm{m}$.\nContrôle : la flèche vaut $y_S = \\dfrac{196\\times 0{,}766^2}{2\\times 9{,}8} = 5{,}87\\ \\mathrm{m}$ et la portée $x_P = \\dfrac{196\\sin 100^\\circ}{9{,}8} = 19{,}7\\ \\mathrm{m}$. Le point $x = 12\\ \\mathrm{m}$ est après le sommet ($x_S = 9{,}85\\ \\mathrm{m}$) et $5{,}59 < 5{,}87$ : cohérent.",
+          "methode": "Question « passe-t-il au-dessus de l'obstacle ? » : calcule $y$ à l'abscisse de l'obstacle avec l'équation de la trajectoire, puis compare. Ne cherche jamais la date d'abord.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-l-equation-de-la-trajectoire-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le vecteur vitesse au cours du vol",
+        "lesson": "Mouvement d'un projectile",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-le-vecteur-vitesse-au-cours-du-vol",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Le vecteur vitesse au cours du vol",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le vecteur vitesse au cours du vol",
+          "difficulty": 1,
+          "statement": "À un instant quelconque du vol d'un projectile (frottements négligés), le vecteur vitesse $\\vec v$ :",
+          "options": [
+            {
+              "label": "est tangent à la trajectoire, orienté dans le sens du mouvement",
+              "correct": true,
+              "why": "C'est la propriété générale du vecteur vitesse : $\\vec v = \\dfrac{d\\overrightarrow{OM}}{dt}$ est toujours tangent à la trajectoire et orienté dans le sens du parcours."
+            },
+            {
+              "label": "est tangent à la trajectoire, orienté vers le point de lancement",
+              "why": "Erreur de sens : $\\vec v$ pointe toujours vers là où le projectile va, jamais vers d'où il vient."
+            },
+            {
+              "label": "est vertical vers le bas, comme le vecteur accélération",
+              "why": "Tu confonds $\\vec v$ et $\\vec a$. C'est $\\vec a = \\vec g$ qui est vertical vers le bas ; $\\vec v$ garde en permanence une composante horizontale $v_0\\cos\\alpha$."
+            },
+            {
+              "label": "garde la direction de $\\vec v_0$, seule sa norme change",
+              "why": "C'est le cas d'un mouvement rectiligne. Ici $v_y$ change de signe alors que $v_x$ reste constante : la direction de $\\vec v$ tourne continûment."
+            }
+          ],
+          "hint": "Rappelle-toi la définition du vecteur vitesse comme dérivée du vecteur position.",
+          "solution": "Par définition $\\vec v = \\dfrac{d\\overrightarrow{OM}}{dt}$ : le vecteur vitesse est tangent à la trajectoire et orienté dans le sens du mouvement.\nIci $v_x = v_0\\cos\\alpha$ reste constante tandis que $v_y = -g\\,t + v_0\\sin\\alpha$ décroît : la direction de $\\vec v$ pivote progressivement vers le bas, en restant tangente à la parabole.\nContrôle : au sommet $v_y = 0$, donc $\\vec v$ est horizontal — ce qui est bien la tangente à la parabole en son sommet.",
+          "methode": "Ne confonds jamais $\\vec v$ (tangent à la trajectoire) et $\\vec a$ (ici constant, vertical vers le bas).",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-vecteur-vitesse-au-cours-du-vol-q1"
+        },
+        {
+          "notion": "Le vecteur vitesse au cours du vol",
+          "difficulty": 2,
+          "statement": "Un projectile est lancé du sol avec $v_0 = 18\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 35^\\circ$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. À la date $t = 1{,}2\\ \\mathrm{s}$, la norme de sa vitesse vaut :",
+          "options": [
+            {
+              "label": "$14{,}8\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_x = 18\\cos 35^\\circ = 14{,}74\\ \\mathrm{m\\,s^{-1}}$, $v_y = -9{,}8\\times 1{,}2 + 10{,}32 = -1{,}44\\ \\mathrm{m\\,s^{-1}}$, donc $v = \\sqrt{14{,}74^2 + 1{,}44^2} = 14{,}8\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$18{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as supposé que la norme de la vitesse se conserve. Ce serait vrai sans le poids ; ici $v_y$ change à chaque instant."
+            },
+            {
+              "label": "$16{,}2\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as additionné les normes des composantes : $14{,}74 + 1{,}44 = 16{,}2$. Deux composantes perpendiculaires se composent par le théorème de Pythagore."
+            },
+            {
+              "label": "$1{,}4\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu n'as gardé que $|v_y| = 1{,}44\\ \\mathrm{m\\,s^{-1}}$. La composante horizontale $14{,}74\\ \\mathrm{m\\,s^{-1}}$ existe toujours."
+            }
+          ],
+          "hint": "Calcule séparément $v_x$ et $v_y$ à cette date, puis compose-les.",
+          "solution": "$v_x = v_0\\cos 35^\\circ = 18\\times 0{,}8192 = 14{,}74\\ \\mathrm{m\\,s^{-1}}$ (constante).\n$v_{0y} = 18\\times\\sin 35^\\circ = 18\\times 0{,}5736 = 10{,}32\\ \\mathrm{m\\,s^{-1}}$, donc $v_y(1{,}2) = -9{,}8\\times 1{,}2 + 10{,}32 = -11{,}76 + 10{,}32 = -1{,}44\\ \\mathrm{m\\,s^{-1}}$.\n$v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{217{,}4 + 2{,}1} = \\sqrt{219{,}5} = 14{,}8\\ \\mathrm{m\\,s^{-1}}$.\nContrôle : $v_y < 0$, donc le projectile descend déjà ; en effet $t_S = 10{,}32/9{,}8 = 1{,}05\\ \\mathrm{s} < 1{,}2\\ \\mathrm{s}$. Et $14{,}8 < 18{,}0$ : la vitesse est plus faible qu'au départ puisque le projectile est plus haut.",
+          "methode": "Norme de la vitesse : toujours $v = \\sqrt{v_x^2 + v_y^2}$, jamais $v_x + |v_y|$. Le signe de $v_y$ te dit si le projectile monte ou descend.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-vecteur-vitesse-au-cours-du-vol-q2"
+        },
+        {
+          "notion": "Le vecteur vitesse au cours du vol",
+          "difficulty": 2,
+          "statement": "Le même projectile ($v_0 = 18\\ \\mathrm{m\\,s^{-1}}$, $\\alpha = 35^\\circ$) atteint le sommet de sa trajectoire. Sa vitesse y vaut :",
+          "options": [
+            {
+              "label": "$14{,}7\\ \\mathrm{m\\,s^{-1}}$, horizontale",
+              "correct": true,
+              "why": "Au sommet $v_y = 0$, il ne reste que $v_x = v_0\\cos 35^\\circ = 14{,}7\\ \\mathrm{m\\,s^{-1}}$ : la vitesse est horizontale mais non nulle."
+            },
+            {
+              "label": "$0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "C'est le piège le plus fréquent de ce chapitre : au sommet seule la composante **verticale** s'annule. Si $\\vec v$ était nul, le projectile tomberait à la verticale."
+            },
+            {
+              "label": "$18{,}0\\ \\mathrm{m\\,s^{-1}}$, horizontale",
+              "why": "Tu as gardé la norme de $\\vec v_0$ : la direction est juste, mais la norme au sommet est $v_0\\cos\\alpha$, pas $v_0$."
+            },
+            {
+              "label": "$10{,}3\\ \\mathrm{m\\,s^{-1}}$, horizontale",
+              "why": "Tu as calculé $v_0\\sin 35^\\circ = 10{,}3\\ \\mathrm{m\\,s^{-1}}$ : c'est la composante **verticale** initiale, justement celle qui s'annule au sommet."
+            }
+          ],
+          "hint": "Quelle composante de la vitesse s'annule au sommet ? Et l'autre, que devient-elle ?",
+          "solution": "Le sommet est caractérisé par $v_y = 0$ : c'est l'instant où le projectile cesse de monter.\nLa composante horizontale, elle, est constante pendant tout le vol : $v_x = v_0\\cos\\alpha = 18\\times 0{,}8192 = 14{,}7\\ \\mathrm{m\\,s^{-1}}$.\nAu sommet, $v = \\sqrt{v_x^2 + 0^2} = 14{,}7\\ \\mathrm{m\\,s^{-1}}$, vecteur horizontal dans le sens du tir.\nContrôle par l'énergie : $\\tfrac12 v^2 = \\tfrac12 v_0^2 - g\\,y_S$ avec $y_S = \\dfrac{10{,}32^2}{2\\times 9{,}8} = 5{,}44\\ \\mathrm{m}$, soit $v^2 = 324 - 2\\times 9{,}8\\times 5{,}44 = 324 - 106{,}6 = 217{,}4$ et $v = 14{,}7\\ \\mathrm{m\\,s^{-1}}$ : on retrouve bien $v_x$.",
+          "methode": "Au sommet : $v_y = 0$ mais $v = v_0\\cos\\alpha \\ne 0$. Seul un tir vertical ($\\alpha = 90^\\circ$) a une vitesse nulle au sommet.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-vecteur-vitesse-au-cours-du-vol-q3"
+        },
+        {
+          "notion": "Le vecteur vitesse au cours du vol",
+          "difficulty": 3,
+          "statement": "Un projectile est lancé du sol avec la vitesse $\\vec v_0$ (norme $v_0$, angle $\\alpha$) et retombe sur le sol horizontal. Les frottements sont négligés. Le vecteur vitesse à l'arrivée :",
+          "options": [
+            {
+              "label": "a la même norme $v_0$ et fait l'angle $\\alpha$ **sous** l'horizontale",
+              "correct": true,
+              "why": "Départ et arrivée sont à la même altitude, donc $\\tfrac12 mv^2$ est identique : $v = v_0$. De plus $v_x$ est inchangée et $v_y$ a changé de signe, d'où l'angle $-\\alpha$."
+            },
+            {
+              "label": "a la même norme $v_0$ et fait l'angle $\\alpha$ **au-dessus** de l'horizontale",
+              "why": "La norme est juste, mais le signe est faux : à l'arrivée le projectile descend, donc $v_y < 0$. Un $v_y > 0$ voudrait dire qu'il remonte."
+            },
+            {
+              "label": "a pour norme $v_0\\cos\\alpha$ et est horizontal",
+              "why": "C'est la vitesse **au sommet**, pas à l'arrivée. Au retour au sol, $v_y$ a retrouvé la valeur $-v_0\\sin\\alpha$."
+            },
+            {
+              "label": "a une norme supérieure à $v_0$ et fait l'angle $\\alpha$ sous l'horizontale",
+              "why": "L'angle est juste, mais la norme ne peut pas augmenter : le projectile revient à la même altitude, donc l'énergie potentielle est la même et $v = v_0$ exactement."
+            }
+          ],
+          "hint": "Compare les altitudes de départ et d'arrivée, puis regarde ce qu'il advient de $v_x$ et de $v_y$.",
+          "solution": "Composantes à la date $t$ : $v_x = v_0\\cos\\alpha$ (constante) et $v_y = -g\\,t + v_0\\sin\\alpha$.\nLe retour au sol se produit à $t_{\\text{vol}} = \\dfrac{2v_0\\sin\\alpha}{g}$, donc $v_y(t_{\\text{vol}}) = -2v_0\\sin\\alpha + v_0\\sin\\alpha = -v_0\\sin\\alpha$.\nNorme : $v = \\sqrt{(v_0\\cos\\alpha)^2 + (v_0\\sin\\alpha)^2} = v_0$. Angle : $\\tan\\theta = \\dfrac{-v_0\\sin\\alpha}{v_0\\cos\\alpha} = -\\tan\\alpha$, soit l'angle $\\alpha$ sous l'horizontale.\nContrôle par l'énergie mécanique : elle se conserve et les altitudes de départ et d'arrivée sont égales, donc les énergies cinétiques le sont aussi, ce qui impose $v = v_0$.",
+          "methode": "Trajectoire symétrique : sur un sol horizontal, le projectile arrive avec la même vitesse qu'au départ, inclinée du même angle mais vers le bas.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-vecteur-vitesse-au-cours-du-vol-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les grandeurs caractéristiques",
+        "lesson": "Trajectoire, flèche et portée",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-les-grandeurs-caracteristiques",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Les grandeurs caractéristiques",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les grandeurs caractéristiques",
+          "difficulty": 1,
+          "statement": "Pour un projectile lancé depuis le sol et retombant sur un sol horizontal, la **portée** du tir est :",
+          "options": [
+            {
+              "label": "la distance horizontale entre le point de lancement et le point de chute",
+              "correct": true,
+              "why": "C'est la définition : la portée $x_P$ est l'abscisse du point où la trajectoire recoupe le sol."
+            },
+            {
+              "label": "la longueur de l'arc de parabole effectivement parcouru",
+              "why": "Tu as décrit la longueur de la trajectoire, qui est toujours plus grande que la portée. La portée est une distance **horizontale**."
+            },
+            {
+              "label": "la hauteur maximale atteinte au-dessus du sol",
+              "why": "Tu as décrit la **flèche** $y_S$, pas la portée. Ce sont deux grandeurs différentes : l'une verticale, l'autre horizontale."
+            },
+            {
+              "label": "la distance horizontale parcourue pendant la seule phase de montée",
+              "why": "Tu n'as compté que la moitié du vol. Sur un sol horizontal, cette distance vaut exactement $x_P/2$."
+            }
+          ],
+          "hint": "Portée, flèche, temps de vol : trois grandeurs distinctes. Laquelle est une distance horizontale ?",
+          "solution": "La portée $x_P$ est, par définition, la distance horizontale séparant le point de lancement du point de chute, c'est-à-dire l'abscisse de l'intersection de la trajectoire avec le sol.\nÀ distinguer de la flèche $y_S$ (hauteur maximale) et du temps de vol $t_{\\text{vol}}$ (durée totale du mouvement).\nContrôle dimensionnel : la portée est une longueur, en mètres, comme la flèche ; le temps de vol est une durée, en secondes.",
+          "methode": "Mets de l'ordre dans le vocabulaire : portée = horizontale, flèche = verticale, temps de vol = durée. Un énoncé mal lu coûte autant qu'un calcul faux.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-les-grandeurs-caracteristiques-q1"
+        },
+        {
+          "notion": "Les grandeurs caractéristiques",
+          "difficulty": 2,
+          "statement": "Parmi ces quatre expressions, laquelle peut représenter la portée $x_P$ d'un tir depuis le sol, du point de vue de l'homogénéité ?",
+          "options": [
+            {
+              "label": "$\\dfrac{v_0^2\\sin 2\\alpha}{g}$",
+              "correct": true,
+              "why": "$\\dfrac{(\\mathrm{m\\,s^{-1}})^2}{\\mathrm{m\\,s^{-2}}} = \\dfrac{\\mathrm{m^2\\,s^{-2}}}{\\mathrm{m\\,s^{-2}}} = \\mathrm{m}$ : c'est bien une longueur, et c'est l'expression correcte."
+            },
+            {
+              "label": "$\\dfrac{v_0\\sin 2\\alpha}{g}$",
+              "why": "$\\dfrac{\\mathrm{m\\,s^{-1}}}{\\mathrm{m\\,s^{-2}}} = \\mathrm{s}$ : cette expression est une durée, pas une longueur. Il manque un facteur $v_0$."
+            },
+            {
+              "label": "$\\dfrac{v_0^2\\sin 2\\alpha}{g^2}$",
+              "why": "$\\dfrac{\\mathrm{m^2\\,s^{-2}}}{\\mathrm{m^2\\,s^{-4}}} = \\mathrm{s^2}$ : tu obtiens un carré de durée. Un seul $g$ doit figurer au dénominateur."
+            },
+            {
+              "label": "$\\dfrac{2v_0\\sin\\alpha}{g^2}$",
+              "why": "$\\dfrac{\\mathrm{m\\,s^{-1}}}{\\mathrm{m^2\\,s^{-4}}} = \\mathrm{m^{-1}\\,s^{3}}$ : ce n'est ni une longueur ni une durée. Tu as mélangé la formule du temps de vol et un $g^2$."
+            }
+          ],
+          "hint": "Remplace chaque grandeur par son unité et simplifie : seule une expression doit donner des mètres.",
+          "solution": "Unités : $[v_0] = \\mathrm{m\\,s^{-1}}$, $[g] = \\mathrm{m\\,s^{-2}}$, et $\\sin 2\\alpha$ est sans dimension.\n$\\dfrac{v_0^2}{g} \\to \\dfrac{\\mathrm{m^2\\,s^{-2}}}{\\mathrm{m\\,s^{-2}}} = \\mathrm{m}$ : homogène à une longueur.\n$\\dfrac{v_0}{g} \\to \\mathrm{s}$ (une durée), $\\dfrac{v_0^2}{g^2} \\to \\mathrm{s^2}$, $\\dfrac{v_0}{g^2} \\to \\mathrm{m^{-1}\\,s^{3}}$ : aucune de ces trois n'est une longueur.\nSeule $\\dfrac{v_0^2\\sin 2\\alpha}{g}$ convient. Contrôle : pour $v_0 = 10\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 45^\\circ$, elle donne $100/9{,}8 = 10{,}2\\ \\mathrm{m}$, ordre de grandeur plausible.",
+          "methode": "Avant d'appliquer une formule retrouvée de mémoire, teste son homogénéité : $v_0^2/g$ est une longueur, $v_0/g$ est une durée.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-les-grandeurs-caracteristiques-q2"
+        },
+        {
+          "notion": "Les grandeurs caractéristiques",
+          "difficulty": 2,
+          "statement": "Un projectile est lancé depuis le sol avec $v_0 = 25\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 60^\\circ$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. Sa flèche et sa portée valent :",
+          "options": [
+            {
+              "label": "$y_S = 23{,}9\\ \\mathrm{m}$ et $x_P = 55{,}2\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$y_S = \\dfrac{625\\times\\sin^2 60^\\circ}{2\\times 9{,}8} = \\dfrac{625\\times 0{,}750}{19{,}6} = 23{,}9\\ \\mathrm{m}$ et $x_P = \\dfrac{625\\times\\sin 120^\\circ}{9{,}8} = \\dfrac{625\\times 0{,}866}{9{,}8} = 55{,}2\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$y_S = 55{,}2\\ \\mathrm{m}$ et $x_P = 23{,}9\\ \\mathrm{m}$",
+              "why": "Tu as inversé les deux formules : $55{,}2\\ \\mathrm{m}$ est la portée et $23{,}9\\ \\mathrm{m}$ la flèche. La flèche porte le facteur $2g$ au dénominateur, la portée le $\\sin 2\\alpha$."
+            },
+            {
+              "label": "$y_S = 47{,}8\\ \\mathrm{m}$ et $x_P = 55{,}2\\ \\mathrm{m}$",
+              "why": "Tu as oublié le facteur $2$ au dénominateur de la flèche : $\\dfrac{625\\times 0{,}750}{9{,}8} = 47{,}8\\ \\mathrm{m}$. La flèche vaut $\\dfrac{v_0^2\\sin^2\\alpha}{2g}$."
+            },
+            {
+              "label": "$y_S = 23{,}9\\ \\mathrm{m}$ et $x_P = 27{,}6\\ \\mathrm{m}$",
+              "why": "Tu as divisé la portée par $2g$ au lieu de $g$ : $\\dfrac{625\\times 0{,}866}{19{,}6} = 27{,}6\\ \\mathrm{m}$. Le facteur $2$ n'apparaît que dans la flèche."
+            }
+          ],
+          "hint": "Deux formules à appliquer : $y_S = \\dfrac{v_0^2\\sin^2\\alpha}{2g}$ et $x_P = \\dfrac{v_0^2\\sin 2\\alpha}{g}$. Attention à $\\sin^2\\alpha$ et $\\sin 2\\alpha$.",
+          "solution": "Flèche : $\\sin 60^\\circ = 0{,}866$ donc $\\sin^2 60^\\circ = 0{,}750$, et $y_S = \\dfrac{25^2\\times 0{,}750}{2\\times 9{,}8} = \\dfrac{468{,}8}{19{,}6} = 23{,}9\\ \\mathrm{m}$.\nPortée : $2\\alpha = 120^\\circ$ et $\\sin 120^\\circ = 0{,}866$, donc $x_P = \\dfrac{625\\times 0{,}866}{9{,}8} = \\dfrac{541{,}3}{9{,}8} = 55{,}2\\ \\mathrm{m}$.\nContrôle : $\\dfrac{y_S}{x_P} = \\dfrac{23{,}9}{55{,}2} = 0{,}433$, et $\\dfrac{\\tan 60^\\circ}{4} = \\dfrac{1{,}732}{4} = 0{,}433$. Le rapport attendu est retrouvé.",
+          "methode": "$\\sin^2\\alpha$ dans la flèche, $\\sin 2\\alpha$ dans la portée : écris les deux formules côte à côte avant de calculer.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-les-grandeurs-caracteristiques-q3"
+        },
+        {
+          "notion": "Les grandeurs caractéristiques",
+          "difficulty": 3,
+          "statement": "Pour un tir depuis le sol sur un sol horizontal, le rapport $\\dfrac{\\text{flèche}}{\\text{portée}}$ vaut :",
+          "options": [
+            {
+              "label": "$\\dfrac{\\tan\\alpha}{4}$",
+              "correct": true,
+              "why": "$\\dfrac{y_S}{x_P} = \\dfrac{v_0^2\\sin^2\\alpha/(2g)}{v_0^2\\sin 2\\alpha/g} = \\dfrac{\\sin^2\\alpha}{2\\times 2\\sin\\alpha\\cos\\alpha} = \\dfrac{\\tan\\alpha}{4}$."
+            },
+            {
+              "label": "$\\dfrac{\\tan\\alpha}{2}$",
+              "why": "Tu n'as pas développé $\\sin 2\\alpha = 2\\sin\\alpha\\cos\\alpha$ : en gardant $\\sin 2\\alpha \\approx \\sin\\alpha\\cos\\alpha$ on perd le facteur $2$ et on trouve $\\tan\\alpha/2$."
+            },
+            {
+              "label": "$\\tan\\alpha$",
+              "why": "Tu as cumulé deux oublis : le $2$ du dénominateur de la flèche **et** le $2$ de $\\sin 2\\alpha = 2\\sin\\alpha\\cos\\alpha$. Chacun divise le résultat par $2$."
+            },
+            {
+              "label": "$\\dfrac{\\sin\\alpha}{4}$",
+              "why": "Tu as simplifié $\\dfrac{\\sin^2\\alpha}{\\sin\\alpha\\cos\\alpha}$ en $\\sin\\alpha$ au lieu de $\\dfrac{\\sin\\alpha}{\\cos\\alpha}$ : le $\\cos\\alpha$ du dénominateur a disparu."
+            }
+          ],
+          "hint": "Écris les deux formules, fais le quotient, puis utilise $\\sin 2\\alpha = 2\\sin\\alpha\\cos\\alpha$.",
+          "solution": "$y_S = \\dfrac{v_0^2\\sin^2\\alpha}{2g}$ et $x_P = \\dfrac{v_0^2\\sin 2\\alpha}{g} = \\dfrac{2v_0^2\\sin\\alpha\\cos\\alpha}{g}$.\nQuotient : $\\dfrac{y_S}{x_P} = \\dfrac{v_0^2\\sin^2\\alpha}{2g}\\times\\dfrac{g}{2v_0^2\\sin\\alpha\\cos\\alpha} = \\dfrac{\\sin\\alpha}{4\\cos\\alpha} = \\dfrac{\\tan\\alpha}{4}$.\nNi $v_0$ ni $g$ n'y figurent : le rapport ne dépend que de l'angle de tir.\nContrôle numérique avec $v_0 = 25\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 60^\\circ$ : $y_S = 23{,}9\\ \\mathrm{m}$, $x_P = 55{,}2\\ \\mathrm{m}$, rapport $0{,}433$ ; et $\\tan 60^\\circ/4 = 0{,}433$. De plus, pour $\\alpha = 45^\\circ$ le rapport vaut $0{,}25$ : la flèche est le quart de la portée, résultat classique.",
+          "methode": "Pour comparer deux grandeurs d'un même tir, fais le quotient des formules littérales : $v_0$ et $g$ disparaissent souvent, et il ne reste qu'une fonction de $\\alpha$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-les-grandeurs-caracteristiques-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le sommet et la flèche",
+        "lesson": "Trajectoire, flèche et portée",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-le-sommet-et-la-fleche",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Le sommet et la flèche",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le sommet et la flèche",
+          "difficulty": 1,
+          "statement": "Un projectile est lancé du sol avec $\\vec v_0$ (norme $v_0$, angle $\\alpha$). La date $t_S$ de son passage au sommet de la trajectoire vaut :",
+          "options": [
+            {
+              "label": "$t_S = \\dfrac{v_0\\sin\\alpha}{g}$",
+              "correct": true,
+              "why": "Le sommet correspond à $v_y = 0$, soit $-g\\,t_S + v_0\\sin\\alpha = 0$, d'où $t_S = \\dfrac{v_0\\sin\\alpha}{g}$."
+            },
+            {
+              "label": "$t_S = \\dfrac{v_0\\cos\\alpha}{g}$",
+              "why": "Tu as pris la composante horizontale. Or $v_x = v_0\\cos\\alpha$ ne s'annule jamais : c'est $v_y$ qui s'annule au sommet."
+            },
+            {
+              "label": "$t_S = \\dfrac{v_0}{g}$",
+              "why": "Tu as oublié de projeter $\\vec v_0$. Cette expression ne serait exacte que pour un tir vertical ($\\alpha = 90^\\circ$, $\\sin\\alpha = 1$)."
+            },
+            {
+              "label": "$t_S = \\dfrac{2v_0\\sin\\alpha}{g}$",
+              "why": "C'est le **temps de vol** total sur un sol horizontal, soit $2t_S$. Le sommet est atteint à la moitié de cette durée."
+            }
+          ],
+          "hint": "Quelle condition caractérise le sommet ? Écris-la sur la bonne composante de la vitesse.",
+          "solution": "Au sommet, le projectile cesse de monter et n'a pas encore commencé à descendre : la composante verticale de la vitesse s'annule, $v_y(t_S) = 0$.\nOr $v_y(t) = -g\\,t + v_0\\sin\\alpha$, donc $-g\\,t_S + v_0\\sin\\alpha = 0$ et $t_S = \\dfrac{v_0\\sin\\alpha}{g}$.\nContrôle d'homogénéité : $\\dfrac{\\mathrm{m\\,s^{-1}}}{\\mathrm{m\\,s^{-2}}} = \\mathrm{s}$, c'est bien une durée.",
+          "methode": "Sommet $\\Leftrightarrow v_y = 0$. Écris $v_y(t) = 0$ et résous : tu obtiens $t_S$, puis reporte dans $y(t)$ pour la flèche.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-sommet-et-la-fleche-q1"
+        },
+        {
+          "notion": "Le sommet et la flèche",
+          "difficulty": 2,
+          "statement": "Un projectile part du sol avec $v_0 = 16\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 40^\\circ$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. Sa flèche vaut :",
+          "options": [
+            {
+              "label": "$5{,}40\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$y_S = \\dfrac{v_0^2\\sin^2\\alpha}{2g} = \\dfrac{256\\times 0{,}4132}{19{,}6} = 5{,}40\\ \\mathrm{m}$ (avec $\\sin 40^\\circ = 0{,}6428$)."
+            },
+            {
+              "label": "$7{,}66\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $\\cos^2 40^\\circ = 0{,}5868$ : $\\dfrac{256\\times 0{,}5868}{19{,}6} = 7{,}66\\ \\mathrm{m}$. La hauteur dépend de la composante **verticale** $v_0\\sin\\alpha$."
+            },
+            {
+              "label": "$8{,}39\\ \\mathrm{m}$",
+              "why": "Tu as écrit $\\sin\\alpha$ au lieu de $\\sin^2\\alpha$ : $\\dfrac{256\\times 0{,}6428}{19{,}6} = 8{,}39\\ \\mathrm{m}$. La flèche vient de $\\dfrac{(v_0\\sin\\alpha)^2}{2g}$, le carré porte sur toute la composante."
+            },
+            {
+              "label": "$10{,}79\\ \\mathrm{m}$",
+              "why": "Tu as divisé par $g$ au lieu de $2g$ : $\\dfrac{256\\times 0{,}4132}{9{,}8} = 10{,}79\\ \\mathrm{m}$. Le facteur $2$ vient de $\\tfrac12 g t_S^2$."
+            }
+          ],
+          "hint": "La flèche ne dépend que de la composante verticale initiale : $y_S = \\dfrac{(v_0\\sin\\alpha)^2}{2g}$.",
+          "solution": "Composante verticale initiale : $v_0\\sin 40^\\circ = 16\\times 0{,}6428 = 10{,}28\\ \\mathrm{m\\,s^{-1}}$.\nDate du sommet : $t_S = \\dfrac{10{,}28}{9{,}8} = 1{,}05\\ \\mathrm{s}$.\nFlèche : $y_S = -\\tfrac12\\times 9{,}8\\times 1{,}05^2 + 10{,}28\\times 1{,}05 = -5{,}40 + 10{,}79 = 5{,}39\\ \\mathrm{m}$, ou directement $y_S = \\dfrac{10{,}28^2}{2\\times 9{,}8} = 5{,}40\\ \\mathrm{m}$.\nContrôle : avec la même vitesse lancée **verticalement**, on aurait $\\dfrac{16^2}{19{,}6} = 13{,}1\\ \\mathrm{m}$. La flèche obliquée est forcément plus petite : $5{,}40 < 13{,}1$.",
+          "methode": "Flèche d'un tir depuis le sol : $y_S = \\dfrac{(v_0\\sin\\alpha)^2}{2g}$. Calcule d'abord $v_0\\sin\\alpha$ en $\\mathrm{m\\,s^{-1}}$, puis élève au carré.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-sommet-et-la-fleche-q2"
+        },
+        {
+          "notion": "Le sommet et la flèche",
+          "difficulty": 2,
+          "statement": "Un ballon lancé du sol avec un angle $\\alpha = 55^\\circ$ atteint une flèche de $3{,}2\\ \\mathrm{m}$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. Sa vitesse initiale valait :",
+          "options": [
+            {
+              "label": "$9{,}67\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_0\\sin\\alpha = \\sqrt{2g\\,y_S} = \\sqrt{62{,}72} = 7{,}92\\ \\mathrm{m\\,s^{-1}}$, donc $v_0 = \\dfrac{7{,}92}{\\sin 55^\\circ} = \\dfrac{7{,}92}{0{,}8192} = 9{,}67\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$7{,}92\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu t'es arrêté à $\\sqrt{2g\\,y_S} = 7{,}92\\ \\mathrm{m\\,s^{-1}}$ : c'est la composante **verticale** $v_0\\sin\\alpha$, il reste à diviser par $\\sin 55^\\circ$."
+            },
+            {
+              "label": "$13{,}81\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé par $\\cos 55^\\circ = 0{,}5736$ : $7{,}92/0{,}5736 = 13{,}81\\ \\mathrm{m\\,s^{-1}}$. La flèche est liée à la composante verticale, donc à $\\sin\\alpha$."
+            },
+            {
+              "label": "$6{,}84\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as oublié le facteur $2$ : $\\sqrt{9{,}8\\times 3{,}2} = 5{,}60$, puis $5{,}60/0{,}8192 = 6{,}84\\ \\mathrm{m\\,s^{-1}}$. La relation est $y_S = \\dfrac{(v_0\\sin\\alpha)^2}{2g}$."
+            }
+          ],
+          "hint": "Pars de $y_S = \\dfrac{(v_0\\sin\\alpha)^2}{2g}$ et isole $v_0$ en deux étapes.",
+          "solution": "De $y_S = \\dfrac{(v_0\\sin\\alpha)^2}{2g}$ on tire $v_0\\sin\\alpha = \\sqrt{2g\\,y_S} = \\sqrt{2\\times 9{,}8\\times 3{,}2} = \\sqrt{62{,}72} = 7{,}92\\ \\mathrm{m\\,s^{-1}}$.\nPuis $v_0 = \\dfrac{7{,}92}{\\sin 55^\\circ} = \\dfrac{7{,}92}{0{,}8192} = 9{,}67\\ \\mathrm{m\\,s^{-1}}$.\nContrôle : avec $v_0 = 9{,}67\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 55^\\circ$, la flèche recalculée vaut $\\dfrac{(9{,}67\\times 0{,}8192)^2}{19{,}6} = \\dfrac{62{,}7}{19{,}6} = 3{,}2\\ \\mathrm{m}$ : la valeur de départ est retrouvée.",
+          "methode": "Problème inverse : isole d'abord la composante ($v_0\\sin\\alpha$ ou $v_0\\cos\\alpha$), puis seulement ensuite divise par $\\sin\\alpha$ ou $\\cos\\alpha$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-sommet-et-la-fleche-q3"
+        },
+        {
+          "notion": "Le sommet et la flèche",
+          "difficulty": 3,
+          "statement": "Au sommet de la trajectoire d'un projectile lancé obliquement (frottements négligés) :",
+          "options": [
+            {
+              "label": "$v_y = 0$ mais $\\vec v \\ne \\vec 0$, et $\\vec a = \\vec g$ est inchangé",
+              "correct": true,
+              "why": "Seule la composante verticale s'annule : il reste $v_x = v_0\\cos\\alpha$. Le poids agit toujours, donc $\\vec a = \\vec g$ en permanence."
+            },
+            {
+              "label": "$\\vec v = \\vec 0$ et $\\vec a = \\vec g$",
+              "why": "Si $\\vec v$ était nul, le projectile tomberait verticalement ensuite : la trajectoire ferait un angle, ce n'est pas une parabole. Seul $v_y$ s'annule."
+            },
+            {
+              "label": "$\\vec v \\ne \\vec 0$ et $\\vec a = \\vec 0$",
+              "why": "Tu as annulé l'accélération. Si $\\vec a$ était nul au sommet, le mouvement y serait rectiligne uniforme et le projectile ne redescendrait pas."
+            },
+            {
+              "label": "$v_x = 0$ et $\\vec a = \\vec g$",
+              "why": "Tu as annulé la mauvaise composante : $v_x = v_0\\cos\\alpha$ est constante pendant tout le vol et ne s'annule jamais (sauf tir vertical)."
+            }
+          ],
+          "hint": "Fais la liste de ce qui s'annule et de ce qui ne s'annule pas au sommet : vitesse, composantes, accélération.",
+          "solution": "Au sommet, $v_y = 0$ par définition : c'est la condition qui donne $t_S$.\nMais $v_x = v_0\\cos\\alpha$ reste constante tout au long du vol, donc $\\vec v$ est horizontal **et non nul** (sa norme vaut $v_0\\cos\\alpha$).\nQuant à l'accélération, elle vaut $\\vec a = \\vec g$ à chaque instant, sommet compris : le poids ne s'interrompt pas.\nContrôle : si $\\vec a$ s'annulait au sommet, la vitesse y serait constante et le projectile poursuivrait en ligne droite ; or on l'observe redescendre. Et si $\\vec v$ s'annulait, la trajectoire présenterait un point de rebroussement, ce que la parabole ne montre pas.",
+          "methode": "Au sommet : $v_y = 0$, $v_x$ inchangée, $\\vec a = \\vec g$. Trois affirmations à retenir ensemble, c'est le piège favori de l'examen.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-sommet-et-la-fleche-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le temps de vol et la portée",
+        "lesson": "Trajectoire, flèche et portée",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-le-temps-de-vol-et-la-portee",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Le temps de vol et la portée",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le temps de vol et la portée",
+          "difficulty": 1,
+          "statement": "Un projectile est lancé du sol avec $\\vec v_0$ (norme $v_0$, angle $\\alpha$) et retombe sur le sol horizontal. Son temps de vol vaut :",
+          "options": [
+            {
+              "label": "$t_{\\text{vol}} = \\dfrac{2v_0\\sin\\alpha}{g}$",
+              "correct": true,
+              "why": "On résout $y(t) = -\\tfrac12 g t^2 + v_0\\sin\\alpha\\,t = 0$ : les solutions sont $t = 0$ et $t = \\dfrac{2v_0\\sin\\alpha}{g}$."
+            },
+            {
+              "label": "$t_{\\text{vol}} = \\dfrac{v_0\\sin\\alpha}{g}$",
+              "why": "C'est seulement la **durée de la montée** $t_S$. Par symétrie, la descente dure autant : le vol complet dure $2t_S$."
+            },
+            {
+              "label": "$t_{\\text{vol}} = \\dfrac{2v_0\\cos\\alpha}{g}$",
+              "why": "Tu as pris la composante horizontale. La durée du vol est fixée par le mouvement vertical, donc par $v_0\\sin\\alpha$."
+            },
+            {
+              "label": "$t_{\\text{vol}} = \\dfrac{2v_0}{g}$",
+              "why": "Tu as oublié de projeter : cette expression ne vaudrait que pour un tir vertical ($\\alpha = 90^\\circ$)."
+            }
+          ],
+          "hint": "Le retour au sol signifie $y = 0$. Résous cette équation : elle a deux solutions, dont une est triviale.",
+          "solution": "Avec $y_0 = 0$, l'équation du retour au sol est $y(t) = -\\tfrac12 g t^2 + v_0\\sin\\alpha\\,t = 0$, soit $t\\left(v_0\\sin\\alpha - \\tfrac12 g t\\right) = 0$.\nLa solution $t = 0$ correspond au lancement ; l'autre donne $t_{\\text{vol}} = \\dfrac{2v_0\\sin\\alpha}{g} = 2t_S$.\nContrôle : le temps de vol est exactement le double de la durée de montée, ce qui traduit la symétrie de la parabole par rapport à la verticale du sommet.",
+          "methode": "Durée totale du vol depuis le sol : $t_{\\text{vol}} = 2t_S$. Ne confonds jamais montée et vol complet.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-temps-de-vol-et-la-portee-q1"
+        },
+        {
+          "notion": "Le temps de vol et la portée",
+          "difficulty": 2,
+          "statement": "Un projectile est lancé du sol avec $v_0 = 22\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 25^\\circ$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. Sa portée vaut :",
+          "options": [
+            {
+              "label": "$37{,}8\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$x_P = \\dfrac{v_0^2\\sin 2\\alpha}{g} = \\dfrac{484\\times\\sin 50^\\circ}{9{,}8} = \\dfrac{484\\times 0{,}766}{9{,}8} = 37{,}8\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$20{,}9\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $\\sin\\alpha = \\sin 25^\\circ = 0{,}423$ au lieu de $\\sin 2\\alpha$ : $\\dfrac{484\\times 0{,}423}{9{,}8} = 20{,}9\\ \\mathrm{m}$. L'angle à doubler est bien $\\alpha$."
+            },
+            {
+              "label": "$8{,}82\\ \\mathrm{m}$",
+              "why": "Tu as confondu $\\sin 2\\alpha$ et $\\sin^2\\alpha$ : $\\dfrac{484\\times 0{,}423^2}{9{,}8} = 8{,}82\\ \\mathrm{m}$. Le carré n'intervient que dans la formule de la flèche."
+            },
+            {
+              "label": "$75{,}7\\ \\mathrm{m}$",
+              "why": "Tu as mis un facteur $2$ en trop : $\\dfrac{2\\times 484\\times 0{,}766}{9{,}8} = 75{,}7\\ \\mathrm{m}$. Le $2$ du temps de vol est déjà contenu dans $\\sin 2\\alpha$."
+            }
+          ],
+          "hint": "Applique $x_P = \\dfrac{v_0^2\\sin 2\\alpha}{g}$ : commence par calculer $2\\alpha$, puis son sinus.",
+          "solution": "$2\\alpha = 50^\\circ$ et $\\sin 50^\\circ = 0{,}766$.\n$x_P = \\dfrac{22^2\\times 0{,}766}{9{,}8} = \\dfrac{484\\times 0{,}766}{9{,}8} = \\dfrac{370{,}8}{9{,}8} = 37{,}8\\ \\mathrm{m}$.\nContrôle par le chemin long : $t_{\\text{vol}} = \\dfrac{2\\times 22\\times\\sin 25^\\circ}{9{,}8} = \\dfrac{18{,}60}{9{,}8} = 1{,}90\\ \\mathrm{s}$ et $x_P = v_0\\cos\\alpha\\,t_{\\text{vol}} = 19{,}94\\times 1{,}90 = 37{,}9\\ \\mathrm{m}$. Les deux méthodes concordent.",
+          "methode": "Deux voies pour la portée : la formule $\\dfrac{v_0^2\\sin 2\\alpha}{g}$, ou $x_P = v_0\\cos\\alpha\\times t_{\\text{vol}}$. Utilise la seconde pour vérifier la première.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-temps-de-vol-et-la-portee-q2"
+        },
+        {
+          "notion": "Le temps de vol et la portée",
+          "difficulty": 2,
+          "statement": "Pour le même tir ($v_0 = 22\\ \\mathrm{m\\,s^{-1}}$, $\\alpha = 25^\\circ$, $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$), le temps de vol vaut :",
+          "options": [
+            {
+              "label": "$1{,}90\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$t_{\\text{vol}} = \\dfrac{2v_0\\sin\\alpha}{g} = \\dfrac{2\\times 22\\times 0{,}4226}{9{,}8} = \\dfrac{18{,}60}{9{,}8} = 1{,}90\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$0{,}95\\ \\mathrm{s}$",
+              "why": "Tu as calculé $t_S = \\dfrac{v_0\\sin\\alpha}{g} = 0{,}95\\ \\mathrm{s}$ : c'est la durée de la **montée** seule, il faut la doubler."
+            },
+            {
+              "label": "$4{,}07\\ \\mathrm{s}$",
+              "why": "Tu as utilisé $\\cos 25^\\circ = 0{,}906$ : $\\dfrac{2\\times 22\\times 0{,}906}{9{,}8} = 4{,}07\\ \\mathrm{s}$. La durée du vol est imposée par la composante verticale."
+            },
+            {
+              "label": "$4{,}49\\ \\mathrm{s}$",
+              "why": "Tu as oublié $\\sin\\alpha$ : $\\dfrac{2\\times 22}{9{,}8} = 4{,}49\\ \\mathrm{s}$. Ce serait la durée d'un tir **vertical** à $22\\ \\mathrm{m\\,s^{-1}}$."
+            }
+          ],
+          "hint": "La durée du vol ne dépend que du mouvement vertical : quelle composante de $\\vec v_0$ intervient ?",
+          "solution": "$v_0\\sin 25^\\circ = 22\\times 0{,}4226 = 9{,}30\\ \\mathrm{m\\,s^{-1}}$.\n$t_{\\text{vol}} = \\dfrac{2\\times 9{,}30}{9{,}8} = \\dfrac{18{,}60}{9{,}8} = 1{,}90\\ \\mathrm{s}$.\nContrôle : avec $v_x = 22\\times\\cos 25^\\circ = 19{,}94\\ \\mathrm{m\\,s^{-1}}$, la portée vaut $19{,}94\\times 1{,}90 = 37{,}9\\ \\mathrm{m}$, en accord avec $\\dfrac{484\\sin 50^\\circ}{9{,}8} = 37{,}8\\ \\mathrm{m}$.",
+          "methode": "Durée du vol : uniquement le mouvement vertical. Portée : la durée du vol multipliée par $v_0\\cos\\alpha$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-temps-de-vol-et-la-portee-q3"
+        },
+        {
+          "notion": "Le temps de vol et la portée",
+          "difficulty": 3,
+          "statement": "Avec la même vitesse initiale $v_0 = 22\\ \\mathrm{m\\,s^{-1}}$ et $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$, un **autre** angle de tir donne exactement la même portée de $37{,}8\\ \\mathrm{m}$. Cet angle vaut :",
+          "options": [
+            {
+              "label": "$65^\\circ$",
+              "correct": true,
+              "why": "$\\sin 2\\alpha$ est inchangé si $2\\alpha$ devient $180^\\circ - 2\\alpha$, c'est-à-dire si $\\alpha$ devient $90^\\circ - \\alpha = 65^\\circ$. En effet $\\sin 130^\\circ = \\sin 50^\\circ = 0{,}766$."
+            },
+            {
+              "label": "$50^\\circ$",
+              "why": "Tu as confondu $2\\alpha = 50^\\circ$ avec un angle de tir. Avec $\\alpha = 50^\\circ$, la portée vaut $\\dfrac{484\\sin 100^\\circ}{9{,}8} = 48{,}6\\ \\mathrm{m}$, ce n'est pas la même."
+            },
+            {
+              "label": "$45^\\circ$",
+              "why": "Tu as donné l'angle de portée **maximale**. Il donne $\\dfrac{484}{9{,}8} = 49{,}4\\ \\mathrm{m}$, la plus grande portée possible, donc pas $37{,}8\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$115^\\circ$",
+              "why": "Tu as ajouté $90^\\circ$ à $\\alpha$ au lieu de prendre le complémentaire. Un angle supérieur à $90^\\circ$ correspondrait d'ailleurs à un tir dirigé vers l'arrière."
+            }
+          ],
+          "hint": "Deux angles donnent la même portée lorsqu'ils donnent le même $\\sin 2\\alpha$. Quelle relation lie alors les deux angles ?",
+          "solution": "La portée s'écrit $x_P = \\dfrac{v_0^2\\sin 2\\alpha}{g}$ : elle ne dépend de l'angle qu'à travers $\\sin 2\\alpha$.\nOr $\\sin\\theta = \\sin(180^\\circ - \\theta)$. Deux angles de tir donnent donc la même portée si $2\\alpha' = 180^\\circ - 2\\alpha$, soit $\\alpha' = 90^\\circ - \\alpha$.\nIci $\\alpha = 25^\\circ$ donne $\\alpha' = 65^\\circ$, et l'on vérifie $\\sin 130^\\circ = \\sin 50^\\circ = 0{,}766$, donc la même portée $37{,}8\\ \\mathrm{m}$.\nContrôle : les deux tirs ne sont pas identiques pour autant. Avec $65^\\circ$ la flèche vaut $\\dfrac{484\\sin^2 65^\\circ}{19{,}6} = 20{,}3\\ \\mathrm{m}$, contre $\\dfrac{484\\sin^2 25^\\circ}{19{,}6} = 4{,}41\\ \\mathrm{m}$ avec $25^\\circ$ : même point de chute, trajectoires très différentes.",
+          "methode": "Angles complémentaires ($\\alpha$ et $90^\\circ-\\alpha$) : même portée, flèches et temps de vol différents. Le maximum est atteint quand les deux se confondent, à $45^\\circ$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-temps-de-vol-et-la-portee-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'angle de portée maximale",
+        "lesson": "Trajectoire, flèche et portée",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-l-angle-de-portee-maximale",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "L'angle de portée maximale",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'angle de portée maximale",
+          "difficulty": 1,
+          "statement": "Un projectile est lancé depuis le sol, à vitesse initiale $v_0$ fixée, sur un sol horizontal. La portée est maximale pour :",
+          "options": [
+            {
+              "label": "$\\alpha = 45^\\circ$",
+              "correct": true,
+              "why": "$x_P = \\dfrac{v_0^2\\sin 2\\alpha}{g}$ est maximale quand $\\sin 2\\alpha = 1$, soit $2\\alpha = 90^\\circ$ et $\\alpha = 45^\\circ$."
+            },
+            {
+              "label": "$\\alpha = 90^\\circ$",
+              "why": "Tu as cru qu'un angle plus grand porte plus loin. À $90^\\circ$ le tir est vertical : $\\sin 180^\\circ = 0$ et la portée est **nulle**."
+            },
+            {
+              "label": "$\\alpha = 30^\\circ$",
+              "why": "$\\sin 60^\\circ = 0{,}866 < 1$ : la portée n'est pas maximale. Cet angle donne la même portée que $60^\\circ$, les deux étant complémentaires."
+            },
+            {
+              "label": "$\\alpha = 0^\\circ$",
+              "why": "Un tir horizontal depuis le sol ne décolle pas : $\\sin 0 = 0$, la portée est nulle."
+            }
+          ],
+          "hint": "La portée ne dépend de l'angle qu'à travers $\\sin 2\\alpha$ : quand ce sinus est-il maximal ?",
+          "solution": "$x_P = \\dfrac{v_0^2\\sin 2\\alpha}{g}$. À $v_0$ et $g$ fixés, $x_P$ est maximale lorsque $\\sin 2\\alpha$ est maximal, c'est-à-dire égal à $1$.\nCela impose $2\\alpha = 90^\\circ$, donc $\\alpha = 45^\\circ$, et alors $x_{P,\\max} = \\dfrac{v_0^2}{g}$.\nContrôle : $\\alpha = 30^\\circ$ et $\\alpha = 60^\\circ$ donnent tous deux $\\sin 2\\alpha = 0{,}866$, soit $13\\ \\%$ de moins que le maximum. La portée est donc bien symétrique autour de $45^\\circ$.",
+          "methode": "Portée maximale depuis le sol : $\\alpha = 45^\\circ$ et $x_{P,\\max} = v_0^2/g$. Deux angles complémentaires donnent la même portée, et ils se confondent en $45^\\circ$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-l-angle-de-portee-maximale-q1"
+        },
+        {
+          "notion": "L'angle de portée maximale",
+          "difficulty": 2,
+          "statement": "Un lanceur communique à un projectile la vitesse $v_0 = 30\\ \\mathrm{m\\,s^{-1}}$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La portée maximale accessible depuis le sol vaut :",
+          "options": [
+            {
+              "label": "$91{,}8\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$x_{P,\\max} = \\dfrac{v_0^2}{g} = \\dfrac{900}{9{,}8} = 91{,}8\\ \\mathrm{m}$, obtenue pour $\\alpha = 45^\\circ$ où $\\sin 2\\alpha = 1$."
+            },
+            {
+              "label": "$64{,}9\\ \\mathrm{m}$",
+              "why": "Tu as écrit $\\sin\\alpha = \\sin 45^\\circ = 0{,}707$ au lieu de $\\sin 2\\alpha = \\sin 90^\\circ = 1$ : $\\dfrac{900\\times 0{,}707}{9{,}8} = 64{,}9\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$45{,}9\\ \\mathrm{m}$",
+              "why": "Tu as divisé par $2g$ : $\\dfrac{900}{19{,}6} = 45{,}9\\ \\mathrm{m}$. Cette valeur est la hauteur maximale d'un tir **vertical** à $30\\ \\mathrm{m\\,s^{-1}}$, pas une portée."
+            },
+            {
+              "label": "$183{,}7\\ \\mathrm{m}$",
+              "why": "Tu as doublé le résultat : $\\dfrac{2\\times 900}{9{,}8} = 183{,}7\\ \\mathrm{m}$. Le facteur $2$ du temps de vol est déjà inclus dans $\\sin 2\\alpha$."
+            }
+          ],
+          "hint": "Quelle valeur prend $\\sin 2\\alpha$ à l'optimum ? Reporte-la dans la formule de la portée.",
+          "solution": "L'optimum est $\\alpha = 45^\\circ$, où $\\sin 2\\alpha = \\sin 90^\\circ = 1$.\n$x_{P,\\max} = \\dfrac{v_0^2}{g} = \\dfrac{30^2}{9{,}8} = \\dfrac{900}{9{,}8} = 91{,}8\\ \\mathrm{m}$.\nContrôle par le chemin long : $t_{\\text{vol}} = \\dfrac{2\\times 30\\times 0{,}707}{9{,}8} = 4{,}33\\ \\mathrm{s}$ et $x_P = 30\\times 0{,}707\\times 4{,}33 = 91{,}8\\ \\mathrm{m}$. Même résultat.\nÀ comparer avec la flèche de ce tir : $\\dfrac{900\\times 0{,}5}{19{,}6} = 23{,}0\\ \\mathrm{m}$, soit le quart de la portée, comme attendu pour $45^\\circ$.",
+          "methode": "Retiens $x_{P,\\max} = v_0^2/g$ : c'est une longueur caractéristique utile pour juger de l'ordre de grandeur d'une portée.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-l-angle-de-portee-maximale-q2"
+        },
+        {
+          "notion": "L'angle de portée maximale",
+          "difficulty": 3,
+          "statement": "Un projectile est maintenant lancé depuis une plate-forme de hauteur $h > 0$, avec la même vitesse $v_0$, et retombe sur le sol horizontal situé en bas. L'angle qui maximise la portée :",
+          "options": [
+            {
+              "label": "devient inférieur à $45^\\circ$",
+              "correct": true,
+              "why": "La hauteur $h$ allonge le vol même pour un angle faible : il devient payant de privilégier la composante horizontale $v_0\\cos\\alpha$, donc de baisser l'angle. L'optimum descend sous $45^\\circ$ et tend vers $0$ quand $h$ devient très grand."
+            },
+            {
+              "label": "reste égal à $45^\\circ$ quelle que soit $h$",
+              "why": "Le résultat $45^\\circ$ s'obtient en résolvant $y = 0$ avec $y_0 = 0$. Dès que $y_0 = h \\ne 0$, l'équation du temps de vol change et l'optimum se déplace."
+            },
+            {
+              "label": "devient supérieur à $45^\\circ$",
+              "why": "Un angle plus grand allongerait encore le vol, mais il réduit $v_0\\cos\\alpha$ plus vite qu'il n'allonge la durée : le bilan est défavorable. Le point de départ étant déjà en hauteur, c'est la composante horizontale qu'il faut favoriser."
+            },
+            {
+              "label": "dépend de la masse du projectile",
+              "why": "La masse n'intervient dans aucune équation de ce chapitre, puisque $\\vec a = \\vec g$. Elle ne peut donc pas fixer l'angle optimal."
+            }
+          ],
+          "hint": "La hauteur de départ allonge la durée du vol. À durée allongée, quelle composante de $\\vec v_0$ devient la plus utile ?",
+          "solution": "Depuis le sol, la portée $\\dfrac{v_0^2\\sin 2\\alpha}{g}$ est maximale à $45^\\circ$ : ce résultat suppose un départ et une arrivée à la même altitude.\nDepuis une hauteur $h$, le temps de vol est la racine positive de $-\\tfrac12 g t^2 + v_0\\sin\\alpha\\,t + h = 0$ ; il reste strictement positif même pour $\\alpha = 0$, car la chute de la hauteur $h$ prend déjà $\\sqrt{2h/g}$.\nLa portée $x_P = v_0\\cos\\alpha\\times t_{\\text{vol}}$ résulte alors d'un compromis : augmenter $\\alpha$ allonge $t_{\\text{vol}}$ mais diminue $v_0\\cos\\alpha$. Comme une partie de la durée est désormais « offerte » par la hauteur, le compromis se déplace vers les petits angles : l'optimum est inférieur à $45^\\circ$.\nContrôle sur un exemple numérique avec $v_0 = 10\\ \\mathrm{m\\,s^{-1}}$ et $h = 10\\ \\mathrm{m}$ : à $45^\\circ$ on trouve $t_{\\text{vol}} = 2{,}32\\ \\mathrm{s}$ et $x_P = 16{,}4\\ \\mathrm{m}$ ; à $30^\\circ$ on trouve $t_{\\text{vol}} = 2{,}03\\ \\mathrm{s}$ et $x_P = 17{,}6\\ \\mathrm{m}$. L'angle plus faible porte effectivement plus loin.\nÀ la limite $h \\to 0$ on retrouve bien $45^\\circ$, et pour $h$ très grand l'optimum tend vers un tir quasi horizontal.",
+          "methode": "La règle des $45^\\circ$ n'est valable que si le départ et l'arrivée sont à la même altitude. Dès qu'il y a une dénivellation, repasse par $x_P = v_0\\cos\\alpha\\times t_{\\text{vol}}$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-l-angle-de-portee-maximale-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le tir depuis une hauteur",
+        "lesson": "Trajectoire, flèche et portée",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-le-tir-depuis-une-hauteur",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Le tir depuis une hauteur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le tir depuis une hauteur",
+          "difficulty": 1,
+          "statement": "Une bille est lancée **horizontalement** avec $v_0 = 8{,}0\\ \\mathrm{m\\,s^{-1}}$ depuis le haut d'une falaise de hauteur $h = 20\\ \\mathrm{m}$ ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La durée de la chute jusqu'au sol vaut :",
+          "options": [
+            {
+              "label": "$2{,}02\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "Le mouvement vertical est une chute libre sans vitesse initiale verticale : $h = \\tfrac12 g t^2$, donc $t = \\sqrt{2h/g} = \\sqrt{40/9{,}8} = 2{,}02\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$1{,}43\\ \\mathrm{s}$",
+              "why": "Tu as oublié le facteur $2$ : $\\sqrt{20/9{,}8} = 1{,}43\\ \\mathrm{s}$. La relation est $h = \\tfrac12 g t^2$, d'où $t = \\sqrt{2h/g}$."
+            },
+            {
+              "label": "$4{,}08\\ \\mathrm{s}$",
+              "why": "Tu as oublié la racine carrée : $\\dfrac{2\\times 20}{9{,}8} = 4{,}08$, qui est en $\\mathrm{s^2}$ et non en $\\mathrm{s}$."
+            },
+            {
+              "label": "$2{,}50\\ \\mathrm{s}$",
+              "why": "Tu as calculé $h/v_0 = 20/8{,}0 = 2{,}50\\ \\mathrm{s}$, en divisant une hauteur par une vitesse **horizontale**. Les deux axes sont indépendants : la durée de chute ne dépend pas de $v_0$."
+            }
+          ],
+          "hint": "Décompose : le mouvement vertical est indépendant du mouvement horizontal. Quelle est la vitesse verticale initiale ?",
+          "solution": "Le tir étant horizontal, $v_{0y} = 0$ : selon $Oy$ la bille tombe comme en chute libre sans vitesse initiale.\nEn prenant l'origine au point de lancement et $Oy$ vers le haut, $y = -\\tfrac12 g t^2$ ; l'arrivée au sol correspond à $y = -h$, soit $h = \\tfrac12 g t^2$.\n$t = \\sqrt{\\dfrac{2h}{g}} = \\sqrt{\\dfrac{40}{9{,}8}} = \\sqrt{4{,}08} = 2{,}02\\ \\mathrm{s}$.\nContrôle : une bille simplement lâchée du même point toucherait le sol en même temps. La valeur $v_0 = 8{,}0\\ \\mathrm{m\\,s^{-1}}$ n'intervient pas ici.",
+          "methode": "Tir horizontal : la durée de chute ne dépend que de la hauteur, $t = \\sqrt{2h/g}$. La vitesse initiale ne fixe que la distance parcourue.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-tir-depuis-une-hauteur-q1"
+        },
+        {
+          "notion": "Le tir depuis une hauteur",
+          "difficulty": 2,
+          "statement": "Pour le même tir horizontal ($v_0 = 8{,}0\\ \\mathrm{m\\,s^{-1}}$, $h = 20\\ \\mathrm{m}$, $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$), la distance horizontale entre le pied de la falaise et le point d'impact vaut :",
+          "options": [
+            {
+              "label": "$16{,}2\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "Le mouvement horizontal est uniforme : $x = v_0\\,t = 8{,}0\\times 2{,}02 = 16{,}2\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$11{,}4\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $t = \\sqrt{h/g} = 1{,}43\\ \\mathrm{s}$ : $8{,}0\\times 1{,}43 = 11{,}4\\ \\mathrm{m}$. Il manque le facteur $2$ dans $t = \\sqrt{2h/g}$."
+            },
+            {
+              "label": "$32{,}7\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $t = 2h/g = 4{,}08\\ \\mathrm{s}$, sans prendre la racine carrée : $8{,}0\\times 4{,}08 = 32{,}7\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$6{,}5\\ \\mathrm{m}$",
+              "why": "Tu as pris $t = v_0/g = 0{,}82\\ \\mathrm{s}$ : $8{,}0\\times 0{,}82 = 6{,}5\\ \\mathrm{m}$. Cette expression est celle d'une durée de montée, elle ne dit rien de la hauteur de chute."
+            }
+          ],
+          "hint": "Trouve d'abord la durée du vol par le mouvement vertical, puis reporte-la dans le mouvement horizontal.",
+          "solution": "Durée de chute : $t = \\sqrt{2h/g} = \\sqrt{40/9{,}8} = 2{,}02\\ \\mathrm{s}$.\nMouvement horizontal uniforme : $x = v_0\\,t = 8{,}0\\times 2{,}02 = 16{,}2\\ \\mathrm{m}$.\nContrôle par l'équation de la trajectoire : avec $\\alpha = 0$, $y = -\\dfrac{g}{2v_0^2}x^2 = -\\dfrac{9{,}8}{128}x^2$ ; pour $y = -20\\ \\mathrm{m}$ on obtient $x^2 = \\dfrac{20\\times 128}{9{,}8} = 261$ et $x = 16{,}2\\ \\mathrm{m}$. Même résultat.",
+          "methode": "Tir horizontal en deux temps : la verticale donne la durée, l'horizontale donne la distance. Ne mélange jamais les deux axes dans un même calcul.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-tir-depuis-une-hauteur-q2"
+        },
+        {
+          "notion": "Le tir depuis une hauteur",
+          "difficulty": 2,
+          "statement": "Toujours pour ce tir horizontal ($v_0 = 8{,}0\\ \\mathrm{m\\,s^{-1}}$, $h = 20\\ \\mathrm{m}$, $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$), la norme de la vitesse au moment de l'impact vaut :",
+          "options": [
+            {
+              "label": "$21{,}4\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_x = 8{,}0\\ \\mathrm{m\\,s^{-1}}$ et $v_y = -g\\,t = -19{,}8\\ \\mathrm{m\\,s^{-1}}$, donc $v = \\sqrt{64 + 392} = \\sqrt{456} = 21{,}4\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$19{,}8\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu n'as gardé que $|v_y| = g\\,t = 19{,}8\\ \\mathrm{m\\,s^{-1}}$. La composante horizontale $8{,}0\\ \\mathrm{m\\,s^{-1}}$ subsiste pendant toute la chute."
+            },
+            {
+              "label": "$27{,}8\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as additionné les deux composantes : $8{,}0 + 19{,}8 = 27{,}8$. Perpendiculaires, elles se composent par le théorème de Pythagore."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as supposé la vitesse constante. Seule $v_x$ l'est : $v_y$ croît en valeur absolue pendant toute la chute."
+            }
+          ],
+          "hint": "Les deux composantes à l'impact, puis compose-les. Tu peux aussi passer par la conservation de l'énergie mécanique.",
+          "solution": "$t = 2{,}02\\ \\mathrm{s}$, $v_x = v_0 = 8{,}0\\ \\mathrm{m\\,s^{-1}}$ et $v_y = -9{,}8\\times 2{,}02 = -19{,}8\\ \\mathrm{m\\,s^{-1}}$.\n$v = \\sqrt{8{,}0^2 + 19{,}8^2} = \\sqrt{64 + 392} = \\sqrt{456} = 21{,}4\\ \\mathrm{m\\,s^{-1}}$.\nContrôle par l'énergie mécanique, qui se conserve : $\\tfrac12 v^2 = \\tfrac12 v_0^2 + g\\,h$, soit $v^2 = 64 + 2\\times 9{,}8\\times 20 = 64 + 392 = 456$ et $v = 21{,}4\\ \\mathrm{m\\,s^{-1}}$. Les deux voies concordent.",
+          "methode": "Vitesse d'impact : soit par les composantes, soit par $v^2 = v_0^2 + 2g\\,h$. La seconde voie est plus rapide et sert de vérification.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-tir-depuis-une-hauteur-q3"
+        },
+        {
+          "notion": "Le tir depuis une hauteur",
+          "difficulty": 3,
+          "statement": "Un projectile est lancé depuis le toit d'un immeuble, à $h = 15\\ \\mathrm{m}$ du sol, avec $v_0 = 12\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 30^\\circ$ au-dessus de l'horizontale ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La distance horizontale entre le point de lancement et le point d'impact au sol vaut :",
+          "options": [
+            {
+              "label": "$25{,}6\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "On résout $4{,}9t^2 - 6{,}0t - 15 = 0$ : $t = \\dfrac{6{,}0 + \\sqrt{36 + 294}}{9{,}8} = 2{,}47\\ \\mathrm{s}$, puis $x = 10{,}39\\times 2{,}47 = 25{,}6\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$12{,}7\\ \\mathrm{m}$",
+              "why": "Tu as oublié la hauteur de départ et utilisé $t_{\\text{vol}} = \\dfrac{2v_0\\sin\\alpha}{g} = 1{,}22\\ \\mathrm{s}$ : $10{,}39\\times 1{,}22 = 12{,}7\\ \\mathrm{m}$. Cette formule suppose un retour à l'altitude de départ."
+            },
+            {
+              "label": "$18{,}2\\ \\mathrm{m}$",
+              "why": "Tu as traité le tir comme horizontal : $t = \\sqrt{2h/g} = 1{,}75\\ \\mathrm{s}$ et $10{,}39\\times 1{,}75 = 18{,}2\\ \\mathrm{m}$. Tu as donc négligé la composante verticale initiale $v_0\\sin\\alpha = 6{,}0\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$29{,}6\\ \\mathrm{m}$",
+              "why": "La durée est juste, mais tu as utilisé $v_0$ au lieu de $v_0\\cos\\alpha$ : $12\\times 2{,}47 = 29{,}6\\ \\mathrm{m}$. Seule la composante horizontale fait avancer le projectile."
+            }
+          ],
+          "hint": "Pose $y = 0$ au niveau du sol et $y_0 = h$ : tu obtiens une équation du second degré en $t$. Garde la racine positive.",
+          "solution": "Composantes : $v_0\\cos 30^\\circ = 10{,}39\\ \\mathrm{m\\,s^{-1}}$ et $v_0\\sin 30^\\circ = 6{,}0\\ \\mathrm{m\\,s^{-1}}$.\nEn prenant l'origine au sol, $y(t) = -4{,}9t^2 + 6{,}0t + 15$. L'impact correspond à $y = 0$, soit $4{,}9t^2 - 6{,}0t - 15 = 0$.\nDiscriminant : $\\Delta = 36 + 4\\times 4{,}9\\times 15 = 36 + 294 = 330$, donc $\\sqrt{\\Delta} = 18{,}17$.\nRacine positive : $t = \\dfrac{6{,}0 + 18{,}17}{2\\times 4{,}9} = \\dfrac{24{,}17}{9{,}8} = 2{,}47\\ \\mathrm{s}$ (l'autre racine, négative, est à rejeter).\nDistance horizontale : $x = 10{,}39\\times 2{,}47 = 25{,}6\\ \\mathrm{m}$.\nContrôle : sans la hauteur de $15\\ \\mathrm{m}$, la portée ne serait que de $12{,}7\\ \\mathrm{m}$ ; partir de plus haut double presque la distance, ce qui est cohérent.",
+          "methode": "Tir depuis une hauteur : écris $y(t)$ avec $y_0 = h$, résous $y = 0$ (second degré), garde la racine positive, puis $x = v_0\\cos\\alpha\\times t$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-tir-depuis-une-hauteur-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le dispositif",
+        "lesson": "Chronophotographie d'un projectile",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-le-dispositif",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Le dispositif",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le dispositif",
+          "difficulty": 1,
+          "statement": "Pour étudier expérimentalement le mouvement d'un projectile, on filme son vol puis on pointe sa position image par image. Pour exploiter cet enregistrement, il est **indispensable** de connaître :",
+          "options": [
+            {
+              "label": "la durée $\\tau$ entre deux images consécutives et l'échelle de l'enregistrement",
+              "correct": true,
+              "why": "$\\tau$ convertit les numéros d'image en dates, l'échelle convertit les distances mesurées à l'écran en mètres. Sans ces deux données, aucune vitesse ne peut être calculée."
+            },
+            {
+              "label": "la masse du projectile et la durée $\\tau$ entre deux images",
+              "why": "$\\tau$ est bien nécessaire, mais la masse ne sert à rien : sans frottement $\\vec a = \\vec g$ ne contient pas $m$. En revanche il manque l'échelle."
+            },
+            {
+              "label": "l'échelle de l'enregistrement et l'angle de tir $\\alpha$",
+              "why": "L'échelle est nécessaire, mais $\\alpha$ est justement une grandeur que l'exploitation doit **déterminer**, et il manque $\\tau$ pour obtenir des dates."
+            },
+            {
+              "label": "la masse du projectile et son volume",
+              "why": "Ces deux grandeurs ne servent qu'à discuter la poussée d'Archimède ou les frottements. Elles ne permettent de convertir ni les durées ni les distances."
+            }
+          ],
+          "hint": "De quoi as-tu besoin pour transformer « numéro d'image » en secondes, et « millimètres sur l'image » en mètres ?",
+          "solution": "Le pointage image par image fournit des positions en pixels (ou en millimètres sur une photographie) et des numéros d'image.\nPour passer aux dates, il faut la durée $\\tau$ séparant deux images, c'est-à-dire l'inverse de la fréquence d'acquisition : $t_i = i\\,\\tau$.\nPour passer aux longueurs réelles, il faut l'échelle, obtenue en photographiant dans le plan du mouvement un objet de longueur connue (règle, mire).\nContrôle : la masse n'est jamais utile dans ce chapitre, puisque l'équation du mouvement $\\vec a = \\vec g$ ne la contient pas.",
+          "methode": "Toute chronophotographie s'exploite avec deux conversions : $\\tau$ pour le temps, l'échelle pour l'espace. Note-les avant tout calcul.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-dispositif-q1"
+        },
+        {
+          "notion": "Le dispositif",
+          "difficulty": 2,
+          "statement": "La caméra utilisée enregistre $25$ images par seconde. La durée $\\tau$ séparant deux images consécutives vaut :",
+          "options": [
+            {
+              "label": "$40\\ \\mathrm{ms}$",
+              "correct": true,
+              "why": "$\\tau = \\dfrac{1}{f} = \\dfrac{1}{25} = 0{,}040\\ \\mathrm{s} = 40\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$25\\ \\mathrm{ms}$",
+              "why": "Tu as recopié la valeur numérique de la fréquence en lui donnant l'unité d'une durée. $25$ est un nombre d'images par seconde, pas une durée."
+            },
+            {
+              "label": "$0{,}40\\ \\mathrm{s}$",
+              "why": "Erreur de puissance de dix : $1/25 = 0{,}040\\ \\mathrm{s}$ et non $0{,}40\\ \\mathrm{s}$. Avec $0{,}40\\ \\mathrm{s}$ la caméra ne prendrait que $2{,}5$ images par seconde."
+            },
+            {
+              "label": "$80\\ \\mathrm{ms}$",
+              "why": "Tu as compté une image sur deux : $2\\tau = 80\\ \\mathrm{ms}$. L'énoncé demande l'intervalle entre deux images **consécutives**."
+            }
+          ],
+          "hint": "$\\tau$ et la fréquence d'acquisition sont inverses l'une de l'autre : surveille la puissance de dix.",
+          "solution": "$\\tau = \\dfrac{1}{f} = \\dfrac{1}{25\\ \\mathrm{s^{-1}}} = 0{,}040\\ \\mathrm{s}$, soit $40\\ \\mathrm{ms}$.\nContrôle : $25$ intervalles de $40\\ \\mathrm{ms}$ font $25\\times 0{,}040 = 1{,}00\\ \\mathrm{s}$, ce qui est cohérent avec $25$ images par seconde.",
+          "methode": "$\\tau = 1/f$. Vérifie toujours en multipliant : $f\\times\\tau$ doit donner $1$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-dispositif-q2"
+        },
+        {
+          "notion": "Le dispositif",
+          "difficulty": 2,
+          "statement": "Sur la photographie, une règle de longueur réelle $1{,}00\\ \\mathrm{m}$ placée dans le plan du mouvement mesure $4{,}0\\ \\mathrm{cm}$. Un déplacement du projectile mesuré à $2{,}6\\ \\mathrm{cm}$ sur la même photographie correspond, en réalité, à :",
+          "options": [
+            {
+              "label": "$0{,}65\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "L'échelle vaut $\\dfrac{1{,}00\\ \\mathrm{m}}{4{,}0\\ \\mathrm{cm}} = 0{,}25\\ \\mathrm{m\\,cm^{-1}}$, donc $2{,}6\\times 0{,}25 = 0{,}65\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$1{,}54\\ \\mathrm{m}$",
+              "why": "Tu as inversé le rapport : $\\dfrac{4{,}0}{2{,}6}\\times 1{,}00 = 1{,}54\\ \\mathrm{m}$. Un déplacement **plus petit** que la règle sur l'image doit donner moins de $1{,}00\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$2{,}60\\ \\mathrm{m}$",
+              "why": "Tu as pris la mesure sur l'image pour une longueur réelle, en passant simplement des centimètres aux mètres. Il faut appliquer l'échelle."
+            },
+            {
+              "label": "$0{,}104\\ \\mathrm{m}$",
+              "why": "Tu as multiplié par $0{,}040\\ \\mathrm{m\\,cm^{-1}}$ au lieu de $0{,}25\\ \\mathrm{m\\,cm^{-1}}$ : $2{,}6\\times 0{,}040 = 0{,}104\\ \\mathrm{m}$. Tu as donc utilisé l'échelle à l'envers."
+            }
+          ],
+          "hint": "Construis l'échelle comme un rapport « mètres réels par centimètre d'image », puis multiplie.",
+          "solution": "Échelle : $1{,}00\\ \\mathrm{m}$ réel correspond à $4{,}0\\ \\mathrm{cm}$ sur l'image, soit $k = \\dfrac{1{,}00}{4{,}0} = 0{,}25\\ \\mathrm{m\\,cm^{-1}}$.\nDéplacement réel : $d = 2{,}6\\ \\mathrm{cm}\\times 0{,}25\\ \\mathrm{m\\,cm^{-1}} = 0{,}65\\ \\mathrm{m}$.\nContrôle par proportionnalité : $2{,}6\\ \\mathrm{cm}$ représente $65\\ \\%$ de $4{,}0\\ \\mathrm{cm}$, donc $65\\ \\%$ de $1{,}00\\ \\mathrm{m}$, soit $0{,}65\\ \\mathrm{m}$.",
+          "methode": "Échelle : pose toujours la proportion $\\dfrac{\\text{réel}}{\\text{image}}$ avec la règle connue, puis vérifie l'ordre de grandeur du résultat.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-dispositif-q3"
+        },
+        {
+          "notion": "Le dispositif",
+          "difficulty": 3,
+          "statement": "On choisit cette fois un repère d'origine au point de lancement dont l'axe $Oy$ est orienté **vers le bas** (l'axe $Ox$ restant horizontal dans le sens du tir). Pour un tir faisant l'angle $\\alpha$ **au-dessus** de l'horizontale, les équations horaires deviennent :",
+          "options": [
+            {
+              "label": "$x = v_0\\cos\\alpha\\,t$ et $y = \\tfrac12 g t^2 - v_0\\sin\\alpha\\,t$",
+              "correct": true,
+              "why": "Avec $Oy$ vers le bas, $a_y = +g$ et $v_{0y} = -v_0\\sin\\alpha$ (le projectile part vers le haut, donc vers les $y$ négatifs). Les deux primitivations donnent cette expression."
+            },
+            {
+              "label": "$x = v_0\\cos\\alpha\\,t$ et $y = \\tfrac12 g t^2 + v_0\\sin\\alpha\\,t$",
+              "why": "Tu as changé le signe de $g$ mais oublié celui de $v_{0y}$. Avec ton expression $y > 0$ dès le départ : le projectile descendrait immédiatement, alors qu'il monte."
+            },
+            {
+              "label": "$x = v_0\\cos\\alpha\\,t$ et $y = -\\tfrac12 g t^2 - v_0\\sin\\alpha\\,t$",
+              "why": "Tu as changé le signe de $v_{0y}$ mais gardé $a_y = -g$. Or avec $Oy$ vers le bas l'accélération est **positive** : $a_y = +g$."
+            },
+            {
+              "label": "$x = v_0\\cos\\alpha\\,t$ et $y = -\\tfrac12 g t^2 + v_0\\sin\\alpha\\,t$",
+              "why": "C'est l'expression valable pour $Oy$ **vers le haut**. En changeant l'orientation de l'axe, les deux termes verticaux changent de signe."
+            }
+          ],
+          "hint": "Reprends la projection de $\\vec a = \\vec g$ et de $\\vec v_0$ sur un axe dirigé vers le bas : les deux changent de signe.",
+          "solution": "Avec $Oy$ orienté vers le bas, le vecteur $\\vec g$ est dans le sens positif de l'axe : $a_y = +g$.\nLe projectile part vers le haut, donc dans le sens **négatif** de cet axe : $v_{0y} = -v_0\\sin\\alpha$.\nPrimitivation : $v_y(t) = g\\,t - v_0\\sin\\alpha$, puis $y(t) = \\tfrac12 g t^2 - v_0\\sin\\alpha\\,t$ (avec $y(0) = 0$). Selon $Ox$ rien ne change : $x = v_0\\cos\\alpha\\,t$.\nContrôle : le sommet correspond toujours à $v_y = 0$, soit $t_S = \\dfrac{v_0\\sin\\alpha}{g}$, inchangé ; et l'ordonnée y vaut alors $y_S = -\\dfrac{v_0^2\\sin^2\\alpha}{2g}$, négative, c'est-à-dire **au-dessus** de l'origine : cohérent avec un axe vers le bas.\nLes grandeurs physiques (date du sommet, flèche, portée) sont évidemment les mêmes ; seuls les signes des coordonnées changent.",
+          "methode": "Quand l'énoncé impose une orientation d'axe, repars de la projection de $\\vec a$ et de $\\vec v_0$. Un seul signe oublié fausse tout le problème.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-dispositif-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Exploiter le tableau de mesures",
+        "lesson": "Chronophotographie d'un projectile",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-exploiter-le-tableau-de-mesures",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Exploiter le tableau de mesures",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Exploiter le tableau de mesures",
+          "difficulty": 1,
+          "statement": "Le pointage d'un enregistrement vidéo donne les positions d'une bille lancée depuis l'origine, relevées toutes les $\\tau = 0{,}10\\ \\mathrm{s}$, sous la forme $t\\ (\\mathrm{s}) \\to (x\\ ;\\ y)$ en mètres : $0{,}00 \\to (0{,}000\\ ;\\ 0{,}000)$ ; $0{,}10 \\to (0{,}300\\ ;\\ 0{,}471)$ ; $0{,}20 \\to (0{,}600\\ ;\\ 0{,}843)$ ; $0{,}30 \\to (0{,}900\\ ;\\ 1{,}118)$ ; $0{,}40 \\to (1{,}200\\ ;\\ 1{,}294)$ ; $0{,}50 \\to (1{,}500\\ ;\\ 1{,}373)$ ; $0{,}60 \\to (1{,}800\\ ;\\ 1{,}354)$. On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La composante horizontale de la vitesse vaut :",
+          "options": [
+            {
+              "label": "$3{,}00\\ \\mathrm{m\\,s^{-1}}$, constante",
+              "correct": true,
+              "why": "Entre deux relevés successifs, $x$ augmente toujours de $0{,}300\\ \\mathrm{m}$ en $0{,}10\\ \\mathrm{s}$ : $v_x = 0{,}300/0{,}10 = 3{,}00\\ \\mathrm{m\\,s^{-1}}$, constante."
+            },
+            {
+              "label": "$0{,}300\\ \\mathrm{m\\,s^{-1}}$, constante",
+              "why": "Tu as pris le déplacement pour une vitesse, sans diviser par $\\tau = 0{,}10\\ \\mathrm{s}$. $0{,}300$ est une distance, en mètres."
+            },
+            {
+              "label": "$3{,}00\\ \\mathrm{m\\,s^{-1}}$ au début, puis décroissante",
+              "why": "La valeur initiale est juste, mais les écarts sur $x$ restent égaux à $0{,}300\\ \\mathrm{m}$ jusqu'au dernier relevé : $v_x$ ne varie pas, car $a_x = 0$."
+            },
+            {
+              "label": "$30{,}0\\ \\mathrm{m\\,s^{-1}}$, constante",
+              "why": "Erreur de puissance de dix : $0{,}300/0{,}10 = 3{,}00$ et non $30{,}0$. Une bille lancée à la main n'atteint pas $30\\ \\mathrm{m\\,s^{-1}}$."
+            }
+          ],
+          "hint": "Regarde les écarts successifs sur la colonne $x$ : sont-ils égaux ?",
+          "solution": "Écarts successifs sur $x$ : $0{,}300\\ \\mathrm{m}$ à chaque intervalle de $\\tau = 0{,}10\\ \\mathrm{s}$.\n$v_x = \\dfrac{\\Delta x}{\\tau} = \\dfrac{0{,}300}{0{,}10} = 3{,}00\\ \\mathrm{m\\,s^{-1}}$, et cette valeur est la même sur tous les intervalles.\nContrôle : c'est exactement ce que prévoit la théorie, $a_x = 0$ donc $v_x = v_0\\cos\\alpha$ est constante. Le mouvement est uniforme selon $Ox$.",
+          "methode": "Premier réflexe devant un tableau de projectile : vérifier que les écarts sur $x$ sont constants. Cela valide le modèle et donne $v_0\\cos\\alpha$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-exploiter-le-tableau-de-mesures-q1"
+        },
+        {
+          "notion": "Exploiter le tableau de mesures",
+          "difficulty": 2,
+          "statement": "Le pointage d'un enregistrement vidéo donne les positions d'une bille lancée depuis l'origine, relevées toutes les $\\tau = 0{,}10\\ \\mathrm{s}$, sous la forme $t\\ (\\mathrm{s}) \\to (x\\ ;\\ y)$ en mètres : $0{,}00 \\to (0{,}000\\ ;\\ 0{,}000)$ ; $0{,}10 \\to (0{,}300\\ ;\\ 0{,}471)$ ; $0{,}20 \\to (0{,}600\\ ;\\ 0{,}843)$ ; $0{,}30 \\to (0{,}900\\ ;\\ 1{,}118)$ ; $0{,}40 \\to (1{,}200\\ ;\\ 1{,}294)$ ; $0{,}50 \\to (1{,}500\\ ;\\ 1{,}373)$ ; $0{,}60 \\to (1{,}800\\ ;\\ 1{,}354)$. On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La composante verticale de la vitesse à la date $t = 0{,}30\\ \\mathrm{s}$, estimée par encadrement, vaut :",
+          "options": [
+            {
+              "label": "$2{,}26\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_y(0{,}30) \\approx \\dfrac{y(0{,}40) - y(0{,}20)}{2\\tau} = \\dfrac{1{,}294 - 0{,}843}{0{,}20} = \\dfrac{0{,}451}{0{,}20} = 2{,}26\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$4{,}51\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé par $\\tau$ au lieu de $2\\tau$ : $\\dfrac{0{,}451}{0{,}10} = 4{,}51\\ \\mathrm{m\\,s^{-1}}$. L'écart $y(0{,}40)-y(0{,}20)$ est parcouru en **deux** intervalles."
+            },
+            {
+              "label": "$2{,}75\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as calculé $\\dfrac{y(0{,}30)-y(0{,}20)}{\\tau} = \\dfrac{0{,}275}{0{,}10} = 2{,}75\\ \\mathrm{m\\,s^{-1}}$ : c'est la vitesse moyenne sur $[0{,}20\\,;0{,}30]$, donc une estimation de $v_y$ à $t = 0{,}25\\ \\mathrm{s}$, pas à $0{,}30\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$3{,}73\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé l'ordonnée par la date : $\\dfrac{1{,}118}{0{,}30} = 3{,}73\\ \\mathrm{m\\,s^{-1}}$. Cela donnerait la vitesse verticale **moyenne** depuis le départ, pas la vitesse à $t = 0{,}30\\ \\mathrm{s}$."
+            }
+          ],
+          "hint": "Pour estimer une vitesse instantanée à partir d'un tableau, encadre le point : utilise le point précédent et le point suivant.",
+          "solution": "Méthode de l'encadrement : $v_y(t_i) \\approx \\dfrac{y_{i+1} - y_{i-1}}{2\\tau}$.\nIci $v_y(0{,}30) \\approx \\dfrac{1{,}294 - 0{,}843}{2\\times 0{,}10} = \\dfrac{0{,}451}{0{,}20} = 2{,}26\\ \\mathrm{m\\,s^{-1}}$.\nContrôle par la théorie : avec $v_{0y} = 5{,}20\\ \\mathrm{m\\,s^{-1}}$ (voir l'exploitation du tableau), $v_y(0{,}30) = -9{,}8\\times 0{,}30 + 5{,}20 = 2{,}26\\ \\mathrm{m\\,s^{-1}}$. L'encadrement est ici exact, car $y(t)$ est un polynôme du second degré.",
+          "methode": "Vitesse instantanée à partir d'un relevé : $v_i \\approx \\dfrac{y_{i+1}-y_{i-1}}{2\\tau}$. Deux intervalles au numérateur, donc $2\\tau$ au dénominateur.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-exploiter-le-tableau-de-mesures-q2"
+        },
+        {
+          "notion": "Exploiter le tableau de mesures",
+          "difficulty": 2,
+          "statement": "Le pointage d'un enregistrement vidéo donne les positions d'une bille lancée depuis l'origine, relevées toutes les $\\tau = 0{,}10\\ \\mathrm{s}$, sous la forme $t\\ (\\mathrm{s}) \\to (x\\ ;\\ y)$ en mètres : $0{,}00 \\to (0{,}000\\ ;\\ 0{,}000)$ ; $0{,}10 \\to (0{,}300\\ ;\\ 0{,}471)$ ; $0{,}20 \\to (0{,}600\\ ;\\ 0{,}843)$ ; $0{,}30 \\to (0{,}900\\ ;\\ 1{,}118)$ ; $0{,}40 \\to (1{,}200\\ ;\\ 1{,}294)$ ; $0{,}50 \\to (1{,}500\\ ;\\ 1{,}373)$ ; $0{,}60 \\to (1{,}800\\ ;\\ 1{,}354)$. On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La norme de la vitesse de la bille à la date $t = 0{,}30\\ \\mathrm{s}$ vaut :",
+          "options": [
+            {
+              "label": "$3{,}75\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v = \\sqrt{v_x^2 + v_y^2} = \\sqrt{3{,}00^2 + 2{,}26^2} = \\sqrt{9{,}00 + 5{,}11} = 3{,}75\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$5{,}26\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as additionné les composantes : $3{,}00 + 2{,}26 = 5{,}26$. Elles sont perpendiculaires, donc il faut le théorème de Pythagore."
+            },
+            {
+              "label": "$2{,}26\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu n'as gardé que la composante verticale. La bille avance toujours horizontalement à $3{,}00\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$6{,}00\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "C'est la vitesse **initiale** $v_0$ déduite du tableau. À $t = 0{,}30\\ \\mathrm{s}$ la bille est montée, donc sa vitesse est plus faible."
+            }
+          ],
+          "hint": "Tu connais déjà $v_x$ et tu peux estimer $v_y$ par encadrement : compose les deux.",
+          "solution": "$v_x = 3{,}00\\ \\mathrm{m\\,s^{-1}}$ (écarts constants sur $x$) et $v_y(0{,}30) \\approx \\dfrac{1{,}294-0{,}843}{0{,}20} = 2{,}26\\ \\mathrm{m\\,s^{-1}}$.\n$v = \\sqrt{3{,}00^2 + 2{,}26^2} = \\sqrt{9{,}00 + 5{,}11} = \\sqrt{14{,}11} = 3{,}75\\ \\mathrm{m\\,s^{-1}}$.\nContrôle par l'énergie : $v^2 = v_0^2 - 2g\\,y = 36{,}0 - 2\\times 9{,}8\\times 1{,}118 = 36{,}0 - 21{,}9 = 14{,}1$, soit $v = 3{,}75\\ \\mathrm{m\\,s^{-1}}$. Les deux méthodes concordent.",
+          "methode": "Norme de la vitesse sur un relevé : estime $v_x$ et $v_y$ séparément, puis compose. Vérifie avec $v^2 = v_0^2 - 2gy$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-exploiter-le-tableau-de-mesures-q3"
+        },
+        {
+          "notion": "Exploiter le tableau de mesures",
+          "difficulty": 3,
+          "statement": "Le pointage d'un enregistrement vidéo donne les positions d'une bille lancée depuis l'origine, relevées toutes les $\\tau = 0{,}10\\ \\mathrm{s}$, sous la forme $t\\ (\\mathrm{s}) \\to (x\\ ;\\ y)$ en mètres : $0{,}00 \\to (0{,}000\\ ;\\ 0{,}000)$ ; $0{,}10 \\to (0{,}300\\ ;\\ 0{,}471)$ ; $0{,}20 \\to (0{,}600\\ ;\\ 0{,}843)$ ; $0{,}30 \\to (0{,}900\\ ;\\ 1{,}118)$ ; $0{,}40 \\to (1{,}200\\ ;\\ 1{,}294)$ ; $0{,}50 \\to (1{,}500\\ ;\\ 1{,}373)$ ; $0{,}60 \\to (1{,}800\\ ;\\ 1{,}354)$. On prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La vitesse initiale et l'angle de tir déduits de ce relevé valent :",
+          "options": [
+            {
+              "label": "$v_0 = 6{,}0\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 60^\\circ$",
+              "correct": true,
+              "why": "$v_{0x} = 3{,}00\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = 5{,}20\\ \\mathrm{m\\,s^{-1}}$, d'où $v_0 = \\sqrt{9{,}00+27{,}0} = 6{,}0\\ \\mathrm{m\\,s^{-1}}$ et $\\tan\\alpha = 5{,}20/3{,}00 = 1{,}73$, soit $\\alpha = 60^\\circ$."
+            },
+            {
+              "label": "$v_0 = 8{,}2\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 60^\\circ$",
+              "why": "Tu as additionné les composantes : $3{,}00 + 5{,}20 = 8{,}2$. La norme s'obtient par $\\sqrt{v_{0x}^2+v_{0y}^2}$."
+            },
+            {
+              "label": "$v_0 = 6{,}0\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 30^\\circ$",
+              "why": "Tu as inversé le rapport : $\\tan\\alpha = 3{,}00/5{,}20$ donne $30^\\circ$. Or $\\tan\\alpha = v_{0y}/v_{0x}$, et la bille monte beaucoup plus qu'elle n'avance."
+            },
+            {
+              "label": "$v_0 = 5{,}2\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 60^\\circ$",
+              "why": "Tu as confondu $v_0$ avec sa composante verticale $v_{0y} = 5{,}20\\ \\mathrm{m\\,s^{-1}}$. La norme est nécessairement supérieure à chacune des composantes."
+            }
+          ],
+          "hint": "$v_{0x}$ se lit directement sur la colonne $x$. Pour $v_{0y}$, exploite $y(0{,}10)$ sachant que $y = -\\tfrac12 g t^2 + v_{0y}\\,t$.",
+          "solution": "Composante horizontale : $v_{0x} = v_x = \\dfrac{0{,}300}{0{,}10} = 3{,}00\\ \\mathrm{m\\,s^{-1}}$.\nComposante verticale : de $y(0{,}10) = -4{,}9\\times 0{,}010 + v_{0y}\\times 0{,}10 = 0{,}471$, on tire $v_{0y}\\times 0{,}10 = 0{,}471 + 0{,}049 = 0{,}520$, donc $v_{0y} = 5{,}20\\ \\mathrm{m\\,s^{-1}}$.\nNorme : $v_0 = \\sqrt{3{,}00^2 + 5{,}20^2} = \\sqrt{9{,}00 + 27{,}0} = \\sqrt{36{,}0} = 6{,}0\\ \\mathrm{m\\,s^{-1}}$. Angle : $\\tan\\alpha = \\dfrac{5{,}20}{3{,}00} = 1{,}73$, soit $\\alpha = 60^\\circ$.\nContrôle par le sommet : la théorie prévoit $t_S = \\dfrac{5{,}20}{9{,}8} = 0{,}53\\ \\mathrm{s}$ et $y_S = \\dfrac{5{,}20^2}{2\\times 9{,}8} = 1{,}38\\ \\mathrm{m}$. Le tableau montre bien un maximum de $1{,}373\\ \\mathrm{m}$ entre $0{,}50$ et $0{,}60\\ \\mathrm{s}$ : cohérent.",
+          "methode": "Pour remonter aux conditions initiales d'un relevé : $v_{0x}$ par les écarts sur $x$, $v_{0y}$ en injectant un couple $(t\\,;y)$ dans l'équation horaire, puis Pythagore et arctangente.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-exploiter-le-tableau-de-mesures-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Exemple complet",
+        "lesson": "Chronophotographie d'un projectile",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-exemple-complet",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Exemple complet",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Exemple complet",
+          "difficulty": 1,
+          "statement": "Un joueur lance un ballon depuis une hauteur $y_0 = 2{,}0\\ \\mathrm{m}$ au-dessus du sol, avec $v_0 = 9{,}0\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 50^\\circ$ au-dessus de l'horizontale. On néglige les frottements et on prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. Les composantes de la vitesse initiale valent :",
+          "options": [
+            {
+              "label": "$v_{0x} = 5{,}79\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = 6{,}89\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_{0x} = 9{,}0\\times\\cos 50^\\circ = 9{,}0\\times 0{,}6428 = 5{,}79\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = 9{,}0\\times\\sin 50^\\circ = 9{,}0\\times 0{,}7660 = 6{,}89\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$v_{0x} = 6{,}89\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = 5{,}79\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as échangé sinus et cosinus. Comme $\\alpha = 50^\\circ > 45^\\circ$, la composante verticale doit être la plus grande."
+            },
+            {
+              "label": "$v_{0x} = 9{,}00\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = 6{,}89\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu n'as pas projeté la composante horizontale. On aurait alors $\\sqrt{9{,}00^2+6{,}89^2} = 11{,}3\\ \\mathrm{m\\,s^{-1}} \\ne v_0$."
+            },
+            {
+              "label": "$v_{0x} = 5{,}79\\ \\mathrm{m\\,s^{-1}}$ et $v_{0y} = 8{,}89\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as ajouté $2{,}0$ à la composante verticale, en confondant la hauteur de départ $y_0$ avec une vitesse. $y_0$ intervient dans $y(t)$, pas dans $\\vec v_0$."
+            }
+          ],
+          "hint": "Projette $\\vec v_0$ : l'angle est mesuré depuis l'horizontale. La hauteur $y_0$ n'intervient pas ici.",
+          "solution": "$v_{0x} = v_0\\cos\\alpha = 9{,}0\\times 0{,}6428 = 5{,}79\\ \\mathrm{m\\,s^{-1}}$.\n$v_{0y} = v_0\\sin\\alpha = 9{,}0\\times 0{,}7660 = 6{,}89\\ \\mathrm{m\\,s^{-1}}$.\nContrôle : $\\sqrt{5{,}79^2 + 6{,}89^2} = \\sqrt{33{,}5+47{,}5} = 9{,}0\\ \\mathrm{m\\,s^{-1}} = v_0$, et $v_{0y} > v_{0x}$ comme attendu pour $\\alpha > 45^\\circ$.",
+          "methode": "Projette $\\vec v_0$ avant tout, et vérifie par $v_{0x}^2+v_{0y}^2 = v_0^2$. La hauteur de départ n'entre que dans $y(t)$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-exemple-complet-q1"
+        },
+        {
+          "notion": "Exemple complet",
+          "difficulty": 2,
+          "statement": "Un joueur lance un ballon depuis une hauteur $y_0 = 2{,}0\\ \\mathrm{m}$ au-dessus du sol, avec $v_0 = 9{,}0\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 50^\\circ$ au-dessus de l'horizontale. On néglige les frottements et on prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La hauteur maximale atteinte par le ballon au-dessus du sol vaut :",
+          "options": [
+            {
+              "label": "$4{,}43\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$y_S = y_0 + \\dfrac{(v_0\\sin\\alpha)^2}{2g} = 2{,}0 + \\dfrac{6{,}89^2}{19{,}6} = 2{,}0 + 2{,}43 = 4{,}43\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$2{,}43\\ \\mathrm{m}$",
+              "why": "Tu as oublié d'ajouter $y_0 = 2{,}0\\ \\mathrm{m}$ : $2{,}43\\ \\mathrm{m}$ n'est que la hauteur gagnée **au-dessus du point de lancement**."
+            },
+            {
+              "label": "$3{,}71\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $\\cos 50^\\circ$ : $2{,}0 + \\dfrac{5{,}79^2}{19{,}6} = 2{,}0 + 1{,}71 = 3{,}71\\ \\mathrm{m}$. La montée est due à la composante **verticale**."
+            },
+            {
+              "label": "$6{,}85\\ \\mathrm{m}$",
+              "why": "Tu as divisé par $g$ au lieu de $2g$ : $2{,}0 + \\dfrac{47{,}5}{9{,}8} = 2{,}0 + 4{,}85 = 6{,}85\\ \\mathrm{m}$."
+            }
+          ],
+          "hint": "La hauteur gagnée se calcule comme pour un tir depuis le sol ; il reste à y ajouter l'altitude de départ.",
+          "solution": "Hauteur gagnée au-dessus du point de lancement : $\\dfrac{(v_0\\sin\\alpha)^2}{2g} = \\dfrac{6{,}89^2}{2\\times 9{,}8} = \\dfrac{47{,}5}{19{,}6} = 2{,}43\\ \\mathrm{m}$.\nAltitude maximale au-dessus du sol : $y_S = 2{,}0 + 2{,}43 = 4{,}43\\ \\mathrm{m}$.\nContrôle : la date du sommet vaut $t_S = \\dfrac{6{,}89}{9{,}8} = 0{,}703\\ \\mathrm{s}$, et $y(t_S) = -4{,}9\\times 0{,}494 + 6{,}89\\times 0{,}703 + 2{,}0 = -2{,}42 + 4{,}84 + 2{,}0 = 4{,}42\\ \\mathrm{m}$ : même valeur aux arrondis près.",
+          "methode": "Tir depuis une hauteur : la flèche **au-dessus du sol** est $y_0 + \\dfrac{(v_0\\sin\\alpha)^2}{2g}$. Oublier $y_0$ est l'erreur la plus courante.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-exemple-complet-q2"
+        },
+        {
+          "notion": "Exemple complet",
+          "difficulty": 2,
+          "statement": "Un joueur lance un ballon depuis une hauteur $y_0 = 2{,}0\\ \\mathrm{m}$ au-dessus du sol, avec $v_0 = 9{,}0\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 50^\\circ$ au-dessus de l'horizontale. On néglige les frottements et on prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. Lorsque le ballon a avancé de $6{,}0\\ \\mathrm{m}$ horizontalement, son altitude au-dessus du sol vaut :",
+          "options": [
+            {
+              "label": "$3{,}88\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$t = \\dfrac{6{,}0}{5{,}79} = 1{,}037\\ \\mathrm{s}$, puis $y = -4{,}9\\times 1{,}075 + 6{,}89\\times 1{,}037 + 2{,}0 = -5{,}27 + 7{,}15 + 2{,}0 = 3{,}88\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$1{,}88\\ \\mathrm{m}$",
+              "why": "Tu as oublié $y_0 = 2{,}0\\ \\mathrm{m}$ : $-5{,}27 + 7{,}15 = 1{,}88\\ \\mathrm{m}$ est l'altitude comptée depuis le point de lancement, pas depuis le sol."
+            },
+            {
+              "label": "$4{,}42\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $t = 6{,}0/9{,}0 = 0{,}667\\ \\mathrm{s}$, c'est-à-dire $v_0$ au lieu de $v_0\\cos\\alpha$ : $-4{,}9\\times 0{,}444 + 6{,}89\\times 0{,}667 + 2{,}0 = 4{,}42\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$14{,}4\\ \\mathrm{m}$",
+              "why": "Erreur de signe sur le terme en $t^2$ : $+5{,}27 + 7{,}15 + 2{,}0 = 14{,}4\\ \\mathrm{m}$. Or la flèche n'est que de $4{,}43\\ \\mathrm{m}$ : la valeur est impossible."
+            }
+          ],
+          "hint": "Trouve la date correspondant à $x = 6{,}0\\ \\mathrm{m}$ grâce au mouvement horizontal, puis reporte-la dans $y(t)$.",
+          "solution": "Mouvement horizontal uniforme : $t = \\dfrac{x}{v_0\\cos\\alpha} = \\dfrac{6{,}0}{5{,}79} = 1{,}037\\ \\mathrm{s}$.\nMouvement vertical : $y(t) = -4{,}9t^2 + 6{,}89t + 2{,}0$, donc $y = -4{,}9\\times 1{,}037^2 + 6{,}89\\times 1{,}037 + 2{,}0 = -5{,}27 + 7{,}15 + 2{,}0 = 3{,}88\\ \\mathrm{m}$.\nContrôle : l'abscisse du sommet vaut $x_S = 5{,}79\\times 0{,}703 = 4{,}07\\ \\mathrm{m}$. Le point $x = 6{,}0\\ \\mathrm{m}$ est donc après le sommet, et $3{,}88\\ \\mathrm{m} < 4{,}43\\ \\mathrm{m}$ : le ballon est effectivement redescendu.",
+          "methode": "« Où est le projectile à telle distance ? » : passe par la date $t = x/(v_0\\cos\\alpha)$, ou directement par l'équation de la trajectoire.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-exemple-complet-q3"
+        },
+        {
+          "notion": "Exemple complet",
+          "difficulty": 3,
+          "statement": "Un joueur lance un ballon depuis une hauteur $y_0 = 2{,}0\\ \\mathrm{m}$ au-dessus du sol, avec $v_0 = 9{,}0\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 50^\\circ$ au-dessus de l'horizontale. On néglige les frottements et on prend $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. La distance horizontale parcourue par le ballon jusqu'à son impact sur le sol vaut :",
+          "options": [
+            {
+              "label": "$9{,}57\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "On résout $4{,}9t^2 - 6{,}89t - 2{,}0 = 0$ : $t = \\dfrac{6{,}89 + 9{,}31}{9{,}8} = 1{,}654\\ \\mathrm{s}$, puis $x = 5{,}79\\times 1{,}654 = 9{,}57\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$8{,}14\\ \\mathrm{m}$",
+              "why": "Tu as appliqué $x_P = \\dfrac{v_0^2\\sin 2\\alpha}{g} = \\dfrac{81\\times 0{,}985}{9{,}8} = 8{,}14\\ \\mathrm{m}$ : cette formule n'est valable que si le tir part du sol. Elle ignore $y_0 = 2{,}0\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$14{,}9\\ \\mathrm{m}$",
+              "why": "La durée est juste, mais tu as utilisé $v_0$ au lieu de $v_0\\cos\\alpha$ : $9{,}0\\times 1{,}654 = 14{,}9\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$19{,}1\\ \\mathrm{m}$",
+              "why": "Dans la résolution du trinôme tu as divisé par $a$ au lieu de $2a$ : $t = \\dfrac{6{,}89+9{,}31}{4{,}9} = 3{,}31\\ \\mathrm{s}$, puis $5{,}79\\times 3{,}31 = 19{,}1\\ \\mathrm{m}$."
+            }
+          ],
+          "hint": "L'impact correspond à $y = 0$ avec $y_0 = 2{,}0\\ \\mathrm{m}$ : une équation du second degré, dont tu gardes la racine positive.",
+          "solution": "Équation horaire verticale, origine au sol : $y(t) = -4{,}9t^2 + 6{,}89t + 2{,}0$.\nImpact : $y = 0$, soit $4{,}9t^2 - 6{,}89t - 2{,}0 = 0$. Discriminant $\\Delta = 6{,}89^2 + 4\\times 4{,}9\\times 2{,}0 = 47{,}5 + 39{,}2 = 86{,}7$, donc $\\sqrt{\\Delta} = 9{,}31$.\nRacine positive : $t = \\dfrac{6{,}89 + 9{,}31}{2\\times 4{,}9} = \\dfrac{16{,}20}{9{,}8} = 1{,}654\\ \\mathrm{s}$.\nDistance horizontale : $x_P = 5{,}79\\times 1{,}654 = 9{,}57\\ \\mathrm{m}$.\nContrôle : si le tir partait du sol, la portée serait de $8{,}14\\ \\mathrm{m}$ ; les $2{,}0\\ \\mathrm{m}$ de hauteur initiale ajoutent $1{,}4\\ \\mathrm{m}$ environ, ce qui est cohérent. Par ailleurs la vitesse d'impact vaut $\\sqrt{81 + 2\\times 9{,}8\\times 2{,}0} = 11{,}0\\ \\mathrm{m\\,s^{-1}} > v_0$, comme attendu puisque le ballon arrive plus bas qu'il n'est parti.",
+          "methode": "Tir depuis une hauteur : jamais $\\dfrac{v_0^2\\sin 2\\alpha}{g}$. Résous $y(t)=0$ avec $y_0$, puis multiplie la racine positive par $v_0\\cos\\alpha$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-exemple-complet-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Vérifier la conservation de l'énergie",
+        "lesson": "Chronophotographie d'un projectile",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-verifier-la-conservation-de-l-energie",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Vérifier la conservation de l'énergie",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Vérifier la conservation de l'énergie",
+          "difficulty": 1,
+          "statement": "Un projectile de masse $m = 0{,}20\\ \\mathrm{kg}$ est lancé depuis le sol avec $v_0 = 12\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 40^\\circ$. Les frottements sont négligés, $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$, et l'énergie potentielle de pesanteur est prise nulle au niveau du sol. L'énergie mécanique du projectile pendant tout son vol vaut :",
+          "options": [
+            {
+              "label": "$14{,}4\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "Au départ $E_{pp} = 0$ et $E_c = \\tfrac12 mv_0^2 = \\tfrac12\\times 0{,}20\\times 144 = 14{,}4\\ \\mathrm{J}$ ; sans frottement $E_m$ se conserve."
+            },
+            {
+              "label": "$28{,}8\\ \\mathrm{J}$",
+              "why": "Tu as oublié le facteur $\\tfrac12$ : $0{,}20\\times 144 = 28{,}8\\ \\mathrm{J}$. L'énergie cinétique est $\\tfrac12 mv^2$."
+            },
+            {
+              "label": "$72{,}0\\ \\mathrm{J}$",
+              "why": "Tu as oublié la masse, c'est-à-dire pris $m = 1\\ \\mathrm{kg}$ : $\\tfrac12\\times 144 = 72{,}0\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$1{,}20\\ \\mathrm{J}$",
+              "why": "Tu as écrit $\\tfrac12 mv_0$ au lieu de $\\tfrac12 mv_0^2$ : $\\tfrac12\\times 0{,}20\\times 12 = 1{,}20$, ce qui n'est d'ailleurs pas homogène à une énergie."
+            }
+          ],
+          "hint": "Où le projectile est-il quand on connaît le mieux son énergie ? Pense à l'instant du lancement.",
+          "solution": "Le poids est la seule force : elle est conservative, donc l'énergie mécanique se conserve.\nÀ $t = 0$, le projectile est au sol, donc $E_{pp} = 0$, et $E_c = \\tfrac12 mv_0^2 = \\tfrac12\\times 0{,}20\\times 12^2 = 0{,}10\\times 144 = 14{,}4\\ \\mathrm{J}$.\nDonc $E_m = 14{,}4\\ \\mathrm{J}$ à chaque instant du vol.\nContrôle d'unité : $\\mathrm{kg}\\times(\\mathrm{m\\,s^{-1}})^2 = \\mathrm{kg\\,m^2\\,s^{-2}} = \\mathrm{J}$ : correct.",
+          "methode": "Sans frottement, calcule $E_m$ à l'instant le plus simple (souvent $t=0$) : elle vaut la même chose partout ailleurs.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-verifier-la-conservation-de-l-energie-q1"
+        },
+        {
+          "notion": "Vérifier la conservation de l'énergie",
+          "difficulty": 2,
+          "statement": "Un projectile de masse $m = 0{,}20\\ \\mathrm{kg}$ est lancé depuis le sol avec $v_0 = 12\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 40^\\circ$. Les frottements sont négligés, $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$, et l'énergie potentielle de pesanteur est prise nulle au niveau du sol. L'énergie cinétique du projectile au sommet de sa trajectoire vaut :",
+          "options": [
+            {
+              "label": "$8{,}45\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "$y_S = \\dfrac{(12\\sin 40^\\circ)^2}{2g} = 3{,}04\\ \\mathrm{m}$, donc $E_{pp} = 0{,}20\\times 9{,}8\\times 3{,}04 = 5{,}95\\ \\mathrm{J}$ et $E_c = 14{,}4 - 5{,}95 = 8{,}45\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$0\\ \\mathrm{J}$",
+              "why": "Tu as supposé la vitesse nulle au sommet. Seule $v_y$ s'annule : il reste $v_x = 12\\cos 40^\\circ = 9{,}19\\ \\mathrm{m\\,s^{-1}}$, donc de l'énergie cinétique."
+            },
+            {
+              "label": "$14{,}4\\ \\mathrm{J}$",
+              "why": "Tu as oublié l'énergie potentielle acquise en montant. Au sommet, $5{,}95\\ \\mathrm{J}$ sont stockés sous forme potentielle."
+            },
+            {
+              "label": "$5{,}95\\ \\mathrm{J}$",
+              "why": "C'est l'énergie **potentielle** au sommet, pas l'énergie cinétique. Les deux sont complémentaires : leur somme vaut $14{,}4\\ \\mathrm{J}$."
+            }
+          ],
+          "hint": "Utilise la conservation : $E_c = E_m - E_{pp}$. Il te faut donc d'abord la flèche.",
+          "solution": "Flèche : $v_0\\sin 40^\\circ = 12\\times 0{,}6428 = 7{,}71\\ \\mathrm{m\\,s^{-1}}$, donc $y_S = \\dfrac{7{,}71^2}{2\\times 9{,}8} = \\dfrac{59{,}5}{19{,}6} = 3{,}04\\ \\mathrm{m}$.\nÉnergie potentielle au sommet : $E_{pp} = mg\\,y_S = 0{,}20\\times 9{,}8\\times 3{,}04 = 5{,}95\\ \\mathrm{J}$.\nConservation : $E_c = E_m - E_{pp} = 14{,}4 - 5{,}95 = 8{,}45\\ \\mathrm{J}$.\nContrôle direct : au sommet $v = v_0\\cos\\alpha = 9{,}19\\ \\mathrm{m\\,s^{-1}}$ et $\\tfrac12 mv^2 = 0{,}10\\times 84{,}5 = 8{,}45\\ \\mathrm{J}$. Les deux voies donnent la même valeur.",
+          "methode": "Au sommet, $E_c = \\tfrac12 m(v_0\\cos\\alpha)^2$ : elle n'est jamais nulle. Vérifie-la toujours par $E_m - E_{pp}$.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-verifier-la-conservation-de-l-energie-q2"
+        },
+        {
+          "notion": "Vérifier la conservation de l'énergie",
+          "difficulty": 2,
+          "statement": "Un projectile de masse $m = 0{,}20\\ \\mathrm{kg}$ est lancé depuis le sol avec $v_0 = 12\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 40^\\circ$. Les frottements sont négligés, $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$, et l'énergie potentielle de pesanteur est prise nulle au niveau du sol. La norme de la vitesse du projectile lorsqu'il passe à l'altitude $y = 2{,}0\\ \\mathrm{m}$ vaut :",
+          "options": [
+            {
+              "label": "$10{,}2\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v^2 = v_0^2 - 2g\\,y = 144 - 2\\times 9{,}8\\times 2{,}0 = 144 - 39{,}2 = 104{,}8$, donc $v = 10{,}2\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$11{,}2\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as oublié le facteur $2$ : $144 - 9{,}8\\times 2{,}0 = 124{,}4$ donne $11{,}2\\ \\mathrm{m\\,s^{-1}}$. La relation est $v^2 = v_0^2 - 2gy$."
+            },
+            {
+              "label": "$13{,}5\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Erreur de signe : $144 + 39{,}2 = 183{,}2$ donne $13{,}5\\ \\mathrm{m\\,s^{-1}}$. En montant, le projectile **perd** de l'énergie cinétique."
+            },
+            {
+              "label": "$5{,}7\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as soustrait les vitesses au lieu des carrés : $12 - \\sqrt{2\\times 9{,}8\\times 2{,}0} = 12 - 6{,}26 = 5{,}7\\ \\mathrm{m\\,s^{-1}}$. La conservation porte sur les **énergies**, donc sur $v^2$."
+            }
+          ],
+          "hint": "Écris la conservation de l'énergie mécanique entre le sol et l'altitude $y$, puis simplifie par $m$.",
+          "solution": "Conservation : $\\tfrac12 mv_0^2 = \\tfrac12 mv^2 + mg\\,y$. La masse se simplifie : $v^2 = v_0^2 - 2g\\,y$.\n$v^2 = 144 - 2\\times 9{,}8\\times 2{,}0 = 144 - 39{,}2 = 104{,}8\\ \\mathrm{m^2\\,s^{-2}}$, donc $v = 10{,}2\\ \\mathrm{m\\,s^{-1}}$.\nContrôle : l'altitude $2{,}0\\ \\mathrm{m}$ est inférieure à la flèche $3{,}04\\ \\mathrm{m}$, donc ce point est bien atteint ; et $10{,}2\\ \\mathrm{m\\,s^{-1}}$ est compris entre $v_0 = 12\\ \\mathrm{m\\,s^{-1}}$ et la vitesse au sommet $9{,}19\\ \\mathrm{m\\,s^{-1}}$ : cohérent.\nRemarque : la masse ayant disparu, ce résultat vaut pour n'importe quel projectile lancé à $12\\ \\mathrm{m\\,s^{-1}}$.",
+          "methode": "Relation à retenir : $v^2 = v_0^2 - 2g(y - y_0)$. Elle donne la vitesse à une altitude donnée sans passer par les dates.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-verifier-la-conservation-de-l-energie-q3"
+        },
+        {
+          "notion": "Vérifier la conservation de l'énergie",
+          "difficulty": 3,
+          "statement": "Un projectile de masse $m = 0{,}20\\ \\mathrm{kg}$ est lancé depuis le sol avec $v_0 = 12\\ \\mathrm{m\\,s^{-1}}$ et $\\alpha = 40^\\circ$. Les frottements sont négligés, $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$, et l'énergie potentielle de pesanteur est prise nulle au niveau du sol. Le projectile retombe sur le sol horizontal. La norme de sa vitesse à l'arrivée vaut :",
+          "options": [
+            {
+              "label": "$12{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "Départ et arrivée sont à la même altitude, donc $E_{pp}$ est la même : $E_c$ est identique et $v = v_0 = 12{,}0\\ \\mathrm{m\\,s^{-1}}$, quel que soit $\\alpha$."
+            },
+            {
+              "label": "$9{,}2\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as donné $v_0\\cos 40^\\circ = 9{,}19\\ \\mathrm{m\\,s^{-1}}$, c'est-à-dire la vitesse **au sommet**. À l'arrivée au sol, $v_y$ a retrouvé toute sa valeur."
+            },
+            {
+              "label": "$7{,}7\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as donné $v_0\\sin 40^\\circ = 7{,}71\\ \\mathrm{m\\,s^{-1}}$, la seule composante verticale. Il faut composer avec $v_x = 9{,}19\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$14{,}3\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as ajouté $2g\\,y_S$ à $v_0^2$ : $\\sqrt{144 + 2\\times 9{,}8\\times 3{,}04} = 14{,}3\\ \\mathrm{m\\,s^{-1}}$. Or le projectile **remonte puis redescend** : le gain et la perte d'énergie potentielle se compensent exactement."
+            }
+          ],
+          "hint": "Compare les altitudes de départ et d'arrivée, puis écris la conservation de l'énergie mécanique.",
+          "solution": "L'énergie mécanique se conserve : $\\tfrac12 mv_0^2 + mg\\,y_0 = \\tfrac12 mv^2 + mg\\,y$.\nIci $y = y_0 = 0$ (départ et arrivée au sol), donc $\\tfrac12 mv^2 = \\tfrac12 mv_0^2$ et $v = v_0 = 12{,}0\\ \\mathrm{m\\,s^{-1}}$.\nContrôle par les composantes : à $t_{\\text{vol}} = \\dfrac{2\\times 7{,}71}{9{,}8} = 1{,}57\\ \\mathrm{s}$, on a $v_y = -9{,}8\\times 1{,}57 + 7{,}71 = -7{,}71\\ \\mathrm{m\\,s^{-1}}$ et $v_x = 9{,}19\\ \\mathrm{m\\,s^{-1}}$, soit $v = \\sqrt{84{,}5 + 59{,}5} = \\sqrt{144} = 12{,}0\\ \\mathrm{m\\,s^{-1}}$.\nCe résultat ne dépend ni de $\\alpha$ ni de $m$ : tout projectile revenant à son altitude de départ y repasse avec la même vitesse.",
+          "methode": "Même altitude $\\Rightarrow$ même énergie potentielle $\\Rightarrow$ même vitesse. C'est la conséquence la plus rentable de la conservation de l'énergie.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-verifier-la-conservation-de-l-energie-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Sources d'erreur",
+        "lesson": "Chronophotographie d'un projectile",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-sources-d-erreur",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Sources d'erreur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 1,
+          "statement": "Lors de l'étude expérimentale du vol d'une balle de tennis de table, les points relevés s'écartent nettement de la parabole théorique. La cause principale est :",
+          "options": [
+            {
+              "label": "la résistance de l'air, négligée dans le modèle",
+              "correct": true,
+              "why": "Une balle très légère et de grande surface est fortement freinée : la force de frottement n'est plus négligeable devant le poids, ce qui écarte la trajectoire réelle de la parabole."
+            },
+            {
+              "label": "la variation de $g$ avec l'altitude au cours du vol",
+              "why": "Sur quelques mètres, $g$ varie de moins de $10^{-5}\\ \\mathrm{m\\,s^{-2}}$ : c'est totalement indétectable à ce niveau de précision."
+            },
+            {
+              "label": "la masse de la balle, qui n'est pas prise en compte",
+              "why": "Le modèle sans frottement donne $\\vec a = \\vec g$, où la masse ne figure pas : ce n'est donc pas un oubli, mais un résultat. La masse ne compte que par comparaison avec la force de frottement."
+            },
+            {
+              "label": "le choix de l'origine du repère sur l'enregistrement",
+              "why": "Changer l'origine translate les coordonnées sans déformer la courbe : une parabole reste une parabole. Cela ne peut pas expliquer un écart de forme."
+            }
+          ],
+          "hint": "Quelle hypothèse du modèle est la plus fragile pour un objet très léger lancé à grande vitesse ?",
+          "solution": "Le modèle parabolique repose sur une seule hypothèse forte : le poids est la seule force.\nPour une balle de tennis de table (masse d'environ $2{,}7\\ \\mathrm{g}$, diamètre $40\\ \\mathrm{mm}$), la force de frottement de l'air devient rapidement comparable au poids : l'accélération n'est plus constante et la trajectoire n'est plus une parabole.\nLes autres causes évoquées sont soit négligeables (variation de $g$), soit inopérantes (origine du repère), soit fondées sur une confusion (la masse n'intervient pas dans le modèle sans frottement).\nContrôle : la même expérience avec une bille d'acier donne des points très proches de la parabole, ce qui confirme que c'est bien l'air, et non le protocole, qui est en cause.",
+          "methode": "Avant d'accuser le protocole, demande-toi si les hypothèses du modèle sont vérifiées. Objet léger et volumineux $\\Rightarrow$ frottements non négligeables.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-sources-d-erreur-q1"
+        },
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 2,
+          "statement": "L'exploitation d'une chronophotographie conduit à une valeur mesurée $a_y = 8{,}9\\ \\mathrm{m\\,s^{-2}}$, alors que la valeur de référence est $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. L'écart relatif à la valeur de référence vaut :",
+          "options": [
+            {
+              "label": "$9{,}2\\ \\%$",
+              "correct": true,
+              "why": "$\\dfrac{|9{,}8 - 8{,}9|}{9{,}8} = \\dfrac{0{,}9}{9{,}8} = 0{,}092$, soit $9{,}2\\ \\%$."
+            },
+            {
+              "label": "$0{,}90\\ \\%$",
+              "why": "Tu as pris l'écart absolu $0{,}9\\ \\mathrm{m\\,s^{-2}}$ pour un pourcentage. Un écart relatif est un **rapport** sans unité, qu'il faut calculer puis convertir."
+            },
+            {
+              "label": "$10{,}1\\ \\%$",
+              "why": "Tu as divisé par la valeur mesurée : $\\dfrac{0{,}9}{8{,}9} = 10{,}1\\ \\%$. L'énoncé demande l'écart relatif **à la valeur de référence**, donc $9{,}8$ au dénominateur."
+            },
+            {
+              "label": "$92\\ \\%$",
+              "why": "Erreur de puissance de dix : $\\dfrac{0{,}9}{9{,}8} = 0{,}092 = 9{,}2\\ \\%$. Un écart de $92\\ \\%$ signifierait une valeur mesurée proche de $0{,}8\\ \\mathrm{m\\,s^{-2}}$."
+            }
+          ],
+          "hint": "Écart relatif = écart absolu divisé par la valeur de référence, puis conversion en pourcentage.",
+          "solution": "Écart absolu : $|9{,}8 - 8{,}9| = 0{,}9\\ \\mathrm{m\\,s^{-2}}$.\nÉcart relatif : $\\dfrac{0{,}9}{9{,}8} = 0{,}0918$, soit $9{,}2\\ \\%$.\nContrôle : $9{,}2\\ \\%$ de $9{,}8$ vaut $0{,}90$, et $9{,}8 - 0{,}90 = 8{,}9\\ \\mathrm{m\\,s^{-2}}$ : on retrouve la valeur mesurée.\nUn tel écart, bien supérieur à l'incertitude de pointage, signale un biais : frottements de l'air, échelle mal calibrée ou caméra mal orientée.",
+          "methode": "Écart relatif : toujours $\\dfrac{|\\text{mesure} - \\text{référence}|}{\\text{référence}}$. Vérifie en reconstituant la mesure à partir du pourcentage.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-sources-d-erreur-q2"
+        },
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 2,
+          "statement": "En dépouillant la vidéo, un élève utilise par erreur $\\tau = 50\\ \\mathrm{ms}$ alors que la caméra filme à $25$ images par seconde. Les vitesses qu'il calcule sont :",
+          "options": [
+            {
+              "label": "sous-estimées de $20\\ \\%$",
+              "correct": true,
+              "why": "Les vitesses sont calculées en $\\Delta x/\\tau$ : avec $\\tau$ trop grand elles sont trop petites, dans le rapport $\\dfrac{40}{50} = 0{,}80$, soit $20\\ \\%$ de moins."
+            },
+            {
+              "label": "surestimées de $20\\ \\%$",
+              "why": "Le pourcentage est juste mais le sens est inversé : la vitesse est **inversement** proportionnelle à $\\tau$, donc un $\\tau$ trop grand donne une vitesse trop petite."
+            },
+            {
+              "label": "sous-estimées de $25\\ \\%$",
+              "why": "Tu as rapporté l'écart $10\\ \\mathrm{ms}$ au bon $\\tau = 40\\ \\mathrm{ms}$. Le bon raisonnement compare les vitesses : $\\dfrac{v_{\\text{calculée}}}{v_{\\text{vraie}}} = \\dfrac{40}{50} = 0{,}80$, soit $-20\\ \\%$."
+            },
+            {
+              "label": "inchangées, car $\\tau$ se simplifie dans le calcul",
+              "why": "$\\tau$ ne se simplifie pas : il figure une seule fois, au dénominateur de $\\Delta x/\\tau$. Seul un rapport de deux vitesses en serait indépendant."
+            }
+          ],
+          "hint": "La vitesse se calcule en divisant un déplacement par $\\tau$ : que devient-elle si $\\tau$ est surévalué ?",
+          "solution": "La vraie durée entre deux images est $\\tau = 1/25 = 40\\ \\mathrm{ms}$.\nUne vitesse est calculée par $v = \\dfrac{\\Delta x}{\\tau}$. Le déplacement $\\Delta x$ mesuré est correct ; seul $\\tau$ est faux.\n$\\dfrac{v_{\\text{calculée}}}{v_{\\text{vraie}}} = \\dfrac{\\tau_{\\text{vrai}}}{\\tau_{\\text{utilisé}}} = \\dfrac{40}{50} = 0{,}80$ : les vitesses sont donc $20\\ \\%$ trop petites.\nContrôle sur un exemple : si la vraie vitesse est $3{,}00\\ \\mathrm{m\\,s^{-1}}$, le déplacement par image vaut $0{,}120\\ \\mathrm{m}$ ; divisé par $0{,}050\\ \\mathrm{s}$ il donne $2{,}40\\ \\mathrm{m\\,s^{-1}}$, soit bien $20\\ \\%$ de moins.\nConséquence : l'accélération, en $\\Delta v/\\tau$, serait fausse de $(0{,}80)^2 = 0{,}64$, soit $36\\ \\%$ trop petite.",
+          "methode": "Erreur sur $\\tau$ : la vitesse varie en $1/\\tau$ et l'accélération en $1/\\tau^2$. Compare les valeurs, ne rapporte pas l'écart au mauvais nombre.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-sources-d-erreur-q3"
+        },
+        {
+          "notion": "Sources d'erreur",
+          "difficulty": 3,
+          "statement": "La caméra n'est pas exactement perpendiculaire au plan du mouvement : elle le filme de biais. Cette imperfection :",
+          "options": [
+            {
+              "label": "introduit une erreur systématique, que répéter l'expérience ne réduit pas",
+              "correct": true,
+              "why": "Le biais d'orientation est identique à chaque enregistrement : il déforme les distances toujours dans le même sens, donc la moyenne de plusieurs mesures reste faussée."
+            },
+            {
+              "label": "introduit une erreur aléatoire, que l'on réduit en moyennant plusieurs essais",
+              "why": "Une erreur aléatoire change de signe d'une mesure à l'autre. Ici l'angle de la caméra ne change pas : l'erreur se reproduit à l'identique et la moyenne ne l'élimine pas."
+            },
+            {
+              "label": "n'a aucun effet, car la trajectoire observée reste une parabole",
+              "why": "La forme peut effectivement rester parabolique, mais les **longueurs** sont contractées dans une direction : les vitesses et l'accélération mesurées sont fausses. Garder la bonne forme ne garantit pas les bonnes valeurs."
+            },
+            {
+              "label": "se corrige en augmentant la fréquence d'acquisition de la caméra",
+              "why": "Augmenter la fréquence donne plus de points, donc réduit l'erreur **aléatoire** de pointage. Cela ne change rien à un défaut géométrique de prise de vue."
+            }
+          ],
+          "hint": "Cette erreur change-t-elle de signe si tu refais l'enregistrement dans les mêmes conditions ?",
+          "solution": "Une caméra de biais projette le plan du mouvement sur le capteur avec une contraction dans une direction : les distances mesurées le long de cette direction sont systématiquement trop petites, et l'échelle calibrée dans une autre direction ne les corrige pas.\nComme l'orientation de la caméra reste la même d'un essai à l'autre, l'erreur se reproduit identique en signe et en valeur : c'est une erreur **systématique**. Moyenner plusieurs essais ne l'élimine pas.\nSeule une correction du dispositif la supprime : replacer l'axe optique perpendiculaire au plan du mouvement, ou corriger la perspective au dépouillement.\nContrôle : une erreur systématique se détecte en comparant la mesure à une valeur de référence. Si le dépouillement donne $a_y = 8{,}9\\ \\mathrm{m\\,s^{-2}}$ au lieu de $9{,}8\\ \\mathrm{m\\,s^{-2}}$ dans tous les essais, c'est la signature d'un biais, pas du hasard.",
+          "methode": "Erreur systématique (biais de réglage, échelle fausse) : même écart à chaque essai, la moyenne ne l'efface pas. Erreur aléatoire (pointage) : elle se réduit en multipliant les mesures.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-sources-d-erreur-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La parabole de sûreté",
+        "lesson": "Approfondissement — Mouvements plans",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-la-parabole-de-surete",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "La parabole de sûreté",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La parabole de sûreté",
+          "difficulty": 3,
+          "statement": "Un canon placé en $O$ lance des projectiles avec une vitesse de norme fixée $v_0 = 20\\ \\mathrm{m\\,s^{-1}}$, l'angle $\\alpha$ pouvant être choisi librement ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$. L'enveloppe de toutes les trajectoires possibles, appelée **parabole de sûreté**, a pour équation $y = \\dfrac{v_0^2}{2g} - \\dfrac{g\\,x^2}{2v_0^2}$. L'altitude maximale que l'on peut atteindre à la distance horizontale $x = 30\\ \\mathrm{m}$ vaut :",
+          "options": [
+            {
+              "label": "$9{,}38\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$y = \\dfrac{400}{19{,}6} - \\dfrac{9{,}8\\times 900}{2\\times 400} = 20{,}41 - 11{,}03 = 9{,}38\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$20{,}41\\ \\mathrm{m}$",
+              "why": "Tu n'as gardé que le premier terme $\\dfrac{v_0^2}{2g}$ : c'est le sommet de la parabole de sûreté, atteint seulement à la verticale du canon ($x = 0$)."
+            },
+            {
+              "label": "$11{,}03\\ \\mathrm{m}$",
+              "why": "Tu n'as calculé que le second terme $\\dfrac{g\\,x^2}{2v_0^2} = 11{,}03\\ \\mathrm{m}$, en oubliant de le retrancher à $\\dfrac{v_0^2}{2g}$."
+            },
+            {
+              "label": "$31{,}43\\ \\mathrm{m}$",
+              "why": "Erreur de signe : tu as ajouté les deux termes ($20{,}41 + 11{,}03$). Cette altitude dépasserait même la hauteur maximale accessible, $20{,}41\\ \\mathrm{m}$."
+            }
+          ],
+          "hint": "Remplace simplement $x$ par $30\\ \\mathrm{m}$ dans l'équation donnée, en soignant le signe du second terme.",
+          "solution": "$\\dfrac{v_0^2}{2g} = \\dfrac{400}{2\\times 9{,}8} = 20{,}41\\ \\mathrm{m}$ et $\\dfrac{g\\,x^2}{2v_0^2} = \\dfrac{9{,}8\\times 30^2}{2\\times 400} = \\dfrac{8820}{800} = 11{,}03\\ \\mathrm{m}$.\nD'où $y = 20{,}41 - 11{,}03 = 9{,}38\\ \\mathrm{m}$ : aucun réglage de $\\alpha$ ne permet d'atteindre un point situé à $30\\ \\mathrm{m}$ de distance et à plus de $9{,}38\\ \\mathrm{m}$ de hauteur.\nContrôle aux deux extrémités : pour $x = 0$ on trouve $20{,}41\\ \\mathrm{m}$, qui est bien la hauteur d'un tir vertical $\\dfrac{v_0^2}{2g}$ ; et $y = 0$ donne $x = \\dfrac{v_0^2}{g} = \\dfrac{400}{9{,}8} = 40{,}8\\ \\mathrm{m}$, qui est bien la portée maximale au sol. L'équation est donc cohérente.\nUn point situé en $(30\\ \\mathrm{m}\\,;\\,5{,}0\\ \\mathrm{m})$, par exemple, est atteignable puisque $5{,}0 < 9{,}38$.",
+          "methode": "Parabole de sûreté : elle sépare les points atteignables des points hors de portée, à $v_0$ fixée. Ses deux repères utiles sont $\\dfrac{v_0^2}{2g}$ à la verticale et $\\dfrac{v_0^2}{g}$ au sol.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-la-parabole-de-surete-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'influence de la résistance de l'air",
+        "lesson": "Approfondissement — Mouvements plans",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-l-influence-de-la-resistance-de-l-air",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "L'influence de la résistance de l'air",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'influence de la résistance de l'air",
+          "difficulty": 3,
+          "statement": "On compare le vol réel d'un ballon lancé obliquement dans l'air au vol prévu par le modèle sans frottement, pour les mêmes conditions initiales. Quelle description est exacte ?",
+          "options": [
+            {
+              "label": "La trajectoire réelle n'est plus symétrique : la branche descendante est plus raide, la flèche et la portée sont plus petites.",
+              "correct": true,
+              "why": "La force de frottement, opposée à $\\vec v$, dissipe de l'énergie et réduit $v_x$ en permanence : le ballon avance moins après le sommet qu'avant, d'où l'asymétrie, et les deux grandeurs diminuent."
+            },
+            {
+              "label": "La trajectoire réelle reste une parabole, simplement plus petite et toujours symétrique.",
+              "why": "La force de frottement dépend de la vitesse, donc l'accélération n'est plus constante : la courbe obtenue n'est plus une parabole, et sa symétrie est perdue."
+            },
+            {
+              "label": "La trajectoire réelle est plus raide à la montée qu'à la descente, avec une portée plus petite.",
+              "why": "La portée diminue effectivement, mais l'asymétrie est inversée : la vitesse horizontale est plus grande au début qu'à la fin, donc la montée est la partie la plus « étalée » et la descente la plus raide."
+            },
+            {
+              "label": "La portée réelle est plus grande, car le ballon est freiné et reste donc plus longtemps en l'air.",
+              "why": "Le frottement ne fait pas rester plus longtemps en l'air : il réduit aussi la composante verticale ascendante, donc la flèche et la durée du vol. Et même à durée égale, un $v_x$ plus petit donnerait une portée plus faible."
+            }
+          ],
+          "hint": "La force de frottement est opposée au vecteur vitesse : que devient alors la composante horizontale, auparavant constante ?",
+          "solution": "Avec frottement, le bilan des forces est $\\vec P + \\vec f$ avec $\\vec f$ opposée à $\\vec v$ et de norme croissante avec $v$. L'accélération $\\vec a = \\vec g + \\vec f/m$ n'est donc plus constante : la trajectoire n'est plus une parabole.\nConséquence sur $Ox$ : $v_x$ n'est plus constante, elle décroît tout au long du vol. Le ballon avance donc davantage pendant la première moitié du vol que pendant la seconde : la courbe perd sa symétrie, la branche descendante devient plus raide.\nConséquence globale : une partie de l'énergie mécanique est dissipée, donc la flèche et la portée réelles sont inférieures à celles du modèle.\nContrôle : l'effet est d'autant plus marqué que l'objet est léger et volumineux. Une bille d'acier suit presque exactement la parabole, un ballon de baudruche s'en écarte énormément : c'est bien le rapport frottement/poids qui gouverne l'écart.",
+          "methode": "Frottement de l'air : accélération non constante, trajectoire non parabolique, asymétrie avec descente plus raide, flèche et portée réduites. Quatre conséquences à citer ensemble.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-l-influence-de-la-resistance-de-l-air-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'effet Magnus",
+        "lesson": "Approfondissement — Mouvements plans",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-l-effet-magnus",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "L'effet Magnus",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'effet Magnus",
+          "difficulty": 3,
+          "statement": "Un footballeur frappe le ballon en lui communiquant une rotation rapide : on observe que la trajectoire s'écarte du plan vertical prévu, ou plonge plus vite que prévu. Cet **effet Magnus** se traduit par :",
+          "options": [
+            {
+              "label": "une force perpendiculaire au vecteur vitesse, dont le sens dépend du sens de la rotation",
+              "correct": true,
+              "why": "La rotation entraîne l'air de façon dissymétrique autour du ballon : la pression devient plus faible d'un côté que de l'autre, ce qui crée une force transversale, perpendiculaire à $\\vec v$, et dont le sens s'inverse avec le sens de rotation."
+            },
+            {
+              "label": "une force opposée au vecteur vitesse, qui freine le ballon",
+              "why": "C'est la description de la **traînée**, la force de frottement ordinaire. Elle existe aussi, mais elle ne peut pas faire dévier le ballon hors de son plan : une force colinéaire à $\\vec v$ ne courbe pas la trajectoire latéralement."
+            },
+            {
+              "label": "une force verticale dirigée vers le haut, quel que soit le sens de la rotation",
+              "why": "Le sens de la force dépend du sens de la rotation : un ballon lifté est poussé vers le bas, un ballon brossé est poussé latéralement. Il n'y a pas de sens privilégié indépendant de la rotation."
+            },
+            {
+              "label": "une force proportionnelle à la masse du ballon, comme le poids",
+              "why": "L'effet Magnus est d'origine aérodynamique : il dépend de la vitesse de rotation, de la vitesse de translation, du rayon du ballon et de la masse volumique de l'air, mais pas de la masse du ballon."
+            }
+          ],
+          "hint": "Pour dévier un mobile de son plan de tir, dans quelle direction la force supplémentaire doit-elle agir ?",
+          "solution": "Un ballon en rotation entraîne par viscosité la couche d'air qui le touche. D'un côté, cet entraînement s'ajoute à l'écoulement et la vitesse relative de l'air augmente ; de l'autre, il s'y oppose et elle diminue. La dissymétrie de vitesse crée une dissymétrie de pression, donc une force transversale : c'est la force de Magnus, perpendiculaire à $\\vec v$.\nSon sens s'inverse avec le sens de la rotation : un ballon **lifté** (rotation vers l'avant) est poussé vers le bas et plonge ; un ballon **brossé** (rotation autour d'un axe vertical) est dévié latéralement, d'où les coups francs en courbe.\nCette force s'ajoute à la traînée, qui elle est opposée à $\\vec v$ et ne fait que freiner.\nContrôle : dans le modèle du programme, ni la traînée ni l'effet Magnus n'existent, puisque la seule force retenue est le poids. L'effet Magnus explique précisément les trajectoires que ce modèle ne peut pas reproduire, en particulier celles qui sortent du plan vertical contenant $\\vec v_0$.",
+          "methode": "Trois forces à distinguer dans l'air : le poids (vertical), la traînée (opposée à $\\vec v$), l'effet Magnus (perpendiculaire à $\\vec v$, lié à la rotation). Seule la troisième fait sortir du plan de tir.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-l-effet-magnus-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le mouvement dans un champ uniforme quelconque",
+        "lesson": "Approfondissement — Mouvements plans",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 1,
+        "target_new_questions": 0,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-champ-pesanteur-le-mouvement-dans-un-champ-uniforme-quel",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "qcu",
+      "title": "Le mouvement dans un champ uniforme quelconque",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le mouvement dans un champ uniforme quelconque",
+          "difficulty": 3,
+          "statement": "Un électron ($m = 9{,}1\\times 10^{-31}\\ \\mathrm{kg}$, charge de valeur absolue $e = 1{,}6\\times 10^{-19}\\ \\mathrm{C}$) pénètre dans un champ électrique uniforme de valeur $E = 1{,}0\\times 10^{3}\\ \\mathrm{V\\,m^{-1}}$. Le rapport entre la norme de l'accélération due à la force électrique et $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$ vaut environ :",
+          "options": [
+            {
+              "label": "$1{,}8\\times 10^{13}$",
+              "correct": true,
+              "why": "$a = \\dfrac{eE}{m} = \\dfrac{1{,}6\\times 10^{-19}\\times 1{,}0\\times 10^{3}}{9{,}1\\times 10^{-31}} = 1{,}8\\times 10^{14}\\ \\mathrm{m\\,s^{-2}}$, donc $\\dfrac{a}{g} = \\dfrac{1{,}8\\times 10^{14}}{9{,}8} = 1{,}8\\times 10^{13}$."
+            },
+            {
+              "label": "$1{,}8\\times 10^{14}$",
+              "why": "C'est la valeur de $a$ elle-même, en $\\mathrm{m\\,s^{-2}}$ : tu as comparé à $1\\ \\mathrm{m\\,s^{-2}}$ au lieu de diviser par $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$."
+            },
+            {
+              "label": "$5{,}6\\times 10^{-14}$",
+              "why": "Tu as calculé le rapport inverse $g/a$. Le résultat étant très petit, il indique au contraire que c'est le poids qui est négligeable."
+            },
+            {
+              "label": "$9{,}8\\times 10^{9}$",
+              "why": "Tu as utilisé la masse du proton ($1{,}67\\times 10^{-27}\\ \\mathrm{kg}$) au lieu de celle de l'électron : $\\dfrac{1{,}6\\times 10^{-16}}{1{,}67\\times 10^{-27}\\times 9{,}8} = 9{,}8\\times 10^{9}$."
+            }
+          ],
+          "hint": "Calcule d'abord $a = eE/m$, puis divise par $g$. Surveille les puissances de dix.",
+          "solution": "La force électrique a pour norme $F = eE = 1{,}6\\times 10^{-19}\\times 1{,}0\\times 10^{3} = 1{,}6\\times 10^{-16}\\ \\mathrm{N}$.\nL'accélération correspondante vaut $a = \\dfrac{F}{m} = \\dfrac{1{,}6\\times 10^{-16}}{9{,}1\\times 10^{-31}} = 1{,}8\\times 10^{14}\\ \\mathrm{m\\,s^{-2}}$.\nRapport : $\\dfrac{a}{g} = \\dfrac{1{,}8\\times 10^{14}}{9{,}8} = 1{,}8\\times 10^{13}$.\nInterprétation : le poids de l'électron est treize ordres de grandeur plus faible que la force électrique ; on le néglige donc toujours dans l'étude du mouvement d'une particule chargée.\nContrôle : la méthode du chapitre reste valable, car un champ uniforme donne une accélération constante. On remplace simplement $\\vec g$ par $\\dfrac{q\\vec E}{m}$ et l'on retrouve une trajectoire parabolique — avec cette différence que, cette fois, la masse **intervient**.",
+          "methode": "Dans tout champ uniforme, $\\vec a$ est constant et la trajectoire est une parabole. Pour une particule chargée, remplace $\\vec g$ par $q\\vec E/m$ et vérifie que le poids est négligeable.",
+          "points": 1,
+          "ref": "pc-champ-pesanteur-le-mouvement-dans-un-champ-uniforme-quel-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-champ-pesanteur-probleme-1",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "probleme",
+      "title": "Un lancer franc au basket",
+      "difficulty": 3,
+      "context": "Au basket, un joueur lâche le ballon à $2{,}0\\ \\mathrm{m}$ au-dessus du sol avec une vitesse $\\vec v_0$ de norme $v_0 = 7{,}6\\ \\mathrm{m\\,s^{-1}}$ faisant l'angle $\\alpha = 50^\\circ$ avec l'horizontale. L'origine $O$ du repère est le point du sol situé à la verticale du lâcher ; $Ox$ est horizontal, dirigé vers le panier, et $Oy$ est vertical vers le haut. L'instant du lâcher est pris pour origine des dates. L'anneau est à la hauteur $3{,}05\\ \\mathrm{m}$, à la distance horizontale $d = 4{,}6\\ \\mathrm{m}$ de $O$. On néglige les frottements de l'air ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$ ; le ballon est assimilé à un point matériel.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Les équations horaires",
+          "difficulty": 1,
+          "statement": "L'équation horaire $y(t)$ du ballon, dans le repère défini ci-dessus, est :",
+          "options": [
+            {
+              "label": "$y(t) = -\\dfrac12 g t^2 + v_0\\sin\\alpha\\,t + 2{,}0$",
+              "correct": true,
+              "why": "Avec $a_y=-g$, $v_{0y}=v_0\\sin\\alpha$ et $y(0)=2{,}0\\ \\mathrm{m}$ (l'origine est au sol)."
+            },
+            {
+              "label": "$y(t) = -\\dfrac12 g t^2 + v_0\\sin\\alpha\\,t$",
+              "why": "Tu as oublié la hauteur de lâcher : $y(0)=2{,}0\\ \\mathrm{m}$ car $O$ est au sol."
+            },
+            {
+              "label": "$y(t) = \\dfrac12 g t^2 + v_0\\sin\\alpha\\,t + 2{,}0$",
+              "why": "Erreur de signe : $Oy$ est vers le haut et $\\vec g$ vers le bas, donc $a_y=-g$."
+            },
+            {
+              "label": "$y(t) = -\\dfrac12 g t^2 + v_0\\cos\\alpha\\,t + 2{,}0$",
+              "why": "Tu as pris la composante horizontale $v_0\\cos\\alpha$ : la composante verticale est $v_0\\sin\\alpha$."
+            }
+          ],
+          "hint": "Intègre deux fois $a_y=-g$ et utilise les conditions initiales en $y$ : position et vitesse verticale à $t=0$.",
+          "solution": "$a_y=-g$ ; $v_y=-gt+v_0\\sin\\alpha$ ; $y=-\\tfrac12 gt^2+v_0\\sin\\alpha\\,t+y_0$ avec $y_0=2{,}0\\ \\mathrm{m}$ puisque $O$ est au sol. Contrôle : à $t=0$ on retrouve bien $y=2{,}0\\ \\mathrm{m}$.",
+          "methode": "Équations horaires : deux intégrations successives, constantes fixées par la position et la vitesse à $t=0$.",
+          "points": 1,
+          "part": "Partie A — Étude du mouvement",
+          "ref": "pc-champ-pesanteur-probleme-1-q1"
+        },
+        {
+          "notion": "Le sommet et la flèche",
+          "difficulty": 1,
+          "statement": "Le ballon atteint le sommet de sa trajectoire à la date :",
+          "options": [
+            {
+              "label": "$0{,}59\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "Au sommet $v_y=0$ : $t_S=\\dfrac{v_0\\sin\\alpha}{g}=\\dfrac{5{,}82}{9{,}8}=0{,}59\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$0{,}78\\ \\mathrm{s}$",
+              "why": "Tu as oublié le $\\sin\\alpha$ : $v_0/g=\\dfrac{7{,}6}{9{,}8}=0{,}78\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$0{,}50\\ \\mathrm{s}$",
+              "why": "Tu as utilisé $v_0\\cos\\alpha$ au lieu de $v_0\\sin\\alpha$ : $\\dfrac{4{,}89}{9{,}8}=0{,}50\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$1{,}19\\ \\mathrm{s}$",
+              "why": "Tu as doublé le résultat : $2t_S=1{,}19\\ \\mathrm{s}$ est la durée d'un aller-retour à la même hauteur, pas la date du sommet."
+            }
+          ],
+          "hint": "Que vaut la composante verticale de la vitesse au sommet ?",
+          "solution": "$v_y(t_S)=0\\Rightarrow t_S=\\dfrac{v_0\\sin\\alpha}{g}=\\dfrac{7{,}6\\times\\sin 50^\\circ}{9{,}8}=0{,}59\\ \\mathrm{s}$. Contrôle : $v_{0y}=5{,}82\\ \\mathrm{m\\,s^{-1}}$ perd $9{,}8\\ \\mathrm{m\\,s^{-1}}$ par seconde, donc moins d'une seconde suffit.",
+          "methode": "Sommet : $v_y=0$, d'où $t_S=v_0\\sin\\alpha/g$.",
+          "points": 1,
+          "part": "Partie A — Étude du mouvement",
+          "ref": "pc-champ-pesanteur-probleme-1-q2"
+        },
+        {
+          "notion": "Le sommet et la flèche",
+          "difficulty": 2,
+          "statement": "La hauteur maximale atteinte par le ballon au-dessus du sol vaut :",
+          "options": [
+            {
+              "label": "$3{,}73\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$y_S=y_0+\\dfrac{(v_0\\sin\\alpha)^2}{2g}=2{,}0+\\dfrac{5{,}82^2}{2\\times9{,}8}=3{,}73\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$1{,}73\\ \\mathrm{m}$",
+              "why": "Tu as oublié d'ajouter la hauteur de lâcher : $1{,}73\\ \\mathrm{m}$ est seulement la montée au-dessus de la main."
+            },
+            {
+              "label": "$5{,}46\\ \\mathrm{m}$",
+              "why": "Tu as oublié le $2$ au dénominateur : $y_0+\\dfrac{(v_0\\sin\\alpha)^2}{g}=5{,}46\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$3{,}22\\ \\mathrm{m}$",
+              "why": "Tu as utilisé $v_0\\cos\\alpha$ au lieu de $v_0\\sin\\alpha$ : $2{,}0+\\dfrac{4{,}89^2}{2g}=3{,}22\\ \\mathrm{m}$."
+            }
+          ],
+          "hint": "La montée au-dessus du point de lâcher ne dépend que de la composante verticale initiale.",
+          "solution": "$y_S=y_0+\\dfrac{v_{0y}^2}{2g}=2{,}0+\\dfrac{5{,}82^2}{19{,}6}=3{,}73\\ \\mathrm{m}$. Contrôle par $t_S$ : $y(t_S)=2{,}0+5{,}82\\times0{,}594-4{,}9\\times0{,}594^2=3{,}73\\ \\mathrm{m}$.",
+          "methode": "Flèche : $y_S=y_0+v_0^2\\sin^2\\alpha/2g$ — ne pas oublier $y_0$.",
+          "points": 1,
+          "part": "Partie A — Étude du mouvement",
+          "ref": "pc-champ-pesanteur-probleme-1-q3"
+        },
+        {
+          "notion": "L'équation de la trajectoire",
+          "difficulty": 2,
+          "statement": "L'équation de la trajectoire $y(x)$, avec $x$ et $y$ en mètres, s'écrit :",
+          "options": [
+            {
+              "label": "$y=-0{,}205\\,x^2+1{,}19\\,x+2{,}0$",
+              "correct": true,
+              "why": "$y=-\\dfrac{g}{2v_0^2\\cos^2\\alpha}x^2+x\\tan\\alpha+y_0$ avec $\\dfrac{g}{2v_0^2\\cos^2\\alpha}=0{,}205$ et $\\tan 50^\\circ=1{,}19$."
+            },
+            {
+              "label": "$y=-0{,}411\\,x^2+1{,}19\\,x+2{,}0$",
+              "why": "Tu as oublié le $2$ du dénominateur : $\\dfrac{g}{v_0^2\\cos^2\\alpha}=0{,}411$ au lieu de $0{,}205$."
+            },
+            {
+              "label": "$y=-0{,}205\\,x^2+0{,}77\\,x+2{,}0$",
+              "why": "Tu as mis $\\sin\\alpha=0{,}77$ à la place de $\\tan\\alpha=1{,}19$ devant $x$."
+            },
+            {
+              "label": "$y=-0{,}205\\,x^2+1{,}19\\,x$",
+              "why": "Tu as oublié l'ordonnée à l'origine : la trajectoire part de $y=2{,}0\\ \\mathrm{m}$ en $x=0$."
+            }
+          ],
+          "hint": "Élimine $t$ entre $x(t)$ et $y(t)$, puis remplace par les données numériques ; vérifie la valeur en $x=0$.",
+          "solution": "$t=\\dfrac{x}{v_0\\cos\\alpha}$ reporté dans $y(t)$ : $y=-\\dfrac{g}{2v_0^2\\cos^2\\alpha}x^2+x\\tan\\alpha+y_0$. Avec $v_0\\cos\\alpha=4{,}885$ : coefficient de $x^2$ égal à $0{,}205$, de $x$ égal à $1{,}19$. Contrôle : en $x=0$, $y=2{,}0\\ \\mathrm{m}$.",
+          "methode": "Trajectoire : éliminer $t$ ; le terme constant est $y_0$, le coefficient de $x$ est $\\tan\\alpha$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-champ-pesanteur-probleme-1-q4"
+        },
+        {
+          "notion": "Méthode 2 — Le projectile passe-t-il au-dessus d'un obstacle ?",
+          "difficulty": 2,
+          "statement": "Quand le ballon se trouve à la verticale de l'anneau ($x=d=4{,}6\\ \\mathrm{m}$), sa hauteur au-dessus du sol vaut :",
+          "options": [
+            {
+              "label": "$3{,}14\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$t=\\dfrac{d}{v_0\\cos\\alpha}=0{,}942\\ \\mathrm{s}$ puis $y=2{,}0+5{,}82\\times0{,}942-4{,}9\\times0{,}942^2=3{,}14\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$3{,}73\\ \\mathrm{m}$",
+              "why": "Tu as calculé la date avec $t=d/v_0=0{,}605\\ \\mathrm{s}$ : la composante horizontale est $v_0\\cos\\alpha$, pas $v_0$."
+            },
+            {
+              "label": "$1{,}14\\ \\mathrm{m}$",
+              "why": "Tu as oublié la hauteur de lâcher $y_0=2{,}0\\ \\mathrm{m}$ : tu as donné la hauteur par rapport à la main."
+            },
+            {
+              "label": "$-1{,}21\\ \\mathrm{m}$",
+              "why": "Tu as oublié le facteur $\\tfrac12$ devant $gt^2$ : $2{,}0+5{,}82\\times0{,}942-9{,}8\\times0{,}942^2=-1{,}21\\ \\mathrm{m}$."
+            }
+          ],
+          "hint": "Cherche d'abord la date à laquelle $x=d$, puis calcule $y$ à cette date.",
+          "solution": "$x=v_0\\cos\\alpha\\,t=d\\Rightarrow t=\\dfrac{4{,}6}{4{,}885}=0{,}942\\ \\mathrm{s}$. Alors $y=3{,}14\\ \\mathrm{m}$, soit environ $0{,}09\\ \\mathrm{m}$ de plus que l'anneau ($3{,}05\\ \\mathrm{m}$). Contrôle avec l'équation de la trajectoire : même valeur.",
+          "methode": "Obstacle : date de passage $t=d/v_{0x}$, puis hauteur $y(t)$ à cette date.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-champ-pesanteur-probleme-1-q5"
+        },
+        {
+          "notion": "Le tir depuis une hauteur",
+          "difficulty": 3,
+          "statement": "Si l'anneau n'était pas là, le ballon toucherait le sol à une distance horizontale de $O$ égale à :",
+          "options": [
+            {
+              "label": "$7{,}16\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$y=0$ donne $t=\\dfrac{v_{0y}+\\sqrt{v_{0y}^2+2gy_0}}{g}=1{,}466\\ \\mathrm{s}$, d'où $x=v_0\\cos\\alpha\\times t=7{,}16\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$5{,}80\\ \\mathrm{m}$",
+              "why": "Tu as appliqué la portée depuis le sol $\\dfrac{v_0^2\\sin2\\alpha}{g}=5{,}80\\ \\mathrm{m}$, qui néglige la hauteur de lâcher."
+            },
+            {
+              "label": "$11{,}15\\ \\mathrm{m}$",
+              "why": "Tu as multiplié le temps de vol $1{,}466\\ \\mathrm{s}$ par $v_0$ au lieu de $v_0\\cos\\alpha$."
+            },
+            {
+              "label": "$2{,}90\\ \\mathrm{m}$",
+              "why": "Tu t'es arrêté au sommet : $v_0\\cos\\alpha\\times t_S=2{,}90\\ \\mathrm{m}$ est l'abscisse du sommet, pas du point de chute."
+            }
+          ],
+          "hint": "Résous $y(t)=0$ (équation du second degré, garde la racine positive), puis reporte dans $x(t)$.",
+          "solution": "$-4{,}9t^2+5{,}82\\,t+2{,}0=0$ : racine positive $t=1{,}466\\ \\mathrm{s}$. Alors $x=4{,}885\\times1{,}466=7{,}16\\ \\mathrm{m}$. Contrôle : c'est plus que la portée depuis le sol ($5{,}80\\ \\mathrm{m}$), comme on l'attend pour un lâcher en hauteur.",
+          "methode": "Chute depuis une hauteur : $y(t)=0$, racine positive, puis $x(t)$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-champ-pesanteur-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-champ-pesanteur-probleme-2",
+      "chapter": "pc-champ-pesanteur",
+      "kind": "probleme",
+      "title": "Balle de tennis : retrouver la vitesse de lancement",
+      "difficulty": 3,
+      "context": "Lors d'un entraînement de tennis, on filme un coup de raquette sur une balle de masse $m = 60\\ \\mathrm{g}$ frappée au niveau du sol, à l'origine $O$ du repère ($Ox$ horizontal, $Oy$ vertical vers le haut). Le dépouillement de la vidéo indique que le sommet de la trajectoire est atteint à la date $t_S = 0{,}70\\ \\mathrm{s}$, en un point d'abscisse $x_S = 3{,}5\\ \\mathrm{m}$. La balle retombe ensuite sur le sol horizontal. On néglige les frottements de l'air ; $g = 9{,}8\\ \\mathrm{m\\,s^{-2}}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Le sommet et la flèche",
+          "difficulty": 1,
+          "statement": "La composante verticale $v_{0y}$ de la vitesse initiale vaut :",
+          "options": [
+            {
+              "label": "$6{,}9\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "Au sommet $v_y=0$ : $v_{0y}=g\\,t_S=9{,}8\\times0{,}70=6{,}86\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$14{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé $g$ par $t_S$ : $9{,}8/0{,}70=14{,}0$, ce qui n'est pas une vitesse."
+            },
+            {
+              "label": "$13{,}7\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as utilisé $2t_S=1{,}40\\ \\mathrm{s}$, la durée totale du vol, à la place de $t_S$ : $9{,}8\\times1{,}40=13{,}7$."
+            },
+            {
+              "label": "$5{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "$x_S/t_S=5{,}0\\ \\mathrm{m\\,s^{-1}}$ est la composante horizontale $v_{0x}$, pas $v_{0y}$."
+            }
+          ],
+          "hint": "Que vaut $v_y$ au sommet ? Écris $v_y(t)$ et résous.",
+          "solution": "$v_y(t)=-gt+v_{0y}$ et $v_y(t_S)=0$, donc $v_{0y}=gt_S=9{,}8\\times0{,}70=6{,}86\\ \\mathrm{m\\,s^{-1}}$. Contrôle : la flèche vaut alors $v_{0y}^2/2g=2{,}40\\ \\mathrm{m}$, hauteur plausible pour une balle lobée.",
+          "methode": "Au sommet $v_y=0$ : $v_{0y}=g\\,t_S$.",
+          "points": 1,
+          "part": "Partie A — Étude du mouvement",
+          "ref": "pc-champ-pesanteur-probleme-2-q1"
+        },
+        {
+          "notion": "Les équations horaires",
+          "difficulty": 1,
+          "statement": "La composante horizontale $v_{0x}$ de la vitesse initiale vaut :",
+          "options": [
+            {
+              "label": "$5{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "Le mouvement horizontal est uniforme : $v_{0x}=\\dfrac{x_S}{t_S}=\\dfrac{3{,}5}{0{,}70}=5{,}0\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$2{,}45\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as multiplié $x_S$ par $t_S$ au lieu de les diviser : $3{,}5\\times0{,}70=2{,}45$."
+            },
+            {
+              "label": "$7{,}1\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé par $t_S^2$ comme pour une accélération : $3{,}5/0{,}70^2=7{,}1$."
+            },
+            {
+              "label": "$10{,}0\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as divisé $2x_S$ (la portée) par $t_S$ au lieu de $2t_S$ : $7{,}0/0{,}70=10{,}0$."
+            }
+          ],
+          "hint": "Quelle est la nature du mouvement selon $Ox$ ? Quelle relation lie alors $x$, $v_{0x}$ et $t$ ?",
+          "solution": "$a_x=0$ donc $x=v_{0x}t$ et $v_{0x}=\\dfrac{x_S}{t_S}=\\dfrac{3{,}5}{0{,}70}=5{,}0\\ \\mathrm{m\\,s^{-1}}$. Contrôle : $v_{0x}$ reste constante, donc c'est aussi la vitesse horizontale au sommet.",
+          "methode": "Selon $Ox$, mouvement uniforme : $v_{0x}=x/t$.",
+          "points": 1,
+          "part": "Partie A — Étude du mouvement",
+          "ref": "pc-champ-pesanteur-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 3 — Retrouver $v_0$ ou $\\alpha$ à partir d'un point atteint",
+          "difficulty": 2,
+          "statement": "L'angle de tir $\\alpha$ vaut environ :",
+          "options": [
+            {
+              "label": "$54^\\circ$",
+              "correct": true,
+              "why": "$\\tan\\alpha=\\dfrac{v_{0y}}{v_{0x}}=\\dfrac{6{,}86}{5{,}0}=1{,}37$ donc $\\alpha\\approx54^\\circ$."
+            },
+            {
+              "label": "$36^\\circ$",
+              "why": "Tu as inversé le rapport : $\\arctan(v_{0x}/v_{0y})=36^\\circ$ est l'angle avec la verticale."
+            },
+            {
+              "label": "$34^\\circ$",
+              "why": "Tu as pris $\\tan\\alpha=y_S/x_S$ : il manque un facteur $2$ car $\\tan\\alpha=2y_S/x_S$ ; $\\arctan(2{,}40/3{,}5)=34^\\circ$."
+            },
+            {
+              "label": "$70^\\circ$",
+              "why": "Tu as doublé $v_{0y}$ avant de former le rapport : $\\arctan(2v_{0y}/v_{0x})=70^\\circ$."
+            }
+          ],
+          "hint": "Les deux composantes de $\\vec v_0$ sont connues : quel rapport fait apparaître $\\tan\\alpha$ ?",
+          "solution": "$\\tan\\alpha=\\dfrac{v_{0y}}{v_{0x}}=\\dfrac{6{,}86}{5{,}0}=1{,}372$, d'où $\\alpha=53{,}9^\\circ$. Contrôle : $\\alpha>45^\\circ$ car $v_{0y}>v_{0x}$.",
+          "methode": "Angle de tir : $\\tan\\alpha=v_{0y}/v_{0x}$.",
+          "points": 1,
+          "part": "Partie A — Étude du mouvement",
+          "ref": "pc-champ-pesanteur-probleme-2-q3"
+        },
+        {
+          "notion": "Les grandeurs caractéristiques",
+          "difficulty": 2,
+          "statement": "La norme $v_0$ de la vitesse initiale vaut :",
+          "options": [
+            {
+              "label": "$8{,}5\\ \\mathrm{m\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v_0=\\sqrt{v_{0x}^2+v_{0y}^2}=\\sqrt{5{,}0^2+6{,}86^2}=8{,}5\\ \\mathrm{m\\,s^{-1}}$."
+            },
+            {
+              "label": "$11{,}9\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as additionné les composantes : $5{,}0+6{,}86=11{,}9$ ; une norme se calcule avec Pythagore."
+            },
+            {
+              "label": "$4{,}7\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as soustrait les carrés : $\\sqrt{6{,}86^2-5{,}0^2}=4{,}7$."
+            },
+            {
+              "label": "$6{,}9\\ \\mathrm{m\\,s^{-1}}$",
+              "why": "Tu as pris la seule composante verticale $v_{0y}=6{,}9$ ; $v_0$ tient compte des deux composantes."
+            }
+          ],
+          "hint": "Les composantes sont perpendiculaires.",
+          "solution": "$v_0=\\sqrt{5{,}0^2+6{,}86^2}=8{,}49\\ \\mathrm{m\\,s^{-1}}$. Contrôle : $v_0\\sin\\alpha=8{,}49\\times\\sin53{,}9^\\circ\\approx6{,}86=v_{0y}$.",
+          "methode": "Norme à partir des composantes : $v_0=\\sqrt{v_{0x}^2+v_{0y}^2}$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-champ-pesanteur-probleme-2-q4"
+        },
+        {
+          "notion": "Méthode 4 — Utiliser l'énergie",
+          "difficulty": 3,
+          "statement": "Au sommet de la trajectoire, l'énergie cinétique de la balle vaut :",
+          "options": [
+            {
+              "label": "$0{,}75\\ \\mathrm{J}$",
+              "correct": true,
+              "why": "Au sommet la vitesse est horizontale, égale à $v_{0x}$ : $E_c=\\tfrac12 m v_{0x}^2=0{,}5\\times0{,}060\\times5{,}0^2=0{,}75\\ \\mathrm{J}$."
+            },
+            {
+              "label": "$0{,}00\\ \\mathrm{J}$",
+              "why": "Tu as cru que la vitesse s'annule au sommet : seule $v_y$ est nulle, la composante $v_{0x}$ subsiste."
+            },
+            {
+              "label": "$2{,}16\\ \\mathrm{J}$",
+              "why": "Tu as utilisé $v_0$ : $\\tfrac12 m v_0^2=2{,}16\\ \\mathrm{J}$ est l'énergie cinétique au départ."
+            },
+            {
+              "label": "$1{,}41\\ \\mathrm{J}$",
+              "why": "Tu as utilisé la composante verticale : $\\tfrac12 m v_{0y}^2=1{,}41\\ \\mathrm{J}$ ; au sommet c'est justement elle qui est nulle."
+            }
+          ],
+          "hint": "Quelle est la vitesse de la balle au sommet ? Pense à la composante qui ne change jamais.",
+          "solution": "Au sommet $\\vec v=v_{0x}\\vec i$, soit $E_c=\\tfrac12 m v_{0x}^2=0{,}5\\times0{,}060\\times25=0{,}75\\ \\mathrm{J}$. Contrôle par l'énergie : $E_{c,0}-mgy_S=2{,}16-0{,}060\\times9{,}8\\times2{,}40=0{,}75\\ \\mathrm{J}$.",
+          "methode": "Énergie mécanique conservée : au sommet il reste l'énergie cinétique liée à $v_{0x}$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-champ-pesanteur-probleme-2-q5"
+        },
+        {
+          "notion": "Méthode 2 — Le projectile passe-t-il au-dessus d'un obstacle ?",
+          "difficulty": 3,
+          "statement": "Un filet de hauteur $2{,}0\\ \\mathrm{m}$ est placé à $6{,}0\\ \\mathrm{m}$ de $O$, au-delà du sommet. La balle passe alors à la hauteur :",
+          "options": [
+            {
+              "label": "$1{,}18\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$t=\\dfrac{6{,}0}{5{,}0}=1{,}20\\ \\mathrm{s}$ puis $y=6{,}86\\times1{,}20-4{,}9\\times1{,}20^2=1{,}18\\ \\mathrm{m}$, donc sous le filet."
+            },
+            {
+              "label": "$8{,}23\\ \\mathrm{m}$",
+              "why": "Tu as oublié le terme $-\\tfrac12 gt^2$ : $v_{0y}t=8{,}23\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$-5{,}88\\ \\mathrm{m}$",
+              "why": "Tu as oublié le facteur $\\tfrac12$ : $6{,}86\\times1{,}20-9{,}8\\times1{,}20^2=-5{,}88\\ \\mathrm{m}$."
+            },
+            {
+              "label": "$2{,}40\\ \\mathrm{m}$",
+              "why": "Tu as donné la flèche $y_S=2{,}40\\ \\mathrm{m}$ : elle est atteinte à $x_S=3{,}5\\ \\mathrm{m}$, pas à $6{,}0\\ \\mathrm{m}$."
+            }
+          ],
+          "hint": "Calcule la date à laquelle $x=6{,}0\\ \\mathrm{m}$ avec $v_{0x}$, puis la hauteur à cette date.",
+          "solution": "$t=x/v_{0x}=6{,}0/5{,}0=1{,}20\\ \\mathrm{s}$ ; $y=v_{0y}t-\\tfrac12 gt^2=6{,}86\\times1{,}20-4{,}9\\times1{,}44=1{,}18\\ \\mathrm{m}$. Cette valeur est inférieure à $2{,}0\\ \\mathrm{m}$ : la balle ne passe pas le filet. Contrôle : $6{,}0\\ \\mathrm{m}<2x_S=7{,}0\\ \\mathrm{m}$, la balle est encore en l'air mais descend.",
+          "methode": "Obstacle : date $t=x/v_{0x}$, puis comparer $y(t)$ à la hauteur de l'obstacle.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-champ-pesanteur-probleme-2-q6"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-champ-pesanteur-serie-1",
+      "title": "Mouvements plans dans un champ de pesanteur · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-champ-pesanteur",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-champ-pesanteur-la-situation-q1",
+        "pc-champ-pesanteur-les-equations-horaires-q1",
+        "pc-champ-pesanteur-le-vecteur-vitesse-au-cours-du-vol-q1",
+        "pc-champ-pesanteur-les-grandeurs-caracteristiques-q1",
+        "pc-champ-pesanteur-le-sommet-et-la-fleche-q1",
+        "pc-champ-pesanteur-le-temps-de-vol-et-la-portee-q1",
+        "pc-champ-pesanteur-le-tir-depuis-une-hauteur-q1",
+        "pc-champ-pesanteur-la-situation-q2",
+        "pc-champ-pesanteur-le-sommet-et-la-fleche-q2",
+        "pc-champ-pesanteur-le-temps-de-vol-et-la-portee-q2"
+      ]
+    },
+    {
+      "slug": "pc-champ-pesanteur-serie-2",
+      "title": "Mouvements plans dans un champ de pesanteur · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-champ-pesanteur",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-champ-pesanteur-les-equations-horaires-q1",
+        "pc-champ-pesanteur-l-angle-de-portee-maximale-q1",
+        "pc-champ-pesanteur-le-dispositif-q1",
+        "pc-champ-pesanteur-l-equation-de-la-trajectoire-q1",
+        "pc-champ-pesanteur-les-grandeurs-caracteristiques-q3",
+        "pc-champ-pesanteur-le-tir-depuis-une-hauteur-q2",
+        "pc-champ-pesanteur-exploiter-le-tableau-de-mesures-q2",
+        "pc-champ-pesanteur-verifier-la-conservation-de-l-energie-q2",
+        "pc-champ-pesanteur-sources-d-erreur-q2",
+        "pc-champ-pesanteur-l-angle-de-portee-maximale-q3",
+        "pc-champ-pesanteur-exemple-complet-q4",
+        "pc-champ-pesanteur-le-vecteur-vitesse-au-cours-du-vol-q4"
+      ]
+    },
+    {
+      "slug": "pc-champ-pesanteur-serie-3",
+      "title": "Mouvements plans dans un champ de pesanteur · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-champ-pesanteur",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-champ-pesanteur-les-equations-horaires-q3",
+        "pc-champ-pesanteur-l-equation-de-la-trajectoire-q2",
+        "pc-champ-pesanteur-les-grandeurs-caracteristiques-q4",
+        "pc-champ-pesanteur-le-sommet-et-la-fleche-q4",
+        "pc-champ-pesanteur-le-temps-de-vol-et-la-portee-q4",
+        "pc-champ-pesanteur-le-tir-depuis-une-hauteur-q4",
+        "pc-champ-pesanteur-la-parabole-de-surete-q1",
+        "pc-champ-pesanteur-probleme-1-q6",
+        "pc-champ-pesanteur-probleme-2-q5",
+        "pc-champ-pesanteur-probleme-2-q6"
+      ]
+    }
+  ]
+}
