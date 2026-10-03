@@ -1,878 +1,1631 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "tracks": [
-  "pc",
-  "sm_a",
-  "sm_b"
- ],
- "_scaffold": {
-  "pack": "pc-specifique",
-  "label": "Physique-Chimie — chapitres PC/SM (modulation, atome)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-modulation",
-   "name": "Modulation d'amplitude",
-   "domain": "physique",
-   "unit": "Électricité"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "tracks": [
+    "pc",
+    "sm_a",
+    "sm_b"
+  ],
+  "_scaffold": {
+    "pack": "pc-specifique",
+    "label": "Physique-Chimie — chapitres PC/SM (modulation, atome)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-modulation",
+      "name": "Modulation d'amplitude",
+      "domain": "physique",
+      "unit": "Électricité"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Pourquoi moduler",
+      "Les deux signaux",
+      "Le multiplieur",
+      "Le spectre du signal modulé",
+      "Le taux de modulation",
+      "La bonne modulation",
+      "La méthode du trapèze",
+      "La démodulation"
+    ],
+    "methodes_du_cours": [],
+    "existing_questions_total": 5,
+    "target_new_questions": 27,
+    "suggested_figures": [
+      "modulation-amplitude — Signal modulé en amplitude et son enveloppe",
+      "montage-modulation — Chaîne de modulation : multiplieur (porteuse × signal décalé)",
+      "spectre-modulation — Spectre d'un signal modulé en amplitude"
+    ],
+    "sources": [
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "Pourquoi moduler",
-   "Les deux signaux",
-   "Le multiplieur",
-   "Le spectre du signal modulé",
-   "Le taux de modulation",
-   "La bonne modulation",
-   "La méthode du trapèze",
-   "La démodulation"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Pourquoi moduler",
+        "lesson": "Principe de la modulation d'amplitude",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-modulation-pourquoi-moduler",
+      "chapter": "pc-modulation",
+      "kind": "qcu",
+      "title": "Pourquoi moduler",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Pourquoi moduler",
+          "difficulty": 1,
+          "statement": "La modulation d'amplitude consiste à :",
+          "options": [
+            {
+              "label": "faire varier l'amplitude d'une porteuse haute fréquence au rythme du signal",
+              "correct": true,
+              "why": "L'information est portée par l'enveloppe de la porteuse : son amplitude suit le signal modulant."
+            },
+            {
+              "label": "faire varier la fréquence de la porteuse au rythme du signal à transmettre",
+              "why": "C'est la modulation de fréquence ; en modulation d'amplitude, la fréquence de la porteuse est constante."
+            },
+            {
+              "label": "additionner simplement le signal de basse fréquence et la porteuse sinusoïdale",
+              "why": "Une somme ne modifie pas l'amplitude de la porteuse : il faut un produit."
+            },
+            {
+              "label": "amplifier le signal sans changer sa forme ni sa fréquence d'origine",
+              "why": "L'amplification ne fait pas intervenir de porteuse : ce n'est pas une modulation."
+            }
+          ],
+          "hint": "Quelle grandeur de la porteuse varie, et au rythme de quel signal ?",
+          "solution": "Modulation d'amplitude : l'amplitude d'une porteuse sinusoïdale de haute fréquence varie au rythme du signal modulant, de basse fréquence. Contrôle : la fréquence de la porteuse reste égale à $F$.",
+          "methode": "Modulation d'amplitude : $A_{porteuse}$ suit $s(t)$ ; $F$ constante.",
+          "points": 1,
+          "ref": "pc-modulation-pourquoi-moduler-q1"
+        },
+        {
+          "notion": "Pourquoi moduler",
+          "difficulty": 2,
+          "statement": "Avec $c=3{,}00\\times10^{8}\\ \\mathrm{m\\,s^{-1}}$, la longueur d'onde d'un signal électromagnétique de fréquence $f=1{,}0\\ \\mathrm{kHz}$ vaut :",
+          "options": [
+            {
+              "label": "$\\lambda=3{,}0\\times10^{5}\\ \\mathrm{m}$",
+              "correct": true,
+              "why": "$\\lambda=\\dfrac{c}{f}=\\dfrac{3{,}00\\times10^{8}}{1{,}0\\times10^{3}}=3{,}0\\times10^{5}\\ \\mathrm{m}$, soit $300\\ \\mathrm{km}$ : aucune antenne raisonnable."
+            },
+            {
+              "label": "$\\lambda=3{,}0\\times10^{2}\\ \\mathrm{m}$",
+              "why": "Tu as converti $1\\ \\mathrm{kHz}$ en $10^{6}\\ \\mathrm{Hz}$ : $1\\ \\mathrm{kHz}=10^{3}\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$\\lambda=3{,}3\\times10^{-6}\\ \\mathrm{m}$",
+              "why": "Tu as calculé $f/c$ : la longueur d'onde est $c/f$."
+            },
+            {
+              "label": "$\\lambda=3{,}0\\times10^{11}\\ \\mathrm{m}$",
+              "why": "Tu as calculé $c\\times f$ : la longueur d'onde est $c/f$."
+            }
+          ],
+          "hint": "$\\lambda=c/f$ avec $f$ en hertz.",
+          "solution": "$\\lambda=\\dfrac{c}{f}=\\dfrac{3{,}00\\times10^{8}}{1{,}0\\times10^{3}}=3{,}0\\times10^{5}\\ \\mathrm{m}$ ($300\\ \\mathrm{km}$). Une antenne efficace a une taille de l'ordre de $\\lambda$ ; on transpose donc le signal sur une porteuse de haute fréquence (par exemple $1\\ \\mathrm{MHz}$, $\\lambda=300\\ \\mathrm{m}$). Contrôle : $\\lambda f=c$.",
+          "methode": "$\\lambda=c/f$ : basse fréquence $\\Rightarrow$ grande longueur d'onde.",
+          "points": 1,
+          "ref": "pc-modulation-pourquoi-moduler-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les deux signaux",
+        "lesson": "Principe de la modulation d'amplitude",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-modulation-les-deux-signaux",
+      "chapter": "pc-modulation",
+      "kind": "qcu",
+      "title": "Les deux signaux",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Les deux signaux",
+          "difficulty": 1,
+          "statement": "Dans la modulation d'amplitude, la porteuse est :",
+          "options": [
+            {
+              "label": "un signal sinusoïdal de haute fréquence $F$, sans information",
+              "correct": true,
+              "why": "Elle sert de support ; l'information est portée par le signal modulant."
+            },
+            {
+              "label": "le signal d'information, de basse fréquence $f$, à transmettre",
+              "why": "C'est le signal modulant, non la porteuse."
+            },
+            {
+              "label": "le signal modulé obtenu en sortie du multiplieur étudié",
+              "why": "Le signal modulé est le résultat de la modulation, non l'un des signaux d'entrée."
+            },
+            {
+              "label": "la tension continue $U_0$ ajoutée au signal modulant",
+              "why": "$U_0$ est une composante continue ajoutée au modulant ; elle n'est pas la porteuse."
+            }
+          ],
+          "hint": "Quel signal a la plus haute fréquence ? Lequel contient l'information ?",
+          "solution": "Porteuse : $p(t)=P_m\\cos(2\\pi Ft)$, haute fréquence, sans information ; modulant : $s(t)$, basse fréquence, porteur de l'information. Contrôle : $F\\gg f$.",
+          "methode": "Porteuse : haute fréquence $F$ ; modulant : basse fréquence $f$.",
+          "points": 1,
+          "ref": "pc-modulation-les-deux-signaux-q1"
+        },
+        {
+          "notion": "Les deux signaux",
+          "difficulty": 2,
+          "statement": "On mesure la période du signal modulant, $T=2{,}0\\ \\mathrm{ms}$, et celle de la porteuse, $T_p=20\\ \\mathrm{\\mu s}$. Les fréquences valent :",
+          "options": [
+            {
+              "label": "$f=5{,}0\\times10^{2}\\ \\mathrm{Hz}$ et $F=5{,}0\\times10^{4}\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "$f=\\dfrac{1}{2{,}0\\times10^{-3}}=500\\ \\mathrm{Hz}$ et $F=\\dfrac{1}{20\\times10^{-6}}=5{,}0\\times10^{4}\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$f=5{,}0\\times10^{4}\\ \\mathrm{Hz}$ et $F=5{,}0\\times10^{2}\\ \\mathrm{Hz}$",
+              "why": "Tu as permuté les périodes : la plus courte ($20\\ \\mathrm{\\mu s}$) est celle de la porteuse, de haute fréquence."
+            },
+            {
+              "label": "$f=0{,}50\\ \\mathrm{Hz}$ et $F=0{,}050\\ \\mathrm{Hz}$",
+              "why": "Tu n'as pas converti les unités : $2{,}0\\ \\mathrm{ms}=2{,}0\\times10^{-3}\\ \\mathrm{s}$ et $20\\ \\mathrm{\\mu s}=20\\times10^{-6}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$f=5{,}0\\times10^{2}\\ \\mathrm{Hz}$ et $F=5{,}0\\times10^{7}\\ \\mathrm{Hz}$",
+              "why": "Tu as converti $20\\ \\mathrm{\\mu s}$ en $20\\times10^{-9}\\ \\mathrm{s}$ : $1\\ \\mathrm{\\mu s}=10^{-6}\\ \\mathrm{s}$."
+            }
+          ],
+          "hint": "$f=1/T$ avec $T$ en secondes ; quelle période est la plus courte ?",
+          "solution": "$f=\\dfrac{1}{T}=\\dfrac{1}{2{,}0\\times10^{-3}}=5{,}0\\times10^{2}\\ \\mathrm{Hz}$ ; $F=\\dfrac{1}{T_p}=\\dfrac{1}{20\\times10^{-6}}=5{,}0\\times10^{4}\\ \\mathrm{Hz}$. Contrôle : $F=100\\,f$, condition $F\\gg f$ vérifiée.",
+          "methode": "$f=1/T$, avec la période en secondes.",
+          "points": 1,
+          "ref": "pc-modulation-les-deux-signaux-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le multiplieur",
+        "lesson": "Principe de la modulation d'amplitude",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-modulation-le-multiplieur",
+      "chapter": "pc-modulation",
+      "kind": "qcu",
+      "title": "Le multiplieur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le multiplieur",
+          "difficulty": 1,
+          "statement": "Un multiplieur de constante $k$ qui reçoit les tensions $x(t)$ et $y(t)$ délivre :",
+          "options": [
+            {
+              "label": "$u(t)=k\\,x(t)\\,y(t)$",
+              "correct": true,
+              "why": "Le composant effectue le produit des deux tensions d'entrée, multiplié par la constante $k$."
+            },
+            {
+              "label": "$u(t)=k\\,[x(t)+y(t)]$",
+              "why": "Cela définirait un additionneur, non un multiplieur."
+            },
+            {
+              "label": "$u(t)=k\\,\\dfrac{x(t)}{y(t)}$",
+              "why": "Un multiplieur ne divise pas : il effectue le produit."
+            },
+            {
+              "label": "$u(t)=k\\,[x(t)-y(t)]$",
+              "why": "Cela définirait un soustracteur, non un multiplieur."
+            }
+          ],
+          "hint": "Le nom du composant donne l'opération qu'il réalise.",
+          "solution": "Par définition, $u(t)=k\\,x(t)\\,y(t)$. Contrôle : si $y=0$, la sortie est nulle, quelle que soit $x$.",
+          "methode": "Multiplieur : $u=k\\,x\\,y$.",
+          "points": 1,
+          "ref": "pc-modulation-le-multiplieur-q1"
+        },
+        {
+          "notion": "Le multiplieur",
+          "difficulty": 2,
+          "statement": "Pour obtenir $u(t)=k\\,[s(t)+U_0]\\,p(t)$, on applique aux deux entrées du multiplieur :",
+          "options": [
+            {
+              "label": "la tension $s(t)+U_0$ sur l'une et la porteuse $p(t)$ sur l'autre",
+              "correct": true,
+              "why": "Le produit voulu est celui de $s(t)+U_0$ par $p(t)$ : ce sont les deux tensions à appliquer."
+            },
+            {
+              "label": "la tension $s(t)$ seule sur l'une et la porteuse $p(t)$ sur l'autre",
+              "why": "On obtiendrait $k\\,s(t)\\,p(t)$ : il manquerait la composante continue $U_0$."
+            },
+            {
+              "label": "la somme $s(t)+p(t)$ sur l'une et $U_0$ sur l'autre",
+              "why": "Le produit serait $k\\,[s+p]\\,U_0$ : la porteuse n'est plus multipliée par le signal décalé."
+            },
+            {
+              "label": "la tension continue $U_0$ sur l'une et la porteuse $p(t)$ sur l'autre",
+              "why": "On obtiendrait $k\\,U_0\\,p(t)$ : le signal modulant n'interviendrait pas."
+            }
+          ],
+          "hint": "Identifie les deux facteurs du produit $u(t)=k\\,[s(t)+U_0]\\,p(t)$.",
+          "solution": "Les deux facteurs sont $s(t)+U_0$ (signal modulant décalé d'une composante continue) et $p(t)$ (porteuse) : on applique ces deux tensions aux entrées. Contrôle : sans $U_0$, il n'y aurait pas de raie de porteuse dans le spectre.",
+          "methode": "Entrées du multiplieur : $s(t)+U_0$ et $p(t)$.",
+          "points": 1,
+          "ref": "pc-modulation-le-multiplieur-q2"
+        },
+        {
+          "notion": "Le multiplieur",
+          "difficulty": 2,
+          "statement": "Avec $s(t)=S_m\\cos(2\\pi f t)$, $p(t)=P_m\\cos(2\\pi F t)$ et $m=\\dfrac{S_m}{U_0}$, la tension $u(t)=k\\,[s(t)+U_0]\\,p(t)$ s'écrit :",
+          "options": [
+            {
+              "label": "$u(t)=k\\,P_m\\,U_0\\,[1+m\\cos(2\\pi f t)]\\cos(2\\pi F t)$",
+              "correct": true,
+              "why": "On factorise $U_0$ : $s(t)+U_0=U_0\\left[1+\\dfrac{S_m}{U_0}\\cos(2\\pi f t)\\right]$."
+            },
+            {
+              "label": "$u(t)=k\\,P_m\\,U_0\\,[1+\\dfrac{1}{m}\\cos(2\\pi f t)]\\cos(2\\pi F t)$",
+              "why": "Tu as inversé $m$ : le facteur devant le cosinus est $S_m/U_0=m$."
+            },
+            {
+              "label": "$u(t)=k\\,P_m\\,U_0\\,[1+S_m\\cos(2\\pi f t)]\\cos(2\\pi F t)$",
+              "why": "Tu as oublié de diviser par $U_0$ en factorisant : le coefficient est $m=S_m/U_0$."
+            },
+            {
+              "label": "$u(t)=k\\,P_m\\,S_m\\,[1+m\\cos(2\\pi f t)]\\cos(2\\pi F t)$",
+              "why": "Tu as factorisé $S_m$ au lieu de $U_0$ : la composante continue est $U_0$."
+            }
+          ],
+          "hint": "Factorise $U_0$ dans $s(t)+U_0$.",
+          "solution": "$s(t)+U_0=S_m\\cos(2\\pi ft)+U_0=U_0\\left[1+m\\cos(2\\pi ft)\\right]$ ; avec $p(t)=P_m\\cos(2\\pi Ft)$ : $u(t)=kP_mU_0[1+m\\cos(2\\pi ft)]\\cos(2\\pi Ft)$. Contrôle : pour $m=0$, $u(t)=kP_mU_0\\cos(2\\pi Ft)$, la porteuse seule.",
+          "methode": "$u(t)=kP_mU_0[1+m\\cos(2\\pi f t)]\\cos(2\\pi F t)$.",
+          "points": 1,
+          "ref": "pc-modulation-le-multiplieur-q3"
+        },
+        {
+          "notion": "Le multiplieur",
+          "difficulty": 3,
+          "statement": "On a $k=0{,}10\\ \\mathrm{V^{-1}}$, $P_m=5{,}0\\ \\mathrm{V}$, $U_0=4{,}0\\ \\mathrm{V}$ et $S_m=2{,}0\\ \\mathrm{V}$. L'amplitude maximale $A_{max}$ de l'enveloppe de $u(t)$ vaut :",
+          "options": [
+            {
+              "label": "$A_{max}=3{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$A_{max}=kP_m(U_0+S_m)=0{,}10\\times5{,}0\\times(4{,}0+2{,}0)=3{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$A_{max}=2{,}0\\ \\mathrm{V}$",
+              "why": "Tu as oublié $S_m$ : $kP_mU_0$ est l'amplitude de la porteuse seule, non le maximum de l'enveloppe."
+            },
+            {
+              "label": "$A_{max}=1{,}0\\ \\mathrm{V}$",
+              "why": "Tu as calculé $A_{min}=kP_m(U_0-S_m)$ : le maximum correspond à $U_0+S_m$."
+            },
+            {
+              "label": "$A_{max}=30\\ \\mathrm{V}$",
+              "why": "Tu as oublié la constante $k=0{,}10\\ \\mathrm{V^{-1}}$ du multiplieur."
+            }
+          ],
+          "hint": "L'enveloppe vaut $kP_m[U_0+s(t)]$ : quelle est sa valeur maximale ?",
+          "solution": "L'enveloppe est $kP_m[U_0+s(t)]$ ; elle est maximale pour $s=+S_m$ : $A_{max}=0{,}10\\times5{,}0\\times6{,}0=3{,}0\\ \\mathrm{V}$ (et $A_{min}=1{,}0\\ \\mathrm{V}$). Contrôle : $m=\\dfrac{A_{max}-A_{min}}{A_{max}+A_{min}}=\\dfrac{2{,}0}{4{,}0}=0{,}50=\\dfrac{S_m}{U_0}$.",
+          "methode": "$A_{max}=kP_m(U_0+S_m)$ ; $A_{min}=kP_m(U_0-S_m)$.",
+          "points": 1,
+          "ref": "pc-modulation-le-multiplieur-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le spectre du signal modulé",
+        "lesson": "Principe de la modulation d'amplitude",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-modulation-le-spectre-du-signal-module",
+      "chapter": "pc-modulation",
+      "kind": "qcu",
+      "title": "Le spectre du signal modulé",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le spectre du signal modulé",
+          "difficulty": 1,
+          "statement": "Le spectre d'un signal modulé en amplitude par un signal sinusoïdal de fréquence $f$, avec une porteuse de fréquence $F$, comporte :",
+          "options": [
+            {
+              "label": "trois raies, aux fréquences $F-f$, $F$ et $F+f$",
+              "correct": true,
+              "why": "$u(t)$ se décompose en une porteuse à $F$ et deux composantes latérales à $F\\pm f$."
+            },
+            {
+              "label": "deux raies, aux fréquences $F$ et $f$",
+              "why": "La fréquence $f$ n'apparaît pas telle quelle : elle se retrouve dans les écarts $F\\pm f$."
+            },
+            {
+              "label": "une seule raie, à la fréquence $F+f$",
+              "why": "Il y a aussi la porteuse à $F$ et la raie à $F-f$."
+            },
+            {
+              "label": "trois raies, aux fréquences $f$, $F$ et $F+f$",
+              "why": "La fréquence $f$ ne figure pas dans le spectre du signal modulé : la raie basse est à $F-f$."
+            }
+          ],
+          "hint": "Développe $[1+m\\cos(2\\pi f t)]\\cos(2\\pi F t)$ avec la formule de linéarisation du produit de cosinus.",
+          "solution": "$\\cos a\\cos b=\\tfrac{1}{2}[\\cos(a-b)+\\cos(a+b)]$ donne la porteuse ($F$) et deux raies latérales ($F-f$ et $F+f$), d'amplitude $mU_m/2$ chacune. Contrôle : le spectre est symétrique autour de $F$.",
+          "methode": "Spectre : $F-f$, $F$, $F+f$.",
+          "points": 1,
+          "ref": "pc-modulation-le-spectre-du-signal-module-q1"
+        },
+        {
+          "notion": "Le spectre du signal modulé",
+          "difficulty": 2,
+          "statement": "Une porteuse de fréquence $F=100\\ \\mathrm{kHz}$ est modulée par un signal de fréquence $f=2{,}0\\ \\mathrm{kHz}$. Les raies du spectre sont à :",
+          "options": [
+            {
+              "label": "$98\\ \\mathrm{kHz}$, $100\\ \\mathrm{kHz}$ et $102\\ \\mathrm{kHz}$",
+              "correct": true,
+              "why": "$F-f=98\\ \\mathrm{kHz}$, $F=100\\ \\mathrm{kHz}$, $F+f=102\\ \\mathrm{kHz}$."
+            },
+            {
+              "label": "$100\\ \\mathrm{kHz}$, $102\\ \\mathrm{kHz}$ et $104\\ \\mathrm{kHz}$",
+              "why": "Tu as pris $F$, $F+f$ et $F+2f$ : le spectre est symétrique autour de $F$, avec $F-f$."
+            },
+            {
+              "label": "$2\\ \\mathrm{kHz}$, $100\\ \\mathrm{kHz}$ et $102\\ \\mathrm{kHz}$",
+              "why": "La raie basse n'est pas à $f=2\\ \\mathrm{kHz}$ mais à $F-f=98\\ \\mathrm{kHz}$."
+            },
+            {
+              "label": "$96\\ \\mathrm{kHz}$, $100\\ \\mathrm{kHz}$ et $104\\ \\mathrm{kHz}$",
+              "why": "Tu as pris $F\\pm2f$ : l'écart des raies latérales à la porteuse est $f$, pas $2f$."
+            }
+          ],
+          "hint": "Les raies latérales sont à $F\\pm f$.",
+          "solution": "$F-f=100-2{,}0=98\\ \\mathrm{kHz}$ ; $F=100\\ \\mathrm{kHz}$ ; $F+f=102\\ \\mathrm{kHz}$. Contrôle : les raies latérales sont symétriques par rapport à la porteuse.",
+          "methode": "Raies à $F-f$, $F$, $F+f$.",
+          "points": 1,
+          "ref": "pc-modulation-le-spectre-du-signal-module-q2"
+        },
+        {
+          "notion": "Le spectre du signal modulé",
+          "difficulty": 2,
+          "statement": "Dans le même cas ($F=100\\ \\mathrm{kHz}$, $f=2{,}0\\ \\mathrm{kHz}$), la largeur de la bande de fréquences occupée par le signal modulé est :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{kHz}$",
+              "correct": true,
+              "why": "La bande va de $F-f=98\\ \\mathrm{kHz}$ à $F+f=102\\ \\mathrm{kHz}$ : largeur $2f=4{,}0\\ \\mathrm{kHz}$."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{kHz}$",
+              "why": "Tu as pris $f$ : la bande couvre les deux raies latérales, soit $2f$."
+            },
+            {
+              "label": "$100\\ \\mathrm{kHz}$",
+              "why": "Tu as pris la fréquence de la porteuse : la largeur de bande est l'écart entre les raies extrêmes."
+            },
+            {
+              "label": "$102\\ \\mathrm{kHz}$",
+              "why": "Tu as pris la fréquence de la raie la plus haute : la largeur est une différence de fréquences."
+            }
+          ],
+          "hint": "Largeur = fréquence de la raie la plus haute $-$ fréquence de la raie la plus basse.",
+          "solution": "Bande occupée : de $98$ à $102\\ \\mathrm{kHz}$, largeur $102-98=4{,}0\\ \\mathrm{kHz}=2f$. Contrôle : on peut juxtaposer des émetteurs espacés d'au moins $2f$.",
+          "methode": "Largeur de bande : $2f$.",
+          "points": 1,
+          "ref": "pc-modulation-le-spectre-du-signal-module-q3"
+        },
+        {
+          "notion": "Le spectre du signal modulé",
+          "difficulty": 3,
+          "statement": "Le signal modulé s'écrit $u(t)=U_m\\,[1+m\\cos(2\\pi ft)]\\cos(2\\pi Ft)$ avec $U_m=4{,}0\\ \\mathrm{V}$ et $m=0{,}50$. L'amplitude de chacune des deux raies latérales vaut :",
+          "options": [
+            {
+              "label": "$1{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$u(t)=U_m\\cos(2\\pi Ft)+\\dfrac{mU_m}{2}\\cos[2\\pi(F-f)t]+\\dfrac{mU_m}{2}\\cos[2\\pi(F+f)t]$ ; $\\dfrac{0{,}50\\times4{,}0}{2}=1{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{V}$",
+              "why": "Tu as oublié le facteur $\\dfrac{1}{2}$ de la linéarisation : chaque raie latérale a pour amplitude $mU_m/2$."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{V}$",
+              "why": "Tu as repris l'amplitude de la porteuse : les raies latérales ont une amplitude plus faible, $mU_m/2$."
+            },
+            {
+              "label": "$0{,}25\\ \\mathrm{V}$",
+              "why": "Tu as calculé $m/2$ sans multiplier par $U_m$ : l'amplitude est en volts."
+            }
+          ],
+          "hint": "Linéarise $m\\cos(2\\pi ft)\\cos(2\\pi Ft)$ : quelle est l'amplitude de chaque terme ?",
+          "solution": "$mU_m\\cos(2\\pi ft)\\cos(2\\pi Ft)=\\dfrac{mU_m}{2}\\left\\{\\cos[2\\pi(F-f)t]+\\cos[2\\pi(F+f)t]\\right\\}$ ; chaque raie latérale a pour amplitude $\\dfrac{mU_m}{2}=1{,}0\\ \\mathrm{V}$. Contrôle : la porteuse a pour amplitude $4{,}0\\ \\mathrm{V}$ ; la somme $A_{max}=U_m(1+m)=6{,}0\\ \\mathrm{V}=4{,}0+2\\times1{,}0$.",
+          "methode": "Raies latérales : $mU_m/2$ chacune ; porteuse : $U_m$.",
+          "points": 1,
+          "ref": "pc-modulation-le-spectre-du-signal-module-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le taux de modulation",
+        "lesson": "Taux de modulation & démodulation",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-modulation-le-taux-de-modulation",
+      "chapter": "pc-modulation",
+      "kind": "qcu",
+      "title": "Le taux de modulation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le taux de modulation",
+          "difficulty": 1,
+          "statement": "Le taux de modulation $m$ est défini par :",
+          "options": [
+            {
+              "label": "$m=\\dfrac{S_m}{U_0}$, rapport de $S_m$ à $U_0$",
+              "correct": true,
+              "why": "C'est la définition : $m$ compare l'amplitude du signal modulant au décalage continu $U_0$."
+            },
+            {
+              "label": "$m=\\dfrac{U_0}{S_m}$, rapport inverse de celui de $S_m$ à $U_0$",
+              "why": "Tu as inversé le rapport : $m$ est l'amplitude du modulant divisée par $U_0$."
+            },
+            {
+              "label": "$m=S_m\\times U_0$, produit des deux tensions du montage",
+              "why": "Le taux de modulation est un rapport sans dimension, non un produit de tensions."
+            },
+            {
+              "label": "$m=S_m-U_0$, différence des deux tensions du montage",
+              "why": "Le taux de modulation est un rapport, pas une différence de tensions."
+            }
+          ],
+          "hint": "$m$ est sans dimension : quelle opération sur $S_m$ et $U_0$ donne un nombre sans unité ?",
+          "solution": "$m=\\dfrac{S_m}{U_0}$, sans dimension. Contrôle : $m=0$ pour un signal non modulé ($S_m=0$).",
+          "methode": "$m=S_m/U_0$.",
+          "points": 1,
+          "ref": "pc-modulation-le-taux-de-modulation-q1"
+        },
+        {
+          "notion": "Le taux de modulation",
+          "difficulty": 2,
+          "statement": "Un signal modulant d'amplitude $S_m=1{,}5\\ \\mathrm{V}$ est décalé d'une composante continue $U_0=3{,}0\\ \\mathrm{V}$. Le taux de modulation vaut :",
+          "options": [
+            {
+              "label": "$m=0{,}50$",
+              "correct": true,
+              "why": "$m=\\dfrac{S_m}{U_0}=\\dfrac{1{,}5}{3{,}0}=0{,}50$."
+            },
+            {
+              "label": "$m=2{,}0$",
+              "why": "Tu as inversé le rapport : $m=S_m/U_0$."
+            },
+            {
+              "label": "$m=4{,}5$",
+              "why": "Tu as multiplié les tensions : $m$ est un rapport."
+            },
+            {
+              "label": "$m=1{,}5$",
+              "why": "Tu as calculé la différence $U_0-S_m$ : $m$ est un rapport."
+            }
+          ],
+          "hint": "$m=S_m/U_0$.",
+          "solution": "$m=\\dfrac{S_m}{U_0}=\\dfrac{1{,}5}{3{,}0}=0{,}50<1$ : bonne modulation. Contrôle : $S_m<U_0$ donne $m<1$.",
+          "methode": "$m=S_m/U_0$.",
+          "points": 1,
+          "ref": "pc-modulation-le-taux-de-modulation-q2"
+        },
+        {
+          "notion": "Le taux de modulation",
+          "difficulty": 2,
+          "statement": "Sur l'oscillogramme du signal modulé, l'enveloppe oscille entre $A_{max}=6{,}0\\ \\mathrm{V}$ et $A_{min}=2{,}0\\ \\mathrm{V}$. Le taux de modulation vaut :",
+          "options": [
+            {
+              "label": "$m=0{,}50$",
+              "correct": true,
+              "why": "$m=\\dfrac{A_{max}-A_{min}}{A_{max}+A_{min}}=\\dfrac{6{,}0-2{,}0}{6{,}0+2{,}0}=0{,}50$."
+            },
+            {
+              "label": "$m=2{,}0$",
+              "why": "Tu as inversé le rapport : le numérateur est $A_{max}-A_{min}$."
+            },
+            {
+              "label": "$m=4{,}0$",
+              "why": "Tu as calculé $A_{max}-A_{min}$ sans diviser par $A_{max}+A_{min}$."
+            },
+            {
+              "label": "$m=3{,}0$",
+              "why": "Tu as calculé le rapport $A_{max}/A_{min}$, non la formule du taux de modulation."
+            }
+          ],
+          "hint": "$A_{max}=kP_m(U_0+S_m)$ et $A_{min}=kP_m(U_0-S_m)$ : forme $m$.",
+          "solution": "$m=\\dfrac{A_{max}-A_{min}}{A_{max}+A_{min}}=\\dfrac{4{,}0}{8{,}0}=0{,}50$. Contrôle : $\\dfrac{S_m}{U_0}=\\dfrac{(A_{max}-A_{min})/2}{(A_{max}+A_{min})/2}$, même résultat.",
+          "methode": "$m=\\dfrac{A_{max}-A_{min}}{A_{max}+A_{min}}$.",
+          "points": 1,
+          "ref": "pc-modulation-le-taux-de-modulation-q3"
+        },
+        {
+          "notion": "Le taux de modulation",
+          "difficulty": 3,
+          "statement": "L'enveloppe d'un signal modulé oscille entre $A_{max}=5{,}0\\ \\mathrm{V}$ et $A_{min}=1{,}0\\ \\mathrm{V}$, avec $kP_m=1$. Les valeurs de $U_0$ et $S_m$ sont :",
+          "options": [
+            {
+              "label": "$U_0=3{,}0\\ \\mathrm{V}$ et $S_m=2{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$A_{max}=U_0+S_m=5{,}0$ et $A_{min}=U_0-S_m=1{,}0$ donnent $U_0=\\dfrac{5{,}0+1{,}0}{2}=3{,}0$ et $S_m=\\dfrac{5{,}0-1{,}0}{2}=2{,}0$."
+            },
+            {
+              "label": "$U_0=2{,}0\\ \\mathrm{V}$ et $S_m=3{,}0\\ \\mathrm{V}$",
+              "why": "Tu as permuté les deux : $U_0$ est la demi-somme (valeur moyenne) et $S_m$ la demi-différence."
+            },
+            {
+              "label": "$U_0=5{,}0\\ \\mathrm{V}$ et $S_m=1{,}0\\ \\mathrm{V}$",
+              "why": "Tu as pris les extrema de l'enveloppe pour $U_0$ et $S_m$ : $A_{max}=U_0+S_m$ et $A_{min}=U_0-S_m$."
+            },
+            {
+              "label": "$U_0=6{,}0\\ \\mathrm{V}$ et $S_m=4{,}0\\ \\mathrm{V}$",
+              "why": "Tu as oublié de diviser par $2$ : $U_0=(A_{max}+A_{min})/2$ et $S_m=(A_{max}-A_{min})/2$."
+            }
+          ],
+          "hint": "Résous le système $A_{max}=U_0+S_m$, $A_{min}=U_0-S_m$.",
+          "solution": "$A_{max}+A_{min}=2U_0$ donc $U_0=3{,}0\\ \\mathrm{V}$ ; $A_{max}-A_{min}=2S_m$ donc $S_m=2{,}0\\ \\mathrm{V}$. Contrôle : $m=\\dfrac{2{,}0}{3{,}0}=0{,}67=\\dfrac{5{,}0-1{,}0}{5{,}0+1{,}0}$.",
+          "methode": "$U_0=\\dfrac{A_{max}+A_{min}}{2}$, $S_m=\\dfrac{A_{max}-A_{min}}{2}$ (avec $kP_m=1$).",
+          "points": 1,
+          "ref": "pc-modulation-le-taux-de-modulation-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La bonne modulation",
+        "lesson": "Taux de modulation & démodulation",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-modulation-la-bonne-modulation",
+      "chapter": "pc-modulation",
+      "kind": "qcu",
+      "title": "La bonne modulation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La bonne modulation",
+          "difficulty": 1,
+          "statement": "La condition de bonne modulation (enveloppe reproduisant le signal modulant) est :",
+          "options": [
+            {
+              "label": "$m<1$",
+              "correct": true,
+              "why": "Pour $m<1$, $U_0+s(t)$ reste positive : l'enveloppe suit fidèlement le signal."
+            },
+            {
+              "label": "$m>1$",
+              "why": "Pour $m>1$, il y a surmodulation : l'enveloppe est déformée."
+            },
+            {
+              "label": "$m=0$",
+              "why": "Pour $m=0$, il n'y a aucune modulation : l'amplitude est constante."
+            },
+            {
+              "label": "$F<f$",
+              "why": "La condition sur les fréquences est $F\\gg f$, non $F<f$."
+            }
+          ],
+          "hint": "Que se passe-t-il si $U_0+s(t)$ change de signe ?",
+          "solution": "Une bonne modulation exige $m<1$ (et $F\\gg f$). Contrôle : $m<1$ équivaut à $S_m<U_0$.",
+          "methode": "Bonne modulation : $m<1$.",
+          "points": 1,
+          "ref": "pc-modulation-la-bonne-modulation-q1"
+        },
+        {
+          "notion": "La bonne modulation",
+          "difficulty": 2,
+          "statement": "Avec $S_m=4{,}0\\ \\mathrm{V}$ et $U_0=2{,}0\\ \\mathrm{V}$, la modulation est :",
+          "options": [
+            {
+              "label": "telle que $m=2{,}0$ : il y a surmodulation, l'enveloppe est déformée",
+              "correct": true,
+              "why": "$m=\\dfrac{4{,}0}{2{,}0}=2{,}0>1$ : $U_0+s(t)$ change de signe, l'enveloppe ne reproduit plus le signal."
+            },
+            {
+              "label": "telle que $m=0{,}50$ : la modulation est bonne",
+              "why": "Tu as inversé le rapport : $m=S_m/U_0=2{,}0$."
+            },
+            {
+              "label": "telle que $m=2{,}0$ : la modulation est bonne, car l'amplitude est grande",
+              "why": "Une grande amplitude ne suffit pas : $m>1$ provoque une surmodulation."
+            },
+            {
+              "label": "telle que $m=0{,}50$ : il y a surmodulation",
+              "why": "Avec $m=0{,}50$, il n'y aurait pas de surmodulation ; mais $m=2{,}0$ ici."
+            }
+          ],
+          "hint": "Calcule $m$ puis compare à $1$.",
+          "solution": "$m=\\dfrac{S_m}{U_0}=\\dfrac{4{,}0}{2{,}0}=2{,}0>1$ : surmodulation ; l'enveloppe ne reproduit plus le signal modulant. Contrôle : $U_0+s(t)$ varie de $-2{,}0$ à $6{,}0\\ \\mathrm{V}$ et change de signe.",
+          "methode": "$m>1$ : surmodulation.",
+          "points": 1,
+          "ref": "pc-modulation-la-bonne-modulation-q2"
+        },
+        {
+          "notion": "La bonne modulation",
+          "difficulty": 2,
+          "statement": "La porteuse a pour fréquence $F=100\\ \\mathrm{kHz}$. Pour que l'enveloppe soit bien lisible, le signal modulant peut avoir pour fréquence :",
+          "options": [
+            {
+              "label": "$f=1{,}0\\ \\mathrm{kHz}$",
+              "correct": true,
+              "why": "$F/f=100$ : la porteuse oscille cent fois plus vite que le modulant, condition $F\\gg f$ remplie."
+            },
+            {
+              "label": "$f=50\\ \\mathrm{kHz}$",
+              "why": "$F/f=2$ seulement : trop peu d'oscillations de la porteuse par période du modulant, l'enveloppe est illisible."
+            },
+            {
+              "label": "$f=100\\ \\mathrm{kHz}$",
+              "why": "$F=f$ : l'enveloppe n'est pas définie."
+            },
+            {
+              "label": "$f=300\\ \\mathrm{kHz}$",
+              "why": "$f>F$ : le modulant serait plus rapide que la porteuse, ce qui est absurde."
+            }
+          ],
+          "hint": "Compare $F/f$ à la valeur nécessaire ($F\\gg f$).",
+          "solution": "Il faut $F\\gg f$ (en pratique $F\\geq100\\,f$) : seul $f=1{,}0\\ \\mathrm{kHz}$ donne $F/f=100$. Contrôle : les autres valeurs donnent $F/f=2$, $1$ et $0{,}33$.",
+          "methode": "Bonne lisibilité : $F\\gg f$ ($F\\geq100\\,f$).",
+          "points": 1,
+          "ref": "pc-modulation-la-bonne-modulation-q3"
+        },
+        {
+          "notion": "La bonne modulation",
+          "difficulty": 3,
+          "statement": "On veut une modulation de taux $m=0{,}80$ avec un signal modulant d'amplitude $S_m=3{,}0\\ \\mathrm{V}$. La composante continue à ajouter vaut :",
+          "options": [
+            {
+              "label": "$U_0=3{,}75\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$m=\\dfrac{S_m}{U_0}$ donne $U_0=\\dfrac{S_m}{m}=\\dfrac{3{,}0}{0{,}80}=3{,}75\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$U_0=2{,}4\\ \\mathrm{V}$",
+              "why": "Tu as multiplié $S_m$ par $m$ : $U_0=S_m/m$."
+            },
+            {
+              "label": "$U_0=3{,}0\\ \\mathrm{V}$",
+              "why": "Avec $U_0=S_m$, on aurait $m=1$ et non $0{,}80$."
+            },
+            {
+              "label": "$U_0=0{,}27\\ \\mathrm{V}$",
+              "why": "Tu as calculé $m/S_m$ : $U_0=S_m/m$."
+            }
+          ],
+          "hint": "Isole $U_0$ dans $m=S_m/U_0$.",
+          "solution": "$U_0=\\dfrac{S_m}{m}=\\dfrac{3{,}0}{0{,}80}=3{,}75\\ \\mathrm{V}$. Contrôle : $\\dfrac{3{,}0}{3{,}75}=0{,}80<1$ : bonne modulation.",
+          "methode": "$U_0=S_m/m$.",
+          "points": 1,
+          "ref": "pc-modulation-la-bonne-modulation-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La méthode du trapèze",
+        "lesson": "Taux de modulation & démodulation",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-modulation-la-methode-du-trapeze",
+      "chapter": "pc-modulation",
+      "kind": "qcu",
+      "title": "La méthode du trapèze",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La méthode du trapèze",
+          "difficulty": 1,
+          "statement": "Pour obtenir la figure en trapèze à l'oscilloscope (mode XY), on applique :",
+          "options": [
+            {
+              "label": "$s(t)$ sur la voie X et $u(t)$ sur la voie Y",
+              "correct": true,
+              "why": "La tension modulante sert de balayage horizontal et le signal modulé donne l'amplitude verticale : on obtient un trapèze."
+            },
+            {
+              "label": "$p(t)$ sur la voie X et $u(t)$ sur la voie Y",
+              "why": "On obtiendrait la courbe de $u$ en fonction de la porteuse, qui n'est pas un trapèze."
+            },
+            {
+              "label": "$s(t)$ sur les deux voies",
+              "why": "Un même signal sur X et sur Y donne un segment de droite."
+            },
+            {
+              "label": "$p(t)$ sur les deux voies",
+              "why": "Une même tension sur X et sur Y donne un segment de droite."
+            }
+          ],
+          "hint": "Quelle tension constitue l'abscisse du trapèze ?",
+          "solution": "En mode XY, $s(t)$ en X et $u(t)$ en Y : $u=kP_m\\,[U_0+s]\\cos(2\\pi Ft)$ a une enveloppe linéaire en $s$, d'où un trapèze. Contrôle : $m=0$ donne un rectangle.",
+          "methode": "Trapèze : $s(t)$ en X, $u(t)$ en Y.",
+          "points": 1,
+          "ref": "pc-modulation-la-methode-du-trapeze-q1"
+        },
+        {
+          "notion": "La méthode du trapèze",
+          "difficulty": 2,
+          "statement": "Sur le trapèze, la grande base mesure $a=8{,}0\\ \\mathrm{div}$ et la petite $b=2{,}0\\ \\mathrm{div}$. Avec $m=\\dfrac{a-b}{a+b}$, le taux de modulation vaut :",
+          "options": [
+            {
+              "label": "$m=0{,}60$",
+              "correct": true,
+              "why": "$m=\\dfrac{8{,}0-2{,}0}{8{,}0+2{,}0}=0{,}60$."
+            },
+            {
+              "label": "$m=4{,}0$",
+              "why": "Tu as calculé $a/b$, non la formule du taux de modulation."
+            },
+            {
+              "label": "$m=1{,}67$",
+              "why": "Tu as inversé le rapport : le numérateur est $a-b$."
+            },
+            {
+              "label": "$m=0{,}25$",
+              "why": "Tu as calculé $b/a$, non $\\dfrac{a-b}{a+b}$."
+            }
+          ],
+          "hint": "$a$ et $b$ sont les longueurs des bases du trapèze.",
+          "solution": "$m=\\dfrac{a-b}{a+b}=\\dfrac{8{,}0-2{,}0}{8{,}0+2{,}0}=0{,}60$. Contrôle : $b>0$ donne $m<1$, cohérent avec la figure d'un trapèze.",
+          "methode": "Trapèze : $m=\\dfrac{a-b}{a+b}$.",
+          "points": 1,
+          "ref": "pc-modulation-la-methode-du-trapeze-q2"
+        },
+        {
+          "notion": "La méthode du trapèze",
+          "difficulty": 2,
+          "statement": "Pour un taux de modulation $m=1$, la figure obtenue en mode XY est :",
+          "options": [
+            {
+              "label": "un triangle (la petite base est nulle)",
+              "correct": true,
+              "why": "Pour $m=1$, $A_{min}=0$ : la petite base $b$ s'annule et le trapèze devient un triangle."
+            },
+            {
+              "label": "un rectangle",
+              "why": "Le rectangle correspond à $m=0$ (signal non modulé)."
+            },
+            {
+              "label": "un trapèze dont la petite base n'est pas nulle",
+              "why": "Une petite base non nulle correspond à $m<1$."
+            },
+            {
+              "label": "deux triangles opposés par le sommet",
+              "why": "Cette figure caractérise la surmodulation ($m>1$)."
+            }
+          ],
+          "hint": "Que vaut $b$ lorsque $m=1$ ?",
+          "solution": "$m=\\dfrac{a-b}{a+b}=1$ donne $b=0$ : la figure est un triangle. $m=0$ : rectangle ; $0<m<1$ : trapèze ; $m>1$ : deux triangles opposés par le sommet. Contrôle : $m=1$ est la limite de la bonne modulation.",
+          "methode": "$m=0$ : rectangle ; $m<1$ : trapèze ; $m=1$ : triangle ; $m>1$ : deux triangles.",
+          "points": 1,
+          "ref": "pc-modulation-la-methode-du-trapeze-q3"
+        },
+        {
+          "notion": "La méthode du trapèze",
+          "difficulty": 3,
+          "statement": "Le trapèze a pour bases $a=7{,}0\\ \\mathrm{div}$ et $b=3{,}0\\ \\mathrm{div}$ (avec $m=\\dfrac{a-b}{a+b}$) et la composante continue vaut $U_0=5{,}0\\ \\mathrm{V}$. L'amplitude du signal modulant vaut :",
+          "options": [
+            {
+              "label": "$S_m=2{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$m=\\dfrac{7{,}0-3{,}0}{7{,}0+3{,}0}=0{,}40$ ; $S_m=m\\,U_0=0{,}40\\times5{,}0=2{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$S_m=5{,}0\\ \\mathrm{V}$",
+              "why": "Tu as pris $S_m=U_0$, ce qui donnerait $m=1$ et un triangle."
+            },
+            {
+              "label": "$S_m=0{,}40\\ \\mathrm{V}$",
+              "why": "$0{,}40$ est le taux de modulation, sans unité : il faut le multiplier par $U_0$."
+            },
+            {
+              "label": "$S_m=12{,}5\\ \\mathrm{V}$",
+              "why": "Tu as calculé $U_0/m$ : $S_m=m\\,U_0$."
+            }
+          ],
+          "hint": "Calcule $m$ avec les bases, puis déduis $S_m$ de $m=S_m/U_0$.",
+          "solution": "$m=\\dfrac{a-b}{a+b}=\\dfrac{4{,}0}{10{,}0}=0{,}40$ ; $S_m=m\\,U_0=0{,}40\\times5{,}0=2{,}0\\ \\mathrm{V}$. Contrôle : $S_m<U_0$, cohérent avec $m<1$.",
+          "methode": "$S_m=m\\,U_0$.",
+          "points": 1,
+          "ref": "pc-modulation-la-methode-du-trapeze-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La démodulation",
+        "lesson": "Taux de modulation & démodulation",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-modulation-la-demodulation",
+      "chapter": "pc-modulation",
+      "kind": "qcu",
+      "title": "La démodulation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La démodulation",
+          "difficulty": 1,
+          "statement": "Les deux étapes de la démodulation d'un signal modulé en amplitude sont :",
+          "options": [
+            {
+              "label": "la détection d'enveloppe (diode et filtre $RC$), puis la suppression de la composante continue",
+              "correct": true,
+              "why": "On extrait l'enveloppe, qui contient $U_0+s(t)$, puis on retire $U_0$ pour retrouver $s(t)$."
+            },
+            {
+              "label": "la suppression de la composante continue, puis la détection d'enveloppe par diode et filtre $RC$",
+              "why": "La composante continue ne peut être retirée qu'après avoir extrait l'enveloppe."
+            },
+            {
+              "label": "la multiplication par la porteuse, puis l'amplification du signal obtenu",
+              "why": "Ce ne sont pas les étapes de la détection d'enveloppe étudiée ici."
+            },
+            {
+              "label": "le redressement du signal, puis l'ajout d'une composante continue",
+              "why": "Il faut retirer la composante continue et non en ajouter une."
+            }
+          ],
+          "hint": "Que contient l'enveloppe : $s(t)$ seul ou $s(t)+U_0$ ?",
+          "solution": "Étape 1 : diode et filtre $RC$ extraient l'enveloppe $U_0+s(t)$. Étape 2 : un condensateur de liaison (filtre passe-haut) élimine $U_0$. Contrôle : en sortie, on retrouve $s(t)$.",
+          "methode": "Démodulation : enveloppe, puis suppression de $U_0$.",
+          "points": 1,
+          "ref": "pc-modulation-la-demodulation-q1"
+        },
+        {
+          "notion": "La démodulation",
+          "difficulty": 2,
+          "statement": "Pour $F=100\\ \\mathrm{kHz}$ et $f=1{,}0\\ \\mathrm{kHz}$, la constante de temps $RC$ du détecteur doit vérifier $\\dfrac{1}{F}\\ll RC\\ll\\dfrac{1}{f}$. Une valeur convenable est :",
+          "options": [
+            {
+              "label": "$RC=1{,}0\\times10^{2}\\ \\mathrm{\\mu s}$",
+              "correct": true,
+              "why": "$\\dfrac{1}{F}=10\\ \\mathrm{\\mu s}\\ll100\\ \\mathrm{\\mu s}\\ll\\dfrac{1}{f}=1{,}0\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$RC=1{,}0\\ \\mathrm{\\mu s}$",
+              "why": "$RC<\\dfrac{1}{F}=10\\ \\mathrm{\\mu s}$ : le condensateur suit la porteuse, la sortie reste fortement ondulée."
+            },
+            {
+              "label": "$RC=1{,}0\\times10\\ \\mathrm{ms}$",
+              "why": "$RC>\\dfrac{1}{f}=1{,}0\\ \\mathrm{ms}$ : le condensateur est trop lent pour suivre l'enveloppe."
+            },
+            {
+              "label": "$RC=1{,}0\\times10\\ \\mathrm{\\mu s}$",
+              "why": "$RC=\\dfrac{1}{F}$ : il faut $RC\\gg\\dfrac{1}{F}$, non égal."
+            }
+          ],
+          "hint": "Calcule $1/F$ et $1/f$ puis choisis $RC$ strictement entre les deux.",
+          "solution": "$\\dfrac{1}{F}=10\\ \\mathrm{\\mu s}$ et $\\dfrac{1}{f}=1{,}0\\ \\mathrm{ms}$ : on choisit $RC$ entre les deux, par exemple $100\\ \\mathrm{\\mu s}$ ($R=10\\ \\mathrm{k\\Omega}$, $C=10\\ \\mathrm{nF}$). Contrôle : $10\\times10^{3}\\times10\\times10^{-9}=1{,}0\\times10^{-4}\\ \\mathrm{s}$.",
+          "methode": "Détection d'enveloppe : $\\dfrac{1}{F}\\ll RC\\ll\\dfrac{1}{f}$.",
+          "points": 1,
+          "ref": "pc-modulation-la-demodulation-q2"
+        },
+        {
+          "notion": "La démodulation",
+          "difficulty": 3,
+          "statement": "Si la constante de temps $RC$ du détecteur d'enveloppe est trop grande devant $\\dfrac{1}{f}$, la tension de sortie :",
+          "options": [
+            {
+              "label": "ne suit pas les décroissances de l'enveloppe : le condensateur se décharge trop lentement",
+              "correct": true,
+              "why": "Le condensateur reste chargé quand l'enveloppe diminue : la sortie décroît moins vite que l'enveloppe."
+            },
+            {
+              "label": "reste fortement ondulée à la fréquence $F$ de la porteuse, sans suivre l'enveloppe",
+              "why": "C'est le défaut d'un $RC$ trop petit devant $\\dfrac{1}{F}$."
+            },
+            {
+              "label": "perd sa composante continue $U_0$ dès la sortie du détecteur d'enveloppe",
+              "why": "L'élimination de $U_0$ est assurée par le condensateur de liaison, non par le choix du $RC$."
+            },
+            {
+              "label": "voit son taux de modulation $m$ augmenter au cours de la détection",
+              "why": "Le taux de modulation est une propriété du signal émis ; le détecteur ne le modifie pas."
+            }
+          ],
+          "hint": "Que devient la tension aux bornes du condensateur lorsque l'enveloppe diminue plus vite que la décharge ?",
+          "solution": "Si $RC\\gg\\dfrac{1}{f}$, la décharge du condensateur est trop lente : la sortie ne suit pas les décroissances de l'enveloppe et le signal est déformé. Contrôle : si $RC\\ll\\dfrac{1}{F}$, c'est l'ondulation à $F$ qui subsiste.",
+          "methode": "$RC$ trop grand : sortie qui ne suit pas l'enveloppe ; $RC$ trop petit : ondulation à $F$.",
+          "points": 1,
+          "ref": "pc-modulation-la-demodulation-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-sm-2026-rattrapage",
+          "pc-sm-2026-normale",
+          "pc-sm-2025-normale",
+          "pc-sm-2024-rattrapage",
+          "pc-sm-2024-normale",
+          "pc-sm-2023-rattrapage"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-modulation-probleme-1",
+      "chapter": "pc-modulation",
+      "kind": "probleme",
+      "title": "Analyse d'un signal modulé en amplitude",
+      "difficulty": 3,
+      "context": "Un multiplieur de constante $k=0{,}10\\ \\mathrm{V^{-1}}$ délivre $u(t)=k\\,[s(t)+U_0]\\,p(t)$. Le signal modulant est $s(t)=S_m\\cos(2\\pi ft)$ avec $S_m=2{,}5\\ \\mathrm{V}$, la porteuse est $p(t)=P_m\\cos(2\\pi Ft)$ avec $P_m=10\\ \\mathrm{V}$, et on ajoute $U_0=4{,}0\\ \\mathrm{V}$. À l'oscilloscope, on mesure la période du modulant, $T_s=1{,}0\\ \\mathrm{ms}$, et celle de la porteuse, $T_p=10\\ \\mathrm{\\mu s}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Les deux signaux",
+          "difficulty": 1,
+          "statement": "Les fréquences du signal modulant et de la porteuse valent :",
+          "options": [
+            {
+              "label": "$f=1{,}0\\times10^{3}\\ \\mathrm{Hz}$ et $F=1{,}0\\times10^{5}\\ \\mathrm{Hz}$",
+              "correct": true,
+              "why": "$f=\\dfrac{1}{1{,}0\\times10^{-3}}=1{,}0\\times10^{3}\\ \\mathrm{Hz}$ et $F=\\dfrac{1}{10\\times10^{-6}}=1{,}0\\times10^{5}\\ \\mathrm{Hz}$."
+            },
+            {
+              "label": "$f=1{,}0\\times10^{5}\\ \\mathrm{Hz}$ et $F=1{,}0\\times10^{3}\\ \\mathrm{Hz}$",
+              "why": "Tu as permuté les périodes : la porteuse, de haute fréquence, a la période la plus courte."
+            },
+            {
+              "label": "$f=1{,}0\\ \\mathrm{Hz}$ et $F=0{,}10\\ \\mathrm{Hz}$",
+              "why": "Tu n'as pas converti les unités : $1{,}0\\ \\mathrm{ms}=10^{-3}\\ \\mathrm{s}$ et $10\\ \\mathrm{\\mu s}=10^{-5}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$f=1{,}0\\times10^{3}\\ \\mathrm{Hz}$ et $F=1{,}0\\times10^{8}\\ \\mathrm{Hz}$",
+              "why": "Tu as converti $10\\ \\mathrm{\\mu s}$ en $10\\times10^{-9}\\ \\mathrm{s}$ : $1\\ \\mathrm{\\mu s}=10^{-6}\\ \\mathrm{s}$."
+            }
+          ],
+          "hint": "$f=1/T$ avec $T$ en secondes.",
+          "solution": "$f=\\dfrac{1}{T_s}=1{,}0\\times10^{3}\\ \\mathrm{Hz}$ ; $F=\\dfrac{1}{T_p}=1{,}0\\times10^{5}\\ \\mathrm{Hz}$. Contrôle : $F=100\\,f$.",
+          "methode": "$f=1/T$.",
+          "points": 1,
+          "part": "Partie A — Signaux et spectre",
+          "ref": "pc-modulation-probleme-1-q1"
+        },
+        {
+          "notion": "Le multiplieur",
+          "difficulty": 1,
+          "statement": "L'amplitude de la composante de porteuse de $u(t)$ vaut $k\\,P_m\\,U_0$, soit :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$kP_mU_0=0{,}10\\times10\\times4{,}0=4{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$40\\ \\mathrm{V}$",
+              "why": "Tu as oublié la constante $k=0{,}10\\ \\mathrm{V^{-1}}$ du multiplieur."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{V}$",
+              "why": "Tu as oublié $U_0$ : l'amplitude de la porteuse est $kP_mU_0$."
+            },
+            {
+              "label": "$0{,}4\\ \\mathrm{V}$",
+              "why": "Tu as oublié $P_m$ : l'amplitude de la porteuse est $kP_mU_0$."
+            }
+          ],
+          "hint": "$u(t)=kP_mU_0[1+m\\cos(2\\pi ft)]\\cos(2\\pi Ft)$ : repère le facteur devant $\\cos(2\\pi Ft)$ pour $m=0$.",
+          "solution": "$u(t)=kP_mU_0[1+m\\cos(2\\pi ft)]\\cos(2\\pi Ft)$ : la porteuse a pour amplitude $kP_mU_0=0{,}10\\times10\\times4{,}0=4{,}0\\ \\mathrm{V}$. Contrôle : $kP_m=1{,}0$ donc l'enveloppe vaut $U_0+s(t)$ en volts.",
+          "methode": "Amplitude de la porteuse : $kP_mU_0$.",
+          "points": 1,
+          "part": "Partie A — Signaux et spectre",
+          "ref": "pc-modulation-probleme-1-q2"
+        },
+        {
+          "notion": "Le spectre du signal modulé",
+          "difficulty": 2,
+          "statement": "Le spectre de $u(t)$ comporte des raies de fréquences et d'amplitudes :",
+          "options": [
+            {
+              "label": "$99$, $100$ et $101\\ \\mathrm{kHz}$ ; $1{,}25$, $4{,}0$ et $1{,}25\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "Raies à $F-f$, $F$, $F+f$ ; la porteuse a pour amplitude $kP_mU_0=4{,}0\\ \\mathrm{V}$ et chaque raie latérale $\\dfrac{mkP_mU_0}{2}=1{,}25\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$99$, $100$ et $101\\ \\mathrm{kHz}$ ; $2{,}5$, $4{,}0$ et $2{,}5\\ \\mathrm{V}$",
+              "why": "Tu as oublié le facteur $\\dfrac{1}{2}$ : chaque raie latérale a pour amplitude $\\dfrac{mU_m}{2}$."
+            },
+            {
+              "label": "$100$, $101$ et $102\\ \\mathrm{kHz}$ ; $4{,}0$, $1{,}25$ et $1{,}25\\ \\mathrm{V}$",
+              "why": "Le spectre est symétrique autour de $F$ : les raies sont à $F-f=99$, $F=100$ et $F+f=101\\ \\mathrm{kHz}$."
+            },
+            {
+              "label": "$99$, $100$ et $101\\ \\mathrm{kHz}$ ; $4{,}0$, $1{,}25$ et $4{,}0\\ \\mathrm{V}$",
+              "why": "Tu as inversé les amplitudes : la porteuse est la raie la plus grande, à $4{,}0\\ \\mathrm{V}$."
+            }
+          ],
+          "hint": "Raies latérales à $F\\pm f$, d'amplitude $mU_m/2$ ; porteuse d'amplitude $U_m=kP_mU_0$.",
+          "solution": "$m=\\dfrac{S_m}{U_0}=0{,}625$ ; raies à $99$, $100$ et $101\\ \\mathrm{kHz}$ ; amplitudes : $\\dfrac{mU_m}{2}=\\dfrac{0{,}625\\times4{,}0}{2}=1{,}25\\ \\mathrm{V}$ (latérales) et $U_m=4{,}0\\ \\mathrm{V}$ (porteuse). Contrôle : $A_{max}=U_m+2\\times\\dfrac{mU_m}{2}=6{,}5\\ \\mathrm{V}$.",
+          "methode": "Spectre : $F-f$, $F$, $F+f$ avec amplitudes $mU_m/2$, $U_m$, $mU_m/2$.",
+          "points": 1,
+          "part": "Partie A — Signaux et spectre",
+          "ref": "pc-modulation-probleme-1-q3"
+        },
+        {
+          "notion": "Le taux de modulation",
+          "difficulty": 2,
+          "statement": "Le taux de modulation du signal vaut :",
+          "options": [
+            {
+              "label": "$m=0{,}62$",
+              "correct": true,
+              "why": "$m=\\dfrac{S_m}{U_0}=\\dfrac{2{,}5}{4{,}0}=0{,}625$."
+            },
+            {
+              "label": "$m=1{,}6$",
+              "why": "Tu as inversé le rapport : $m=S_m/U_0$."
+            },
+            {
+              "label": "$m=0{,}38$",
+              "why": "Tu as divisé par $U_0+S_m=6{,}5$ : $m=S_m/U_0$."
+            },
+            {
+              "label": "$m=6{,}5$",
+              "why": "$6{,}5\\ \\mathrm{V}$ est l'amplitude maximale de l'enveloppe $A_{max}$, une tension, non le taux de modulation."
+            }
+          ],
+          "hint": "$m=S_m/U_0$ ; vérifie avec $\\dfrac{A_{max}-A_{min}}{A_{max}+A_{min}}$.",
+          "solution": "$m=\\dfrac{S_m}{U_0}=\\dfrac{2{,}5}{4{,}0}=0{,}625$ ; avec $A_{max}=6{,}5\\ \\mathrm{V}$ et $A_{min}=1{,}5\\ \\mathrm{V}$ : $\\dfrac{5{,}0}{8{,}0}=0{,}625$. Contrôle : les deux méthodes concordent.",
+          "methode": "$m=S_m/U_0=(A_{max}-A_{min})/(A_{max}+A_{min})$.",
+          "points": 1,
+          "part": "Partie B — Taux de modulation",
+          "ref": "pc-modulation-probleme-1-q4"
+        },
+        {
+          "notion": "La bonne modulation",
+          "difficulty": 2,
+          "statement": "Cette modulation est-elle correcte ?",
+          "options": [
+            {
+              "label": "oui : $m=0{,}63<1$ et $F=100\\,f\\gg f$",
+              "correct": true,
+              "why": "Les deux conditions de bonne modulation sont remplies : $m<1$ et $F\\gg f$."
+            },
+            {
+              "label": "non : $F=100\\,f$ est trop grand pour que l'enveloppe soit lisible",
+              "why": "Plus $F$ est grande devant $f$, plus l'enveloppe est lisible : la condition est $F\\gg f$."
+            },
+            {
+              "label": "non : $m=1{,}6>1$, il y a surmodulation",
+              "why": "Le taux est $m=S_m/U_0=0{,}63$ ; $1{,}6$ est son inverse."
+            },
+            {
+              "label": "non : $A_{min}=1{,}5\\ \\mathrm{V}$ n'est pas nulle, l'enveloppe est déformée",
+              "why": "Une valeur $A_{min}>0$ signifie $m<1$ : c'est justement le signe d'une bonne modulation."
+            }
+          ],
+          "hint": "Vérifie $m<1$ puis $F\\gg f$.",
+          "solution": "$m=0{,}63<1$ ($U_0+s(t)$ reste positive, $A_{min}=1{,}5\\ \\mathrm{V}>0$) et $F/f=100$ : l'enveloppe reproduit le signal modulant. Contrôle : $m=1$ correspondrait à $A_{min}=0$.",
+          "methode": "Bonne modulation : $m<1$ et $F\\gg f$.",
+          "points": 1,
+          "part": "Partie B — Taux de modulation",
+          "ref": "pc-modulation-probleme-1-q5"
+        },
+        {
+          "notion": "Le taux de modulation",
+          "difficulty": 3,
+          "statement": "On veut obtenir un taux $m=0{,}50$ en conservant $S_m=2{,}5\\ \\mathrm{V}$. La composante continue doit valoir :",
+          "options": [
+            {
+              "label": "$U_0=5{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$U_0=\\dfrac{S_m}{m}=\\dfrac{2{,}5}{0{,}50}=5{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$U_0=1{,}25\\ \\mathrm{V}$",
+              "why": "Tu as multiplié $S_m$ par $m$ : $U_0=S_m/m$."
+            },
+            {
+              "label": "$U_0=2{,}5\\ \\mathrm{V}$",
+              "why": "Avec $U_0=S_m$, on aurait $m=1$ et non $0{,}50$."
+            },
+            {
+              "label": "$U_0=0{,}20\\ \\mathrm{V}$",
+              "why": "Tu as calculé $m/S_m$ : $U_0=S_m/m$."
+            }
+          ],
+          "hint": "Isole $U_0$ dans $m=S_m/U_0$.",
+          "solution": "$U_0=\\dfrac{S_m}{m}=\\dfrac{2{,}5}{0{,}50}=5{,}0\\ \\mathrm{V}$. Contrôle : $\\dfrac{2{,}5}{5{,}0}=0{,}50$.",
+          "methode": "$U_0=S_m/m$.",
+          "points": 1,
+          "part": "Partie B — Taux de modulation",
+          "ref": "pc-modulation-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-sm-2026-rattrapage",
+          "pc-sm-2026-normale",
+          "pc-sm-2025-normale",
+          "pc-sm-2024-rattrapage",
+          "pc-sm-2024-normale",
+          "pc-sm-2023-rattrapage"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-modulation-probleme-2",
+      "chapter": "pc-modulation",
+      "kind": "probleme",
+      "title": "Démodulation d'un signal modulé en amplitude",
+      "difficulty": 3,
+      "context": "On démodule un signal modulé en amplitude de porteuse $F=200\\ \\mathrm{kHz}$ et de signal modulant de fréquence $f=1{,}0\\ \\mathrm{kHz}$. On suppose $kP_m=1$ : l'enveloppe vaut donc $U_0+s(t)$ ; elle oscille entre $A_{max}=7{,}0\\ \\mathrm{V}$ et $A_{min}=3{,}0\\ \\mathrm{V}$. Le détecteur est formé d'une diode en série avec un conducteur ohmique $R=10\\ \\mathrm{k\\Omega}$ en parallèle sur un condensateur $C$ ; il est suivi d'un condensateur de liaison.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "La démodulation",
+          "difficulty": 1,
+          "statement": "Dans le détecteur d'enveloppe, la diode a pour rôle de :",
+          "options": [
+            {
+              "label": "ne laisser passer le courant que dans un sens : le condensateur ne se charge que sur les crêtes",
+              "correct": true,
+              "why": "La diode redresse : elle permet la charge du condensateur sur les crêtes du signal et bloque son retour."
+            },
+            {
+              "label": "amplifier le signal modulé avant son passage dans le filtre $RC$",
+              "why": "Une diode est un composant passif : elle n'amplifie pas."
+            },
+            {
+              "label": "éliminer la composante continue du signal avant son traitement",
+              "why": "Cette étape est assurée par le condensateur de liaison placé en aval."
+            },
+            {
+              "label": "multiplier le signal modulé par la porteuse reçue en entrée",
+              "why": "La multiplication est réalisée à l'émission par le multiplieur, non par la diode."
+            }
+          ],
+          "hint": "Que fait une diode du sens du courant ?",
+          "solution": "La diode ne conduit que dans un sens : le condensateur se charge sur les crêtes et se décharge lentement dans $R$ ; la tension de sortie suit l'enveloppe. Contrôle : sans diode, le condensateur suivrait les alternances négatives.",
+          "methode": "Diode : redressement ; $RC$ : lissage.",
+          "points": 1,
+          "part": "Partie A — Détection et taux de modulation",
+          "ref": "pc-modulation-probleme-2-q1"
+        },
+        {
+          "notion": "La démodulation",
+          "difficulty": 2,
+          "statement": "Le condensateur de liaison en sortie du détecteur a pour rôle de :",
+          "options": [
+            {
+              "label": "éliminer la composante continue $U_0$ du signal détecté",
+              "correct": true,
+              "why": "Il bloque le continu et laisse passer le signal variable $s(t)$."
+            },
+            {
+              "label": "supprimer la porteuse de haute fréquence du signal reçu",
+              "why": "La porteuse est éliminée par le filtre $RC$ du détecteur, non par le condensateur de liaison."
+            },
+            {
+              "label": "détecter l'enveloppe du signal modulé en amplitude",
+              "why": "L'enveloppe est détectée par la diode et le filtre $RC$."
+            },
+            {
+              "label": "augmenter le taux de modulation du signal reçu",
+              "why": "Le taux de modulation est fixé à l'émission ; le récepteur ne le modifie pas."
+            }
+          ],
+          "hint": "L'enveloppe contient $U_0+s(t)$ : comment retirer $U_0$ ?",
+          "solution": "Le condensateur de liaison, associé à la résistance de la charge, forme un filtre passe-haut : il arrête la composante continue $U_0$ et laisse passer $s(t)$. Contrôle : en sortie, le signal est centré sur $0\\ \\mathrm{V}$.",
+          "methode": "Condensateur de liaison : supprime $U_0$.",
+          "points": 1,
+          "part": "Partie A — Détection et taux de modulation",
+          "ref": "pc-modulation-probleme-2-q2"
+        },
+        {
+          "notion": "Le taux de modulation",
+          "difficulty": 2,
+          "statement": "Le taux de modulation du signal reçu vaut :",
+          "options": [
+            {
+              "label": "$m=0{,}40$",
+              "correct": true,
+              "why": "$m=\\dfrac{A_{max}-A_{min}}{A_{max}+A_{min}}=\\dfrac{7{,}0-3{,}0}{7{,}0+3{,}0}=0{,}40$."
+            },
+            {
+              "label": "$m=2{,}5$",
+              "why": "Tu as inversé le rapport : le numérateur est $A_{max}-A_{min}$."
+            },
+            {
+              "label": "$m=4{,}0$",
+              "why": "Tu as calculé $A_{max}-A_{min}$ sans diviser par $A_{max}+A_{min}$."
+            },
+            {
+              "label": "$m=2{,}3$",
+              "why": "Tu as calculé le rapport $A_{max}/A_{min}$, non la formule du taux de modulation."
+            }
+          ],
+          "hint": "$m=\\dfrac{A_{max}-A_{min}}{A_{max}+A_{min}}$.",
+          "solution": "$m=\\dfrac{7{,}0-3{,}0}{7{,}0+3{,}0}=0{,}40$ ; de plus $U_0=\\dfrac{A_{max}+A_{min}}{2}=5{,}0\\ \\mathrm{V}$ et $S_m=\\dfrac{A_{max}-A_{min}}{2}=2{,}0\\ \\mathrm{V}$. Contrôle : $\\dfrac{S_m}{U_0}=\\dfrac{2{,}0}{5{,}0}=0{,}40$.",
+          "methode": "$m=\\dfrac{A_{max}-A_{min}}{A_{max}+A_{min}}$.",
+          "points": 1,
+          "part": "Partie A — Détection et taux de modulation",
+          "ref": "pc-modulation-probleme-2-q3"
+        },
+        {
+          "notion": "La démodulation",
+          "difficulty": 2,
+          "statement": "Avec $R=10\\ \\mathrm{k\\Omega}$, la capacité $C$ qui convient pour que $\\dfrac{1}{F}\\ll RC\\ll\\dfrac{1}{f}$ est :",
+          "options": [
+            {
+              "label": "$C=10\\ \\mathrm{nF}$",
+              "correct": true,
+              "why": "$RC=10\\times10^{3}\\times10\\times10^{-9}=100\\ \\mathrm{\\mu s}$, entre $\\dfrac{1}{F}=5{,}0\\ \\mathrm{\\mu s}$ et $\\dfrac{1}{f}=1{,}0\\ \\mathrm{ms}$."
+            },
+            {
+              "label": "$C=100\\ \\mathrm{pF}$",
+              "why": "$RC=1{,}0\\ \\mathrm{\\mu s}<\\dfrac{1}{F}=5{,}0\\ \\mathrm{\\mu s}$ : la sortie suivrait la porteuse, restant très ondulée."
+            },
+            {
+              "label": "$C=1{,}0\\ \\mathrm{\\mu F}$",
+              "why": "$RC=10\\ \\mathrm{ms}>\\dfrac{1}{f}=1{,}0\\ \\mathrm{ms}$ : le condensateur ne suivrait pas les décroissances de l'enveloppe."
+            },
+            {
+              "label": "$C=0{,}50\\ \\mathrm{nF}$",
+              "why": "$RC=5{,}0\\ \\mathrm{\\mu s}=\\dfrac{1}{F}$ : il faut $RC\\gg\\dfrac{1}{F}$, non égal."
+            }
+          ],
+          "hint": "Calcule $RC$ pour chaque valeur de $C$ et compare à $1/F$ et $1/f$.",
+          "solution": "$\\dfrac{1}{F}=5{,}0\\ \\mathrm{\\mu s}$ et $\\dfrac{1}{f}=1{,}0\\ \\mathrm{ms}$ : on choisit $RC$ entre les deux. Pour $C=10\\ \\mathrm{nF}$ : $RC=1{,}0\\times10^{-4}\\ \\mathrm{s}=100\\ \\mathrm{\\mu s}$. Contrôle : $5{,}0\\ \\mathrm{\\mu s}\\ll100\\ \\mathrm{\\mu s}\\ll1{,}0\\ \\mathrm{ms}$.",
+          "methode": "Choix de $C$ : $\\dfrac{1}{F}\\ll RC\\ll\\dfrac{1}{f}$.",
+          "points": 1,
+          "part": "Partie B — Choix des composants",
+          "ref": "pc-modulation-probleme-2-q4"
+        },
+        {
+          "notion": "La bonne modulation",
+          "difficulty": 2,
+          "statement": "On conserve $U_0=5{,}0\\ \\mathrm{V}$ et on augmente l'amplitude du signal modulant. Pour éviter la surmodulation, il faut :",
+          "options": [
+            {
+              "label": "$S_m<5{,}0\\ \\mathrm{V}$",
+              "correct": true,
+              "why": "$m=\\dfrac{S_m}{U_0}<1$ équivaut à $S_m<U_0=5{,}0\\ \\mathrm{V}$."
+            },
+            {
+              "label": "$S_m<2{,}0\\ \\mathrm{V}$",
+              "why": "$2{,}0\\ \\mathrm{V}$ est la valeur actuelle, non la limite : pour $S_m=4{,}0\\ \\mathrm{V}$, $m=0{,}80<1$ reste correct."
+            },
+            {
+              "label": "$S_m<10\\ \\mathrm{V}$",
+              "why": "Pour $S_m=10\\ \\mathrm{V}$, $m=2{,}0>1$ : il y aurait surmodulation."
+            },
+            {
+              "label": "$S_m<7{,}0\\ \\mathrm{V}$",
+              "why": "Pour $S_m=7{,}0\\ \\mathrm{V}$ (valeur de $A_{max}$), $m=1{,}4>1$ : il y aurait surmodulation."
+            }
+          ],
+          "hint": "La condition est $m<1$ avec $m=S_m/U_0$.",
+          "solution": "$m<1$ donne $S_m<U_0=5{,}0\\ \\mathrm{V}$. Contrôle : pour $S_m=4{,}0\\ \\mathrm{V}$, $m=0{,}80$ ; pour $S_m=6{,}0\\ \\mathrm{V}$, $m=1{,}2$ (surmodulation).",
+          "methode": "Sans surmodulation : $S_m<U_0$.",
+          "points": 1,
+          "part": "Partie B — Choix des composants",
+          "ref": "pc-modulation-probleme-2-q5"
+        },
+        {
+          "notion": "Le multiplieur",
+          "difficulty": 3,
+          "statement": "On double l'amplitude $P_m$ de la porteuse, sans modifier $S_m$ ni $U_0$. Le taux de modulation et l'amplitude maximale de l'enveloppe deviennent :",
+          "options": [
+            {
+              "label": "$m$ inchangé ($0{,}40$) et $A_{max}$ doublé ($14\\ \\mathrm{V}$)",
+              "correct": true,
+              "why": "$m=S_m/U_0$ ne dépend pas de $P_m$ ; $A_{max}=kP_m(U_0+S_m)$ est proportionnelle à $P_m$."
+            },
+            {
+              "label": "$m$ doublé ($0{,}80$) et $A_{max}$ doublé ($14\\ \\mathrm{V}$)",
+              "why": "$m=S_m/U_0$ ne fait pas intervenir $P_m$ : il est inchangé."
+            },
+            {
+              "label": "$m$ inchangé ($0{,}40$) et $A_{max}$ inchangé ($7{,}0\\ \\mathrm{V}$)",
+              "why": "$A_{max}=kP_m(U_0+S_m)$ est proportionnelle à $P_m$ : elle double."
+            },
+            {
+              "label": "$m$ divisé par $2$ ($0{,}20$) et $A_{max}$ inchangé ($7{,}0\\ \\mathrm{V}$)",
+              "why": "Ni $m=S_m/U_0$ ni $A_{max}$ ne sont dans ce cas : $m$ est inchangé et $A_{max}$ double."
+            }
+          ],
+          "hint": "Exprime $m$ puis $A_{max}$ avec $k$, $P_m$, $U_0$ et $S_m$ ; lequel dépend de $P_m$ ?",
+          "solution": "$m=\\dfrac{S_m}{U_0}=0{,}40$ ne dépend pas de $P_m$ ; $A_{max}=kP_m(U_0+S_m)$ est proportionnelle à $P_m$ : $2\\times7{,}0=14\\ \\mathrm{V}$. Contrôle : $\\dfrac{A_{max}-A_{min}}{A_{max}+A_{min}}=\\dfrac{14-6}{14+6}=0{,}40$.",
+          "methode": "$P_m$ change l'amplitude globale, non le taux $m$.",
+          "points": 1,
+          "part": "Partie B — Choix des composants",
+          "ref": "pc-modulation-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [],
-  "existing_questions_total": 5,
-  "target_new_questions": 27,
-  "suggested_figures": [
-   "modulation-amplitude — Signal modulé en amplitude et son enveloppe",
-   "montage-modulation — Chaîne de modulation : multiplieur (porteuse × signal décalé)",
-   "spectre-modulation — Spectre d'un signal modulé en amplitude"
-  ],
-  "sources": [
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-modulation-serie-1",
+      "title": "Modulation d'amplitude · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-modulation",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-modulation-pourquoi-moduler-q1",
+        "pc-modulation-les-deux-signaux-q1",
+        "pc-modulation-le-multiplieur-q1",
+        "pc-modulation-le-spectre-du-signal-module-q1",
+        "pc-modulation-le-taux-de-modulation-q1",
+        "pc-modulation-la-bonne-modulation-q1",
+        "pc-modulation-la-methode-du-trapeze-q1",
+        "pc-modulation-la-demodulation-q1",
+        "pc-modulation-pourquoi-moduler-q2",
+        "pc-modulation-les-deux-signaux-q2",
+        "pc-modulation-le-multiplieur-q2",
+        "pc-modulation-le-spectre-du-signal-module-q2"
+      ]
+    },
+    {
+      "slug": "pc-modulation-serie-2",
+      "title": "Modulation d'amplitude · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-modulation",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-modulation-le-multiplieur-q3",
+        "pc-modulation-le-spectre-du-signal-module-q3",
+        "pc-modulation-le-taux-de-modulation-q2",
+        "pc-modulation-le-taux-de-modulation-q3",
+        "pc-modulation-la-bonne-modulation-q2",
+        "pc-modulation-la-bonne-modulation-q3",
+        "pc-modulation-la-methode-du-trapeze-q2",
+        "pc-modulation-la-methode-du-trapeze-q3",
+        "pc-modulation-la-demodulation-q2",
+        "pc-modulation-le-multiplieur-q4",
+        "pc-modulation-le-spectre-du-signal-module-q4",
+        "pc-modulation-le-taux-de-modulation-q4"
+      ]
+    },
+    {
+      "slug": "pc-modulation-serie-3",
+      "title": "Modulation d'amplitude · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-modulation",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-modulation-probleme-1-q2",
+        "pc-modulation-probleme-1-q3",
+        "pc-modulation-probleme-2-q3",
+        "pc-modulation-probleme-1-q4",
+        "pc-modulation-probleme-2-q4",
+        "pc-modulation-probleme-1-q5",
+        "pc-modulation-probleme-2-q5",
+        "pc-modulation-la-bonne-modulation-q4",
+        "pc-modulation-la-methode-du-trapeze-q4",
+        "pc-modulation-la-demodulation-q3",
+        "pc-modulation-probleme-1-q6",
+        "pc-modulation-probleme-2-q6"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Pourquoi moduler",
-    "lesson": "Principe de la modulation d'amplitude",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 2,
-    "target_new_questions": 2,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-modulation-pourquoi-moduler",
-   "chapter": "pc-modulation",
-   "kind": "qcu",
-   "title": "Pourquoi moduler",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-modulation-pourquoi-moduler-q1",
-     "notion": "Pourquoi moduler",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les deux signaux",
-    "lesson": "Principe de la modulation d'amplitude",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 2,
-    "target_new_questions": 2,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-modulation-les-deux-signaux",
-   "chapter": "pc-modulation",
-   "kind": "qcu",
-   "title": "Les deux signaux",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-modulation-les-deux-signaux-q1",
-     "notion": "Les deux signaux",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le multiplieur",
-    "lesson": "Principe de la modulation d'amplitude",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-modulation-le-multiplieur",
-   "chapter": "pc-modulation",
-   "kind": "qcu",
-   "title": "Le multiplieur",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-modulation-le-multiplieur-q1",
-     "notion": "Le multiplieur",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le spectre du signal modulé",
-    "lesson": "Principe de la modulation d'amplitude",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-modulation-le-spectre-du-signal-module",
-   "chapter": "pc-modulation",
-   "kind": "qcu",
-   "title": "Le spectre du signal modulé",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-modulation-le-spectre-du-signal-module-q1",
-     "notion": "Le spectre du signal modulé",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le taux de modulation",
-    "lesson": "Taux de modulation & démodulation",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-modulation-le-taux-de-modulation",
-   "chapter": "pc-modulation",
-   "kind": "qcu",
-   "title": "Le taux de modulation",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-modulation-le-taux-de-modulation-q1",
-     "notion": "Le taux de modulation",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La bonne modulation",
-    "lesson": "Taux de modulation & démodulation",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-modulation-la-bonne-modulation",
-   "chapter": "pc-modulation",
-   "kind": "qcu",
-   "title": "La bonne modulation",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-modulation-la-bonne-modulation-q1",
-     "notion": "La bonne modulation",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La méthode du trapèze",
-    "lesson": "Taux de modulation & démodulation",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-modulation-la-methode-du-trapeze",
-   "chapter": "pc-modulation",
-   "kind": "qcu",
-   "title": "La méthode du trapèze",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-modulation-la-methode-du-trapeze-q1",
-     "notion": "La méthode du trapèze",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La démodulation",
-    "lesson": "Taux de modulation & démodulation",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-modulation-la-demodulation",
-   "chapter": "pc-modulation",
-   "kind": "qcu",
-   "title": "La démodulation",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-modulation-la-demodulation-q1",
-     "notion": "La démodulation",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-sm-2026-rattrapage",
-     "pc-sm-2026-normale",
-     "pc-sm-2025-normale",
-     "pc-sm-2024-rattrapage",
-     "pc-sm-2024-normale",
-     "pc-sm-2023-rattrapage"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-modulation-probleme-1",
-   "chapter": "pc-modulation",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-sm-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-modulation-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-modulation-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-modulation-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-sm-2026-rattrapage",
-     "pc-sm-2026-normale",
-     "pc-sm-2025-normale",
-     "pc-sm-2024-rattrapage",
-     "pc-sm-2024-normale",
-     "pc-sm-2023-rattrapage"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-modulation-probleme-2",
-   "chapter": "pc-modulation",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-sm-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-modulation-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-modulation-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-modulation-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-modulation-serie-1",
-   "title": "Modulation d'amplitude · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-modulation",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-modulation-serie-2",
-   "title": "Modulation d'amplitude · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-modulation",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-modulation-serie-3",
-   "title": "Modulation d'amplitude · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-modulation",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
