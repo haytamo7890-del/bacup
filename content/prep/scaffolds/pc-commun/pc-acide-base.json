@@ -510,7 +510,7 @@
             },
             {
               "label": "$\\mathrm{ClO^-}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{HClO}+\\mathrm{H_3O^+}$",
-              "why": "Tu as écrit une réaction où $\\mathrm{ClO^-}$ cède un proton à l'eau, ce qui est impossible pour une base : l'équation correcte a $\\mathrm{HClO}$ et $\\mathrm{HO^-}$ pour réactifs."
+              "why": "Les charges ne sont pas conservées ($-1$ à gauche, $+1$ à droite), et cette équation n'implique pas $\\mathrm{HO^-}$ comme le demande l'énoncé : les réactifs sont $\\mathrm{HClO}$ et $\\mathrm{HO^-}$."
             }
           ],
           "hint": "Identifie l'acide et la base parmi les réactifs, puis écris le transfert de proton ; vérifie la conservation de la charge.",
@@ -605,7 +605,7 @@
         {
           "notion": "Le pH",
           "difficulty": 2,
-          "statement": "On dilue $100$ fois une solution d'acide chlorhydrique de pH $2{,}0$ (acide fort, la dilution restant faible devant l'eau). Le pH de la solution diluée vaut :",
+          "statement": "On dilue $100$ fois une solution d'acide chlorhydrique de pH $2{,}0$ (acide fort, l'autoprotolyse de l'eau restant négligeable). Le pH de la solution diluée vaut :",
           "options": [
             {
               "label": "$4{,}0$",
@@ -908,7 +908,7 @@
             }
           ],
           "hint": "Compare le pH mesuré à $-\\log C$ puis calcule $\\tau=[\\mathrm{H_3O^+}]/C$.",
-          "solution": "$-\\log C=2{,}0$ alors que le pH mesuré est $3{,}0>2{,}0$ : l'acide est faible. $[\\mathrm{H_3O^+}]=10^{-3,0}\\ \\mathrm{mol\\,L^{-1}}$ donc $\\tau=\\dfrac{10^{-3}}{10^{-2}}=0{,}10$. Contrôle : seulement $10\\ \\%$ de l'acide a réagi avec l'eau.",
+          "solution": "$-\\log C=2{,}0$ alors que le pH mesuré est $3{,}0>2{,}0$ : l'acide est faible. $[\\mathrm{H_3O^+}]=10^{-3{,}0}\\ \\mathrm{mol\\,L^{-1}}$ donc $\\tau=\\dfrac{10^{-3}}{10^{-2}}=0{,}10$. Contrôle : seulement $10\\ \\%$ de l'acide a réagi avec l'eau.",
           "methode": "Acide faible : $\\mathrm{pH}>-\\log C$ et $\\tau=10^{-\\mathrm{pH}}/C<1$.",
           "points": 1,
           "ref": "pc-acide-base-acide-fort-acide-faible-q3"
@@ -1128,7 +1128,7 @@
             },
             {
               "label": "$0{,}010$",
-              "why": "Tu as pris $10^{-2}$ : $\\mathrm{pH}-\\mathrm{p}K_A=-1{,}00$, donc $10^{-1}$."
+              "why": "Tu as pris $10^{-2}$ au lieu de $10^{-1}$, par exemple en doublant l'écart de pH : $\\mathrm{pH}-\\mathrm{p}K_A=-1{,}00$."
             }
           ],
           "hint": "Isole le logarithme du rapport avec $\\mathrm{pH}-\\mathrm{p}K_A$, puis prends $10^{\\ldots}$.",
@@ -1393,29 +1393,29 @@
         {
           "notion": "Les indicateurs colorés",
           "difficulty": 3,
-          "statement": "Un indicateur de $\\mathrm{p}K_A=7{,}1$ (couple $\\mathrm{HIn/In^-}$) est en solution. À quel pH le rapport $\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}$ vaut-il $10$ ?",
+          "statement": "Un indicateur coloré de couple $\\mathrm{HIn/In^-}$ a pour $\\mathrm{p}K_A=5{,}0$. À quel pH le rapport $\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}$ vaut-il $10$ ?",
           "options": [
             {
-              "label": "$\\mathrm{pH}=8{,}1$",
+              "label": "$\\mathrm{pH}=6{,}0$",
               "correct": true,
-              "why": "$\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}=7{,}1+\\log10=8{,}1$."
+              "why": "$\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}=5{,}0+\\log10=6{,}0$."
             },
             {
-              "label": "$\\mathrm{pH}=6{,}1$",
+              "label": "$\\mathrm{pH}=4{,}0$",
               "why": "Tu as pris un rapport $\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}=\\dfrac1{10}$ : pour un rapport $10$, le pH est supérieur au $\\mathrm{p}K_A$."
             },
             {
-              "label": "$\\mathrm{pH}=17{,}1$",
+              "label": "$\\mathrm{pH}=15{,}0$",
               "why": "Tu as ajouté le rapport $10$ au $\\mathrm{p}K_A$ sans prendre le logarithme : $\\log10=1$."
             },
             {
-              "label": "$\\mathrm{pH}=7{,}1$",
-              "why": "À $\\mathrm{pH}=\\mathrm{p}K_A=7{,}1$, le rapport vaut $1$ ($[\\mathrm{In^-}]=[\\mathrm{HIn}]$), pas $10$."
+              "label": "$\\mathrm{pH}=5{,}0$",
+              "why": "À $\\mathrm{pH}=\\mathrm{p}K_A=5{,}0$, le rapport vaut $1$ ($[\\mathrm{In^-}]=[\\mathrm{HIn}]$), pas $10$."
             }
           ],
           "hint": "Utilise $\\mathrm{pH}=\\mathrm{p}K_A+\\log\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}$.",
-          "solution": "$\\mathrm{pH}=7{,}1+\\log10=8{,}1$. À ce pH la forme $\\mathrm{In^-}$ est dix fois plus abondante : on atteint la limite basique de la zone de virage. Contrôle : $\\mathrm{pH}=8{,}1>\\mathrm{p}K_A$, la forme basique prédomine.",
-          "methode": "Limites de la zone de virage : $\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}=\\tfrac1{10}$ ou $10$, soit $\\mathrm{p}K_A\\mp1$.",
+          "solution": "$\\mathrm{pH}=5{,}0+\\log10=6{,}0$. À ce pH la forme $\\mathrm{In^-}$ est dix fois plus abondante : on atteint la limite basique de la zone de virage théorique $\\mathrm{p}K_A\\pm1$. Contrôle : $\\mathrm{pH}=6{,}0>\\mathrm{p}K_A$, la forme basique prédomine.",
+          "methode": "Limites théoriques de la zone de virage : $\\dfrac{[\\mathrm{In^-}]}{[\\mathrm{HIn}]}=\\tfrac1{10}$ ou $10$, soit $\\mathrm{p}K_A\\mp1$.",
           "points": 1,
           "ref": "pc-acide-base-les-indicateurs-colores-q4"
         }
@@ -1552,7 +1552,7 @@
           "statement": "Dans l'eau, l'acide le plus fort que l'on puisse rencontrer et la base la plus forte sont respectivement :",
           "options": [
             {
-              "label": "$\\mathrm{H_3O^+}$ (couple de $\\mathrm{p}K_A=0$) et $\\mathrm{HO^-}$ (couple de $\\mathrm{p}K_A=14$)",
+              "label": "$\\mathrm{H_3O^+}$ ($\\mathrm{p}K_A=0$) et $\\mathrm{HO^-}$ ($\\mathrm{p}K_A=14$)",
               "correct": true,
               "why": "Tout acide plus fort que $\\mathrm{H_3O^+}$ réagit totalement avec l'eau pour donner $\\mathrm{H_3O^+}$ ; toute base plus forte que $\\mathrm{HO^-}$ donne $\\mathrm{HO^-}$."
             },
@@ -1866,7 +1866,7 @@
             {
               "label": "$0{,}082$",
               "correct": true,
-              "why": "$\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=\\dfrac{7{,}6\\times10^{-4}}{0{,}00924}=0{,}082$ (ou $10^{\\mathrm{pH}-\\mathrm{p}K_A}=10^{3{,}12-4{,}21}$) : l'acide prédomine nettement."
+              "why": "$\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}=\\dfrac{7{,}6\\times10^{-4}}{0{,}00924}=0{,}082$ (ou $10^{\\mathrm{pH}-\\mathrm{p}K_A}=10^{3{,}12-4{,}206}$) : l'acide prédomine nettement."
             },
             {
               "label": "$12$",
@@ -1882,7 +1882,7 @@
             }
           ],
           "hint": "Utilise les concentrations ou la relation fondamentale ; compare le pH au $\\mathrm{p}K_A$ pour contrôler.",
-          "solution": "$[\\mathrm{A^-}]=[\\mathrm{H_3O^+}]=7{,}6\\times10^{-4}$ et $[\\mathrm{AH}]=0{,}00924$ : rapport $=0{,}082$. Par la relation fondamentale : $10^{\\mathrm{pH}-\\mathrm{p}K_A}=10^{3{,}12-4{,}21}=0{,}082$. Contrôle : $\\mathrm{pH}<\\mathrm{p}K_A$, la forme acide prédomine, rapport inférieur à $1$.",
+          "solution": "$[\\mathrm{A^-}]=[\\mathrm{H_3O^+}]=7{,}6\\times10^{-4}$ et $[\\mathrm{AH}]=0{,}00924$ : rapport $=0{,}082$. Par la relation fondamentale : $10^{\\mathrm{pH}-\\mathrm{p}K_A}=10^{3{,}12-4{,}206}=0{,}082$. Contrôle : $\\mathrm{pH}<\\mathrm{p}K_A$, la forme acide prédomine, rapport inférieur à $1$.",
           "methode": "Prédominance : le rapport $[\\mathrm{A^-}]/[\\mathrm{AH}]$ se lit directement par $10^{\\mathrm{pH}-\\mathrm{p}K_A}$.",
           "points": 1,
           "part": "Partie B — Prédominance",
@@ -1994,7 +1994,7 @@
             },
             {
               "label": "$2{,}38$",
-              "why": "Tu as pris la moitié du $\\mathrm{p}K_A$ : la formule $\\tfrac12(\\mathrm{p}K_A-\\log C)$ concerne l'acide seul, pas un mélange acide/base."
+              "why": "Tu as pris $\\mathrm{p}K_A/2=2{,}38$ : un tampon à quantités égales d'acide et de base a pour pH le $\\mathrm{p}K_A$ lui-même."
             }
           ],
           "hint": "Compare les quantités d'acide et de base dans $\\mathrm{C}$.",
@@ -2088,7 +2088,7 @@
             }
           ],
           "hint": "La base ajoutée réagit avec l'acide du tampon : recalcule les quantités d'acide et de base.",
-          "solution": "$\\mathrm{CH_3COOH}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{H_2O}$ : $n(\\mathrm{CH_3COOH})=0{,}100-0{,}010=0{,}090\\ \\mathrm{mol}$ et $n(\\mathrm{CH_3COO^-})=0{,}110\\ \\mathrm{mol}$ ; le volume se simplifie : $\\mathrm{pH}=4{,}75+\\log\\dfrac{0{,}110}{0{,}090}=4{,}84$. Contrôle : dans $1\\ \\mathrm{L}$ de la solution $\\mathrm{B}$ (base forte seule) le pH serait $12{,}0$ ; ici il varie de $0{,}09$ unité seulement.",
+          "solution": "$\\mathrm{CH_3COOH}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{H_2O}$ : $n(\\mathrm{CH_3COOH})=0{,}100-0{,}010=0{,}090\\ \\mathrm{mol}$ et $n(\\mathrm{CH_3COO^-})=0{,}110\\ \\mathrm{mol}$ ; le volume se simplifie : $\\mathrm{pH}=4{,}75+\\log\\dfrac{0{,}110}{0{,}090}=4{,}84$. Contrôle : dans $1\\ \\mathrm{L}$ d'eau pure, ajouter la même quantité de soude ferait passer le pH de $7$ à $12{,}0$ ; ici il ne varie que de $0{,}09$ unité.",
           "methode": "Tampon : une base ajoutée consomme l'acide du couple ; le pH varie peu.",
           "points": 1,
           "part": "Partie B — Indicateurs et tampon",
