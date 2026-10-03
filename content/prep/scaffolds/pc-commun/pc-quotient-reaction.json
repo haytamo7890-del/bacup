@@ -1,1300 +1,2233 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "track": null,
- "_scaffold": {
-  "pack": "pc-commun",
-  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-quotient-reaction",
-   "name": "État d'équilibre — quotient de réaction",
-   "domain": "chimie",
-   "unit": "Transformations & équilibre"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-quotient-reaction",
+      "name": "État d'équilibre — quotient de réaction",
+      "domain": "chimie",
+      "unit": "Transformations & équilibre"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Définition",
+      "Les espèces qui n'apparaissent pas",
+      "Le cas de l'estérification",
+      "Calculer $Q_r$",
+      "Comment $Q_r$ évolue",
+      "La loi de l'équilibre",
+      "Ce que dit la valeur de $K$",
+      "Deux constantes du programme",
+      "Relier $K$ et $\\tau$",
+      "Le critère d'évolution spontanée",
+      "L'influence de la température",
+      "Le produit de solubilité",
+      "Les limites du modèle",
+      "Ce que $K$ ne dit pas",
+      "Méthode 1 — Écrire l'expression de $Q_r$",
+      "Méthode 2 — Calculer $K$ à partir de mesures",
+      "Méthode 3 — Calculer $\\tau$ à partir de $K$",
+      "Méthode 4 — Utiliser le produit ionique de l'eau",
+      "Méthode 5 — Manipuler $K$ pour une équation modifiée"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Écrire l'expression de $Q_r$",
+      "Méthode 2 — Calculer $K$ à partir de mesures",
+      "Méthode 3 — Calculer $\\tau$ à partir de $K$",
+      "Méthode 4 — Utiliser le produit ionique de l'eau",
+      "Méthode 5 — Manipuler $K$ pour une équation modifiée"
+    ],
+    "existing_questions_total": 4,
+    "target_new_questions": 38,
+    "suggested_figures": [],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "Définition",
-   "Les espèces qui n'apparaissent pas",
-   "Le cas de l'estérification",
-   "Calculer $Q_r$",
-   "Comment $Q_r$ évolue",
-   "La loi de l'équilibre",
-   "Ce que dit la valeur de $K$",
-   "Deux constantes du programme",
-   "Relier $K$ et $\\tau$",
-   "Le critère d'évolution spontanée",
-   "L'influence de la température",
-   "Le produit de solubilité",
-   "Les limites du modèle",
-   "Ce que $K$ ne dit pas",
-   "Méthode 1 — Écrire l'expression de $Q_r$",
-   "Méthode 2 — Calculer $K$ à partir de mesures",
-   "Méthode 3 — Calculer $\\tau$ à partir de $K$",
-   "Méthode 4 — Utiliser le produit ionique de l'eau",
-   "Méthode 5 — Manipuler $K$ pour une équation modifiée"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Définition",
+        "lesson": "Quotient de réaction",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-definition",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Définition",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Définition",
+          "difficulty": 1,
+          "statement": "Pour la transformation d'équation $a\\,\\mathrm{A}+b\\,\\mathrm{B}\\rightleftharpoons c\\,\\mathrm{C}+d\\,\\mathrm{D}$ en solution aqueuse, le quotient de réaction s'écrit :",
+          "options": [
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{C}]^{c}\\,[\\mathrm{D}]^{d}}{[\\mathrm{A}]^{a}\\,[\\mathrm{B}]^{b}}$",
+              "correct": true,
+              "why": "Les produits sont au numérateur et les réactifs au dénominateur, chaque concentration étant élevée à la puissance de son coefficient stœchiométrique."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{A}]^{a}\\,[\\mathrm{B}]^{b}}{[\\mathrm{C}]^{c}\\,[\\mathrm{D}]^{d}}$",
+              "why": "Tu as inversé le quotient : ce sont les produits qui sont au numérateur."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{C}]\\,[\\mathrm{D}]}{[\\mathrm{A}]\\,[\\mathrm{B}]}$",
+              "why": "Tu as oublié les exposants : chaque concentration est élevée à la puissance de son coefficient stœchiométrique."
+            },
+            {
+              "label": "$Q_r=\\dfrac{c\\,[\\mathrm{C}]+d\\,[\\mathrm{D}]}{a\\,[\\mathrm{A}]+b\\,[\\mathrm{B}]}$",
+              "why": "Tu as additionné et multiplié par les coefficients : le quotient de réaction est un produit de puissances, pas une somme."
+            }
+          ],
+          "hint": "Produits en haut, réactifs en bas : que fait-on des coefficients stœchiométriques ?",
+          "solution": "Le quotient de réaction est un rapport sans unité : $Q_r=\\dfrac{[\\mathrm{C}]^{c}[\\mathrm{D}]^{d}}{[\\mathrm{A}]^{a}[\\mathrm{B}]^{b}}$ avec des concentrations en $\\mathrm{mol\\,L^{-1}}$ rapportées à $1\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : pour un mélange ne contenant que des réactifs, $Q_r=0$.",
+          "methode": "$Q_r$ : produits au numérateur, réactifs au dénominateur, exposants égaux aux coefficients.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-definition-q1"
+        },
+        {
+          "notion": "Définition",
+          "difficulty": 2,
+          "statement": "Pour $\\mathrm{Fe^{3+}}+\\mathrm{SCN^-}\\rightleftharpoons\\mathrm{FeSCN^{2+}}$, on mesure $[\\mathrm{Fe^{3+}}]=2{,}0\\times10^{-3}$, $[\\mathrm{SCN^-}]=1{,}0\\times10^{-3}$ et $[\\mathrm{FeSCN^{2+}}]=4{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$. Le quotient de réaction vaut :",
+          "options": [
+            {
+              "label": "$Q_r=200$",
+              "correct": true,
+              "why": "$Q_r=\\dfrac{[\\mathrm{FeSCN^{2+}}]}{[\\mathrm{Fe^{3+}}][\\mathrm{SCN^-}]}=\\dfrac{4{,}0\\times10^{-4}}{2{,}0\\times10^{-3}\\times1{,}0\\times10^{-3}}=200$."
+            },
+            {
+              "label": "$Q_r=5{,}0\\times10^{-3}$",
+              "why": "Tu as inversé le quotient : le produit $\\mathrm{FeSCN^{2+}}$ est au numérateur."
+            },
+            {
+              "label": "$Q_r=0{,}20$",
+              "why": "Tu as oublié $[\\mathrm{SCN^-}]$ au dénominateur : les deux réactifs y figurent."
+            },
+            {
+              "label": "$Q_r=8{,}0\\times10^{-10}$",
+              "why": "Tu as multiplié toutes les concentrations : le produit est au numérateur, les réactifs au dénominateur, on divise."
+            }
+          ],
+          "hint": "Place $\\mathrm{FeSCN^{2+}}$ au numérateur, les deux réactifs au dénominateur, puis calcule.",
+          "solution": "$Q_r=\\dfrac{[\\mathrm{FeSCN^{2+}}]}{[\\mathrm{Fe^{3+}}][\\mathrm{SCN^-}]}=\\dfrac{4{,}0\\times10^{-4}}{(2{,}0\\times10^{-3})(1{,}0\\times10^{-3})}=\\dfrac{4{,}0\\times10^{-4}}{2{,}0\\times10^{-6}}=200$. Contrôle : $Q_r$ est un nombre sans unité.",
+          "methode": "Calculer $Q_r$ : écrire l'expression littérale d'abord, puis remplacer par les valeurs.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-definition-q2"
+        },
+        {
+          "notion": "Définition",
+          "difficulty": 2,
+          "statement": "Pour $2\\,\\mathrm{Fe^{3+}}+\\mathrm{Sn^{2+}}\\rightleftharpoons2\\,\\mathrm{Fe^{2+}}+\\mathrm{Sn^{4+}}$, on a $[\\mathrm{Fe^{2+}}]=0{,}20$, $[\\mathrm{Sn^{4+}}]=0{,}10$, $[\\mathrm{Fe^{3+}}]=0{,}10$ et $[\\mathrm{Sn^{2+}}]=0{,}050\\ \\mathrm{mol\\,L^{-1}}$. Le quotient de réaction vaut :",
+          "options": [
+            {
+              "label": "$Q_r=8{,}0$",
+              "correct": true,
+              "why": "$Q_r=\\dfrac{[\\mathrm{Fe^{2+}}]^{2}[\\mathrm{Sn^{4+}}]}{[\\mathrm{Fe^{3+}}]^{2}[\\mathrm{Sn^{2+}}]}=\\dfrac{0{,}20^2\\times0{,}10}{0{,}10^2\\times0{,}050}=8{,}0$."
+            },
+            {
+              "label": "$Q_r=4{,}0$",
+              "why": "Tu as oublié les exposants : $[\\mathrm{Fe^{2+}}]$ et $[\\mathrm{Fe^{3+}}]$ sont élevés au carré (coefficient $2$)."
+            },
+            {
+              "label": "$Q_r=0{,}125$",
+              "why": "Tu as inversé le quotient : les produits sont au numérateur."
+            },
+            {
+              "label": "$Q_r=16$",
+              "why": "Tu as mis l'exposant $2$ sur toutes les concentrations : seules celles de $\\mathrm{Fe^{2+}}$ et $\\mathrm{Fe^{3+}}$ ont le coefficient $2$."
+            }
+          ],
+          "hint": "Écris l'expression en notant les coefficients : lesquelles des espèces sont élevées au carré ?",
+          "solution": "$Q_r=\\dfrac{[\\mathrm{Fe^{2+}}]^{2}[\\mathrm{Sn^{4+}}]}{[\\mathrm{Fe^{3+}}]^{2}[\\mathrm{Sn^{2+}}]}=\\dfrac{(0{,}20)^2\\times0{,}10}{(0{,}10)^2\\times0{,}050}=\\dfrac{4{,}0\\times10^{-3}}{5{,}0\\times10^{-4}}=8{,}0$. Contrôle : sans les exposants on trouverait $4{,}0$, valeur différente.",
+          "methode": "Les exposants du quotient sont les coefficients stœchiométriques de l'équation.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-definition-q3"
+        },
+        {
+          "notion": "Définition",
+          "difficulty": 3,
+          "statement": "Un mélange initial ne contient que les réactifs $\\mathrm{A}$ et $\\mathrm{B}$, aucun produit, pour la transformation $\\mathrm{A}+\\mathrm{B}\\rightleftharpoons\\mathrm{C}+\\mathrm{D}$ de constante $K$. À l'état initial et au cours de l'évolution spontanée, $Q_r$ :",
+          "options": [
+            {
+              "label": "vaut $0$ au départ, puis augmente jusqu'à la valeur $K$",
+              "correct": true,
+              "why": "Sans produit, le numérateur est nul : $Q_{r,i}=0$ ; les produits se forment, $Q_r$ augmente et tend vers $K$ à l'équilibre."
+            },
+            {
+              "label": "vaut $1$ au départ, puis évolue jusqu'à la valeur $K$",
+              "why": "$Q_r=1$ n'a rien de général : il faudrait $[\\mathrm{C}][\\mathrm{D}]=[\\mathrm{A}][\\mathrm{B}]$, ce qui n'est pas le cas sans produits."
+            },
+            {
+              "label": "vaut $K$ dès le départ, puis reste constant",
+              "why": "$Q_r=K$ caractérise l'état d'équilibre : sans produit, ce n'est pas le cas et le système évolue."
+            },
+            {
+              "label": "est infini au départ, puis diminue jusqu'à la valeur $K$",
+              "why": "Il y a des réactifs et pas de produits : $Q_r=0$ ; $Q_r$ ne devient infini que s'il n'y a plus aucun réactif."
+            }
+          ],
+          "hint": "Que vaut le numérateur quand aucun produit n'est présent ?",
+          "solution": "Sans produit, $[\\mathrm{C}]=[\\mathrm{D}]=0$ donc $Q_{r,i}=0$. Le système évolue dans le sens direct : $[\\mathrm{C}]$ et $[\\mathrm{D}]$ augmentent, $[\\mathrm{A}]$ et $[\\mathrm{B}]$ diminuent, donc $Q_r$ augmente jusqu'à $K$. Contrôle : $Q_{r,i}=0<K$, ce qui impose le sens direct.",
+          "methode": "Mélange sans produit : $Q_{r,i}=0$ ; $Q_r$ évolue en se rapprochant de $K$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-definition-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les espèces qui n'apparaissent pas",
+        "lesson": "Quotient de réaction",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-les-especes-qui-n-apparaissent-pas",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Les espèces qui n'apparaissent pas",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les espèces qui n'apparaissent pas",
+          "difficulty": 1,
+          "statement": "Dans l'expression du quotient de réaction, ne figurent pas :",
+          "options": [
+            {
+              "label": "les espèces solides et l'eau solvant",
+              "correct": true,
+              "why": "Leur concentration est constante ou non définie : on ne les fait pas figurer dans $Q_r$."
+            },
+            {
+              "label": "les ions, car ils sont toujours spectateurs",
+              "why": "Les ions qui participent à la transformation figurent bien dans $Q_r$ ; seuls les ions spectateurs, absents de l'équation, n'y figurent pas."
+            },
+            {
+              "label": "les produits, car seuls les réactifs comptent",
+              "why": "Les produits sont au numérateur : ils figurent dans $Q_r$."
+            },
+            {
+              "label": "les espèces dissoutes, car leur concentration varie trop vite",
+              "why": "Les espèces dissoutes sont justement celles dont la concentration figure dans $Q_r$."
+            }
+          ],
+          "hint": "Pour quelles espèces la notion de concentration n'a-t-elle pas de sens, ou reste-t-elle constante ?",
+          "solution": "Dans $Q_r$ ne figurent ni les solides, ni le solvant (eau en grande quantité). Seules figurent les espèces dissoutes (et les gaz, par leur concentration au niveau étudié). Contrôle : si une espèce est solide, on écrit simplement qu'elle n'apparaît pas.",
+          "methode": "Pas de solide ni d'eau solvant dans $Q_r$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-les-especes-qui-n-apparaissent-pas-q1"
+        },
+        {
+          "notion": "Les espèces qui n'apparaissent pas",
+          "difficulty": 2,
+          "statement": "Pour $\\mathrm{Zn(s)}+\\mathrm{Cu^{2+}}\\rightleftharpoons\\mathrm{Zn^{2+}}+\\mathrm{Cu(s)}$, avec $[\\mathrm{Zn^{2+}}]=0{,}10$ et $[\\mathrm{Cu^{2+}}]=0{,}010\\ \\mathrm{mol\\,L^{-1}}$, le quotient de réaction vaut :",
+          "options": [
+            {
+              "label": "$Q_r=10$",
+              "correct": true,
+              "why": "Les solides ne figurent pas : $Q_r=\\dfrac{[\\mathrm{Zn^{2+}}]}{[\\mathrm{Cu^{2+}}]}=\\dfrac{0{,}10}{0{,}010}=10$."
+            },
+            {
+              "label": "$Q_r=0{,}10$",
+              "why": "Tu as inversé le quotient : l'ion produit $\\mathrm{Zn^{2+}}$ est au numérateur."
+            },
+            {
+              "label": "$Q_r=1{,}0\\times10^{-3}$",
+              "why": "Tu as multiplié les deux concentrations : c'est un rapport, pas un produit."
+            },
+            {
+              "label": "$Q_r=0{,}11$",
+              "why": "Tu as additionné les concentrations : $Q_r$ est un quotient."
+            }
+          ],
+          "hint": "Quelles espèces de l'équation sont dissoutes ? Seules elles figurent dans le quotient.",
+          "solution": "$\\mathrm{Zn(s)}$ et $\\mathrm{Cu(s)}$ sont solides, donc absents de $Q_r$ : $Q_r=\\dfrac{[\\mathrm{Zn^{2+}}]}{[\\mathrm{Cu^{2+}}]}=\\dfrac{0{,}10}{0{,}010}=10$. Contrôle : une concentration de produit dix fois plus grande que celle du réactif donne bien $Q_r=10$.",
+          "methode": "Solide absent du quotient : ne garder que les ions dissous.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-les-especes-qui-n-apparaissent-pas-q2"
+        },
+        {
+          "notion": "Les espèces qui n'apparaissent pas",
+          "difficulty": 2,
+          "statement": "La réaction de l'acide éthanoïque avec l'eau, $\\mathrm{CH_3COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{H_3O^+}$, a pour quotient de réaction :",
+          "options": [
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{CH_3COO^-}]\\,[\\mathrm{H_3O^+}]}{[\\mathrm{CH_3COOH}]}$",
+              "correct": true,
+              "why": "L'eau est le solvant : elle ne figure pas dans $Q_r$ ; on garde les espèces dissoutes."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{CH_3COO^-}]\\,[\\mathrm{H_3O^+}]}{[\\mathrm{CH_3COOH}]\\,[\\mathrm{H_2O}]}$",
+              "why": "Tu as fait figurer l'eau, qui est le solvant : on ne la fait pas apparaître dans $Q_r$."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{CH_3COOH}]}{[\\mathrm{CH_3COO^-}]\\,[\\mathrm{H_3O^+}]}$",
+              "why": "Tu as inversé le quotient : les produits sont au numérateur."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{CH_3COO^-}]\\,[\\mathrm{H_3O^+}]\\,[\\mathrm{H_2O}]}{[\\mathrm{CH_3COOH}]}$",
+              "why": "Tu as mis l'eau au numérateur alors qu'elle n'apparaît pas : c'est le solvant et un réactif."
+            }
+          ],
+          "hint": "L'eau est ici en très grande quantité : figure-t-elle dans le quotient ?",
+          "solution": "L'eau est à la fois réactif et solvant : on ne la fait pas figurer dans $Q_r$. Il reste $Q_r=\\dfrac{[\\mathrm{CH_3COO^-}][\\mathrm{H_3O^+}]}{[\\mathrm{CH_3COOH}]}$ ; à l'équilibre cette expression vaut la constante d'acidité $K_A$. Contrôle : $Q_r$ ne contient que des espèces dissoutes autres que le solvant.",
+          "methode": "Eau solvant : absente de $Q_r$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-les-especes-qui-n-apparaissent-pas-q3"
+        },
+        {
+          "notion": "Les espèces qui n'apparaissent pas",
+          "difficulty": 3,
+          "statement": "La dissolution du calcaire dans une solution acide, $\\mathrm{CaCO_3(s)}+2\\,\\mathrm{H_3O^+}\\rightleftharpoons\\mathrm{Ca^{2+}}+\\mathrm{CO_2(aq)}+3\\,\\mathrm{H_2O}$, a pour quotient de réaction :",
+          "options": [
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{Ca^{2+}}]\\,[\\mathrm{CO_2}]}{[\\mathrm{H_3O^+}]^{2}}$",
+              "correct": true,
+              "why": "Le solide $\\mathrm{CaCO_3}$ et l'eau n'apparaissent pas ; $\\mathrm{H_3O^+}$ est élevé au carré (coefficient $2$)."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{Ca^{2+}}]\\,[\\mathrm{CO_2}]}{[\\mathrm{CaCO_3}]\\,[\\mathrm{H_3O^+}]^{2}}$",
+              "why": "Tu as fait figurer le solide $\\mathrm{CaCO_3}$ : une espèce solide n'apparaît pas dans $Q_r$."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{Ca^{2+}}]\\,[\\mathrm{CO_2}]}{[\\mathrm{H_3O^+}]}$",
+              "why": "Tu as oublié l'exposant $2$ de $\\mathrm{H_3O^+}$, qui a pour coefficient $2$ dans l'équation."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{Ca^{2+}}]\\,[\\mathrm{CO_2}]\\,[\\mathrm{H_2O}]^{3}}{[\\mathrm{H_3O^+}]^{2}}$",
+              "why": "Tu as fait figurer l'eau, solvant : elle n'apparaît pas dans $Q_r$, quel que soit son coefficient."
+            }
+          ],
+          "hint": "Barre les espèces qui n'apparaissent pas, puis applique les exposants aux autres.",
+          "solution": "On écarte le solide $\\mathrm{CaCO_3(s)}$ et l'eau solvant. Il reste $Q_r=\\dfrac{[\\mathrm{Ca^{2+}}][\\mathrm{CO_2}]}{[\\mathrm{H_3O^+}]^{2}}$ (exposant $2$ car le coefficient de $\\mathrm{H_3O^+}$ est $2$). Contrôle : $Q_r$ est sans unité par convention, comme tout quotient de réaction.",
+          "methode": "Quotient : retirer solide et solvant, puis exposants = coefficients.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-les-especes-qui-n-apparaissent-pas-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le cas de l'estérification",
+        "lesson": "Quotient de réaction",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-le-cas-de-l-esterification",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Le cas de l'estérification",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le cas de l'estérification",
+          "difficulty": 1,
+          "statement": "Pour l'estérification $\\mathrm{acide}+\\mathrm{alcool}\\rightleftharpoons\\mathrm{ester}+\\mathrm{eau}$, le quotient de réaction s'écrit :",
+          "options": [
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{ester}]\\,[\\mathrm{eau}]}{[\\mathrm{acide}]\\,[\\mathrm{alcool}]}$",
+              "correct": true,
+              "why": "L'eau est ici un produit, pas un solvant : elle figure au numérateur avec l'ester."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{ester}]}{[\\mathrm{acide}]\\,[\\mathrm{alcool}]}$",
+              "why": "Tu as oublié l'eau : dans l'estérification elle est un produit et figure dans le quotient."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{acide}]\\,[\\mathrm{alcool}]}{[\\mathrm{ester}]\\,[\\mathrm{eau}]}$",
+              "why": "Tu as inversé le quotient : les produits sont au numérateur."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{ester}]\\,[\\mathrm{eau}]}{[\\mathrm{acide}]}$",
+              "why": "Tu as oublié l'alcool au dénominateur : les deux réactifs y figurent."
+            }
+          ],
+          "hint": "Dans cette transformation, l'eau est-elle un solvant ou une espèce produite ?",
+          "solution": "Dans l'estérification, l'eau est un produit formé en quantité comparable à l'ester ; ce n'est pas le solvant. Elle figure donc dans $Q_r=\\dfrac{[\\mathrm{ester}][\\mathrm{eau}]}{[\\mathrm{acide}][\\mathrm{alcool}]}$. Contrôle : tous les coefficients valent $1$, il n'y a pas d'exposant.",
+          "methode": "Estérification : eau produite, donc dans $Q_r$ (contrairement à l'eau solvant).",
+          "points": 1,
+          "ref": "pc-quotient-reaction-le-cas-de-l-esterification-q1"
+        },
+        {
+          "notion": "Le cas de l'estérification",
+          "difficulty": 2,
+          "statement": "On part de $1{,}50\\ \\mathrm{mol}$ d'acide et de $1{,}50\\ \\mathrm{mol}$ d'alcool. À l'équilibre, $n(\\mathrm{ester})=n(\\mathrm{eau})=1{,}00\\ \\mathrm{mol}$ et $n(\\mathrm{acide})=n(\\mathrm{alcool})=0{,}50\\ \\mathrm{mol}$, dans un volume commun. La constante d'équilibre vaut :",
+          "options": [
+            {
+              "label": "$K=4{,}0$",
+              "correct": true,
+              "why": "$K=Q_{r,\\text{éq}}=\\dfrac{1{,}00\\times1{,}00}{0{,}50\\times0{,}50}=4{,}0$ ; le volume se simplifie car $2$ concentrations sont au numérateur et au dénominateur."
+            },
+            {
+              "label": "$K=0{,}25$",
+              "why": "Tu as inversé le quotient : les produits sont au numérateur."
+            },
+            {
+              "label": "$K=2{,}0$",
+              "why": "Tu as oublié l'eau et l'alcool : $K=\\dfrac{[\\mathrm{ester}][\\mathrm{eau}]}{[\\mathrm{acide}][\\mathrm{alcool}]}$ comporte deux termes en haut et deux en bas."
+            },
+            {
+              "label": "$K=0{,}67$",
+              "why": "Tu as donné le taux d'avancement final $\\tau=\\dfrac{1{,}00}{1{,}50}$ au lieu du quotient à l'équilibre."
+            }
+          ],
+          "hint": "Les quatre quantités à l'équilibre sont données : applique l'expression de $Q_r$ en remarquant que le volume se simplifie.",
+          "solution": "À l'équilibre $Q_{r,\\text{éq}}=K=\\dfrac{[\\mathrm{ester}][\\mathrm{eau}]}{[\\mathrm{acide}][\\mathrm{alcool}]}=\\dfrac{1{,}00\\times1{,}00}{0{,}50\\times0{,}50}=4{,}0$ (le volume $V$ se simplifie). Contrôle : $\\tau=\\dfrac{1{,}00}{1{,}50}=0{,}67$, valeur usuelle pour un mélange équimolaire.",
+          "methode": "$K=Q_{r,\\text{éq}}$ : calculer avec les quantités à l'équilibre ; V se simplifie si $\\Delta\\nu=0$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-le-cas-de-l-esterification-q2"
+        },
+        {
+          "notion": "Le cas de l'estérification",
+          "difficulty": 2,
+          "statement": "Un mélange contient $2{,}00\\ \\mathrm{mol}$ d'acide, $1{,}50\\ \\mathrm{mol}$ d'alcool, $0{,}50\\ \\mathrm{mol}$ d'ester et $0{,}50\\ \\mathrm{mol}$ d'eau dans un volume commun. Son quotient de réaction initial vaut :",
+          "options": [
+            {
+              "label": "$Q_{r,i}=0{,}083$",
+              "correct": true,
+              "why": "$Q_{r,i}=\\dfrac{0{,}50\\times0{,}50}{2{,}00\\times1{,}50}=0{,}083$ ; le volume se simplifie."
+            },
+            {
+              "label": "$Q_{r,i}=12$",
+              "why": "Tu as inversé le quotient : les produits sont au numérateur."
+            },
+            {
+              "label": "$Q_{r,i}=0{,}12$",
+              "why": "Tu as oublié l'alcool au dénominateur : les deux réactifs y figurent."
+            },
+            {
+              "label": "$Q_{r,i}=0{,}17$",
+              "why": "Tu as oublié l'eau au numérateur : dans l'estérification elle est un produit."
+            }
+          ],
+          "hint": "Applique $\\dfrac{[\\mathrm{ester}][\\mathrm{eau}]}{[\\mathrm{acide}][\\mathrm{alcool}]}$ avec les quantités : le volume se simplifie.",
+          "solution": "$Q_{r,i}=\\dfrac{n(\\mathrm{ester})\\,n(\\mathrm{eau})}{n(\\mathrm{acide})\\,n(\\mathrm{alcool})}=\\dfrac{0{,}50\\times0{,}50}{2{,}00\\times1{,}50}=0{,}083$ (le volume se simplifie, $V^2$ en haut et en bas). Contrôle : $Q_{r,i}$ est petit car les produits sont peu abondants.",
+          "methode": "Quand $\\Delta\\nu=0$, on peut utiliser les quantités de matière à la place des concentrations.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-le-cas-de-l-esterification-q3"
+        },
+        {
+          "notion": "Le cas de l'estérification",
+          "difficulty": 3,
+          "statement": "Pour l'estérification, le volume du mélange intervient-il dans l'expression numérique de $Q_r$ ?",
+          "options": [
+            {
+              "label": "non : le numérateur et le dénominateur comportent chacun deux concentrations, donc $V$ se simplifie",
+              "correct": true,
+              "why": "$Q_r=\\dfrac{(n_e/V)(n_w/V)}{(n_a/V)(n_o/V)}=\\dfrac{n_en_w}{n_an_o}$ : $V^2$ se simplifie."
+            },
+            {
+              "label": "oui : $Q_r$ est inversement proportionnel à $V$",
+              "why": "Il y a autant de concentrations au numérateur qu'au dénominateur : les facteurs $1/V$ se compensent."
+            },
+            {
+              "label": "oui : $Q_r$ est proportionnel à $V^2$",
+              "why": "Les facteurs $V^2$ du numérateur et du dénominateur s'annulent : $Q_r$ ne dépend pas de $V$."
+            },
+            {
+              "label": "non : le volume n'intervient jamais dans un quotient de réaction, quelle que soit l'équation",
+              "why": "Ce n'est vrai que si l'équation a autant de concentrations en haut qu'en bas, comme ici ; pour $\\mathrm{N_2}+3\\,\\mathrm{H_2}\\rightleftharpoons2\\,\\mathrm{NH_3}$ le volume intervient."
+            }
+          ],
+          "hint": "Écris chaque concentration sous la forme $n/V$ et simplifie.",
+          "solution": "Avec $[X]=\\dfrac{n_X}{V}$ : $Q_r=\\dfrac{(n_e/V)(n_w/V)}{(n_a/V)(n_o/V)}=\\dfrac{n_en_w}{n_an_o}$. Le volume se simplifie parce que la somme des coefficients des produits égale celle des réactifs. Contrôle : on peut utiliser directement les quantités de matière pour l'estérification.",
+          "methode": "$\\sum\\nu_{\\text{produits}}=\\sum\\nu_{\\text{réactifs}}$ : le volume se simplifie dans $Q_r$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-le-cas-de-l-esterification-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Calculer $Q_r$",
+        "lesson": "Quotient de réaction",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-calculer-q-r",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Calculer $Q_r$",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Calculer $Q_r$",
+          "difficulty": 1,
+          "statement": "Le quotient de réaction $Q_r$ est une grandeur :",
+          "options": [
+            {
+              "label": "sans unité",
+              "correct": true,
+              "why": "$Q_r$ est un rapport de concentrations (chacune rapportée à $1\\ \\mathrm{mol\\,L^{-1}}$) : par convention c'est un nombre sans unité."
+            },
+            {
+              "label": "exprimée en $\\mathrm{mol\\,L^{-1}}$",
+              "why": "$Q_r$ est un rapport où les unités se compensent : il n'a pas d'unité."
+            },
+            {
+              "label": "exprimée en $\\mathrm{mol}$",
+              "why": "$Q_r$ ne mesure pas une quantité de matière : c'est un rapport sans unité."
+            },
+            {
+              "label": "exprimée en $\\mathrm{L\\,mol^{-1}}$",
+              "why": "Cette unité ne correspond qu'à certains cas particuliers ; par convention $Q_r$ est un nombre sans unité."
+            }
+          ],
+          "hint": "Les concentrations sont au numérateur et au dénominateur : que devient l'unité ?",
+          "solution": "Par convention, chaque concentration de $Q_r$ est exprimée en $\\mathrm{mol\\,L^{-1}}$ puis divisée par la concentration de référence $1\\ \\mathrm{mol\\,L^{-1}}$, de sorte que $Q_r$ est un nombre sans unité. Contrôle : on ne met jamais d'unité à $Q_r$ ni à $K$.",
+          "methode": "$Q_r$ et $K$ : sans unité.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-calculer-q-r-q1"
+        },
+        {
+          "notion": "Calculer $Q_r$",
+          "difficulty": 2,
+          "statement": "Une solution d'acide fluorhydrique $\\mathrm{HF}$ de concentration apportée $C=0{,}100\\ \\mathrm{mol\\,L^{-1}}$ a pour pH $2{,}10$. Pour $\\mathrm{HF}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{F^-}+\\mathrm{H_3O^+}$, le quotient de réaction à l'équilibre vaut :",
+          "options": [
+            {
+              "label": "$Q_{r,\\text{éq}}=6{,}9\\times10^{-4}$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=[\\mathrm{F^-}]=10^{-2{,}10}=7{,}9\\times10^{-3}$, $[\\mathrm{HF}]=0{,}100-7{,}9\\times10^{-3}=0{,}0921$ et $Q_{r,\\text{éq}}=\\dfrac{(7{,}9\\times10^{-3})^2}{0{,}0921}=6{,}9\\times10^{-4}$."
+            },
+            {
+              "label": "$Q_{r,\\text{éq}}=7{,}9\\times10^{-3}$",
+              "why": "Tu as donné $[\\mathrm{H_3O^+}]$ au lieu du quotient complet $\\dfrac{[\\mathrm{F^-}][\\mathrm{H_3O^+}]}{[\\mathrm{HF}]}$."
+            },
+            {
+              "label": "$Q_{r,\\text{éq}}=1{,}5\\times10^{3}$",
+              "why": "Tu as inversé le quotient : les produits $\\mathrm{F^-}$ et $\\mathrm{H_3O^+}$ sont au numérateur."
+            },
+            {
+              "label": "$Q_{r,\\text{éq}}=6{,}3\\times10^{-5}$",
+              "why": "Tu as oublié de diviser par $[\\mathrm{HF}]$ : le quotient comporte le réactif au dénominateur."
+            }
+          ],
+          "hint": "Calcule d'abord les trois concentrations à l'équilibre, sans oublier ce que devient $[\\mathrm{HF}]$.",
+          "solution": "$[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}=7{,}9\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ et, d'après l'équation, $[\\mathrm{F^-}]=[\\mathrm{H_3O^+}]$ ; $[\\mathrm{HF}]=C-[\\mathrm{H_3O^+}]=0{,}0921\\ \\mathrm{mol\\,L^{-1}}$. $Q_{r,\\text{éq}}=\\dfrac{[\\mathrm{F^-}][\\mathrm{H_3O^+}]}{[\\mathrm{HF}]}=6{,}9\\times10^{-4}$, c'est la constante d'acidité $K_A$ du couple. Contrôle : $Q_{r,\\text{éq}}$ est petit car $\\tau=0{,}079$ est faible.",
+          "methode": "Acide faible : $[\\mathrm{AH}]_f=C-[\\mathrm{H_3O^+}]$ ; $Q_{r,\\text{éq}}=[\\mathrm{A^-}][\\mathrm{H_3O^+}]/[\\mathrm{AH}]$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-calculer-q-r-q2"
+        },
+        {
+          "notion": "Calculer $Q_r$",
+          "difficulty": 2,
+          "statement": "Pour $\\mathrm{A}+\\mathrm{B}\\rightleftharpoons\\mathrm{C}$, on a $0{,}20\\ \\mathrm{mol}$ de $\\mathrm{A}$, $0{,}10\\ \\mathrm{mol}$ de $\\mathrm{B}$ et $0{,}30\\ \\mathrm{mol}$ de $\\mathrm{C}$ dans un volume $V=0{,}500\\ \\mathrm{L}$. Le quotient de réaction vaut :",
+          "options": [
+            {
+              "label": "$Q_r=7{,}5$",
+              "correct": true,
+              "why": "$[\\mathrm{A}]=0{,}40$, $[\\mathrm{B}]=0{,}20$, $[\\mathrm{C}]=0{,}60\\ \\mathrm{mol\\,L^{-1}}$ puis $Q_r=\\dfrac{0{,}60}{0{,}40\\times0{,}20}=7{,}5$."
+            },
+            {
+              "label": "$Q_r=15$",
+              "why": "Tu as utilisé les quantités de matière : ici le numérateur compte une concentration et le dénominateur deux, donc le volume ne se simplifie pas."
+            },
+            {
+              "label": "$Q_r=0{,}13$",
+              "why": "Tu as inversé le quotient : le produit $\\mathrm{C}$ est au numérateur."
+            },
+            {
+              "label": "$Q_r=1{,}5$",
+              "why": "Tu as oublié $[\\mathrm{B}]$ au dénominateur : les deux réactifs y figurent."
+            }
+          ],
+          "hint": "Transforme d'abord les quantités de matière en concentrations avec $V$.",
+          "solution": "$[\\mathrm{A}]=\\dfrac{0{,}20}{0{,}500}=0{,}40$, $[\\mathrm{B}]=\\dfrac{0{,}10}{0{,}500}=0{,}20$ et $[\\mathrm{C}]=\\dfrac{0{,}30}{0{,}500}=0{,}60\\ \\mathrm{mol\\,L^{-1}}$. $Q_r=\\dfrac{[\\mathrm{C}]}{[\\mathrm{A}][\\mathrm{B}]}=\\dfrac{0{,}60}{0{,}40\\times0{,}20}=7{,}5$. Contrôle : avec les quantités on obtiendrait $15$, valeur fausse car $V$ ne se simplifie pas.",
+          "methode": "Si $\\Delta\\nu\\ne0$, convertir en concentrations avant de calculer $Q_r$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-calculer-q-r-q3"
+        },
+        {
+          "notion": "Calculer $Q_r$",
+          "difficulty": 3,
+          "statement": "Pour $2\\,\\mathrm{Fe^{3+}}+2\\,\\mathrm{I^-}\\rightleftharpoons2\\,\\mathrm{Fe^{2+}}+\\mathrm{I_2}$, on a $[\\mathrm{Fe^{2+}}]=2{,}0\\times10^{-2}$, $[\\mathrm{I_2}]=1{,}0\\times10^{-2}$, $[\\mathrm{Fe^{3+}}]=1{,}0\\times10^{-2}$ et $[\\mathrm{I^-}]=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$. Le quotient de réaction vaut :",
+          "options": [
+            {
+              "label": "$Q_r=400$",
+              "correct": true,
+              "why": "$Q_r=\\dfrac{[\\mathrm{Fe^{2+}}]^{2}[\\mathrm{I_2}]}{[\\mathrm{Fe^{3+}}]^{2}[\\mathrm{I^-}]^{2}}=\\dfrac{(2{,}0\\times10^{-2})^2\\times1{,}0\\times10^{-2}}{(1{,}0\\times10^{-2})^2(1{,}0\\times10^{-2})^2}=400$."
+            },
+            {
+              "label": "$Q_r=2{,}0$",
+              "why": "Tu as oublié les exposants : trois des quatre coefficients valent $2$."
+            },
+            {
+              "label": "$Q_r=4$",
+              "why": "Tu as oublié l'exposant de $[\\mathrm{I^-}]$ : le coefficient de $\\mathrm{I^-}$ vaut $2$, donc $[\\mathrm{I^-}]^2$."
+            },
+            {
+              "label": "$Q_r=2{,}5\\times10^{-3}$",
+              "why": "Tu as inversé le quotient : les produits sont au numérateur."
+            }
+          ],
+          "hint": "Relève les coefficients : quelles concentrations sont élevées au carré ?",
+          "solution": "Coefficients $2$ pour $\\mathrm{Fe^{3+}}$, $\\mathrm{I^-}$, $\\mathrm{Fe^{2+}}$ et $1$ pour $\\mathrm{I_2}$ : $Q_r=\\dfrac{[\\mathrm{Fe^{2+}}]^2[\\mathrm{I_2}]}{[\\mathrm{Fe^{3+}}]^2[\\mathrm{I^-}]^2}=\\dfrac{4{,}0\\times10^{-4}\\times1{,}0\\times10^{-2}}{1{,}0\\times10^{-4}\\times1{,}0\\times10^{-4}}=400$. Contrôle : $\\dfrac{4{,}0\\times10^{-6}}{1{,}0\\times10^{-8}}=400$.",
+          "methode": "Chaque concentration est élevée à la puissance de son coefficient, y compris pour les réactifs.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-calculer-q-r-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Comment $Q_r$ évolue",
+        "lesson": "Quotient de réaction",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-comment-q-r-evolue",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Comment $Q_r$ évolue",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Comment $Q_r$ évolue",
+          "difficulty": 1,
+          "statement": "Au cours de l'évolution spontanée d'un système vers son état d'équilibre, le quotient de réaction $Q_r$ :",
+          "options": [
+            {
+              "label": "se rapproche de la constante d'équilibre $K$",
+              "correct": true,
+              "why": "L'évolution spontanée se fait toujours dans le sens qui rapproche $Q_r$ de $K$ ; à l'équilibre $Q_r=K$."
+            },
+            {
+              "label": "s'éloigne de la constante d'équilibre $K$",
+              "why": "C'est l'inverse : spontanément, $Q_r$ tend vers $K$ ; il ne s'éloigne de $K$ que dans une transformation forcée."
+            },
+            {
+              "label": "reste égal à sa valeur initiale pendant toute l'évolution",
+              "why": "$Q_r$ varie au cours de l'évolution, puisque les concentrations varient."
+            },
+            {
+              "label": "tend vers $1$, quelle que soit la valeur de $K$",
+              "why": "$Q_r$ tend vers $K$, qui n'est égal à $1$ que dans des cas particuliers."
+            }
+          ],
+          "hint": "L'état d'équilibre est caractérisé par $Q_r=\\ldots$ ; l'évolution y mène spontanément.",
+          "solution": "L'évolution spontanée d'un système fait tendre $Q_r$ vers $K$ : si $Q_{r,i}<K$, $Q_r$ augmente ; si $Q_{r,i}>K$, $Q_r$ diminue. À l'équilibre, $Q_{r,\\text{éq}}=K$. Contrôle : seule une transformation forcée éloigne $Q_r$ de $K$.",
+          "methode": "Évolution spontanée : $Q_r$ tend vers $K$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-comment-q-r-evolue-q1"
+        },
+        {
+          "notion": "Comment $Q_r$ évolue",
+          "difficulty": 2,
+          "statement": "Pour une transformation de constante $K=4{,}0$, un mélange a pour quotient initial $Q_{r,i}=0{,}083$. Au cours de l'évolution spontanée, $Q_r$ :",
+          "options": [
+            {
+              "label": "augmente de $0{,}083$ jusqu'à $4{,}0$",
+              "correct": true,
+              "why": "$Q_{r,i}<K$ : le système évolue pour que $Q_r$ atteigne $K$, donc $Q_r$ augmente jusqu'à $4{,}0$."
+            },
+            {
+              "label": "diminue de $0{,}083$ jusqu'à $4{,}0$",
+              "why": "$Q_r$ ne peut pas diminuer vers une valeur plus grande que $0{,}083$ : pour atteindre $4{,}0$ il doit augmenter."
+            },
+            {
+              "label": "reste égal à $0{,}083$",
+              "why": "$Q_{r,i}\\ne K$ : le système n'est pas à l'équilibre, $Q_r$ évolue vers $K$."
+            },
+            {
+              "label": "diminue de $0{,}083$ jusqu'à $0$",
+              "why": "$Q_r$ évolue vers $K=4{,}0$, pas vers $0$ ; il est déjà inférieur à $K$."
+            }
+          ],
+          "hint": "Compare $Q_{r,i}$ et $K$, puis dis dans quel sens $Q_r$ doit évoluer pour rejoindre $K$.",
+          "solution": "$Q_{r,i}=0{,}083<K=4{,}0$ : le système évolue de façon que $Q_r$ augmente jusqu'à $K$, ce qui correspond à une formation de produits (sens direct). Contrôle : à l'état final $Q_{r,\\text{éq}}=4{,}0$.",
+          "methode": "$Q_{r,i}<K$ : $Q_r$ augmente jusqu'à $K$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-comment-q-r-evolue-q2"
+        },
+        {
+          "notion": "Comment $Q_r$ évolue",
+          "difficulty": 2,
+          "statement": "Pour $K=4{,}0$, un mélange a pour quotient initial $Q_{r,i}=25$. Il évolue spontanément :",
+          "options": [
+            {
+              "label": "dans le sens inverse, car $Q_{r,i}>K$ et $Q_r$ doit diminuer jusqu'à $K$",
+              "correct": true,
+              "why": "Quand $Q_{r,i}>K$, $Q_r$ diminue : il y a trop de produits par rapport à l'équilibre, ils se transforment en réactifs."
+            },
+            {
+              "label": "dans le sens direct, car $Q_{r,i}>K$ et $Q_r$ doit augmenter encore",
+              "why": "Dans le sens direct $Q_r$ augmente, ce qui l'éloignerait de $K$ puisqu'il est déjà supérieur à $K$."
+            },
+            {
+              "label": "pas du tout, car $Q_{r,i}\\ne K$ signifie que le système est bloqué",
+              "why": "Le système n'est à l'équilibre que si $Q_{r,i}=K$ ; sinon il évolue."
+            },
+            {
+              "label": "dans le sens direct, car il reste forcément des réactifs dans le mélange",
+              "why": "Le critère est la comparaison de $Q_{r,i}$ et $K$, pas la présence de réactifs : ici $Q_{r,i}>K$ impose le sens inverse."
+            }
+          ],
+          "hint": "Pour que $Q_r$ passe de $25$ à $4{,}0$, doit-il augmenter ou diminuer ? Quel sens cela correspond-il ?",
+          "solution": "$Q_{r,i}=25>K=4{,}0$ : pour atteindre $K$, $Q_r$ doit diminuer, donc le numérateur (produits) diminue et le dénominateur (réactifs) augmente : évolution dans le sens inverse (2). Contrôle : à l'équilibre $Q_{r,\\text{éq}}=4{,}0<25$.",
+          "methode": "$Q_{r,i}>K$ : sens inverse ; $Q_{r,i}<K$ : sens direct.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-comment-q-r-evolue-q3"
+        },
+        {
+          "notion": "Comment $Q_r$ évolue",
+          "difficulty": 3,
+          "statement": "Pour l'estérification de constante $K=4{,}0$, un mélange contient $1{,}0\\ \\mathrm{mol}$ d'acide, $1{,}0\\ \\mathrm{mol}$ d'alcool, $2{,}0\\ \\mathrm{mol}$ d'ester et $2{,}0\\ \\mathrm{mol}$ d'eau. Ce système :",
+          "options": [
+            {
+              "label": "est déjà à l'équilibre : $Q_{r,i}=\\dfrac{2{,}0\\times2{,}0}{1{,}0\\times1{,}0}=4{,}0=K$, il n'évolue pas",
+              "correct": true,
+              "why": "$Q_{r,i}=K$ caractérise l'état d'équilibre : réactifs et produits sont présents et la composition ne varie pas."
+            },
+            {
+              "label": "évolue dans le sens direct, car il reste des réactifs à transformer",
+              "why": "La présence de réactifs ne suffit pas : $Q_{r,i}=K$ signifie que le système est déjà à l'équilibre."
+            },
+            {
+              "label": "évolue dans le sens inverse, car les produits sont plus abondants que les réactifs",
+              "why": "Les produits sont plus abondants, mais c'est la comparaison $Q_{r,i}=4{,}0=K$ qui compte : pas d'évolution."
+            },
+            {
+              "label": "évolue dans le sens direct jusqu'à ce que tous les réactifs soient consommés",
+              "why": "L'estérification est limitée : elle s'arrête à l'équilibre, bien avant l'épuisement des réactifs."
+            }
+          ],
+          "hint": "Calcule $Q_{r,i}$ puis compare-le à $K$ avant de répondre.",
+          "solution": "$Q_{r,i}=\\dfrac{n(\\mathrm{ester})\\,n(\\mathrm{eau})}{n(\\mathrm{acide})\\,n(\\mathrm{alcool})}=\\dfrac{2{,}0\\times2{,}0}{1{,}0\\times1{,}0}=4{,}0=K$ : le système est dans un état d'équilibre, sans évolution macroscopique. Contrôle : ses quatre quantités ($1{,}0$, $1{,}0$, $2{,}0$, $2{,}0$) correspondent à $\\tau=\\dfrac23$ pour un mélange de départ de $3{,}0\\ \\mathrm{mol}$ de chaque réactif.",
+          "methode": "$Q_{r,i}=K$ : équilibre, aucune évolution, même si réactifs et produits sont présents.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-comment-q-r-evolue-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La loi de l'équilibre",
+        "lesson": "Constante d'équilibre",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-la-loi-de-l-equilibre",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "La loi de l'équilibre",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La loi de l'équilibre",
+          "difficulty": 1,
+          "statement": "À l'état d'équilibre d'un système chimique, le quotient de réaction vaut :",
+          "options": [
+            {
+              "label": "la constante d'équilibre $K$ de la transformation, $Q_{r,\\text{éq}}=K$",
+              "correct": true,
+              "why": "C'est la loi de l'équilibre : à l'équilibre, $Q_r$ prend une valeur fixe appelée constante d'équilibre."
+            },
+            {
+              "label": "$1$, quelle que soit la transformation étudiée",
+              "why": "$Q_{r,\\text{éq}}=K$, et $K$ n'est égal à $1$ que dans des cas particuliers."
+            },
+            {
+              "label": "$0$, car les produits ne se forment plus",
+              "why": "$Q_{r,\\text{éq}}$ ne s'annule pas : à l'équilibre il y a des produits et des réactifs, donc un quotient non nul."
+            },
+            {
+              "label": "sa valeur initiale $Q_{r,i}$, car il ne varie jamais",
+              "why": "$Q_r$ évolue au cours de la transformation et ne retrouve sa valeur initiale que si le système était déjà à l'équilibre."
+            }
+          ],
+          "hint": "La valeur atteinte par $Q_r$ à l'équilibre porte un nom : lequel ?",
+          "solution": "À l'état d'équilibre, $Q_{r,\\text{éq}}=K$, constante qui ne dépend que de la température. Contrôle : si $Q_r\\ne K$, le système évolue.",
+          "methode": "Équilibre : $Q_{r,\\text{éq}}=K$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-la-loi-de-l-equilibre-q1"
+        },
+        {
+          "notion": "La loi de l'équilibre",
+          "difficulty": 2,
+          "statement": "À la même température, on prépare deux mélanges initiaux différents pour la même transformation, qui atteignent chacun un état d'équilibre. Les quotients de réaction à l'équilibre des deux systèmes :",
+          "options": [
+            {
+              "label": "sont égaux : tous deux valent la même constante $K$",
+              "correct": true,
+              "why": "$K$ ne dépend que de la température : deux états initiaux différents conduisent à des compositions différentes mais au même $Q_{r,\\text{éq}}$."
+            },
+            {
+              "label": "sont différents, car les quantités initiales ne sont pas les mêmes",
+              "why": "Les compositions d'équilibre diffèrent, mais pas $Q_{r,\\text{éq}}$ : il vaut $K$ dans les deux cas."
+            },
+            {
+              "label": "sont différents : le plus grand est celui du mélange le plus riche en réactifs",
+              "why": "$Q_{r,\\text{éq}}=K$ ne dépend pas de la richesse initiale en réactifs, seulement de la température."
+            },
+            {
+              "label": "valent tous les deux $1$, par définition de l'équilibre",
+              "why": "$Q_{r,\\text{éq}}=K$, qui n'est pas forcément $1$ : sa valeur dépend de la transformation."
+            }
+          ],
+          "hint": "Que sait-on de la grandeur dont dépend $K$ ?",
+          "solution": "La constante d'équilibre $K$ ne dépend que de la température et de l'équation de la réaction. Deux mélanges initiaux différents à la même température ont donc des compositions d'équilibre différentes mais le même $Q_{r,\\text{éq}}=K$. Contrôle : c'est ce qui permet de comparer des expériences réalisées à partir d'états initiaux différents.",
+          "methode": "$K$ ne dépend ni de l'état initial ni de la dilution, seulement de $T$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-la-loi-de-l-equilibre-q2"
+        },
+        {
+          "notion": "La loi de l'équilibre",
+          "difficulty": 3,
+          "statement": "On dilue dix fois, à température constante, une solution d'acide éthanoïque ayant atteint l'équilibre, puis on la laisse évoluer jusqu'au nouvel équilibre. Entre les deux états d'équilibre :",
+          "options": [
+            {
+              "label": "$K$ est inchangée, et le taux d'avancement final $\\tau$ augmente",
+              "correct": true,
+              "why": "$K$ ne dépend que de la température ; $\\tau$ dépend aussi de la dilution, et augmente pour un acide faible."
+            },
+            {
+              "label": "$K$ augmente, et $\\tau$ augmente",
+              "why": "$K$ ne dépend pas de la concentration : elle reste inchangée, seule la température la modifie."
+            },
+            {
+              "label": "$K$ diminue, et $\\tau$ augmente",
+              "why": "$K$ ne varie pas avec la dilution : c'est $\\tau$ qui varie."
+            },
+            {
+              "label": "$K$ est inchangée, et $\\tau$ est inchangé",
+              "why": "$\\tau$ dépend de la concentration : pour un acide faible il augmente quand on dilue."
+            }
+          ],
+          "hint": "Parmi $K$ et $\\tau$, laquelle des deux grandeurs dépend de la dilution ?",
+          "solution": "À température constante, $K$ est une constante : $Q_{r,\\text{éq}}=K$ avant et après dilution. Le taux d'avancement final, lui, dépend de l'état initial et de la dilution : il augmente quand on dilue un acide faible. Contrôle : l'équilibre est atteint avec des concentrations toutes plus petites, mais avec le même rapport $K$.",
+          "methode": "$K$ ne dépend que de $T$ ; $\\tau$ dépend de l'état initial et de la dilution.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-la-loi-de-l-equilibre-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Ce que dit la valeur de $K$",
+        "lesson": "Constante d'équilibre",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-ce-que-dit-la-valeur-de-k",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Ce que dit la valeur de $K$",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Ce que dit la valeur de $K$",
+          "difficulty": 1,
+          "statement": "Une transformation a une constante d'équilibre $K=10^{10}$. On peut en déduire que cette transformation est :",
+          "options": [
+            {
+              "label": "quasi totale : à l'équilibre, les produits dominent très largement",
+              "correct": true,
+              "why": "Un $K$ très grand traduit des produits très largement majoritaires à l'équilibre : transformation quasi totale."
+            },
+            {
+              "label": "très limitée : à l'équilibre, les réactifs dominent très largement",
+              "why": "C'est l'inverse : un $K$ très petit correspondrait à des réactifs très majoritaires."
+            },
+            {
+              "label": "très rapide : elle se termine en quelques secondes",
+              "why": "$K$ ne renseigne pas sur la vitesse de la transformation."
+            },
+            {
+              "label": "impossible : une constante aussi grande n'a pas de sens physique",
+              "why": "Un $K$ très grand a un sens : les produits sont fortement favorisés à l'équilibre."
+            }
+          ],
+          "hint": "Si $K$ est très grand, quelles espèces dominent à l'équilibre ?",
+          "solution": "$K=Q_{r,\\text{éq}}$ compare produits (numérateur) et réactifs (dénominateur) à l'équilibre. Un $K$ très grand signifie que les produits dominent : la transformation est quasi totale. Contrôle : $K$ ne dit rien de la durée nécessaire pour atteindre l'équilibre.",
+          "methode": "$K$ grand : produits favorisés ; $K$ petit : réactifs favorisés.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-ce-que-dit-la-valeur-de-k-q1"
+        },
+        {
+          "notion": "Ce que dit la valeur de $K$",
+          "difficulty": 2,
+          "statement": "Deux transformations de même type, avec les mêmes quantités initiales, ont pour constantes $K_1=10^{5}$ et $K_2=10^{-3}$. À l'équilibre :",
+          "options": [
+            {
+              "label": "la transformation 1 est beaucoup plus avancée que la transformation 2",
+              "correct": true,
+              "why": "Un $K$ plus grand favorise davantage les produits : la transformation 1 va plus loin que la 2."
+            },
+            {
+              "label": "la transformation 2 est beaucoup plus avancée que la transformation 1",
+              "why": "C'est l'inverse : $K_2=10^{-3}$ est très petit, les réactifs dominent à l'équilibre."
+            },
+            {
+              "label": "les deux transformations sont aussi avancées l'une que l'autre",
+              "why": "Leurs $K$ diffèrent de huit puissances de dix : leurs avancements finaux sont très différents."
+            },
+            {
+              "label": "la transformation 1 est plus rapide que la transformation 2",
+              "why": "$K$ ne se rapporte pas à la vitesse : il décrit seulement l'état final."
+            }
+          ],
+          "hint": "À quantités initiales égales, un $K$ plus grand donne-t-il un avancement plus grand ou plus petit ?",
+          "solution": "À même état initial et même type de transformation, plus $K$ est grand, plus l'avancement final est proche de l'avancement maximal. Donc la transformation 1 ($K_1=10^{5}$) est bien plus avancée que la 2 ($K_2=10^{-3}$). Contrôle : $K_2\\ll1$ indique une transformation très limitée.",
+          "methode": "À états initiaux comparables : $K$ plus grand $\\Rightarrow$ transformation plus avancée.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-ce-que-dit-la-valeur-de-k-q2"
+        },
+        {
+          "notion": "Ce que dit la valeur de $K$",
+          "difficulty": 3,
+          "statement": "Pour $\\mathrm{A}+\\mathrm{B}\\rightleftharpoons\\mathrm{C}+\\mathrm{D}$ de constante $K=1{,}0$, on part de $1{,}00\\ \\mathrm{mol}$ de $\\mathrm{A}$ et $1{,}00\\ \\mathrm{mol}$ de $\\mathrm{B}$ (volume commun). Le taux d'avancement final vaut :",
+          "options": [
+            {
+              "label": "$\\tau=0{,}50$",
+              "correct": true,
+              "why": "$K=\\dfrac{x^2}{(1-x)^2}=1$ donne $\\dfrac{x}{1-x}=1$ donc $x_f=0{,}50\\ \\mathrm{mol}$ et $\\tau=\\dfrac{x_f}{x_{\\max}}=0{,}50$."
+            },
+            {
+              "label": "$\\tau=1{,}0$",
+              "why": "$K=1$ ne veut pas dire transformation totale : il faudrait un $K$ très grand."
+            },
+            {
+              "label": "$\\tau=0{,}25$",
+              "why": "Tu as pris $x^2=0{,}25$ sans prendre la racine : l'équation $\\dfrac{x^2}{(1-x)^2}=1$ donne $x=0{,}50$."
+            },
+            {
+              "label": "$\\tau=0{,}33$",
+              "why": "Tu as résolu $\\dfrac{x}{1-x}=\\dfrac12$ au lieu de $\\dfrac{x}{1-x}=1$ (ou oublié que le numérateur est un carré)."
+            }
+          ],
+          "hint": "Écris $K$ en fonction de l'avancement $x_f$ avec le tableau d'avancement, puis résous.",
+          "solution": "Avec $x_f=x$ : $n(\\mathrm{A})=n(\\mathrm{B})=1{,}00-x$ et $n(\\mathrm{C})=n(\\mathrm{D})=x$. Le volume se simplifie : $K=\\dfrac{x^2}{(1-x)^2}=1$, donc $x=1-x$ et $x_f=0{,}50\\ \\mathrm{mol}$ ; $\\tau=\\dfrac{0{,}50}{1{,}00}=0{,}50$. Contrôle : $K=1$ donne autant de produits que de réactifs.",
+          "methode": "Avec $\\Delta\\nu=0$ : $K=x^2/(n_0-x)^2$ pour un mélange équimolaire.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-ce-que-dit-la-valeur-de-k-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Deux constantes du programme",
+        "lesson": "Constante d'équilibre",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-deux-constantes-du-programme",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Deux constantes du programme",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Deux constantes du programme",
+          "difficulty": 1,
+          "statement": "À $25\\ ^\\circ\\mathrm{C}$, le produit ionique de l'eau $K_e=[\\mathrm{H_3O^+}][\\mathrm{HO^-}]$ vaut :",
+          "options": [
+            {
+              "label": "$10^{-14}$",
+              "correct": true,
+              "why": "C'est la valeur à $25\\ ^\\circ\\mathrm{C}$ de la constante de l'équilibre d'autoprotolyse de l'eau, soit $\\mathrm{p}K_e=14$."
+            },
+            {
+              "label": "$10^{-7}$",
+              "why": "$10^{-7}\\ \\mathrm{mol\\,L^{-1}}$ est la concentration en $\\mathrm{H_3O^+}$ dans l'eau pure ; $K_e$ est le produit de deux telles concentrations."
+            },
+            {
+              "label": "$14$",
+              "why": "$14$ est la valeur de $\\mathrm{p}K_e=-\\log K_e$, pas celle de $K_e$ lui-même."
+            },
+            {
+              "label": "$10^{14}$",
+              "why": "L'exposant est négatif : $K_e$ est un nombre très petit, la réaction d'autoprotolyse étant très peu avancée."
+            }
+          ],
+          "hint": "À $25\\ ^\\circ\\mathrm{C}$, $[\\mathrm{H_3O^+}]=[\\mathrm{HO^-}]=10^{-7}\\ \\mathrm{mol\\,L^{-1}}$ dans l'eau pure : que vaut leur produit ?",
+          "solution": "$K_e=[\\mathrm{H_3O^+}][\\mathrm{HO^-}]=10^{-7}\\times10^{-7}=10^{-14}$ à $25\\ ^\\circ\\mathrm{C}$, soit $\\mathrm{p}K_e=14$. Contrôle : $K_e$ varie avec la température.",
+          "methode": "$K_e=[\\mathrm{H_3O^+}][\\mathrm{HO^-}]=10^{-14}$ à $25\\ ^\\circ\\mathrm{C}$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-deux-constantes-du-programme-q1"
+        },
+        {
+          "notion": "Deux constantes du programme",
+          "difficulty": 2,
+          "statement": "À $25\\ ^\\circ\\mathrm{C}$, une solution aqueuse a un pH de $9{,}0$. La concentration en ions hydroxyde vaut :",
+          "options": [
+            {
+              "label": "$[\\mathrm{HO^-}]=1{,}0\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=10^{-9{,}0}$ et $[\\mathrm{HO^-}]=\\dfrac{K_e}{[\\mathrm{H_3O^+}]}=\\dfrac{10^{-14}}{10^{-9}}=10^{-5}\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$[\\mathrm{HO^-}]=1{,}0\\times10^{-9}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as donné $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$ au lieu de $[\\mathrm{HO^-}]=K_e/[\\mathrm{H_3O^+}]$."
+            },
+            {
+              "label": "$[\\mathrm{HO^-}]=9{,}0\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as pris le pH comme une concentration : c'est un nombre sans unité, $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$."
+            },
+            {
+              "label": "$[\\mathrm{HO^-}]=1{,}0\\times10^{-23}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as multiplié $K_e$ par $[\\mathrm{H_3O^+}]$ au lieu de diviser."
+            }
+          ],
+          "hint": "Utilise $K_e$ et $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$ pour trouver $[\\mathrm{HO^-}]$.",
+          "solution": "$[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}=10^{-9{,}0}\\ \\mathrm{mol\\,L^{-1}}$ ; $[\\mathrm{HO^-}]=\\dfrac{K_e}{[\\mathrm{H_3O^+}]}=\\dfrac{10^{-14}}{10^{-9}}=10^{-5}\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $\\mathrm{pH}>7$, solution basique : $[\\mathrm{HO^-}]>[\\mathrm{H_3O^+}]$.",
+          "methode": "Eau à $25\\ ^\\circ\\mathrm{C}$ : $[\\mathrm{HO^-}]=K_e/[\\mathrm{H_3O^+}]$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-deux-constantes-du-programme-q2"
+        },
+        {
+          "notion": "Deux constantes du programme",
+          "difficulty": 2,
+          "statement": "Pour le couple acide/base $\\mathrm{AH}/\\mathrm{A^-}$, la constante d'acidité $K_A$ est la constante d'équilibre de la réaction de l'acide avec l'eau et s'écrit :",
+          "options": [
+            {
+              "label": "$K_A=\\dfrac{[\\mathrm{A^-}]\\,[\\mathrm{H_3O^+}]}{[\\mathrm{AH}]}$",
+              "correct": true,
+              "why": "C'est le quotient de réaction à l'équilibre de $\\mathrm{AH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{A^-}+\\mathrm{H_3O^+}$, l'eau solvant n'y figurant pas."
+            },
+            {
+              "label": "$K_A=\\dfrac{[\\mathrm{AH}]}{[\\mathrm{A^-}]\\,[\\mathrm{H_3O^+}]}$",
+              "why": "Tu as inversé le quotient : les produits $\\mathrm{A^-}$ et $\\mathrm{H_3O^+}$ sont au numérateur."
+            },
+            {
+              "label": "$K_A=\\dfrac{[\\mathrm{A^-}]\\,[\\mathrm{H_3O^+}]}{[\\mathrm{AH}]\\,[\\mathrm{H_2O}]}$",
+              "why": "Tu as fait figurer l'eau, qui est le solvant : elle n'apparaît pas dans l'expression de $K_A$."
+            },
+            {
+              "label": "$K_A=\\dfrac{[\\mathrm{A^-}]}{[\\mathrm{AH}]}$",
+              "why": "Tu as oublié $[\\mathrm{H_3O^+}]$ : c'est un produit de la réaction, il figure au numérateur."
+            }
+          ],
+          "hint": "Écris d'abord l'équation de la réaction de l'acide avec l'eau, puis le quotient à l'équilibre.",
+          "solution": "$\\mathrm{AH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{A^-}+\\mathrm{H_3O^+}$ : $K_A=Q_{r,\\text{éq}}=\\dfrac{[\\mathrm{A^-}]_{\\text{éq}}[\\mathrm{H_3O^+}]_{\\text{éq}}}{[\\mathrm{AH}]_{\\text{éq}}}$. Contrôle : $K_A$ est sans unité et plus un acide est fort, plus $K_A$ est grand.",
+          "methode": "$K_A=[\\mathrm{A^-}][\\mathrm{H_3O^+}]/[\\mathrm{AH}]$ ; l'eau n'y figure pas.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-deux-constantes-du-programme-q3"
+        },
+        {
+          "notion": "Deux constantes du programme",
+          "difficulty": 3,
+          "statement": "Une solution d'un acide faible $\\mathrm{AH}$ de concentration apportée $C=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$ a pour pH $3{,}40$. La constante d'acidité $K_A$ vaut environ :",
+          "options": [
+            {
+              "label": "$1{,}7\\times10^{-5}$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=[\\mathrm{A^-}]=10^{-3{,}40}=4{,}0\\times10^{-4}$ et $[\\mathrm{AH}]=C-[\\mathrm{H_3O^+}]$ ; $K_A=\\dfrac{(4{,}0\\times10^{-4})^2}{0{,}00960}=1{,}7\\times10^{-5}$."
+            },
+            {
+              "label": "$0{,}041$",
+              "why": "Tu as oublié d'élever $[\\mathrm{H_3O^+}]$ au carré : le numérateur contient $[\\mathrm{A^-}][\\mathrm{H_3O^+}]=[\\mathrm{H_3O^+}]^2$."
+            },
+            {
+              "label": "$6{,}1\\times10^{4}$",
+              "why": "Tu as inversé le quotient : les produits sont au numérateur."
+            },
+            {
+              "label": "$4{,}0\\times10^{-4}$",
+              "why": "Tu as donné $[\\mathrm{H_3O^+}]$ au lieu de $K_A=\\dfrac{[\\mathrm{A^-}][\\mathrm{H_3O^+}]}{[\\mathrm{AH}]}$."
+            }
+          ],
+          "hint": "À l'équilibre, $[\\mathrm{A^-}]=[\\mathrm{H_3O^+}]$ : calcule d'abord cette valeur, puis $[\\mathrm{AH}]=C-[\\mathrm{H_3O^+}]$.",
+          "solution": "$[\\mathrm{H_3O^+}]=10^{-3{,}40}=4{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ et $[\\mathrm{A^-}]=[\\mathrm{H_3O^+}]$ ; $[\\mathrm{AH}]=1{,}0\\times10^{-2}-4{,}0\\times10^{-4}=0{,}00960\\ \\mathrm{mol\\,L^{-1}}$. $K_A=\\dfrac{[\\mathrm{A^-}][\\mathrm{H_3O^+}]}{[\\mathrm{AH}]}=\\dfrac{(4{,}0\\times10^{-4})^2}{0{,}00960}=1{,}7\\times10^{-5}$. Contrôle : $\\mathrm{p}K_A=-\\log K_A\\approx4{,}78$, valeur d'un acide faible.",
+          "methode": "$K_A=[\\mathrm{H_3O^+}]^2/(C-[\\mathrm{H_3O^+}])$ pour un acide faible avec $[\\mathrm{A^-}]=[\\mathrm{H_3O^+}]$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-deux-constantes-du-programme-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Relier $K$ et $\\tau$",
+        "lesson": "Constante d'équilibre",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-relier-k-et-tau",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Relier $K$ et $\\tau$",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Relier $K$ et $\\tau$",
+          "difficulty": 1,
+          "statement": "Pour une même transformation à une température donnée, quelle grandeur dépend de l'état initial du système, alors que l'autre n'en dépend pas ?",
+          "options": [
+            {
+              "label": "le taux d'avancement final $\\tau$ en dépend ; la constante $K$ n'en dépend pas",
+              "correct": true,
+              "why": "$K$ ne dépend que de la température ; $\\tau$ dépend de la composition initiale et de la dilution."
+            },
+            {
+              "label": "la constante $K$ en dépend ; le taux d'avancement final $\\tau$ n'en dépend pas",
+              "why": "C'est l'inverse : $K$ est caractéristique de la transformation et de $T$, $\\tau$ varie avec l'état initial."
+            },
+            {
+              "label": "les deux en dépendent de la même façon",
+              "why": "$K$ est indépendante de l'état initial : elle vaut $Q_{r,\\text{éq}}$ quelle que soit la composition de départ."
+            },
+            {
+              "label": "aucune des deux n'en dépend, car elles caractérisent toutes deux l'équilibre",
+              "why": "Le taux d'avancement final change avec l'état initial (quantités, dilution), contrairement à $K$."
+            }
+          ],
+          "hint": "Laquelle des deux grandeurs est une constante à température fixée ?",
+          "solution": "$K$ est caractéristique de la transformation et de la température ; $\\tau$ dépend aussi des quantités initiales et de la dilution. Contrôle : un mélange équimolaire d'acide et d'alcool donne $\\tau=0{,}67$, un excès d'alcool donne un $\\tau$ plus grand avec la même valeur de $K$.",
+          "methode": "$K$ ne dépend que de $T$ ; $\\tau$ dépend aussi de l'état initial.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-relier-k-et-tau-q1"
+        },
+        {
+          "notion": "Relier $K$ et $\\tau$",
+          "difficulty": 2,
+          "statement": "Pour $\\mathrm{A}+\\mathrm{B}\\rightleftharpoons\\mathrm{C}+\\mathrm{D}$, on part de $1{,}00\\ \\mathrm{mol}$ de $\\mathrm{A}$ et de $\\mathrm{B}$ et on trouve $\\tau=0{,}80$. La constante d'équilibre vaut :",
+          "options": [
+            {
+              "label": "$K=16$",
+              "correct": true,
+              "why": "$x_f=0{,}80\\ \\mathrm{mol}$ ; $K=\\dfrac{x_f^2}{(1-x_f)^2}=\\dfrac{0{,}80^2}{0{,}20^2}=16$."
+            },
+            {
+              "label": "$K=4$",
+              "why": "Tu as oublié d'élever au carré : $\\dfrac{\\tau}{1-\\tau}=4{,}0$, alors que $K=\\left(\\dfrac{\\tau}{1-\\tau}\\right)^2$."
+            },
+            {
+              "label": "$K=0{,}64$",
+              "why": "Tu as donné $\\tau^2$ : $K=\\dfrac{\\tau^2}{(1-\\tau)^2}$ comporte aussi le dénominateur $(1-\\tau)^2$."
+            },
+            {
+              "label": "$K=0{,}0625$",
+              "why": "Tu as inversé le quotient : les produits sont au numérateur."
+            }
+          ],
+          "hint": "Compose le tableau d'avancement à l'équilibre avec $x_f=\\tau\\,x_{\\max}$ et écris $K=Q_{r,\\text{éq}}$.",
+          "solution": "$x_{\\max}=1{,}00\\ \\mathrm{mol}$ donc $x_f=0{,}80\\ \\mathrm{mol}$ ; à l'équilibre $n(\\mathrm{A})=n(\\mathrm{B})=0{,}20$ et $n(\\mathrm{C})=n(\\mathrm{D})=0{,}80\\ \\mathrm{mol}$. $K=\\dfrac{0{,}80\\times0{,}80}{0{,}20\\times0{,}20}=16$. Contrôle : $K\\gg1$ pour un taux d'avancement élevé.",
+          "methode": "Mélange équimolaire, $\\Delta\\nu=0$ : $K=\\left(\\dfrac{\\tau}{1-\\tau}\\right)^2$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-relier-k-et-tau-q2"
+        },
+        {
+          "notion": "Relier $K$ et $\\tau$",
+          "difficulty": 2,
+          "statement": "Pour $\\mathrm{A}+\\mathrm{B}\\rightleftharpoons\\mathrm{C}+\\mathrm{D}$ de constante $K=9{,}0$, on part de $1{,}00\\ \\mathrm{mol}$ de $\\mathrm{A}$ et de $\\mathrm{B}$. Le taux d'avancement final vaut :",
+          "options": [
+            {
+              "label": "$\\tau=0{,}75$",
+              "correct": true,
+              "why": "$K=\\dfrac{x^2}{(1-x)^2}=9$ donc $\\dfrac{x}{1-x}=3$ et $x_f=0{,}75\\ \\mathrm{mol}$ ; $\\tau=\\dfrac{0{,}75}{1{,}00}=0{,}75$."
+            },
+            {
+              "label": "$\\tau=0{,}90$",
+              "why": "Tu as utilisé $\\tau=\\dfrac{K}{K+1}$, qui est valable pour $\\mathrm{A}\\rightleftharpoons\\mathrm{B}$ mais pas ici : le quotient comporte des carrés."
+            },
+            {
+              "label": "$\\tau=0{,}25$",
+              "why": "Tu as donné $1-\\tau$, la proportion de réactif restant."
+            },
+            {
+              "label": "$\\tau=1{,}00$",
+              "why": "$K=9{,}0$ ne signifie pas transformation totale : il reste $0{,}25\\ \\mathrm{mol}$ de chaque réactif à l'équilibre."
+            }
+          ],
+          "hint": "Prends la racine carrée de $K=\\dfrac{x^2}{(1-x)^2}$ pour isoler $\\dfrac{x}{1-x}$.",
+          "solution": "$K=\\dfrac{x^2}{(1-x)^2}=9\\Rightarrow\\dfrac{x}{1-x}=\\sqrt{9}=3\\Rightarrow x=3-3x\\Rightarrow x=0{,}75\\ \\mathrm{mol}$ ; $\\tau=\\dfrac{x_f}{x_{\\max}}=0{,}75$. Contrôle : $K=\\dfrac{0{,}75^2}{0{,}25^2}=9{,}0$.",
+          "methode": "$K=\\left(\\dfrac{x}{n_0-x}\\right)^2$ pour un mélange équimolaire avec $\\Delta\\nu=0$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-relier-k-et-tau-q3"
+        },
+        {
+          "notion": "Relier $K$ et $\\tau$",
+          "difficulty": 3,
+          "statement": "Pour l'estérification de constante $K=4{,}0$, on part de $1{,}00\\ \\mathrm{mol}$ d'acide et de $3{,}00\\ \\mathrm{mol}$ d'alcool (volume commun). Le taux d'avancement final, rapporté à $x_{\\max}$, vaut environ :",
+          "options": [
+            {
+              "label": "$\\tau=0{,}90$",
+              "correct": true,
+              "why": "$K=\\dfrac{x^2}{(1-x)(3-x)}=4$ donne $3x^2-16x+12=0$ et la racine acceptable $x_f=0{,}90\\ \\mathrm{mol}$ ; $x_{\\max}=1{,}00$ donc $\\tau=0{,}90$."
+            },
+            {
+              "label": "$\\tau=0{,}67$",
+              "why": "Tu as supposé $\\tau$ indépendant de l'état initial (valeur du mélange équimolaire) : l'excès d'alcool déplace l'équilibre et augmente $\\tau$."
+            },
+            {
+              "label": "$\\tau=1{,}00$",
+              "why": "L'excès d'alcool augmente le rendement mais ne rend pas la transformation totale : $\\tau<1$."
+            },
+            {
+              "label": "$\\tau=0{,}30$",
+              "why": "Tu as rapporté $x_f$ à $n_0(\\mathrm{alcool})=3{,}00$ : $\\tau$ se rapporte à $x_{\\max}=1{,}00\\ \\mathrm{mol}$, fixé par l'acide, réactif limitant."
+            }
+          ],
+          "hint": "Écris le tableau d'avancement : l'acide est limitant, donc $x_{\\max}=1{,}00$ ; résous l'équation en $x$ en gardant $x<1{,}00$.",
+          "solution": "$K=\\dfrac{x\\cdot x}{(1-x)(3-x)}=4\\Rightarrow x^2=4(3-4x+x^2)\\Rightarrow3x^2-16x+12=0$, de racines $x\\approx0{,}903$ et $x\\approx4{,}43$ ; seule $x<x_{\\max}=1{,}00$ convient. $\\tau=\\dfrac{x_f}{x_{\\max}}=0{,}90$, contre $0{,}67$ pour un mélange équimolaire. Contrôle : $\\dfrac{0{,}903^2}{(1-0{,}903)(3-0{,}903)}=4{,}00$.",
+          "methode": "$\\tau$ dépend de l'état initial : un excès d'un réactif augmente $\\tau$ à $K$ constante.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-relier-k-et-tau-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le critère d'évolution spontanée",
+        "lesson": "Approfondissement — État d'équilibre",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 2,
+        "target_new_questions": 0,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-le-critere-d-evolution-spontanee",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Le critère d'évolution spontanée",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le critère d'évolution spontanée",
+          "difficulty": 3,
+          "statement": "Pour l'estérification de constante $K=4{,}0$, un mélange contient $0{,}50\\ \\mathrm{mol}$ d'acide, $0{,}50\\ \\mathrm{mol}$ d'alcool, $2{,}00\\ \\mathrm{mol}$ d'ester et $1{,}00\\ \\mathrm{mol}$ d'eau. Ce mélange évolue spontanément :",
+          "options": [
+            {
+              "label": "dans le sens inverse (hydrolyse), car $Q_{r,i}=8{,}0>K$",
+              "correct": true,
+              "why": "$Q_{r,i}=\\dfrac{2{,}0\\times1{,}0}{0{,}50\\times0{,}50}=8{,}0>K=4{,}0$ : $Q_r$ doit diminuer, donc évolution dans le sens inverse."
+            },
+            {
+              "label": "dans le sens direct (estérification), car il reste des réactifs",
+              "why": "La présence de réactifs n'est pas le critère : $Q_{r,i}=8{,}0>K$ impose le sens inverse."
+            },
+            {
+              "label": "ni dans un sens ni dans l'autre, car il est à l'équilibre",
+              "why": "Le système est à l'équilibre seulement si $Q_{r,i}=K$ ; ici $Q_{r,i}=8{,}0\\ne4{,}0$."
+            },
+            {
+              "label": "dans un sens impossible à prévoir sans connaître le volume du mélange",
+              "why": "Le volume se simplifie dans $Q_r$ pour l'estérification : on peut calculer $Q_{r,i}$ avec les quantités de matière."
+            }
+          ],
+          "hint": "Calcule $Q_{r,i}$ avec les quantités de matière (le volume se simplifie) puis compare à $K$.",
+          "solution": "$Q_{r,i}=\\dfrac{n(\\mathrm{ester})\\,n(\\mathrm{eau})}{n(\\mathrm{acide})\\,n(\\mathrm{alcool})}=\\dfrac{2{,}0\\times1{,}0}{0{,}50\\times0{,}50}=8{,}0>K=4{,}0$. Le quotient doit diminuer pour atteindre $K$ : les produits se transforment en réactifs, sens inverse. Contrôle : en sens inverse, $n(\\mathrm{ester})$ et $n(\\mathrm{eau})$ diminuent, donc $Q_r$ diminue.",
+          "methode": "Critère d'évolution : $Q_{r,i}<K$ sens direct, $Q_{r,i}>K$ sens inverse, $Q_{r,i}=K$ équilibre.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-le-critere-d-evolution-spontanee-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'influence de la température",
+        "lesson": "Approfondissement — État d'équilibre",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-l-influence-de-la-temperature",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "L'influence de la température",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'influence de la température",
+          "difficulty": 3,
+          "statement": "La constante $K_e$ dépend de la température : $K_e=1{,}0\\times10^{-14}$ à $25\\ ^\\circ\\mathrm{C}$ et $K_e=5{,}5\\times10^{-14}$ à $50\\ ^\\circ\\mathrm{C}$. Le pH de l'eau pure, neutre, à $50\\ ^\\circ\\mathrm{C}$ vaut environ :",
+          "options": [
+            {
+              "label": "$6{,}63$",
+              "correct": true,
+              "why": "Eau pure : $[\\mathrm{H_3O^+}]=[\\mathrm{HO^-}]=\\sqrt{K_e}=2{,}35\\times10^{-7}$ donc $\\mathrm{pH}=\\dfrac{\\mathrm{p}K_e}{2}=\\dfrac{13{,}26}{2}=6{,}63$."
+            },
+            {
+              "label": "$7{,}00$",
+              "why": "Tu as supposé que l'eau neutre a toujours un pH de $7$ : c'est vrai seulement à $25\\ ^\\circ\\mathrm{C}$, car $K_e$ varie avec la température."
+            },
+            {
+              "label": "$13{,}26$",
+              "why": "Tu as donné $\\mathrm{p}K_e=13{,}26$ : le pH est la moitié de $\\mathrm{p}K_e$ dans l'eau pure."
+            },
+            {
+              "label": "$7{,}37$",
+              "why": "Tu as calculé $14-6{,}63$ : $14$ n'est la valeur de $\\mathrm{p}K_e$ qu'à $25\\ ^\\circ\\mathrm{C}$ ; à $50\\ ^\\circ\\mathrm{C}$, $\\mathrm{pH}+\\mathrm{pOH}=13{,}26$ et $\\mathrm{pOH}=6{,}63$ aussi."
+            }
+          ],
+          "hint": "Dans l'eau pure, $[\\mathrm{H_3O^+}]=[\\mathrm{HO^-}]$ : exprime-les avec $K_e$ à $50\\ ^\\circ\\mathrm{C}$.",
+          "solution": "Dans l'eau pure, $[\\mathrm{H_3O^+}]=[\\mathrm{HO^-}]$ donc $K_e=[\\mathrm{H_3O^+}]^2$ et $[\\mathrm{H_3O^+}]=\\sqrt{5{,}5\\times10^{-14}}=2{,}35\\times10^{-7}\\ \\mathrm{mol\\,L^{-1}}$ ; $\\mathrm{pH}=-\\log(2{,}35\\times10^{-7})=6{,}63$. Contrôle : l'eau reste neutre ($[\\mathrm{H_3O^+}]=[\\mathrm{HO^-}]$) bien que son pH soit inférieur à $7$.",
+          "methode": "$K$ dépend de $T$ : la neutralité de l'eau est $\\mathrm{pH}=\\mathrm{p}K_e/2$, égal à $7$ seulement à $25\\ ^\\circ\\mathrm{C}$.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-l-influence-de-la-temperature-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le produit de solubilité",
+        "lesson": "Approfondissement — État d'équilibre",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-le-produit-de-solubilite",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Le produit de solubilité",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le produit de solubilité",
+          "difficulty": 3,
+          "statement": "Pour la dissolution $\\mathrm{AgBr(s)}\\rightleftharpoons\\mathrm{Ag^+}+\\mathrm{Br^-}$, le produit de solubilité vaut $K_s=[\\mathrm{Ag^+}][\\mathrm{Br^-}]=5{,}0\\times10^{-13}$ à l'équilibre. La solubilité $s$ du bromure d'argent dans l'eau pure, en $\\mathrm{mol\\,L^{-1}}$, vaut :",
+          "options": [
+            {
+              "label": "$s=7{,}1\\times10^{-7}$",
+              "correct": true,
+              "why": "Dans l'eau pure, $[\\mathrm{Ag^+}]=[\\mathrm{Br^-}]=s$ donc $K_s=s^2$ et $s=\\sqrt{5{,}0\\times10^{-13}}=7{,}07\\times10^{-7}$."
+            },
+            {
+              "label": "$s=5{,}0\\times10^{-13}$",
+              "why": "Tu as pris $s=K_s$ : comme $K_s=s^2$, il faut prendre la racine carrée."
+            },
+            {
+              "label": "$s=2{,}5\\times10^{-13}$",
+              "why": "Tu as divisé $K_s$ par $2$ : les deux ions ont la même concentration $s$, et $K_s=s^2$, pas $2s$."
+            },
+            {
+              "label": "$s=3{,}5\\times10^{-7}$",
+              "why": "Tu as divisé la racine par $2$ : $s=[\\mathrm{Ag^+}]=[\\mathrm{Br^-}]=\\sqrt{K_s}$, sans facteur $\\dfrac12$."
+            }
+          ],
+          "hint": "Quand le solide se dissout dans l'eau pure, que peut-on dire de $[\\mathrm{Ag^+}]$ et de $[\\mathrm{Br^-}]$ ?",
+          "solution": "Le solide n'apparaît pas dans $Q_r=[\\mathrm{Ag^+}][\\mathrm{Br^-}]$ ; à l'équilibre $Q_{r,\\text{éq}}=K_s$. Par stœchiométrie $[\\mathrm{Ag^+}]=[\\mathrm{Br^-}]=s$, donc $s^2=K_s$ et $s=\\sqrt{5{,}0\\times10^{-13}}=7{,}07\\times10^{-7}\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $s^2=5{,}0\\times10^{-13}$.",
+          "methode": "Produit de solubilité : $K_s=[\\text{cation}][\\text{anion}]$ ; $s=\\sqrt{K_s}$ pour un sel 1:1.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-le-produit-de-solubilite-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les limites du modèle",
+        "lesson": "Approfondissement — État d'équilibre",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-les-limites-du-modele",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Les limites du modèle",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les limites du modèle",
+          "difficulty": 3,
+          "statement": "On introduit $1{,}0\\times10^{-6}\\ \\mathrm{mol}$ de chlorure d'argent solide dans $1{,}0\\ \\mathrm{L}$ d'eau pure ; $K_s(\\mathrm{AgCl})=1{,}8\\times10^{-10}$. Tout le solide se dissout. Dans l'état final, $Q_r=[\\mathrm{Ag^+}][\\mathrm{Cl^-}]$ vaut :",
+          "options": [
+            {
+              "label": "$1{,}0\\times10^{-12}$, inférieur à $K_s$ : il n'y a plus de solide, l'équilibre n'est pas atteint",
+              "correct": true,
+              "why": "$[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=1{,}0\\times10^{-6}$ donc $Q_r=1{,}0\\times10^{-12}<K_s$ : sans solide, la relation $Q_{r,\\text{éq}}=K_s$ ne s'applique pas."
+            },
+            {
+              "label": "$1{,}8\\times10^{-10}$, égal à $K_s$ : $Q_{r,\\text{éq}}=K$ est valable dans tous les cas",
+              "why": "$Q_{r,\\text{éq}}=K_s$ n'est vraie que si le solide est encore présent à l'état final, ce qui n'est pas le cas ici."
+            },
+            {
+              "label": "$1{,}0\\times10^{-6}$, car $Q_r$ est égal à la concentration des ions",
+              "why": "Tu as donné $[\\mathrm{Ag^+}]=1{,}0\\times10^{-6}$ : $Q_r$ est le produit $[\\mathrm{Ag^+}][\\mathrm{Cl^-}]$."
+            },
+            {
+              "label": "$2{,}0\\times10^{-6}$, somme des concentrations des deux ions",
+              "why": "Tu as additionné les concentrations : $Q_r$ est un produit."
+            }
+          ],
+          "hint": "Pour que $Q_{r,\\text{éq}}=K_s$, que faut-il qu'il reste dans le système ?",
+          "solution": "Tout le solide est dissous : $[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=1{,}0\\times10^{-6}\\ \\mathrm{mol\\,L^{-1}}$, donc $Q_r=(1{,}0\\times10^{-6})^2=1{,}0\\times10^{-12}<K_s=1{,}8\\times10^{-10}$. Le modèle $Q_{r,\\text{éq}}=K$ suppose que toutes les espèces nécessaires, solide compris, subsistent à l'équilibre : ici le système n'a pas atteint l'équilibre, la dissolution est totale. Contrôle : la solution est non saturée.",
+          "methode": "$Q_{r,\\text{éq}}=K_s$ exige qu'il reste du solide ; sinon $Q_r<K_s$ (solution non saturée).",
+          "points": 1,
+          "ref": "pc-quotient-reaction-les-limites-du-modele-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Ce que $K$ ne dit pas",
+        "lesson": "Approfondissement — État d'équilibre",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-quotient-reaction-ce-que-k-ne-dit-pas",
+      "chapter": "pc-quotient-reaction",
+      "kind": "qcu",
+      "title": "Ce que $K$ ne dit pas",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Ce que $K$ ne dit pas",
+          "difficulty": 3,
+          "statement": "Deux transformations ont pour constantes $K_1=10^{10}$ et $K_2=10^{-3}$. On peut affirmer que :",
+          "options": [
+            {
+              "label": "la transformation 1 est bien plus avancée à l'équilibre, mais on ne sait rien de sa vitesse",
+              "correct": true,
+              "why": "$K$ décrit l'état final ; la vitesse est un autre sujet, qui dépend des facteurs cinétiques."
+            },
+            {
+              "label": "la transformation 1 est plus rapide, puisque son $K$ est plus grand",
+              "why": "$K$ ne renseigne pas sur la vitesse : une transformation à très grand $K$ peut être très lente."
+            },
+            {
+              "label": "la transformation 2 est plus rapide, puisque son $K$ est plus petit",
+              "why": "Rien ne relie la valeur de $K$ à la vitesse de la transformation."
+            },
+            {
+              "label": "les deux transformations ont la même vitesse, car $K$ ne dépend pas du temps",
+              "why": "Que $K$ ne dépende pas du temps ne veut pas dire que les vitesses sont égales : $K$ ne contient aucune information sur la vitesse."
+            }
+          ],
+          "hint": "$K$ dit-il en combien de temps l'équilibre est atteint ?",
+          "solution": "$K$ renseigne sur l'état d'équilibre : $K_1\\gg1$ indique une transformation quasi totale, $K_2\\ll1$ une transformation très limitée. Il ne dit rien de la durée nécessaire pour atteindre l'équilibre, qui dépend des facteurs cinétiques (température, catalyseur, concentrations). Contrôle : la transformation entre $\\mathrm{H_2}$ et $\\mathrm{O_2}$ à température ambiante a un $K$ gigantesque et est pourtant bloquée.",
+          "methode": "$K$ : état final seulement, jamais la vitesse.",
+          "points": 1,
+          "ref": "pc-quotient-reaction-ce-que-k-ne-dit-pas-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-quotient-reaction-probleme-1",
+      "chapter": "pc-quotient-reaction",
+      "kind": "probleme",
+      "title": "Acide méthanoïque et dilution",
+      "difficulty": 3,
+      "context": "À $25\\ ^\\circ\\mathrm{C}$, on étudie l'acide méthanoïque $\\mathrm{HCOOH}$, acide faible, dont la réaction avec l'eau est $\\mathrm{HCOOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{HCOO^-}+\\mathrm{H_3O^+}$. La solution $\\mathrm{S_1}$ a pour concentration apportée $C_1=0{,}100\\ \\mathrm{mol\\,L^{-1}}$ et pour pH $2{,}38$ ; la solution $\\mathrm{S_2}$, obtenue en diluant $\\mathrm{S_1}$ dix fois, a pour concentration $C_2=1{,}00\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$ et pour pH $2{,}90$, à l'équilibre. Pour toutes les solutions, $[\\mathrm{HCOO^-}]=[\\mathrm{H_3O^+}]$ à l'équilibre.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Définition",
+          "difficulty": 1,
+          "statement": "Le quotient de réaction de cette transformation s'écrit :",
+          "options": [
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{HCOO^-}]\\,[\\mathrm{H_3O^+}]}{[\\mathrm{HCOOH}]}$",
+              "correct": true,
+              "why": "L'eau est le solvant : elle n'apparaît pas ; les produits sont au numérateur et le réactif dissous au dénominateur."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{HCOOH}]}{[\\mathrm{HCOO^-}]\\,[\\mathrm{H_3O^+}]}$",
+              "why": "Tu as inversé le quotient : les produits $\\mathrm{HCOO^-}$ et $\\mathrm{H_3O^+}$ sont au numérateur."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{HCOO^-}]\\,[\\mathrm{H_3O^+}]}{[\\mathrm{HCOOH}]\\,[\\mathrm{H_2O}]}$",
+              "why": "Tu as fait figurer l'eau, solvant : elle n'apparaît pas dans $Q_r$."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{HCOO^-}]}{[\\mathrm{HCOOH}]}$",
+              "why": "Tu as oublié $[\\mathrm{H_3O^+}]$ : c'est un produit, il figure au numérateur."
+            }
+          ],
+          "hint": "Produits au numérateur, réactif dissous au dénominateur ; l'eau est-elle dans le quotient ?",
+          "solution": "Les espèces dissoutes figurent dans $Q_r$ ; l'eau solvant n'y figure pas. $Q_r=\\dfrac{[\\mathrm{HCOO^-}][\\mathrm{H_3O^+}]}{[\\mathrm{HCOOH}]}$ ; à l'équilibre, c'est la constante d'acidité $K_A$. Contrôle : tous les coefficients valent $1$.",
+          "methode": "Acide faible dans l'eau : $Q_r=[\\mathrm{A^-}][\\mathrm{H_3O^+}]/[\\mathrm{AH}]$.",
+          "points": 1,
+          "part": "Partie A — Écrire et calculer le quotient",
+          "ref": "pc-quotient-reaction-probleme-1-q1"
+        },
+        {
+          "notion": "Méthode 2 — Calculer $K$ à partir de mesures",
+          "difficulty": 2,
+          "statement": "La constante d'équilibre de cette transformation, calculée avec $\\mathrm{S_1}$, vaut :",
+          "options": [
+            {
+              "label": "$K=1{,}8\\times10^{-4}$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=[\\mathrm{HCOO^-}]=10^{-2{,}38}=4{,}2\\times10^{-3}$ ; $[\\mathrm{HCOOH}]=0{,}100-4{,}2\\times10^{-3}=0{,}0958$ ; $K=\\dfrac{(4{,}2\\times10^{-3})^2}{0{,}0958}=1{,}8\\times10^{-4}$."
+            },
+            {
+              "label": "$K=4{,}2\\times10^{-3}$",
+              "why": "Tu as donné $[\\mathrm{H_3O^+}]$ au lieu du quotient $\\dfrac{[\\mathrm{HCOO^-}][\\mathrm{H_3O^+}]}{[\\mathrm{HCOOH}]}$."
+            },
+            {
+              "label": "$K=1{,}7\\times10^{-5}$",
+              "why": "Tu as oublié de diviser par $[\\mathrm{HCOOH}]$ : le quotient comporte le réactif au dénominateur."
+            },
+            {
+              "label": "$K=5{,}5\\times10^{3}$",
+              "why": "Tu as inversé le quotient : les produits sont au numérateur."
+            }
+          ],
+          "hint": "À l'équilibre $[\\mathrm{HCOO^-}]=[\\mathrm{H_3O^+}]$ et $[\\mathrm{HCOOH}]=C_1-[\\mathrm{H_3O^+}]$.",
+          "solution": "$[\\mathrm{H_3O^+}]=10^{-2{,}38}=4{,}2\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ ; $[\\mathrm{HCOOH}]=C_1-[\\mathrm{H_3O^+}]=0{,}0958\\ \\mathrm{mol\\,L^{-1}}$. $K=Q_{r,\\text{éq}}=\\dfrac{[\\mathrm{HCOO^-}][\\mathrm{H_3O^+}]}{[\\mathrm{HCOOH}]}=1{,}8\\times10^{-4}$. Contrôle : $\\mathrm{p}K=-\\log K=3{,}74$.",
+          "methode": "$K=\\dfrac{[\\mathrm{H_3O^+}]^2}{C-[\\mathrm{H_3O^+}]}$ pour un acide faible, à partir du pH.",
+          "points": 1,
+          "part": "Partie A — Écrire et calculer le quotient",
+          "ref": "pc-quotient-reaction-probleme-1-q2"
+        },
+        {
+          "notion": "Les espèces qui n'apparaissent pas",
+          "difficulty": 2,
+          "statement": "Pourquoi l'eau ne figure-t-elle pas dans l'expression de $Q_r$ ?",
+          "options": [
+            {
+              "label": "parce que c'est le solvant, en très grande quantité : on ne le fait pas figurer dans $Q_r$",
+              "correct": true,
+              "why": "Convention : le solvant ne figure pas dans le quotient de réaction (comme les solides)."
+            },
+            {
+              "label": "parce qu'elle ne participe pas à la transformation, qui ne concerne que l'acide",
+              "why": "L'eau participe : elle reçoit le proton de l'acide pour donner $\\mathrm{H_3O^+}$ ; c'est son statut de solvant qui l'exclut de $Q_r$."
+            },
+            {
+              "label": "parce qu'elle est un solide, dont la concentration n'est pas définie dans le mélange",
+              "why": "L'eau est un liquide, le solvant ; ce sont les solides qui sont exclus pour leur concentration non définie."
+            },
+            {
+              "label": "parce qu'elle apparaît dans l'équation sans coefficient stœchiométrique devant elle",
+              "why": "L'eau a bien un coefficient $1$ dans l'équation ; ce n'est pas la raison de son absence de $Q_r$."
+            }
+          ],
+          "hint": "L'eau est présente à la fois comme réactif et comme solvant : laquelle des deux fonctions l'exclut du quotient ?",
+          "solution": "L'eau est le solvant de la solution : sa quantité est très grande et pratiquement inchangée. On convient de ne pas la faire figurer dans $Q_r$, de même que les solides. Contrôle : les solutés dissous $\\mathrm{HCOOH}$, $\\mathrm{HCOO^-}$ et $\\mathrm{H_3O^+}$ y figurent.",
+          "methode": "Solvant (eau) et solides : jamais dans $Q_r$.",
+          "points": 1,
+          "part": "Partie A — Écrire et calculer le quotient",
+          "ref": "pc-quotient-reaction-probleme-1-q3"
+        },
+        {
+          "notion": "Relier $K$ et $\\tau$",
+          "difficulty": 2,
+          "statement": "Le taux d'avancement final dans $\\mathrm{S_1}$ vaut :",
+          "options": [
+            {
+              "label": "$\\tau_1=4{,}2\\times10^{-2}$",
+              "correct": true,
+              "why": "$\\tau_1=\\dfrac{x_f}{x_{\\max}}=\\dfrac{[\\mathrm{H_3O^+}]}{C_1}=\\dfrac{4{,}2\\times10^{-3}}{0{,}100}=4{,}2\\times10^{-2}$."
+            },
+            {
+              "label": "$\\tau_1=4{,}2\\times10^{-3}$",
+              "why": "Tu as donné $[\\mathrm{H_3O^+}]$ sans diviser par la concentration apportée $C_1$."
+            },
+            {
+              "label": "$\\tau_1=24$",
+              "why": "Tu as inversé le rapport : $\\dfrac{C_1}{[\\mathrm{H_3O^+}]}$ dépasse $1$, impossible pour un taux d'avancement."
+            },
+            {
+              "label": "$\\tau_1=0{,}96$",
+              "why": "Tu as calculé $1-\\tau_1$, la fraction d'acide qui n'a pas réagi."
+            }
+          ],
+          "hint": "$x_{\\max}=C_1V$ et $x_f=[\\mathrm{H_3O^+}]V$ : fais le rapport.",
+          "solution": "$\\tau_1=\\dfrac{[\\mathrm{H_3O^+}]_f}{C_1}=\\dfrac{10^{-2{,}38}}{0{,}100}=4{,}2\\times10^{-2}$, soit environ $4{,}2\\ \\%$. Contrôle : $0<\\tau_1<1$, acide faible.",
+          "methode": "$\\tau=[\\mathrm{H_3O^+}]_f/C$ pour un monoacide.",
+          "points": 1,
+          "part": "Partie B — Effet de la dilution",
+          "ref": "pc-quotient-reaction-probleme-1-q4"
+        },
+        {
+          "notion": "Comment $Q_r$ évolue",
+          "difficulty": 3,
+          "statement": "Juste après la dilution de $\\mathrm{S_1}$ par $10$, avant toute évolution, les concentrations sont toutes divisées par $10$. Le quotient de réaction vaut alors :",
+          "options": [
+            {
+              "label": "$Q_{r,i}=1{,}8\\times10^{-5}$, soit $K/10$",
+              "correct": true,
+              "why": "Le numérateur compte deux concentrations (÷$100$), le dénominateur une seule (÷$10$) : $Q_r$ est divisé par $10$, soit $1{,}8\\times10^{-5}$."
+            },
+            {
+              "label": "$Q_{r,i}=1{,}8\\times10^{-4}$, soit $K$",
+              "why": "Tu as supposé que $Q_r$ ne dépend pas de la dilution : il est divisé par $10$ car le numérateur compte une concentration de plus que le dénominateur."
+            },
+            {
+              "label": "$Q_{r,i}=1{,}8\\times10^{-3}$, soit $10\\,K$",
+              "why": "Tu as inversé l'effet de la dilution : diluer diminue les concentrations, donc ici $Q_r$."
+            },
+            {
+              "label": "$Q_{r,i}=1{,}8\\times10^{-6}$, soit $K/100$",
+              "why": "Tu as divisé $Q_r$ par $100$ en comptant seulement les deux concentrations du numérateur : le dénominateur est aussi divisé par $10$."
+            }
+          ],
+          "hint": "Écris $Q_r$ avec chaque concentration divisée par $10$ et simplifie.",
+          "solution": "Avant évolution : $Q_{r,i}=\\dfrac{([\\mathrm{HCOO^-}]/10)([\\mathrm{H_3O^+}]/10)}{[\\mathrm{HCOOH}]/10}=\\dfrac{1}{10}\\,\\dfrac{[\\mathrm{HCOO^-}][\\mathrm{H_3O^+}]}{[\\mathrm{HCOOH}]}=\\dfrac{K}{10}=1{,}8\\times10^{-5}$. Contrôle : $Q_{r,i}<K$, le système n'est plus à l'équilibre.",
+          "methode": "Dilution : $Q_r$ change si $\\Delta\\nu\\ne0$ ; ici il est divisé par $10$.",
+          "points": 1,
+          "part": "Partie B — Effet de la dilution",
+          "ref": "pc-quotient-reaction-probleme-1-q5"
+        },
+        {
+          "notion": "Le critère d'évolution spontanée",
+          "difficulty": 3,
+          "statement": "Après la dilution, le système évolue spontanément vers un nouvel équilibre :",
+          "options": [
+            {
+              "label": "dans le sens direct, car $Q_{r,i}<K$ ; $\\tau$ augmente ($\\tau_2=0{,}13>\\tau_1=0{,}042$)",
+              "correct": true,
+              "why": "$Q_{r,i}=K/10<K$ impose le sens direct : l'acide réagit davantage, $\\tau$ passe de $0{,}042$ à $0{,}13$."
+            },
+            {
+              "label": "dans le sens inverse, car $Q_{r,i}<K$ ; $\\tau$ diminue entre les deux solutions",
+              "why": "Quand $Q_{r,i}<K$, $Q_r$ doit augmenter, ce qui se fait dans le sens direct ; et $\\tau$ augmente (données des solutions)."
+            },
+            {
+              "label": "pas du tout, car $K$ ne dépend pas de la dilution, donc rien ne change",
+              "why": "$K$ est constante, mais ce n'est pas $K$ qui détermine s'il y a évolution : c'est la comparaison $Q_{r,i}\\ne K$ ; le système évolue."
+            },
+            {
+              "label": "dans le sens direct, et $K$ augmente avec la dilution de la solution",
+              "why": "Le sens est bon mais $K$ ne change pas avec la dilution : seule la température la modifie."
+            }
+          ],
+          "hint": "Compare $Q_{r,i}$ et $K$ pour trouver le sens, puis vérifie avec les valeurs de $\\tau$ des deux solutions.",
+          "solution": "$Q_{r,i}=K/10<K$ : $Q_r$ doit augmenter jusqu'à $K$, donc évolution dans le sens direct (formation de $\\mathrm{HCOO^-}$ et $\\mathrm{H_3O^+}$). Le taux d'avancement augmente : $\\tau_2=\\dfrac{10^{-2{,}90}}{1{,}00\\times10^{-2}}=0{,}13>\\tau_1=0{,}042$. Contrôle : $K$ reste inchangée, $Q_{r,\\text{éq}}=K$ pour $\\mathrm{S_2}$ aussi.",
+          "methode": "Critère : $Q_{r,i}<K$ $\\Rightarrow$ sens direct ; vérifier avec les données mesurées.",
+          "points": 1,
+          "part": "Partie B — Effet de la dilution",
+          "ref": "pc-quotient-reaction-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-quotient-reaction-probleme-2",
+      "chapter": "pc-quotient-reaction",
+      "kind": "probleme",
+      "title": "Précipitation du chlorure d'argent",
+      "difficulty": 3,
+      "context": "On étudie, à $25\\ ^\\circ\\mathrm{C}$, la dissolution du chlorure d'argent : $\\mathrm{AgCl(s)}\\rightleftharpoons\\mathrm{Ag^+}+\\mathrm{Cl^-}$, de constante d'équilibre (produit de solubilité) $K_s=1{,}8\\times10^{-10}$. Expérience 1 : on mélange $100\\ \\mathrm{mL}$ de solution de nitrate d'argent à $1{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ et $100\\ \\mathrm{mL}$ de solution de chlorure de sodium à $1{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$. Expérience 2 : on mélange $100\\ \\mathrm{mL}$ de nitrate d'argent à $1{,}0\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$ et $100\\ \\mathrm{mL}$ de chlorure de sodium à $1{,}0\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$. Les ions $\\mathrm{Na^+}$ et $\\mathrm{NO_3^-}$ sont spectateurs.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Définition",
+          "difficulty": 1,
+          "statement": "Le quotient de réaction de l'équation $\\mathrm{AgCl(s)}\\rightleftharpoons\\mathrm{Ag^+}+\\mathrm{Cl^-}$ s'écrit :",
+          "options": [
+            {
+              "label": "$Q_r=[\\mathrm{Ag^+}]\\,[\\mathrm{Cl^-}]$",
+              "correct": true,
+              "why": "Le solide n'apparaît pas ; les deux ions dissous sont au numérateur, sans dénominateur à écrire."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{Ag^+}]\\,[\\mathrm{Cl^-}]}{[\\mathrm{AgCl}]}$",
+              "why": "Tu as fait figurer le solide $\\mathrm{AgCl(s)}$ : une espèce solide n'apparaît pas dans $Q_r$."
+            },
+            {
+              "label": "$Q_r=\\dfrac{[\\mathrm{AgCl}]}{[\\mathrm{Ag^+}]\\,[\\mathrm{Cl^-}]}$",
+              "why": "Tu as inversé le quotient et fait figurer le solide, qui n'apparaît pas."
+            },
+            {
+              "label": "$Q_r=[\\mathrm{Ag^+}]+[\\mathrm{Cl^-}]$",
+              "why": "Tu as additionné les concentrations : $Q_r$ est un produit de concentrations, pas une somme."
+            }
+          ],
+          "hint": "Quelle espèce de l'équation est solide ? Que devient le dénominateur ?",
+          "solution": "Le solide est exclu de $Q_r$ : seul le produit $Q_r=[\\mathrm{Ag^+}][\\mathrm{Cl^-}]$ subsiste, le dénominateur valant $1$. À l'équilibre, en présence du solide, $Q_{r,\\text{éq}}=K_s$. Contrôle : $Q_r$ est sans unité.",
+          "methode": "Solide dissous en ions : $Q_r$ est le produit des concentrations ioniques.",
+          "points": 1,
+          "part": "Partie A — Quotient et sens d'évolution",
+          "ref": "pc-quotient-reaction-probleme-2-q1"
+        },
+        {
+          "notion": "Calculer $Q_r$",
+          "difficulty": 2,
+          "statement": "Dans l'expérience 1, juste après le mélange et avant toute évolution, le quotient de réaction vaut :",
+          "options": [
+            {
+              "label": "$Q_{r,i}=2{,}5\\times10^{-7}$",
+              "correct": true,
+              "why": "Chaque concentration est divisée par $2$ au mélange : $[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=5{,}0\\times10^{-4}$ et $Q_{r,i}=(5{,}0\\times10^{-4})^2=2{,}5\\times10^{-7}$."
+            },
+            {
+              "label": "$Q_{r,i}=1{,}0\\times10^{-6}$",
+              "why": "Tu as oublié la dilution au mélange : $[\\mathrm{Ag^+}]$ et $[\\mathrm{Cl^-}]$ sont divisées par $2$ (volume doublé)."
+            },
+            {
+              "label": "$Q_{r,i}=5{,}0\\times10^{-4}$",
+              "why": "Tu as donné une concentration : $Q_r=[\\mathrm{Ag^+}][\\mathrm{Cl^-}]$ est le produit des deux."
+            },
+            {
+              "label": "$Q_{r,i}=2{,}0\\times10^{-3}$",
+              "why": "Tu as additionné les concentrations d'avant mélange : $Q_r$ est un produit de concentrations dans le mélange."
+            }
+          ],
+          "hint": "Calcule d'abord les concentrations dans le mélange de volume $200\\ \\mathrm{mL}$, puis leur produit.",
+          "solution": "Après mélange, $V=200\\ \\mathrm{mL}$ : $[\\mathrm{Ag^+}]=\\dfrac{1{,}0\\times10^{-3}\\times100}{200}=5{,}0\\times10^{-4}$ et de même $[\\mathrm{Cl^-}]=5{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$. $Q_{r,i}=[\\mathrm{Ag^+}][\\mathrm{Cl^-}]=(5{,}0\\times10^{-4})^2=2{,}5\\times10^{-7}$. Contrôle : chaque concentration est la moitié de la concentration d'une solution de départ.",
+          "methode": "Après un mélange de volumes, recalculer les concentrations : $C=C_1V_1/V_{\\text{total}}$.",
+          "points": 1,
+          "part": "Partie A — Quotient et sens d'évolution",
+          "ref": "pc-quotient-reaction-probleme-2-q2"
+        },
+        {
+          "notion": "Le critère d'évolution spontanée",
+          "difficulty": 2,
+          "statement": "Dans l'expérience 1, comme $Q_{r,i}=2{,}5\\times10^{-7}$ est supérieur à $K_s=1{,}8\\times10^{-10}$, le système évolue :",
+          "options": [
+            {
+              "label": "dans le sens inverse : du chlorure d'argent solide se forme (précipitation)",
+              "correct": true,
+              "why": "$Q_{r,i}>K_s$ : $Q_r$ doit diminuer, donc les ions $\\mathrm{Ag^+}$ et $\\mathrm{Cl^-}$ se combinent pour former $\\mathrm{AgCl(s)}$."
+            },
+            {
+              "label": "dans le sens direct : du chlorure d'argent solide se dissout dans la solution",
+              "why": "Dans le sens direct (dissolution), $Q_r$ augmenterait, ce qui l'éloignerait de $K_s$ ; de plus il n'y a pas de solide au départ."
+            },
+            {
+              "label": "ni dans un sens ni dans l'autre : il est déjà à l'équilibre à l'instant initial",
+              "why": "Le système serait à l'équilibre si $Q_{r,i}=K_s$, ce qui n'est pas le cas."
+            },
+            {
+              "label": "dans le sens direct, car aucun solide n'est présent au départ du mélange",
+              "why": "L'absence de solide ne décide pas du sens : c'est $Q_{r,i}>K_s$ qui impose le sens inverse, avec formation du solide."
+            }
+          ],
+          "hint": "Compare $Q_{r,i}$ et $K_s$ : $Q_r$ doit-il augmenter ou diminuer pour rejoindre $K_s$ ?",
+          "solution": "$Q_{r,i}=2{,}5\\times10^{-7}>K_s=1{,}8\\times10^{-10}$ : $Q_r$ doit diminuer, donc les concentrations en ions diminuent : évolution dans le sens inverse, formation du précipité de $\\mathrm{AgCl(s)}$. Contrôle : on observe effectivement un précipité blanc.",
+          "methode": "$Q_{r,i}>K$ : sens inverse ; pour une dissolution, c'est la précipitation.",
+          "points": 1,
+          "part": "Partie A — Quotient et sens d'évolution",
+          "ref": "pc-quotient-reaction-probleme-2-q3"
+        },
+        {
+          "notion": "Le produit de solubilité",
+          "difficulty": 2,
+          "statement": "La solubilité $s$ du chlorure d'argent dans l'eau pure, en $\\mathrm{mol\\,L^{-1}}$, vaut :",
+          "options": [
+            {
+              "label": "$s=1{,}3\\times10^{-5}$",
+              "correct": true,
+              "why": "Dans l'eau pure, $[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=s$ donc $K_s=s^2$ et $s=\\sqrt{1{,}8\\times10^{-10}}=1{,}34\\times10^{-5}$."
+            },
+            {
+              "label": "$s=1{,}8\\times10^{-10}$",
+              "why": "Tu as pris $s=K_s$ : comme $K_s=s^2$, il faut prendre la racine carrée."
+            },
+            {
+              "label": "$s=9{,}0\\times10^{-11}$",
+              "why": "Tu as divisé $K_s$ par $2$ : $K_s=s^2$, pas $2s$."
+            },
+            {
+              "label": "$s=6{,}7\\times10^{-6}$",
+              "why": "Tu as divisé la racine par $2$ : $[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=s$, sans facteur $\\dfrac12$."
+            }
+          ],
+          "hint": "Que valent $[\\mathrm{Ag^+}]$ et $[\\mathrm{Cl^-}]$ dans l'eau pure saturée en chlorure d'argent ?",
+          "solution": "À l'équilibre de dissolution, $Q_{r,\\text{éq}}=[\\mathrm{Ag^+}][\\mathrm{Cl^-}]=K_s$ avec $[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=s$ : $s=\\sqrt{K_s}=\\sqrt{1{,}8\\times10^{-10}}=1{,}34\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : $s^2=1{,}8\\times10^{-10}$.",
+          "methode": "Sel $1{:}1$ : $s=\\sqrt{K_s}$.",
+          "points": 1,
+          "part": "Partie B — Équilibre de solubilité",
+          "ref": "pc-quotient-reaction-probleme-2-q4"
+        },
+        {
+          "notion": "La loi de l'équilibre",
+          "difficulty": 3,
+          "statement": "Dans l'expérience 1, après formation du précipité et retour à l'équilibre, la concentration en ions argent $[\\mathrm{Ag^+}]$ vaut :",
+          "options": [
+            {
+              "label": "$1{,}3\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "Le solide est présent : $Q_{r,\\text{éq}}=K_s$ ; les ions restent en quantités égales (mélange stœchiométrique) donc $[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=\\sqrt{K_s}=1{,}34\\times10^{-5}$."
+            },
+            {
+              "label": "$0{,}0\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as supposé la précipitation totale : à l'équilibre il reste des ions en solution, ce que traduit $Q_{r,\\text{éq}}=K_s\\ne0$."
+            },
+            {
+              "label": "$5{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as repris la concentration initiale du mélange : une grande partie des ions a précipité."
+            },
+            {
+              "label": "$1{,}8\\times10^{-10}\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as donné $K_s$ au lieu de $\\sqrt{K_s}$ : $K_s=[\\mathrm{Ag^+}][\\mathrm{Cl^-}]$ est un produit de deux concentrations égales."
+            }
+          ],
+          "hint": "En présence du solide, que vaut $Q_r$ ? Quelle relation lie alors les deux concentrations ?",
+          "solution": "En présence du précipité, l'équilibre est atteint : $[\\mathrm{Ag^+}][\\mathrm{Cl^-}]=K_s$. Les ions étaient introduits en quantités égales et disparaissent en quantités égales : $[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]$, donc $[\\mathrm{Ag^+}]=\\sqrt{K_s}=1{,}34\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : elle est très inférieure à $5{,}0\\times10^{-4}$, donc la majeure partie des ions a précipité.",
+          "methode": "À l'équilibre avec le solide : $Q_{r,\\text{éq}}=K_s$.",
+          "points": 1,
+          "part": "Partie B — Équilibre de solubilité",
+          "ref": "pc-quotient-reaction-probleme-2-q5"
+        },
+        {
+          "notion": "Le critère d'évolution spontanée",
+          "difficulty": 3,
+          "statement": "Dans l'expérience 2, le mélange conduit à $[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=5{,}0\\times10^{-6}\\ \\mathrm{mol\\,L^{-1}}$. On observe :",
+          "options": [
+            {
+              "label": "aucun précipité : $Q_{r,i}=2{,}5\\times10^{-11}$ est inférieur à $K_s$",
+              "correct": true,
+              "why": "$Q_{r,i}=(5{,}0\\times10^{-6})^2=2{,}5\\times10^{-11}<K_s=1{,}8\\times10^{-10}$ : le système évolue dans le sens direct (dissolution), mais il n'y a pas de solide : aucun précipité ne se forme."
+            },
+            {
+              "label": "un précipité, car $Q_{r,i}=2{,}5\\times10^{-11}$ est supérieur à $K_s$",
+              "why": "Tu as inversé la comparaison : $2{,}5\\times10^{-11}$ est inférieur à $1{,}8\\times10^{-10}$."
+            },
+            {
+              "label": "un précipité, car toute concentration non nulle en ions $\\mathrm{Ag^+}$ et $\\mathrm{Cl^-}$ provoque une précipitation",
+              "why": "La précipitation n'a lieu que si $Q_{r,i}>K_s$ : à faible concentration, les ions restent dissous."
+            },
+            {
+              "label": "aucun précipité, car les ions $\\mathrm{Ag^+}$ et $\\mathrm{Cl^-}$ ne réagissent jamais ensemble",
+              "why": "Ils réagissent bien ensemble quand $Q_{r,i}>K_s$ (expérience 1) ; ici ce n'est pas le cas."
+            }
+          ],
+          "hint": "Calcule $Q_{r,i}$ puis compare à $K_s$ : le sens d'évolution est-il celui de la précipitation ?",
+          "solution": "$Q_{r,i}=[\\mathrm{Ag^+}][\\mathrm{Cl^-}]=(5{,}0\\times10^{-6})^2=2{,}5\\times10^{-11}<K_s=1{,}8\\times10^{-10}$. Le critère indique le sens direct (dissolution), mais il n'y a pas de solide à dissoudre : la solution reste limpide. Contrôle : la solution n'est pas saturée.",
+          "methode": "Précipitation seulement si $Q_{r,i}>K_s$ ; sinon la solution reste limpide.",
+          "points": 1,
+          "part": "Partie B — Équilibre de solubilité",
+          "ref": "pc-quotient-reaction-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [
-   "Méthode 1 — Écrire l'expression de $Q_r$",
-   "Méthode 2 — Calculer $K$ à partir de mesures",
-   "Méthode 3 — Calculer $\\tau$ à partir de $K$",
-   "Méthode 4 — Utiliser le produit ionique de l'eau",
-   "Méthode 5 — Manipuler $K$ pour une équation modifiée"
-  ],
-  "existing_questions_total": 4,
-  "target_new_questions": 38,
-  "suggested_figures": [],
-  "sources": [
-   {
-    "annale": "pc-svt-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-quotient-reaction-serie-1",
+      "title": "État d'équilibre — quotient de réaction · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-quotient-reaction",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-quotient-reaction-definition-q1",
+        "pc-quotient-reaction-les-especes-qui-n-apparaissent-pas-q1",
+        "pc-quotient-reaction-le-cas-de-l-esterification-q1",
+        "pc-quotient-reaction-calculer-q-r-q1",
+        "pc-quotient-reaction-comment-q-r-evolue-q1",
+        "pc-quotient-reaction-la-loi-de-l-equilibre-q1",
+        "pc-quotient-reaction-ce-que-dit-la-valeur-de-k-q1",
+        "pc-quotient-reaction-deux-constantes-du-programme-q1",
+        "pc-quotient-reaction-relier-k-et-tau-q1",
+        "pc-quotient-reaction-definition-q2",
+        "pc-quotient-reaction-calculer-q-r-q2",
+        "pc-quotient-reaction-la-loi-de-l-equilibre-q2"
+      ]
+    },
+    {
+      "slug": "pc-quotient-reaction-serie-2",
+      "title": "État d'équilibre — quotient de réaction · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-quotient-reaction",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-quotient-reaction-les-especes-qui-n-apparaissent-pas-q2",
+        "pc-quotient-reaction-le-cas-de-l-esterification-q2",
+        "pc-quotient-reaction-calculer-q-r-q3",
+        "pc-quotient-reaction-comment-q-r-evolue-q2",
+        "pc-quotient-reaction-ce-que-dit-la-valeur-de-k-q2",
+        "pc-quotient-reaction-deux-constantes-du-programme-q2",
+        "pc-quotient-reaction-relier-k-et-tau-q2",
+        "pc-quotient-reaction-relier-k-et-tau-q3",
+        "pc-quotient-reaction-comment-q-r-evolue-q3",
+        "pc-quotient-reaction-le-cas-de-l-esterification-q3",
+        "pc-quotient-reaction-definition-q3",
+        "pc-quotient-reaction-deux-constantes-du-programme-q3"
+      ]
+    },
+    {
+      "slug": "pc-quotient-reaction-serie-3",
+      "title": "État d'équilibre — quotient de réaction · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-quotient-reaction",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-quotient-reaction-definition-q4",
+        "pc-quotient-reaction-les-especes-qui-n-apparaissent-pas-q4",
+        "pc-quotient-reaction-le-cas-de-l-esterification-q4",
+        "pc-quotient-reaction-comment-q-r-evolue-q4",
+        "pc-quotient-reaction-relier-k-et-tau-q4",
+        "pc-quotient-reaction-le-critere-d-evolution-spontanee-q1",
+        "pc-quotient-reaction-le-produit-de-solubilite-q1",
+        "pc-quotient-reaction-les-limites-du-modele-q1",
+        "pc-quotient-reaction-ce-que-k-ne-dit-pas-q1",
+        "pc-quotient-reaction-probleme-1-q5",
+        "pc-quotient-reaction-probleme-2-q5",
+        "pc-quotient-reaction-probleme-2-q6"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Définition",
-    "lesson": "Quotient de réaction",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-definition",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Définition",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-definition-q1",
-     "notion": "Définition",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les espèces qui n'apparaissent pas",
-    "lesson": "Quotient de réaction",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-les-especes-qui-n-apparaissent-pas",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Les espèces qui n'apparaissent pas",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-les-especes-qui-n-apparaissent-pas-q1",
-     "notion": "Les espèces qui n'apparaissent pas",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le cas de l'estérification",
-    "lesson": "Quotient de réaction",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-le-cas-de-l-esterification",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Le cas de l'estérification",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-le-cas-de-l-esterification-q1",
-     "notion": "Le cas de l'estérification",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Calculer $Q_r$",
-    "lesson": "Quotient de réaction",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-calculer-q-r",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Calculer $Q_r$",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-calculer-q-r-q1",
-     "notion": "Calculer $Q_r$",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Comment $Q_r$ évolue",
-    "lesson": "Quotient de réaction",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-comment-q-r-evolue",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Comment $Q_r$ évolue",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-comment-q-r-evolue-q1",
-     "notion": "Comment $Q_r$ évolue",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La loi de l'équilibre",
-    "lesson": "Constante d'équilibre",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-la-loi-de-l-equilibre",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "La loi de l'équilibre",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-la-loi-de-l-equilibre-q1",
-     "notion": "La loi de l'équilibre",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Ce que dit la valeur de $K$",
-    "lesson": "Constante d'équilibre",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-ce-que-dit-la-valeur-de-k",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Ce que dit la valeur de $K$",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-ce-que-dit-la-valeur-de-k-q1",
-     "notion": "Ce que dit la valeur de $K$",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Deux constantes du programme",
-    "lesson": "Constante d'équilibre",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-deux-constantes-du-programme",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Deux constantes du programme",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-deux-constantes-du-programme-q1",
-     "notion": "Deux constantes du programme",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Relier $K$ et $\\tau$",
-    "lesson": "Constante d'équilibre",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-relier-k-et-tau",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Relier $K$ et $\\tau$",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-relier-k-et-tau-q1",
-     "notion": "Relier $K$ et $\\tau$",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le critère d'évolution spontanée",
-    "lesson": "Approfondissement — État d'équilibre",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 2,
-    "target_new_questions": 0,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-le-critere-d-evolution-spontanee",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Le critère d'évolution spontanée",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-le-critere-d-evolution-spontanee-q1",
-     "notion": "Le critère d'évolution spontanée",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'influence de la température",
-    "lesson": "Approfondissement — État d'équilibre",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-l-influence-de-la-temperature",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "L'influence de la température",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-l-influence-de-la-temperature-q1",
-     "notion": "L'influence de la température",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le produit de solubilité",
-    "lesson": "Approfondissement — État d'équilibre",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-le-produit-de-solubilite",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Le produit de solubilité",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-le-produit-de-solubilite-q1",
-     "notion": "Le produit de solubilité",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les limites du modèle",
-    "lesson": "Approfondissement — État d'équilibre",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-les-limites-du-modele",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Les limites du modèle",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-les-limites-du-modele-q1",
-     "notion": "Les limites du modèle",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Ce que $K$ ne dit pas",
-    "lesson": "Approfondissement — État d'équilibre",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-quotient-reaction-ce-que-k-ne-dit-pas",
-   "chapter": "pc-quotient-reaction",
-   "kind": "qcu",
-   "title": "Ce que $K$ ne dit pas",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-ce-que-k-ne-dit-pas-q1",
-     "notion": "Ce que $K$ ne dit pas",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-quotient-reaction-probleme-1",
-   "chapter": "pc-quotient-reaction",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-quotient-reaction-probleme-2",
-   "chapter": "pc-quotient-reaction",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-quotient-reaction-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-quotient-reaction-serie-1",
-   "title": "État d'équilibre — quotient de réaction · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-quotient-reaction",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-quotient-reaction-serie-2",
-   "title": "État d'équilibre — quotient de réaction · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-quotient-reaction",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-quotient-reaction-serie-3",
-   "title": "État d'équilibre — quotient de réaction · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-quotient-reaction",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
