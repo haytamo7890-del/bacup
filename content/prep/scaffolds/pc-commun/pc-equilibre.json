@@ -308,7 +308,7 @@
               "why": "Une transformation limitée a bien lieu : des produits se forment, mais pas jusqu'à l'épuisement des réactifs."
             },
             {
-              "label": "est atteint toujours en moins d'une seconde, quelle que soit la température",
+              "label": "est atteint en moins d'une seconde, quelle que soit la température du mélange",
               "why": "La durée pour atteindre l'état final n'est pas le critère : une transformation limitée peut être lente ou rapide."
             }
           ],
@@ -350,7 +350,7 @@
         {
           "notion": "Une transformation peut être incomplète",
           "difficulty": 3,
-          "statement": "Dans une transformation d'équation $\\mathrm{A}+\\mathrm{B}\\rightarrow\\mathrm{C}+\\mathrm{D}$, on introduit $0{,}10\\ \\mathrm{mol}$ de $\\mathrm{A}$ et $0{,}10\\ \\mathrm{mol}$ de $\\mathrm{B}$ ; l'avancement final est $x_f=0{,}040\\ \\mathrm{mol}$. On peut affirmer que la transformation est :",
+          "statement": "Dans une transformation d'équation $\\mathrm{A}+\\mathrm{B}\\rightleftharpoons\\mathrm{C}+\\mathrm{D}$, on introduit $0{,}10\\ \\mathrm{mol}$ de $\\mathrm{A}$ et $0{,}10\\ \\mathrm{mol}$ de $\\mathrm{B}$ ; l'avancement final est $x_f=0{,}040\\ \\mathrm{mol}$. On peut affirmer que la transformation est :",
           "options": [
             {
               "label": "limitée : il reste $0{,}060\\ \\mathrm{mol}$ de chacun des réactifs",
@@ -657,29 +657,29 @@
         {
           "notion": "Comparer la force des acides",
           "difficulty": 3,
-          "statement": "Un acide $\\mathrm{A}$ en solution à $1{,}0\\times10^{-1}\\ \\mathrm{mol\\,L^{-1}}$ a un pH de $2{,}9$, et un acide $\\mathrm{B}$ en solution à $1{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ a un pH de $3{,}9$. Un élève affirme que $\\mathrm{A}$ est le plus fort, car son pH est plus bas. Cette affirmation est :",
+          "statement": "Un acide $\\mathrm{A}$ en solution à $1{,}0\\times10^{-1}\\ \\mathrm{mol\\,L^{-1}}$ a un pH de $2{,}9$, et un acide $\\mathrm{B}$ en solution à $1{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ a un pH de $3{,}9$. Un élève affirme que $\\mathrm{A}$ est le plus fort, car son pH est plus bas. On peut dire que cette affirmation est :",
           "options": [
             {
-              "label": "fausse : concentrations différentes ; $\\tau_{\\mathrm{A}}=0{,}013$, $\\tau_{\\mathrm{B}}=0{,}13$, donc $\\mathrm{B}$ est plus fort",
+              "label": "non justifiée : les concentrations diffèrent, et des pH ne se comparent qu'à même concentration apportée",
               "correct": true,
-              "why": "Pour comparer des forces il faut comparer $\\tau=\\dfrac{10^{-\\mathrm{pH}}}{C}$ : $\\tau_{\\mathrm{A}}=0{,}013$ et $\\tau_{\\mathrm{B}}=0{,}13$."
+              "why": "Le pH dépend de la nature de l'acide et de sa concentration : on ne peut rien conclure sur la force à partir de deux pH obtenus à des concentrations différentes."
             },
             {
-              "label": "vraie : le pH le plus bas désigne toujours l'acide le plus fort dans une comparaison",
-              "why": "Le pH dépend aussi de la concentration : comparer des pH n'a de sens qu'à même concentration apportée."
+              "label": "justifiée : le pH le plus bas désigne toujours l'acide le plus fort, quelles que soient les concentrations",
+              "why": "Le pH dépend aussi de la concentration : $\\mathrm{A}$ est $100$ fois plus concentré que $\\mathrm{B}$, ce qui suffit à abaisser son pH sans prouver qu'il est plus fort."
             },
             {
-              "label": "vraie : la concentration apportée la plus grande donne toujours l'acide le plus fort",
+              "label": "justifiée : la concentration apportée la plus grande donne toujours l'acide le plus fort dans une comparaison",
               "why": "La concentration apportée est un choix de l'expérimentateur : elle ne caractérise pas la force de l'acide."
             },
             {
-              "label": "fausse : le pH n'a aucun lien avec la force d'un acide, seul $\\tau$ compte vraiment",
-              "why": "Le pH est lié à $\\tau$ par $\\tau=10^{-\\mathrm{pH}}/C$ ; il intervient, mais il faut aussi connaître la concentration."
+              "label": "fausse : $\\mathrm{B}$ est certainement le plus fort, puisque son taux d'avancement final est le plus grand",
+              "why": "Ici $\\tau_{\\mathrm{B}}=0{,}13>\\tau_{\\mathrm{A}}=0{,}013$, mais $\\mathrm{B}$ est aussi $100$ fois plus dilué, ce qui augmente $\\tau$ : on ne peut pas non plus en conclure que $\\mathrm{B}$ est le plus fort."
             }
           ],
-          "hint": "Pour comparer des acides, quelle grandeur doit-on calculer, qui tient compte de la concentration ?",
-          "solution": "On compare des forces avec $\\tau=\\dfrac{[\\mathrm{H_3O^+}]_f}{C}$ : $\\tau_{\\mathrm{A}}=\\dfrac{10^{-2{,}9}}{0{,}1}=0{,}013$ et $\\tau_{\\mathrm{B}}=\\dfrac{10^{-3{,}9}}{10^{-3}}=0{,}13$. $\\mathrm{B}$ réagit davantage avec l'eau : il est le plus fort. Contrôle : $\\mathrm{B}$ est plus dilué, ce qui augmente son $\\tau$ ; cela n'est pas visible en comparant seulement les pH.",
-          "methode": "Comparer des forces : toujours via $\\tau$ ; un pH seul ne suffit pas si les concentrations diffèrent.",
+          "hint": "Pour comparer des forces d'acides, que faut-il imposer aux deux solutions ?",
+          "solution": "Le pH dépend de la concentration apportée autant que de la force de l'acide. Ici $\\tau_{\\mathrm{A}}=\\dfrac{10^{-2{,}9}}{0{,}1}=0{,}013$ et $\\tau_{\\mathrm{B}}=\\dfrac{10^{-3{,}9}}{10^{-3}}=0{,}13$ : $\\tau_{\\mathrm{B}}$ est plus grand surtout parce que $\\mathrm{B}$ est $100$ fois plus dilué. Il faut comparer à même concentration apportée pour conclure. Contrôle : une dilution augmente $\\tau$ d'un acide faible, sans en changer la nature.",
+          "methode": "Comparer des forces : à même concentration apportée seulement ; un pH ou un $\\tau$ obtenus à $C$ différentes ne suffisent pas.",
           "points": 1,
           "ref": "pc-equilibre-comparer-la-force-des-acides-q4"
         }
@@ -964,7 +964,7 @@
         {
           "notion": "Atteindre le même équilibre par les deux bouts",
           "difficulty": 1,
-          "statement": "On réalise, à la même température et dans le même volume, une estérification à partir de l'acide et de l'alcool, puis une hydrolyse à partir de l'ester et de l'eau, avec des quantités totales de matière équivalentes. Les deux systèmes atteignent :",
+          "statement": "On réalise, à la même température et dans le même volume, une estérification à partir de l'acide et de l'alcool, puis une hydrolyse à partir de l'ester et de l'eau, à partir de mélanges équivalents (mêmes éléments, mêmes quantités). Les deux systèmes atteignent :",
           "options": [
             {
               "label": "le même état d'équilibre, avec la même composition finale",
@@ -993,29 +993,29 @@
         {
           "notion": "Atteindre le même équilibre par les deux bouts",
           "difficulty": 2,
-          "statement": "Dans un essai d'hydrolyse, on part de $1{,}00\\ \\mathrm{mol}$ d'ester et $1{,}00\\ \\mathrm{mol}$ d'eau, et on retrouve $0{,}67\\ \\mathrm{mol}$ d'ester à l'équilibre. Le taux d'avancement final de l'hydrolyse vaut :",
+          "statement": "Dans un essai d'hydrolyse, on part de $1{,}00\\ \\mathrm{mol}$ d'ester et $1{,}00\\ \\mathrm{mol}$ d'eau, et on retrouve $0{,}67\\ \\mathrm{mol}$ d'ester à l'équilibre. La quantité d'acide éthanoïque présente à l'équilibre vaut :",
           "options": [
             {
-              "label": "$\\tau=0{,}33$",
+              "label": "$0{,}33\\ \\mathrm{mol}$",
               "correct": true,
-              "why": "L'ester consommé vaut $x_f=1{,}00-0{,}67=0{,}33\\ \\mathrm{mol}$ et $x_{\\max}=1{,}00\\ \\mathrm{mol}$ : $\\tau=\\dfrac{0{,}33}{1{,}00}=0{,}33$."
+              "why": "L'ester consommé vaut $x_f=1{,}00-0{,}67=0{,}33\\ \\mathrm{mol}$ ; l'acide est un produit de coefficient $1$, absent au départ : $n(\\text{acide})=x_f=0{,}33\\ \\mathrm{mol}$."
             },
             {
-              "label": "$\\tau=0{,}67$",
-              "why": "Tu as pris la quantité d'ester restant à l'équilibre : $\\tau$ est la proportion d'ester qui a réagi, donc $0{,}33$."
+              "label": "$0{,}67\\ \\mathrm{mol}$",
+              "why": "Tu as donné la quantité d'ester restant à l'équilibre, pas celle d'acide formé."
             },
             {
-              "label": "$\\tau=1{,}00$",
-              "why": "Tu as supposé l'hydrolyse totale : or il reste $0{,}67\\ \\mathrm{mol}$ d'ester, la transformation est limitée."
+              "label": "$0{,}00\\ \\mathrm{mol}$",
+              "why": "Tu as cru qu'il n'y a pas d'acide puisqu'on part sans acide : l'hydrolyse en forme à partir de l'ester et de l'eau."
             },
             {
-              "label": "$\\tau=3{,}0$",
-              "why": "Tu as inversé le rapport $\\dfrac{x_{\\max}}{x_f}=\\dfrac{1{,}00}{0{,}33}$ : un taux d'avancement ne dépasse pas $1$."
+              "label": "$1{,}00\\ \\mathrm{mol}$",
+              "why": "Tu as supposé l'hydrolyse totale : l'acide formé serait alors égal à l'ester de départ, soit $1{,}00\\ \\mathrm{mol}$, alors qu'il reste $0{,}67\\ \\mathrm{mol}$ d'ester."
             }
           ],
-          "hint": "Combien d'ester a disparu pendant l'hydrolyse ? Rapporte-le à l'avancement maximal.",
-          "solution": "Pour l'hydrolyse $\\text{ester}+\\text{eau}\\rightleftharpoons\\text{acide}+\\text{alcool}$, $x_{\\max}=1{,}00\\ \\mathrm{mol}$. L'ester diminue de $x_f$ : $n_f(\\text{ester})=1{,}00-x_f=0{,}67$ donc $x_f=0{,}33\\ \\mathrm{mol}$ et $\\tau=\\dfrac{x_f}{x_{\\max}}=0{,}33$. Contrôle : on retrouve la composition obtenue par l'estérification ($0{,}33\\ \\mathrm{mol}$ d'acide et d'alcool).",
-          "methode": "Taux d'avancement : proportion du réactif limitant qui a réagi, $\\tau=x_f/x_{\\max}$.",
+          "hint": "Combien d'ester a disparu pendant l'hydrolyse ? Que se forme-t-il alors, avec quel coefficient ?",
+          "solution": "Pour l'hydrolyse $\\text{ester}+\\text{eau}\\rightleftharpoons\\text{acide}+\\text{alcool}$, l'ester diminue de $x_f$ : $1{,}00-x_f=0{,}67$ donc $x_f=0{,}33\\ \\mathrm{mol}$. L'acide, produit de coefficient $1$ et absent au départ, vaut $n(\\text{acide})=x_f=0{,}33\\ \\mathrm{mol}$. Contrôle : c'est la quantité d'acide trouvée à l'équilibre de l'estérification.",
+          "methode": "Hydrolyse : $n(\\text{produit})=\\nu\\,x_f$ avec $x_f$ = quantité d'ester disparue.",
           "points": 1,
           "ref": "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux-q2"
         },
@@ -1042,7 +1042,7 @@
               "why": "Ce mélange contient plus de carbone et d'hydrogène que l'état de référence : il ne conduit pas à la même composition d'équilibre."
             }
           ],
-          "hint": "Cherche le mélange formé des produits de l'estérification, dans les quantités correspondant à $x_{\\max}$.",
+          "hint": "Quel mélange contient les mêmes éléments, dans les mêmes quantités, que le mélange de référence ?",
           "solution": "L'estérification d'équation $\\mathrm{CH_3COOH}+\\mathrm{C_2H_5OH}\\rightleftharpoons\\mathrm{CH_3COOC_2H_5}+\\mathrm{H_2O}$ part de l'acide et de l'alcool. L'état d'équilibre est le même si l'on part des produits, ester et eau, en quantités égales à celles qu'on obtiendrait avec $x_{\\max}$ : ici $1{,}00\\ \\mathrm{mol}$ de chacun. Contrôle : mêmes éléments, mêmes quantités.",
           "methode": "Même équilibre : partir des produits correspondant à l'avancement maximal.",
           "points": 1,
@@ -1163,12 +1163,12 @@
         {
           "notion": "L'interprétation microscopique",
           "difficulty": 3,
-          "statement": "À l'équilibre d'une estérification, on ajoute un peu d'alcool marqué par un isotope, de réactivité identique, sans changer la composition globale. Plus tard, on retrouve le marqueur dans l'ester et dans l'alcool. On en conclut que :",
+          "statement": "À l'équilibre d'une estérification, on ajoute un peu d'alcool marqué par un isotope, de réactivité identique, sans changer la composition globale. Plus tard, on détecte le marqueur dans l'ester, alors que la composition globale reste constante. On en conclut que :",
           "options": [
             {
               "label": "les transformations directe et inverse continuent de se produire à l'équilibre",
               "correct": true,
-              "why": "Le marqueur passe de l'alcool à l'ester (estérification) et revient (hydrolyse) : les deux transformations se poursuivent."
+              "why": "Le marqueur apparaît dans l'ester : l'estérification se poursuit ; la composition globale étant constante, l'hydrolyse se poursuit aussi, au même rythme."
             },
             {
               "label": "les transformations se sont arrêtées et le marqueur s'est simplement déplacé par diffusion",
@@ -1184,7 +1184,7 @@
             }
           ],
           "hint": "Pour que le marqueur passe de l'alcool à l'ester puis revienne, que doit-il se passer ?",
-          "solution": "Le marqueur de l'alcool ne peut entrer dans l'ester que par estérification, et le marqueur ne peut rester dans l'alcool que si l'hydrolyse en régénère. Sa présence dans les deux espèces prouve que les deux transformations se poursuivent à l'équilibre, tandis que les quantités totales restent constantes. Contrôle : c'est une preuve expérimentale du caractère dynamique de l'équilibre.",
+          "solution": "Le marqueur de l'alcool ne peut entrer dans l'ester que par estérification : cette transformation se poursuit donc à l'équilibre. Comme la quantité d'ester reste constante, de l'ester disparaît aussi au même rythme, par hydrolyse : les deux transformations se poursuivent. Contrôle : c'est une preuve expérimentale du caractère dynamique de l'équilibre.",
           "methode": "Marquage isotopique : preuve que les deux sens se poursuivent à l'équilibre.",
           "points": 1,
           "ref": "pc-equilibre-l-interpretation-microscopique-q3"
@@ -1521,7 +1521,7 @@
             },
             {
               "label": "$1{,}3\\ \\mathrm{mol}$ d'acide et $1{,}3\\ \\mathrm{mol}$ d'alcool",
-              "why": "Tu as multiplié par $\\tau$ au lieu de diviser : $2{,}0\\times0{,}67$ donnerait une quantité inférieure à celle d'ester voulue, ce qui est impossible."
+              "why": "Tu as multiplié par $\\tau$ au lieu de diviser : avec $1{,}3\\ \\mathrm{mol}$ de chaque réactif on n'obtiendrait que $0{,}67\\times1{,}3=0{,}90\\ \\mathrm{mol}$ d'ester, pas $2{,}0$."
             },
             {
               "label": "$2{,}0\\ \\mathrm{mol}$ d'acide et $2{,}0\\ \\mathrm{mol}$ d'alcool",
@@ -1717,7 +1717,7 @@
             {
               "label": "multiplié $\\tau$ par environ $3{,}0$ : la transformation est plus avancée dans $\\mathrm{S_2}$",
               "correct": true,
-              "why": "$\\dfrac{\\tau_2}{\\tau_1}=\\dfrac{1{,}3\\times10^{-1}}{4{,}2\\times10^{-2}}=3{,}0$ : $\\tau$ augmente avec la dilution."
+              "why": "$\\dfrac{\\tau_2}{\\tau_1}=\\dfrac{10^{-3{,}90}/10^{-3}}{10^{-3{,}38}/10^{-2}}\\approx3{,}0$ (valeurs non arrondies) : $\\tau$ augmente avec la dilution."
             },
             {
               "label": "multiplié $\\tau$ par $10$, comme la dilution l'a fait pour le volume de la solution",
@@ -1733,7 +1733,7 @@
             }
           ],
           "hint": "Calcule le rapport $\\tau_2/\\tau_1$ et interprète-le.",
-          "solution": "$\\dfrac{\\tau_2}{\\tau_1}=\\dfrac{1{,}3\\times10^{-1}}{4{,}2\\times10^{-2}}=3{,}0$. Un acide faible plus dilué réagit davantage avec l'eau : $\\tau$ augmente, sans être proportionnel à la dilution. Contrôle : $\\tau_2=0{,}126<1$, acide toujours faible.",
+          "solution": "$\\dfrac{\\tau_2}{\\tau_1}\\approx3{,}0$ (calcul avec les valeurs non arrondies de $10^{-\\mathrm{pH}}$). Un acide faible plus dilué réagit davantage avec l'eau : $\\tau$ augmente, sans être proportionnel à la dilution. Contrôle : $\\tau_2=0{,}126<1$, acide toujours faible.",
           "methode": "Dilution d'un acide faible : $\\tau$ augmente, mais moins vite que la dilution.",
           "points": 1,
           "part": "Partie B — Effet de la concentration",
@@ -1793,7 +1793,7 @@
             }
           ],
           "hint": "Écris $[\\mathrm{H_3O^+}]=\\tau\\,C$ pour les deux solutions et fais le rapport.",
-          "solution": "$[\\mathrm{H_3O^+}]_1=10^{-3{,}38}=4{,}2\\times10^{-4}$ et $[\\mathrm{H_3O^+}]_2=10^{-3{,}90}=1{,}3\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ : rapport $0{,}30$. On retrouve $\\dfrac{\\tau_2C_2}{\\tau_1C_1}=3{,}0\\times0{,}10=0{,}30$. Contrôle : la dilution fait baisser la concentration en ions, mais moins que la concentration apportée.",
+          "solution": "$[\\mathrm{H_3O^+}]_1=10^{-3{,}38}=4{,}2\\times10^{-4}$ et $[\\mathrm{H_3O^+}]_2=10^{-3{,}90}=1{,}3\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ : rapport $0{,}30$. On retrouve $\\dfrac{\\tau_2C_2}{\\tau_1C_1}\\approx3{,}0\\times0{,}10\\approx0{,}30$ (valeurs non arrondies). Contrôle : la dilution fait baisser la concentration en ions, mais moins que la concentration apportée.",
           "methode": "$[\\mathrm{H_3O^+}]=\\tau\\,C$ : à la dilution, $C$ baisse et $\\tau$ monte.",
           "points": 1,
           "part": "Partie B — Effet de la concentration",
@@ -1908,7 +1908,7 @@
               "why": "Tu as supposé la transformation totale : $1{,}00\\ \\mathrm{mol}$ d'eau supposerait $x_f=x_{\\max}$."
             }
           ],
-          "hint": "Quelle espèce se forme dans la même quantité que l'ester ?",
+          "hint": "Compare les coefficients stœchiométriques de l'eau et de l'ester, et leurs quantités initiales.",
           "solution": "Les produits de l'estérification, ester et eau, ont le même coefficient $1$ et sont absents au départ : $n(\\text{eau})=n(\\text{ester})=x_f=0{,}67\\ \\mathrm{mol}$. Les réactifs valent $1{,}00-0{,}67=0{,}33\\ \\mathrm{mol}$ chacun. Contrôle : $0{,}33\\times2+0{,}67\\times2=2{,}00\\ \\mathrm{mol}$.",
           "methode": "Produits de même coefficient formés ensemble : mêmes quantités à tout instant.",
           "points": 1,
