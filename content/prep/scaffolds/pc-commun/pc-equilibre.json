@@ -1,1300 +1,2088 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "track": null,
- "_scaffold": {
-  "pack": "pc-commun",
-  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-equilibre",
-   "name": "Transformations dans les deux sens",
-   "domain": "chimie",
-   "unit": "Transformations & équilibre"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-equilibre",
+      "name": "Transformations dans les deux sens",
+      "domain": "chimie",
+      "unit": "Transformations & équilibre"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Une transformation peut être incomplète",
+      "Le taux d'avancement final",
+      "La double flèche",
+      "Comparer la force des acides",
+      "L'influence de la dilution",
+      "L'état d'équilibre",
+      "Atteindre le même équilibre par les deux bouts",
+      "L'interprétation microscopique",
+      "Reconnaître un équilibre",
+      "Mesurer $\\tau$ : les deux voies expérimentales",
+      "La loi de dilution d'Ostwald",
+      "L'approximation usuelle",
+      "Les transformations limitées en dehors de l'acido-basique",
+      "Vers la constante d'équilibre",
+      "Méthode 1 — Calculer $\\tau$ à partir du pH",
+      "Méthode 2 — Calculer $\\tau$ à partir d'une conductivité",
+      "Méthode 3 — Comparer deux acides ou deux bases",
+      "Méthode 4 — Étudier l'effet d'une dilution",
+      "Méthode 5 — Vérifier qu'un système est à l'équilibre"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Calculer $\\tau$ à partir du pH",
+      "Méthode 2 — Calculer $\\tau$ à partir d'une conductivité",
+      "Méthode 3 — Comparer deux acides ou deux bases",
+      "Méthode 4 — Étudier l'effet d'une dilution",
+      "Méthode 5 — Vérifier qu'un système est à l'équilibre"
+    ],
+    "existing_questions_total": 7,
+    "target_new_questions": 34,
+    "suggested_figures": [],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "Une transformation peut être incomplète",
-   "Le taux d'avancement final",
-   "La double flèche",
-   "Comparer la force des acides",
-   "L'influence de la dilution",
-   "L'état d'équilibre",
-   "Atteindre le même équilibre par les deux bouts",
-   "L'interprétation microscopique",
-   "Reconnaître un équilibre",
-   "Mesurer $\\tau$ : les deux voies expérimentales",
-   "La loi de dilution d'Ostwald",
-   "L'approximation usuelle",
-   "Les transformations limitées en dehors de l'acido-basique",
-   "Vers la constante d'équilibre",
-   "Méthode 1 — Calculer $\\tau$ à partir du pH",
-   "Méthode 2 — Calculer $\\tau$ à partir d'une conductivité",
-   "Méthode 3 — Comparer deux acides ou deux bases",
-   "Méthode 4 — Étudier l'effet d'une dilution",
-   "Méthode 5 — Vérifier qu'un système est à l'équilibre"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Une transformation peut être incomplète",
+        "lesson": "Réactions dans les deux sens",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-une-transformation-peut-etre-incomplete",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "Une transformation peut être incomplète",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Une transformation peut être incomplète",
+          "difficulty": 1,
+          "statement": "Une transformation limitée est une transformation dont l'état final :",
+          "options": [
+            {
+              "label": "contient à la fois des réactifs et des produits, aucun réactif n'étant entièrement consommé",
+              "correct": true,
+              "why": "Une transformation limitée s'arrête avant l'épuisement du réactif limitant : réactifs et produits coexistent à l'état final."
+            },
+            {
+              "label": "ne contient plus aucun réactif, car le réactif limitant est entièrement consommé",
+              "why": "Cela décrit une transformation totale : le réactif limitant est alors épuisé et $x_f=x_{\\max}$."
+            },
+            {
+              "label": "ne contient aucun produit, car la transformation n'a pas pu démarrer",
+              "why": "Une transformation limitée a bien lieu : des produits se forment, mais pas jusqu'à l'épuisement des réactifs."
+            },
+            {
+              "label": "est atteint toujours en moins d'une seconde, quelle que soit la température",
+              "why": "La durée pour atteindre l'état final n'est pas le critère : une transformation limitée peut être lente ou rapide."
+            }
+          ],
+          "hint": "Demande-toi si, à la fin, le réactif limitant a disparu ou non.",
+          "solution": "Pour une transformation limitée, l'avancement final $x_f$ est strictement inférieur à l'avancement maximal $x_{\\max}$ : aucun réactif n'est entièrement consommé, et réactifs et produits coexistent à l'état final. Contrôle : pour une transformation totale on aurait $x_f=x_{\\max}$.",
+          "methode": "Limitée : $x_f<x_{\\max}$, réactifs et produits coexistent à l'état final.",
+          "points": 1,
+          "ref": "pc-equilibre-une-transformation-peut-etre-incomplete-q1"
+        },
+        {
+          "notion": "Une transformation peut être incomplète",
+          "difficulty": 2,
+          "statement": "Parmi les transformations suivantes, laquelle est limitée ?",
+          "options": [
+            {
+              "label": "la réaction de l'acide éthanoïque avec l'eau",
+              "correct": true,
+              "why": "L'acide éthanoïque est un acide faible : il réagit partiellement avec l'eau, le taux d'avancement final est nettement inférieur à $1$."
+            },
+            {
+              "label": "la réaction d'un acide fort, comme l'acide chlorhydrique, avec l'eau",
+              "why": "Un acide fort réagit totalement avec l'eau : le taux d'avancement final vaut $1$."
+            },
+            {
+              "label": "la réaction entre les ions oxonium et les ions hydroxyde",
+              "why": "Cette neutralisation est considérée comme totale au niveau étudié : les ions limitants sont entièrement consommés."
+            },
+            {
+              "label": "la combustion du carbone dans un excès de dioxygène",
+              "why": "Cette combustion est totale : le carbone est entièrement consommé si le dioxygène est en excès."
+            }
+          ],
+          "hint": "Quelle transformation laisse, à l'état final, des réactifs et des produits en présence ?",
+          "solution": "L'acide éthanoïque est un acide faible : sa réaction avec l'eau, $\\mathrm{CH_3COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{H_3O^+}$, est limitée. Les acides forts, la neutralisation et la combustion en excès de dioxygène sont totales. Contrôle : la mesure du pH d'une solution d'acide éthanoïque donne un pH supérieur à $-\\log C$.",
+          "methode": "Acide faible dans l'eau : transformation limitée ; acide fort : totale.",
+          "points": 1,
+          "ref": "pc-equilibre-une-transformation-peut-etre-incomplete-q2"
+        },
+        {
+          "notion": "Une transformation peut être incomplète",
+          "difficulty": 3,
+          "statement": "Dans une transformation d'équation $\\mathrm{A}+\\mathrm{B}\\rightarrow\\mathrm{C}+\\mathrm{D}$, on introduit $0{,}10\\ \\mathrm{mol}$ de $\\mathrm{A}$ et $0{,}10\\ \\mathrm{mol}$ de $\\mathrm{B}$ ; l'avancement final est $x_f=0{,}040\\ \\mathrm{mol}$. On peut affirmer que la transformation est :",
+          "options": [
+            {
+              "label": "limitée : il reste $0{,}060\\ \\mathrm{mol}$ de chacun des réactifs",
+              "correct": true,
+              "why": "$x_{\\max}=0{,}10\\ \\mathrm{mol}>x_f$ donc limitée ; $n(\\mathrm{A})=n(\\mathrm{B})=0{,}10-0{,}040=0{,}060\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "limitée : il reste $0{,}040\\ \\mathrm{mol}$ de chacun des réactifs",
+              "why": "Tu as confondu l'avancement final $x_f=0{,}040$ avec la quantité restante, qui vaut $n_0-x_f=0{,}060\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "totale : il ne reste plus aucun réactif à l'état final",
+              "why": "Pour une transformation totale on aurait $x_f=x_{\\max}=0{,}10\\ \\mathrm{mol}$ ; ici $x_f$ est plus petit."
+            },
+            {
+              "label": "limitée : il reste $0{,}14\\ \\mathrm{mol}$ de chacun des réactifs",
+              "why": "Tu as ajouté $x_f$ à $n_0$ : un réactif perd $x_f$ au cours de la transformation, sa quantité ne peut pas dépasser $n_0$."
+            }
+          ],
+          "hint": "Calcule $x_{\\max}$ puis compare avec $x_f$ ; la quantité restante d'un réactif est $n_0-\\nu x_f$.",
+          "solution": "Les deux réactifs ont le coefficient $1$ : $x_{\\max}=0{,}10\\ \\mathrm{mol}$ pour chacun. Comme $x_f=0{,}040\\ \\mathrm{mol}<x_{\\max}$, la transformation est limitée, et $n(\\mathrm{A})=n(\\mathrm{B})=0{,}10-0{,}040=0{,}060\\ \\mathrm{mol}$. Contrôle : le taux d'avancement vaut $\\dfrac{0{,}040}{0{,}10}=0{,}40$, strictement inférieur à $1$.",
+          "methode": "Limitée si $x_f<x_{\\max}$ ; quantité restante $=n_0-\\nu x_f$.",
+          "points": 1,
+          "ref": "pc-equilibre-une-transformation-peut-etre-incomplete-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le taux d'avancement final",
+        "lesson": "Réactions dans les deux sens",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 3,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-le-taux-d-avancement-final",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "Le taux d'avancement final",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Le taux d'avancement final",
+          "difficulty": 2,
+          "statement": "Une transformation a pour avancement maximal $x_{\\max}=5{,}0\\ \\mathrm{mmol}$ et pour avancement final $x_f=3{,}2\\ \\mathrm{mmol}$. Son taux d'avancement final vaut :",
+          "options": [
+            {
+              "label": "$\\tau=0{,}64$",
+              "correct": true,
+              "why": "$\\tau=\\dfrac{x_f}{x_{\\max}}=\\dfrac{3{,}2}{5{,}0}=0{,}64$ : nombre sans unité compris entre $0$ et $1$."
+            },
+            {
+              "label": "$\\tau=1{,}6$",
+              "why": "Tu as inversé le rapport : $\\dfrac{x_{\\max}}{x_f}=1{,}6$ dépasse $1$, ce qui est impossible pour un taux d'avancement."
+            },
+            {
+              "label": "$\\tau=0{,}36$",
+              "why": "Tu as calculé la fraction qui n'a pas réagi, $1-\\dfrac{x_f}{x_{\\max}}=0{,}36$, au lieu de la fraction qui a réagi."
+            },
+            {
+              "label": "$\\tau=1{,}8$",
+              "why": "Tu as calculé la différence $x_{\\max}-x_f=1{,}8\\ \\mathrm{mmol}$ : un taux est un rapport sans unité, pas une différence."
+            }
+          ],
+          "hint": "Un taux d'avancement est un rapport sans unité : lequel des deux avancements va au numérateur ?",
+          "solution": "$\\tau=\\dfrac{x_f}{x_{\\max}}=\\dfrac{3{,}2}{5{,}0}=0{,}64$, soit $64\\ \\%$ de l'avancement maximal. Contrôle : $0<\\tau<1$, la transformation est limitée.",
+          "methode": "$\\tau=x_f/x_{\\max}$, avec $0<\\tau\\le1$.",
+          "points": 1,
+          "ref": "pc-equilibre-le-taux-d-avancement-final-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La double flèche",
+        "lesson": "Réactions dans les deux sens",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-la-double-fleche",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "La double flèche",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La double flèche",
+          "difficulty": 1,
+          "statement": "Dans l'équation d'une transformation, la double flèche $\\rightleftharpoons$ traduit :",
+          "options": [
+            {
+              "label": "une transformation limitée, qui peut se produire dans les deux sens",
+              "correct": true,
+              "why": "La double flèche indique que la transformation directe et la transformation inverse peuvent avoir lieu : l'état final est un état d'équilibre."
+            },
+            {
+              "label": "une transformation totale dans le sens direct, suivie d'un retour",
+              "why": "Une transformation totale s'écrit avec une simple flèche : elle ne comporte pas de sens inverse notable."
+            },
+            {
+              "label": "deux transformations qui se produisent l'une après l'autre, jamais ensemble",
+              "why": "Les deux transformations ont lieu simultanément dans le même mélange, pas successivement."
+            },
+            {
+              "label": "une transformation lente, que l'on peut suivre dans le temps",
+              "why": "La double flèche ne renseigne pas sur la vitesse : une transformation limitée peut être rapide ou lente."
+            }
+          ],
+          "hint": "La double flèche porte sur le caractère de la transformation, pas sur sa vitesse.",
+          "solution": "La double flèche $\\rightleftharpoons$ indique une transformation limitée dont les sens direct et inverse sont possibles simultanément. Une transformation totale s'écrit avec une simple flèche $\\rightarrow$. Contrôle : écrire $\\rightarrow$ pour l'acide éthanoïque dans l'eau serait faux.",
+          "methode": "$\\rightleftharpoons$ : transformation limitée, sens direct et inverse ; $\\rightarrow$ : transformation totale.",
+          "points": 1,
+          "ref": "pc-equilibre-la-double-fleche-q1"
+        },
+        {
+          "notion": "La double flèche",
+          "difficulty": 2,
+          "statement": "L'équation de la réaction de l'acide éthanoïque avec l'eau s'écrit :",
+          "options": [
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{H_3O^+}$",
+              "correct": true,
+              "why": "Acide faible : transformation limitée (double flèche), l'acide cède un proton à l'eau, charges et éléments conservés."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{H_2O}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{H_3O^+}$",
+              "why": "La simple flèche traduit une transformation totale : celle-ci est limitée pour un acide faible."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{HO^-}$",
+              "why": "L'acide cède un proton : l'eau devient $\\mathrm{H_3O^+}$ et non $\\mathrm{HO^-}$ (qui apparaîtrait si l'eau cédait un proton)."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{CH_3COO}+\\mathrm{H_3O}$",
+              "why": "Les charges ne sont pas écrites : $\\mathrm{CH_3COO^-}$ et $\\mathrm{H_3O^+}$ sont des ions, et la charge totale doit se conserver."
+            }
+          ],
+          "hint": "L'acide éthanoïque est un acide faible, qui cède un proton $\\mathrm{H^+}$ à l'eau.",
+          "solution": "L'acide $\\mathrm{CH_3COOH}$ cède un proton à l'eau, qui devient $\\mathrm{H_3O^+}$ ; l'acide devient sa base conjuguée $\\mathrm{CH_3COO^-}$. La transformation est limitée : double flèche. Contrôle : charge $0$ à gauche, $-1+1=0$ à droite ; chaque élément se conserve.",
+          "methode": "Acide faible dans l'eau : double flèche, $\\mathrm{AH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{A^-}+\\mathrm{H_3O^+}$.",
+          "points": 1,
+          "ref": "pc-equilibre-la-double-fleche-q2"
+        },
+        {
+          "notion": "La double flèche",
+          "difficulty": 3,
+          "statement": "Dans un mélange contenant à la fois de l'acide éthanoïque, de l'éthanol, de l'ester et de l'eau, l'estérification et l'hydrolyse de l'ester se déroulent :",
+          "options": [
+            {
+              "label": "simultanément, les deux transformations ayant lieu en même temps dans le mélange",
+              "correct": true,
+              "why": "Les quatre espèces coexistent : les deux transformations, inverses l'une de l'autre, se produisent en même temps."
+            },
+            {
+              "label": "successivement : l'hydrolyse ne commence que quand l'estérification est terminée",
+              "why": "L'estérification ne se termine pas avant le début de l'hydrolyse : dès qu'il y a de l'ester et de l'eau, l'hydrolyse a lieu."
+            },
+            {
+              "label": "l'une après l'autre, dans un ordre imposé par la température du mélange",
+              "why": "La température modifie les vitesses mais n'impose aucun ordre : les deux transformations se produisent simultanément."
+            },
+            {
+              "label": "aucune des deux, car elles s'annulent exactement dès l'instant du mélange",
+              "why": "Elles ne s'annulent pas dès le mélange : au début, les quantités évoluent ; elles se compensent seulement à l'équilibre."
+            }
+          ],
+          "hint": "Les produits d'une transformation sont les réactifs de la transformation inverse : sont-ils présents en même temps ?",
+          "solution": "Dès qu'ester et eau sont présents en même temps que l'acide et l'alcool, les transformations directe (estérification) et inverse (hydrolyse) se produisent simultanément. À l'équilibre, leurs vitesses sont égales, donc les quantités ne varient plus. Contrôle : l'équation s'écrit avec une double flèche.",
+          "methode": "Sens direct et sens inverse : deux transformations simultanées dans le même mélange.",
+          "points": 1,
+          "ref": "pc-equilibre-la-double-fleche-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Comparer la force des acides",
+        "lesson": "Réactions dans les deux sens",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-comparer-la-force-des-acides",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "Comparer la force des acides",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Comparer la force des acides",
+          "difficulty": 1,
+          "statement": "Deux acides, de même concentration apportée, réagissent avec l'eau. Le plus fort est celui dont le taux d'avancement final est :",
+          "options": [
+            {
+              "label": "le plus grand",
+              "correct": true,
+              "why": "À même concentration, plus l'acide réagit avec l'eau, plus son taux d'avancement final est proche de $1$ : c'est l'acide le plus fort."
+            },
+            {
+              "label": "le plus petit",
+              "why": "C'est l'inverse : un petit $\\tau$ caractérise un acide qui réagit peu avec l'eau, donc faible."
+            },
+            {
+              "label": "le plus proche de zéro, quelle que soit la concentration apportée",
+              "why": "Un $\\tau$ proche de $0$ indique un acide très peu dissocié, donc très faible, pas fort."
+            },
+            {
+              "label": "égal pour les deux, car $\\tau$ ne dépend pas de la nature de l'acide",
+              "why": "$\\tau$ dépend de l'acide : il vaut $1$ pour un acide fort, et moins de $1$ pour un acide faible."
+            }
+          ],
+          "hint": "À même concentration, quel acide réagit le plus avec l'eau ?",
+          "solution": "À concentration apportée égale, la force d'un acide se compare par son taux d'avancement final : plus $\\tau$ est grand, plus l'acide réagit avec l'eau, donc plus il est fort. Un acide fort a $\\tau=1$. Contrôle : un acide faible a $\\tau<1$.",
+          "methode": "Même $C$ : acide plus fort $\\Leftrightarrow$ $\\tau$ plus grand.",
+          "points": 1,
+          "ref": "pc-equilibre-comparer-la-force-des-acides-q1"
+        },
+        {
+          "notion": "Comparer la force des acides",
+          "difficulty": 2,
+          "statement": "Deux solutions d'acides $\\mathrm{A}$ et $\\mathrm{B}$, de même concentration apportée $C=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$, ont pour pH : $\\mathrm{pH}_{\\mathrm{A}}=2{,}00$ et $\\mathrm{pH}_{\\mathrm{B}}=3{,}40$. On en déduit :",
+          "options": [
+            {
+              "label": "$\\tau_{\\mathrm{A}}=1{,}0$ et $\\tau_{\\mathrm{B}}=0{,}040$ : $\\mathrm{A}$ est le plus fort",
+              "correct": true,
+              "why": "$\\tau=\\dfrac{10^{-\\mathrm{pH}}}{C}$ : $\\tau_{\\mathrm{A}}=\\dfrac{10^{-2{,}00}}{10^{-2}}=1{,}0$ et $\\tau_{\\mathrm{B}}=\\dfrac{10^{-3{,}40}}{10^{-2}}=0{,}040$."
+            },
+            {
+              "label": "$\\tau_{\\mathrm{A}}=1{,}0$ et $\\tau_{\\mathrm{B}}=0{,}040$ : $\\mathrm{B}$ est le plus fort, car son pH est le plus élevé",
+              "why": "Les valeurs de $\\tau$ sont justes mais la conclusion est inversée : un pH plus bas signifie plus d'ions $\\mathrm{H_3O^+}$, donc un acide plus fort ici."
+            },
+            {
+              "label": "$\\tau_{\\mathrm{A}}=1{,}0$ et $\\tau_{\\mathrm{B}}=0{,}40$ : $\\mathrm{A}$ est le plus fort",
+              "why": "Pour $\\mathrm{B}$ tu as divisé $10^{-3{,}40}$ par $1{,}0\\times10^{-3}$ au lieu de la concentration $C=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$ : $\\tau_{\\mathrm{B}}=0{,}040$."
+            },
+            {
+              "label": "$\\tau_{\\mathrm{A}}=0{,}010$ et $\\tau_{\\mathrm{B}}=4{,}0\\times10^{-4}$ : $\\mathrm{A}$ est le plus fort",
+              "why": "Tu as pris $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$ comme taux d'avancement, sans diviser par $C$ ; or $\\tau=[\\mathrm{H_3O^+}]/C$."
+            }
+          ],
+          "hint": "Calcule $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$ puis divise par la concentration apportée.",
+          "solution": "$\\tau_{\\mathrm{A}}=\\dfrac{10^{-2{,}00}}{1{,}0\\times10^{-2}}=1{,}0$ : $\\mathrm{A}$ est un acide fort, totalement dissocié. $\\tau_{\\mathrm{B}}=\\dfrac{10^{-3{,}40}}{1{,}0\\times10^{-2}}=0{,}040$ : $\\mathrm{B}$ est faible. À même $C$, $\\mathrm{A}$ est le plus fort. Contrôle : $0<\\tau\\le1$ pour les deux acides.",
+          "methode": "$\\tau=\\dfrac{[\\mathrm{H_3O^+}]_f}{C}=\\dfrac{10^{-\\mathrm{pH}}}{C}$ ; à même $C$, comparer les $\\tau$.",
+          "points": 1,
+          "ref": "pc-equilibre-comparer-la-force-des-acides-q2"
+        },
+        {
+          "notion": "Comparer la force des acides",
+          "difficulty": 2,
+          "statement": "Trois acides $\\mathrm{A}_1$, $\\mathrm{A}_2$, $\\mathrm{A}_3$, de même concentration apportée, ont pour taux d'avancement final $0{,}12$, $0{,}040$ et $0{,}0042$ respectivement. Du plus fort au plus faible, on les classe :",
+          "options": [
+            {
+              "label": "$\\mathrm{A}_1$, puis $\\mathrm{A}_2$, puis $\\mathrm{A}_3$",
+              "correct": true,
+              "why": "À même concentration, plus $\\tau$ est grand, plus l'acide est fort : $0{,}12>0{,}040>0{,}0042$."
+            },
+            {
+              "label": "$\\mathrm{A}_3$, puis $\\mathrm{A}_2$, puis $\\mathrm{A}_1$",
+              "why": "Tu as classé par $\\tau$ croissant : c'est l'ordre du plus faible au plus fort."
+            },
+            {
+              "label": "$\\mathrm{A}_2$, puis $\\mathrm{A}_1$, puis $\\mathrm{A}_3$",
+              "why": "Rien ne justifie de placer $\\mathrm{A}_2$ avant $\\mathrm{A}_1$ : $0{,}040$ est plus petit que $0{,}12$."
+            },
+            {
+              "label": "$\\mathrm{A}_1$, $\\mathrm{A}_2$ et $\\mathrm{A}_3$ sont aussi forts les uns que les autres, car $\\tau<1$ pour tous",
+              "why": "Un acide plus fort a un $\\tau$ plus grand : des valeurs différentes de $\\tau<1$ traduisent des forces différentes."
+            }
+          ],
+          "hint": "Classe les valeurs de $\\tau$ puis traduis dans l'ordre de force.",
+          "solution": "À même concentration apportée, $\\tau$ mesure la proportion d'acide ayant réagi avec l'eau : $\\mathrm{A}_1$ ($0{,}12$) réagit le plus, $\\mathrm{A}_3$ ($0{,}0042$) le moins. Ordre décroissant de force : $\\mathrm{A}_1>\\mathrm{A}_2>\\mathrm{A}_3$. Contrôle : aucun n'est un acide fort ($\\tau<1$).",
+          "methode": "Même $C$ : classer les acides par $\\tau$ décroissant, du plus fort au plus faible.",
+          "points": 1,
+          "ref": "pc-equilibre-comparer-la-force-des-acides-q3"
+        },
+        {
+          "notion": "Comparer la force des acides",
+          "difficulty": 3,
+          "statement": "Un acide $\\mathrm{A}$ en solution à $1{,}0\\times10^{-1}\\ \\mathrm{mol\\,L^{-1}}$ a un pH de $2{,}9$, et un acide $\\mathrm{B}$ en solution à $1{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ a un pH de $3{,}9$. Un élève affirme que $\\mathrm{A}$ est le plus fort, car son pH est plus bas. Cette affirmation est :",
+          "options": [
+            {
+              "label": "fausse : concentrations différentes ; $\\tau_{\\mathrm{A}}=0{,}013$, $\\tau_{\\mathrm{B}}=0{,}13$, donc $\\mathrm{B}$ est plus fort",
+              "correct": true,
+              "why": "Pour comparer des forces il faut comparer $\\tau=\\dfrac{10^{-\\mathrm{pH}}}{C}$ : $\\tau_{\\mathrm{A}}=0{,}013$ et $\\tau_{\\mathrm{B}}=0{,}13$."
+            },
+            {
+              "label": "vraie : le pH le plus bas désigne toujours l'acide le plus fort dans une comparaison",
+              "why": "Le pH dépend aussi de la concentration : comparer des pH n'a de sens qu'à même concentration apportée."
+            },
+            {
+              "label": "vraie : la concentration apportée la plus grande donne toujours l'acide le plus fort",
+              "why": "La concentration apportée est un choix de l'expérimentateur : elle ne caractérise pas la force de l'acide."
+            },
+            {
+              "label": "fausse : le pH n'a aucun lien avec la force d'un acide, seul $\\tau$ compte vraiment",
+              "why": "Le pH est lié à $\\tau$ par $\\tau=10^{-\\mathrm{pH}}/C$ ; il intervient, mais il faut aussi connaître la concentration."
+            }
+          ],
+          "hint": "Pour comparer des acides, quelle grandeur doit-on calculer, qui tient compte de la concentration ?",
+          "solution": "On compare des forces avec $\\tau=\\dfrac{[\\mathrm{H_3O^+}]_f}{C}$ : $\\tau_{\\mathrm{A}}=\\dfrac{10^{-2{,}9}}{0{,}1}=0{,}013$ et $\\tau_{\\mathrm{B}}=\\dfrac{10^{-3{,}9}}{10^{-3}}=0{,}13$. $\\mathrm{B}$ réagit davantage avec l'eau : il est le plus fort. Contrôle : $\\mathrm{B}$ est plus dilué, ce qui augmente son $\\tau$ ; cela n'est pas visible en comparant seulement les pH.",
+          "methode": "Comparer des forces : toujours via $\\tau$ ; un pH seul ne suffit pas si les concentrations diffèrent.",
+          "points": 1,
+          "ref": "pc-equilibre-comparer-la-force-des-acides-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'influence de la dilution",
+        "lesson": "Réactions dans les deux sens",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-l-influence-de-la-dilution",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "L'influence de la dilution",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'influence de la dilution",
+          "difficulty": 1,
+          "statement": "Lorsqu'on dilue la solution d'un acide faible, son taux d'avancement final :",
+          "options": [
+            {
+              "label": "augmente, car l'acide réagit davantage avec l'eau quand il est plus dilué",
+              "correct": true,
+              "why": "Quand la solution est diluée, la proportion d'acide ayant réagi avec l'eau augmente : $\\tau$ croît."
+            },
+            {
+              "label": "diminue, car il y a moins d'acide dans la solution après dilution",
+              "why": "La quantité d'ions formés diminue en valeur absolue, mais la proportion d'acide qui a réagi augmente : $\\tau$ croît."
+            },
+            {
+              "label": "reste constant, car $\\tau$ ne dépend que de la nature de l'acide",
+              "why": "$\\tau$ dépend aussi de la concentration : il augmente quand on dilue une solution d'acide faible."
+            },
+            {
+              "label": "devient égal à $1$ dès la première dilution, quelle que soit sa valeur de départ",
+              "why": "Il augmente, mais pas jusqu'à $1$ en une dilution : il ne vaut $1$ que pour un acide fort."
+            }
+          ],
+          "hint": "La dilution favorise-t-elle ou non la réaction de l'acide avec l'eau, présente en grande quantité ?",
+          "solution": "Pour un acide faible, la dilution augmente le taux d'avancement final : la proportion d'acide ayant réagi avec l'eau est plus grande dans la solution diluée. Pour un acide fort, $\\tau=1$ avant comme après dilution. Contrôle : $\\tau$ reste inférieur à $1$ pour un acide faible.",
+          "methode": "Dilution d'un acide faible : $\\tau$ augmente ; acide fort : $\\tau$ reste égal à $1$.",
+          "points": 1,
+          "ref": "pc-equilibre-l-influence-de-la-dilution-q1"
+        },
+        {
+          "notion": "L'influence de la dilution",
+          "difficulty": 2,
+          "statement": "Une solution d'acide éthanoïque a pour pH $2{,}88$ à la concentration $C_1=1{,}0\\times10^{-1}\\ \\mathrm{mol\\,L^{-1}}$ et $3{,}38$ après dilution à $C_2=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$. On trouve :",
+          "options": [
+            {
+              "label": "$\\tau_1=1{,}3\\times10^{-2}$ et $\\tau_2=4{,}2\\times10^{-2}$ : $\\tau$ augmente avec la dilution",
+              "correct": true,
+              "why": "$\\tau=\\dfrac{10^{-\\mathrm{pH}}}{C}$ : $\\tau_1=\\dfrac{10^{-2{,}88}}{0{,}10}=1{,}3\\times10^{-2}$ et $\\tau_2=\\dfrac{10^{-3{,}38}}{0{,}010}=4{,}2\\times10^{-2}$."
+            },
+            {
+              "label": "$\\tau_1=4{,}2\\times10^{-2}$ et $\\tau_2=1{,}3\\times10^{-2}$ : $\\tau$ diminue avec la dilution",
+              "why": "Tu as permuté les deux valeurs : c'est la solution la plus diluée qui a le $\\tau$ le plus grand."
+            },
+            {
+              "label": "$\\tau_1=1{,}3\\times10^{-3}$ et $\\tau_2=4{,}2\\times10^{-4}$ : $\\tau$ diminue avec la dilution",
+              "why": "Tu as pris $[\\mathrm{H_3O^+}]=10^{-\\mathrm{pH}}$ pour $\\tau$ sans diviser par $C$ : $[\\mathrm{H_3O^+}]$ diminue, mais $\\tau$, lui, augmente."
+            },
+            {
+              "label": "$\\tau_1=1{,}3\\times10^{-2}$ et $\\tau_2=4{,}2\\times10^{-3}$ : $\\tau$ diminue avec la dilution",
+              "why": "Pour $\\tau_2$ tu as divisé par $C_1=0{,}10$ au lieu de $C_2=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$."
+            }
+          ],
+          "hint": "Calcule $\\tau=[\\mathrm{H_3O^+}]/C$ pour chaque solution, avec la bonne concentration à chaque fois.",
+          "solution": "$[\\mathrm{H_3O^+}]_1=10^{-2{,}88}=1{,}3\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$ donc $\\tau_1=\\dfrac{1{,}3\\times10^{-3}}{0{,}10}=1{,}3\\times10^{-2}$ ; $[\\mathrm{H_3O^+}]_2=10^{-3{,}38}=4{,}2\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ donc $\\tau_2=\\dfrac{4{,}2\\times10^{-4}}{0{,}010}=4{,}2\\times10^{-2}$. Le taux d'avancement final est multiplié par environ $3{,}2$ quand on dilue $10$ fois. Contrôle : $\\tau_2>\\tau_1$ et les deux restent inférieurs à $1$.",
+          "methode": "Dilution d'un acide faible : $\\tau=[\\mathrm{H_3O^+}]/C$ augmente, bien que $[\\mathrm{H_3O^+}]$ diminue.",
+          "points": 1,
+          "ref": "pc-equilibre-l-influence-de-la-dilution-q2"
+        },
+        {
+          "notion": "L'influence de la dilution",
+          "difficulty": 3,
+          "statement": "On dilue $10$ fois une solution d'acide fort et une solution d'acide faible. Le taux d'avancement final de l'acide fort et celui de l'acide faible varient ainsi :",
+          "options": [
+            {
+              "label": "celui de l'acide fort reste égal à $1$, celui de l'acide faible augmente",
+              "correct": true,
+              "why": "Un acide fort est totalement dissocié avant et après dilution ; seul l'acide faible voit $\\tau$ augmenter."
+            },
+            {
+              "label": "les deux augmentent, celui de l'acide fort dépassant alors $1$",
+              "why": "Un taux d'avancement ne peut pas dépasser $1$ : celui de l'acide fort reste égal à $1$."
+            },
+            {
+              "label": "celui de l'acide fort diminue, celui de l'acide faible augmente",
+              "why": "Un acide fort est totalement dissocié, $\\tau=1$, et cela ne dépend pas de la dilution : il ne diminue pas."
+            },
+            {
+              "label": "les deux restent constants, car la dilution ne change pas la nature de l'acide",
+              "why": "La nature de l'acide ne change pas, mais $\\tau$ d'un acide faible dépend de la concentration : il augmente."
+            }
+          ],
+          "hint": "Un acide fort a-t-il encore quelque chose à gagner en se dissociant davantage ?",
+          "solution": "Acide fort : $\\tau=1$ quelle que soit la concentration, la transformation étant totale. Acide faible : $\\tau<1$ augmente quand on dilue. Contrôle : $\\tau$ est toujours compris entre $0$ et $1$, donc aucun des deux ne peut dépasser $1$.",
+          "methode": "Dilution : $\\tau$ d'un acide fort reste $1$ ; celui d'un acide faible augmente sans dépasser $1$.",
+          "points": 1,
+          "ref": "pc-equilibre-l-influence-de-la-dilution-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'état d'équilibre",
+        "lesson": "État d'équilibre dynamique",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-l-etat-d-equilibre",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "L'état d'équilibre",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'état d'équilibre",
+          "difficulty": 1,
+          "statement": "À l'état d'équilibre chimique, les quantités de matière des espèces :",
+          "options": [
+            {
+              "label": "restent constantes au cours du temps",
+              "correct": true,
+              "why": "C'est la caractéristique de l'état d'équilibre : la composition du système n'évolue plus macroscopiquement."
+            },
+            {
+              "label": "sont toutes nulles, car les réactifs sont entièrement consommés",
+              "why": "Cela décrit une transformation totale épuisant les réactifs ; à l'équilibre, réactifs et produits coexistent."
+            },
+            {
+              "label": "continuent de varier, les produits augmentant toujours",
+              "why": "À l'équilibre, la composition est constante : plus aucune évolution macroscopique n'est observée."
+            },
+            {
+              "label": "sont égales pour tous les réactifs et tous les produits",
+              "why": "Il n'y a aucune raison que toutes les quantités soient égales : elles dépendent de la transformation et de l'état initial."
+            }
+          ],
+          "hint": "À l'équilibre, observe-t-on encore une évolution de la composition du mélange ?",
+          "solution": "À l'état d'équilibre, la composition du système reste constante : les quantités de matière de toutes les espèces ne varient plus. Les réactifs et les produits y coexistent, avec des quantités en général différentes. Contrôle : la courbe $x(t)$ est devenue horizontale.",
+          "methode": "État d'équilibre : composition constante, réactifs et produits coexistent.",
+          "points": 1,
+          "ref": "pc-equilibre-l-etat-d-equilibre-q1"
+        },
+        {
+          "notion": "L'état d'équilibre",
+          "difficulty": 2,
+          "statement": "Dire que l'état d'équilibre est un équilibre dynamique signifie que :",
+          "options": [
+            {
+              "label": "les transformations directe et inverse se poursuivent à la même vitesse, quantités constantes",
+              "correct": true,
+              "why": "À l'échelle microscopique rien ne s'arrête : les deux sens ont lieu à la même vitesse, ce qui compense exactement les effets."
+            },
+            {
+              "label": "aucune transformation n'a plus lieu, même à l'échelle microscopique, dans le mélange",
+              "why": "Les transformations ne s'arrêtent pas : seules les quantités macroscopiques cessent de varier."
+            },
+            {
+              "label": "seule la transformation directe se poursuit, mais à une vitesse plus faible qu'au début",
+              "why": "Si seule la transformation directe se poursuivait, les quantités continueraient d'évoluer : or elles sont constantes."
+            },
+            {
+              "label": "la transformation inverse est plus rapide que la directe, ce qui fige la composition",
+              "why": "Si l'inverse était plus rapide, la composition évoluerait dans le sens inverse ; elle est figée parce que les vitesses sont égales."
+            }
+          ],
+          "hint": "Pour que la composition ne varie plus, que doit-on avoir entre la vitesse du sens direct et celle du sens inverse ?",
+          "solution": "À l'équilibre, les transformations directe et inverse se poursuivent mais à la même vitesse : chaque espèce est formée aussi vite qu'elle est consommée, d'où des quantités constantes. Contrôle : si une des vitesses l'emportait, la composition continuerait d'évoluer.",
+          "methode": "Équilibre dynamique : vitesse du sens direct = vitesse du sens inverse, quantités constantes.",
+          "points": 1,
+          "ref": "pc-equilibre-l-etat-d-equilibre-q2"
+        },
+        {
+          "notion": "L'état d'équilibre",
+          "difficulty": 2,
+          "statement": "On mélange $1{,}00\\ \\mathrm{mol}$ d'acide éthanoïque et $1{,}00\\ \\mathrm{mol}$ d'éthanol, ce qui conduit à un taux d'avancement final $\\tau=0{,}67$ pour l'estérification. À l'équilibre, la quantité d'acide restant et la quantité d'ester formé valent :",
+          "options": [
+            {
+              "label": "$n(\\text{acide})=0{,}33\\ \\mathrm{mol}$ et $n(\\text{ester})=0{,}67\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$x_f=\\tau\\,x_{\\max}=0{,}67\\times1{,}00=0{,}67\\ \\mathrm{mol}$ ; $n(\\text{ester})=x_f$ et $n(\\text{acide})=1{,}00-x_f=0{,}33\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$n(\\text{acide})=0{,}67\\ \\mathrm{mol}$ et $n(\\text{ester})=0{,}33\\ \\mathrm{mol}$",
+              "why": "Tu as permuté les deux : l'ester est un produit, sa quantité vaut $x_f=0{,}67$ ; l'acide, réactif, en conserve $1{,}00-0{,}67$."
+            },
+            {
+              "label": "$n(\\text{acide})=0{,}00\\ \\mathrm{mol}$ et $n(\\text{ester})=1{,}00\\ \\mathrm{mol}$",
+              "why": "Tu as supposé la transformation totale : avec $\\tau=0{,}67<1$, il reste de l'acide à l'équilibre."
+            },
+            {
+              "label": "$n(\\text{acide})=0{,}33\\ \\mathrm{mol}$ et $n(\\text{ester})=0{,}33\\ \\mathrm{mol}$",
+              "why": "Tu as supposé que réactifs et produits ont la même quantité à l'équilibre : ici $n(\\text{ester})=x_f=0{,}67\\ \\mathrm{mol}$, pas $0{,}33$."
+            }
+          ],
+          "hint": "Calcule d'abord $x_f$ à partir de $\\tau$, puis la composition avec le tableau d'avancement.",
+          "solution": "$x_{\\max}=1{,}00\\ \\mathrm{mol}$ (coefficients $1$, quantités égales) donc $x_f=\\tau\\,x_{\\max}=0{,}67\\ \\mathrm{mol}$. À l'équilibre : $n(\\text{ester})=n(\\text{eau})=0{,}67\\ \\mathrm{mol}$ et $n(\\text{acide})=n(\\text{alcool})=1{,}00-0{,}67=0{,}33\\ \\mathrm{mol}$. Contrôle : le nombre total de moles est conservé, $0{,}33\\times2+0{,}67\\times2=2{,}00\\ \\mathrm{mol}$.",
+          "methode": "À l'équilibre : $n_i=n_{i,0}\\mp\\nu_i x_f$ avec $x_f=\\tau\\,x_{\\max}$.",
+          "points": 1,
+          "ref": "pc-equilibre-l-etat-d-equilibre-q3"
+        },
+        {
+          "notion": "L'état d'équilibre",
+          "difficulty": 3,
+          "statement": "Sur la courbe $x(t)$ d'une transformation limitée, la pente devient nulle à partir d'une certaine date, ce qui signifie que :",
+          "options": [
+            {
+              "label": "les vitesses des transformations directe et inverse sont devenues égales",
+              "correct": true,
+              "why": "La pente de $x(t)$ est la vitesse globale, différence des deux vitesses : elle est nulle quand elles sont égales."
+            },
+            {
+              "label": "la transformation directe s'est arrêtée dans le mélange, la transformation inverse continuant",
+              "why": "La transformation directe continue : c'est la compensation par la transformation inverse qui annule la variation de $x$."
+            },
+            {
+              "label": "la transformation inverse s'est arrêtée dans le mélange, la transformation directe continuant",
+              "why": "Si l'inverse s'était arrêtée, la transformation directe continuerait de faire croître $x$."
+            },
+            {
+              "label": "le réactif limitant est entièrement consommé, plus rien ne peut donc évoluer",
+              "why": "Pour une transformation limitée, aucun réactif n'est entièrement consommé : $x_f<x_{\\max}$."
+            }
+          ],
+          "hint": "La pente de $x(t)$ traduit la vitesse globale : de quoi est-elle la différence ?",
+          "solution": "La vitesse globale de la transformation est la différence entre la vitesse du sens direct et celle du sens inverse. Une pente nulle signifie que ces deux vitesses sont égales : l'équilibre est atteint, sans que rien ne soit arrêté. Contrôle : $x_f<x_{\\max}$, donc le réactif limitant n'est pas épuisé.",
+          "methode": "Pente nulle de $x(t)$ : vitesses direct et inverse égales, pas arrêt des transformations.",
+          "points": 1,
+          "ref": "pc-equilibre-l-etat-d-equilibre-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Atteindre le même équilibre par les deux bouts",
+        "lesson": "État d'équilibre dynamique",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "Atteindre le même équilibre par les deux bouts",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Atteindre le même équilibre par les deux bouts",
+          "difficulty": 1,
+          "statement": "On réalise, à la même température et dans le même volume, une estérification à partir de l'acide et de l'alcool, puis une hydrolyse à partir de l'ester et de l'eau, avec des quantités totales de matière équivalentes. Les deux systèmes atteignent :",
+          "options": [
+            {
+              "label": "le même état d'équilibre, avec la même composition finale",
+              "correct": true,
+              "why": "L'état d'équilibre ne dépend pas du sens par lequel on l'atteint, dès lors que les quantités d'éléments introduites sont les mêmes."
+            },
+            {
+              "label": "deux états d'équilibre différents, selon le sens de départ",
+              "why": "L'équilibre n'a pas de mémoire du chemin suivi : la composition finale est la même quel que soit le sens de départ."
+            },
+            {
+              "label": "un état où tous les réactifs sont entièrement consommés dans les deux cas",
+              "why": "L'estérification comme l'hydrolyse sont limitées : réactifs et produits coexistent à l'équilibre, dans les deux cas."
+            },
+            {
+              "label": "un état d'équilibre seulement pour l'estérification, l'hydrolyse étant toujours totale",
+              "why": "L'hydrolyse est la transformation inverse, tout aussi limitée : elle conduit au même état d'équilibre."
+            }
+          ],
+          "hint": "Un état d'équilibre dépend-il de la direction dans laquelle on s'en approche ?",
+          "solution": "L'estérification et l'hydrolyse sont deux transformations inverses l'une de l'autre. Partant d'un mélange de même composition en éléments, elles aboutissent au même état d'équilibre, de même composition finale. C'est une manière expérimentale de reconnaître un équilibre. Contrôle : les courbes $n(\\text{ester})(t)$ des deux essais convergent vers la même valeur.",
+          "methode": "Un même état d'équilibre est atteint par les deux sens, à conditions identiques.",
+          "points": 1,
+          "ref": "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux-q1"
+        },
+        {
+          "notion": "Atteindre le même équilibre par les deux bouts",
+          "difficulty": 2,
+          "statement": "Dans un essai d'hydrolyse, on part de $1{,}00\\ \\mathrm{mol}$ d'ester et $1{,}00\\ \\mathrm{mol}$ d'eau, et on retrouve $0{,}67\\ \\mathrm{mol}$ d'ester à l'équilibre. Le taux d'avancement final de l'hydrolyse vaut :",
+          "options": [
+            {
+              "label": "$\\tau=0{,}33$",
+              "correct": true,
+              "why": "L'ester consommé vaut $x_f=1{,}00-0{,}67=0{,}33\\ \\mathrm{mol}$ et $x_{\\max}=1{,}00\\ \\mathrm{mol}$ : $\\tau=\\dfrac{0{,}33}{1{,}00}=0{,}33$."
+            },
+            {
+              "label": "$\\tau=0{,}67$",
+              "why": "Tu as pris la quantité d'ester restant à l'équilibre : $\\tau$ est la proportion d'ester qui a réagi, donc $0{,}33$."
+            },
+            {
+              "label": "$\\tau=1{,}00$",
+              "why": "Tu as supposé l'hydrolyse totale : or il reste $0{,}67\\ \\mathrm{mol}$ d'ester, la transformation est limitée."
+            },
+            {
+              "label": "$\\tau=3{,}0$",
+              "why": "Tu as inversé le rapport $\\dfrac{x_{\\max}}{x_f}=\\dfrac{1{,}00}{0{,}33}$ : un taux d'avancement ne dépasse pas $1$."
+            }
+          ],
+          "hint": "Combien d'ester a disparu pendant l'hydrolyse ? Rapporte-le à l'avancement maximal.",
+          "solution": "Pour l'hydrolyse $\\text{ester}+\\text{eau}\\rightleftharpoons\\text{acide}+\\text{alcool}$, $x_{\\max}=1{,}00\\ \\mathrm{mol}$. L'ester diminue de $x_f$ : $n_f(\\text{ester})=1{,}00-x_f=0{,}67$ donc $x_f=0{,}33\\ \\mathrm{mol}$ et $\\tau=\\dfrac{x_f}{x_{\\max}}=0{,}33$. Contrôle : on retrouve la composition obtenue par l'estérification ($0{,}33\\ \\mathrm{mol}$ d'acide et d'alcool).",
+          "methode": "Taux d'avancement : proportion du réactif limitant qui a réagi, $\\tau=x_f/x_{\\max}$.",
+          "points": 1,
+          "ref": "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux-q2"
+        },
+        {
+          "notion": "Atteindre le même équilibre par les deux bouts",
+          "difficulty": 2,
+          "statement": "À la même température, quel mélange initial conduit à la même composition d'équilibre que $1{,}00\\ \\mathrm{mol}$ d'acide éthanoïque et $1{,}00\\ \\mathrm{mol}$ d'éthanol ?",
+          "options": [
+            {
+              "label": "$1{,}00\\ \\mathrm{mol}$ d'ester (éthanoate d'éthyle) et $1{,}00\\ \\mathrm{mol}$ d'eau",
+              "correct": true,
+              "why": "Ce mélange contient les mêmes éléments en mêmes quantités : l'hydrolyse conduit au même état d'équilibre."
+            },
+            {
+              "label": "$1{,}00\\ \\mathrm{mol}$ d'ester seul, sans eau",
+              "why": "Sans eau, l'hydrolyse ne peut pas avoir lieu : le mélange contiendrait les éléments dans des proportions différentes de l'état initial de référence."
+            },
+            {
+              "label": "$1{,}00\\ \\mathrm{mol}$ d'acide éthanoïque et $1{,}00\\ \\mathrm{mol}$ d'eau",
+              "why": "Acide et eau ne réagissent pas ensemble pour former l'ester : ce mélange n'a pas la même composition en éléments."
+            },
+            {
+              "label": "$1{,}00\\ \\mathrm{mol}$ d'éthanol et $1{,}00\\ \\mathrm{mol}$ d'ester",
+              "why": "Ce mélange contient plus de carbone et d'hydrogène que l'état de référence : il ne conduit pas à la même composition d'équilibre."
+            }
+          ],
+          "hint": "Cherche le mélange formé des produits de l'estérification, dans les quantités correspondant à $x_{\\max}$.",
+          "solution": "L'estérification d'équation $\\mathrm{CH_3COOH}+\\mathrm{C_2H_5OH}\\rightleftharpoons\\mathrm{CH_3COOC_2H_5}+\\mathrm{H_2O}$ part de l'acide et de l'alcool. L'état d'équilibre est le même si l'on part des produits, ester et eau, en quantités égales à celles qu'on obtiendrait avec $x_{\\max}$ : ici $1{,}00\\ \\mathrm{mol}$ de chacun. Contrôle : mêmes éléments, mêmes quantités.",
+          "methode": "Même équilibre : partir des produits correspondant à l'avancement maximal.",
+          "points": 1,
+          "ref": "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux-q3"
+        },
+        {
+          "notion": "Atteindre le même équilibre par les deux bouts",
+          "difficulty": 3,
+          "statement": "Un mélange de $1{,}00\\ \\mathrm{mol}$ d'acide et $1{,}00\\ \\mathrm{mol}$ d'alcool conduit à l'équilibre à $0{,}67\\ \\mathrm{mol}$ d'ester. On part de $1{,}00\\ \\mathrm{mol}$ d'ester et $1{,}00\\ \\mathrm{mol}$ d'eau, dans les mêmes conditions. À l'équilibre, la quantité d'ester vaut :",
+          "options": [
+            {
+              "label": "$0{,}67\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "Même état d'équilibre atteint par l'autre sens : la composition est identique, donc $n(\\text{ester})=0{,}67\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$0{,}33\\ \\mathrm{mol}$",
+              "why": "Tu as repris la quantité d'acide à l'équilibre : l'ester, lui, garde $0{,}67\\ \\mathrm{mol}$ puisque la composition finale est la même dans les deux essais."
+            },
+            {
+              "label": "$1{,}00\\ \\mathrm{mol}$",
+              "why": "Tu as supposé qu'aucune hydrolyse n'avait lieu : l'ester et l'eau réagissent pour former acide et alcool jusqu'à l'équilibre."
+            },
+            {
+              "label": "$0{,}00\\ \\mathrm{mol}$",
+              "why": "Tu as supposé l'hydrolyse totale : or elle est limitée et conduit au même équilibre que l'estérification."
+            }
+          ],
+          "hint": "Que sais-tu de l'état final atteint à partir des produits, dans des conditions identiques ?",
+          "solution": "Les deux essais partent de mélanges équivalents (mêmes éléments, mêmes quantités) et sont à la même température : ils atteignent le même état d'équilibre. La composition est donc $n(\\text{ester})=n(\\text{eau})=0{,}67\\ \\mathrm{mol}$ et $n(\\text{acide})=n(\\text{alcool})=0{,}33\\ \\mathrm{mol}$. Contrôle : l'hydrolyse a consommé $1{,}00-0{,}67=0{,}33\\ \\mathrm{mol}$ d'ester.",
+          "methode": "Équilibre atteint par les deux sens : même composition finale.",
+          "points": 1,
+          "ref": "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'interprétation microscopique",
+        "lesson": "État d'équilibre dynamique",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-l-interpretation-microscopique",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "L'interprétation microscopique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'interprétation microscopique",
+          "difficulty": 1,
+          "statement": "À l'échelle microscopique, à l'état d'équilibre, les entités chimiques :",
+          "options": [
+            {
+              "label": "réagissent toujours dans les deux sens, aussi souvent dans un sens que dans l'autre",
+              "correct": true,
+              "why": "L'équilibre est dynamique : les chocs efficaces se poursuivent dans les deux sens, à des fréquences égales."
+            },
+            {
+              "label": "ne réagissent plus du tout, car la composition macroscopique du mélange est constante",
+              "why": "La composition macroscopique est constante, mais les entités continuent de réagir : l'équilibre est dynamique."
+            },
+            {
+              "label": "réagissent seulement dans le sens direct, plus lentement qu'au début de la transformation",
+              "why": "Si seul le sens direct se poursuivait, la composition évoluerait ; elle est constante parce que le sens inverse compense."
+            },
+            {
+              "label": "réagissent plus souvent dans le sens direct que dans le sens inverse, sans que cela se voie",
+              "why": "Si les fréquences n'étaient pas égales, la composition évoluerait : à l'équilibre elles sont égales."
+            }
+          ],
+          "hint": "Que fait chaque entité à l'échelle microscopique pendant que la composition macroscopique reste constante ?",
+          "solution": "À l'état d'équilibre, des chocs efficaces ont lieu dans les deux sens : des réactifs se transforment en produits et des produits en réactifs, avec le même nombre de transformations par seconde. La composition globale ne varie pas. Contrôle : c'est ce que traduit le qualificatif « dynamique ».",
+          "methode": "Équilibre : transformations microscopiques toujours en cours, même nombre par seconde dans les deux sens.",
+          "points": 1,
+          "ref": "pc-equilibre-l-interpretation-microscopique-q1"
+        },
+        {
+          "notion": "L'interprétation microscopique",
+          "difficulty": 2,
+          "statement": "À l'équilibre, la quantité d'une espèce chimique reste constante parce que :",
+          "options": [
+            {
+              "label": "le nombre d'entités de cette espèce formées par seconde égale le nombre de celles qui disparaissent",
+              "correct": true,
+              "why": "Formation et disparition se compensent exactement : le bilan est nul, donc la quantité ne varie pas."
+            },
+            {
+              "label": "plus aucune entité de cette espèce ne réagit dans le mélange une fois l'équilibre atteint",
+              "why": "Les entités réagissent encore : ce sont les vitesses de formation et de disparition qui sont égales."
+            },
+            {
+              "label": "cette espèce est seulement formée, jamais consommée, une fois l'équilibre atteint",
+              "why": "Si elle n'était que formée, sa quantité augmenterait : à l'équilibre elle est aussi consommée."
+            },
+            {
+              "label": "cette espèce est seulement consommée, jamais formée, une fois l'équilibre atteint",
+              "why": "Si elle n'était que consommée, sa quantité diminuerait : à l'équilibre elle est aussi formée."
+            }
+          ],
+          "hint": "La constance d'une quantité peut venir d'une absence de transformation ou d'une compensation : laquelle correspond à l'équilibre ?",
+          "solution": "À l'équilibre, chaque espèce est formée par une transformation et consommée par la transformation inverse ; les deux vitesses sont égales, donc la quantité reste constante. Contrôle : une quantité constante ne signifie pas une absence de transformation.",
+          "methode": "Quantité constante à l'équilibre : vitesse de formation = vitesse de disparition.",
+          "points": 1,
+          "ref": "pc-equilibre-l-interpretation-microscopique-q2"
+        },
+        {
+          "notion": "L'interprétation microscopique",
+          "difficulty": 3,
+          "statement": "À l'équilibre d'une estérification, on ajoute un peu d'alcool marqué par un isotope, de réactivité identique, sans changer la composition globale. Plus tard, on retrouve le marqueur dans l'ester et dans l'alcool. On en conclut que :",
+          "options": [
+            {
+              "label": "les transformations directe et inverse continuent de se produire à l'équilibre",
+              "correct": true,
+              "why": "Le marqueur passe de l'alcool à l'ester (estérification) et revient (hydrolyse) : les deux transformations se poursuivent."
+            },
+            {
+              "label": "les transformations se sont arrêtées et le marqueur s'est simplement déplacé par diffusion",
+              "why": "Le marqueur est lié à l'ester par une liaison chimique : cela exige une transformation, pas une simple diffusion."
+            },
+            {
+              "label": "seule l'hydrolyse se poursuit à l'équilibre, l'estérification étant arrêtée",
+              "why": "Le marqueur ne pourrait pas apparaître dans l'ester sans estérification : celle-ci se poursuit aussi."
+            },
+            {
+              "label": "l'ajout a déplacé l'équilibre vers l'ester, qui contient désormais le marqueur",
+              "why": "Le marqueur ne change pas la composition globale ni les vitesses : il révèle les échanges, il ne modifie pas l'équilibre."
+            }
+          ],
+          "hint": "Pour que le marqueur passe de l'alcool à l'ester puis revienne, que doit-il se passer ?",
+          "solution": "Le marqueur de l'alcool ne peut entrer dans l'ester que par estérification, et le marqueur ne peut rester dans l'alcool que si l'hydrolyse en régénère. Sa présence dans les deux espèces prouve que les deux transformations se poursuivent à l'équilibre, tandis que les quantités totales restent constantes. Contrôle : c'est une preuve expérimentale du caractère dynamique de l'équilibre.",
+          "methode": "Marquage isotopique : preuve que les deux sens se poursuivent à l'équilibre.",
+          "points": 1,
+          "ref": "pc-equilibre-l-interpretation-microscopique-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Reconnaître un équilibre",
+        "lesson": "État d'équilibre dynamique",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-reconnaitre-un-equilibre",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "Reconnaître un équilibre",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Reconnaître un équilibre",
+          "difficulty": 1,
+          "statement": "Pour reconnaître qu'un système chimique est dans un état d'équilibre, il faut d'abord constater que :",
+          "options": [
+            {
+              "label": "sa composition reste constante au cours du temps",
+              "correct": true,
+              "why": "Une composition qui n'évolue plus est la première condition à vérifier pour parler d'un équilibre."
+            },
+            {
+              "label": "tous les réactifs ont été entièrement consommés",
+              "why": "Cela caractérise une transformation totale ; à l'équilibre, réactifs et produits coexistent."
+            },
+            {
+              "label": "la température du système a augmenté pendant la transformation",
+              "why": "L'évolution de la température n'est pas un critère : l'équilibre se reconnaît à la composition du système."
+            },
+            {
+              "label": "le système est devenu incolore à la fin de la transformation",
+              "why": "La couleur du mélange n'est pas un critère général d'équilibre : elle dépend des espèces en présence."
+            }
+          ],
+          "hint": "Qu'observe-t-on sur les quantités des espèces quand un système est à l'équilibre ?",
+          "solution": "La première condition pour qu'un système soit à l'équilibre est que sa composition reste constante au cours du temps, à température et volume fixés. Il faut ensuite s'assurer qu'il ne s'agit pas d'un blocage cinétique. Contrôle : tous les réactifs consommés signalerait plutôt une transformation totale.",
+          "methode": "Équilibre : d'abord vérifier une composition constante dans le temps.",
+          "points": 1,
+          "ref": "pc-equilibre-reconnaitre-un-equilibre-q1"
+        },
+        {
+          "notion": "Reconnaître un équilibre",
+          "difficulty": 2,
+          "statement": "La composition d'un mélange reste constante depuis plusieurs jours. On y ajoute un catalyseur adapté : la composition se met à évoluer. On en conclut que, avant l'ajout :",
+          "options": [
+            {
+              "label": "le système n'était pas à l'équilibre, mais bloqué cinétiquement",
+              "correct": true,
+              "why": "Un catalyseur ne change pas un état d'équilibre ; s'il fait évoluer la composition, c'est que le système n'y était pas."
+            },
+            {
+              "label": "le système était à l'équilibre et le catalyseur a déplacé cet équilibre",
+              "why": "Un catalyseur accélère les deux sens sans modifier l'état d'équilibre : il ne peut pas le déplacer."
+            },
+            {
+              "label": "le système était à l'équilibre et le catalyseur a été consommé en formant de nouveaux produits",
+              "why": "Un catalyseur n'est pas consommé : il ne fait pas apparaître de nouveaux produits de cette façon."
+            },
+            {
+              "label": "le système était à l'équilibre, la composition ayant changé seulement à cause de l'ajout du volume du catalyseur",
+              "why": "L'ajout d'une petite quantité de catalyseur ne modifie pas assez le volume pour changer la composition d'un équilibre."
+            }
+          ],
+          "hint": "Un catalyseur modifie-t-il l'état d'équilibre d'un système ?",
+          "solution": "Un catalyseur agit sur la vitesse, pas sur l'état d'équilibre. Si la composition évolue après son ajout, l'état précédent n'était pas un état d'équilibre : la transformation était bloquée cinétiquement. Contrôle : un équilibre véritable resterait inchangé après ajout du catalyseur.",
+          "methode": "Composition constante qui évolue avec un catalyseur : blocage cinétique, pas équilibre.",
+          "points": 1,
+          "ref": "pc-equilibre-reconnaitre-un-equilibre-q2"
+        },
+        {
+          "notion": "Reconnaître un équilibre",
+          "difficulty": 2,
+          "statement": "Parmi ces expériences, laquelle apporte la meilleure preuve qu'un système est à l'état d'équilibre ?",
+          "options": [
+            {
+              "label": "retrouver la même composition finale en partant des produits, dans les mêmes conditions",
+              "correct": true,
+              "why": "Atteindre le même état par les deux sens est le critère expérimental le plus convaincant d'un état d'équilibre."
+            },
+            {
+              "label": "mesurer la composition une seule fois, après plusieurs heures de réaction",
+              "why": "Une seule mesure ne montre pas que la composition est stable dans le temps ni qu'il s'agit d'un équilibre."
+            },
+            {
+              "label": "vérifier que la température du mélange est restée constante pendant l'expérience",
+              "why": "Une température constante est une condition de l'expérience, pas une preuve d'équilibre."
+            },
+            {
+              "label": "observer que le mélange est limpide à la fin de la transformation",
+              "why": "L'aspect du mélange ne dit rien sur l'état d'équilibre : un système limpide peut très bien évoluer encore."
+            }
+          ],
+          "hint": "Quel test distingue un équilibre d'une transformation simplement lente ou bloquée ?",
+          "solution": "Un équilibre se reconnaît par une composition constante et par le fait qu'il est atteint de la même manière en partant des réactifs ou des produits. Une mesure unique ou un simple aspect ne le prouvent pas. Contrôle : si on ne retrouvait pas la même composition, le système ne serait pas à l'équilibre.",
+          "methode": "Preuve d'équilibre : même composition finale atteinte par les deux sens.",
+          "points": 1,
+          "ref": "pc-equilibre-reconnaitre-un-equilibre-q3"
+        },
+        {
+          "notion": "Reconnaître un équilibre",
+          "difficulty": 3,
+          "statement": "On suit le nombre de moles d'ester $n(\\text{ester})$ dans deux essais à la même température : essai 1 (acide + alcool) : $0\\,;0{,}38\\,;0{,}52\\,;0{,}62\\,;0{,}67\\,;0{,}67$ ; essai 2 (ester + eau) : $1{,}00\\,;0{,}80\\,;0{,}72\\,;0{,}68\\,;0{,}67\\,;0{,}67$ aux dates $t=0\\,;0{,}5\\,;1\\,;2\\,;4\\,;8\\ \\mathrm{h}$. D'après ces relevés, on peut affirmer que :",
+          "options": [
+            {
+              "label": "les deux essais convergent vers la même composition : état d'équilibre atteint par les deux sens",
+              "correct": true,
+              "why": "Dès $4\\ \\mathrm{h}$ les deux essais donnent $0{,}67\\ \\mathrm{mol}$ et n'évoluent plus : état d'équilibre atteint par deux voies."
+            },
+            {
+              "label": "la transformation est totale, car la quantité d'ester ne varie plus à partir de $4\\ \\mathrm{h}$",
+              "why": "Une quantité qui ne varie plus indique un état final, pas son caractère total : l'ester ($0{,}67$) et les réactifs coexistent."
+            },
+            {
+              "label": "l'essai 2 est une transformation totale, puisque la quantité d'ester diminue au cours du temps",
+              "why": "L'ester ne disparaît pas entièrement : il reste $0{,}67\\ \\mathrm{mol}$, donc l'hydrolyse est limitée."
+            },
+            {
+              "label": "les deux essais ne sont pas comparables, car leurs états initiaux sont différents l'un de l'autre",
+              "why": "Ils sont comparables précisément pour cela : deux états initiaux équivalents conduisant au même état final prouvent l'équilibre."
+            }
+          ],
+          "hint": "Compare les dernières valeurs des deux séries : que remarques-tu ?",
+          "solution": "Dans l'essai 1, $n(\\text{ester})$ croît de $0$ à $0{,}67$ ; dans l'essai 2, il décroît de $1{,}00$ à $0{,}67$. À partir de $4\\ \\mathrm{h}$ les deux valeurs sont identiques et constantes : l'état final est le même, atteint par les deux sens. Contrôle : $0{,}67<1{,}00$ : aucun des deux essais n'est total.",
+          "methode": "Deux essais en sens inverses qui convergent : état d'équilibre.",
+          "points": 1,
+          "ref": "pc-equilibre-reconnaitre-un-equilibre-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Mesurer $\\tau$ : les deux voies expérimentales",
+        "lesson": "Approfondissement — Transformations dans les deux sens",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-mesurer-tau-les-deux-voies-experimentale",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "Mesurer $\\tau$ : les deux voies expérimentales",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Mesurer $\\tau$ : les deux voies expérimentales",
+          "difficulty": 3,
+          "statement": "Une solution d'acide éthanoïque de concentration $C=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$ a une conductivité $\\sigma=16{,}3\\ \\mathrm{mS\\,m^{-1}}$, avec $\\lambda(\\mathrm{H_3O^+})=35{,}0\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$ et $\\lambda(\\mathrm{CH_3COO^-})=4{,}09\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$. Son taux d'avancement final vaut environ :",
+          "options": [
+            {
+              "label": "$4{,}2\\times10^{-2}$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=\\dfrac{\\sigma}{\\lambda(\\mathrm{H_3O^+})+\\lambda(\\mathrm{CH_3COO^-})}=\\dfrac{16{,}3}{39{,}09}=0{,}417\\ \\mathrm{mol\\,m^{-3}}=4{,}2\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ puis $\\tau=\\dfrac{[\\mathrm{H_3O^+}]}{C}=4{,}2\\times10^{-2}$."
+            },
+            {
+              "label": "$42$",
+              "why": "Tu as laissé $[\\mathrm{H_3O^+}]$ en $\\mathrm{mol\\,m^{-3}}$ et divisé par $C$ en $\\mathrm{mol\\,L^{-1}}$ : il faut convertir ($1\\ \\mathrm{mol\\,m^{-3}}=10^{-3}\\ \\mathrm{mol\\,L^{-1}}$), sinon $\\tau$ dépasse $1$."
+            },
+            {
+              "label": "$4{,}7\\times10^{-2}$",
+              "why": "Tu n'as compté que $\\lambda(\\mathrm{H_3O^+})$ : l'ion éthanoate, de même concentration, contribue aussi à la conductivité."
+            },
+            {
+              "label": "$5{,}3\\times10^{-2}$",
+              "why": "Tu as soustrait les conductivités ioniques molaires : les deux ions sont présents, leurs contributions s'additionnent."
+            }
+          ],
+          "hint": "Exprime $\\sigma$ en fonction de $[\\mathrm{H_3O^+}]$ en tenant compte des deux ions, puis convertis l'unité.",
+          "solution": "Les deux ions ont la même concentration : $\\sigma=\\bigl(\\lambda(\\mathrm{H_3O^+})+\\lambda(\\mathrm{CH_3COO^-})\\bigr)[\\mathrm{H_3O^+}]$, d'où $[\\mathrm{H_3O^+}]=\\dfrac{16{,}3}{39{,}09}=0{,}417\\ \\mathrm{mol\\,m^{-3}}=4{,}2\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ et $\\tau=\\dfrac{4{,}2\\times10^{-4}}{1{,}0\\times10^{-2}}=4{,}2\\times10^{-2}$. Contrôle : $\\tau<1$, cohérent avec un acide faible.",
+          "methode": "Mesure de $\\tau$ par conductimétrie : $[\\mathrm{H_3O^+}]=\\sigma/\\sum\\lambda_i$ (SI), puis $\\tau=[\\mathrm{H_3O^+}]/C$.",
+          "points": 1,
+          "ref": "pc-equilibre-mesurer-tau-les-deux-voies-experimentale-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La loi de dilution d'Ostwald",
+        "lesson": "Approfondissement — Transformations dans les deux sens",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-la-loi-de-dilution-d-ostwald",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "La loi de dilution d'Ostwald",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La loi de dilution d'Ostwald",
+          "difficulty": 3,
+          "statement": "Pour un acide faible peu dissocié ($\\tau\\ll1$), on admet (relation donnée) que $\\tau\\approx\\sqrt{\\dfrac{K_A}{C}}$, où $K_A$ est une constante pour l'acide à température donnée. Si l'on dilue la solution $100$ fois, le taux d'avancement final est multiplié par environ :",
+          "options": [
+            {
+              "label": "$10$",
+              "correct": true,
+              "why": "$C$ est divisée par $100$ donc $\\tau\\propto\\dfrac{1}{\\sqrt{C}}$ est multiplié par $\\sqrt{100}=10$."
+            },
+            {
+              "label": "$100$",
+              "why": "Tu as supposé $\\tau$ inversement proportionnel à $C$ ; la relation donnée fait intervenir $\\sqrt{C}$."
+            },
+            {
+              "label": "$0{,}10$",
+              "why": "Tu as divisé $\\tau$ par $10$ : $\\tau$ augmente quand $C$ diminue, il ne diminue pas."
+            },
+            {
+              "label": "$1$ : $\\tau$ ne dépend pas de la concentration",
+              "why": "La relation donnée montre que $\\tau$ dépend de $C$ : plus la solution est diluée, plus $\\tau$ est grand."
+            }
+          ],
+          "hint": "Calcule le rapport $\\dfrac{\\tau_2}{\\tau_1}$ avec la relation donnée quand $C_2=\\dfrac{C_1}{100}$.",
+          "solution": "$\\dfrac{\\tau_2}{\\tau_1}=\\sqrt{\\dfrac{K_A/C_2}{K_A/C_1}}=\\sqrt{\\dfrac{C_1}{C_2}}=\\sqrt{100}=10$ ($K_A$ est constante à température fixée). Contrôle : $\\tau$ augmente quand on dilue, comme on l'observe pour les acides faibles ; l'approximation $\\tau\\ll1$ cesse d'être valable si $\\tau$ devient trop grand.",
+          "methode": "Acide faible : $\\tau\\propto1/\\sqrt{C}$ dans l'approximation $\\tau\\ll1$ ; dilution ×100 → $\\tau$ ×10.",
+          "points": 1,
+          "ref": "pc-equilibre-la-loi-de-dilution-d-ostwald-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'approximation usuelle",
+        "lesson": "Approfondissement — Transformations dans les deux sens",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-l-approximation-usuelle",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "L'approximation usuelle",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'approximation usuelle",
+          "difficulty": 3,
+          "statement": "Pour une solution d'un acide faible peu dissocié, on admet (relation donnée) que $\\mathrm{pH}=\\dfrac12\\left(\\mathrm{p}K_A-\\log C\\right)$. Pour l'acide éthanoïque ($\\mathrm{p}K_A=4{,}75$) à $C=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$, on trouve :",
+          "options": [
+            {
+              "label": "$\\mathrm{pH}=3{,}38$",
+              "correct": true,
+              "why": "$\\mathrm{pH}=\\dfrac12(4{,}75-\\log10^{-2})=\\dfrac12(4{,}75+2{,}00)=3{,}375$."
+            },
+            {
+              "label": "$\\mathrm{pH}=2{,}00$",
+              "why": "Tu as utilisé la formule des acides forts $\\mathrm{pH}=-\\log C$ : pour un acide faible, le pH est plus élevé."
+            },
+            {
+              "label": "$\\mathrm{pH}=6{,}75$",
+              "why": "Tu as oublié le facteur $\\dfrac12$ : $\\mathrm{p}K_A-\\log C=6{,}75$ n'est pas le pH."
+            },
+            {
+              "label": "$\\mathrm{pH}=2{,}38$",
+              "why": "Tu n'as pris que $\\dfrac12\\mathrm{p}K_A$ : le terme $-\\log C=2{,}00$ est aussi dans la parenthèse."
+            }
+          ],
+          "hint": "Remplace $\\mathrm{p}K_A$ et $\\log C$ par leurs valeurs, en faisant attention au signe de $\\log C$.",
+          "solution": "$\\log C=\\log(1{,}0\\times10^{-2})=-2{,}00$ donc $-\\log C=+2{,}00$ et $\\mathrm{pH}=\\dfrac12(4{,}75+2{,}00)=3{,}375$. Contrôle : ce pH est supérieur à $-\\log C=2{,}00$ (acide faible), et inférieur à $\\mathrm{p}K_A=4{,}75$ : valeur plausible ; $\\tau=\\dfrac{10^{-3{,}38}}{10^{-2}}=0{,}042$ reste petit, ce qui valide l'approximation.",
+          "methode": "Acide faible peu dissocié : $\\mathrm{pH}=\\tfrac12(\\mathrm{p}K_A-\\log C)$, à vérifier avec $\\tau\\ll1$.",
+          "points": 1,
+          "ref": "pc-equilibre-l-approximation-usuelle-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les transformations limitées en dehors de l'acido-basique",
+        "lesson": "Approfondissement — Transformations dans les deux sens",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-les-transformations-limitees-en-dehors-d",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "Les transformations limitées en dehors de l'acido-basique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les transformations limitées en dehors de l'acido-basique",
+          "difficulty": 3,
+          "statement": "Un mélange équimolaire d'acide carboxylique et d'alcool primaire conduit, à l'équilibre, à un taux d'avancement final d'environ $0{,}67$. Pour obtenir $2{,}0\\ \\mathrm{mol}$ d'ester à l'équilibre, il faut partir de :",
+          "options": [
+            {
+              "label": "$3{,}0\\ \\mathrm{mol}$ d'acide et $3{,}0\\ \\mathrm{mol}$ d'alcool",
+              "correct": true,
+              "why": "$x_f=\\tau\\,x_{\\max}$ avec $x_{\\max}=n_0$ : $n_0=\\dfrac{x_f}{\\tau}=\\dfrac{2{,}0}{0{,}67}=3{,}0\\ \\mathrm{mol}$ de chaque."
+            },
+            {
+              "label": "$1{,}3\\ \\mathrm{mol}$ d'acide et $1{,}3\\ \\mathrm{mol}$ d'alcool",
+              "why": "Tu as multiplié par $\\tau$ au lieu de diviser : $2{,}0\\times0{,}67$ donnerait une quantité inférieure à celle d'ester voulue, ce qui est impossible."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{mol}$ d'acide et $2{,}0\\ \\mathrm{mol}$ d'alcool",
+              "why": "Tu as supposé la transformation totale : avec $\\tau=0{,}67$, seulement $67\\ \\%$ de l'acide ou de l'alcool se transforment."
+            },
+            {
+              "label": "$6{,}1\\ \\mathrm{mol}$ d'acide et $6{,}1\\ \\mathrm{mol}$ d'alcool",
+              "why": "Tu as utilisé $1-\\tau=0{,}33$ au lieu de $\\tau=0{,}67$ : $0{,}33$ est la proportion qui n'a pas réagi."
+            }
+          ],
+          "hint": "L'ester formé est $x_f=\\tau\\,x_{\\max}$ : retrouve $x_{\\max}$ puis la quantité initiale de chaque réactif.",
+          "solution": "Avec des quantités égales et des coefficients $1$, $x_{\\max}=n_0$ et $n(\\text{ester})_f=x_f=\\tau\\,n_0$. Donc $n_0=\\dfrac{2{,}0}{0{,}67}=3{,}0\\ \\mathrm{mol}$ d'acide et autant d'alcool. Contrôle : $0{,}67\\times3{,}0=2{,}0\\ \\mathrm{mol}$ d'ester.",
+          "methode": "Estérification équimolaire : $n_{\\text{ester}}=\\tau\\,n_0$, donc $n_0=n_{\\text{ester}}/\\tau$.",
+          "points": 1,
+          "ref": "pc-equilibre-les-transformations-limitees-en-dehors-d-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Vers la constante d'équilibre",
+        "lesson": "Approfondissement — Transformations dans les deux sens",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-equilibre-vers-la-constante-d-equilibre",
+      "chapter": "pc-equilibre",
+      "kind": "qcu",
+      "title": "Vers la constante d'équilibre",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Vers la constante d'équilibre",
+          "difficulty": 3,
+          "statement": "Pour la transformation $\\mathrm{A}+\\mathrm{B}\\rightleftharpoons\\mathrm{C}+\\mathrm{D}$, on part de $1{,}00\\ \\mathrm{mol}$ de $\\mathrm{A}$ et de $1{,}00\\ \\mathrm{mol}$ de $\\mathrm{B}$ ; à l'équilibre, $n(\\mathrm{C})=n(\\mathrm{D})=0{,}60\\ \\mathrm{mol}$. Le volume est le même pour toutes les espèces et la somme des coefficients ne change pas : le quotient de réaction à l'équilibre s'écrit $Q_{r,\\text{éq}}=\\dfrac{[\\mathrm{C}][\\mathrm{D}]}{[\\mathrm{A}][\\mathrm{B}]}$ et vaut $K$. On trouve :",
+          "options": [
+            {
+              "label": "$K=2{,}25$",
+              "correct": true,
+              "why": "$n(\\mathrm{A})=n(\\mathrm{B})=1{,}00-0{,}60=0{,}40\\ \\mathrm{mol}$ ; le volume se simplifie : $K=\\dfrac{0{,}60\\times0{,}60}{0{,}40\\times0{,}40}=2{,}25$."
+            },
+            {
+              "label": "$K=0{,}44$",
+              "why": "Tu as inversé le quotient : les produits $\\mathrm{C}$ et $\\mathrm{D}$ sont au numérateur, les réactifs au dénominateur."
+            },
+            {
+              "label": "$K=3{,}75$",
+              "why": "Tu as oublié $[\\mathrm{D}]$ au numérateur : $K=\\dfrac{[\\mathrm{C}]\\,[\\mathrm{D}]}{[\\mathrm{A}]\\,[\\mathrm{B}]}$ comporte les deux produits."
+            },
+            {
+              "label": "$K=0{,}90$",
+              "why": "Tu as oublié $[\\mathrm{B}]$ au dénominateur : $K$ comporte les deux réactifs."
+            }
+          ],
+          "hint": "Calcule d'abord les quantités de $\\mathrm{A}$ et $\\mathrm{B}$ à l'équilibre, puis le quotient avec tous les termes.",
+          "solution": "$n(\\mathrm{A})_f=n(\\mathrm{B})_f=1{,}00-0{,}60=0{,}40\\ \\mathrm{mol}$. Comme tous les coefficients valent $1$ et que le volume $V$ est commun, il se simplifie : $K=\\dfrac{0{,}60\\times0{,}60}{0{,}40\\times0{,}40}=2{,}25$. Contrôle : $K>1$ car les produits dominent ; $\\tau=0{,}60$.",
+          "methode": "À l'équilibre $Q_{r,\\text{éq}}=K$ ; tous les termes du quotient, et ne pas l'inverser.",
+          "points": 1,
+          "ref": "pc-equilibre-vers-la-constante-d-equilibre-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-equilibre-probleme-1",
+      "chapter": "pc-equilibre",
+      "kind": "probleme",
+      "title": "Acide éthanoïque, acide chlorhydrique et dilution",
+      "difficulty": 3,
+      "context": "On étudie, à $25\\ ^\\circ\\mathrm{C}$, deux solutions aqueuses d'acide éthanoïque $\\mathrm{CH_3COOH}$ : $\\mathrm{S_1}$ de concentration apportée $C_1=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$, de pH $3{,}38$ ; $\\mathrm{S_2}$, obtenue en diluant $\\mathrm{S_1}$ dix fois, de concentration $C_2=1{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}}$, de pH $3{,}90$. On dispose aussi d'une solution $\\mathrm{S_3}$ d'acide chlorhydrique, acide fort, de concentration $1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$, de pH $2{,}00$. L'équation de la réaction de l'acide éthanoïque avec l'eau est $\\mathrm{CH_3COOH}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{CH_3COO^-}+\\mathrm{H_3O^+}$. Le volume de chaque solution est $V=100\\ \\mathrm{mL}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Une transformation peut être incomplète",
+          "difficulty": 1,
+          "statement": "La mesure du pH de $\\mathrm{S_1}$ conduit à conclure que la transformation de l'acide éthanoïque avec l'eau est :",
+          "options": [
+            {
+              "label": "limitée, car le pH mesuré ($3{,}38$) dépasse $-\\log C_1=2{,}00$, valeur d'une transformation totale",
+              "correct": true,
+              "why": "Si l'acide réagissait totalement, $[\\mathrm{H_3O^+}]=C_1$ donnerait $\\mathrm{pH}=2{,}00$ ; un pH plus élevé signifie moins d'ions formés."
+            },
+            {
+              "label": "totale, car le pH mesuré est inférieur à $7$, ce qui montre que l'acide a réagi complètement",
+              "why": "Un pH inférieur à $7$ montre seulement que la solution est acide ; ce n'est pas un critère du caractère total."
+            },
+            {
+              "label": "limitée, car le pH mesuré est supérieur à $7$, ce qui montre une solution basique",
+              "why": "Le pH mesuré ($3{,}38$) est inférieur à $7$ ; le critère est la comparaison avec $-\\log C_1=2{,}00$."
+            },
+            {
+              "label": "totale, car le pH mesuré ($3{,}38$) dépasse $-\\log C_1=2{,}00$, valeur d'une transformation totale",
+              "why": "Un pH supérieur à $-\\log C_1$ traduit au contraire moins d'ions $\\mathrm{H_3O^+}$ que si la transformation était totale."
+            }
+          ],
+          "hint": "Pour une transformation totale, quelle valeur du pH attendrait-on avec $C_1$ ?",
+          "solution": "Si la transformation était totale, $[\\mathrm{H_3O^+}]=C_1=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$ et $\\mathrm{pH}=2{,}00$. Le pH mesuré est $3{,}38>2{,}00$ : il y a moins d'ions $\\mathrm{H_3O^+}$ que prévu, donc la transformation est limitée. Contrôle : la même mesure sur $\\mathrm{S_3}$ (acide chlorhydrique) donne $2{,}00$ exactement.",
+          "methode": "Comparer le pH mesuré à $-\\log C$ : plus grand $\\Rightarrow$ transformation limitée.",
+          "points": 1,
+          "part": "Partie A — Reconnaître une transformation limitée",
+          "ref": "pc-equilibre-probleme-1-q1"
+        },
+        {
+          "notion": "Méthode 1 — Calculer $\\tau$ à partir du pH",
+          "difficulty": 2,
+          "statement": "Le taux d'avancement final de la transformation dans $\\mathrm{S_1}$ vaut :",
+          "options": [
+            {
+              "label": "$\\tau_1=4{,}2\\times10^{-2}$",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=10^{-3{,}38}=4{,}2\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ et $\\tau_1=\\dfrac{[\\mathrm{H_3O^+}]}{C_1}=\\dfrac{4{,}2\\times10^{-4}}{1{,}0\\times10^{-2}}=4{,}2\\times10^{-2}$."
+            },
+            {
+              "label": "$\\tau_1=4{,}2\\times10^{-4}$",
+              "why": "Tu as pris $[\\mathrm{H_3O^+}]$ pour $\\tau_1$ sans diviser par la concentration apportée $C_1$."
+            },
+            {
+              "label": "$\\tau_1=4{,}2\\times10^{-3}$",
+              "why": "Tu as divisé par $0{,}10\\ \\mathrm{mol\\,L^{-1}}$ au lieu de $C_1=1{,}0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$\\tau_1=24$",
+              "why": "Tu as inversé le rapport : $\\dfrac{C_1}{[\\mathrm{H_3O^+}]}=24$ dépasse $1$, ce qui est impossible pour un taux d'avancement."
+            }
+          ],
+          "hint": "Passe du pH à la concentration en ions oxonium, puis divise par la concentration apportée.",
+          "solution": "$\\tau=\\dfrac{x_f}{x_{\\max}}=\\dfrac{[\\mathrm{H_3O^+}]_f}{C_1}$ car $x_{\\max}=C_1V$ et $x_f=[\\mathrm{H_3O^+}]_fV$. Avec $[\\mathrm{H_3O^+}]_f=10^{-3{,}38}=4{,}2\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ : $\\tau_1=4{,}2\\times10^{-2}$, soit environ $4{,}2\\ \\%$. Contrôle : $0<\\tau_1<1$, acide faible.",
+          "methode": "$\\tau=[\\mathrm{H_3O^+}]_f/C=10^{-\\mathrm{pH}}/C$ pour un monoacide.",
+          "points": 1,
+          "part": "Partie A — Reconnaître une transformation limitée",
+          "ref": "pc-equilibre-probleme-1-q2"
+        },
+        {
+          "notion": "Méthode 3 — Comparer deux acides ou deux bases",
+          "difficulty": 2,
+          "statement": "En comparant $\\mathrm{S_1}$ et $\\mathrm{S_3}$, de même concentration apportée, on peut affirmer que :",
+          "options": [
+            {
+              "label": "l'acide chlorhydrique est plus fort, car son taux d'avancement final ($1{,}0$) est plus grand",
+              "correct": true,
+              "why": "À même concentration, $\\tau$ plus grand signifie acide plus fort : $\\tau(\\mathrm{S_3})=1{,}0$ contre $4{,}2\\times10^{-2}$ pour $\\mathrm{S_1}$."
+            },
+            {
+              "label": "l'acide éthanoïque est plus fort, car son pH est plus élevé que celui de l'acide chlorhydrique",
+              "why": "Un pH plus élevé signifie moins d'ions $\\mathrm{H_3O^+}$, donc un acide qui réagit moins : il est plus faible."
+            },
+            {
+              "label": "les deux acides sont aussi forts l'un que l'autre, car leurs concentrations sont égales",
+              "why": "Les concentrations sont égales mais les $\\tau$ sont différents : c'est cela qui distingue les forces."
+            },
+            {
+              "label": "l'acide éthanoïque est plus fort, car son taux d'avancement est le plus proche de $0$",
+              "why": "Un $\\tau$ proche de $0$ caractérise un acide très peu dissocié, donc faible."
+            }
+          ],
+          "hint": "À même concentration apportée, quel critère compare deux forces ?",
+          "solution": "À même $C$, l'acide le plus fort est celui de $\\tau$ le plus grand. Pour $\\mathrm{S_3}$ : $\\tau=\\dfrac{10^{-2{,}00}}{10^{-2}}=1{,}0$ (transformation totale), pour $\\mathrm{S_1}$ : $\\tau_1=4{,}2\\times10^{-2}$. L'acide chlorhydrique est donc plus fort. Contrôle : son pH est le plus bas, $2{,}00<3{,}38$.",
+          "methode": "Même $C$ : plus $\\tau$ est grand, plus l'acide est fort.",
+          "points": 1,
+          "part": "Partie A — Reconnaître une transformation limitée",
+          "ref": "pc-equilibre-probleme-1-q3"
+        },
+        {
+          "notion": "Méthode 4 — Étudier l'effet d'une dilution",
+          "difficulty": 2,
+          "statement": "Le taux d'avancement final dans $\\mathrm{S_2}$ vaut $\\tau_2=1{,}3\\times10^{-1}$. Par rapport à $\\mathrm{S_1}$, la dilution par $10$ a donc :",
+          "options": [
+            {
+              "label": "multiplié $\\tau$ par environ $3{,}0$ : la transformation est plus avancée dans $\\mathrm{S_2}$",
+              "correct": true,
+              "why": "$\\dfrac{\\tau_2}{\\tau_1}=\\dfrac{1{,}3\\times10^{-1}}{4{,}2\\times10^{-2}}=3{,}0$ : $\\tau$ augmente avec la dilution."
+            },
+            {
+              "label": "multiplié $\\tau$ par $10$, comme la dilution l'a fait pour le volume de la solution",
+              "why": "$\\tau$ n'est pas proportionnel au facteur de dilution : il est multiplié par $3{,}0$ seulement."
+            },
+            {
+              "label": "divisé $\\tau$ par $10$, comme la dilution l'a fait pour la concentration apportée",
+              "why": "$\\tau$ ne suit pas la concentration : il augmente quand on dilue un acide faible."
+            },
+            {
+              "label": "laissé $\\tau$ inchangé, car la nature de l'acide n'a pas changé entre les solutions",
+              "why": "$\\tau$ varie avec la concentration : $\\tau_2\\ne\\tau_1$ ici."
+            }
+          ],
+          "hint": "Calcule le rapport $\\tau_2/\\tau_1$ et interprète-le.",
+          "solution": "$\\dfrac{\\tau_2}{\\tau_1}=\\dfrac{1{,}3\\times10^{-1}}{4{,}2\\times10^{-2}}=3{,}0$. Un acide faible plus dilué réagit davantage avec l'eau : $\\tau$ augmente, sans être proportionnel à la dilution. Contrôle : $\\tau_2=0{,}126<1$, acide toujours faible.",
+          "methode": "Dilution d'un acide faible : $\\tau$ augmente, mais moins vite que la dilution.",
+          "points": 1,
+          "part": "Partie B — Effet de la concentration",
+          "ref": "pc-equilibre-probleme-1-q4"
+        },
+        {
+          "notion": "L'état d'équilibre",
+          "difficulty": 3,
+          "statement": "Dans $100\\ \\mathrm{mL}$ de $\\mathrm{S_1}$, à l'équilibre, la quantité d'acide éthanoïque non dissocié vaut :",
+          "options": [
+            {
+              "label": "$0{,}958\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "$n_0=C_1V=1{,}0\\ \\mathrm{mmol}$ et $x_f=\\tau_1n_0=0{,}042\\ \\mathrm{mmol}$ ; $n(\\mathrm{CH_3COOH})=n_0-x_f=0{,}958\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$0{,}042\\ \\mathrm{mmol}$",
+              "why": "Tu as donné la quantité d'ions formés $x_f=\\tau_1n_0$, pas celle d'acide restant."
+            },
+            {
+              "label": "$0{,}000\\ \\mathrm{mmol}$",
+              "why": "Tu as supposé la transformation totale : avec $\\tau_1<1$, la quasi-totalité de l'acide n'a pas réagi."
+            },
+            {
+              "label": "$1{,}042\\ \\mathrm{mmol}$",
+              "why": "Tu as ajouté $x_f$ à $n_0$ : un réactif perd $x_f$, il n'en gagne pas."
+            }
+          ],
+          "hint": "Calcule $n_0$, puis $x_f$ avec $\\tau_1$, puis ce qui reste de l'acide.",
+          "solution": "$n_0=C_1V=1{,}0\\times10^{-2}\\times0{,}100=1{,}0\\times10^{-3}\\ \\mathrm{mol}=1{,}0\\ \\mathrm{mmol}$ ; $x_f=\\tau_1\\,n_0=0{,}042\\ \\mathrm{mmol}$ ; $n(\\mathrm{CH_3COOH})=1{,}0-0{,}042=0{,}958\\ \\mathrm{mmol}$. Contrôle : $n(\\mathrm{H_3O^+})=n(\\mathrm{CH_3COO^-})=x_f=0{,}042\\ \\mathrm{mmol}$ et $n(\\mathrm{CH_3COOH})+n(\\mathrm{CH_3COO^-})=1{,}0\\ \\mathrm{mmol}$.",
+          "methode": "Équilibre : $n_{\\text{acide}}=n_0-x_f$ avec $x_f=\\tau\\,n_0$.",
+          "points": 1,
+          "part": "Partie B — Effet de la concentration",
+          "ref": "pc-equilibre-probleme-1-q5"
+        },
+        {
+          "notion": "L'influence de la dilution",
+          "difficulty": 3,
+          "statement": "Quand on passe de $\\mathrm{S_1}$ à $\\mathrm{S_2}$ (dilution par $10$), la concentration en ions oxonium $[\\mathrm{H_3O^+}]$ est multipliée par :",
+          "options": [
+            {
+              "label": "$0{,}30$, soit divisée par environ $3{,}3$ seulement",
+              "correct": true,
+              "why": "$[\\mathrm{H_3O^+}]=\\tau\\,C$ : $\\tau$ est multiplié par $3{,}0$ et $C$ par $0{,}10$, d'où $0{,}30$."
+            },
+            {
+              "label": "$0{,}10$, c'est-à-dire divisée par $10$ comme la concentration apportée",
+              "why": "Tu as supposé $\\tau$ constant, ce qui donnerait $[\\mathrm{H_3O^+}]$ divisée par $10$ ; mais $\\tau$ augmente avec la dilution."
+            },
+            {
+              "label": "$3{,}0$, c'est-à-dire multipliée comme $\\tau$",
+              "why": "Tu as oublié que $C$ est divisée par $10$ : $[\\mathrm{H_3O^+}]=\\tau\\,C$ ne varie pas comme $\\tau$ seul."
+            },
+            {
+              "label": "$1{,}0$, car la dilution compense l'augmentation de $\\tau$",
+              "why": "La compensation n'est pas exacte : $\\tau$ est multiplié par $3{,}0$ et $C$ divisée par $10$, d'où un facteur $0{,}30$, pas $1$."
+            }
+          ],
+          "hint": "Écris $[\\mathrm{H_3O^+}]=\\tau\\,C$ pour les deux solutions et fais le rapport.",
+          "solution": "$[\\mathrm{H_3O^+}]_1=10^{-3{,}38}=4{,}2\\times10^{-4}$ et $[\\mathrm{H_3O^+}]_2=10^{-3{,}90}=1{,}3\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}}$ : rapport $0{,}30$. On retrouve $\\dfrac{\\tau_2C_2}{\\tau_1C_1}=3{,}0\\times0{,}10=0{,}30$. Contrôle : la dilution fait baisser la concentration en ions, mais moins que la concentration apportée.",
+          "methode": "$[\\mathrm{H_3O^+}]=\\tau\\,C$ : à la dilution, $C$ baisse et $\\tau$ monte.",
+          "points": 1,
+          "part": "Partie B — Effet de la concentration",
+          "ref": "pc-equilibre-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-equilibre-probleme-2",
+      "chapter": "pc-equilibre",
+      "kind": "probleme",
+      "title": "Estérification et hydrolyse : un même équilibre",
+      "difficulty": 3,
+      "context": "À $T$ fixée, on réalise deux expériences dans des volumes identiques. Expérience 1 : on mélange $1{,}00\\ \\mathrm{mol}$ d'acide éthanoïque et $1{,}00\\ \\mathrm{mol}$ d'éthanol. Expérience 2 : on mélange $1{,}00\\ \\mathrm{mol}$ d'éthanoate d'éthyle (ester) et $1{,}00\\ \\mathrm{mol}$ d'eau. L'équation est $\\mathrm{CH_3COOH}+\\mathrm{C_2H_5OH}\\rightleftharpoons\\mathrm{CH_3COOC_2H_5}+\\mathrm{H_2O}$. Quantité d'ester $n(\\text{ester})$ (en mol) aux dates $t=0\\,;0{,}5\\,;1\\,;2\\,;4\\,;8\\ \\mathrm{h}$ : expérience 1 : $0\\,;0{,}38\\,;0{,}52\\,;0{,}62\\,;0{,}67\\,;0{,}67$ ; expérience 2 : $1{,}00\\,;0{,}80\\,;0{,}72\\,;0{,}68\\,;0{,}67\\,;0{,}67$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Une transformation peut être incomplète",
+          "difficulty": 1,
+          "statement": "Le taux d'avancement final de l'expérience 1 (estérification) vaut :",
+          "options": [
+            {
+              "label": "$\\tau=0{,}67$",
+              "correct": true,
+              "why": "$x_{\\max}=1{,}00\\ \\mathrm{mol}$ (réactifs en quantités égales, coefficients $1$) et $x_f=n(\\text{ester})_f=0{,}67\\ \\mathrm{mol}$ : $\\tau=0{,}67$."
+            },
+            {
+              "label": "$\\tau=1{,}5$",
+              "why": "Tu as inversé le rapport : $\\dfrac{x_{\\max}}{x_f}=1{,}5$ dépasse $1$, impossible pour un taux d'avancement."
+            },
+            {
+              "label": "$\\tau=0{,}33$",
+              "why": "Tu as pris la quantité d'acide restant à l'équilibre : $\\tau$ est la proportion qui a réagi, donc $0{,}67$."
+            },
+            {
+              "label": "$\\tau=1{,}00$",
+              "why": "Tu as supposé la transformation totale : le tableau montre $n(\\text{ester})=0{,}67\\ \\mathrm{mol}<1{,}00\\ \\mathrm{mol}$ à l'état final."
+            }
+          ],
+          "hint": "Que vaut l'avancement final ? Et l'avancement maximal ?",
+          "solution": "L'estérification est limitée : l'ester atteint $0{,}67\\ \\mathrm{mol}$ au lieu de $1{,}00\\ \\mathrm{mol}$. $\\tau=\\dfrac{x_f}{x_{\\max}}=\\dfrac{0{,}67}{1{,}00}=0{,}67$. Contrôle : $0<\\tau<1$.",
+          "methode": "$\\tau=x_f/x_{\\max}$ avec $x_f=n(\\text{produit})_f$ si $n_0(\\text{produit})=0$.",
+          "points": 1,
+          "part": "Partie A — Atteindre l'équilibre par les deux sens",
+          "ref": "pc-equilibre-probleme-2-q1"
+        },
+        {
+          "notion": "Atteindre le même équilibre par les deux bouts",
+          "difficulty": 2,
+          "statement": "Le taux d'avancement final de l'expérience 2 (hydrolyse) vaut :",
+          "options": [
+            {
+              "label": "$\\tau=0{,}33$",
+              "correct": true,
+              "why": "L'ester consommé vaut $x_f=1{,}00-0{,}67=0{,}33\\ \\mathrm{mol}$ et $x_{\\max}=1{,}00\\ \\mathrm{mol}$ : $\\tau=0{,}33$."
+            },
+            {
+              "label": "$\\tau=0{,}67$",
+              "why": "Tu as pris la quantité d'ester restant à l'équilibre : $\\tau$ est la proportion d'ester qui a réagi, soit $0{,}33$."
+            },
+            {
+              "label": "$\\tau=1{,}00$",
+              "why": "Tu as supposé l'hydrolyse totale : or il reste $0{,}67\\ \\mathrm{mol}$ d'ester à l'état final."
+            },
+            {
+              "label": "$\\tau=3{,}0$",
+              "why": "Tu as inversé le rapport $\\dfrac{x_{\\max}}{x_f}$ : un taux d'avancement ne dépasse pas $1$."
+            }
+          ],
+          "hint": "Combien d'ester a disparu entre $t=0$ et l'équilibre ?",
+          "solution": "Dans l'hydrolyse, l'ester est un réactif : sa quantité passe de $1{,}00$ à $0{,}67\\ \\mathrm{mol}$, soit $x_f=0{,}33\\ \\mathrm{mol}$. $\\tau=\\dfrac{0{,}33}{1{,}00}=0{,}33$. Contrôle : les deux taux valent $0{,}67$ et $0{,}33$, de somme $1$ ici car les deux essais mènent au même état.",
+          "methode": "Hydrolyse : $x_f$ = quantité d'ester disparue ; $\\tau=x_f/x_{\\max}$.",
+          "points": 1,
+          "part": "Partie A — Atteindre l'équilibre par les deux sens",
+          "ref": "pc-equilibre-probleme-2-q2"
+        },
+        {
+          "notion": "L'état d'équilibre",
+          "difficulty": 2,
+          "statement": "À l'équilibre, la quantité d'eau dans l'expérience 1 vaut :",
+          "options": [
+            {
+              "label": "$0{,}67\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "L'eau est un produit de coefficient $1$, absente au départ : $n(\\mathrm{H_2O})=x_f=0{,}67\\ \\mathrm{mol}$, égale à celle de l'ester."
+            },
+            {
+              "label": "$0{,}33\\ \\mathrm{mol}$",
+              "why": "Tu as pris la quantité d'acide restant : l'eau est un produit, sa quantité vaut $x_f=0{,}67\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$0{,}00\\ \\mathrm{mol}$",
+              "why": "L'eau n'est pas absente à l'équilibre : elle se forme avec l'ester, dans la même quantité."
+            },
+            {
+              "label": "$1{,}00\\ \\mathrm{mol}$",
+              "why": "Tu as supposé la transformation totale : $1{,}00\\ \\mathrm{mol}$ d'eau supposerait $x_f=x_{\\max}$."
+            }
+          ],
+          "hint": "Quelle espèce se forme dans la même quantité que l'ester ?",
+          "solution": "Les produits de l'estérification, ester et eau, ont le même coefficient $1$ et sont absents au départ : $n(\\text{eau})=n(\\text{ester})=x_f=0{,}67\\ \\mathrm{mol}$. Les réactifs valent $1{,}00-0{,}67=0{,}33\\ \\mathrm{mol}$ chacun. Contrôle : $0{,}33\\times2+0{,}67\\times2=2{,}00\\ \\mathrm{mol}$.",
+          "methode": "Produits de même coefficient formés ensemble : mêmes quantités à tout instant.",
+          "points": 1,
+          "part": "Partie A — Atteindre l'équilibre par les deux sens",
+          "ref": "pc-equilibre-probleme-2-q3"
+        },
+        {
+          "notion": "Reconnaître un équilibre",
+          "difficulty": 2,
+          "statement": "D'après les relevés des deux expériences, l'état d'équilibre est atteint au plus tôt à la date :",
+          "options": [
+            {
+              "label": "$t=4\\ \\mathrm{h}$",
+              "correct": true,
+              "why": "À $4\\ \\mathrm{h}$ les deux expériences donnent $0{,}67\\ \\mathrm{mol}$ et n'évoluent plus ensuite : état d'équilibre commun."
+            },
+            {
+              "label": "$t=2\\ \\mathrm{h}$",
+              "why": "À $2\\ \\mathrm{h}$ les deux valeurs ($0{,}62$ et $0{,}68$) diffèrent encore et continuent d'évoluer : l'équilibre n'est pas atteint."
+            },
+            {
+              "label": "$t=1\\ \\mathrm{h}$",
+              "why": "À $1\\ \\mathrm{h}$ les valeurs ($0{,}52$ et $0{,}72$) sont encore éloignées : le système évolue fortement."
+            },
+            {
+              "label": "$t=0{,}5\\ \\mathrm{h}$",
+              "why": "À $0{,}5\\ \\mathrm{h}$ les valeurs ($0{,}38$ et $0{,}80$) sont très différentes : on est loin de l'équilibre."
+            }
+          ],
+          "hint": "À quelle date les deux séries de valeurs deviennent-elles égales et constantes ?",
+          "solution": "L'équilibre est atteint lorsque la composition cesse d'évoluer. Les deux séries valent $0{,}67$ à $t=4\\ \\mathrm{h}$ et $t=8\\ \\mathrm{h}$ : la date la plus précoce, d'après ces relevés, est $4\\ \\mathrm{h}$. Contrôle : à $2\\ \\mathrm{h}$ les valeurs ne sont pas encore égales.",
+          "methode": "Équilibre : composition constante ; lire la première date où les deux courbes se rejoignent.",
+          "points": 1,
+          "part": "Partie B — Exploiter la composition à l'équilibre",
+          "ref": "pc-equilibre-probleme-2-q4"
+        },
+        {
+          "notion": "Vers la constante d'équilibre",
+          "difficulty": 3,
+          "statement": "À l'équilibre de l'estérification, avec le volume commun à toutes les espèces, le quotient $Q_{r,\\text{éq}}=\\dfrac{[\\text{ester}][\\text{eau}]}{[\\text{acide}][\\text{alcool}]}$, égal à $K$, vaut environ :",
+          "options": [
+            {
+              "label": "$4{,}1$",
+              "correct": true,
+              "why": "$n(\\text{ester})=n(\\text{eau})=0{,}67$ et $n(\\text{acide})=n(\\text{alcool})=0{,}33$ ; le volume se simplifie : $K=\\dfrac{0{,}67\\times0{,}67}{0{,}33\\times0{,}33}=4{,}12$."
+            },
+            {
+              "label": "$0{,}24$",
+              "why": "Tu as inversé le quotient : les produits (ester, eau) sont au numérateur."
+            },
+            {
+              "label": "$6{,}2$",
+              "why": "Tu as oublié l'eau au numérateur : $K$ comporte les deux produits, ester et eau."
+            },
+            {
+              "label": "$1{,}4$",
+              "why": "Tu as oublié l'alcool au dénominateur : $K$ comporte les deux réactifs, acide et alcool."
+            }
+          ],
+          "hint": "Utilise les quantités à l'équilibre : le volume se simplifie dans ce quotient.",
+          "solution": "À l'équilibre : $n(\\text{ester})=n(\\text{eau})=0{,}67\\ \\mathrm{mol}$ et $n(\\text{acide})=n(\\text{alcool})=0{,}33\\ \\mathrm{mol}$. Les coefficients valent $1$ et le volume $V$ se simplifie : $K=\\dfrac{0{,}67\\times0{,}67}{0{,}33\\times0{,}33}=4{,}12\\approx4{,}1$. Contrôle : $K>1$ car les produits dominent ($\\tau=0{,}67>0{,}5$).",
+          "methode": "$Q_{r,\\text{éq}}=K$ : produits au numérateur, réactifs au dénominateur, tous les termes.",
+          "points": 1,
+          "part": "Partie B — Exploiter la composition à l'équilibre",
+          "ref": "pc-equilibre-probleme-2-q5"
+        },
+        {
+          "notion": "Les transformations limitées en dehors de l'acido-basique",
+          "difficulty": 3,
+          "statement": "Avec la même température, on mélange $2{,}0\\ \\mathrm{mol}$ d'acide éthanoïque et $2{,}0\\ \\mathrm{mol}$ d'éthanol. La quantité d'ester à l'équilibre vaut environ :",
+          "options": [
+            {
+              "label": "$1{,}3\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$x_{\\max}=2{,}0\\ \\mathrm{mol}$ et $x_f=\\tau\\,x_{\\max}=0{,}67\\times2{,}0=1{,}34\\ \\mathrm{mol}$ ; l'ester est un produit de coefficient $1$."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{mol}$",
+              "why": "Tu as supposé la transformation totale : avec $\\tau=0{,}67$, il ne se forme que les deux tiers environ de la quantité maximale."
+            },
+            {
+              "label": "$0{,}67\\ \\mathrm{mol}$",
+              "why": "Tu as repris le taux d'avancement tel quel : $0{,}67$ est un rapport sans unité, à multiplier par $x_{\\max}=2{,}0\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$3{,}0\\ \\mathrm{mol}$",
+              "why": "Tu as divisé par $\\tau$ au lieu de multiplier : tu obtiendrais plus d'ester que la quantité maximale possible."
+            }
+          ],
+          "hint": "L'ester formé est $x_f=\\tau\\,x_{\\max}$ : calcule $x_{\\max}$ d'abord.",
+          "solution": "Réactifs en quantités égales, coefficients $1$ : $x_{\\max}=2{,}0\\ \\mathrm{mol}$. $n(\\text{ester})_f=x_f=\\tau\\,x_{\\max}=0{,}67\\times2{,}0=1{,}34\\ \\mathrm{mol}$. Contrôle : la quantité formée est inférieure à $x_{\\max}$, la transformation étant limitée.",
+          "methode": "Transformation limitée : $n_{\\text{produit}}=\\tau\\,x_{\\max}\\times\\nu$, jamais $x_{\\max}\\,\\nu$.",
+          "points": 1,
+          "part": "Partie B — Exploiter la composition à l'équilibre",
+          "ref": "pc-equilibre-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [
-   "Méthode 1 — Calculer $\\tau$ à partir du pH",
-   "Méthode 2 — Calculer $\\tau$ à partir d'une conductivité",
-   "Méthode 3 — Comparer deux acides ou deux bases",
-   "Méthode 4 — Étudier l'effet d'une dilution",
-   "Méthode 5 — Vérifier qu'un système est à l'équilibre"
-  ],
-  "existing_questions_total": 7,
-  "target_new_questions": 34,
-  "suggested_figures": [],
-  "sources": [
-   {
-    "annale": "pc-svt-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-equilibre-serie-1",
+      "title": "Transformations dans les deux sens · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-equilibre",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-equilibre-une-transformation-peut-etre-incomplete-q1",
+        "pc-equilibre-la-double-fleche-q1",
+        "pc-equilibre-comparer-la-force-des-acides-q1",
+        "pc-equilibre-l-influence-de-la-dilution-q1",
+        "pc-equilibre-l-etat-d-equilibre-q1",
+        "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux-q1",
+        "pc-equilibre-l-interpretation-microscopique-q1",
+        "pc-equilibre-reconnaitre-un-equilibre-q1",
+        "pc-equilibre-le-taux-d-avancement-final-q1",
+        "pc-equilibre-une-transformation-peut-etre-incomplete-q2",
+        "pc-equilibre-la-double-fleche-q2",
+        "pc-equilibre-l-etat-d-equilibre-q2"
+      ]
+    },
+    {
+      "slug": "pc-equilibre-serie-2",
+      "title": "Transformations dans les deux sens · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-equilibre",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-equilibre-comparer-la-force-des-acides-q2",
+        "pc-equilibre-l-influence-de-la-dilution-q2",
+        "pc-equilibre-l-etat-d-equilibre-q3",
+        "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux-q2",
+        "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux-q3",
+        "pc-equilibre-l-interpretation-microscopique-q2",
+        "pc-equilibre-reconnaitre-un-equilibre-q2",
+        "pc-equilibre-reconnaitre-un-equilibre-q3",
+        "pc-equilibre-comparer-la-force-des-acides-q3",
+        "pc-equilibre-une-transformation-peut-etre-incomplete-q3",
+        "pc-equilibre-la-double-fleche-q3",
+        "pc-equilibre-l-influence-de-la-dilution-q3"
+      ]
+    },
+    {
+      "slug": "pc-equilibre-serie-3",
+      "title": "Transformations dans les deux sens · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-equilibre",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-equilibre-comparer-la-force-des-acides-q4",
+        "pc-equilibre-l-etat-d-equilibre-q4",
+        "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux-q4",
+        "pc-equilibre-l-interpretation-microscopique-q3",
+        "pc-equilibre-reconnaitre-un-equilibre-q4",
+        "pc-equilibre-mesurer-tau-les-deux-voies-experimentale-q1",
+        "pc-equilibre-l-approximation-usuelle-q1",
+        "pc-equilibre-vers-la-constante-d-equilibre-q1",
+        "pc-equilibre-les-transformations-limitees-en-dehors-d-q1",
+        "pc-equilibre-la-loi-de-dilution-d-ostwald-q1",
+        "pc-equilibre-probleme-1-q5",
+        "pc-equilibre-probleme-2-q5"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Une transformation peut être incomplète",
-    "lesson": "Réactions dans les deux sens",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-une-transformation-peut-etre-incomplete",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "Une transformation peut être incomplète",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-une-transformation-peut-etre-incomplete-q1",
-     "notion": "Une transformation peut être incomplète",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le taux d'avancement final",
-    "lesson": "Réactions dans les deux sens",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 3,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-le-taux-d-avancement-final",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "Le taux d'avancement final",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-le-taux-d-avancement-final-q1",
-     "notion": "Le taux d'avancement final",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La double flèche",
-    "lesson": "Réactions dans les deux sens",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-la-double-fleche",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "La double flèche",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-la-double-fleche-q1",
-     "notion": "La double flèche",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Comparer la force des acides",
-    "lesson": "Réactions dans les deux sens",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-comparer-la-force-des-acides",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "Comparer la force des acides",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-comparer-la-force-des-acides-q1",
-     "notion": "Comparer la force des acides",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'influence de la dilution",
-    "lesson": "Réactions dans les deux sens",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-l-influence-de-la-dilution",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "L'influence de la dilution",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-l-influence-de-la-dilution-q1",
-     "notion": "L'influence de la dilution",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'état d'équilibre",
-    "lesson": "État d'équilibre dynamique",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-l-etat-d-equilibre",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "L'état d'équilibre",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-l-etat-d-equilibre-q1",
-     "notion": "L'état d'équilibre",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Atteindre le même équilibre par les deux bouts",
-    "lesson": "État d'équilibre dynamique",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "Atteindre le même équilibre par les deux bouts",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-atteindre-le-meme-equilibre-par-les-deux-q1",
-     "notion": "Atteindre le même équilibre par les deux bouts",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'interprétation microscopique",
-    "lesson": "État d'équilibre dynamique",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-l-interpretation-microscopique",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "L'interprétation microscopique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-l-interpretation-microscopique-q1",
-     "notion": "L'interprétation microscopique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Reconnaître un équilibre",
-    "lesson": "État d'équilibre dynamique",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-reconnaitre-un-equilibre",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "Reconnaître un équilibre",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-reconnaitre-un-equilibre-q1",
-     "notion": "Reconnaître un équilibre",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Mesurer $\\tau$ : les deux voies expérimentales",
-    "lesson": "Approfondissement — Transformations dans les deux sens",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-mesurer-tau-les-deux-voies-experimentale",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "Mesurer $\\tau$ : les deux voies expérimentales",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-mesurer-tau-les-deux-voies-experimentale-q1",
-     "notion": "Mesurer $\\tau$ : les deux voies expérimentales",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La loi de dilution d'Ostwald",
-    "lesson": "Approfondissement — Transformations dans les deux sens",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-la-loi-de-dilution-d-ostwald",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "La loi de dilution d'Ostwald",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-la-loi-de-dilution-d-ostwald-q1",
-     "notion": "La loi de dilution d'Ostwald",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'approximation usuelle",
-    "lesson": "Approfondissement — Transformations dans les deux sens",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-l-approximation-usuelle",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "L'approximation usuelle",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-l-approximation-usuelle-q1",
-     "notion": "L'approximation usuelle",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les transformations limitées en dehors de l'acido-basique",
-    "lesson": "Approfondissement — Transformations dans les deux sens",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-les-transformations-limitees-en-dehors-d",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "Les transformations limitées en dehors de l'acido-basique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-les-transformations-limitees-en-dehors-d-q1",
-     "notion": "Les transformations limitées en dehors de l'acido-basique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Vers la constante d'équilibre",
-    "lesson": "Approfondissement — Transformations dans les deux sens",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-equilibre-vers-la-constante-d-equilibre",
-   "chapter": "pc-equilibre",
-   "kind": "qcu",
-   "title": "Vers la constante d'équilibre",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-vers-la-constante-d-equilibre-q1",
-     "notion": "Vers la constante d'équilibre",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-equilibre-probleme-1",
-   "chapter": "pc-equilibre",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-equilibre-probleme-2",
-   "chapter": "pc-equilibre",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-equilibre-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-equilibre-serie-1",
-   "title": "Transformations dans les deux sens · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-equilibre",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-equilibre-serie-2",
-   "title": "Transformations dans les deux sens · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-equilibre",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-equilibre-serie-3",
-   "title": "Transformations dans les deux sens · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-equilibre",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
