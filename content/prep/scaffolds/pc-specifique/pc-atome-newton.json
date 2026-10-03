@@ -1,822 +1,1452 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "tracks": [
-  "pc",
-  "sm_a",
-  "sm_b"
- ],
- "_scaffold": {
-  "pack": "pc-specifique",
-  "label": "Physique-Chimie — chapitres PC/SM (modulation, atome)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-atome-newton",
-   "name": "Atome et mécanique de Newton",
-   "domain": "physique",
-   "unit": "Mécanique"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "tracks": [
+    "pc",
+    "sm_a",
+    "sm_b"
+  ],
+  "_scaffold": {
+    "pack": "pc-specifique",
+    "label": "Physique-Chimie — chapitres PC/SM (modulation, atome)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-atome-newton",
+      "name": "Atome et mécanique de Newton",
+      "domain": "physique",
+      "unit": "Mécanique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Le modèle planétaire de l'atome",
+      "Les trois échecs du modèle",
+      "Ce que révèle l'échec",
+      "La quantification de l'énergie",
+      "Le photon",
+      "Émission et absorption",
+      "Les autres excitations"
+    ],
+    "methodes_du_cours": [],
+    "existing_questions_total": 6,
+    "target_new_questions": 22,
+    "suggested_figures": [
+      "niveaux-energie — Diagramme des niveaux d'énergie de l'atome d'hydrogène"
+    ],
+    "sources": [
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "Le modèle planétaire de l'atome",
-   "Les trois échecs du modèle",
-   "Ce que révèle l'échec",
-   "La quantification de l'énergie",
-   "Le photon",
-   "Émission et absorption",
-   "Les autres excitations"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Le modèle planétaire de l'atome",
+        "lesson": "Insuffisance de la mécanique de Newton",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-atome-newton-le-modele-planetaire-de-l-atome",
+      "chapter": "pc-atome-newton",
+      "kind": "qcu",
+      "title": "Le modèle planétaire de l'atome",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le modèle planétaire de l'atome",
+          "difficulty": 1,
+          "statement": "Dans le modèle planétaire de l'atome, l'électron :",
+          "options": [
+            {
+              "label": "tourne autour du noyau sous l'effet de la force électrique d'attraction",
+              "correct": true,
+              "why": "Le noyau, positif, attire l'électron, négatif : cette force joue le rôle de la gravitation pour une planète."
+            },
+            {
+              "label": "est immobile au contact du noyau",
+              "why": "Le modèle planétaire décrit un électron en mouvement autour du noyau, à distance non nulle."
+            },
+            {
+              "label": "tourne autour du noyau sous l'effet de la force nucléaire forte",
+              "why": "La force nucléaire forte agit sur les nucléons du noyau ; la force qui retient l'électron est électrique."
+            },
+            {
+              "label": "se déplace en ligne droite car aucune force ne s'exerce sur lui",
+              "why": "Une force électrique s'exerce : sans elle, l'électron s'éloignerait de l'atome."
+            }
+          ],
+          "hint": "Quelle force s'exerce entre le noyau chargé $+$ et l'électron chargé $-$ ?",
+          "solution": "Modèle planétaire : l'électron décrit une orbite autour du noyau, retenu par la force électrique d'attraction (analogue de la gravitation). Contrôle : la force électrique est du même type en $1/r^2$ que la force gravitationnelle.",
+          "methode": "Modèle planétaire : électron en orbite, force électrique attractive.",
+          "points": 1,
+          "ref": "pc-atome-newton-le-modele-planetaire-de-l-atome-q1"
+        },
+        {
+          "notion": "Le modèle planétaire de l'atome",
+          "difficulty": 2,
+          "statement": "La force électrique entre le noyau et l'électron a pour valeur $F=\\dfrac{k\\,e^2}{r^2}$. Si la distance $r$ double, la valeur de la force :",
+          "options": [
+            {
+              "label": "est divisée par $4$",
+              "correct": true,
+              "why": "$F\\propto\\dfrac{1}{r^2}$ : en doublant $r$, $\\dfrac{1}{(2r)^2}=\\dfrac{1}{4r^2}$."
+            },
+            {
+              "label": "est divisée par $2$",
+              "why": "Tu as pris $F\\propto1/r$ : la force varie comme $1/r^2$, donc le facteur est $4$."
+            },
+            {
+              "label": "est multipliée par $4$",
+              "why": "Tu as inversé le sens de variation : la force diminue quand la distance augmente."
+            },
+            {
+              "label": "est multipliée par $2$",
+              "why": "Tu as inversé le sens de variation : la force diminue quand la distance augmente."
+            }
+          ],
+          "hint": "$F$ est inversement proportionnelle au carré de $r$.",
+          "solution": "$F(2r)=\\dfrac{ke^2}{(2r)^2}=\\dfrac{F(r)}{4}$. Contrôle : la force décroît quand la distance augmente.",
+          "methode": "$F\\propto1/r^2$ : $r$ doublée $\\Rightarrow$ $F$ divisée par $4$.",
+          "points": 1,
+          "ref": "pc-atome-newton-le-modele-planetaire-de-l-atome-q2"
+        },
+        {
+          "notion": "Le modèle planétaire de l'atome",
+          "difficulty": 2,
+          "statement": "Un électron de masse $m$ décrit un cercle de rayon $r$ sous l'action de la force $F=\\dfrac{ke^2}{r^2}$. D'après la deuxième loi de Newton, sa vitesse vaut :",
+          "options": [
+            {
+              "label": "$v=\\sqrt{\\dfrac{k\\,e^2}{m\\,r}}$",
+              "correct": true,
+              "why": "Mouvement circulaire uniforme : $m\\dfrac{v^2}{r}=\\dfrac{ke^2}{r^2}$ donc $v^2=\\dfrac{ke^2}{mr}$."
+            },
+            {
+              "label": "$v=\\dfrac{k\\,e^2}{m\\,r}$",
+              "why": "Tu as oublié la racine carrée : $v^2=\\dfrac{ke^2}{mr}$."
+            },
+            {
+              "label": "$v=\\sqrt{\\dfrac{k\\,e^2}{m\\,r^2}}$",
+              "why": "Tu as laissé $r^2$ : $m\\dfrac{v^2}{r}=\\dfrac{ke^2}{r^2}$ donne $v^2=\\dfrac{ke^2}{mr}$."
+            },
+            {
+              "label": "$v=\\sqrt{\\dfrac{m\\,r}{k\\,e^2}}$",
+              "why": "Tu as inversé le rapport : la vitesse augmente avec la force et diminue avec la masse."
+            }
+          ],
+          "hint": "Mouvement circulaire uniforme : accélération centripète $\\dfrac{v^2}{r}$ ; $\\sum\\vec F=m\\vec a$.",
+          "solution": "$\\sum\\vec F=m\\vec a$ avec $a=\\dfrac{v^2}{r}$ : $\\dfrac{ke^2}{r^2}=m\\dfrac{v^2}{r}$ donc $v=\\sqrt{\\dfrac{ke^2}{mr}}$. Contrôle : $v$ décroît quand $r$ augmente, comme pour un satellite.",
+          "methode": "Newton + mouvement circulaire : $v=\\sqrt{ke^2/(mr)}$.",
+          "points": 1,
+          "ref": "pc-atome-newton-le-modele-planetaire-de-l-atome-q3"
+        },
+        {
+          "notion": "Le modèle planétaire de l'atome",
+          "difficulty": 3,
+          "statement": "Dans le modèle planétaire, $v=\\sqrt{\\dfrac{ke^2}{mr}}$. Si le rayon de l'orbite est multiplié par $4$, la vitesse :",
+          "options": [
+            {
+              "label": "est divisée par $2$",
+              "correct": true,
+              "why": "$v\\propto\\dfrac{1}{\\sqrt{r}}$ : pour $r\\rightarrow4r$, $v\\rightarrow\\dfrac{v}{\\sqrt{4}}=\\dfrac{v}{2}$."
+            },
+            {
+              "label": "est divisée par $4$",
+              "why": "Tu as pris $v\\propto1/r$ : la vitesse varie comme $1/\\sqrt{r}$."
+            },
+            {
+              "label": "est multipliée par $2$",
+              "why": "Une orbite plus grande donne une vitesse plus faible, non plus grande."
+            },
+            {
+              "label": "est divisée par $16$",
+              "why": "Tu as pris $v\\propto1/r^2$ : la vitesse varie comme $1/\\sqrt{r}$."
+            }
+          ],
+          "hint": "Exprime le rapport $\\dfrac{v(4r)}{v(r)}$.",
+          "solution": "$\\dfrac{v(4r)}{v(r)}=\\sqrt{\\dfrac{r}{4r}}=\\dfrac{1}{2}$ : la vitesse est divisée par $2$. Contrôle : comme les planètes éloignées du Soleil, l'électron plus éloigné va plus lentement.",
+          "methode": "$v\\propto1/\\sqrt{r}$.",
+          "points": 1,
+          "ref": "pc-atome-newton-le-modele-planetaire-de-l-atome-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les trois échecs du modèle",
+        "lesson": "Insuffisance de la mécanique de Newton",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-atome-newton-les-trois-echecs-du-modele",
+      "chapter": "pc-atome-newton",
+      "kind": "qcu",
+      "title": "Les trois échecs du modèle",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les trois échecs du modèle",
+          "difficulty": 1,
+          "statement": "D'après la physique classique, un électron en orbite autour du noyau devrait :",
+          "options": [
+            {
+              "label": "rayonner de l'énergie et finir par tomber sur le noyau",
+              "correct": true,
+              "why": "Une charge accélérée rayonne ; l'électron perdrait son énergie et décrirait une spirale vers le noyau."
+            },
+            {
+              "label": "rester indéfiniment sur son orbite sans rayonner d'énergie",
+              "why": "C'est ce qu'on observe, mais la physique classique prévoit un rayonnement d'une charge accélérée."
+            },
+            {
+              "label": "s'éloigner du noyau en suivant une spirale qui s'élargit",
+              "why": "Perdre de l'énergie rapproche l'électron du noyau, ne l'en éloigne pas."
+            },
+            {
+              "label": "absorber de l'énergie fournie par le noyau au fil du temps",
+              "why": "Le noyau ne fournit pas d'énergie à l'électron ; c'est l'électron qui rayonne."
+            }
+          ],
+          "hint": "Que fait une charge électrique soumise à une accélération ?",
+          "solution": "En orbite, l'électron est accéléré ; selon l'électromagnétisme classique il rayonne, perd de l'énergie et s'écrase sur le noyau. Contrôle : c'est contraire à la stabilité observée des atomes.",
+          "methode": "Charge accélérée $\\Rightarrow$ rayonnement $\\Rightarrow$ chute sur le noyau (prévision classique).",
+          "points": 1,
+          "ref": "pc-atome-newton-les-trois-echecs-du-modele-q1"
+        },
+        {
+          "notion": "Les trois échecs du modèle",
+          "difficulty": 2,
+          "statement": "Le modèle classique prévoit, pour l'atome d'hydrogène, un spectre d'émission :",
+          "options": [
+            {
+              "label": "continu, car l'énergie perdue varierait de façon continue",
+              "correct": true,
+              "why": "Le rayon de l'orbite varierait continûment : toutes les fréquences seraient émises."
+            },
+            {
+              "label": "de raies discrètes, comme on l'observe dans les spectres",
+              "why": "Les raies discrètes sont l'observation, non la prévision du modèle classique."
+            },
+            {
+              "label": "nul, car l'atome ne rayonnerait aucune énergie du tout",
+              "why": "La physique classique prévoit au contraire un rayonnement continu de l'électron accéléré."
+            },
+            {
+              "label": "d'absorption uniquement, sans aucune émission de lumière",
+              "why": "Un électron accéléré rayonne : un spectre d'émission est prévu."
+            }
+          ],
+          "hint": "Si l'énergie de l'électron peut varier de façon continue, quelles fréquences sont émises ?",
+          "solution": "Dans le modèle classique, l'énergie diminue continûment : le spectre prévu est continu, alors que l'observation donne un spectre de raies. Contrôle : c'est le troisième échec du modèle.",
+          "methode": "Classique : spectre continu ; observé : spectre de raies.",
+          "points": 1,
+          "ref": "pc-atome-newton-les-trois-echecs-du-modele-q2"
+        },
+        {
+          "notion": "Les trois échecs du modèle",
+          "difficulty": 2,
+          "statement": "Parmi ces faits, ceux que le modèle planétaire classique ne permet pas d'expliquer sont :",
+          "options": [
+            {
+              "label": "la stabilité des atomes et la discontinuité de leurs spectres",
+              "correct": true,
+              "why": "Le modèle prévoit l'effondrement de l'atome et un spectre continu."
+            },
+            {
+              "label": "le fait que la force entre noyau et électron soit attractive",
+              "why": "Le modèle l'explique par les charges opposées : $+$ et $-$."
+            },
+            {
+              "label": "le fait que l'électron porte une charge négative",
+              "why": "La charge de l'électron est une donnée du modèle, non une prévision."
+            },
+            {
+              "label": "le fait que l'atome soit électriquement neutre",
+              "why": "Le modèle l'explique : autant d'électrons que de protons."
+            }
+          ],
+          "hint": "Quelles observations contredisent les prévisions du modèle ?",
+          "solution": "Le modèle classique n'explique ni la stabilité des atomes ni la discontinuité des spectres ; il explique en revanche l'attraction électrique et la neutralité de l'atome. Contrôle : ces deux échecs conduisent à l'idée de quantification.",
+          "methode": "Échecs : stabilité, spectres de raies.",
+          "points": 1,
+          "ref": "pc-atome-newton-les-trois-echecs-du-modele-q3"
+        },
+        {
+          "notion": "Les trois échecs du modèle",
+          "difficulty": 3,
+          "statement": "Un calcul classique montre qu'un électron en orbite autour d'un noyau s'écraserait sur lui en environ $10^{-11}\\ \\mathrm{s}$. Cette conclusion :",
+          "options": [
+            {
+              "label": "incompatible avec la stabilité observée : le modèle est insuffisant à l'échelle atomique",
+              "correct": true,
+              "why": "Les atomes existent depuis des milliards d'années : le modèle classique est contredit par l'expérience."
+            },
+            {
+              "label": "favorable au modèle : les atomes se détruisent mais se reforment aussitôt",
+              "why": "Rien ne montre une reformation permanente des atomes : on observe leur stabilité."
+            },
+            {
+              "label": "compatible avec l'observation, car les atomes ne dureraient que $10^{-11}\\ \\mathrm{s}$",
+              "why": "Les atomes sont stables sur des durées bien plus longues que $10^{-11}\\ \\mathrm{s}$."
+            },
+            {
+              "label": "sans conséquence, la stabilité des atomes n'ayant jamais été observée",
+              "why": "La stabilité de la matière est une observation courante : elle contredit le modèle."
+            }
+          ],
+          "hint": "Compare $10^{-11}\\ \\mathrm{s}$ à la durée de vie observée de la matière.",
+          "solution": "Une durée de chute de $10^{-11}\\ \\mathrm{s}$ n'est pas compatible avec des atomes stables sur des durées macroscopiques : le modèle classique est réfuté pour l'atome. Contrôle : une théorie correcte doit expliquer la stabilité.",
+          "methode": "Prévision classique : atome instable ; observation : atome stable.",
+          "points": 1,
+          "ref": "pc-atome-newton-les-trois-echecs-du-modele-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Ce que révèle l'échec",
+        "lesson": "Insuffisance de la mécanique de Newton",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-atome-newton-ce-que-revele-l-echec",
+      "chapter": "pc-atome-newton",
+      "kind": "qcu",
+      "title": "Ce que révèle l'échec",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Ce que révèle l'échec",
+          "difficulty": 1,
+          "statement": "L'échec du modèle planétaire montre que :",
+          "options": [
+            {
+              "label": "la mécanique de Newton ne s'applique pas à l'échelle de l'atome",
+              "correct": true,
+              "why": "Les lois de Newton, établies à notre échelle, ne décrivent pas l'électron dans l'atome."
+            },
+            {
+              "label": "la mécanique de Newton est fausse à toutes les échelles",
+              "why": "Elle reste valable pour les objets macroscopiques (satellites, balles, planètes)."
+            },
+            {
+              "label": "l'atome n'existe pas",
+              "why": "L'atome existe : c'est le modèle qui est insuffisant, non l'atome qui est irréel."
+            },
+            {
+              "label": "l'électron n'a pas de masse",
+              "why": "L'électron a une masse ($9{,}1\\times10^{-31}\\ \\mathrm{kg}$) : le problème est dans le modèle, non dans la masse."
+            }
+          ],
+          "hint": "Quel est le domaine de validité de la mécanique de Newton ?",
+          "solution": "Le modèle planétaire, fondé sur la mécanique de Newton, échoue pour l'atome : cette mécanique n'est pas valable à l'échelle atomique. Contrôle : elle reste valable à notre échelle.",
+          "methode": "Newton : valable à l'échelle macroscopique, insuffisant pour l'atome.",
+          "points": 1,
+          "ref": "pc-atome-newton-ce-que-revele-l-echec-q1"
+        },
+        {
+          "notion": "Ce que révèle l'échec",
+          "difficulty": 2,
+          "statement": "Pour décrire l'atome, il faut :",
+          "options": [
+            {
+              "label": "une nouvelle théorie, la mécanique quantique, où l'énergie est quantifiée",
+              "correct": true,
+              "why": "L'échec des lois de Newton impose de nouvelles lois, où l'énergie est quantifiée."
+            },
+            {
+              "label": "un réglage de la valeur de la force électrique du modèle utilisé",
+              "why": "L'échec est de principe : aucun réglage de la force ne règle l'instabilité et la discontinuité des spectres."
+            },
+            {
+              "label": "une force de frottement ajoutée au mouvement de l'électron en orbite",
+              "why": "Un frottement ferait perdre de l'énergie à l'électron et aggraverait la chute sur le noyau."
+            },
+            {
+              "label": "une orbite elliptique à la place de l'orbite circulaire du modèle",
+              "why": "Une orbite elliptique serait toujours accélérée : l'électron rayonnerait de la même façon."
+            }
+          ],
+          "hint": "L'échec est-il dû à un détail du modèle ou au cadre théorique lui-même ?",
+          "solution": "Aucun ajustement des lois de Newton ne résout les échecs : il faut une nouvelle théorie, la mécanique quantique, dans laquelle l'énergie de l'atome est quantifiée. Contrôle : elle explique la stabilité et les raies.",
+          "methode": "Atome : mécanique quantique (énergie quantifiée).",
+          "points": 1,
+          "ref": "pc-atome-newton-ce-que-revele-l-echec-q2"
+        },
+        {
+          "notion": "Ce que révèle l'échec",
+          "difficulty": 2,
+          "statement": "La mécanique de Newton reste valable pour décrire :",
+          "options": [
+            {
+              "label": "le mouvement d'un satellite autour de la Terre",
+              "correct": true,
+              "why": "À l'échelle macroscopique et à vitesse faible devant $c$, la mécanique de Newton s'applique."
+            },
+            {
+              "label": "le mouvement de l'électron dans l'atome d'hydrogène",
+              "why": "C'est précisément le cas où la mécanique de Newton échoue."
+            },
+            {
+              "label": "la stabilité de l'atome d'hydrogène",
+              "why": "Elle ne l'explique pas : c'est un des échecs du modèle planétaire."
+            },
+            {
+              "label": "l'émission d'un spectre de raies par un atome",
+              "why": "Elle prévoit un spectre continu : elle ne rend pas compte des raies."
+            }
+          ],
+          "hint": "À quelle échelle la mécanique de Newton a-t-elle été vérifiée ?",
+          "solution": "La mécanique de Newton décrit très bien le mouvement des corps macroscopiques ($\\mathrm{kg}$, $\\mathrm{m}$), comme celui d'un satellite. Contrôle : elle échoue à l'échelle de $10^{-10}\\ \\mathrm{m}$.",
+          "methode": "Newton : macroscopique, oui ; atomique, non.",
+          "points": 1,
+          "ref": "pc-atome-newton-ce-que-revele-l-echec-q3"
+        },
+        {
+          "notion": "Ce que révèle l'échec",
+          "difficulty": 3,
+          "statement": "Une théorie quantique de l'atome doit aussi décrire correctement les objets macroscopiques. À l'échelle macroscopique, elle :",
+          "options": [
+            {
+              "label": "redonne les résultats de la mécanique de Newton",
+              "correct": true,
+              "why": "Une théorie plus générale englobe l'ancienne dans son domaine de validité."
+            },
+            {
+              "label": "remplace Newton : les satellites suivraient des lois entièrement différentes",
+              "why": "Les prévisions de Newton pour les satellites sont confirmées par l'expérience ; la nouvelle théorie doit les retrouver."
+            },
+            {
+              "label": "n'a aucun lien avec la mécanique de Newton",
+              "why": "Une nouvelle théorie doit contenir l'ancienne comme cas limite, non l'ignorer."
+            },
+            {
+              "label": "ne s'applique qu'à l'atome d'hydrogène, rien d'autre",
+              "why": "La théorie quantique s'applique à tous les atomes et à la matière en général."
+            }
+          ],
+          "hint": "Les anciennes lois, vérifiées à notre échelle, doivent-elles être retrouvées ?",
+          "solution": "Une nouvelle théorie doit coïncider, dans le domaine où l'ancienne est vérifiée, avec celle-ci : la mécanique quantique redonne Newton à l'échelle macroscopique. Contrôle : cela explique que Newton fonctionne si bien pour les satellites.",
+          "methode": "Nouvelle théorie : retrouve l'ancienne dans son domaine de validité.",
+          "points": 1,
+          "ref": "pc-atome-newton-ce-que-revele-l-echec-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La quantification de l'énergie",
+        "lesson": "Niveaux d'énergie et photon",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-atome-newton-la-quantification-de-l-energie",
+      "chapter": "pc-atome-newton",
+      "kind": "qcu",
+      "title": "La quantification de l'énergie",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "La quantification de l'énergie",
+          "difficulty": 1,
+          "statement": "Dire que l'énergie de l'atome est quantifiée signifie qu'elle :",
+          "options": [
+            {
+              "label": "ne peut prendre que certaines valeurs discrètes",
+              "correct": true,
+              "why": "Seuls certains niveaux d'énergie sont permis : $E_1,E_2,E_3\\dots$"
+            },
+            {
+              "label": "peut prendre n'importe quelle valeur, de façon continue",
+              "why": "C'est le contraire de la quantification : une énergie continue serait classique."
+            },
+            {
+              "label": "est toujours nulle dans l'état fondamental",
+              "why": "Dans l'état fondamental de l'hydrogène, $E_1=-13{,}6\\ \\mathrm{eV}$, non nulle."
+            },
+            {
+              "label": "augmente toujours avec le temps",
+              "why": "L'énergie de l'atome est constante tant qu'il ne reçoit ni n'émet de photon."
+            }
+          ],
+          "hint": "Quantifié s'oppose à continu.",
+          "solution": "Quantification : l'énergie ne prend que des valeurs discrètes $E_n$. Contrôle : pour l'hydrogène, $E_n=-\\dfrac{13{,}6}{n^2}\\ \\mathrm{eV}$ avec $n$ entier non nul.",
+          "methode": "Énergie quantifiée : valeurs discrètes $E_n$.",
+          "points": 1,
+          "ref": "pc-atome-newton-la-quantification-de-l-energie-q1"
+        },
+        {
+          "notion": "La quantification de l'énergie",
+          "difficulty": 2,
+          "statement": "Pour l'atome d'hydrogène, $E_n=-\\dfrac{13{,}6}{n^2}\\ \\mathrm{eV}$. L'énergie du niveau $n=3$ vaut :",
+          "options": [
+            {
+              "label": "$E_3=-1{,}51\\ \\mathrm{eV}$",
+              "correct": true,
+              "why": "$E_3=-\\dfrac{13{,}6}{3^2}=-\\dfrac{13{,}6}{9}=-1{,}51\\ \\mathrm{eV}$."
+            },
+            {
+              "label": "$E_3=-4{,}53\\ \\mathrm{eV}$",
+              "why": "Tu as divisé par $n$ au lieu de $n^2$ : $E_3=-13{,}6/9$."
+            },
+            {
+              "label": "$E_3=1{,}51\\ \\mathrm{eV}$",
+              "why": "Tu as oublié le signe moins : les niveaux liés ont une énergie négative."
+            },
+            {
+              "label": "$E_3=-122\\ \\mathrm{eV}$",
+              "why": "Tu as multiplié par $n^2$ au lieu de diviser : l'énergie se rapproche de $0$ quand $n$ augmente."
+            }
+          ],
+          "hint": "$E_n=-E_0/n^2$ avec $n=3$.",
+          "solution": "$E_3=-\\dfrac{13{,}6}{9}=-1{,}51\\ \\mathrm{eV}$. Contrôle : $E_1<E_2<E_3<0$, avec $E_1=-13{,}6\\ \\mathrm{eV}$ et $E_2=-3{,}40\\ \\mathrm{eV}$.",
+          "methode": "$E_n=-13{,}6/n^2$ ($\\mathrm{eV}$).",
+          "points": 1,
+          "ref": "pc-atome-newton-la-quantification-de-l-energie-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le photon",
+        "lesson": "Niveaux d'énergie et photon",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-atome-newton-le-photon",
+      "chapter": "pc-atome-newton",
+      "kind": "qcu",
+      "title": "Le photon",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le photon",
+          "difficulty": 1,
+          "statement": "L'énergie d'un photon de fréquence $\\nu$ est :",
+          "options": [
+            {
+              "label": "$E=h\\,\\nu$",
+              "correct": true,
+              "why": "Relation de Planck : l'énergie est proportionnelle à la fréquence, avec la constante $h$."
+            },
+            {
+              "label": "$E=\\dfrac{h}{\\nu}$",
+              "why": "L'énergie du photon augmente avec la fréquence : elle n'est pas inversement proportionnelle."
+            },
+            {
+              "label": "$E=\\dfrac{\\nu}{h}$",
+              "why": "Il faut multiplier $\\nu$ par $h$ : une énergie s'exprime en joules, pas en $\\mathrm{s^{-2}\\,J^{-1}}$."
+            },
+            {
+              "label": "$E=h\\,\\nu^{2}$",
+              "why": "L'énergie est proportionnelle à $\\nu$, non à $\\nu^2$."
+            }
+          ],
+          "hint": "L'énergie d'un photon est proportionnelle à sa fréquence.",
+          "solution": "$E=h\\nu=\\dfrac{hc}{\\lambda}$ avec $h=6{,}63\\times10^{-34}\\ \\mathrm{J\\,s}$. Contrôle : $h\\nu$ s'exprime en $\\mathrm{J\\,s\\times s^{-1}=J}$.",
+          "methode": "$E=h\\nu=hc/\\lambda$.",
+          "points": 1,
+          "ref": "pc-atome-newton-le-photon-q1"
+        },
+        {
+          "notion": "Le photon",
+          "difficulty": 2,
+          "statement": "Un photon a pour longueur d'onde $\\lambda=500\\ \\mathrm{nm}$. Avec $h=6{,}63\\times10^{-34}\\ \\mathrm{J\\,s}$, $c=3{,}00\\times10^{8}\\ \\mathrm{m\\,s^{-1}}$ et $1\\ \\mathrm{eV}=1{,}6\\times10^{-19}\\ \\mathrm{J}$, son énergie vaut :",
+          "options": [
+            {
+              "label": "$E=2{,}49\\ \\mathrm{eV}$",
+              "correct": true,
+              "why": "$E=\\dfrac{hc}{\\lambda}=\\dfrac{6{,}63\\times10^{-34}\\times3{,}00\\times10^{8}}{500\\times10^{-9}}=3{,}98\\times10^{-19}\\ \\mathrm{J}=2{,}49\\ \\mathrm{eV}$."
+            },
+            {
+              "label": "$E=3{,}98\\times10^{-19}\\ \\mathrm{eV}$",
+              "why": "$3{,}98\\times10^{-19}$ est l'énergie en joules : il faut diviser par $1{,}6\\times10^{-19}$ pour l'avoir en $\\mathrm{eV}$."
+            },
+            {
+              "label": "$E=2{,}49\\times10^{-9}\\ \\mathrm{eV}$",
+              "why": "Tu as utilisé $\\lambda=500$ sans convertir les nanomètres en mètres ($500\\times10^{-9}\\ \\mathrm{m}$)."
+            },
+            {
+              "label": "$E=8{,}29\\times10^{-9}\\ \\mathrm{eV}$",
+              "why": "Tu as oublié la célérité $c$ : $E=hc/\\lambda$, non $h/\\lambda$."
+            }
+          ],
+          "hint": "$E=hc/\\lambda$ avec $\\lambda$ en mètres, puis conversion en $\\mathrm{eV}$.",
+          "solution": "$E=\\dfrac{hc}{\\lambda}=\\dfrac{6{,}63\\times10^{-34}\\times3{,}00\\times10^{8}}{5{,}00\\times10^{-7}}=3{,}98\\times10^{-19}\\ \\mathrm{J}$ ; $E=\\dfrac{3{,}98\\times10^{-19}}{1{,}6\\times10^{-19}}=2{,}49\\ \\mathrm{eV}$. Contrôle : lumière visible, quelques $\\mathrm{eV}$.",
+          "methode": "$E=hc/\\lambda$ ; $1\\ \\mathrm{eV}=1{,}6\\times10^{-19}\\ \\mathrm{J}$.",
+          "points": 1,
+          "ref": "pc-atome-newton-le-photon-q2"
+        },
+        {
+          "notion": "Le photon",
+          "difficulty": 3,
+          "statement": "Avec $E_n=-\\dfrac{13{,}6}{n^2}\\ \\mathrm{eV}$, $h=6{,}63\\times10^{-34}\\ \\mathrm{J\\,s}$, $c=3{,}00\\times10^{8}\\ \\mathrm{m\\,s^{-1}}$ et $1\\ \\mathrm{eV}=1{,}6\\times10^{-19}\\ \\mathrm{J}$, la longueur d'onde du photon émis lors de la transition $n=3\\rightarrow n=2$ de l'atome d'hydrogène vaut :",
+          "options": [
+            {
+              "label": "$\\lambda=658\\ \\mathrm{nm}$",
+              "correct": true,
+              "why": "$\\Delta E=13{,}6\\left(\\dfrac{1}{4}-\\dfrac{1}{9}\\right)=1{,}89\\ \\mathrm{eV}=3{,}02\\times10^{-19}\\ \\mathrm{J}$ ; $\\lambda=\\dfrac{hc}{\\Delta E}=6{,}58\\times10^{-7}\\ \\mathrm{m}=658\\ \\mathrm{nm}$."
+            },
+            {
+              "label": "$\\lambda=1{,}05\\times10^{-25}\\ \\mathrm{m}$",
+              "why": "Tu as oublié de convertir $\\Delta E$ de $\\mathrm{eV}$ en joules : il faut multiplier par $1{,}6\\times10^{-19}$."
+            },
+            {
+              "label": "$\\lambda=548\\ \\mathrm{nm}$",
+              "why": "Tu as utilisé $\\dfrac{1}{n}$ au lieu de $\\dfrac{1}{n^2}$ : $E_n$ varie comme $1/n^2$."
+            },
+            {
+              "label": "$\\lambda=253\\ \\mathrm{nm}$",
+              "why": "Tu as additionné $\\dfrac{1}{4}+\\dfrac{1}{9}$ : une transition est la différence $E_3-E_2$ des deux niveaux."
+            }
+          ],
+          "hint": "$\\Delta E=|E_3-E_2|$ en $\\mathrm{eV}$, converti en joules, puis $\\lambda=hc/\\Delta E$.",
+          "solution": "$\\Delta E=|E_3-E_2|=13{,}6\\left(\\dfrac{1}{4}-\\dfrac{1}{9}\\right)=1{,}89\\ \\mathrm{eV}=3{,}02\\times10^{-19}\\ \\mathrm{J}$ ; $\\lambda=\\dfrac{hc}{\\Delta E}=\\dfrac{6{,}63\\times10^{-34}\\times3{,}00\\times10^{8}}{3{,}02\\times10^{-19}}=6{,}58\\times10^{-7}\\ \\mathrm{m}\\approx658\\ \\mathrm{nm}$ : raie rouge visible. Contrôle : $400\\ \\mathrm{nm}<\\lambda<800\\ \\mathrm{nm}$.",
+          "methode": "$\\lambda=hc/|E_p-E_n|$ avec les énergies en joules.",
+          "points": 1,
+          "ref": "pc-atome-newton-le-photon-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Émission et absorption",
+        "lesson": "Niveaux d'énergie et photon",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 3,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-atome-newton-emission-et-absorption",
+      "chapter": "pc-atome-newton",
+      "kind": "qcu",
+      "title": "Émission et absorption",
+      "difficulty": 1,
+      "questions": [
+        {
+          "notion": "Émission et absorption",
+          "difficulty": 1,
+          "statement": "Un atome passe d'un niveau d'énergie $E_p$ à un niveau plus bas $E_n$ ($E_n<E_p$). Il :",
+          "options": [
+            {
+              "label": "émet un photon d'énergie $E_p-E_n$",
+              "correct": true,
+              "why": "La différence d'énergie est emportée par un photon : $h\\nu=E_p-E_n$."
+            },
+            {
+              "label": "absorbe un photon d'énergie $E_p-E_n$",
+              "why": "Une descente de niveau s'accompagne d'une émission, non d'une absorption."
+            },
+            {
+              "label": "émet un photon d'énergie quelconque",
+              "why": "L'énergie du photon est imposée par l'écart entre les niveaux, non quelconque."
+            },
+            {
+              "label": "émet un électron d'énergie $E_p-E_n$",
+              "why": "Dans une désexcitation, c'est un photon qui est émis, non un électron."
+            }
+          ],
+          "hint": "Descente : l'énergie est perdue ou gagnée ?",
+          "solution": "Lors d'une désexcitation $E_p\\rightarrow E_n$, l'atome émet un photon d'énergie $h\\nu=E_p-E_n$ ; à l'inverse, une montée de niveau suppose l'absorption d'un photon de même énergie. Contrôle : conservation de l'énergie.",
+          "methode": "Descente : émission de $h\\nu=E_p-E_n$ ; montée : absorption.",
+          "points": 1,
+          "ref": "pc-atome-newton-emission-et-absorption-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les autres excitations",
+        "lesson": "Niveaux d'énergie et photon",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-atome-newton-les-autres-excitations",
+      "chapter": "pc-atome-newton",
+      "kind": "qcu",
+      "title": "Les autres excitations",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les autres excitations",
+          "difficulty": 1,
+          "statement": "Parmi les processus suivants, celui qui peut faire passer un atome à un niveau excité est :",
+          "options": [
+            {
+              "label": "une collision avec un électron d'énergie cinétique suffisante",
+              "correct": true,
+              "why": "Au cours du choc, l'électron cède à l'atome l'énergie nécessaire à l'excitation."
+            },
+            {
+              "label": "l'émission spontanée d'un photon",
+              "why": "L'émission spontanée fait passer l'atome à un niveau plus bas."
+            },
+            {
+              "label": "la désexcitation vers l'état fondamental",
+              "why": "C'est une descente de niveau, non une excitation."
+            },
+            {
+              "label": "le refroidissement de l'atome à très basse température",
+              "why": "Le refroidissement tend à ramener l'atome vers l'état fondamental."
+            }
+          ],
+          "hint": "Pour exciter un atome, il faut lui apporter de l'énergie : de quelle façon ?",
+          "solution": "L'excitation peut se faire par absorption d'un photon, par collision (électron, atome) ou par agitation thermique : dans tous les cas l'atome reçoit de l'énergie. Contrôle : une désexcitation en libère.",
+          "methode": "Excitation : absorption de photon, collision, chaleur.",
+          "points": 1,
+          "ref": "pc-atome-newton-les-autres-excitations-q1"
+        },
+        {
+          "notion": "Les autres excitations",
+          "difficulty": 2,
+          "statement": "Un photon de $11{,}0\\ \\mathrm{eV}$ rencontre un atome d'hydrogène dans son état fondamental ($E_2-E_1=10{,}2\\ \\mathrm{eV}$, $E_3-E_1=12{,}1\\ \\mathrm{eV}$). Le photon est :",
+          "options": [
+            {
+              "label": "non absorbé, car son énergie ne correspond à aucun écart entre deux niveaux",
+              "correct": true,
+              "why": "Un photon n'est absorbé que si son énergie est exactement égale à un écart : $11{,}0$ n'est ni $10{,}2$ ni $12{,}1$."
+            },
+            {
+              "label": "absorbé : l'atome passe à $n=2$ et le surplus de $0{,}8\\ \\mathrm{eV}$ reste en énergie cinétique",
+              "why": "Un photon est absorbé en bloc : il ne peut pas céder seulement une partie de son énergie."
+            },
+            {
+              "label": "absorbé partiellement : l'atome prend $10{,}2\\ \\mathrm{eV}$ et le photon repart avec $0{,}8\\ \\mathrm{eV}$",
+              "why": "Un photon est absorbé en totalité ou pas du tout ; il ne repart pas avec une énergie réduite."
+            },
+            {
+              "label": "absorbé : l'atome est ionisé car l'énergie dépasse l'écart $n=1\\rightarrow n=2$",
+              "why": "L'ionisation exige au moins $13{,}6\\ \\mathrm{eV}$ ; $11{,}0\\ \\mathrm{eV}$ ne suffit pas."
+            }
+          ],
+          "hint": "Compare l'énergie du photon aux écarts permis entre niveaux.",
+          "solution": "Les écarts depuis le fondamental valent $10{,}2$ et $12{,}1\\ \\mathrm{eV}$ (…) ; $11{,}0\\ \\mathrm{eV}$ n'en est aucun : le photon n'est pas absorbé. Contrôle : l'ionisation demanderait $13{,}6\\ \\mathrm{eV}$ ou plus.",
+          "methode": "Photon : absorbé en totalité si $h\\nu=\\Delta E$, sinon pas du tout.",
+          "points": 1,
+          "ref": "pc-atome-newton-les-autres-excitations-q2"
+        },
+        {
+          "notion": "Les autres excitations",
+          "difficulty": 2,
+          "statement": "Un électron d'énergie cinétique $11{,}0\\ \\mathrm{eV}$ percute un atome d'hydrogène dans son état fondamental. Il peut :",
+          "options": [
+            {
+              "label": "l'exciter au niveau $n=2$ en lui cédant $10{,}2\\ \\mathrm{eV}$ et repartir avec $0{,}8\\ \\mathrm{eV}$",
+              "correct": true,
+              "why": "Lors d'une collision, l'énergie cédée peut être inférieure à l'énergie cinétique de l'électron : il en garde $11{,}0-10{,}2=0{,}8\\ \\mathrm{eV}$."
+            },
+            {
+              "label": "ne rien faire : $11{,}0\\ \\mathrm{eV}$ ne correspond à aucun écart entre niveaux",
+              "why": "La condition d'égalité exacte ne vaut que pour un photon ; un électron peut ne céder qu'une partie de son énergie."
+            },
+            {
+              "label": "l'ioniser, car $11{,}0\\ \\mathrm{eV}$ est supérieur à l'écart de $10{,}2\\ \\mathrm{eV}$",
+              "why": "L'ionisation exige $13{,}6\\ \\mathrm{eV}$ au moins depuis le fondamental."
+            },
+            {
+              "label": "l'exciter au niveau $n=3$, car $11{,}0$ est proche de l'écart de $12{,}1\\ \\mathrm{eV}$",
+              "why": "Il faudrait céder $12{,}1\\ \\mathrm{eV}$, plus que l'énergie de l'électron ($11{,}0\\ \\mathrm{eV}$)."
+            }
+          ],
+          "hint": "Un électron qui entre en collision peut-il céder seulement une partie de son énergie ?",
+          "solution": "L'électron peut céder $10{,}2\\ \\mathrm{eV}$ (excitation vers $n=2$) et garder $11{,}0-10{,}2=0{,}8\\ \\mathrm{eV}$ ; il ne peut pas céder $12{,}1\\ \\mathrm{eV}$ car il n'en a pas assez. Contrôle : différence avec le photon, absorbé en totalité ou pas du tout.",
+          "methode": "Collision : transfert partiel possible, au moins égal à un écart.",
+          "points": 1,
+          "ref": "pc-atome-newton-les-autres-excitations-q3"
+        },
+        {
+          "notion": "Les autres excitations",
+          "difficulty": 3,
+          "statement": "Au-delà de la limite d'ionisation, tout photon d'énergie $\\geq13{,}6\\ \\mathrm{eV}$ peut être absorbé par un atome d'hydrogène au fondamental. Un photon de $15{,}0\\ \\mathrm{eV}$ arrache l'électron ; son énergie cinétique après éjection vaut :",
+          "options": [
+            {
+              "label": "$E_c=1{,}4\\ \\mathrm{eV}$",
+              "correct": true,
+              "why": "$E_c=h\\nu-E_{ionisation}=15{,}0-13{,}6=1{,}4\\ \\mathrm{eV}$."
+            },
+            {
+              "label": "$E_c=15{,}0\\ \\mathrm{eV}$",
+              "why": "Tu as oublié l'énergie nécessaire pour arracher l'électron ($13{,}6\\ \\mathrm{eV}$)."
+            },
+            {
+              "label": "$E_c=28{,}6\\ \\mathrm{eV}$",
+              "why": "Tu as additionné $13{,}6$ au lieu de le retrancher : l'ionisation consomme de l'énergie."
+            },
+            {
+              "label": "$E_c=0{,}0\\ \\mathrm{eV}$",
+              "why": "Le surplus d'énergie n'est pas perdu : il est emporté par l'électron sous forme d'énergie cinétique."
+            }
+          ],
+          "hint": "Bilan d'énergie : énergie du photon $=$ énergie d'ionisation $+$ énergie cinétique de l'électron.",
+          "solution": "$h\\nu=E_{ion}+E_c$ donc $E_c=15{,}0-13{,}6=1{,}4\\ \\mathrm{eV}$. Contrôle : $E_c>0$ car $15{,}0>13{,}6\\ \\mathrm{eV}$ ; pour $13{,}6\\ \\mathrm{eV}$ pile, l'électron est éjecté à vitesse nulle.",
+          "methode": "Ionisation : $h\\nu=13{,}6+E_c$ (en $\\mathrm{eV}$).",
+          "points": 1,
+          "ref": "pc-atome-newton-les-autres-excitations-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-sm-2026-rattrapage",
+          "pc-sm-2026-normale",
+          "pc-sm-2025-normale",
+          "pc-sm-2024-rattrapage",
+          "pc-sm-2024-normale",
+          "pc-sm-2023-rattrapage"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-atome-newton-probleme-1",
+      "chapter": "pc-atome-newton",
+      "kind": "probleme",
+      "title": "Raie d'émission de l'hydrogène",
+      "difficulty": 3,
+      "context": "Un gaz d'hydrogène excité émet des raies. Les niveaux d'énergie de l'atome sont donnés par $E_n=-\\dfrac{13{,}6}{n^2}\\ \\mathrm{eV}$ ($n$ entier non nul). Données : $h=6{,}63\\times10^{-34}\\ \\mathrm{J\\,s}$ ; $c=3{,}00\\times10^{8}\\ \\mathrm{m\\,s^{-1}}$ ; $1\\ \\mathrm{eV}=1{,}6\\times10^{-19}\\ \\mathrm{J}$. On s'intéresse à la raie émise lors de la transition $n=5\\rightarrow n=2$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "La quantification de l'énergie",
+          "difficulty": 1,
+          "statement": "L'énergie du niveau $n=2$ vaut :",
+          "options": [
+            {
+              "label": "$E_2=-3{,}40\\ \\mathrm{eV}$",
+              "correct": true,
+              "why": "$E_2=-\\dfrac{13{,}6}{2^2}=-\\dfrac{13{,}6}{4}=-3{,}40\\ \\mathrm{eV}$."
+            },
+            {
+              "label": "$E_2=-6{,}80\\ \\mathrm{eV}$",
+              "why": "Tu as divisé par $n$ au lieu de $n^2$ : $E_2=-13{,}6/4$."
+            },
+            {
+              "label": "$E_2=3{,}40\\ \\mathrm{eV}$",
+              "why": "Tu as oublié le signe moins : les niveaux liés ont une énergie négative."
+            },
+            {
+              "label": "$E_2=-54{,}4\\ \\mathrm{eV}$",
+              "why": "Tu as multiplié par $n^2$ au lieu de diviser."
+            }
+          ],
+          "hint": "$E_n=-13{,}6/n^2$ avec $n=2$.",
+          "solution": "$E_2=-\\dfrac{13{,}6}{4}=-3{,}40\\ \\mathrm{eV}$. Contrôle : $E_1=-13{,}6<E_2<0$.",
+          "methode": "$E_n=-13{,}6/n^2$.",
+          "points": 1,
+          "part": "Partie A — Niveaux et transition",
+          "ref": "pc-atome-newton-probleme-1-q1"
+        },
+        {
+          "notion": "Émission et absorption",
+          "difficulty": 1,
+          "statement": "La transition $n=5\\rightarrow n=2$ correspond à :",
+          "options": [
+            {
+              "label": "une émission : l'atome descend vers un niveau plus bas en émettant un photon",
+              "correct": true,
+              "why": "$E_5>E_2$ : l'atome perd de l'énergie, emportée par un photon."
+            },
+            {
+              "label": "une absorption : l'atome capte un photon pour passer de $n=5$ à $n=2$",
+              "why": "Une absorption fait monter l'atome vers un niveau plus haut, non plus bas."
+            },
+            {
+              "label": "une émission d'électron par l'atome, qui passe à $n=2$",
+              "why": "La désexcitation émet un photon, non un électron."
+            },
+            {
+              "label": "ni émission ni absorption : l'atome change seulement de trajectoire",
+              "why": "Il n'y a pas de trajectoire, mais une variation d'énergie qui s'accompagne d'un photon."
+            }
+          ],
+          "hint": "$n=5$ est-il plus haut ou plus bas en énergie que $n=2$ ?",
+          "solution": "$E_5=-0{,}54\\ \\mathrm{eV}>E_2=-3{,}40\\ \\mathrm{eV}$ : transition vers un niveau plus bas, avec émission d'un photon. Contrôle : une transition $2\\rightarrow5$ demanderait l'absorption d'un photon.",
+          "methode": "Descente : émission d'un photon.",
+          "points": 1,
+          "part": "Partie A — Niveaux et transition",
+          "ref": "pc-atome-newton-probleme-1-q2"
+        },
+        {
+          "notion": "Le photon",
+          "difficulty": 2,
+          "statement": "L'énergie du photon émis lors de la transition $5\\rightarrow2$ vaut :",
+          "options": [
+            {
+              "label": "$\\Delta E=2{,}86\\ \\mathrm{eV}$",
+              "correct": true,
+              "why": "$\\Delta E=|E_5-E_2|=13{,}6\\left(\\dfrac{1}{4}-\\dfrac{1}{25}\\right)=2{,}86\\ \\mathrm{eV}$."
+            },
+            {
+              "label": "$\\Delta E=3{,}94\\ \\mathrm{eV}$",
+              "why": "Tu as additionné $\\dfrac{1}{4}+\\dfrac{1}{25}$ : l'énergie du photon est la différence des deux niveaux."
+            },
+            {
+              "label": "$\\Delta E=0{,}54\\ \\mathrm{eV}$",
+              "why": "Tu as pris l'énergie du niveau $n=5$ seul ($13{,}6/25$) : il faut la différence $E_5-E_2$."
+            },
+            {
+              "label": "$\\Delta E=3{,}40\\ \\mathrm{eV}$",
+              "why": "Tu as pris l'énergie du niveau $n=2$ seul : il faut la différence $E_5-E_2$."
+            }
+          ],
+          "hint": "L'énergie du photon est l'écart entre les deux niveaux.",
+          "solution": "$\\Delta E=|E_5-E_2|=|-0{,}54-(-3{,}40)|=2{,}86\\ \\mathrm{eV}$ ; en joules : $4{,}57\\times10^{-19}\\ \\mathrm{J}$. Contrôle : $2{,}86\\ \\mathrm{eV}$ est de l'ordre de l'$\\mathrm{eV}$ comme pour la lumière visible.",
+          "methode": "$h\\nu=|E_p-E_n|$.",
+          "points": 1,
+          "part": "Partie A — Niveaux et transition",
+          "ref": "pc-atome-newton-probleme-1-q3"
+        },
+        {
+          "notion": "Le photon",
+          "difficulty": 2,
+          "statement": "La longueur d'onde de ce photon vaut :",
+          "options": [
+            {
+              "label": "$\\lambda=435\\ \\mathrm{nm}$",
+              "correct": true,
+              "why": "$\\lambda=\\dfrac{hc}{\\Delta E}=\\dfrac{6{,}63\\times10^{-34}\\times3{,}00\\times10^{8}}{4{,}57\\times10^{-19}}=4{,}35\\times10^{-7}\\ \\mathrm{m}=435\\ \\mathrm{nm}$."
+            },
+            {
+              "label": "$\\lambda=315\\ \\mathrm{nm}$",
+              "why": "Tu as pris $\\Delta E=3{,}94\\ \\mathrm{eV}$ (somme des termes en $1/n^2$) au lieu de la différence."
+            },
+            {
+              "label": "$\\lambda=2{,}29\\times10^{3}\\ \\mathrm{nm}$",
+              "why": "Tu as pris $\\Delta E=E_5$ seul ($0{,}54\\ \\mathrm{eV}$) au lieu de l'écart $E_5-E_2$."
+            },
+            {
+              "label": "$\\lambda=6{,}96\\times10^{-26}\\ \\mathrm{m}$",
+              "why": "Tu as oublié de convertir $\\Delta E$ en joules : il faut multiplier par $1{,}6\\times10^{-19}$."
+            }
+          ],
+          "hint": "$\\lambda=hc/\\Delta E$ avec $\\Delta E$ en joules.",
+          "solution": "$\\lambda=\\dfrac{hc}{\\Delta E}=\\dfrac{6{,}63\\times10^{-34}\\times3{,}00\\times10^{8}}{4{,}57\\times10^{-19}}=4{,}35\\times10^{-7}\\ \\mathrm{m}\\approx435\\ \\mathrm{nm}$ : raie violette. Contrôle : $400\\ \\mathrm{nm}<\\lambda<800\\ \\mathrm{nm}$.",
+          "methode": "$\\lambda=hc/\\Delta E$.",
+          "points": 1,
+          "part": "Partie B — Longueur d'onde et spectre",
+          "ref": "pc-atome-newton-probleme-1-q4"
+        },
+        {
+          "notion": "Le photon",
+          "difficulty": 2,
+          "statement": "Parmi les transitions $3\\rightarrow2$, $4\\rightarrow2$, $5\\rightarrow2$ et $5\\rightarrow3$, celle qui émet le photon de plus petite longueur d'onde est :",
+          "options": [
+            {
+              "label": "$5\\rightarrow2$",
+              "correct": true,
+              "why": "C'est celle de plus grand écart d'énergie ($2{,}86\\ \\mathrm{eV}$), donc de plus petite longueur d'onde ($\\lambda=hc/\\Delta E$)."
+            },
+            {
+              "label": "$3\\rightarrow2$",
+              "why": "Son écart ($1{,}89\\ \\mathrm{eV}$) est le plus petit des transitions vers $n=2$ : sa longueur d'onde est la plus grande."
+            },
+            {
+              "label": "$4\\rightarrow2$",
+              "why": "Son écart ($2{,}55\\ \\mathrm{eV}$) est inférieur à celui de $5\\rightarrow2$."
+            },
+            {
+              "label": "$5\\rightarrow3$",
+              "why": "Son écart ($0{,}97\\ \\mathrm{eV}$) est le plus faible de toutes : la longueur d'onde est la plus grande."
+            }
+          ],
+          "hint": "Plus l'écart d'énergie est grand, plus la longueur d'onde est petite.",
+          "solution": "Écarts : $3\\rightarrow2$ : 1{,}89 ; $4\\rightarrow2$ : 2{,}55 ; $5\\rightarrow2$ : 2{,}86 ; $5\\rightarrow3$ : 0{,}97 ($\\mathrm{eV}$). $\\lambda=hc/\\Delta E$ est minimale pour l'écart maximal : $5\\rightarrow2$. Contrôle : $\\lambda$ est inversement proportionnelle à $\\Delta E$.",
+          "methode": "$\\lambda$ minimale $\\Leftrightarrow$ $\\Delta E$ maximal.",
+          "points": 1,
+          "part": "Partie B — Longueur d'onde et spectre",
+          "ref": "pc-atome-newton-probleme-1-q5"
+        },
+        {
+          "notion": "Émission et absorption",
+          "difficulty": 3,
+          "statement": "De la lumière blanche traverse un gaz d'hydrogène froid dont tous les atomes sont dans l'état fondamental. La raie à $435\\ \\mathrm{nm}$ (transition $5\\rightarrow2$) :",
+          "options": [
+            {
+              "label": "n'apparaît pas en absorption : les atomes au fondamental n'absorbent que des photons d'énergie égale à un écart $n=1\\rightarrow n$",
+              "correct": true,
+              "why": "Pour absorber à $435\\ \\mathrm{nm}$, il faudrait des atomes déjà au niveau $n=2$."
+            },
+            {
+              "label": "apparaît en absorption : une raie a la même longueur d'onde en émission et en absorption, quel que soit l'état de l'atome",
+              "why": "C'est vrai seulement si l'atome part du niveau $n=2$ ; au fondamental, le niveau de départ est $n=1$."
+            },
+            {
+              "label": "apparaît en absorption, car $435\\ \\mathrm{nm}$ est dans le domaine visible",
+              "why": "Le domaine spectral ne décide pas : l'absorption exige l'égalité exacte avec un écart depuis le niveau occupé."
+            },
+            {
+              "label": "apparaît uniquement en émission, car un gaz froid ne peut jamais absorber",
+              "why": "Un gaz froid absorbe les photons correspondant aux transitions depuis le fondamental, dans l'ultraviolet."
+            }
+          ],
+          "hint": "Depuis quel niveau l'atome absorbe-t-il, s'il est au fondamental ?",
+          "solution": "Au fondamental, l'absorption correspond à des transitions $1\\rightarrow n$ ($\\Delta E\\geq10{,}2\\ \\mathrm{eV}$, ultraviolet). La raie $5\\rightarrow2$ (435 nm) demande des atomes initialement en $n=2$ : elle n'apparaît pas. Contrôle : les raies d'absorption du gaz froid sont dans l'ultraviolet.",
+          "methode": "Absorption : depuis le niveau occupé ; gaz froid $\\Rightarrow$ $n=1$.",
+          "points": 1,
+          "part": "Partie B — Longueur d'onde et spectre",
+          "ref": "pc-atome-newton-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-sm-2026-rattrapage",
+          "pc-sm-2026-normale",
+          "pc-sm-2025-normale",
+          "pc-sm-2024-rattrapage",
+          "pc-sm-2024-normale",
+          "pc-sm-2023-rattrapage"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-atome-newton-probleme-2",
+      "chapter": "pc-atome-newton",
+      "kind": "probleme",
+      "title": "Excitation et désexcitation de l'hydrogène",
+      "difficulty": 3,
+      "context": "Un atome d'hydrogène est dans son état fondamental ($n=1$). Ses niveaux sont donnés par $E_n=-\\dfrac{13{,}6}{n^2}\\ \\mathrm{eV}$. On donne $E_2-E_1=10{,}2\\ \\mathrm{eV}$ et $E_3-E_1=12{,}09\\ \\mathrm{eV}$. $h=6{,}63\\times10^{-34}\\ \\mathrm{J\\,s}$ ; $c=3{,}00\\times10^{8}\\ \\mathrm{m\\,s^{-1}}$ ; $1\\ \\mathrm{eV}=1{,}6\\times10^{-19}\\ \\mathrm{J}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Les autres excitations",
+          "difficulty": 1,
+          "statement": "L'énergie nécessaire pour ioniser l'atome depuis son état fondamental vaut :",
+          "options": [
+            {
+              "label": "$13{,}6\\ \\mathrm{eV}$",
+              "correct": true,
+              "why": "Il faut amener l'énergie de $-13{,}6\\ \\mathrm{eV}$ à $0$ : on apporte $13{,}6\\ \\mathrm{eV}$."
+            },
+            {
+              "label": "$-13{,}6\\ \\mathrm{eV}$",
+              "why": "$-13{,}6\\ \\mathrm{eV}$ est l'énergie de l'état fondamental ; l'énergie à fournir est positive."
+            },
+            {
+              "label": "$3{,}40\\ \\mathrm{eV}$",
+              "why": "$3{,}40\\ \\mathrm{eV}$ est l'énergie (en valeur absolue) du niveau $n=2$, non l'énergie d'ionisation depuis $n=1$."
+            },
+            {
+              "label": "$0\\ \\mathrm{eV}$",
+              "why": "$0$ est l'énergie de l'atome ionisé, non l'énergie à fournir pour y arriver."
+            }
+          ],
+          "hint": "Ionisation : passage de $E_1$ à $E=0$.",
+          "solution": "L'ionisation fait passer de $E_1=-13{,}6\\ \\mathrm{eV}$ à $E=0$ : il faut apporter $13{,}6\\ \\mathrm{eV}$. Contrôle : $-13{,}6+13{,}6=0$.",
+          "methode": "Énergie d'ionisation (fondamental) $=13{,}6\\ \\mathrm{eV}$.",
+          "points": 1,
+          "part": "Partie A — Niveaux et photon",
+          "ref": "pc-atome-newton-probleme-2-q1"
+        },
+        {
+          "notion": "La quantification de l'énergie",
+          "difficulty": 1,
+          "statement": "L'énergie du niveau $n=4$ vaut :",
+          "options": [
+            {
+              "label": "$E_4=-0{,}85\\ \\mathrm{eV}$",
+              "correct": true,
+              "why": "$E_4=-\\dfrac{13{,}6}{16}=-0{,}85\\ \\mathrm{eV}$."
+            },
+            {
+              "label": "$E_4=-3{,}40\\ \\mathrm{eV}$",
+              "why": "Tu as divisé par $n$ au lieu de $n^2$ : $E_4=-13{,}6/16$."
+            },
+            {
+              "label": "$E_4=0{,}85\\ \\mathrm{eV}$",
+              "why": "Tu as oublié le signe moins : les niveaux liés ont une énergie négative."
+            },
+            {
+              "label": "$E_4=-218\\ \\mathrm{eV}$",
+              "why": "Tu as multiplié par $n^2$ au lieu de diviser."
+            }
+          ],
+          "hint": "$E_n=-13{,}6/n^2$ avec $n=4$.",
+          "solution": "$E_4=-\\dfrac{13{,}6}{16}=-0{,}85\\ \\mathrm{eV}$. Contrôle : $E_4=-0{,}85>E_3=-1{,}51\\ \\mathrm{eV}$ et $E_4<0$.",
+          "methode": "$E_n=-13{,}6/n^2$.",
+          "points": 1,
+          "part": "Partie A — Niveaux et photon",
+          "ref": "pc-atome-newton-probleme-2-q2"
+        },
+        {
+          "notion": "Le photon",
+          "difficulty": 2,
+          "statement": "La longueur d'onde d'un photon capable de faire passer l'atome de $n=1$ à $n=2$ vaut :",
+          "options": [
+            {
+              "label": "$\\lambda=122\\ \\mathrm{nm}$ (ultraviolet)",
+              "correct": true,
+              "why": "$\\lambda=\\dfrac{hc}{\\Delta E}=\\dfrac{6{,}63\\times10^{-34}\\times3{,}00\\times10^{8}}{10{,}2\\times1{,}6\\times10^{-19}}=122\\ \\mathrm{nm}$."
+            },
+            {
+              "label": "$\\lambda=103\\ \\mathrm{nm}$ (ultraviolet)",
+              "why": "Tu as pris l'écart $n=1\\rightarrow n=3$ ($12{,}09\\ \\mathrm{eV}$) au lieu de $n=1\\rightarrow n=2$."
+            },
+            {
+              "label": "$\\lambda=1{,}95\\times10^{-26}\\ \\mathrm{m}$",
+              "why": "Tu as oublié de convertir $10{,}2\\ \\mathrm{eV}$ en joules : il faut multiplier par $1{,}6\\times10^{-19}$."
+            },
+            {
+              "label": "$\\lambda=1{,}22\\times10^{-6}\\ \\mathrm{m}$ (infrarouge)",
+              "why": "Tu as pris $1\\ \\mathrm{eV}=1{,}6\\times10^{-20}\\ \\mathrm{J}$ : la bonne valeur est $1{,}6\\times10^{-19}\\ \\mathrm{J}$."
+            }
+          ],
+          "hint": "$\\lambda=hc/\\Delta E$, avec $\\Delta E=10{,}2\\ \\mathrm{eV}$ converti en joules.",
+          "solution": "$\\Delta E=10{,}2\\times1{,}6\\times10^{-19}=1{,}63\\times10^{-18}\\ \\mathrm{J}$ ; $\\lambda=\\dfrac{hc}{\\Delta E}=1{,}22\\times10^{-7}\\ \\mathrm{m}=122\\ \\mathrm{nm}$ : ultraviolet ($\\lambda<400\\ \\mathrm{nm}$). Contrôle : $\\lambda\\Delta E=hc$.",
+          "methode": "$\\lambda=hc/\\Delta E$.",
+          "points": 1,
+          "part": "Partie A — Niveaux et photon",
+          "ref": "pc-atome-newton-probleme-2-q3"
+        },
+        {
+          "notion": "Les autres excitations",
+          "difficulty": 2,
+          "statement": "Un photon de $11{,}5\\ \\mathrm{eV}$ rencontre cet atome. Il est :",
+          "options": [
+            {
+              "label": "non absorbé, car $11{,}5\\ \\mathrm{eV}$ n'est égal ni à $10{,}2$ ni à $12{,}09\\ \\mathrm{eV}$",
+              "correct": true,
+              "why": "Un photon n'est absorbé que si son énergie est exactement un écart entre niveaux."
+            },
+            {
+              "label": "absorbé : l'atome passe à $n=2$, le surplus de $1{,}3\\ \\mathrm{eV}$ restant sous forme d'énergie cinétique",
+              "why": "Un photon est absorbé en totalité ou pas du tout : pas de transfert partiel."
+            },
+            {
+              "label": "absorbé : l'atome passe à $n=3$, car $11{,}5$ est proche de $12{,}09\\ \\mathrm{eV}$",
+              "why": "La condition est une égalité exacte, pas une proximité."
+            },
+            {
+              "label": "absorbé : l'atome est ionisé, car $11{,}5>10{,}2\\ \\mathrm{eV}$",
+              "why": "L'ionisation exige au moins $13{,}6\\ \\mathrm{eV}$ depuis le fondamental."
+            }
+          ],
+          "hint": "Compare $11{,}5\\ \\mathrm{eV}$ aux écarts permis depuis $n=1$.",
+          "solution": "Écarts depuis $n=1$ : $10{,}2$, $12{,}09$, … ; $11{,}5\\ \\mathrm{eV}$ n'en est aucun : le photon n'est pas absorbé. Contrôle : ionisation à partir de $13{,}6\\ \\mathrm{eV}$.",
+          "methode": "Photon : absorbé seulement si $h\\nu=\\Delta E$.",
+          "points": 1,
+          "part": "Partie B — Excitation et désexcitation",
+          "ref": "pc-atome-newton-probleme-2-q4"
+        },
+        {
+          "notion": "Les autres excitations",
+          "difficulty": 2,
+          "statement": "Un électron d'énergie cinétique $12{,}0\\ \\mathrm{eV}$ percute cet atome. Il peut :",
+          "options": [
+            {
+              "label": "l'exciter jusqu'à $n=2$ seulement, en repartant avec $1{,}8\\ \\mathrm{eV}$",
+              "correct": true,
+              "why": "Il peut céder $10{,}2\\ \\mathrm{eV}$ ($n=2$) et garder $12{,}0-10{,}2=1{,}8\\ \\mathrm{eV}$ ; $n=3$ exigerait $12{,}09\\ \\mathrm{eV}$."
+            },
+            {
+              "label": "l'exciter jusqu'à $n=3$ en repartant avec une énergie cinétique nulle",
+              "why": "$n=3$ exige $12{,}09\\ \\mathrm{eV}$ ; l'électron n'en possède que $12{,}0$."
+            },
+            {
+              "label": "l'exciter indifféremment jusqu'à $n=2$ ou jusqu'à $n=3$ selon le choc",
+              "why": "Il n'a pas assez d'énergie pour atteindre $n=3$ ($12{,}09>12{,}0$)."
+            },
+            {
+              "label": "l'ioniser, car son énergie dépasse celle de l'écart $n=1\\rightarrow n=2$",
+              "why": "L'ionisation exige $13{,}6\\ \\mathrm{eV}$ au moins : $12{,}0$ ne suffit pas."
+            }
+          ],
+          "hint": "Quels écarts depuis $n=1$ sont inférieurs ou égaux à $12{,}0\\ \\mathrm{eV}$ ?",
+          "solution": "Seul l'écart $10{,}2\\ \\mathrm{eV}$ ($n=2$) est inférieur à $12{,}0\\ \\mathrm{eV}$ ; $12{,}09>12{,}0$ exclut $n=3$. L'électron repart avec $12{,}0-10{,}2=1{,}8\\ \\mathrm{eV}$. Contrôle : une collision peut transférer une partie de l'énergie seulement.",
+          "methode": "Collision : transfert $\\leq$ énergie de l'électron, égal à un écart.",
+          "points": 1,
+          "part": "Partie B — Excitation et désexcitation",
+          "ref": "pc-atome-newton-probleme-2-q5"
+        },
+        {
+          "notion": "Émission et absorption",
+          "difficulty": 3,
+          "statement": "L'atome est excité jusqu'au niveau $n=3$. Le nombre de raies d'émission différentes qu'il peut produire en revenant au fondamental (sur l'ensemble de la population d'atomes) est :",
+          "options": [
+            {
+              "label": "$3$ : $3\\rightarrow2$, $2\\rightarrow1$ et $3\\rightarrow1$",
+              "correct": true,
+              "why": "Trois descentes sont possibles : $3\\rightarrow2$, $3\\rightarrow1$ et $2\\rightarrow1$."
+            },
+            {
+              "label": "$1$ : seulement la transition $3\\rightarrow1$ directe",
+              "why": "Les atomes peuvent aussi passer par $n=2$ : $3\\rightarrow2$ puis $2\\rightarrow1$."
+            },
+            {
+              "label": "$2$ : $3\\rightarrow2$ et $2\\rightarrow1$ seulement",
+              "why": "Il manque la transition directe $3\\rightarrow1$."
+            },
+            {
+              "label": "$6$ : les trois descentes et les trois montées possibles",
+              "why": "Les montées correspondent à des absorptions, non à des raies d'émission."
+            }
+          ],
+          "hint": "Compte les descentes possibles depuis $n=3$, puis depuis $n=2$.",
+          "solution": "Depuis $n=3$ : vers $2$ ou vers $1$ ; depuis $n=2$ : vers $1$ ; soit $3$ raies : $3\\rightarrow2$, $3\\rightarrow1$, $2\\rightarrow1$. Contrôle : $\\dfrac{n(n-1)}{2}=3$ pour $n=3$.",
+          "methode": "Raies d'émission depuis $n$ : $n(n-1)/2$.",
+          "points": 1,
+          "part": "Partie B — Excitation et désexcitation",
+          "ref": "pc-atome-newton-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [],
-  "existing_questions_total": 6,
-  "target_new_questions": 22,
-  "suggested_figures": [
-   "niveaux-energie — Diagramme des niveaux d'énergie de l'atome d'hydrogène"
-  ],
-  "sources": [
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-atome-newton-serie-1",
+      "title": "Atome et mécanique de Newton · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-atome-newton",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-atome-newton-le-modele-planetaire-de-l-atome-q1",
+        "pc-atome-newton-les-trois-echecs-du-modele-q1",
+        "pc-atome-newton-ce-que-revele-l-echec-q1",
+        "pc-atome-newton-la-quantification-de-l-energie-q1",
+        "pc-atome-newton-le-photon-q1",
+        "pc-atome-newton-emission-et-absorption-q1",
+        "pc-atome-newton-les-autres-excitations-q1",
+        "pc-atome-newton-le-modele-planetaire-de-l-atome-q2",
+        "pc-atome-newton-les-trois-echecs-du-modele-q2",
+        "pc-atome-newton-ce-que-revele-l-echec-q2"
+      ]
+    },
+    {
+      "slug": "pc-atome-newton-serie-2",
+      "title": "Atome et mécanique de Newton · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-atome-newton",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-atome-newton-le-modele-planetaire-de-l-atome-q3",
+        "pc-atome-newton-les-trois-echecs-du-modele-q3",
+        "pc-atome-newton-ce-que-revele-l-echec-q3",
+        "pc-atome-newton-la-quantification-de-l-energie-q2",
+        "pc-atome-newton-le-photon-q2",
+        "pc-atome-newton-les-autres-excitations-q2",
+        "pc-atome-newton-les-autres-excitations-q3",
+        "pc-atome-newton-le-modele-planetaire-de-l-atome-q4",
+        "pc-atome-newton-les-trois-echecs-du-modele-q4",
+        "pc-atome-newton-le-photon-q3"
+      ]
+    },
+    {
+      "slug": "pc-atome-newton-serie-3",
+      "title": "Atome et mécanique de Newton · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-atome-newton",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-atome-newton-probleme-1-q3",
+        "pc-atome-newton-probleme-2-q3",
+        "pc-atome-newton-probleme-1-q4",
+        "pc-atome-newton-probleme-2-q4",
+        "pc-atome-newton-probleme-1-q5",
+        "pc-atome-newton-probleme-2-q5",
+        "pc-atome-newton-ce-que-revele-l-echec-q4",
+        "pc-atome-newton-les-autres-excitations-q4",
+        "pc-atome-newton-probleme-1-q6",
+        "pc-atome-newton-probleme-2-q6"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le modèle planétaire de l'atome",
-    "lesson": "Insuffisance de la mécanique de Newton",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-atome-newton-le-modele-planetaire-de-l-atome",
-   "chapter": "pc-atome-newton",
-   "kind": "qcu",
-   "title": "Le modèle planétaire de l'atome",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-le-modele-planetaire-de-l-atome-q1",
-     "notion": "Le modèle planétaire de l'atome",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les trois échecs du modèle",
-    "lesson": "Insuffisance de la mécanique de Newton",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-atome-newton-les-trois-echecs-du-modele",
-   "chapter": "pc-atome-newton",
-   "kind": "qcu",
-   "title": "Les trois échecs du modèle",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-les-trois-echecs-du-modele-q1",
-     "notion": "Les trois échecs du modèle",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Ce que révèle l'échec",
-    "lesson": "Insuffisance de la mécanique de Newton",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-atome-newton-ce-que-revele-l-echec",
-   "chapter": "pc-atome-newton",
-   "kind": "qcu",
-   "title": "Ce que révèle l'échec",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-ce-que-revele-l-echec-q1",
-     "notion": "Ce que révèle l'échec",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La quantification de l'énergie",
-    "lesson": "Niveaux d'énergie et photon",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 2,
-    "target_new_questions": 2,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-atome-newton-la-quantification-de-l-energie",
-   "chapter": "pc-atome-newton",
-   "kind": "qcu",
-   "title": "La quantification de l'énergie",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-la-quantification-de-l-energie-q1",
-     "notion": "La quantification de l'énergie",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le photon",
-    "lesson": "Niveaux d'énergie et photon",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-atome-newton-le-photon",
-   "chapter": "pc-atome-newton",
-   "kind": "qcu",
-   "title": "Le photon",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-le-photon-q1",
-     "notion": "Le photon",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Émission et absorption",
-    "lesson": "Niveaux d'énergie et photon",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 3,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-atome-newton-emission-et-absorption",
-   "chapter": "pc-atome-newton",
-   "kind": "qcu",
-   "title": "Émission et absorption",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-emission-et-absorption-q1",
-     "notion": "Émission et absorption",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les autres excitations",
-    "lesson": "Niveaux d'énergie et photon",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-atome-newton-les-autres-excitations",
-   "chapter": "pc-atome-newton",
-   "kind": "qcu",
-   "title": "Les autres excitations",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-les-autres-excitations-q1",
-     "notion": "Les autres excitations",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-sm-2026-rattrapage",
-     "pc-sm-2026-normale",
-     "pc-sm-2025-normale",
-     "pc-sm-2024-rattrapage",
-     "pc-sm-2024-normale",
-     "pc-sm-2023-rattrapage"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-atome-newton-probleme-1",
-   "chapter": "pc-atome-newton",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-sm-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-sm-2026-rattrapage",
-     "pc-sm-2026-normale",
-     "pc-sm-2025-normale",
-     "pc-sm-2024-rattrapage",
-     "pc-sm-2024-normale",
-     "pc-sm-2023-rattrapage"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-atome-newton-probleme-2",
-   "chapter": "pc-atome-newton",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-sm-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-atome-newton-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-atome-newton-serie-1",
-   "title": "Atome et mécanique de Newton · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-atome-newton",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-atome-newton-serie-2",
-   "title": "Atome et mécanique de Newton · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-atome-newton",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-atome-newton-serie-3",
-   "title": "Atome et mécanique de Newton · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-atome-newton",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
