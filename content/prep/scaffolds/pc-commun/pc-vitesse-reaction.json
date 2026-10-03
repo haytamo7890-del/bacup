@@ -1,1417 +1,2381 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "track": null,
- "_scaffold": {
-  "pack": "pc-commun",
-  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-vitesse-reaction",
-   "name": "Suivi temporel — vitesse de réaction",
-   "domain": "chimie",
-   "unit": "Cinétique chimique"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-vitesse-reaction",
+      "name": "Suivi temporel — vitesse de réaction",
+      "domain": "chimie",
+      "unit": "Cinétique chimique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "L'avancement de réaction",
+      "La vitesse volumique de réaction",
+      "La détermination graphique",
+      "Le temps de demi-réaction",
+      "À quoi sert $t_{1/2}$",
+      "Les méthodes de suivi",
+      "La vitesse de disparition et de formation",
+      "La modélisation exponentielle",
+      "La loi d'Arrhenius",
+      "Les précautions expérimentales",
+      "Les incertitudes",
+      "Le montage",
+      "De la mesure à l'avancement",
+      "Le protocole",
+      "L'exploitation",
+      "Les sources d'erreur",
+      "Méthode 1 — Le tableau d'avancement",
+      "Méthode 2 — Convertir la grandeur mesurée en avancement",
+      "Méthode 3 — Calculer une vitesse volumique",
+      "Méthode 4 — Exploiter une conductimétrie",
+      "Méthode 5 — Déterminer $t_{1/2}$ et conclure"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Le tableau d'avancement",
+      "Méthode 2 — Convertir la grandeur mesurée en avancement",
+      "Méthode 3 — Calculer une vitesse volumique",
+      "Méthode 4 — Exploiter une conductimétrie",
+      "Méthode 5 — Déterminer $t_{1/2}$ et conclure"
+    ],
+    "existing_questions_total": 8,
+    "target_new_questions": 42,
+    "suggested_figures": [
+      "cinetique — Suivi cinétique — [réactif] décroît, [produit] croît, avec t½",
+      "vecteurs-cinematiques — Position, vitesse et accélération d'un point mobile",
+      "chute-fluide-vitesse — Vitesse au cours d'une chute dans un fluide",
+      "retard-temporel — Retard temporel : M reproduit le mouvement de S avec τ = d/c",
+      "vitesse-tangente — Détermination de la vitesse par la pente de la tangente",
+      "montage-conductimetrie — Montage de suivi conductimétrique",
+      "esterification-rendement — Vitesse vs rendement : effet du catalyseur et effet de l'excès de réactif",
+      "montage-gaz — Mesure du volume de gaz dégagé (suivi cinétique)"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "L'avancement de réaction",
-   "La vitesse volumique de réaction",
-   "La détermination graphique",
-   "Le temps de demi-réaction",
-   "À quoi sert $t_{1/2}$",
-   "Les méthodes de suivi",
-   "La vitesse de disparition et de formation",
-   "La modélisation exponentielle",
-   "La loi d'Arrhenius",
-   "Les précautions expérimentales",
-   "Les incertitudes",
-   "Le montage",
-   "De la mesure à l'avancement",
-   "Le protocole",
-   "L'exploitation",
-   "Les sources d'erreur",
-   "Méthode 1 — Le tableau d'avancement",
-   "Méthode 2 — Convertir la grandeur mesurée en avancement",
-   "Méthode 3 — Calculer une vitesse volumique",
-   "Méthode 4 — Exploiter une conductimétrie",
-   "Méthode 5 — Déterminer $t_{1/2}$ et conclure"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "L'avancement de réaction",
+        "lesson": "Avancement & vitesse volumique",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-l-avancement-de-reaction",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "L'avancement de réaction",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'avancement de réaction",
+          "difficulty": 1,
+          "statement": "Pour la transformation d'équation $a\\,\\mathrm{A}+b\\,\\mathrm{B}\\rightarrow c\\,\\mathrm{C}+d\\,\\mathrm{D}$, la quantité de matière de $\\mathrm{A}$ à l'avancement $x$ s'écrit :",
+          "options": [
+            {
+              "label": "$n_{\\mathrm{A}}=n_{\\mathrm{A},0}-a\\,x$",
+              "correct": true,
+              "why": "Le réactif $\\mathrm{A}$ est consommé : on retranche $a\\,x$, avec son coefficient stœchiométrique $a$."
+            },
+            {
+              "label": "$n_{\\mathrm{A}}=n_{\\mathrm{A},0}+a\\,x$",
+              "why": "Tu as additionné : $\\mathrm{A}$ est un réactif, sa quantité diminue au cours de la transformation."
+            },
+            {
+              "label": "$n_{\\mathrm{A}}=n_{\\mathrm{A},0}-x$",
+              "why": "Tu as oublié le coefficient stœchiométrique : $\\mathrm{A}$ disparaît de $a\\,x$, pas de $x$ (sauf si $a=1$)."
+            },
+            {
+              "label": "$n_{\\mathrm{A}}=n_{\\mathrm{A},0}-c\\,x$",
+              "why": "Tu as pris le coefficient d'un produit : c'est le coefficient $a$ de $\\mathrm{A}$ qui intervient."
+            }
+          ],
+          "hint": "Un réactif disparaît ; de combien, pour un avancement $x$ ?",
+          "solution": "L'avancement $x$ mesure combien de fois la réaction s'est produite : pour chaque avancement $x$, un réactif de coefficient $a$ perd $a\\,x$ et un produit de coefficient $c$ gagne $c\\,x$. Donc $n_{\\mathrm{A}}=n_{\\mathrm{A},0}-a\\,x$. Contrôle : à $x=0$ on retrouve la quantité initiale.",
+          "methode": "Tableau d'avancement : réactif $n_i=n_{i,0}-\\nu_i x$ ; produit $n_i=n_{i,0}+\\nu_i x$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-l-avancement-de-reaction-q1"
+        },
+        {
+          "notion": "L'avancement de réaction",
+          "difficulty": 2,
+          "statement": "On fait réagir $0{,}50\\ \\mathrm{mol}$ de fer avec $0{,}30\\ \\mathrm{mol}$ de dioxygène, selon $4\\,\\mathrm{Fe}+3\\,\\mathrm{O_2}\\rightarrow2\\,\\mathrm{Fe_2O_3}$. L'avancement maximal est :",
+          "options": [
+            {
+              "label": "$x_{\\max}=0{,}100\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "Le dioxygène est le réactif limitant : $\\dfrac{n(\\mathrm{O_2})}{3}=\\dfrac{0{,}30}{3}=0{,}100\\ \\mathrm{mol}$, plus petit que $\\dfrac{n(\\mathrm{Fe})}{4}=0{,}125\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$x_{\\max}=0{,}125\\ \\mathrm{mol}$",
+              "why": "Tu as retenu le fer comme limitant, mais $\\dfrac{n(\\mathrm{Fe})}{4}=0{,}125$ est plus grand que $\\dfrac{n(\\mathrm{O_2})}{3}=0{,}100$ : c'est le dioxygène qui limite."
+            },
+            {
+              "label": "$x_{\\max}=0{,}30\\ \\mathrm{mol}$",
+              "why": "Tu as pris $n(\\mathrm{O_2})$ sans diviser par son coefficient $3$."
+            },
+            {
+              "label": "$x_{\\max}=0{,}80\\ \\mathrm{mol}$",
+              "why": "Tu as additionné les deux quantités de matière : $x_{\\max}$ vient du plus petit rapport $n_{i,0}/\\nu_i$."
+            }
+          ],
+          "hint": "Calcule, pour chaque réactif, le rapport $n_{i,0}/\\nu_i$ ; que représente le plus petit ?",
+          "solution": "$x_{\\max}=\\min\\left(\\dfrac{n(\\mathrm{Fe})}{4},\\dfrac{n(\\mathrm{O_2})}{3}\\right)=\\min(0{,}125;\\,0{,}100)=0{,}100\\ \\mathrm{mol}$, atteint quand $\\mathrm{O_2}$ est épuisé. Contrôle : il reste alors $n(\\mathrm{Fe})=0{,}50-4\\times0{,}100=0{,}10\\ \\mathrm{mol}$ de fer, quantité positive.",
+          "methode": "$x_{\\max}=\\min\\bigl(n_{i,0}/\\nu_i\\bigr)$ : le réactif limitant est celui qui donne le plus petit rapport.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-l-avancement-de-reaction-q2"
+        },
+        {
+          "notion": "L'avancement de réaction",
+          "difficulty": 2,
+          "statement": "On fait réagir $2{,}0\\ \\mathrm{mol}$ de diazote avec $5{,}0\\ \\mathrm{mol}$ de dihydrogène : $\\mathrm{N_2}+3\\,\\mathrm{H_2}\\rightarrow2\\,\\mathrm{NH_3}$. À l'avancement $x=1{,}2\\ \\mathrm{mol}$, les quantités de dihydrogène et d'ammoniac sont :",
+          "options": [
+            {
+              "label": "$n(\\mathrm{H_2})=1{,}4\\ \\mathrm{mol}$ et $n(\\mathrm{NH_3})=2{,}4\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$n(\\mathrm{H_2})=5{,}0-3\\times1{,}2=1{,}4$ et $n(\\mathrm{NH_3})=2\\times1{,}2=2{,}4$ : on applique chaque coefficient."
+            },
+            {
+              "label": "$n(\\mathrm{H_2})=3{,}8\\ \\mathrm{mol}$ et $n(\\mathrm{NH_3})=1{,}2\\ \\mathrm{mol}$",
+              "why": "Tu as oublié tous les coefficients : $5{,}0-1{,}2=3{,}8$ et $1{,}2$ ; le dihydrogène perd $3x$ et l'ammoniac gagne $2x$."
+            },
+            {
+              "label": "$n(\\mathrm{H_2})=1{,}4\\ \\mathrm{mol}$ et $n(\\mathrm{NH_3})=1{,}2\\ \\mathrm{mol}$",
+              "why": "Tu as bien utilisé le coefficient $3$ pour $\\mathrm{H_2}$ mais oublié le coefficient $2$ pour $\\mathrm{NH_3}$ : il gagne $2x=2{,}4\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$n(\\mathrm{H_2})=3{,}8\\ \\mathrm{mol}$ et $n(\\mathrm{NH_3})=2{,}4\\ \\mathrm{mol}$",
+              "why": "Tu as oublié le coefficient $3$ pour $\\mathrm{H_2}$ (qui perd $3x=3{,}6\\ \\mathrm{mol}$) mais pas le $2$ pour $\\mathrm{NH_3}$."
+            }
+          ],
+          "hint": "Écris le tableau d'avancement ligne par ligne, avec le coefficient de chaque espèce.",
+          "solution": "Réactif : $n(\\mathrm{H_2})=n_0-3x=5{,}0-3\\times1{,}2=1{,}4\\ \\mathrm{mol}$. Produit : $n(\\mathrm{NH_3})=2x=2\\times1{,}2=2{,}4\\ \\mathrm{mol}$. Contrôle : $\\mathrm{N_2}$ restant $=2{,}0-1{,}2=0{,}8\\ \\mathrm{mol}$ ; les éléments $\\mathrm{N}$ se conservent : $2\\times0{,}8+2{,}4=4{,}0$ contre $2\\times2{,}0=4{,}0\\ \\mathrm{mol}$ au départ.",
+          "methode": "Tableau d'avancement : chaque espèce varie de son coefficient fois $x$, avec le signe $-$ pour un réactif et $+$ pour un produit.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-l-avancement-de-reaction-q3"
+        },
+        {
+          "notion": "L'avancement de réaction",
+          "difficulty": 3,
+          "statement": "On introduit $0{,}020\\ \\mathrm{mol}$ de zinc et $0{,}030\\ \\mathrm{mol}$ d'ions oxonium dans le mélange réactionnel, selon $\\mathrm{Zn(s)}+2\\,\\mathrm{H_3O^+}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{H_2(g)}+2\\,\\mathrm{H_2O}$. La transformation étant totale, la quantité de zinc restante en fin de transformation est :",
+          "options": [
+            {
+              "label": "$0{,}005\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$\\dfrac{n(\\mathrm{H_3O^+})}{2}=0{,}015<n(\\mathrm{Zn})=0{,}020$ : $\\mathrm{H_3O^+}$ limite, $x_{\\max}=0{,}015\\ \\mathrm{mol}$ et $n(\\mathrm{Zn})_f=0{,}020-0{,}015=0{,}005\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$0{,}000\\ \\mathrm{mol}$",
+              "why": "Tu as comparé $n(\\mathrm{Zn})=0{,}020$ et $n(\\mathrm{H_3O^+})=0{,}030$ sans les coefficients, et conclu que le zinc limite : il en reste en réalité $0{,}005\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$0{,}015\\ \\mathrm{mol}$",
+              "why": "Tu as donné l'avancement maximal $x_{\\max}=0{,}015\\ \\mathrm{mol}$, qui est la quantité de zinc consommée, pas celle qui reste."
+            },
+            {
+              "label": "$-0{,}010\\ \\mathrm{mol}$",
+              "why": "Tu as oublié le coefficient $2$ devant $\\mathrm{H_3O^+}$ : tu as retranché $n(\\mathrm{H_3O^+})$ au lieu de $2x_{\\max}$ ; une quantité négative est de toute façon impossible."
+            }
+          ],
+          "hint": "Compare $n_{i,0}/\\nu_i$ pour les deux réactifs avant de calculer ce qui reste.",
+          "solution": "$\\dfrac{n(\\mathrm{Zn})}{1}=0{,}020$ et $\\dfrac{n(\\mathrm{H_3O^+})}{2}=0{,}015$ : le plus petit est celui de $\\mathrm{H_3O^+}$, donc $x_{\\max}=0{,}015\\ \\mathrm{mol}$. $n(\\mathrm{Zn})_f=0{,}020-0{,}015=0{,}005\\ \\mathrm{mol}$. Contrôle : $\\mathrm{H_3O^+}$ restant $=0{,}030-2\\times0{,}015=0$, ce qui confirme qu'il est entièrement consommé.",
+          "methode": "Réactif limitant : comparer $n_{i,0}/\\nu_i$, jamais les quantités brutes.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-l-avancement-de-reaction-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La vitesse volumique de réaction",
+        "lesson": "Avancement & vitesse volumique",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 4,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-la-vitesse-volumique-de-reaction",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "La vitesse volumique de réaction",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "La vitesse volumique de réaction",
+          "difficulty": 2,
+          "statement": "Dans un volume réactionnel $V=250\\ \\mathrm{mL}$, la dérivée de l'avancement par rapport au temps vaut $\\dfrac{dx}{dt}=3{,}0\\times10^{-5}\\ \\mathrm{mol\\,s^{-1}}$ à une date donnée. La vitesse volumique de réaction à cette date est :",
+          "options": [
+            {
+              "label": "$1{,}2\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v=\\dfrac{1}{V}\\dfrac{dx}{dt}=\\dfrac{3{,}0\\times10^{-5}}{0{,}250}=1{,}2\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$ avec $V$ en litres."
+            },
+            {
+              "label": "$3{,}0\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as oublié de diviser par le volume : $\\dfrac{dx}{dt}$ est en $\\mathrm{mol\\,s^{-1}}$, pas en $\\mathrm{mol\\,L^{-1}\\,s^{-1}}$."
+            },
+            {
+              "label": "$7{,}5\\times10^{-6}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as multiplié par $V$ au lieu de diviser : $3{,}0\\times10^{-5}\\times0{,}250$."
+            },
+            {
+              "label": "$1{,}2\\times10^{-7}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as divisé par $250$, la valeur de $V$ en millilitres, au lieu de $0{,}250\\ \\mathrm{L}$."
+            }
+          ],
+          "hint": "La vitesse volumique se rapporte à un litre de mélange : quelle unité de volume dois-tu utiliser ?",
+          "solution": "$v=\\dfrac{1}{V}\\,\\dfrac{dx}{dt}$ avec $V=250\\ \\mathrm{mL}=0{,}250\\ \\mathrm{L}$ : $v=\\dfrac{3{,}0\\times10^{-5}}{0{,}250}=1{,}2\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$. Contrôle : en multipliant $v$ par $V$ on retrouve bien $\\dfrac{dx}{dt}=3{,}0\\times10^{-5}\\ \\mathrm{mol\\,s^{-1}}$.",
+          "methode": "$v=\\dfrac{1}{V}\\dfrac{dx}{dt}$, avec $V$ en litres pour obtenir des $\\mathrm{mol\\,L^{-1}\\,s^{-1}}$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-la-vitesse-volumique-de-reaction-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La détermination graphique",
+        "lesson": "Avancement & vitesse volumique",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-la-determination-graphique",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "La détermination graphique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La détermination graphique",
+          "difficulty": 1,
+          "statement": "Pour déterminer graphiquement la vitesse volumique à la date $t$, on mesure sur la courbe $x(t)$ :",
+          "options": [
+            {
+              "label": "la pente de la tangente à la courbe à la date $t$, puis on la divise par $V$",
+              "correct": true,
+              "why": "$v=\\dfrac{1}{V}\\dfrac{dx}{dt}$ et $\\dfrac{dx}{dt}$ est le coefficient directeur de la tangente à la courbe à la date $t$."
+            },
+            {
+              "label": "la pente de la corde joignant l'origine au point d'abscisse $t$, puis on la divise par $V$",
+              "why": "La corde donne une vitesse moyenne entre $0$ et $t$, pas la vitesse à la date $t$."
+            },
+            {
+              "label": "la valeur de $x$ à la date $t$, puis on la divise par $t$ et par $V$",
+              "why": "$x/t$ est la pente de la corde depuis l'origine : vitesse moyenne, pas vitesse à la date $t$."
+            },
+            {
+              "label": "l'aire sous la courbe jusqu'à la date $t$, puis on la divise par $V$",
+              "why": "L'aire sous une courbe $x(t)$ n'est pas la vitesse ; la vitesse correspond à une dérivée, c'est-à-dire à une pente."
+            }
+          ],
+          "hint": "La vitesse instantanée est une dérivée : quelle grandeur géométrique représente une dérivée sur un graphe ?",
+          "solution": "La dérivée $\\dfrac{dx}{dt}$ à la date $t$ est le coefficient directeur de la tangente à la courbe $x(t)$ en ce point. On le calcule avec deux points de la tangente, puis on divise par $V$ pour obtenir $v$. Contrôle : une courbe qui se redresse a une tangente de plus en plus pentue, donc une vitesse plus grande.",
+          "methode": "Vitesse à la date $t$ : pente de la tangente à $x(t)$, divisée par $V$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-la-determination-graphique-q1"
+        },
+        {
+          "notion": "La détermination graphique",
+          "difficulty": 2,
+          "statement": "La tangente à la courbe $x(t)$ à la date $t=0$ passe par l'origine et par le point $(t=20\\ \\mathrm{s}\\,;\\,x=4{,}0\\ \\mathrm{mmol})$. Le volume réactionnel est $V=100\\ \\mathrm{mL}$. La vitesse volumique à $t=0$ vaut :",
+          "options": [
+            {
+              "label": "$2{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "correct": true,
+              "why": "Pente $=\\dfrac{4{,}0\\times10^{-3}}{20}=2{,}0\\times10^{-4}\\ \\mathrm{mol\\,s^{-1}}$ ; on divise par $V=0{,}100\\ \\mathrm{L}$ : $2{,}0\\times10^{-3}$."
+            },
+            {
+              "label": "$2{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as oublié de diviser par le volume : $2{,}0\\times10^{-4}$ est la pente de la tangente en $\\mathrm{mol\\,s^{-1}}$."
+            },
+            {
+              "label": "$2{,}0\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as multiplié la pente par $V$ au lieu de la diviser."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as oublié de convertir les $\\mathrm{mmol}$ en $\\mathrm{mol}$ : le résultat $2{,}0$ est en $\\mathrm{mmol\\,L^{-1}\\,s^{-1}}$."
+            }
+          ],
+          "hint": "Calcule d'abord la pente de la tangente en $\\mathrm{mol\\,s^{-1}}$, puis ramène-la à un litre.",
+          "solution": "Pente de la tangente : $\\dfrac{dx}{dt}=\\dfrac{4{,}0\\times10^{-3}\\ \\mathrm{mol}}{20\\ \\mathrm{s}}=2{,}0\\times10^{-4}\\ \\mathrm{mol\\,s^{-1}}$. Puis $v=\\dfrac{1}{V}\\dfrac{dx}{dt}=\\dfrac{2{,}0\\times10^{-4}}{0{,}100}=2{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$. Contrôle : $2{,}0\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}=2{,}0\\ \\mathrm{mmol\\,L^{-1}\\,s^{-1}}$.",
+          "methode": "Vitesse volumique : pente de la tangente en $\\mathrm{mol\\,s^{-1}}$ (convertir les $\\mathrm{mmol}$) puis division par $V$ en litres.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-la-determination-graphique-q2"
+        },
+        {
+          "notion": "La détermination graphique",
+          "difficulty": 3,
+          "statement": "Sur la courbe $x(t)$ d'une transformation, la tangente à la date $t=0$ a pour pente $0{,}50\\ \\mathrm{mmol\\,s^{-1}}$ et la tangente à la date $t=40\\ \\mathrm{s}$ a pour pente $0{,}10\\ \\mathrm{mmol\\,s^{-1}}$ ; le volume est constant. Entre ces deux dates, la vitesse volumique :",
+          "options": [
+            {
+              "label": "est divisée par $5$ : la tangente est plus horizontale, car les concentrations des réactifs ont diminué",
+              "correct": true,
+              "why": "$v\\propto\\dfrac{dx}{dt}$ à $V$ constant : $\\dfrac{0{,}10}{0{,}50}=0{,}20$, donc $v$ est divisée par $5$ ; la baisse des concentrations ralentit la transformation."
+            },
+            {
+              "label": "est multipliée par $5$ : l'avancement augmente donc la vitesse augmente",
+              "why": "L'avancement croît mais la vitesse est la pente de la courbe, et la pente diminue : la vitesse est divisée par $5$."
+            },
+            {
+              "label": "est divisée par $4$, car l'écart relatif entre les deux pentes vaut $\\dfrac{0{,}50-0{,}10}{0{,}10}=4$",
+              "why": "Tu as calculé l'écart relatif $\\dfrac{0{,}50-0{,}10}{0{,}10}=4$ au lieu du rapport des pentes $0{,}50/0{,}10=5$."
+            },
+            {
+              "label": "reste constante, car l'avancement augmente à chaque instant",
+              "why": "Les deux pentes sont différentes ($0{,}50$ puis $0{,}10$) : la vitesse n'est pas constante, elle diminue."
+            }
+          ],
+          "hint": "À volume constant, la vitesse volumique est proportionnelle à la pente de la tangente : compare les deux pentes.",
+          "solution": "À $V$ constant, $v=\\dfrac{1}{V}\\dfrac{dx}{dt}$ est proportionnelle à la pente de la tangente. Le rapport des pentes est $\\dfrac{0{,}50}{0{,}10}=5$ : la vitesse à $t=40\\ \\mathrm{s}$ est cinq fois plus petite qu'à $t=0$. Cela s'explique par la diminution des concentrations des réactifs au cours du temps. Contrôle : la courbe $x(t)$ se rapproche d'une asymptote horizontale, sa pente tend vers $0$.",
+          "methode": "Vitesse qui décroît : tangente de plus en plus horizontale, concentrations des réactifs qui baissent.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-la-determination-graphique-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le temps de demi-réaction",
+        "lesson": "Temps de demi-réaction & suivi",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-le-temps-de-demi-reaction",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "Le temps de demi-réaction",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le temps de demi-réaction",
+          "difficulty": 1,
+          "statement": "Le temps de demi-réaction $t_{1/2}$ d'une transformation totale est la date à laquelle :",
+          "options": [
+            {
+              "label": "l'avancement atteint la moitié de sa valeur finale, $x=\\dfrac{x_f}{2}$",
+              "correct": true,
+              "why": "C'est la définition : on cherche la date où $x=x_f/2$, avec $x_f=x_{\\max}$ pour une transformation totale."
+            },
+            {
+              "label": "la transformation est entièrement terminée, c'est-à-dire que $x=x_f$",
+              "why": "À la fin de la transformation $x=x_f$ ; $t_{1/2}$ est la date où l'on n'est qu'à la moitié de ce chemin."
+            },
+            {
+              "label": "la vitesse de réaction est égale à la moitié de sa valeur initiale",
+              "why": "$t_{1/2}$ se définit à partir de l'avancement, pas à partir de la vitesse."
+            },
+            {
+              "label": "la moitié du volume du mélange réactionnel a déjà réagi",
+              "why": "$t_{1/2}$ ne dépend pas du volume : il se définit à partir de l'avancement $x$."
+            }
+          ],
+          "hint": "Le nom l'indique : « demi » de quelle grandeur, et de quelle valeur ?",
+          "solution": "Le temps de demi-réaction est la durée au bout de laquelle l'avancement atteint la moitié de son avancement final : $x(t_{1/2})=\\dfrac{x_f}{2}$ ; pour une transformation totale, $x_f=x_{\\max}$. Contrôle : $t_{1/2}$ est toujours inférieur à la durée totale de la transformation.",
+          "methode": "$t_{1/2}$ : date telle que $x=x_f/2$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-le-temps-de-demi-reaction-q1"
+        },
+        {
+          "notion": "Le temps de demi-réaction",
+          "difficulty": 2,
+          "statement": "Une transformation totale a pour avancement maximal $x_{\\max}=5{,}0\\ \\mathrm{mmol}$. Pour déterminer son temps de demi-réaction sur la courbe $x(t)$, il faut repérer la date à laquelle l'avancement vaut :",
+          "options": [
+            {
+              "label": "$2{,}5\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "$x(t_{1/2})=\\dfrac{x_{\\max}}{2}=\\dfrac{5{,}0}{2}=2{,}5\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$5{,}0\\ \\mathrm{mmol}$",
+              "why": "$5{,}0\\ \\mathrm{mmol}$ est $x_{\\max}$, valeur atteinte à la fin de la transformation, pas à la moitié."
+            },
+            {
+              "label": "$1{,}25\\ \\mathrm{mmol}$",
+              "why": "Tu as divisé $x_{\\max}$ par $4$ (deux fois par $2$) : $t_{1/2}$ correspond à $x_{\\max}/2$."
+            },
+            {
+              "label": "$10{,}0\\ \\mathrm{mmol}$",
+              "why": "Tu as doublé $x_{\\max}$ au lieu de le diviser par $2$ : cette valeur n'est jamais atteinte."
+            }
+          ],
+          "hint": "Prends la moitié de l'avancement final, puis cherche la date correspondante sur la courbe.",
+          "solution": "$x(t_{1/2})=\\dfrac{x_f}{2}=\\dfrac{x_{\\max}}{2}=\\dfrac{5{,}0}{2}=2{,}5\\ \\mathrm{mmol}$ pour une transformation totale. On lit ensuite en abscisse la date correspondante. Contrôle : $2{,}5\\ \\mathrm{mmol}$ est bien compris entre $0$ et $x_{\\max}$.",
+          "methode": "Méthode : calculer $x_f/2$ puis lire la date sur la courbe.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-le-temps-de-demi-reaction-q2"
+        },
+        {
+          "notion": "Le temps de demi-réaction",
+          "difficulty": 3,
+          "statement": "On introduit $20{,}0\\ \\mathrm{mmol}$ de zinc et $30{,}0\\ \\mathrm{mmol}$ d'ions oxonium : $\\mathrm{Zn(s)}+2\\,\\mathrm{H_3O^+}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{H_2(g)}+2\\,\\mathrm{H_2O}$ (transformation totale). Pour déterminer $t_{1/2}$, il faut repérer sur la courbe $x(t)$ la date à laquelle $x$ vaut :",
+          "options": [
+            {
+              "label": "$7{,}5\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "$\\dfrac{n(\\mathrm{H_3O^+})}{2}=15{,}0<n(\\mathrm{Zn})=20{,}0$ : $x_{\\max}=15{,}0\\ \\mathrm{mmol}$, donc $x(t_{1/2})=\\dfrac{15{,}0}{2}=7{,}5\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$10{,}0\\ \\mathrm{mmol}$",
+              "why": "Tu as pris le zinc comme limitant ($20{,}0\\ \\mathrm{mmol}$) en comparant les quantités sans les coefficients, puis divisé par $2$ ; c'est $\\mathrm{H_3O^+}$ qui limite."
+            },
+            {
+              "label": "$15{,}0\\ \\mathrm{mmol}$",
+              "why": "Tu as donné $x_{\\max}$ lui-même au lieu de sa moitié."
+            },
+            {
+              "label": "$3{,}75\\ \\mathrm{mmol}$",
+              "why": "Tu as divisé $x_{\\max}$ deux fois par $2$ : $t_{1/2}$ correspond à $x_{\\max}/2$ seulement."
+            }
+          ],
+          "hint": "Détermine d'abord $x_{\\max}$ en comparant $n_{i,0}/\\nu_i$, puis prends sa moitié.",
+          "solution": "$\\dfrac{n(\\mathrm{Zn})}{1}=20{,}0\\ \\mathrm{mmol}$ et $\\dfrac{n(\\mathrm{H_3O^+})}{2}=15{,}0\\ \\mathrm{mmol}$ : $x_{\\max}=15{,}0\\ \\mathrm{mmol}$ (réactif limitant $\\mathrm{H_3O^+}$). $x(t_{1/2})=\\dfrac{x_{\\max}}{2}=7{,}5\\ \\mathrm{mmol}$. Contrôle : $7{,}5<15{,}0=x_{\\max}$.",
+          "methode": "$x(t_{1/2})=x_{\\max}/2$, où $x_{\\max}$ vient du réactif limitant.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-le-temps-de-demi-reaction-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "À quoi sert $t_{1/2}$",
+        "lesson": "Temps de demi-réaction & suivi",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-a-quoi-sert-t-1-2",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "À quoi sert $t_{1/2}$",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "À quoi sert $t_{1/2}$",
+          "difficulty": 1,
+          "statement": "Le temps de demi-réaction d'une transformation sert principalement à :",
+          "options": [
+            {
+              "label": "caractériser sa rapidité et choisir la durée du suivi",
+              "correct": true,
+              "why": "Un $t_{1/2}$ court indique une transformation rapide ; il donne l'ordre de grandeur de la durée sur laquelle effectuer les mesures."
+            },
+            {
+              "label": "calculer l'avancement maximal à partir de la courbe expérimentale",
+              "why": "L'avancement maximal se calcule à partir des quantités initiales et de l'équation, pas à partir de $t_{1/2}$."
+            },
+            {
+              "label": "identifier le réactif limitant parmi les réactifs introduits",
+              "why": "Le réactif limitant se détermine avec un tableau d'avancement, indépendamment de $t_{1/2}$."
+            },
+            {
+              "label": "déterminer le coefficient stœchiométrique de chaque espèce chimique",
+              "why": "Les coefficients découlent de l'équation de la réaction ; $t_{1/2}$ est une durée et ne les donne pas."
+            }
+          ],
+          "hint": "$t_{1/2}$ s'exprime en secondes ou en minutes : de quelle propriété d'une transformation est-il l'image ?",
+          "solution": "Le temps de demi-réaction est une durée caractéristique : plus il est court, plus la transformation est rapide. Il sert à comparer des transformations ou des conditions expérimentales, et à choisir la durée d'enregistrement ainsi que l'intervalle entre deux mesures. Contrôle : il n'intervient ni dans le calcul de $x_{\\max}$ ni dans celui des coefficients.",
+          "methode": "$t_{1/2}$ : durée caractéristique pour comparer des vitesses et organiser un suivi.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-a-quoi-sert-t-1-2-q1"
+        },
+        {
+          "notion": "À quoi sert $t_{1/2}$",
+          "difficulty": 2,
+          "statement": "Une transformation totale a un temps de demi-réaction $t_{1/2}=2{,}0\\ \\mathrm{min}$. Pour observer son évolution jusqu'à l'état final, la durée d'enregistrement doit être d'environ :",
+          "options": [
+            {
+              "label": "$10\\ \\mathrm{min}$, soit environ $5\\,t_{1/2}$",
+              "correct": true,
+              "why": "Au bout de $5\\,t_{1/2}$, la transformation est quasiment terminée : l'avancement est très proche de sa valeur finale."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{min}$, soit une seule fois $t_{1/2}$",
+              "why": "À $t=t_{1/2}$ l'avancement n'est que la moitié de sa valeur finale : l'état final n'est pas observé."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{min}$, soit la moitié de $t_{1/2}$",
+              "why": "À $t_{1/2}/2$ la transformation est encore moins avancée qu'à $t_{1/2}$ : on n'observerait même pas la moitié de l'évolution."
+            },
+            {
+              "label": "$24\\ \\mathrm{s}$, soit $t_{1/2}$ divisé par $5$",
+              "why": "Cette durée est très inférieure à $t_{1/2}$ : l'avancement serait à peine amorcé."
+            }
+          ],
+          "hint": "Pour voir l'état final, il faut dépasser largement la date à laquelle $x$ atteint la moitié de sa valeur finale.",
+          "solution": "$t_{1/2}$ donne l'ordre de grandeur de la durée de la transformation : après quelques $t_{1/2}$ (de l'ordre de $5\\,t_{1/2}$) l'avancement est proche de sa valeur finale. Ici $5\\times2{,}0=10\\ \\mathrm{min}$. Contrôle : une durée de $2{,}0\\ \\mathrm{min}$ laisserait la moitié de la transformation non observée.",
+          "methode": "Durée d'enregistrement : quelques $t_{1/2}$, de l'ordre de $5\\,t_{1/2}$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-a-quoi-sert-t-1-2-q2"
+        },
+        {
+          "notion": "À quoi sert $t_{1/2}$",
+          "difficulty": 2,
+          "statement": "Pour tracer correctement la courbe $x(t)$ d'une transformation de temps de demi-réaction $t_{1/2}=6{,}0\\ \\mathrm{min}$, l'intervalle de temps entre deux relevés doit être de l'ordre de :",
+          "options": [
+            {
+              "label": "$30\\ \\mathrm{s}$, soit environ $\\dfrac{t_{1/2}}{12}$",
+              "correct": true,
+              "why": "Avec $\\dfrac{360\\ \\mathrm{s}}{30\\ \\mathrm{s}}=12$ points pendant une demi-réaction, on suit finement l'évolution."
+            },
+            {
+              "label": "$6{,}0\\ \\mathrm{min}$, soit une seule mesure par $t_{1/2}$",
+              "why": "Avec un point par $t_{1/2}$, la courbe n'a que quelques points : on ne repère pas la tangente ni la date où $x$ vaut $x_f/2$."
+            },
+            {
+              "label": "$30\\ \\mathrm{min}$, soit environ $5\\,t_{1/2}$",
+              "why": "Cet intervalle est bien plus long que $t_{1/2}$ : toute la transformation serait déjà quasiment terminée entre deux relevés."
+            },
+            {
+              "label": "$3{,}0\\ \\mathrm{h}$, soit $30$ fois $t_{1/2}$",
+              "why": "Cet intervalle est démesuré : on n'aurait qu'un seul point, après la fin de la transformation."
+            }
+          ],
+          "hint": "Combien de points veux-tu obtenir pendant une durée égale à $t_{1/2}$ ?",
+          "solution": "L'intervalle entre relevés doit être petit devant $t_{1/2}$ pour disposer de plusieurs points pendant la demi-réaction : ici $t_{1/2}=360\\ \\mathrm{s}$ et un relevé toutes les $30\\ \\mathrm{s}$ donne $12$ points. Contrôle : $30\\ \\mathrm{s}\\ll360\\ \\mathrm{s}$.",
+          "methode": "Intervalle entre relevés : très inférieur à $t_{1/2}$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-a-quoi-sert-t-1-2-q3"
+        },
+        {
+          "notion": "À quoi sert $t_{1/2}$",
+          "difficulty": 3,
+          "statement": "Une transformation limitée a pour avancement maximal $x_{\\max}=5{,}0\\ \\mathrm{mmol}$ mais atteint un avancement final $x_f=4{,}0\\ \\mathrm{mmol}$. Pour déterminer son temps de demi-réaction, on repère la date à laquelle l'avancement vaut :",
+          "options": [
+            {
+              "label": "$2{,}0\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "Pour une transformation limitée, on prend la moitié de l'avancement final : $\\dfrac{x_f}{2}=\\dfrac{4{,}0}{2}=2{,}0\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$2{,}5\\ \\mathrm{mmol}$",
+              "why": "Tu as pris la moitié de $x_{\\max}$ : cette valeur n'est pas la moitié de ce que la transformation atteint réellement."
+            },
+            {
+              "label": "$4{,}0\\ \\mathrm{mmol}$",
+              "why": "Tu as donné l'avancement final lui-même : il est atteint à la fin de la transformation, pas à la moitié."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{mmol}$",
+              "why": "Tu as divisé $x_f$ deux fois par $2$ : $t_{1/2}$ correspond à $x_f/2$ seulement."
+            }
+          ],
+          "hint": "Quelle grandeur représente l'avancement atteint à la fin pour une transformation qui ne va pas jusqu'à $x_{\\max}$ ?",
+          "solution": "Le temps de demi-réaction se définit avec l'avancement final $x_f$ : $x(t_{1/2})=\\dfrac{x_f}{2}=\\dfrac{4{,}0}{2}=2{,}0\\ \\mathrm{mmol}$. Pour une transformation limitée $x_f<x_{\\max}$, prendre $x_{\\max}/2=2{,}5\\ \\mathrm{mmol}$ donnerait une date inexacte. Contrôle : $2{,}0<x_f=4{,}0\\ \\mathrm{mmol}$.",
+          "methode": "$t_{1/2}$ : $x=x_f/2$ avec $x_f$ (et non $x_{\\max}$) si la transformation est limitée.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-a-quoi-sert-t-1-2-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les méthodes de suivi",
+        "lesson": "Temps de demi-réaction & suivi",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-les-methodes-de-suivi",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "Les méthodes de suivi",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les méthodes de suivi",
+          "difficulty": 1,
+          "statement": "Parmi ces méthodes de suivi, laquelle nécessite de réaliser des prélèvements et une trempe ?",
+          "options": [
+            {
+              "label": "le titrage, méthode discontinue",
+              "correct": true,
+              "why": "Il faut prélever un échantillon à chaque date, bloquer la transformation par trempe, puis titrer."
+            },
+            {
+              "label": "la conductimétrie, par immersion d'une cellule dans le mélange",
+              "why": "Elle se fait directement dans le mélange, en continu, sans prélèvement ni trempe."
+            },
+            {
+              "label": "la spectrophotométrie, par mesure de l'absorbance du mélange",
+              "why": "Elle se fait aussi in situ, sans prélèvement ni trempe, tant que le mélange est transparent."
+            },
+            {
+              "label": "la mesure de la pression dans une enceinte fermée",
+              "why": "Elle se fait en continu avec un capteur dans l'enceinte, sans prélèvement ni trempe."
+            }
+          ],
+          "hint": "Quelle méthode ne permet pas de lire la grandeur directement dans le mélange en évolution ?",
+          "solution": "Dans un suivi par titrage, on prélève un échantillon à des dates choisies ; comme la transformation continue, on bloque l'évolution par trempe (refroidissement et dilution) avant de titrer. Les méthodes physiques (conductimétrie, spectrophotométrie, pression) mesurent en continu dans le mélange. Contrôle : chaque prélèvement correspond à un seul point de la courbe.",
+          "methode": "Méthode chimique (titrage) : prélèvements et trempe ; méthodes physiques : mesures continues.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-les-methodes-de-suivi-q1"
+        },
+        {
+          "notion": "Les méthodes de suivi",
+          "difficulty": 2,
+          "statement": "On suit la transformation d'équation $\\mathrm{Zn(s)}+2\\,\\mathrm{H_3O^+}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{H_2(g)}+2\\,\\mathrm{H_2O}$ dans un milieu incolore. Quelle technique ne convient pas ?",
+          "options": [
+            {
+              "label": "la spectrophotométrie dans le visible",
+              "correct": true,
+              "why": "Aucune espèce du milieu n'est colorée : l'absorbance dans le visible n'évolue pas avec l'avancement."
+            },
+            {
+              "label": "la mesure du volume de dihydrogène dégagé",
+              "why": "Le dihydrogène est formé : $n(\\mathrm{H_2})=x$, son volume est un bon indicateur de l'avancement."
+            },
+            {
+              "label": "la conductimétrie",
+              "why": "Les ions $\\mathrm{H_3O^+}$ sont remplacés par des ions $\\mathrm{Zn^{2+}}$ moins conducteurs : la conductivité varie avec l'avancement."
+            },
+            {
+              "label": "la pH-métrie",
+              "why": "Les ions $\\mathrm{H_3O^+}$ sont consommés : le pH augmente avec l'avancement, ce qui permet de suivre la transformation."
+            }
+          ],
+          "hint": "Pour chaque technique, demande-toi si la grandeur mesurée varie réellement avec l'avancement ici.",
+          "solution": "Une technique convient si la grandeur mesurée varie avec $x$. Le volume de $\\mathrm{H_2}$, la conductivité (échange de $\\mathrm{H_3O^+}$ contre $\\mathrm{Zn^{2+}}$) et le pH (consommation de $\\mathrm{H_3O^+}$) évoluent tous. En l'absence d'espèce colorée, la spectrophotométrie dans le visible ne convient pas. Contrôle : une seule technique de la liste n'a aucun signal.",
+          "methode": "Technique de suivi : la grandeur mesurée doit varier avec l'avancement.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-les-methodes-de-suivi-q2"
+        },
+        {
+          "notion": "Les méthodes de suivi",
+          "difficulty": 3,
+          "statement": "On suit par conductimétrie l'hydrolyse du 2-chloro-2-méthylpropane : $\\mathrm{RCl}+2\\,\\mathrm{H_2O}\\rightarrow\\mathrm{ROH}+\\mathrm{H_3O^+}+\\mathrm{Cl^-}$, dans un volume $V=100\\ \\mathrm{mL}$. À une date $t$, on mesure $\\sigma=21{,}3\\ \\mathrm{mS\\,m^{-1}}$ (conductivité nulle à $t=0$). Avec $\\lambda(\\mathrm{H_3O^+})=35{,}0\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$ et $\\lambda(\\mathrm{Cl^-})=7{,}6\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$, l'avancement à cette date vaut :",
+          "options": [
+            {
+              "label": "$5{,}0\\times10^{-5}\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$\\sigma=\\bigl(\\lambda(\\mathrm{H_3O^+})+\\lambda(\\mathrm{Cl^-})\\bigr)\\dfrac{x}{V}$ donc $x=\\dfrac{\\sigma V}{\\lambda_{\\text{tot}}}=\\dfrac{21{,}3\\times1{,}00\\times10^{-4}}{42{,}6}=5{,}0\\times10^{-5}\\ \\mathrm{mol}$ (avec $V$ en $\\mathrm{m^3}$)."
+            },
+            {
+              "label": "$6{,}1\\times10^{-5}\\ \\mathrm{mol}$",
+              "why": "Tu n'as compté que $\\lambda(\\mathrm{H_3O^+})$ : l'ion $\\mathrm{Cl^-}$ contribue aussi à la conductivité, $x$ étant lié à la somme des deux."
+            },
+            {
+              "label": "$5{,}0\\times10^{-2}\\ \\mathrm{mol}$",
+              "why": "Tu as utilisé $V=0{,}100$ en litres : dans $\\sigma=\\lambda\\,[X]$ avec $\\lambda$ en $\\mathrm{mS\\,m^2\\,mol^{-1}}$, il faut $V$ en $\\mathrm{m^3}$, soit $1{,}00\\times10^{-4}\\ \\mathrm{m^3}$."
+            },
+            {
+              "label": "$7{,}8\\times10^{-5}\\ \\mathrm{mol}$",
+              "why": "Tu as soustrait les conductivités ioniques : les deux ions sont produits, leurs contributions s'additionnent."
+            }
+          ],
+          "hint": "Exprime $\\sigma$ en fonction de $x$ : quels ions sont produits, avec quels coefficients ?",
+          "solution": "Les deux ions apparaissent avec le coefficient $1$ : $\\sigma=\\bigl(\\lambda(\\mathrm{H_3O^+})+\\lambda(\\mathrm{Cl^-})\\bigr)\\dfrac{x}{V}$. Avec $V=1{,}00\\times10^{-4}\\ \\mathrm{m^3}$ : $x=\\dfrac{\\sigma V}{\\lambda(\\mathrm{H_3O^+})+\\lambda(\\mathrm{Cl^-})}=\\dfrac{21{,}3\\times1{,}00\\times10^{-4}}{42{,}6}=5{,}0\\times10^{-5}\\ \\mathrm{mol}$. Contrôle : $\\dfrac{x}{V}=0{,}50\\ \\mathrm{mol\\,m^{-3}}$, soit $0{,}0005\\ \\mathrm{mol\\,L^{-1}}$ : ordre de grandeur plausible.",
+          "methode": "Conductimétrie : $\\sigma=\\sum\\lambda_i[X_i]$ avec $[X_i]$ en $\\mathrm{mol\\,m^{-3}}$, puis relier à $x/V$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-les-methodes-de-suivi-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le montage",
+        "lesson": "Suivi par dégagement gazeux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-le-montage",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "Le montage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le montage",
+          "difficulty": 1,
+          "statement": "Pour mesurer le volume de dihydrogène dégagé par la réaction du zinc avec un acide, le dispositif comporte :",
+          "options": [
+            {
+              "label": "un erlenmeyer bouché relié par un tuyau à une éprouvette graduée renversée sur une cuve à eau",
+              "correct": true,
+              "why": "Le montage fermé conduit tout le gaz formé vers l'éprouvette, où l'on lit le volume dégagé."
+            },
+            {
+              "label": "un erlenmeyer ouvert à l'air libre, avec une éprouvette graduée simplement posée au-dessus",
+              "why": "Le gaz s'échapperait dans l'air : on ne recueillerait pas tout le dihydrogène formé."
+            },
+            {
+              "label": "un erlenmeyer bouché portant seulement un thermomètre, sans aucun tuyau de sortie du gaz",
+              "why": "Sans circuit de sortie, le gaz s'accumulerait dans le flacon sans qu'on puisse mesurer son volume."
+            },
+            {
+              "label": "un erlenmeyer bouché dont le tuyau plonge directement dans la solution acide du flacon",
+              "why": "Le gaz serait réinjecté dans la solution au lieu d'être recueilli : aucun volume ne serait mesurable."
+            }
+          ],
+          "hint": "Le gaz formé doit être guidé vers un instrument de mesure sans fuite.",
+          "solution": "Le dispositif de mesure d'un volume de gaz comprend un récipient réactionnel fermé et un tuyau de dégagement conduisant le gaz sous une éprouvette graduée renversée dans une cuve à eau (ou vers une seringue graduée). Contrôle : le volume lu correspond au gaz formé, et non à de l'air déplacé.",
+          "methode": "Suivi par volume de gaz : récipient fermé + tuyau de dégagement + éprouvette ou seringue graduée.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-le-montage-q1"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 2,
+          "statement": "Le dihydrogène peut être recueilli par déplacement d'eau dans une éprouvette renversée car :",
+          "options": [
+            {
+              "label": "il est très peu soluble dans l'eau",
+              "correct": true,
+              "why": "Le gaz reste quasi entièrement dans l'éprouvette sans se dissoudre : le volume lu est fiable."
+            },
+            {
+              "label": "il est plus dense que l'eau",
+              "why": "Un gaz est toujours moins dense qu'un liquide ; ce n'est pas la raison du recueil sur cuve à eau."
+            },
+            {
+              "label": "il est plus dense que l'air",
+              "why": "Le dihydrogène est bien plus léger que l'air : cette affirmation est fausse."
+            },
+            {
+              "label": "il réagit avec l'eau en formant un gaz coloré",
+              "why": "Le dihydrogène ne réagit pas avec l'eau dans ces conditions, et il est incolore."
+            }
+          ],
+          "hint": "Si le gaz se dissolvait dans l'eau de la cuve, que deviendrait le volume lu ?",
+          "solution": "Le recueil sur cuve à eau n'est valable que pour un gaz très peu soluble dans l'eau, ce qui est le cas de $\\mathrm{H_2}$. Dans ce cas le volume lu est égal au volume formé. Pour un gaz soluble comme $\\mathrm{CO_2}$, on préfère une seringue ou un capteur de pression. Contrôle : si le gaz se dissolvait, le volume lu serait inférieur au volume formé.",
+          "methode": "Cuve à eau : réservée aux gaz peu solubles dans l'eau.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-le-montage-q2"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 3,
+          "statement": "Dans une enceinte fermée de volume gazeux $V=250\\ \\mathrm{mL}$ à $T=298\\ \\mathrm{K}$, un capteur indique que la pression a augmenté de $\\Delta P=2{,}0\\times10^{3}\\ \\mathrm{Pa}$ à cause d'un gaz formé. Avec $R=8{,}31\\ \\mathrm{J\\,mol^{-1}\\,K^{-1}}$, la quantité de gaz formé vaut :",
+          "options": [
+            {
+              "label": "$2{,}0\\times10^{-4}\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$n=\\dfrac{\\Delta P\\,V}{RT}=\\dfrac{2{,}0\\times10^{3}\\times250\\times10^{-6}}{8{,}31\\times298}=2{,}0\\times10^{-4}\\ \\mathrm{mol}$ avec $V$ en $\\mathrm{m^3}$."
+            },
+            {
+              "label": "$2{,}0\\times10^{2}\\ \\mathrm{mol}$",
+              "why": "Tu as gardé $V=250$ (en $\\mathrm{mL}$) : dans $PV=nRT$ avec $P$ en $\\mathrm{Pa}$, $V$ doit être en $\\mathrm{m^3}$."
+            },
+            {
+              "label": "$2{,}4\\times10^{-3}\\ \\mathrm{mol}$",
+              "why": "Tu as utilisé $T=25$ en degrés Celsius : la loi des gaz parfaits exige la température en kelvin, $298\\ \\mathrm{K}$."
+            },
+            {
+              "label": "$2{,}0\\times10^{-7}\\ \\mathrm{mol}$",
+              "why": "Tu as utilisé $\\Delta P=2{,}0$ en $\\mathrm{kPa}$ : avec $R$ en $\\mathrm{J\\,mol^{-1}\\,K^{-1}}$, la pression doit être en $\\mathrm{Pa}$."
+            }
+          ],
+          "hint": "Utilise $PV=nRT$ appliquée à la variation de pression, avec toutes les grandeurs en unités du système international.",
+          "solution": "Seul le gaz formé fait varier la pression : $n=\\dfrac{\\Delta P\\,V}{R\\,T}$. Conversions : $V=250\\ \\mathrm{mL}=250\\times10^{-6}\\ \\mathrm{m^3}$, $T=298\\ \\mathrm{K}$. $n=\\dfrac{2{,}0\\times10^{3}\\times250\\times10^{-6}}{8{,}31\\times298}=2{,}0\\times10^{-4}\\ \\mathrm{mol}$. Contrôle : ordre de grandeur $0{,}5\\ \\mathrm{J}$ sur $2{,}5\\times10^{3}\\ \\mathrm{J\\,mol^{-1}}$, soit environ $2\\times10^{-4}\\ \\mathrm{mol}$.",
+          "methode": "Manométrie : $n=\\Delta P\\,V/(RT)$ avec $P$ en Pa, $V$ en $\\mathrm{m^3}$, $T$ en K.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-le-montage-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "De la mesure à l'avancement",
+        "lesson": "Suivi par dégagement gazeux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-de-la-mesure-a-l-avancement",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "De la mesure à l'avancement",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "De la mesure à l'avancement",
+          "difficulty": 1,
+          "statement": "Pour la transformation $\\mathrm{Zn(s)}+2\\,\\mathrm{H_3O^+}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{H_2(g)}+2\\,\\mathrm{H_2O}$, la quantité de dihydrogène formé à l'avancement $x$ est :",
+          "options": [
+            {
+              "label": "$n(\\mathrm{H_2})=x$",
+              "correct": true,
+              "why": "Le coefficient stœchiométrique de $\\mathrm{H_2}$ est $1$ : il se forme $1\\times x$."
+            },
+            {
+              "label": "$n(\\mathrm{H_2})=2x$",
+              "why": "Tu as pris le coefficient $2$ de $\\mathrm{H_3O^+}$ ou de $\\mathrm{H_2O}$ : celui de $\\mathrm{H_2}$ est $1$."
+            },
+            {
+              "label": "$n(\\mathrm{H_2})=\\dfrac{x}{2}$",
+              "why": "Tu as divisé par $2$ sans raison : un coefficient $1$ donne $n(\\mathrm{H_2})=x$."
+            },
+            {
+              "label": "$n(\\mathrm{H_2})=n_0-x$",
+              "why": "Tu as écrit la loi d'un réactif : $\\mathrm{H_2}$ est un produit, absent au départ, et sa quantité augmente."
+            }
+          ],
+          "hint": "Un produit se forme du coefficient fois l'avancement. Quel est le coefficient du dihydrogène ?",
+          "solution": "Pour un produit de coefficient $\\nu$, $n=n_0+\\nu\\,x$. Ici $n_0(\\mathrm{H_2})=0$ et $\\nu=1$ : $n(\\mathrm{H_2})=x$. Mesurer le volume de $\\mathrm{H_2}$ revient donc à mesurer l'avancement. Contrôle : à $x=0$ il n'y a pas de gaz.",
+          "methode": "Produit : $n=n_0+\\nu x$ ; avec $\\nu=1$ et $n_0=0$, $x=n(\\mathrm{gaz})$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-de-la-mesure-a-l-avancement-q1"
+        },
+        {
+          "notion": "De la mesure à l'avancement",
+          "difficulty": 2,
+          "statement": "Lors de la transformation précédente, on recueille $V(\\mathrm{H_2})=60\\ \\mathrm{mL}$ de dihydrogène ; le volume molaire des gaz est $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$. L'avancement est :",
+          "options": [
+            {
+              "label": "$x=2{,}5\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "$x=n(\\mathrm{H_2})=\\dfrac{V}{V_m}=\\dfrac{0{,}060}{24{,}0}=2{,}5\\times10^{-3}\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$x=1{,}44\\ \\mathrm{mol}$",
+              "why": "Tu as multiplié $V$ par $V_m$ au lieu de diviser : $0{,}060\\times24{,}0$."
+            },
+            {
+              "label": "$x=2{,}5\\ \\mathrm{mol}$",
+              "why": "Tu as oublié de convertir $60\\ \\mathrm{mL}$ en litres : $\\dfrac{60}{24{,}0}$ mélange des $\\mathrm{mL}$ et des $\\mathrm{L\\,mol^{-1}}$."
+            },
+            {
+              "label": "$x=5{,}0\\ \\mathrm{mmol}$",
+              "why": "Tu as multiplié par $2$, le coefficient de $\\mathrm{H_3O^+}$ : $n(\\mathrm{H_2})=x$ avec un coefficient $1$."
+            }
+          ],
+          "hint": "Convertis d'abord le volume en litres, puis divise par le volume molaire.",
+          "solution": "$n(\\mathrm{H_2})=\\dfrac{V}{V_m}=\\dfrac{60\\times10^{-3}\\ \\mathrm{L}}{24{,}0\\ \\mathrm{L\\,mol^{-1}}}=2{,}5\\times10^{-3}\\ \\mathrm{mol}$ et $x=n(\\mathrm{H_2})$. Contrôle : $2{,}5\\times10^{-3}\\times24{,}0=0{,}060\\ \\mathrm{L}$.",
+          "methode": "Gaz : $n=V/V_m$ (avec $V$ en L), puis $x=n/\\nu$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-de-la-mesure-a-l-avancement-q2"
+        },
+        {
+          "notion": "De la mesure à l'avancement",
+          "difficulty": 2,
+          "statement": "Lors de la décomposition $2\\,\\mathrm{H_2O_2}\\rightarrow2\\,\\mathrm{H_2O}+\\mathrm{O_2}$, on recueille $48\\ \\mathrm{mL}$ de dioxygène ; $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$. La quantité d'eau oxygénée consommée est :",
+          "options": [
+            {
+              "label": "$4{,}0\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "$x=n(\\mathrm{O_2})=\\dfrac{0{,}048}{24{,}0}=2{,}0\\ \\mathrm{mmol}$ ; $\\mathrm{H_2O_2}$ a pour coefficient $2$ : $n_{\\text{consommé}}=2x=4{,}0\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$2{,}0\\ \\mathrm{mmol}$",
+              "why": "Tu as donné l'avancement $x=n(\\mathrm{O_2})$ : l'eau oxygénée consommée vaut $2x$ car son coefficient est $2$."
+            },
+            {
+              "label": "$1{,}0\\ \\mathrm{mmol}$",
+              "why": "Tu as divisé $x$ par $2$ : le réactif consommé est $2x$, pas $x/2$."
+            },
+            {
+              "label": "$8{,}0\\ \\mathrm{mmol}$",
+              "why": "Tu as appliqué deux fois le coefficient $2$ : $4x$ au lieu de $2x$."
+            }
+          ],
+          "hint": "Passe du volume de gaz à l'avancement, puis de l'avancement à la quantité du réactif avec son coefficient.",
+          "solution": "$x=n(\\mathrm{O_2})=\\dfrac{V}{V_m}=\\dfrac{48\\times10^{-3}}{24{,}0}=2{,}0\\times10^{-3}\\ \\mathrm{mol}$ ; $n(\\mathrm{H_2O_2})_{\\text{consommé}}=2x=4{,}0\\ \\mathrm{mmol}$. Contrôle : il se forme autant de moles de $\\mathrm{H_2O}$ que de $\\mathrm{H_2O_2}$ consommées, soit $4{,}0\\ \\mathrm{mmol}$.",
+          "methode": "Gaz formé → $x$ ; réactif consommé $=\\nu\\,x$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-de-la-mesure-a-l-avancement-q3"
+        },
+        {
+          "notion": "De la mesure à l'avancement",
+          "difficulty": 3,
+          "statement": "Lors d'un suivi par volume de gaz, un élève utilise $V_m=22{,}4\\ \\mathrm{L\\,mol^{-1}}$ (valeur à $0\\ ^\\circ\\mathrm{C}$) alors que les mesures sont faites dans des conditions où $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$. L'avancement calculé est :",
+          "options": [
+            {
+              "label": "surestimé d'environ $7{,}1\\ \\%$ par rapport à la valeur exacte",
+              "correct": true,
+              "why": "$x=V/V_m$ : avec $V_m$ trop petit, $x$ est trop grand ; $\\dfrac{24{,}0}{22{,}4}=1{,}071$ soit $+7{,}1\\ \\%$."
+            },
+            {
+              "label": "sous-estimé d'environ $6{,}7\\ \\%$ par rapport à la valeur exacte",
+              "why": "Tu as inversé l'effet de $V_m$ : $x$ est inversement proportionnel à $V_m$, un $V_m$ plus petit donne un $x$ plus grand."
+            },
+            {
+              "label": "surestimé d'environ $6{,}7\\ \\%$ par rapport à la valeur exacte",
+              "why": "Le sens est bon mais le calcul est faux : l'écart relatif se calcule par rapport à la valeur exacte, $\\dfrac{24{,}0}{22{,}4}-1=7{,}1\\ \\%$, pas $\\dfrac{24{,}0-22{,}4}{24{,}0}$."
+            },
+            {
+              "label": "exact : le volume molaire n'intervient pas dans le calcul de $x$",
+              "why": "$V_m$ intervient directement : $x=V/V_m$ ; changer sa valeur change $x$."
+            }
+          ],
+          "hint": "Compare $\\dfrac{V}{22{,}4}$ et $\\dfrac{V}{24{,}0}$ : lequel est le plus grand ?",
+          "solution": "$x_{\\text{calculé}}=\\dfrac{V}{22{,}4}$ et $x_{\\text{exact}}=\\dfrac{V}{24{,}0}$ : le rapport vaut $\\dfrac{24{,}0}{22{,}4}=1{,}071$, donc $x$ est surestimé de $7{,}1\\ \\%$. Contrôle : un $V_m$ plus petit donne plus de moles pour un même volume.",
+          "methode": "$x=V/V_m$ : $x$ varie en sens inverse de $V_m$ ; utiliser le $V_m$ des conditions de l'expérience.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-de-la-mesure-a-l-avancement-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le protocole",
+        "lesson": "Suivi par dégagement gazeux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-le-protocole",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "Le protocole",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le protocole",
+          "difficulty": 1,
+          "statement": "Dans le suivi par volume de gaz, le chronomètre doit être déclenché :",
+          "options": [
+            {
+              "label": "au moment où l'on met en contact les réactifs, en introduisant l'acide",
+              "correct": true,
+              "why": "La date $t=0$ est celle du début de la transformation : le premier relevé correspond alors à $x=0$."
+            },
+            {
+              "label": "dès l'apparition de la première bulle de gaz",
+              "why": "La transformation a commencé avant la première bulle visible : le chronomètre serait en retard et toutes les dates seraient décalées."
+            },
+            {
+              "label": "quand le volume de gaz recueilli atteint $10\\ \\mathrm{mL}$",
+              "why": "À cette date, l'avancement n'est plus nul : l'origine des dates serait faussée."
+            },
+            {
+              "label": "à la fin du dégagement gazeux, une fois la transformation terminée",
+              "why": "Une fois la transformation terminée, il n'y a plus rien à suivre : on ne mesure plus aucune évolution."
+            }
+          ],
+          "hint": "Quelle valeur de l'avancement doit correspondre au temps $t=0$ ?",
+          "solution": "L'origine des dates est le début de la transformation, c'est-à-dire l'instant de la mise en contact des réactifs : à $t=0$, $x=0$ et $V(\\mathrm{H_2})=0$. Lancer le chronomètre plus tard décale toutes les dates. Contrôle : le premier point de la courbe est l'origine $(0\\,;\\,0)$.",
+          "methode": "Chronomètre : déclenché à la mise en contact des réactifs ($t=0$, $x=0$).",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-le-protocole-q1"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 2,
+          "statement": "Dans une étude cinétique par volume de gaz, on place le zinc en excès. Cette précaution permet :",
+          "options": [
+            {
+              "label": "que l'avancement maximal ne dépende que de la quantité d'acide, que l'on connaît précisément",
+              "correct": true,
+              "why": "Zinc en excès : l'acide est le réactif limitant, $x_{\\max}=n(\\mathrm{H_3O^+})/2$ se calcule simplement."
+            },
+            {
+              "label": "que la vitesse de réaction reste constante pendant toute la durée de l'expérience",
+              "why": "La vitesse diminue au cours du temps car la concentration en acide baisse : un excès de zinc ne la rend pas constante."
+            },
+            {
+              "label": "que la température du mélange reste constante au cours de l'expérience",
+              "why": "Un excès de zinc n'a aucun effet sur la température : elle se contrôle avec un bain thermostaté."
+            },
+            {
+              "label": "que le dihydrogène soit produit en quantité plus grande que si l'acide était en excès",
+              "why": "La quantité de dihydrogène est fixée par le réactif limitant : mettre l'acide en excès ou en défaut change simplement lequel des deux limite."
+            }
+          ],
+          "hint": "Un réactif en excès n'est pas totalement consommé : lequel fixe alors la quantité finale ?",
+          "solution": "Si le zinc est en excès, il reste du zinc à la fin : c'est $\\mathrm{H_3O^+}$ qui est entièrement consommé, donc $x_{\\max}=\\dfrac{n(\\mathrm{H_3O^+})}{2}$, valeur facilement calculable et connue. Cela ne rend pas la vitesse constante ni ne règle la température. Contrôle : en comparant deux acides de concentrations différentes, $x_{\\max}$ change avec l'acide.",
+          "methode": "Réactif en excès : l'autre réactif est limitant, ce qui fixe $x_{\\max}$ sans ambiguïté.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-le-protocole-q2"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 2,
+          "statement": "Pourquoi maintient-on le mélange réactionnel à température constante pendant le suivi par volume de gaz ?",
+          "options": [
+            {
+              "label": "la température est un facteur cinétique et agit aussi sur le volume du gaz recueilli",
+              "correct": true,
+              "why": "Si $T$ varie, la vitesse change et le volume de gaz mesuré change aussi : les mesures ne seraient plus comparables."
+            },
+            {
+              "label": "elle fait augmenter l'avancement maximal d'une transformation totale du zinc avec l'acide",
+              "why": "Pour une transformation totale, $x_{\\max}$ ne dépend pas de la température : seule la vitesse en dépend."
+            },
+            {
+              "label": "elle n'a aucun effet réel, mais le protocole l'impose simplement par convention",
+              "why": "La température a un effet réel : c'est un facteur cinétique et elle agit sur le volume de gaz."
+            },
+            {
+              "label": "elle modifie l'équation de la réaction entre le zinc et l'acide chlorhydrique",
+              "why": "L'équation est la même quelle que soit la température ; c'est la vitesse qui change."
+            }
+          ],
+          "hint": "Pense à ce qui change si $T$ varie, à la fois dans le mélange et dans le gaz recueilli.",
+          "solution": "À température variable, deux effets se superposent : la vitesse de réaction change (facteur cinétique) et le volume de gaz recueilli à pression donnée varie avec $T$. Pour que $V(t)$ reflète seulement l'avancement, on garde $T$ constante, par exemple avec un bain thermostaté. Contrôle : à $T$ constante, le seul paramètre qui évolue est l'avancement.",
+          "methode": "Suivi cinétique : température constante (facteur cinétique, et volume d'un gaz).",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-le-protocole-q3"
+        },
+        {
+          "notion": "Le protocole",
+          "difficulty": 3,
+          "statement": "On veut comparer l'effet de la concentration en acide sur la vitesse de la réaction du zinc avec l'acide chlorhydrique, avec deux essais d'acide à $0{,}50$ puis $1{,}0\\ \\mathrm{mol\\,L^{-1}}$. Quel protocole est valable ?",
+          "options": [
+            {
+              "label": "même zinc, même volume d'acide, même température : seule la concentration d'acide change",
+              "correct": true,
+              "why": "Un seul facteur varie, donc la différence de vitesse s'attribue à la concentration."
+            },
+            {
+              "label": "concentrations $0{,}50$ puis $1{,}0\\ \\mathrm{mol\\,L^{-1}}$, avec une masse de zinc doublée dans le second essai",
+              "why": "Deux facteurs changent à la fois (concentration et quantité de zinc) : on ne pourrait pas attribuer la différence à la concentration."
+            },
+            {
+              "label": "concentrations $0{,}50$ puis $1{,}0\\ \\mathrm{mol\\,L^{-1}}$, à $20\\ ^\\circ\\mathrm{C}$ puis à $35\\ ^\\circ\\mathrm{C}$ respectivement",
+              "why": "La température change aussi : l'effet de la concentration serait mélangé avec celui de la température."
+            },
+            {
+              "label": "concentrations $0{,}50$ puis $1{,}0\\ \\mathrm{mol\\,L^{-1}}$, avec du zinc en grenaille puis en poudre",
+              "why": "L'état de division du zinc change aussi : la différence de vitesse viendrait des deux facteurs à la fois."
+            }
+          ],
+          "hint": "Pour attribuer un effet à un facteur, que doit-on garder identique d'un essai à l'autre ?",
+          "solution": "On étudie l'influence d'un seul facteur à la fois : les autres facteurs cinétiques (température, quantité et forme du zinc, volume d'acide) doivent rester identiques. Seul le premier protocole respecte cette règle. Contrôle : dans les trois autres, deux facteurs varient en même temps.",
+          "methode": "Comparer deux essais : ne faire varier qu'un seul facteur, tout le reste identique.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-le-protocole-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'exploitation",
+        "lesson": "Suivi par dégagement gazeux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-l-exploitation",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "L'exploitation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'exploitation",
+          "difficulty": 1,
+          "statement": "La courbe $x(t)$ d'une transformation totale suivie par volume de gaz a l'allure :",
+          "options": [
+            {
+              "label": "d'une courbe croissante, de pente décroissante, tendant vers une asymptote $x_{\\max}$",
+              "correct": true,
+              "why": "Les réactifs se consomment, la vitesse diminue donc la pente diminue ; $x$ tend vers $x_{\\max}$ quand le réactif limitant est épuisé."
+            },
+            {
+              "label": "d'une droite croissante passant par l'origine, avec une pente constante au cours du temps",
+              "why": "La pente d'une droite serait constante : la vitesse ne diminuerait pas, ce qui contredit la baisse des concentrations."
+            },
+            {
+              "label": "d'une courbe croissante dont la pente augmente de plus en plus au cours du temps",
+              "why": "La vitesse diminue au cours du temps ; une pente qui augmenterait supposerait une vitesse croissante."
+            },
+            {
+              "label": "d'une courbe décroissante qui part de $x_{\\max}$ et tend vers $0$ au bout d'un temps long",
+              "why": "$x$ part de $0$ et augmente : il ne peut pas décroître vers $0$ ; c'est la quantité d'un réactif qui décroît."
+            }
+          ],
+          "hint": "L'avancement augmente-t-il toujours ? À quelle vitesse ? Et vers quelle valeur ?",
+          "solution": "L'avancement part de $0$ et augmente. Comme les concentrations des réactifs diminuent, la vitesse (donc la pente de $x(t)$) diminue : la courbe est croissante et concave, avec une asymptote horizontale $x_{\\max}$. Contrôle : une pente nulle à la fin correspond à une vitesse nulle, réactif limitant épuisé.",
+          "methode": "$x(t)$ pour une transformation totale : croissante, pente décroissante, asymptote $x_{\\max}$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-l-exploitation-q1"
+        },
+        {
+          "notion": "L'exploitation",
+          "difficulty": 2,
+          "statement": "Une transformation totale est suivie par le volume de dihydrogène dégagé, dont l'asymptote est $V_{\\max}=54\\ \\mathrm{mL}$. Relevés : $t$ (s) $=0\\,;20\\,;40\\,;60\\,;90\\,;120\\,;180\\,;240$ et $V$ (mL) $=0\\,;16\\,;27\\,;35\\,;43\\,;47\\,;52\\,;53$. Le temps de demi-réaction vaut :",
+          "options": [
+            {
+              "label": "$40\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$V(t_{1/2})=\\dfrac{V_{\\max}}{2}=27\\ \\mathrm{mL}$, valeur relevée à $t=40\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$27\\ \\mathrm{s}$",
+              "why": "Tu as lu la valeur du volume ($27\\ \\mathrm{mL}$) comme si c'était une date : $t_{1/2}$ est l'abscisse, pas l'ordonnée."
+            },
+            {
+              "label": "$120\\ \\mathrm{s}$",
+              "why": "Tu as pris la moitié de la durée d'enregistrement ($240\\ \\mathrm{s}$) : $t_{1/2}$ n'est pas la moitié de la durée du suivi."
+            },
+            {
+              "label": "$60\\ \\mathrm{s}$",
+              "why": "À $t=60\\ \\mathrm{s}$, $V=35\\ \\mathrm{mL}$ et non $27\\ \\mathrm{mL}$ : tu as lu le mauvais point du tableau."
+            }
+          ],
+          "hint": "Calcule la moitié du volume maximal, puis cherche à quelle date cette valeur est atteinte.",
+          "solution": "Le volume est proportionnel à l'avancement : $V_{\\max}\\leftrightarrow x_{\\max}$ et $V(t_{1/2})=\\dfrac{54}{2}=27\\ \\mathrm{mL}$. Le tableau donne $V=27\\ \\mathrm{mL}$ à $t=40\\ \\mathrm{s}$, donc $t_{1/2}=40\\ \\mathrm{s}$. Contrôle : $V(20)=16<27<V(60)=35$, $t_{1/2}$ est bien entre ces dates.",
+          "methode": "$t_{1/2}$ : repérer $V_{\\max}/2$ puis lire la date correspondante.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-l-exploitation-q2"
+        },
+        {
+          "notion": "L'exploitation",
+          "difficulty": 2,
+          "statement": "Dans un volume réactionnel $V_s=50{,}0\\ \\mathrm{mL}$, la tangente à la courbe $V_{\\mathrm{H_2}}(t)$ à l'origine passe par le point $(t=30\\ \\mathrm{s}\\,;\\,V=24\\ \\mathrm{mL})$ ; $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$. La vitesse volumique à $t=0$ vaut :",
+          "options": [
+            {
+              "label": "$6{,}7\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "correct": true,
+              "why": "$\\dfrac{dx}{dt}=\\dfrac{24\\times10^{-3}/24{,}0}{30}=3{,}3\\times10^{-5}\\ \\mathrm{mol\\,s^{-1}}$ puis $v=\\dfrac{1}{V_s}\\dfrac{dx}{dt}=\\dfrac{3{,}3\\times10^{-5}}{0{,}0500}=6{,}7\\times10^{-4}$."
+            },
+            {
+              "label": "$3{,}3\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as oublié de diviser par le volume de la solution $V_s$ : $3{,}3\\times10^{-5}$ est la pente en $\\mathrm{mol\\,s^{-1}}$."
+            },
+            {
+              "label": "$1{,}7\\times10^{-6}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as multiplié par $V_s$ au lieu de diviser."
+            },
+            {
+              "label": "$0{,}67\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as oublié de convertir les $\\mathrm{mmol}$ en $\\mathrm{mol}$ : $1{,}0\\ \\mathrm{mmol}$ pour $30\\ \\mathrm{s}$ et $0{,}0500\\ \\mathrm{L}$ donne $0{,}67\\ \\mathrm{mmol\\,L^{-1}\\,s^{-1}}$."
+            }
+          ],
+          "hint": "Passe du volume de gaz à l'avancement, calcule la pente de la tangente, puis divise par le volume de la solution.",
+          "solution": "$x=n(\\mathrm{H_2})=\\dfrac{24\\times10^{-3}}{24{,}0}=1{,}0\\times10^{-3}\\ \\mathrm{mol}$ à $t=30\\ \\mathrm{s}$ sur la tangente, d'où $\\dfrac{dx}{dt}=3{,}3\\times10^{-5}\\ \\mathrm{mol\\,s^{-1}}$ et $v=\\dfrac{1}{V_s}\\dfrac{dx}{dt}=\\dfrac{3{,}3\\times10^{-5}}{0{,}0500}=6{,}7\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$. Contrôle : $v\\times V_s=3{,}3\\times10^{-5}=\\dfrac{dx}{dt}$.",
+          "methode": "Vitesse volumique : $v=\\dfrac{1}{V_s}\\dfrac{dx}{dt}$ avec $V_s$ le volume de la solution, pas celui du gaz.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-l-exploitation-q3"
+        },
+        {
+          "notion": "L'exploitation",
+          "difficulty": 3,
+          "statement": "Pour la même transformation, les tangentes à la courbe $x(t)$ ont pour pentes $0{,}90\\ \\mathrm{mL\\,s^{-1}}$ (équivalent en volume de gaz) à $t=0$ et $0{,}15\\ \\mathrm{mL\\,s^{-1}}$ à $t=90\\ \\mathrm{s}$, à volume de solution constant. On en déduit que, entre ces dates, la vitesse volumique :",
+          "options": [
+            {
+              "label": "est divisée par $6$, car la concentration en ions oxonium a diminué",
+              "correct": true,
+              "why": "$\\dfrac{0{,}15}{0{,}90}=\\dfrac16$ : la vitesse est divisée par $6$ ; elle diminue parce que $\\mathrm{H_3O^+}$ est consommé."
+            },
+            {
+              "label": "est divisée par $5$, car l'écart relatif des pentes vaut $\\dfrac{0{,}90-0{,}15}{0{,}15}=5$",
+              "why": "Tu as calculé l'écart relatif $\\dfrac{0{,}90-0{,}15}{0{,}15}=5$ au lieu du rapport des pentes $\\dfrac{0{,}90}{0{,}15}=6$."
+            },
+            {
+              "label": "est multipliée par $6$, car le volume de gaz recueilli a augmenté",
+              "why": "Le volume de gaz augmente mais la vitesse est la pente de la courbe, qui diminue : la vitesse est divisée par $6$."
+            },
+            {
+              "label": "reste constante, car le volume de solution reste constant",
+              "why": "À volume constant, $v$ est proportionnelle à la pente de la tangente, et les deux pentes sont différentes : $v$ n'est pas constante."
+            }
+          ],
+          "hint": "À volume constant, compare directement les pentes des tangentes ; explique la tendance par les concentrations.",
+          "solution": "À $V_s$ constant, $v$ est proportionnelle à la pente de la tangente. Le rapport $\\dfrac{0{,}90}{0{,}15}=6$ : la vitesse à $t=90\\ \\mathrm{s}$ est six fois plus petite. Cause : les ions $\\mathrm{H_3O^+}$ sont consommés, leur concentration diminue. Contrôle : la courbe se couche vers l'horizontale, comme attendu quand la vitesse décroît.",
+          "methode": "Rapport de vitesses = rapport des pentes de tangente (à $V_s$ constant).",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-l-exploitation-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les sources d'erreur",
+        "lesson": "Suivi par dégagement gazeux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-les-sources-d-erreur",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "Les sources d'erreur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 1,
+          "statement": "Lors d'un suivi par volume de gaz, une fuite de gaz au niveau du bouchon conduit à un avancement calculé :",
+          "options": [
+            {
+              "label": "sous-estimé, car une partie du gaz formé n'est pas comptée",
+              "correct": true,
+              "why": "Le volume lu est inférieur au volume réellement formé : $x=V/V_m$ est sous-estimé."
+            },
+            {
+              "label": "surestimé, car le gaz qui s'échappe est compté deux fois",
+              "why": "Un gaz qui s'échappe ne peut pas être compté deux fois : le volume recueilli est plus faible, pas plus fort."
+            },
+            {
+              "label": "exact, car la fuite ne change pas la quantité de gaz formé",
+              "why": "La quantité formée ne change pas, mais la quantité recueillie, donc le volume lu, diminue : $x$ calculé est faux."
+            },
+            {
+              "label": "sans effet sur $x$, mais il augmente $x_{\\max}$",
+              "why": "$x_{\\max}$ dépend des quantités de matière initiales, pas du montage, et la fuite affecte bien le $x$ calculé."
+            }
+          ],
+          "hint": "Que mesure-t-on : le gaz formé ou le gaz recueilli ?",
+          "solution": "Avec une fuite, une partie du gaz formé s'échappe : le volume mesuré est inférieur au volume formé et $x=V/V_m$ est sous-estimé. Contrôle : un montage étanche est donc indispensable.",
+          "methode": "Fuite de gaz : volume lu trop faible, avancement sous-estimé.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-les-sources-d-erreur-q1"
+        },
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 2,
+          "statement": "La température du laboratoire passe de $20\\ ^\\circ\\mathrm{C}$ à $23\\ ^\\circ\\mathrm{C}$ pendant l'expérience, à pression constante. Pour une même quantité de gaz formé, le volume lu est :",
+          "options": [
+            {
+              "label": "surestimé d'environ $1\\ \\%$",
+              "correct": true,
+              "why": "À $P$ constante, $V\\propto T$ : $\\dfrac{296}{293}=1{,}010$, soit environ $+1\\ \\%$ (température en kelvin)."
+            },
+            {
+              "label": "sous-estimé d'environ $1\\ \\%$",
+              "why": "Tu as inversé l'effet : le volume d'un gaz augmente avec la température, il ne diminue pas."
+            },
+            {
+              "label": "surestimé d'environ $15\\ \\%$",
+              "why": "Tu as utilisé les températures en $^\\circ\\mathrm{C}$ ($3/20$) : la loi des gaz demande des kelvin, $3/293$."
+            },
+            {
+              "label": "exact, car la quantité de gaz ne change pas",
+              "why": "La quantité de gaz ne change pas, mais son volume à pression constante dépend de $T$ : le volume lu change."
+            }
+          ],
+          "hint": "À pression constante, comment évolue le volume d'une quantité de gaz donnée quand $T$ augmente ? Utilise des kelvin.",
+          "solution": "À $P$ constante et pour une quantité de gaz fixe, $V\\propto T$ (en kelvin). $T$ passe de $293\\ \\mathrm{K}$ à $296\\ \\mathrm{K}$ : $\\dfrac{V_2}{V_1}=\\dfrac{296}{293}=1{,}010$, soit une augmentation d'environ $1\\ \\%$. Contrôle : une variation de $3\\ \\mathrm{K}$ sur $293\\ \\mathrm{K}$ est de l'ordre du pour cent.",
+          "methode": "Gaz à $P$ constante : $V\\propto T$ en kelvin ; une variation de $T$ fausse le volume lu.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-les-sources-d-erreur-q2"
+        },
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 2,
+          "statement": "On suit par volume de gaz la réaction du carbonate de calcium avec un acide, qui forme du dioxyde de carbone, assez soluble dans l'eau, recueilli sur cuve à eau. Le volume de gaz lu est :",
+          "options": [
+            {
+              "label": "inférieur au volume de $\\mathrm{CO_2}$ réellement formé, car une partie se dissout dans l'eau",
+              "correct": true,
+              "why": "Le gaz dissous ne participe pas au volume lu : on sous-estime la quantité formée."
+            },
+            {
+              "label": "supérieur au volume de $\\mathrm{CO_2}$ formé, car l'eau de la cuve libère aussi du gaz",
+              "why": "L'eau de la cuve ne produit pas de $\\mathrm{CO_2}$ : le volume lu ne peut pas dépasser le volume formé."
+            },
+            {
+              "label": "égal au volume formé, car un gaz ne peut pas se dissoudre dans l'eau",
+              "why": "Beaucoup de gaz se dissolvent dans l'eau, plus ou moins : $\\mathrm{CO_2}$ est assez soluble."
+            },
+            {
+              "label": "égal au volume formé, la dissolution ne changeant que la vitesse de la réaction",
+              "why": "La dissolution ne modifie pas la vitesse de la réaction : elle modifie la quantité de gaz recueillie."
+            }
+          ],
+          "hint": "Le gaz dissous se retrouve-t-il dans l'éprouvette ?",
+          "solution": "Une partie du dioxyde de carbone se dissout dans l'eau de la cuve : le volume lu est inférieur au volume formé, donc $x$ est sous-estimé. Avec $\\mathrm{H_2}$, très peu soluble, le problème ne se pose pas. Contrôle : pour $\\mathrm{CO_2}$ on préfère une seringue à gaz ou un capteur de pression.",
+          "methode": "Gaz soluble sur cuve à eau : volume lu sous-estimé ; préférer une seringue ou un capteur.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-les-sources-d-erreur-q3"
+        },
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 3,
+          "statement": "Un élève déclenche le chronomètre $10\\ \\mathrm{s}$ après la mise en contact des réactifs. Par rapport à la valeur réelle, le temps de demi-réaction qu'il lit sur sa courbe est :",
+          "options": [
+            {
+              "label": "sous-estimé de $10\\ \\mathrm{s}$, car toutes ses dates sont inférieures de $10\\ \\mathrm{s}$ aux dates réelles",
+              "correct": true,
+              "why": "$t_{\\text{lu}}=t_{\\text{réel}}-10\\ \\mathrm{s}$ : le chronomètre est lancé en retard, toutes les dates mesurées sont plus petites."
+            },
+            {
+              "label": "surestimé de $10\\ \\mathrm{s}$, car toutes ses dates sont supérieures de $10\\ \\mathrm{s}$ aux dates réelles",
+              "why": "Un chronomètre déclenché en retard donne des dates plus petites que les dates réelles, pas plus grandes."
+            },
+            {
+              "label": "inchangé, car seule la pente de la courbe intervient dans $t_{1/2}$",
+              "why": "$t_{1/2}$ est une date : si toutes les dates sont décalées, sa valeur lue est décalée aussi."
+            },
+            {
+              "label": "sous-estimé de $20\\ \\mathrm{s}$, car le décalage est compté deux fois",
+              "why": "Le décalage est de $10\\ \\mathrm{s}$ une seule fois : il n'est pas compté deux fois."
+            }
+          ],
+          "hint": "Si le chronomètre démarre en retard, les dates lues sont-elles plus grandes ou plus petites que les dates réelles ?",
+          "solution": "Si le chronomètre est lancé $10\\ \\mathrm{s}$ trop tard, chaque date lue est $t_{\\text{lu}}=t_{\\text{réel}}-10\\ \\mathrm{s}$. Le temps de demi-réaction lu est donc sous-estimé de $10\\ \\mathrm{s}$ ; la courbe tracée est décalée vers la gauche et ne passe plus par l'origine $(0\\,;\\,0)$. Contrôle : le premier relevé à $t_{\\text{lu}}=0$ correspond déjà à un avancement non nul.",
+          "methode": "Retard au démarrage : dates mesurées décalées, $t_{1/2}$ lu faux d'autant.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-les-sources-d-erreur-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La vitesse de disparition et de formation",
+        "lesson": "Approfondissement — Suivi temporel",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-la-vitesse-de-disparition-et-de-formatio",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "La vitesse de disparition et de formation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La vitesse de disparition et de formation",
+          "difficulty": 3,
+          "statement": "Lors de la décomposition $2\\,\\mathrm{H_2O_2}\\rightarrow2\\,\\mathrm{H_2O}+\\mathrm{O_2}$ dans un volume constant, la vitesse de formation du dioxygène, $v_f(\\mathrm{O_2})=\\dfrac{d[\\mathrm{O_2}]}{dt}$, vaut $1{,}5\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$ à une date donnée. La vitesse de disparition de l'eau oxygénée, $v_d(\\mathrm{H_2O_2})=-\\dfrac{d[\\mathrm{H_2O_2}]}{dt}$, vaut alors :",
+          "options": [
+            {
+              "label": "$3{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "correct": true,
+              "why": "$v=v_f(\\mathrm{O_2})$ (coefficient $1$) et $v_d(\\mathrm{H_2O_2})=2\\,v$ (coefficient $2$) : $2\\times1{,}5\\times10^{-4}=3{,}0\\times10^{-4}$."
+            },
+            {
+              "label": "$1{,}5\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as supposé que tous les réactifs et produits ont la même vitesse ; elles diffèrent d'un facteur égal au rapport des coefficients."
+            },
+            {
+              "label": "$7{,}5\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as divisé par $2$ au lieu de multiplier : $\\mathrm{H_2O_2}$ disparaît deux fois plus vite que $\\mathrm{O_2}$ n'apparaît."
+            },
+            {
+              "label": "$-3{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Une vitesse de disparition est positive par définition, grâce au signe moins dans $-\\dfrac{d[\\mathrm{H_2O_2}]}{dt}$ ; la valeur négative est celle de $\\dfrac{d[\\mathrm{H_2O_2}]}{dt}$."
+            }
+          ],
+          "hint": "Relie chaque vitesse à la vitesse de réaction $v$ en tenant compte du coefficient de l'espèce.",
+          "solution": "À volume constant, $v=\\dfrac{1}{V}\\dfrac{dx}{dt}$ et, pour une espèce de coefficient $\\nu$, $v_f=\\nu\\,v$ (produit) ou $v_d=\\nu\\,v$ (réactif). Ici $\\nu(\\mathrm{O_2})=1$, donc $v=1{,}5\\times10^{-4}$ ; $\\nu(\\mathrm{H_2O_2})=2$, donc $v_d(\\mathrm{H_2O_2})=2v=3{,}0\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$. Contrôle : $\\mathrm{H_2O_2}$ disparaît bien plus vite que $\\mathrm{O_2}$ n'apparaît, ce qui reflète le coefficient $2$.",
+          "methode": "$v_d(\\text{réactif})=\\nu\\,v$ et $v_f(\\text{produit})=\\nu\\,v$ ; $v$ est la vitesse de réaction.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-la-vitesse-de-disparition-et-de-formatio-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La modélisation exponentielle",
+        "lesson": "Approfondissement — Suivi temporel",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-la-modelisation-exponentielle",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "La modélisation exponentielle",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La modélisation exponentielle",
+          "difficulty": 3,
+          "statement": "On modélise l'avancement d'une transformation totale par $x(t)=x_{\\max}\\bigl(1-e^{-t/\\tau}\\bigr)$ avec $\\tau=40\\ \\mathrm{s}$ (relation donnée). Le temps de demi-réaction $t_{1/2}$, défini par $x(t_{1/2})=\\dfrac{x_{\\max}}{2}$, vaut :",
+          "options": [
+            {
+              "label": "$28\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$1-e^{-t_{1/2}/\\tau}=\\dfrac12$ donc $e^{-t_{1/2}/\\tau}=\\dfrac12$ et $t_{1/2}=\\tau\\ln2=40\\times0{,}693=27{,}7\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$40\\ \\mathrm{s}$",
+              "why": "Tu as confondu $t_{1/2}$ et la constante de temps $\\tau$ : à $t=\\tau$, $x=x_{\\max}(1-e^{-1})\\approx0{,}63\\,x_{\\max}$, pas $0{,}5\\,x_{\\max}$."
+            },
+            {
+              "label": "$80\\ \\mathrm{s}$",
+              "why": "Tu as pris $2\\tau$ : à cette date $x=x_{\\max}(1-e^{-2})\\approx0{,}86\\,x_{\\max}$, bien au-delà de la moitié."
+            },
+            {
+              "label": "$58\\ \\mathrm{s}$",
+              "why": "Tu as divisé $\\tau$ par $\\ln2$ au lieu de le multiplier : $t_{1/2}=\\tau\\ln2$ est plus petit que $\\tau$, puisque $\\ln2<1$."
+            }
+          ],
+          "hint": "Écris l'équation $x(t_{1/2})=x_{\\max}/2$ puis isole l'exponentielle avant de prendre le logarithme.",
+          "solution": "$x_{\\max}\\bigl(1-e^{-t_{1/2}/\\tau}\\bigr)=\\dfrac{x_{\\max}}{2}\\Rightarrow e^{-t_{1/2}/\\tau}=\\dfrac12\\Rightarrow t_{1/2}=\\tau\\ln2=40\\times0{,}693=27{,}7\\ \\mathrm{s}$. Contrôle : $t_{1/2}<\\tau$ et à $t=27{,}7\\ \\mathrm{s}$, $e^{-t/\\tau}=e^{-0{,}693}=0{,}50$, donc $x=0{,}50\\,x_{\\max}$.",
+          "methode": "Modèle exponentiel : $t_{1/2}=\\tau\\ln 2\\approx0{,}69\\,\\tau$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-la-modelisation-exponentielle-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La loi d'Arrhenius",
+        "lesson": "Approfondissement — Suivi temporel",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-la-loi-d-arrhenius",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "La loi d'Arrhenius",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La loi d'Arrhenius",
+          "difficulty": 3,
+          "statement": "Dans la loi d'Arrhenius (relation donnée), la constante de vitesse s'écrit $k=A\\,e^{-E_a/(RT)}$, avec $E_a=50{,}0\\ \\mathrm{kJ\\,mol^{-1}}$, $R=8{,}314\\ \\mathrm{J\\,mol^{-1}\\,K^{-1}}$ et $A$ indépendant de la température. Le rapport $\\dfrac{k(308\\ \\mathrm{K})}{k(298\\ \\mathrm{K})}$ vaut environ :",
+          "options": [
+            {
+              "label": "$1{,}9$",
+              "correct": true,
+              "why": "$\\dfrac{k_2}{k_1}=\\exp\\left[\\dfrac{E_a}{R}\\left(\\dfrac1{T_1}-\\dfrac1{T_2}\\right)\\right]=\\exp(0{,}655)=1{,}93$."
+            },
+            {
+              "label": "$1{,}0$",
+              "why": "Tu n'as pas converti $E_a$ en $\\mathrm{J\\,mol^{-1}}$ : avec $50{,}0$ au lieu de $50{,}0\\times10^{3}$ le rapport est quasiment $1$."
+            },
+            {
+              "label": "$0{,}52$",
+              "why": "Tu as calculé $\\dfrac{k(298)}{k(308)}$ : le rapport demandé est celui à $308\\ \\mathrm{K}$ sur celui à $298\\ \\mathrm{K}$, supérieur à $1$."
+            },
+            {
+              "label": "$2{,}0$",
+              "why": "Tu as utilisé la règle approchée « doublement tous les $10\\ ^\\circ\\mathrm{C}$ » : avec la loi donnée et $E_a=50{,}0\\ \\mathrm{kJ\\,mol^{-1}}$, on trouve 1{,}93, pas exactement $2{,}0$."
+            }
+          ],
+          "hint": "Écris le rapport $k_2/k_1$ : $A$ se simplifie ; mets $T$ en kelvin et $E_a$ en joules.",
+          "solution": "$\\ln\\dfrac{k_2}{k_1}=\\dfrac{E_a}{R}\\left(\\dfrac1{T_1}-\\dfrac1{T_2}\\right)=\\dfrac{50{,}0\\times10^{3}}{8{,}314}\\left(\\dfrac1{298}-\\dfrac1{308}\\right)=0{,}655$ donc $\\dfrac{k_2}{k_1}=e^{0{,}655}=1{,}93$. Contrôle : le rapport est supérieur à $1$ comme attendu pour une élévation de température de $10\\ \\mathrm{K}$ (la vitesse augmente).",
+          "methode": "Arrhenius : $\\ln(k_2/k_1)=\\dfrac{E_a}{R}\\left(\\dfrac1{T_1}-\\dfrac1{T_2}\\right)$, avec $T$ en K et $E_a$ en J/mol.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-la-loi-d-arrhenius-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les précautions expérimentales",
+        "lesson": "Approfondissement — Suivi temporel",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-les-precautions-experimentales",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "Les précautions expérimentales",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les précautions expérimentales",
+          "difficulty": 3,
+          "statement": "On réalise deux essais de la réaction $\\mathrm{Zn(s)}+2\\,\\mathrm{H_3O^+}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{H_2(g)}+2\\,\\mathrm{H_2O}$ avec $50{,}0\\ \\mathrm{mL}$ d'acide à $0{,}50$ puis à $1{,}0\\ \\mathrm{mol\\,L^{-1}}$, le zinc étant en excès dans les deux cas ; $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$. Le volume maximal de dihydrogène recueilli dans le second essai vaut :",
+          "options": [
+            {
+              "label": "$600\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "Zinc en excès : $\\mathrm{H_3O^+}$ limite, $n=1{,}0\\times0{,}0500=0{,}050\\ \\mathrm{mol}$, $x_{\\max}=\\dfrac{n}{2}=0{,}0250\\ \\mathrm{mol}$ et $V=x_{\\max}V_m=600\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$300\\ \\mathrm{mL}$",
+              "why": "Tu as repris le volume du premier essai : la quantité d'acide a doublé, donc $x_{\\max}$ et le volume aussi."
+            },
+            {
+              "label": "$1200\\ \\mathrm{mL}$",
+              "why": "Tu as oublié le coefficient $2$ devant $\\mathrm{H_3O^+}$ : $x_{\\max}=n(\\mathrm{H_3O^+})/2$, et non $n(\\mathrm{H_3O^+})$."
+            },
+            {
+              "label": "$0{,}60\\ \\mathrm{mL}$",
+              "why": "Tu as écrit $0{,}600\\ \\mathrm{L}$ comme $0{,}60\\ \\mathrm{mL}$ : $0{,}600\\ \\mathrm{L}=600\\ \\mathrm{mL}$."
+            }
+          ],
+          "hint": "Le zinc est en excès : quel réactif fixe alors $x_{\\max}$ ? Exprime-le avec son coefficient.",
+          "solution": "$n(\\mathrm{H_3O^+})=C\\,V=1{,}0\\times0{,}0500=0{,}050\\ \\mathrm{mol}$ ; avec le zinc en excès, $x_{\\max}=\\dfrac{n(\\mathrm{H_3O^+})}{2}=0{,}0250\\ \\mathrm{mol}$ et $V_{\\max}=x_{\\max}V_m=0{,}0250\\times24{,}0=0{,}600\\ \\mathrm{L}=600\\ \\mathrm{mL}$. Contrôle : le premier essai donne la moitié, $300\\ \\mathrm{mL}$, car l'acide y est deux fois moins concentré.",
+          "methode": "Réactif en excès : le réactif limitant fixe $x_{\\max}$ ; en déduire $V_{\\max}=x_{\\max}V_m$.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-les-precautions-experimentales-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les incertitudes",
+        "lesson": "Approfondissement — Suivi temporel",
+        "role": "approfondissement",
+        "bac_frequency": 1,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-vitesse-reaction-les-incertitudes",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "qcu",
+      "title": "Les incertitudes",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les incertitudes",
+          "difficulty": 3,
+          "statement": "Un volume de dihydrogène est lu : $V=48\\ \\mathrm{mL}$ avec une incertitude $\\Delta V=1\\ \\mathrm{mL}$ ; $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$ est supposé connu exactement. L'avancement $x=n(\\mathrm{H_2})$ s'écrit :",
+          "options": [
+            {
+              "label": "$x=(2{,}00\\pm0{,}04)\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "$x=\\dfrac{V}{V_m}=\\dfrac{48}{24{,}0}=2{,}00\\ \\mathrm{mmol}$ et $\\Delta x=\\dfrac{\\Delta V}{V_m}=\\dfrac{1}{24{,}0}=0{,}042\\ \\mathrm{mmol}\\approx0{,}04\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$x=(2{,}00\\pm1)\\ \\mathrm{mmol}$",
+              "why": "Tu as repris l'incertitude $1\\ \\mathrm{mL}$ de $V$ sans la convertir : elle se divise aussi par $V_m$, ce qui donne $0{,}04\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$x=(2{,}00\\pm0{,}08)\\ \\mathrm{mmol}$",
+              "why": "Tu as doublé l'incertitude : $\\Delta x=\\dfrac{\\Delta V}{V_m}=0{,}042$, pas $\\dfrac{2\\,\\Delta V}{V_m}$."
+            },
+            {
+              "label": "$x=(2{,}00\\pm0{,}04)\\ \\mathrm{mol}$",
+              "why": "Tu as oublié de convertir les $\\mathrm{mL}$ en litres : $\\dfrac{48\\times10^{-3}}{24{,}0}=2{,}00\\times10^{-3}\\ \\mathrm{mol}$, c'est-à-dire $2{,}00\\ \\mathrm{mmol}$."
+            }
+          ],
+          "hint": "L'incertitude se propage comme la grandeur : $x=V/V_m$, que devient $\\Delta V$ ?",
+          "solution": "$x=\\dfrac{V}{V_m}$ avec $V_m$ exact : $\\Delta x=\\dfrac{\\Delta V}{V_m}=\\dfrac{1\\times10^{-3}\\ \\mathrm{L}}{24{,}0\\ \\mathrm{L\\,mol^{-1}}}=4{,}2\\times10^{-5}\\ \\mathrm{mol}$. Donc $x=(2{,}00\\pm0{,}04)\\ \\mathrm{mmol}$. Contrôle : incertitude relative $\\dfrac{\\Delta x}{x}=\\dfrac{\\Delta V}{V}=\\dfrac{1}{48}=2{,}1\\ \\%$, la même que sur $V$.",
+          "methode": "Incertitude sur $x=V/V_m$ : $\\Delta x=\\Delta V/V_m$ ; l'incertitude relative est conservée.",
+          "points": 1,
+          "ref": "pc-vitesse-reaction-les-incertitudes-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-vitesse-reaction-probleme-1",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "probleme",
+      "title": "Réaction du zinc avec l'acide chlorhydrique",
+      "difficulty": 3,
+      "context": "À $25\\ ^\\circ\\mathrm{C}$, on place un excès de zinc en poudre dans un erlenmeyer, puis on introduit à $t=0$ un volume $V_s=50{,}0\\ \\mathrm{mL}$ d'acide chlorhydrique de concentration $0{,}300\\ \\mathrm{mol\\,L^{-1}}$. La transformation, d'équation $\\mathrm{Zn(s)}+2\\,\\mathrm{H_3O^+}\\rightarrow\\mathrm{Zn^{2+}}+\\mathrm{H_2(g)}+2\\,\\mathrm{H_2O}$, est totale. Le dihydrogène formé est recueilli et son volume $V$ est lu à intervalles de temps réguliers ; $V_m=24{,}0\\ \\mathrm{L\\,mol^{-1}}$. Relevés : $t$ (s) $=0\\,;25\\,;50\\,;75\\,;100\\,;150\\,;200\\,;300$ et $V$ (mL) $=0\\,;53\\,;90\\,;116\\,;135\\,;158\\,;169\\,;177$. La tangente à l'origine à la courbe $V(t)$ coupe l'asymptote horizontale de la courbe à la date $t=72\\ \\mathrm{s}$, et la tangente à la date $t=100\\ \\mathrm{s}$ a pour pente $0{,}62\\ \\mathrm{mL\\,s^{-1}}$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "De la mesure à l'avancement",
+          "difficulty": 1,
+          "statement": "Quelle relation permet de calculer l'avancement $x$ à partir du volume $V$ de dihydrogène recueilli ?",
+          "options": [
+            {
+              "label": "$x=\\dfrac{V}{V_m}$",
+              "correct": true,
+              "why": "$n(\\mathrm{H_2})=\\dfrac{V}{V_m}$ et le coefficient de $\\mathrm{H_2}$ vaut $1$ : $x=n(\\mathrm{H_2})$."
+            },
+            {
+              "label": "$x=\\dfrac{2V}{V_m}$",
+              "why": "Tu as pris le coefficient $2$ de $\\mathrm{H_3O^+}$ : celui de $\\mathrm{H_2}$ est $1$."
+            },
+            {
+              "label": "$x=V\\times V_m$",
+              "why": "Tu as multiplié au lieu de diviser : $n=V/V_m$, jamais $V\\times V_m$."
+            },
+            {
+              "label": "$x=\\dfrac{V}{2\\,V_m}$",
+              "why": "Tu as divisé par $2$ sans raison : le coefficient de $\\mathrm{H_2}$ est $1$."
+            }
+          ],
+          "hint": "Un produit se forme de son coefficient fois $x$ ; le volume d'un gaz se relie à sa quantité par $V_m$.",
+          "solution": "$n(\\mathrm{H_2})=\\dfrac{V}{V_m}$ et, d'après l'équation, $n(\\mathrm{H_2})=x$ (coefficient $1$, quantité initiale nulle). Donc $x=\\dfrac{V}{V_m}$. Contrôle : $V$ en litres et $V_m$ en $\\mathrm{L\\,mol^{-1}}$ donnent des moles.",
+          "methode": "Gaz formé de coefficient $1$ : $x=V/V_m$.",
+          "points": 1,
+          "part": "Partie A — Préparer le suivi",
+          "ref": "pc-vitesse-reaction-probleme-1-q1"
+        },
+        {
+          "notion": "L'avancement de réaction",
+          "difficulty": 2,
+          "statement": "L'avancement maximal de la transformation vaut :",
+          "options": [
+            {
+              "label": "$x_{\\max}=7{,}5\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "Zinc en excès : $\\mathrm{H_3O^+}$ limite. $n(\\mathrm{H_3O^+})=0{,}300\\times0{,}0500=15{,}0\\ \\mathrm{mmol}$ et $x_{\\max}=\\dfrac{n}{2}=7{,}5\\ \\mathrm{mmol}$."
+            },
+            {
+              "label": "$x_{\\max}=15{,}0\\ \\mathrm{mmol}$",
+              "why": "Tu as oublié le coefficient $2$ devant $\\mathrm{H_3O^+}$ : $x_{\\max}=n(\\mathrm{H_3O^+})/2$."
+            },
+            {
+              "label": "$x_{\\max}=3{,}75\\ \\mathrm{mmol}$",
+              "why": "Tu as divisé deux fois par $2$ : le coefficient de $\\mathrm{H_3O^+}$ n'impose de diviser qu'une fois."
+            },
+            {
+              "label": "$x_{\\max}=7{,}5\\ \\mathrm{mol}$",
+              "why": "Tu as oublié de convertir $50{,}0\\ \\mathrm{mL}$ en litres : $\\dfrac{0{,}300\\times50{,}0}{2}$ est en $\\mathrm{mmol}$, pas en $\\mathrm{mol}$."
+            }
+          ],
+          "hint": "Le zinc est en excès : quel réactif limite, et avec quel coefficient ?",
+          "solution": "$n(\\mathrm{H_3O^+})=C\\,V_s=0{,}300\\times0{,}0500=15{,}0\\times10^{-3}\\ \\mathrm{mol}$. Le zinc étant en excès, $x_{\\max}=\\dfrac{n(\\mathrm{H_3O^+})}{2}=7{,}50\\ \\mathrm{mmol}$. Contrôle : il reste du zinc en fin de transformation et plus aucun ion oxonium.",
+          "methode": "Réactif limitant en excès de l'autre : $x_{\\max}=n_{\\text{limitant}}/\\nu$.",
+          "points": 1,
+          "part": "Partie A — Préparer le suivi",
+          "ref": "pc-vitesse-reaction-probleme-1-q2"
+        },
+        {
+          "notion": "Méthode 2 — Convertir la grandeur mesurée en avancement",
+          "difficulty": 2,
+          "statement": "Le volume maximal de dihydrogène que l'on peut recueillir vaut :",
+          "options": [
+            {
+              "label": "$180\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$V_{\\max}=x_{\\max}V_m=7{,}5\\times10^{-3}\\times24{,}0=0{,}180\\ \\mathrm{L}=180\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$360\\ \\mathrm{mL}$",
+              "why": "Tu as pris $n(\\mathrm{H_3O^+})=15{,}0\\ \\mathrm{mmol}$ au lieu de $x_{\\max}$ : le coefficient $2$ devant $\\mathrm{H_3O^+}$ a été oublié."
+            },
+            {
+              "label": "$90\\ \\mathrm{mL}$",
+              "why": "Tu as donné $V_{\\max}/2$, volume dégagé au temps de demi-réaction, pas le volume maximal."
+            },
+            {
+              "label": "$0{,}18\\ \\mathrm{mL}$",
+              "why": "Tu as écrit $0{,}180\\ \\mathrm{L}$ comme $0{,}18\\ \\mathrm{mL}$ : $0{,}180\\ \\mathrm{L}=180\\ \\mathrm{mL}$."
+            }
+          ],
+          "hint": "Le volume de gaz est proportionnel à l'avancement : $V=x\\,V_m$.",
+          "solution": "$n(\\mathrm{H_2})_{\\max}=x_{\\max}=7{,}5\\times10^{-3}\\ \\mathrm{mol}$ donc $V_{\\max}=x_{\\max}V_m=7{,}5\\times10^{-3}\\times24{,}0=0{,}180\\ \\mathrm{L}=180\\ \\mathrm{mL}$. Contrôle : c'est l'asymptote de la courbe $V(t)$, que les relevés ($177\\ \\mathrm{mL}$ à $300\\ \\mathrm{s}$) approchent.",
+          "methode": "$V_{\\max}=x_{\\max}V_m$ ; l'asymptote de $V(t)$ correspond à $x_{\\max}$.",
+          "points": 1,
+          "part": "Partie A — Préparer le suivi",
+          "ref": "pc-vitesse-reaction-probleme-1-q3"
+        },
+        {
+          "notion": "Le temps de demi-réaction",
+          "difficulty": 2,
+          "statement": "Le temps de demi-réaction, lu dans le tableau, vaut :",
+          "options": [
+            {
+              "label": "$50\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$V(t_{1/2})=\\dfrac{V_{\\max}}{2}=90\\ \\mathrm{mL}$, valeur relevée à $t=50\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$90\\ \\mathrm{s}$",
+              "why": "Tu as lu la valeur du volume ($90\\ \\mathrm{mL}$) comme une date : $t_{1/2}$ est l'abscisse, pas l'ordonnée."
+            },
+            {
+              "label": "$150\\ \\mathrm{s}$",
+              "why": "Tu as pris la moitié de la durée d'enregistrement ($300\\ \\mathrm{s}$) : $t_{1/2}$ n'est pas la moitié de la durée du suivi."
+            },
+            {
+              "label": "$25\\ \\mathrm{s}$",
+              "why": "À $t=25\\ \\mathrm{s}$, $V=53\\ \\mathrm{mL}$ et non $90\\ \\mathrm{mL}$ : tu as lu le mauvais point du tableau."
+            }
+          ],
+          "hint": "Calcule la moitié du volume maximal puis cherche la date correspondante.",
+          "solution": "$V_{\\max}=180\\ \\mathrm{mL}$ donc $V(t_{1/2})=90\\ \\mathrm{mL}$, relevé à $t=50\\ \\mathrm{s}$ : $t_{1/2}=50\\ \\mathrm{s}$. Contrôle : $V(25)=53<90<V(75)=116$, la date est encadrée par ces deux relevés.",
+          "methode": "$t_{1/2}$ : lire la date où $V=V_{\\max}/2$.",
+          "points": 1,
+          "part": "Partie B — Exploiter la courbe",
+          "ref": "pc-vitesse-reaction-probleme-1-q4"
+        },
+        {
+          "notion": "Méthode 3 — Calculer une vitesse volumique",
+          "difficulty": 3,
+          "statement": "La vitesse volumique de réaction à $t=0$ vaut :",
+          "options": [
+            {
+              "label": "$2{,}08\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "correct": true,
+              "why": "Pente de la tangente $=\\dfrac{180}{72}=2{,}50\\ \\mathrm{mL\\,s^{-1}}$ ; $\\dfrac{dx}{dt}=\\dfrac{2{,}50\\times10^{-3}}{24{,}0}=1{,}04\\times10^{-4}\\ \\mathrm{mol\\,s^{-1}}$ ; $v=\\dfrac{1}{V_s}\\dfrac{dx}{dt}=\\dfrac{1{,}04\\times10^{-4}}{0{,}0500}=2{,}08\\times10^{-3}$."
+            },
+            {
+              "label": "$1{,}04\\times10^{-4}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as oublié de diviser par le volume de la solution : $1{,}04\\times10^{-4}$ est la pente en $\\mathrm{mol\\,s^{-1}}$."
+            },
+            {
+              "label": "$5{,}21\\times10^{-6}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as multiplié par $V_s$ au lieu de diviser."
+            },
+            {
+              "label": "$2{,}08\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as oublié de convertir les $\\mathrm{mmol}$ en $\\mathrm{mol}$ : le résultat $2{,}08$ est en $\\mathrm{mmol\\,L^{-1}\\,s^{-1}}$."
+            }
+          ],
+          "hint": "Pente de la tangente en $\\mathrm{mL\\,s^{-1}}$, conversion en $\\mathrm{mol\\,s^{-1}}$ avec $V_m$, puis division par le volume de solution.",
+          "solution": "La tangente à l'origine joint $(0\\,;0)$ et $(72\\ \\mathrm{s}\\,;180\\ \\mathrm{mL})$ : pente $=2{,}50\\ \\mathrm{mL\\,s^{-1}}$. Alors $\\dfrac{dx}{dt}=\\dfrac{2{,}50\\times10^{-3}\\ \\mathrm{L\\,s^{-1}}}{24{,}0\\ \\mathrm{L\\,mol^{-1}}}=1{,}04\\times10^{-4}\\ \\mathrm{mol\\,s^{-1}}$ et $v=\\dfrac{1}{V_s}\\dfrac{dx}{dt}=\\dfrac{1{,}04\\times10^{-4}}{0{,}0500}=2{,}08\\times10^{-3}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$. Contrôle : $v\\times V_s=\\dfrac{dx}{dt}$.",
+          "methode": "$v=\\dfrac{1}{V_s}\\dfrac{dx}{dt}$ avec $\\dfrac{dx}{dt}$ lue sur la tangente, convertie avec $V_m$.",
+          "points": 1,
+          "part": "Partie B — Exploiter la courbe",
+          "ref": "pc-vitesse-reaction-probleme-1-q5"
+        },
+        {
+          "notion": "La détermination graphique",
+          "difficulty": 3,
+          "statement": "La tangente à la date $t=100\\ \\mathrm{s}$ a pour pente $0{,}62\\ \\mathrm{mL\\,s^{-1}}$, contre $2{,}50\\ \\mathrm{mL\\,s^{-1}}$ à $t=0$. Entre ces dates, la vitesse volumique :",
+          "options": [
+            {
+              "label": "est divisée par $4$ environ, car les ions oxonium ont été consommés",
+              "correct": true,
+              "why": "$\\dfrac{0{,}62}{2{,}50}\\approx\\dfrac14$ : la vitesse est divisée par $4$ ; la concentration en $\\mathrm{H_3O^+}$ a baissé."
+            },
+            {
+              "label": "est divisée par $2$, car $t=100\\ \\mathrm{s}$ vaut deux fois $t_{1/2}$",
+              "why": "Tu as confondu avec un nombre de demi-réactions : le rapport des vitesses se lit sur le rapport des pentes, $0{,}62/2{,}50\\approx\\dfrac14$."
+            },
+            {
+              "label": "est multipliée par $4$, car le volume de gaz recueilli a augmenté",
+              "why": "Le volume augmente mais la vitesse est la pente de la courbe, qui diminue : elle est divisée par $4$."
+            },
+            {
+              "label": "reste constante, car le volume de la solution ne change pas",
+              "why": "À volume constant, $v$ est proportionnelle à la pente de la tangente, qui n'est pas la même à $t=0$ et à $t=100\\ \\mathrm{s}$."
+            }
+          ],
+          "hint": "À volume constant, la vitesse volumique est proportionnelle à la pente de la tangente.",
+          "solution": "À $V_s$ constant, $\\dfrac{v(100)}{v(0)}=\\dfrac{0{,}62}{2{,}50}=0{,}25$ : la vitesse est environ quatre fois plus faible à $t=100\\ \\mathrm{s}$. Cause : $\\mathrm{H_3O^+}$ est consommé, sa concentration diminue. Contrôle : la courbe $V(t)$ est presque horizontale à $100\\ \\mathrm{s}$, la pente y est faible.",
+          "methode": "Rapport de vitesses = rapport des pentes (à volume constant) ; la vitesse baisse avec les concentrations.",
+          "points": 1,
+          "part": "Partie B — Exploiter la courbe",
+          "ref": "pc-vitesse-reaction-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-vitesse-reaction-probleme-2",
+      "chapter": "pc-vitesse-reaction",
+      "kind": "probleme",
+      "title": "Hydrolyse d'un dérivé chloré suivie par conductimétrie",
+      "difficulty": 3,
+      "context": "On étudie à $25\\ ^\\circ\\mathrm{C}$ l'hydrolyse du 2-chloro-2-méthylpropane, noté $\\mathrm{RCl}$, d'équation $\\mathrm{RCl}+2\\,\\mathrm{H_2O}\\rightarrow\\mathrm{ROH}+\\mathrm{H_3O^+}+\\mathrm{Cl^-}$, transformation totale. On introduit $n_0(\\mathrm{RCl})=2{,}0\\ \\mathrm{mmol}$ dans un mélange de volume $V=100\\ \\mathrm{mL}$ ; l'eau est en grand excès. Seuls les ions $\\mathrm{H_3O^+}$ et $\\mathrm{Cl^-}$ contribuent à la conductivité ; $\\lambda(\\mathrm{H_3O^+})=35{,}0\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$ et $\\lambda(\\mathrm{Cl^-})=7{,}6\\ \\mathrm{mS\\,m^2\\,mol^{-1}}$. Relevés de la conductivité $\\sigma$ (en $\\mathrm{mS\\,m^{-1}}$) : $t$ (s) $=0\\,;150\\,;300\\,;600\\,;900\\,;1500$ et $\\sigma=0\\,;250\\,;426\\,;639\\,;746\\,;825$. La tangente à l'origine à la courbe $\\sigma(t)$ passe par le point $(t=200\\ \\mathrm{s}\\,;\\,\\sigma=394\\ \\mathrm{mS\\,m^{-1}})$.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Les méthodes de suivi",
+          "difficulty": 1,
+          "statement": "Pourquoi la conductimétrie est-elle adaptée au suivi de cette transformation ?",
+          "options": [
+            {
+              "label": "des ions apparaissent à partir d'espèces neutres, donc la conductivité augmente avec $x$",
+              "correct": true,
+              "why": "$\\mathrm{H_3O^+}$ et $\\mathrm{Cl^-}$ sont formés à partir de molécules : $\\sigma$ croît avec $x$."
+            },
+            {
+              "label": "tous les réactifs sont des ions qui disparaissent au cours de la transformation chimique",
+              "why": "Les réactifs ($\\mathrm{RCl}$ et l'eau) ne sont pas des ions ; ce sont les produits qui sont ioniques."
+            },
+            {
+              "label": "la transformation dégage un gaz dont la conductivité est facilement mesurable en solution",
+              "why": "Aucun gaz n'est formé et un gaz ne contribuerait pas à la conductivité de la solution."
+            },
+            {
+              "label": "la solution change de couleur et la conductivité mesure l'intensité de cette couleur",
+              "why": "La conductivité ne mesure pas la couleur : c'est l'absorbance qui s'y rapporte, et ici rien n'est coloré."
+            }
+          ],
+          "hint": "Quelles espèces de l'équation sont chargées, et de quel côté se trouvent-elles ?",
+          "solution": "La conductivité d'une solution est la somme des contributions de ses ions. Ici, deux ions $\\mathrm{H_3O^+}$ et $\\mathrm{Cl^-}$ sont formés à partir d'espèces neutres : $\\sigma$ augmente avec $x$ et $\\sigma=\\bigl(\\lambda(\\mathrm{H_3O^+})+\\lambda(\\mathrm{Cl^-})\\bigr)\\dfrac{x}{V}$. Contrôle : $\\sigma=0$ à $t=0$ car il n'y a pas encore d'ions.",
+          "methode": "Conductimétrie : adaptée si des ions sont formés ou consommés.",
+          "points": 1,
+          "part": "Partie A — Préparer le suivi",
+          "ref": "pc-vitesse-reaction-probleme-2-q1"
+        },
+        {
+          "notion": "Méthode 4 — Exploiter une conductimétrie",
+          "difficulty": 2,
+          "statement": "À la date $t=300\\ \\mathrm{s}$ ($\\sigma=426\\ \\mathrm{mS\\,m^{-1}}$), l'avancement vaut :",
+          "options": [
+            {
+              "label": "$x=1{,}0\\ \\mathrm{mmol}$",
+              "correct": true,
+              "why": "$x=\\dfrac{\\sigma\\,V}{\\lambda(\\mathrm{H_3O^+})+\\lambda(\\mathrm{Cl^-})}=\\dfrac{426\\times1{,}00\\times10^{-4}}{42{,}6}=1{,}0\\times10^{-3}\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$x=1{,}0\\ \\mathrm{mol}$",
+              "why": "Tu as utilisé $V=0{,}100\\ \\mathrm{L}$ : avec $\\sigma$ en $\\mathrm{mS\\,m^{-1}}$ et $\\lambda$ en $\\mathrm{mS\\,m^2\\,mol^{-1}}$, il faut $V$ en $\\mathrm{m^3}$."
+            },
+            {
+              "label": "$x=1{,}2\\ \\mathrm{mmol}$",
+              "why": "Tu n'as compté que $\\lambda(\\mathrm{H_3O^+})$ : l'ion chlorure contribue aussi à la conductivité."
+            },
+            {
+              "label": "$x=1{,}6\\ \\mathrm{mmol}$",
+              "why": "Tu as soustrait les conductivités ioniques : les deux ions sont produits, leurs contributions s'additionnent."
+            }
+          ],
+          "hint": "Exprime $\\sigma$ en fonction de $x$ puis isole $x$, avec $V$ en $\\mathrm{m^3}$.",
+          "solution": "Les deux ions se forment avec le coefficient $1$ : $\\sigma=\\bigl(\\lambda(\\mathrm{H_3O^+})+\\lambda(\\mathrm{Cl^-})\\bigr)\\dfrac{x}{V}$ donc $x=\\dfrac{\\sigma V}{42{,}6}=\\dfrac{426\\times1{,}00\\times10^{-4}}{42{,}6}=1{,}0\\ \\mathrm{mmol}$. Contrôle : $x=1{,}0\\ \\mathrm{mmol}$ est la moitié de $n_0=2{,}0\\ \\mathrm{mmol}$, cohérent avec la date $t=300\\ \\mathrm{s}$ qui sera le temps de demi-réaction.",
+          "methode": "Conductimétrie : $\\sigma=\\sum\\lambda_i[X_i]$ puis $x=\\sigma V/\\sum\\lambda_i$ (SI).",
+          "points": 1,
+          "part": "Partie A — Préparer le suivi",
+          "ref": "pc-vitesse-reaction-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 1 — Le tableau d'avancement",
+          "difficulty": 2,
+          "statement": "La conductivité finale de la solution, quand la transformation est terminée, vaut :",
+          "options": [
+            {
+              "label": "$\\sigma_f=852\\ \\mathrm{mS\\,m^{-1}}$",
+              "correct": true,
+              "why": "$x_{\\max}=n_0=2{,}0\\ \\mathrm{mmol}$ (réactif limitant $\\mathrm{RCl}$) : $\\sigma_f=42{,}6\\times\\dfrac{2{,}0\\times10^{-3}}{1{,}00\\times10^{-4}}=42{,}6\\times20=852\\ \\mathrm{mS\\,m^{-1}}$."
+            },
+            {
+              "label": "$\\sigma_f=700\\ \\mathrm{mS\\,m^{-1}}$",
+              "why": "Tu n'as compté que $\\mathrm{H_3O^+}$ : $35{,}0\\times20=700$ ; l'ion $\\mathrm{Cl^-}$ apparaît aussi, avec le même coefficient."
+            },
+            {
+              "label": "$\\sigma_f=152\\ \\mathrm{mS\\,m^{-1}}$",
+              "why": "Tu n'as compté que $\\mathrm{Cl^-}$ : $7{,}6\\times20=152$ ; l'ion $\\mathrm{H_3O^+}$, bien plus conducteur, apparaît aussi."
+            },
+            {
+              "label": "$\\sigma_f=0{,}852\\ \\mathrm{mS\\,m^{-1}}$",
+              "why": "Tu as utilisé la concentration en $\\mathrm{mol\\,L^{-1}}$ ($0{,}020$) au lieu de $\\mathrm{mol\\,m^{-3}}$ ($20$) : le résultat est $1000$ fois trop petit."
+            }
+          ],
+          "hint": "Détermine d'abord l'avancement maximal et les concentrations finales des deux ions, en $\\mathrm{mol\\,m^{-3}}$.",
+          "solution": "$x_{\\max}=n_0(\\mathrm{RCl})=2{,}0\\ \\mathrm{mmol}$ (l'eau est en excès). $[\\mathrm{H_3O^+}]_f=[\\mathrm{Cl^-}]_f=\\dfrac{x_{\\max}}{V}=\\dfrac{2{,}0\\times10^{-3}}{1{,}00\\times10^{-4}}=20\\ \\mathrm{mol\\,m^{-3}}$. $\\sigma_f=(35{,}0+7{,}6)\\times20=852\\ \\mathrm{mS\\,m^{-1}}$. Contrôle : le dernier relevé ($825$ à $1500\\ \\mathrm{s}$) s'en approche sans le dépasser.",
+          "methode": "$\\sigma_f=\\bigl(\\sum\\lambda_i\\bigr)\\,x_{\\max}/V$ avec $V$ en $\\mathrm{m^3}$.",
+          "points": 1,
+          "part": "Partie A — Préparer le suivi",
+          "ref": "pc-vitesse-reaction-probleme-2-q3"
+        },
+        {
+          "notion": "Méthode 5 — Déterminer $t_{1/2}$ et conclure",
+          "difficulty": 2,
+          "statement": "Le temps de demi-réaction de la transformation vaut :",
+          "options": [
+            {
+              "label": "$300\\ \\mathrm{s}$",
+              "correct": true,
+              "why": "$\\sigma$ est proportionnelle à $x$ : $x=\\dfrac{x_{\\max}}2$ correspond à $\\sigma=\\dfrac{852}{2}=426\\ \\mathrm{mS\\,m^{-1}}$, relevé à $t=300\\ \\mathrm{s}$."
+            },
+            {
+              "label": "$426\\ \\mathrm{s}$",
+              "why": "Tu as lu la valeur de $\\sigma$ ($426$) comme une date : $t_{1/2}$ est une abscisse en secondes."
+            },
+            {
+              "label": "$150\\ \\mathrm{s}$",
+              "why": "À $t=150\\ \\mathrm{s}$, $\\sigma=250$ et non $426$ : tu as lu le mauvais point."
+            },
+            {
+              "label": "$750\\ \\mathrm{s}$",
+              "why": "Tu as pris la moitié de la durée d'enregistrement ($1500\\ \\mathrm{s}$) : $t_{1/2}$ se définit sur l'avancement."
+            }
+          ],
+          "hint": "L'avancement est proportionnel à $\\sigma$ : à quelle valeur de $\\sigma$ correspond la moitié de $x_{\\max}$ ?",
+          "solution": "$\\sigma=\\dfrac{\\sum\\lambda_i}{V}\\,x$ est proportionnelle à $x$, donc $x(t_{1/2})=\\dfrac{x_{\\max}}{2}$ correspond à $\\sigma=\\dfrac{\\sigma_f}{2}=426\\ \\mathrm{mS\\,m^{-1}}$. Le tableau donne $426$ à $t=300\\ \\mathrm{s}$ : $t_{1/2}=300\\ \\mathrm{s}$. Contrôle : en $t=600\\ \\mathrm{s}$ ($2\\,t_{1/2}$) $\\sigma=639$, soit $75\\ \\%$ de $\\sigma_f$.",
+          "methode": "$\\sigma\\propto x$ : $t_{1/2}$ se lit à $\\sigma=\\sigma_f/2$.",
+          "points": 1,
+          "part": "Partie B — Exploiter la courbe",
+          "ref": "pc-vitesse-reaction-probleme-2-q4"
+        },
+        {
+          "notion": "Méthode 3 — Calculer une vitesse volumique",
+          "difficulty": 3,
+          "statement": "La vitesse volumique de réaction à $t=0$ vaut :",
+          "options": [
+            {
+              "label": "$4{,}62\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "correct": true,
+              "why": "Pente de la tangente $\\dfrac{394}{200}=1{,}97\\ \\mathrm{mS\\,m^{-1}\\,s^{-1}}$ ; $v=\\dfrac{1}{V}\\dfrac{dx}{dt}=\\dfrac{1}{\\sum\\lambda_i}\\dfrac{d\\sigma}{dt}=\\dfrac{1{,}97}{42{,}6}=0{,}0462\\ \\mathrm{mol\\,m^{-3}\\,s^{-1}}=4{,}62\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$."
+            },
+            {
+              "label": "$4{,}62\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as laissé le résultat en $\\mathrm{mol\\,m^{-3}\\,s^{-1}}$ : $1\\ \\mathrm{mol\\,m^{-3}}=10^{-3}\\ \\mathrm{mol\\,L^{-1}}$, il faut convertir."
+            },
+            {
+              "label": "$5{,}63\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu n'as divisé que par $\\lambda(\\mathrm{H_3O^+})=35{,}0$ : l'ion chlorure participe aussi, il faut diviser par $42{,}6$."
+            },
+            {
+              "label": "$3{,}33\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$",
+              "why": "Tu as pris la corde entre $t=0$ et $t=300\\ \\mathrm{s}$ ($1{,}42\\ \\mathrm{mS\\,m^{-1}\\,s^{-1}}$) : c'est une vitesse moyenne, pas la vitesse à $t=0$."
+            }
+          ],
+          "hint": "Relie $\\dfrac{d\\sigma}{dt}$ à $\\dfrac{1}{V}\\dfrac{dx}{dt}$ avec la somme des conductivités ioniques molaires, puis convertis l'unité.",
+          "solution": "$\\sigma=\\dfrac{\\sum\\lambda_i}{V}\\,x$ donc $v=\\dfrac{1}{V}\\dfrac{dx}{dt}=\\dfrac{1}{\\sum\\lambda_i}\\dfrac{d\\sigma}{dt}$. La tangente à l'origine a pour pente $\\dfrac{394}{200}=1{,}97\\ \\mathrm{mS\\,m^{-1}\\,s^{-1}}$ : $v=\\dfrac{1{,}97}{42{,}6}=0{,}0462\\ \\mathrm{mol\\,m^{-3}\\,s^{-1}}=4{,}62\\times10^{-5}\\ \\mathrm{mol\\,L^{-1}\\,s^{-1}}$. Contrôle : $v\\times V=4{,}62\\times10^{-6}\\ \\mathrm{mol\\,s^{-1}}$ pour $V=1{,}00\\times10^{-4}\\ \\mathrm{m^3}$.",
+          "methode": "Conductimétrie : $v=\\dfrac{1}{\\sum\\lambda_i}\\dfrac{d\\sigma}{dt}$, tangente et non corde, puis conversion en $\\mathrm{mol\\,L^{-1}\\,s^{-1}}$.",
+          "points": 1,
+          "part": "Partie B — Exploiter la courbe",
+          "ref": "pc-vitesse-reaction-probleme-2-q5"
+        },
+        {
+          "notion": "Méthode 4 — Exploiter une conductimétrie",
+          "difficulty": 3,
+          "statement": "À la date $t=600\\ \\mathrm{s}$ ($\\sigma=639\\ \\mathrm{mS\\,m^{-1}}$), la concentration en ions chlorure vaut :",
+          "options": [
+            {
+              "label": "$0{,}015\\ \\mathrm{mol\\,L^{-1}}$",
+              "correct": true,
+              "why": "$[\\mathrm{Cl^-}]=\\dfrac{x}{V}=\\dfrac{\\sigma}{\\lambda(\\mathrm{H_3O^+})+\\lambda(\\mathrm{Cl^-})}=\\dfrac{639}{42{,}6}=15{,}0\\ \\mathrm{mol\\,m^{-3}}=0{,}015\\ \\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$15{,}0\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as laissé le résultat en $\\mathrm{mol\\,m^{-3}}$ : il faut diviser par $1000$ pour obtenir des $\\mathrm{mol\\,L^{-1}}$."
+            },
+            {
+              "label": "$0{,}084\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as divisé $\\sigma$ par $\\lambda(\\mathrm{Cl^-})$ seul : la conductivité est due aux deux ions, pas à $\\mathrm{Cl^-}$ seulement."
+            },
+            {
+              "label": "$0{,}030\\ \\mathrm{mol\\,L^{-1}}$",
+              "why": "Tu as multiplié par $2$ en croyant que l'équation forme deux ions chlorure : elle en forme un par unité d'avancement."
+            }
+          ],
+          "hint": "Les deux ions ont la même concentration ; exprime $\\sigma$ en fonction de cette concentration commune.",
+          "solution": "$[\\mathrm{H_3O^+}]=[\\mathrm{Cl^-}]=\\dfrac{x}{V}$ et $\\sigma=\\bigl(\\lambda(\\mathrm{H_3O^+})+\\lambda(\\mathrm{Cl^-})\\bigr)[\\mathrm{Cl^-}]$, d'où $[\\mathrm{Cl^-}]=\\dfrac{639}{42{,}6}=15{,}0\\ \\mathrm{mol\\,m^{-3}}=0{,}015\\ \\mathrm{mol\\,L^{-1}}$. Contrôle : c'est $75\\ \\%$ de la concentration finale $0{,}020\\ \\mathrm{mol\\,L^{-1}}$ ($x_{\\max}/V$).",
+          "methode": "Conductimétrie : concentration d'un ion $=\\sigma/\\sum\\lambda_i$ quand tous les ions ont même concentration.",
+          "points": 1,
+          "part": "Partie B — Exploiter la courbe",
+          "ref": "pc-vitesse-reaction-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [
-   "Méthode 1 — Le tableau d'avancement",
-   "Méthode 2 — Convertir la grandeur mesurée en avancement",
-   "Méthode 3 — Calculer une vitesse volumique",
-   "Méthode 4 — Exploiter une conductimétrie",
-   "Méthode 5 — Déterminer $t_{1/2}$ et conclure"
-  ],
-  "existing_questions_total": 8,
-  "target_new_questions": 42,
-  "suggested_figures": [
-   "cinetique — Suivi cinétique — [réactif] décroît, [produit] croît, avec t½",
-   "vecteurs-cinematiques — Position, vitesse et accélération d'un point mobile",
-   "chute-fluide-vitesse — Vitesse au cours d'une chute dans un fluide",
-   "retard-temporel — Retard temporel : M reproduit le mouvement de S avec τ = d/c",
-   "vitesse-tangente — Détermination de la vitesse par la pente de la tangente",
-   "montage-conductimetrie — Montage de suivi conductimétrique",
-   "esterification-rendement — Vitesse vs rendement : effet du catalyseur et effet de l'excès de réactif",
-   "montage-gaz — Mesure du volume de gaz dégagé (suivi cinétique)"
-  ],
-  "sources": [
-   {
-    "annale": "pc-svt-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-vitesse-reaction-serie-1",
+      "title": "Suivi temporel — vitesse de réaction · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-vitesse-reaction",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-vitesse-reaction-l-avancement-de-reaction-q1",
+        "pc-vitesse-reaction-la-determination-graphique-q1",
+        "pc-vitesse-reaction-le-temps-de-demi-reaction-q1",
+        "pc-vitesse-reaction-a-quoi-sert-t-1-2-q1",
+        "pc-vitesse-reaction-les-methodes-de-suivi-q1",
+        "pc-vitesse-reaction-le-montage-q1",
+        "pc-vitesse-reaction-de-la-mesure-a-l-avancement-q1",
+        "pc-vitesse-reaction-le-protocole-q1",
+        "pc-vitesse-reaction-l-exploitation-q1",
+        "pc-vitesse-reaction-les-sources-d-erreur-q1",
+        "pc-vitesse-reaction-la-vitesse-volumique-de-reaction-q1",
+        "pc-vitesse-reaction-l-avancement-de-reaction-q2"
+      ]
+    },
+    {
+      "slug": "pc-vitesse-reaction-serie-2",
+      "title": "Suivi temporel — vitesse de réaction · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-vitesse-reaction",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-vitesse-reaction-l-avancement-de-reaction-q3",
+        "pc-vitesse-reaction-la-determination-graphique-q2",
+        "pc-vitesse-reaction-le-temps-de-demi-reaction-q2",
+        "pc-vitesse-reaction-a-quoi-sert-t-1-2-q2",
+        "pc-vitesse-reaction-les-methodes-de-suivi-q2",
+        "pc-vitesse-reaction-le-montage-q2",
+        "pc-vitesse-reaction-de-la-mesure-a-l-avancement-q2",
+        "pc-vitesse-reaction-le-protocole-q2",
+        "pc-vitesse-reaction-l-exploitation-q2",
+        "pc-vitesse-reaction-les-sources-d-erreur-q2",
+        "pc-vitesse-reaction-la-determination-graphique-q3",
+        "pc-vitesse-reaction-a-quoi-sert-t-1-2-q4"
+      ]
+    },
+    {
+      "slug": "pc-vitesse-reaction-serie-3",
+      "title": "Suivi temporel — vitesse de réaction · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-vitesse-reaction",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-vitesse-reaction-l-avancement-de-reaction-q4",
+        "pc-vitesse-reaction-le-temps-de-demi-reaction-q3",
+        "pc-vitesse-reaction-les-methodes-de-suivi-q3",
+        "pc-vitesse-reaction-le-montage-q3",
+        "pc-vitesse-reaction-de-la-mesure-a-l-avancement-q4",
+        "pc-vitesse-reaction-le-protocole-q4",
+        "pc-vitesse-reaction-l-exploitation-q4",
+        "pc-vitesse-reaction-les-sources-d-erreur-q4",
+        "pc-vitesse-reaction-probleme-1-q5",
+        "pc-vitesse-reaction-probleme-1-q6",
+        "pc-vitesse-reaction-probleme-2-q5",
+        "pc-vitesse-reaction-probleme-2-q6"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'avancement de réaction",
-    "lesson": "Avancement & vitesse volumique",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-l-avancement-de-reaction",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "L'avancement de réaction",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-l-avancement-de-reaction-q1",
-     "notion": "L'avancement de réaction",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La vitesse volumique de réaction",
-    "lesson": "Avancement & vitesse volumique",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 4,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-la-vitesse-volumique-de-reaction",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "La vitesse volumique de réaction",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-la-vitesse-volumique-de-reaction-q1",
-     "notion": "La vitesse volumique de réaction",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La détermination graphique",
-    "lesson": "Avancement & vitesse volumique",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-la-determination-graphique",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "La détermination graphique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-la-determination-graphique-q1",
-     "notion": "La détermination graphique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le temps de demi-réaction",
-    "lesson": "Temps de demi-réaction & suivi",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-le-temps-de-demi-reaction",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "Le temps de demi-réaction",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-le-temps-de-demi-reaction-q1",
-     "notion": "Le temps de demi-réaction",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "À quoi sert $t_{1/2}$",
-    "lesson": "Temps de demi-réaction & suivi",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-a-quoi-sert-t-1-2",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "À quoi sert $t_{1/2}$",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-a-quoi-sert-t-1-2-q1",
-     "notion": "À quoi sert $t_{1/2}$",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les méthodes de suivi",
-    "lesson": "Temps de demi-réaction & suivi",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-les-methodes-de-suivi",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "Les méthodes de suivi",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-les-methodes-de-suivi-q1",
-     "notion": "Les méthodes de suivi",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le montage",
-    "lesson": "Suivi par dégagement gazeux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-le-montage",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "Le montage",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-le-montage-q1",
-     "notion": "Le montage",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "De la mesure à l'avancement",
-    "lesson": "Suivi par dégagement gazeux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-de-la-mesure-a-l-avancement",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "De la mesure à l'avancement",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-de-la-mesure-a-l-avancement-q1",
-     "notion": "De la mesure à l'avancement",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le protocole",
-    "lesson": "Suivi par dégagement gazeux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-le-protocole",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "Le protocole",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-le-protocole-q1",
-     "notion": "Le protocole",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'exploitation",
-    "lesson": "Suivi par dégagement gazeux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-l-exploitation",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "L'exploitation",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-l-exploitation-q1",
-     "notion": "L'exploitation",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les sources d'erreur",
-    "lesson": "Suivi par dégagement gazeux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-les-sources-d-erreur",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "Les sources d'erreur",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-les-sources-d-erreur-q1",
-     "notion": "Les sources d'erreur",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La vitesse de disparition et de formation",
-    "lesson": "Approfondissement — Suivi temporel",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-la-vitesse-de-disparition-et-de-formatio",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "La vitesse de disparition et de formation",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-la-vitesse-de-disparition-et-de-formatio-q1",
-     "notion": "La vitesse de disparition et de formation",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La modélisation exponentielle",
-    "lesson": "Approfondissement — Suivi temporel",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-la-modelisation-exponentielle",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "La modélisation exponentielle",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-la-modelisation-exponentielle-q1",
-     "notion": "La modélisation exponentielle",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La loi d'Arrhenius",
-    "lesson": "Approfondissement — Suivi temporel",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-la-loi-d-arrhenius",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "La loi d'Arrhenius",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-la-loi-d-arrhenius-q1",
-     "notion": "La loi d'Arrhenius",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les précautions expérimentales",
-    "lesson": "Approfondissement — Suivi temporel",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-les-precautions-experimentales",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "Les précautions expérimentales",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-les-precautions-experimentales-q1",
-     "notion": "Les précautions expérimentales",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les incertitudes",
-    "lesson": "Approfondissement — Suivi temporel",
-    "role": "approfondissement",
-    "bac_frequency": 1,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-vitesse-reaction-les-incertitudes",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "qcu",
-   "title": "Les incertitudes",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-les-incertitudes-q1",
-     "notion": "Les incertitudes",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-vitesse-reaction-probleme-1",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-vitesse-reaction-probleme-2",
-   "chapter": "pc-vitesse-reaction",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-vitesse-reaction-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-vitesse-reaction-serie-1",
-   "title": "Suivi temporel — vitesse de réaction · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-vitesse-reaction",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-vitesse-reaction-serie-2",
-   "title": "Suivi temporel — vitesse de réaction · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-vitesse-reaction",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-vitesse-reaction-serie-3",
-   "title": "Suivi temporel — vitesse de réaction · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-vitesse-reaction",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
