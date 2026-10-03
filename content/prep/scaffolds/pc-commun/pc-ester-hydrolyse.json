@@ -1,1467 +1,2577 @@
 {
- "format": "bacup.prep/v2",
- "level": "2bac",
- "subject": "pc",
- "track": null,
- "_scaffold": {
-  "pack": "pc-commun",
-  "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
-  "priority": "P1",
-  "chapter": {
-   "code": "pc-ester-hydrolyse",
-   "name": "Estérification et hydrolyse",
-   "domain": "chimie",
-   "unit": "Chimie organique"
+  "format": "bacup.prep/v2",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "_scaffold": {
+    "pack": "pc-commun",
+    "label": "Physique-Chimie — tronc commun (PC, SVT, SM)",
+    "priority": "P1",
+    "chapter": {
+      "code": "pc-ester-hydrolyse",
+      "name": "Estérification et hydrolyse",
+      "domain": "chimie",
+      "unit": "Chimie organique"
+    },
+    "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
+    "notions": [
+      "Les deux réactions inverses",
+      "Les groupes fonctionnels",
+      "La nomenclature des esters",
+      "Les trois caractères de l'estérification",
+      "Deux leviers indépendants",
+      "Agir sur la vitesse",
+      "Agir sur le rendement",
+      "Le rendement",
+      "Des dérivés d'acide plus réactifs",
+      "L'hydrolyse basique",
+      "Les esters dans la nature",
+      "Les techniques de séparation",
+      "Le montage",
+      "Pourquoi ce montage",
+      "Le protocole d'une estérification",
+      "Le traitement du mélange",
+      "Les sources d'erreur",
+      "Méthode 1 — Nommer et écrire les formules",
+      "Méthode 2 — Calculer $x_f$ et le rendement",
+      "Méthode 3 — Déterminer $K$ à partir d'une mesure",
+      "Méthode 4 — Le dosage de l'acide restant",
+      "Méthode 5 — Justifier un choix expérimental"
+    ],
+    "methodes_du_cours": [
+      "Méthode 1 — Nommer et écrire les formules",
+      "Méthode 2 — Calculer $x_f$ et le rendement",
+      "Méthode 3 — Déterminer $K$ à partir d'une mesure",
+      "Méthode 4 — Le dosage de l'acide restant",
+      "Méthode 5 — Justifier un choix expérimental"
+    ],
+    "existing_questions_total": 8,
+    "target_new_questions": 48,
+    "suggested_figures": [
+      "montage-reflux — Montage à reflux (estérification / saponification)",
+      "esterification-rendement — Vitesse vs rendement : effet du catalyseur et effet de l'excès de réactif"
+    ],
+    "sources": [
+      {
+        "annale": "pc-svt-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2023-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2020-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2017-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-svt-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2026-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2025-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2024-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2023-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2022-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2021-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2020-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2019-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2018-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2017-normale",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2016-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2015-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-rattrapage",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
+      },
+      {
+        "annale": "pc-sm-2014-normale",
+        "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
+        "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
+      }
+    ],
+    "forbidden_sources": [
+      "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+    ]
   },
-  "how_to": "Lis docs/content-brief-preparation.md. Remplis chaque bloc _todo puis supprime \"_todo\": true (ou mets false). Ajoute autant de questions que target_new_questions (copie le modèle, incrémente le suffixe -q1, -q2…). Les blocs laissés en _todo sont ignorés à l'import. Vérifie dans /admin/preparation → Import JSON → Vérifier.",
-  "notions": [
-   "Les deux réactions inverses",
-   "Les groupes fonctionnels",
-   "La nomenclature des esters",
-   "Les trois caractères de l'estérification",
-   "Deux leviers indépendants",
-   "Agir sur la vitesse",
-   "Agir sur le rendement",
-   "Le rendement",
-   "Des dérivés d'acide plus réactifs",
-   "L'hydrolyse basique",
-   "Les esters dans la nature",
-   "Les techniques de séparation",
-   "Le montage",
-   "Pourquoi ce montage",
-   "Le protocole d'une estérification",
-   "Le traitement du mélange",
-   "Les sources d'erreur",
-   "Méthode 1 — Nommer et écrire les formules",
-   "Méthode 2 — Calculer $x_f$ et le rendement",
-   "Méthode 3 — Déterminer $K$ à partir d'une mesure",
-   "Méthode 4 — Le dosage de l'acide restant",
-   "Méthode 5 — Justifier un choix expérimental"
+  "exercises": [
+    {
+      "_brief": {
+        "notion": "Les deux réactions inverses",
+        "lesson": "Estérification et hydrolyse",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 3,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-les-deux-reactions-inverses",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Les deux réactions inverses",
+      "difficulty": 1,
+      "questions": [
+        {
+          "notion": "Les deux réactions inverses",
+          "difficulty": 1,
+          "statement": "L'hydrolyse d'un ester est la réaction :",
+          "options": [
+            {
+              "label": "de l'ester avec l'eau, qui donne un acide carboxylique et un alcool",
+              "correct": true,
+              "why": "C'est la réaction inverse de l'estérification : $\\mathrm{ester}+\\mathrm{H_2O}\\rightleftharpoons\\mathrm{acide}+\\mathrm{alcool}$."
+            },
+            {
+              "label": "d'un acide carboxylique avec un alcool, qui donne un ester et de l'eau",
+              "why": "C'est l'estérification, la réaction directe, et non l'hydrolyse."
+            },
+            {
+              "label": "de l'ester avec une base forte, qui donne un carboxylate et un alcool",
+              "why": "C'est la saponification, réaction totale : l'hydrolyse proprement dite est limitée."
+            },
+            {
+              "label": "de l'acide carboxylique avec l'eau, qui donne un ester",
+              "why": "Un acide carboxylique réagit avec un alcool, non avec l'eau, pour former un ester."
+            }
+          ],
+          "hint": "L'hydrolyse est la réaction inverse de l'estérification.",
+          "solution": "Estérification : $\\mathrm{acide}+\\mathrm{alcool}\\rightleftharpoons\\mathrm{ester}+\\mathrm{eau}$. L'hydrolyse est la réaction dans le sens inverse : l'ester et l'eau redonnent l'acide et l'alcool. Contrôle : les deux réactions s'arrêtent dans le même état d'équilibre.",
+          "methode": "Estérification et hydrolyse : deux sens d'une même équation, limitée.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-deux-reactions-inverses-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les groupes fonctionnels",
+        "lesson": "Estérification et hydrolyse",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-les-groupes-fonctionnels",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Les groupes fonctionnels",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les groupes fonctionnels",
+          "difficulty": 1,
+          "statement": "Le groupe caractéristique d'un acide carboxylique est :",
+          "options": [
+            {
+              "label": "le groupe carboxyle $-\\mathrm{COOH}$",
+              "correct": true,
+              "why": "Un acide carboxylique est caractérisé par le groupe $-\\mathrm{COOH}$."
+            },
+            {
+              "label": "le groupe hydroxyle $-\\mathrm{OH}$ seul",
+              "why": "Le groupe $-\\mathrm{OH}$ seul caractérise un alcool."
+            },
+            {
+              "label": "le groupe ester $-\\mathrm{COO}-$",
+              "why": "Le groupe $-\\mathrm{COO}-$, lié à deux chaînes carbonées, caractérise un ester."
+            },
+            {
+              "label": "le groupe carbonyle $-\\mathrm{CO}-$ seul",
+              "why": "Le groupe $-\\mathrm{CO}-$ seul caractérise une cétone ou un aldéhyde."
+            }
+          ],
+          "hint": "L'acide carboxylique porte à la fois un groupe carbonyle et un groupe hydroxyle sur le même carbone.",
+          "solution": "Les acides carboxyliques portent le groupe carboxyle $-\\mathrm{COOH}$ (carbonyle et hydroxyle sur le même carbone). Contrôle : l'acide éthanoïque s'écrit $\\mathrm{CH_3-COOH}$.",
+          "methode": "Acide : $-\\mathrm{COOH}$ ; alcool : $-\\mathrm{OH}$ ; ester : $-\\mathrm{COO}-$.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-groupes-fonctionnels-q1"
+        },
+        {
+          "notion": "Les groupes fonctionnels",
+          "difficulty": 2,
+          "statement": "Parmi ces composés, celui qui est un ester est :",
+          "options": [
+            {
+              "label": "$\\mathrm{CH_3-COO-CH_2-CH_3}$",
+              "correct": true,
+              "why": "Le groupe $-\\mathrm{COO}-$ est lié aux chaînes $\\mathrm{CH_3}$ et $\\mathrm{CH_2CH_3}$ : c'est un ester."
+            },
+            {
+              "label": "$\\mathrm{CH_3-CH_2-COOH}$",
+              "why": "Il se termine par $-\\mathrm{COOH}$ : c'est un acide carboxylique, l'acide propanoïque."
+            },
+            {
+              "label": "$\\mathrm{CH_3-CH_2-CH_2-OH}$",
+              "why": "Il porte le groupe $-\\mathrm{OH}$ : c'est un alcool, le propan-1-ol."
+            },
+            {
+              "label": "$\\mathrm{CH_3-CO-CH_3}$",
+              "why": "Le groupe $-\\mathrm{CO}-$ lié à deux carbones caractérise une cétone, la propanone."
+            }
+          ],
+          "hint": "Cherche le groupe $-\\mathrm{COO}-$ lié à deux chaînes carbonées.",
+          "solution": "Seul $\\mathrm{CH_3-COO-CH_2-CH_3}$ contient le groupe ester $-\\mathrm{COO}-$ entre deux chaînes carbonées. Contrôle : les trois autres composés sont un acide, un alcool et une cétone.",
+          "methode": "Ester : $\\mathrm{R-COO-R'}$.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-groupes-fonctionnels-q2"
+        },
+        {
+          "notion": "Les groupes fonctionnels",
+          "difficulty": 2,
+          "statement": "Le propan-2-ol $\\mathrm{CH_3-CHOH-CH_3}$ est un alcool :",
+          "options": [
+            {
+              "label": "secondaire, car le carbone porteur de $-\\mathrm{OH}$ est lié à deux carbones",
+              "correct": true,
+              "why": "Le carbone $\\mathrm{CHOH}$ est lié à deux carbones : l'alcool est secondaire."
+            },
+            {
+              "label": "primaire, car il ne possède qu'un seul groupe $-\\mathrm{OH}$ dans la molécule",
+              "why": "La classe dépend du nombre de carbones liés au carbone porteur de $-\\mathrm{OH}$, non du nombre de groupes $-\\mathrm{OH}$."
+            },
+            {
+              "label": "tertiaire, car la chaîne carbonée contient trois atomes de carbone",
+              "why": "La classe ne dépend pas de la longueur de la chaîne : le carbone porteur de $-\\mathrm{OH}$ est lié à deux carbones, non trois."
+            },
+            {
+              "label": "primaire, car le groupe $-\\mathrm{OH}$ est placé au milieu de la chaîne",
+              "why": "Placé au milieu de la chaîne, le groupe donne un alcool secondaire : un alcool primaire a son $-\\mathrm{OH}$ en bout de chaîne."
+            }
+          ],
+          "hint": "Compte les atomes de carbone directement liés au carbone qui porte le groupe $-\\mathrm{OH}$.",
+          "solution": "Le carbone qui porte $-\\mathrm{OH}$ est lié à $2$ autres carbones : alcool secondaire (primaire : $1$ ; tertiaire : $3$). Contrôle : le propan-1-ol $\\mathrm{CH_3CH_2CH_2OH}$, où ce carbone n'a qu'un voisin carboné, est primaire.",
+          "methode": "Classe d'un alcool : nombre de carbones liés au carbone porteur de $-\\mathrm{OH}$.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-groupes-fonctionnels-q3"
+        },
+        {
+          "notion": "Les groupes fonctionnels",
+          "difficulty": 3,
+          "statement": "L'éthane-1,2-diol $\\mathrm{HO-CH_2-CH_2-OH}$ réagit avec de l'acide éthanoïque en excès jusqu'à estérification de tous ses groupes $-\\mathrm{OH}$. Le nombre de molécules d'eau formées par molécule de diol est :",
+          "options": [
+            {
+              "label": "$2$",
+              "correct": true,
+              "why": "Chacun des deux groupes $-\\mathrm{OH}$ s'estérifie en libérant une molécule d'eau."
+            },
+            {
+              "label": "$1$",
+              "why": "Cela supposerait qu'un seul des deux groupes $-\\mathrm{OH}$ réagisse ; ici les deux sont estérifiés."
+            },
+            {
+              "label": "$4$",
+              "why": "Chaque estérification libère une seule molécule d'eau : $2$ groupes $-\\mathrm{OH}$ donnent $2$ molécules d'eau, non $4$."
+            },
+            {
+              "label": "$0$",
+              "why": "L'estérification forme toujours une molécule d'eau par groupe $-\\mathrm{OH}$ estérifié."
+            }
+          ],
+          "hint": "Combien de groupes $-\\mathrm{OH}$ s'estérifient, et combien d'eau chaque estérification libère-t-elle ?",
+          "solution": "$\\mathrm{HO-CH_2-CH_2-OH}+2\\,\\mathrm{CH_3COOH}\\rightleftharpoons\\mathrm{CH_3COO-CH_2-CH_2-OOCCH_3}+2\\,\\mathrm{H_2O}$. Contrôle : $2$ groupes $-\\mathrm{OH}$ donnent $2$ molécules d'eau.",
+          "methode": "Une estérification libère une molécule d'eau par groupe $-\\mathrm{OH}$ estérifié.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-groupes-fonctionnels-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "La nomenclature des esters",
+        "lesson": "Estérification et hydrolyse",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-la-nomenclature-des-esters",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "La nomenclature des esters",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "La nomenclature des esters",
+          "difficulty": 1,
+          "statement": "Le composé $\\mathrm{CH_3-COO-CH_2-CH_3}$ s'appelle :",
+          "options": [
+            {
+              "label": "l'éthanoate d'éthyle",
+              "correct": true,
+              "why": "La partie $\\mathrm{CH_3COO}$ (venant de l'acide éthanoïque) donne « éthanoate » ; la chaîne $\\mathrm{CH_2CH_3}$ liée à l'oxygène donne « d'éthyle »."
+            },
+            {
+              "label": "l'éthanoate de méthyle",
+              "why": "La chaîne liée à l'oxygène est $\\mathrm{CH_2CH_3}$ (éthyle) et non $\\mathrm{CH_3}$ (méthyle)."
+            },
+            {
+              "label": "le propanoate de méthyle",
+              "why": "La partie acide comporte $2$ carbones (éthanoate) et la partie alcool $2$ carbones (éthyle) : les rôles sont mal attribués."
+            },
+            {
+              "label": "le méthanoate d'éthyle",
+              "why": "La partie acide $\\mathrm{CH_3COO}$ contient $2$ carbones (éthanoate), non $1$ (méthanoate)."
+            }
+          ],
+          "hint": "Nom de l'ester : [acide]oate de [alkyle de l'alcool].",
+          "solution": "$\\mathrm{CH_3COO-}$ vient de l'acide éthanoïque (éthanoate) ; $-\\mathrm{CH_2CH_3}$ est le groupe éthyle de l'éthanol : éthanoate d'éthyle. Contrôle : $4$ carbones au total, $2$ pour l'acide et $2$ pour l'alcool.",
+          "methode": "Ester : nom de l'acide en « -oate » suivi de « de/d' » et du groupe alkyle.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-la-nomenclature-des-esters-q1"
+        },
+        {
+          "notion": "La nomenclature des esters",
+          "difficulty": 2,
+          "statement": "La formule semi-développée du propanoate de méthyle est :",
+          "options": [
+            {
+              "label": "$\\mathrm{CH_3-CH_2-COO-CH_3}$",
+              "correct": true,
+              "why": "« Propanoate » : $\\mathrm{CH_3CH_2COO}$ ($3$ carbones) ; « de méthyle » : $\\mathrm{CH_3}$ lié à l'oxygène."
+            },
+            {
+              "label": "$\\mathrm{CH_3-COO-CH_2-CH_3}$",
+              "why": "Cet isomère est l'éthanoate d'éthyle : les parties acide et alcool sont permutées."
+            },
+            {
+              "label": "$\\mathrm{H-COO-CH_2-CH_2-CH_3}$",
+              "why": "Cet isomère est le méthanoate de propyle : la partie acide ne comporte qu'un carbone."
+            },
+            {
+              "label": "$\\mathrm{CH_3-CH_2-COO-CH_2-CH_3}$",
+              "why": "Cet ester est le propanoate d'éthyle : le groupe lié à l'oxygène est ici un éthyle et non un méthyle."
+            }
+          ],
+          "hint": "Écris d'abord la partie acide « propanoate », puis le groupe « méthyle » lié à l'oxygène.",
+          "solution": "Propanoate : $\\mathrm{CH_3CH_2-COO-}$ ; méthyle : $-\\mathrm{CH_3}$. Formule : $\\mathrm{CH_3-CH_2-COO-CH_3}$. Contrôle : il se forme par estérification de l'acide propanoïque et du méthanol.",
+          "methode": "Écrire un ester : chaîne de l'acide, groupe $-\\mathrm{COO}-$, groupe alkyle de l'alcool.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-la-nomenclature-des-esters-q2"
+        },
+        {
+          "notion": "La nomenclature des esters",
+          "difficulty": 2,
+          "statement": "Pour synthétiser le butanoate d'éthyle, on fait réagir :",
+          "options": [
+            {
+              "label": "l'acide butanoïque et l'éthanol",
+              "correct": true,
+              "why": "Le nom indique la partie acide « butanoate » (acide butanoïque) et la partie alcool « d'éthyle » (éthanol)."
+            },
+            {
+              "label": "l'acide éthanoïque et le butan-1-ol",
+              "why": "Ces réactifs donnent l'éthanoate de butyle : acide et alcool sont permutés."
+            },
+            {
+              "label": "l'acide butanoïque et le méthanol",
+              "why": "Ces réactifs donnent le butanoate de méthyle : le groupe lié à l'oxygène est ici un méthyle."
+            },
+            {
+              "label": "l'acide propanoïque et l'éthanol",
+              "why": "Ces réactifs donnent le propanoate d'éthyle : la partie acide a $3$ carbones et non $4$."
+            }
+          ],
+          "hint": "La première partie du nom vient de l'acide, la seconde de l'alcool.",
+          "solution": "« Butanoate » vient de l'acide butanoïque ($4$ carbones) ; « d'éthyle » vient de l'éthanol. Équation : $\\mathrm{C_3H_7COOH}+\\mathrm{C_2H_5OH}\\rightleftharpoons\\mathrm{C_3H_7COOC_2H_5}+\\mathrm{H_2O}$. Contrôle : $4+2=6$ carbones dans l'ester.",
+          "methode": "Ester $\\leftarrow$ acide (-oate) + alcool (-yle).",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-la-nomenclature-des-esters-q3"
+        },
+        {
+          "notion": "La nomenclature des esters",
+          "difficulty": 3,
+          "statement": "On estérifie l'acide propanoïque $\\mathrm{C_3H_6O_2}$ par l'éthanol $\\mathrm{C_2H_6O}$ : l'ester formé a pour formule brute :",
+          "options": [
+            {
+              "label": "$\\mathrm{C_5H_{10}O_2}$",
+              "correct": true,
+              "why": "$\\mathrm{C_3H_6O_2}+\\mathrm{C_2H_6O}=\\mathrm{C_5H_{12}O_3}$ ; on retire $\\mathrm{H_2O}$ : $\\mathrm{C_5H_{10}O_2}$."
+            },
+            {
+              "label": "$\\mathrm{C_5H_{12}O_3}$",
+              "why": "Tu as additionné les formules sans retirer la molécule d'eau formée."
+            },
+            {
+              "label": "$\\mathrm{C_5H_8O}$",
+              "why": "Tu as retiré deux molécules d'eau : $\\mathrm{C_5H_{12}O_3}-2\\,\\mathrm{H_2O}=\\mathrm{C_5H_8O}$ ; il n'y en a qu'une."
+            },
+            {
+              "label": "$\\mathrm{C_5H_{12}O_2}$",
+              "why": "Tu n'as retiré que l'atome d'oxygène de l'eau et oublié ses deux atomes d'hydrogène."
+            }
+          ],
+          "hint": "Additionne les formules brutes des réactifs puis retire la molécule d'eau.",
+          "solution": "$\\mathrm{C_3H_6O_2}+\\mathrm{C_2H_6O}\\rightarrow\\mathrm{ester}+\\mathrm{H_2O}$ donc ester $=\\mathrm{C_5H_{12}O_3}-\\mathrm{H_2O}=\\mathrm{C_5H_{10}O_2}$ (propanoate d'éthyle). Contrôle : la conservation de la matière : $\\mathrm{C}$ : $5=5$ ; $\\mathrm{H}$ : $12=10+2$ ; $\\mathrm{O}$ : $3=2+1$.",
+          "methode": "Formule brute de l'ester : somme des réactifs moins $\\mathrm{H_2O}$.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-la-nomenclature-des-esters-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les trois caractères de l'estérification",
+        "lesson": "Estérification et hydrolyse",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 1,
+        "target_new_questions": 3,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-les-trois-caracteres-de-l-esterification",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Les trois caractères de l'estérification",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les trois caractères de l'estérification",
+          "difficulty": 1,
+          "statement": "L'estérification est une réaction :",
+          "options": [
+            {
+              "label": "lente, limitée et athermique",
+              "correct": true,
+              "why": "Elle est lente (heures sans catalyseur ni chauffage), limitée (équilibre) et athermique (pas d'échange notable de chaleur)."
+            },
+            {
+              "label": "rapide, totale et exothermique",
+              "why": "Elle est lente et limitée ; elle ne dégage pas de chaleur de façon notable."
+            },
+            {
+              "label": "lente, totale et athermique",
+              "why": "Elle est limitée par l'hydrolyse inverse : le rendement n'atteint pas $100\\ \\%$."
+            },
+            {
+              "label": "rapide, limitée et endothermique",
+              "why": "Elle est lente, et sans échange notable de chaleur : athermique."
+            }
+          ],
+          "hint": "Trois mots : vitesse, avancement final, aspect thermique.",
+          "solution": "L'estérification est lente, limitée (équilibre avec l'hydrolyse) et athermique. Contrôle : un mélange équimolaire d'acide et d'alcool primaire donne environ $67\\ \\%$ d'ester, jamais $100\\ \\%$.",
+          "methode": "Estérification : lente, limitée, athermique.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-trois-caracteres-de-l-esterification-q1"
+        },
+        {
+          "notion": "Les trois caractères de l'estérification",
+          "difficulty": 2,
+          "statement": "Pour accélérer une estérification, on passe de $20\\ ^\\circ\\mathrm{C}$ à $100\\ ^\\circ\\mathrm{C}$. La réaction étant athermique, cette élévation de température modifie :",
+          "options": [
+            {
+              "label": "la vitesse, mais pas (ou à peine) la constante $K$ ni le rendement final",
+              "correct": true,
+              "why": "Une température élevée accélère les deux sens ; $K$, quasi indépendante de $T$ pour une réaction athermique, reste la même."
+            },
+            {
+              "label": "le rendement final, qui augmente car la réaction est endothermique",
+              "why": "La réaction est athermique, non endothermique : le rendement final n'augmente pas."
+            },
+            {
+              "label": "le rendement final, qui diminue car la réaction est exothermique",
+              "why": "La réaction est athermique, non exothermique : le rendement final ne diminue pas."
+            },
+            {
+              "label": "ni la vitesse ni le rendement final",
+              "why": "Une élévation de température accélère toujours une transformation chimique : la vitesse augmente."
+            }
+          ],
+          "hint": "Que signifie athermique pour la constante $K$ ? Et pour la vitesse ?",
+          "solution": "Athermique : $K$ presque indépendante de la température ; le rendement d'équilibre est inchangé. Mais la température est un facteur cinétique : la vitesse augmente. Contrôle : le chauffage ne sert qu'à gagner du temps.",
+          "methode": "Température : facteur cinétique, sans effet sur $K$ ici.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-trois-caracteres-de-l-esterification-q2"
+        },
+        {
+          "notion": "Les trois caractères de l'estérification",
+          "difficulty": 3,
+          "statement": "Un mélange équimolaire d'acide et d'alcool primaire donne, à l'équilibre, une fraction $x_f/x_{max}=\\dfrac{2}{3}$ d'ester. La constante d'équilibre $K=\\dfrac{n(\\mathrm{ester})\\,n(\\mathrm{eau})}{n(\\mathrm{acide})\\,n(\\mathrm{alcool})}$ vaut :",
+          "options": [
+            {
+              "label": "$K=4{,}0$",
+              "correct": true,
+              "why": "À l'équilibre : ester $=\\dfrac{2}{3}$, eau $=\\dfrac{2}{3}$, acide $=\\dfrac{1}{3}$, alcool $=\\dfrac{1}{3}$ (en mol pour $1\\ \\mathrm{mol}$ de chaque réactif) : $K=\\dfrac{(2/3)^2}{(1/3)^2}=4{,}0$."
+            },
+            {
+              "label": "$K=2{,}0$",
+              "why": "Tu as calculé $\\dfrac{x}{1-x}$ : le quotient comporte quatre quantités, d'où les carrés."
+            },
+            {
+              "label": "$K=0{,}25$",
+              "why": "Tu as inversé le quotient : l'ester et l'eau (produits) sont au numérateur."
+            },
+            {
+              "label": "$K=0{,}44$",
+              "why": "Tu as oublié le dénominateur : acide et alcool y figurent, chacun à $\\dfrac{1}{3}$ mol."
+            }
+          ],
+          "hint": "Écris les quantités de chacune des quatre espèces à l'équilibre, pour $1\\ \\mathrm{mol}$ de chaque réactif.",
+          "solution": "Pour $1\\ \\mathrm{mol}$ d'acide et $1\\ \\mathrm{mol}$ d'alcool : $n(\\mathrm{ester})=n(\\mathrm{eau})=\\dfrac{2}{3}\\ \\mathrm{mol}$ et $n(\\mathrm{acide})=n(\\mathrm{alcool})=\\dfrac{1}{3}\\ \\mathrm{mol}$. $K=\\dfrac{(2/3)^2}{(1/3)^2}=4{,}0$ (le volume se simplifie, $\\Delta n_{gaz}=0$). Contrôle : $K=4$ donne bien $67\\ \\%$ de rendement.",
+          "methode": "Estérification d'alcool primaire : $K\\approx4$, rendement $67\\ \\%$ en équimolaire.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-trois-caracteres-de-l-esterification-q3"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Deux leviers indépendants",
+        "lesson": "Contrôle du rendement",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-deux-leviers-independants",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Deux leviers indépendants",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Deux leviers indépendants",
+          "difficulty": 1,
+          "statement": "Pour augmenter le rendement d'une estérification, on peut :",
+          "options": [
+            {
+              "label": "utiliser un excès de l'un des réactifs",
+              "correct": true,
+              "why": "Un excès d'un réactif abaisse $Q_r$ en dessous de $K$ : l'équilibre est déplacé dans le sens direct."
+            },
+            {
+              "label": "ajouter un catalyseur",
+              "why": "Un catalyseur accélère les deux sens sans changer $K$ : le rendement final reste identique."
+            },
+            {
+              "label": "augmenter la température du mélange",
+              "why": "La réaction est athermique : la température n'affecte pas $K$, donc pas le rendement."
+            },
+            {
+              "label": "chauffer à reflux",
+              "why": "Le reflux évite les pertes de matière et accélère la réaction, sans changer l'état d'équilibre."
+            }
+          ],
+          "hint": "Quels leviers modifient la position de l'équilibre, et lesquels n'agissent que sur la vitesse ?",
+          "solution": "Deux leviers indépendants : cinétique (température, catalyseur, reflux : sans effet sur le rendement final) et thermodynamique (excès d'un réactif, élimination d'un produit : modifient le rendement). Contrôle : $K$ ne dépend ni du catalyseur ni, ici, de la température.",
+          "methode": "Vitesse : $T$, catalyseur ; rendement : excès, élimination d'un produit.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-deux-leviers-independants-q1"
+        },
+        {
+          "notion": "Deux leviers indépendants",
+          "difficulty": 2,
+          "statement": "L'acide sulfurique concentré, ajouté en petite quantité, joue le rôle de catalyseur. Son effet est de :",
+          "options": [
+            {
+              "label": "réduire la durée pour atteindre l'équilibre sans changer le rendement",
+              "correct": true,
+              "why": "Un catalyseur accélère les deux sens de la même façon : l'état d'équilibre est identique, atteint plus vite."
+            },
+            {
+              "label": "augmenter la valeur de $K$, et donc le rendement de la réaction",
+              "why": "Un catalyseur ne modifie pas $K$, qui ne dépend que de la température."
+            },
+            {
+              "label": "déplacer l'équilibre dans le sens de formation de l'ester",
+              "why": "Il ne déplace pas l'équilibre : il accélère les deux sens."
+            },
+            {
+              "label": "accélérer seulement l'estérification, sans accélérer l'hydrolyse",
+              "why": "Il accélère les deux sens : sinon l'équilibre serait déplacé, ce qui est impossible."
+            }
+          ],
+          "hint": "Un catalyseur change-t-il $K$ ? Agit-il sur un seul sens ?",
+          "solution": "Le catalyseur diminue la durée nécessaire pour atteindre l'équilibre en accélérant les deux sens, sans changer $K$ ni le rendement. Contrôle : sans catalyseur, le même rendement est atteint, mais beaucoup plus tard.",
+          "methode": "Catalyseur : accélère les deux sens, n'influence pas l'équilibre.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-deux-leviers-independants-q2"
+        },
+        {
+          "notion": "Deux leviers indépendants",
+          "difficulty": 2,
+          "statement": "On élimine l'eau formée au fur et à mesure de l'estérification (montage de Dean-Stark). L'effet est :",
+          "options": [
+            {
+              "label": "le rendement augmente : $Q_r$ reste inférieur à $K$, l'évolution se poursuit",
+              "correct": true,
+              "why": "En retirant un produit, $Q_r$ est maintenu sous $K$ : l'estérification continue au-delà de l'équilibre initial."
+            },
+            {
+              "label": "aucun effet, car l'eau n'intervient pas dans l'équilibre d'estérification",
+              "why": "L'eau est un produit : elle figure dans $Q_r$ et dans $K$."
+            },
+            {
+              "label": "le rendement diminue, car l'eau est un produit de la réaction",
+              "why": "Retirer un produit déplace l'équilibre dans le sens où il se forme, donc augmente le rendement."
+            },
+            {
+              "label": "la vitesse seule augmente, le rendement restant exactement le même",
+              "why": "Éliminer un produit modifie $Q_r$ donc l'état final : le rendement augmente."
+            }
+          ],
+          "hint": "Que devient $Q_r$ quand on retire un produit ?",
+          "solution": "En retirant l'eau, le numérateur de $Q_r$ diminue : $Q_r<K$, donc l'estérification se poursuit dans le sens direct et le rendement augmente. Contrôle : on peut ainsi dépasser les $67\\ \\%$ de l'équilibre équimolaire.",
+          "methode": "Éliminer un produit : $Q_r<K$, rendement plus élevé.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-deux-leviers-independants-q3"
+        },
+        {
+          "notion": "Deux leviers indépendants",
+          "difficulty": 3,
+          "statement": "On compare deux mélanges équimolaires identiques d'acide et d'alcool : le mélange A est maintenu à $20\\ ^\\circ\\mathrm{C}$ sans catalyseur, le mélange B à $100\\ ^\\circ\\mathrm{C}$ avec acide sulfurique. Après un temps très long :",
+          "options": [
+            {
+              "label": "les deux ont le même rendement, mais B atteint l'état final beaucoup plus tôt",
+              "correct": true,
+              "why": "Température et catalyseur n'agissent que sur la vitesse : $K$ est la même, donc le rendement final aussi."
+            },
+            {
+              "label": "le rendement de B est supérieur, car il est plus chaud et catalysé",
+              "why": "Température et catalyseur n'ont aucun effet sur $K$ pour cette réaction athermique : même rendement."
+            },
+            {
+              "label": "le rendement de A est supérieur, car la réaction inverse est plus lente à $20\\ ^\\circ\\mathrm{C}$",
+              "why": "À $20\\ ^\\circ\\mathrm{C}$ les deux sens sont ralentis dans les mêmes proportions : l'équilibre est inchangé."
+            },
+            {
+              "label": "le mélange B atteint un rendement de $100\\ \\%$ grâce au catalyseur",
+              "why": "Un catalyseur ne rend pas une réaction limitée totale : le rendement reste d'environ $67\\ \\%$."
+            }
+          ],
+          "hint": "Après un temps très long, quel état chaque mélange a-t-il atteint ?",
+          "solution": "A et B atteignent le même état d'équilibre ($K\\approx4$, rendement $67\\ \\%$) : B y parvient en quelques heures, A en des jours ou des semaines. Contrôle : la position de l'équilibre est indépendante de la vitesse.",
+          "methode": "Facteurs cinétiques : même état final, atteint plus ou moins vite.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-deux-leviers-independants-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Agir sur la vitesse",
+        "lesson": "Contrôle du rendement",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-agir-sur-la-vitesse",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Agir sur la vitesse",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Agir sur la vitesse",
+          "difficulty": 1,
+          "statement": "Pour accélérer une estérification sans modifier son rendement final, on peut :",
+          "options": [
+            {
+              "label": "chauffer le mélange et ajouter un catalyseur",
+              "correct": true,
+              "why": "Température et catalyseur sont des facteurs cinétiques : ils réduisent la durée sans changer l'état d'équilibre."
+            },
+            {
+              "label": "ajouter un excès d'alcool dans le mélange",
+              "why": "Un excès d'un réactif augmente le rendement : cela modifie l'état final."
+            },
+            {
+              "label": "éliminer l'ester au fur et à mesure",
+              "why": "Retirer un produit déplace l'équilibre : cela modifie l'état final."
+            },
+            {
+              "label": "refroidir le mélange dans de la glace",
+              "why": "Le refroidissement ralentit la réaction : c'est l'inverse de l'effet recherché."
+            }
+          ],
+          "hint": "Quels facteurs agissent sur la vitesse seulement ?",
+          "solution": "La température et le catalyseur agissent sur la vitesse sans changer $K$. Contrôle : un excès de réactif ou l'élimination d'un produit déplacent l'équilibre et modifient le rendement.",
+          "methode": "Facteurs cinétiques : température, catalyseur.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-agir-sur-la-vitesse-q1"
+        },
+        {
+          "notion": "Agir sur la vitesse",
+          "difficulty": 2,
+          "statement": "Au cours d'une estérification à température constante, la vitesse de formation de l'ester est maximale :",
+          "options": [
+            {
+              "label": "à l'instant initial, puis elle diminue car les concentrations des réactifs diminuent",
+              "correct": true,
+              "why": "La vitesse est la pente de $x(t)$ : maximale à $t=0$ (réactifs abondants), nulle à l'équilibre."
+            },
+            {
+              "label": "à l'équilibre, puis elle diminue car les produits sont plus abondants",
+              "why": "À l'équilibre la vitesse nette est nulle : $x(t)$ ne varie plus."
+            },
+            {
+              "label": "à tout instant car elle reste constante tant que la réaction est lente",
+              "why": "La vitesse diminue au fil du temps, même pour une réaction lente : les réactifs sont consommés."
+            },
+            {
+              "label": "à l'instant initial, puis elle diminue car la température du mélange baisse",
+              "why": "La température est maintenue constante (reflux) : c'est la consommation des réactifs qui fait baisser la vitesse."
+            }
+          ],
+          "hint": "La vitesse est la pente de la courbe $x(t)$ : où est-elle la plus grande ?",
+          "solution": "La courbe $x(t)$ est la plus pentue à $t=0$ puis s'aplatit jusqu'à $x_f$ : la vitesse décroît à mesure que les concentrations en réactifs diminuent. Contrôle : à l'équilibre, la pente est nulle.",
+          "methode": "Vitesse maximale à $t=0$ ; nulle à l'équilibre.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-agir-sur-la-vitesse-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Agir sur le rendement",
+        "lesson": "Contrôle du rendement",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-agir-sur-le-rendement",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Agir sur le rendement",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Agir sur le rendement",
+          "difficulty": 1,
+          "statement": "Pour augmenter le rendement de la synthèse d'un ester, on peut :",
+          "options": [
+            {
+              "label": "distiller l'ester au fur et à mesure de sa formation",
+              "correct": true,
+              "why": "Retirer un produit abaisse $Q_r$ sous $K$ : l'équilibre se déplace dans le sens de formation de l'ester."
+            },
+            {
+              "label": "augmenter la température du mélange réactionnel",
+              "why": "La réaction est athermique : la température n'agit que sur la vitesse, pas sur le rendement."
+            },
+            {
+              "label": "ajouter quelques gouttes d'acide sulfurique",
+              "why": "Le catalyseur accélère les deux sens : il ne change pas l'état d'équilibre."
+            },
+            {
+              "label": "chauffer à reflux pendant plus longtemps",
+              "why": "Une durée plus longue ne dépasse pas l'état d'équilibre : le rendement se stabilise à sa valeur d'équilibre."
+            }
+          ],
+          "hint": "Quelle action déplace l'équilibre et non seulement la vitesse ?",
+          "solution": "Seule l'élimination d'un produit (ici l'ester, distillé) ou l'emploi d'un excès d'un réactif déplace l'équilibre. Contrôle : température, catalyseur et durée ne modifient pas le rendement d'équilibre.",
+          "methode": "Augmenter le rendement : excès d'un réactif ou élimination d'un produit.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-agir-sur-le-rendement-q1"
+        },
+        {
+          "notion": "Agir sur le rendement",
+          "difficulty": 2,
+          "statement": "Pour $K=4{,}0$, on mélange $1{,}0\\ \\mathrm{mol}$ d'acide et $5{,}0\\ \\mathrm{mol}$ d'alcool primaire. Le rendement (par rapport à l'acide, réactif limitant) est d'environ :",
+          "options": [
+            {
+              "label": "$94\\ \\%$",
+              "correct": true,
+              "why": "$\\dfrac{x^2}{(1-x)(5-x)}=4$ donne $3x^2-24x+20=0$ d'où $x=0{,}945\\ \\mathrm{mol}$ : rendement $94\\ \\%$."
+            },
+            {
+              "label": "$67\\ \\%$",
+              "why": "Tu as ignoré l'excès d'alcool : $67\\ \\%$ est le rendement du mélange équimolaire."
+            },
+            {
+              "label": "$100\\ \\%$",
+              "why": "Une réaction limitée n'est jamais totale : même avec un grand excès, $K$ reste finie."
+            },
+            {
+              "label": "$80\\ \\%$",
+              "why": "Tu as calculé $\\dfrac{K}{5}=\\dfrac{4}{5}=0{,}80$ : ce quotient n'a aucune justification ; il faut résoudre $Q_{r,\\mathrm{\\acute{e}q}}=K$."
+            }
+          ],
+          "hint": "Écris $K=\\dfrac{x\\times x}{(1-x)(5-x)}$ (quantités en mol, volume qui se simplifie) puis résous.",
+          "solution": "$K=\\dfrac{x^2}{(1-x)(5-x)}=4$ donne $3x^2-24x+20=0$, d'où $x=\\dfrac{24-\\sqrt{336}}{6}=0{,}945\\ \\mathrm{mol}$ ; rendement $=\\dfrac{0{,}945}{1{,}0}\\approx94\\ \\%$. Contrôle : mieux que $67\\ \\%$ sans atteindre $100\\ \\%$.",
+          "methode": "Excès d'un réactif : résoudre $Q_{r,\\mathrm{\\acute{e}q}}=K$ ; rendement par rapport au réactif limitant.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-agir-sur-le-rendement-q2"
+        },
+        {
+          "notion": "Agir sur le rendement",
+          "difficulty": 2,
+          "statement": "On double à la fois la quantité d'acide et celle d'alcool primaire d'un mélange équimolaire (de $1{,}0$ à $2{,}0\\ \\mathrm{mol}$ de chacun). Le rendement :",
+          "options": [
+            {
+              "label": "est inchangé, environ $67\\ \\%$",
+              "correct": true,
+              "why": "Les proportions restent équimolaires : $Q_r$ garde la même valeur initiale et $K$ est inchangée, donc le même rendement."
+            },
+            {
+              "label": "augmente, car il y a plus de réactifs",
+              "why": "Plus de réactifs en quantité, mais en mêmes proportions : le rendement dépend des proportions, non des quantités absolues."
+            },
+            {
+              "label": "double, pour atteindre environ $134\\ \\%$",
+              "why": "Un rendement ne peut pas dépasser $100\\ \\%$ ; c'est la quantité d'ester qui double, non le rendement."
+            },
+            {
+              "label": "diminue, car il se forme deux fois plus d'eau",
+              "why": "L'eau double aussi, mais les proportions sont conservées : le rendement est le même."
+            }
+          ],
+          "hint": "Compare les proportions initiales avant et après. Que valent $Q_{r,i}$ et $K$ ?",
+          "solution": "Doubler les deux quantités laisse les proportions (équimolaire) inchangées : même $K$, donc même rendement de $67\\ \\%$ ; la quantité d'ester obtenue double, pas le rendement. Contrôle : c'est un excès d'un réactif, non un doublement général, qui augmente le rendement.",
+          "methode": "Rendement : fonction des proportions, pas des quantités absolues.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-agir-sur-le-rendement-q3"
+        },
+        {
+          "notion": "Agir sur le rendement",
+          "difficulty": 3,
+          "statement": "On distille l'ester (le constituant le plus volatil) au fur et à mesure de sa formation. Cette opération augmente le rendement car :",
+          "options": [
+            {
+              "label": "$Q_r$ reste inférieur à $K$ : le système continue d'évoluer dans le sens direct",
+              "correct": true,
+              "why": "L'ester retiré maintient le numérateur de $Q_r$ bas : tant que $Q_r<K$, la formation d'ester se poursuit."
+            },
+            {
+              "label": "elle augmente la valeur de la constante $K$",
+              "why": "$K$ ne dépend que de la température : retirer un produit ne la modifie pas."
+            },
+            {
+              "label": "elle accélère la réaction inverse d'hydrolyse",
+              "why": "Retirer l'ester diminue la vitesse de l'hydrolyse (moins d'ester) ; ce n'est pas l'effet recherché."
+            },
+            {
+              "label": "elle refroidit le mélange, ce qui déplace l'équilibre car la réaction est exothermique",
+              "why": "La réaction est athermique : la température n'influe pas sur la position de l'équilibre."
+            }
+          ],
+          "hint": "Que devient $Q_r$ quand le produit est retiré ? Compare-le à $K$.",
+          "solution": "En retirant l'ester, $Q_r$ est maintenu inférieur à $K$ : l'évolution se poursuit dans le sens direct et le rendement dépasse la valeur d'équilibre initiale. Contrôle : $K$ ne change pas ; c'est $Q_r$ que l'on agit sur.",
+          "methode": "Distiller le produit : $Q_r<K$ maintenu, rendement plus élevé.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-agir-sur-le-rendement-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le rendement",
+        "lesson": "Contrôle du rendement",
+        "role": "cours",
+        "bac_frequency": 3,
+        "existing_questions": 2,
+        "target_new_questions": 2,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-le-rendement",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Le rendement",
+      "difficulty": 2,
+      "questions": [
+        {
+          "notion": "Le rendement",
+          "difficulty": 1,
+          "statement": "Le rendement d'une synthèse d'ester est défini par :",
+          "options": [
+            {
+              "label": "$r=\\dfrac{n(\\text{ester obtenu})}{n(\\text{ester théorique maximal})}$",
+              "correct": true,
+              "why": "Le rendement compare ce qu'on obtient réellement à ce qu'on obtiendrait avec une réaction totale."
+            },
+            {
+              "label": "$r=\\dfrac{n(\\text{ester théorique maximal})}{n(\\text{ester obtenu})}$",
+              "why": "Le quotient est inversé : le rendement ne peut pas dépasser $1$."
+            },
+            {
+              "label": "$r=n(\\text{ester obtenu})\\times n(\\text{ester théorique maximal})$",
+              "why": "Le rendement est un rapport, non un produit de deux quantités de matière."
+            },
+            {
+              "label": "$r=n(\\text{ester théorique maximal})-n(\\text{ester obtenu})$",
+              "why": "Cette différence est la quantité d'ester « manquante », non le rendement."
+            }
+          ],
+          "hint": "Rendement : réel rapporté au maximum.",
+          "solution": "$r=\\dfrac{n_{exp}}{n_{max}}$, sans unité, compris entre $0$ et $1$ ($0$ à $100\\ \\%$). Contrôle : pour une réaction totale, $n_{exp}=n_{max}$ donc $r=100\\ \\%$.",
+          "methode": "$r=n_{exp}/n_{max}$.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-rendement-q1"
+        },
+        {
+          "notion": "Le rendement",
+          "difficulty": 2,
+          "statement": "On mélange $0{,}300\\ \\mathrm{mol}$ d'acide éthanoïque et $0{,}300\\ \\mathrm{mol}$ d'éthanol. On obtient $17{,}6\\ \\mathrm{g}$ d'éthanoate d'éthyle ($M=88{,}0\\ \\mathrm{g\\,mol^{-1}}$). Le rendement vaut :",
+          "options": [
+            {
+              "label": "$r=67\\ \\%$",
+              "correct": true,
+              "why": "$n_{exp}=\\dfrac{17{,}6}{88{,}0}=0{,}200\\ \\mathrm{mol}$ ; $n_{max}=0{,}300\\ \\mathrm{mol}$ ; $r=\\dfrac{0{,}200}{0{,}300}=0{,}67$."
+            },
+            {
+              "label": "$r=150\\ \\%$",
+              "why": "Tu as inversé le rapport : le rendement ne peut pas dépasser $100\\ \\%$."
+            },
+            {
+              "label": "$r=33\\ \\%$",
+              "why": "Tu as calculé la fraction d'ester non obtenue ($1-r$), non le rendement."
+            },
+            {
+              "label": "$r=0{,}67\\ \\%$",
+              "why": "Tu as oublié de multiplier par $100$ : le rapport $0{,}67$ s'écrit $67\\ \\%$."
+            }
+          ],
+          "hint": "Convertis la masse en quantité de matière avant de comparer à $n_{max}$.",
+          "solution": "$n_{exp}=\\dfrac{17{,}6}{88{,}0}=0{,}200\\ \\mathrm{mol}$ ; $n_{max}=0{,}300\\ \\mathrm{mol}$ (réactifs équimolaires) ; $r=\\dfrac{0{,}200}{0{,}300}=0{,}67=67\\ \\%$. Contrôle : valeur compatible avec $K=4$ pour un mélange équimolaire.",
+          "methode": "$r=\\dfrac{m_{exp}/M}{n_{max}}$.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-rendement-q2"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le montage",
+        "lesson": "Le chauffage à reflux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-le-montage",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Le montage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le montage",
+          "difficulty": 1,
+          "statement": "Dans le montage de chauffage à reflux, le réfrigérant sert à :",
+          "options": [
+            {
+              "label": "condenser les vapeurs, qui retombent dans le ballon",
+              "correct": true,
+              "why": "Refroidies par l'eau, les vapeurs se liquéfient et reviennent dans le milieu réactionnel."
+            },
+            {
+              "label": "chauffer le mélange réactionnel",
+              "why": "C'est le chauffe-ballon qui chauffe ; le réfrigérant refroidit."
+            },
+            {
+              "label": "agiter le mélange pour l'homogénéiser",
+              "why": "L'agitation est assurée par un agitateur magnétique ou par l'ébullition, non par le réfrigérant."
+            },
+            {
+              "label": "filtrer les solides formés pendant la réaction",
+              "why": "Le réfrigérant ne retient aucun solide : il condense des vapeurs."
+            }
+          ],
+          "hint": "Que deviennent les vapeurs qui montent dans le réfrigérant ?",
+          "solution": "Le réfrigérant, parcouru par un courant d'eau froide, condense les vapeurs, qui retombent dans le ballon. Contrôle : aucune perte de matière, malgré l'ébullition.",
+          "methode": "Reflux : réfrigérant = condensation des vapeurs.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-montage-q1"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 2,
+          "statement": "Dans le réfrigérant, l'eau de refroidissement doit :",
+          "options": [
+            {
+              "label": "entrer par le bas et sortir par le haut",
+              "correct": true,
+              "why": "L'eau entrant par le bas remplit toute la double enveloppe : le refroidissement est efficace et sans bulles d'air."
+            },
+            {
+              "label": "entrer par le haut et sortir par le bas",
+              "why": "L'eau descendrait par gravité sans remplir l'enveloppe : le refroidissement serait inefficace."
+            },
+            {
+              "label": "rester immobile dans la double enveloppe",
+              "why": "Une eau immobile s'échaufferait rapidement et ne refroidirait plus les vapeurs."
+            },
+            {
+              "label": "circuler dans le sens qui convient le mieux selon l'ordre de montage",
+              "why": "Le sens est imposé par l'efficacité du refroidissement : entrée en bas, sortie en haut."
+            }
+          ],
+          "hint": "Comment faire pour que l'enveloppe soit toujours remplie d'eau ?",
+          "solution": "L'eau entre par le bas et ressort par le haut : l'enveloppe reste pleine et le refroidissement des vapeurs est efficace. Contrôle : si l'entrée était en haut, l'eau s'écoulerait sans remplir l'enveloppe.",
+          "methode": "Réfrigérant : eau en bas, sortie en haut.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-montage-q2"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 2,
+          "statement": "On place quelques grains de pierre ponce dans le ballon avant de chauffer. Leur rôle est de :",
+          "options": [
+            {
+              "label": "régulariser l'ébullition, en évitant les surchauffes brutales",
+              "correct": true,
+              "why": "Les cavités de la pierre ponce amorcent la formation régulière de bulles de vapeur."
+            },
+            {
+              "label": "catalyser l'estérification, comme le fait l'acide sulfurique",
+              "why": "La pierre ponce est inerte chimiquement : le catalyseur est l'acide sulfurique."
+            },
+            {
+              "label": "absorber l'eau formée au cours de la réaction d'estérification",
+              "why": "La pierre ponce n'absorbe pas l'eau ; l'eau formée reste dans le milieu."
+            },
+            {
+              "label": "empêcher les réactifs de s'évaporer pendant le chauffage",
+              "why": "C'est le rôle du réfrigérant, non de la pierre ponce."
+            }
+          ],
+          "hint": "Qu'évite-t-on en chauffant un liquide avec des grains poreux ?",
+          "solution": "La pierre ponce, par ses cavités, facilite la formation régulière de bulles et évite les surchauffes et les projections. Contrôle : sans elle, une ébullition brutale peut éjecter le contenu du ballon.",
+          "methode": "Pierre ponce : ébullition régulière.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-montage-q3"
+        },
+        {
+          "notion": "Le montage",
+          "difficulty": 3,
+          "statement": "Une précaution de sécurité essentielle du montage à reflux est de :",
+          "options": [
+            {
+              "label": "laisser le haut du réfrigérant ouvert sur l'air, pour éviter toute surpression",
+              "correct": true,
+              "why": "Un système clos chauffé verrait sa pression monter : risque de projection, voire d'explosion."
+            },
+            {
+              "label": "boucher le haut du réfrigérant avec un bouchon pour éviter les pertes de vapeurs",
+              "why": "Un montage fermé et chauffé est dangereux : la pression augmente et peut faire éclater la verrerie."
+            },
+            {
+              "label": "boucher l'arrivée d'eau pour mieux conserver la chaleur",
+              "why": "Sans eau de refroidissement, les vapeurs ne se condensent plus et s'échappent."
+            },
+            {
+              "label": "chauffer à feu nu pour obtenir l'ébullition plus rapidement",
+              "why": "Les vapeurs d'alcool sont inflammables : on chauffe avec un chauffe-ballon et jamais à feu nu."
+            }
+          ],
+          "hint": "Que risque-t-il de se passer dans un récipient fermé que l'on chauffe ?",
+          "solution": "Le haut du réfrigérant reste ouvert (ou muni d'une sortie à l'air) : un montage fermé et chauffé risque la surpression. On chauffe avec un chauffe-ballon, loin des flammes. Contrôle : le gaz chauffé dans une enceinte close voit sa pression augmenter.",
+          "methode": "Reflux : montage ouvert sur l'air, jamais fermé.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-montage-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Pourquoi ce montage",
+        "lesson": "Le chauffage à reflux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-pourquoi-ce-montage",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Pourquoi ce montage",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Pourquoi ce montage",
+          "difficulty": 1,
+          "statement": "Le chauffage à reflux permet de :",
+          "options": [
+            {
+              "label": "chauffer le mélange sans perte de matière",
+              "correct": true,
+              "why": "Les vapeurs, condensées par le réfrigérant, retombent dans le ballon : ni réactifs ni produit ne sont perdus."
+            },
+            {
+              "label": "déplacer l'équilibre vers la formation de l'ester",
+              "why": "Le reflux ne retire aucun constituant du milieu : l'équilibre n'est pas déplacé."
+            },
+            {
+              "label": "augmenter la valeur de la constante $K$",
+              "why": "$K$ ne dépend que de la température, et pas du montage."
+            },
+            {
+              "label": "éliminer l'eau formée au cours de la réaction",
+              "why": "L'eau condensée retombe dans le ballon avec le reste : elle n'est pas éliminée."
+            }
+          ],
+          "hint": "Que deviennent les vapeurs avec un réfrigérant ?",
+          "solution": "Chauffer accélère la réaction, mais les constituants sont volatils : le reflux condense les vapeurs et les renvoie dans le ballon. Contrôle : la composition globale du milieu reste constante.",
+          "methode": "Reflux : chauffer sans perdre de matière.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-pourquoi-ce-montage-q1"
+        },
+        {
+          "notion": "Pourquoi ce montage",
+          "difficulty": 2,
+          "statement": "Pourquoi ne chauffe-t-on pas simplement le mélange dans un bécher ouvert ?",
+          "options": [
+            {
+              "label": "les réactifs et l'ester, volatils, s'évaporeraient : perte de matière",
+              "correct": true,
+              "why": "Alcool, ester et acide s'évaporent à la température de réaction ; le réfrigérant évite cette perte."
+            },
+            {
+              "label": "la réaction ne pourrait pas avoir lieu dans un récipient ouvert",
+              "why": "L'estérification se déroule en solution : elle n'exige pas un milieu fermé."
+            },
+            {
+              "label": "l'acide sulfurique, catalyseur, s'évaporerait à l'air libre",
+              "why": "L'acide sulfurique concentré est très peu volatil : il ne s'évapore pas aux températures utilisées."
+            },
+            {
+              "label": "l'équilibre serait déplacé vers les réactifs par le contact de l'air",
+              "why": "L'air ne déplace pas l'équilibre : ce sont les pertes de matière qui posent problème."
+            }
+          ],
+          "hint": "Quelles espèces du mélange sont volatiles à l'ébullition ?",
+          "solution": "À la température de chauffage, l'alcool et l'ester s'évaporent : sans réfrigérant, on perdrait de la matière et le rendement s'effondrerait. Contrôle : l'éthanol bout à $78\\ ^\\circ\\mathrm{C}$, l'ester à $77\\ ^\\circ\\mathrm{C}$.",
+          "methode": "Sans reflux : pertes de matière volatile.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-pourquoi-ce-montage-q2"
+        },
+        {
+          "notion": "Pourquoi ce montage",
+          "difficulty": 2,
+          "statement": "Le chauffage à reflux modifie :",
+          "options": [
+            {
+              "label": "la vitesse de la réaction, sans déplacer l'équilibre",
+              "correct": true,
+              "why": "Chauffer accélère les deux sens ; le reflux évite les pertes mais ne retire rien du milieu : l'équilibre est inchangé."
+            },
+            {
+              "label": "l'état d'équilibre, car le reflux élimine l'eau formée",
+              "why": "L'eau condensée retombe dans le ballon : elle n'est pas éliminée."
+            },
+            {
+              "label": "ni la vitesse ni l'équilibre : il ne sert qu'à la sécurité",
+              "why": "Le chauffage augmente la vitesse ; le reflux est justement choisi pour pouvoir chauffer sans pertes."
+            },
+            {
+              "label": "à la fois la vitesse et le rendement, qui augmentent tous deux",
+              "why": "Le rendement dépend de $K$ et des proportions, et non du chauffage pour cette réaction athermique."
+            }
+          ],
+          "hint": "Le reflux est-il un facteur cinétique ou un facteur thermodynamique ?",
+          "solution": "Le reflux permet un chauffage prolongé sans perte : il agit sur la vitesse (température), pas sur la composition d'équilibre. Contrôle : le rendement final est celui de l'équilibre, $K$ étant inchangée.",
+          "methode": "Reflux : levier cinétique.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-pourquoi-ce-montage-q3"
+        },
+        {
+          "notion": "Pourquoi ce montage",
+          "difficulty": 3,
+          "statement": "Au cours du chauffage à reflux, la température du milieu réactionnel est limitée par :",
+          "options": [
+            {
+              "label": "la température d'ébullition du mélange, que le reflux maintient pratiquement constante",
+              "correct": true,
+              "why": "Le liquide bout à sa température d'ébullition ; la condensation fait retomber les vapeurs sans que la température ne dépasse ce palier."
+            },
+            {
+              "label": "la puissance du chauffe-ballon : le mélange peut dépasser largement son ébullition",
+              "why": "Un liquide en ébullition ne dépasse pas sa température d'ébullition : l'énergie fournie sert à le vaporiser."
+            },
+            {
+              "label": "la température de l'eau du réfrigérant, qui impose celle du ballon",
+              "why": "L'eau du réfrigérant refroidit les vapeurs, mais n'impose pas la température du milieu qui bout dans le ballon."
+            },
+            {
+              "label": "la température de décomposition du catalyseur, ici l'acide sulfurique",
+              "why": "L'acide sulfurique est stable bien au-delà des températures utilisées ; ce n'est pas lui qui limite."
+            }
+          ],
+          "hint": "Que devient l'énergie apportée à un liquide qui bout ?",
+          "solution": "Le mélange bout : sa température reste voisine de son point d'ébullition (de l'ordre de $80$ à $100\\ ^\\circ\\mathrm{C}$) quelle que soit la puissance du chauffage ; le réfrigérant renvoie les vapeurs. Contrôle : augmenter la puissance ne fait qu'accélérer l'ébullition.",
+          "methode": "Reflux : température plafonnée par l'ébullition du mélange.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-pourquoi-ce-montage-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le protocole d'une estérification",
+        "lesson": "Le chauffage à reflux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-le-protocole-d-une-esterification",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Le protocole d'une estérification",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le protocole d'une estérification",
+          "difficulty": 1,
+          "statement": "Dans le protocole, l'acide sulfurique concentré est ajouté :",
+          "options": [
+            {
+              "label": "en petite quantité (quelques gouttes), comme catalyseur",
+              "correct": true,
+              "why": "Quelques gouttes suffisent pour accélérer la réaction ; il n'apparaît pas dans le bilan."
+            },
+            {
+              "label": "en grande quantité, comme réactif de la réaction",
+              "why": "Il ne réagit pas : il n'apparaît pas dans l'équation de l'estérification."
+            },
+            {
+              "label": "en solution diluée, pour neutraliser l'acide éthanoïque",
+              "why": "Il ne sert pas à neutraliser, c'est un acide fort concentré et un catalyseur."
+            },
+            {
+              "label": "à la fin du chauffage, pour arrêter la réaction",
+              "why": "Il est ajouté au départ pour accélérer la réaction, non à la fin pour la bloquer."
+            }
+          ],
+          "hint": "Le catalyseur n'est pas consommé : en faut-il beaucoup ?",
+          "solution": "On ajoute quelques gouttes d'acide sulfurique concentré dès le début : c'est un catalyseur, il n'est pas consommé. Contrôle : il ne figure pas dans l'équation de la réaction.",
+          "methode": "Acide sulfurique : quelques gouttes, catalyseur, ajouté au départ.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-protocole-d-une-esterification-q1"
+        },
+        {
+          "notion": "Le protocole d'une estérification",
+          "difficulty": 2,
+          "statement": "On veut $0{,}100\\ \\mathrm{mol}$ d'acide éthanoïque ($M=60{,}0\\ \\mathrm{g\\,mol^{-1}}$, $\\rho=1{,}05\\ \\mathrm{g\\,mL^{-1}}$). Le volume à prélever est :",
+          "options": [
+            {
+              "label": "$V=5{,}7\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$m=nM=6{,}00\\ \\mathrm{g}$ ; $V=\\dfrac{m}{\\rho}=\\dfrac{6{,}00}{1{,}05}=5{,}7\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$V=6{,}3\\ \\mathrm{mL}$",
+              "why": "Tu as multiplié $m$ par $\\rho$ au lieu de diviser : $V=m/\\rho$."
+            },
+            {
+              "label": "$V=6{,}0\\ \\mathrm{mL}$",
+              "why": "Tu as pris $\\rho=1\\ \\mathrm{g\\,mL^{-1}}$ : la masse volumique de l'acide éthanoïque vaut $1{,}05\\ \\mathrm{g\\,mL^{-1}}$."
+            },
+            {
+              "label": "$V=57\\ \\mathrm{mL}$",
+              "why": "Tu as calculé le volume d'une mole ($M/\\rho$) au lieu de celui de $0{,}100\\ \\mathrm{mol}$."
+            }
+          ],
+          "hint": "Passe de $n$ à $m$ avec $M$, puis de $m$ à $V$ avec $\\rho$.",
+          "solution": "$m=n\\,M=0{,}100\\times60{,}0=6{,}00\\ \\mathrm{g}$ ; $V=\\dfrac{m}{\\rho}=\\dfrac{6{,}00}{1{,}05}=5{,}7\\ \\mathrm{mL}$. Contrôle : $5{,}7\\times1{,}05=6{,}00\\ \\mathrm{g}$.",
+          "methode": "Volume d'un liquide : $V=\\dfrac{nM}{\\rho}$.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-protocole-d-une-esterification-q2"
+        },
+        {
+          "notion": "Le protocole d'une estérification",
+          "difficulty": 2,
+          "statement": "On veut $0{,}100\\ \\mathrm{mol}$ d'éthanol ($M=46{,}0\\ \\mathrm{g\\,mol^{-1}}$, $\\rho=0{,}79\\ \\mathrm{g\\,mL^{-1}}$). Le volume à prélever est :",
+          "options": [
+            {
+              "label": "$V=5{,}8\\ \\mathrm{mL}$",
+              "correct": true,
+              "why": "$m=nM=4{,}60\\ \\mathrm{g}$ ; $V=\\dfrac{4{,}60}{0{,}79}=5{,}8\\ \\mathrm{mL}$."
+            },
+            {
+              "label": "$V=3{,}6\\ \\mathrm{mL}$",
+              "why": "Tu as multiplié $m$ par $\\rho$ au lieu de diviser : $V=m/\\rho$."
+            },
+            {
+              "label": "$V=4{,}6\\ \\mathrm{mL}$",
+              "why": "Tu as pris $\\rho=1\\ \\mathrm{g\\,mL^{-1}}$ : l'éthanol est moins dense que l'eau ($0{,}79$)."
+            },
+            {
+              "label": "$V=58\\ \\mathrm{mL}$",
+              "why": "Tu as calculé le volume d'une mole ($M/\\rho$) au lieu de celui de $0{,}100\\ \\mathrm{mol}$."
+            }
+          ],
+          "hint": "Passe de $n$ à $m$ avec $M$, puis de $m$ à $V$ avec $\\rho$.",
+          "solution": "$m=0{,}100\\times46{,}0=4{,}60\\ \\mathrm{g}$ ; $V=\\dfrac{4{,}60}{0{,}79}=5{,}8\\ \\mathrm{mL}$. Contrôle : $5{,}8\\times0{,}79\\approx4{,}60\\ \\mathrm{g}$.",
+          "methode": "Volume d'un liquide : $V=m/\\rho$.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-protocole-d-une-esterification-q3"
+        },
+        {
+          "notion": "Le protocole d'une estérification",
+          "difficulty": 3,
+          "statement": "On mélange $0{,}100\\ \\mathrm{mol}$ d'acide éthanoïque et $0{,}200\\ \\mathrm{mol}$ d'éthanol. Avec $M(\\text{ester})=88{,}0\\ \\mathrm{g\\,mol^{-1}}$, la masse maximale d'ester qu'on peut obtenir est :",
+          "options": [
+            {
+              "label": "$m_{max}=8{,}80\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "L'acide est le réactif limitant : $n_{max}=0{,}100\\ \\mathrm{mol}$ ; $m_{max}=0{,}100\\times88{,}0=8{,}80\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m_{max}=17{,}6\\ \\mathrm{g}$",
+              "why": "Tu as pris l'éthanol comme réactif limitant : c'est l'acide ($0{,}100\\ \\mathrm{mol}$), en défaut, qui limite."
+            },
+            {
+              "label": "$m_{max}=26{,}4\\ \\mathrm{g}$",
+              "why": "Tu as additionné les deux quantités ($0{,}300\\ \\mathrm{mol}$) : l'ester se forme à raison d'une mole par mole d'acide."
+            },
+            {
+              "label": "$m_{max}=4{,}40\\ \\mathrm{g}$",
+              "why": "Tu as divisé par $2$ la quantité d'acide : les coefficients valent $1$, il n'y a pas de facteur $2$."
+            }
+          ],
+          "hint": "Quel réactif est limitant ? Les coefficients de l'équation sont tous égaux à $1$.",
+          "solution": "$n_{max}=\\min(0{,}100;\\,0{,}200)=0{,}100\\ \\mathrm{mol}$ (réaction totale supposée) ; $m_{max}=0{,}100\\times88{,}0=8{,}80\\ \\mathrm{g}$. Contrôle : l'excès d'éthanol ($0{,}100\\ \\mathrm{mol}$) reste inutilisé.",
+          "methode": "Masse maximale : $n_{max}=n(\\text{réactif limitant})$, $m=nM$.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-protocole-d-une-esterification-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Le traitement du mélange",
+        "lesson": "Le chauffage à reflux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-le-traitement-du-melange",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Le traitement du mélange",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Le traitement du mélange",
+          "difficulty": 1,
+          "statement": "On verse le mélange refroidi dans de l'eau salée (relargage). Le but est de :",
+          "options": [
+            {
+              "label": "diminuer la solubilité de l'ester dans l'eau, pour le récupérer",
+              "correct": true,
+              "why": "L'eau salée est moins bon solvant pour l'ester : il se sépare mieux de la phase aqueuse."
+            },
+            {
+              "label": "augmenter la solubilité de l'ester dans la phase aqueuse salée",
+              "why": "C'est l'inverse : on cherche à réduire la solubilité de l'ester dans l'eau."
+            },
+            {
+              "label": "catalyser la réaction d'hydrolyse de l'ester formé",
+              "why": "Le but est d'éviter les pertes d'ester, non de provoquer l'hydrolyse."
+            },
+            {
+              "label": "neutraliser les restes d'acide sulfurique du mélange refroidi",
+              "why": "La neutralisation se fait ensuite avec une solution d'hydrogénocarbonate de sodium."
+            }
+          ],
+          "hint": "Pourquoi ajouter du sel dans l'eau ?",
+          "solution": "Le sel diminue la solubilité des composés organiques dans l'eau (relargage) : l'ester migre dans la phase organique. Contrôle : on obtient deux phases bien distinctes.",
+          "methode": "Relargage : l'eau salée dissout moins l'ester.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-traitement-du-melange-q1"
+        },
+        {
+          "notion": "Le traitement du mélange",
+          "difficulty": 2,
+          "statement": "On lave la phase organique avec une solution d'hydrogénocarbonate de sodium. Le but est :",
+          "options": [
+            {
+              "label": "d'éliminer l'acide restant, avec un dégagement de dioxyde de carbone",
+              "correct": true,
+              "why": "Les acides réagissent avec $\\mathrm{HCO_3^-}$ en formant $\\mathrm{CO_2}$ et de l'eau : ils passent dans la phase aqueuse."
+            },
+            {
+              "label": "d'éliminer l'alcool resté dans la phase organique, sans dégagement",
+              "why": "L'hydrogénocarbonate réagit avec les acides, pas avec l'alcool."
+            },
+            {
+              "label": "de sécher l'ester en retirant les dernières traces d'eau liquide",
+              "why": "Le lavage ajoute de l'eau : le séchage se fait ensuite avec un sel anhydre."
+            },
+            {
+              "label": "de catalyser l'estérification résiduelle dans la phase organique",
+              "why": "Le milieu basique ne catalyse pas l'estérification : il neutralise les acides."
+            }
+          ],
+          "hint": "Que fait un ion hydrogénocarbonate en présence d'un acide ?",
+          "solution": "$\\mathrm{HCO_3^-}+\\mathrm{H_3O^+}\\rightarrow\\mathrm{CO_2}+2\\,\\mathrm{H_2O}$ : l'acide éthanoïque et l'acide sulfurique sont éliminés ; le dégagement de $\\mathrm{CO_2}$ est visible. Contrôle : on cesse d'ajouter la solution quand le dégagement s'arrête.",
+          "methode": "Lavage au $\\mathrm{NaHCO_3}$ : neutraliser les acides.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-traitement-du-melange-q2"
+        },
+        {
+          "notion": "Le traitement du mélange",
+          "difficulty": 2,
+          "statement": "Dans l'ampoule à décanter, l'ester ($\\rho=0{,}90\\ \\mathrm{g\\,mL^{-1}}$, peu soluble dans l'eau salée) et la phase aqueuse ($\\rho\\approx1{,}1\\ \\mathrm{g\\,mL^{-1}}$) forment deux phases. L'ester se trouve :",
+          "options": [
+            {
+              "label": "dans la phase supérieure, car il est moins dense que la phase aqueuse",
+              "correct": true,
+              "why": "Le liquide le moins dense surnage : l'ester ($0{,}90$) est au-dessus de l'eau salée ($1{,}1$)."
+            },
+            {
+              "label": "dans la phase inférieure, car il est plus dense que la phase aqueuse",
+              "why": "$0{,}90<1{,}1$ : l'ester est moins dense que l'eau salée."
+            },
+            {
+              "label": "à l'interface des deux phases, car sa densité est intermédiaire",
+              "why": "La densité de l'ester est inférieure aux deux autres : il se place au-dessus."
+            },
+            {
+              "label": "répartie également entre les deux phases, car il est miscible aux deux",
+              "why": "L'ester est peu soluble dans l'eau salée : il forme une phase distincte."
+            }
+          ],
+          "hint": "Comparer les masses volumiques : lequel des deux liquides flotte sur l'autre ?",
+          "solution": "Deux liquides non miscibles se superposent selon leur densité : le moins dense ($\\rho=0{,}90$ pour l'ester) occupe la phase supérieure. Contrôle : on soutire d'abord la phase aqueuse (inférieure).",
+          "methode": "Décantation : la phase la moins dense est au-dessus.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-traitement-du-melange-q3"
+        },
+        {
+          "notion": "Le traitement du mélange",
+          "difficulty": 3,
+          "statement": "L'enchaînement logique des opérations pour isoler l'ester pur est :",
+          "options": [
+            {
+              "label": "relargage, décantation, lavage au $\\mathrm{NaHCO_3}$, séchage au $\\mathrm{MgSO_4}$, filtration, distillation",
+              "correct": true,
+              "why": "On sépare d'abord les phases, on neutralise, on retire l'eau, on filtre le desséchant puis on purifie par distillation."
+            },
+            {
+              "label": "séchage au $\\mathrm{MgSO_4}$, lavage au $\\mathrm{NaHCO_3}$, relargage, filtration, décantation, distillation",
+              "why": "Le lavage ajoute de l'eau : un séchage placé avant lui serait inutile."
+            },
+            {
+              "label": "distillation, lavage au $\\mathrm{NaHCO_3}$, séchage au $\\mathrm{MgSO_4}$, décantation, relargage, filtration",
+              "why": "La distillation ne se fait qu'en dernier, sur un liquide déjà séparé, neutralisé et sec."
+            },
+            {
+              "label": "lavage au $\\mathrm{NaHCO_3}$, relargage, filtration, séchage au $\\mathrm{MgSO_4}$, décantation, distillation",
+              "why": "On ne filtre qu'après séchage (pour retirer le desséchant) et la décantation précède les lavages."
+            }
+          ],
+          "hint": "Pense à ce que chaque étape ajoute ou retire (eau, acide, solide).",
+          "solution": "Relargage puis décantation (séparer l'ester de la phase aqueuse), lavage basique (retirer les acides), séchage (retirer l'eau), filtration (retirer le desséchant) et distillation (purifier). Contrôle : chaque étape dépend de la précédente : le séchage vient après tout contact avec l'eau.",
+          "methode": "Purification : décanter, laver, sécher, filtrer, distiller.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-le-traitement-du-melange-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les sources d'erreur",
+        "lesson": "Le chauffage à reflux",
+        "role": "cours",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 4,
+        "difficulty_mix": {
+          "1": 1,
+          "2": 2,
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-les-sources-d-erreur",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Les sources d'erreur",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 1,
+          "statement": "Laquelle de ces causes diminue le rendement mesuré de la synthèse ?",
+          "options": [
+            {
+              "label": "de l'ester resté sur la verrerie et dans l'ampoule lors des transferts",
+              "correct": true,
+              "why": "Les pertes matérielles diminuent la masse d'ester récupérée, donc le rendement."
+            },
+            {
+              "label": "l'emploi d'un excès d'alcool dans le mélange initial de départ",
+              "why": "Un excès d'un réactif augmente le rendement."
+            },
+            {
+              "label": "l'ajout de quelques gouttes d'acide sulfurique au mélange",
+              "why": "Le catalyseur accélère la réaction sans modifier le rendement final."
+            },
+            {
+              "label": "l'élimination de l'eau formée au cours de la réaction",
+              "why": "Éliminer un produit déplace l'équilibre et augmente le rendement."
+            }
+          ],
+          "hint": "Quelle cause fait perdre de la matière ?",
+          "solution": "Les transferts successifs laissent un peu d'ester sur la verrerie : c'est une perte matérielle, qui diminue le rendement. Contrôle : les trois autres causes agissent sur l'équilibre ou la vitesse, pas sur les pertes.",
+          "methode": "Pertes aux transferts : rendement mesuré plus faible.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-sources-d-erreur-q1"
+        },
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 2,
+          "statement": "L'ester pesé contient encore de l'eau et un peu d'acide. Le rendement calculé à partir de cette masse est :",
+          "options": [
+            {
+              "label": "surestimé, car la masse pesée contient d'autres constituants que l'ester",
+              "correct": true,
+              "why": "La masse pesée est supérieure à celle de l'ester pur : le rendement est surestimé."
+            },
+            {
+              "label": "sous-estimé, car l'ester pur est présent en moindre quantité",
+              "why": "C'est l'inverse : les impuretés augmentent la masse mesurée."
+            },
+            {
+              "label": "exact, car la masse totale du mélange se conserve toujours",
+              "why": "La masse pesée comprend l'eau et l'acide, qui ne sont pas de l'ester."
+            },
+            {
+              "label": "indéterminé, tant que l'expérience n'est pas refaite en entier",
+              "why": "On peut raisonner sans refaire l'expérience : les impuretés augmentent la masse."
+            }
+          ],
+          "hint": "Que contient la masse pesée en plus de l'ester pur ?",
+          "solution": "La masse pesée inclut l'ester et les impuretés (eau, acide) : le rendement calculé est supérieur au rendement réel. Contrôle : l'ester pur aurait une masse plus faible.",
+          "methode": "Produit impur : rendement surestimé.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-sources-d-erreur-q2"
+        },
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 2,
+          "statement": "On arrête le chauffage à reflux après quelques minutes seulement. Le rendement mesuré est :",
+          "options": [
+            {
+              "label": "inférieur à $67\\ \\%$, car l'état d'équilibre n'est pas atteint (réaction lente)",
+              "correct": true,
+              "why": "L'estérification est lente : après quelques minutes l'avancement est inférieur à son avancement final."
+            },
+            {
+              "label": "égal à $67\\ \\%$, car le rendement ne dépend pas de la durée du chauffage",
+              "why": "Le rendement final ne dépend pas de la durée, mais il n'est atteint qu'à l'équilibre ; avant, il est plus bas."
+            },
+            {
+              "label": "supérieur à $67\\ \\%$, car moins d'ester a le temps de s'hydrolyser",
+              "why": "L'hydrolyse est elle aussi lente : on ne dépasse pas l'état d'équilibre."
+            },
+            {
+              "label": "nul, car aucune transformation n'a lieu avant l'équilibre",
+              "why": "La transformation se produit progressivement : l'avancement croît dès les premiers instants."
+            }
+          ],
+          "hint": "La réaction est lente : l'équilibre est-il atteint après quelques minutes ?",
+          "solution": "L'estérification est lente : x croît progressivement jusqu'à $x_f$. Un arrêt prématuré donne un rendement inférieur à celui de l'équilibre. Contrôle : la courbe $x(t)$ est encore croissante.",
+          "methode": "Durée trop courte : équilibre non atteint, rendement plus faible.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-sources-d-erreur-q3"
+        },
+        {
+          "notion": "Les sources d'erreur",
+          "difficulty": 3,
+          "statement": "Pour éliminer l'acide du mélange, on lave l'ester avec de la soude concentrée et on laisse longtemps en contact au lieu d'utiliser l'hydrogénocarbonate de sodium. L'erreur est que :",
+          "options": [
+            {
+              "label": "l'ester est saponifié par la soude (réaction totale), ce qui fait perdre de l'ester",
+              "correct": true,
+              "why": "Un ester réagit avec une base forte : $\\mathrm{ester}+\\mathrm{HO^-}\\rightarrow\\mathrm{carboxylate}+\\mathrm{alcool}$, totale, donc perte du produit recherché."
+            },
+            {
+              "label": "l'ester est estérifié une seconde fois, ce qui augmente le rendement",
+              "why": "L'estérification a lieu entre un acide et un alcool, en milieu acide : la soude ne la favorise pas."
+            },
+            {
+              "label": "la soude déplace l'équilibre d'estérification et conduit à un rendement de $100\\ \\%$",
+              "why": "La soude attaque l'ester produit : elle ne le forme pas."
+            },
+            {
+              "label": "aucune : la soude concentrée est plus efficace et sans effet sur l'ester",
+              "why": "Les esters sont saponifiés par la soude : l'effet sur l'ester est important."
+            }
+          ],
+          "hint": "Que devient un ester au contact d'une base forte ?",
+          "solution": "En milieu basique fort, l'ester est saponifié : $\\mathrm{R-COOR'}+\\mathrm{HO^-}\\rightarrow\\mathrm{R-COO^-}+\\mathrm{R'OH}$ (totale). On perd l'ester, d'où l'usage d'une base faible ($\\mathrm{HCO_3^-}$) et d'un contact court. Contrôle : la saponification est utilisée pour fabriquer du savon.",
+          "methode": "Base forte : saponification de l'ester ; laver avec $\\mathrm{HCO_3^-}$.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-sources-d-erreur-q4"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Des dérivés d'acide plus réactifs",
+        "lesson": "Approfondissement — Estérification",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-des-derives-d-acide-plus-reactifs",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Des dérivés d'acide plus réactifs",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Des dérivés d'acide plus réactifs",
+          "difficulty": 3,
+          "statement": "On remplace l'acide éthanoïque par l'anhydride éthanoïque dans la réaction avec l'éthanol : $(\\mathrm{CH_3CO})_2\\mathrm{O}+\\mathrm{CH_3CH_2OH}\\rightarrow\\mathrm{CH_3COOCH_2CH_3}+\\mathrm{CH_3COOH}$. Cette réaction est :",
+          "options": [
+            {
+              "label": "rapide et totale, et forme de l'acide éthanoïque comme sous-produit",
+              "correct": true,
+              "why": "L'anhydride est plus réactif que l'acide : la réaction est rapide, totale, et ne forme pas d'eau (donc pas d'hydrolyse)."
+            },
+            {
+              "label": "lente et limitée, avec production d'eau comme avec l'acide",
+              "why": "Avec l'anhydride, il se forme de l'acide éthanoïque et non de l'eau : la réaction est rapide et totale."
+            },
+            {
+              "label": "rapide mais limitée, car l'eau formée provoque l'hydrolyse de l'ester",
+              "why": "Il ne se forme pas d'eau : aucune hydrolyse ne limite la réaction, qui est totale."
+            },
+            {
+              "label": "totale mais lente, car l'anhydride est moins réactif que l'acide",
+              "why": "L'anhydride est plus réactif que l'acide carboxylique : la réaction est rapide."
+            }
+          ],
+          "hint": "Quels sont les produits de la réaction ? L'eau y figure-t-elle ?",
+          "solution": "L'anhydride éthanoïque réagit rapidement et complètement avec l'alcool : l'ester se forme avec de l'acide éthanoïque (pas d'eau, donc pas d'hydrolyse inverse). Contrôle : le rendement n'est limité que par les pertes de manipulation.",
+          "methode": "Anhydride d'acide + alcool : ester + acide, rapide et total.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-des-derives-d-acide-plus-reactifs-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "L'hydrolyse basique",
+        "lesson": "Approfondissement — Estérification",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-l-hydrolyse-basique",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "L'hydrolyse basique",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "L'hydrolyse basique",
+          "difficulty": 3,
+          "statement": "On saponifie $8{,}80\\ \\mathrm{g}$ d'éthanoate d'éthyle ($M=88{,}0\\ \\mathrm{g\\,mol^{-1}}$) par de la soude en excès. La masse d'éthanoate de sodium $\\mathrm{CH_3COONa}$ ($M=82{,}0\\ \\mathrm{g\\,mol^{-1}}$) formée est :",
+          "options": [
+            {
+              "label": "$m=8{,}20\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "$n(\\text{ester})=\\dfrac{8{,}80}{88{,}0}=0{,}100\\ \\mathrm{mol}$ ; la saponification est totale, $n(\\mathrm{CH_3COO^-})=0{,}100\\ \\mathrm{mol}$ ; $m=0{,}100\\times82{,}0=8{,}20\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m=16{,}4\\ \\mathrm{g}$",
+              "why": "Tu as doublé la quantité : une mole d'ester donne une mole de carboxylate."
+            },
+            {
+              "label": "$m=4{,}10\\ \\mathrm{g}$",
+              "why": "Tu as divisé par $2$ : une mole d'ester donne une mole de carboxylate."
+            },
+            {
+              "label": "$m=5{,}49\\ \\mathrm{g}$",
+              "why": "Tu as appliqué le rendement de l'estérification ($67\\ \\%$) : la saponification est totale."
+            }
+          ],
+          "hint": "La saponification est-elle limitée ou totale ? Quel est le rapport entre $n(\\text{ester})$ et $n(\\text{carboxylate})$ ?",
+          "solution": "$\\mathrm{CH_3COOC_2H_5}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{C_2H_5OH}$, totale : $n(\\mathrm{CH_3COO^-})=n(\\text{ester})=0{,}100\\ \\mathrm{mol}$ ; $m=0{,}100\\times82{,}0=8{,}20\\ \\mathrm{g}$. Contrôle : $\\mathrm{Na^+}$ spectateur, $M(\\mathrm{CH_3COONa})=82{,}0\\ \\mathrm{g\\,mol^{-1}}$.",
+          "methode": "Saponification : totale, $n(\\text{carboxylate})=n(\\text{ester})$ en excès de base.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-l-hydrolyse-basique-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les esters dans la nature",
+        "lesson": "Approfondissement — Estérification",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-les-esters-dans-la-nature",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Les esters dans la nature",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les esters dans la nature",
+          "difficulty": 3,
+          "statement": "Un triglycéride (huile ou graisse) est un triester du glycérol et de trois acides gras. La saponification d'une mole de triglycéride par la soude en excès donne :",
+          "options": [
+            {
+              "label": "$1$ mole de glycérol et $3$ moles de carboxylate (savon)",
+              "correct": true,
+              "why": "Le glycérol a trois groupes $-\\mathrm{OH}$ estérifiés : la saponification libère $1$ glycérol et $3$ ions carboxylate."
+            },
+            {
+              "label": "$3$ moles de glycérol et $1$ mole de carboxylate",
+              "why": "Un seul glycérol porte les trois chaînes : il n'y en a qu'une mole, et trois carboxylates."
+            },
+            {
+              "label": "$1$ mole de glycérol et $1$ mole de carboxylate",
+              "why": "Il y a trois fonctions ester par triglycéride : trois carboxylates sont formés."
+            },
+            {
+              "label": "$3$ moles de glycérol et $3$ moles de carboxylate",
+              "why": "Un triglycéride ne contient qu'un seul glycérol : on ne peut en former qu'une mole."
+            }
+          ],
+          "hint": "Combien de fonctions ester contient un triglycéride ? Combien de glycérols ?",
+          "solution": "$\\mathrm{triglyc\\acute{e}ride}+3\\,\\mathrm{HO^-}\\rightarrow\\mathrm{glyc\\acute{e}rol}+3\\,\\mathrm{carboxylate}$ : un triglycéride a $3$ fonctions ester et un glycérol. Contrôle : $3$ $\\mathrm{HO^-}$ consommés pour $3$ esters.",
+          "methode": "Triglycéride + $3\\,\\mathrm{HO^-}$ $\\to$ glycérol + $3$ carboxylates (savon).",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-esters-dans-la-nature-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "notion": "Les techniques de séparation",
+        "lesson": "Approfondissement — Estérification",
+        "role": "approfondissement",
+        "bac_frequency": 2,
+        "existing_questions": 0,
+        "target_new_questions": 1,
+        "difficulty_mix": {
+          "3": 1
+        }
+      },
+      "ref": "pc-ester-hydrolyse-les-techniques-de-separation",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "qcu",
+      "title": "Les techniques de séparation",
+      "difficulty": 3,
+      "questions": [
+        {
+          "notion": "Les techniques de séparation",
+          "difficulty": 3,
+          "statement": "On veut séparer l'éthanoate d'éthyle ($\\theta_{eb}=77\\ ^\\circ\\mathrm{C}$) de l'acide éthanoïque ($\\theta_{eb}=118\\ ^\\circ\\mathrm{C}$), deux liquides miscibles. La technique adaptée est :",
+          "options": [
+            {
+              "label": "la distillation fractionnée",
+              "correct": true,
+              "why": "Les liquides miscibles de températures d'ébullition différentes se séparent par distillation fractionnée."
+            },
+            {
+              "label": "la décantation, dans une ampoule à décanter",
+              "why": "La décantation sépare des liquides non miscibles ; ces deux liquides sont miscibles."
+            },
+            {
+              "label": "la filtration sur papier",
+              "why": "La filtration sépare un solide d'un liquide : il n'y a ici aucun solide."
+            },
+            {
+              "label": "l'évaporation à l'air libre jusqu'à obtenir un résidu",
+              "why": "Les deux liquides sont volatils : l'évaporation les ferait disparaître l'un et l'autre."
+            }
+          ],
+          "hint": "Les deux liquides sont-ils miscibles ? Quelle propriété les distingue ?",
+          "solution": "Deux liquides miscibles dont les températures d'ébullition diffèrent ($77$ et $118\\ ^\\circ\\mathrm{C}$) se séparent par distillation fractionnée : l'ester, plus volatil, distille en premier. Contrôle : décantation pour non miscibles, filtration pour solide/liquide.",
+          "methode": "Distillation : liquides miscibles de températures d'ébullition différentes.",
+          "points": 1,
+          "ref": "pc-ester-hydrolyse-les-techniques-de-separation-q1"
+        }
+      ],
+      "origin": {
+        "type": "original"
+      }
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-ester-hydrolyse-probleme-1",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "probleme",
+      "title": "Synthèse de l'éthanoate d'éthyle",
+      "difficulty": 3,
+      "context": "On chauffe à reflux, avec quelques gouttes d'acide sulfurique concentré, un mélange de $0{,}20\\ \\mathrm{mol}$ d'acide éthanoïque et de $0{,}20\\ \\mathrm{mol}$ d'éthanol. Après refroidissement et traitement du mélange (relargage, lavage, séchage, distillation), on isole $11{,}8\\ \\mathrm{g}$ d'ester. Données : $M(\\mathrm{CH_3COOC_2H_5})=88{,}0\\ \\mathrm{g\\,mol^{-1}}$ ; le volume total se simplifie dans le calcul de $K$ ($\\Delta n_{gaz}=0$).",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 1 — Nommer et écrire les formules",
+          "difficulty": 1,
+          "statement": "L'équation de la réaction de synthèse est :",
+          "options": [
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{CH_3CH_2OH}\\rightleftharpoons\\mathrm{CH_3COOCH_2CH_3}+\\mathrm{H_2O}$",
+              "correct": true,
+              "why": "Acide $+$ alcool $\\rightleftharpoons$ ester $+$ eau ; atomes conservés : $\\mathrm{C}$ : $4=4$, $\\mathrm{H}$ : $10=10$, $\\mathrm{O}$ : $3=3$."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{CH_3CH_2OH}\\rightleftharpoons\\mathrm{CH_3COOCH_2CH_3}$",
+              "why": "Il manque la molécule d'eau formée : les atomes d'hydrogène et d'oxygène ne sont pas conservés."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{CH_3CH_2OH}\\rightleftharpoons\\mathrm{CH_3CH_2COOCH_3}+\\mathrm{H_2O}$",
+              "why": "L'ester formé est l'éthanoate d'éthyle : la chaîne de l'acide ($2$ carbones) reste du côté du groupe carbonyle."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{CH_3CH_2OH}\\rightleftharpoons\\mathrm{CH_3COOCH_2CH_3}+\\mathrm{H_2}$",
+              "why": "Le deuxième produit est l'eau, pas le dihydrogène : l'oxygène n'est pas conservé ($3$ à gauche, $2$ à droite)."
+            }
+          ],
+          "hint": "Un ester se forme avec l'élimination d'une petite molécule : laquelle ?",
+          "solution": "$\\mathrm{CH_3COOH}+\\mathrm{CH_3CH_2OH}\\rightleftharpoons\\mathrm{CH_3COOCH_2CH_3}+\\mathrm{H_2O}$. Contrôle : $\\mathrm{C}$ : $2+2=4$ ; $\\mathrm{H}$ : $4+6=10$ ; $\\mathrm{O}$ : $2+1=3$.",
+          "methode": "Estérification : acide + alcool $\\rightleftharpoons$ ester + eau.",
+          "points": 1,
+          "part": "Partie A — Écrire et justifier la synthèse",
+          "ref": "pc-ester-hydrolyse-probleme-1-q1"
+        },
+        {
+          "notion": "Méthode 1 — Nommer et écrire les formules",
+          "difficulty": 1,
+          "statement": "L'ester formé s'appelle :",
+          "options": [
+            {
+              "label": "l'éthanoate d'éthyle",
+              "correct": true,
+              "why": "Partie acide : éthanoate ($\\mathrm{CH_3COO}$) ; partie alcool : éthyle ($\\mathrm{CH_2CH_3}$)."
+            },
+            {
+              "label": "le propanoate de méthyle",
+              "why": "Cet isomère se formerait à partir de l'acide propanoïque et du méthanol."
+            },
+            {
+              "label": "l'éthanoate de méthyle",
+              "why": "Il se formerait à partir de l'acide éthanoïque et du méthanol, non de l'éthanol."
+            },
+            {
+              "label": "le méthanoate d'éthyle",
+              "why": "Il se formerait à partir de l'acide méthanoïque et de l'éthanol."
+            }
+          ],
+          "hint": "Nom : [acide]oate de [alkyle de l'alcool].",
+          "solution": "Acide éthanoïque $\\to$ éthanoate ; éthanol $\\to$ éthyle : éthanoate d'éthyle. Contrôle : $4$ carbones, $2$ de l'acide et $2$ de l'alcool.",
+          "methode": "Ester : racine de l'acide + « oate de » + groupe alkyle.",
+          "points": 1,
+          "part": "Partie A — Écrire et justifier la synthèse",
+          "ref": "pc-ester-hydrolyse-probleme-1-q2"
+        },
+        {
+          "notion": "Méthode 5 — Justifier un choix expérimental",
+          "difficulty": 2,
+          "statement": "Les quelques gouttes d'acide sulfurique concentré se justifient car :",
+          "options": [
+            {
+              "label": "c'est un catalyseur : il réduit la durée de la synthèse sans changer le rendement",
+              "correct": true,
+              "why": "L'estérification est lente ; un catalyseur accélère les deux sens et laisse $K$ inchangée."
+            },
+            {
+              "label": "c'est un réactif : il augmente la quantité d'ester formée à l'équilibre",
+              "why": "Il n'apparaît pas dans l'équation de la réaction : il ne forme pas d'ester."
+            },
+            {
+              "label": "il élimine l'eau formée : l'équilibre est déplacé et la réaction devient totale",
+              "why": "Il est en trop faible quantité pour fixer l'eau en quantité utile, et la réaction reste limitée."
+            },
+            {
+              "label": "il augmente la valeur de $K$ et donc le rendement de la synthèse",
+              "why": "Un catalyseur ne modifie pas $K$, fonction de la seule température."
+            }
+          ],
+          "hint": "Que fait un catalyseur de la vitesse et de l'équilibre ?",
+          "solution": "L'acide sulfurique est un catalyseur : il accélère l'estérification (lente) sans changer $K$ ni le rendement. Contrôle : les gouttes ne sont pas consommées ; elles ne figurent pas dans l'équation.",
+          "methode": "Choix du catalyseur : gain de temps, aucun effet sur le rendement.",
+          "points": 1,
+          "part": "Partie A — Écrire et justifier la synthèse",
+          "ref": "pc-ester-hydrolyse-probleme-1-q3"
+        },
+        {
+          "notion": "Méthode 2 — Calculer $x_f$ et le rendement",
+          "difficulty": 2,
+          "statement": "La masse maximale d'ester (réaction supposée totale) vaut :",
+          "options": [
+            {
+              "label": "$m_{max}=17{,}6\\ \\mathrm{g}$",
+              "correct": true,
+              "why": "Réactifs équimolaires, coefficients $1$ : $n_{max}=0{,}20\\ \\mathrm{mol}$ ; $m_{max}=0{,}20\\times88{,}0=17{,}6\\ \\mathrm{g}$."
+            },
+            {
+              "label": "$m_{max}=35{,}2\\ \\mathrm{g}$",
+              "why": "Tu as additionné les quantités des deux réactifs ($0{,}40\\ \\mathrm{mol}$) : une mole d'ester se forme par mole d'acide."
+            },
+            {
+              "label": "$m_{max}=8{,}8\\ \\mathrm{g}$",
+              "why": "Tu as divisé $n_{max}$ par $2$ : les coefficients valent $1$."
+            },
+            {
+              "label": "$m_{max}=21{,}2\\ \\mathrm{g}$",
+              "why": "Tu as utilisé la somme des masses molaires des réactifs ($106{,}0$) au lieu de la masse molaire de l'ester."
+            }
+          ],
+          "hint": "Réactif limitant, puis $m=nM$ avec la masse molaire de l'ester.",
+          "solution": "$n_{max}=0{,}20\\ \\mathrm{mol}$ ; $m_{max}=n_{max}\\,M=0{,}20\\times88{,}0=17{,}6\\ \\mathrm{g}$. Contrôle : la masse obtenue ($11{,}8\\ \\mathrm{g}$) est inférieure à $m_{max}$, comme il se doit pour une réaction limitée.",
+          "methode": "$m_{max}=n(\\text{réactif limitant})\\,M(\\text{ester})$.",
+          "points": 1,
+          "part": "Partie B — Rendement et constante",
+          "ref": "pc-ester-hydrolyse-probleme-1-q4"
+        },
+        {
+          "notion": "Méthode 2 — Calculer $x_f$ et le rendement",
+          "difficulty": 2,
+          "statement": "Le rendement de la synthèse vaut :",
+          "options": [
+            {
+              "label": "$r=67\\ \\%$",
+              "correct": true,
+              "why": "$r=\\dfrac{m_{exp}}{m_{max}}=\\dfrac{11{,}8}{17{,}6}=0{,}670$."
+            },
+            {
+              "label": "$r=149\\ \\%$",
+              "why": "Tu as inversé le rapport : le rendement ne peut pas dépasser $100\\ \\%$."
+            },
+            {
+              "label": "$r=56\\ \\%$",
+              "why": "Tu as comparé à la somme des masses des réactifs ($21{,}2\\ \\mathrm{g}$) au lieu de la masse théorique d'ester."
+            },
+            {
+              "label": "$r=33\\ \\%$",
+              "why": "Tu as calculé la fraction d'ester non obtenue ($1-r$), non le rendement."
+            }
+          ],
+          "hint": "$r$ compare la masse obtenue à la masse maximale calculée.",
+          "solution": "$r=\\dfrac{m_{exp}}{m_{max}}=\\dfrac{11{,}8}{17{,}6}=0{,}670\\approx67\\ \\%$. Contrôle : c'est la valeur attendue pour un mélange équimolaire d'acide et d'alcool primaire.",
+          "methode": "$r=m_{exp}/m_{max}$.",
+          "points": 1,
+          "part": "Partie B — Rendement et constante",
+          "ref": "pc-ester-hydrolyse-probleme-1-q5"
+        },
+        {
+          "notion": "Méthode 3 — Déterminer $K$ à partir d'une mesure",
+          "difficulty": 3,
+          "statement": "À l'équilibre, la constante $K=\\dfrac{n(\\mathrm{ester})\\,n(\\mathrm{eau})}{n(\\mathrm{acide})\\,n(\\mathrm{alcool})}$ vaut environ :",
+          "options": [
+            {
+              "label": "$K=4{,}1$",
+              "correct": true,
+              "why": "$n(\\mathrm{ester})=n(\\mathrm{eau})=0{,}134\\ \\mathrm{mol}$ ; $n(\\mathrm{acide})=n(\\mathrm{alcool})=0{,}20-0{,}134=0{,}066\\ \\mathrm{mol}$ ; $K=\\left(\\dfrac{0{,}134}{0{,}066}\\right)^2=4{,}1$."
+            },
+            {
+              "label": "$K=2{,}0$",
+              "why": "Tu as calculé $\\dfrac{n(\\mathrm{ester})}{n(\\mathrm{acide})}$ : le quotient comporte quatre quantités, d'où le carré."
+            },
+            {
+              "label": "$K=0{,}24$",
+              "why": "Tu as inversé le quotient : les produits (ester, eau) sont au numérateur."
+            },
+            {
+              "label": "$K=0{,}45$",
+              "why": "Tu as utilisé les quantités initiales ($0{,}20$) au dénominateur au lieu des quantités à l'équilibre."
+            }
+          ],
+          "hint": "Dresse le tableau d'avancement : que valent les quantités des quatre espèces à l'équilibre ?",
+          "solution": "$n_f(\\mathrm{ester})=n_f(\\mathrm{eau})=\\dfrac{11{,}8}{88{,}0}=0{,}134\\ \\mathrm{mol}$ ; $n_f(\\mathrm{acide})=n_f(\\mathrm{alcool})=0{,}20-0{,}134=0{,}066\\ \\mathrm{mol}$ ; $K=\\dfrac{0{,}134^2}{0{,}066^2}=4{,}1$. Contrôle : $K\\approx4$, valeur attendue pour un alcool primaire.",
+          "methode": "$K=Q_{r,\\mathrm{\\acute{e}q}}$ à partir du tableau d'avancement.",
+          "points": 1,
+          "part": "Partie B — Rendement et constante",
+          "ref": "pc-ester-hydrolyse-probleme-1-q6"
+        }
+      ]
+    },
+    {
+      "_brief": {
+        "type": "Problème type BAC guidé",
+        "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
+        "source_suggestions": [
+          "pc-svt-2026-rattrapage",
+          "pc-svt-2026-normale",
+          "pc-svt-2025-rattrapage",
+          "pc-svt-2025-normale",
+          "pc-svt-2024-rattrapage",
+          "pc-svt-2024-normale"
+        ],
+        "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
+      },
+      "ref": "pc-ester-hydrolyse-probleme-2",
+      "chapter": "pc-ester-hydrolyse",
+      "kind": "probleme",
+      "title": "Dosage de l'acide restant dans une estérification",
+      "difficulty": 3,
+      "context": "On mélange $0{,}100\\ \\mathrm{mol}$ d'acide éthanoïque et $0{,}100\\ \\mathrm{mol}$ d'éthanol avec un catalyseur solide (résine acide, retirée avant le dosage). Après reflux, on refroidit le mélange dans la glace, puis on le complète à $100{,}0\\ \\mathrm{mL}$ avec de l'eau glacée. On dose $10{,}0\\ \\mathrm{mL}$ de cette solution par de la soude à $C_B=1{,}00\\ \\mathrm{mol\\,L^{-1}}$ : $V_E=3{,}3\\ \\mathrm{mL}$. L'ester ne réagit pas avec la soude pendant la durée du dosage.",
+      "origin": {
+        "type": "original"
+      },
+      "questions": [
+        {
+          "notion": "Méthode 4 — Le dosage de l'acide restant",
+          "difficulty": 1,
+          "statement": "Le refroidissement dans la glace avant le dosage (trempe) a pour but de :",
+          "options": [
+            {
+              "label": "ralentir fortement les réactions pour figer la composition du mélange",
+              "correct": true,
+              "why": "À basse température la vitesse devient très faible : la composition ne change plus pendant le dosage."
+            },
+            {
+              "label": "déplacer l'équilibre dans le sens de formation de l'ester",
+              "why": "La réaction est athermique : refroidir ne déplace pas l'équilibre, il ne fait que ralentir les réactions."
+            },
+            {
+              "label": "éliminer l'eau du mélange avant le dosage",
+              "why": "Le refroidissement n'enlève aucun constituant ; on ajoute même de l'eau glacée."
+            },
+            {
+              "label": "augmenter la valeur de $K$ pour que le dosage soit plus précis",
+              "why": "$K$ est quasi indépendante de la température ici ; la trempe sert à figer le système, non à changer $K$."
+            }
+          ],
+          "hint": "Que se passerait-il si la réaction continuait pendant le dosage ?",
+          "solution": "La trempe (refroidissement et dilution à froid) ralentit les réactions : la composition à l'instant du prélèvement est figée. Contrôle : sans trempe, l'hydrolyse ou l'estérification fausserait le dosage.",
+          "methode": "Trempe : figer la composition avant le dosage.",
+          "points": 1,
+          "part": "Partie A — Principe du dosage",
+          "ref": "pc-ester-hydrolyse-probleme-2-q1"
+        },
+        {
+          "notion": "Méthode 4 — Le dosage de l'acide restant",
+          "difficulty": 1,
+          "statement": "L'équation de la réaction de dosage est :",
+          "options": [
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{H_2O}$",
+              "correct": true,
+              "why": "L'acide cède un proton à l'ion hydroxyde ; charges : $-1=-1$ ; atomes conservés."
+            },
+            {
+              "label": "$\\mathrm{CH_3COO^-}+\\mathrm{H_3O^+}\\rightarrow\\mathrm{CH_3COOH}+\\mathrm{H_2O}$",
+              "why": "C'est la réaction de la base avec un acide, non le dosage de l'acide par la soude."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+\\mathrm{Na^+}\\rightarrow\\mathrm{CH_3COONa}+\\mathrm{H^+}$",
+              "why": "Les ions $\\mathrm{Na^+}$ sont spectateurs : la soude intervient par l'ion $\\mathrm{HO^-}$."
+            },
+            {
+              "label": "$\\mathrm{CH_3COOH}+2\\,\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^{2-}}+2\\,\\mathrm{H_2O}$",
+              "why": "L'acide éthanoïque est monoacide : un seul $\\mathrm{HO^-}$ réagit ; l'ion $\\mathrm{CH_3COO^{2-}}$ n'existe pas."
+            }
+          ],
+          "hint": "Quelle espèce de la soude réagit avec l'acide, et quel proton est transféré ?",
+          "solution": "$\\mathrm{CH_3COOH}+\\mathrm{HO^-}\\rightarrow\\mathrm{CH_3COO^-}+\\mathrm{H_2O}$ : réaction acido-basique $1{:}1$, quasi totale. Contrôle : charges $-1$ de chaque côté.",
+          "methode": "Dosage de l'acide carboxylique par la soude : $1{:}1$.",
+          "points": 1,
+          "part": "Partie A — Principe du dosage",
+          "ref": "pc-ester-hydrolyse-probleme-2-q2"
+        },
+        {
+          "notion": "Méthode 4 — Le dosage de l'acide restant",
+          "difficulty": 2,
+          "statement": "À l'équivalence, la solution contient l'ion éthanoate, base faible : $\\mathrm{pH}_E\\approx8{,}7$. L'indicateur coloré adapté est :",
+          "options": [
+            {
+              "label": "la phénolphtaléine (zone de virage $8{,}2$–$10{,}0$)",
+              "correct": true,
+              "why": "$8{,}2<8{,}7<10{,}0$ : la zone de virage contient $\\mathrm{pH}_E$."
+            },
+            {
+              "label": "l'hélianthine (zone de virage $3{,}1$–$4{,}4$)",
+              "why": "Sa zone de virage est très en dessous de $8{,}7$ : elle virerait bien avant l'équivalence."
+            },
+            {
+              "label": "le rouge de méthyle (zone de virage $4{,}2$–$6{,}2$)",
+              "why": "Sa zone de virage est inférieure à $8{,}7$ : il virerait avant l'équivalence."
+            },
+            {
+              "label": "le bleu de bromothymol (zone de virage $6{,}0$–$7{,}6$)",
+              "why": "Sa zone de virage est inférieure à $8{,}7$ : il virerait avant l'équivalence."
+            }
+          ],
+          "hint": "L'indicateur convient si sa zone de virage contient le $\\mathrm{pH}$ à l'équivalence.",
+          "solution": "On choisit l'indicateur dont la zone de virage contient $\\mathrm{pH}_E=8{,}7$ : la phénolphtaléine ($8{,}2$–$10{,}0$). Contrôle : les trois autres zones de virage sont toutes en dessous de $8{,}2$.",
+          "methode": "Indicateur : zone de virage $\\ni\\mathrm{pH}_E$.",
+          "points": 1,
+          "part": "Partie A — Principe du dosage",
+          "ref": "pc-ester-hydrolyse-probleme-2-q3"
+        },
+        {
+          "notion": "Méthode 4 — Le dosage de l'acide restant",
+          "difficulty": 2,
+          "statement": "La quantité d'acide éthanoïque restant dans les $100{,}0\\ \\mathrm{mL}$ vaut :",
+          "options": [
+            {
+              "label": "$n_{reste}=0{,}033\\ \\mathrm{mol}$",
+              "correct": true,
+              "why": "$n(\\mathrm{HO^-})_E=1{,}00\\times3{,}3\\times10^{-3}=3{,}3\\times10^{-3}\\ \\mathrm{mol}$ dans $10{,}0\\ \\mathrm{mL}$ ; $\\times10$ pour $100{,}0\\ \\mathrm{mL}$ : $0{,}033\\ \\mathrm{mol}$."
+            },
+            {
+              "label": "$n_{reste}=3{,}3\\times10^{-3}\\ \\mathrm{mol}$",
+              "why": "Tu as oublié que seuls $10{,}0\\ \\mathrm{mL}$ des $100{,}0\\ \\mathrm{mL}$ ont été dosés : il faut multiplier par $10$."
+            },
+            {
+              "label": "$n_{reste}=0{,}33\\ \\mathrm{mol}$",
+              "why": "Tu as multiplié par $100$ ; le facteur est $\\dfrac{100{,}0}{10{,}0}=10$."
+            },
+            {
+              "label": "$n_{reste}=0{,}067\\ \\mathrm{mol}$",
+              "why": "$0{,}067\\ \\mathrm{mol}$ est la quantité d'ester formé ($0{,}100-n_{reste}$), non celle de l'acide restant."
+            }
+          ],
+          "hint": "Équivalence : $n(\\mathrm{acide})_{dosé}=C_BV_E$ ; tiens compte du facteur de dilution (prélèvement).",
+          "solution": "$n(\\mathrm{acide})_{10\\ \\mathrm{mL}}=C_BV_E=1{,}00\\times3{,}3\\times10^{-3}=3{,}3\\times10^{-3}\\ \\mathrm{mol}$ ; dans $100{,}0\\ \\mathrm{mL}$ : $0{,}033\\ \\mathrm{mol}$. Contrôle : $0{,}033<0{,}100\\ \\mathrm{mol}$ : une partie de l'acide a été consommée.",
+          "methode": "Prélèvement : multiplier par $\\dfrac{V_{total}}{V_{prélevé}}$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-ester-hydrolyse-probleme-2-q4"
+        },
+        {
+          "notion": "Méthode 2 — Calculer $x_f$ et le rendement",
+          "difficulty": 2,
+          "statement": "Le rendement de l'estérification vaut :",
+          "options": [
+            {
+              "label": "$r=67\\ \\%$",
+              "correct": true,
+              "why": "$n(\\mathrm{ester})=0{,}100-0{,}033=0{,}067\\ \\mathrm{mol}$ ; $r=\\dfrac{0{,}067}{0{,}100}=0{,}67$."
+            },
+            {
+              "label": "$r=33\\ \\%$",
+              "why": "Tu as calculé la fraction d'acide restant ($1-r$), non le rendement."
+            },
+            {
+              "label": "$r=203\\ \\%$",
+              "why": "Tu as divisé l'ester formé par l'acide restant : le rendement se rapporte à la quantité maximale ($0{,}100\\ \\mathrm{mol}$)."
+            },
+            {
+              "label": "$r=149\\ \\%$",
+              "why": "Tu as inversé le rapport : le rendement ne peut pas dépasser $100\\ \\%$."
+            }
+          ],
+          "hint": "Ester formé = acide introduit $-$ acide restant ; rapporte à la quantité maximale.",
+          "solution": "$n_f(\\mathrm{ester})=0{,}100-0{,}033=0{,}067\\ \\mathrm{mol}$ ; $n_{max}=0{,}100\\ \\mathrm{mol}$ ; $r=\\dfrac{0{,}067}{0{,}100}=0{,}67=67\\ \\%$. Contrôle : valeur attendue pour un mélange équimolaire d'alcool primaire.",
+          "methode": "$r=n_f(\\text{ester})/n_{max}$ avec $n_f(\\text{ester})=n_0-n_{reste}$.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-ester-hydrolyse-probleme-2-q5"
+        },
+        {
+          "notion": "Méthode 5 — Justifier un choix expérimental",
+          "difficulty": 3,
+          "statement": "On reprend la synthèse avec $0{,}100\\ \\mathrm{mol}$ d'acide et $0{,}300\\ \\mathrm{mol}$ d'éthanol ($K=4{,}0$). Le rendement d'équilibre, par rapport à l'acide, devient environ :",
+          "options": [
+            {
+              "label": "$r=90\\ \\%$",
+              "correct": true,
+              "why": "$\\dfrac{x^2}{(0{,}100-x)(0{,}300-x)}=4$ donne $3x^2-1{,}6\\,x+0{,}12=0$, d'où $x=0{,}090\\ \\mathrm{mol}$ : $r=90\\ \\%$."
+            },
+            {
+              "label": "$r=67\\ \\%$",
+              "why": "Tu as ignoré l'excès d'éthanol : $67\\ \\%$ est le rendement du mélange équimolaire."
+            },
+            {
+              "label": "$r=100\\ \\%$",
+              "why": "Une réaction limitée n'est jamais totale : $K$ reste finie même en excès d'un réactif."
+            },
+            {
+              "label": "$r=75\\ \\%$",
+              "why": "Tu as calculé $\\dfrac{0{,}300}{0{,}300+0{,}100}=0{,}75$ : cette fraction n'a aucune justification ; il faut résoudre $Q_{r,\\mathrm{\\acute{e}q}}=K$."
+            }
+          ],
+          "hint": "Écris $K=\\dfrac{x^2}{(0{,}100-x)(0{,}300-x)}$ et résous l'équation du second degré.",
+          "solution": "$\\dfrac{x^2}{(0{,}100-x)(0{,}300-x)}=4$ donne $3x^2-1{,}6\\,x+0{,}12=0$, soit $x=\\dfrac{1{,}6-\\sqrt{1{,}12}}{6}=0{,}090\\ \\mathrm{mol}$ ; $r=\\dfrac{0{,}090}{0{,}100}\\approx90\\ \\%$. Contrôle : l'excès d'un réactif améliore le rendement sans le rendre total.",
+          "methode": "Excès d'un réactif : résoudre $Q_{r,\\mathrm{\\acute{e}q}}=K$ ; rendement par rapport au réactif limitant.",
+          "points": 1,
+          "part": "Partie B — Exploitation",
+          "ref": "pc-ester-hydrolyse-probleme-2-q6"
+        }
+      ]
+    }
   ],
-  "methodes_du_cours": [
-   "Méthode 1 — Nommer et écrire les formules",
-   "Méthode 2 — Calculer $x_f$ et le rendement",
-   "Méthode 3 — Déterminer $K$ à partir d'une mesure",
-   "Méthode 4 — Le dosage de l'acide restant",
-   "Méthode 5 — Justifier un choix expérimental"
-  ],
-  "existing_questions_total": 8,
-  "target_new_questions": 48,
-  "suggested_figures": [
-   "montage-reflux — Montage à reflux (estérification / saponification)",
-   "esterification-rendement — Vitesse vs rendement : effet du catalyseur et effet de l'excès de réactif"
-  ],
-  "sources": [
-   {
-    "annale": "pc-svt-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2023-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2023-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2023-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2020-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2020-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2020-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2017-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2017-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-svt-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-svt-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-svt-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2026-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2026-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2026-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2025-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2025-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2025-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2024-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2024-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2024-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2023-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2023-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2023-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2022-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2022-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2022-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2021-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2021-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2021-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2020-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2020-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2020-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2019-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2019-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2019-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2018-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2018-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2018-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2017-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2017-normale",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2017-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2016-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2016-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2016-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2015-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2015-normale.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-rattrapage",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-rattrapage.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-rattrapage.pdf"
-   },
-   {
-    "annale": "pc-sm-2014-normale",
-    "sujet": "annales-propres/Sujet-pc-sm-2014-normale.pdf",
-    "corrige": "corriges-propres/pc/Corrige-pc-sm-2014-normale.pdf"
-   }
-  ],
-  "forbidden_sources": [
-   "exam-pdfs/** (MonBac) — ne jamais copier ni s'en inspirer"
+  "series": [
+    {
+      "slug": "pc-ester-hydrolyse-serie-1",
+      "title": "Estérification et hydrolyse · Échauffement",
+      "description": "Les bases du chapitre, pour démarrer en confiance.",
+      "kind": "custom",
+      "chapter": "pc-ester-hydrolyse",
+      "difficulty": 1,
+      "xp_bonus": 20,
+      "position": 101,
+      "published": true,
+      "questions": [
+        "pc-ester-hydrolyse-les-groupes-fonctionnels-q1",
+        "pc-ester-hydrolyse-la-nomenclature-des-esters-q1",
+        "pc-ester-hydrolyse-les-trois-caracteres-de-l-esterification-q1",
+        "pc-ester-hydrolyse-deux-leviers-independants-q1",
+        "pc-ester-hydrolyse-agir-sur-la-vitesse-q1",
+        "pc-ester-hydrolyse-agir-sur-le-rendement-q1",
+        "pc-ester-hydrolyse-le-rendement-q1",
+        "pc-ester-hydrolyse-le-montage-q1",
+        "pc-ester-hydrolyse-le-protocole-d-une-esterification-q1",
+        "pc-ester-hydrolyse-les-groupes-fonctionnels-q2",
+        "pc-ester-hydrolyse-la-nomenclature-des-esters-q2",
+        "pc-ester-hydrolyse-les-trois-caracteres-de-l-esterification-q2"
+      ]
+    },
+    {
+      "slug": "pc-ester-hydrolyse-serie-2",
+      "title": "Estérification et hydrolyse · Entraînement",
+      "description": "Le cœur du chapitre, toutes les notions.",
+      "kind": "custom",
+      "chapter": "pc-ester-hydrolyse",
+      "difficulty": 2,
+      "xp_bonus": 30,
+      "position": 102,
+      "published": true,
+      "questions": [
+        "pc-ester-hydrolyse-deux-leviers-independants-q2",
+        "pc-ester-hydrolyse-agir-sur-la-vitesse-q2",
+        "pc-ester-hydrolyse-agir-sur-le-rendement-q2",
+        "pc-ester-hydrolyse-le-rendement-q2",
+        "pc-ester-hydrolyse-le-montage-q2",
+        "pc-ester-hydrolyse-le-protocole-d-une-esterification-q2",
+        "pc-ester-hydrolyse-pourquoi-ce-montage-q2",
+        "pc-ester-hydrolyse-le-traitement-du-melange-q2",
+        "pc-ester-hydrolyse-les-sources-d-erreur-q2",
+        "pc-ester-hydrolyse-les-groupes-fonctionnels-q4",
+        "pc-ester-hydrolyse-la-nomenclature-des-esters-q4",
+        "pc-ester-hydrolyse-les-trois-caracteres-de-l-esterification-q3"
+      ]
+    },
+    {
+      "slug": "pc-ester-hydrolyse-serie-3",
+      "title": "Estérification et hydrolyse · Type BAC",
+      "description": "Des questions au niveau de l'examen, pièges compris.",
+      "kind": "custom",
+      "chapter": "pc-ester-hydrolyse",
+      "difficulty": 3,
+      "xp_bonus": 50,
+      "position": 103,
+      "published": true,
+      "questions": [
+        "pc-ester-hydrolyse-deux-leviers-independants-q4",
+        "pc-ester-hydrolyse-agir-sur-le-rendement-q4",
+        "pc-ester-hydrolyse-le-montage-q4",
+        "pc-ester-hydrolyse-le-protocole-d-une-esterification-q4",
+        "pc-ester-hydrolyse-pourquoi-ce-montage-q4",
+        "pc-ester-hydrolyse-le-traitement-du-melange-q4",
+        "pc-ester-hydrolyse-les-sources-d-erreur-q4",
+        "pc-ester-hydrolyse-des-derives-d-acide-plus-reactifs-q1",
+        "pc-ester-hydrolyse-l-hydrolyse-basique-q1",
+        "pc-ester-hydrolyse-les-esters-dans-la-nature-q1",
+        "pc-ester-hydrolyse-les-techniques-de-separation-q1",
+        "pc-ester-hydrolyse-probleme-1-q6"
+      ]
+    }
   ]
- },
- "exercises": [
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les deux réactions inverses",
-    "lesson": "Estérification et hydrolyse",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 3,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-les-deux-reactions-inverses",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Les deux réactions inverses",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-les-deux-reactions-inverses-q1",
-     "notion": "Les deux réactions inverses",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les groupes fonctionnels",
-    "lesson": "Estérification et hydrolyse",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-les-groupes-fonctionnels",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Les groupes fonctionnels",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-les-groupes-fonctionnels-q1",
-     "notion": "Les groupes fonctionnels",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "La nomenclature des esters",
-    "lesson": "Estérification et hydrolyse",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-la-nomenclature-des-esters",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "La nomenclature des esters",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-la-nomenclature-des-esters-q1",
-     "notion": "La nomenclature des esters",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les trois caractères de l'estérification",
-    "lesson": "Estérification et hydrolyse",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 1,
-    "target_new_questions": 3,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-les-trois-caracteres-de-l-esterification",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Les trois caractères de l'estérification",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-les-trois-caracteres-de-l-esterification-q1",
-     "notion": "Les trois caractères de l'estérification",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Deux leviers indépendants",
-    "lesson": "Contrôle du rendement",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-deux-leviers-independants",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Deux leviers indépendants",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-deux-leviers-independants-q1",
-     "notion": "Deux leviers indépendants",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Agir sur la vitesse",
-    "lesson": "Contrôle du rendement",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 2,
-    "target_new_questions": 2,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-agir-sur-la-vitesse",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Agir sur la vitesse",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-agir-sur-la-vitesse-q1",
-     "notion": "Agir sur la vitesse",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Agir sur le rendement",
-    "lesson": "Contrôle du rendement",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-agir-sur-le-rendement",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Agir sur le rendement",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-agir-sur-le-rendement-q1",
-     "notion": "Agir sur le rendement",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le rendement",
-    "lesson": "Contrôle du rendement",
-    "role": "cours",
-    "bac_frequency": 3,
-    "existing_questions": 2,
-    "target_new_questions": 2,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-le-rendement",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Le rendement",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-le-rendement-q1",
-     "notion": "Le rendement",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le montage",
-    "lesson": "Le chauffage à reflux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-le-montage",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Le montage",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-le-montage-q1",
-     "notion": "Le montage",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Pourquoi ce montage",
-    "lesson": "Le chauffage à reflux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-pourquoi-ce-montage",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Pourquoi ce montage",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-pourquoi-ce-montage-q1",
-     "notion": "Pourquoi ce montage",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le protocole d'une estérification",
-    "lesson": "Le chauffage à reflux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-le-protocole-d-une-esterification",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Le protocole d'une estérification",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-le-protocole-d-une-esterification-q1",
-     "notion": "Le protocole d'une estérification",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Le traitement du mélange",
-    "lesson": "Le chauffage à reflux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-le-traitement-du-melange",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Le traitement du mélange",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-le-traitement-du-melange-q1",
-     "notion": "Le traitement du mélange",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les sources d'erreur",
-    "lesson": "Le chauffage à reflux",
-    "role": "cours",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 4,
-    "difficulty_mix": {
-     "1": 1,
-     "2": 2,
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-les-sources-d-erreur",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Les sources d'erreur",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-les-sources-d-erreur-q1",
-     "notion": "Les sources d'erreur",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Des dérivés d'acide plus réactifs",
-    "lesson": "Approfondissement — Estérification",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-des-derives-d-acide-plus-reactifs",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Des dérivés d'acide plus réactifs",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-des-derives-d-acide-plus-reactifs-q1",
-     "notion": "Des dérivés d'acide plus réactifs",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "L'hydrolyse basique",
-    "lesson": "Approfondissement — Estérification",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-l-hydrolyse-basique",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "L'hydrolyse basique",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-l-hydrolyse-basique-q1",
-     "notion": "L'hydrolyse basique",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les esters dans la nature",
-    "lesson": "Approfondissement — Estérification",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-les-esters-dans-la-nature",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Les esters dans la nature",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-les-esters-dans-la-nature-q1",
-     "notion": "Les esters dans la nature",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "notion": "Les techniques de séparation",
-    "lesson": "Approfondissement — Estérification",
-    "role": "approfondissement",
-    "bac_frequency": 2,
-    "existing_questions": 0,
-    "target_new_questions": 1,
-    "difficulty_mix": {
-     "3": 1
-    }
-   },
-   "ref": "pc-ester-hydrolyse-les-techniques-de-separation",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "qcu",
-   "title": "Les techniques de séparation",
-   "difficulty": 2,
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-les-techniques-de-separation-q1",
-     "notion": "Les techniques de séparation",
-     "difficulty": 2,
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-ester-hydrolyse-probleme-1",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 1",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-probleme-1-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-probleme-1-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-probleme-1-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  },
-  {
-   "_todo": true,
-   "_brief": {
-    "type": "Problème type BAC guidé",
-    "structure": "énoncé commun + figure éventuelle, Partie A / Partie B, 5 à 8 sous-questions QCU de difficulté croissante (1 → 3), chacune taguée sur UNE notion de _scaffold.notions",
-    "source_suggestions": [
-     "pc-svt-2026-rattrapage",
-     "pc-svt-2026-normale",
-     "pc-svt-2025-rattrapage",
-     "pc-svt-2025-normale",
-     "pc-svt-2024-rattrapage",
-     "pc-svt-2024-normale"
-    ],
-    "rule": "partir d'un exercice d'annale qui porte sur CE chapitre ; changer les valeurs numériques et le contexte, réécrire l'énoncé et la correction avec nos mots ; renseigner origin"
-   },
-   "ref": "pc-ester-hydrolyse-probleme-2",
-   "chapter": "pc-ester-hydrolyse",
-   "kind": "probleme",
-   "title": "TODO — titre court du problème 2",
-   "difficulty": 3,
-   "context": "TODO — énoncé commun (données, schéma décrit, notations)",
-   "figure": "",
-   "origin": {
-    "type": "annale",
-    "ref": "TODO ex. pc-svt-2026-rattrapage",
-    "exercise": "TODO ex. Exercice 2",
-    "reexpressed": true
-   },
-   "questions": [
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-probleme-2-q1",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 1,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-probleme-2-q2",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 2,
-     "part": "Partie A",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    },
-    {
-     "_todo": true,
-     "ref": "pc-ester-hydrolyse-probleme-2-q3",
-     "notion": "TODO — un titre exact de _scaffold.notions",
-     "difficulty": 3,
-     "part": "Partie B",
-     "statement": "TODO — énoncé court et précis ($…$ pour les maths)",
-     "options": [
-      {
-       "label": "TODO bonne réponse",
-       "correct": true,
-       "why": "TODO — pourquoi c'est juste (1 phrase)"
-      },
-      {
-       "label": "TODO piège n°1 (erreur fréquente)",
-       "why": "TODO — l'erreur exacte que fait l'élève qui choisit ça"
-      },
-      {
-       "label": "TODO piège n°2",
-       "why": "TODO"
-      },
-      {
-       "label": "TODO piège n°3",
-       "why": "TODO"
-      }
-     ],
-     "hint": "TODO — un indice qui oriente sans donner la réponse",
-     "solution": "TODO — correction Bac Up rédigée pas à pas (nos mots, vérifiée)",
-     "methode": "TODO — la méthode réutilisable en 1–2 lignes (facultatif)",
-     "points": 1
-    }
-   ]
-  }
- ],
- "series": [
-  {
-   "_todo": true,
-   "slug": "pc-ester-hydrolyse-serie-1",
-   "title": "Estérification et hydrolyse · Échauffement",
-   "description": "Les bases du chapitre, pour démarrer en confiance.",
-   "kind": "custom",
-   "chapter": "pc-ester-hydrolyse",
-   "difficulty": 1,
-   "xp_bonus": 20,
-   "position": 101,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-ester-hydrolyse-serie-2",
-   "title": "Estérification et hydrolyse · Entraînement",
-   "description": "Le cœur du chapitre, toutes les notions.",
-   "kind": "custom",
-   "chapter": "pc-ester-hydrolyse",
-   "difficulty": 2,
-   "xp_bonus": 30,
-   "position": 102,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  },
-  {
-   "_todo": true,
-   "slug": "pc-ester-hydrolyse-serie-3",
-   "title": "Estérification et hydrolyse · Type BAC",
-   "description": "Des questions au niveau de l'examen, pièges compris.",
-   "kind": "custom",
-   "chapter": "pc-ester-hydrolyse",
-   "difficulty": 3,
-   "xp_bonus": 50,
-   "position": 103,
-   "published": true,
-   "questions": [
-    "TODO — 8 à 12 refs de questions de ce fichier (ou existantes), de la plus facile à la plus dure"
-   ]
-  }
- ]
 }
