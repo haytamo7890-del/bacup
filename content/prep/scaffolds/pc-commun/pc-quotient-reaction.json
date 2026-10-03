@@ -644,7 +644,7 @@
               "why": "Tu as inversé le quotient : les produits sont au numérateur."
             },
             {
-              "label": "$Q_{r,i}=0{,}12$",
+              "label": "$Q_{r,i}=0{,}125$",
               "why": "Tu as oublié l'alcool au dénominateur : les deux réactifs y figurent."
             },
             {
@@ -1180,11 +1180,11 @@
             },
             {
               "label": "$\\tau=0{,}25$",
-              "why": "Tu as pris $x^2=0{,}25$ sans prendre la racine : l'équation $\\dfrac{x^2}{(1-x)^2}=1$ donne $x=0{,}50$."
+              "why": "Tu as trouvé $x_f=0{,}50\\ \\mathrm{mol}$ puis élevé $\\tau$ au carré ($0{,}50^2=0{,}25$) : le taux d'avancement est $\\dfrac{x_f}{x_{\\max}}=0{,}50$ lui-même."
             },
             {
               "label": "$\\tau=0{,}33$",
-              "why": "Tu as résolu $\\dfrac{x}{1-x}=\\dfrac12$ au lieu de $\\dfrac{x}{1-x}=1$ (ou oublié que le numérateur est un carré)."
+              "why": "Tu as écrit $1-x=2x$ au lieu de $x=1-x$, ce qui donne $x=\\dfrac13$ : de $\\dfrac{x}{1-x}=1$ on déduit $x=1-x$."
             }
           ],
           "hint": "Écris $K$ en fonction de l'avancement $x_f$ avec le tableau d'avancement, puis résous.",
@@ -1618,7 +1618,7 @@
             },
             {
               "label": "$s=2{,}5\\times10^{-13}$",
-              "why": "Tu as divisé $K_s$ par $2$ : les deux ions ont la même concentration $s$, et $K_s=s^2$, pas $2s$."
+              "why": "Tu as écrit $K_s=2s$, d'où $s=K_s/2$ : or $K_s=[\\mathrm{Ag^+}][\\mathrm{Br^-}]=s^2$."
             },
             {
               "label": "$s=3{,}5\\times10^{-7}$",
@@ -1660,7 +1660,7 @@
           "statement": "On introduit $1{,}0\\times10^{-6}\\ \\mathrm{mol}$ de chlorure d'argent solide dans $1{,}0\\ \\mathrm{L}$ d'eau pure ; $K_s(\\mathrm{AgCl})=1{,}8\\times10^{-10}$. Tout le solide se dissout. Dans l'état final, $Q_r=[\\mathrm{Ag^+}][\\mathrm{Cl^-}]$ vaut :",
           "options": [
             {
-              "label": "$1{,}0\\times10^{-12}$, inférieur à $K_s$ : il n'y a plus de solide, l'équilibre n'est pas atteint",
+              "label": "$1{,}0\\times10^{-12}$, inférieur à $K_s$ : sans solide, la relation $Q_{r,\\text{éq}}=K_s$ ne s'applique pas",
               "correct": true,
               "why": "$[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=1{,}0\\times10^{-6}$ donc $Q_r=1{,}0\\times10^{-12}<K_s$ : sans solide, la relation $Q_{r,\\text{éq}}=K_s$ ne s'applique pas."
             },
@@ -1678,7 +1678,7 @@
             }
           ],
           "hint": "Pour que $Q_{r,\\text{éq}}=K_s$, que faut-il qu'il reste dans le système ?",
-          "solution": "Tout le solide est dissous : $[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=1{,}0\\times10^{-6}\\ \\mathrm{mol\\,L^{-1}}$, donc $Q_r=(1{,}0\\times10^{-6})^2=1{,}0\\times10^{-12}<K_s=1{,}8\\times10^{-10}$. Le modèle $Q_{r,\\text{éq}}=K$ suppose que toutes les espèces nécessaires, solide compris, subsistent à l'équilibre : ici le système n'a pas atteint l'équilibre, la dissolution est totale. Contrôle : la solution est non saturée.",
+          "solution": "Tout le solide est dissous : $[\\mathrm{Ag^+}]=[\\mathrm{Cl^-}]=1{,}0\\times10^{-6}\\ \\mathrm{mol\\,L^{-1}}$, donc $Q_r=(1{,}0\\times10^{-6})^2=1{,}0\\times10^{-12}<K_s=1{,}8\\times10^{-10}$. Le modèle $Q_{r,\\text{éq}}=K$ suppose que toutes les espèces nécessaires, solide compris, subsistent à l'équilibre : ici il ne reste plus de solide, la dissolution est totale et la relation $Q_{r,\\text{éq}}=K_s$ ne s'applique pas. Contrôle : la solution est non saturée.",
           "methode": "$Q_{r,\\text{éq}}=K_s$ exige qu'il reste du solide ; sinon $Q_r<K_s$ (solution non saturée).",
           "points": 1,
           "ref": "pc-quotient-reaction-les-limites-du-modele-q1"
@@ -1709,7 +1709,7 @@
         {
           "notion": "Ce que $K$ ne dit pas",
           "difficulty": 3,
-          "statement": "Deux transformations ont pour constantes $K_1=10^{10}$ et $K_2=10^{-3}$. On peut affirmer que :",
+          "statement": "Deux transformations de même type, à états initiaux comparables, ont pour constantes $K_1=10^{10}$ et $K_2=10^{-3}$. On peut affirmer que :",
           "options": [
             {
               "label": "la transformation 1 est bien plus avancée, mais on ne sait rien de sa vitesse",
@@ -1900,7 +1900,7 @@
             },
             {
               "label": "$Q_{r,i}=1{,}8\\times10^{-3}$, soit $10\\,K$",
-              "why": "Tu as inversé l'effet de la dilution : diluer diminue les concentrations, donc ici $Q_r$."
+              "why": "Tu as inversé l'effet de la dilution : diluer diminue les concentrations, donc ici $Q_r$ diminue (divisé par $10$) ; il ne peut pas être multiplié par $10$."
             },
             {
               "label": "$Q_{r,i}=1{,}8\\times10^{-6}$, soit $K/100$",
@@ -2076,7 +2076,7 @@
             },
             {
               "label": "$s=9{,}0\\times10^{-11}$",
-              "why": "Tu as divisé $K_s$ par $2$ : $K_s=s^2$, pas $2s$."
+              "why": "Tu as écrit $K_s=2s$, d'où $s=K_s/2$ : or $K_s=[\\mathrm{Ag^+}][\\mathrm{Cl^-}]=s^2$."
             },
             {
               "label": "$s=6{,}7\\times10^{-6}$",
