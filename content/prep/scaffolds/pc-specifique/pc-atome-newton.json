@@ -403,7 +403,7 @@
         {
           "notion": "Les trois échecs du modèle",
           "difficulty": 3,
-          "statement": "Un calcul classique montre qu'un électron en orbite autour d'un noyau s'écraserait sur lui en environ $10^{-11}\\ \\mathrm{s}$. Cette conclusion :",
+          "statement": "Un calcul classique montre qu'un électron en orbite autour d'un noyau s'écraserait sur lui en environ $10^{-11}\\ \\mathrm{s}$. Cette conclusion est :",
           "options": [
             {
               "label": "incompatible avec la stabilité observée : le modèle est insuffisant à l'échelle atomique",
@@ -701,7 +701,7 @@
               "why": "L'énergie est proportionnelle à $\\nu$, non à $\\nu^2$."
             }
           ],
-          "hint": "L'énergie d'un photon est proportionnelle à sa fréquence.",
+          "hint": "Relation de Planck : quelle grandeur relie l'énergie à la fréquence ?",
           "solution": "$E=h\\nu=\\dfrac{hc}{\\lambda}$ avec $h=6{,}63\\times10^{-34}\\ \\mathrm{J\\,s}$. Contrôle : $h\\nu$ s'exprime en $\\mathrm{J\\,s\\times s^{-1}=J}$.",
           "methode": "$E=h\\nu=hc/\\lambda$.",
           "points": 1,
@@ -897,7 +897,7 @@
             }
           ],
           "hint": "Compare l'énergie du photon aux écarts permis entre niveaux.",
-          "solution": "Les écarts depuis le fondamental valent $10{,}2$ et $12{,}1\\ \\mathrm{eV}$ (…) ; $11{,}0\\ \\mathrm{eV}$ n'en est aucun : le photon n'est pas absorbé. Contrôle : l'ionisation demanderait $13{,}6\\ \\mathrm{eV}$ ou plus.",
+          "solution": "Les écarts permis depuis le fondamental sont $10{,}2\\ \\mathrm{eV}$ ($n=2$), $12{,}1\\ \\mathrm{eV}$ ($n=3$) et des valeurs plus grandes ; $11{,}0\\ \\mathrm{eV}$ n'en est aucun : le photon n'est pas absorbé. Contrôle : l'ionisation demanderait $13{,}6\\ \\mathrm{eV}$ ou plus.",
           "methode": "Photon : absorbé en totalité si $h\\nu=\\Delta E$, sinon pas du tout.",
           "points": 1,
           "ref": "pc-atome-newton-les-autres-excitations-q2"
@@ -905,27 +905,27 @@
         {
           "notion": "Les autres excitations",
           "difficulty": 2,
-          "statement": "Un électron d'énergie cinétique $11{,}0\\ \\mathrm{eV}$ percute un atome d'hydrogène dans son état fondamental. Il peut :",
+          "statement": "Un électron d'énergie cinétique $11{,}0\\ \\mathrm{eV}$ percute un atome d'hydrogène dans son état fondamental. Parmi ces affirmations sur l'excitation de l'atome par ce choc, la seule correcte est :",
           "options": [
             {
-              "label": "l'exciter au niveau $n=2$ en lui cédant $10{,}2\\ \\mathrm{eV}$ et repartir avec $0{,}8\\ \\mathrm{eV}$",
+              "label": "l'atome peut être excité au niveau $n=2$, l'électron repartant avec $0{,}8\\ \\mathrm{eV}$",
               "correct": true,
               "why": "Lors d'une collision, l'énergie cédée peut être inférieure à l'énergie cinétique de l'électron : il en garde $11{,}0-10{,}2=0{,}8\\ \\mathrm{eV}$."
             },
             {
-              "label": "ne rien faire : $11{,}0\\ \\mathrm{eV}$ ne correspond à aucun écart entre niveaux",
+              "label": "l'atome ne peut être excité à aucun niveau : $11{,}0\\ \\mathrm{eV}$ n'est aucun écart",
               "why": "La condition d'égalité exacte ne vaut que pour un photon ; un électron peut ne céder qu'une partie de son énergie."
             },
             {
-              "label": "l'ioniser, car $11{,}0\\ \\mathrm{eV}$ est supérieur à l'écart de $10{,}2\\ \\mathrm{eV}$",
+              "label": "l'atome peut être ionisé, car $11{,}0\\ \\mathrm{eV}$ dépasse l'écart de $10{,}2\\ \\mathrm{eV}$",
               "why": "L'ionisation exige $13{,}6\\ \\mathrm{eV}$ au moins depuis le fondamental."
             },
             {
-              "label": "l'exciter au niveau $n=3$, car $11{,}0$ est proche de l'écart de $12{,}1\\ \\mathrm{eV}$",
+              "label": "l'atome peut être excité au niveau $n=3$, $11{,}0$ étant proche de $12{,}1\\ \\mathrm{eV}$",
               "why": "Il faudrait céder $12{,}1\\ \\mathrm{eV}$, plus que l'énergie de l'électron ($11{,}0\\ \\mathrm{eV}$)."
             }
           ],
-          "hint": "Un électron qui entre en collision peut-il céder seulement une partie de son énergie ?",
+          "hint": "Compare l'énergie de l'électron aux écarts depuis $n=1$ et à l'énergie d'ionisation.",
           "solution": "L'électron peut céder $10{,}2\\ \\mathrm{eV}$ (excitation vers $n=2$) et garder $11{,}0-10{,}2=0{,}8\\ \\mathrm{eV}$ ; il ne peut pas céder $12{,}1\\ \\mathrm{eV}$ car il n'en a pas assez. Contrôle : différence avec le photon, absorbé en totalité ou pas du tout.",
           "methode": "Collision : transfert partiel possible, au moins égal à un écart.",
           "points": 1,
@@ -1091,15 +1091,15 @@
             },
             {
               "label": "$\\lambda=315\\ \\mathrm{nm}$",
-              "why": "Tu as pris $\\Delta E=3{,}94\\ \\mathrm{eV}$ (somme des termes en $1/n^2$) au lieu de la différence."
+              "why": "Tu as pris $\\Delta E=3{,}944\\ \\mathrm{eV}$ (somme des termes en $1/n^2$) au lieu de la différence."
             },
             {
               "label": "$\\lambda=2{,}29\\times10^{3}\\ \\mathrm{nm}$",
-              "why": "Tu as pris $\\Delta E=E_5$ seul ($0{,}54\\ \\mathrm{eV}$) au lieu de l'écart $E_5-E_2$."
+              "why": "Tu as pris $\\Delta E=E_5$ seul ($0{,}544\\ \\mathrm{eV}$) au lieu de l'écart $E_5-E_2$."
             },
             {
               "label": "$\\lambda=6{,}96\\times10^{-26}\\ \\mathrm{m}$",
-              "why": "Tu as oublié de convertir $\\Delta E$ en joules : il faut multiplier par $1{,}6\\times10^{-19}$."
+              "why": "Tu as utilisé $\\Delta E=2{,}856$ sans le convertir en joules : il faut multiplier par $1{,}6\\times10^{-19}$."
             }
           ],
           "hint": "$\\lambda=hc/\\Delta E$ avec $\\Delta E$ en joules.",
@@ -1133,7 +1133,7 @@
             }
           ],
           "hint": "Plus l'écart d'énergie est grand, plus la longueur d'onde est petite.",
-          "solution": "Écarts : $3\\rightarrow2$ : 1{,}89 ; $4\\rightarrow2$ : 2{,}55 ; $5\\rightarrow2$ : 2{,}86 ; $5\\rightarrow3$ : 0{,}97 ($\\mathrm{eV}$). $\\lambda=hc/\\Delta E$ est minimale pour l'écart maximal : $5\\rightarrow2$. Contrôle : $\\lambda$ est inversement proportionnelle à $\\Delta E$.",
+          "solution": "Écarts : $3\\rightarrow2$ : $1{,}89$ ; $4\\rightarrow2$ : $2{,}55$ ; $5\\rightarrow2$ : $2{,}86$ ; $5\\rightarrow3$ : $0{,}97$ ($\\mathrm{eV}$). $\\lambda=hc/\\Delta E$ est minimale pour l'écart maximal : $5\\rightarrow2$. Contrôle : $\\lambda$ est inversement proportionnelle à $\\Delta E$.",
           "methode": "$\\lambda$ minimale $\\Leftrightarrow$ $\\Delta E$ maximal.",
           "points": 1,
           "part": "Partie B — Longueur d'onde et spectre",
@@ -1145,16 +1145,16 @@
           "statement": "De la lumière blanche traverse un gaz d'hydrogène froid dont tous les atomes sont dans l'état fondamental. La raie à $435\\ \\mathrm{nm}$ (transition $5\\rightarrow2$) :",
           "options": [
             {
-              "label": "n'apparaît pas en absorption : les atomes au fondamental n'absorbent que des photons d'énergie égale à un écart $n=1\\rightarrow n$",
+              "label": "n'apparaît pas en absorption : le gaz froid n'absorbe que depuis $n=1$ (raies ultraviolettes)",
               "correct": true,
               "why": "Pour absorber à $435\\ \\mathrm{nm}$, il faudrait des atomes déjà au niveau $n=2$."
             },
             {
-              "label": "apparaît en absorption : une raie a la même longueur d'onde en émission et en absorption, quel que soit l'état de l'atome",
+              "label": "apparaît en absorption : une raie a la même longueur d'onde en émission et en absorption",
               "why": "C'est vrai seulement si l'atome part du niveau $n=2$ ; au fondamental, le niveau de départ est $n=1$."
             },
             {
-              "label": "apparaît en absorption, car $435\\ \\mathrm{nm}$ est dans le domaine visible",
+              "label": "apparaît en absorption, car $435\\ \\mathrm{nm}$ est dans le visible",
               "why": "Le domaine spectral ne décide pas : l'absorption exige l'égalité exacte avec un écart depuis le niveau occupé."
             },
             {
@@ -1413,9 +1413,9 @@
       "position": 102,
       "published": true,
       "questions": [
+        "pc-atome-newton-emission-et-absorption-q1",
         "pc-atome-newton-le-modele-planetaire-de-l-atome-q3",
         "pc-atome-newton-les-trois-echecs-du-modele-q3",
-        "pc-atome-newton-ce-que-revele-l-echec-q3",
         "pc-atome-newton-la-quantification-de-l-energie-q2",
         "pc-atome-newton-le-photon-q2",
         "pc-atome-newton-les-autres-excitations-q2",
