@@ -1,0 +1,999 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "sm_a",
+  "sm_b"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-sm-proba-flash-1",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Permutations, arrangements, combinaisons",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Permutations, arrangements, combinaisons",
+     "difficulty": 1,
+     "statement": "$\\mathrm{A}_6^3$ vaut :",
+     "options": [
+      {
+       "label": "$120$",
+       "correct": true,
+       "why": "$6\\times5\\times4 = 120$."
+      },
+      {
+       "label": "$20$",
+       "why": "C'est $\\mathrm C_6^3$ : l'arrangement tient compte de l'ordre."
+      },
+      {
+       "label": "$216$",
+       "why": "$6^3$ autorise les répétitions."
+      },
+      {
+       "label": "$720$",
+       "why": "C'est $6!$ : on ne prend que $3$ éléments."
+      }
+     ],
+     "hint": "$\\mathrm A_n^p = n(n-1)\\cdots(n - p + 1)$ ($p$ facteurs).",
+     "solution": "$\\mathrm A_6^3 = 6\\times5\\times4 = 120$.",
+     "points": 1,
+     "methode": "$\\mathrm A_n^p = \\frac{n!}{(n-p)!}$ et $\\mathrm C_n^p = \\frac{\\mathrm A_n^p}{p!}$.",
+     "ref": "m2-sm-proba-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-flash-2",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Principe fondamental",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Principe fondamental",
+     "difficulty": 1,
+     "statement": "Un restaurant propose $3$ entrées, $4$ plats et $2$ desserts. Le nombre de menus « entrée-plat-dessert » différents est :",
+     "options": [
+      {
+       "label": "$24$",
+       "correct": true,
+       "why": "$3\\times4\\times2$."
+      },
+      {
+       "label": "$9$",
+       "why": "On multiplie les choix successifs, on ne les additionne pas."
+      },
+      {
+       "label": "$12$",
+       "why": "Tu as oublié les desserts."
+      },
+      {
+       "label": "$6$",
+       "why": "Tu as multiplié $3\\times2$ en oubliant les plats."
+      }
+     ],
+     "hint": "Principe multiplicatif.",
+     "solution": "On choisit une entrée ($3$ choix), puis un plat ($4$), puis un dessert ($2$) : $3\\times4\\times2 = 24$ menus.",
+     "points": 1,
+     "ref": "m2-sm-proba-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-flash-3",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Choisir le bon dénombrement",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Choisir le bon dénombrement",
+     "difficulty": 2,
+     "statement": "Le nombre d'anagrammes du mot $\\text{ANANAS}$ est :",
+     "options": [
+      {
+       "label": "$60$",
+       "correct": true,
+       "why": "$\\frac{6!}{3!\\,2!}$ : $3$ A et $2$ N identiques."
+      },
+      {
+       "label": "$720$",
+       "why": "$6!$ compterait les lettres identiques comme différentes."
+      },
+      {
+       "label": "$120$",
+       "why": "Tu n'as divisé que par $3!$ ; il faut aussi diviser par $2!$ pour les N."
+      },
+      {
+       "label": "$30$",
+       "why": "Tu as divisé une fois de trop."
+      }
+     ],
+     "hint": "Permutations avec répétition : $\\frac{n!}{n_1!\\,n_2!\\cdots}$.",
+     "solution": "Le mot a $6$ lettres dont $3$ A, $2$ N et $1$ S : $\\dfrac{6!}{3!\\,2!\\,1!} = \\dfrac{720}{12} = 60$.",
+     "points": 1,
+     "ref": "m2-sm-proba-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-flash-4",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Vocabulaire et probabilité",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Vocabulaire et probabilité",
+     "difficulty": 1,
+     "statement": "On lance deux fois un dé équilibré. La probabilité que la somme des deux résultats soit $7$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac16$",
+       "correct": true,
+       "why": "$6$ couples favorables sur $36$."
+      },
+      {
+       "label": "$\\dfrac{7}{36}$",
+       "why": "Il y a $6$ couples, pas $7$ : $(1;6),(2;5),\\dots,(6;1)$."
+      },
+      {
+       "label": "$\\dfrac1{12}$",
+       "why": "Les couples $(1;6)$ et $(6;1)$ sont différents : il faut compter l'ordre."
+      },
+      {
+       "label": "$\\dfrac1{11}$",
+       "why": "Les $11$ sommes possibles ne sont pas équiprobables."
+      }
+     ],
+     "hint": "Liste les couples $(a;b)$ avec $a + b = 7$.",
+     "solution": "$36$ couples équiprobables. Favorables : $(1;6),(2;5),(3;4),(4;3),(5;2),(6;1)$, soit $6$. $P = \\frac{6}{36} = \\frac16$.",
+     "points": 1,
+     "ref": "m2-sm-proba-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-flash-5",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Probabilité conditionnelle et indépendance",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Probabilité conditionnelle et indépendance",
+     "difficulty": 2,
+     "statement": "$A$ et $B$ sont incompatibles, avec $P(A) = 0{,}3$ et $P(B) = 0{,}5$. Alors $A$ et $B$ :",
+     "options": [
+      {
+       "label": "ne sont pas indépendants",
+       "correct": true,
+       "why": "$P(A\\cap B) = 0 \\ne P(A)P(B) = 0{,}15$."
+      },
+      {
+       "label": "sont indépendants",
+       "why": "Incompatibles et indépendants seraient contradictoires ici : $0 \\ne 0{,}15$."
+      },
+      {
+       "label": "vérifient $P(A\\cup B) = 0{,}15$",
+       "why": "Incompatibles : $P(A\\cup B) = P(A) + P(B) = 0{,}8$."
+      },
+      {
+       "label": "on ne peut pas savoir",
+       "why": "On connaît $P(A\\cap B) = 0$ et $P(A)P(B)$ : on peut comparer."
+      }
+     ],
+     "hint": "Compare $P(A\\cap B)$ et $P(A)\\times P(B)$.",
+     "solution": "Incompatibles : $P(A\\cap B) = 0$. Or $P(A)\\times P(B) = 0{,}15 \\ne 0$. Donc $A$ et $B$ ne sont pas indépendants.",
+     "points": 1,
+     "methode": "Deux événements de probabilités non nulles ne peuvent pas être à la fois incompatibles et indépendants.",
+     "ref": "m2-sm-proba-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-flash-6",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Formule de Bayes",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Formule de Bayes",
+     "difficulty": 2,
+     "statement": "$P(A) = 0{,}4$, $P_A(B) = 0{,}5$ et $P_{\\bar A}(B) = 0{,}25$. Alors $P_B(A)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac47$",
+       "correct": true,
+       "why": "$P(B) = 0{,}2 + 0{,}15 = 0{,}35$ et $P_B(A) = \\frac{0{,}2}{0{,}35}$."
+      },
+      {
+       "label": "$0{,}5$",
+       "why": "C'est $P_A(B)$ : le conditionnement est inversé."
+      },
+      {
+       "label": "$0{,}2$",
+       "why": "C'est $P(A\\cap B)$ ; il faut diviser par $P(B)$."
+      },
+      {
+       "label": "$0{,}4$",
+       "why": "C'est $P(A)$, sans tenir compte de $B$."
+      }
+     ],
+     "hint": "$P_B(A) = \\dfrac{P(A)P_A(B)}{P(B)}$ avec $P(B)$ par les probabilités totales.",
+     "solution": "$P(B) = 0{,}4\\times0{,}5 + 0{,}6\\times0{,}25 = 0{,}2 + 0{,}15 = 0{,}35$. $P_B(A) = \\dfrac{0{,}2}{0{,}35} = \\dfrac{4}{7}$.",
+     "points": 1,
+     "ref": "m2-sm-proba-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-flash-7",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Espérance et variance sur un exemple",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Espérance et variance sur un exemple",
+     "difficulty": 2,
+     "statement": "$V(X) = 5$. Alors $V(2X + 3)$ vaut :",
+     "options": [
+      {
+       "label": "$20$",
+       "correct": true,
+       "why": "$V(aX + b) = a^2V(X) = 4\\times5$."
+      },
+      {
+       "label": "$13$",
+       "why": "La constante $3$ ne change pas la variance, et le coefficient $2$ est élevé au carré."
+      },
+      {
+       "label": "$10$",
+       "why": "Le coefficient s'élève au carré : $2^2 = 4$."
+      },
+      {
+       "label": "$23$",
+       "why": "Une constante ajoutée ne modifie pas la dispersion."
+      }
+     ],
+     "hint": "$V(aX + b) = a^2V(X)$.",
+     "solution": "$V(2X + 3) = 2^2V(X) = 4\\times5 = 20$.",
+     "points": 1,
+     "methode": "$E(aX + b) = aE(X) + b$ mais $V(aX + b) = a^2V(X)$.",
+     "ref": "m2-sm-proba-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-flash-8",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Loi binomiale : « au moins un »",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Loi binomiale : « au moins un »",
+     "difficulty": 3,
+     "statement": "On lance $n$ fois un dé équilibré. Le plus petit $n$ tel que la probabilité d'obtenir au moins un $6$ soit $\\ge 0{,}9$ est :",
+     "options": [
+      {
+       "label": "$13$",
+       "correct": true,
+       "why": "$1 - \\left(\\frac56\\right)^n \\ge 0{,}9 \\Leftrightarrow n \\ge \\frac{\\ln0{,}1}{\\ln(5/6)}\\approx12{,}6$."
+      },
+      {
+       "label": "$12$",
+       "why": "$1 - \\left(\\frac56\\right)^{12} \\approx 0{,}888 < 0{,}9$."
+      },
+      {
+       "label": "$10$",
+       "why": "$1 - \\left(\\frac56\\right)^{10} \\approx 0{,}84$."
+      },
+      {
+       "label": "$6$",
+       "why": "Six lancers ne garantissent pas un $6$ : $1 - \\left(\\frac56\\right)^6 \\approx 0{,}67$."
+      }
+     ],
+     "hint": "Passe au logarithme ; attention, $\\ln\\frac56 < 0$ change le sens de l'inégalité.",
+     "solution": "$1 - \\left(\\frac56\\right)^n \\ge 0{,}9 \\Leftrightarrow \\left(\\frac56\\right)^n \\le 0{,}1 \\Leftrightarrow n\\ln\\frac56 \\le \\ln0{,}1 \\Leftrightarrow n \\ge \\dfrac{\\ln0{,}1}{\\ln\\frac56}\\approx12{,}63$ (division par un négatif). Donc $n = 13$.",
+     "points": 1,
+     "methode": "« Au moins un » : $1 - (1-p)^n$ ; pour trouver $n$, logarithme et changement de sens.",
+     "ref": "m2-sm-proba-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-ex1",
+   "chapter": "proba",
+   "kind": "probleme",
+   "title": "Exercice 1 — Tirages successifs sans remise",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Une urne contient $5$ boules numérotées de $1$ à $5$. On tire successivement et sans remise $3$ boules, et on forme le nombre à trois chiffres dans l'ordre du tirage.",
+   "questions": [
+    {
+     "notion": "Permutations, arrangements, combinaisons",
+     "difficulty": 1,
+     "statement": "1) Le nombre de tirages possibles est :",
+     "options": [
+      {
+       "label": "$60$",
+       "correct": true,
+       "why": "Ordonné sans remise : $\\mathrm A_5^3 = 5\\times4\\times3$."
+      },
+      {
+       "label": "$10$",
+       "why": "$\\mathrm C_5^3$ ignore l'ordre ; ici l'ordre forme un nombre."
+      },
+      {
+       "label": "$125$",
+       "why": "$5^3$ autoriserait de retirer la même boule."
+      },
+      {
+       "label": "$15$",
+       "why": "On multiplie les choix : $5\\times4\\times3$."
+      }
+     ],
+     "hint": "Ordre important, sans remise.",
+     "solution": "Tirages ordonnés sans remise de $3$ boules parmi $5$ : $\\mathrm A_5^3 = 5\\times4\\times3 = 60$.",
+     "points": 1,
+     "ref": "m2-sm-proba-ex1-q1"
+    },
+    {
+     "notion": "Vocabulaire et probabilité",
+     "difficulty": 2,
+     "statement": "2) La probabilité que les trois numéros sortent dans l'ordre croissant est :",
+     "options": [
+      {
+       "label": "$\\dfrac16$",
+       "correct": true,
+       "why": "Chaque groupe de $3$ numéros donne $3! = 6$ ordres, dont un seul croissant."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Il y a $6$ ordres possibles pour $3$ numéros, pas $2$."
+      },
+      {
+       "label": "$\\dfrac1{10}$",
+       "why": "Tu as divisé par $\\mathrm C_5^3$ au lieu de $\\mathrm A_5^3$."
+      },
+      {
+       "label": "$\\dfrac13$",
+       "why": "Un seul des $3! = 6$ ordres est croissant."
+      }
+     ],
+     "hint": "Combien de tirages croissants ? Un par choix de $3$ numéros.",
+     "solution": "Un tirage croissant correspond à un choix de $3$ numéros parmi $5$ : $\\mathrm C_5^3 = 10$. $P = \\frac{10}{60} = \\frac16$.",
+     "points": 1,
+     "ref": "m2-sm-proba-ex1-q2"
+    },
+    {
+     "notion": "Choisir le bon dénombrement",
+     "difficulty": 2,
+     "statement": "3) La probabilité que le nombre formé soit pair est :",
+     "options": [
+      {
+       "label": "$\\dfrac25$",
+       "correct": true,
+       "why": "Dernier chiffre $2$ ou $4$ ($2$ choix), puis $\\mathrm A_4^2 = 12$ : $\\frac{24}{60}$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Il n'y a que $2$ numéros pairs sur $5$."
+      },
+      {
+       "label": "$\\dfrac35$",
+       "why": "C'est la probabilité d'un nombre impair."
+      },
+      {
+       "label": "$\\dfrac{2}{60}$",
+       "why": "Une fois le dernier chiffre choisi, les deux premiers peuvent s'arranger de $\\mathrm A_4^2 = 12$ façons."
+      }
+     ],
+     "hint": "Commence par la contrainte : le chiffre des unités.",
+     "solution": "Unités : $2$ ou $4$ ($2$ choix) ; puis les deux premiers chiffres parmi les $4$ boules restantes, dans l'ordre : $\\mathrm A_4^2 = 12$. Favorables : $2\\times12 = 24$. $P = \\frac{24}{60} = \\frac25$.",
+     "points": 1,
+     "methode": "Dénombrer sous contrainte : place d'abord l'élément contraint.",
+     "ref": "m2-sm-proba-ex1-q3"
+    },
+    {
+     "notion": "Probabilité conditionnelle et indépendance",
+     "difficulty": 2,
+     "statement": "4) Sachant que la première boule porte le numéro $1$, la probabilité que la deuxième porte le numéro $2$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac14$",
+       "correct": true,
+       "why": "Il reste $4$ boules équiprobables."
+      },
+      {
+       "label": "$\\dfrac15$",
+       "why": "Sans remise : il ne reste que $4$ boules."
+      },
+      {
+       "label": "$\\dfrac{1}{20}$",
+       "why": "C'est $P(\\text{1 puis 2}) = \\frac15\\times\\frac14$, pas la probabilité conditionnelle."
+      },
+      {
+       "label": "$\\dfrac13$",
+       "why": "Le troisième tirage n'intervient pas ici."
+      }
+     ],
+     "hint": "Après avoir tiré la boule $1$, que reste-t-il dans l'urne ?",
+     "solution": "Après le tirage de la boule $1$, il reste $4$ boules équiprobables, dont la boule $2$ : $P = \\frac14$. Par la formule : $P(\\text{1 en premier}) = \\frac{\\mathrm A_4^2}{60} = \\frac{12}{60}$ et $P(\\text{1 puis 2}) = \\frac{3}{60}$, d'où $\\frac{3/60}{12/60} = \\frac14$.",
+     "points": 1,
+     "ref": "m2-sm-proba-ex1-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-ex2",
+   "chapter": "proba",
+   "kind": "probleme",
+   "title": "Exercice 2 — Deux lancers de dé et loi binomiale",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "On lance deux fois un dé cubique équilibré. On note $X$ le nombre de $6$ obtenus.",
+   "questions": [
+    {
+     "notion": "Loi binomiale",
+     "difficulty": 1,
+     "statement": "1) $P(X = 1)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{5}{18}$",
+       "correct": true,
+       "why": "$\\mathrm C_2^1\\times\\frac16\\times\\frac56 = \\frac{10}{36}$."
+      },
+      {
+       "label": "$\\dfrac16$",
+       "why": "C'est la probabilité d'un $6$ en un lancer."
+      },
+      {
+       "label": "$\\dfrac{5}{36}$",
+       "why": "Il faut multiplier par $\\mathrm C_2^1 = 2$ : le $6$ peut sortir au 1er ou au 2e lancer."
+      },
+      {
+       "label": "$\\dfrac13$",
+       "why": "$\\frac16 + \\frac16$ compte deux fois le cas « deux $6$ » et oublie le facteur $\\frac56$."
+      }
+     ],
+     "hint": "$X\\sim\\mathcal B\\left(2;\\frac16\\right)$.",
+     "solution": "$X\\sim\\mathcal B\\left(2;\\frac16\\right)$. $P(X = 1) = \\mathrm C_2^1\\left(\\frac16\\right)^1\\left(\\frac56\\right)^1 = \\frac{10}{36} = \\frac{5}{18}$.",
+     "points": 1,
+     "ref": "m2-sm-proba-ex2-q1"
+    },
+    {
+     "notion": "Variable aléatoire",
+     "difficulty": 1,
+     "statement": "2) $P(X = 0)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{25}{36}$",
+       "correct": true,
+       "why": "$\\left(\\frac56\\right)^2$."
+      },
+      {
+       "label": "$\\dfrac56$",
+       "why": "C'est pour un seul lancer ; ici il y en a deux."
+      },
+      {
+       "label": "$\\dfrac1{36}$",
+       "why": "C'est $P(X = 2)$."
+      },
+      {
+       "label": "$\\dfrac{11}{36}$",
+       "why": "C'est $P(X \\ge 1)$."
+      }
+     ],
+     "hint": "Aucun $6$ sur deux lancers indépendants.",
+     "solution": "$P(X = 0) = \\left(\\frac56\\right)^2 = \\frac{25}{36}$. Contrôle : $\\frac{25}{36} + \\frac{10}{36} + \\frac{1}{36} = 1$ ✓.",
+     "points": 1,
+     "ref": "m2-sm-proba-ex2-q2"
+    },
+    {
+     "notion": "Espérance et variance sur un exemple",
+     "difficulty": 2,
+     "statement": "3) $E(X)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac13$",
+       "correct": true,
+       "why": "$np = 2\\times\\frac16$."
+      },
+      {
+       "label": "$\\dfrac16$",
+       "why": "C'est $p$ ; il y a $n = 2$ lancers."
+      },
+      {
+       "label": "$2$",
+       "why": "C'est $n$, la valeur maximale."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Recalcule $np = 2\\times\\frac16$."
+      }
+     ],
+     "hint": "$E(X) = np$.",
+     "solution": "$E(X) = np = 2\\times\\frac16 = \\frac13$. (Directement : $0\\times\\frac{25}{36} + 1\\times\\frac{10}{36} + 2\\times\\frac{1}{36} = \\frac{12}{36}$ ✓.)",
+     "points": 1,
+     "ref": "m2-sm-proba-ex2-q3"
+    },
+    {
+     "notion": "Espérance et variance sur un exemple",
+     "difficulty": 2,
+     "statement": "4) $V(X)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{5}{18}$",
+       "correct": true,
+       "why": "$np(1-p) = 2\\times\\frac16\\times\\frac56 = \\frac{10}{36}$."
+      },
+      {
+       "label": "$\\dfrac13$",
+       "why": "C'est l'espérance $E(X)$."
+      },
+      {
+       "label": "$\\dfrac{25}{36}$",
+       "why": "C'est $P(X = 0)$."
+      },
+      {
+       "label": "$\\dfrac5{36}$",
+       "why": "Il manque le facteur $n = 2$."
+      }
+     ],
+     "hint": "$V(X) = np(1-p)$.",
+     "solution": "$V(X) = np(1 - p) = 2\\times\\frac16\\times\\frac56 = \\frac{10}{36} = \\frac{5}{18}$.",
+     "points": 1,
+     "ref": "m2-sm-proba-ex2-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-ex3",
+   "chapter": "proba",
+   "kind": "probleme",
+   "title": "Exercice 3 — Deux urnes, un dé et la formule de Bayes",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "On lance un dé équilibré. Si on obtient $1$ ou $2$, on tire simultanément $2$ boules de l'urne $U_1$ ($3$ rouges, $2$ blanches) ; sinon, on tire simultanément $2$ boules de l'urne $U_2$ ($2$ rouges, $3$ blanches). On note $R$ « les deux boules sont rouges » et $X$ le nombre de boules rouges tirées. On répète ensuite ce jeu $5$ fois de façon indépendante ; $Y$ est le nombre de fois où $R$ est réalisé.",
+   "questions": [
+    {
+     "notion": "Arbre et probabilités totales",
+     "difficulty": 1,
+     "statement": "1) $P_{U_1}(R)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{3}{10}$",
+       "correct": true,
+       "why": "$\\frac{\\mathrm C_3^2}{\\mathrm C_5^2} = \\frac{3}{10}$."
+      },
+      {
+       "label": "$\\dfrac{9}{25}$",
+       "why": "$\\left(\\frac35\\right)^2$ correspond à un tirage avec remise."
+      },
+      {
+       "label": "$\\dfrac35$",
+       "why": "C'est la proportion de rouges, pas la probabilité d'en tirer deux."
+      },
+      {
+       "label": "$\\dfrac1{10}$",
+       "why": "C'est $P_{U_2}(R) = \\frac{\\mathrm C_2^2}{10}$."
+      }
+     ],
+     "hint": "Tirage simultané de $2$ boules parmi $5$.",
+     "solution": "Dans $U_1$ : $\\mathrm C_5^2 = 10$ tirages, dont $\\mathrm C_3^2 = 3$ avec deux rouges. $P_{U_1}(R) = \\frac{3}{10}$ (et $P_{U_2}(R) = \\frac{\\mathrm C_2^2}{10} = \\frac1{10}$).",
+     "points": 1,
+     "part": "Partie A — Un tirage",
+     "ref": "m2-sm-proba-ex3-q1"
+    },
+    {
+     "notion": "Arbre et probabilités totales",
+     "difficulty": 2,
+     "statement": "2) $P(R)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac16$",
+       "correct": true,
+       "why": "$\\frac13\\times\\frac3{10} + \\frac23\\times\\frac1{10} = \\frac{3 + 2}{30}$."
+      },
+      {
+       "label": "$\\dfrac15$",
+       "why": "La moyenne simple $\\frac12\\left(\\frac3{10} + \\frac1{10}\\right)$ ignore que $U_2$ est choisie deux fois plus souvent."
+      },
+      {
+       "label": "$\\dfrac25$",
+       "why": "Tu as additionné $\\frac3{10} + \\frac1{10}$ sans pondérer."
+      },
+      {
+       "label": "$\\dfrac1{10}$",
+       "why": "Tu n'as gardé que la branche $U_1$ pondérée : $\\frac13\\times\\frac3{10}$."
+      }
+     ],
+     "hint": "$P(U_1) = \\frac26 = \\frac13$ et $P(U_2) = \\frac23$.",
+     "solution": "$P(R) = P(U_1)P_{U_1}(R) + P(U_2)P_{U_2}(R) = \\frac13\\times\\frac3{10} + \\frac23\\times\\frac1{10} = \\frac{3}{30} + \\frac{2}{30} = \\frac16$.",
+     "points": 1,
+     "part": "Partie A — Un tirage",
+     "ref": "m2-sm-proba-ex3-q2"
+    },
+    {
+     "notion": "Formule de Bayes",
+     "difficulty": 3,
+     "statement": "3) Les deux boules tirées sont rouges. La probabilité qu'elles proviennent de $U_1$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac35$",
+       "correct": true,
+       "why": "$\\frac{3/30}{5/30}$."
+      },
+      {
+       "label": "$\\dfrac13$",
+       "why": "C'est $P(U_1)$ avant le tirage ; l'information « deux rouges » la modifie."
+      },
+      {
+       "label": "$\\dfrac3{10}$",
+       "why": "C'est $P_{U_1}(R)$, le conditionnement inverse."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Les deux urnes ne sont ni également choisies ni également riches en rouges."
+      }
+     ],
+     "hint": "$P_R(U_1) = \\frac{P(U_1\\cap R)}{P(R)}$.",
+     "solution": "$P_R(U_1) = \\dfrac{P(U_1\\cap R)}{P(R)} = \\dfrac{1/10}{1/6} = \\dfrac{3/30}{5/30} = \\dfrac35$.",
+     "points": 1,
+     "part": "Partie A — Un tirage",
+     "ref": "m2-sm-proba-ex3-q3"
+    },
+    {
+     "notion": "Variable aléatoire",
+     "difficulty": 2,
+     "statement": "4) $P(X = 0)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{7}{30}$",
+       "correct": true,
+       "why": "$\\frac13\\times\\frac{1}{10} + \\frac23\\times\\frac{3}{10} = \\frac{1 + 6}{30}$."
+      },
+      {
+       "label": "$\\dfrac1{10}$",
+       "why": "C'est $P_{U_1}(X = 0)$ seule."
+      },
+      {
+       "label": "$\\dfrac3{10}$",
+       "why": "C'est $P_{U_2}(X = 0)$ seule."
+      },
+      {
+       "label": "$\\dfrac15$",
+       "why": "Moyenne non pondérée de $\\frac1{10}$ et $\\frac3{10}$."
+      }
+     ],
+     "hint": "Deux blanches : $\\frac{\\mathrm C_2^2}{10}$ dans $U_1$, $\\frac{\\mathrm C_3^2}{10}$ dans $U_2$.",
+     "solution": "$P(X = 0) = \\frac13\\times\\frac{\\mathrm C_2^2}{10} + \\frac23\\times\\frac{\\mathrm C_3^2}{10} = \\frac{1}{30} + \\frac{6}{30} = \\frac{7}{30}$. De même $P(X = 1) = \\frac{6}{10} = \\frac{18}{30}$ et $P(X = 2) = \\frac{5}{30}$ ; la somme vaut $1$ ✓.",
+     "points": 1,
+     "part": "Partie B — Loi de X et répétition",
+     "ref": "m2-sm-proba-ex3-q4"
+    },
+    {
+     "notion": "Espérance et variance sur un exemple",
+     "difficulty": 2,
+     "statement": "5) Sachant que $P(X = 1) = \\frac{18}{30}$ et $P(X = 2) = \\frac{5}{30}$, $E(X)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{14}{15}$",
+       "correct": true,
+       "why": "$\\frac{18}{30} + 2\\times\\frac{5}{30} = \\frac{28}{30}$."
+      },
+      {
+       "label": "$1$",
+       "why": "$1$ est la valeur la plus probable, pas l'espérance."
+      },
+      {
+       "label": "$\\dfrac35$",
+       "why": "Tu as oublié la contribution de $X = 2$."
+      },
+      {
+       "label": "$\\dfrac{23}{30}$",
+       "why": "$X = 2$ compte avec le coefficient $2$ : $\\frac{18 + 10}{30}$."
+      }
+     ],
+     "hint": "$E(X) = \\sum x_iP(X = x_i)$.",
+     "solution": "$E(X) = 0\\times\\frac{7}{30} + 1\\times\\frac{18}{30} + 2\\times\\frac{5}{30} = \\frac{28}{30} = \\frac{14}{15}$.",
+     "points": 1,
+     "part": "Partie B — Loi de X et répétition",
+     "ref": "m2-sm-proba-ex3-q5"
+    },
+    {
+     "notion": "Loi binomiale : « au moins un »",
+     "difficulty": 3,
+     "statement": "6) La probabilité que $R$ soit réalisé au moins une fois en $5$ parties est :",
+     "options": [
+      {
+       "label": "$1 - \\left(\\dfrac56\\right)^5$",
+       "correct": true,
+       "why": "$Y\\sim\\mathcal B\\left(5;\\frac16\\right)$ et $P(Y \\ge 1) = 1 - P(Y = 0)$."
+      },
+      {
+       "label": "$\\left(\\dfrac56\\right)^5$",
+       "why": "C'est $P(Y = 0)$ : $R$ n'est jamais réalisé."
+      },
+      {
+       "label": "$5\\times\\dfrac16$",
+       "why": "C'est l'espérance de $Y$, pas une probabilité."
+      },
+      {
+       "label": "$1 - \\left(\\dfrac16\\right)^5$",
+       "why": "Le contraire de « au moins une fois » est « jamais », de probabilité $\\left(\\frac56\\right)^5$."
+      }
+     ],
+     "hint": "Identifie la loi de $Y$, puis passe par le contraire.",
+     "solution": "Les $5$ parties sont indépendantes et $P(R) = \\frac16$ : $Y\\sim\\mathcal B\\left(5;\\frac16\\right)$. $P(Y \\ge 1) = 1 - \\left(\\frac56\\right)^5 \\approx 0{,}598$.",
+     "points": 1,
+     "part": "Partie B — Loi de X et répétition",
+     "ref": "m2-sm-proba-ex3-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-proba-ex4",
+   "chapter": "proba",
+   "kind": "probleme",
+   "title": "Exercice 4 — Somme de deux jetons",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Un sac contient $10$ jetons : $5$ portent le nombre $0$, $3$ portent le nombre $1$ et $2$ portent le nombre $2$. On tire simultanément $2$ jetons et on note $X$ la somme des deux nombres obtenus.",
+   "questions": [
+    {
+     "notion": "Choisir le bon dénombrement",
+     "difficulty": 1,
+     "statement": "1) Le nombre de tirages possibles est :",
+     "options": [
+      {
+       "label": "$45$",
+       "correct": true,
+       "why": "$\\mathrm C_{10}^2 = \\frac{10\\times9}{2}$."
+      },
+      {
+       "label": "$90$",
+       "why": "$\\mathrm A_{10}^2$ compte l'ordre ; le tirage est simultané."
+      },
+      {
+       "label": "$100$",
+       "why": "$10^2$ autoriserait de tirer deux fois le même jeton, dans un ordre."
+      },
+      {
+       "label": "$20$",
+       "why": "Recalcule $\\frac{10\\times9}{2} = 45$."
+      }
+     ],
+     "hint": "Tirage simultané ⇒ combinaisons.",
+     "solution": "$\\mathrm{card}\\,\\Omega = \\mathrm C_{10}^2 = 45$.",
+     "points": 1,
+     "part": "Partie A — Loi de X",
+     "ref": "m2-sm-proba-ex4-q1"
+    },
+    {
+     "notion": "Variable aléatoire",
+     "difficulty": 2,
+     "statement": "2) $P(X = 2)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{13}{45}$",
+       "correct": true,
+       "why": "Deux « 1 » : $\\mathrm C_3^2 = 3$ ; un « 0 » et un « 2 » : $5\\times2 = 10$."
+      },
+      {
+       "label": "$\\dfrac{3}{45}$",
+       "why": "Tu as oublié le cas « $0 + 2$ »."
+      },
+      {
+       "label": "$\\dfrac{10}{45}$",
+       "why": "Tu as oublié le cas « $1 + 1$ »."
+      },
+      {
+       "label": "$\\dfrac{1}{45}$",
+       "why": "C'est $P(X = 4)$ (deux jetons « 2 »)."
+      }
+     ],
+     "hint": "Liste toutes les façons d'obtenir une somme égale à $2$.",
+     "solution": "$X = 2$ : soit deux jetons « 1 » ($\\mathrm C_3^2 = 3$), soit un « 0 » et un « 2 » ($5\\times2 = 10$). $P(X = 2) = \\frac{13}{45}$.",
+     "points": 1,
+     "part": "Partie A — Loi de X",
+     "ref": "m2-sm-proba-ex4-q2"
+    },
+    {
+     "notion": "Variable aléatoire",
+     "difficulty": 2,
+     "statement": "3) $P(X \\ge 3)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{7}{45}$",
+       "correct": true,
+       "why": "$X = 3$ : $3\\times2 = 6$ ; $X = 4$ : $\\mathrm C_2^2 = 1$."
+      },
+      {
+       "label": "$\\dfrac{6}{45}$",
+       "why": "Tu as oublié $X = 4$."
+      },
+      {
+       "label": "$\\dfrac{1}{45}$",
+       "why": "C'est $P(X = 4)$ seule."
+      },
+      {
+       "label": "$\\dfrac{20}{45}$",
+       "why": "C'est $P(X \\ge 2)$."
+      }
+     ],
+     "hint": "$X \\ge 3$ ⇔ $X = 3$ ou $X = 4$.",
+     "solution": "$X = 3$ : un « 1 » et un « 2 », $3\\times2 = 6$ tirages. $X = 4$ : deux « 2 », $1$ tirage. $P(X \\ge 3) = \\frac{7}{45}$.",
+     "points": 1,
+     "part": "Partie A — Loi de X",
+     "ref": "m2-sm-proba-ex4-q3"
+    },
+    {
+     "notion": "Espérance et variance sur un exemple",
+     "difficulty": 3,
+     "statement": "4) Sachant que $P(X = 0) = \\frac{10}{45}$ et $P(X = 1) = \\frac{15}{45}$, $E(X)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac75$",
+       "correct": true,
+       "why": "$\\frac{15 + 2\\times13 + 3\\times6 + 4\\times1}{45} = \\frac{63}{45}$."
+      },
+      {
+       "label": "$2$",
+       "why": "$2$ est la valeur centrale, pas la moyenne pondérée."
+      },
+      {
+       "label": "$1$",
+       "why": "Recalcule $\\sum x_ip_i$ avec toutes les valeurs."
+      },
+      {
+       "label": "$\\dfrac{63}{90}$",
+       "why": "C'est l'espérance pour un seul jeton ($0{,}7$) ; on en tire deux."
+      }
+     ],
+     "hint": "Loi complète : $\\frac{10}{45}, \\frac{15}{45}, \\frac{13}{45}, \\frac{6}{45}, \\frac{1}{45}$.",
+     "solution": "$E(X) = \\dfrac{0\\times10 + 1\\times15 + 2\\times13 + 3\\times6 + 4\\times1}{45} = \\dfrac{63}{45} = \\dfrac75$. Contrôle : un jeton vaut en moyenne $\\frac{3 + 4}{10} = 0{,}7$, et $2\\times0{,}7 = 1{,}4$ ✓.",
+     "points": 1,
+     "part": "Partie B — Espérance et conditionnement",
+     "ref": "m2-sm-proba-ex4-q4"
+    },
+    {
+     "notion": "Probabilité conditionnelle et indépendance",
+     "difficulty": 3,
+     "statement": "5) Sachant que $X \\ge 1$, la probabilité que $X = 2$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac{13}{35}$",
+       "correct": true,
+       "why": "$P(X \\ge 1) = 1 - \\frac{10}{45} = \\frac{35}{45}$ et $\\frac{13/45}{35/45}$."
+      },
+      {
+       "label": "$\\dfrac{13}{45}$",
+       "why": "C'est $P(X = 2)$ sans condition."
+      },
+      {
+       "label": "$\\dfrac{35}{45}$",
+       "why": "C'est $P(X \\ge 1)$."
+      },
+      {
+       "label": "$\\dfrac{13}{20}$",
+       "why": "On divise par $P(X \\ge 1) = \\frac{35}{45}$, pas par $P(X \\ge 2)$."
+      }
+     ],
+     "hint": "$P_{X\\ge1}(X = 2) = \\frac{P(X = 2)}{P(X \\ge 1)}$ (car $\\{X = 2\\}\\subset\\{X \\ge 1\\}$).",
+     "solution": "$P(X \\ge 1) = 1 - P(X = 0) = \\frac{35}{45}$. Comme $\\{X = 2\\}\\subset\\{X\\ge1\\}$ : $P_{X\\ge1}(X = 2) = \\dfrac{13/45}{35/45} = \\dfrac{13}{35}$.",
+     "points": 1,
+     "part": "Partie B — Espérance et conditionnement",
+     "ref": "m2-sm-proba-ex4-q5"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-sm-proba-serie-1",
+   "title": "Calcul des probabilités · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (4 questions).",
+   "kind": "custom",
+   "chapter": "proba",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-sm-proba-flash-q1",
+    "m2-sm-proba-flash-q2",
+    "m2-sm-proba-flash-q3",
+    "m2-sm-proba-flash-q4",
+    "m2-sm-proba-ex1-q1",
+    "m2-sm-proba-ex1-q2",
+    "m2-sm-proba-ex1-q3",
+    "m2-sm-proba-ex1-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-proba-serie-2",
+   "title": "Calcul des probabilités · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (4 questions).",
+   "kind": "custom",
+   "chapter": "proba",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-sm-proba-flash-q5",
+    "m2-sm-proba-flash-q6",
+    "m2-sm-proba-flash-q7",
+    "m2-sm-proba-flash-q8",
+    "m2-sm-proba-ex2-q1",
+    "m2-sm-proba-ex2-q2",
+    "m2-sm-proba-ex2-q3",
+    "m2-sm-proba-ex2-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-proba-serie-3",
+   "title": "Calcul des probabilités · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (6 questions) + Exercice 4 (5 questions).",
+   "kind": "custom",
+   "chapter": "proba",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-sm-proba-ex3-q1",
+    "m2-sm-proba-ex3-q2",
+    "m2-sm-proba-ex3-q3",
+    "m2-sm-proba-ex3-q4",
+    "m2-sm-proba-ex3-q5",
+    "m2-sm-proba-ex3-q6",
+    "m2-sm-proba-ex4-q1",
+    "m2-sm-proba-ex4-q2",
+    "m2-sm-proba-ex4-q3",
+    "m2-sm-proba-ex4-q4",
+    "m2-sm-proba-ex4-q5"
+   ]
+  }
+ ]
+}

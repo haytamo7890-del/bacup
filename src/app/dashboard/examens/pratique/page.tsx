@@ -27,8 +27,7 @@ import {
   type PlayQ, type Serie,
 } from "@/lib/prep";
 import {
-  ChevronLeft, ChevronRight, Check, X, Loader2, Target, Layers, Trophy, PartyPopper, RotateCw,
-  BookOpen, Zap, Flame, Sparkles, Lightbulb, Brain, Swords, Compass,
+  ChevronLeft, ChevronRight, Check, X, Loader2, Target, Layers, Trophy, PartyPopper, RotateCw, BookOpen, Zap, Flame, Lightbulb, Brain, Swords, Compass, ListOrdered, TriangleAlert, type LucideIcon,
 } from "lucide-react";
 
 type Setup = {
@@ -43,12 +42,12 @@ type Setup = {
 };
 type Result = { earned: number; bonus: number; pct: number; first_completion: boolean; total_xp: number; streak: number | null; review_due?: number };
 
-const AI_MODES: { key: string; label: string; emoji: string }[] = [
-  { key: "autrement", label: "Explique autrement", emoji: "💡" },
-  { key: "etapes", label: "Étape par étape", emoji: "🪜" },
-  { key: "cours", label: "Rappel du cours", emoji: "📘" },
-  { key: "erreurs", label: "Erreurs fréquentes", emoji: "⚠️" },
-  { key: "methode", label: "Méthode générale", emoji: "🧭" },
+const AI_MODES: { key: string; label: string; icon: LucideIcon }[] = [
+  { key: "autrement", label: "Explique autrement", icon: Lightbulb },
+  { key: "etapes", label: "Étape par étape", icon: ListOrdered },
+  { key: "cours", label: "Rappel du cours", icon: BookOpen },
+  { key: "erreurs", label: "Erreurs fréquentes", icon: TriangleAlert },
+  { key: "methode", label: "Méthode générale", icon: Compass },
 ];
 
 function shuffle<T>(arr: T[]): T[] {
@@ -90,7 +89,7 @@ export default function PratiquePage() {
       if (!ctx?.levelId) { setError("Connecte-toi pour t'entraîner."); return; }
       const ownTrackId = ctx.ownTrack ? ctx.trackIdByCode.get(ctx.ownTrack) ?? null : null;
 
-      const firstChapterOf = async (subjectId: string) => (await loadChapters(supabase, ctx.levelId!, subjectId, ownTrackId))[0]?.id ?? null;
+      const firstChapterOf = async (subjectId: string) => (await loadChapters(supabase, ctx.levelId!, subjectId, ownTrackId, ctx.ownTrack))[0]?.id ?? null;
 
       if (review) {
         const subj = review !== "all" ? ctx.subjectsByCode.get(review) : null;
@@ -212,8 +211,8 @@ export default function PratiquePage() {
         body: JSON.stringify({ question: qq.statement, options: qq.options.map((o) => o.label), choice: qq.options.find((o) => o.id === picked[qq.id])?.label ?? "", existing: qq.solution, mode: key }),
       });
       const j = await res.json();
-      setAiLive((m) => ({ ...m, [`${qq.id}:${key}`]: j.text || `⚠ ${j.error || "Explication indisponible."}` }));
-    } catch { setAiLive((m) => ({ ...m, [`${qq.id}:${key}`]: "⚠ Explication indisponible." })); }
+      setAiLive((m) => ({ ...m, [`${qq.id}:${key}`]: j.text || `${j.error || "Explication indisponible."}` }));
+    } catch { setAiLive((m) => ({ ...m, [`${qq.id}:${key}`]: "Explication indisponible." })); }
     setAiBusy(null);
   }
 
@@ -237,7 +236,7 @@ export default function PratiquePage() {
   );
 
   if (deck.length === 0) {
-    return <Shell back={back}>{Hero}<div className="mt-5 glass rounded-3xl p-10 text-center text-sm text-neutral-400">{setup.kind === "review" ? "Rien à revoir pour l'instant — reviens demain ou continue par notion. 🎉" : "Aucun exercice pour l'instant — ils arrivent bientôt. ✨"}</div></Shell>;
+    return <Shell back={back}>{Hero}<div className="mt-5 glass rounded-3xl p-10 text-center text-sm text-neutral-400">{setup.kind === "review" ? "Rien à revoir pour l'instant — reviens demain ou continue par notion." : "Aucun exercice pour l'instant — ils arrivent bientôt."}</div></Shell>;
   }
 
   // ---------- results ----------
@@ -254,14 +253,14 @@ export default function PratiquePage() {
           </div>
           <div className="mt-4 text-4xl font-extrabold tracking-tight tabular-nums">{nCorrect} / {deck.length}</div>
           <div className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
-            {pct === 100 ? "Parfait ! Notion maîtrisée. 🎉" : pct >= 70 ? "Bien joué — encore un petit effort pour le sans-faute." : "Relis le cours de la notion, puis retente."}
+            {pct === 100 ? "Parfait ! Notion maîtrisée." : pct >= 70 ? "Bien joué — encore un petit effort pour le sans-faute." : "Relis le cours de la notion, puis retente."}
           </div>
           {phase === "saving" ? (
             <div className="mt-5 inline-flex items-center gap-2 text-sm text-neutral-400"><Loader2 className="w-4 h-4 animate-spin" /> Enregistrement…</div>
           ) : result ? (
             <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
               <span className="inline-flex items-center gap-1 text-sm font-bold px-3 py-1 rounded-full bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan"><Zap className="w-4 h-4" /> +{result.earned} XP</span>
-              {result.bonus > 0 && <span className="inline-flex items-center gap-1 text-sm font-bold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400"><Sparkles className="w-4 h-4" /> Série validée · +{result.bonus} XP</span>}
+              {result.bonus > 0 && <span className="inline-flex items-center gap-1 text-sm font-bold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400"><Zap className="w-4 h-4" /> Série validée · +{result.bonus} XP</span>}
               {result.streak != null && <span className="inline-flex items-center gap-1 text-sm font-bold px-3 py-1 rounded-full bg-orange-500/15 text-orange-500"><Flame className="w-4 h-4" /> {result.streak} j</span>}
               {!!result.review_due && setup.kind !== "review" && <Link href={prepRoutes.review(code || undefined)} className="inline-flex items-center gap-1 text-sm font-bold px-3 py-1 rounded-full bg-violet-500/15 text-violet-600 dark:text-violet-400"><Brain className="w-4 h-4" /> {result.review_due} à revoir</Link>}
             </div>
@@ -328,7 +327,7 @@ export default function PratiquePage() {
               )}
             </div>
           );
-        })() : q.context && <div className="mb-3 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] px-4 py-3 text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed"><Tex>{q.context}</Tex>{q.figure && <CourseFigure name={q.figure} />}</div>}
+        })() : (q.context || q.figure) && <div className="mb-3 rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] px-4 py-3 text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">{q.context && <Tex>{q.context}</Tex>}{q.figure && <CourseFigure name={q.figure} />}</div>}
         {q.part && <div className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-neutral-400">{q.part}</div>}
         <div dir="auto" className="text-[16px] font-semibold leading-relaxed"><Tex>{q.statement}</Tex></div>
         {!answered && q.hint && (
@@ -361,7 +360,7 @@ export default function PratiquePage() {
         {answered && (
           <>
             <div className={`mt-4 rounded-2xl border-l-[3px] p-4 ${chosen?.correct ? "border-emerald-500/60 bg-emerald-500/[0.05]" : "border-red-500/60 bg-red-500/[0.05]"}`}>
-              <div className={`text-[11px] font-bold uppercase tracking-wide mb-1 ${chosen?.correct ? "text-emerald-600 dark:text-emerald-300" : "text-red-500"}`}>{chosen?.correct ? "Bonne réponse ✓" : "Correction"}</div>
+              <div className={`text-[11px] font-bold uppercase tracking-wide mb-1 ${chosen?.correct ? "text-emerald-600 dark:text-emerald-300" : "text-red-500"}`}>{chosen?.correct ? "Bonne réponse" : "Correction"}</div>
               {chosen && !chosen.correct && chosen.why && (
                 <div className="mb-2 text-sm text-red-600 dark:text-red-300 leading-relaxed"><span className="font-semibold">Pourquoi ta réponse est fausse : </span><Tex>{chosen.why}</Tex></div>
               )}
@@ -382,8 +381,8 @@ export default function PratiquePage() {
             <div className="mt-3 flex flex-wrap gap-1.5">
               {AI_MODES.map((m) => (
                 <button key={m.key} onClick={() => askAI(q, m.key)}
-                  className={`text-[12px] font-semibold px-3 py-1.5 rounded-full transition ${aiKey === m.key ? "bg-arctic-blue text-white" : "bg-black/[0.04] dark:bg-white/[0.06] text-neutral-600 dark:text-neutral-300 hover:bg-arctic-blue/10"}`}>
-                  {m.emoji} {m.label}
+                  className={`inline-flex items-center gap-1.5 text-[12px] font-semibold px-3 py-1.5 rounded-full transition ${aiKey === m.key ? "bg-arctic-blue text-white" : "bg-black/[0.04] dark:bg-white/[0.06] text-neutral-600 dark:text-neutral-300 hover:bg-arctic-blue/10"}`}>
+                  <m.icon className="w-3.5 h-3.5" /> {m.label}
                 </button>
               ))}
             </div>
@@ -408,7 +407,7 @@ function Shell({ back, children }: { back: string; children: React.ReactNode }) 
   return (
     <div className="max-w-3xl mx-auto py-8 fade-up">
       <Link href={back} className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white">
-        <ChevronLeft className="w-4 h-4" /> Espace de préparation
+        <ChevronLeft className="w-4 h-4" /> Préparation
       </Link>
       {children}
     </div>

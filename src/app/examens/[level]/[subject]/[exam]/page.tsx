@@ -150,7 +150,7 @@ export default async function ExamEnonce({ params }: { params: Promise<Params> }
               </ol>
             </article>
           ))}
-          {d.exercises.length === 0 && <p className="c-dim">L&apos;énoncé de ce sujet arrive bientôt. ✨</p>}
+          {d.exercises.length === 0 && <p className="c-dim">L&apos;énoncé de ce sujet arrive bientôt.</p>}
         </div>
 
         <section className="mt-10 rounded-3xl p-7 border border-arctic-cyan/25 bg-gradient-to-br from-arctic-cyan/10 to-arctic-blue/5 text-center">

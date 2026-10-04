@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Check, FileText, Sparkles, ListChecks } from "lucide-react";
+import { Check, FileText, ListChecks, Lightbulb } from "lucide-react";
 import { createPublicSupabase } from "@/lib/supabase-public";
 import { PublicNav, PublicFooter, Breadcrumbs, JsonLd } from "@/components/public-shell";
 import { Tex } from "@/components/math";
@@ -110,7 +110,7 @@ export default async function ExamCorrige({ params }: { params: Promise<Params> 
             <FileText className="w-4 h-4" /> Revoir l&apos;énoncé
           </Link>
           <Link href="/signup" className="px-5 py-3 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white text-sm font-semibold hover:brightness-105 transition inline-flex items-center gap-2">
-            <Sparkles className="w-4 h-4" /> Explique-moi avec l&apos;IA
+            <Lightbulb className="w-4 h-4" /> Explique-moi avec l&apos;IA
           </Link>
         </div>
 
@@ -146,7 +146,7 @@ export default async function ExamCorrige({ params }: { params: Promise<Params> 
               </div>
             </article>
           ))}
-          {d.exercises.length === 0 && <p className="c-dim">Le corrigé de ce sujet arrive bientôt. ✨</p>}
+          {d.exercises.length === 0 && <p className="c-dim">Le corrigé de ce sujet arrive bientôt.</p>}
         </div>
 
         <section className="mt-10 rounded-3xl p-7 border border-arctic-cyan/25 bg-gradient-to-br from-arctic-cyan/10 to-arctic-blue/5 text-center">

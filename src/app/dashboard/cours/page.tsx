@@ -13,18 +13,17 @@ import { PracticeQuiz, type PQItem } from "@/components/course/practice-quiz";
 import { questionsForNotion, groupByNotion, lessonNotions } from "@/lib/notions";
 import { prepRoutes } from "@/lib/prep";
 import { filiereChips, SHORT } from "@/lib/filieres";
-import { curriculumFor, type SubjectRef } from "@/config/curriculum";
+import { curriculumFor, type SubjectRef, chapterVisibleFor } from "@/config/curriculum";
 import { subjectTheme } from "@/config/subjects";
 import { SubjectPad, PadChip, subjectIcon, SubjectAmbient } from "@/components/subject-pad";
 import { SubjectBanner } from "@/components/subject-banner";
 import {
-  ChevronLeft, ChevronRight, BookOpen, Loader2, Check, GraduationCap,
-  FileText, Sparkles, ScrollText, Layers, Lock,
+  ChevronLeft, ChevronRight, BookOpen, Loader2, Check, GraduationCap, FileText, ScrollText, Layers, Lock,
 } from "lucide-react";
 
 type Subject = { id: string; code: string; name: string };
 type Track = { id: string; code: string; name: string };
-type Chapter = { id: string; subject_id: string; track_id: string | null; name: string; position: number; domain?: string | null; unit?: string | null; unit_pos?: number | null };
+type Chapter = { id: string; subject_id: string; track_id: string | null; code?: string | null; name: string; position: number; domain?: string | null; unit?: string | null; unit_pos?: number | null };
 type Lesson = { id: string; title: string; body: string | null; resume: string | null; kind: string; difficulty: number | null; duration_min: number | null; bac_frequency: number | null };
 type SubjectCard = { id: string; code: string; name: string; coeff: number | null; chapters: Chapter[] };
 
@@ -122,7 +121,7 @@ export default function CoursPage() {
         supabase.from("subjects").select("id, code, name"),
         supabase.from("tracks").select("id, code, name"),
         levelId
-          ? supabase.from("chapters").select("id, subject_id, track_id, name, position, domain, unit, unit_pos").eq("level_id", levelId).order("position")
+          ? supabase.from("chapters").select("id, subject_id, track_id, code, name, position, domain, unit, unit_pos").eq("level_id", levelId).order("position")
           : Promise.resolve({ data: [] as Chapter[] }),
       ]);
       const sById = new Map<string, Subject>(); const sByCode = new Map<string, Subject>();
@@ -142,7 +141,7 @@ export default function CoursPage() {
         const trackCode = dc.track_id ? [...tId.entries()].find(([, id]) => id === dc.track_id)?.[0] ?? tc : tc;
         const trackId = trackCode ? tId.get(trackCode) ?? null : null;
         const subjChapters = ((chs ?? []) as Chapter[])
-          .filter((c) => c.subject_id === ds.id && (c.track_id === trackId || c.track_id == null))
+          .filter((c) => c.subject_id === ds.id && (c.track_id === trackId || c.track_id == null) && chapterVisibleFor(trackCode, c.code))
           .sort((a, b) => a.position - b.position);
         const coeff = curriculumFor(lc, trackCode)?.find((r) => r.code === ds.code)?.coeff ?? null;
         setFiliere(trackCode);
@@ -210,7 +209,7 @@ export default function CoursPage() {
     const trackId = trackIdByCode.get(f) ?? null;
     const chaptersFor = (subjId: string) =>
       chapters
-        .filter((c) => c.subject_id === subjId && (c.track_id === trackId || c.track_id == null))
+        .filter((c) => c.subject_id === subjId && (c.track_id === trackId || c.track_id == null) && chapterVisibleFor(f, c.code))
         .sort((a, b) => a.position - b.position);
     const ref: SubjectRef[] | null = curriculumFor(levelCode, f);
     if (ref) {
@@ -308,9 +307,9 @@ export default function CoursPage() {
         body: JSON.stringify({ subject: subject?.name, chapter: chapter.name, body: coursBodies }),
       });
       const json = await res.json();
-      setAiResume(json.text || `⚠ ${json.error || "Le résumé n'a pas pu être généré."}`);
+      setAiResume(json.text || `${json.error || "Le résumé n'a pas pu être généré."}`);
     } catch {
-      setAiResume("⚠ Impossible de générer le résumé.");
+      setAiResume("Impossible de générer le résumé.");
     }
     setAiBusy(false);
   }
@@ -363,7 +362,7 @@ export default function CoursPage() {
                 </div>
                 <div className="h-2 rounded-full bg-black/[0.06] dark:bg-white/[0.08] overflow-hidden"><div className="h-full bg-emerald-500 transition-all" style={{ width: `${pct}%` }} /></div>
               </div>
-              <button onClick={() => setDeckOpen(true)} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full glass hover:-translate-y-0.5 transition"><Sparkles className="w-4 h-4 text-arctic-blue dark:text-arctic-cyan" /> Flashcards</button>
+              <button onClick={() => setDeckOpen(true)} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full glass hover:-translate-y-0.5 transition"><Layers className="w-4 h-4 text-arctic-blue dark:text-arctic-cyan" /> Flashcards</button>
               <button onClick={() => router.push(subject ? prepRoutes.subject(subject.code, { f: filiere, mode: "notion", chapter: chapter.id }) : prepRoutes.hub())} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white hover:brightness-105 transition"><FileText className="w-4 h-4" /> S&apos;entraîner</button>
             </div>
           );
@@ -384,7 +383,7 @@ export default function CoursPage() {
             <div className="mt-5">
               {!aiResume && (
                 <div className="glass rounded-3xl p-8 text-center">
-                  <div className="w-12 h-12 rounded-2xl bg-arctic-blue/10 text-arctic-blue dark:text-arctic-cyan grid place-items-center mx-auto"><Sparkles className="w-5 h-5" /></div>
+                  <div className="w-12 h-12 rounded-2xl bg-arctic-blue/10 text-arctic-blue dark:text-arctic-cyan grid place-items-center mx-auto"><ScrollText className="w-5 h-5" /></div>
                   <p className="mt-4 text-sm text-neutral-500 dark:text-neutral-400 max-w-sm mx-auto">
                     Aucun résumé rédigé pour ce chapitre — l&apos;IA Bac-up peut t&apos;en générer un instantanément à partir du cours.
                   </p>
@@ -393,7 +392,7 @@ export default function CoursPage() {
                     disabled={aiBusy || !coursBodies.trim()}
                     className="mt-5 inline-flex items-center gap-2 text-sm font-semibold rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white px-5 py-2.5 hover:brightness-105 transition disabled:opacity-50"
                   >
-                    {aiBusy ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
+                    {aiBusy ? <Loader2 className="w-4 h-4 animate-spin" /> : <ScrollText className="w-4 h-4" />}
                     {coursBodies.trim() ? "Générer le résumé IA" : "Cours indisponible"}
                   </button>
                 </div>
@@ -401,7 +400,7 @@ export default function CoursPage() {
               {aiResume && (
                 <div className="glass rounded-3xl p-7">
                   <div className="flex items-center gap-1.5 text-xs font-semibold text-arctic-blue dark:text-arctic-cyan mb-3">
-                    <Sparkles className="w-3.5 h-3.5" /> Résumé généré par l&apos;IA Bac-up
+                    <ScrollText className="w-3.5 h-3.5" /> Résumé généré par l&apos;IA Bac-up
                   </div>
                   <div className="text-[15px] leading-relaxed text-neutral-700 dark:text-neutral-200 whitespace-pre-wrap"><Tex>{aiResume}</Tex></div>
                 </div>
@@ -409,7 +408,7 @@ export default function CoursPage() {
             </div>
           )
         ) : lessons.length === 0 ? (
-          <Empty text="Le cours de ce chapitre arrive bientôt. ✨" />
+          <Empty text="Le cours de ce chapitre arrive bientôt." />
         ) : (
           // COURS: full lessons + mark-as-read gamification.
           <div className="mt-5 space-y-4">
@@ -494,7 +493,7 @@ export default function CoursPage() {
         </div>
 
         {subject.chapters.length === 0 ? (
-          <div className="mt-6 glass rounded-3xl p-10 text-center text-neutral-400">Les cours de cette matière arrivent très bientôt. ✨</div>
+          <div className="mt-6 glass rounded-3xl p-10 text-center text-neutral-400">Les cours de cette matière arrivent très bientôt.</div>
         ) : (() => {
           const hasDomains = subject.chapters.some((c) => c.domain);
           const firstId = subject.chapters[0]?.id;             // demo: only the very 1st chapter is open
@@ -609,7 +608,7 @@ export default function CoursPage() {
         <GraduationCap className="w-4 h-4" /> {is2bac ? (trackNameByCode.get(filiere ?? "") ?? "Matières") : (ownTrackName || "Matières")}
       </div>
       {subjectCards.length === 0 ? (
-        <div className="mt-4 glass rounded-3xl p-10 text-center text-neutral-400">Le contenu arrive très bientôt. ✨</div>
+        <div className="mt-4 glass rounded-3xl p-10 text-center text-neutral-400">Le contenu arrive très bientôt.</div>
       ) : (
         <div className="mt-4 space-y-3">
           {subjectCards.map((c) => {

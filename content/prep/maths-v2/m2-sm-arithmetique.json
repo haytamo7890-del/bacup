@@ -1,0 +1,965 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "sm_a",
+  "sm_b"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-sm-arithmetique-flash-1",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Divisibilité et division euclidienne",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Divisibilité et division euclidienne",
+     "difficulty": 1,
+     "statement": "Le reste de la division euclidienne de $-17$ par $5$ est :",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "$-17 = 5\\times(-4) + 3$ avec $0 \\le 3 < 5$."
+      },
+      {
+       "label": "$-2$",
+       "why": "$-17 = 5\\times(-3) - 2$, mais un reste doit vérifier $0 \\le r < 5$."
+      },
+      {
+       "label": "$2$",
+       "why": "$2$ est le reste de $17$, pas de $-17$."
+      },
+      {
+       "label": "$-3$",
+       "why": "Un reste euclidien n'est jamais négatif."
+      }
+     ],
+     "hint": "Cherche $q$ tel que $0 \\le -17 - 5q < 5$.",
+     "solution": "$-17 = 5\\times(-4) + 3$ et $0 \\le 3 < 5$ : le quotient est $-4$ et le reste $3$.",
+     "points": 1,
+     "methode": "Division euclidienne de $a$ par $b > 0$ : $a = bq + r$ avec $0 \\le r < b$, même si $a < 0$.",
+     "ref": "m2-sm-arithmetique-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-flash-2",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "PGCD et algorithme d'Euclide",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "PGCD et algorithme d'Euclide",
+     "difficulty": 1,
+     "statement": "$\\mathrm{pgcd}(84;36)$ vaut :",
+     "options": [
+      {
+       "label": "$12$",
+       "correct": true,
+       "why": "$84 = 2\\times36 + 12$ et $36 = 3\\times12$."
+      },
+      {
+       "label": "$6$",
+       "why": "$6$ divise les deux, mais $12$ aussi : ce n'est pas le plus grand."
+      },
+      {
+       "label": "$4$",
+       "why": "$12$ divise $84$ et $36$ : le PGCD est au moins $12$."
+      },
+      {
+       "label": "$252$",
+       "why": "C'est le PPCM."
+      }
+     ],
+     "hint": "Algorithme d'Euclide.",
+     "solution": "$84 = 2\\times36 + 12$ ; $36 = 3\\times12 + 0$. Le dernier reste non nul est $12$ : $\\mathrm{pgcd}(84;36) = 12$.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-flash-3",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Relation PGCD - PPCM",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Relation PGCD - PPCM",
+     "difficulty": 2,
+     "statement": "Deux entiers naturels $a$ et $b$ vérifient $ab = 720$ et $\\mathrm{pgcd}(a;b) = 6$. Alors $\\mathrm{ppcm}(a;b)$ vaut :",
+     "options": [
+      {
+       "label": "$120$",
+       "correct": true,
+       "why": "$\\mathrm{pgcd}\\times\\mathrm{ppcm} = ab$, donc $\\mathrm{ppcm} = \\frac{720}{6}$."
+      },
+      {
+       "label": "$4320$",
+       "why": "Tu as multiplié par $6$ au lieu de diviser."
+      },
+      {
+       "label": "$714$",
+       "why": "La relation est multiplicative, pas une soustraction."
+      },
+      {
+       "label": "$12$",
+       "why": "Le PPCM est un multiple commun, donc au moins $\\max(a;b)$."
+      }
+     ],
+     "hint": "$\\mathrm{pgcd}(a;b)\\times\\mathrm{ppcm}(a;b) = ab$.",
+     "solution": "$\\mathrm{ppcm}(a;b) = \\dfrac{ab}{\\mathrm{pgcd}(a;b)} = \\dfrac{720}{6} = 120$.",
+     "points": 1,
+     "methode": "Pour $a, b \\in \\mathbb N^*$ : $\\mathrm{pgcd}(a;b)\\times\\mathrm{ppcm}(a;b) = ab$.",
+     "ref": "m2-sm-arithmetique-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-flash-4",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Congruences modulo n",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Congruences modulo n",
+     "difficulty": 1,
+     "statement": "Le reste de la division de $2^{10}$ par $7$ est :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "$2^3 = 8 \\equiv 1\\ [7]$, donc $2^{10} = (2^3)^3\\times2 \\equiv 2$."
+      },
+      {
+       "label": "$1$",
+       "why": "$10$ n'est pas multiple de $3$ : il reste un facteur $2$."
+      },
+      {
+       "label": "$4$",
+       "why": "$2^{10} = 2^9\\times2$ et $2^9 \\equiv 1$ : le reste est $2$."
+      },
+      {
+       "label": "$3$",
+       "why": "$1024 = 7\\times146 + 2$."
+      }
+     ],
+     "hint": "Trouve une puissance de $2$ congrue à $1$ modulo $7$.",
+     "solution": "$2^3 = 8 \\equiv 1\\ [7]$. $10 = 3\\times3 + 1$, donc $2^{10} = \\left(2^3\\right)^3\\times2 \\equiv 1^3\\times2 = 2\\ [7]$. (Contrôle : $1024 = 7\\times146 + 2$.)",
+     "points": 1,
+     "methode": "Puissance modulo $n$ : cherche $a^k \\equiv 1$, puis divise l'exposant par $k$.",
+     "ref": "m2-sm-arithmetique-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-flash-5",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Petit théorème de Fermat",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Petit théorème de Fermat",
+     "difficulty": 2,
+     "statement": "Le reste de la division de $3^{12}$ par $13$ est :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "$13$ est premier et ne divise pas $3$ : $3^{12} \\equiv 1\\ [13]$."
+      },
+      {
+       "label": "$0$",
+       "why": "$13$ est premier et ne divise pas $3$, donc il ne divise pas $3^{12}$."
+      },
+      {
+       "label": "$3$",
+       "why": "C'est $3^{13} \\equiv 3\\ [13]$ ; avec l'exposant $12$, on obtient $1$."
+      },
+      {
+       "label": "$12$",
+       "why": "Fermat : $a^{p-1} \\equiv 1\\ [p]$, pas $p - 1$."
+      }
+     ],
+     "hint": "Petit théorème de Fermat avec $p = 13$.",
+     "solution": "$13$ est premier et $13 \\nmid 3$. D'après le petit théorème de Fermat, $3^{13-1} = 3^{12} \\equiv 1\\ [13]$.",
+     "points": 1,
+     "methode": "Fermat : $p$ premier, $p \\nmid a$ ⇒ $a^{p-1} \\equiv 1\\ [p]$ ; pour tout $a$ : $a^p \\equiv a\\ [p]$.",
+     "ref": "m2-sm-arithmetique-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-flash-6",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Systèmes de numération",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Systèmes de numération",
+     "difficulty": 1,
+     "statement": "Le nombre qui s'écrit $\\overline{1011}^{(2)}$ en base $2$ vaut en base $10$ :",
+     "options": [
+      {
+       "label": "$11$",
+       "correct": true,
+       "why": "$1\\times8 + 0\\times4 + 1\\times2 + 1 = 11$."
+      },
+      {
+       "label": "$13$",
+       "why": "Tu as lu les chiffres dans le mauvais sens : $\\overline{1101}^{(2)} = 13$."
+      },
+      {
+       "label": "$1011$",
+       "why": "En base $2$, chaque chiffre est multiplié par une puissance de $2$, pas de $10$."
+      },
+      {
+       "label": "$9$",
+       "why": "Tu as oublié le chiffre des « deux » : $8 + 2 + 1$."
+      }
+     ],
+     "hint": "$\\overline{a_3a_2a_1a_0}^{(2)} = a_3 2^3 + a_2 2^2 + a_1 2 + a_0$.",
+     "solution": "$\\overline{1011}^{(2)} = 1\\times2^3 + 0\\times2^2 + 1\\times2^1 + 1\\times2^0 = 8 + 0 + 2 + 1 = 11$.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-flash-7",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Bézout et Gauss",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Bézout et Gauss",
+     "difficulty": 2,
+     "statement": "$n$ est un entier tel que $7$ divise $4n$. On peut conclure que :",
+     "options": [
+      {
+       "label": "$7$ divise $n$",
+       "correct": true,
+       "why": "Gauss : $7 \\mid 4n$ et $\\mathrm{pgcd}(7;4) = 1$."
+      },
+      {
+       "label": "$7$ divise $4$",
+       "why": "$7$ ne divise pas $4$ : c'est justement pour ça qu'il divise $n$."
+      },
+      {
+       "label": "$28$ divise $n$",
+       "why": "Gauss donne seulement $7 \\mid n$ (ex. $n = 7$)."
+      },
+      {
+       "label": "on ne peut rien conclure",
+       "why": "$7$ et $4$ sont premiers entre eux : le théorème de Gauss s'applique."
+      }
+     ],
+     "hint": "Théorème de Gauss.",
+     "solution": "$7 \\mid 4n$ et $\\mathrm{pgcd}(7;4) = 1$ : d'après le théorème de Gauss, $7 \\mid n$.",
+     "points": 1,
+     "methode": "Gauss : $a \\mid bc$ et $\\mathrm{pgcd}(a;b) = 1$ ⇒ $a \\mid c$.",
+     "ref": "m2-sm-arithmetique-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-flash-8",
+   "chapter": "arithmetique",
+   "kind": "qcu",
+   "title": "Nombres premiers et décomposition",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Nombres premiers et décomposition",
+     "difficulty": 2,
+     "statement": "Le nombre de diviseurs positifs de $72$ est :",
+     "options": [
+      {
+       "label": "$12$",
+       "correct": true,
+       "why": "$72 = 2^3\\times3^2$ : $(3 + 1)(2 + 1) = 12$."
+      },
+      {
+       "label": "$6$",
+       "why": "Tu as multiplié les exposants $3\\times2$ : on ajoute $1$ à chacun."
+      },
+      {
+       "label": "$5$",
+       "why": "Tu as additionné $3 + 2$ : c'est un produit $(3+1)(2+1)$."
+      },
+      {
+       "label": "$9$",
+       "why": "Recompte la décomposition : $72 = 8\\times9 = 2^3\\times3^2$."
+      }
+     ],
+     "hint": "Décompose $72$ en facteurs premiers.",
+     "solution": "$72 = 2^3\\times3^2$. Un diviseur s'écrit $2^\\alpha 3^\\beta$ avec $0 \\le \\alpha \\le 3$ et $0 \\le \\beta \\le 2$ : $4\\times3 = 12$ diviseurs.",
+     "points": 1,
+     "methode": "$n = p_1^{\\alpha_1}\\cdots p_k^{\\alpha_k}$ a $(\\alpha_1 + 1)\\cdots(\\alpha_k + 1)$ diviseurs positifs.",
+     "ref": "m2-sm-arithmetique-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-ex1",
+   "chapter": "arithmetique",
+   "kind": "probleme",
+   "title": "Exercice 1 — Algorithme d'Euclide et identité de Bézout",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "On considère les entiers $a = 221$ et $b = 65$.",
+   "questions": [
+    {
+     "notion": "PGCD et algorithme d'Euclide",
+     "difficulty": 1,
+     "statement": "1) $\\mathrm{pgcd}(221;65)$ vaut :",
+     "options": [
+      {
+       "label": "$13$",
+       "correct": true,
+       "why": "$221 = 3\\times65 + 26$ ; $65 = 2\\times26 + 13$ ; $26 = 2\\times13$."
+      },
+      {
+       "label": "$26$",
+       "why": "$26$ est un reste intermédiaire ; il faut continuer jusqu'au reste nul."
+      },
+      {
+       "label": "$1$",
+       "why": "$13$ divise $221 = 13\\times17$ et $65 = 13\\times5$."
+      },
+      {
+       "label": "$65$",
+       "why": "$65$ ne divise pas $221$."
+      }
+     ],
+     "hint": "Applique l'algorithme d'Euclide jusqu'au reste nul.",
+     "solution": "$221 = 3\\times65 + 26$ ; $65 = 2\\times26 + 13$ ; $26 = 2\\times13 + 0$. Le dernier reste non nul est $13$.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex1-q1"
+    },
+    {
+     "notion": "Bézout et Gauss",
+     "difficulty": 2,
+     "statement": "2) Un couple $(u;v)$ d'entiers tel que $221u + 65v = 13$ est :",
+     "options": [
+      {
+       "label": "$(-2\\,;7)$",
+       "correct": true,
+       "why": "$221\\times(-2) + 65\\times7 = -442 + 455 = 13$."
+      },
+      {
+       "label": "$(2\\,;-7)$",
+       "why": "$442 - 455 = -13$ : signe inversé."
+      },
+      {
+       "label": "$(7\\,;-2)$",
+       "why": "Tu as échangé $u$ et $v$ : $221\\times7 - 65\\times2 = 1417$."
+      },
+      {
+       "label": "$(-2\\,;-7)$",
+       "why": "$-442 - 455 \\ne 13$."
+      }
+     ],
+     "hint": "Remonte l'algorithme : $13 = 65 - 2\\times26$ et $26 = 221 - 3\\times65$.",
+     "solution": "$13 = 65 - 2\\times26 = 65 - 2(221 - 3\\times65) = 7\\times65 - 2\\times221$. Donc $(u;v) = (-2;7)$.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex1-q2"
+    },
+    {
+     "notion": "Bézout et Gauss",
+     "difficulty": 2,
+     "statement": "3) L'équation $221x + 65y = 1$, d'inconnues entières :",
+     "options": [
+      {
+       "label": "n'a pas de solution",
+       "correct": true,
+       "why": "$13$ divise $221x + 65y$ pour tous $x, y$, mais pas $1$."
+      },
+      {
+       "label": "a une infinité de solutions",
+       "why": "Bézout : $ax + by = 1$ a des solutions seulement si $\\mathrm{pgcd}(a;b) = 1$."
+      },
+      {
+       "label": "a pour solution $(-2\\,;7)$",
+       "why": "Ce couple donne $13$, pas $1$."
+      },
+      {
+       "label": "a une unique solution",
+       "why": "Même avec $\\mathrm{pgcd} = 1$, il y aurait une infinité de solutions."
+      }
+     ],
+     "hint": "Que divise forcément $221x + 65y$ ?",
+     "solution": "$13 \\mid 221$ et $13 \\mid 65$, donc $13 \\mid 221x + 65y$ pour tous entiers $x, y$. Comme $13 \\nmid 1$, l'équation n'a pas de solution.",
+     "points": 1,
+     "methode": "$ax + by = c$ a des solutions entières ⇔ $\\mathrm{pgcd}(a;b) \\mid c$.",
+     "ref": "m2-sm-arithmetique-ex1-q3"
+    },
+    {
+     "notion": "Relation PGCD - PPCM",
+     "difficulty": 2,
+     "statement": "4) $\\mathrm{ppcm}(221;65)$ vaut :",
+     "options": [
+      {
+       "label": "$1105$",
+       "correct": true,
+       "why": "$\\frac{221\\times65}{13} = 221\\times5$."
+      },
+      {
+       "label": "$14365$",
+       "why": "C'est le produit $221\\times65$ ; il faut diviser par le PGCD."
+      },
+      {
+       "label": "$13$",
+       "why": "C'est le PGCD."
+      },
+      {
+       "label": "$2210$",
+       "why": "Recalcule : $\\frac{65}{13} = 5$, et $221\\times5 = 1105$."
+      }
+     ],
+     "hint": "$\\mathrm{ppcm} = \\frac{ab}{\\mathrm{pgcd}}$.",
+     "solution": "$\\mathrm{ppcm}(221;65) = \\dfrac{221\\times65}{13} = 221\\times5 = 1105$ (soit $13\\times17\\times5$).",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex1-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-ex2",
+   "chapter": "arithmetique",
+   "kind": "probleme",
+   "title": "Exercice 2 — Restes de puissances et congruence linéaire",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Les questions portent sur les restes de puissances et sur la résolution de congruences.",
+   "questions": [
+    {
+     "notion": "Restes de puissances (ordre)",
+     "difficulty": 1,
+     "statement": "1) Le plus petit entier $n \\ge 1$ tel que $2^n \\equiv 1\\ [7]$ est :",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "$2^1 = 2$, $2^2 = 4$, $2^3 = 8 \\equiv 1\\ [7]$."
+      },
+      {
+       "label": "$6$",
+       "why": "Fermat donne $2^6 \\equiv 1$, mais $6$ n'est pas forcément le plus petit."
+      },
+      {
+       "label": "$7$",
+       "why": "$2^7 \\equiv 2\\ [7]$."
+      },
+      {
+       "label": "$2$",
+       "why": "$2^2 = 4 \\not\\equiv 1\\ [7]$."
+      }
+     ],
+     "hint": "Calcule les restes de $2^1, 2^2, 2^3,\\dots$ modulo $7$.",
+     "solution": "Restes de $2^n$ modulo $7$ : $2, 4, 1, 2, 4, 1,\\dots$ Le plus petit $n$ est $3$ (l'ordre de $2$ modulo $7$).",
+     "points": 1,
+     "methode": "L'ordre de $a$ modulo $p$ divise $p - 1$ (Fermat) : teste seulement les diviseurs de $p-1$.",
+     "ref": "m2-sm-arithmetique-ex2-q1"
+    },
+    {
+     "notion": "Congruences et restes",
+     "difficulty": 2,
+     "statement": "2) Le reste de la division de $2^{2026}$ par $7$ est :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "$2026 = 3\\times675 + 1$, donc $2^{2026} \\equiv 2^1$."
+      },
+      {
+       "label": "$1$",
+       "why": "$2026$ n'est pas multiple de $3$."
+      },
+      {
+       "label": "$4$",
+       "why": "Cela correspondrait à un reste de $2$ dans la division de l'exposant par $3$ ; ici le reste est $1$."
+      },
+      {
+       "label": "$0$",
+       "why": "$7$ est premier et ne divise pas $2$ : il ne divise aucune puissance de $2$."
+      }
+     ],
+     "hint": "Divise l'exposant par l'ordre $3$.",
+     "solution": "$2^3 \\equiv 1\\ [7]$ et $2026 = 3\\times675 + 1$, donc $2^{2026} = \\left(2^3\\right)^{675}\\times2 \\equiv 2\\ [7]$.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex2-q2"
+    },
+    {
+     "notion": "Congruences modulo n",
+     "difficulty": 2,
+     "statement": "3) Le chiffre des unités de $7^{2026}$ est :",
+     "options": [
+      {
+       "label": "$9$",
+       "correct": true,
+       "why": "Modulo $10$ : $7, 9, 3, 1$ (période $4$) et $2026 \\equiv 2\\ [4]$."
+      },
+      {
+       "label": "$7$",
+       "why": "$7^1$ se termine par $7$ ; mais $2026 \\equiv 2\\ [4]$, donc on prend $7^2$."
+      },
+      {
+       "label": "$3$",
+       "why": "$7^3$ se termine par $3$ ; l'exposant réduit est $2$, pas $3$."
+      },
+      {
+       "label": "$1$",
+       "why": "$2026$ n'est pas multiple de $4$."
+      }
+     ],
+     "hint": "Chiffre des unités = reste modulo $10$.",
+     "solution": "$7^1 \\equiv 7$, $7^2 \\equiv 9$, $7^3 \\equiv 3$, $7^4 \\equiv 1\\ [10]$. $2026 = 4\\times506 + 2$, donc $7^{2026} \\equiv 7^2 \\equiv 9\\ [10]$.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex2-q3"
+    },
+    {
+     "notion": "Congruence linéaire",
+     "difficulty": 2,
+     "statement": "4) Les solutions de $3x \\equiv 2\\ [7]$ sont les entiers :",
+     "options": [
+      {
+       "label": "$x \\equiv 3\\ [7]$",
+       "correct": true,
+       "why": "$3\\times5 \\equiv 1\\ [7]$, donc $x \\equiv 5\\times2 = 10 \\equiv 3$."
+      },
+      {
+       "label": "$x \\equiv 2\\ [7]$",
+       "why": "$3\\times2 = 6 \\not\\equiv 2\\ [7]$."
+      },
+      {
+       "label": "$x \\equiv 5\\ [7]$",
+       "why": "$5$ est l'inverse de $3$ modulo $7$ ; il faut encore multiplier par $2$."
+      },
+      {
+       "label": "$x \\equiv 6\\ [7]$",
+       "why": "$3\\times6 = 18 \\equiv 4\\ [7]$."
+      }
+     ],
+     "hint": "Cherche l'inverse de $3$ modulo $7$.",
+     "solution": "$3\\times5 = 15 \\equiv 1\\ [7]$ : $5$ est un inverse de $3$. En multipliant par $5$ : $x \\equiv 10 \\equiv 3\\ [7]$. Contrôle : $3\\times3 = 9 \\equiv 2$ ✓.",
+     "points": 1,
+     "methode": "$ax \\equiv b\\ [n]$ avec $\\mathrm{pgcd}(a;n) = 1$ : multiplie par l'inverse de $a$ modulo $n$.",
+     "ref": "m2-sm-arithmetique-ex2-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-ex3",
+   "chapter": "arithmetique",
+   "kind": "probleme",
+   "title": "Exercice 3 — Équation diophantienne et système de congruences",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "On considère l'équation $(E) : 7x - 5y = 1$, d'inconnues $(x;y)\\in\\mathbb Z^2$.",
+   "questions": [
+    {
+     "notion": "Bézout et Gauss",
+     "difficulty": 1,
+     "statement": "1) Une solution particulière de $(E)$ est :",
+     "options": [
+      {
+       "label": "$(3\\,;4)$",
+       "correct": true,
+       "why": "$7\\times3 - 5\\times4 = 21 - 20 = 1$."
+      },
+      {
+       "label": "$(4\\,;3)$",
+       "why": "$28 - 15 = 13 \\ne 1$ : tu as échangé $x$ et $y$."
+      },
+      {
+       "label": "$(2\\,;3)$",
+       "why": "$14 - 15 = -1$ : signe inversé."
+      },
+      {
+       "label": "$(1\\,;1)$",
+       "why": "$7 - 5 = 2 \\ne 1$."
+      }
+     ],
+     "hint": "Teste les propositions, ou cherche un multiple de $7$ qui vaut $1$ de plus qu'un multiple de $5$.",
+     "solution": "$7\\times3 - 5\\times4 = 21 - 20 = 1$ : $(3;4)$ est solution.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex3-q1"
+    },
+    {
+     "notion": "Bézout et Gauss",
+     "difficulty": 2,
+     "statement": "2) Si $(x;y)$ est solution, $7(x - 3) = 5(y - 4)$. On en déduit que :",
+     "options": [
+      {
+       "label": "$5$ divise $x - 3$",
+       "correct": true,
+       "why": "$5 \\mid 7(x - 3)$ et $\\mathrm{pgcd}(5;7) = 1$ : Gauss."
+      },
+      {
+       "label": "$7$ divise $x - 3$",
+       "why": "C'est $y - 4$ qui est multiple de $7$ ; $x - 3$ est multiple de $5$."
+      },
+      {
+       "label": "$5$ divise $y - 4$",
+       "why": "$5$ divise le membre de droite, et via Gauss il divise le facteur $x - 3$ du membre de gauche."
+      },
+      {
+       "label": "$x - 3 = 5$",
+       "why": "On obtient « $5$ divise $x - 3$ », pas une égalité."
+      }
+     ],
+     "hint": "$5$ divise $5(y-4) = 7(x-3)$.",
+     "solution": "$7(x - 3) = 5(y - 4)$, donc $5 \\mid 7(x - 3)$. Comme $\\mathrm{pgcd}(5;7) = 1$, le théorème de Gauss donne $5 \\mid x - 3$.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex3-q2"
+    },
+    {
+     "notion": "Résoudre une équation diophantienne",
+     "difficulty": 3,
+     "statement": "3) L'ensemble des solutions de $(E)$ est :",
+     "options": [
+      {
+       "label": "$\\{(3 + 5k\\,;4 + 7k),\\ k\\in\\mathbb Z\\}$",
+       "correct": true,
+       "why": "$x = 3 + 5k$, puis $7\\times5k = 5(y - 4)$ donne $y = 4 + 7k$."
+      },
+      {
+       "label": "$\\{(3 + 7k\\,;4 + 5k),\\ k\\in\\mathbb Z\\}$",
+       "why": "Coefficients échangés : $7(3 + 7k) - 5(4 + 5k) = 1 + 24k$."
+      },
+      {
+       "label": "$\\{(3 + 5k\\,;4 - 7k),\\ k\\in\\mathbb Z\\}$",
+       "why": "Erreur de signe : $7\\times5k = 5(y - 4)$ donne $y - 4 = 7k$."
+      },
+      {
+       "label": "$\\{(5k\\,;7k),\\ k\\in\\mathbb Z\\}$",
+       "why": "Ces couples donnent $35k - 35k = 0 \\ne 1$."
+      }
+     ],
+     "hint": "Écris $x = 3 + 5k$ et reporte dans $7(x-3) = 5(y-4)$.",
+     "solution": "$x - 3 = 5k$ ($k\\in\\mathbb Z$), donc $7\\times5k = 5(y - 4)$, soit $y = 4 + 7k$. Réciproquement, $7(3 + 5k) - 5(4 + 7k) = 21 - 20 = 1$ ✓.",
+     "points": 1,
+     "methode": "Diophantienne $ax - by = c$ : solution particulière, soustraction, Gauss, puis réciproque.",
+     "ref": "m2-sm-arithmetique-ex3-q3"
+    },
+    {
+     "notion": "Congruences et restes",
+     "difficulty": 3,
+     "statement": "4) Le plus petit entier naturel $N$ tel que $N \\equiv 2\\ [7]$ et $N \\equiv 3\\ [5]$ est :",
+     "options": [
+      {
+       "label": "$23$",
+       "correct": true,
+       "why": "$N = 7x + 2 = 5y + 3 \\Leftrightarrow 7x - 5y = 1$ : $x = 3 + 5k$, $N = 23 + 35k$."
+      },
+      {
+       "label": "$2$",
+       "why": "$2 \\equiv 2\\ [5]$, pas $3$."
+      },
+      {
+       "label": "$12$",
+       "why": "$12 \\equiv 5\\ [7]$, pas $2$."
+      },
+      {
+       "label": "$58$",
+       "why": "$58$ convient, mais $23 = 58 - 35$ est plus petit."
+      }
+     ],
+     "hint": "Écris $N = 7x + 2 = 5y + 3$ : tu retrouves $(E)$.",
+     "solution": "$N = 7x + 2 = 5y + 3 \\Leftrightarrow 7x - 5y = 1$, donc $x = 3 + 5k$ et $N = 7(3 + 5k) + 2 = 23 + 35k$. Le plus petit entier naturel est $23$ ($23 = 3\\times7 + 2 = 4\\times5 + 3$ ✓).",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex3-q4"
+    },
+    {
+     "notion": "Congruence linéaire",
+     "difficulty": 2,
+     "statement": "5) Le nombre d'entiers $N$ de $[0;1000]$ vérifiant ces deux congruences est :",
+     "options": [
+      {
+       "label": "$28$",
+       "correct": true,
+       "why": "$23 + 35k \\le 1000 \\Leftrightarrow k \\le 27{,}9$, soit $k = 0, \\dots, 27$."
+      },
+      {
+       "label": "$27$",
+       "why": "De $k = 0$ à $k = 27$, il y a $28$ valeurs."
+      },
+      {
+       "label": "$29$",
+       "why": "Pour $k = 28$ : $23 + 980 = 1003 > 1000$."
+      },
+      {
+       "label": "$35$",
+       "why": "$35$ est la période, pas le nombre de solutions."
+      }
+     ],
+     "hint": "$N = 23 + 35k$ avec $k \\ge 0$.",
+     "solution": "$0 \\le 23 + 35k \\le 1000 \\Leftrightarrow 0 \\le k \\le \\frac{977}{35}\\approx27{,}9$, donc $k\\in\\{0,\\dots,27\\}$ : $28$ entiers.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex3-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-arithmetique-ex4",
+   "chapter": "arithmetique",
+   "kind": "probleme",
+   "title": "Exercice 4 — Fermat, ordre et congruences modulo 13",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Dans tout l'exercice, on travaille modulo $13$, qui est un nombre premier.",
+   "questions": [
+    {
+     "notion": "Petit théorème de Fermat",
+     "difficulty": 1,
+     "statement": "1) $2^{12}$ est congru modulo $13$ à :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "Fermat : $13$ premier, $13 \\nmid 2$."
+      },
+      {
+       "label": "$0$",
+       "why": "$13$ ne divise aucune puissance de $2$."
+      },
+      {
+       "label": "$2$",
+       "why": "C'est $2^{13} \\equiv 2$."
+      },
+      {
+       "label": "$12$",
+       "why": "Fermat donne $1$, pas $p - 1$."
+      }
+     ],
+     "hint": "Petit théorème de Fermat.",
+     "solution": "$13$ est premier et ne divise pas $2$, donc $2^{12} \\equiv 1\\ [13]$.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex4-q1"
+    },
+    {
+     "notion": "Restes de puissances (ordre)",
+     "difficulty": 2,
+     "statement": "2) Sachant que $2^4 \\equiv 3$ et $2^6 \\equiv -1\\ [13]$, l'ordre de $2$ modulo $13$ est :",
+     "options": [
+      {
+       "label": "$12$",
+       "correct": true,
+       "why": "L'ordre divise $12$ ; $2^1, 2^2, 2^3, 2^4, 2^6 \\not\\equiv 1$, donc c'est $12$."
+      },
+      {
+       "label": "$6$",
+       "why": "$2^6 \\equiv -1$, pas $1$."
+      },
+      {
+       "label": "$4$",
+       "why": "$2^4 \\equiv 3 \\ne 1$."
+      },
+      {
+       "label": "$13$",
+       "why": "L'ordre divise $13 - 1 = 12$."
+      }
+     ],
+     "hint": "L'ordre divise $12$ : teste $1, 2, 3, 4, 6$.",
+     "solution": "L'ordre de $2$ divise $12$. Or $2 \\not\\equiv 1$, $4 \\not\\equiv 1$, $8 \\not\\equiv 1$, $2^4 \\equiv 3 \\not\\equiv 1$, $2^6 \\equiv -1 \\not\\equiv 1$. L'ordre est donc $12$.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex4-q2"
+    },
+    {
+     "notion": "Congruences et restes",
+     "difficulty": 3,
+     "statement": "3) Le reste de la division de $2^{2026}$ par $13$ est :",
+     "options": [
+      {
+       "label": "$10$",
+       "correct": true,
+       "why": "$2026 \\equiv 10\\ [12]$ et $2^{10} = 2^6\\times2^4 \\equiv -3 \\equiv 10$."
+      },
+      {
+       "label": "$1$",
+       "why": "$2026$ n'est pas multiple de $12$."
+      },
+      {
+       "label": "$4$",
+       "why": "Tu as pris $2026 \\equiv 2\\ [12]$ : en fait $2026 = 12\\times168 + 10$."
+      },
+      {
+       "label": "$3$",
+       "why": "$2^4 \\equiv 3$, mais l'exposant réduit est $10$, pas $4$."
+      }
+     ],
+     "hint": "Divise $2026$ par $12$.",
+     "solution": "$2026 = 12\\times168 + 10$, donc $2^{2026} \\equiv 2^{10}\\ [13]$. $2^{10} = 2^6\\times2^4 \\equiv (-1)\\times3 = -3 \\equiv 10\\ [13]$. (Contrôle : $1024 = 13\\times78 + 10$.)",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex4-q3"
+    },
+    {
+     "notion": "Congruence linéaire",
+     "difficulty": 2,
+     "statement": "4) Les solutions de $5x \\equiv 3\\ [13]$ sont :",
+     "options": [
+      {
+       "label": "$x \\equiv 11\\ [13]$",
+       "correct": true,
+       "why": "$5\\times8 = 40 \\equiv 1$, donc $x \\equiv 24 \\equiv 11$."
+      },
+      {
+       "label": "$x \\equiv 3\\ [13]$",
+       "why": "$5\\times3 = 15 \\equiv 2 \\ne 3$."
+      },
+      {
+       "label": "$x \\equiv 8\\ [13]$",
+       "why": "$8$ est l'inverse de $5$ ; il faut encore multiplier par $3$."
+      },
+      {
+       "label": "$x \\equiv 7\\ [13]$",
+       "why": "$5\\times7 = 35 \\equiv 9 \\ne 3$."
+      }
+     ],
+     "hint": "Inverse de $5$ modulo $13$.",
+     "solution": "$5\\times8 = 40 = 3\\times13 + 1$ : $8$ est l'inverse de $5$. $x \\equiv 8\\times3 = 24 \\equiv 11\\ [13]$. Contrôle : $5\\times11 = 55 = 4\\times13 + 3$ ✓.",
+     "points": 1,
+     "ref": "m2-sm-arithmetique-ex4-q4"
+    },
+    {
+     "notion": "Petit théorème de Fermat",
+     "difficulty": 3,
+     "statement": "5) Pour tout entier $a$, $a^{13} - a$ est divisible par $13$ :",
+     "options": [
+      {
+       "label": "car $13$ est premier (Fermat : $a^p \\equiv a\\ [p]$ pour tout $a$)",
+       "correct": true,
+       "why": "Cette forme du théorème vaut pour tout entier, multiple de $13$ ou non."
+      },
+      {
+       "label": "seulement si $a$ n'est pas divisible par $13$",
+       "why": "Si $13 \\mid a$, alors $a^{13} - a \\equiv 0 - 0$ : c'est encore vrai."
+      },
+      {
+       "label": "seulement si $a$ est premier",
+       "why": "La primalité porte sur $13$, pas sur $a$."
+      },
+      {
+       "label": "car $12$ est divisible par $13$",
+       "why": "$12$ n'est pas divisible par $13$ : cet argument est faux."
+      }
+     ],
+     "hint": "Distingue $13 \\mid a$ et $13 \\nmid a$.",
+     "solution": "Si $13 \\nmid a$ : $a^{12} \\equiv 1$, donc $a^{13} \\equiv a\\ [13]$. Si $13 \\mid a$ : $a^{13} \\equiv 0 \\equiv a\\ [13]$. Dans tous les cas $13 \\mid a^{13} - a$.",
+     "points": 1,
+     "methode": "Forme générale de Fermat : $p$ premier ⇒ $a^p \\equiv a\\ [p]$ pour tout $a\\in\\mathbb Z$.",
+     "ref": "m2-sm-arithmetique-ex4-q5"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-sm-arithmetique-serie-1",
+   "title": "Arithmétique dans ℤ · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (4 questions).",
+   "kind": "custom",
+   "chapter": "arithmetique",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-sm-arithmetique-flash-q1",
+    "m2-sm-arithmetique-flash-q2",
+    "m2-sm-arithmetique-flash-q3",
+    "m2-sm-arithmetique-flash-q4",
+    "m2-sm-arithmetique-ex1-q1",
+    "m2-sm-arithmetique-ex1-q2",
+    "m2-sm-arithmetique-ex1-q3",
+    "m2-sm-arithmetique-ex1-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-arithmetique-serie-2",
+   "title": "Arithmétique dans ℤ · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (4 questions).",
+   "kind": "custom",
+   "chapter": "arithmetique",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-sm-arithmetique-flash-q5",
+    "m2-sm-arithmetique-flash-q6",
+    "m2-sm-arithmetique-flash-q7",
+    "m2-sm-arithmetique-flash-q8",
+    "m2-sm-arithmetique-ex2-q1",
+    "m2-sm-arithmetique-ex2-q2",
+    "m2-sm-arithmetique-ex2-q3",
+    "m2-sm-arithmetique-ex2-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-arithmetique-serie-3",
+   "title": "Arithmétique dans ℤ · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (5 questions) + Exercice 4 (5 questions).",
+   "kind": "custom",
+   "chapter": "arithmetique",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-sm-arithmetique-ex3-q1",
+    "m2-sm-arithmetique-ex3-q2",
+    "m2-sm-arithmetique-ex3-q3",
+    "m2-sm-arithmetique-ex3-q4",
+    "m2-sm-arithmetique-ex3-q5",
+    "m2-sm-arithmetique-ex4-q1",
+    "m2-sm-arithmetique-ex4-q2",
+    "m2-sm-arithmetique-ex4-q3",
+    "m2-sm-arithmetique-ex4-q4",
+    "m2-sm-arithmetique-ex4-q5"
+   ]
+  }
+ ]
+}

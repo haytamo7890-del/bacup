@@ -62,7 +62,7 @@ export function PracticeQuiz({ notion, items, onClose }: { notion: string; items
             </div>
             <div className="mt-4 text-3xl font-extrabold tracking-tight">{score} / {deck.length}</div>
             <div className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
-              {score === deck.length ? "Parfait ! Notion maîtrisée. 🎉" : score >= deck.length * 0.6 ? "Bien joué — quelques révisions et c'est parfait." : "Relis la notion, puis retente."}
+              {score === deck.length ? "Parfait ! Notion maîtrisée." : score >= deck.length * 0.6 ? "Bien joué — quelques révisions et c'est parfait." : "Relis la notion, puis retente."}
             </div>
             <div className="mt-6 flex items-center justify-center gap-3">
               <button onClick={restart} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full glass hover:-translate-y-0.5 transition"><RotateCw className="w-4 h-4" /> Recommencer</button>

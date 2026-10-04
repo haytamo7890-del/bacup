@@ -44,6 +44,7 @@ docs/                   product-spec.md, plan-day1.md, erd.mermaid
 - **Math**: render any text that may contain LaTeX with `<Math>{...}</Math>` (`src/components/math.tsx`), using `$...$` inline delimiters.
 - **Content/IP**: official past sujets are public (OK). **Corrigés**: we take the *answers/methods* from the reference corrigés we hold (facts about public exams — not copyrightable), then **re-express them in our own words, verify them for correctness, and brand them Bac-up (author `hsgenius`)**. Never ship a third party's verbatim wording, layout, or logo. Re-expressed + verified = legally safe AND the moat.
 - **Design**: Arctic-glass (`.glass` utility, `arctic-*` colors), dark-first, French copy, minimal + premium.
+- **No emoji anywhere in the UI or copy** (incl. ✓ ✗ ⚠ ✨ in strings) and **no `Sparkles` icon**. Use a lucide/Bac-up icon or plain words. Design direction: see the "Bac-up UI Reset" artifact (calm trays + white cards, one accent, no glass/gradients).
 - Keep PRs/changes small and verifiable; TS strict, no `any` where avoidable, no `SELECT *`.
 
 ## Current state (built)
@@ -85,6 +86,7 @@ docs/                   product-spec.md, plan-day1.md, erd.mermaid
   Niveau BAC); spaced review `review_items` (Leitner 0→1d→3d→7d, fed by `record_practice`, runner `?review=<subject|all>`).
   Content brief for the content team: `docs/content-brief-preparation.md`; scaffolds `content/prep/scaffolds/**` (manifest);
   gold-standard example `content/prep/examples/pc-rc-exemple-complet.json` (imported).
+- **Exam engine LOCKED (2026-10-04):** `FEATURES.examEngine = false` in `src/config/index.ts`. Examens tab/cards show a « Bientôt » pill and open `<ExamsSoonPanel>` (`src/components/prep/exams-soon.tsx`: construction bar = `EXAMS_COMING_SOON.progress` + what the section will do); `/dashboard/examens/session` renders `<ExamsSoonGate>`; blanc exercises are excluded from random/adaptive runs. Data kept in DB. Sidebar label is now **Préparation**. Flip the flag to re-open.
 - Calculette page (`/dashboard/calculette`). Bibliothèque, classement, monk mode, reminders, payments/admin.
 - Schema/migrations: `0001` … `0028` (0027/0028 applied to the live DB). Idempotent content seeds under `db/seed/`. AI gateway with cheap/strong routing.
 

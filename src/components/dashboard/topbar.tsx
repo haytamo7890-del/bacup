@@ -3,6 +3,7 @@
 import { PanelLeft } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { NotificationBell } from "@/components/dashboard/notification-bell";
+import { GoalPill } from "@/components/dashboard/goal-pill";
 
 export function DashboardTopbar({
   name,
@@ -28,6 +29,7 @@ export function DashboardTopbar({
 
         <div className="flex-1" />
 
+        <GoalPill />
         <ThemeToggle />
         <NotificationBell />
 

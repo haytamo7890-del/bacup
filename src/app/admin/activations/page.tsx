@@ -137,7 +137,7 @@ export default function ActivationsPage() {
                   )}
                   {r.status !== "pending" && (
                     <div className={`mt-2 text-xs font-semibold ${r.status === "approved" ? "text-emerald-500" : "text-red-500"}`}>
-                      {r.status === "approved" ? "✓ Approuvé" : "✗ Refusé"}{r.admin_note ? ` — ${r.admin_note}` : ""}
+                      {r.status === "approved" ? "Approuvé" : "Refusé"}{r.admin_note ? ` — ${r.admin_note}` : ""}
                     </div>
                   )}
                 </div>

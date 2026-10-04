@@ -154,7 +154,7 @@ export function PrepCoverage() {
                     {r.notions.map((n) => (
                       <div key={n.notion} title={n.extra ? "Tag qui ne correspond à aucun titre ## du cours — à renommer" : undefined}
                         className={`flex items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 text-xs ${n.n === 0 ? "bg-red-500/10 text-red-600 dark:text-red-400" : n.extra ? "bg-amber-500/10 text-amber-700 dark:text-amber-300 italic" : "bg-black/[0.03] dark:bg-white/[0.04]"}`}>
-                        <span className="truncate">{n.extra ? "⚠ " : ""}{notionLabel(n.notion)}</span><b className="tabular-nums">{n.n}</b>
+                        <span className="truncate">{n.extra ? "" : ""}{notionLabel(n.notion)}</span><b className="tabular-nums">{n.n}</b>
                       </div>
                     ))}
                   </div>

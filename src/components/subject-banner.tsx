@@ -11,7 +11,7 @@
  * all in the subject accent via currentColor — no image files.
  */
 import Link from "next/link";
-import { ArrowRight, BookOpen, Play } from "lucide-react";
+import { ArrowRight, BookOpen, Play, Check } from "lucide-react";
 import { subjectTheme } from "@/config/subjects";
 
 const SUBJECT_LABELS: Record<string, string> = {
@@ -107,7 +107,7 @@ function Stepper({ done, total, barClass, textClass, ringClass }: { done: number
       {dots.map((_, i) => (
         <div key={i} className="flex items-center gap-1.5">
           <span className={`grid place-items-center w-6 h-6 rounded-full text-[10px] font-bold transition ${i < filled ? `${barClass} text-white` : `bg-white/5 ${textClass} ring-1 ${ringClass}`}`}>
-            {i < filled ? "✓" : i + 1}
+            {i < filled ? <Check className="w-3.5 h-3.5" strokeWidth={2.5} /> : i + 1}
           </span>
           {i < n - 1 && <span className={`w-5 h-0.5 rounded-full ${i < filled ? barClass : "bg-white/10"}`} />}
         </div>

@@ -4,6 +4,7 @@
  * same progress model (attempts + chapter_mastery + xp_events + streaks).
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { chapterVisibleFor } from "@/config/curriculum";
 import { lessonNotions } from "@/lib/notions";
 
 export type Sb = SupabaseClient;
@@ -51,13 +52,13 @@ export async function loadStudentCtx(supabase: Sb): Promise<StudentCtx | null> {
   };
 }
 
-export type PrepChapter = { id: string; subject_id: string; track_id: string | null; name: string; position: number; domain: string | null; unit: string | null; unit_pos: number | null };
+export type PrepChapter = { id: string; subject_id: string; track_id: string | null; code: string | null; name: string; position: number; domain: string | null; unit: string | null; unit_pos: number | null };
 
-export async function loadChapters(supabase: Sb, levelId: string, subjectId: string | null, trackId: string | null): Promise<PrepChapter[]> {
-  let q = supabase.from("chapters").select("id, subject_id, track_id, name, position, domain, unit, unit_pos").eq("level_id", levelId);
+export async function loadChapters(supabase: Sb, levelId: string, subjectId: string | null, trackId: string | null, trackCode?: string | null): Promise<PrepChapter[]> {
+  let q = supabase.from("chapters").select("id, subject_id, track_id, code, name, position, domain, unit, unit_pos").eq("level_id", levelId);
   if (subjectId) q = q.eq("subject_id", subjectId);
   const { data } = await q.order("position");
-  return ((data ?? []) as PrepChapter[]).filter((c) => c.track_id === trackId || c.track_id == null);
+  return ((data ?? []) as PrepChapter[]).filter((c) => (c.track_id === trackId || c.track_id == null) && chapterVisibleFor(trackCode, c.code));
 }
 
 /** Chapter bank = chapter-tagged exercises; returns light question rows (for counts / notion grouping). */

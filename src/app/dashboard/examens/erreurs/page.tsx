@@ -73,7 +73,7 @@ export default function ErreursPage() {
   return (
     <div className="max-w-4xl mx-auto py-8 fade-up">
       <Link href={prepRoutes.hub()} className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white">
-        <ChevronLeft className="w-4 h-4" /> Espace de préparation
+        <ChevronLeft className="w-4 h-4" /> Préparation
       </Link>
 
       <div className="mt-3 rounded-3xl p-6 sm:p-7 relative overflow-hidden text-white bg-gradient-to-br from-rose-500 via-orange-500 to-amber-500 shadow-lg shadow-black/10">
@@ -103,7 +103,7 @@ export default function ErreursPage() {
       ) : subjects.length === 0 ? (
         <div className="mt-5 glass rounded-3xl p-10 text-center">
           <PartyPopper className="w-8 h-8 mx-auto text-emerald-500" />
-          <div className="mt-3 font-semibold">Aucune erreur en cours 🎉</div>
+          <div className="mt-3 font-semibold">Aucune erreur en cours</div>
           <p className="mt-1 text-sm text-neutral-400">Tes erreurs apparaîtront ici dès ta prochaine série ou ton prochain examen.</p>
           <Link href={prepRoutes.hub()} className="mt-4 inline-flex text-sm font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white">S&apos;entraîner</Link>
         </div>

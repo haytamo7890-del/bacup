@@ -4,14 +4,15 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import {
-  Flame, Zap, Trophy, ArrowRight, FileText,
+  Zap, Trophy, ArrowRight, FileText,
   ChevronRight, Library, Upload,
 } from "lucide-react";
 import { ProgressCurve } from "@/components/dashboard/progress-curve";
 import { subjectTheme } from "@/config/subjects";
-import { SubjectName } from "@/components/subject-pad";
 import { SubjectBanner } from "@/components/subject-banner";
 import { PrepAlerts } from "@/components/prep/prep-alerts";
+import { FEATURES } from "@/config";
+import { MonkCard } from "@/components/dashboard/monk-card";
 
 type Stats = {
   xp: number; level: number; streak: number; accuracy: number | null;
@@ -22,8 +23,6 @@ type LeaderRow = { rank: number; display_name: string; total_xp: number; is_me: 
 type NewContent = { kind: "cours" | "examen"; title: string; sub: string; href: string; subject: string } | null;
 type ResumeItem = { key: string; chapter: string; subject: string; done: number; total: number; href: string };
 
-const pad = (n: number) => String(n).padStart(2, "0");
-const ymd = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 
 export default function DashboardHome() {
   const supabase = createBrowserSupabase();
@@ -35,8 +34,6 @@ export default function DashboardHome() {
   const [myRank, setMyRank] = useState<{ rank: number; total_xp: number } | null>(null);
   const [fresh, setFresh] = useState<NewContent>(null);
   const [resume, setResume] = useState<ResumeItem[]>([]);
-  const [monkStreak, setMonkStreak] = useState<number>(-1);
-  const [monkTodayDone, setMonkTodayDone] = useState(false);
   const [libFiles, setLibFiles] = useState<{ id: string; name: string; size_bytes: number; subject_code: string | null }[]>([]);
   const [libUsed, setLibUsed] = useState(0);
 
@@ -73,7 +70,7 @@ export default function DashboardHome() {
       const l0 = (les?.[0] ?? null) as { title: string; created_at: string; chapters: { name: string; subjects: { code: string; name: string } | null } | null } | null;
       const e0 = (exs?.[0] ?? null) as { title: string | null; year: number; created_at: string; subjects: { code: string; name: string } | null } | null;
       const lTime = l0 ? Date.parse(l0.created_at) : 0;
-      const eTime = e0 ? Date.parse(e0.created_at) : 0;
+      const eTime = e0 && FEATURES.examEngine ? Date.parse(e0.created_at) : 0;
       if (lTime === 0 && eTime === 0) setFresh(null);
       else if (lTime >= eTime && l0) setFresh({ kind: "cours", title: l0.chapters?.name ?? "Nouveau cours", sub: l0.title, href: "/dashboard/cours", subject: l0.chapters?.subjects?.code ?? l0.chapters?.subjects?.name ?? "" });
       else if (e0) setFresh({ kind: "examen", title: e0.title ?? `Examen ${e0.year}`, sub: "Nouvel examen disponible", href: e0.subjects?.code ? `/dashboard/examens/preparation/${e0.subjects.code}?mode=examens` : "/dashboard/examens/preparation", subject: e0.subjects?.code ?? e0.subjects?.name ?? "" });
@@ -94,24 +91,6 @@ export default function DashboardHome() {
         setResume(items.slice(0, 6));
       }
 
-      const since = new Date(); since.setDate(since.getDate() - 120);
-      const [{ data: mh, error: mhe }, { data: mc }] = await Promise.all([
-        supabase.from("monk_habits").select("id, is_core").eq("active", true),
-        supabase.from("monk_checks").select("habit_id, day").gte("day", ymd(since)),
-      ]);
-      if (mhe) { setMonkStreak(-1); return; }
-      const coreIds = (mh ?? []).filter((x) => (x as { is_core: boolean }).is_core).map((x) => (x as { id: string }).id);
-      if (coreIds.length < 4) { setMonkStreak(-1); return; }
-      const byDay = new Map<string, Set<string>>();
-      for (const c of (mc ?? []) as { habit_id: string; day: string }[]) { if (!byDay.has(c.day)) byDay.set(c.day, new Set()); byDay.get(c.day)!.add(c.habit_id); }
-      const complete = (d: string) => { const s = byDay.get(d); return !!s && coreIds.every((id) => s.has(id)); };
-      const today = ymd(new Date());
-      setMonkTodayDone(complete(today));
-      const dt = new Date();
-      if (!complete(ymd(dt))) dt.setDate(dt.getDate() - 1);
-      let s = 0;
-      for (let i = 0; i < 400; i++) { if (complete(ymd(dt))) { s++; dt.setDate(dt.getDate() - 1); } else break; }
-      setMonkStreak(s);
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -125,7 +104,7 @@ export default function DashboardHome() {
     <div className="max-w-6xl mx-auto py-8 space-y-5 fade-up">
       <div>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">{greeting}{firstName ? `, ${firstName}` : ""}.</h1>
-        <p className="mt-1.5 text-neutral-500 dark:text-neutral-400">Voici où tu en es. Chaque QCM fait monter ces chiffres. 💪</p>
+        <p className="mt-1.5 text-neutral-500 dark:text-neutral-400">Voici où tu en es. Chaque QCM fait monter ces chiffres.</p>
       </div>
 
       {/* review engine — "À réviser aujourd'hui" + "Mes erreurs" */}
@@ -134,7 +113,7 @@ export default function DashboardHome() {
       {/* BENTO — same asymmetric layout as the reference */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
         <div className="lg:col-span-7"><NewContentBanner c={fresh} /></div>
-        <div className="lg:col-span-5"><MonkCell streak={monkStreak} /></div>
+        <div className="lg:col-span-5"><MonkCard /></div>
         <div className="lg:col-span-5"><LibraryCell files={libFiles} usedBytes={libUsed} /></div>
         <div className="lg:col-span-7"><ResumeCarousel items={resume} /></div>
       </div>
@@ -197,7 +176,7 @@ export default function DashboardHome() {
       <div className="glass rounded-3xl p-6">
         <h3 className="text-base font-semibold tracking-tight mb-5">Maîtrise par matière</h3>
         {!stats || stats.subjects.length === 0 ? (
-          <div className="text-sm text-neutral-400 text-center py-6">Commence un examen — ta maîtrise par matière apparaîtra ici. ✨</div>
+          <div className="text-sm text-neutral-400 text-center py-6">Commence un examen — ta maîtrise par matière apparaîtra ici.</div>
         ) : (
           <div className="space-y-4">
             {stats.subjects.map((s) => {
@@ -206,8 +185,8 @@ export default function DashboardHome() {
               return (
                 <div key={s.name}>
                   <div className="flex items-center justify-between mb-1.5 text-sm">
-                    <span className="font-medium inline-flex items-center gap-2"><span className={`w-2.5 h-2.5 rounded-full ${col.bar}`} /> <SubjectName name={s.name} sizeClass="text-xl" swash={false} /></span>
-                    <span className={`font-bold ${col.text}`}>{pct}%</span>
+                    <span className="inline-flex items-center gap-2"><span className={`w-2 h-2 rounded-full ${col.bar}`} /> <span dir="auto" className="font-display text-[15px] font-medium text-neutral-800 dark:text-neutral-100">{s.name}</span></span>
+                    <span className="font-display text-[15px] font-semibold tabular-nums text-neutral-500 dark:text-neutral-400">{pct}%</span>
                   </div>
                   <div className="h-2.5 rounded-full bg-black/5 dark:bg-white/10 overflow-hidden">
                     <div className={`h-full ${col.bar} rounded-full transition-all duration-500`} style={{ width: `${Math.max(3, pct)}%` }} />
@@ -234,34 +213,6 @@ function NewContentBanner({ c }: { c: NewContent }) {
       subtitle={c ? c.sub : "Le prochain cours ou examen ajouté apparaîtra ici."}
       className="h-full min-h-[220px]"
     />
-  );
-}
-
-function MonkCell({ streak }: { streak: number }) {
-  const started = streak >= 0;
-  return (
-    <div className="glass rounded-3xl p-5 h-full min-h-[280px] flex flex-col">
-      <div className="flex items-center justify-between mb-3">
-        <span className="text-sm font-semibold inline-flex items-center gap-2"><Flame className="w-4 h-4 text-orange-500" /> Monk Mode</span>
-        <Link href="/dashboard/monk" className="text-neutral-400 hover:text-arctic-blue"><ChevronRight className="w-4 h-4" /></Link>
-      </div>
-      <div className="flex-1 rounded-2xl ring-2 ring-arctic-blue/70 bg-white/40 dark:bg-white/[0.03] grid place-items-center p-5 text-center relative overflow-hidden">
-        <div className="pointer-events-none absolute -top-14 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-arctic-blue/15 blur-3xl" />
-        {started ? (
-          <div className="relative">
-            <div className="text-7xl font-extrabold leading-none bg-gradient-to-br from-arctic-cyan to-arctic-blue bg-clip-text text-transparent">{streak}</div>
-            <div className="mt-2 text-lg font-bold tracking-tight">jour{streak > 1 ? "s" : ""} de série</div>
-            <div className="mt-1 text-xs text-neutral-400">{streak === 0 ? "Coche tes non-négociables" : "Ne casse pas la chaîne 🔥"}</div>
-          </div>
-        ) : (
-          <div className="relative">
-            <div className="text-lg font-bold tracking-tight">Lance ta discipline</div>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1 mb-4">4 non-négociables, une série qui monte.</p>
-            <Link href="/dashboard/monk" className="inline-flex items-center gap-2 text-sm font-semibold rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white px-5 py-2.5 hover:brightness-105 transition"><Flame className="w-4 h-4" /> Démarrer</Link>
-          </div>
-        )}
-      </div>
-    </div>
   );
 }
 

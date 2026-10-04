@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { X, ArrowRight, Loader2, Sparkles } from "lucide-react";
+import { X, ArrowRight, Loader2, Send } from "lucide-react";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { LogoMark } from "./primitives";
 
@@ -112,7 +112,7 @@ export function LeadModal({ open, onClose, level }: { open: boolean; onClose: ()
               disabled={state === "loading"}
               className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white text-sm font-bold py-3.5 shadow-[0_10px_30px_rgba(27,127,220,.35)] hover:brightness-110 transition disabled:opacity-60"
             >
-              {state === "loading" ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
+              {state === "loading" ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
               {state === "loading" ? "Ouverture de ta démo…" : "Entrer dans la démo"}
               {state !== "loading" && <ArrowRight className="w-4 h-4" />}
             </button>

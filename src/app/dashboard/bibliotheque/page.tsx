@@ -145,7 +145,7 @@ export default function BibliothequePage() {
         </div>
 
         {openFiles.length === 0 ? (
-          <div className="mt-6 glass rounded-3xl p-10 text-center text-sm text-neutral-400">Aucun PDF ici. Téléverse ton premier fichier. 📄</div>
+          <div className="mt-6 glass rounded-3xl p-10 text-center text-sm text-neutral-400">Aucun PDF ici. Téléverse ton premier fichier.</div>
         ) : (
           <div className="mt-5 space-y-2.5">
             {openFiles.map((f) => <FileRow key={f.id} f={f} busy={busy === f.id} onOpen={() => openFile(f)} onRename={() => renameFile(f)} onDelete={() => delFile(f)} />)}

@@ -180,7 +180,7 @@ export default function AdminCours() {
               </div>
 
               <div className="mt-3 flex items-center justify-end gap-3">
-                {saved === l.id && <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Enregistré ✓</span>}
+                {saved === l.id && <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Enregistré</span>}
                 <button onClick={() => saveLesson(l)} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:opacity-90 transition"><Save className="w-4 h-4" /> Enregistrer</button>
               </div>
             </div>

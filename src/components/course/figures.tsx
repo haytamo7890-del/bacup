@@ -1,15 +1,19 @@
 "use client";
 
+import { MATHS_FIGURES } from "./figures-maths";
+
 /**
  * Named schematic figures for the cours, drawn as inline SVG (dark-friendly,
  * arctic accents). Reference one in a lesson with `[[fig:NAME]]`.
  */
 export function CourseFigure({ name, caption }: { name: string; caption?: string }) {
   const fig = FIGURES[name];
-  if (!fig) return null;
+  // Exercise-specific figures (generated SVG, e.g. "m2-scex-suites-ex3") live in figures-maths.ts.
+  const raw = fig ? undefined : MATHS_FIGURES[name];
+  if (!fig && !raw) return null;
   return (
-    <figure className="my-4 rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.03] p-4">
-      <div className="w-full overflow-x-auto">{fig}</div>
+    <figure className="my-4 rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.03] p-4 text-neutral-700 dark:text-neutral-200">
+      {fig ? <div className="w-full overflow-x-auto">{fig}</div> : <div className="w-full overflow-x-auto" dangerouslySetInnerHTML={{ __html: raw! }} />}
       {caption && <figcaption className="mt-2 text-center text-xs text-neutral-400">{caption}</figcaption>}
     </figure>
   );

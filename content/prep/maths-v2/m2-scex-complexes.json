@@ -1,0 +1,1101 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "pc",
+  "svt"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-scex-complexes-flash-1",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Opérations sous forme algébrique",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Opérations sous forme algébrique",
+     "difficulty": 1,
+     "statement": "La forme algébrique de $(2 + i)(1 - 3i)$ est :",
+     "options": [
+      {
+       "label": "$5 - 5i$",
+       "correct": true,
+       "why": "$2 - 6i + i - 3i^2 = 2 - 5i + 3$."
+      },
+      {
+       "label": "$-1 - 5i$",
+       "why": "Tu as pris $i^2 = 1$ : or $i^2 = -1$, donc $-3i^2 = +3$."
+      },
+      {
+       "label": "$2 - 3i$",
+       "why": "Tu as multiplié les parties réelles entre elles et les parties imaginaires entre elles : il faut développer."
+      },
+      {
+       "label": "$5 + 5i$",
+       "why": "Erreur de signe sur la partie imaginaire : $-6i + i = -5i$."
+      }
+     ],
+     "hint": "Développe, puis remplace $i^2$ par $-1$.",
+     "solution": "$(2 + i)(1 - 3i) = 2 - 6i + i - 3i^2 = 2 - 5i + 3 = 5 - 5i$.",
+     "points": 1,
+     "methode": "On calcule dans $\\mathbb C$ comme dans $\\mathbb R$, avec $i^2 = -1$.",
+     "ref": "m2-scex-complexes-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-complexes-flash-2",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Le conjugué",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Le conjugué",
+     "difficulty": 1,
+     "statement": "Soit $z = i(2 - i)$. Le conjugué $\\bar z$ vaut :",
+     "options": [
+      {
+       "label": "$1 - 2i$",
+       "correct": true,
+       "why": "$z = 2i - i^2 = 1 + 2i$, donc $\\bar z = 1 - 2i$."
+      },
+      {
+       "label": "$1 + 2i$",
+       "why": "C'est $z$ lui-même : le conjugué change le signe de la partie imaginaire."
+      },
+      {
+       "label": "$-1 + 2i$",
+       "why": "$-i^2 = +1$ : la partie réelle de $z$ est $1$."
+      },
+      {
+       "label": "$-1 - 2i$",
+       "why": "C'est $-z$, pas $\\bar z$."
+      }
+     ],
+     "hint": "Mets d'abord $z$ sous forme algébrique.",
+     "solution": "$z = i(2 - i) = 2i - i^2 = 1 + 2i$. Donc $\\bar z = 1 - 2i$.",
+     "points": 1,
+     "methode": "$\\overline{a + ib} = a - ib$ : mets d'abord $z$ sous forme algébrique.",
+     "ref": "m2-scex-complexes-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-complexes-flash-3",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Le module",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Le module",
+     "difficulty": 1,
+     "statement": "Le module de $z = 3 - 4i$ est :",
+     "options": [
+      {
+       "label": "$5$",
+       "correct": true,
+       "why": "$\\sqrt{3^2 + (-4)^2} = \\sqrt{25}$."
+      },
+      {
+       "label": "$7$",
+       "why": "Le module n'est pas $|a| + |b|$ : c'est $\\sqrt{a^2 + b^2}$."
+      },
+      {
+       "label": "$-1$",
+       "why": "Un module est positif ; on ne fait pas $a + b$."
+      },
+      {
+       "label": "$25$",
+       "why": "$25$ est $|z|^2$ : il faut prendre la racine."
+      }
+     ],
+     "hint": "$|a + ib| = \\sqrt{a^2 + b^2}$.",
+     "solution": "$|z| = \\sqrt{3^2 + (-4)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+     "points": 1,
+     "methode": "$|a + ib| = \\sqrt{a^2 + b^2}$ et $|z|^2 = z\\bar z$.",
+     "ref": "m2-scex-complexes-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-complexes-flash-4",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Argument d'un nombre complexe",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Argument d'un nombre complexe",
+     "difficulty": 2,
+     "statement": "Un argument de $z = 1 + i\\sqrt3$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\pi}{3}$",
+       "correct": true,
+       "why": "$|z| = 2$, $\\cos\\theta = \\frac12$, $\\sin\\theta = \\frac{\\sqrt3}{2}$."
+      },
+      {
+       "label": "$\\dfrac{\\pi}{6}$",
+       "why": "Tu as inversé cosinus et sinus : $\\cos\\frac\\pi6 = \\frac{\\sqrt3}2$, or ici $\\cos\\theta = \\frac12$."
+      },
+      {
+       "label": "$\\dfrac{2\\pi}{3}$",
+       "why": "La partie réelle est positive : l'argument est dans $\\left]-\\frac\\pi2;\\frac\\pi2\\right[$."
+      },
+      {
+       "label": "$-\\dfrac{\\pi}{3}$",
+       "why": "La partie imaginaire est positive : l'argument est positif (modulo $2\\pi$)."
+      }
+     ],
+     "hint": "Calcule $|z|$, puis $\\cos\\theta = \\frac{a}{|z|}$ et $\\sin\\theta = \\frac{b}{|z|}$.",
+     "solution": "$|z| = \\sqrt{1 + 3} = 2$. $\\cos\\theta = \\frac12$ et $\\sin\\theta = \\frac{\\sqrt3}{2}$, donc $\\theta = \\frac\\pi3\\ [2\\pi]$.",
+     "points": 1,
+     "methode": "$\\arg z$ : $\\cos\\theta = \\frac{\\mathrm{Re}(z)}{|z|}$, $\\sin\\theta = \\frac{\\mathrm{Im}(z)}{|z|}$ ; vérifie les deux.",
+     "ref": "m2-scex-complexes-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-complexes-flash-5",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Forme exponentielle",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Forme exponentielle",
+     "difficulty": 2,
+     "statement": "La forme exponentielle de $z = -2i$ est :",
+     "options": [
+      {
+       "label": "$2\\,\\mathrm{e}^{-i\\frac{\\pi}{2}}$",
+       "correct": true,
+       "why": "$|z| = 2$ et $\\arg z = -\\frac\\pi2$ (le point est sur l'axe imaginaire, en bas)."
+      },
+      {
+       "label": "$-2\\,\\mathrm{e}^{i\\frac{\\pi}{2}}$",
+       "why": "Égal en valeur, mais ce n'est pas une forme exponentielle : le module doit être positif."
+      },
+      {
+       "label": "$2\\,\\mathrm{e}^{i\\frac{\\pi}{2}}$",
+       "why": "$2\\mathrm e^{i\\pi/2} = 2i$ : il manque le signe moins."
+      },
+      {
+       "label": "$2\\,\\mathrm{e}^{i\\pi}$",
+       "why": "$2\\mathrm e^{i\\pi} = -2$ : c'est un réel."
+      }
+     ],
+     "hint": "Place $-2i$ dans le plan : module et angle.",
+     "solution": "$|{-2i}| = 2$. Le point d'affixe $-2i$ est sur l'axe des imaginaires, côté négatif : $\\arg(-2i) = -\\frac\\pi2\\ [2\\pi]$. Donc $z = 2\\mathrm e^{-i\\pi/2}$.",
+     "points": 1,
+     "methode": "Forme exponentielle $r\\mathrm e^{i\\theta}$ : toujours $r > 0$.",
+     "ref": "m2-scex-complexes-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-complexes-flash-6",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Type 2 — Calculer une puissance",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Type 2 — Calculer une puissance",
+     "difficulty": 3,
+     "statement": "$(1 + i)^8$ vaut :",
+     "options": [
+      {
+       "label": "$16$",
+       "correct": true,
+       "why": "$1 + i = \\sqrt2\\,\\mathrm e^{i\\pi/4}$, donc $(1+i)^8 = (\\sqrt2)^8\\mathrm e^{2i\\pi} = 16$."
+      },
+      {
+       "label": "$-16$",
+       "why": "$8\\times\\frac\\pi4 = 2\\pi$, et $\\mathrm e^{2i\\pi} = 1$, pas $-1$."
+      },
+      {
+       "label": "$16i$",
+       "why": "$\\mathrm e^{2i\\pi} = 1$ : le résultat est réel."
+      },
+      {
+       "label": "$8$",
+       "why": "$(\\sqrt2)^8 = 2^4 = 16$, pas $8$."
+      }
+     ],
+     "hint": "Passe par la forme exponentielle de $1 + i$.",
+     "solution": "$|1 + i| = \\sqrt2$ et $\\arg(1 + i) = \\frac\\pi4$. $(1 + i)^8 = (\\sqrt2)^8\\,\\mathrm e^{i\\,8\\pi/4} = 16\\,\\mathrm e^{2i\\pi} = 16$.",
+     "points": 1,
+     "methode": "Pour une puissance : forme exponentielle, puis $\\left(r\\mathrm e^{i\\theta}\\right)^n = r^n\\mathrm e^{in\\theta}$.",
+     "ref": "m2-scex-complexes-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-complexes-flash-7",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Équation du second degré à coefficients réels",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Équation du second degré à coefficients réels",
+     "difficulty": 2,
+     "statement": "Dans $\\mathbb C$, les solutions de $z^2 - 2z + 5 = 0$ sont :",
+     "options": [
+      {
+       "label": "$1 + 2i$ et $1 - 2i$",
+       "correct": true,
+       "why": "$\\Delta = 4 - 20 = -16 = (4i)^2$, $z = \\frac{2 \\pm 4i}{2}$."
+      },
+      {
+       "label": "$1 + 4i$ et $1 - 4i$",
+       "why": "Tu as oublié de diviser $\\pm 4i$ par $2a = 2$."
+      },
+      {
+       "label": "$-1 + 2i$ et $-1 - 2i$",
+       "why": "Erreur de signe : $z = \\frac{-b \\pm i\\sqrt{-\\Delta}}{2a}$ avec $-b = 2$."
+      },
+      {
+       "label": "pas de solution dans $\\mathbb{C}$",
+       "why": "Dans $\\mathbb C$, une équation du second degré a toujours des solutions ; $\\Delta < 0$ donne deux solutions conjuguées."
+      }
+     ],
+     "hint": "$\\Delta < 0$ : $z = \\dfrac{-b \\pm i\\sqrt{-\\Delta}}{2a}$.",
+     "solution": "$\\Delta = (-2)^2 - 4\\times5 = -16 < 0$. Les solutions sont $z = \\dfrac{2 \\pm i\\sqrt{16}}{2} = \\dfrac{2 \\pm 4i}{2}$, soit $1 + 2i$ et $1 - 2i$.",
+     "points": 1,
+     "methode": "$\\Delta < 0$ : deux solutions complexes conjuguées $\\frac{-b \\pm i\\sqrt{-\\Delta}}{2a}$.",
+     "ref": "m2-scex-complexes-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-complexes-flash-8",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Formules d'Euler et linéarisation",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Formules d'Euler et linéarisation",
+     "difficulty": 2,
+     "statement": "Pour tout réel $\\theta$, $\\cos\\theta$ est égal à :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\mathrm{e}^{i\\theta} + \\mathrm{e}^{-i\\theta}}{2}$",
+       "correct": true,
+       "why": "Formule d'Euler : on additionne $\\mathrm e^{i\\theta}$ et son conjugué."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^{i\\theta} - \\mathrm{e}^{-i\\theta}}{2i}$",
+       "why": "C'est la formule de $\\sin\\theta$."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^{i\\theta} - \\mathrm{e}^{-i\\theta}}{2}$",
+       "why": "Cette quantité vaut $i\\sin\\theta$."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^{i\\theta} + \\mathrm{e}^{-i\\theta}}{2i}$",
+       "why": "Le dénominateur de $\\cos\\theta$ est $2$, sans $i$."
+      }
+     ],
+     "hint": "$\\mathrm e^{i\\theta} = \\cos\\theta + i\\sin\\theta$ et $\\mathrm e^{-i\\theta} = \\cos\\theta - i\\sin\\theta$.",
+     "solution": "En additionnant $\\mathrm e^{i\\theta} = \\cos\\theta + i\\sin\\theta$ et $\\mathrm e^{-i\\theta} = \\cos\\theta - i\\sin\\theta$ : $\\mathrm e^{i\\theta} + \\mathrm e^{-i\\theta} = 2\\cos\\theta$, d'où $\\cos\\theta = \\dfrac{\\mathrm e^{i\\theta} + \\mathrm e^{-i\\theta}}{2}$.",
+     "points": 1,
+     "methode": "Euler : $\\cos\\theta = \\frac{\\mathrm e^{i\\theta} + \\mathrm e^{-i\\theta}}{2}$ et $\\sin\\theta = \\frac{\\mathrm e^{i\\theta} - \\mathrm e^{-i\\theta}}{2i}$.",
+     "ref": "m2-scex-complexes-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-complexes-ex1",
+   "chapter": "complexes",
+   "kind": "probleme",
+   "title": "Exercice 1 — Forme trigonométrique et puissances",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "On considère les nombres complexes $a = \\sqrt3 + i$ et $b = 1 + i$.",
+   "questions": [
+    {
+     "notion": "Le module",
+     "difficulty": 1,
+     "statement": "1) $|a|$ vaut :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "$\\sqrt{3 + 1} = 2$."
+      },
+      {
+       "label": "$4$",
+       "why": "$4$ est $|a|^2$ : il faut la racine."
+      },
+      {
+       "label": "$\\sqrt3 + 1$",
+       "why": "Le module n'est pas la somme des parties : c'est $\\sqrt{a^2 + b^2}$."
+      },
+      {
+       "label": "$\\sqrt2$",
+       "why": "Tu as pris $(\\sqrt3)^2 = 1$ : en fait $(\\sqrt3)^2 = 3$."
+      }
+     ],
+     "hint": "$|x + iy| = \\sqrt{x^2 + y^2}$.",
+     "solution": "$|a| = \\sqrt{(\\sqrt3)^2 + 1^2} = \\sqrt{3 + 1} = 2$.",
+     "points": 1,
+     "ref": "m2-scex-complexes-ex1-q1"
+    },
+    {
+     "notion": "Forme trigonométrique",
+     "difficulty": 2,
+     "statement": "2) La forme trigonométrique de $a$ est :",
+     "options": [
+      {
+       "label": "$2\\left(\\cos\\dfrac{\\pi}{6} + i\\sin\\dfrac{\\pi}{6}\\right)$",
+       "correct": true,
+       "why": "$\\cos\\theta = \\frac{\\sqrt3}{2}$ et $\\sin\\theta = \\frac12$, donc $\\theta = \\frac\\pi6$."
+      },
+      {
+       "label": "$2\\left(\\cos\\dfrac{\\pi}{3} + i\\sin\\dfrac{\\pi}{3}\\right)$",
+       "why": "Tu as inversé : $\\cos\\frac\\pi3 = \\frac12$, mais ici $\\cos\\theta = \\frac{\\sqrt3}{2}$."
+      },
+      {
+       "label": "$2\\left(\\cos\\dfrac{\\pi}{6} - i\\sin\\dfrac{\\pi}{6}\\right)$",
+       "why": "Ce n'est pas une forme trigonométrique (signe $-$), et ça vaut $\\bar a$."
+      },
+      {
+       "label": "$4\\left(\\cos\\dfrac{\\pi}{6} + i\\sin\\dfrac{\\pi}{6}\\right)$",
+       "why": "Le module est $2$, pas $4$."
+      }
+     ],
+     "hint": "Divise $a$ par son module et reconnais $\\cos\\theta$, $\\sin\\theta$.",
+     "solution": "$a = 2\\left(\\frac{\\sqrt3}{2} + \\frac12 i\\right) = 2\\left(\\cos\\frac\\pi6 + i\\sin\\frac\\pi6\\right)$.",
+     "points": 1,
+     "methode": "Forme trigonométrique : $r(\\cos\\theta + i\\sin\\theta)$ avec $r > 0$ et un signe $+$.",
+     "ref": "m2-scex-complexes-ex1-q2"
+    },
+    {
+     "notion": "Opérations sous forme exponentielle",
+     "difficulty": 2,
+     "statement": "3) Sachant que $b = \\sqrt2\\,\\mathrm{e}^{i\\frac{\\pi}{4}}$, le produit $ab$ s'écrit :",
+     "options": [
+      {
+       "label": "$2\\sqrt2\\,\\mathrm{e}^{i\\frac{5\\pi}{12}}$",
+       "correct": true,
+       "why": "On multiplie les modules et on additionne les arguments : $\\frac\\pi6 + \\frac\\pi4 = \\frac{5\\pi}{12}$."
+      },
+      {
+       "label": "$2\\sqrt2\\,\\mathrm{e}^{i\\frac{\\pi}{24}}$",
+       "why": "On n'a pas à multiplier les arguments : on les additionne."
+      },
+      {
+       "label": "$(2 + \\sqrt2)\\,\\mathrm{e}^{i\\frac{5\\pi}{12}}$",
+       "why": "Les modules se multiplient, ils ne s'additionnent pas."
+      },
+      {
+       "label": "$2\\sqrt2\\,\\mathrm{e}^{i\\frac{\\pi}{12}}$",
+       "why": "$\\frac\\pi6 + \\frac\\pi4 = \\frac{2\\pi + 3\\pi}{12} = \\frac{5\\pi}{12}$ : tu as soustrait."
+      }
+     ],
+     "hint": "$r\\mathrm e^{i\\alpha}\\times r'\\mathrm e^{i\\beta} = rr'\\mathrm e^{i(\\alpha + \\beta)}$.",
+     "solution": "$a = 2\\mathrm e^{i\\pi/6}$ et $b = \\sqrt2\\mathrm e^{i\\pi/4}$. $ab = 2\\sqrt2\\,\\mathrm e^{i(\\pi/6 + \\pi/4)} = 2\\sqrt2\\,\\mathrm e^{i5\\pi/12}$.",
+     "points": 1,
+     "methode": "Produit : modules multipliés, arguments additionnés. Quotient : modules divisés, arguments soustraits.",
+     "ref": "m2-scex-complexes-ex1-q3"
+    },
+    {
+     "notion": "Formule de Moivre",
+     "difficulty": 2,
+     "statement": "4) $a^6$ vaut :",
+     "options": [
+      {
+       "label": "$-64$",
+       "correct": true,
+       "why": "$a^6 = 2^6\\mathrm e^{i\\,6\\pi/6} = 64\\,\\mathrm e^{i\\pi} = -64$."
+      },
+      {
+       "label": "$64$",
+       "why": "$\\mathrm e^{i\\pi} = -1$, pas $1$."
+      },
+      {
+       "label": "$12$",
+       "why": "$2^6 = 64$, pas $2\\times6$."
+      },
+      {
+       "label": "$64i$",
+       "why": "$6\\times\\frac\\pi6 = \\pi$ et $\\mathrm e^{i\\pi} = -1$ est réel."
+      }
+     ],
+     "hint": "$\\left(2\\mathrm e^{i\\pi/6}\\right)^6 = 2^6\\mathrm e^{i\\pi}$.",
+     "solution": "$a^6 = \\left(2\\mathrm e^{i\\pi/6}\\right)^6 = 2^6\\,\\mathrm e^{i\\pi} = 64\\times(-1) = -64$.",
+     "points": 1,
+     "ref": "m2-scex-complexes-ex1-q4"
+    },
+    {
+     "notion": "Type 1 — Passer d'une forme à l'autre",
+     "difficulty": 2,
+     "statement": "5) La forme algébrique de $2\\,\\mathrm{e}^{-i\\frac{\\pi}{3}}$ est :",
+     "options": [
+      {
+       "label": "$1 - i\\sqrt3$",
+       "correct": true,
+       "why": "$2\\left(\\cos\\frac\\pi3 - i\\sin\\frac\\pi3\\right) = 2\\left(\\frac12 - i\\frac{\\sqrt3}2\\right)$."
+      },
+      {
+       "label": "$1 + i\\sqrt3$",
+       "why": "$\\sin\\left(-\\frac\\pi3\\right) = -\\frac{\\sqrt3}{2}$ : la partie imaginaire est négative."
+      },
+      {
+       "label": "$\\sqrt3 - i$",
+       "why": "Tu as utilisé $\\frac\\pi6$ au lieu de $\\frac\\pi3$ : $\\cos\\frac\\pi3 = \\frac12$."
+      },
+      {
+       "label": "$-1 - i\\sqrt3$",
+       "why": "$\\cos\\left(-\\frac\\pi3\\right) = \\cos\\frac\\pi3 = \\frac12 > 0$."
+      }
+     ],
+     "hint": "$r\\mathrm e^{i\\theta} = r\\cos\\theta + ir\\sin\\theta$.",
+     "solution": "$2\\mathrm e^{-i\\pi/3} = 2\\cos\\left(-\\frac\\pi3\\right) + 2i\\sin\\left(-\\frac\\pi3\\right) = 2\\times\\frac12 - 2i\\times\\frac{\\sqrt3}{2} = 1 - i\\sqrt3$.",
+     "points": 1,
+     "ref": "m2-scex-complexes-ex1-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-complexes-ex2",
+   "chapter": "complexes",
+   "kind": "probleme",
+   "title": "Exercice 2 — Équation, points et triangle",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Le plan complexe est rapporté à un repère orthonormé direct $(O;\\vec u,\\vec v)$. On considère l'équation $(E) : z^2 - 4z + 8 = 0$ dans $\\mathbb C$.",
+   "questions": [
+    {
+     "notion": "Équation du second degré à coefficients réels",
+     "difficulty": 1,
+     "statement": "1) Les solutions de $(E)$ sont :",
+     "options": [
+      {
+       "label": "$2 + 2i$ et $2 - 2i$",
+       "correct": true,
+       "why": "$\\Delta = 16 - 32 = -16$, $z = \\frac{4 \\pm 4i}{2}$."
+      },
+      {
+       "label": "$2 + 4i$ et $2 - 4i$",
+       "why": "Tu as oublié de diviser $\\pm4i$ par $2$."
+      },
+      {
+       "label": "$-2 + 2i$ et $-2 - 2i$",
+       "why": "$-b = +4$ : la partie réelle est $+2$."
+      },
+      {
+       "label": "$4 + 4i$ et $4 - 4i$",
+       "why": "Tu as oublié de diviser par $2a = 2$."
+      }
+     ],
+     "hint": "Calcule $\\Delta$, puis $z = \\frac{-b \\pm i\\sqrt{-\\Delta}}{2a}$.",
+     "solution": "$\\Delta = (-4)^2 - 4\\times8 = -16 = (4i)^2$. $z_1 = \\frac{4 + 4i}{2} = 2 + 2i$ et $z_2 = 2 - 2i$.",
+     "points": 1,
+     "ref": "m2-scex-complexes-ex2-q1"
+    },
+    {
+     "notion": "Affixe : le dictionnaire entre complexes et géométrie",
+     "difficulty": 1,
+     "statement": "2) On note $A$ et $B$ les points d'affixes $z_A = 2 + 2i$ et $z_B = 2 - 2i$. L'affixe du vecteur $\\overrightarrow{AB}$ est :",
+     "options": [
+      {
+       "label": "$-4i$",
+       "correct": true,
+       "why": "$z_B - z_A = (2 - 2i) - (2 + 2i) = -4i$."
+      },
+      {
+       "label": "$4i$",
+       "why": "C'est l'affixe de $\\overrightarrow{BA}$ : $z_{\\overrightarrow{AB}} = z_B - z_A$."
+      },
+      {
+       "label": "$4$",
+       "why": "Les parties réelles s'annulent : $2 - 2 = 0$."
+      },
+      {
+       "label": "$4 - 4i$",
+       "why": "Tu as additionné les parties réelles au lieu de les soustraire."
+      }
+     ],
+     "hint": "$z_{\\overrightarrow{AB}} = z_B - z_A$ (arrivée − départ).",
+     "solution": "$z_{\\overrightarrow{AB}} = z_B - z_A = 2 - 2i - 2 - 2i = -4i$. En particulier $AB = |-4i| = 4$.",
+     "points": 1,
+     "ref": "m2-scex-complexes-ex2-q2"
+    },
+    {
+     "notion": "L'outil central : le quotient de deux différences",
+     "difficulty": 2,
+     "statement": "3) Le quotient $\\dfrac{z_A}{z_B}$ vaut :",
+     "options": [
+      {
+       "label": "$i$",
+       "correct": true,
+       "why": "$\\frac{2 + 2i}{2 - 2i} = \\frac{(1+i)^2}{(1-i)(1+i)} = \\frac{2i}{2}$."
+      },
+      {
+       "label": "$-i$",
+       "why": "C'est $\\frac{z_B}{z_A}$ : tu as inversé le quotient."
+      },
+      {
+       "label": "$1$",
+       "why": "$|z_A| = |z_B|$ donne seulement $\\left|\\frac{z_A}{z_B}\\right| = 1$, pas un quotient égal à $1$."
+      },
+      {
+       "label": "$2i$",
+       "why": "Tu as oublié de diviser par $(1-i)(1+i) = 2$."
+      }
+     ],
+     "hint": "Multiplie numérateur et dénominateur par le conjugué du dénominateur.",
+     "solution": "$\\dfrac{z_A}{z_B} = \\dfrac{1 + i}{1 - i} = \\dfrac{(1 + i)^2}{(1 - i)(1 + i)} = \\dfrac{1 + 2i - 1}{2} = i$.",
+     "points": 1,
+     "methode": "Pour un quotient : multiplie en haut et en bas par le conjugué du dénominateur.",
+     "ref": "m2-scex-complexes-ex2-q3"
+    },
+    {
+     "notion": "Type 4 — Nature d'un triangle",
+     "difficulty": 2,
+     "statement": "4) On en déduit que le triangle $OAB$ est :",
+     "options": [
+      {
+       "label": "rectangle et isocèle en $O$",
+       "correct": true,
+       "why": "$\\frac{z_A - 0}{z_B - 0} = i = \\mathrm e^{i\\pi/2}$ : $OA = OB$ et $(\\overrightarrow{OB},\\overrightarrow{OA}) = \\frac\\pi2$."
+      },
+      {
+       "label": "équilatéral",
+       "why": "L'angle en $O$ vaut $\\frac\\pi2$, pas $\\frac\\pi3$."
+      },
+      {
+       "label": "rectangle en $A$",
+       "why": "Le quotient porte sur les vecteurs issus de $O$ : l'angle droit est en $O$."
+      },
+      {
+       "label": "isocèle en $O$ mais non rectangle",
+       "why": "$\\arg i = \\frac\\pi2$ : l'angle en $O$ est droit."
+      }
+     ],
+     "hint": "Lis le module et l'argument de $\\frac{z_A - z_O}{z_B - z_O}$.",
+     "solution": "$\\dfrac{z_A - z_O}{z_B - z_O} = i$. Module $1$ : $OA = OB$. Argument $\\frac\\pi2$ : $(\\overrightarrow{OB},\\overrightarrow{OA}) = \\frac\\pi2\\ [2\\pi]$. Le triangle $OAB$ est rectangle isocèle en $O$.",
+     "points": 1,
+     "methode": "$\\frac{z_C - z_A}{z_B - z_A} = \\mathrm e^{\\pm i\\pi/2}$ ⇒ rectangle isocèle en $A$ ; $= \\mathrm e^{\\pm i\\pi/3}$ ⇒ équilatéral.",
+     "ref": "m2-scex-complexes-ex2-q4"
+    },
+    {
+     "notion": "Transformations du plan",
+     "difficulty": 2,
+     "statement": "5) La rotation de centre $O$ qui transforme $B$ en $A$ a pour angle :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\pi}{2}$",
+       "correct": true,
+       "why": "$z_A = i\\,z_B = \\mathrm e^{i\\pi/2}z_B$."
+      },
+      {
+       "label": "$-\\dfrac{\\pi}{2}$",
+       "why": "C'est l'angle de la rotation qui transforme $A$ en $B$."
+      },
+      {
+       "label": "$\\pi$",
+       "why": "La rotation d'angle $\\pi$ (symétrie centrale) envoie $B$ sur $-z_B = -2 + 2i$."
+      },
+      {
+       "label": "$\\dfrac{\\pi}{4}$",
+       "why": "$\\frac\\pi4$ est l'argument de $z_A$, pas l'angle entre $\\overrightarrow{OB}$ et $\\overrightarrow{OA}$."
+      }
+     ],
+     "hint": "Rotation de centre $O$ et d'angle $\\theta$ : $z' = \\mathrm e^{i\\theta}z$.",
+     "solution": "La rotation de centre $O$ et d'angle $\\theta$ s'écrit $z' = \\mathrm e^{i\\theta}z$. On a $z_A = i z_B = \\mathrm e^{i\\pi/2}z_B$, donc $\\theta = \\frac\\pi2$.",
+     "points": 1,
+     "methode": "Rotation de centre $\\Omega$, d'angle $\\theta$ : $z' - \\omega = \\mathrm e^{i\\theta}(z - \\omega)$.",
+     "ref": "m2-scex-complexes-ex2-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-complexes-ex3",
+   "chapter": "complexes",
+   "kind": "probleme",
+   "title": "Exercice 3 — Équation, rotation et ensembles de points",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Le plan complexe est rapporté à un repère orthonormé direct $(O;\\vec u,\\vec v)$. Soit l'équation $(E) : z^2 - 2\\sqrt3\\,z + 4 = 0$. On note $a = \\sqrt3 + i$ et $b = \\sqrt3 - i$, et $A$, $B$ les points d'affixes $a$ et $b$. Soit $R$ la rotation de centre $O$ et d'angle $\\dfrac{\\pi}{3}$.",
+   "questions": [
+    {
+     "notion": "Équation du second degré à coefficients réels",
+     "difficulty": 1,
+     "statement": "1) Les solutions de $(E)$ sont :",
+     "options": [
+      {
+       "label": "$\\sqrt3 + i$ et $\\sqrt3 - i$",
+       "correct": true,
+       "why": "$\\Delta = 12 - 16 = -4$, $z = \\frac{2\\sqrt3 \\pm 2i}{2}$."
+      },
+      {
+       "label": "$\\sqrt3 + 2i$ et $\\sqrt3 - 2i$",
+       "why": "Tu as oublié de diviser $\\pm2i$ par $2$."
+      },
+      {
+       "label": "$-\\sqrt3 + i$ et $-\\sqrt3 - i$",
+       "why": "$-b = +2\\sqrt3$ : la partie réelle est positive."
+      },
+      {
+       "label": "$2\\sqrt3 + 2i$ et $2\\sqrt3 - 2i$",
+       "why": "Tu as oublié de diviser par $2a = 2$."
+      }
+     ],
+     "hint": "$\\Delta = (2\\sqrt3)^2 - 16$.",
+     "solution": "$\\Delta = (-2\\sqrt3)^2 - 4\\times4 = 12 - 16 = -4 = (2i)^2$. Solutions : $\\dfrac{2\\sqrt3 \\pm 2i}{2} = \\sqrt3 \\pm i$. Donc $a$ et $b$ sont les solutions de $(E)$.",
+     "points": 1,
+     "part": "Partie A — Équation",
+     "ref": "m2-scex-complexes-ex3-q1"
+    },
+    {
+     "notion": "Type 1 — Passer d'une forme à l'autre",
+     "difficulty": 2,
+     "statement": "2) La forme exponentielle de $a$ est :",
+     "options": [
+      {
+       "label": "$2\\,\\mathrm{e}^{i\\frac{\\pi}{6}}$",
+       "correct": true,
+       "why": "$|a| = 2$, $\\cos\\theta = \\frac{\\sqrt3}{2}$, $\\sin\\theta = \\frac12$."
+      },
+      {
+       "label": "$2\\,\\mathrm{e}^{i\\frac{\\pi}{3}}$",
+       "why": "$\\cos\\frac\\pi3 = \\frac12$ ; or ici $\\cos\\theta = \\frac{\\sqrt3}{2}$."
+      },
+      {
+       "label": "$4\\,\\mathrm{e}^{i\\frac{\\pi}{6}}$",
+       "why": "$4 = |a|^2$ : le module est $2$."
+      },
+      {
+       "label": "$2\\,\\mathrm{e}^{-i\\frac{\\pi}{6}}$",
+       "why": "C'est la forme exponentielle de $b = \\bar a$."
+      }
+     ],
+     "hint": "Module, puis cosinus et sinus.",
+     "solution": "$|a| = \\sqrt{3 + 1} = 2$ et $a = 2\\left(\\frac{\\sqrt3}{2} + \\frac12 i\\right) = 2\\mathrm e^{i\\pi/6}$. De même $b = \\bar a = 2\\mathrm e^{-i\\pi/6}$.",
+     "points": 1,
+     "part": "Partie A — Équation",
+     "ref": "m2-scex-complexes-ex3-q2"
+    },
+    {
+     "notion": "Transformations du plan",
+     "difficulty": 1,
+     "statement": "3) L'écriture complexe de la rotation $R$ est :",
+     "options": [
+      {
+       "label": "$z' = \\mathrm{e}^{i\\frac{\\pi}{3}}\\,z$",
+       "correct": true,
+       "why": "Rotation de centre $O$ : $z' = \\mathrm e^{i\\theta}z$."
+      },
+      {
+       "label": "$z' = z + \\mathrm{e}^{i\\frac{\\pi}{3}}$",
+       "why": "Ajouter une constante, c'est une translation."
+      },
+      {
+       "label": "$z' = \\mathrm{e}^{-i\\frac{\\pi}{3}}\\,z$",
+       "why": "L'angle est $+\\frac\\pi3$."
+      },
+      {
+       "label": "$z' = \\dfrac{\\pi}{3}\\,z$",
+       "why": "Multiplier par un réel positif, c'est une homothétie."
+      }
+     ],
+     "hint": "Rotation de centre $\\Omega$ et d'angle $\\theta$ : $z' - \\omega = \\mathrm e^{i\\theta}(z - \\omega)$.",
+     "solution": "Avec $\\omega = 0$ et $\\theta = \\frac\\pi3$ : $z' = \\mathrm e^{i\\pi/3}z$.",
+     "points": 1,
+     "part": "Partie B — Rotation",
+     "ref": "m2-scex-complexes-ex3-q3"
+    },
+    {
+     "notion": "L'outil central : le quotient de deux différences",
+     "difficulty": 2,
+     "statement": "4) L'image de $B$ par $R$ est :",
+     "options": [
+      {
+       "label": "le point $A$",
+       "correct": true,
+       "why": "$\\mathrm e^{i\\pi/3}\\times2\\mathrm e^{-i\\pi/6} = 2\\mathrm e^{i\\pi/6} = a$."
+      },
+      {
+       "label": "le point d'affixe $2i$",
+       "why": "Tu as pris $\\arg b = +\\frac\\pi6$ : or $b = 2\\mathrm e^{-i\\pi/6}$."
+      },
+      {
+       "label": "le point $B$ lui-même",
+       "why": "Seul le centre $O$ est fixe par une rotation d'angle non nul."
+      },
+      {
+       "label": "le point d'affixe $-\\sqrt3 + i$",
+       "why": "C'est $-b$, l'image de $B$ par la symétrie de centre $O$ (rotation d'angle $\\pi$), pas $\\frac\\pi3$."
+      }
+     ],
+     "hint": "Calcule $\\mathrm e^{i\\pi/3}\\,b$ avec la forme exponentielle de $b$.",
+     "solution": "$R(B)$ a pour affixe $\\mathrm e^{i\\pi/3}\\,b = \\mathrm e^{i\\pi/3}\\times2\\mathrm e^{-i\\pi/6} = 2\\mathrm e^{i(\\pi/3 - \\pi/6)} = 2\\mathrm e^{i\\pi/6} = a$. Donc $R(B) = A$.",
+     "points": 1,
+     "part": "Partie B — Rotation",
+     "ref": "m2-scex-complexes-ex3-q4"
+    },
+    {
+     "notion": "Type 4 — Nature d'un triangle",
+     "difficulty": 3,
+     "statement": "5) On en déduit que le triangle $OAB$ est :",
+     "options": [
+      {
+       "label": "équilatéral",
+       "correct": true,
+       "why": "$R(B) = A$ : $OA = OB$ et $(\\overrightarrow{OB},\\overrightarrow{OA}) = \\frac\\pi3$."
+      },
+      {
+       "label": "rectangle isocèle en $O$",
+       "why": "L'angle en $O$ est $\\frac\\pi3$, pas $\\frac\\pi2$."
+      },
+      {
+       "label": "isocèle en $O$ mais non équilatéral",
+       "why": "Un triangle isocèle dont l'angle au sommet vaut $\\frac\\pi3$ est équilatéral."
+      },
+      {
+       "label": "rectangle en $A$",
+       "why": "$AB = |b - a| = |-2i| = 2 = OA$ : les trois côtés sont égaux."
+      }
+     ],
+     "hint": "Une rotation conserve les distances : $OA = OB$. Que vaut l'angle au sommet $O$ ?",
+     "solution": "$R$ est la rotation de centre $O$ et d'angle $\\frac\\pi3$ et $R(B) = A$, donc $OB = OA$ et $(\\overrightarrow{OB},\\overrightarrow{OA}) = \\frac\\pi3$. Un triangle isocèle d'angle au sommet $\\frac\\pi3$ est équilatéral. (Contrôle : $OA = OB = AB = 2$.)",
+     "points": 1,
+     "methode": "Rotation d'angle $\\pm\\frac\\pi3$ de centre $A$ envoyant $B$ sur $C$ ⇒ $ABC$ équilatéral.",
+     "part": "Partie B — Rotation",
+     "ref": "m2-scex-complexes-ex3-q5"
+    },
+    {
+     "notion": "Ensembles de points",
+     "difficulty": 2,
+     "statement": "6) L'ensemble des points $M$ d'affixe $z$ tels que $|z - a| = |z - b|$ est :",
+     "options": [
+      {
+       "label": "l'axe des réels",
+       "correct": true,
+       "why": "$MA = MB$ : c'est la médiatrice de $[AB]$, et $A$, $B$ sont symétriques par rapport à l'axe des réels."
+      },
+      {
+       "label": "le cercle de centre $O$ et de rayon $2$",
+       "why": "$|z - a| = |z - b|$ ne fixe pas la distance à $O$."
+      },
+      {
+       "label": "la droite $(AB)$",
+       "why": "Les points équidistants de $A$ et $B$ forment la médiatrice, perpendiculaire à $(AB)$."
+      },
+      {
+       "label": "l'axe des imaginaires purs",
+       "why": "$A$ et $B$ sont conjugués : leur médiatrice est l'axe des réels."
+      }
+     ],
+     "hint": "$|z - a| = MA$ et $|z - b| = MB$.",
+     "solution": "$|z - a| = |z - b| \\Leftrightarrow MA = MB$ : c'est la médiatrice de $[AB]$. $A(\\sqrt3;1)$ et $B(\\sqrt3;-1)$ sont symétriques par rapport à l'axe des abscisses, donc cette médiatrice est l'axe des réels.",
+     "points": 1,
+     "methode": "$|z - a| = |z - b|$ ⇔ médiatrice de $[AB]$ ; $|z - a| = r$ ⇔ cercle de centre $A$ et de rayon $r$.",
+     "part": "Partie C — Ensembles de points",
+     "ref": "m2-scex-complexes-ex3-q6"
+    },
+    {
+     "notion": "Lieux géométriques",
+     "difficulty": 3,
+     "statement": "7) L'ensemble des points $M$ d'affixe $z$ tels que $|z - \\sqrt3 - i| = 2$ est :",
+     "options": [
+      {
+       "label": "le cercle de centre $A$ et de rayon $2$",
+       "correct": true,
+       "why": "$|z - a| = 2 \\Leftrightarrow AM = 2$."
+      },
+      {
+       "label": "le cercle de centre le point d'affixe $-\\sqrt3 - i$ et de rayon $2$",
+       "why": "$|z - \\sqrt3 - i| = |z - (\\sqrt3 + i)|$ : le centre est le point d'affixe $+\\sqrt3 + i$."
+      },
+      {
+       "label": "le cercle de centre $A$ et de rayon $4$",
+       "why": "$|z - a| = 2$ donne $AM = 2$, pas $AM^2 = 2$ ni $4$."
+      },
+      {
+       "label": "la médiatrice de $[OA]$",
+       "why": "Une distance fixée à un point définit un cercle, pas une médiatrice."
+      }
+     ],
+     "hint": "Écris $\\sqrt3 + i = a$.",
+     "solution": "$|z - \\sqrt3 - i| = |z - a| = AM$. Donc $AM = 2$ : c'est le cercle de centre $A$ et de rayon $2$. Il passe par $O$ et par $B$ car $OA = AB = 2$.",
+     "points": 1,
+     "part": "Partie C — Ensembles de points",
+     "ref": "m2-scex-complexes-ex3-q7"
+    }
+   ],
+   "figure": "plan-complexe"
+  },
+  {
+   "ref": "m2-scex-complexes-ex4",
+   "chapter": "complexes",
+   "kind": "probleme",
+   "title": "Exercice 4 — Moivre, linéarisation et puissances",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $\\theta$ un réel. On rappelle que $\\left(\\cos\\theta + i\\sin\\theta\\right)^n = \\cos n\\theta + i\\sin n\\theta$ pour tout entier $n$. On considère aussi $z = 1 + i\\sqrt3$.",
+   "questions": [
+    {
+     "notion": "Formule de Moivre",
+     "difficulty": 1,
+     "statement": "1) $\\left(\\cos\\theta + i\\sin\\theta\\right)^3$ est égal à :",
+     "options": [
+      {
+       "label": "$\\cos 3\\theta + i\\sin 3\\theta$",
+       "correct": true,
+       "why": "Formule de Moivre avec $n = 3$."
+      },
+      {
+       "label": "$\\cos^3\\theta + i\\sin^3\\theta$",
+       "why": "La puissance d'une somme n'est pas la somme des puissances."
+      },
+      {
+       "label": "$3\\cos\\theta + 3i\\sin\\theta$",
+       "why": "L'exposant multiplie l'angle, pas le nombre."
+      },
+      {
+       "label": "$\\cos 3\\theta - i\\sin 3\\theta$",
+       "why": "Le signe reste $+$ : c'est $\\mathrm e^{3i\\theta}$."
+      }
+     ],
+     "hint": "$\\left(\\mathrm e^{i\\theta}\\right)^3 = \\mathrm e^{3i\\theta}$.",
+     "solution": "$\\left(\\cos\\theta + i\\sin\\theta\\right)^3 = \\left(\\mathrm e^{i\\theta}\\right)^3 = \\mathrm e^{3i\\theta} = \\cos3\\theta + i\\sin3\\theta$.",
+     "points": 1,
+     "part": "Partie A — Moivre et linéarisation",
+     "ref": "m2-scex-complexes-ex4-q1"
+    },
+    {
+     "notion": "Formule de Moivre",
+     "difficulty": 3,
+     "statement": "2) En développant $(\\cos\\theta + i\\sin\\theta)^3$ et en identifiant les parties réelles, on obtient :",
+     "options": [
+      {
+       "label": "$\\cos3\\theta = 4\\cos^3\\theta - 3\\cos\\theta$",
+       "correct": true,
+       "why": "$\\mathrm{Re} = \\cos^3\\theta - 3\\cos\\theta\\sin^2\\theta$, puis $\\sin^2\\theta = 1 - \\cos^2\\theta$."
+      },
+      {
+       "label": "$\\cos3\\theta = 3\\cos\\theta - 4\\cos^3\\theta$",
+       "why": "Erreur de signe : $\\cos^3\\theta - 3\\cos\\theta(1 - \\cos^2\\theta) = 4\\cos^3\\theta - 3\\cos\\theta$."
+      },
+      {
+       "label": "$\\cos3\\theta = \\cos^3\\theta - 3\\cos\\theta$",
+       "why": "Tu as remplacé $\\sin^2\\theta$ par $1$ : $\\sin^2\\theta = 1 - \\cos^2\\theta$."
+      },
+      {
+       "label": "$\\cos3\\theta = 4\\cos^3\\theta + 3\\cos\\theta$",
+       "why": "Pour $\\theta = 0$ : $\\cos 0 = 1$ alors que $4 + 3 = 7$ ; vérifie le signe."
+      }
+     ],
+     "hint": "$(c + is)^3 = c^3 + 3c^2(is) + 3c(is)^2 + (is)^3$ ; garde les termes réels.",
+     "solution": "$(c + is)^3 = c^3 + 3ic^2s - 3cs^2 - is^3$. Partie réelle : $c^3 - 3cs^2 = c^3 - 3c(1 - c^2) = 4c^3 - 3c$. Par Moivre, elle vaut $\\cos3\\theta$ : $\\cos3\\theta = 4\\cos^3\\theta - 3\\cos\\theta$. (Contrôle avec $\\theta = 0$ : $1 = 4 - 3$ ✓.)",
+     "points": 1,
+     "methode": "Teste toujours une formule trigonométrique avec $\\theta = 0$.",
+     "part": "Partie A — Moivre et linéarisation",
+     "ref": "m2-scex-complexes-ex4-q2"
+    },
+    {
+     "notion": "Formules d'Euler et linéarisation",
+     "difficulty": 2,
+     "statement": "3) En utilisant $\\cos\\theta = \\dfrac{\\mathrm{e}^{i\\theta} + \\mathrm{e}^{-i\\theta}}{2}$, la linéarisation de $\\cos^3\\theta$ donne :",
+     "options": [
+      {
+       "label": "$\\cos^3\\theta = \\dfrac{\\cos3\\theta + 3\\cos\\theta}{4}$",
+       "correct": true,
+       "why": "$\\frac{1}{8}\\left(\\mathrm e^{3i\\theta} + 3\\mathrm e^{i\\theta} + 3\\mathrm e^{-i\\theta} + \\mathrm e^{-3i\\theta}\\right) = \\frac{2\\cos3\\theta + 6\\cos\\theta}{8}$."
+      },
+      {
+       "label": "$\\cos^3\\theta = \\dfrac{\\cos3\\theta + 3\\cos\\theta}{8}$",
+       "why": "Tu as oublié que $\\mathrm e^{ik\\theta} + \\mathrm e^{-ik\\theta} = 2\\cos k\\theta$ : on simplifie par $2$."
+      },
+      {
+       "label": "$\\cos^3\\theta = \\dfrac{3\\cos3\\theta + \\cos\\theta}{4}$",
+       "why": "Les coefficients du binôme sont $1, 3, 3, 1$ : le $3$ va avec $\\cos\\theta$."
+      },
+      {
+       "label": "$\\cos^3\\theta = \\cos3\\theta$",
+       "why": "Pour $\\theta = \\frac\\pi3$ : $\\cos^3\\frac\\pi3 = \\frac18$ mais $\\cos\\pi = -1$."
+      }
+     ],
+     "hint": "Développe $\\left(\\mathrm e^{i\\theta} + \\mathrm e^{-i\\theta}\\right)^3$ avec le binôme, puis regroupe les termes conjugués.",
+     "solution": "$\\cos^3\\theta = \\dfrac{\\left(\\mathrm e^{i\\theta} + \\mathrm e^{-i\\theta}\\right)^3}{8} = \\dfrac{\\mathrm e^{3i\\theta} + 3\\mathrm e^{i\\theta} + 3\\mathrm e^{-i\\theta} + \\mathrm e^{-3i\\theta}}{8} = \\dfrac{2\\cos3\\theta + 6\\cos\\theta}{8} = \\dfrac{\\cos3\\theta + 3\\cos\\theta}{4}$. (On retrouve la formule de la question 2.)",
+     "points": 1,
+     "methode": "Linéariser : Euler, binôme, puis regrouper $\\mathrm e^{ik\\theta} + \\mathrm e^{-ik\\theta} = 2\\cos k\\theta$.",
+     "part": "Partie A — Moivre et linéarisation",
+     "ref": "m2-scex-complexes-ex4-q3"
+    },
+    {
+     "notion": "Type 2 — Calculer une puissance",
+     "difficulty": 2,
+     "statement": "4) $z^6$ vaut :",
+     "options": [
+      {
+       "label": "$64$",
+       "correct": true,
+       "why": "$z = 2\\mathrm e^{i\\pi/3}$ et $z^6 = 64\\,\\mathrm e^{2i\\pi} = 64$."
+      },
+      {
+       "label": "$-64$",
+       "why": "$6\\times\\frac\\pi3 = 2\\pi$ et $\\mathrm e^{2i\\pi} = 1$."
+      },
+      {
+       "label": "$64i$",
+       "why": "$\\mathrm e^{2i\\pi} = 1$ : le résultat est réel."
+      },
+      {
+       "label": "$12$",
+       "why": "$2^6 = 64$, pas $2\\times6$."
+      }
+     ],
+     "hint": "Forme exponentielle de $z$ : $|z| = 2$ et $\\arg z = \\frac\\pi3$.",
+     "solution": "$|z| = \\sqrt{1 + 3} = 2$ et $\\arg z = \\frac\\pi3$, donc $z = 2\\mathrm e^{i\\pi/3}$. $z^6 = 2^6\\,\\mathrm e^{i\\,6\\pi/3} = 64\\,\\mathrm e^{2i\\pi} = 64$.",
+     "points": 1,
+     "part": "Partie B — Puissances",
+     "ref": "m2-scex-complexes-ex4-q4"
+    },
+    {
+     "notion": "Opérations sous forme exponentielle",
+     "difficulty": 3,
+     "statement": "5) Le plus petit entier $n \\ge 1$ tel que $z^n$ soit un réel est :",
+     "options": [
+      {
+       "label": "$n = 3$",
+       "correct": true,
+       "why": "$z^n = 2^n\\mathrm e^{in\\pi/3}$ est réel ⇔ $\\frac{n\\pi}{3} \\equiv 0\\ [\\pi]$ ⇔ $3 \\mid n$."
+      },
+      {
+       "label": "$n = 6$",
+       "why": "$z^6 = 64$ est réel positif, mais $z^3 = 8\\mathrm e^{i\\pi} = -8$ est déjà réel."
+      },
+      {
+       "label": "$n = 2$",
+       "why": "$z^2 = 4\\mathrm e^{2i\\pi/3}$ a une partie imaginaire non nulle."
+      },
+      {
+       "label": "il n'en existe pas",
+       "why": "$z^3 = -8$ est réel."
+      }
+     ],
+     "hint": "$z^n$ est réel ⇔ son argument est un multiple de $\\pi$.",
+     "solution": "$z^n = 2^n\\mathrm e^{in\\pi/3}$ est réel ⇔ $\\frac{n\\pi}{3} = k\\pi$ ($k\\in\\mathbb Z$) ⇔ $n = 3k$. Le plus petit $n \\ge 1$ est $3$ : $z^3 = 8\\mathrm e^{i\\pi} = -8$.",
+     "points": 1,
+     "methode": "$z^n$ réel ⇔ $n\\arg z \\equiv 0\\ [\\pi]$ ; imaginaire pur ⇔ $n\\arg z \\equiv \\frac\\pi2\\ [\\pi]$.",
+     "part": "Partie B — Puissances",
+     "ref": "m2-scex-complexes-ex4-q5"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-scex-complexes-serie-1",
+   "title": "Nombres complexes · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (5 questions).",
+   "kind": "custom",
+   "chapter": "complexes",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-scex-complexes-flash-q1",
+    "m2-scex-complexes-flash-q2",
+    "m2-scex-complexes-flash-q3",
+    "m2-scex-complexes-flash-q4",
+    "m2-scex-complexes-ex1-q1",
+    "m2-scex-complexes-ex1-q2",
+    "m2-scex-complexes-ex1-q3",
+    "m2-scex-complexes-ex1-q4",
+    "m2-scex-complexes-ex1-q5"
+   ]
+  },
+  {
+   "slug": "m2-scex-complexes-serie-2",
+   "title": "Nombres complexes · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (5 questions).",
+   "kind": "custom",
+   "chapter": "complexes",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-scex-complexes-flash-q5",
+    "m2-scex-complexes-flash-q6",
+    "m2-scex-complexes-flash-q7",
+    "m2-scex-complexes-flash-q8",
+    "m2-scex-complexes-ex2-q1",
+    "m2-scex-complexes-ex2-q2",
+    "m2-scex-complexes-ex2-q3",
+    "m2-scex-complexes-ex2-q4",
+    "m2-scex-complexes-ex2-q5"
+   ]
+  },
+  {
+   "slug": "m2-scex-complexes-serie-3",
+   "title": "Nombres complexes · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (7 questions) + Exercice 4 (5 questions).",
+   "kind": "custom",
+   "chapter": "complexes",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-scex-complexes-ex3-q1",
+    "m2-scex-complexes-ex3-q2",
+    "m2-scex-complexes-ex3-q3",
+    "m2-scex-complexes-ex3-q4",
+    "m2-scex-complexes-ex3-q5",
+    "m2-scex-complexes-ex3-q6",
+    "m2-scex-complexes-ex3-q7",
+    "m2-scex-complexes-ex4-q1",
+    "m2-scex-complexes-ex4-q2",
+    "m2-scex-complexes-ex4-q3",
+    "m2-scex-complexes-ex4-q4",
+    "m2-scex-complexes-ex4-q5"
+   ]
+  }
+ ]
+}

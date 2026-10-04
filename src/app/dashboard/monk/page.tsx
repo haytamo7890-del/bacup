@@ -7,9 +7,7 @@ import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { useAccess } from "@/lib/use-access";
 import { TIERS, tierFor, nextTier, MonkBadge } from "@/components/monk/badges";
 import {
-  Dumbbell, BookOpen, Brain, Droplet, Moon, Ban, Timer, Target, Heart, Zap, PenLine,
-  GraduationCap, Flame, Check, Plus, Trash2, Lock, Loader2, Sparkles, AlertCircle, RotateCcw,
-  X, type LucideIcon,
+  Dumbbell, Sun, BookOpen, Brain, Droplet, Moon, Ban, Timer, Target, Heart, Zap, PenLine, GraduationCap, Flame, Check, Plus, Trash2, Lock, Loader2, Award, AlertCircle, RotateCcw, X, type LucideIcon,
 } from "lucide-react";
 
 type Habit = { id: string; title: string; icon: string | null; is_core: boolean; position: number };
@@ -148,7 +146,7 @@ export default function MonkModePage() {
       {confirmReset && <ResetModal onConfirm={doReset} onCancel={() => setConfirmReset(false)} streak={streak} />}
 
       <div className="flex items-center gap-3">
-        <span className="w-11 h-11 rounded-2xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center shadow-lg shadow-arctic-blue/30"><Flame className="w-6 h-6" /></span>
+        <span className="w-11 h-11 rounded-2xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center shadow-lg shadow-arctic-blue/30"><Sun className="w-6 h-6" /></span>
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Monk Mode</h1>
           <p className="text-sm text-neutral-500 dark:text-neutral-400">Ta discipline, un jour à la fois.</p>
@@ -183,7 +181,7 @@ export default function MonkModePage() {
                   <div className="mt-1.5 text-[11px] text-neutral-400">{next.day - streak} jour{next.day - streak > 1 ? "s" : ""} pour devenir <b className="text-neutral-500 dark:text-neutral-300">{next.name}</b></div>
                 </div>
               ) : (
-                <div className="mt-4 text-xs font-semibold text-arctic-blue dark:text-arctic-cyan">Rang maximal atteint. Respect. 🙏</div>
+                <div className="mt-4 text-xs font-semibold text-arctic-blue dark:text-arctic-cyan">Rang maximal atteint.</div>
               )}
               <div className="mt-3 text-[11px] text-neutral-400">Record : {sync.best_streak} j</div>
             </div>
@@ -222,7 +220,7 @@ export default function MonkModePage() {
             )}
           </div>
           {!todayDone && <div className="mt-1 text-xs text-orange-500 font-medium">Coche tes 4 non-négociables pour {streak === 0 ? "lancer" : "faire monter"} ta série.</div>}
-          {todayDone && <div className="mt-1 text-xs text-emerald-500 font-semibold">Journée validée ✓ Reviens demain !</div>}
+          {todayDone && <div className="mt-1 text-xs text-emerald-500 font-semibold">Journée validée. Reviens demain.</div>}
 
           <div className="mt-4 space-y-2.5">
             <div className="text-[11px] font-bold uppercase tracking-wide text-neutral-400">Non-négociables</div>
@@ -316,7 +314,7 @@ function Celebration({ milestone, onClose }: { milestone: number; onClose: () =>
         <button onClick={onClose} className="absolute top-3 right-3 text-neutral-400 hover:text-neutral-600"><X className="w-5 h-5" /></button>
         <div className="pointer-events-none absolute -top-20 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full blur-3xl" style={{ background: `${tier.ring}33` }} />
         <div className="relative flex flex-col items-center">
-          <div className="text-xs font-bold uppercase tracking-widest text-arctic-blue dark:text-arctic-cyan flex items-center gap-1.5"><Sparkles className="w-4 h-4" /> Nouveau rang</div>
+          <div className="text-xs font-bold uppercase tracking-widest text-arctic-blue dark:text-arctic-cyan flex items-center gap-1.5"><Award className="w-4 h-4" /> Nouveau rang</div>
           <div className="mt-4"><MonkBadge tier={tier} size={110} /></div>
           <h3 className="mt-4 text-2xl font-extrabold tracking-tight">{tier.name}</h3>
           <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">{tier.tagline}</p>
@@ -342,7 +340,7 @@ function Setup({ supabase, userId, onDone }: { supabase: ReturnType<typeof creat
   return (
     <div className="max-w-xl mx-auto py-10 fade-up">
       <div className="text-center">
-        <span className="inline-grid place-items-center w-16 h-16 rounded-3xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white shadow-lg shadow-arctic-blue/30"><Flame className="w-8 h-8" /></span>
+        <span className="inline-grid place-items-center w-16 h-16 rounded-3xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white shadow-lg shadow-arctic-blue/30"><Sun className="w-8 h-8" /></span>
         <h1 className="mt-4 text-3xl font-bold tracking-tight">Entre en Monk Mode</h1>
         <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
           La science est claire : il faut <b>21 jours pour créer une habitude</b>, et <b>66 jours pour qu&apos;elle devienne automatique</b>.

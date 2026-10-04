@@ -5,9 +5,7 @@ import katex from "katex";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { CourseFigure } from "./figures";
 import {
-  BookMarked, Sigma, CheckCircle2, Lightbulb, Wrench, Info, AlertTriangle,
-  Sparkles, ListTree, ChevronDown, ScrollText, Check, PencilLine, Target, ChevronRight,
-  FlaskConical, Microscope, FileText,
+  BookMarked, Sigma, CheckCircle2, Lightbulb, Wrench, Info, AlertTriangle, ListTree, ChevronDown, ScrollText, Check, PencilLine, Target, ChevronRight, FlaskConical, Microscope, FileText, Bookmark,
 } from "lucide-react";
 
 /** Interactive context: mastery toggles + the practice-overlay launcher (funnels). */
@@ -37,7 +35,7 @@ function FunnelCTA({ notion, onClick, onTrain }: { notion: string; onClick: () =
         <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center shrink-0 shadow-sm shadow-arctic-blue/25"><Target className="w-4.5 h-4.5" /></span>
         <span className="min-w-0 flex-1">
           <span className="block text-sm font-bold tracking-tight">M&apos;entraîner sur cette notion</span>
-          <span className="block text-[12px] text-neutral-500 dark:text-neutral-400 truncate">Espace de préparation · XP, niveau de maîtrise, révision espacée</span>
+          <span className="block text-[12px] text-neutral-500 dark:text-neutral-400 truncate">Préparation · XP, niveau de maîtrise, révision espacée</span>
         </span>
         <ChevronRight className="w-5 h-5 text-arctic-blue dark:text-arctic-cyan shrink-0 group-hover:translate-x-0.5 transition" />
       </button>
@@ -183,7 +181,7 @@ const CO: Record<string, { label: string; icon: typeof Info; bar: string; bg: st
   methode:       { label: "Méthode type", icon: Wrench,       bar: "border-sky-500/60",      bg: "bg-sky-500/[0.05]",      tile: "bg-sky-500/15 text-sky-600 dark:text-sky-300", text: "text-sky-600 dark:text-sky-300" },
   remarque:      { label: "Remarque",     icon: Info,         bar: "border-neutral-400/50",  bg: "bg-neutral-400/[0.05]",  tile: "bg-neutral-400/15 text-neutral-500 dark:text-neutral-300", text: "text-neutral-500 dark:text-neutral-300" },
   attention:     { label: "Attention",    icon: AlertTriangle,bar: "border-amber-500/60",    bg: "bg-amber-500/[0.06]",    tile: "bg-amber-500/15 text-amber-600 dark:text-amber-300", text: "text-amber-600 dark:text-amber-300" },
-  aretenir:      { label: "À retenir",    icon: Sparkles,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
+  aretenir:      { label: "À retenir",    icon: Bookmark,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   demonstration: { label: "Démonstration",icon: ScrollText,   bar: "border-neutral-400/40",  bg: "bg-black/[0.02] dark:bg-white/[0.03]", tile: "bg-neutral-400/15 text-neutral-500 dark:text-neutral-300", text: "text-neutral-500 dark:text-neutral-300", collapsible: true },
   solution:      { label: "Correction",   icon: CheckCircle2, bar: "border-emerald-500/50",  bg: "bg-emerald-500/[0.05]",  tile: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-300", text: "text-emerald-600 dark:text-emerald-300", collapsible: true },
   experience:    { label: "Expérience",    icon: FlaskConical, bar: "border-teal-500/60",     bg: "bg-teal-500/[0.05]",     tile: "bg-teal-500/15 text-teal-600 dark:text-teal-300", text: "text-teal-600 dark:text-teal-300" },
@@ -193,13 +191,13 @@ const CO: Record<string, { label: string; icon: typeof Info; bar: string; bg: st
   rule:          { label: "Rule",         icon: BookMarked,   bar: "border-arctic-blue/60",  bg: "bg-arctic-blue/[0.05]",  tile: "bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   example:       { label: "Example",      icon: Lightbulb,    bar: "border-emerald-500/60",  bg: "bg-emerald-500/[0.05]",  tile: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-300", text: "text-emerald-600 dark:text-emerald-300" },
   tip:           { label: "Tip",          icon: Info,         bar: "border-sky-500/60",      bg: "bg-sky-500/[0.05]",      tile: "bg-sky-500/15 text-sky-600 dark:text-sky-300", text: "text-sky-600 dark:text-sky-300" },
-  remember:      { label: "Remember",     icon: Sparkles,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
+  remember:      { label: "Remember",     icon: Bookmark,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   mistake:       { label: "Common mistake", icon: AlertTriangle, bar: "border-amber-500/60", bg: "bg-amber-500/[0.06]",   tile: "bg-amber-500/15 text-amber-600 dark:text-amber-300", text: "text-amber-600 dark:text-amber-300" },
   // Philosophie (arabe)
   tarif:         { label: "تعريف",         icon: BookMarked,   bar: "border-arctic-blue/60",  bg: "bg-arctic-blue/[0.05]",  tile: "bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   ishkal:        { label: "إشكال",         icon: AlertTriangle,bar: "border-amber-500/60",    bg: "bg-amber-500/[0.06]",    tile: "bg-amber-500/15 text-amber-600 dark:text-amber-300", text: "text-amber-600 dark:text-amber-300" },
   mawqif:        { label: "موقف فلسفي",    icon: Sigma,        bar: "border-indigo-500/60",   bg: "bg-indigo-500/[0.05]",   tile: "bg-indigo-500/15 text-indigo-500 dark:text-indigo-300", text: "text-indigo-500 dark:text-indigo-300" },
-  khoulasa:      { label: "خلاصة",         icon: Sparkles,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
+  khoulasa:      { label: "خلاصة",         icon: Bookmark,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
 };
 
 /** Inline application the student does while reading; "Fait" feeds the maîtrise %. */

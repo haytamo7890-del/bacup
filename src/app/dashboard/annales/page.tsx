@@ -269,7 +269,7 @@ export default function AnnalesPage() {
         </div>
 
         {tracks.length === 0 && rows.length === 0 ? (
-          <div className="mt-6 glass rounded-3xl p-10 text-center text-neutral-400">Les annales de cette matière arrivent très bientôt. ✨</div>
+          <div className="mt-6 glass rounded-3xl p-10 text-center text-neutral-400">Les annales de cette matière arrivent très bientôt.</div>
         ) : (
           <>
             {hasSwitcher && (
@@ -351,7 +351,7 @@ export default function AnnalesPage() {
         <GraduationCap className="w-4 h-4" /> {is2bac ? (trackNameByCode.get(activeFil ?? "") ?? "Matières") : (ownTrackName || "Matières")}
       </div>
       {subjectCards.length === 0 ? (
-        <div className="mt-4 glass rounded-3xl p-10 text-center text-neutral-400">Les annales arrivent très bientôt. ✨</div>
+        <div className="mt-4 glass rounded-3xl p-10 text-center text-neutral-400">Les annales arrivent très bientôt.</div>
       ) : (
         <div className="mt-4 space-y-3">
           {subjectCards.map((c) => {

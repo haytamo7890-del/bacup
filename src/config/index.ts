@@ -42,6 +42,23 @@ export const BEACHHEAD = {
 export const FEATURES = {
   tutor: true,
   examLibrary: true,
-  gamification: false,
+  gamification: true, // XP, streaks, mastery, classement — live
   community: false,
+  /** Exam engine (sujets nationaux + examens blancs, chronométrés /20). Off = locked « Bientôt » everywhere. */
+  examEngine: false,
 } as const;
+
+/** Copy + progress shown on the locked Examens section while the exam engine is rebuilt. */
+export const EXAMS_COMING_SOON = {
+  progress: 86, // % shown on the construction bar — bump as the rebuild advances
+  title: "Le mode Examen arrive",
+  lead: "On reconstruit les examens pour qu'ils ressemblent vraiment au jour J.",
+  features: [
+    { t: "Vrais sujets du BAC", d: "Les sujets nationaux, session normale et rattrapage, matière par matière." },
+    { t: "Examens blancs type BAC", d: "Des sujets complets écrits par Bac-up, au niveau et au format de l'épreuve." },
+    { t: "Chronométré, noté /20", d: "Le temps officiel, un barème réel et ta note estimée à la fin." },
+    { t: "Corrigé détaillé + IA", d: "Chaque question expliquée pas à pas, et l'IA pour creuser ce qui bloque." },
+  ],
+  meanwhile: "En attendant, entraîne-toi par notion et avec les séries : c'est là que se construit ta note.",
+} as const;
+

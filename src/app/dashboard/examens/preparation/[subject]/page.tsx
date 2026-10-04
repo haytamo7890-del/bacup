@@ -7,6 +7,7 @@
  *   Séries     : curated sets (bilans, unités, mixtes BAC, séries du prof)
  *                with best score + one-time XP bonus.
  *   Examens    : annales / examens blancs → the existing session runner (unchanged).
+ *                Locked « Bientôt » while FEATURES.examEngine is false (opens <ExamsSoonPanel>).
  * Route: /dashboard/examens/preparation/<subjectCode>?f=<track>&mode=notion|series|examens&chapter=<id>
  */
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -19,6 +20,8 @@ import { SubjectAmbient } from "@/components/subject-pad";
 import { SubjectBanner } from "@/components/subject-banner";
 import { PrepAlerts } from "@/components/prep/prep-alerts";
 import { LockBadge } from "@/components/dashboard/paywall";
+import { SoonPill, ExamsSoonPanel } from "@/components/prep/exams-soon";
+import { FEATURES } from "@/config";
 import { SHORT } from "@/lib/filieres";
 import { groupByNotion, notionLabel, OTHER_NOTIONS } from "@/lib/notions";
 import {
@@ -55,6 +58,8 @@ export default function PrepSubjectPage() {
   const [exams, setExams] = useState<Exam[]>([]);
   const [mastery, setMastery] = useState<Map<string, ChapterMastery>>(new Map());
   const [notions, setNotions] = useState<Record<string, NotionRow[] | "loading">>({});
+  const examsLocked = !FEATURES.examEngine;
+  const [soonOpen, setSoonOpen] = useState(false);
 
   const subject = ctx?.subjectsByCode.get(code) ?? null;
   const t = subjectTheme(code);
@@ -63,11 +68,12 @@ export default function PrepSubjectPage() {
     (async () => {
       const sp = new URLSearchParams(window.location.search);
       const m = sp.get("mode");
-      if (m === "series" || m === "examens" || m === "notion") setMode(m);
+      if (m === "examens" && !FEATURES.examEngine) setSoonOpen(true);
+      else if (m === "series" || m === "examens" || m === "notion") setMode(m);
       if (sp.get("chapter")) setOpenCh(sp.get("chapter"));
       const c = await loadStudentCtx(supabase);
       setCtx(c);
-      setFiliere(sp.get("f") || c?.ownTrack || null);
+      setFiliere(c?.ownTrack || null); // own filière only
       if (!c?.levelId || !c.subjectsByCode.get(code)) setLoading(false);
     })();
   }, [supabase, code]);
@@ -94,7 +100,7 @@ export default function PrepSubjectPage() {
     (async () => {
       setLoading(true);
       const trackId = filiere ? ctx.trackIdByCode.get(filiere) ?? null : null;
-      const chs = await loadChapters(supabase, ctx.levelId!, subject.id, trackId);
+      const chs = await loadChapters(supabase, ctx.levelId!, subject.id, trackId, filiere);
       const ids = chs.map((c) => c.id);
       const [b, se, m, { data: ex }] = await Promise.all([
         loadBank(supabase, ids),
@@ -105,8 +111,8 @@ export default function PrepSubjectPage() {
       ]);
       const sp = await loadSeriesProgress(supabase, se.map((s) => s.id));
       if (!live) return;
-      setChapters(chs); setBank(b.questions); setSeries(se); setSProg(sp); setMastery(m);
-      setExams(((ex ?? []) as Exam[]).filter((e) => (e.track_id === trackId || e.track_id == null) && !b.bankExamIds.has(e.id)));
+      setChapters(chs); setBank(b.questions); setSeries(se.filter((x) => !x.chapter_id || chs.some((c) => c.id === x.chapter_id))); setSProg(sp); setMastery(m);
+      setExams(FEATURES.examEngine ? ((ex ?? []) as Exam[]).filter((e) => (e.track_id === trackId || e.track_id == null) && !b.bankExamIds.has(e.id)) : []);
       setLoading(false);
       const deep = new URLSearchParams(window.location.search).get("chapter");
       const deepItems = deep ? b.questions.filter((q) => q.chapter_id === deep) : [];
@@ -131,7 +137,7 @@ export default function PrepSubjectPage() {
     return m;
   }, [bank]);
 
-  const firstId = chapters[0]?.id;
+  const firstId = chapters.find((c) => (qByCh.get(c.id)?.length ?? 0) > 0)?.id;
   const lockedCh = useCallback((id: string | null) => access.isDemo && id !== firstId, [access.isDemo, firstId]);
 
   const ensureNotions = (chId: string) => { if (notions[chId] === undefined && (qByCh.get(chId)?.length ?? 0) > 0) void loadNotions(chId, qByCh.get(chId)!); };
@@ -148,7 +154,7 @@ export default function PrepSubjectPage() {
   if (!loading && !subject) {
     return (
       <div className="max-w-3xl mx-auto py-8">
-        <Link href={prepRoutes.hub()} className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white"><ChevronLeft className="w-4 h-4" /> Espace de préparation</Link>
+        <Link href={prepRoutes.hub()} className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white"><ChevronLeft className="w-4 h-4" /> Préparation</Link>
         <div className="mt-6 glass rounded-3xl p-10 text-center text-neutral-400">Matière introuvable.</div>
       </div>
     );
@@ -165,7 +171,7 @@ export default function PrepSubjectPage() {
     <div className="max-w-3xl mx-auto py-8 fade-up">
       <SubjectAmbient code={code} />
       <Link href={prepRoutes.hub(filiere !== ctx?.ownTrack ? filiere : null)} className="inline-flex items-center gap-1.5 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white">
-        <ChevronLeft className="w-4 h-4" /> {ctx?.levelCode === "2bac" && filiere ? `Préparation · ${SHORT[filiere] ?? filiere}` : "Espace de préparation"}
+        <ChevronLeft className="w-4 h-4" /> {ctx?.levelCode === "2bac" && filiere ? `Préparation · ${SHORT[filiere] ?? filiere}` : "Préparation"}
       </Link>
 
       <div className="mt-3">
@@ -176,7 +182,7 @@ export default function PrepSubjectPage() {
             onClick={() => goChapter(resume.ch!.id)} />
         ) : (
           <SubjectBanner mode="new" code={code} name={subject.name}
-            subtitle={loading ? "Chargement…" : `${counts.notion} exercices · ${counts.series} séries · ${counts.examens} examens`}
+            subtitle={loading ? "Chargement…" : `${counts.notion} exercices · ${counts.series} séries${examsLocked ? "" : ` · ${counts.examens} examens`}`}
             onClick={() => chapters[0] && goChapter(chapters[0].id)} />
         ))}
       </div>
@@ -187,6 +193,16 @@ export default function PrepSubjectPage() {
       <div className="mt-5 grid grid-cols-3 gap-1 p-1 rounded-2xl glass">
         {TABS.map((tb) => {
           const on = mode === tb.key;
+          if (tb.key === "examens" && examsLocked) {
+            return (
+              <button key={tb.key} onClick={() => setSoonOpen(true)} aria-haspopup="dialog"
+                className="relative flex items-center justify-center gap-1.5 rounded-xl px-2 py-2.5 text-sm font-semibold transition text-neutral-400 dark:text-neutral-500 hover:bg-black/[0.04] dark:hover:bg-white/[0.05]">
+                <Lock className="w-3.5 h-3.5 shrink-0" />
+                <span className="truncate">{tb.label}</span>
+                <SoonPill className="hidden sm:inline-flex" />
+              </button>
+            );
+          }
           return (
             <button key={tb.key} onClick={() => setMode(tb.key)}
               className={`flex items-center justify-center gap-1.5 rounded-xl px-2 py-2.5 text-sm font-semibold transition ${on ? `bg-gradient-to-br ${t.grad} text-white shadow-lg shadow-black/10` : "text-neutral-500 dark:text-neutral-400 hover:bg-black/[0.04] dark:hover:bg-white/[0.05]"}`}>
@@ -201,13 +217,14 @@ export default function PrepSubjectPage() {
       {loading ? (
         <div className="grid place-items-center h-40 text-neutral-400"><Loader2 className="w-6 h-6 animate-spin" /></div>
       ) : mode === "notion" ? (
-        <NotionMode chapters={chapters} qByCh={qByCh} mastery={mastery} openCh={openCh} setOpenCh={setOpenCh}
+        <NotionMode chapters={chapters.filter((c) => (qByCh.get(c.id)?.length ?? 0) > 0)} qByCh={qByCh} mastery={mastery} openCh={openCh} setOpenCh={setOpenCh}
           notions={notions} ensureNotions={ensureNotions} lockedCh={lockedCh} dept={dept} setDept={setDept} code={code} />
       ) : mode === "series" ? (
         <SeriesMode series={series} prog={sProg} chapters={chapters} lockedCh={lockedCh} code={code} />
-      ) : (
+      ) : examsLocked ? null : (
         <ExamMode exams={exams} code={code} />
       )}
+      <ExamsSoonPanel open={soonOpen} onClose={() => setSoonOpen(false)} />
     </div>
   );
 }
@@ -221,7 +238,7 @@ function NotionMode({ chapters, qByCh, mastery, openCh, setOpenCh, notions, ensu
 }) {
   const router = useRouter();
   const t = subjectTheme(code);
-  if (chapters.length === 0) return <Empty text="Les exercices de cette matière arrivent très bientôt. ✨" />;
+  if (chapters.length === 0) return <Empty text="Les exercices de cette matière arrivent très bientôt." />;
   const num = new Map(chapters.map((c, i) => [c.id, i + 1]));
 
   const Row = (c: PrepChapter) => {
@@ -347,7 +364,7 @@ function SeriesMode({ series, prog, chapters, lockedCh, code }: {
   series: Serie[]; prog: Map<string, SerieProgress>; chapters: PrepChapter[]; lockedCh: (id: string | null) => boolean; code: string;
 }) {
   const t = subjectTheme(code);
-  if (series.length === 0) return <Empty text="Les séries de cette matière arrivent très bientôt. ✨" />;
+  if (series.length === 0) return <Empty text="Les séries de cette matière arrivent très bientôt." />;
   const chName = new Map(chapters.map((c) => [c.id, c.name]));
   const chPos = new Map(chapters.map((c, i) => [c.id, i]));
   const done = series.filter((s) => prog.get(s.id)?.completed_at).length;
@@ -436,7 +453,7 @@ function ExamMode({ exams }: { exams: Exam[]; code: string }) {
         </div>
       </div>
       {exams.length === 0 ? (
-        <Empty text="Les annales de cette matière arrivent très bientôt. ✨" />
+        <Empty text="Les annales de cette matière arrivent très bientôt." />
       ) : (
         <div className="mt-4 space-y-2.5">
           {exams.map((e) => (

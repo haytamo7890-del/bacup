@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Lock, ArrowRight, Sparkles } from "lucide-react";
+import { Lock, ArrowRight } from "lucide-react";
 
 /** Small "premium" pill for locked cards/rows. */
 export function LockBadge({ className = "" }: { className?: string }) {
@@ -24,7 +24,7 @@ export function UpgradeCard({
 }) {
   return (
     <div className={`glass rounded-3xl p-7 text-center ${className}`}>
-      <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center mx-auto"><Sparkles className="w-5 h-5" /></span>
+      <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center mx-auto"><Lock className="w-5 h-5" /></span>
       <h3 className="mt-4 text-lg font-bold tracking-tight">{title}</h3>
       <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400 max-w-sm mx-auto">{sub}</p>
       <Link href="/payment" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white px-6 py-3 hover:brightness-105 transition">

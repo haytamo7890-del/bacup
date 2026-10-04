@@ -1,0 +1,1029 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "sm_a",
+  "sm_b"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-sm-suites-flash-1",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Raisonnement par récurrence",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Raisonnement par récurrence",
+     "difficulty": 2,
+     "statement": "On veut montrer par récurrence que $4^n - 1$ est divisible par $3$ pour tout $n\\in\\mathbb N$. Dans l'hérédité, l'égalité utile est :",
+     "options": [
+      {
+       "label": "$4^{n+1} - 1 = 4\\left(4^n - 1\\right) + 3$",
+       "correct": true,
+       "why": "Elle fait apparaître $4^n - 1$ (divisible par $3$ par hypothèse) et $3$."
+      },
+      {
+       "label": "$4^{n+1} - 1 = \\left(4^n - 1\\right) + 4$",
+       "why": "Faux : $(4^n - 1) + 4 = 4^n + 3 \\neq 4^{n+1} - 1$."
+      },
+      {
+       "label": "$4^{n+1} - 1 = 4\\left(4^n - 1\\right) - 3$",
+       "why": "Erreur de signe : $4(4^n - 1) = 4^{n+1} - 4$, il faut ajouter $3$."
+      },
+      {
+       "label": "$4^{n+1} - 1 = \\left(4^n - 1\\right) + 3$",
+       "why": "Faux : $(4^n - 1) + 3 = 4^n + 2$."
+      }
+     ],
+     "hint": "Écris $4^{n+1} = 4\\times4^n$ et fais apparaître $4^n - 1$.",
+     "solution": "$4^{n+1} - 1 = 4\\times4^n - 4 + 3 = 4(4^n - 1) + 3$. Si $3 \\mid 4^n - 1$, alors $3$ divise $4(4^n - 1)$ et $3$, donc leur somme $4^{n+1} - 1$.",
+     "points": 1,
+     "methode": "Dans l'hérédité, fais apparaître l'expression de rang $n$ dans celle de rang $n+1$.",
+     "ref": "m2-sm-suites-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-flash-2",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Suites géométriques",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites géométriques",
+     "difficulty": 1,
+     "statement": "La suite définie par $u_n = \\dfrac{2^{n+1}}{3^n}$ est géométrique de raison :",
+     "options": [
+      {
+       "label": "$\\dfrac23$",
+       "correct": true,
+       "why": "$\\frac{u_{n+1}}{u_n} = \\frac{2^{n+2}}{3^{n+1}}\\times\\frac{3^n}{2^{n+1}} = \\frac23$."
+      },
+      {
+       "label": "$2$",
+       "why": "Tu n'as regardé que le numérateur : le dénominateur est multiplié par $3$ à chaque rang."
+      },
+      {
+       "label": "$\\dfrac32$",
+       "why": "Tu as inversé le quotient $\\frac{u_{n+1}}{u_n}$."
+      },
+      {
+       "label": "$\\dfrac43$",
+       "why": "$2^{n+1}$ est multiplié par $2$ (et non $4$) quand $n$ augmente de $1$."
+      }
+     ],
+     "hint": "Calcule $\\frac{u_{n+1}}{u_n}$.",
+     "solution": "$u_n = 2\\left(\\frac23\\right)^n$ : la suite est géométrique de raison $\\frac23$ et de premier terme $u_0 = 2$.",
+     "points": 1,
+     "methode": "Pour reconnaître une suite géométrique, écris $u_n = a\\,q^n$.",
+     "ref": "m2-sm-suites-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-flash-3",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Suites de référence",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites de référence",
+     "difficulty": 1,
+     "statement": "La suite $\\left((-3)^n\\right)$ :",
+     "options": [
+      {
+       "label": "n'a pas de limite",
+       "correct": true,
+       "why": "Pour $q \\le -1$, $q^n$ oscille entre des valeurs positives et négatives de plus en plus grandes."
+      },
+      {
+       "label": "tend vers $+\\infty$",
+       "why": "Les termes de rang impair sont négatifs : $(-3)^1 = -3$, $(-3)^3 = -27$."
+      },
+      {
+       "label": "tend vers $-\\infty$",
+       "why": "Les termes de rang pair sont positifs : $(-3)^2 = 9$."
+      },
+      {
+       "label": "tend vers $0$",
+       "why": "$q^n \\to 0$ seulement si $|q| < 1$."
+      }
+     ],
+     "hint": "Regarde les termes de rang pair et de rang impair.",
+     "solution": "$(-3)^{2k} = 9^k \\to +\\infty$ et $(-3)^{2k+1} = -3\\times9^k \\to -\\infty$. Les deux sous-suites ont des limites différentes : $\\left((-3)^n\\right)$ n'a pas de limite.",
+     "points": 1,
+     "methode": "$q^n$ : $q > 1$ ⇒ $+\\infty$ ; $|q| < 1$ ⇒ $0$ ; $q = 1$ ⇒ $1$ ; $q \\le -1$ ⇒ pas de limite.",
+     "ref": "m2-sm-suites-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-flash-4",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Croissances comparées",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Croissances comparées",
+     "difficulty": 2,
+     "statement": "$\\lim\\limits_{n\\to+\\infty}\\dfrac{n^3}{2^n}$ vaut :",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "Une suite géométrique de raison $> 1$ l'emporte sur toute puissance de $n$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "$n^3$ grandit, mais $2^n$ grandit infiniment plus vite."
+      },
+      {
+       "label": "$1$",
+       "why": "$\\frac\\infty\\infty$ est une forme indéterminée, pas $1$."
+      },
+      {
+       "label": "elle n'existe pas",
+       "why": "La forme indéterminée se lève par croissances comparées : la limite existe."
+      }
+     ],
+     "hint": "Croissances comparées : $q^n$ ($q > 1$) contre $n^\\alpha$.",
+     "solution": "Pour $q > 1$ et $\\alpha > 0$, $\\lim\\dfrac{n^\\alpha}{q^n} = 0$. Ici $q = 2$ et $\\alpha = 3$ : la limite vaut $0$.",
+     "points": 1,
+     "methode": "À l'infini : $\\ln n \\ll n^\\alpha \\ll q^n$ ($q > 1$) $\\ll n!$.",
+     "ref": "m2-sm-suites-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-flash-5",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Théorème d'encadrement",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Théorème d'encadrement",
+     "difficulty": 2,
+     "statement": "$\\lim\\limits_{n\\to+\\infty}\\dfrac{n + \\sin n}{n + 1}$ vaut :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "$\\frac{n-1}{n+1} \\le u_n \\le \\frac{n+1}{n+1} = 1$ et $\\frac{n-1}{n+1} \\to 1$."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\frac{\\sin n}{n+1} \\to 0$, mais $\\frac{n}{n+1} \\to 1$."
+      },
+      {
+       "label": "elle n'existe pas car $\\sin n$ oscille",
+       "why": "$\\sin n$ est bornée et « écrasée » par $n$ : on encadre."
+      },
+      {
+       "label": "$2$",
+       "why": "Tu as pris $\\sin n \\to 1$ : $\\sin n$ n'a pas de limite, il faut encadrer."
+      }
+     ],
+     "hint": "Encadre $\\sin n$ entre $-1$ et $1$.",
+     "solution": "$-1 \\le \\sin n \\le 1$, donc $\\dfrac{n - 1}{n + 1} \\le \\dfrac{n + \\sin n}{n+1} \\le \\dfrac{n+1}{n+1} = 1$. Or $\\dfrac{n-1}{n+1} = \\dfrac{1 - \\frac1n}{1 + \\frac1n} \\to 1$. Par encadrement, la limite vaut $1$.",
+     "points": 1,
+     "ref": "m2-sm-suites-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-flash-6",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Suites adjacentes",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites adjacentes",
+     "difficulty": 2,
+     "statement": "Pour $n \\ge 1$, quelles suites sont adjacentes ?",
+     "options": [
+      {
+       "label": "$u_n = 1 - \\dfrac1n$ et $v_n = 1 + \\dfrac1n$",
+       "correct": true,
+       "why": "$(u_n)$ croît, $(v_n)$ décroît et $v_n - u_n = \\frac2n \\to 0$."
+      },
+      {
+       "label": "$u_n = 1 - \\dfrac1n$ et $v_n = 2 + \\dfrac1n$",
+       "why": "$v_n - u_n = 1 + \\frac2n \\to 1 \\ne 0$."
+      },
+      {
+       "label": "$u_n = 1 + \\dfrac1n$ et $v_n = 1 - \\dfrac1n$",
+       "why": "Ici $(u_n)$ est décroissante et $(v_n)$ croissante : c'est l'inverse de la définition (et $v_n < u_n$)."
+      },
+      {
+       "label": "$u_n = \\dfrac{(-1)^n}{n}$ et $v_n = \\dfrac1n$",
+       "why": "$(u_n)$ n'est pas monotone."
+      }
+     ],
+     "hint": "Vérifie les trois conditions : une croissante, l'autre décroissante, différence qui tend vers $0$.",
+     "solution": "$(u_n)$ et $(v_n)$ sont adjacentes si $(u_n)$ est croissante, $(v_n)$ décroissante et $\\lim(v_n - u_n) = 0$. Pour $u_n = 1 - \\frac1n$ et $v_n = 1 + \\frac1n$ : les trois conditions sont vérifiées (limite commune $1$).",
+     "points": 1,
+     "methode": "Adjacentes ⇒ convergentes vers la même limite $\\ell$, avec $u_n \\le \\ell \\le v_n$.",
+     "ref": "m2-sm-suites-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-flash-7",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Somme d'une série géométrique",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Somme d'une série géométrique",
+     "difficulty": 2,
+     "statement": "$\\lim\\limits_{n\\to+\\infty}\\displaystyle\\sum_{k=0}^{n}\\left(\\frac13\\right)^k$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac32$",
+       "correct": true,
+       "why": "$\\frac{1 - (1/3)^{n+1}}{1 - 1/3} \\to \\frac{1}{2/3}$."
+      },
+      {
+       "label": "$3$",
+       "why": "Tu as calculé $\\frac{1}{1/3}$ : c'est $\\frac{1}{1 - q}$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "On ajoute une infinité de termes, mais ils décroissent géométriquement : la somme converge."
+      },
+      {
+       "label": "$\\dfrac23$",
+       "why": "Tu as calculé $1 - q$ au lieu de $\\frac{1}{1-q}$."
+      }
+     ],
+     "hint": "Somme géométrique de premier terme $1$ et de raison $\\frac13$, avec $n+1$ termes.",
+     "solution": "$\\displaystyle\\sum_{k=0}^n\\left(\\frac13\\right)^k = \\frac{1 - \\left(\\frac13\\right)^{n+1}}{1 - \\frac13} = \\frac32\\left(1 - \\left(\\frac13\\right)^{n+1}\\right) \\to \\frac32$.",
+     "points": 1,
+     "methode": "Si $|q| < 1$ : $\\sum_{k=0}^{n}q^k \\to \\frac{1}{1-q}$.",
+     "ref": "m2-sm-suites-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-flash-8",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Convergence monotone",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Convergence monotone",
+     "difficulty": 3,
+     "statement": "$u_0\\in]0;1[$ et $u_{n+1} = u_n - u_n^2$. On admet que $0 < u_n < 1$ pour tout $n$. La suite $(u_n)$ :",
+     "options": [
+      {
+       "label": "converge vers $0$",
+       "correct": true,
+       "why": "$u_{n+1} - u_n = -u_n^2 < 0$ : décroissante et minorée par $0$ ; la limite vérifie $\\ell = \\ell - \\ell^2$, donc $\\ell = 0$."
+      },
+      {
+       "label": "converge vers $1$",
+       "why": "$(u_n)$ est décroissante et $u_0 < 1$ : elle ne peut pas tendre vers $1$."
+      },
+      {
+       "label": "diverge vers $-\\infty$",
+       "why": "Elle est minorée par $0$."
+      },
+      {
+       "label": "converge vers $\\dfrac12$",
+       "why": "$\\frac12$ ne vérifie pas $\\ell = \\ell - \\ell^2$."
+      }
+     ],
+     "hint": "Étudie le signe de $u_{n+1} - u_n$, puis résous $\\ell = \\ell - \\ell^2$.",
+     "solution": "$u_{n+1} - u_n = -u_n^2 < 0$ : $(u_n)$ est décroissante. Elle est minorée par $0$, donc converge vers $\\ell \\ge 0$. La fonction $x \\mapsto x - x^2$ est continue, donc $\\ell = \\ell - \\ell^2$, soit $\\ell^2 = 0$ : $\\ell = 0$.",
+     "points": 1,
+     "ref": "m2-sm-suites-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-ex1",
+   "chapter": "suites",
+   "kind": "probleme",
+   "title": "Exercice 1 — Suite homographique et suite auxiliaire",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $f$ la fonction définie sur $[0;+\\infty[$ par $f(x) = \\dfrac{2x + 3}{x + 4}$, et $(u_n)$ la suite définie par $u_0 = 0$ et $u_{n+1} = f(u_n)$. On pose $v_n = \\dfrac{u_n - 1}{u_n + 3}$.",
+   "questions": [
+    {
+     "notion": "Méthode d'étude",
+     "difficulty": 1,
+     "statement": "1) Pour tout $x \\ge 0$, $f'(x)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{5}{(x+4)^2}$",
+       "correct": true,
+       "why": "$\\frac{2(x+4) - (2x+3)}{(x+4)^2} = \\frac{5}{(x+4)^2}$."
+      },
+      {
+       "label": "$\\dfrac{-5}{(x+4)^2}$",
+       "why": "Tu as calculé $uv' - u'v$."
+      },
+      {
+       "label": "$\\dfrac{11}{(x+4)^2}$",
+       "why": "Erreur de signe : $8 - 3 = 5$, pas $8 + 3$."
+      },
+      {
+       "label": "$2$",
+       "why": "Tu as dérivé seulement le numérateur."
+      }
+     ],
+     "hint": "$\\left(\\frac{ax+b}{cx+d}\\right)' = \\frac{ad - bc}{(cx+d)^2}$.",
+     "solution": "$f'(x) = \\dfrac{2\\times4 - 3\\times1}{(x+4)^2} = \\dfrac{5}{(x+4)^2} > 0$ : $f$ est strictement croissante sur $[0;+\\infty[$.",
+     "points": 1,
+     "ref": "m2-sm-suites-ex1-q1"
+    },
+    {
+     "notion": "Suites récurrentes et récurrence",
+     "difficulty": 2,
+     "statement": "2) On suppose $0 \\le u_n < 1$. Comme $f$ est croissante, on obtient :",
+     "options": [
+      {
+       "label": "$\\dfrac34 \\le u_{n+1} < 1$",
+       "correct": true,
+       "why": "$f(0) = \\frac34$ et $f(1) = 1$."
+      },
+      {
+       "label": "$0 \\le u_{n+1} < \\dfrac34$",
+       "why": "$f(0) = \\frac34$, pas $0$ : applique $f$ aux deux bornes."
+      },
+      {
+       "label": "$u_{n+1} \\ge 1$",
+       "why": "$f$ croissante et $u_n < 1$ donnent $u_{n+1} < f(1) = 1$."
+      },
+      {
+       "label": "$\\dfrac34 \\le u_{n+1} < \\dfrac54$",
+       "why": "$f(1) = \\frac{2 + 3}{1 + 4} = 1$."
+      }
+     ],
+     "hint": "Calcule $f(0)$ et $f(1)$.",
+     "solution": "$f$ est strictement croissante, donc $0 \\le u_n < 1 \\Rightarrow f(0) \\le f(u_n) < f(1)$, soit $\\frac34 \\le u_{n+1} < 1$. Avec $u_0 = 0$, on obtient par récurrence $0 \\le u_n < 1$ pour tout $n$.",
+     "points": 1,
+     "ref": "m2-sm-suites-ex1-q2"
+    },
+    {
+     "notion": "Monotonie et bornes",
+     "difficulty": 2,
+     "statement": "3) Pour tout $n$, $u_{n+1} - u_n$ est égal à :",
+     "options": [
+      {
+       "label": "$\\dfrac{(1 - u_n)(u_n + 3)}{u_n + 4}$",
+       "correct": true,
+       "why": "$\\frac{2u_n + 3 - u_n^2 - 4u_n}{u_n + 4} = \\frac{-u_n^2 - 2u_n + 3}{u_n + 4}$."
+      },
+      {
+       "label": "$\\dfrac{(u_n - 1)(u_n + 3)}{u_n + 4}$",
+       "why": "Erreur de signe : $-u_n^2 - 2u_n + 3 = -(u_n - 1)(u_n + 3)$."
+      },
+      {
+       "label": "$\\dfrac{(1 - u_n)(u_n + 3)}{(u_n + 4)^2}$",
+       "why": "Le dénominateur commun est $u_n + 4$, pas son carré."
+      },
+      {
+       "label": "$\\dfrac{3 - u_n}{u_n + 4}$",
+       "why": "Tu as soustrait $u_n$ sans le multiplier par $u_n + 4$."
+      }
+     ],
+     "hint": "Réduis au même dénominateur, puis factorise le trinôme $-x^2 - 2x + 3$.",
+     "solution": "$u_{n+1} - u_n = \\dfrac{2u_n + 3 - u_n(u_n + 4)}{u_n + 4} = \\dfrac{-u_n^2 - 2u_n + 3}{u_n + 4} = \\dfrac{(1 - u_n)(u_n + 3)}{u_n + 4}$. Comme $0 \\le u_n < 1$, c'est strictement positif : $(u_n)$ est strictement croissante.",
+     "points": 1,
+     "ref": "m2-sm-suites-ex1-q3"
+    },
+    {
+     "notion": "Suites géométriques",
+     "difficulty": 2,
+     "statement": "4) La suite $(v_n)$ est géométrique de raison :",
+     "options": [
+      {
+       "label": "$\\dfrac15$",
+       "correct": true,
+       "why": "$v_{n+1} = \\frac{u_n - 1}{5u_n + 15} = \\frac15 v_n$."
+      },
+      {
+       "label": "$5$",
+       "why": "Tu as inversé le rapport."
+      },
+      {
+       "label": "$-\\dfrac13$",
+       "why": "C'est le premier terme $v_0 = \\frac{0 - 1}{0 + 3}$."
+      },
+      {
+       "label": "$\\dfrac13$",
+       "why": "Recalcule $u_{n+1} + 3 = \\frac{5u_n + 15}{u_n + 4}$."
+      }
+     ],
+     "hint": "Calcule $u_{n+1} - 1$ et $u_{n+1} + 3$ en fonction de $u_n$.",
+     "solution": "$u_{n+1} - 1 = \\dfrac{u_n - 1}{u_n + 4}$ et $u_{n+1} + 3 = \\dfrac{5u_n + 15}{u_n + 4} = \\dfrac{5(u_n + 3)}{u_n + 4}$. Donc $v_{n+1} = \\dfrac{u_n - 1}{5(u_n + 3)} = \\dfrac15 v_n$, avec $v_0 = -\\frac13$.",
+     "points": 1,
+     "ref": "m2-sm-suites-ex1-q4"
+    },
+    {
+     "notion": "Méthode d'étude",
+     "difficulty": 2,
+     "statement": "5) Sachant que $u_n = \\dfrac{1 + 3v_n}{1 - v_n}$, $\\lim\\limits_{n\\to+\\infty}u_n$ vaut :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "$v_n \\to 0$ car $\\left|\\frac15\\right| < 1$, donc $u_n \\to \\frac{1}{1}$."
+      },
+      {
+       "label": "$-3$",
+       "why": "$-3$ est l'autre point fixe de $f$, mais $u_n \\ge 0$."
+      },
+      {
+       "label": "$\\dfrac34$",
+       "why": "$\\frac34 = u_1$, pas la limite."
+      },
+      {
+       "label": "$0$",
+       "why": "$0 = u_0$ ; la suite est croissante."
+      }
+     ],
+     "hint": "Limite de $v_n$, puis opérations.",
+     "solution": "$v_n = -\\frac13\\left(\\frac15\\right)^n \\to 0$, donc $u_n = \\dfrac{1 + 3v_n}{1 - v_n} \\to \\dfrac{1}{1} = 1$. C'est cohérent : $(u_n)$ est croissante et majorée par $1$.",
+     "points": 1,
+     "ref": "m2-sm-suites-ex1-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-ex2",
+   "chapter": "suites",
+   "kind": "probleme",
+   "title": "Exercice 2 — Deux suites adjacentes",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Pour tout entier $n \\ge 1$, on pose $u_n = \\displaystyle\\sum_{k=0}^{n}\\frac{1}{k!} = 1 + \\frac{1}{1!} + \\frac1{2!} + \\dots + \\frac{1}{n!}$ et $v_n = u_n + \\dfrac{1}{n\\cdot n!}$.",
+   "questions": [
+    {
+     "notion": "Monotonie et bornes",
+     "difficulty": 1,
+     "statement": "1) Pour tout $n \\ge 1$, $u_{n+1} - u_n$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{1}{(n+1)!}$",
+       "correct": true,
+       "why": "C'est le terme ajouté au rang $n+1$."
+      },
+      {
+       "label": "$\\dfrac{1}{n!}$",
+       "why": "C'est le dernier terme de $u_n$, pas celui ajouté dans $u_{n+1}$."
+      },
+      {
+       "label": "$\\dfrac{1}{n+1}$",
+       "why": "Le terme ajouté est $\\frac{1}{(n+1)!}$, avec une factorielle."
+      },
+      {
+       "label": "$-\\dfrac{1}{(n+1)!}$",
+       "why": "On ajoute un terme positif : la différence est positive."
+      }
+     ],
+     "hint": "Que contient $u_{n+1}$ de plus que $u_n$ ?",
+     "solution": "$u_{n+1} - u_n = \\dfrac{1}{(n+1)!} > 0$ : $(u_n)$ est strictement croissante.",
+     "points": 1,
+     "ref": "m2-sm-suites-ex2-q1"
+    },
+    {
+     "notion": "Suites adjacentes",
+     "difficulty": 3,
+     "statement": "2) Pour tout $n \\ge 1$, $v_{n+1} - v_n$ vaut :",
+     "options": [
+      {
+       "label": "$-\\dfrac{1}{n(n+1)\\,(n+1)!}$",
+       "correct": true,
+       "why": "$\\frac{1}{(n+1)!} + \\frac{1}{(n+1)(n+1)!} - \\frac{1}{n\\cdot n!} = \\frac{n(n+1) + n - (n+1)^2}{n(n+1)(n+1)!}$."
+      },
+      {
+       "label": "$\\dfrac{1}{n(n+1)\\,(n+1)!}$",
+       "why": "Erreur de signe : le numérateur vaut $n^2 + 2n - (n^2 + 2n + 1) = -1$."
+      },
+      {
+       "label": "$\\dfrac{1}{(n+1)!}$",
+       "why": "C'est $u_{n+1} - u_n$ ; il faut aussi tenir compte des termes $\\frac{1}{n\\cdot n!}$."
+      },
+      {
+       "label": "$0$",
+       "why": "$(v_n)$ n'est pas constante : $v_1 = 3$ et $v_2 = 2{,}75$."
+      }
+     ],
+     "hint": "Réduis au dénominateur commun $n(n+1)(n+1)!$, en utilisant $n! = \\frac{(n+1)!}{n+1}$.",
+     "solution": "$v_{n+1} - v_n = \\dfrac{1}{(n+1)!} + \\dfrac{1}{(n+1)(n+1)!} - \\dfrac{1}{n\\cdot n!}$. Avec $\\dfrac{1}{n\\cdot n!} = \\dfrac{n+1}{n\\,(n+1)!}$ et le dénominateur commun $n(n+1)(n+1)!$ : numérateur $= n(n+1) + n - (n+1)^2 = -1$. Donc $v_{n+1} - v_n = -\\dfrac{1}{n(n+1)(n+1)!} < 0$ : $(v_n)$ est décroissante.",
+     "points": 1,
+     "ref": "m2-sm-suites-ex2-q2"
+    },
+    {
+     "notion": "Suites adjacentes",
+     "difficulty": 2,
+     "statement": "3) Sachant que $v_n - u_n = \\dfrac{1}{n\\cdot n!}$, on peut conclure que :",
+     "options": [
+      {
+       "label": "$(u_n)$ et $(v_n)$ sont adjacentes et convergent vers une même limite $\\ell$",
+       "correct": true,
+       "why": "Croissante, décroissante, et $v_n - u_n \\to 0$."
+      },
+      {
+       "label": "$(u_n)$ et $(v_n)$ divergent",
+       "why": "Deux suites adjacentes convergent toujours."
+      },
+      {
+       "label": "elles convergent vers des limites différentes",
+       "why": "$v_n - u_n \\to 0$ impose la même limite."
+      },
+      {
+       "label": "$(u_n)$ converge mais pas $(v_n)$",
+       "why": "Le théorème des suites adjacentes donne la convergence des deux."
+      }
+     ],
+     "hint": "Rappelle les trois conditions et la conclusion du théorème.",
+     "solution": "$(u_n)$ est croissante, $(v_n)$ décroissante et $\\lim(v_n - u_n) = \\lim\\frac{1}{n\\cdot n!} = 0$ : elles sont adjacentes, donc convergent vers une même limite $\\ell$ (qui est en fait le nombre $\\mathrm e$), avec $u_n \\le \\ell \\le v_n$.",
+     "points": 1,
+     "ref": "m2-sm-suites-ex2-q3"
+    },
+    {
+     "notion": "Opérations et ordre",
+     "difficulty": 2,
+     "statement": "4) En utilisant $u_2 \\le \\ell \\le v_2$, on obtient l'encadrement :",
+     "options": [
+      {
+       "label": "$2{,}5 \\le \\ell \\le 2{,}75$",
+       "correct": true,
+       "why": "$u_2 = 1 + 1 + \\frac12 = 2{,}5$ et $v_2 = 2{,}5 + \\frac{1}{2\\times2} = 2{,}75$."
+      },
+      {
+       "label": "$2 \\le \\ell \\le 3$",
+       "why": "C'est l'encadrement avec $n = 1$ ($u_1 = 2$, $v_1 = 3$)."
+      },
+      {
+       "label": "$2{,}5 \\le \\ell \\le 3$",
+       "why": "$v_2 = u_2 + \\frac{1}{2\\cdot2!} = 2{,}5 + 0{,}25$."
+      },
+      {
+       "label": "$2{,}75 \\le \\ell \\le 3$",
+       "why": "La borne inférieure est $u_2 = 2{,}5$."
+      }
+     ],
+     "hint": "Calcule $u_2$ et $v_2$.",
+     "solution": "$u_2 = \\frac1{0!} + \\frac1{1!} + \\frac1{2!} = 1 + 1 + 0{,}5 = 2{,}5$ et $v_2 = 2{,}5 + \\frac{1}{2\\times2} = 2{,}75$. Donc $2{,}5 \\le \\ell \\le 2{,}75$ (et en effet $\\mathrm e \\approx 2{,}718$).",
+     "points": 1,
+     "ref": "m2-sm-suites-ex2-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-ex3",
+   "chapter": "suites",
+   "kind": "probleme",
+   "title": "Exercice 3 — La suite u(n+1) = ln(1 + u(n))",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $g$ la fonction définie sur $[0;+\\infty[$ par $g(x) = x - \\ln(1 + x)$, et $(u_n)$ la suite définie par $u_0 = 1$ et $u_{n+1} = \\ln(1 + u_n)$ pour tout $n\\in\\mathbb N$.",
+   "questions": [
+    {
+     "notion": "Méthode d'étude",
+     "difficulty": 1,
+     "statement": "1) Pour tout $x \\ge 0$, $g'(x)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{x}{1+x}$",
+       "correct": true,
+       "why": "$1 - \\frac{1}{1+x} = \\frac{x}{1+x}$."
+      },
+      {
+       "label": "$-\\dfrac{x}{1+x}$",
+       "why": "Erreur de signe : $1 - \\frac{1}{1+x} = \\frac{1 + x - 1}{1+x}$."
+      },
+      {
+       "label": "$\\dfrac{1}{1+x}$",
+       "why": "C'est la dérivée de $\\ln(1+x)$ seule."
+      },
+      {
+       "label": "$\\dfrac{2+x}{1+x}$",
+       "why": "Tu as ajouté $\\frac{1}{1+x}$ au lieu de le retrancher."
+      }
+     ],
+     "hint": "$\\left(\\ln(1+x)\\right)' = \\frac{1}{1+x}$.",
+     "solution": "$g'(x) = 1 - \\dfrac{1}{1+x} = \\dfrac{x}{1+x} \\ge 0$ sur $[0;+\\infty[$ : $g$ est croissante (strictement sur $]0;+\\infty[$).",
+     "points": 1,
+     "part": "Partie A — Une inégalité",
+     "ref": "m2-sm-suites-ex3-q1"
+    },
+    {
+     "notion": "Limites par comparaison",
+     "difficulty": 2,
+     "statement": "2) Sachant que $g(0) = 0$, on en déduit que pour tout $x \\ge 0$ :",
+     "options": [
+      {
+       "label": "$\\ln(1 + x) \\le x$",
+       "correct": true,
+       "why": "$g$ croissante et $g(0) = 0$ ⇒ $g(x) \\ge 0$."
+      },
+      {
+       "label": "$\\ln(1 + x) \\ge x$",
+       "why": "Sens inversé : $g(x) = x - \\ln(1+x) \\ge 0$."
+      },
+      {
+       "label": "$\\ln(1 + x) < x$",
+       "why": "Égalité pour $x = 0$ : l'inégalité n'est pas stricte sur $[0;+\\infty[$."
+      },
+      {
+       "label": "$\\ln(1 + x) \\le x - 1$",
+       "why": "Faux en $x = 0$ : $0 \\le -1$ est faux."
+      }
+     ],
+     "hint": "$g(x) \\ge g(0)$ pour $x \\ge 0$.",
+     "solution": "$g$ est croissante sur $[0;+\\infty[$, donc pour $x \\ge 0$, $g(x) \\ge g(0) = 0$, c'est-à-dire $\\ln(1+x) \\le x$.",
+     "points": 1,
+     "part": "Partie A — Une inégalité",
+     "ref": "m2-sm-suites-ex3-q2"
+    },
+    {
+     "notion": "Raisonnement par récurrence",
+     "difficulty": 2,
+     "statement": "3) On montre par récurrence que $u_n > 0$. Dans l'hérédité, de $u_n > 0$ on déduit $u_{n+1} > 0$ car :",
+     "options": [
+      {
+       "label": "$1 + u_n > 1$ et $\\ln$ est strictement croissante avec $\\ln 1 = 0$",
+       "correct": true,
+       "why": "Donc $\\ln(1 + u_n) > \\ln 1 = 0$."
+      },
+      {
+       "label": "$\\ln$ est positive sur $]0;+\\infty[$",
+       "why": "Faux : $\\ln x < 0$ pour $0 < x < 1$."
+      },
+      {
+       "label": "$u_{n+1} \\le u_n$",
+       "why": "Une majoration ne donne pas la positivité."
+      },
+      {
+       "label": "$\\ln(1 + u_n) \\le u_n$",
+       "why": "C'est un majorant de $u_{n+1}$, pas un minorant."
+      }
+     ],
+     "hint": "Compare $1 + u_n$ à $1$.",
+     "solution": "Initialisation : $u_0 = 1 > 0$. Hérédité : si $u_n > 0$, alors $1 + u_n > 1$, et comme $\\ln$ est strictement croissante, $\\ln(1 + u_n) > \\ln 1 = 0$, soit $u_{n+1} > 0$.",
+     "points": 1,
+     "part": "Partie B — Étude de la suite",
+     "ref": "m2-sm-suites-ex3-q3"
+    },
+    {
+     "notion": "Monotonie et bornes",
+     "difficulty": 2,
+     "statement": "4) Comme $u_{n+1} - u_n = -g(u_n)$, la suite $(u_n)$ est :",
+     "options": [
+      {
+       "label": "décroissante",
+       "correct": true,
+       "why": "$g(u_n) \\ge 0$ (partie A), donc $u_{n+1} - u_n \\le 0$."
+      },
+      {
+       "label": "croissante",
+       "why": "Attention au signe moins : $-g(u_n) \\le 0$."
+      },
+      {
+       "label": "constante",
+       "why": "$u_1 = \\ln 2 \\approx 0{,}69 \\ne u_0 = 1$."
+      },
+      {
+       "label": "ni croissante ni décroissante",
+       "why": "Le signe de $-g(u_n)$ est le même pour tout $n$."
+      }
+     ],
+     "hint": "Utilise le signe de $g$ établi en partie A.",
+     "solution": "$u_{n+1} - u_n = \\ln(1 + u_n) - u_n = -g(u_n) \\le 0$ car $u_n > 0$ et $g \\ge 0$. La suite $(u_n)$ est décroissante.",
+     "points": 1,
+     "part": "Partie B — Étude de la suite",
+     "ref": "m2-sm-suites-ex3-q4"
+    },
+    {
+     "notion": "Convergence monotone",
+     "difficulty": 2,
+     "statement": "5) Que peut-on en conclure ?",
+     "options": [
+      {
+       "label": "$(u_n)$ converge vers un réel $\\ell \\ge 0$",
+       "correct": true,
+       "why": "Décroissante et minorée par $0$."
+      },
+      {
+       "label": "$(u_n)$ tend vers $-\\infty$",
+       "why": "Elle est minorée par $0$."
+      },
+      {
+       "label": "$(u_n)$ converge vers $1$",
+       "why": "$u_0 = 1$ et la suite décroît : sa limite est $\\le u_1 < 1$."
+      },
+      {
+       "label": "on ne peut rien conclure",
+       "why": "Décroissante + minorée ⇒ convergente."
+      }
+     ],
+     "hint": "Théorème de convergence monotone.",
+     "solution": "$(u_n)$ est décroissante et minorée par $0$, donc elle converge vers un réel $\\ell$ ; par passage à la limite dans $u_n > 0$, $\\ell \\ge 0$.",
+     "points": 1,
+     "part": "Partie B — Étude de la suite",
+     "ref": "m2-sm-suites-ex3-q5"
+    },
+    {
+     "notion": "Suites récurrentes et récurrence",
+     "difficulty": 3,
+     "statement": "6) La limite $\\ell$ vaut :",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "$\\ell = \\ln(1 + \\ell) \\Leftrightarrow g(\\ell) = 0$, et $g$ ne s'annule qu'en $0$ sur $[0;+\\infty[$."
+      },
+      {
+       "label": "$1$",
+       "why": "$1 \\ne \\ln 2$ : $1$ n'est pas solution de $\\ell = \\ln(1 + \\ell)$."
+      },
+      {
+       "label": "$\\ln 2$",
+       "why": "$\\ln 2 = u_1$ ; la suite continue de décroître."
+      },
+      {
+       "label": "$\\mathrm e - 1$",
+       "why": "$\\ln(1 + \\mathrm e - 1) = 1 \\ne \\mathrm e - 1$."
+      }
+     ],
+     "hint": "$x \\mapsto \\ln(1+x)$ est continue : $\\ell = \\ln(1 + \\ell)$, soit $g(\\ell) = 0$.",
+     "solution": "La fonction $x\\mapsto\\ln(1+x)$ est continue sur $[0;+\\infty[$, donc $\\ell = \\ln(1 + \\ell)$, soit $g(\\ell) = 0$. Or $g$ est strictement croissante sur $[0;+\\infty[$ avec $g(0) = 0$ : la seule solution est $\\ell = 0$. Donc $\\lim u_n = 0$.",
+     "points": 1,
+     "part": "Partie B — Étude de la suite",
+     "ref": "m2-sm-suites-ex3-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-suites-ex4",
+   "chapter": "suites",
+   "kind": "probleme",
+   "title": "Exercice 4 — Suite arithmético-géométrique et somme",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $(u_n)$ la suite définie par $u_0 = 2$ et $u_{n+1} = 3u_n - 2$ pour tout $n\\in\\mathbb N$. On pose $v_n = u_n - 1$ et $S_n = \\displaystyle\\sum_{k=0}^{n}u_k$.",
+   "questions": [
+    {
+     "notion": "Suites arithmético-géométriques",
+     "difficulty": 1,
+     "statement": "1) La suite $(v_n)$ est :",
+     "options": [
+      {
+       "label": "géométrique de raison $3$",
+       "correct": true,
+       "why": "$v_{n+1} = 3u_n - 3 = 3(u_n - 1) = 3v_n$."
+      },
+      {
+       "label": "arithmétique de raison $-2$",
+       "why": "$-2$ est la constante de la relation ; $(v_n)$ est géométrique."
+      },
+      {
+       "label": "géométrique de raison $\\dfrac13$",
+       "why": "On passe de $v_n$ à $v_{n+1}$ en multipliant par $3$."
+      },
+      {
+       "label": "géométrique de raison $-2$",
+       "why": "Factorise $3u_n - 3 = 3(u_n - 1)$."
+      }
+     ],
+     "hint": "Calcule $v_{n+1} = u_{n+1} - 1$.",
+     "solution": "$v_{n+1} = u_{n+1} - 1 = 3u_n - 3 = 3(u_n - 1) = 3v_n$ : $(v_n)$ est géométrique de raison $3$ et de premier terme $v_0 = 1$.",
+     "points": 1,
+     "part": "Partie A — Terme général",
+     "ref": "m2-sm-suites-ex4-q1"
+    },
+    {
+     "notion": "Suites géométriques",
+     "difficulty": 1,
+     "statement": "2) Pour tout $n$, $u_n$ vaut :",
+     "options": [
+      {
+       "label": "$3^n + 1$",
+       "correct": true,
+       "why": "$v_n = 3^n$ et $u_n = v_n + 1$."
+      },
+      {
+       "label": "$2\\times3^n$",
+       "why": "Tu as utilisé $u_0 = 2$ comme premier terme de $(v_n)$ : $v_0 = u_0 - 1 = 1$."
+      },
+      {
+       "label": "$3^n - 1$",
+       "why": "$u_n = v_n + 1$, pas $v_n - 1$."
+      },
+      {
+       "label": "$2\\times3^n - 1$",
+       "why": "Recalcule $v_0 = 1$, puis $u_n = v_n + 1$."
+      }
+     ],
+     "hint": "$v_n = v_0\\,3^n$ avec $v_0 = u_0 - 1$.",
+     "solution": "$v_n = 1\\times3^n = 3^n$, donc $u_n = 3^n + 1$. Contrôle : $u_0 = 2$ ✓, $u_1 = 4 = 3\\times2 - 2$ ✓.",
+     "points": 1,
+     "part": "Partie A — Terme général",
+     "ref": "m2-sm-suites-ex4-q2"
+    },
+    {
+     "notion": "Somme d'une série géométrique",
+     "difficulty": 2,
+     "statement": "3) $\\displaystyle\\sum_{k=0}^{n}3^k$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{3^{n+1} - 1}{2}$",
+       "correct": true,
+       "why": "$n+1$ termes, premier terme $1$, raison $3$ : $\\frac{3^{n+1} - 1}{3 - 1}$."
+      },
+      {
+       "label": "$\\dfrac{3^n - 1}{2}$",
+       "why": "Il y a $n + 1$ termes (de $k = 0$ à $n$), donc l'exposant est $n+1$."
+      },
+      {
+       "label": "$3^{n+1} - 1$",
+       "why": "Tu as oublié de diviser par $q - 1 = 2$."
+      },
+      {
+       "label": "$\\dfrac{1 - 3^{n+1}}{2}$",
+       "why": "Ce nombre est négatif : le dénominateur est $1 - q = -2$, pas $2$."
+      }
+     ],
+     "hint": "$\\sum_{k=0}^{n} q^k = \\frac{q^{n+1} - 1}{q - 1}$.",
+     "solution": "$\\displaystyle\\sum_{k=0}^n 3^k = \\dfrac{3^{n+1} - 1}{3 - 1} = \\dfrac{3^{n+1} - 1}{2}$.",
+     "points": 1,
+     "part": "Partie B — Somme",
+     "ref": "m2-sm-suites-ex4-q3"
+    },
+    {
+     "notion": "Opérations et ordre",
+     "difficulty": 2,
+     "statement": "4) On en déduit que $S_n$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{3^{n+1} - 1}{2} + n + 1$",
+       "correct": true,
+       "why": "$S_n = \\sum 3^k + \\sum 1$, et il y a $n + 1$ termes égaux à $1$."
+      },
+      {
+       "label": "$\\dfrac{3^{n+1} - 1}{2}$",
+       "why": "Tu as oublié la somme des $1$ : $u_k = 3^k + 1$."
+      },
+      {
+       "label": "$\\dfrac{3^{n+1} - 1}{2} + n$",
+       "why": "De $k = 0$ à $n$, il y a $n + 1$ termes, pas $n$."
+      },
+      {
+       "label": "$\\dfrac{3^{n+1} - 1}{2} + 1$",
+       "why": "On ajoute $1$ pour chaque terme, soit $n + 1$ fois."
+      }
+     ],
+     "hint": "Sépare $\\sum(3^k + 1) = \\sum 3^k + \\sum 1$.",
+     "solution": "$S_n = \\displaystyle\\sum_{k=0}^n(3^k + 1) = \\sum_{k=0}^n3^k + \\sum_{k=0}^n1 = \\frac{3^{n+1} - 1}{2} + (n + 1)$. Contrôle : $S_0 = \\frac{3 - 1}{2} + 1 = 2 = u_0$ ✓.",
+     "points": 1,
+     "part": "Partie B — Somme",
+     "ref": "m2-sm-suites-ex4-q4"
+    },
+    {
+     "notion": "Croissances comparées",
+     "difficulty": 3,
+     "statement": "5) $\\lim\\limits_{n\\to+\\infty}\\dfrac{S_n}{3^n}$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac32$",
+       "correct": true,
+       "why": "$\\frac{S_n}{3^n} = \\frac32 - \\frac{1}{2\\cdot3^n} + \\frac{n+1}{3^n} \\to \\frac32$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "$S_n$ et $3^n$ tendent vers $+\\infty$ au même rythme : le quotient a une limite finie."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "$\\frac{3^{n+1}}{2\\cdot3^n} = \\frac32$, pas $\\frac12$."
+      },
+      {
+       "label": "$3$",
+       "why": "Tu as oublié de diviser par $2$."
+      }
+     ],
+     "hint": "Divise chaque terme par $3^n$, et utilise $\\frac{n}{3^n} \\to 0$.",
+     "solution": "$\\dfrac{S_n}{3^n} = \\dfrac{3^{n+1}}{2\\cdot3^n} - \\dfrac{1}{2\\cdot3^n} + \\dfrac{n + 1}{3^n} = \\dfrac32 - \\dfrac{1}{2\\cdot3^n} + \\dfrac{n+1}{3^n}$. Par croissances comparées, $\\frac{n+1}{3^n} \\to 0$, et $\\frac{1}{3^n} \\to 0$. Donc la limite vaut $\\frac32$.",
+     "points": 1,
+     "part": "Partie B — Somme",
+     "ref": "m2-sm-suites-ex4-q5"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-sm-suites-serie-1",
+   "title": "Suites numériques · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (5 questions).",
+   "kind": "custom",
+   "chapter": "suites",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-sm-suites-flash-q1",
+    "m2-sm-suites-flash-q2",
+    "m2-sm-suites-flash-q3",
+    "m2-sm-suites-flash-q4",
+    "m2-sm-suites-ex1-q1",
+    "m2-sm-suites-ex1-q2",
+    "m2-sm-suites-ex1-q3",
+    "m2-sm-suites-ex1-q4",
+    "m2-sm-suites-ex1-q5"
+   ]
+  },
+  {
+   "slug": "m2-sm-suites-serie-2",
+   "title": "Suites numériques · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (4 questions).",
+   "kind": "custom",
+   "chapter": "suites",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-sm-suites-flash-q5",
+    "m2-sm-suites-flash-q6",
+    "m2-sm-suites-flash-q7",
+    "m2-sm-suites-flash-q8",
+    "m2-sm-suites-ex2-q1",
+    "m2-sm-suites-ex2-q2",
+    "m2-sm-suites-ex2-q3",
+    "m2-sm-suites-ex2-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-suites-serie-3",
+   "title": "Suites numériques · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (6 questions) + Exercice 4 (5 questions).",
+   "kind": "custom",
+   "chapter": "suites",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-sm-suites-ex3-q1",
+    "m2-sm-suites-ex3-q2",
+    "m2-sm-suites-ex3-q3",
+    "m2-sm-suites-ex3-q4",
+    "m2-sm-suites-ex3-q5",
+    "m2-sm-suites-ex3-q6",
+    "m2-sm-suites-ex4-q1",
+    "m2-sm-suites-ex4-q2",
+    "m2-sm-suites-ex4-q3",
+    "m2-sm-suites-ex4-q4",
+    "m2-sm-suites-ex4-q5"
+   ]
+  }
+ ]
+}

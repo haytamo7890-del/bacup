@@ -347,7 +347,7 @@ function GameMock() {
   return (
     <Mock>
       <div className="grid grid-cols-3 gap-3">
-        {[{ v: "244", l: "XP" }, { v: "12", l: "série 🔥" }, { v: "16,2", l: "note estimée" }].map((k) => (
+        {[{ v: "244", l: "XP" }, { v: "12", l: "jours de série" }, { v: "16,2", l: "note estimée" }].map((k) => (
           <div key={k.l} className="rounded-xl bg-white/[0.02] border border-white/8 p-3 text-center"><div className="font-display font-black text-xl text-[#7fe9f5]">{k.v}</div><div className="text-[11px] text-white/45">{k.l}</div></div>
         ))}
       </div>
@@ -423,8 +423,8 @@ export function AvecSans() {
             <div className="rounded-3xl border border-white/8 bg-white/[0.015] p-6 h-full">
               <div className="text-center"><div className="font-display font-black text-2xl text-white/70">Sans Bac Up</div><p className="mt-1 text-sm text-white/40">Le stress, sans plan.</p></div>
               <div className="mt-6 space-y-3 saturate-[.55]">
-                <Notif good={false} icon={<GmailIcon s={20} />} title="Où est passée ma moyenne ? 💀" sub="Toujours bloqué à 08/20." time="now" />
-                <Notif good={false} icon={<WhatsIcon s={20} />} title="Je suis complètement perdu 😩" sub="Je sais même pas par où commencer." time="2m" />
+                <Notif good={false} icon={<GmailIcon s={20} />} title="Où est passée ma moyenne ?" sub="Toujours bloqué à 08/20." time="now" />
+                <Notif good={false} icon={<WhatsIcon s={20} />} title="Je suis complètement perdu" sub="Je sais même pas par où commencer." time="2m" />
                 <Notif good={false} icon={<LogoMark size={20} />} title="Stress +42% cette semaine" sub="3ème nuit blanche sans méthode." time="5m" />
               </div>
             </div>
@@ -433,9 +433,9 @@ export function AvecSans() {
             <div className="rounded-3xl border border-arctic-cyan/25 bg-gradient-to-br from-arctic-blue/12 to-transparent p-6 h-full">
               <div className="text-center"><div className="font-display font-black text-2xl text-transparent bg-clip-text bg-gradient-to-r from-arctic-cyan to-white">Avec Bac Up</div><p className="mt-1 text-sm text-white/50">La clarté, et ça monte.</p></div>
               <div className="mt-6 space-y-3">
-                <Notif good icon={<LogoMark size={20} />} title="Moyenne +6 pts ce mois 📈" sub="Note estimée : 16,2/20." time="now" />
-                <Notif good icon={<GmailIcon s={20} />} title="Enfin je comprends tout 🧡" sub="L’IA m’a débloqué en physique." time="4m" />
-                <Notif good icon={<WhatsIcon s={20} />} title="Coach : ta séance du jour est prête 💪" sub="2 exos sur tes points faibles." time="12m" />
+                <Notif good icon={<LogoMark size={20} />} title="Moyenne +6 pts ce mois" sub="Note estimée : 16,2/20." time="now" />
+                <Notif good icon={<GmailIcon s={20} />} title="Enfin je comprends tout" sub="L’IA m’a débloqué en physique." time="4m" />
+                <Notif good icon={<WhatsIcon s={20} />} title="Coach : ta séance du jour est prête" sub="2 exos sur tes points faibles." time="12m" />
               </div>
             </div>
           </Reveal>
@@ -534,7 +534,7 @@ export function Pricing({ level, setLevel, onDemo }: { level: Level; setLevel: (
   const [formule, setFormule] = useState<"solo" | "binome">("solo");
   const price = formule === "solo" ? 220 : 200;
   const feats = ["Toutes les matières, examens blancs /20", "IA Explique (5 modes) + Coach IA", "Monk Mode + Classement + XP", "1bac & 2bac inclus", "Mises à jour toute l’année", "Accès démo → complet"];
-  const wa = "https://wa.me/?text=" + encodeURIComponent("Rejoins-moi sur Bac Up, on paie 200 DH chacun au lieu de 220 👇 https://bacup.ma");
+  const wa = "https://wa.me/?text=" + encodeURIComponent("Rejoins-moi sur Bac Up, on paie 200 DH chacun au lieu de 220 : https://bacup.ma");
   return (
     <Sec id="pricing" alt className="py-24 px-5 border-t border-white/5">
       <div className="max-w-5xl mx-auto">

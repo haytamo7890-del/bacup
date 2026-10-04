@@ -15,7 +15,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
-import { CoachAvatar } from "@/components/dashboard/coach-avatar";
 import { BrandLogo } from "@/components/brand";
 
 type NavItem = { label: string; icon: LucideIcon; href: string; match: (p: string) => boolean };
@@ -23,7 +22,7 @@ type NavItem = { label: string; icon: LucideIcon; href: string; match: (p: strin
 const NAV: NavItem[] = [
   { label: "Dashboard", icon: Layers, href: "/dashboard", match: (p) => p === "/dashboard" },
   { label: "Cours", icon: BookOpen, href: "/dashboard/cours", match: (p) => p.startsWith("/dashboard/cours") },
-  { label: "Examens", icon: FileText, href: "/dashboard/examens/preparation", match: (p) => p.startsWith("/dashboard/examens") },
+  { label: "Préparation", icon: FileText, href: "/dashboard/examens/preparation", match: (p) => p.startsWith("/dashboard/examens") },
   { label: "Annales", icon: ScrollText, href: "/dashboard/annales", match: (p) => p.startsWith("/dashboard/annales") },
   { label: "Bibliothèque", icon: Library, href: "/dashboard/bibliotheque", match: (p) => p.startsWith("/dashboard/bibliotheque") },
   { label: "Monk Mode", icon: Sun, href: "/dashboard/monk", match: (p) => p.startsWith("/dashboard/monk") },
@@ -105,12 +104,6 @@ export function DashboardSidebar({ collapsed }: { collapsed: boolean }) {
               </Link>
             );
           })}
-          <Link href="/dashboard/coach" title="Coach IA" className={row(pathname === "/dashboard/coach")}>
-            <span className="transition-transform duration-200 group-hover:scale-110 shrink-0 grid place-items-center w-5 h-5">
-              <CoachAvatar size={20} />
-            </span>
-            {!collapsed && <span>Coach IA</span>}
-          </Link>
         </nav>
 
         {/* bottom — always visible */}

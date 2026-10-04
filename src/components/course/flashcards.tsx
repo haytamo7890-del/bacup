@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { Blocks, extractCards } from "./course-content";
 import { Tex } from "@/components/math";
-import { X, ChevronLeft, ChevronRight, Shuffle, RotateCw, Sparkles } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Shuffle, RotateCw, Layers } from "lucide-react";
 
 const LABEL: Record<string, string> = { definition: "Définition", theoreme: "Théorème", propriete: "Propriété" };
 const PROMPT: Record<string, string> = { definition: "Définis", theoreme: "Énonce", propriete: "Rappelle la propriété" };
@@ -42,7 +42,7 @@ export function FlashcardDeck({ bodies, onClose }: { bodies: string[]; onClose: 
   return (
     <Overlay onClose={onClose}>
       <div className="flex items-center justify-between mb-4">
-        <div className="inline-flex items-center gap-1.5 text-sm font-semibold text-arctic-blue dark:text-arctic-cyan"><Sparkles className="w-4 h-4" /> Flashcards · révision active</div>
+        <div className="inline-flex items-center gap-1.5 text-sm font-semibold text-arctic-blue dark:text-arctic-cyan"><Layers className="w-4 h-4" /> Flashcards · révision active</div>
         <div className="text-xs text-neutral-400">{pos + 1} / {cards.length}</div>
       </div>
 

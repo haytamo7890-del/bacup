@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Bell, Flame, PlayCircle, Sparkles, Check } from "lucide-react";
+import { Bell, Flame, PlayCircle, Check, Megaphone } from "lucide-react";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 
 type Notif = { id: string; icon: "monk" | "resume" | "new"; title: string; desc: string; href: string };
@@ -34,7 +34,7 @@ export function NotificationBell() {
           const today = ymd(new Date());
           const todaySet = new Set((mc ?? []).filter((c) => (c as { day: string }).day === today).map((c) => (c as { habit_id: string }).habit_id));
           const done = coreIds.every((id) => todaySet.has(id));
-          if (!done) out.push({ id: "monk", icon: "monk", title: "Monk Mode du jour", desc: "Coche tes non-négociables avant minuit 🔥", href: "/dashboard/monk" });
+          if (!done) out.push({ id: "monk", icon: "monk", title: "Monk Mode du jour", desc: "Coche tes non-négociables avant minuit", href: "/dashboard/monk" });
         }
       }
 
@@ -68,7 +68,7 @@ export function NotificationBell() {
   }, []);
 
   const count = notifs.length;
-  const Ico = { monk: Flame, resume: PlayCircle, new: Sparkles };
+  const Ico = { monk: Flame, resume: PlayCircle, new: Megaphone };
 
   return (
     <div ref={ref} className="relative">
@@ -89,7 +89,7 @@ export function NotificationBell() {
           <div className="px-3 py-2 text-xs font-bold uppercase tracking-wide text-neutral-400">Notifications</div>
           {count === 0 ? (
             <div className="px-3 py-6 text-center text-sm text-neutral-400 inline-flex flex-col items-center gap-2 w-full">
-              <Check className="w-5 h-5 text-emerald-500" /> Tout est à jour ✨
+              <Check className="w-5 h-5 text-emerald-500" /> Tout est à jour
             </div>
           ) : (
             <div className="space-y-1">

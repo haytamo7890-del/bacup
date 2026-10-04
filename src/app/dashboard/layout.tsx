@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { ArrowRight, Info } from "lucide-react";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { DashboardSidebar } from "@/components/dashboard/sidebar";
 import { DashboardTopbar } from "@/components/dashboard/topbar";
@@ -91,14 +91,14 @@ export default function DashboardLayout({
             className="mx-6 lg:mx-10 mt-3 rounded-xl bg-gradient-to-r from-arctic-cyan/15 to-arctic-blue/15 border border-arctic-blue/25 px-4 py-2.5 flex items-center justify-between gap-3 hover:brightness-110 transition"
           >
             <span className="text-sm font-semibold text-arctic-blue dark:text-arctic-cyan inline-flex items-center gap-2">
-              <Sparkles className="w-4 h-4" /> Mode démo · accès limité
+              <Info className="w-4 h-4" /> Mode démo · accès limité
             </span>
             <span className="text-sm font-bold text-arctic-blue dark:text-arctic-cyan inline-flex items-center gap-1">
               Obtenir l&apos;accès <ArrowRight className="w-4 h-4" />
             </span>
           </Link>
         )}
-        <main className="flex-1 overflow-y-auto px-6 lg:px-10 pb-12">{children}</main>
+        <main className="flex-1 overflow-y-auto px-5 sm:px-8 lg:px-14 pt-2 pb-20">{children}</main>
       </div>
     </div>
   );

@@ -8,19 +8,10 @@ import { Tex } from "@/components/math";
 import Link from "next/link";
 import { subjectTheme } from "@/config/subjects";
 import { SubjectAmbient, SubjectName } from "@/components/subject-pad";
+import { ExamsSoonPanel } from "@/components/prep/exams-soon";
+import { FEATURES } from "@/config";
 import {
-  BookOpen,
-  Check,
-  ChevronLeft,
-  ChevronRight,
-  Clock,
-  Eye,
-  FileText,
-  Loader2,
-  Lock,
-  Shuffle,
-  Sparkles,
-  Zap,
+  BookOpen, Check, ChevronLeft, ChevronRight, Clock, Eye, FileText, Loader2, Lock, Shuffle, Zap, Lightbulb,
 } from "lucide-react";
 
 type Subject = { id: string; name: string };
@@ -70,6 +61,7 @@ export default function ExamensPage() {
     "subjects" | "modes" | "exams" | "notions" | "run" | "results"
   >("subjects");
   const [loading, setLoading] = useState(false);
+  const [soonOpen, setSoonOpen] = useState(false);
 
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [subject, setSubject] = useState<Subject | null>(null);
@@ -260,6 +252,7 @@ export default function ExamensPage() {
     if (!subject) return;
     setLoading(true);
     let q = supabase.from("exercises").select(EX_SELECT).eq("subject_id", subject.id);
+    if (!FEATURES.examEngine) q = q.is("exam_id", null); // examens blancs hidden while the exam engine is locked
     if (levelId) q = q.eq("level_id", levelId);
     const { data } = await q;
     const all = flatten((data ?? []) as unknown as ExRow[]);
@@ -292,6 +285,7 @@ export default function ExamensPage() {
     if (!subject) return;
     setLoading(true);
     let q = supabase.from("exercises").select(EX_SELECT).eq("subject_id", subject.id);
+    if (!FEATURES.examEngine) q = q.is("exam_id", null); // examens blancs hidden while the exam engine is locked
     if (levelId) q = q.eq("level_id", levelId);
     const { data } = await q;
     const all = flatten((data ?? []) as unknown as ExRow[]);
@@ -346,8 +340,8 @@ export default function ExamensPage() {
   if (step === "subjects") {
     return (
       <Shell
-        title="Entraînement & Examens"
-        subtitle="Choisis une matière : révise par notion, enchaîne des séries d'exercices, ou passe un examen blanc/national."
+        title="Préparation"
+        subtitle="Choisis une matière : révise par notion ou enchaîne des séries d'exercices."
         tabs={
           <Link href="/dashboard/examens/preparation" className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full chip hover:-translate-y-0.5 transition">
             <FileText className="w-4 h-4" /> Toutes les annales
@@ -364,7 +358,7 @@ export default function ExamensPage() {
               <div className="w-11 h-11 rounded-2xl bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan grid place-items-center font-bold uppercase">
                 {s.name.slice(0, 2)}
               </div>
-              <SubjectName name={s.name} sizeClass="text-3xl" className="mt-3" />
+              <SubjectName name={s.name} sizeClass="text-2xl" className="mt-3" />
               <div className="mt-1 text-xs text-neutral-400">Voir les examens</div>
             </button>
           ))}
@@ -425,13 +419,15 @@ export default function ExamensPage() {
               <SectionLabel n={3} title="Exam blanc & national" desc="Sujets nationaux et examens blancs, chronométrés comme le jour J." />
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <ModeCard
-                  icon={<FileText className="w-5 h-5" />}
+                  icon={FEATURES.examEngine ? <FileText className="w-5 h-5" /> : <Lock className="w-5 h-5" />}
                   title="Examen Complet"
                   desc="Sujet complet, chronomètre officiel, conditions réelles du Bac."
-                  onClick={() => setStep("exams")}
+                  badge={FEATURES.examEngine ? undefined : "Bientôt"}
+                  onClick={() => (FEATURES.examEngine ? setStep("exams") : setSoonOpen(true))}
                 />
               </div>
             </section>
+            <ExamsSoonPanel open={soonOpen} onClose={() => setSoonOpen(false)} />
           </div>
         )}
       </Shell>
@@ -472,7 +468,7 @@ export default function ExamensPage() {
   }
 
   // ---------- EXAMS LIST ----------
-  if (step === "exams") {
+  if (step === "exams" && FEATURES.examEngine) {
     return (
       <Shell
         title={subject?.name ?? "Examens"}
@@ -643,7 +639,7 @@ export default function ExamensPage() {
           <span className="text-2xl text-neutral-400 font-medium">/20</span>
         </div>
         <div className="relative mt-3 text-lg font-bold">
-          {passed ? "Bravo, continue comme ça ! 🎉" : "Ne lâche rien — chaque erreur te fait progresser. 💪"}
+          {passed ? "Bravo, continue comme ça." : "Ne lâche rien : chaque erreur te fait progresser."}
         </div>
         <div className="relative mt-1 text-sm text-neutral-400">
           {earnedPts} / {totalPts} points · {questions.length} questions
@@ -652,7 +648,7 @@ export default function ExamensPage() {
           <div className="relative mt-4 inline-flex items-center gap-3 rounded-full bg-arctic-blue/10 px-4 py-2 text-sm font-semibold">
             <span className="text-arctic-blue dark:text-arctic-cyan">+{xpResult.earned} XP</span>
             <span className="text-neutral-400">·</span>
-            <span className="text-orange-500">🔥 {xpResult.streak} j</span>
+            <span className="text-orange-500">Série : {xpResult.streak} j</span>
           </div>
         )}
       </div>
@@ -743,9 +739,9 @@ function ExplainMenu({ q, choiceLabel, locked }: { q: Q; choiceLabel: string; lo
         }),
       });
       const json = await res.json();
-      setText(json.text || `⚠ ${json.error || "Le coach IA n'a pas pu répondre."}`);
+      setText(json.text || `${json.error || "Le coach IA n'a pas pu répondre."}`);
     } catch {
-      setText("⚠ Impossible de contacter le coach.");
+      setText("Impossible de contacter le coach.");
     }
     setBusy(null);
   }
@@ -754,7 +750,7 @@ function ExplainMenu({ q, choiceLabel, locked }: { q: Q; choiceLabel: string; lo
     <div className="mt-4">
       <div className="flex items-center gap-2 flex-wrap">
         <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-arctic-blue dark:text-arctic-cyan">
-          <Sparkles className="w-3.5 h-3.5" /> Expliquer avec l&apos;IA :
+          <Lightbulb className="w-3.5 h-3.5" /> Expliquer avec l&apos;IA :
         </span>
         {AI_MODES.map((m) => (
           <button

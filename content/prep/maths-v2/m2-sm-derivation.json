@@ -1,0 +1,1062 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "sm_a",
+  "sm_b"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-sm-derivation-flash-1",
+   "chapter": "derivation",
+   "kind": "qcu",
+   "title": "Dérivabilité à gauche et à droite",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Dérivabilité à gauche et à droite",
+     "difficulty": 2,
+     "statement": "Pour $f(x) = |x - 1|$, au point $x = 1$ :",
+     "options": [
+      {
+       "label": "$f$ est dérivable à gauche et à droite, mais pas dérivable en $1$",
+       "correct": true,
+       "why": "$f'_g(1) = -1 \\ne f'_d(1) = 1$ : point anguleux."
+      },
+      {
+       "label": "$f$ est dérivable en $1$ et $f'(1) = 0$",
+       "why": "Les taux d'accroissement à gauche et à droite tendent vers $-1$ et $1$ : pas de nombre dérivé commun."
+      },
+      {
+       "label": "$f$ n'est dérivable ni à gauche ni à droite en $1$",
+       "why": "Elle l'est des deux côtés : les demi-dérivées valent $-1$ et $1$."
+      },
+      {
+       "label": "$f$ n'est pas continue en $1$",
+       "why": "$|x - 1| \\to 0 = f(1)$ : $f$ est continue en $1$."
+      }
+     ],
+     "hint": "Calcule $\\frac{f(x) - f(1)}{x - 1}$ pour $x > 1$ puis pour $x < 1$.",
+     "solution": "Pour $x > 1$ : $\\frac{|x-1|}{x - 1} = 1$ ; pour $x < 1$ : $\\frac{|x-1|}{x-1} = -1$. Donc $f'_d(1) = 1$ et $f'_g(1) = -1$. Elles sont différentes : $f$ n'est pas dérivable en $1$ ; la courbe a un point anguleux.",
+     "points": 1,
+     "methode": "Dérivable en $a$ ⇔ dérivable à gauche et à droite avec $f'_g(a) = f'_d(a)$.",
+     "ref": "m2-sm-derivation-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-flash-2",
+   "chapter": "derivation",
+   "kind": "qcu",
+   "title": "Dérivée d'une composée et d'une réciproque",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Dérivée d'une composée et d'une réciproque",
+     "difficulty": 3,
+     "statement": "$f(x) = x^3 + x$ est une bijection de $\\mathbb R$ sur $\\mathbb R$. $(f^{-1})'(2)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac14$",
+       "correct": true,
+       "why": "$f(1) = 2$ et $(f^{-1})'(2) = \\frac{1}{f'(1)} = \\frac{1}{3 + 1}$."
+      },
+      {
+       "label": "$\\dfrac{1}{13}$",
+       "why": "Tu as calculé $\\frac{1}{f'(2)}$ : il faut $\\frac{1}{f'(f^{-1}(2))}$, avec $f^{-1}(2) = 1$."
+      },
+      {
+       "label": "$13$",
+       "why": "C'est $f'(2)$."
+      },
+      {
+       "label": "$4$",
+       "why": "C'est $f'(1)$ ; la dérivée de la réciproque est l'inverse."
+      }
+     ],
+     "hint": "$(f^{-1})'(y) = \\dfrac{1}{f'\\left(f^{-1}(y)\\right)}$. Cherche d'abord $f^{-1}(2)$.",
+     "solution": "$f(1) = 1 + 1 = 2$, donc $f^{-1}(2) = 1$. $f'(x) = 3x^2 + 1$, $f'(1) = 4 \\ne 0$. Donc $(f^{-1})'(2) = \\frac{1}{f'(1)} = \\frac14$.",
+     "points": 1,
+     "methode": "$(f^{-1})'(b) = \\frac{1}{f'(a)}$ où $a = f^{-1}(b)$ et $f'(a) \\ne 0$.",
+     "ref": "m2-sm-derivation-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-flash-3",
+   "chapter": "derivation",
+   "kind": "qcu",
+   "title": "Théorème de Rolle",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Théorème de Rolle",
+     "difficulty": 2,
+     "statement": "$f$ est continue sur $[a;b]$, dérivable sur $]a;b[$ et $f(a) = f(b)$. Le théorème de Rolle affirme que :",
+     "options": [
+      {
+       "label": "il existe $c\\in]a;b[$ tel que $f'(c) = 0$",
+       "correct": true,
+       "why": "La courbe a une tangente horizontale entre $a$ et $b$."
+      },
+      {
+       "label": "$f'(x) = 0$ pour tout $x\\in]a;b[$",
+       "why": "Rolle donne l'existence d'au moins un point, pas une dérivée nulle partout."
+      },
+      {
+       "label": "il existe $c\\in]a;b[$ tel que $f(c) = 0$",
+       "why": "C'est $f'$ qui s'annule, pas $f$."
+      },
+      {
+       "label": "$f$ est constante sur $[a;b]$",
+       "why": "$f(a) = f(b)$ n'implique pas que $f$ soit constante."
+      }
+     ],
+     "hint": "Interprétation graphique : une courbe qui part et revient à la même hauteur.",
+     "solution": "Rolle : si $f$ est continue sur $[a;b]$, dérivable sur $]a;b[$ et $f(a) = f(b)$, alors il existe au moins un $c\\in]a;b[$ tel que $f'(c) = 0$.",
+     "points": 1,
+     "ref": "m2-sm-derivation-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-flash-4",
+   "chapter": "derivation",
+   "kind": "qcu",
+   "title": "Théorème des accroissements finis",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Théorème des accroissements finis",
+     "difficulty": 3,
+     "statement": "En appliquant le TAF à $\\ln$ sur $[x;x+1]$ ($x > 0$), on obtient :",
+     "options": [
+      {
+       "label": "$\\dfrac{1}{x+1} < \\ln\\left(1 + \\dfrac1x\\right) < \\dfrac1x$",
+       "correct": true,
+       "why": "$\\ln(x+1) - \\ln x = \\frac{1}{c}$ avec $x < c < x+1$."
+      },
+      {
+       "label": "$\\dfrac1x < \\ln\\left(1 + \\dfrac1x\\right) < \\dfrac{1}{x+1}$",
+       "why": "Inégalités inversées : $\\frac1c$ est décroissante en $c$, donc $\\frac{1}{x+1} < \\frac1c < \\frac1x$."
+      },
+      {
+       "label": "$\\ln\\left(1 + \\dfrac1x\\right) = \\dfrac{1}{x}$",
+       "why": "Le TAF donne $\\frac1c$ pour un $c$ inconnu entre $x$ et $x+1$, pas exactement $\\frac1x$."
+      },
+      {
+       "label": "$x < \\ln\\left(1 + \\dfrac1x\\right) < x + 1$",
+       "why": "Tu as encadré $c$, pas $\\frac1c$."
+      }
+     ],
+     "hint": "$\\ln(x+1) - \\ln x = \\ln'(c)\\times1$ avec $c\\in]x;x+1[$.",
+     "solution": "$\\ln$ est continue sur $[x;x+1]$ et dérivable sur $]x;x+1[$ : il existe $c\\in]x;x+1[$ tel que $\\ln(x+1) - \\ln x = \\frac1c$. Comme $x < c < x + 1$ : $\\frac{1}{x+1} < \\frac1c < \\frac1x$. Or $\\ln(x+1) - \\ln x = \\ln\\left(1 + \\frac1x\\right)$.",
+     "points": 1,
+     "methode": "TAF : $f(b) - f(a) = f'(c)(b - a)$ ; on encadre ensuite $f'(c)$ grâce à $a < c < b$.",
+     "ref": "m2-sm-derivation-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-flash-5",
+   "chapter": "derivation",
+   "kind": "qcu",
+   "title": "Définition et propriétés",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Définition et propriétés",
+     "difficulty": 1,
+     "statement": "$\\ln 8 - 2\\ln 2$ est égal à :",
+     "options": [
+      {
+       "label": "$\\ln 2$",
+       "correct": true,
+       "why": "$\\ln8 = 3\\ln2$, donc $3\\ln2 - 2\\ln2 = \\ln2$."
+      },
+      {
+       "label": "$\\ln 4$",
+       "why": "Tu as calculé $\\ln\\frac82$ : $2\\ln2 = \\ln4$, donc $\\ln8 - \\ln4 = \\ln 2$."
+      },
+      {
+       "label": "$\\ln 6$",
+       "why": "$\\ln a - \\ln b = \\ln\\frac ab$, pas $\\ln(a - b)$."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\ln 8 = 3\\ln 2$, pas $2\\ln 2$."
+      }
+     ],
+     "hint": "Écris $8 = 2^3$.",
+     "solution": "$\\ln 8 = \\ln 2^3 = 3\\ln2$, donc $\\ln8 - 2\\ln2 = 3\\ln 2 - 2\\ln 2 = \\ln 2$.",
+     "points": 1,
+     "methode": "$\\ln(ab) = \\ln a + \\ln b$, $\\ln\\frac ab = \\ln a - \\ln b$, $\\ln a^n = n\\ln a$.",
+     "ref": "m2-sm-derivation-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-flash-6",
+   "chapter": "derivation",
+   "kind": "qcu",
+   "title": "Limites et dérivée",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limites et dérivée",
+     "difficulty": 2,
+     "statement": "$\\lim\\limits_{x\\to0}\\dfrac{\\mathrm{e}^{2x} - 1}{x}$ vaut :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "C'est le nombre dérivé de $x\\mapsto\\mathrm e^{2x}$ en $0$ : $2\\mathrm e^0 = 2$."
+      },
+      {
+       "label": "$1$",
+       "why": "$\\frac{\\mathrm e^u - 1}{u} \\to 1$ avec $u = 2x$ : il reste un facteur $2$."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\frac00$ est une forme indéterminée."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Tu as divisé par $2$ au lieu de multiplier."
+      }
+     ],
+     "hint": "$\\frac{\\mathrm e^{2x} - 1}{x} = 2\\cdot\\frac{\\mathrm e^{2x} - 1}{2x}$.",
+     "solution": "$\\dfrac{\\mathrm e^{2x} - 1}{x} = 2\\times\\dfrac{\\mathrm e^{2x} - 1}{2x}$ et $\\lim\\limits_{u\\to0}\\dfrac{\\mathrm e^u - 1}{u} = 1$. Donc la limite vaut $2$.",
+     "points": 1,
+     "methode": "Limites-taux en $0$ : $\\frac{\\mathrm e^x - 1}{x}\\to 1$ et $\\frac{\\ln(1+x)}{x} \\to 1$.",
+     "ref": "m2-sm-derivation-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-flash-7",
+   "chapter": "derivation",
+   "kind": "qcu",
+   "title": "Résolution d'équations",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Résolution d'équations",
+     "difficulty": 2,
+     "statement": "L'ensemble des solutions de $\\mathrm{e}^{2x} - 3\\mathrm{e}^{x} + 2 = 0$ est :",
+     "options": [
+      {
+       "label": "$\\{0\\,;\\ln2\\}$",
+       "correct": true,
+       "why": "Avec $X = \\mathrm e^x$ : $X^2 - 3X + 2 = 0$, $X = 1$ ou $X = 2$."
+      },
+      {
+       "label": "$\\{1\\,;2\\}$",
+       "why": "Ce sont les valeurs de $X = \\mathrm e^x$ ; il faut revenir à $x = \\ln X$."
+      },
+      {
+       "label": "$\\{0\\}$",
+       "why": "Tu as oublié la solution $X = 2$, soit $x = \\ln 2$."
+      },
+      {
+       "label": "$\\{\\ln 2\\,;\\ln 3\\}$",
+       "why": "Les racines de $X^2 - 3X + 2$ sont $1$ et $2$, pas $2$ et $3$."
+      }
+     ],
+     "hint": "Pose $X = \\mathrm e^x > 0$.",
+     "solution": "Avec $X = \\mathrm e^x > 0$ : $X^2 - 3X + 2 = 0 \\Leftrightarrow (X-1)(X-2) = 0 \\Leftrightarrow X = 1$ ou $X = 2$. Donc $x = \\ln 1 = 0$ ou $x = \\ln 2$.",
+     "points": 1,
+     "methode": "Équation en $\\mathrm e^{2x}$ et $\\mathrm e^x$ : pose $X = \\mathrm e^x$, résous, garde $X > 0$, puis $x = \\ln X$.",
+     "ref": "m2-sm-derivation-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-flash-8",
+   "chapter": "derivation",
+   "kind": "qcu",
+   "title": "Équations différentielles",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Équations différentielles",
+     "difficulty": 2,
+     "statement": "Les solutions de $y'' + 4y = 0$ sont les fonctions :",
+     "options": [
+      {
+       "label": "$x\\mapsto A\\cos2x + B\\sin2x$",
+       "correct": true,
+       "why": "$r^2 + 4 = 0$ : $r = \\pm2i$."
+      },
+      {
+       "label": "$x\\mapsto A\\cos4x + B\\sin4x$",
+       "why": "La pulsation est $\\sqrt4 = 2$, pas $4$."
+      },
+      {
+       "label": "$x\\mapsto A\\mathrm{e}^{2x} + B\\mathrm{e}^{-2x}$",
+       "why": "C'est la solution de $y'' - 4y = 0$."
+      },
+      {
+       "label": "$x\\mapsto(Ax + B)\\mathrm{e}^{2x}$",
+       "why": "Racine double : ce n'est pas le cas de $r^2 + 4 = 0$."
+      }
+     ],
+     "hint": "Équation caractéristique $r^2 + 4 = 0$.",
+     "solution": "$r^2 + 4 = 0 \\Leftrightarrow r = \\pm2i$ ($p = 0$, $q = 2$). Les solutions sont $y(x) = A\\cos2x + B\\sin2x$, $A, B\\in\\mathbb R$.",
+     "points": 1,
+     "methode": "$y'' + \\omega^2y = 0$ : $y = A\\cos\\omega x + B\\sin\\omega x$.",
+     "ref": "m2-sm-derivation-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-ex1",
+   "chapter": "derivation",
+   "kind": "probleme",
+   "title": "Exercice 1 — Accroissements finis et racine carrée",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $f$ la fonction définie sur $[0;+\\infty[$ par $f(x) = \\sqrt x$.",
+   "questions": [
+    {
+     "notion": "Théorème des accroissements finis",
+     "difficulty": 1,
+     "statement": "1) Sur $[4;9]$, le TAF assure l'existence de $c\\in]4;9[$ tel que :",
+     "options": [
+      {
+       "label": "$\\sqrt9 - \\sqrt4 = \\dfrac{5}{2\\sqrt c}$",
+       "correct": true,
+       "why": "$f(9) - f(4) = f'(c)(9 - 4)$ avec $f'(c) = \\frac{1}{2\\sqrt c}$."
+      },
+      {
+       "label": "$\\sqrt9 - \\sqrt4 = \\dfrac{1}{2\\sqrt c}$",
+       "why": "Tu as oublié le facteur $(b - a) = 5$."
+      },
+      {
+       "label": "$\\dfrac{1}{2\\sqrt c} = 0$",
+       "why": "C'est la conclusion de Rolle, qui exige $f(4) = f(9)$."
+      },
+      {
+       "label": "$\\sqrt9 - \\sqrt4 = 5\\sqrt c$",
+       "why": "Il faut $f'(c)$, pas $f(c)$."
+      }
+     ],
+     "hint": "TAF : $f(b) - f(a) = f'(c)(b - a)$.",
+     "solution": "$f$ est continue sur $[4;9]$ et dérivable sur $]4;9[$ ($f'(x) = \\frac{1}{2\\sqrt x}$). Il existe $c\\in]4;9[$ tel que $f(9) - f(4) = f'(c)(9 - 4)$, soit $3 - 2 = \\frac{5}{2\\sqrt c}$.",
+     "points": 1,
+     "ref": "m2-sm-derivation-ex1-q1"
+    },
+    {
+     "notion": "Théorème des accroissements finis",
+     "difficulty": 2,
+     "statement": "2) La valeur de $c$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac{25}{4}$",
+       "correct": true,
+       "why": "$1 = \\frac{5}{2\\sqrt c} \\Rightarrow \\sqrt c = \\frac52$."
+      },
+      {
+       "label": "$\\dfrac52$",
+       "why": "C'est $\\sqrt c$ : il faut élever au carré."
+      },
+      {
+       "label": "$\\dfrac{13}{2}$",
+       "why": "Le TAF ne donne pas le milieu de l'intervalle en général."
+      },
+      {
+       "label": "$4$",
+       "why": "$c$ est strictement entre $4$ et $9$."
+      }
+     ],
+     "hint": "Résous $1 = \\frac{5}{2\\sqrt c}$.",
+     "solution": "$1 = \\dfrac{5}{2\\sqrt c} \\Leftrightarrow \\sqrt c = \\dfrac52 \\Leftrightarrow c = \\dfrac{25}{4} = 6{,}25 \\in ]4;9[$ ✓.",
+     "points": 1,
+     "ref": "m2-sm-derivation-ex1-q2"
+    },
+    {
+     "notion": "Théorème des accroissements finis",
+     "difficulty": 2,
+     "statement": "3) Pour tout $x > 0$, l'inégalité des accroissements finis sur $[x;x+1]$ donne :",
+     "options": [
+      {
+       "label": "$\\dfrac{1}{2\\sqrt{x+1}} \\le \\sqrt{x+1} - \\sqrt x \\le \\dfrac{1}{2\\sqrt x}$",
+       "correct": true,
+       "why": "$\\frac{1}{2\\sqrt t}$ est décroissante : on l'encadre par ses valeurs en $x+1$ et en $x$."
+      },
+      {
+       "label": "$\\dfrac{1}{2\\sqrt{x}} \\le \\sqrt{x+1} - \\sqrt x \\le \\dfrac{1}{2\\sqrt{x+1}}$",
+       "why": "Inégalités inversées : $f'$ est décroissante."
+      },
+      {
+       "label": "$\\sqrt{x} \\le \\sqrt{x+1} - \\sqrt x \\le \\sqrt{x+1}$",
+       "why": "Tu as encadré $f(c)$ au lieu de $f'(c)$."
+      },
+      {
+       "label": "$\\sqrt{x+1} - \\sqrt x = \\dfrac{1}{2\\sqrt x}$",
+       "why": "Le TAF donne $f'(c)$ pour un $c$ inconnu, pas $f'(x)$."
+      }
+     ],
+     "hint": "$\\sqrt{x+1} - \\sqrt x = \\frac{1}{2\\sqrt c}$ avec $x < c < x+1$.",
+     "solution": "D'après le TAF, $\\sqrt{x+1} - \\sqrt x = \\frac{1}{2\\sqrt c}$ avec $x < c < x+1$. Comme $t\\mapsto\\frac{1}{2\\sqrt t}$ est décroissante : $\\frac{1}{2\\sqrt{x+1}} \\le \\frac{1}{2\\sqrt c} \\le \\frac{1}{2\\sqrt x}$.",
+     "points": 1,
+     "ref": "m2-sm-derivation-ex1-q3"
+    },
+    {
+     "notion": "Dérivée pour prouver une inégalité",
+     "difficulty": 3,
+     "statement": "4) Avec $x = 100$, on en déduit :",
+     "options": [
+      {
+       "label": "$\\sqrt{101} \\le 10{,}05$",
+       "correct": true,
+       "why": "$\\sqrt{101} - 10 \\le \\frac{1}{2\\times10} = 0{,}05$."
+      },
+      {
+       "label": "$\\sqrt{101} \\ge 10{,}05$",
+       "why": "C'est un majorant de $\\sqrt{101} - 10$ qu'on obtient, pas un minorant."
+      },
+      {
+       "label": "$\\sqrt{101} \\le 10{,}005$",
+       "why": "Faux : $\\sqrt{101} \\approx 10{,}0499$. Le majorant est $\\frac{1}{2\\sqrt{100}} = 0{,}05$."
+      },
+      {
+       "label": "$\\sqrt{101} = 10{,}05$",
+       "why": "On obtient une inégalité, pas une égalité ($10{,}05^2 = 101{,}0025$)."
+      }
+     ],
+     "hint": "Remplace $x$ par $100$ dans la borne supérieure.",
+     "solution": "Avec $x = 100$ : $\\sqrt{101} - \\sqrt{100} \\le \\dfrac{1}{2\\sqrt{100}} = \\dfrac{1}{20}$, donc $\\sqrt{101} \\le 10{,}05$. (La borne inférieure donne $\\sqrt{101} \\ge 10 + \\frac{1}{2\\sqrt{101}} > 10{,}049$.)",
+     "points": 1,
+     "ref": "m2-sm-derivation-ex1-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-ex2",
+   "chapter": "derivation",
+   "kind": "probleme",
+   "title": "Exercice 2 — Logarithmes : équations, limites et inégalité",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Les questions suivantes portent sur les fonctions $\\ln$, $\\log$ (logarithme décimal) et $\\exp$.",
+   "questions": [
+    {
+     "notion": "Équations et logarithme décimal",
+     "difficulty": 1,
+     "statement": "1) L'équation $\\log x = 2$ a pour solution :",
+     "options": [
+      {
+       "label": "$x = 100$",
+       "correct": true,
+       "why": "$\\log x = 2 \\Leftrightarrow x = 10^2$."
+      },
+      {
+       "label": "$x = \\mathrm{e}^2$",
+       "why": "C'est la solution de $\\ln x = 2$ ; $\\log$ est le logarithme de base $10$."
+      },
+      {
+       "label": "$x = 20$",
+       "why": "$\\log x = 2 \\Leftrightarrow x = 10^2$, pas $10\\times2$."
+      },
+      {
+       "label": "$x = \\dfrac{2}{\\ln 10}$",
+       "why": "$\\log x = \\frac{\\ln x}{\\ln 10} = 2 \\Leftrightarrow \\ln x = 2\\ln10$."
+      }
+     ],
+     "hint": "$\\log x = \\frac{\\ln x}{\\ln 10}$ et $\\log 10^n = n$.",
+     "solution": "$\\log x = 2 \\Leftrightarrow \\dfrac{\\ln x}{\\ln10} = 2 \\Leftrightarrow \\ln x = 2\\ln10 = \\ln 100 \\Leftrightarrow x = 100$.",
+     "points": 1,
+     "ref": "m2-sm-derivation-ex2-q1"
+    },
+    {
+     "notion": "Résolution d'équations",
+     "difficulty": 2,
+     "statement": "2) Dans $]1;+\\infty[$, l'équation $\\ln x + \\ln(x - 1) = \\ln 6$ a pour ensemble de solutions :",
+     "options": [
+      {
+       "label": "$\\{3\\}$",
+       "correct": true,
+       "why": "$x(x-1) = 6 \\Leftrightarrow x = 3$ ou $x = -2$, et seul $3 > 1$."
+      },
+      {
+       "label": "$\\{3\\,;-2\\}$",
+       "why": "$-2$ n'est pas dans le domaine $]1;+\\infty[$."
+      },
+      {
+       "label": "$\\{-2\\}$",
+       "why": "$\\ln(-2)$ n'existe pas."
+      },
+      {
+       "label": "$\\{6\\}$",
+       "why": "$\\ln 6 + \\ln 5 = \\ln 30 \\ne \\ln 6$."
+      }
+     ],
+     "hint": "$\\ln a + \\ln b = \\ln(ab)$, puis vérifie le domaine.",
+     "solution": "Sur $]1;+\\infty[$ : $\\ln x + \\ln(x-1) = \\ln\\big(x(x-1)\\big)$. L'équation équivaut à $x^2 - x - 6 = 0$, soit $(x - 3)(x + 2) = 0$. Seule $x = 3$ appartient au domaine : $S = \\{3\\}$.",
+     "points": 1,
+     "methode": "Équation logarithmique : domaine d'abord, puis $\\ln A = \\ln B \\Leftrightarrow A = B$, puis tri des solutions.",
+     "ref": "m2-sm-derivation-ex2-q2"
+    },
+    {
+     "notion": "Limites et dérivée",
+     "difficulty": 2,
+     "statement": "3) $\\lim\\limits_{x\\to+\\infty}\\dfrac{\\ln x}{\\sqrt x}$ vaut :",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "Croissances comparées : $\\frac{\\ln x}{x^\\alpha} \\to 0$ pour $\\alpha > 0$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "$\\ln x$ croît moins vite que toute puissance positive de $x$."
+      },
+      {
+       "label": "$1$",
+       "why": "$\\frac\\infty\\infty$ est une forme indéterminée, pas $1$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Ce n'est pas un taux d'accroissement : utilise les croissances comparées."
+      }
+     ],
+     "hint": "Pose $X = \\sqrt x$ : $\\frac{\\ln x}{\\sqrt x} = \\frac{2\\ln X}{X}$.",
+     "solution": "Avec $X = \\sqrt x \\to +\\infty$ : $\\dfrac{\\ln x}{\\sqrt x} = \\dfrac{\\ln X^2}{X} = 2\\cdot\\dfrac{\\ln X}{X} \\to 0$.",
+     "points": 1,
+     "ref": "m2-sm-derivation-ex2-q3"
+    },
+    {
+     "notion": "Dérivée d'une composée et d'une réciproque",
+     "difficulty": 2,
+     "statement": "4) Sur $]1;+\\infty[$, la dérivée de $x\\mapsto\\ln(\\ln x)$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac{1}{x\\ln x}$",
+       "correct": true,
+       "why": "$(\\ln u)' = \\frac{u'}{u}$ avec $u = \\ln x$, $u' = \\frac1x$."
+      },
+      {
+       "label": "$\\dfrac{1}{\\ln x}$",
+       "why": "Tu as oublié de multiplier par $u' = \\frac1x$."
+      },
+      {
+       "label": "$\\dfrac{\\ln x}{x}$",
+       "why": "C'est $u\\times u'$, pas $\\frac{u'}{u}$."
+      },
+      {
+       "label": "$\\dfrac1x$",
+       "why": "C'est la dérivée de $\\ln x$ seule."
+      }
+     ],
+     "hint": "$(\\ln u)' = \\frac{u'}{u}$.",
+     "solution": "Avec $u(x) = \\ln x > 0$ sur $]1;+\\infty[$ : $(\\ln u)' = \\dfrac{u'}{u} = \\dfrac{1/x}{\\ln x} = \\dfrac{1}{x\\ln x}$.",
+     "points": 1,
+     "ref": "m2-sm-derivation-ex2-q4"
+    },
+    {
+     "notion": "Dérivée pour prouver une inégalité",
+     "difficulty": 2,
+     "statement": "5) Soit $\\varphi(x) = \\mathrm{e}^x - 1 - x$. On a $\\varphi'(x) = \\mathrm{e}^x - 1$. On en déduit que pour tout réel $x$ :",
+     "options": [
+      {
+       "label": "$\\mathrm{e}^x \\ge 1 + x$",
+       "correct": true,
+       "why": "$\\varphi$ a un minimum en $0$ égal à $\\varphi(0) = 0$."
+      },
+      {
+       "label": "$\\mathrm{e}^x \\le 1 + x$",
+       "why": "Sens inversé : $\\varphi \\ge 0$."
+      },
+      {
+       "label": "$\\mathrm{e}^x > 1 + x$",
+       "why": "Il y a égalité en $x = 0$."
+      },
+      {
+       "label": "$\\mathrm{e}^x \\ge x$ seulement pour $x \\ge 0$",
+       "why": "L'inégalité $\\mathrm e^x \\ge 1 + x$ vaut pour tout réel $x$."
+      }
+     ],
+     "hint": "Signe de $\\varphi'$, puis minimum de $\\varphi$.",
+     "solution": "$\\varphi'(x) = \\mathrm e^x - 1$ est négative sur $]-\\infty;0]$ et positive sur $[0;+\\infty[$ : $\\varphi$ a un minimum en $0$, $\\varphi(0) = 0$. Donc $\\varphi(x) \\ge 0$, c'est-à-dire $\\mathrm e^x \\ge 1 + x$ pour tout réel $x$.",
+     "points": 1,
+     "ref": "m2-sm-derivation-ex2-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-ex3",
+   "chapter": "derivation",
+   "kind": "probleme",
+   "title": "Exercice 3 — Étude de x(1 − ln x)²",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $f$ la fonction définie sur $[0;+\\infty[$ par $f(x) = x(1 - \\ln x)^2$ si $x > 0$ et $f(0) = 0$. On admet que $f$ est continue en $0$ à droite et que $f''(x) = \\dfrac{2\\ln x}{x}$ pour $x > 0$.",
+   "questions": [
+    {
+     "notion": "Interprétation géométrique de la dérivabilité",
+     "difficulty": 2,
+     "statement": "1) Sachant que $\\dfrac{f(x)}{x} = (1 - \\ln x)^2$ pour $x > 0$ :",
+     "options": [
+      {
+       "label": "$f$ n'est pas dérivable à droite en $0$ ; la courbe admet une demi-tangente verticale en $O$",
+       "correct": true,
+       "why": "$(1 - \\ln x)^2 \\to +\\infty$ quand $x\\to0^+$."
+      },
+      {
+       "label": "$f$ est dérivable à droite en $0$ et $f'_d(0) = 0$",
+       "why": "Le taux d'accroissement tend vers $+\\infty$, pas vers $0$."
+      },
+      {
+       "label": "$f$ est dérivable à droite en $0$ et $f'_d(0) = 1$",
+       "why": "$(1 - \\ln x)^2$ ne tend pas vers $1$ quand $x\\to0^+$ : $\\ln x \\to -\\infty$."
+      },
+      {
+       "label": "$f$ n'est pas continue à droite en $0$",
+       "why": "$x(1 - \\ln x)^2 \\to 0 = f(0)$ : $f$ est continue."
+      }
+     ],
+     "hint": "Limite du taux d'accroissement $\\frac{f(x) - f(0)}{x - 0}$ en $0^+$.",
+     "solution": "$\\dfrac{f(x) - f(0)}{x} = (1 - \\ln x)^2$. Quand $x\\to0^+$, $\\ln x\\to-\\infty$ donc $(1 - \\ln x)^2 \\to +\\infty$. $f$ n'est pas dérivable à droite en $0$ et sa courbe admet en $O$ une demi-tangente verticale.",
+     "points": 1,
+     "methode": "Taux d'accroissement → $\\pm\\infty$ : pas dérivable, demi-tangente verticale.",
+     "part": "Partie A — Dérivabilité et variations",
+     "ref": "m2-sm-derivation-ex3-q1"
+    },
+    {
+     "notion": "Dérivées usuelles et opérations",
+     "difficulty": 2,
+     "statement": "2) Pour $x > 0$, $f'(x)$ vaut :",
+     "options": [
+      {
+       "label": "$(\\ln x)^2 - 1$",
+       "correct": true,
+       "why": "$(1 - \\ln x)^2 - 2(1 - \\ln x) = (1 - \\ln x)(-1 - \\ln x) = \\ln^2 x - 1$."
+      },
+      {
+       "label": "$(1 - \\ln x)^2$",
+       "why": "Tu as oublié de dériver le facteur $(1 - \\ln x)^2$ : c'est un produit."
+      },
+      {
+       "label": "$-2(1 - \\ln x)$",
+       "why": "Tu as oublié le terme $u'v = 1\\times(1 - \\ln x)^2$."
+      },
+      {
+       "label": "$(\\ln x)^2 + 1$",
+       "why": "Erreur de signe dans la factorisation : $(1 - \\ln x)(-1 - \\ln x) = \\ln^2x - 1$."
+      }
+     ],
+     "hint": "$(uv)' = u'v + uv'$ avec $u = x$, $v = (1 - \\ln x)^2$, $v' = 2(1 - \\ln x)\\times\\left(-\\frac1x\\right)$.",
+     "solution": "$f'(x) = (1 - \\ln x)^2 + x\\times2(1 - \\ln x)\\left(-\\frac1x\\right) = (1 - \\ln x)^2 - 2(1 - \\ln x) = (1 - \\ln x)(1 - \\ln x - 2) = (1 - \\ln x)(-1 - \\ln x) = (\\ln x)^2 - 1$.",
+     "points": 1,
+     "part": "Partie A — Dérivabilité et variations",
+     "ref": "m2-sm-derivation-ex3-q2"
+    },
+    {
+     "notion": "Monotonie et extremums",
+     "difficulty": 2,
+     "statement": "3) Sur $]0;+\\infty[$, $f$ admet un maximum local :",
+     "options": [
+      {
+       "label": "en $x = \\dfrac1{\\mathrm e}$, égal à $\\dfrac{4}{\\mathrm e}$",
+       "correct": true,
+       "why": "$f' > 0$ avant $\\frac1{\\mathrm e}$, $f' < 0$ entre $\\frac1{\\mathrm e}$ et $\\mathrm e$ ; $f\\left(\\frac1{\\mathrm e}\\right) = \\frac1{\\mathrm e}(1 + 1)^2$."
+      },
+      {
+       "label": "en $x = \\mathrm e$, égal à $0$",
+       "why": "En $\\mathrm e$, $f'$ passe de négative à positive : c'est un minimum local."
+      },
+      {
+       "label": "en $x = \\dfrac1{\\mathrm e}$, égal à $\\dfrac1{\\mathrm e}$",
+       "why": "$1 - \\ln\\frac1{\\mathrm e} = 1 + 1 = 2$, donc $f\\left(\\frac1{\\mathrm e}\\right) = \\frac{4}{\\mathrm e}$."
+      },
+      {
+       "label": "en $x = 1$, égal à $1$",
+       "why": "$f'(1) = -1 \\ne 0$ : ce n'est pas un extremum."
+      }
+     ],
+     "hint": "$f'(x) = (\\ln x - 1)(\\ln x + 1)$ s'annule pour $\\ln x = \\pm1$.",
+     "solution": "$f'(x) = (\\ln x - 1)(\\ln x + 1)$ : positive sur $\\left]0;\\frac1{\\mathrm e}\\right[$, négative sur $\\left]\\frac1{\\mathrm e};\\mathrm e\\right[$, positive sur $]\\mathrm e;+\\infty[$. Maximum local en $\\frac1{\\mathrm e}$ : $f\\left(\\frac1{\\mathrm e}\\right) = \\frac1{\\mathrm e}\\times2^2 = \\frac{4}{\\mathrm e}$ ; minimum local en $\\mathrm e$ : $f(\\mathrm e) = 0$.",
+     "points": 1,
+     "part": "Partie A — Dérivabilité et variations",
+     "ref": "m2-sm-derivation-ex3-q3"
+    },
+    {
+     "notion": "Convexité et points d'inflexion",
+     "difficulty": 2,
+     "statement": "4) La courbe de $f$ admet un point d'inflexion de coordonnées :",
+     "options": [
+      {
+       "label": "$(1\\,;1)$",
+       "correct": true,
+       "why": "$f'' = \\frac{2\\ln x}{x}$ change de signe en $1$, et $f(1) = 1\\times1^2 = 1$."
+      },
+      {
+       "label": "$(\\mathrm e\\,;0)$",
+       "why": "En $\\mathrm e$, c'est $f'$ qui s'annule (minimum local)."
+      },
+      {
+       "label": "$\\left(\\dfrac1{\\mathrm e}\\,;\\dfrac4{\\mathrm e}\\right)$",
+       "why": "En $\\frac1{\\mathrm e}$, c'est un maximum local, pas une inflexion."
+      },
+      {
+       "label": "$(1\\,;0)$",
+       "why": "L'ordonnée est $f(1) = 1$, pas $f''(1) = 0$."
+      }
+     ],
+     "hint": "Signe de $f''(x) = \\frac{2\\ln x}{x}$.",
+     "solution": "$f''(x) = \\frac{2\\ln x}{x}$ est négative sur $]0;1[$ et positive sur $]1;+\\infty[$ : elle s'annule en changeant de signe en $1$. $f(1) = 1\\times(1 - 0)^2 = 1$ : le point d'inflexion est $I(1;1)$.",
+     "points": 1,
+     "part": "Partie B — Courbe et équation",
+     "ref": "m2-sm-derivation-ex3-q4"
+    },
+    {
+     "notion": "Branches infinies (classification complète)",
+     "difficulty": 2,
+     "statement": "5) Sachant que $\\lim\\limits_{x\\to+\\infty}f(x) = +\\infty$, la courbe admet au voisinage de $+\\infty$ :",
+     "options": [
+      {
+       "label": "une branche parabolique de direction l'axe des ordonnées",
+       "correct": true,
+       "why": "$\\frac{f(x)}{x} = (1 - \\ln x)^2 \\to +\\infty$."
+      },
+      {
+       "label": "une asymptote oblique d'équation $y = x$",
+       "why": "$\\frac{f(x)}{x}$ ne tend pas vers $1$ : il tend vers $+\\infty$."
+      },
+      {
+       "label": "une branche parabolique de direction l'axe des abscisses",
+       "why": "Ce serait le cas si $\\frac{f(x)}{x} \\to 0$."
+      },
+      {
+       "label": "une asymptote horizontale",
+       "why": "$f(x) \\to +\\infty$ : pas d'asymptote horizontale."
+      }
+     ],
+     "hint": "Calcule $\\lim\\frac{f(x)}{x}$.",
+     "solution": "$\\lim f(x) = +\\infty$ et $\\dfrac{f(x)}{x} = (1 - \\ln x)^2 \\to +\\infty$ : branche parabolique de direction l'axe des ordonnées.",
+     "points": 1,
+     "part": "Partie B — Courbe et équation",
+     "ref": "m2-sm-derivation-ex3-q5"
+    },
+    {
+     "notion": "Étude complète d'une fonction",
+     "difficulty": 3,
+     "statement": "6) Le nombre de solutions de l'équation $f(x) = 1$ dans $]0;+\\infty[$ est :",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "Une sur $\\left]0;\\frac1{\\mathrm e}\\right[$, une sur $\\left]\\frac1{\\mathrm e};\\mathrm e\\right[$ ($x = 1$) et une sur $]\\mathrm e;+\\infty[$."
+      },
+      {
+       "label": "$1$",
+       "why": "$x = 1$ est une solution, mais pas la seule : regarde chaque intervalle de monotonie."
+      },
+      {
+       "label": "$2$",
+       "why": "Sur $\\left]0;\\frac1{\\mathrm e}\\right]$, $f$ croît de $0$ à $\\frac4{\\mathrm e}\\approx1{,}47 > 1$ : il y a aussi une solution là."
+      },
+      {
+       "label": "$0$",
+       "why": "$f(1) = 1$ : il y a au moins une solution."
+      }
+     ],
+     "hint": "Utilise le tableau de variations : $0 \\nearrow \\frac4{\\mathrm e} \\searrow 0 \\nearrow +\\infty$, et $\\frac{4}{\\mathrm e} \\approx 1{,}47$.",
+     "solution": "Sur $\\left]0;\\frac1{\\mathrm e}\\right]$ : $f$ croît strictement de $0$ (limite) à $\\frac4{\\mathrm e}\\approx1{,}47$ ; comme $0 < 1 < 1{,}47$ : une solution. Sur $\\left[\\frac1{\\mathrm e};\\mathrm e\\right]$ : $f$ décroît de $1{,}47$ à $0$ : une solution (c'est $x = 1$). Sur $[\\mathrm e;+\\infty[$ : $f$ croît de $0$ à $+\\infty$ : une solution. Total : $3$.",
+     "points": 1,
+     "part": "Partie B — Courbe et équation",
+     "ref": "m2-sm-derivation-ex3-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-derivation-ex4",
+   "chapter": "derivation",
+   "kind": "probleme",
+   "title": "Exercice 4 — Équation différentielle et la fonction eˣ sin x",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Partie A : on considère l'équation différentielle $(E) : y'' - 2y' + 2y = 0$. Partie B : soit $g$ la fonction définie sur $[0;\\pi]$ par $g(x) = \\mathrm{e}^{x}\\sin x$.",
+   "questions": [
+    {
+     "notion": "Équations différentielles",
+     "difficulty": 2,
+     "statement": "1) Les solutions de $(E)$ sont les fonctions :",
+     "options": [
+      {
+       "label": "$x\\mapsto\\mathrm{e}^{x}\\left(A\\cos x + B\\sin x\\right)$",
+       "correct": true,
+       "why": "$r^2 - 2r + 2 = 0$ : $r = 1 \\pm i$."
+      },
+      {
+       "label": "$x\\mapsto A\\cos x + B\\sin x$",
+       "why": "Il manque le facteur $\\mathrm e^{px}$ avec $p = 1$ (partie réelle des racines)."
+      },
+      {
+       "label": "$x\\mapsto\\mathrm{e}^{-x}\\left(A\\cos x + B\\sin x\\right)$",
+       "why": "La partie réelle des racines est $+1$ : $\\frac{-b}{2a} = \\frac{2}{2}$."
+      },
+      {
+       "label": "$x\\mapsto A\\mathrm{e}^{x} + B\\mathrm{e}^{-x}$",
+       "why": "$\\Delta = 4 - 8 < 0$ : les racines sont complexes, pas réelles."
+      }
+     ],
+     "hint": "Équation caractéristique $r^2 - 2r + 2 = 0$, $\\Delta = -4$.",
+     "solution": "$\\Delta = 4 - 8 = -4 = (2i)^2$, racines $r = 1 \\pm i$ ($p = 1$, $q = 1$). Solutions : $y(x) = \\mathrm e^{x}(A\\cos x + B\\sin x)$.",
+     "points": 1,
+     "part": "Partie A — Équation différentielle",
+     "ref": "m2-sm-derivation-ex4-q1"
+    },
+    {
+     "notion": "Équations différentielles",
+     "difficulty": 3,
+     "statement": "2) La solution de $(E)$ vérifiant $y(0) = 0$ et $y'(0) = 1$ est :",
+     "options": [
+      {
+       "label": "$x\\mapsto\\mathrm{e}^{x}\\sin x$",
+       "correct": true,
+       "why": "$y(0) = A = 0$, puis $y'(0) = A + B = 1$, donc $B = 1$."
+      },
+      {
+       "label": "$x\\mapsto\\mathrm{e}^{x}\\cos x$",
+       "why": "$\\mathrm e^0\\cos0 = 1 \\ne 0$ : la condition $y(0) = 0$ n'est pas vérifiée."
+      },
+      {
+       "label": "$x\\mapsto\\sin x$",
+       "why": "$\\sin$ n'est pas solution de $(E)$ : il manque $\\mathrm e^x$."
+      },
+      {
+       "label": "$x\\mapsto\\mathrm{e}^{x}(\\cos x + \\sin x)$",
+       "why": "$y(0) = 1 \\ne 0$."
+      }
+     ],
+     "hint": "$y'(x) = \\mathrm e^x\\big((A + B)\\cos x + (B - A)\\sin x\\big)$.",
+     "solution": "$y(0) = A = 0$. $y'(x) = \\mathrm e^x(A\\cos x + B\\sin x) + \\mathrm e^x(-A\\sin x + B\\cos x)$, donc $y'(0) = A + B = 1$, d'où $B = 1$. La solution est $y(x) = \\mathrm e^x\\sin x = g(x)$.",
+     "points": 1,
+     "part": "Partie A — Équation différentielle",
+     "ref": "m2-sm-derivation-ex4-q2"
+    },
+    {
+     "notion": "Dérivées usuelles et opérations",
+     "difficulty": 1,
+     "statement": "3) Pour tout $x$, $g'(x)$ vaut :",
+     "options": [
+      {
+       "label": "$\\mathrm{e}^{x}(\\sin x + \\cos x)$",
+       "correct": true,
+       "why": "$(uv)' = \\mathrm e^x\\sin x + \\mathrm e^x\\cos x$."
+      },
+      {
+       "label": "$\\mathrm{e}^{x}\\cos x$",
+       "why": "Tu as dérivé seulement $\\sin x$ : c'est un produit."
+      },
+      {
+       "label": "$\\mathrm{e}^{x}(\\sin x - \\cos x)$",
+       "why": "$(\\sin x)' = +\\cos x$."
+      },
+      {
+       "label": "$\\mathrm{e}^{x}\\sin x$",
+       "why": "Tu as dérivé seulement $\\mathrm e^x$."
+      }
+     ],
+     "hint": "$(uv)' = u'v + uv'$.",
+     "solution": "$g'(x) = \\mathrm e^x\\sin x + \\mathrm e^x\\cos x = \\mathrm e^x(\\sin x + \\cos x) = \\sqrt2\\,\\mathrm e^x\\sin\\left(x + \\frac\\pi4\\right)$.",
+     "points": 1,
+     "part": "Partie B — Étude de g",
+     "ref": "m2-sm-derivation-ex4-q3"
+    },
+    {
+     "notion": "Monotonie et extremums",
+     "difficulty": 2,
+     "statement": "4) Sur $[0;\\pi]$, $g$ atteint son maximum en :",
+     "options": [
+      {
+       "label": "$x = \\dfrac{3\\pi}{4}$",
+       "correct": true,
+       "why": "$\\sin x + \\cos x = 0 \\Leftrightarrow \\tan x = -1$, soit $x = \\frac{3\\pi}{4}$ dans $[0;\\pi]$."
+      },
+      {
+       "label": "$x = \\dfrac{\\pi}{2}$",
+       "why": "C'est le maximum de $\\sin x$ seul ; le facteur $\\mathrm e^x$ décale le maximum vers la droite."
+      },
+      {
+       "label": "$x = \\dfrac{\\pi}{4}$",
+       "why": "$\\sin\\frac\\pi4 + \\cos\\frac\\pi4 = \\sqrt2 \\ne 0$."
+      },
+      {
+       "label": "$x = \\pi$",
+       "why": "$g(\\pi) = 0$ : c'est un minimum."
+      }
+     ],
+     "hint": "Résous $\\sin x + \\cos x = 0$ sur $[0;\\pi]$.",
+     "solution": "$\\mathrm e^x > 0$, donc $g'(x)$ a le signe de $\\sin x + \\cos x = \\sqrt2\\sin\\left(x + \\frac\\pi4\\right)$ : positif sur $\\left[0;\\frac{3\\pi}{4}\\right[$, négatif sur $\\left]\\frac{3\\pi}{4};\\pi\\right]$. Maximum en $\\frac{3\\pi}4$ : $g\\left(\\frac{3\\pi}{4}\\right) = \\frac{\\sqrt2}{2}\\mathrm e^{3\\pi/4}$.",
+     "points": 1,
+     "part": "Partie B — Étude de g",
+     "ref": "m2-sm-derivation-ex4-q4"
+    },
+    {
+     "notion": "Primitives",
+     "difficulty": 2,
+     "statement": "5) Une primitive de $g$ est :",
+     "options": [
+      {
+       "label": "$G(x) = \\dfrac{\\mathrm{e}^{x}}{2}(\\sin x - \\cos x)$",
+       "correct": true,
+       "why": "$G'(x) = \\frac{\\mathrm e^x}{2}(\\sin x - \\cos x) + \\frac{\\mathrm e^x}{2}(\\cos x + \\sin x) = \\mathrm e^x\\sin x$."
+      },
+      {
+       "label": "$\\mathrm{e}^{x}(\\sin x - \\cos x)$",
+       "why": "En dérivant, on obtient $2\\mathrm e^x\\sin x$ : il manque le facteur $\\frac12$."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^{x}}{2}(\\sin x + \\cos x)$",
+       "why": "En dérivant, on obtient $\\mathrm e^x\\cos x$, pas $\\mathrm e^x\\sin x$."
+      },
+      {
+       "label": "$-\\mathrm{e}^{x}\\cos x$",
+       "why": "On ne primitive pas un produit facteur par facteur : sa dérivée est $\\mathrm e^x(\\sin x - \\cos x)$."
+      }
+     ],
+     "hint": "Cherche $G = \\mathrm e^x(a\\cos x + b\\sin x)$ et identifie $a$, $b$ en dérivant.",
+     "solution": "Avec $G(x) = \\mathrm e^x(a\\cos x + b\\sin x)$ : $G'(x) = \\mathrm e^x\\big((a + b)\\cos x + (b - a)\\sin x\\big)$. On veut $a + b = 0$ et $b - a = 1$ : $b = \\frac12$, $a = -\\frac12$. Donc $G(x) = \\frac{\\mathrm e^x}{2}(\\sin x - \\cos x)$.",
+     "points": 1,
+     "part": "Partie B — Étude de g",
+     "ref": "m2-sm-derivation-ex4-q5"
+    },
+    {
+     "notion": "Primitives",
+     "difficulty": 3,
+     "statement": "6) $\\displaystyle\\int_0^{\\pi}\\mathrm{e}^{x}\\sin x\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\mathrm{e}^{\\pi} + 1}{2}$",
+       "correct": true,
+       "why": "$G(\\pi) - G(0) = \\frac{\\mathrm e^\\pi}{2}(0 + 1) - \\frac12(0 - 1)$."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^{\\pi} - 1}{2}$",
+       "why": "$G(0) = \\frac12(0 - 1) = -\\frac12$ : on retranche $-\\frac12$, donc on ajoute $\\frac12$."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^{\\pi}}{2}$",
+       "why": "Tu as oublié de retrancher $G(0) = -\\frac12$."
+      },
+      {
+       "label": "$\\mathrm{e}^{\\pi} + 1$",
+       "why": "Tu as oublié le facteur $\\frac12$ de la primitive."
+      }
+     ],
+     "hint": "$\\cos\\pi = -1$, $\\sin\\pi = 0$, $\\cos0 = 1$, $\\sin0 = 0$.",
+     "solution": "$G(\\pi) = \\frac{\\mathrm e^\\pi}{2}(\\sin\\pi - \\cos\\pi) = \\frac{\\mathrm e^\\pi}{2}$ et $G(0) = \\frac12(0 - 1) = -\\frac12$. $\\displaystyle\\int_0^\\pi\\mathrm e^x\\sin x\\,\\mathrm dx = \\frac{\\mathrm e^\\pi}{2} + \\frac12 = \\frac{\\mathrm e^\\pi + 1}{2}$.",
+     "points": 1,
+     "part": "Partie B — Étude de g",
+     "ref": "m2-sm-derivation-ex4-q6"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-sm-derivation-serie-1",
+   "title": "Dérivabilité et étude de fonctions · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (4 questions).",
+   "kind": "custom",
+   "chapter": "derivation",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-sm-derivation-flash-q1",
+    "m2-sm-derivation-flash-q2",
+    "m2-sm-derivation-flash-q3",
+    "m2-sm-derivation-flash-q4",
+    "m2-sm-derivation-ex1-q1",
+    "m2-sm-derivation-ex1-q2",
+    "m2-sm-derivation-ex1-q3",
+    "m2-sm-derivation-ex1-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-derivation-serie-2",
+   "title": "Dérivabilité et étude de fonctions · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (5 questions).",
+   "kind": "custom",
+   "chapter": "derivation",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-sm-derivation-flash-q5",
+    "m2-sm-derivation-flash-q6",
+    "m2-sm-derivation-flash-q7",
+    "m2-sm-derivation-flash-q8",
+    "m2-sm-derivation-ex2-q1",
+    "m2-sm-derivation-ex2-q2",
+    "m2-sm-derivation-ex2-q3",
+    "m2-sm-derivation-ex2-q4",
+    "m2-sm-derivation-ex2-q5"
+   ]
+  },
+  {
+   "slug": "m2-sm-derivation-serie-3",
+   "title": "Dérivabilité et étude de fonctions · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (6 questions) + Exercice 4 (6 questions).",
+   "kind": "custom",
+   "chapter": "derivation",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-sm-derivation-ex3-q1",
+    "m2-sm-derivation-ex3-q2",
+    "m2-sm-derivation-ex3-q3",
+    "m2-sm-derivation-ex3-q4",
+    "m2-sm-derivation-ex3-q5",
+    "m2-sm-derivation-ex3-q6",
+    "m2-sm-derivation-ex4-q1",
+    "m2-sm-derivation-ex4-q2",
+    "m2-sm-derivation-ex4-q3",
+    "m2-sm-derivation-ex4-q4",
+    "m2-sm-derivation-ex4-q5",
+    "m2-sm-derivation-ex4-q6"
+   ]
+  }
+ ]
+}

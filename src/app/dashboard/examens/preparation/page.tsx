@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Espace de préparation — hub.
+ * Préparation — hub.
  * Same browse as the Cours (filière chips → subject pads, curriculum order,
  * subject theming), with each pad summarising the three prep modes:
  * Par notion (chapter banks) · Séries · Examens (annales / blancs).
@@ -11,16 +11,17 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
-import { curriculumFor, fmtDuration, type SubjectRef } from "@/config/curriculum";
+import { curriculumFor, fmtDuration, PREP_FILIERES, type SubjectRef } from "@/config/curriculum";
 import { SubjectPad, PadChip } from "@/components/subject-pad";
 import { SubjectBanner } from "@/components/subject-banner";
 import { PrepAlerts } from "@/components/prep/prep-alerts";
-import { filiereChips } from "@/lib/filieres";
+import { SoonPill, ExamsSoonPanel } from "@/components/prep/exams-soon";
+import { FEATURES } from "@/config";
 import {
   loadStudentCtx, loadChapters, loadBank, loadSeries, loadMastery, prepRoutes,
   type StudentCtx, type PrepChapter, type BankQ, type Serie, type ChapterMastery,
 } from "@/lib/prep";
-import { Loader2, Target, Layers, FileText, Timer, Trophy, Calculator, LayoutDashboard, Sparkles, GraduationCap } from "lucide-react";
+import { Loader2, Target, Layers, FileText, Timer, Lock, Trophy, Calculator, LayoutDashboard, GraduationCap, Flag } from "lucide-react";
 
 type Exam = { id: string; subject_id: string; track_id: string | null; exam_type: string };
 type Card = { id: string; code: string; name: string; coeff: number | null; durationMin: number | null; chapters: PrepChapter[]; nQ: number; nSeries: number; nExams: number; mastery: number | null; worked: number };
@@ -29,7 +30,7 @@ const TOOLS = [
   { icon: LayoutDashboard, label: "Ma progression", href: "/dashboard" },
   { icon: Trophy, label: "Classement", href: "/dashboard/classement" },
   { icon: Calculator, label: "Note de Bac", href: "/dashboard/calculette" },
-  { icon: Sparkles, label: "Défi National", href: "/defi" },
+  { icon: Flag, label: "Défi National", href: "/defi" },
 ];
 
 export default function PreparationHub() {
@@ -44,15 +45,16 @@ export default function PreparationHub() {
   const [series, setSeries] = useState<Serie[]>([]);
   const [exams, setExams] = useState<Exam[]>([]);
   const [mastery, setMastery] = useState<Map<string, ChapterMastery>>(new Map());
+  const [soonOpen, setSoonOpen] = useState(false);
 
   // student context once
   useEffect(() => {
     (async () => {
       const c = await loadStudentCtx(supabase);
       setCtx(c);
-      const f = new URLSearchParams(window.location.search).get("f");
-      setFiliere(f || c?.ownTrack || null);
-      if (!c?.levelId || !(f || c.ownTrack)) setLoading(false);
+      // Own filière only: a student never browses another filière's content.
+      setFiliere(c?.ownTrack || null);
+      if (!c?.levelId || !c.ownTrack) setLoading(false);
     })();
   }, [supabase]);
 
@@ -63,7 +65,7 @@ export default function PreparationHub() {
     (async () => {
       setLoading(true);
       const trackId = ctx.trackIdByCode.get(filiere) ?? null;
-      const chs = await loadChapters(supabase, ctx.levelId!, null, trackId);
+      const chs = await loadChapters(supabase, ctx.levelId!, null, trackId, filiere);
       const [b, se, { data: ex }, m] = await Promise.all([
         loadBank(supabase, chs.map((c) => c.id)),
         loadSeries(supabase, ctx.levelId!, null, trackId),
@@ -71,8 +73,8 @@ export default function PreparationHub() {
         loadMastery(supabase, chs.map((c) => c.id)),
       ]);
       if (!live) return;
-      setChapters(chs); setBank(b.questions); setBankExamIds(b.bankExamIds); setSeries(se);
-      setExams(((ex ?? []) as Exam[]).filter((e) => e.track_id === trackId || e.track_id == null));
+      setChapters(chs); setBank(b.questions); setBankExamIds(b.bankExamIds); setSeries(se.filter((x) => !x.chapter_id || chs.some((c) => c.id === x.chapter_id)));
+      setExams(FEATURES.examEngine ? ((ex ?? []) as Exam[]).filter((e) => e.track_id === trackId || e.track_id == null) : []);
       setMastery(m);
       setLoading(false);
     })();
@@ -80,14 +82,15 @@ export default function PreparationHub() {
   }, [ctx, filiere, supabase]);
 
   const is2bac = ctx?.levelCode === "2bac";
-  const chips = useMemo(() => (ctx && is2bac ? filiereChips(ctx.ownTrack, ctx.trackIdByCode, ctx.trackNameByCode) : []), [ctx, is2bac]);
+  const supported = !!(is2bac && filiere && PREP_FILIERES.has(filiere));
 
   const cards = useMemo<Card[]>(() => {
     if (!ctx || !filiere) return [];
     const qByCh = new Map<string, number>();
     for (const q of bank) qByCh.set(q.chapter_id, (qByCh.get(q.chapter_id) ?? 0) + 1);
     const build = (s: { id: string; code: string; name: string }, coeff: number | null, durationMin: number | null): Card => {
-      const chs = chapters.filter((c) => c.subject_id === s.id);
+      // only chapters that already have questions count (empty ones are hidden)
+      const chs = chapters.filter((c) => c.subject_id === s.id && (qByCh.get(c.id) ?? 0) > 0);
       const ms = chs.map((c) => mastery.get(c.id)).filter(Boolean) as ChapterMastery[];
       return {
         id: s.id, code: s.code, name: s.name, coeff, durationMin, chapters: chs,
@@ -119,7 +122,7 @@ export default function PreparationHub() {
   return (
     <div className="max-w-4xl mx-auto py-8 fade-up">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">Espace de préparation</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Préparation</h1>
         <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
           {ctx?.ownTrackName ? `${ctx.ownTrackName} · ${ctx.levelName}` : "Par notion, par séries, ou en conditions d'examen."}
         </p>
@@ -130,14 +133,24 @@ export default function PreparationHub() {
         {[
           { icon: Target, t: "Par notion", d: "Les exercices de chaque notion du cours." },
           { icon: Layers, t: "Séries", d: "Des séries dosées, avec ton meilleur score." },
-          { icon: Timer, t: "Examens", d: "Annales et examens blancs, notés /20." },
-        ].map((m) => (
+          { icon: Timer, t: "Examens", d: "Vrais sujets et examens blancs, notés /20.", soon: !FEATURES.examEngine },
+        ].map((m) => m.soon ? (
+          <button key={m.t} onClick={() => setSoonOpen(true)} aria-haspopup="dialog"
+            className="glass rounded-2xl p-4 flex items-start gap-3 text-left relative overflow-hidden hover:-translate-y-0.5 transition">
+            <span className="w-9 h-9 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] text-neutral-400 grid place-items-center shrink-0"><Lock className="w-4 h-4" /></span>
+            <div className="min-w-0">
+              <div className="text-sm font-semibold flex items-center gap-2 text-neutral-500 dark:text-neutral-400">{m.t} <SoonPill /></div>
+              <div className="text-xs text-neutral-400">{m.d}</div>
+            </div>
+          </button>
+        ) : (
           <div key={m.t} className="glass rounded-2xl p-4 flex items-start gap-3">
             <span className="w-9 h-9 rounded-xl bg-arctic-blue/10 text-arctic-blue dark:text-arctic-cyan grid place-items-center shrink-0"><m.icon className="w-4.5 h-4.5" /></span>
             <div><div className="text-sm font-semibold">{m.t}</div><div className="text-xs text-neutral-400">{m.d}</div></div>
           </div>
         ))}
       </div>
+      <ExamsSoonPanel open={soonOpen} onClose={() => setSoonOpen(false)} />
 
       <PrepAlerts className="mt-5" />
 
@@ -150,37 +163,20 @@ export default function PreparationHub() {
         </div>
       )}
 
-      {is2bac && chips.length > 0 && (
-        <div className="mt-7">
-          <div className="text-[11px] font-bold uppercase tracking-wide text-neutral-400 mb-2">Filière</div>
-          <div className="flex flex-wrap gap-2">
-            {chips.map((c) => {
-              const isOwn = c.code === ctx?.ownTrack;
-              const on = c.code === filiere;
-              return (
-                <button key={c.code} onClick={() => setFiliere(c.code)} title={c.name}
-                  className={`inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full transition ${on ? "bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white shadow-lg shadow-arctic-blue/20" : "chip text-neutral-600 dark:text-neutral-300 hover:-translate-y-0.5"}`}>
-                  {c.label}
-                  {isOwn && <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${on ? "bg-white/25" : "bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan"}`}>TA FILIÈRE</span>}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
       <div className="mt-8 flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-neutral-400">
         <GraduationCap className="w-4 h-4" /> {(is2bac ? ctx?.trackNameByCode.get(filiere ?? "") : ctx?.ownTrackName) || "Matières"}
       </div>
 
-      {loading ? (
+      {!loading && ctx && !supported ? (
+        <div className="mt-4 glass rounded-3xl p-10 text-center text-neutral-400">La Préparation arrive bientôt pour ta filière.</div>
+      ) : loading ? (
         <div className="grid place-items-center h-40 text-neutral-400"><Loader2 className="w-6 h-6 animate-spin" /></div>
       ) : cards.length === 0 ? (
-        <div className="mt-4 glass rounded-3xl p-10 text-center text-neutral-400">Le contenu arrive très bientôt. ✨</div>
+        <div className="mt-4 glass rounded-3xl p-10 text-center text-neutral-400">Le contenu arrive très bientôt.</div>
       ) : (
         <div className="mt-4 space-y-3">
           {cards.map((c) => {
-            const has = c.nQ + c.nSeries + c.nExams > 0;
+            const has = c.nQ > 0;
             return (
               <SubjectPad key={c.code} code={c.code} name={c.name} onClick={() => has && open(c)} disabled={!has}
                 subtitle={c.mastery != null ? `${c.mastery}% de réussite · ${c.worked}/${c.chapters.length} chapitres travaillés` : undefined}

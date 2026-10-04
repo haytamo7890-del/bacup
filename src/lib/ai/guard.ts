@@ -23,7 +23,7 @@ export async function guardAI(): Promise<GuardResult> {
 
   const { data, error } = await supabase.rpc("ai_can_use", { p_max: AI_LIMITS.pro.questionsPerDay });
   if (error) return { ok: false, status: 500, message: "Quota IA indisponible. Réessaie plus tard." };
-  if (!data) return { ok: false, status: 429, message: "Tu as atteint ta limite d'IA du jour. Reviens demain 💪" };
+  if (!data) return { ok: false, status: 429, message: "Tu as atteint ta limite d'IA du jour. Reviens demain." };
 
   return { ok: true, userId: user.id };
 }

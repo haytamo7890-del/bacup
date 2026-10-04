@@ -1,4 +1,4 @@
-import { Sparkles, Flame, Leaf, Brain, Award, Crown, Gem, type LucideIcon } from "lucide-react";
+import { Flame, Leaf, Brain, Award, Crown, Gem, type LucideIcon, Sprout } from "lucide-react";
 
 export type Tier = {
   key: string; day: number; name: string; tagline: string;
@@ -7,7 +7,7 @@ export type Tier = {
 
 /** Monk ladder — inspired by tiered-shield badge systems, themed to habit-building science. */
 export const TIERS: Tier[] = [
-  { key: "novice",   day: 0,   name: "Novice",   tagline: "Le premier pas",              c1: "#94a3b8", c2: "#475569", ring: "#64748b", Icon: Sparkles, xp: 0 },
+  { key: "novice",   day: 0,   name: "Novice",   tagline: "Le premier pas",              c1: "#94a3b8", c2: "#475569", ring: "#64748b", Icon: Sprout, xp: 0 },
   { key: "apprenti", day: 7,   name: "Apprenti", tagline: "La première semaine",         c1: "#f4a15a", c2: "#b45309", ring: "#d97706", Icon: Flame, xp: 50 },
   { key: "disciple", day: 21,  name: "Disciple", tagline: "Habitude formée · 21 jours",  c1: "#e2e8f0", c2: "#94a3b8", ring: "#cbd5e1", Icon: Leaf, xp: 150 },
   { key: "initie",   day: 66,  name: "Initié",   tagline: "Automatisme · 66 jours",      c1: "#fcd34d", c2: "#d97706", ring: "#fbbf24", Icon: Brain, xp: 400 },

@@ -5,7 +5,8 @@
 
 /* ---- Arctic Depths palette + fonts ---- */
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+  /* UI typeface = Satoshi (Postflows-style). Inter stays as fallback. */
+  --font-sans: "Satoshi", var(--font-inter), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", sans-serif;
 
   --color-arctic-cyan: #0db8d3;
@@ -279,3 +280,52 @@ body {
 /* hide horizontal scrollbar on the exam tab switcher */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ---------- Exam engine « Bientôt » (src/components/prep/exams-soon.tsx) ---------- */
+.soon-stripes {
+  background-image: repeating-linear-gradient(-45deg, rgba(255,255,255,.28) 0 8px, transparent 8px 16px);
+  background-size: 22.6px 22.6px;
+  animation: soon-stripes 1s linear infinite;
+}
+@keyframes soon-stripes { to { background-position: 22.6px 0; } }
+.soon-dot { animation: soon-pulse 1.8s ease-in-out infinite; }
+@keyframes soon-pulse { 0%,100% { opacity: .45; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.15); } }
+@media (prefers-reduced-motion: reduce) { .soon-stripes, .soon-dot { animation: none; } }
+
+
+/* ==========================================================================
+   TYPE RESET — Postflows-style typography across the app (2026-10-04)
+   One family (Satoshi), max weight 700, tight headings, calm body.
+   To roll back: delete this block + restore --font-sans in @theme.
+   ========================================================================== */
+body {
+  letter-spacing: -0.005em;
+  font-feature-settings: normal;
+  line-height: 1.55;
+}
+@layer base {
+  h1, h2, h3, h4 { letter-spacing: -0.02em; line-height: 1.2; text-wrap: balance; }
+}
+/* Satoshi has no 800: cap heavy weights at 700 like Postflows */
+.font-extrabold, .font-black { font-weight: 700; }
+/* Subject names: Satoshi instead of the brush script, no swash */
+.subject-title {
+  font-family: "Satoshi", var(--font-aref), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.subject-swash { display: none; }
+
+/* ---------- Goal pill: slow light sweep across the text (src/components/dashboard/goal-pill.tsx) ---------- */
+.goal-shine {
+  --shine-base: #262626; --shine-hi: #1b7fdc;
+  background-image: linear-gradient(110deg, var(--shine-base) 0%, var(--shine-base) 40%, var(--shine-hi) 50%, var(--shine-base) 60%, var(--shine-base) 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+  animation: goal-shine 5s ease-in-out infinite;
+}
+.dark .goal-shine { --shine-base: #ededed; --shine-hi: #0db8d3; }
+@keyframes goal-shine { 0% { background-position: 100% 0; } 60%, 100% { background-position: 0% 0; } }
+@media (prefers-reduced-motion: reduce) { .goal-shine { animation: none; background-position: 100% 0; } }

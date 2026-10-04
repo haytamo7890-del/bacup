@@ -1,0 +1,1013 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "pc",
+  "svt"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-scex-integrale-flash-1",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Définition de l'intégrale",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Définition de l'intégrale",
+     "difficulty": 1,
+     "statement": "$\\displaystyle\\int_0^2 3x^2\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$8$",
+       "correct": true,
+       "why": "Une primitive de $3x^2$ est $x^3$ : $2^3 - 0^3 = 8$."
+      },
+      {
+       "label": "$12$",
+       "why": "Tu as calculé la dérivée $6x$ en $2$ : il faut une primitive."
+      },
+      {
+       "label": "$24$",
+       "why": "Tu as pris $3x^3$ comme primitive : la primitive de $3x^2$ est $x^3$ (on divise par $3$)."
+      },
+      {
+       "label": "$4$",
+       "why": "Tu as calculé $2^2$ : il faut $[x^3]_0^2$."
+      }
+     ],
+     "hint": "Trouve une primitive $F$ de $3x^2$, puis calcule $F(2) - F(0)$.",
+     "solution": "Une primitive de $x\\mapsto 3x^2$ est $F(x) = x^3$. Donc $\\displaystyle\\int_0^2 3x^2\\,\\mathrm dx = F(2) - F(0) = 8 - 0 = 8$.",
+     "points": 1,
+     "methode": "$\\int_a^b f(x)\\,\\mathrm dx = F(b) - F(a)$, où $F$ est une primitive de $f$.",
+     "ref": "m2-scex-integrale-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-flash-2",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Technique 1 — Reconnaître une primitive",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Technique 1 — Reconnaître une primitive",
+     "difficulty": 2,
+     "statement": "$\\displaystyle\\int_0^1 \\mathrm{e}^{2x}\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\mathrm{e}^2 - 1}{2}$",
+       "correct": true,
+       "why": "Une primitive de $\\mathrm e^{2x}$ est $\\frac12\\mathrm e^{2x}$."
+      },
+      {
+       "label": "$\\mathrm{e}^2 - 1$",
+       "why": "Tu as oublié le facteur $\\frac12$ : $\\left(\\mathrm e^{2x}\\right)' = 2\\mathrm e^{2x}$."
+      },
+      {
+       "label": "$2(\\mathrm{e}^2 - 1)$",
+       "why": "Tu as multiplié par $2$ au lieu de diviser."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^2}{2}$",
+       "why": "Tu as oublié de retrancher $F(0) = \\frac12$."
+      }
+     ],
+     "hint": "Primitive de $\\mathrm e^{ax}$ : $\\frac1a\\mathrm e^{ax}$.",
+     "solution": "$F(x) = \\frac12\\mathrm e^{2x}$ est une primitive de $\\mathrm e^{2x}$. $\\displaystyle\\int_0^1\\mathrm e^{2x}\\,\\mathrm dx = \\frac12\\mathrm e^{2} - \\frac12\\mathrm e^0 = \\frac{\\mathrm e^2 - 1}{2}$.",
+     "points": 1,
+     "methode": "Primitive de $\\mathrm{e}^{ax+b}$ : $\\frac1a\\mathrm{e}^{ax+b}$.",
+     "ref": "m2-scex-integrale-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-flash-3",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Propriétés algébriques",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Propriétés algébriques",
+     "difficulty": 1,
+     "statement": "On sait que $\\displaystyle\\int_0^3 f(x)\\,\\mathrm{d}x = 5$ et $\\displaystyle\\int_0^1 f(x)\\,\\mathrm{d}x = 2$. Alors $\\displaystyle\\int_1^3 f(x)\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "Chasles : $\\int_0^3 = \\int_0^1 + \\int_1^3$, donc $\\int_1^3 = 5 - 2$."
+      },
+      {
+       "label": "$7$",
+       "why": "Tu as additionné : la relation de Chasles donne une différence ici."
+      },
+      {
+       "label": "$-3$",
+       "why": "Tu as calculé $\\int_3^1$ : les bornes sont dans l'ordre $1 \\to 3$."
+      },
+      {
+       "label": "$\\dfrac52$",
+       "why": "Une intégrale n'est pas proportionnelle à la longueur de l'intervalle en général."
+      }
+     ],
+     "hint": "Relation de Chasles : $\\int_a^c = \\int_a^b + \\int_b^c$.",
+     "solution": "D'après la relation de Chasles : $\\displaystyle\\int_0^3 f = \\int_0^1 f + \\int_1^3 f$, donc $\\displaystyle\\int_1^3 f = 5 - 2 = 3$.",
+     "points": 1,
+     "methode": "Chasles : $\\int_a^b f + \\int_b^c f = \\int_a^c f$ ; et $\\int_b^a f = -\\int_a^b f$.",
+     "ref": "m2-scex-integrale-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-flash-4",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Positivité et ordre",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Positivité et ordre",
+     "difficulty": 2,
+     "statement": "Pour tout $x\\in[0;1]$, $0 \\le f(x) \\le x^2$. On peut en déduire :",
+     "options": [
+      {
+       "label": "$0 \\le \\displaystyle\\int_0^1 f(x)\\,\\mathrm{d}x \\le \\dfrac13$",
+       "correct": true,
+       "why": "On intègre l'encadrement ($0 < 1$) et $\\int_0^1 x^2\\,\\mathrm dx = \\frac13$."
+      },
+      {
+       "label": "$0 \\le \\displaystyle\\int_0^1 f(x)\\,\\mathrm{d}x \\le 1$",
+       "why": "Vrai mais trop faible : $\\int_0^1 x^2\\,\\mathrm dx = \\frac13$, il faut intégrer la borne."
+      },
+      {
+       "label": "$\\displaystyle\\int_0^1 f(x)\\,\\mathrm{d}x = \\dfrac13$",
+       "why": "On a seulement une inégalité : $f$ n'est pas forcément égale à $x^2$."
+      },
+      {
+       "label": "$0 \\le \\displaystyle\\int_0^1 f(x)\\,\\mathrm{d}x \\le \\dfrac12$",
+       "why": "$\\frac12$ est l'intégrale de $x$, pas de $x^2$."
+      }
+     ],
+     "hint": "Les inégalités se conservent par intégration quand les bornes sont dans l'ordre croissant.",
+     "solution": "Comme $0 < 1$ et $0 \\le f(x) \\le x^2$ sur $[0;1]$, on intègre : $0 \\le \\displaystyle\\int_0^1 f(x)\\,\\mathrm dx \\le \\int_0^1 x^2\\,\\mathrm dx = \\left[\\frac{x^3}{3}\\right]_0^1 = \\frac13$.",
+     "points": 1,
+     "methode": "Si $a \\le b$ et $f \\le g$ sur $[a;b]$, alors $\\int_a^b f \\le \\int_a^b g$.",
+     "ref": "m2-scex-integrale-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-flash-5",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Valeur moyenne",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Valeur moyenne",
+     "difficulty": 2,
+     "statement": "La valeur moyenne de $f(x) = x^2$ sur $[0;3]$ est :",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "$\\frac{1}{3 - 0}\\int_0^3 x^2\\,\\mathrm dx = \\frac13\\times 9 = 3$."
+      },
+      {
+       "label": "$9$",
+       "why": "Tu as oublié de diviser par la longueur de l'intervalle $b - a = 3$."
+      },
+      {
+       "label": "$\\dfrac92$",
+       "why": "Tu as fait la moyenne de $f(0)$ et $f(3)$ : la valeur moyenne d'une fonction se calcule avec une intégrale."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as divisé $3$ par $3$ : $\\int_0^3 x^2\\,\\mathrm dx = 9$, pas $3$."
+      }
+     ],
+     "hint": "$\\mu = \\dfrac{1}{b-a}\\displaystyle\\int_a^b f(x)\\,\\mathrm dx$.",
+     "solution": "$\\displaystyle\\int_0^3 x^2\\,\\mathrm dx = \\left[\\frac{x^3}{3}\\right]_0^3 = 9$. Valeur moyenne : $\\mu = \\frac{1}{3}\\times 9 = 3$.",
+     "points": 1,
+     "methode": "Valeur moyenne $= \\frac{1}{b-a}\\int_a^b f$.",
+     "ref": "m2-scex-integrale-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-flash-6",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Technique 3 — L'intégration par parties",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Technique 3 — L'intégration par parties",
+     "difficulty": 3,
+     "statement": "$\\displaystyle\\int_0^1 x\\,\\mathrm{e}^{x}\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "$[x\\mathrm e^x]_0^1 - \\int_0^1\\mathrm e^x\\,\\mathrm dx = \\mathrm e - (\\mathrm e - 1) = 1$."
+      },
+      {
+       "label": "$\\mathrm{e}$",
+       "why": "Tu t'es arrêté au crochet $[x\\mathrm e^x]_0^1$ : il reste l'intégrale $\\int_0^1 \\mathrm e^x\\,\\mathrm dx$ à retrancher."
+      },
+      {
+       "label": "$\\mathrm{e} - 1$",
+       "why": "C'est $\\int_0^1 \\mathrm e^x\\,\\mathrm dx$ seule : le facteur $x$ compte."
+      },
+      {
+       "label": "$2\\mathrm{e} - 1$",
+       "why": "Erreur de signe : la formule est $[uv] - \\int u'v$."
+      }
+     ],
+     "hint": "Pose $u(x) = x$ et $v'(x) = \\mathrm e^x$.",
+     "solution": "Avec $u = x$, $u' = 1$, $v' = \\mathrm e^x$, $v = \\mathrm e^x$ : $\\displaystyle\\int_0^1 x\\mathrm e^x\\,\\mathrm dx = [x\\mathrm e^x]_0^1 - \\int_0^1 \\mathrm e^x\\,\\mathrm dx = \\mathrm e - [\\mathrm e^x]_0^1 = \\mathrm e - (\\mathrm e - 1) = 1$.",
+     "points": 1,
+     "methode": "IPP : $\\int_a^b uv' = [uv]_a^b - \\int_a^b u'v$. Pose $u$ = le polynôme (il se simplifie en dérivant).",
+     "ref": "m2-scex-integrale-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-flash-7",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Aire entre une courbe et l'axe des abscisses",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Aire entre une courbe et l'axe des abscisses",
+     "difficulty": 2,
+     "statement": "L'aire du domaine compris entre la courbe de $f(x) = x^2 - 1$, l'axe des abscisses et les droites $x = 0$ et $x = 1$ est, en unités d'aire :",
+     "options": [
+      {
+       "label": "$\\dfrac23$",
+       "correct": true,
+       "why": "$f \\le 0$ sur $[0;1]$, donc l'aire est $-\\int_0^1 (x^2-1)\\,\\mathrm dx = -\\left(\\frac13 - 1\\right) = \\frac23$."
+      },
+      {
+       "label": "$-\\dfrac23$",
+       "why": "Une aire est toujours positive : comme $f \\le 0$, on prend l'opposé de l'intégrale."
+      },
+      {
+       "label": "$\\dfrac13$",
+       "why": "Tu as oublié le terme $-1$ : $\\int_0^1 (x^2 - 1)\\,\\mathrm dx = \\frac13 - 1$."
+      },
+      {
+       "label": "$\\dfrac43$",
+       "why": "Tu as calculé $\\frac13 + 1$ : l'intégrale de $-1$ sur $[0;1]$ vaut $-1$."
+      }
+     ],
+     "hint": "Étudie le signe de $f$ sur $[0;1]$ avant d'intégrer.",
+     "solution": "Pour $x\\in[0;1]$, $x^2 \\le 1$ donc $f(x) \\le 0$. L'aire vaut $\\mathcal A = -\\displaystyle\\int_0^1(x^2 - 1)\\,\\mathrm dx = -\\left[\\frac{x^3}{3} - x\\right]_0^1 = -\\left(\\frac13 - 1\\right) = \\frac23$ u.a.",
+     "points": 1,
+     "methode": "Aire = $\\int_a^b |f(x)|\\,\\mathrm dx$ : si $f \\le 0$, l'aire est $-\\int_a^b f$.",
+     "ref": "m2-scex-integrale-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-flash-8",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Parité et symétries : simplifier avant de calculer",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Parité et symétries : simplifier avant de calculer",
+     "difficulty": 2,
+     "statement": "$\\displaystyle\\int_{-2}^{2} x^3\\cos x\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "$x\\mapsto x^3\\cos x$ est impaire et l'intervalle est symétrique."
+      },
+      {
+       "label": "$2\\displaystyle\\int_0^2 x^3\\cos x\\,\\mathrm{d}x$",
+       "why": "Cette formule vaut pour une fonction paire ; ici $(-x)^3\\cos(-x) = -x^3\\cos x$ : elle est impaire."
+      },
+      {
+       "label": "$16\\cos 2$",
+       "why": "On ne peut pas sortir $\\cos x$ de l'intégrale comme une constante."
+      },
+      {
+       "label": "on ne peut pas la calculer sans intégration par parties",
+       "why": "La parité suffit : l'intégrale d'une fonction impaire sur $[-a;a]$ est nulle."
+      }
+     ],
+     "hint": "Calcule $f(-x)$.",
+     "solution": "Soit $f(x) = x^3\\cos x$. $f(-x) = (-x)^3\\cos(-x) = -x^3\\cos x = -f(x)$ : $f$ est impaire. Sur l'intervalle symétrique $[-2;2]$, son intégrale est nulle.",
+     "points": 1,
+     "methode": "Sur $[-a;a]$ : $f$ impaire ⇒ $\\int = 0$ ; $f$ paire ⇒ $\\int_{-a}^a f = 2\\int_0^a f$.",
+     "ref": "m2-scex-integrale-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-ex1",
+   "chapter": "integrale",
+   "kind": "probleme",
+   "title": "Exercice 1 — Calculer des intégrales",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Calculer chacune des intégrales suivantes. Choisis à chaque fois la bonne technique : primitive directe, forme $\\frac{u'}{u}$, linéarisation ou intégration par parties.",
+   "questions": [
+    {
+     "notion": "Technique 1 — Reconnaître une primitive",
+     "difficulty": 1,
+     "statement": "1) $\\displaystyle\\int_1^{\\mathrm e} \\frac{1}{x}\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "$[\\ln x]_1^{\\mathrm e} = 1 - 0$."
+      },
+      {
+       "label": "$\\mathrm{e} - 1$",
+       "why": "Tu as intégré $1$ au lieu de $\\frac1x$ : la primitive de $\\frac1x$ est $\\ln x$."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\ln\\mathrm e = 1$, pas $0$."
+      },
+      {
+       "label": "$\\dfrac{1}{\\mathrm{e}}$",
+       "why": "Tu as évalué $\\frac1x$ en $\\mathrm e$ au lieu d'une primitive."
+      }
+     ],
+     "hint": "Primitive de $\\frac1x$ sur $]0;+\\infty[$.",
+     "solution": "$\\displaystyle\\int_1^{\\mathrm e}\\frac1x\\,\\mathrm dx = [\\ln x]_1^{\\mathrm e} = \\ln\\mathrm e - \\ln 1 = 1$.",
+     "points": 1,
+     "ref": "m2-scex-integrale-ex1-q1"
+    },
+    {
+     "notion": "Technique 1 — Reconnaître une primitive",
+     "difficulty": 2,
+     "statement": "2) $\\displaystyle\\int_0^1 \\frac{2x}{x^2+1}\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$\\ln 2$",
+       "correct": true,
+       "why": "Forme $\\frac{u'}{u}$ : $[\\ln(x^2+1)]_0^1 = \\ln2 - \\ln1$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as simplifié $\\frac{2x}{x^2+1}$ comme $\\frac2x$ : on ne simplifie pas une somme."
+      },
+      {
+       "label": "$2\\ln 2$",
+       "why": "Le numérateur $2x$ est exactement $u'$ : pas de facteur $2$ en plus."
+      },
+      {
+       "label": "$\\dfrac{\\ln 2}{2}$",
+       "why": "Le numérateur est déjà $u' = 2x$ : on ne divise pas par $2$."
+      }
+     ],
+     "hint": "Le numérateur est-il la dérivée du dénominateur ?",
+     "solution": "Avec $u(x) = x^2 + 1 > 0$, $u'(x) = 2x$ : l'intégrande est $\\frac{u'}{u}$, de primitive $\\ln u$. $\\displaystyle\\int_0^1\\frac{2x}{x^2+1}\\,\\mathrm dx = [\\ln(x^2+1)]_0^1 = \\ln2 - \\ln1 = \\ln 2$.",
+     "points": 1,
+     "methode": "$\\frac{u'}{u}$ a pour primitive $\\ln|u|$.",
+     "ref": "m2-scex-integrale-ex1-q2"
+    },
+    {
+     "notion": "Technique 2 — Linéariser ou transformer l'écriture",
+     "difficulty": 2,
+     "statement": "3) Sachant que $\\cos^2 x = \\dfrac{1 + \\cos 2x}{2}$, $\\displaystyle\\int_0^{\\pi}\\cos^2 x\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\pi}{2}$",
+       "correct": true,
+       "why": "$\\left[\\frac x2 + \\frac{\\sin 2x}{4}\\right]_0^\\pi = \\frac\\pi2$."
+      },
+      {
+       "label": "$\\pi$",
+       "why": "Tu as oublié de diviser par $2$ : $\\int_0^\\pi \\frac12\\,\\mathrm dx = \\frac\\pi2$."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\cos^2 x \\ge 0$ : son intégrale sur $[0;\\pi]$ ne peut pas être nulle."
+      },
+      {
+       "label": "$1$",
+       "why": "Calcule $\\left[\\frac{x}{2}\\right]_0^{\\pi}$ : on obtient $\\frac\\pi2$, pas $1$."
+      }
+     ],
+     "hint": "Intègre séparément $\\frac12$ et $\\frac{\\cos 2x}{2}$.",
+     "solution": "$\\displaystyle\\int_0^\\pi\\cos^2x\\,\\mathrm dx = \\int_0^\\pi\\left(\\frac12 + \\frac{\\cos2x}{2}\\right)\\mathrm dx = \\left[\\frac x2 + \\frac{\\sin2x}{4}\\right]_0^\\pi = \\frac\\pi2 + \\frac{\\sin2\\pi}{4} - 0 = \\frac\\pi2$.",
+     "points": 1,
+     "methode": "Puissances de $\\cos$ ou $\\sin$ : linéarise d'abord.",
+     "ref": "m2-scex-integrale-ex1-q3"
+    },
+    {
+     "notion": "Technique 3 — L'intégration par parties",
+     "difficulty": 3,
+     "statement": "4) $\\displaystyle\\int_1^{\\mathrm e}\\ln x\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "IPP avec $u = \\ln x$, $v' = 1$ : $[x\\ln x]_1^{\\mathrm e} - \\int_1^{\\mathrm e} 1\\,\\mathrm dx = \\mathrm e - (\\mathrm e - 1)$."
+      },
+      {
+       "label": "$\\mathrm{e}$",
+       "why": "Tu t'es arrêté au crochet $[x\\ln x]_1^{\\mathrm e}$ : il faut retrancher $\\int_1^{\\mathrm e}1\\,\\mathrm dx$."
+      },
+      {
+       "label": "$\\mathrm{e} - 1$",
+       "why": "C'est $\\int_1^{\\mathrm e}1\\,\\mathrm dx$ : tu as oublié le crochet."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\ln x \\ge 0$ sur $[1;\\mathrm e]$ et n'est pas identiquement nulle : l'intégrale est strictement positive."
+      }
+     ],
+     "hint": "Écris $\\ln x = 1\\times\\ln x$ et pose $u = \\ln x$, $v' = 1$.",
+     "solution": "$u = \\ln x$, $u' = \\frac1x$, $v' = 1$, $v = x$. $\\displaystyle\\int_1^{\\mathrm e}\\ln x\\,\\mathrm dx = [x\\ln x]_1^{\\mathrm e} - \\int_1^{\\mathrm e}x\\cdot\\frac1x\\,\\mathrm dx = (\\mathrm e - 0) - (\\mathrm e - 1) = 1$.",
+     "points": 1,
+     "methode": "Pour intégrer $\\ln x$ seul : IPP avec $v' = 1$. Une primitive de $\\ln x$ est $x\\ln x - x$.",
+     "ref": "m2-scex-integrale-ex1-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-ex2",
+   "chapter": "integrale",
+   "kind": "probleme",
+   "title": "Exercice 2 — Aire, valeur moyenne et volume",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Dans un repère orthonormé d'unité graphique $2\\ \\mathrm{cm}$, on considère les fonctions $f(x) = x^2$ et $g(x) = x$ sur $[0;1]$, et la fonction $h(x) = \\sqrt{x}$ sur $[0;1]$.",
+   "questions": [
+    {
+     "notion": "Aire entre deux courbes",
+     "difficulty": 2,
+     "statement": "1) L'aire du domaine compris entre les courbes de $f$ et de $g$ sur $[0;1]$ vaut, en unités d'aire :",
+     "options": [
+      {
+       "label": "$\\dfrac16$",
+       "correct": true,
+       "why": "$g \\ge f$ sur $[0;1]$ : $\\int_0^1 (x - x^2)\\,\\mathrm dx = \\frac12 - \\frac13$."
+      },
+      {
+       "label": "$-\\dfrac16$",
+       "why": "Tu as calculé $\\int (f - g)$ : on intègre (fonction du dessus) − (fonction du dessous)."
+      },
+      {
+       "label": "$\\dfrac56$",
+       "why": "Tu as additionné les deux intégrales au lieu de les soustraire."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "C'est l'aire sous $g$ seule : il faut retirer l'aire sous $f$."
+      }
+     ],
+     "hint": "Sur $[0;1]$, $x^2 \\le x$. Intègre la différence.",
+     "solution": "Pour $x\\in[0;1]$, $x^2 \\le x$, donc $g \\ge f$. $\\mathcal A = \\displaystyle\\int_0^1(x - x^2)\\,\\mathrm dx = \\left[\\frac{x^2}{2} - \\frac{x^3}{3}\\right]_0^1 = \\frac12 - \\frac13 = \\frac16$ u.a.",
+     "points": 1,
+     "methode": "Aire entre deux courbes = $\\int_a^b (\\text{haut} - \\text{bas})$.",
+     "ref": "m2-scex-integrale-ex2-q1"
+    },
+    {
+     "notion": "Interprétation géométrique : l'aire",
+     "difficulty": 2,
+     "statement": "2) Avec l'unité graphique de $2\\ \\mathrm{cm}$, cette aire vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac23\\ \\mathrm{cm}^2$",
+       "correct": true,
+       "why": "$1$ u.a. $= 2\\times2 = 4\\ \\mathrm{cm}^2$, et $\\frac16\\times4 = \\frac23$."
+      },
+      {
+       "label": "$\\dfrac13\\ \\mathrm{cm}^2$",
+       "why": "Tu as multiplié par $2$ : une unité d'aire est un carré de $2\\ \\mathrm{cm}$ de côté, soit $4\\ \\mathrm{cm}^2$."
+      },
+      {
+       "label": "$\\dfrac16\\ \\mathrm{cm}^2$",
+       "why": "Tu as oublié de convertir les unités d'aire en $\\mathrm{cm}^2$."
+      },
+      {
+       "label": "$\\dfrac1{24}\\ \\mathrm{cm}^2$",
+       "why": "Tu as divisé par $4$ au lieu de multiplier."
+      }
+     ],
+     "hint": "Une unité d'aire = aire du carré construit sur les unités des axes.",
+     "solution": "L'unité d'aire est le carré de côté $2\\ \\mathrm{cm}$ : $1$ u.a. $= 4\\ \\mathrm{cm}^2$. Donc $\\mathcal A = \\frac16\\times4 = \\frac23\\ \\mathrm{cm}^2$.",
+     "points": 1,
+     "methode": "1 u.a. = $\\|\\vec i\\|\\times\\|\\vec j\\|$ (en $\\mathrm{cm}^2$).",
+     "ref": "m2-scex-integrale-ex2-q2"
+    },
+    {
+     "notion": "Valeur moyenne : interprétation et usage",
+     "difficulty": 2,
+     "statement": "3) La valeur moyenne de $f$ sur $[0;2]$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac43$",
+       "correct": true,
+       "why": "$\\frac12\\int_0^2 x^2\\,\\mathrm dx = \\frac12\\times\\frac83$."
+      },
+      {
+       "label": "$\\dfrac83$",
+       "why": "Tu as oublié de diviser par $b - a = 2$."
+      },
+      {
+       "label": "$2$",
+       "why": "Tu as fait la moyenne de $f(0) = 0$ et $f(2) = 4$ : ce n'est pas la valeur moyenne d'une fonction."
+      },
+      {
+       "label": "$4$",
+       "why": "C'est la valeur maximale $f(2)$, pas la moyenne."
+      }
+     ],
+     "hint": "$\\mu = \\frac{1}{b-a}\\int_a^b f$.",
+     "solution": "$\\displaystyle\\int_0^2 x^2\\,\\mathrm dx = \\left[\\frac{x^3}{3}\\right]_0^2 = \\frac83$, donc $\\mu = \\frac{1}{2}\\times\\frac83 = \\frac43$.",
+     "points": 1,
+     "ref": "m2-scex-integrale-ex2-q3"
+    },
+    {
+     "notion": "Volume d'un solide de révolution",
+     "difficulty": 3,
+     "statement": "4) Le volume du solide obtenu en faisant tourner la courbe de $h$ autour de l'axe des abscisses, pour $x\\in[0;1]$, vaut en unités de volume :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\pi}{2}$",
+       "correct": true,
+       "why": "$V = \\pi\\int_0^1 (\\sqrt x)^2\\,\\mathrm dx = \\pi\\int_0^1 x\\,\\mathrm dx = \\frac\\pi2$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Tu as oublié le facteur $\\pi$ de la formule $V = \\pi\\int_a^b f(x)^2\\,\\mathrm dx$."
+      },
+      {
+       "label": "$\\dfrac{2\\pi}{3}$",
+       "why": "Tu as intégré $\\sqrt x$ au lieu de $(\\sqrt x)^2$ : on intègre le carré."
+      },
+      {
+       "label": "$\\dfrac{\\pi}{3}$",
+       "why": "Tu as intégré $x^2$ : $(\\sqrt x)^2 = x$."
+      }
+     ],
+     "hint": "$V = \\pi\\displaystyle\\int_a^b f(x)^2\\,\\mathrm dx$.",
+     "solution": "$V = \\pi\\displaystyle\\int_0^1\\left(\\sqrt x\\right)^2\\mathrm dx = \\pi\\int_0^1 x\\,\\mathrm dx = \\pi\\left[\\frac{x^2}{2}\\right]_0^1 = \\frac\\pi2$ u.v.",
+     "points": 1,
+     "methode": "Volume de révolution autour de $(Ox)$ : $V = \\pi\\int_a^b f(x)^2\\,\\mathrm dx$.",
+     "ref": "m2-scex-integrale-ex2-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-ex3",
+   "chapter": "integrale",
+   "kind": "probleme",
+   "title": "Exercice 3 — Intégrale de x e^{-x} et suite d'intégrales",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $f$ la fonction définie sur $[0;+\\infty[$ par $f(x) = x\\,\\mathrm{e}^{-x}$. On pose $I = \\displaystyle\\int_0^1 f(x)\\,\\mathrm{d}x$, $F(x) = \\displaystyle\\int_0^x f(t)\\,\\mathrm{d}t$ pour $x \\ge 0$, et, pour tout $n\\in\\mathbb{N}$, $I_n = \\displaystyle\\int_0^1 x^n\\mathrm{e}^{-x}\\,\\mathrm{d}x$.",
+   "questions": [
+    {
+     "notion": "Type 4 — Encadrer une intégrale",
+     "difficulty": 2,
+     "statement": "1) Pour $x\\in[0;1]$, on a $\\mathrm{e}^{-1} \\le \\mathrm{e}^{-x} \\le 1$. On en déduit :",
+     "options": [
+      {
+       "label": "$\\dfrac{1}{2\\mathrm{e}} \\le I \\le \\dfrac12$",
+       "correct": true,
+       "why": "$x\\mathrm e^{-1} \\le f(x) \\le x$, puis on intègre : $\\int_0^1 x\\,\\mathrm dx = \\frac12$."
+      },
+      {
+       "label": "$\\dfrac{1}{\\mathrm{e}} \\le I \\le 1$",
+       "why": "Tu as intégré $\\mathrm e^{-1}$ et $1$ sans le facteur $x$ : il faut multiplier par $x \\ge 0$ avant d'intégrer."
+      },
+      {
+       "label": "$0 \\le I \\le \\dfrac{1}{2\\mathrm{e}}$",
+       "why": "$\\frac1{2\\mathrm e}$ est la borne inférieure, pas supérieure."
+      },
+      {
+       "label": "$\\dfrac12 \\le I \\le \\dfrac{\\mathrm{e}}{2}$",
+       "why": "$\\mathrm e^{-x} \\le 1$ donne $f(x) \\le x$ : la borne $\\frac12$ est un majorant."
+      }
+     ],
+     "hint": "Multiplie l'encadrement par $x \\ge 0$, puis intègre sur $[0;1]$.",
+     "solution": "Pour $x\\in[0;1]$, $x \\ge 0$, donc $x\\mathrm e^{-1} \\le x\\mathrm e^{-x} \\le x$. En intégrant ($0 < 1$) : $\\mathrm e^{-1}\\displaystyle\\int_0^1 x\\,\\mathrm dx \\le I \\le \\int_0^1 x\\,\\mathrm dx$, soit $\\dfrac{1}{2\\mathrm e} \\le I \\le \\dfrac12$.",
+     "points": 1,
+     "methode": "Encadre la fonction sur l'intervalle, puis intègre l'encadrement (bornes dans l'ordre croissant).",
+     "part": "Partie A — Calcul de I",
+     "ref": "m2-scex-integrale-ex3-q1"
+    },
+    {
+     "notion": "Type 2 — Intégration par parties",
+     "difficulty": 2,
+     "statement": "2) En posant $u(x) = x$ et $v'(x) = \\mathrm{e}^{-x}$, l'intégration par parties donne :",
+     "options": [
+      {
+       "label": "$I = \\left[-x\\mathrm{e}^{-x}\\right]_0^1 + \\displaystyle\\int_0^1 \\mathrm{e}^{-x}\\,\\mathrm{d}x$",
+       "correct": true,
+       "why": "$v = -\\mathrm e^{-x}$, donc $-\\int u'v = +\\int\\mathrm e^{-x}$."
+      },
+      {
+       "label": "$I = \\left[x\\mathrm{e}^{-x}\\right]_0^1 - \\displaystyle\\int_0^1 \\mathrm{e}^{-x}\\,\\mathrm{d}x$",
+       "why": "Une primitive de $\\mathrm e^{-x}$ est $-\\mathrm e^{-x}$, pas $\\mathrm e^{-x}$."
+      },
+      {
+       "label": "$I = \\left[-x\\mathrm{e}^{-x}\\right]_0^1 - \\displaystyle\\int_0^1 \\mathrm{e}^{-x}\\,\\mathrm{d}x$",
+       "why": "Erreur de signe : $-\\int u'v = -\\int(-\\mathrm e^{-x}) = +\\int\\mathrm e^{-x}$."
+      },
+      {
+       "label": "$I = \\left[-\\dfrac{x^2}{2}\\mathrm{e}^{-x}\\right]_0^1$",
+       "why": "On ne primitive pas un produit facteur par facteur."
+      }
+     ],
+     "hint": "Calcule d'abord $v$, une primitive de $\\mathrm e^{-x}$.",
+     "solution": "$u = x$, $u' = 1$ ; $v' = \\mathrm e^{-x}$, $v = -\\mathrm e^{-x}$. $I = [uv]_0^1 - \\displaystyle\\int_0^1 u'v = \\left[-x\\mathrm e^{-x}\\right]_0^1 - \\int_0^1(-\\mathrm e^{-x})\\,\\mathrm dx = \\left[-x\\mathrm e^{-x}\\right]_0^1 + \\int_0^1\\mathrm e^{-x}\\,\\mathrm dx$.",
+     "points": 1,
+     "part": "Partie A — Calcul de I",
+     "ref": "m2-scex-integrale-ex3-q2"
+    },
+    {
+     "notion": "Type 2 — Intégration par parties",
+     "difficulty": 3,
+     "statement": "3) La valeur exacte de $I$ est :",
+     "options": [
+      {
+       "label": "$1 - \\dfrac{2}{\\mathrm{e}}$",
+       "correct": true,
+       "why": "$-\\mathrm e^{-1} + (1 - \\mathrm e^{-1}) = 1 - 2\\mathrm e^{-1}$."
+      },
+      {
+       "label": "$1 - \\dfrac{1}{\\mathrm{e}}$",
+       "why": "C'est seulement $\\int_0^1\\mathrm e^{-x}\\,\\mathrm dx$ : tu as oublié le crochet $-\\mathrm e^{-1}$."
+      },
+      {
+       "label": "$\\dfrac{2}{\\mathrm{e}} - 1$",
+       "why": "Ce nombre est négatif, alors que $f \\ge 0$ sur $[0;1]$ : erreur de signe."
+      },
+      {
+       "label": "$\\dfrac{1}{\\mathrm{e}}$",
+       "why": "Tu n'as gardé que la valeur absolue du crochet : $\\left[-x\\mathrm e^{-x}\\right]_0^1 = -\\mathrm e^{-1}$, et il faut ajouter $1 - \\mathrm e^{-1}$."
+      }
+     ],
+     "hint": "Calcule séparément le crochet et l'intégrale de $\\mathrm e^{-x}$.",
+     "solution": "$\\left[-x\\mathrm e^{-x}\\right]_0^1 = -\\mathrm e^{-1} - 0 = -\\mathrm e^{-1}$ et $\\displaystyle\\int_0^1\\mathrm e^{-x}\\,\\mathrm dx = \\left[-\\mathrm e^{-x}\\right]_0^1 = 1 - \\mathrm e^{-1}$. Donc $I = 1 - \\dfrac{2}{\\mathrm e} \\approx 0{,}264$, ce qui respecte bien $\\frac{1}{2\\mathrm e}\\approx 0{,}184 \\le I \\le 0{,}5$.",
+     "points": 1,
+     "part": "Partie A — Calcul de I",
+     "ref": "m2-scex-integrale-ex3-q3"
+    },
+    {
+     "notion": "Fonction définie par une intégrale",
+     "difficulty": 2,
+     "statement": "4) Pour tout $x \\ge 0$, $F'(x)$ vaut :",
+     "options": [
+      {
+       "label": "$x\\,\\mathrm{e}^{-x}$",
+       "correct": true,
+       "why": "$F$ est la primitive de $f$ qui s'annule en $0$ : $F' = f$."
+      },
+      {
+       "label": "$(1 - x)\\,\\mathrm{e}^{-x}$",
+       "why": "C'est $f'(x)$ : on demande la dérivée de $F$, qui est $f$."
+      },
+      {
+       "label": "$-x\\,\\mathrm{e}^{-x}$",
+       "why": "La borne variable est en haut : $F'(x) = f(x)$, sans signe moins."
+      },
+      {
+       "label": "$1 - (x+1)\\,\\mathrm{e}^{-x}$",
+       "why": "C'est l'expression de $F(x)$ elle-même, pas de sa dérivée."
+      }
+     ],
+     "hint": "Que vaut la dérivée de $x\\mapsto\\int_a^x f(t)\\,\\mathrm dt$ quand $f$ est continue ?",
+     "solution": "$f$ est continue sur $[0;+\\infty[$, donc $F : x\\mapsto\\displaystyle\\int_0^x f(t)\\,\\mathrm dt$ est la primitive de $f$ qui s'annule en $0$. Ainsi $F'(x) = f(x) = x\\mathrm e^{-x}$.",
+     "points": 1,
+     "methode": "$\\left(\\int_a^x f(t)\\,\\mathrm dt\\right)' = f(x)$.",
+     "part": "Partie B — Fonction F",
+     "ref": "m2-scex-integrale-ex3-q4"
+    },
+    {
+     "notion": "Fonctions définies par une intégrale : étude approfondie",
+     "difficulty": 3,
+     "statement": "5) On admet que $F(x) = 1 - (x+1)\\,\\mathrm{e}^{-x}$. Alors $\\lim\\limits_{x\\to+\\infty}F(x)$ vaut :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "$(x+1)\\mathrm e^{-x} = x\\mathrm e^{-x} + \\mathrm e^{-x} \\to 0$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "$F$ est croissante, mais majorée : $(x+1)\\mathrm e^{-x} > 0$, donc $F(x) < 1$."
+      },
+      {
+       "label": "$0$",
+       "why": "$0$ est la limite de $(x+1)\\mathrm e^{-x}$, pas de $F$."
+      },
+      {
+       "label": "$1 - \\dfrac{2}{\\mathrm{e}}$",
+       "why": "C'est $F(1) = I$, pas la limite en $+\\infty$."
+      }
+     ],
+     "hint": "$\\lim\\limits_{x\\to+\\infty} x\\mathrm e^{-x} = 0$.",
+     "solution": "$(x+1)\\mathrm e^{-x} = \\dfrac{x}{\\mathrm e^x} + \\mathrm e^{-x}$ ; les deux termes tendent vers $0$ en $+\\infty$. Donc $\\lim\\limits_{x\\to+\\infty}F(x) = 1$. (Vérification : $F(0) = 1 - 1 = 0$ ✓ et $F(1) = 1 - 2\\mathrm e^{-1} = I$ ✓.)",
+     "points": 1,
+     "part": "Partie B — Fonction F",
+     "ref": "m2-scex-integrale-ex3-q5"
+    },
+    {
+     "notion": "Intégrales et suites",
+     "difficulty": 3,
+     "statement": "6) Pour tout $x\\in[0;1]$, $x^{n+1} \\le x^n$. La suite $(I_n)$ est donc :",
+     "options": [
+      {
+       "label": "décroissante et minorée par $0$, donc convergente",
+       "correct": true,
+       "why": "$I_{n+1} \\le I_n$ et $I_n \\ge 0$ car l'intégrande est positive."
+      },
+      {
+       "label": "croissante",
+       "why": "Sur $[0;1]$, élever à une puissance plus grande diminue : $x^{n+1} \\le x^n$."
+      },
+      {
+       "label": "décroissante, et elle tend vers $-\\infty$",
+       "why": "$I_n \\ge 0$ (intégrale d'une fonction positive) : elle est minorée par $0$."
+      },
+      {
+       "label": "constante, égale à $I$",
+       "why": "$I_1 = I$, mais $I_0 = 1 - \\mathrm e^{-1} \\neq I_1$."
+      }
+     ],
+     "hint": "Multiplie $x^{n+1} \\le x^n$ par $\\mathrm e^{-x} > 0$, puis intègre.",
+     "solution": "Pour $x\\in[0;1]$ : $x^{n+1}\\mathrm e^{-x} \\le x^n\\mathrm e^{-x}$ ; en intégrant, $I_{n+1} \\le I_n$ : $(I_n)$ est décroissante. De plus $x^n\\mathrm e^{-x} \\ge 0$, donc $I_n \\ge 0$. Décroissante et minorée, la suite $(I_n)$ converge.",
+     "points": 1,
+     "methode": "Suite d'intégrales : compare les intégrandes pour la monotonie, utilise la positivité pour un minorant.",
+     "part": "Partie C — Suite d'intégrales",
+     "ref": "m2-scex-integrale-ex3-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-integrale-ex4",
+   "chapter": "integrale",
+   "kind": "probleme",
+   "title": "Exercice 4 — Aire sous la courbe de 1 / (x(x+1))",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $f$ la fonction définie sur $[1;+\\infty[$ par $f(x) = \\dfrac{1}{x(x+1)}$. Pour tout entier $n \\ge 2$, on note $\\mathcal{A}(n)$ l'aire, en unités d'aire, du domaine limité par la courbe de $f$, l'axe des abscisses et les droites $x = 1$ et $x = n$.",
+   "questions": [
+    {
+     "notion": "Technique 4 — Utiliser une relation fournie",
+     "difficulty": 1,
+     "statement": "1) Pour tout $x \\ge 1$, $f(x)$ s'écrit :",
+     "options": [
+      {
+       "label": "$\\dfrac1x - \\dfrac{1}{x+1}$",
+       "correct": true,
+       "why": "$\\frac1x - \\frac{1}{x+1} = \\frac{(x+1) - x}{x(x+1)} = \\frac{1}{x(x+1)}$."
+      },
+      {
+       "label": "$\\dfrac1x + \\dfrac{1}{x+1}$",
+       "why": "$\\frac1x + \\frac{1}{x+1} = \\frac{2x+1}{x(x+1)}$ : ce n'est pas $f(x)$."
+      },
+      {
+       "label": "$\\dfrac{1}{x+1} - \\dfrac1x$",
+       "why": "Ce nombre est négatif pour $x \\ge 1$, alors que $f(x) > 0$."
+      },
+      {
+       "label": "$1 - \\dfrac{1}{x+1}$",
+       "why": "$1 - \\frac{1}{x+1} = \\frac{x}{x+1}$ : ce n'est pas $f(x)$."
+      }
+     ],
+     "hint": "Réduis chaque proposition au même dénominateur et compare.",
+     "solution": "$\\dfrac1x - \\dfrac{1}{x+1} = \\dfrac{x + 1 - x}{x(x+1)} = \\dfrac{1}{x(x+1)} = f(x)$.",
+     "points": 1,
+     "methode": "Pour intégrer une fraction rationnelle, décompose-la en somme de fractions simples (souvent donnée par l'énoncé).",
+     "part": "Partie A — Une intégrale",
+     "ref": "m2-scex-integrale-ex4-q1"
+    },
+    {
+     "notion": "Type 1 — Calculer une intégrale simple",
+     "difficulty": 2,
+     "statement": "2) $\\displaystyle\\int_1^2 f(x)\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$\\ln\\dfrac43$",
+       "correct": true,
+       "why": "$[\\ln x - \\ln(x+1)]_1^2 = (\\ln2 - \\ln3) - (0 - \\ln2) = 2\\ln2 - \\ln3$."
+      },
+      {
+       "label": "$\\ln\\dfrac23$",
+       "why": "Tu as oublié de retrancher la valeur en $1$, qui vaut $-\\ln 2$."
+      },
+      {
+       "label": "$\\ln\\dfrac34$",
+       "why": "Tu as calculé $F(1) - F(2)$ : c'est $F(2) - F(1)$."
+      },
+      {
+       "label": "$\\ln 3$",
+       "why": "Erreur de signe : la primitive de $-\\frac{1}{x+1}$ est $-\\ln(x+1)$."
+      }
+     ],
+     "hint": "Primitive : $\\ln x - \\ln(x+1) = \\ln\\frac{x}{x+1}$.",
+     "solution": "Une primitive de $f$ sur $[1;+\\infty[$ est $F(x) = \\ln x - \\ln(x+1) = \\ln\\dfrac{x}{x+1}$. $\\displaystyle\\int_1^2 f = F(2) - F(1) = \\ln\\frac23 - \\ln\\frac12 = \\ln\\left(\\frac23\\times2\\right) = \\ln\\frac43$.",
+     "points": 1,
+     "part": "Partie A — Une intégrale",
+     "ref": "m2-scex-integrale-ex4-q2"
+    },
+    {
+     "notion": "Type 4 — Encadrer une intégrale",
+     "difficulty": 3,
+     "statement": "3) Pour $x \\ge 1$ : $x^2 \\le x(x+1) \\le (x+1)^2$, donc $\\dfrac{1}{(x+1)^2} \\le f(x) \\le \\dfrac{1}{x^2}$. En intégrant sur $[1;2]$, on obtient :",
+     "options": [
+      {
+       "label": "$\\dfrac16 \\le \\ln\\dfrac43 \\le \\dfrac12$",
+       "correct": true,
+       "why": "$\\int_1^2\\frac{\\mathrm dx}{(x+1)^2} = \\frac12 - \\frac13 = \\frac16$ et $\\int_1^2\\frac{\\mathrm dx}{x^2} = 1 - \\frac12 = \\frac12$."
+      },
+      {
+       "label": "$\\dfrac19 \\le \\ln\\dfrac43 \\le \\dfrac14$",
+       "why": "Tu as remplacé les intégrales par les valeurs des fonctions en $2$ ; de plus $\\ln\\frac43\\approx 0{,}29 > \\frac14$."
+      },
+      {
+       "label": "$-\\dfrac12 \\le \\ln\\dfrac43 \\le -\\dfrac16$",
+       "why": "Erreur de signe dans les primitives : une primitive de $\\frac1{x^2}$ est $-\\frac1x$, et $[-\\frac1x]_1^2 = \\frac12 > 0$."
+      },
+      {
+       "label": "$\\dfrac13 \\le \\ln\\dfrac43 \\le 1$",
+       "why": "Les bornes sont mal calculées : $\\left[-\\frac{1}{x+1}\\right]_1^2 = \\frac12 - \\frac13 = \\frac16$ et $\\left[-\\frac1x\\right]_1^2 = \\frac12$ ; d'ailleurs $\\ln\\frac43 \\approx 0{,}29 < \\frac13$."
+      }
+     ],
+     "hint": "Primitives : $-\\frac1x$ pour $\\frac{1}{x^2}$ et $-\\frac{1}{x+1}$ pour $\\frac{1}{(x+1)^2}$.",
+     "solution": "$\\displaystyle\\int_1^2\\frac{\\mathrm dx}{(x+1)^2} = \\left[-\\frac{1}{x+1}\\right]_1^2 = -\\frac13 + \\frac12 = \\frac16$ ; $\\displaystyle\\int_1^2\\frac{\\mathrm dx}{x^2} = \\left[-\\frac1x\\right]_1^2 = -\\frac12 + 1 = \\frac12$. Comme $1 < 2$, on intègre l'encadrement : $\\frac16 \\le \\ln\\frac43 \\le \\frac12$ (en effet $\\ln\\frac43 \\approx 0{,}288$).",
+     "points": 1,
+     "part": "Partie A — Une intégrale",
+     "ref": "m2-scex-integrale-ex4-q3"
+    },
+    {
+     "notion": "Type 3 — Calculer une aire",
+     "difficulty": 2,
+     "statement": "4) Pour tout $n \\ge 2$, $\\mathcal{A}(n)$ vaut :",
+     "options": [
+      {
+       "label": "$\\ln\\dfrac{2n}{n+1}$",
+       "correct": true,
+       "why": "$f > 0$, donc $\\mathcal A(n) = F(n) - F(1) = \\ln\\frac{n}{n+1} + \\ln 2$."
+      },
+      {
+       "label": "$\\ln\\dfrac{n}{n+1}$",
+       "why": "Tu as oublié de retrancher $F(1) = \\ln\\frac12$ ; d'ailleurs ce nombre est négatif."
+      },
+      {
+       "label": "$\\ln\\dfrac{n+1}{2n}$",
+       "why": "C'est $F(1) - F(n)$ : l'aire est $F(n) - F(1)$."
+      },
+      {
+       "label": "$\\ln(2n)$",
+       "why": "Tu as oublié le terme $-\\ln(n+1)$ de la primitive."
+      }
+     ],
+     "hint": "$f$ est positive : l'aire est $\\int_1^n f$. Réutilise la primitive $F$.",
+     "solution": "$f > 0$ sur $[1;n]$, donc $\\mathcal A(n) = \\displaystyle\\int_1^n f(x)\\,\\mathrm dx = F(n) - F(1) = \\ln\\frac{n}{n+1} - \\ln\\frac12 = \\ln\\frac{2n}{n+1}$ u.a. (Pour $n = 2$, on retrouve $\\ln\\frac43$ ✓.)",
+     "points": 1,
+     "part": "Partie B — Aire et limite",
+     "ref": "m2-scex-integrale-ex4-q4"
+    },
+    {
+     "notion": "Intégrales et suites",
+     "difficulty": 3,
+     "statement": "5) $\\lim\\limits_{n\\to+\\infty}\\mathcal{A}(n)$ vaut :",
+     "options": [
+      {
+       "label": "$\\ln 2$",
+       "correct": true,
+       "why": "$\\frac{2n}{n+1} \\to 2$ et $\\ln$ est continue en $2$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Le domaine est infini, mais son aire reste finie : $\\frac{2n}{n+1} < 2$."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\mathcal A(n)$ est croissante et positive : sa limite ne peut pas être $0$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as pris la limite de $\\frac{n}{n+1}$ au lieu de $\\frac{2n}{n+1}$, puis oublié le $\\ln$."
+      }
+     ],
+     "hint": "Calcule d'abord la limite de $\\frac{2n}{n+1}$.",
+     "solution": "$\\dfrac{2n}{n+1} = \\dfrac{2}{1 + \\frac1n} \\to 2$. La fonction $\\ln$ étant continue en $2$, $\\lim\\limits_{n\\to+\\infty}\\mathcal A(n) = \\ln 2$.",
+     "points": 1,
+     "methode": "Limite d'une composée : calcule la limite de l'intérieur, puis applique la fonction (si elle est continue).",
+     "part": "Partie B — Aire et limite",
+     "ref": "m2-scex-integrale-ex4-q5"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-scex-integrale-serie-1",
+   "title": "Calcul intégral · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (4 questions).",
+   "kind": "custom",
+   "chapter": "integrale",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-scex-integrale-flash-q1",
+    "m2-scex-integrale-flash-q2",
+    "m2-scex-integrale-flash-q3",
+    "m2-scex-integrale-flash-q4",
+    "m2-scex-integrale-ex1-q1",
+    "m2-scex-integrale-ex1-q2",
+    "m2-scex-integrale-ex1-q3",
+    "m2-scex-integrale-ex1-q4"
+   ]
+  },
+  {
+   "slug": "m2-scex-integrale-serie-2",
+   "title": "Calcul intégral · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (4 questions).",
+   "kind": "custom",
+   "chapter": "integrale",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-scex-integrale-flash-q5",
+    "m2-scex-integrale-flash-q6",
+    "m2-scex-integrale-flash-q7",
+    "m2-scex-integrale-flash-q8",
+    "m2-scex-integrale-ex2-q1",
+    "m2-scex-integrale-ex2-q2",
+    "m2-scex-integrale-ex2-q3",
+    "m2-scex-integrale-ex2-q4"
+   ]
+  },
+  {
+   "slug": "m2-scex-integrale-serie-3",
+   "title": "Calcul intégral · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (6 questions) + Exercice 4 (5 questions).",
+   "kind": "custom",
+   "chapter": "integrale",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-scex-integrale-ex3-q1",
+    "m2-scex-integrale-ex3-q2",
+    "m2-scex-integrale-ex3-q3",
+    "m2-scex-integrale-ex3-q4",
+    "m2-scex-integrale-ex3-q5",
+    "m2-scex-integrale-ex3-q6",
+    "m2-scex-integrale-ex4-q1",
+    "m2-scex-integrale-ex4-q2",
+    "m2-scex-integrale-ex4-q3",
+    "m2-scex-integrale-ex4-q4",
+    "m2-scex-integrale-ex4-q5"
+   ]
+  }
+ ]
+}

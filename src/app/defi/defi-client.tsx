@@ -88,7 +88,7 @@ export default function DefiClient({ challenge, initialBoard }: { challenge: Cha
 
   function share() {
     const url = typeof window !== "undefined" ? window.location.href : "";
-    const text = "Je participe au Défi National Bac-up cette semaine 🇲🇦📚 Rejoins-moi et grimpe dans le classement !";
+    const text = "Je participe au Défi National Bac-up cette semaine. Rejoins-moi et grimpe dans le classement !";
     if (typeof navigator !== "undefined" && navigator.share) {
       navigator.share({ title: "Défi National Bac-up", text, url }).catch(() => {});
     } else if (typeof navigator !== "undefined" && navigator.clipboard) {
@@ -215,7 +215,7 @@ export default function DefiClient({ challenge, initialBoard }: { challenge: Cha
             {shown.map((r) => (
               <div key={`${r.name}-${r.rank}`} className={`flex items-center gap-3 rounded-xl px-3.5 py-2.5 ${r.rank <= 3 ? "bg-arctic-cyan/10 border border-arctic-cyan/20" : "c-soft"}`}>
                 <span className={`w-7 text-center font-extrabold ${r.rank === 1 ? "text-amber-400" : r.rank === 2 ? "text-slate-400" : r.rank === 3 ? "text-orange-400" : "c-dim text-sm"}`}>
-                  {r.rank <= 3 ? ["🥇", "🥈", "🥉"][r.rank - 1] : r.rank}
+                  {r.rank}
                 </span>
                 <div className="min-w-0 flex-1">
                   <div className="text-sm font-semibold truncate">{maskName(r.name)}</div>

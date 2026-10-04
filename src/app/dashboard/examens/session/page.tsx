@@ -20,13 +20,14 @@
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { ExamsSoonGate } from "@/components/prep/exams-soon";
+import { FEATURES } from "@/config";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { Tex } from "@/components/math";
 import { subjectTheme } from "@/config/subjects";
 import { subjectIcon } from "@/components/subject-pad";
 import {
-  ChevronLeft, ChevronRight, Clock, Check, X, Flag,
-  Loader2, BookOpen, Eye, ListFilter, Trophy, FileText, ChevronDown,
+  ChevronLeft, ChevronRight, Clock, Check, X, Flag, Loader2, BookOpen, Eye, ListFilter, Trophy, FileText, ChevronDown, Lightbulb, ListOrdered, TriangleAlert, Compass, type LucideIcon,
 } from "lucide-react";
 
 type Opt = { id: string; label: string; is_correct: boolean; position: number };
@@ -41,12 +42,12 @@ type Part = { exId: string; title: string; statement: string | null; points: num
 type Group = { key: string; num: string; label: string; parts: Part[]; qs: Q[]; points: number };
 type RunMode = "revise" | "exam";
 
-const MODES: { key: string; label: string; emoji: string }[] = [
-  { key: "autrement", label: "Explique autrement", emoji: "💡" },
-  { key: "etapes", label: "Étape par étape", emoji: "🪜" },
-  { key: "cours", label: "Rappel du cours", emoji: "📘" },
-  { key: "erreurs", label: "Erreurs fréquentes", emoji: "⚠️" },
-  { key: "methode", label: "Méthode générale", emoji: "🧭" },
+const MODES: { key: string; label: string; icon: LucideIcon }[] = [
+  { key: "autrement", label: "Explique autrement", icon: Lightbulb },
+  { key: "etapes", label: "Étape par étape", icon: ListOrdered },
+  { key: "cours", label: "Rappel du cours", icon: BookOpen },
+  { key: "erreurs", label: "Erreurs fréquentes", icon: TriangleAlert },
+  { key: "methode", label: "Méthode générale", icon: Compass },
 ];
 const LETTER = (i: number) => String.fromCharCode(65 + i);
 const nf = (n: number) => n.toFixed(2).replace(/\.?0+$/, "");
@@ -58,6 +59,12 @@ const groupLabel = (title: string) =>
 const partLabel = (title: string) => title.match(/Partie\s+[IVX0-9]+/i)?.[0] ?? null;
 
 export default function ExamSessionPage() {
+  // Exam engine locked (FEATURES.examEngine) → « Bientôt » page instead of the runner.
+  if (!FEATURES.examEngine) return <ExamsSoonGate />;
+  return <ExamSessionRunner />;
+}
+
+function ExamSessionRunner() {
   const supabase = createBrowserSupabase();
   const router = useRouter();
 
@@ -275,7 +282,7 @@ export default function ExamSessionPage() {
           return (
             <button key={m.key} onClick={() => showMode(qq, m.key)}
               className={`inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full transition ${on ? `bg-gradient-to-r ${t.grad} text-white` : "chip text-neutral-600 dark:text-neutral-300 hover:-translate-y-0.5"}`}>
-              <span>{m.emoji}</span> {m.label}
+              <m.icon className="w-3.5 h-3.5" /> {m.label}
             </button>
           );
         })}
@@ -313,7 +320,7 @@ export default function ExamSessionPage() {
       <OptionList qq={qq} />
       {mode === "revise" && chosen[qq.id] && (
         <div className={`mt-3 text-sm font-semibold ${isCorrect(qq) ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400"}`}>
-          {isCorrect(qq) ? `✓ Juste — +${nf(qq.points)} pt` : "✗ Faux"}
+          {isCorrect(qq) ? `Juste · +${nf(qq.points)} pt` : "Faux"}
         </div>
       )}
       {mode === "revise" && chosen[qq.id] && <Correction qq={qq} />}
@@ -443,7 +450,7 @@ export default function ExamSessionPage() {
                 <span className="min-w-0">
                   <span className="block text-[13px] font-bold leading-tight truncate">{gr.label}</span>
                   <span className={`block text-[10px] font-semibold leading-tight ${active ? "text-white/80" : "text-neutral-400"}`}>
-                    /{nf(gr.points)} · {mode === "revise" && done ? `${correctIn(gr.qs)}/${gr.qs.length} ✓` : `${ans}/${gr.qs.length}`}
+                    /{nf(gr.points)} · {mode === "revise" && done ? `${correctIn(gr.qs)}/${gr.qs.length} justes` : `${ans}/${gr.qs.length}`}
                   </span>
                 </span>
               </button>

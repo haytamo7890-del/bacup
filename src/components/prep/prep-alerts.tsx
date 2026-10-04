@@ -9,7 +9,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { loadPrepStats, prepRoutes, type PrepStats } from "@/lib/prep";
-import { Brain, NotebookPen, ChevronRight, Sparkles } from "lucide-react";
+import { Brain, NotebookPen, ChevronRight, Target } from "lucide-react";
 
 const plural = (n: number, w: string) => `${n} ${w}${n > 1 ? "s" : ""}`;
 
@@ -32,10 +32,10 @@ export function PrepAlerts({ subject, showEmpty = false, className = "" }: { sub
     if (!showEmpty) return null;
     return (
       <Link href={prepRoutes.hub()} className={`group glass rounded-2xl p-4 flex items-center gap-3 hover:-translate-y-0.5 transition ${className}`}>
-        <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white grid place-items-center shrink-0 shadow-lg shadow-emerald-500/25"><Sparkles className="w-5 h-5" /></span>
+        <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white grid place-items-center shrink-0 shadow-lg shadow-emerald-500/25"><Target className="w-5 h-5" /></span>
         <div className="flex-1 min-w-0">
           <div className="text-sm font-bold tracking-tight">Rien à revoir aujourd&apos;hui</div>
-          <div className="text-xs text-neutral-500 dark:text-neutral-400">Lance une série dans l&apos;Espace de préparation pour garder le rythme.</div>
+          <div className="text-xs text-neutral-500 dark:text-neutral-400">Lance une série dans la Préparation pour garder le rythme.</div>
         </div>
         <ChevronRight className="w-5 h-5 text-neutral-400 group-hover:translate-x-0.5 transition" />
       </Link>
