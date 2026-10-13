@@ -1,0 +1,3187 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "pc",
+  "svt"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-scex-suites-flash-1",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le terme suivant, pas le terme plus un",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites numériques : vocabulaire",
+     "difficulty": 1,
+     "statement": "On considère la suite définie pour tout $n\\in\\mathbb{N}$ par $u_n = 2n^2 - 5n + 1$. Pour étudier comment elle évolue d'un rang au suivant, on a besoin de l'expression de $u_{n+1}$ en fonction de $n$. Cette expression est :",
+     "options": [
+      {
+       "label": "$u_{n+1} = 2n^2 - n - 2$",
+       "correct": true,
+       "why": "$2(n+1)^2 - 5(n+1) + 1 = 2n^2 + 4n + 2 - 5n - 5 + 1 = 2n^2 - n - 2$."
+      },
+      {
+       "label": "$u_{n+1} = 2n^2 - 5n + 2$",
+       "why": "Tu as calculé $u_n + 1$ : on remplace $n$ par $n+1$ partout, on n'ajoute pas $1$ au terme. Pour $n = 0$ : $u_1 = 2 - 5 + 1 = -2$, alors que ta formule donne $2$."
+      },
+      {
+       "label": "$u_{n+1} = 2n^2 - 5n - 2$",
+       "why": "Tu as écrit $(n+1)^2 = n^2 + 1$ : il manque le double produit $2n$. Pour $n = 1$ : $u_2 = 8 - 10 + 1 = -1$, ta formule donne $-5$."
+      },
+      {
+       "label": "$u_{n+1} = 2n^2 - n + 8$",
+       "why": "Erreur de signe en développant $-5(n+1)$ : cela fait $-5n - 5$, pas $-5n + 5$. Pour $n = 0$, ta formule donne $8 \\neq u_1 = -2$."
+      }
+     ],
+     "hint": "Remplace chaque $n$ par $(n+1)$, entre parenthèses, puis développe.",
+     "solution": "Par définition, $u_{n+1}$ s'obtient en remplaçant $n$ par $n+1$ dans l'expression de $u_n$ : $u_{n+1} = 2(n+1)^2 - 5(n+1) + 1$. On développe : $2(n^2 + 2n + 1) - 5n - 5 + 1 = 2n^2 + 4n + 2 - 5n - 4 = 2n^2 - n - 2$. Contrôle : pour $n = 0$, la formule donne $-2$ et directement $u_1 = 2 - 5 + 1 = -2$ ; pour $n = 1$, elle donne $-1$, et $u_2 = 8 - 10 + 1 = -1$.",
+     "points": 1,
+     "methode": "$u_{n+1}$, c'est « $u$ évaluée en $n+1$ », jamais $u_n + 1$. Mets toujours $(n+1)$ entre parenthèses avant de développer.",
+     "ref": "m2-scex-suites-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-2",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Combien de relevés ?",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites numériques : vocabulaire",
+     "difficulty": 1,
+     "statement": "Un club sportif note $u_n$ son nombre d'adhérents l'année $2015 + n$ (ainsi $u_0$ correspond à 2015). Le bureau ne dispose que des relevés de 2018 à 2026 inclus. Ces relevés correspondent :",
+     "options": [
+      {
+       "label": "aux $9$ termes $u_3, u_4, \\dots, u_{11}$",
+       "correct": true,
+       "why": "$2018 = 2015 + 3$ et $2026 = 2015 + 11$ ; de l'indice $3$ à l'indice $11$ il y a $11 - 3 + 1 = 9$ termes."
+      },
+      {
+       "label": "aux $8$ termes $u_3, u_4, \\dots, u_{11}$",
+       "why": "Tu as calculé $11 - 3 = 8$ : on oublie alors un terme. Vérifie sur un petit cas : de $u_3$ à $u_4$ il y a $2$ termes, pas $4 - 3 = 1$."
+      },
+      {
+       "label": "aux $9$ termes $u_4, u_5, \\dots, u_{12}$",
+       "why": "Tu as décalé les indices comme si 2015 correspondait à $u_1$. Ici $u_0$ correspond à 2015, donc 2018 correspond à $u_3$."
+      },
+      {
+       "label": "aux $12$ termes $u_0, u_1, \\dots, u_{11}$",
+       "why": "Tu as compté depuis 2015, mais les relevés commencent en 2018 : $u_0$, $u_1$ et $u_2$ ne sont pas connus."
+      }
+     ],
+     "hint": "Associe à chaque année son indice $n = \\text{année} - 2015$, puis compte : dernier indice $-$ premier indice $+ 1$.",
+     "solution": "L'année $2015 + n$ correspond à l'indice $n$. Pour 2018 : $n = 3$ ; pour 2026 : $n = 11$. Les relevés sont donc $u_3, u_4, \\dots, u_{11}$, soit $11 - 3 + 1 = 9$ termes. Contrôle : on compte les années 2018, 2019, …, 2026 : il y en a bien $2026 - 2018 + 1 = 9$.",
+     "points": 1,
+     "methode": "Nombre de termes de $u_p$ à $u_q$ : $q - p + 1$. C'est la donnée clé de toutes les formules de sommes.",
+     "ref": "m2-scex-suites-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-3",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Calculer pas à pas",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Les deux modes de définition",
+     "difficulty": 1,
+     "statement": "Une suite est définie par récurrence : $u_0 = 1$ et, pour tout $n\\in\\mathbb{N}$, $u_{n+1} = 3u_n - 4$. On ne dispose d'aucune formule explicite et l'on veut connaître $u_3$. Sa valeur est :",
+     "options": [
+      {
+       "label": "$-25$",
+       "correct": true,
+       "why": "$u_1 = 3 - 4 = -1$, $u_2 = -3 - 4 = -7$, $u_3 = -21 - 4 = -25$."
+      },
+      {
+       "label": "$-7$",
+       "why": "C'est $u_2$ : tu as fait une étape de moins. Pour atteindre $u_3$ depuis $u_0$, il faut appliquer la relation trois fois."
+      },
+      {
+       "label": "$23$",
+       "why": "Tu as écrit $u_3 = 3^3 u_0 - 4$ comme si la relation donnait une formule explicite. Le $-4$ est retranché à chaque étape, et il est lui-même multiplié par $3$ aux étapes suivantes."
+      },
+      {
+       "label": "$79$",
+       "why": "Tu as appliqué $u_{n+1} = 3u_n + 4$ (tu obtiens $7$, $25$, $79$). La constante de la relation est $-4$."
+      }
+     ],
+     "hint": "Calcule $u_1$, puis $u_2$, puis $u_3$, en appliquant à chaque fois la relation au terme précédent.",
+     "solution": "Une suite récurrente se calcule de proche en proche. $u_1 = 3u_0 - 4 = 3 - 4 = -1$ ; $u_2 = 3u_1 - 4 = -3 - 4 = -7$ ; $u_3 = 3u_2 - 4 = -21 - 4 = -25$. Contrôle : la suite $v_n = u_n - 2$ vérifie $v_{n+1} = 3u_n - 6 = 3v_n$ et $v_0 = -1$, donc $u_n = 2 - 3^n$ ; pour $n = 3$ : $2 - 27 = -25$.",
+     "points": 1,
+     "methode": "Récurrence $u_{n+1} = f(u_n)$ : calcule les termes un par un, sans sauter d'étape ; un calcul « direct » de $u_n$ demande une formule explicite.",
+     "ref": "m2-scex-suites-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-4",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Programmer le tableur",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Les deux modes de définition",
+     "difficulty": 2,
+     "statement": "Une biologiste modélise une culture par $u_n = 3\\times 2^n - 1$ (en milliers de cellules) après $n$ heures. Elle veut programmer un tableur qui calcule chaque terme à partir du précédent. Quelle définition par récurrence donne exactement la même suite ?",
+     "options": [
+      {
+       "label": "$u_0 = 2$ et $u_{n+1} = 2u_n + 1$",
+       "correct": true,
+       "why": "$2(3\\times 2^n - 1) + 1 = 3\\times2^{n+1} - 1 = u_{n+1}$, et $u_0 = 3 - 1 = 2$."
+      },
+      {
+       "label": "$u_0 = 2$ et $u_{n+1} = u_n + 3$",
+       "why": "Tu as vérifié seulement le passage de $u_0 = 2$ à $u_1 = 5$. Dès l'étape suivante : $u_2 = 11$, alors que $5 + 3 = 8$."
+      },
+      {
+       "label": "$u_0 = 3$ et $u_{n+1} = 2u_n + 1$",
+       "why": "Bonne relation, mais mauvais premier terme : $2^0 = 1$, donc $u_0 = 3\\times 1 - 1 = 2$ et non $3$."
+      },
+      {
+       "label": "$u_0 = 2$ et $u_{n+1} = 2u_n - 1$",
+       "why": "Tu as recopié le $-1$ : $2u_n - 1 = 3\\times2^{n+1} - 3$, qui ne vaut pas $u_{n+1}$. Par exemple $2\\times 2 - 1 = 3 \\neq u_1 = 5$."
+      }
+     ],
+     "hint": "Calcule $2u_n$ et écris-le avec $2^{n+1}$, puis compare avec $u_{n+1}$.",
+     "solution": "D'une part $u_{n+1} = 3\\times 2^{n+1} - 1$. D'autre part $2u_n = 6\\times 2^n - 2 = 3\\times 2^{n+1} - 2$. Donc $u_{n+1} = 2u_n + 1$. Le premier terme est $u_0 = 3\\times 2^0 - 1 = 2$. Contrôle : la relation donne $u_1 = 5$, $u_2 = 11$, $u_3 = 23$, et la formule explicite $3\\times2 - 1 = 5$, $3\\times 4 - 1 = 11$, $3\\times 8 - 1 = 23$.",
+     "points": 1,
+     "methode": "Pour passer de l'explicite au récurrent : exprime $u_{n+1}$ en fonction de $u_n$ par un calcul algébrique, et n'oublie jamais de donner le premier terme.",
+     "ref": "m2-scex-suites-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-5",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Rédiger l'hérédité",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Le raisonnement par récurrence",
+     "difficulty": 1,
+     "statement": "On veut démontrer par récurrence que, pour tout entier $n \\ge 1$, $1 + 3 + 5 + \\dots + (2n - 1) = n^2$ (propriété $P(n)$). L'initialisation est faite. Quelle rédaction de l'hérédité est correcte ?",
+     "options": [
+      {
+       "label": "Soit $n \\ge 1$ tel que $P(n)$ est vraie ; alors $1 + 3 + \\dots + (2n-1) + (2n+1) = n^2 + 2n + 1 = (n+1)^2$",
+       "correct": true,
+       "why": "On fixe un $n$, on utilise $P(n)$ pour remplacer la somme par $n^2$, puis on ajoute le terme suivant $2n+1$."
+      },
+      {
+       "label": "Supposons $P(n)$ vraie pour tout $n \\ge 1$ ; alors $P(n+1)$ est vraie",
+       "why": "Tu supposes ce qu'il faut démontrer : l'hypothèse de récurrence porte sur UN entier $n$ fixé, pas sur tous les entiers."
+      },
+      {
+       "label": "Soit $n \\ge 1$ tel que $P(n+1)$ est vraie ; en retranchant $2n+1$, on obtient $P(n)$",
+       "why": "Tu as inversé le sens : l'hérédité va de $P(n)$ vers $P(n+1)$, sinon on ne « monte » pas le long des entiers."
+      },
+      {
+       "label": "$P(1)$, $P(2)$ et $P(3)$ sont vraies ($1$, $4$, $9$), donc $P(n)$ l'est aussi",
+       "why": "Quelques vérifications ne prouvent rien pour tous les entiers : c'est une conjecture, pas une hérédité."
+      }
+     ],
+     "hint": "L'hérédité part de $P(n)$ pour un $n$ fixé et arrive à $P(n+1)$. Quel terme s'ajoute quand on passe de $n$ à $n+1$ ?",
+     "solution": "Hérédité : soit $n \\ge 1$ fixé tel que $1 + 3 + \\dots + (2n-1) = n^2$. La somme au rang $n+1$ contient un terme de plus, $2(n+1) - 1 = 2n + 1$. Donc $1 + 3 + \\dots + (2n-1) + (2n+1) = n^2 + 2n + 1 = (n+1)^2$ : $P(n+1)$ est vraie. Conclusion : $P(1)$ est vraie et $P$ est héréditaire, donc $P(n)$ est vraie pour tout $n \\ge 1$. Contrôle : pour $n = 4$, $1 + 3 + 5 + 7 = 16 = 4^2$.",
+     "points": 1,
+     "methode": "Hérédité : « Soit $n$ fixé tel que $P(n)$ est vraie ; montrons $P(n+1)$ ». Repère ce qui change entre les rangs $n$ et $n+1$ et utilise l'hypothèse.",
+     "ref": "m2-scex-suites-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-6",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Une formule explicite à prouver",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Le raisonnement par récurrence",
+     "difficulty": 2,
+     "statement": "Soit $(u_n)$ définie par $u_0 = 2$ et $u_{n+1} = 2u_n - 3$. On conjecture que $u_n = 3 - 2^n$ pour tout $n\\in\\mathbb{N}$. Dans l'hérédité, on suppose $u_n = 3 - 2^n$ pour un $n$ fixé. Quel calcul établit correctement la propriété au rang $n+1$ ?",
+     "options": [
+      {
+       "label": "$u_{n+1} = 2(3 - 2^n) - 3 = 3 - 2^{n+1}$",
+       "correct": true,
+       "why": "On part de la relation de récurrence, on remplace $u_n$ grâce à l'hypothèse, et $2\\times 2^n = 2^{n+1}$."
+      },
+      {
+       "label": "$u_{n+1} = 2(3 - 2^n) - 3 = 3 - 4^n$",
+       "why": "Tu as écrit $2 \\times 2^n = 4^n$ : multiplier par $2$ ajoute $1$ à l'exposant. Pour $n = 2$ : $2\\times 2^2 = 8$, alors que $4^2 = 16$."
+      },
+      {
+       "label": "$u_{n+1} = 3 - 2^{n+1}$, donc $2u_n - 3 = 3 - 2^{n+1}$, d'où $u_n = 3 - 2^n$",
+       "why": "Tu pars de ce que tu veux démontrer pour retrouver l'hypothèse : ce raisonnement montre $P(n+1) \\Rightarrow P(n)$, c'est le mauvais sens."
+      },
+      {
+       "label": "$u_1 = 2\\times2 - 3 = 1 = 3 - 2^1$, donc la formule est vraie",
+       "why": "Ce n'est qu'une vérification au rang $1$ (une initialisation). Elle ne dit rien des rangs suivants."
+      }
+     ],
+     "hint": "Écris $u_{n+1}$ avec la relation de récurrence, remplace $u_n$ par l'hypothèse, puis simplifie la puissance.",
+     "solution": "Initialisation : $u_0 = 2$ et $3 - 2^0 = 2$. Hérédité : soit $n$ tel que $u_n = 3 - 2^n$. Alors $u_{n+1} = 2u_n - 3 = 2(3 - 2^n) - 3 = 6 - 2^{n+1} - 3 = 3 - 2^{n+1}$ : c'est la propriété au rang $n+1$. Conclusion : $u_n = 3 - 2^n$ pour tout $n$. Contrôle : la récurrence donne $u_1 = 1$, $u_2 = -1$, $u_3 = -5$, et la formule $3 - 2 = 1$, $3 - 4 = -1$, $3 - 8 = -5$.",
+     "points": 1,
+     "methode": "Formule explicite par récurrence : $u_{n+1} = $ (relation) $=$ (hypothèse remplacée) $= \\dots =$ formule au rang $n+1$. On va toujours du connu vers le but.",
+     "ref": "m2-scex-suites-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-7",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Héréditaire… mais fausse !",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Le raisonnement par récurrence",
+     "difficulty": 3,
+     "statement": "On considère la propriété $P(n)$ : « $4^n + 1$ est divisible par $3$ ». Un élève remarque que $4^{n+1} + 1 = 4(4^n + 1) - 3$, ce qui prouve que si $P(n)$ est vraie, alors $P(n+1)$ l'est aussi. Que peut-on conclure ?",
+     "options": [
+      {
+       "label": "$P(n)$ est fausse pour tout $n$ : l'hérédité est juste mais aucun rang n'initialise la récurrence",
+       "correct": true,
+       "why": "$4^n + 1$ vaut $2, 5, 17, 65, \\dots$ : aucun n'est multiple de $3$, car $4^n$ a toujours pour reste $1$ dans la division par $3$."
+      },
+      {
+       "label": "$P(n)$ est vraie pour tout $n$, puisqu'elle est héréditaire",
+       "why": "Tu as oublié l'initialisation : pour $n = 0$, $4^0 + 1 = 2$ n'est pas divisible par $3$. L'hérédité seule ne prouve rien."
+      },
+      {
+       "label": "$P(n)$ est vraie à partir d'un certain rang",
+       "why": "Il faudrait un rang $n_0$ où $P(n_0)$ est vraie. Or $2, 5, 17, 65, 257, \\dots$ ne sont jamais multiples de $3$."
+      },
+      {
+       "label": "Le calcul de l'élève est faux : $4^{n+1} + 1 \\neq 4(4^n + 1) - 3$",
+       "why": "L'égalité est juste : $4\\times 4^n + 4 - 3 = 4^{n+1} + 1$. C'est la conclusion qu'il faut contester, pas le calcul."
+      }
+     ],
+     "hint": "Une récurrence a deux étapes. L'élève en a fait une ; teste l'autre pour $n = 0$, $1$, $2$.",
+     "solution": "Le calcul est correct : $4(4^n+1) - 3 = 4^{n+1} + 4 - 3 = 4^{n+1} + 1$. Si $3$ divise $4^n + 1$, il divise $4(4^n+1)$ et $3$, donc leur différence : $P$ est héréditaire. Mais $P(0)$ ($2$), $P(1)$ ($5$), $P(2)$ ($17$) sont fausses. En fait $4 = 3 + 1$, donc $4^n$ a pour reste $1$ dans la division par $3$ et $4^n + 1$ a pour reste $2$ : $P(n)$ est fausse pour tout $n$. Contrôle : $4^3 + 1 = 65 = 3\\times 21 + 2$.",
+     "points": 1,
+     "methode": "Une récurrence sans initialisation ne prouve rien : vérifie toujours le premier rang, même si l'hérédité « marche ».",
+     "ref": "m2-scex-suites-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-8",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Des variations qui changent de sens",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Sens de variation et monotonie",
+     "difficulty": 2,
+     "statement": "Soit $u_n = n^2 - 6n + 1$ pour $n\\in\\mathbb{N}$. Pour étudier le sens de variation de $(u_n)$, on calcule la différence $u_{n+1} - u_n$ et on étudie son signe. Que peut-on conclure ?",
+     "options": [
+      {
+       "label": "$(u_n)$ est strictement croissante à partir du rang $3$",
+       "correct": true,
+       "why": "$u_{n+1} - u_n = 2n - 5$, qui est $> 0$ dès que $n \\ge 3$ (et $< 0$ pour $n \\le 2$)."
+      },
+      {
+       "label": "$(u_n)$ est croissante sur $\\mathbb{N}$, car le coefficient de $n^2$ est positif",
+       "why": "La parabole commence par descendre : $u_0 = 1$, $u_1 = -4$, $u_2 = -7$, $u_3 = -8$. La suite décroît jusqu'au rang $3$."
+      },
+      {
+       "label": "$(u_n)$ est décroissante, car $u_1 < u_0$",
+       "why": "Comparer deux termes ne suffit pas : $u_4 = -7 > u_3 = -8$."
+      },
+      {
+       "label": "$(u_n)$ est strictement croissante à partir du rang $2$",
+       "why": "Tu as résolu $2n - 5 > 0$ en $n > 2{,}5$ puis arrondi à l'entier inférieur. Pour $n = 2$ : $u_3 - u_2 = -1 < 0$ ($u_2 = -7$, $u_3 = -8$), la suite descend encore."
+      }
+     ],
+     "hint": "Développe $(n+1)^2 - 6(n+1) + 1 - (n^2 - 6n + 1)$ et étudie son signe selon $n$.",
+     "solution": "$u_{n+1} - u_n = (n+1)^2 - 6(n+1) + 1 - n^2 + 6n - 1 = 2n + 1 - 6 = 2n - 5$. Pour $n \\le 2$ : $2n - 5 < 0$ ; pour $n \\ge 3$ : $2n - 5 > 0$. Donc $u_0 > u_1 > u_2 > u_3$, puis $(u_n)$ est strictement croissante à partir du rang $3$. Contrôle : $u_3 = -8$, $u_4 = -7$, $u_5 = -4$ : la suite remonte bien après $n = 3$.",
+     "points": 1,
+     "methode": "Sens de variation : signe de $u_{n+1} - u_n$ pour tout $n$ (ou à partir d'un rang). Ne conclus jamais à partir de deux ou trois termes.",
+     "ref": "m2-scex-suites-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-9",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Une note qui progresse",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Sens de variation et monotonie",
+     "difficulty": 1,
+     "statement": "La note de progression d'un élève sur une application est modélisée par $u_n = 3 - \\dfrac{2}{n+1}$ après $n$ semaines. Pour savoir si la note s'améliore chaque semaine, on étudie $u_{n+1} - u_n$. Quelle affirmation est correcte ?",
+     "options": [
+      {
+       "label": "$u_{n+1} - u_n = \\dfrac{2}{(n+1)(n+2)}$, donc $(u_n)$ est strictement croissante",
+       "correct": true,
+       "why": "$\\frac{2}{n+1} - \\frac{2}{n+2} = \\frac{2(n+2) - 2(n+1)}{(n+1)(n+2)} = \\frac{2}{(n+1)(n+2)} > 0$."
+      },
+      {
+       "label": "$u_{n+1} - u_n = -\\dfrac{2}{(n+1)(n+2)}$, donc $(u_n)$ est strictement décroissante",
+       "why": "Erreur de signe : $u_{n+1} - u_n = \\frac{2}{n+1} - \\frac{2}{n+2}$, et $\\frac{2}{n+1} > \\frac{2}{n+2}$. Vérifie : $u_0 = 1 < u_1 = 2$."
+      },
+      {
+       "label": "$u_{n+1} - u_n = \\dfrac{2}{n+2}$, donc $(u_n)$ est strictement croissante",
+       "why": "Tu n'as pas retranché $u_n$ entièrement : le terme $\\frac{2}{n+1}$ ne disparaît pas. Pour $n = 1$ : $u_2 - u_1 = \\frac73 - 2 = \\frac13$, pas $\\frac23$."
+      },
+      {
+       "label": "$(u_n)$ est décroissante, car $n \\mapsto \\dfrac{2}{n+1}$ est décroissante",
+       "why": "$\\frac{2}{n+1}$ diminue, mais on la retranche à $3$ : $u_n$ augmente. Le signe « $-$ » inverse le sens de variation."
+      }
+     ],
+     "hint": "Calcule $u_{n+1} - u_n$ : les $3$ s'éliminent ; réduis les deux fractions au même dénominateur.",
+     "solution": "$u_{n+1} - u_n = \\left(3 - \\frac{2}{n+2}\\right) - \\left(3 - \\frac{2}{n+1}\\right) = \\frac{2}{n+1} - \\frac{2}{n+2} = \\frac{2(n+2) - 2(n+1)}{(n+1)(n+2)} = \\frac{2}{(n+1)(n+2)}$. Ce nombre est strictement positif pour tout $n$, donc $(u_n)$ est strictement croissante. Contrôle : $u_0 = 1$, $u_1 = 2$, $u_2 = \\frac73$, et $u_1 - u_0 = 1 = \\frac{2}{1\\times2}$.",
+     "points": 1,
+     "methode": "Différence $u_{n+1} - u_n$ : mets au même dénominateur et lis le signe. Pour $u_n = a - g(n)$, le sens de variation est l'inverse de celui de $g$.",
+     "ref": "m2-scex-suites-flash-q9"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-10",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le pic de fréquentation",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Sens de variation et monotonie",
+     "difficulty": 3,
+     "statement": "Le nombre de visiteurs (en milliers) d'un site, $n$ jours après son lancement, est modélisé par $u_n = 50\\,n\\,(0{,}9)^n$ pour $n \\ge 1$. Les termes sont strictement positifs. Pour $n \\ge 1$, l'inégalité $\\dfrac{u_{n+1}}{u_n} \\le 1$ équivaut à :",
+     "options": [
+      {
+       "label": "$n \\ge 9$",
+       "correct": true,
+       "why": "$\\frac{u_{n+1}}{u_n} = \\frac{0{,}9(n+1)}{n} \\le 1 \\Leftrightarrow 0{,}9n + 0{,}9 \\le n \\Leftrightarrow n \\ge 9$."
+      },
+      {
+       "label": "$n \\le 9$",
+       "why": "Tu as inversé l'inégalité en isolant $n$ : $0{,}9 \\le 0{,}1\\,n$ donne $n \\ge 9$. Pour $n = 1$, le quotient vaut $1{,}8 > 1$."
+      },
+      {
+       "label": "$n \\ge 1$, car $0{,}9 < 1$",
+       "why": "Tu as oublié le facteur $\\frac{n+1}{n}$, qui dépasse $1$ : au début la fréquentation monte ($u_1 = 45$, $u_2 = 81$)."
+      },
+      {
+       "label": "$n \\ge 10$",
+       "why": "Pour $n = 9$, le quotient vaut exactement $\\frac{0{,}9\\times 10}{9} = 1$ : l'inégalité large est vérifiée, donc $9$ fait partie des solutions."
+      }
+     ],
+     "hint": "Simplifie le quotient : les facteurs $50$ et $(0{,}9)^n$ disparaissent en partie.",
+     "solution": "Pour $n \\ge 1$ : $\\frac{u_{n+1}}{u_n} = \\frac{50(n+1)(0{,}9)^{n+1}}{50\\,n\\,(0{,}9)^n} = \\frac{0{,}9(n+1)}{n}$. Comme $n > 0$ : $\\frac{u_{n+1}}{u_n} \\le 1 \\Leftrightarrow 0{,}9(n+1) \\le n \\Leftrightarrow 0{,}9 \\le 0{,}1\\,n \\Leftrightarrow n \\ge 9$. Les termes étant positifs, $u_{n+1} \\le u_n$ pour $n \\ge 9$ : la fréquentation baisse à partir du 9e jour ($u_{10} = u_9$, puis baisse stricte). Contrôle : $u_9 = 450\\times0{,}9^9 \\approx 174{,}3$ et $u_{10} = 500\\times 0{,}9^{10} \\approx 174{,}3$, puis $u_{11} \\approx 172{,}6$.",
+     "points": 1,
+     "methode": "Termes strictement positifs écrits avec des produits ou des puissances : compare $\\frac{u_{n+1}}{u_n}$ à $1$ plutôt que $u_{n+1} - u_n$ à $0$.",
+     "ref": "m2-scex-suites-flash-q10"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-11",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le meilleur encadrement",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites majorées, minorées, bornées",
+     "difficulty": 2,
+     "statement": "Soit $u_n = \\dfrac{3n+1}{n+2}$ pour $n\\in\\mathbb{N}$ ; on peut vérifier que $u_n = 3 - \\dfrac{5}{n+2}$. Parmi ces encadrements, lequel est vrai pour tout entier naturel $n$ ?",
+     "options": [
+      {
+       "label": "$\\dfrac12 \\le u_n < 3$",
+       "correct": true,
+       "why": "$\\frac{5}{n+2} \\in \\left]0;\\frac52\\right]$, donc $u_n \\in \\left[\\frac12 ; 3\\right[$, avec $u_0 = \\frac12$."
+      },
+      {
+       "label": "$\\dfrac12 \\le u_n \\le \\dfrac32$",
+       "why": "Faux dès $n = 2$ : $u_2 = \\frac74 > \\frac32$. Un majorant doit convenir pour TOUS les termes."
+      },
+      {
+       "label": "$1 \\le u_n < 3$",
+       "why": "Faux pour $n = 0$ : $u_0 = \\frac12 < 1$. Le minorant doit être vérifié dès le premier terme."
+      },
+      {
+       "label": "$\\dfrac12 \\le u_n \\le \\dfrac52$",
+       "why": "Faux à partir de $n = 9$ : $u_9 = \\frac{28}{11} \\approx 2{,}55 > \\frac52$. Tu as encadré $\\frac{5}{n+2}$ au lieu de $u_n$."
+      }
+     ],
+     "hint": "Utilise $u_n = 3 - \\frac{5}{n+2}$ : encadre d'abord $\\frac{5}{n+2}$ pour $n \\ge 0$.",
+     "solution": "Vérification : $3 - \\frac{5}{n+2} = \\frac{3n + 6 - 5}{n+2} = \\frac{3n+1}{n+2}$. Pour $n \\ge 0$ : $n + 2 \\ge 2$, donc $0 < \\frac{5}{n+2} \\le \\frac52$. Ainsi $3 - \\frac52 \\le u_n < 3$, soit $\\frac12 \\le u_n < 3$. La suite est minorée par $\\frac12$ (atteint en $n = 0$) et majorée par $3$ (jamais atteint) : elle est bornée. Contrôle : $u_0 = \\frac12$, $u_1 = \\frac43$, $u_{98} = \\frac{295}{100} = 2{,}95 < 3$.",
+     "points": 1,
+     "methode": "Pour une fraction rationnelle en $n$, écris-la « constante $\\pm$ reste » : l'encadrement du reste donne majorant et minorant.",
+     "ref": "m2-scex-suites-flash-q11"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-12",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Qui reste bornée ?",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites majorées, minorées, bornées",
+     "difficulty": 2,
+     "statement": "On étudie quatre suites définies pour $n\\in\\mathbb{N}$. Une seule d'entre elles est bornée, c'est-à-dire qu'il existe deux réels $m$ et $M$ tels que $m \\le u_n \\le M$ pour tout $n$. Laquelle ?",
+     "options": [
+      {
+       "label": "$u_n = \\dfrac{5\\sin n}{2 + \\cos n}$",
+       "correct": true,
+       "why": "$|5 \\sin n| \\le 5$ et $2 + \\cos n \\ge 1$, donc $|u_n| \\le 5$, soit $-5 \\le u_n \\le 5$."
+      },
+      {
+       "label": "$u_n = n + (-1)^n$",
+       "why": "$u_n \\ge n - 1$ : elle dépasse tout réel $M$, elle n'est pas majorée, même si $(-1)^n$ est borné."
+      },
+      {
+       "label": "$u_n = (-2)^n$",
+       "why": "Elle change de signe, mais $|u_n| = 2^n$ devient arbitrairement grand : elle n'est ni majorée ni minorée."
+      },
+      {
+       "label": "$u_n = \\sqrt{n} - 100\\,000$",
+       "why": "Elle est minorée par $-100\\,000$, mais $\\sqrt n$ dépasse tout réel : elle n'est pas majorée. Une suite bornée doit l'être des deux côtés."
+      }
+     ],
+     "hint": "Pour chaque suite, cherche à la fois un majorant ET un minorant valables pour tous les $n$.",
+     "solution": "Pour $u_n = \\frac{5 \\sin n}{2 + \\cos n}$ : $-1 \\le \\cos n \\le 1$ donne $1 \\le 2 + \\cos n \\le 3$, donc $0 < \\frac{1}{2+\\cos n} \\le 1$ ; et $|5 \\sin n| \\le 5$. Ainsi $|u_n| \\le 5$. Les trois autres ne sont pas bornées : $n + (-1)^n \\ge n - 1$, $|(-2)^n| = 2^n$ et $\\sqrt n$ dépassent tout réel. Contrôle : $u_0 = 0$ et $u_1 = \\frac{5\\sin 1}{2 + \\cos 1} \\approx 1{,}66$, bien dans $[-5;5]$.",
+     "points": 1,
+     "methode": "Bornée $\\Leftrightarrow$ il existe $M$ tel que $|u_n| \\le M$ pour tout $n$. Les facteurs $\\sin n$, $\\cos n$, $(-1)^n$ sont bornés ; $n$, $\\sqrt n$, $q^n$ ($|q| > 1$) ne le sont pas.",
+     "ref": "m2-scex-suites-flash-q12"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-13",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le programme d'entraînement",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites arithmétiques",
+     "difficulty": 1,
+     "statement": "Pour préparer un semi-marathon, Salma court $3$ km la première semaine, puis augmente sa distance de $0{,}5$ km chaque semaine. On note $u_n$ la distance courue la $n$-ième semaine ($u_1 = 3$). Quelle distance court-elle la 12e semaine ?",
+     "options": [
+      {
+       "label": "$8{,}5$ km",
+       "correct": true,
+       "why": "$u_{12} = u_1 + 11\\times 0{,}5 = 3 + 5{,}5 = 8{,}5$."
+      },
+      {
+       "label": "$9$ km",
+       "why": "Tu as utilisé $u_1 + 12r$ : entre la 1re et la 12e semaine, il n'y a que $11$ augmentations. Avec $u_1$, la formule est $u_n = u_1 + (n-1)r$."
+      },
+      {
+       "label": "$6$ km",
+       "why": "Tu as calculé seulement $12 \\times 0{,}5$ : tu as oublié la distance de départ, $3$ km."
+      },
+      {
+       "label": "$69$ km",
+       "why": "C'est la distance totale des $12$ semaines, $12\\times\\frac{3 + 8{,}5}{2}$, pas celle de la 12e semaine."
+      }
+     ],
+     "hint": "Le premier terme est $u_1$ et non $u_0$ : combien d'augmentations de $0{,}5$ km entre la semaine 1 et la semaine 12 ?",
+     "solution": "$(u_n)$ est arithmétique de raison $r = 0{,}5$ et de premier terme $u_1 = 3$, donc $u_n = u_1 + (n-1)r = 3 + 0{,}5(n-1)$. Pour $n = 12$ : $u_{12} = 3 + 0{,}5\\times 11 = 8{,}5$ km. Contrôle : on gagne $1$ km toutes les $2$ semaines, donc $5{,}5$ km en $11$ semaines, et $3 + 5{,}5 = 8{,}5$.",
+     "points": 1,
+     "methode": "$u_n = u_p + (n-p)r$ pour tous indices $n$ et $p$ : l'écart d'indices compte le nombre d'ajouts de la raison.",
+     "ref": "m2-scex-suites-flash-q13"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-14",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Deux relevés suffisent",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites arithmétiques",
+     "difficulty": 2,
+     "statement": "Une suite arithmétique $(u_n)$ vérifie $u_5 = 17$ et $u_{12} = 38$. Un élève veut connaître $u_{100}$ sans calculer tous les termes intermédiaires. Que vaut $u_{100}$ ?",
+     "options": [
+      {
+       "label": "$302$",
+       "correct": true,
+       "why": "$7r = 38 - 17 = 21$, donc $r = 3$ ; $u_{100} = u_5 + 95 \\times 3 = 17 + 285 = 302$."
+      },
+      {
+       "label": "$299$",
+       "why": "Tu as écrit $u_5 = u_0 + 6r$ (donc $u_0 = -1$) : avec $u_0$, on a $u_5 = u_0 + 5r$, d'où $u_0 = 2$."
+      },
+      {
+       "label": "$305$",
+       "why": "Tu as calculé $u_0 + 101\\,r$ : de $u_0$ à $u_{100}$ il y a $100$ pas de raison, pas $101$."
+      },
+      {
+       "label": "$317$",
+       "why": "Tu as fait $u_5 + 100\\,r$ : de l'indice $5$ à l'indice $100$, il n'y a que $95$ pas."
+      }
+     ],
+     "hint": "L'écart $u_{12} - u_5$ contient combien de fois la raison ?",
+     "solution": "$u_{12} - u_5 = (12 - 5) r = 7r$, donc $7r = 21$ et $r = 3$. Puis $u_{100} = u_5 + (100 - 5)r = 17 + 95\\times 3 = 302$. Contrôle : $u_0 = u_5 - 5r = 2$, puis $u_{12} = 2 + 36 = 38$ et $u_{100} = 2 + 300 = 302$.",
+     "points": 1,
+     "methode": "Deux termes d'une suite arithmétique : $r = \\dfrac{u_q - u_p}{q - p}$, puis $u_n = u_p + (n-p)r$.",
+     "ref": "m2-scex-suites-flash-q14"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-15",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Les bactéries qui doublent",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites géométriques",
+     "difficulty": 2,
+     "statement": "Une culture contient $5\\,000$ bactéries ; leur nombre augmente de $8\\,\\%$ par heure. On note $u_n$ l'effectif après $n$ heures. On donne $1{,}08^9 \\approx 1{,}999$ et $1{,}08^{10} \\approx 2{,}159$. Au bout de combien d'heures l'effectif dépasse-t-il pour la première fois $10\\,000$ ?",
+     "options": [
+      {
+       "label": "$10$ heures",
+       "correct": true,
+       "why": "$u_n = 5\\,000\\times1{,}08^n > 10\\,000 \\Leftrightarrow 1{,}08^n > 2$ : faux pour $n = 9$, vrai pour $n = 10$."
+      },
+      {
+       "label": "$9$ heures",
+       "why": "$1{,}08^9 \\approx 1{,}999 < 2$ : après $9$ h il y a environ $9\\,995$ bactéries, pas encore $10\\,000$. Tu as arrondi $\\frac{\\ln 2}{\\ln 1{,}08} \\approx 9{,}006$ à l'entier inférieur."
+      },
+      {
+       "label": "$13$ heures",
+       "why": "Tu as traité la hausse comme arithmétique ($+400$ par heure) : $5\\,000 + 400n > 10\\,000$ donne $n = 13$. Or les $8\\,\\%$ s'appliquent chaque heure à l'effectif du moment."
+      },
+      {
+       "label": "jamais",
+       "why": "Tu as pris la raison $q = 0{,}08$, ce qui ferait diminuer $u_n$. Augmenter de $8\\,\\%$, c'est multiplier par $1 + 0{,}08 = 1{,}08$."
+      }
+     ],
+     "hint": "Écris $u_n$ avec la raison $1 + \\frac{8}{100}$, puis résous $u_n > 10\\,000$ dans les entiers.",
+     "solution": "Augmenter de $8\\,\\%$ revient à multiplier par $1{,}08$ : $(u_n)$ est géométrique, $u_n = 5\\,000\\times 1{,}08^n$. On cherche le plus petit $n$ tel que $1{,}08^n > 2$. Comme $\\ln$ est croissante : $n > \\frac{\\ln 2}{\\ln 1{,}08} \\approx 9{,}006$, donc $n = 10$. Contrôle : $u_9 \\approx 5\\,000\\times1{,}999 \\approx 9\\,995 < 10\\,000$ et $u_{10} \\approx 5\\,000 \\times 2{,}159 \\approx 10\\,795 > 10\\,000$.",
+     "points": 1,
+     "methode": "Hausse de $t\\,\\%$ : raison $q = 1 + \\frac{t}{100}$. Pour un seuil, résous $q^n > k$ (avec $\\ln$ ou un tableau), prends l'entier immédiatement supérieur et vérifie les deux termes voisins.",
+     "ref": "m2-scex-suites-flash-q15"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-16",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Retrouver le premier terme",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites géométriques",
+     "difficulty": 2,
+     "statement": "Une suite géométrique $(u_n)$ à termes strictement positifs vérifie $u_2 = 12$ et $u_5 = 96$. Pour écrire sa formule explicite, on a besoin de son premier terme $u_0$. Il vaut :",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "$q^3 = \\frac{96}{12} = 8$ donc $q = 2$, puis $u_0 = \\frac{u_2}{q^2} = \\frac{12}{4} = 3$."
+      },
+      {
+       "label": "$6$",
+       "why": "C'est $u_1 = \\frac{12}{2}$ : tu n'as divisé qu'une fois par $q$. De $u_2$ à $u_0$ il y a deux pas."
+      },
+      {
+       "label": "$\\dfrac{3}{16}$",
+       "why": "Tu as pris $q = 8$ ; or $\\frac{u_5}{u_2} = q^{5-2} = q^3$, donc $q^3 = 8$ et $q = 2$."
+      },
+      {
+       "label": "$-44$",
+       "why": "Tu as raisonné comme pour une suite arithmétique ($3r = 84$, $r = 28$). Ici on passe d'un terme au suivant en multipliant."
+      }
+     ],
+     "hint": "Le quotient $\\frac{u_5}{u_2}$ est une puissance de $q$ : laquelle ?",
+     "solution": "$u_5 = u_2\\, q^{3}$, donc $q^3 = \\frac{96}{12} = 8$ ; la seule solution réelle est $q = 2$, positive comme les termes. Ensuite $u_2 = u_0 q^2$ donne $u_0 = \\frac{12}{4} = 3$. Contrôle : $u_n = 3\\times 2^n$ donne $u_2 = 12$ et $u_5 = 3\\times 32 = 96$.",
+     "points": 1,
+     "methode": "Géométrique : $u_n = u_p\\, q^{n-p}$. Le quotient de deux termes donne une puissance de $q$, dont l'exposant est l'écart des indices.",
+     "ref": "m2-scex-suites-flash-q16"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-17",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Les places de l'amphithéâtre",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Sommes de termes consécutifs",
+     "difficulty": 1,
+     "statement": "Un amphithéâtre universitaire compte $25$ rangées. La première rangée a $12$ places et chaque rangée a $2$ places de plus que la précédente. Quel est le nombre total de places de l'amphithéâtre ?",
+     "options": [
+      {
+       "label": "$900$",
+       "correct": true,
+       "why": "Dernière rangée : $12 + 24\\times 2 = 60$ ; total $= 25\\times\\frac{12 + 60}{2} = 900$."
+      },
+      {
+       "label": "$925$",
+       "why": "Tu as pris $12 + 25\\times2 = 62$ places pour la 25e rangée : il n'y a que $24$ augmentations entre la 1re et la 25e."
+      },
+      {
+       "label": "$840$",
+       "why": "Tu as compté $24$ rangées ($24\\times\\frac{12+58}{2}$) : la somme porte sur les $25$ rangées."
+      },
+      {
+       "label": "$1\\,800$",
+       "why": "Tu as oublié de diviser par $2$ : la somme vaut (nombre de termes) $\\times$ (premier $+$ dernier)$/2$."
+      }
+     ],
+     "hint": "Calcule d'abord le nombre de places de la 25e rangée, puis utilise « nombre de termes $\\times$ (premier $+$ dernier)$/2$ ».",
+     "solution": "Le nombre de places de la rangée $k$ est $u_k = 12 + 2(k-1)$ : suite arithmétique de raison $2$. $u_{25} = 12 + 48 = 60$. La somme des $25$ termes : $S = 25\\times\\frac{u_1 + u_{25}}{2} = 25\\times 36 = 900$. Contrôle : la rangée du milieu (la 13e) a $12 + 24 = 36$ places, et $25 \\times 36 = 900$.",
+     "points": 1,
+     "methode": "Somme arithmétique $=$ (nombre de termes) $\\times \\dfrac{\\text{premier} + \\text{dernier}}{2}$.",
+     "ref": "m2-scex-suites-flash-q17"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-18",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "L'épargne qui grossit",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Sommes de termes consécutifs",
+     "difficulty": 2,
+     "statement": "Yassine dépose $200$ DH sur un compte le premier mois, puis chaque mois il dépose $5\\,\\%$ de plus que le mois précédent. On donne $1{,}05^{11} \\approx 1{,}710\\,34$ et $1{,}05^{12} \\approx 1{,}795\\,86$. Quel est le montant total déposé (sans intérêts) au bout de $12$ mois ?",
+     "options": [
+      {
+       "label": "environ $3\\,183$ DH",
+       "correct": true,
+       "why": "$200\\times\\frac{1{,}05^{12} - 1}{0{,}05} = 4\\,000\\times 0{,}795\\,86 \\approx 3\\,183$."
+      },
+      {
+       "label": "environ $2\\,841$ DH",
+       "why": "Tu as utilisé $1{,}05^{11}$ : la somme compte $12$ dépôts, et l'exposant de la formule est le nombre de termes, $12$."
+      },
+      {
+       "label": "$3\\,060$ DH",
+       "why": "Tu as ajouté $10$ DH par mois (modèle arithmétique). Les $5\\,\\%$ s'appliquent au dépôt précédent, qui augmente : c'est géométrique."
+      },
+      {
+       "label": "environ $7\\,183$ DH",
+       "why": "Tu as oublié le $-1$ : $4\\,000 \\times 1{,}795\\,86$. Or $12$ dépôts tous inférieurs à $350$ DH ne peuvent pas dépasser $4\\,200$ DH."
+      }
+     ],
+     "hint": "Les dépôts forment une suite géométrique de premier terme $200$ et de raison $1{,}05$ : compte les termes.",
+     "solution": "Le dépôt du mois $k$ vaut $d_k = 200\\times1{,}05^{k-1}$ pour $k = 1, \\dots, 12$. La somme des $12$ termes est $S = 200\\times\\frac{1 - 1{,}05^{12}}{1 - 1{,}05} = 200 \\times\\frac{1{,}05^{12} - 1}{0{,}05} = 4\\,000\\times 0{,}795\\,86 \\approx 3\\,183$ DH. Contrôle : le premier dépôt vaut $200$ DH et le dernier $200\\times1{,}05^{11} \\approx 342$ DH ; la somme est bien entre $12\\times 200 = 2\\,400$ et $12 \\times 342 = 4\\,104$.",
+     "points": 1,
+     "methode": "Somme géométrique $=$ premier terme $\\times \\dfrac{1 - q^{N}}{1 - q}$, avec $N$ le nombre de termes (pas le dernier exposant).",
+     "ref": "m2-scex-suites-flash-q18"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-19",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Qui gagne à long terme ?",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Comparaison des deux modèles",
+     "difficulty": 1,
+     "statement": "La ville A gagne $500$ habitants par an à partir de $10\\,000$ : $a_n = 10\\,000 + 500n$. La ville B augmente de $1\\,\\%$ par an à partir de $10\\,000$ : $b_n = 10\\,000\\times1{,}01^n$. Au début, A croît plus vite. Que se passe-t-il pour $n$ assez grand ?",
+     "options": [
+      {
+       "label": "$b_n > a_n$ : une suite géométrique de raison $q > 1$ finit par dépasser toute suite arithmétique",
+       "correct": true,
+       "why": "L'accroissement de B, $100\\times1{,}01^n$, tend vers $+\\infty$ et finit par dépasser $500$ puis par combler le retard."
+      },
+      {
+       "label": "$a_n > b_n$ pour tout $n$, car $500 > 100$",
+       "why": "Tu as comparé les accroissements de la première année seulement. L'accroissement de B, $100\\times1{,}01^n$, augmente sans limite et finit par dépasser $500$."
+      },
+      {
+       "label": "Les deux suites finissent par être égales et le restent",
+       "why": "Une suite affine et une suite exponentielle ne restent pas égales : après le croisement, l'écart $b_n - a_n$ grandit indéfiniment."
+      },
+      {
+       "label": "On ne peut pas comparer, car les deux suites tendent vers $+\\infty$",
+       "why": "Les deux tendent vers $+\\infty$, mais à des vitesses différentes : $\\frac{b_n}{a_n} \\to +\\infty$, B l'emporte nettement."
+      }
+     ],
+     "hint": "Compare non pas les termes, mais les accroissements annuels $a_{n+1} - a_n$ et $b_{n+1} - b_n$ quand $n$ grandit.",
+     "solution": "$a_{n+1} - a_n = 500$ est constant, tandis que $b_{n+1} - b_n = 10\\,000\\times 1{,}01^n\\times 0{,}01 = 100\\times1{,}01^n$ tend vers $+\\infty$. Les gains de B finissent par dépasser ceux de A, puis par compenser tout le retard accumulé : il existe un rang à partir duquel $b_n > a_n$. Plus précisément, $\\frac{b_n}{a_n} \\to +\\infty$ (croissance exponentielle contre croissance affine). Contrôle : pour $n = 500$, $a_n = 260\\,000$ et $b_n \\approx 10\\,000\\times 144{,}8 \\approx 1\\,448\\,000$.",
+     "points": 1,
+     "methode": "Modèle linéaire (arithmétique) contre modèle exponentiel (géométrique, $q > 1$) : à long terme, l'exponentiel l'emporte toujours, même avec une raison proche de $1$.",
+     "ref": "m2-scex-suites-flash-q19"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-20",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le mois du dépassement",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Comparaison des deux modèles",
+     "difficulty": 3,
+     "statement": "Deux plateformes de cours en ligne partent de $100$ abonnés. La première en gagne $20$ par mois : $a_n = 100 + 20n$. La seconde augmente de $10\\,\\%$ par mois : $b_n = 100\\times 1{,}1^n$. On donne $1{,}1^{14} \\approx 3{,}797\\,5$ et $1{,}1^{15} \\approx 4{,}177\\,2$. Quel est le premier mois $n$ tel que $b_n > a_n$ ?",
+     "options": [
+      {
+       "label": "$n = 15$",
+       "correct": true,
+       "why": "$b_{14} \\approx 379{,}75 < a_{14} = 380$ et $b_{15} \\approx 417{,}72 > a_{15} = 400$."
+      },
+      {
+       "label": "$n = 14$",
+       "why": "Tu as arrondi $b_{14} \\approx 379{,}75$ à $380$ : on a $b_{14} < a_{14} = 380$, le dépassement n'a pas encore eu lieu."
+      },
+      {
+       "label": "$n = 8$",
+       "why": "C'est le premier mois où l'accroissement de B ($10\\,\\%$ de $b_n$) dépasse $20$ : B gagne alors plus vite, mais il lui reste du retard à rattraper ($b_8 \\approx 214 < a_8 = 260$)."
+      },
+      {
+       "label": "jamais, car $10\\,\\%$ de $100$ ne fait que $10 < 20$",
+       "why": "Les $10\\,\\%$ s'appliquent à l'effectif du moment, qui grandit : une suite géométrique de raison $1{,}1 > 1$ finit toujours par dépasser une suite arithmétique."
+      }
+     ],
+     "hint": "Compare $b_n$ et $a_n$ pour $n = 14$ et $n = 15$ avec les valeurs données, sans arrondir trop tôt.",
+     "solution": "$a_{14} = 100 + 280 = 380$ et $b_{14} \\approx 100\\times 3{,}797\\,5 = 379{,}75$ : encore $b_{14} < a_{14}$ (et un tableau de valeurs montre $b_n < a_n$ pour $1 \\le n \\le 14$). $a_{15} = 400$ et $b_{15} \\approx 417{,}72$ : $b_{15} > a_{15}$. Ensuite l'écart ne fait que croître : pour $n \\ge 15$, $b_{n+1} - b_n = 0{,}1\\,b_n > 40 > 20 = a_{n+1} - a_n$. Le premier mois est donc $n = 15$. Contrôle : au mois $14$ l'écart n'est que de $0{,}25$ abonné, d'où l'importance de ne pas arrondir.",
+     "points": 1,
+     "methode": "Pour comparer $a + rn$ et $b\\,q^n$, teste les rangs voisins du croisement avec des valeurs précises ; puis compare les accroissements pour prouver que l'ordre ne change plus.",
+     "ref": "m2-scex-suites-flash-q20"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-21",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Ce que « converger » veut dire",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limite finie : suite convergente",
+     "difficulty": 1,
+     "statement": "En classe, quatre élèves proposent une définition de la phrase « la suite $(u_n)$ converge vers $2$ ». Une seule correspond à la définition du cours. Laquelle ?",
+     "options": [
+      {
+       "label": "Tout intervalle ouvert contenant $2$ contient tous les termes $u_n$ à partir d'un certain rang",
+       "correct": true,
+       "why": "C'est la définition : aussi petit soit l'intervalle autour de $2$, la suite finit par y entrer et par y rester."
+      },
+      {
+       "label": "Les termes se rapprochent de $2$ sans jamais l'atteindre",
+       "why": "La suite constante $u_n = 2$ converge vers $2$ et l'atteint. Et $u_n = 1 - \\frac{1}{n}$ se rapproche de $2$ à chaque rang, mais converge vers $1$."
+      },
+      {
+       "label": "Tout intervalle ouvert contenant $2$ contient une infinité de termes",
+       "why": "Trop faible : la suite qui vaut alternativement $2$ et $5$ a une infinité de termes égaux à $2$, mais elle ne converge pas."
+      },
+      {
+       "label": "$u_n < 2$ pour tout $n$ et la suite est croissante",
+       "why": "Ce sont des hypothèses du théorème de convergence monotone, pas la définition, et elles ne donnent pas $2$ comme limite : $u_n = 1 - \\frac1n$ les vérifie et tend vers $1$."
+      }
+     ],
+     "hint": "La définition parle de « tous les termes à partir d'un certain rang ».",
+     "solution": "$\\lim u_n = 2$ signifie : pour tout intervalle ouvert $I$ contenant $2$, il existe un rang $N$ tel que $u_n \\in I$ pour tout $n \\ge N$. Autrement dit, la distance $|u_n - 2|$ devient, et reste, aussi petite qu'on veut. Contrôle : sur un exemple : pour $u_n = 2 + \\frac1n$ et l'intervalle $]1{,}99 ; 2{,}01[$, tous les termes de rang $n \\ge 101$ conviennent.",
+     "points": 1,
+     "methode": "Converger vers $\\ell$ : les termes finissent par rester dans n'importe quel intervalle ouvert autour de $\\ell$. En pratique : on résout $|u_n - \\ell| < \\varepsilon$.",
+     "ref": "m2-scex-suites-flash-q21"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-22",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Atteindre la précision voulue",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limite finie : suite convergente",
+     "difficulty": 2,
+     "statement": "La suite $u_n = 2 + \\dfrac{3}{n+1}$ converge vers $2$. Un programme doit afficher cette limite à $10^{-2}$ près : on cherche le plus petit entier $N$ tel que $|u_n - 2| < 10^{-2}$ pour tout $n \\ge N$. Ce rang $N$ vaut :",
+     "options": [
+      {
+       "label": "$300$",
+       "correct": true,
+       "why": "$\\frac{3}{n+1} < 0{,}01 \\Leftrightarrow n + 1 > 300 \\Leftrightarrow n > 299$, et $\\frac{3}{n+1}$ décroît avec $n$."
+      },
+      {
+       "label": "$299$",
+       "why": "Pour $n = 299$ : $\\frac{3}{300} = 0{,}01$, qui n'est pas strictement inférieur à $10^{-2}$."
+      },
+      {
+       "label": "$301$",
+       "why": "Tu as écrit $n > 300$ au lieu de $n + 1 > 300$. Pour $n = 300$, $\\frac{3}{301} \\approx 0{,}009\\,97 < 0{,}01$ convient déjà."
+      },
+      {
+       "label": "$30$",
+       "why": "Tu as pris $10^{-2} = 0{,}1$ : $\\frac{3}{31} \\approx 0{,}097$ est loin d'être inférieur à $0{,}01$."
+      }
+     ],
+     "hint": "$|u_n - 2| = \\frac{3}{n+1}$ : résous $\\frac{3}{n+1} < 0{,}01$ dans les entiers.",
+     "solution": "$|u_n - 2| = \\frac{3}{n+1}$. On résout $\\frac{3}{n+1} < 0{,}01 \\Leftrightarrow n + 1 > 300 \\Leftrightarrow n > 299$. Comme $n \\mapsto \\frac{3}{n+1}$ est décroissante, l'inégalité est vraie pour tous les $n \\ge 300$ et fausse pour $n = 299$ : $N = 300$. Contrôle : $u_{300} = 2 + \\frac{3}{301} \\approx 2{,}009\\,97$, à moins de $0{,}01$ de $2$, alors que $u_{299} = 2{,}01$ exactement.",
+     "points": 1,
+     "methode": "« À partir de quel rang $|u_n - \\ell| < \\varepsilon$ ? » : calcule $|u_n - \\ell|$, résous l'inégalité, et vérifie que l'expression est monotone pour que la propriété reste vraie ensuite.",
+     "ref": "m2-scex-suites-flash-q22"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-23",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Pas de limite du tout",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limite infinie et absence de limite",
+     "difficulty": 1,
+     "statement": "On considère quatre suites définies pour $n \\ge 1$. Certaines convergent, d'autres tendent vers l'infini. Une seule n'admet aucune limite, ni finie ni infinie. Laquelle ?",
+     "options": [
+      {
+       "label": "$u_n = (-2)^n$",
+       "correct": true,
+       "why": "Les termes de rang pair tendent vers $+\\infty$, ceux de rang impair vers $-\\infty$ : aucune limite."
+      },
+      {
+       "label": "$u_n = \\dfrac{(-1)^n}{n}$",
+       "why": "Elle change de signe, mais $|u_n| = \\frac1n \\to 0$ : elle converge vers $0$."
+      },
+      {
+       "label": "$u_n = n + (-1)^n$",
+       "why": "Elle n'est pas monotone, mais $u_n \\ge n - 1$ : elle tend vers $+\\infty$, ce qui est une limite."
+      },
+      {
+       "label": "$u_n = -n^2 + n$",
+       "why": "$-n^2 + n = -n(n-1) \\to -\\infty$ : elle admet une limite infinie."
+      }
+     ],
+     "hint": "Ne pas avoir de limite, ce n'est pas tendre vers l'infini. Regarde séparément les termes de rang pair et de rang impair.",
+     "solution": "$(-2)^{2k} = 4^k \\to +\\infty$ et $(-2)^{2k+1} = -2\\times 4^k \\to -\\infty$ : les termes ne s'approchent d'aucune valeur et ne partent pas tous du même côté, donc $(u_n)$ n'a pas de limite. Les autres en ont une : $\\frac{(-1)^n}{n} \\to 0$ (gendarmes), $n + (-1)^n \\to +\\infty$ (comparaison), $-n^2 + n \\to -\\infty$. Contrôle : $u_1 = -2$, $u_2 = 4$, $u_3 = -8$, $u_4 = 16$.",
+     "points": 1,
+     "methode": "$q^n$ avec $q \\le -1$ : pas de limite. Une suite non bornée peut très bien n'avoir aucune limite.",
+     "ref": "m2-scex-suites-flash-q23"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-24",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Dépasser un seuil pour toujours",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limite infinie et absence de limite",
+     "difficulty": 2,
+     "statement": "La suite $u_n = n^2 - 10$ tend vers $+\\infty$ : tout seuil $A$ finit par être dépassé définitivement. Pour $A = 10^4$, quel est le plus petit entier $N$ tel que $u_n > 10^4$ pour tout $n \\ge N$ ?",
+     "options": [
+      {
+       "label": "$101$",
+       "correct": true,
+       "why": "$n^2 > 10\\,010 \\Leftrightarrow n > \\sqrt{10\\,010} \\approx 100{,}05$, et $(u_n)$ est croissante."
+      },
+      {
+       "label": "$100$",
+       "why": "$u_{100} = 10\\,000 - 10 = 9\\,990 < 10^4$ : tu as oublié le $-10$."
+      },
+      {
+       "label": "$10\\,011$",
+       "why": "Tu as résolu $n - 10 > 10^4$ : la suite contient $n^2$, il faut prendre une racine carrée."
+      },
+      {
+       "label": "il n'existe pas, car certains termes sont négatifs",
+       "why": "Seuls $u_0, \\dots, u_3$ sont négatifs ; la définition demande un dépassement « à partir d'un certain rang », pas pour tous les $n$."
+      }
+     ],
+     "hint": "Résous $n^2 - 10 > 10^4$ en encadrant la racine carrée entre deux entiers consécutifs.",
+     "solution": "$u_n > 10^4 \\Leftrightarrow n^2 > 10\\,010 \\Leftrightarrow n > \\sqrt{10\\,010}$ (car $n \\ge 0$). Or $100^2 = 10\\,000 < 10\\,010 < 10\\,201 = 101^2$, donc $N = 101$. Comme $(u_n)$ est croissante, tous les $n \\ge 101$ conviennent. Contrôle : $u_{101} = 10\\,201 - 10 = 10\\,191 > 10^4$, alors que $u_{100} = 9\\,990$.",
+     "points": 1,
+     "methode": "$u_n \\to +\\infty$ : pour tout réel $A$, $u_n > A$ à partir d'un certain rang. Pour trouver ce rang, résous $u_n > A$.",
+     "ref": "m2-scex-suites-flash-q24"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-25",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le bon réflexe sur q puissance n",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Les limites de référence",
+     "difficulty": 1,
+     "statement": "Pour décider rapidement de la limite d'une suite géométrique, on compare la raison à $-1$ et à $1$. Parmi les affirmations suivantes sur les limites quand $n \\to +\\infty$, laquelle est vraie ?",
+     "options": [
+      {
+       "label": "$\\lim (-0{,}9)^n = 0$",
+       "correct": true,
+       "why": "$-1 < -0{,}9 < 1$, donc $(-0{,}9)^n \\to 0$ (en changeant de signe)."
+      },
+      {
+       "label": "$\\lim 1{,}01^n = 1$",
+       "why": "$1{,}01 > 1$ donc $1{,}01^n \\to +\\infty$, même lentement : $1{,}01^{1000} \\approx 20\\,959$."
+      },
+      {
+       "label": "$\\lim (-1{,}5)^n = +\\infty$",
+       "why": "Pour $q < -1$, les termes changent de signe en grandissant : $(-1{,}5)^n$ n'a pas de limite."
+      },
+      {
+       "label": "$\\lim \\dfrac{1}{\\sqrt n} = 1$",
+       "why": "$\\sqrt n \\to +\\infty$, donc $\\frac{1}{\\sqrt n} \\to 0$."
+      }
+     ],
+     "hint": "Repère où se situe la raison : $q > 1$, $-1 < q < 1$, $q = 1$ ou $q \\le -1$.",
+     "solution": "Rappel : si $q > 1$, $q^n \\to +\\infty$ ; si $-1 < q < 1$, $q^n \\to 0$ ; si $q = 1$, $q^n = 1$ ; si $q \\le -1$, pas de limite. Ici $-0{,}9 \\in \\,]-1;1[$, donc $(-0{,}9)^n \\to 0$. Les autres affirmations sont fausses : $1{,}01^n \\to +\\infty$, $(-1{,}5)^n$ n'a pas de limite, $\\frac{1}{\\sqrt n} \\to 0$. Contrôle : $(-0{,}9)^{50} = 0{,}9^{50} \\approx 0{,}005$.",
+     "points": 1,
+     "methode": "$q^n$ : quatre cas selon la position de $q$ par rapport à $-1$ et $1$. Aussi : $n^\\alpha \\to +\\infty$ et $\\frac{1}{n^\\alpha} \\to 0$ pour $\\alpha > 0$.",
+     "ref": "m2-scex-suites-flash-q25"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-26",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Des raisons proches de 1",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Les limites de référence",
+     "difficulty": 2,
+     "statement": "Soit $v_n = 5\\left(\\dfrac{\\pi}{3}\\right)^n - \\left(\\sqrt{2} - 1\\right)^n + 2$. Les nombres $\\frac{\\pi}{3} \\approx 1{,}047$ et $\\sqrt2 - 1 \\approx 0{,}414$ jouent le rôle de raisons. Que vaut $\\lim\\limits_{n\\to+\\infty} v_n$ ?",
+     "options": [
+      {
+       "label": "$+\\infty$",
+       "correct": true,
+       "why": "$\\frac\\pi3 > 1$ donc $5\\left(\\frac\\pi3\\right)^n \\to +\\infty$ ; $0 < \\sqrt2 - 1 < 1$ donc $(\\sqrt2-1)^n \\to 0$."
+      },
+      {
+       "label": "$7$",
+       "why": "Tu as cru que $\\left(\\frac\\pi3\\right)^n \\to 1$ parce que $\\frac\\pi3 \\approx 1$ : dès que $q > 1$, même de très peu, $q^n \\to +\\infty$."
+      },
+      {
+       "label": "$2$",
+       "why": "Tu as cru que $\\frac{\\pi}{3} < 1$. Or $\\pi \\approx 3{,}14 > 3$."
+      },
+      {
+       "label": "$6$",
+       "why": "Tu as remplacé les deux puissances par $1$ : seule la raison $q = 1$ donne $q^n = 1$ ; ici $\\frac\\pi3 > 1$ et $\\sqrt2 - 1 < 1$."
+      }
+     ],
+     "hint": "Compare $\\pi$ à $3$, et $\\sqrt2$ à $2$.",
+     "solution": "$\\pi > 3$ donne $\\frac\\pi3 > 1$, donc $\\lim\\left(\\frac\\pi3\\right)^n = +\\infty$ et $\\lim 5\\left(\\frac\\pi3\\right)^n = +\\infty$. $1 < \\sqrt 2 < 2$ donne $0 < \\sqrt2 - 1 < 1$, donc $\\lim(\\sqrt2-1)^n = 0$. Par somme : $\\lim v_n = +\\infty$. Contrôle : $\\left(\\frac\\pi3\\right)^{100} \\approx 101$, déjà grand bien que la raison soit proche de $1$.",
+     "points": 1,
+     "methode": "Pour $q^n$, seule compte la position exacte de $q$ par rapport à $1$ (et à $-1$) : justifie-la par un encadrement simple.",
+     "ref": "m2-scex-suites-flash-q26"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-27",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Produit de deux limites",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Opérations sur les limites",
+     "difficulty": 1,
+     "statement": "On pose, pour $n \\ge 1$, $u_n = 4 + \\dfrac{1}{n}$ et $v_n = 3 - 2\\left(\\dfrac12\\right)^n$. Un modèle économique utilise le produit $w_n = u_n\\,v_n$. Que vaut $\\lim\\limits_{n\\to+\\infty} w_n$ ?",
+     "options": [
+      {
+       "label": "$12$",
+       "correct": true,
+       "why": "$u_n \\to 4$ et $v_n \\to 3$ : limites finies, donc $u_n v_n \\to 4\\times 3 = 12$."
+      },
+      {
+       "label": "$7$",
+       "why": "Tu as additionné les limites : pour un produit, on multiplie, $4\\times 3 = 12$."
+      },
+      {
+       "label": "$4$",
+       "why": "Tu as cru que $v_n \\to 1$, comme si $\\left(\\frac12\\right)^n \\to 1$ ; or $-1 < \\frac12 < 1$, donc $\\left(\\frac12\\right)^n \\to 0$ et $v_n \\to 3$."
+      },
+      {
+       "label": "on ne peut pas conclure sans développer",
+       "why": "Il n'y a aucune forme indéterminée : les deux limites sont finies, la limite du produit est le produit des limites."
+      }
+     ],
+     "hint": "Calcule séparément $\\lim u_n$ et $\\lim v_n$, puis applique la règle du produit.",
+     "solution": "$\\lim\\frac1n = 0$, donc $\\lim u_n = 4$. Comme $-1 < \\frac12 < 1$, $\\lim\\left(\\frac12\\right)^n = 0$ et $\\lim v_n = 3$. Les deux limites sont finies : $\\lim w_n = 4\\times 3 = 12$. Contrôle : $w_{10} = 4{,}1\\times\\left(3 - \\frac{2}{1024}\\right) \\approx 4{,}1 \\times 2{,}998 \\approx 12{,}29$, proche de $12$.",
+     "points": 1,
+     "methode": "Limites finies : somme, produit et quotient (dénominateur de limite non nulle) passent à la limite. On ne cherche une astuce que devant une forme indéterminée.",
+     "ref": "m2-scex-suites-flash-q27"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-28",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le signe du zéro au dénominateur",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Opérations sur les limites",
+     "difficulty": 2,
+     "statement": "Pour $n \\ge 1$, on pose $w_n = \\dfrac{\\frac1n - 2}{\\frac{1}{n^2}}$. Le numérateur tend vers $-2$ et le dénominateur vers $0$. Sans développer, en raisonnant sur les signes, que vaut $\\lim\\limits_{n\\to+\\infty} w_n$ ?",
+     "options": [
+      {
+       "label": "$-\\infty$",
+       "correct": true,
+       "why": "Numérateur de limite $-2 < 0$, dénominateur qui tend vers $0$ en restant positif : le quotient tend vers $-\\infty$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Tu as oublié le signe : numérateur négatif, dénominateur positif, le quotient est négatif."
+      },
+      {
+       "label": "$0$",
+       "why": "Tu as confondu avec « $\\frac{0}{\\text{nombre}}$ » : ici c'est le DÉNOMINATEUR qui tend vers $0$, le quotient devient très grand en valeur absolue."
+      },
+      {
+       "label": "$-2$",
+       "why": "Tu as ignoré le dénominateur : diviser par un nombre très petit revient à multiplier par un nombre très grand."
+      }
+     ],
+     "hint": "Quand le dénominateur tend vers $0$, étudie son signe, puis celui de la limite du numérateur.",
+     "solution": "$\\lim\\left(\\frac1n - 2\\right) = -2$ et $\\lim \\frac{1}{n^2} = 0$ avec $\\frac{1}{n^2} > 0$ : la règle « $\\frac{\\ell}{0^+}$ » avec $\\ell < 0$ donne $\\lim w_n = -\\infty$. Contrôle : en multipliant par $n^2$, $w_n = n - 2n^2 = n(1 - 2n)$, et par exemple $w_{10} = -190$.",
+     "points": 1,
+     "methode": "« $\\frac{\\ell}{0^{\\pm}}$ » avec $\\ell \\ne 0$ : la limite est infinie ; son signe vient de celui de $\\ell$ et de celui du dénominateur.",
+     "ref": "m2-scex-suites-flash-q28"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-29",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "La racine qui fait illusion",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Lever une forme indéterminée",
+     "difficulty": 3,
+     "statement": "Soit $u_n = \\sqrt{n^2 + 4n} - n$ pour $n\\in\\mathbb{N}$. Les deux termes tendent vers $+\\infty$ : c'est une forme indéterminée « $\\infty - \\infty$ ». En utilisant l'expression conjuguée, on obtient $\\lim\\limits_{n\\to+\\infty} u_n =$",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "$u_n = \\frac{4n}{\\sqrt{n^2+4n} + n} = \\frac{4}{\\sqrt{1 + \\frac4n} + 1} \\to \\frac42 = 2$."
+      },
+      {
+       "label": "$0$",
+       "why": "« $\\infty - \\infty = 0$ » est faux : c'est une forme indéterminée. Vérifie : $u_{100} = \\sqrt{10\\,400} - 100 \\approx 1{,}98$."
+      },
+      {
+       "label": "$4$",
+       "why": "Tu as divisé $4n$ par $\\sqrt{n^2+4n}$ seulement : le dénominateur conjugué est $\\sqrt{n^2+4n} + n$, qui se comporte comme $2n$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Tu n'as gardé que $\\sqrt{n^2+4n} \\to +\\infty$ ; or $\\sqrt{n^2+4n}$ et $n$ sont très proches, leur différence reste bornée."
+      }
+     ],
+     "hint": "Multiplie et divise par $\\sqrt{n^2+4n} + n$, puis factorise par $n$ au dénominateur.",
+     "solution": "Pour $n \\ge 1$ : $u_n = \\frac{(\\sqrt{n^2+4n} - n)(\\sqrt{n^2+4n} + n)}{\\sqrt{n^2+4n} + n} = \\frac{n^2 + 4n - n^2}{\\sqrt{n^2+4n} + n} = \\frac{4n}{n\\left(\\sqrt{1 + \\frac4n} + 1\\right)} = \\frac{4}{\\sqrt{1+\\frac4n} + 1}$. Comme $\\frac4n \\to 0$, le dénominateur tend vers $2$, donc $\\lim u_n = 2$. Contrôle : $u_{100} \\approx 1{,}98$ et $u_{10\\,000} \\approx 1{,}9996$.",
+     "points": 1,
+     "methode": "« $\\sqrt{\\ \\ } - n$ » en $\\infty - \\infty$ : multiplie par l'expression conjuguée, puis factorise par le terme dominant.",
+     "ref": "m2-scex-suites-flash-q29"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-30",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Puissances en concurrence",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Lever une forme indéterminée",
+     "difficulty": 2,
+     "statement": "Soit $u_n = \\dfrac{3^n - 2^n}{3^n + 2^n}$ pour $n\\in\\mathbb{N}$. Numérateur et dénominateur tendent vers $+\\infty$ (forme « $\\frac{\\infty}{\\infty}$ »). En factorisant par la puissance dominante, on trouve $\\lim\\limits_{n\\to+\\infty} u_n =$",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "En divisant par $3^n$ : $u_n = \\frac{1 - (2/3)^n}{1 + (2/3)^n} \\to \\frac{1-0}{1+0} = 1$."
+      },
+      {
+       "label": "$\\dfrac15$",
+       "why": "C'est $u_1 = \\frac{3-2}{3+2}$ : la valeur d'un terme n'est pas la limite."
+      },
+      {
+       "label": "$-1$",
+       "why": "Tu as factorisé par $2^n$ et cru que $\\left(\\frac32\\right)^n \\to 0$ : comme $\\frac32 > 1$, $\\left(\\frac32\\right)^n \\to +\\infty$, et on retrouve $1$."
+      },
+      {
+       "label": "$0$",
+       "why": "« $\\frac{\\infty}{\\infty}$ » ne vaut pas $0$ : c'est une forme indéterminée qu'il faut lever."
+      }
+     ],
+     "hint": "Divise numérateur et dénominateur par $3^n$, puis utilise la limite de $\\left(\\frac23\\right)^n$.",
+     "solution": "$u_n = \\frac{3^n\\left(1 - \\left(\\frac23\\right)^n\\right)}{3^n\\left(1 + \\left(\\frac23\\right)^n\\right)} = \\frac{1 - \\left(\\frac23\\right)^n}{1 + \\left(\\frac23\\right)^n}$. Comme $0 < \\frac23 < 1$, $\\left(\\frac23\\right)^n \\to 0$, donc $\\lim u_n = \\frac{1}{1} = 1$. Contrôle : $u_{10} = \\frac{59\\,049 - 1\\,024}{59\\,049 + 1\\,024} \\approx 0{,}966$, déjà proche de $1$.",
+     "points": 1,
+     "methode": "Quotient de puissances $a^n$ : factorise par la plus grande base ; les autres termes deviennent des $q^n$ avec $0 < q < 1$, qui tendent vers $0$.",
+     "ref": "m2-scex-suites-flash-q30"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-31",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le terme dominant",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Lever une forme indéterminée",
+     "difficulty": 1,
+     "statement": "Une modélisation donne $u_n = \\dfrac{n^2 - 5n^3}{2n^3 + n}$ pour $n \\ge 1$. Pour connaître la tendance à long terme, on cherche $\\lim\\limits_{n\\to+\\infty} u_n$. Elle vaut :",
+     "options": [
+      {
+       "label": "$-\\dfrac52$",
+       "correct": true,
+       "why": "Degrés égaux : la limite est le quotient des termes dominants, $\\frac{-5n^3}{2n^3} = -\\frac52$."
+      },
+      {
+       "label": "$\\dfrac52$",
+       "why": "Tu as perdu le signe : le terme dominant du numérateur est $-5n^3$."
+      },
+      {
+       "label": "$-\\infty$",
+       "why": "Le numérateur tend vers $-\\infty$, mais le dénominateur tend vers $+\\infty$ au même rythme ($n^3$) : la limite est finie."
+      },
+      {
+       "label": "$0$",
+       "why": "Tu as cru que le numérateur était de degré $2$ ; il contient $-5n^3$, de même degré que le dénominateur."
+      }
+     ],
+     "hint": "Factorise numérateur et dénominateur par $n^3$.",
+     "solution": "Pour $n \\ge 1$ : $u_n = \\frac{n^3\\left(\\frac1n - 5\\right)}{n^3\\left(2 + \\frac{1}{n^2}\\right)} = \\frac{\\frac1n - 5}{2 + \\frac1{n^2}}$. Or $\\frac1n \\to 0$ et $\\frac1{n^2}\\to 0$, donc $\\lim u_n = -\\frac52$. Contrôle : $u_{100} = \\frac{10\\,000 - 5\\,000\\,000}{2\\,000\\,000 + 100} \\approx -2{,}495$.",
+     "points": 1,
+     "methode": "Fraction rationnelle en $n$ : factorise par la plus haute puissance en haut et en bas ; à degrés égaux, la limite est le quotient des coefficients dominants.",
+     "ref": "m2-scex-suites-flash-q31"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-32",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Une limite sous le cosinus",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limite d'une suite composée",
+     "difficulty": 2,
+     "statement": "Pour $n\\in\\mathbb{N}$, on pose $u_n = \\cos\\left(\\dfrac{\\pi n}{3n + 1}\\right)$. On rappelle que la fonction $\\cos$ est continue sur $\\mathbb{R}$. Que vaut $\\lim\\limits_{n\\to+\\infty} u_n$ ?",
+     "options": [
+      {
+       "label": "$\\dfrac12$",
+       "correct": true,
+       "why": "$\\frac{\\pi n}{3n+1} \\to \\frac\\pi3$ et $\\cos$ est continue en $\\frac\\pi3$ : $u_n \\to \\cos\\frac\\pi3 = \\frac12$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as cru que $\\frac{\\pi n}{3n+1} \\to 0$ ; or numérateur et dénominateur sont de même degré : la limite est $\\frac\\pi3$."
+      },
+      {
+       "label": "$-1$",
+       "why": "Tu as simplifié $\\frac{\\pi n}{3n+1}$ en $\\pi$ : il faut garder le coefficient $3$ du dénominateur."
+      },
+      {
+       "label": "elle n'existe pas, car $\\cos$ oscille",
+       "why": "$\\cos$ oscille quand son argument tend vers l'infini ; ici l'argument converge vers $\\frac\\pi3$, donc $u_n$ converge."
+      }
+     ],
+     "hint": "Calcule d'abord la limite de l'argument, puis utilise la continuité du cosinus.",
+     "solution": "Pour $n \\ge 1$, $\\frac{\\pi n}{3n + 1} = \\frac{\\pi}{3 + \\frac1n}$, qui tend vers $\\frac\\pi3$. La fonction $\\cos$ est continue en $\\frac\\pi3$, donc $\\lim u_n = \\cos\\frac\\pi3 = \\frac12$. Contrôle : pour $n = 100$, l'argument vaut $\\frac{100\\pi}{301} \\approx 1{,}0437$ et $\\cos(1{,}0437) \\approx 0{,}503$.",
+     "points": 1,
+     "methode": "Suite composée $u_n = f(v_n)$ : si $v_n \\to a$ et $f$ continue en $a$, alors $u_n \\to f(a)$ (plus généralement, si $\\lim_{x\\to a} f(x) = L$, alors $u_n \\to L$).",
+     "ref": "m2-scex-suites-flash-q32"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-33",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Logarithme d'un quotient",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limite d'une suite composée",
+     "difficulty": 2,
+     "statement": "Pour $n \\ge 1$, on pose $u_n = \\ln(2n + 1) - \\ln n$. Les deux logarithmes tendent vers $+\\infty$, ce qui donne une forme « $\\infty - \\infty$ ». En regroupant les logarithmes, on obtient $\\lim\\limits_{n\\to+\\infty} u_n =$",
+     "options": [
+      {
+       "label": "$\\ln 2$",
+       "correct": true,
+       "why": "$u_n = \\ln\\frac{2n+1}{n} = \\ln\\left(2 + \\frac1n\\right)$ et $\\ln$ est continue en $2$."
+      },
+      {
+       "label": "$0$",
+       "why": "« $\\infty - \\infty = 0$ » est faux : c'est une forme indéterminée. Vérifie : $u_{100} = \\ln 2{,}01 \\approx 0{,}698$."
+      },
+      {
+       "label": "$\\ln 3$",
+       "why": "C'est $u_1 = \\ln 3 - \\ln 1$ : la valeur du premier terme n'est pas la limite."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Tu n'as regardé que $\\ln(2n+1) \\to +\\infty$ ; or $\\ln n$ croît au même rythme et compense."
+      }
+     ],
+     "hint": "Utilise $\\ln a - \\ln b = \\ln\\frac ab$, puis la limite de $\\frac{2n+1}{n}$.",
+     "solution": "Pour $n \\ge 1$ : $u_n = \\ln\\frac{2n+1}{n} = \\ln\\left(2 + \\frac1n\\right)$. Comme $2 + \\frac1n \\to 2$ et que $\\ln$ est continue en $2$, $\\lim u_n = \\ln 2 \\approx 0{,}693$. Contrôle : $u_{100} = \\ln 2{,}01 \\approx 0{,}698$, proche de $\\ln 2$.",
+     "points": 1,
+     "methode": "Différence de logarithmes en « $\\infty - \\infty$ » : regroupe en $\\ln$ d'un quotient, calcule la limite du quotient, puis utilise la continuité de $\\ln$.",
+     "ref": "m2-scex-suites-flash-q33"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-34",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Minorer pour conclure",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Théorèmes de comparaison",
+     "difficulty": 2,
+     "statement": "Soit $u_n = 2n + \\sin n$. Le terme $\\sin n$ n'a pas de limite, mais il reste compris entre $-1$ et $1$. Quel raisonnement permet de conclure correctement sur la limite de $(u_n)$ ?",
+     "options": [
+      {
+       "label": "$u_n \\ge 2n - 1$ et $2n - 1 \\to +\\infty$, donc $u_n \\to +\\infty$",
+       "correct": true,
+       "why": "Théorème de comparaison : une suite minorée par une suite qui tend vers $+\\infty$ tend vers $+\\infty$."
+      },
+      {
+       "label": "$u_n \\le 2n + 1$ et $2n+1 \\to +\\infty$, donc $u_n \\to +\\infty$",
+       "why": "Une MAJORATION par une suite qui tend vers $+\\infty$ ne prouve rien : la suite nulle vérifie aussi $0 \\le 2n + 1$."
+      },
+      {
+       "label": "$\\sin n$ n'a pas de limite, donc $u_n$ n'a pas de limite",
+       "why": "Le terme borné $\\sin n$ est « écrasé » par $2n$ : l'absence de limite d'un terme ne se transmet pas forcément à la somme."
+      },
+      {
+       "label": "$2n - 1 \\le u_n \\le 2n + 1$, donc $u_n$ converge d'après les gendarmes",
+       "why": "Les gendarmes exigent que les deux bornes aient la MÊME limite finie ; ici elles tendent vers $+\\infty$ : on conclut par comparaison."
+      }
+     ],
+     "hint": "Pour prouver $u_n \\to +\\infty$, il faut une suite PLUS PETITE que $u_n$ qui tend vers $+\\infty$.",
+     "solution": "Pour tout $n$, $\\sin n \\ge -1$, donc $u_n \\ge 2n - 1$. Comme $\\lim (2n - 1) = +\\infty$, le théorème de comparaison donne $\\lim u_n = +\\infty$. Contrôle : $u_{10} = 20 + \\sin 10 \\approx 19{,}46$, bien supérieur à $2\\times10 - 1 = 19$.",
+     "points": 1,
+     "methode": "Vers $+\\infty$ : minore par une suite qui tend vers $+\\infty$. Vers $-\\infty$ : majore par une suite qui tend vers $-\\infty$.",
+     "ref": "m2-scex-suites-flash-q34"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-35",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Une descente à pas réguliers",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Théorèmes de comparaison",
+     "difficulty": 3,
+     "statement": "Une suite $(v_n)$ vérifie $v_0 = 3$ et, pour tout $n$, $v_{n+1} \\le v_n - \\dfrac12$ : on ne connaît pas $v_{n+1}$ exactement, seulement cette inégalité. Que peut-on affirmer sur $(v_n)$ ?",
+     "options": [
+      {
+       "label": "$v_n \\le 3 - \\dfrac n2$ pour tout $n$, donc $\\lim v_n = -\\infty$",
+       "correct": true,
+       "why": "Chaque pas fait perdre au moins $\\frac12$ (récurrence) ; la majorante tend vers $-\\infty$."
+      },
+      {
+       "label": "$(v_n)$ est décroissante, donc elle converge",
+       "why": "Une suite décroissante converge si elle est MINORÉE ; ici elle ne l'est pas, justement car $v_n \\le 3 - \\frac n2$."
+      },
+      {
+       "label": "On ne peut rien dire sans la formule exacte de $v_n$",
+       "why": "L'inégalité suffit : une majoration par une suite qui tend vers $-\\infty$ donne la limite (théorème de comparaison)."
+      },
+      {
+       "label": "$v_n \\ge 3 - \\dfrac n2$ pour tout $n$, donc $\\lim v_n = -\\infty$",
+       "why": "Inégalité dans le mauvais sens : chaque pas fait perdre AU MOINS $\\frac12$, donc $v_n$ est sous $3 - \\frac n2$ ; et une minoration par une suite qui tend vers $-\\infty$ ne prouverait rien."
+      }
+     ],
+     "hint": "Cumule les pertes : combien vaut au plus $v_1$, puis $v_2$ ? Conjecture une majoration et prouve-la par récurrence.",
+     "solution": "Montrons par récurrence $v_n \\le 3 - \\frac n2$. Initialisation : $v_0 = 3$. Hérédité : si $v_n \\le 3 - \\frac n2$, alors $v_{n+1} \\le v_n - \\frac12 \\le 3 - \\frac n2 - \\frac12 = 3 - \\frac{n+1}{2}$. Donc $v_n \\le 3 - \\frac n2$ pour tout $n$. Comme $\\lim\\left(3 - \\frac n2\\right) = -\\infty$, par comparaison $\\lim v_n = -\\infty$. Contrôle : la suite $v_n = 3 - n$ vérifie l'hypothèse ($v_{n+1} = v_n - 1 \\le v_n - \\frac12$) et tend bien vers $-\\infty$.",
+     "points": 1,
+     "methode": "Une inégalité $v_{n+1} \\le v_n - c$ ($c > 0$) se cumule par récurrence en $v_n \\le v_0 - nc$ ; on conclut ensuite par comparaison.",
+     "ref": "m2-scex-suites-flash-q35"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-36",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le sinus encadré",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Théorème d'encadrement (les gendarmes)",
+     "difficulty": 2,
+     "statement": "Soit $u_n = \\dfrac{3n + \\sin n}{n + 2}$ pour $n\\in\\mathbb{N}$. Le sinus n'a pas de limite, mais $-1 \\le \\sin n \\le 1$ pour tout $n$. Que vaut $\\lim\\limits_{n\\to+\\infty} u_n$ ?",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "$\\frac{3n - 1}{n+2} \\le u_n \\le \\frac{3n+1}{n+2}$ et les deux bornes tendent vers $3$."
+      },
+      {
+       "label": "elle n'existe pas, car $\\sin n$ oscille",
+       "why": "Le sinus est borné et divisé par $n + 2 \\to +\\infty$ : son influence disparaît. L'encadrement prouve la convergence."
+      },
+      {
+       "label": "$4$",
+       "why": "Tu as remplacé $\\sin n$ par $1$ et pris $\\frac{3 + 1}{1}$ : $\\sin n$ ne grandit pas avec $n$, alors que $3n$ oui ; la borne $\\frac{3n+1}{n+2}$ tend vers $3$, pas vers $4$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Le numérateur tend vers $+\\infty$, mais le dénominateur aussi, au même rythme : la limite est finie."
+      }
+     ],
+     "hint": "Encadre le numérateur grâce à $-1 \\le \\sin n \\le 1$, divise par $n + 2 > 0$, puis calcule la limite des deux bornes.",
+     "solution": "Pour tout $n$ : $3n - 1 \\le 3n + \\sin n \\le 3n + 1$ et $n + 2 > 0$, donc $\\frac{3n-1}{n+2} \\le u_n \\le \\frac{3n+1}{n+2}$. Les deux bornes sont des quotients de même degré : elles tendent vers $\\frac31 = 3$. D'après le théorème des gendarmes, $\\lim u_n = 3$. Contrôle : $u_{100} = \\frac{300 + \\sin 100}{102} \\approx \\frac{299{,}49}{102} \\approx 2{,}936$.",
+     "points": 1,
+     "methode": "Gendarmes : $v_n \\le u_n \\le w_n$ avec $\\lim v_n = \\lim w_n = \\ell$ (finie) entraîne $\\lim u_n = \\ell$. Idéal avec $\\sin n$, $\\cos n$, $(-1)^n$.",
+     "ref": "m2-scex-suites-flash-q36"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-37",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Un cosinus coincé",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Théorème d'encadrement (les gendarmes)",
+     "difficulty": 3,
+     "statement": "On admet que, pour tout réel $x \\ge 0$ : $\\dfrac{x^2}{2} - \\dfrac{x^4}{24} \\le 1 - \\cos x \\le \\dfrac{x^2}{2}$. Pour $n \\ge 1$, on pose $u_n = n^2\\left(1 - \\cos\\dfrac1n\\right)$. Que vaut $\\lim\\limits_{n\\to+\\infty} u_n$ ?",
+     "options": [
+      {
+       "label": "$\\dfrac12$",
+       "correct": true,
+       "why": "Avec $x = \\frac1n$ puis multiplication par $n^2$ : $\\frac12 - \\frac{1}{24n^2} \\le u_n \\le \\frac12$, et gendarmes."
+      },
+      {
+       "label": "$0$",
+       "why": "Tu n'as utilisé que $1 - \\cos\\frac1n \\to 0$ : c'est une forme « $\\infty\\times 0$ », il faut l'encadrement."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Tu n'as utilisé que $n^2 \\to +\\infty$ ; or $1 - \\cos\\frac1n$ est de l'ordre de $\\frac{1}{2n^2}$ et compense exactement."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as cru que $1 - \\cos x$ se comporte comme $x^2$ ; l'encadrement donne $\\frac{x^2}{2}$ : le facteur $\\frac12$ compte."
+      }
+     ],
+     "hint": "Remplace $x$ par $\\frac1n$ dans l'encadrement, puis multiplie par $n^2 > 0$.",
+     "solution": "Pour $x = \\frac1n > 0$ : $\\frac{1}{2n^2} - \\frac{1}{24n^4} \\le 1 - \\cos\\frac1n \\le \\frac{1}{2n^2}$. En multipliant par $n^2 > 0$ : $\\frac12 - \\frac{1}{24n^2} \\le u_n \\le \\frac12$. Comme $\\frac{1}{24n^2} \\to 0$, les deux bornes tendent vers $\\frac12$ : par les gendarmes, $\\lim u_n = \\frac12$. Contrôle : $u_{10} = 100(1 - \\cos 0{,}1) \\approx 0{,}4996$.",
+     "points": 1,
+     "methode": "Forme « $\\infty \\times 0$ » avec une fonction connue par un encadrement : remplace $x$ par l'expression en $n$, multiplie, puis applique les gendarmes.",
+     "ref": "m2-scex-suites-flash-q37"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-38",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le réservoir qui se remplit",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Convergence monotone",
+     "difficulty": 1,
+     "statement": "Le niveau d'eau $u_n$ (en mètres) d'un réservoir, relevé chaque matin, augmente d'un jour à l'autre, et on a démontré que $u_n \\le 4$ pour tout $n$ (la hauteur du réservoir). Sans autre calcul, que peut-on affirmer ?",
+     "options": [
+      {
+       "label": "$(u_n)$ converge vers un réel $\\ell \\le 4$",
+       "correct": true,
+       "why": "Croissante et majorée, donc convergente ; l'inégalité large $u_n \\le 4$ passe à la limite."
+      },
+      {
+       "label": "$(u_n)$ converge vers $4$",
+       "why": "Un majorant n'est pas forcément la limite : $u_n = 2 - \\frac{1}{n+1}$ est croissante, majorée par $4$, et tend vers $2$."
+      },
+      {
+       "label": "$(u_n)$ tend vers $+\\infty$, puisqu'elle augmente chaque jour",
+       "why": "Croissante ne suffit pas pour tendre vers $+\\infty$ : il faudrait qu'elle ne soit pas majorée. Ici elle reste sous $4$."
+      },
+      {
+       "label": "$(u_n)$ converge vers un réel $\\ell < 4$ (strictement)",
+       "why": "La limite peut égaler le majorant : $u_n = 4 - \\frac{1}{n+1}$ est croissante, majorée par $4$, et tend vers $4$."
+      }
+     ],
+     "hint": "Quel théorème relie « croissante », « majorée » et « convergente » ? Que dit-il de la valeur de la limite ?",
+     "solution": "Théorème de convergence monotone : toute suite croissante et majorée converge. Ici $(u_n)$ converge vers un réel $\\ell$. En passant à la limite dans $u_n \\le 4$, on obtient $\\ell \\le 4$. Le théorème ne donne pas la valeur exacte de $\\ell$ : il faudra un calcul (souvent $\\ell = f(\\ell)$). Contrôle : $u_n = 3 - \\frac1{n+1}$ et $u_n = 4 - \\frac1{n+1}$ vérifient toutes deux les hypothèses, avec des limites différentes, $3$ et $4$.",
+     "points": 1,
+     "methode": "Croissante et majorée, ou décroissante et minorée : la suite converge. Le théorème donne l'existence de la limite, pas sa valeur ; $\\ell$ respecte les inégalités larges.",
+     "ref": "m2-scex-suites-flash-q38"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-39",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Vrai ou faux sur la monotonie",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Convergence monotone",
+     "difficulty": 2,
+     "statement": "Dans un QCM de révision, un seul des énoncés suivants est un théorème du cours, c'est-à-dire vrai pour toute suite réelle. Lequel ?",
+     "options": [
+      {
+       "label": "Toute suite croissante non majorée tend vers $+\\infty$",
+       "correct": true,
+       "why": "Pour tout $A$, un terme $u_N$ dépasse $A$ (non majorée), et tous les suivants aussi (croissante)."
+      },
+      {
+       "label": "Toute suite convergente est monotone",
+       "why": "Contre-exemple : $u_n = \\frac{(-1)^n}{n}$ converge vers $0$ en changeant de sens à chaque rang."
+      },
+      {
+       "label": "Toute suite bornée converge",
+       "why": "Contre-exemple : $u_n = (-1)^n$ est bornée par $1$ mais n'a pas de limite."
+      },
+      {
+       "label": "Toute suite décroissante tend vers $-\\infty$",
+       "why": "Contre-exemple : $u_n = \\frac1n$ est décroissante et tend vers $0$ ; elle est minorée par $0$."
+      }
+     ],
+     "hint": "Pour éliminer un énoncé général, un seul contre-exemple suffit.",
+     "solution": "Soit $(u_n)$ croissante non majorée et $A$ un réel. Comme $A$ n'est pas un majorant, il existe $N$ tel que $u_N > A$ ; la suite étant croissante, $u_n \\ge u_N > A$ pour tout $n \\ge N$ : c'est la définition de $\\lim u_n = +\\infty$. Les trois autres énoncés tombent par contre-exemple ($\\frac{(-1)^n}{n}$, $(-1)^n$, $\\frac1n$). Contrôle : $u_n = \\sqrt n$ est croissante, non majorée, et tend bien vers $+\\infty$.",
+     "points": 1,
+     "methode": "Une suite monotone a toujours une limite : finie si elle est bornée du « bon côté », infinie sinon.",
+     "ref": "m2-scex-suites-flash-q39"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-40",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "La méthode de Héron",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limite et fonction continue",
+     "difficulty": 2,
+     "statement": "Pour approcher $\\sqrt3$, on pose $u_0 = 2$ et $u_{n+1} = f(u_n)$ avec $f(x) = \\dfrac12\\left(x + \\dfrac3x\\right)$. On admet que $u_n \\ge \\sqrt3$ pour tout $n$ et que $(u_n)$ converge vers $\\ell$. La fonction $f$ étant continue sur $]0;+\\infty[$, la limite $\\ell$ vaut :",
+     "options": [
+      {
+       "label": "$\\sqrt3$",
+       "correct": true,
+       "why": "$\\ell = \\frac12\\left(\\ell + \\frac3\\ell\\right) \\Leftrightarrow \\ell^2 = 3$, et $\\ell \\ge \\sqrt3 > 0$."
+      },
+      {
+       "label": "$-\\sqrt3$",
+       "why": "C'est l'autre solution de $\\ell^2 = 3$, mais $\\ell \\ge \\sqrt3 > 0$ par passage à la limite dans $u_n \\ge \\sqrt 3$."
+      },
+      {
+       "label": "$3$",
+       "why": "Tu as tiré $\\ell = 3$ de $\\ell = \\frac{3}{\\ell}$ : cette égalité donne $\\ell^2 = 3$, donc $\\ell = \\pm\\sqrt3$."
+      },
+      {
+       "label": "$2$",
+       "why": "$2$ est le premier terme ; la limite vérifie $f(\\ell) = \\ell$, or $f(2) = \\frac74 \\ne 2$."
+      }
+     ],
+     "hint": "Passe à la limite dans $u_{n+1} = f(u_n)$ pour obtenir $\\ell = f(\\ell)$, puis résous en tenant compte du signe de $\\ell$.",
+     "solution": "$(u_n)$ converge vers $\\ell \\ge \\sqrt3$ et $f$ est continue en $\\ell$, donc $\\ell = f(\\ell)$ : $\\ell = \\frac12\\left(\\ell + \\frac3\\ell\\right) \\Leftrightarrow 2\\ell = \\ell + \\frac3\\ell \\Leftrightarrow \\ell = \\frac3\\ell \\Leftrightarrow \\ell^2 = 3$. Comme $\\ell \\ge \\sqrt 3 > 0$ : $\\ell = \\sqrt3$. Contrôle : $u_1 = \\frac74 = 1{,}75$ et $u_2 = \\frac{97}{56} \\approx 1{,}732\\,1$, alors que $\\sqrt3 \\approx 1{,}732\\,1$ : la convergence est très rapide.",
+     "points": 1,
+     "methode": "$u_{n+1} = f(u_n)$, $u_n \\to \\ell$ et $f$ continue en $\\ell$ : alors $f(\\ell) = \\ell$. Élimine ensuite les solutions incompatibles avec l'encadrement de la suite.",
+     "ref": "m2-scex-suites-flash-q40"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-41",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Sans continuité, rien ne va",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limite et fonction continue",
+     "difficulty": 3,
+     "statement": "Soit $f$ définie sur $[0;+\\infty[$ par $f(x) = \\dfrac x2$ si $x > 0$ et $f(0) = 1$. On pose $u_0 = 1$ et $u_{n+1} = f(u_n)$. On constate que $u_n = \\left(\\frac12\\right)^n \\to 0$, alors que $f(0) = 1 \\ne 0$. Que montre cet exemple ?",
+     "options": [
+      {
+       "label": "La relation $\\ell = f(\\ell)$ exige que $f$ soit continue en $\\ell$ ; ici $f$ n'est pas continue en $0$",
+       "correct": true,
+       "why": "$\\lim_{x\\to0^+} f(x) = 0 \\ne f(0) = 1$ : l'hypothèse de continuité manque, la propriété ne s'applique pas."
+      },
+      {
+       "label": "La suite $(u_n)$ ne converge pas",
+       "why": "Elle converge : tous ses termes sont strictement positifs et $u_n = \\left(\\frac12\\right)^n \\to 0$."
+      },
+      {
+       "label": "La limite de $(u_n)$ est $f(0) = 1$",
+       "why": "La limite se lit sur les termes : $u_{10} = \\frac{1}{1024}$, très proche de $0$, pas de $1$."
+      },
+      {
+       "label": "$0$ est un point fixe de $f$",
+       "why": "Un point fixe vérifie $f(\\ell) = \\ell$ ; or $f(0) = 1 \\ne 0$. En fait $f$ n'a aucun point fixe."
+      }
+     ],
+     "hint": "Relis les hypothèses du théorème « limite et fonction continue » : laquelle manque ici ?",
+     "solution": "Pour tout $n$, $u_n > 0$, donc $u_{n+1} = \\frac{u_n}{2}$ : $(u_n)$ est géométrique et $u_n = \\left(\\frac12\\right)^n \\to 0$. Si $f$ était continue en $0$, on aurait $f(0) = \\lim f(u_n) = \\lim u_{n+1} = 0$. Mais $f(0) = 1$ : $f$ n'est pas continue en $0$ ($\\lim_{x\\to 0^+} f(x) = 0 \\ne 1$). L'égalité $f(\\ell) = \\ell$ n'est garantie que si $f$ est continue en $\\ell$. Contrôle : $f$ n'a même aucun point fixe ($\\frac x2 = x$ impose $x = 0$, exclu), et pourtant la suite converge.",
+     "points": 1,
+     "methode": "Avant d'écrire $f(\\ell) = \\ell$, cite les deux hypothèses : $(u_n)$ converge vers $\\ell$ ET $f$ est continue en $\\ell$ (souvent : $f$ continue sur un intervalle stable qui contient $\\ell$).",
+     "ref": "m2-scex-suites-flash-q41"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-42",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Une suite qui s'arrête net",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Le problème posé",
+     "difficulty": 2,
+     "statement": "On veut définir une suite par $u_0 = 5$ et $u_{n+1} = \\sqrt{u_n - 1}$. La fonction $f(x) = \\sqrt{x - 1}$ est définie sur $[1;+\\infty[$ et $u_0 = 5$ appartient bien à cet intervalle. Que se passe-t-il ?",
+     "options": [
+      {
+       "label": "Seuls $u_0$, $u_1$, $u_2$, $u_3$ existent : $u_3 = 0$ et $u_4 = \\sqrt{-1}$ n'est pas défini",
+       "correct": true,
+       "why": "$u_1 = 2$, $u_2 = 1$, $u_3 = 0 \\notin [1;+\\infty[$ : l'intervalle n'est pas stable par $f$."
+      },
+      {
+       "label": "La suite est définie pour tout $n$, car $u_0 \\in [1;+\\infty[$",
+       "why": "Il ne suffit pas que $u_0$ soit dans le domaine : il faut que TOUS les termes y restent, c'est-à-dire $f([1;+\\infty[) \\subset [1;+\\infty[$, ce qui est faux ($f(1) = 0$)."
+      },
+      {
+       "label": "La suite s'arrête à $u_2 = 1$",
+       "why": "$u_3 = \\sqrt{1 - 1} = 0$ existe bien ; c'est $u_4 = \\sqrt{0 - 1}$ qui n'existe pas."
+      },
+      {
+       "label": "La suite est définie pour tout $n$ et converge vers $0$",
+       "why": "$u_4$ n'existe pas : la suite s'arrête à $u_3$, on ne peut pas parler de limite."
+      }
+     ],
+     "hint": "Calcule les termes un par un et vérifie à chaque fois que $u_n - 1 \\ge 0$.",
+     "solution": "$u_1 = \\sqrt{4} = 2$, $u_2 = \\sqrt{1} = 1$, $u_3 = \\sqrt 0 = 0$, puis $u_4 = \\sqrt{-1}$ : impossible. La suite n'est donc pas définie pour tout $n$. Le problème vient de ce que l'intervalle $[1;+\\infty[$ n'est pas stable par $f$ : $f(1) = 0 \\notin [1;+\\infty[$. C'est pourquoi, pour $u_{n+1} = f(u_n)$, on commence toujours par trouver un intervalle $I$ tel que $f(I) \\subset I$ et $u_0 \\in I$. Contrôle : avec $u_0 = 1{,}5$ c'est encore plus rapide : $u_1 \\approx 0{,}71$ et $u_2$ n'existe déjà plus.",
+     "points": 1,
+     "methode": "Suite $u_{n+1} = f(u_n)$ : avant tout, prouve (par récurrence) que $u_n \\in I$ pour un intervalle $I$ stable par $f$, sinon la suite peut ne même pas exister.",
+     "ref": "m2-scex-suites-flash-q42"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-43",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le plan d'attaque",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "La méthode complète, sur un exemple",
+     "difficulty": 2,
+     "statement": "Pour étudier $u_0 = a$, $u_{n+1} = f(u_n)$ avec $f$ continue et croissante sur $I = [\\alpha;\\beta]$, $f(I)\\subset I$ et $a \\in I$, un élève hésite sur l'ordre des étapes. Quel enchaînement est logiquement correct ?",
+     "options": [
+      {
+       "label": "Récurrence $u_n \\in I$ ; puis sens de variation ; puis convergence monotone ; enfin $\\ell = f(\\ell)$ avec $\\ell \\in I$",
+       "correct": true,
+       "why": "Chaque étape utilise la précédente : on n'écrit $\\ell = f(\\ell)$ qu'une fois la convergence prouvée."
+      },
+      {
+       "label": "Résoudre $f(\\ell) = \\ell$, puis en déduire que $(u_n)$ converge vers $\\ell$",
+       "why": "Trouver un point fixe ne prouve pas la convergence : $u_{n+1} = 2u_n$ avec $u_0 = 1$ a le point fixe $0$, mais tend vers $+\\infty$."
+      },
+      {
+       "label": "Sens de variation ; puis $\\ell = f(\\ell)$ ; puis récurrence $u_n \\in I$",
+       "why": "Sans l'encadrement, on ne connaît ni le signe de $u_{n+1} - u_n$ ni la convergence : la récurrence doit venir en premier."
+      },
+      {
+       "label": "Récurrence $u_n \\in I$, puis $\\ell = f(\\ell)$ ; la monotonie est inutile",
+       "why": "Bornée ne suffit pas pour converger ($(-1)^n$ est bornée) : il faut la monotonie pour appliquer le théorème."
+      }
+     ],
+     "hint": "Quelle étape a besoin de quelle autre ? La convergence doit être acquise avant de calculer la limite.",
+     "solution": "1) On montre par récurrence que $u_n \\in I$ pour tout $n$ (grâce à $f(I)\\subset I$) : la suite est bornée. 2) On étudie le signe de $u_{n+1} - u_n$ ; avec $f$ croissante, il suffit de comparer $u_1$ et $u_0$ puis de faire une récurrence. 3) Monotone et bornée, la suite converge vers un $\\ell \\in I$. 4) $f$ étant continue en $\\ell$, on résout $f(\\ell) = \\ell$ dans $I$. Contrôle : sur un exemple : $f(x) = \\frac x2 + 1$ sur $I = [0;2]$, $u_0 = 0$ ; on a $f(I) = [1;2] \\subset I$, $u_1 = 1 > u_0$ donc la suite est croissante, elle converge, et $\\frac\\ell2 + 1 = \\ell$ donne $\\ell = 2$.",
+     "points": 1,
+     "methode": "Suite récurrente : stabilité (récurrence), puis monotonie, puis convergence (théorème), enfin $\\ell = f(\\ell)$ dans $I$. Toujours dans cet ordre.",
+     "ref": "m2-scex-suites-flash-q43"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-44",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Une monotonie offerte par f",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "La méthode complète, sur un exemple",
+     "difficulty": 3,
+     "statement": "Soit $f(x) = \\dfrac{2x+3}{x+2}$ sur $I = [0;2]$ ; $f$ est continue et croissante sur $I$, et $f(I) = \\left[\\frac32;\\frac74\\right] \\subset I$. On pose $u_0 = 0$ et $u_{n+1} = f(u_n)$. Quelle conclusion complète est correcte ?",
+     "options": [
+      {
+       "label": "$(u_n)$ est croissante et converge vers $\\sqrt3$",
+       "correct": true,
+       "why": "$u_1 = \\frac32 > u_0$ et $f$ croissante donnent une suite croissante ; $f(\\ell) = \\ell$ donne $\\ell^2 = 3$ avec $\\ell \\in [0;2]$."
+      },
+      {
+       "label": "$(u_n)$ est croissante et converge vers $2$",
+       "why": "$2$ est un majorant, pas forcément la limite : $f(2) = \\frac74 \\ne 2$, donc $2$ n'est pas un point fixe."
+      },
+      {
+       "label": "$(u_n)$ est décroissante et converge vers $\\sqrt3$",
+       "why": "Le sens de variation se lit en comparant $u_1$ et $u_0$ : $u_1 = \\frac32 > 0 = u_0$, la suite monte."
+      },
+      {
+       "label": "$(u_n)$ est croissante et converge vers $-\\sqrt3$",
+       "why": "$-\\sqrt3$ est solution de $\\ell^2 = 3$ mais n'appartient pas à $I = [0;2]$, où se trouvent tous les termes."
+      }
+     ],
+     "hint": "Avec $f$ croissante, compare $u_1$ et $u_0$ ; pour la limite, résous $f(\\ell) = \\ell$ dans $I$.",
+     "solution": "On a $u_n \\in I$ pour tout $n$ (récurrence, car $f(I) \\subset I$). $u_1 = f(0) = \\frac32 \\ge u_0$ ; si $u_{n+1} \\ge u_n$, alors, $f$ étant croissante, $f(u_{n+1}) \\ge f(u_n)$, soit $u_{n+2} \\ge u_{n+1}$ : $(u_n)$ est croissante. Croissante et majorée par $2$, elle converge vers $\\ell \\in [0;2]$, et la continuité de $f$ donne $f(\\ell) = \\ell$ : $2\\ell + 3 = \\ell^2 + 2\\ell$, soit $\\ell^2 = 3$, donc $\\ell = \\sqrt 3$. Contrôle : $u_1 = 1{,}5$, $u_2 = \\frac{6}{3{,}5} \\approx 1{,}714$, $u_3 \\approx 1{,}731$, et $\\sqrt3 \\approx 1{,}732$.",
+     "points": 1,
+     "methode": "Si $f$ est croissante sur un intervalle stable, $(u_n)$ est monotone et son sens est donné par la comparaison de $u_0$ et $u_1$.",
+     "ref": "m2-scex-suites-flash-q44"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-45",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le lac et ses poissons",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites arithmético-géométriques",
+     "difficulty": 1,
+     "statement": "Chaque année, on pêche $20\\,\\%$ des poissons d'un lac puis on y introduit $4$ milliers d'alevins : $u_{n+1} = 0{,}8\\,u_n + 4$ (en milliers). Pour obtenir une formule explicite, on cherche une suite auxiliaire géométrique. Laquelle convient ?",
+     "options": [
+      {
+       "label": "$v_n = u_n - 20$, de raison $0{,}8$",
+       "correct": true,
+       "why": "Point fixe : $\\ell = 0{,}8\\ell + 4 \\Leftrightarrow \\ell = 20$ ; alors $v_{n+1} = 0{,}8u_n - 16 = 0{,}8 v_n$."
+      },
+      {
+       "label": "$v_n = u_n - 4$, de raison $0{,}8$",
+       "why": "$v_{n+1} = 0{,}8u_n = 0{,}8 v_n + 3{,}2$ : le terme constant ne disparaît pas. On retranche le point fixe, pas la constante."
+      },
+      {
+       "label": "$v_n = u_n + 20$, de raison $0{,}8$",
+       "why": "Erreur de signe : $v_{n+1} = 0{,}8u_n + 24 = 0{,}8v_n + 8$, ce n'est pas géométrique."
+      },
+      {
+       "label": "$v_n = u_n - 5$, de raison $0{,}8$",
+       "why": "Tu as calculé $\\frac{4}{0{,}8}$ au lieu de $\\frac{4}{1 - 0{,}8}$ : le point fixe vérifie $\\ell = 0{,}8\\ell + 4$, donc $0{,}2\\ell = 4$."
+      }
+     ],
+     "hint": "Cherche le réel $\\ell$ tel que $\\ell = 0{,}8\\ell + 4$, puis pose $v_n = u_n - \\ell$.",
+     "solution": "Le point fixe vérifie $\\ell = 0{,}8\\ell + 4$, soit $0{,}2\\ell = 4$ et $\\ell = 20$. Posons $v_n = u_n - 20$ : $v_{n+1} = u_{n+1} - 20 = 0{,}8u_n + 4 - 20 = 0{,}8u_n - 16 = 0{,}8(u_n - 20) = 0{,}8v_n$. Donc $(v_n)$ est géométrique de raison $0{,}8$. Contrôle : si $u_n = 20$, alors $u_{n+1} = 16 + 4 = 20$ : une population de $20$ milliers reste stable, c'est l'équilibre du lac.",
+     "points": 1,
+     "methode": "$u_{n+1} = au_n + b$ avec $a \\ne 1$ : le point fixe est $\\ell = \\frac{b}{1-a}$ et $v_n = u_n - \\ell$ est géométrique de raison $a$.",
+     "ref": "m2-scex-suites-flash-q45"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-46",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Proche de l'équilibre",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites arithmético-géométriques",
+     "difficulty": 2,
+     "statement": "Pour le même lac, $u_0 = 50$ (milliers) et l'on a obtenu $u_n = 20 + 30\\times 0{,}8^n$. On donne $0{,}8^{15} \\approx 0{,}0352$ et $0{,}8^{16} \\approx 0{,}0281$. À partir de quelle année $n$ la population devient-elle inférieure à $21$ milliers ?",
+     "options": [
+      {
+       "label": "$n = 16$",
+       "correct": true,
+       "why": "$30\\times0{,}8^n < 1 \\Leftrightarrow 0{,}8^n < \\frac{1}{30} \\approx 0{,}0333$ : faux pour $n = 15$, vrai pour $n = 16$."
+      },
+      {
+       "label": "$n = 15$",
+       "why": "$u_{15} \\approx 20 + 30\\times0{,}0352 \\approx 21{,}06 > 21$ : pas encore."
+      },
+      {
+       "label": "$n = 18$",
+       "why": "Tu as pris $u_n = 20 + 50\\times0{,}8^n$, avec $v_0 = u_0 = 50$ ; or $v_0 = u_0 - 20 = 30$."
+      },
+      {
+       "label": "$n = 0$",
+       "why": "Tu as utilisé $u_n = 20 - 30\\times 0{,}8^n$ (erreur de signe), qui est toujours inférieur à $21$. Or $u_0 = 50 > 21$."
+      }
+     ],
+     "hint": "Résous $20 + 30\\times 0{,}8^n < 21$ : isole $0{,}8^n$, puis utilise les valeurs données.",
+     "solution": "$u_n < 21 \\Leftrightarrow 30\\times0{,}8^n < 1 \\Leftrightarrow 0{,}8^n < \\frac1{30}\\approx 0{,}0333$. Comme $(0{,}8^n)$ est décroissante, il suffit de trouver le premier rang : $0{,}8^{15} \\approx 0{,}0352 > 0{,}0333$ et $0{,}8^{16} \\approx 0{,}0281 < 0{,}0333$. Donc $u_n < 21$ pour tout $n \\ge 16$ (par le calcul : $n > \\frac{\\ln(1/30)}{\\ln 0{,}8} \\approx 15{,}2$). Contrôle : $u_{16} \\approx 20 + 0{,}84 = 20{,}84$ milliers.",
+     "points": 1,
+     "methode": "Seuil pour $u_n = \\ell + c\\,q^n$ : isole $q^n$, puis utilise $\\ln$ (en retournant l'inégalité car $\\ln q < 0$ si $0 < q < 1$) ou un tableau de valeurs.",
+     "ref": "m2-scex-suites-flash-q46"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-47",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Sommer une suite arithmético-géométrique",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites arithmético-géométriques",
+     "difficulty": 3,
+     "statement": "Soit $u_0 = 2$ et $u_{n+1} = 3u_n - 2$. On montre que $v_n = u_n - 1$ est géométrique de raison $3$, d'où $u_n = 3^n + 1$. On cherche alors $S_n = u_0 + u_1 + \\dots + u_n$. Pour tout $n\\in\\mathbb{N}$ :",
+     "options": [
+      {
+       "label": "$S_n = \\dfrac{3^{n+1} - 1}{2} + n + 1$",
+       "correct": true,
+       "why": "$S_n = (1 + 3 + \\dots + 3^n) + (n+1)\\times 1$ : il y a $n+1$ termes dans chaque somme."
+      },
+      {
+       "label": "$S_n = \\dfrac{3^{n+1} - 1}{2} + n$",
+       "why": "Tu as compté $n$ fois le $1$ : de $u_0$ à $u_n$, il y a $n + 1$ termes. Vérifie : $S_0 = u_0 = 2$, ta formule donne $1$."
+      },
+      {
+       "label": "$S_n = \\dfrac{3^{n+1} - 1}{2}$",
+       "why": "Tu as sommé seulement les $v_k = 3^k$ : il faut ajouter les $1$, puisque $u_k = v_k + 1$."
+      },
+      {
+       "label": "$S_n = \\dfrac{3^{n} - 1}{2} + n + 1$",
+       "why": "L'exposant dans la formule est le nombre de termes, $n + 1$, pas le dernier exposant $n$. Pour $n = 0$, ta formule donne $1 \\ne 2$."
+      }
+     ],
+     "hint": "Découpe : $u_k = 3^k + 1$. La somme se sépare en une somme géométrique et une somme de $1$.",
+     "solution": "$S_n = \\sum_{k=0}^{n}(3^k + 1) = \\sum_{k=0}^{n} 3^k + \\sum_{k=0}^{n} 1$. La première est géométrique, de premier terme $1$ et de raison $3$, avec $n+1$ termes : $\\frac{3^{n+1} - 1}{3 - 1} = \\frac{3^{n+1}-1}{2}$. La seconde vaut $n + 1$. Donc $S_n = \\frac{3^{n+1} - 1}{2} + n + 1$. Contrôle : $u_0 = 2$, $u_1 = 4$, $u_2 = 10$ donnent $S_2 = 16$, et la formule donne $\\frac{27 - 1}{2} + 3 = 16$.",
+     "points": 1,
+     "methode": "Somme d'une suite « géométrique $+$ constante » : sépare les deux sommes ; de l'indice $0$ à l'indice $n$, il y a $n+1$ termes.",
+     "ref": "m2-scex-suites-flash-q47"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-48",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "La suite auxiliaire d'une homographie",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites homographiques",
+     "difficulty": 2,
+     "statement": "Soit $u_0 = 0$ et $u_{n+1} = \\dfrac{2u_n + 1}{u_n + 2}$ (on admet $u_n \\ge 0$). Les points fixes de $f(x) = \\frac{2x+1}{x+2}$ sont $1$ et $-1$, ce qui suggère de poser $v_n = \\dfrac{u_n - 1}{u_n + 1}$. La suite $(v_n)$ est géométrique de raison :",
+     "options": [
+      {
+       "label": "$\\dfrac13$",
+       "correct": true,
+       "why": "$u_{n+1} - 1 = \\frac{u_n - 1}{u_n + 2}$ et $u_{n+1} + 1 = \\frac{3(u_n+1)}{u_n+2}$, d'où $v_{n+1} = \\frac13 v_n$."
+      },
+      {
+       "label": "$3$",
+       "why": "Tu as inversé le quotient : $\\frac{u_{n+1} - 1}{u_{n+1}+1} = \\frac{u_n - 1}{3(u_n + 1)}$, le $3$ est au dénominateur."
+      },
+      {
+       "label": "$2$",
+       "why": "$2$ est le coefficient de $u_n$ dans $f$, pas la raison. Vérifie : $v_0 = -1$ et $v_1 = \\frac{1/2 - 1}{1/2 + 1} = -\\frac13$, donc $q = \\frac13$."
+      },
+      {
+       "label": "$-1$",
+       "why": "C'est le premier terme $v_0 = \\frac{0 - 1}{0 + 1}$, pas la raison."
+      }
+     ],
+     "hint": "Calcule séparément $u_{n+1} - 1$ et $u_{n+1} + 1$ au même dénominateur $u_n + 2$, puis fais le quotient.",
+     "solution": "$u_{n+1} - 1 = \\frac{2u_n + 1 - u_n - 2}{u_n + 2} = \\frac{u_n - 1}{u_n+2}$ et $u_{n+1} + 1 = \\frac{2u_n + 1 + u_n + 2}{u_n+2} = \\frac{3(u_n + 1)}{u_n + 2}$. Donc $v_{n+1} = \\frac{u_n - 1}{3(u_n + 1)} = \\frac13 v_n$ : $(v_n)$ est géométrique de raison $\\frac13$ et de premier terme $v_0 = -1$. Contrôle : $u_1 = \\frac12$ et $v_1 = \\frac{-1/2}{3/2} = -\\frac13 = \\frac13 v_0$.",
+     "points": 1,
+     "methode": "Homographique $u_{n+1} = \\frac{au_n + b}{cu_n + d}$ avec deux points fixes $\\alpha$ et $\\beta$ : la suite $v_n = \\frac{u_n - \\alpha}{u_n - \\beta}$ est géométrique.",
+     "ref": "m2-scex-suites-flash-q48"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-49",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Revenir à la suite de départ",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Suites homographiques",
+     "difficulty": 3,
+     "statement": "Suite du même exemple : $v_n = \\dfrac{u_n - 1}{u_n + 1}$ est géométrique de raison $\\frac13$ avec $v_0 = -1$, donc $v_n = -\\left(\\frac13\\right)^n$. En isolant $u_n$, on obtient l'expression de $u_n$ et sa limite :",
+     "options": [
+      {
+       "label": "$u_n = \\dfrac{1 - \\left(\\frac13\\right)^n}{1 + \\left(\\frac13\\right)^n}$ et $\\lim u_n = 1$",
+       "correct": true,
+       "why": "$v_n(u_n + 1) = u_n - 1$ donne $u_n = \\frac{1 + v_n}{1 - v_n}$, puis $\\left(\\frac13\\right)^n \\to 0$."
+      },
+      {
+       "label": "$u_n = \\dfrac{1 + \\left(\\frac13\\right)^n}{1 - \\left(\\frac13\\right)^n}$ et $\\lim u_n = 1$",
+       "why": "Pour $n = 0$ le dénominateur s'annule, alors que $u_0 = 0$ : tu as perdu le signe de $v_n = -\\left(\\frac13\\right)^n$."
+      },
+      {
+       "label": "$u_n = 1 - \\left(\\dfrac13\\right)^n$ et $\\lim u_n = 1$",
+       "why": "Tu as traité $v_n$ comme $u_n - 1$. Vérifie : ta formule donne $u_1 = \\frac23$, alors que $u_1 = f(0) = \\frac12$."
+      },
+      {
+       "label": "$u_n = \\dfrac{1 - 3^n}{1 + 3^n}$ et $\\lim u_n = -1$",
+       "why": "La raison est $\\frac13$, pas $3$ : ta formule donne $u_1 = -\\frac12$ au lieu de $\\frac12$."
+      }
+     ],
+     "hint": "Multiplie $v_n = \\frac{u_n - 1}{u_n + 1}$ par $u_n + 1$, regroupe les termes en $u_n$, puis remplace $v_n$.",
+     "solution": "$v_n(u_n + 1) = u_n - 1 \\Leftrightarrow u_n(v_n - 1) = -1 - v_n \\Leftrightarrow u_n = \\frac{1 + v_n}{1 - v_n}$ (on a $v_n \\ne 1$ car $v_n < 0$). Avec $v_n = -\\left(\\frac13\\right)^n$ : $u_n = \\frac{1 - \\left(\\frac13\\right)^n}{1 + \\left(\\frac13\\right)^n}$. Comme $\\left(\\frac13\\right)^n \\to 0$, $\\lim u_n = 1$. Contrôle : $u_0 = \\frac{0}{2} = 0$ et $u_1 = \\frac{2/3}{4/3} = \\frac12 = f(0)$.",
+     "points": 1,
+     "methode": "Pour revenir de $v_n$ à $u_n$ : isole $u_n$ dans la définition de $v_n$, puis vérifie la formule sur $u_0$ et $u_1$.",
+     "ref": "m2-scex-suites-flash-q49"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-50",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "La balle qui rebondit",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Sommes de termes et limites de sommes",
+     "difficulty": 3,
+     "statement": "On lâche une balle d'une hauteur de $2$ m. Après chaque contact avec le sol, elle remonte à $60\\,\\%$ de la hauteur précédente, puis redescend. On note $D_n$ la distance verticale totale parcourue juste avant le $(n+1)$-ième contact avec le sol. Vers quelle valeur tend $D_n$ ?",
+     "options": [
+      {
+       "label": "$8$ m",
+       "correct": true,
+       "why": "$D_n = 2 + 2\\left(h_1 + \\dots + h_n\\right)$ avec $h_k = 2\\times0{,}6^k$, soit $D_n = 2 + 6\\left(1 - 0{,}6^n\\right) \\to 8$."
+      },
+      {
+       "label": "$5$ m",
+       "why": "Tu as calculé $\\frac{2}{1 - 0{,}6}$ : c'est la somme des hauteurs, chaque rebond étant compté une seule fois. Or la balle monte ET descend."
+      },
+      {
+       "label": "$10$ m",
+       "why": "Tu as doublé aussi la chute initiale : les $2$ premiers mètres ne sont parcourus qu'une fois, en descente."
+      },
+      {
+       "label": "$+\\infty$, car la balle rebondit une infinité de fois",
+       "why": "Une infinité de termes peut avoir une somme finie : ici les hauteurs forment une suite géométrique de raison $0{,}6 < 1$."
+      }
+     ],
+     "hint": "Après le premier contact, chaque rebond de hauteur $h_k = 2\\times0{,}6^k$ ajoute $2h_k$ (montée et descente).",
+     "solution": "La $k$-ième remontée atteint $h_k = 2\\times 0{,}6^k$ ($k \\ge 1$) et est parcourue deux fois. Donc $D_n = 2 + 2(h_1 + \\dots + h_n) = 2 + 2\\times 1{,}2\\times\\frac{1 - 0{,}6^n}{1 - 0{,}6} = 2 + 6(1 - 0{,}6^n)$. Comme $0 < 0{,}6 < 1$, $0{,}6^n \\to 0$ et $\\lim D_n = 8$ m. Contrôle : $D_1 = 2 + 2\\times1{,}2 = 4{,}4$ et la formule donne $2 + 6\\times0{,}4 = 4{,}4$.",
+     "points": 1,
+     "methode": "Somme géométrique de raison $q$ avec $-1 < q < 1$ : $u_0 + \\dots + u_{n} = u_0\\frac{1 - q^{n+1}}{1-q}$ tend vers $\\frac{u_0}{1-q}$.",
+     "ref": "m2-scex-suites-flash-q50"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-51",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Une somme infinie… mais finie",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Sommes de termes et limites de sommes",
+     "difficulty": 1,
+     "statement": "Pour tout $n$, on pose $S_n = 1 + \\dfrac13 + \\dfrac19 + \\dots + \\dfrac{1}{3^n}$. On ajoute un terme de plus à chaque rang, mais ces termes deviennent très petits. Que vaut $\\lim\\limits_{n\\to+\\infty} S_n$ ?",
+     "options": [
+      {
+       "label": "$\\dfrac32$",
+       "correct": true,
+       "why": "$S_n = \\frac{1 - (1/3)^{n+1}}{1 - 1/3} = \\frac32\\left(1 - \\left(\\frac13\\right)^{n+1}\\right) \\to \\frac32$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Une infinité de termes positifs n'a pas forcément une somme infinie : ici $S_n < \\frac32$ pour tout $n$."
+      },
+      {
+       "label": "$\\dfrac23$",
+       "why": "Tu as calculé $1 - q$ au lieu de $\\frac{1}{1-q}$."
+      },
+      {
+       "label": "$\\dfrac43$",
+       "why": "C'est $S_1 = 1 + \\frac13$ : les termes suivants ajoutent encore $\\frac19 + \\frac1{27} + \\dots$"
+      }
+     ],
+     "hint": "$S_n$ est la somme de $n + 1$ termes d'une suite géométrique de premier terme $1$ et de raison $\\frac13$.",
+     "solution": "$S_n = 1\\times\\frac{1 - \\left(\\frac13\\right)^{n+1}}{1 - \\frac13} = \\frac32\\left(1 - \\left(\\frac13\\right)^{n+1}\\right)$. Comme $0 < \\frac13 < 1$, $\\left(\\frac13\\right)^{n+1} \\to 0$, donc $\\lim S_n = \\frac32$. Contrôle : $S_3 = 1 + \\frac13 + \\frac19 + \\frac1{27} = \\frac{40}{27} \\approx 1{,}481$, déjà proche de $1{,}5$.",
+     "points": 1,
+     "methode": "$1 + q + \\dots + q^n \\to \\frac{1}{1-q}$ quand $-1 < q < 1$.",
+     "ref": "m2-scex-suites-flash-q51"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-52",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "La moitié du stock",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Applications concrètes",
+     "difficulty": 2,
+     "statement": "Un laboratoire stocke $800$ g d'une substance radioactive dont la masse diminue de $3\\,\\%$ par an. On note $m_n$ la masse après $n$ années. On donne $0{,}97^{22} \\approx 0{,}512$ et $0{,}97^{23} \\approx 0{,}496$. Au bout de combien d'années la masse devient-elle pour la première fois inférieure à $400$ g ?",
+     "options": [
+      {
+       "label": "$23$ ans",
+       "correct": true,
+       "why": "$m_n = 800\\times 0{,}97^n < 400 \\Leftrightarrow 0{,}97^n < 0{,}5$ : faux pour $n = 22$, vrai pour $n = 23$."
+      },
+      {
+       "label": "$22$ ans",
+       "why": "Tu as arrondi $\\frac{\\ln 0{,}5}{\\ln 0{,}97} \\approx 22{,}8$ à l'entier inférieur : $m_{22} \\approx 409$ g, encore au-dessus de $400$ g."
+      },
+      {
+       "label": "$17$ ans",
+       "why": "Tu as retiré $3\\,\\%$ de $800$ g chaque année ($24$ g) : modèle arithmétique. La perte de $3\\,\\%$ porte sur la masse restante, qui diminue."
+      },
+      {
+       "label": "$1$ an",
+       "why": "Tu as pris $q = 0{,}03$ : c'est le taux de baisse, pas le coefficient multiplicateur. Diminuer de $3\\,\\%$, c'est multiplier par $0{,}97$."
+      }
+     ],
+     "hint": "Diminuer de $3\\,\\%$, c'est multiplier par … ? Résous ensuite $0{,}97^n < 0{,}5$.",
+     "solution": "$(m_n)$ est géométrique de raison $0{,}97$ : $m_n = 800\\times0{,}97^n$. $m_n < 400 \\Leftrightarrow 0{,}97^n < 0{,}5 \\Leftrightarrow n\\ln 0{,}97 < \\ln 0{,}5 \\Leftrightarrow n > \\frac{\\ln 0{,}5}{\\ln 0{,}97}$ (on divise par $\\ln 0{,}97 < 0$, le sens change). Or $\\frac{\\ln 0{,}5}{\\ln 0{,}97} \\approx 22{,}8$, donc $n = 23$. Contrôle : $m_{22} \\approx 800\\times0{,}512 \\approx 409$ g et $m_{23} \\approx 800\\times 0{,}496 \\approx 397$ g.",
+     "points": 1,
+     "methode": "Baisse de $t\\,\\%$ : $q = 1 - \\frac{t}{100}$. En divisant par $\\ln q < 0$, retourne l'inégalité.",
+     "ref": "m2-scex-suites-flash-q52"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-53",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "Le capital qui double",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Applications concrètes",
+     "difficulty": 2,
+     "statement": "Hamza place $10\\,000$ DH à intérêts composés au taux annuel de $4\\,\\%$. On note $C_n$ le capital après $n$ années. On donne $1{,}04^{17} \\approx 1{,}948$ et $1{,}04^{18} \\approx 2{,}026$. Au bout de combien d'années le capital aura-t-il doublé pour la première fois ?",
+     "options": [
+      {
+       "label": "$18$ ans",
+       "correct": true,
+       "why": "$C_n = 10\\,000\\times1{,}04^n \\ge 20\\,000 \\Leftrightarrow 1{,}04^n \\ge 2$ : faux pour $n = 17$, vrai pour $n = 18$."
+      },
+      {
+       "label": "$25$ ans",
+       "why": "Tu as raisonné en intérêts simples ($+400$ DH par an). En intérêts composés, les intérêts produisent eux-mêmes des intérêts : le modèle est géométrique."
+      },
+      {
+       "label": "$17$ ans",
+       "why": "$1{,}04^{17} \\approx 1{,}948 < 2$ : après $17$ ans le capital n'est que d'environ $19\\,480$ DH."
+      },
+      {
+       "label": "$2$ ans",
+       "why": "Tu as écrit $1{,}04\\times n \\ge 2$ au lieu de $1{,}04^n \\ge 2$ : le coefficient multiplicateur s'applique $n$ fois, il est en exposant."
+      }
+     ],
+     "hint": "Chaque année le capital est multiplié par $1{,}04$ : écris $C_n$, puis résous $C_n \\ge 20\\,000$.",
+     "solution": "$C_n = 10\\,000\\times1{,}04^n$ (suite géométrique). On veut $C_n \\ge 20\\,000 \\Leftrightarrow 1{,}04^n \\ge 2 \\Leftrightarrow n \\ge \\frac{\\ln2}{\\ln 1{,}04} \\approx 17{,}7$. Donc $n = 18$. Contrôle : $C_{17} \\approx 19\\,480$ DH $< 20\\,000$ DH et $C_{18} \\approx 20\\,260$ DH $\\ge 20\\,000$ DH.",
+     "points": 1,
+     "methode": "Intérêts composés à $t\\,\\%$ : $C_n = C_0(1 + t/100)^n$, géométrique. Intérêts simples : $C_n = C_0 + n\\,C_0\\,t/100$, arithmétique.",
+     "ref": "m2-scex-suites-flash-q53"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-flash-54",
+   "chapter": "suites",
+   "kind": "qcu",
+   "title": "La dose maximale",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Applications concrètes",
+     "difficulty": 3,
+     "statement": "Un patient prend chaque jour une dose $d$ (en mg) d'un médicament, et son organisme élimine $40\\,\\%$ de la quantité présente en $24$ h. La quantité juste après la prise du jour $n$ vérifie $q_{n+1} = 0{,}6\\,q_n + d$, avec $q_0 = d$. Pour que cette quantité reste toujours inférieure à $50$ mg, quelle est la plus grande dose $d$ possible ?",
+     "options": [
+      {
+       "label": "$20$ mg",
+       "correct": true,
+       "why": "La suite croît vers $\\frac{d}{0{,}4} = 2{,}5d$ sans l'atteindre : il faut et il suffit que $2{,}5d \\le 50$, soit $d \\le 20$."
+      },
+      {
+       "label": "$30$ mg",
+       "why": "Tu as écrit $d = 0{,}6\\times 50$ : à l'équilibre, la dose compense ce qui est éliminé, soit $40\\,\\%$ de $50$, donc $d = 0{,}4\\times50 = 20$. Avec $d = 30$, la limite serait $75$ mg."
+      },
+      {
+       "label": "$50$ mg",
+       "why": "Avec $d = 50$, la quantité dépasse $50$ mg dès la deuxième prise : $q_1 = 0{,}6\\times50 + 50 = 80$."
+      },
+      {
+       "label": "$125$ mg",
+       "why": "Tu as calculé $\\frac{50}{0{,}4}$ : c'est la limite obtenue avec une dose de $50$ mg. La relation est $\\ell = \\frac{d}{0{,}4}$, donc $d = 0{,}4\\,\\ell$."
+      }
+     ],
+     "hint": "Calcule la limite $\\ell$ de $(q_n)$ en fonction de $d$ (point fixe), puis vérifie si la suite approche $\\ell$ par en dessous.",
+     "solution": "Le point fixe vérifie $\\ell = 0{,}6\\ell + d$, soit $\\ell = \\frac{d}{0{,}4} = 2{,}5d$. La suite $w_n = q_n - 2{,}5d$ est géométrique de raison $0{,}6$ avec $w_0 = d - 2{,}5d = -1{,}5d$, donc $q_n = 2{,}5d - 1{,}5d\\times0{,}6^n$. Ainsi $q_n < 2{,}5d$ pour tout $n$ et $q_n \\to 2{,}5d$. Si $d \\le 20$, $q_n < 50$ toujours ; si $d > 20$, la limite dépasse $50$ et $q_n$ finit par dépasser $50$. La dose maximale est $d = 20$ mg. Contrôle : avec $d = 20$, $q_0 = 20$, $q_1 = 32$, $q_2 = 39{,}2$, $q_3 = 43{,}52$ : la quantité monte vers $50$ sans l'atteindre.",
+     "points": 1,
+     "methode": "Modèle « on perd $p\\,\\%$ puis on ajoute $d$ » : suite arithmético-géométrique ; la quantité d'équilibre est $\\frac{d}{p/100}$, et la suite s'en approche sans la dépasser si elle part en dessous.",
+     "ref": "m2-scex-suites-flash-q54"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-ex1",
+   "chapter": "suites",
+   "kind": "probleme",
+   "title": "Exercice 1 — Une suite arithmético-géométrique",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Une coopérative agricole gère un bassin d'irrigation. Au début du mois de janvier (mois $n = 0$), le bassin contient $1$ millier de m³ d'eau. Chaque mois, la moitié de l'eau présente est utilisée pour irriguer les parcelles, puis une station de pompage ajoute $3$ milliers de m³. On note $u_n$ le volume d'eau, en milliers de m³, au début du mois $n$. On a donc $u_0 = 1$ et, pour tout $n\\in\\mathbb{N}$, $u_{n+1} = \\dfrac12 u_n + 3$. Pour étudier l'évolution du volume, on introduit la suite $(v_n)$ définie pour tout $n\\in\\mathbb{N}$ par $v_n = u_n - 6$. On rappelle que, pour tout réel $q \\ne 1$ et tout entier $n$, $1 + q + q^2 + \\dots + q^n = \\dfrac{1 - q^{n+1}}{1 - q}$.",
+   "questions": [
+    {
+     "notion": "Les deux modes de définition",
+     "difficulty": 1,
+     "statement": "1) Calculer $u_1$ et $u_2$.",
+     "options": [
+      {
+       "label": "$u_1 = \\dfrac72$ et $u_2 = \\dfrac{19}{4}$",
+       "correct": true,
+       "why": "$u_1 = \\frac12\\times1 + 3 = \\frac72$ et $u_2 = \\frac12\\times\\frac72 + 3 = \\frac74 + 3 = \\frac{19}{4}$."
+      },
+      {
+       "label": "$u_1 = 2$ et $u_2 = \\dfrac52$",
+       "why": "Tu as calculé $\\frac12(u_n + 3)$ : le coefficient $\\frac12$ ne multiplie que $u_n$, le $+3$ vient après."
+      },
+      {
+       "label": "$u_1 = \\dfrac72$ et $u_2 = \\dfrac{13}{2}$",
+       "why": "$u_1$ est juste, mais pour $u_2$ tu as oublié le $\\frac12$ : $u_2 = \\frac12 u_1 + 3$, pas $u_1 + 3$."
+      },
+      {
+       "label": "$u_1 = 4$ et $u_2 = 7$",
+       "why": "Tu as oublié le coefficient $\\frac12$ à chaque étape : on n'ajoute pas simplement $3$, on divise d'abord le volume par $2$."
+      }
+     ],
+     "hint": "Remplace $n$ par $0$, puis par $1$, dans la relation de récurrence.",
+     "solution": "$u_1 = \\frac12 u_0 + 3 = \\frac12 + 3 = \\frac72$, puis $u_2 = \\frac12 u_1 + 3 = \\frac74 + 3 = \\frac{19}{4}$. Au début de février le bassin contient $3{,}5$ milliers de m³, au début de mars $4{,}75$ milliers de m³. Contrôle : avec la formule obtenue plus loin, $u_2 = 6 - \\frac54 = \\frac{19}{4}$.",
+     "points": 1,
+     "methode": "Suite récurrente : on calcule les termes de proche en proche, en respectant l'ordre des opérations de la relation.",
+     "ref": "m2-scex-suites-ex1-q1"
+    },
+    {
+     "notion": "Suites géométriques",
+     "difficulty": 1,
+     "statement": "2) Montrer que $(v_n)$ est une suite géométrique ; préciser sa raison et son premier terme.",
+     "options": [
+      {
+       "label": "$(v_n)$ est géométrique de raison $\\dfrac12$ et de premier terme $v_0 = -5$",
+       "correct": true,
+       "why": "$v_{n+1} = \\frac12 u_n + 3 - 6 = \\frac12(u_n - 6) = \\frac12 v_n$ et $v_0 = 1 - 6 = -5$."
+      },
+      {
+       "label": "$(v_n)$ est arithmétique de raison $-3$",
+       "why": "Le $-3$ n'est pas ajouté à $v_n$ : en factorisant, $\\frac12 u_n - 3 = \\frac12(u_n - 6) = \\frac12 v_n$."
+      },
+      {
+       "label": "$(v_n)$ est géométrique de raison $\\dfrac12$ et de premier terme $v_0 = 1$",
+       "why": "Tu as pris $v_0 = u_0$ : par définition $v_0 = u_0 - 6 = -5$."
+      },
+      {
+       "label": "$(v_n)$ est géométrique de raison $2$ et de premier terme $v_0 = -5$",
+       "why": "Tu as inversé : on passe de $v_n$ à $v_{n+1}$ en multipliant par $\\frac12$, pas par $2$."
+      }
+     ],
+     "hint": "Exprime $v_{n+1} = u_{n+1} - 6$ en fonction de $u_n$, puis factorise par $\\frac12$.",
+     "solution": "Pour tout $n$ : $v_{n+1} = u_{n+1} - 6 = \\frac12 u_n + 3 - 6 = \\frac12 u_n - 3 = \\frac12\\left(u_n - 6\\right) = \\frac12 v_n$. Donc $(v_n)$ est géométrique de raison $\\frac12$, de premier terme $v_0 = u_0 - 6 = -5$. Contrôle : $v_1 = u_1 - 6 = -\\frac52 = \\frac12 v_0$.",
+     "points": 1,
+     "methode": "Pour $u_{n+1} = a u_n + b$, la suite $v_n = u_n - \\ell$, avec $\\ell = \\frac{b}{1-a}$ le point fixe, est géométrique de raison $a$.",
+     "ref": "m2-scex-suites-ex1-q2"
+    },
+    {
+     "notion": "Suites arithmético-géométriques",
+     "difficulty": 2,
+     "statement": "3) En déduire l'expression de $u_n$ en fonction de $n$.",
+     "options": [
+      {
+       "label": "$u_n = 6 - 5\\left(\\dfrac12\\right)^n$",
+       "correct": true,
+       "why": "$v_n = -5\\left(\\frac12\\right)^n$ et $u_n = v_n + 6$."
+      },
+      {
+       "label": "$u_n = 6 + 5\\left(\\dfrac12\\right)^n$",
+       "why": "Erreur de signe sur $v_0$ : $v_0 = u_0 - 6 = 1 - 6 = -5$. Ta formule donne $u_0 = 11$."
+      },
+      {
+       "label": "$u_n = 6 + \\left(\\dfrac12\\right)^n$",
+       "why": "Tu as pris $v_0 = u_0 = 1$ : il faut $v_0 = u_0 - 6$. Ta formule donne $u_0 = 7$."
+      },
+      {
+       "label": "$u_n = 6 - 5\\times 2^n$",
+       "why": "La raison de $(v_n)$ est $\\frac12$, pas $2$. Ta formule donne $u_1 = -4$, alors que $u_1 = \\frac72$."
+      }
+     ],
+     "hint": "Écris d'abord $v_n = v_0\\, q^n$, puis reviens à $u_n = v_n + 6$.",
+     "solution": "$(v_n)$ est géométrique de premier terme $-5$ et de raison $\\frac12$, donc $v_n = -5\\left(\\frac12\\right)^n$. Comme $u_n = v_n + 6$ : $u_n = 6 - 5\\left(\\frac12\\right)^n$. Contrôle : $u_0 = 6 - 5 = 1$ et $u_1 = 6 - \\frac52 = \\frac72$, conformes à la question 1.",
+     "points": 1,
+     "methode": "Arithmético-géométrique : $u_n = \\ell + (u_0 - \\ell)\\,a^n$, où $\\ell$ est le point fixe.",
+     "ref": "m2-scex-suites-ex1-q3"
+    },
+    {
+     "notion": "Sens de variation et monotonie",
+     "difficulty": 2,
+     "statement": "4) Calculer $u_{n+1} - u_n$ pour tout $n$ et en déduire le sens de variation de $(u_n)$.",
+     "options": [
+      {
+       "label": "$u_{n+1} - u_n = \\dfrac52\\left(\\dfrac12\\right)^n$ ; $(u_n)$ est strictement croissante",
+       "correct": true,
+       "why": "$-5\\left(\\frac12\\right)^{n+1} + 5\\left(\\frac12\\right)^n = 5\\left(\\frac12\\right)^n\\left(1 - \\frac12\\right) = \\frac52\\left(\\frac12\\right)^n > 0$."
+      },
+      {
+       "label": "$u_{n+1} - u_n = -\\dfrac52\\left(\\dfrac12\\right)^n$ ; $(u_n)$ est strictement décroissante",
+       "why": "Erreur de signe : $u_{n+1} - u_n = 5\\left(\\frac12\\right)^n - 5\\left(\\frac12\\right)^{n+1}$, positif. D'ailleurs $u_0 = 1 < u_1 = 3{,}5$."
+      },
+      {
+       "label": "$u_{n+1} - u_n = 3$ ; $(u_n)$ est strictement croissante",
+       "why": "Tu as confondu avec une suite arithmétique : $u_1 - u_0 = 2{,}5$ et $u_2 - u_1 = 1{,}25$, la différence n'est pas constante."
+      },
+      {
+       "label": "$u_{n+1} - u_n = \\dfrac52\\left(\\dfrac12\\right)^n$ ; $(u_n)$ est décroissante, car cette différence diminue",
+       "why": "C'est le SIGNE de $u_{n+1} - u_n$ qui donne le sens de variation, pas ses variations. La différence est positive : la suite croît, de moins en moins vite."
+      }
+     ],
+     "hint": "Utilise la question 3 : $u_{n+1} - u_n = -5\\left(\\frac12\\right)^{n+1} + 5\\left(\\frac12\\right)^n$ ; factorise par $5\\left(\\frac12\\right)^n$.",
+     "solution": "$u_{n+1} - u_n = \\left(6 - 5\\left(\\frac12\\right)^{n+1}\\right) - \\left(6 - 5\\left(\\frac12\\right)^n\\right) = 5\\left(\\frac12\\right)^n - \\frac52\\left(\\frac12\\right)^n = \\frac52\\left(\\frac12\\right)^n$. Ce nombre est strictement positif, donc $(u_n)$ est strictement croissante : le volume du bassin augmente chaque mois. Contrôle : $u_1 - u_0 = \\frac52$ et $u_2 - u_1 = \\frac{19}{4} - \\frac72 = \\frac54 = \\frac52\\times\\frac12$.",
+     "points": 1,
+     "methode": "Le sens de variation se lit sur le signe de $u_{n+1} - u_n$ ; une différence positive qui diminue signifie une croissance qui ralentit.",
+     "ref": "m2-scex-suites-ex1-q4"
+    },
+    {
+     "notion": "Applications concrètes",
+     "difficulty": 2,
+     "statement": "5) Déterminer $\\lim\\limits_{n\\to+\\infty} u_n$, puis le premier mois $n$ à partir duquel le volume dépasse $5{,}9$ milliers de m³.",
+     "options": [
+      {
+       "label": "$\\lim u_n = 6$ ; à partir de $n = 6$",
+       "correct": true,
+       "why": "$u_n > 5{,}9 \\Leftrightarrow 5\\left(\\frac12\\right)^n < 0{,}1 \\Leftrightarrow 2^n > 50$, vrai dès $n = 6$ ($2^6 = 64$)."
+      },
+      {
+       "label": "$\\lim u_n = 6$ ; à partir de $n = 5$",
+       "why": "$2^5 = 32 < 50$ : $u_5 = 6 - \\frac{5}{32} \\approx 5{,}84$, pas encore au-dessus de $5{,}9$."
+      },
+      {
+       "label": "$\\lim u_n = 0$ ; jamais",
+       "why": "C'est $(v_n)$ qui tend vers $0$ ; $u_n = v_n + 6$ tend vers $6$, qui dépasse $5{,}9$."
+      },
+      {
+       "label": "$\\lim u_n = 6$ ; à partir de $n = 50$",
+       "why": "Tu as résolu $2^n > 50$ comme $n > 50$ : il faut chercher la plus petite puissance de $2$ supérieure à $50$, soit $2^6 = 64$."
+      }
+     ],
+     "hint": "$\\left(\\frac12\\right)^n \\to 0$. Pour le seuil, isole $\\left(\\frac12\\right)^n$ dans $u_n > 5{,}9$, puis écris l'inégalité avec $2^n$.",
+     "solution": "Comme $-1 < \\frac12 < 1$, $\\lim\\left(\\frac12\\right)^n = 0$, donc $\\lim u_n = 6$ : à long terme le bassin se stabilise vers $6$ milliers de m³. Ensuite $u_n > 5{,}9 \\Leftrightarrow 5\\left(\\frac12\\right)^n < 0{,}1 \\Leftrightarrow \\left(\\frac12\\right)^n < \\frac1{50} \\Leftrightarrow 2^n > 50$. Or $2^5 = 32$ et $2^6 = 64$ ; $(2^n)$ étant croissante, le volume dépasse $5{,}9$ milliers de m³ à partir du mois $n = 6$. Contrôle : $u_6 = 6 - \\frac{5}{64} \\approx 5{,}92$ et $u_5 \\approx 5{,}84$.",
+     "points": 1,
+     "methode": "Seuil d'une suite qui converge en croissant : isole la puissance, puis compare avec un tableau de puissances ou avec $\\ln$.",
+     "ref": "m2-scex-suites-ex1-q5"
+    },
+    {
+     "notion": "Sommes de termes et limites de sommes",
+     "difficulty": 3,
+     "statement": "6) On pose $S_n = u_0 + u_1 + \\dots + u_n$ (volume cumulé). Exprimer $S_n$ en fonction de $n$.",
+     "options": [
+      {
+       "label": "$S_n = 6(n+1) - 10 + 10\\left(\\dfrac12\\right)^{n+1}$",
+       "correct": true,
+       "why": "$S_n = \\sum_{k=0}^{n}(6 + v_k) = 6(n+1) - 5\\times\\frac{1 - (1/2)^{n+1}}{1/2}$."
+      },
+      {
+       "label": "$S_n = 6n - 10 + 10\\left(\\dfrac12\\right)^{n+1}$",
+       "why": "Tu as compté $n$ fois le $6$ : de $u_0$ à $u_n$ il y a $n+1$ termes. Ta formule donne $S_0 = -5$ au lieu de $1$."
+      },
+      {
+       "label": "$S_n = 6(n+1) - 10 + 10\\left(\\dfrac12\\right)^{n}$",
+       "why": "L'exposant de la somme géométrique est le nombre de termes, $n + 1$. Ta formule donne $S_0 = 6 \\ne u_0 = 1$."
+      },
+      {
+       "label": "$S_n = 6(n+1) + 10 - 10\\left(\\dfrac12\\right)^{n+1}$",
+       "why": "Erreur de signe : les $v_k$ sont négatifs ($v_0 = -5$), leur somme aussi. Ta formule donne $S_0 = 11$."
+      }
+     ],
+     "hint": "Écris $u_k = 6 + v_k$ et sépare : $S_n = (6 + \\dots + 6) + (v_0 + \\dots + v_n)$.",
+     "solution": "$S_n = \\sum_{k=0}^{n} (6 + v_k) = 6(n+1) + (v_0 + \\dots + v_n)$. La somme des $n+1$ premiers termes de $(v_n)$ vaut $-5\\times\\frac{1 - \\left(\\frac12\\right)^{n+1}}{1 - \\frac12} = -10\\left(1 - \\left(\\frac12\\right)^{n+1}\\right)$. Donc $S_n = 6(n+1) - 10 + 10\\left(\\frac12\\right)^{n+1}$. Remarque : $v_0 + \\dots + v_n \\to -10$, donc $S_n \\to +\\infty$ mais $S_n - 6(n+1) \\to -10$. Contrôle : $S_1 = 12 - 10 + \\frac{10}{4} = 4{,}5 = u_0 + u_1 = 1 + 3{,}5$.",
+     "points": 1,
+     "methode": "Somme d'une suite « constante $+$ géométrique » : sépare les deux sommes et compte $n+1$ termes de l'indice $0$ à l'indice $n$.",
+     "ref": "m2-scex-suites-ex1-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-ex2",
+   "chapter": "suites",
+   "kind": "probleme",
+   "title": "Exercice 2 — Une suite définie par une racine",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "On considère la fonction $f$ définie sur $[-2;+\\infty[$ par $f(x) = \\sqrt{x + 2}$, et la suite $(u_n)$ définie par $u_0 = 0$ et, pour tout $n\\in\\mathbb{N}$, $u_{n+1} = f(u_n) = \\sqrt{u_n + 2}$. Dans un repère, on peut construire les premiers termes « en escalier » à l'aide de la courbe de $f$ et de la droite d'équation $y = x$ : la figure suggère que la suite est croissante et qu'elle se rapproche de l'abscisse du point d'intersection de ces deux courbes. L'objectif de l'exercice est de démontrer ces conjectures, puis d'estimer la vitesse de convergence. On rappelle que la fonction racine carrée est continue et strictement croissante sur $[0;+\\infty[$.",
+   "questions": [
+    {
+     "notion": "Les deux modes de définition",
+     "difficulty": 1,
+     "statement": "1) Calculer $u_1$ et $u_2$ (valeur exacte, puis valeur approchée de $u_2$).",
+     "options": [
+      {
+       "label": "$u_1 = \\sqrt{2}$ et $u_2 = \\sqrt{2 + \\sqrt2} \\approx 1{,}85$",
+       "correct": true,
+       "why": "$u_1 = \\sqrt{0 + 2}$, puis $u_2 = \\sqrt{u_1 + 2} = \\sqrt{\\sqrt2 + 2}$."
+      },
+      {
+       "label": "$u_1 = 2$ et $u_2 = \\sqrt{4} = 2$",
+       "why": "Tu as oublié la racine pour $u_1$ : $u_1 = \\sqrt{u_0 + 2} = \\sqrt2$, pas $u_0 + 2$."
+      },
+      {
+       "label": "$u_1 = \\sqrt{2}$ et $u_2 = \\sqrt{2} + 2$",
+       "why": "Pour $u_2$, le $+2$ est SOUS la racine : $u_2 = \\sqrt{u_1 + 2}$."
+      },
+      {
+       "label": "$u_1 = \\sqrt{2}$ et $u_2 = 2$",
+       "why": "Tu as calculé $\\sqrt{u_1^2 + 2} = \\sqrt 4$ : on ajoute $2$ à $u_1$, pas à $u_1^2$."
+      }
+     ],
+     "hint": "Remplace $n$ par $0$, puis par $1$, dans la relation de récurrence.",
+     "solution": "$u_1 = \\sqrt{u_0 + 2} = \\sqrt{2} \\approx 1{,}414$ ; $u_2 = \\sqrt{u_1 + 2} = \\sqrt{2 + \\sqrt2} \\approx \\sqrt{3{,}414} \\approx 1{,}848$. Contrôle : $0 < 1{,}414 < 1{,}848 < 2$, ce qui est cohérent avec la conjecture d'une suite croissante qui reste sous $2$.",
+     "points": 1,
+     "methode": "Suite récurrente : chaque terme se calcule à partir du précédent ; garde les valeurs exactes et n'arrondis qu'à la fin.",
+     "ref": "m2-scex-suites-ex2-q1"
+    },
+    {
+     "notion": "Le raisonnement par récurrence",
+     "difficulty": 2,
+     "statement": "2) On veut montrer par récurrence que, pour tout $n\\in\\mathbb{N}$, $0 \\le u_n < 2$. Dans l'hérédité, de l'hypothèse $0 \\le u_n < 2$ on déduit :",
+     "options": [
+      {
+       "label": "$\\sqrt{2} \\le u_{n+1} < 2$, donc $0 \\le u_{n+1} < 2$",
+       "correct": true,
+       "why": "$2 \\le u_n + 2 < 4$, puis la racine, strictement croissante, donne $\\sqrt2 \\le u_{n+1} < 2$."
+      },
+      {
+       "label": "$0 \\le u_{n+1} < 4$",
+       "why": "Tu as oublié de prendre la racine : $u_{n+1} = \\sqrt{u_n+2}$, pas $u_n + 2$. Et $4$ ne permet pas de conclure $u_{n+1} < 2$."
+      },
+      {
+       "label": "$2 \\le u_{n+1} < 4$",
+       "why": "Tu t'es arrêté à $u_n + 2$ : il faut encore appliquer la racine carrée."
+      },
+      {
+       "label": "$u_{n+1} < u_n$",
+       "why": "L'hérédité doit fournir un encadrement de $u_{n+1}$ du même type que l'hypothèse, pas une comparaison avec $u_n$ (qui serait d'ailleurs fausse)."
+      }
+     ],
+     "hint": "Ajoute $2$ à chaque membre, puis applique la fonction racine, croissante sur $[0;+\\infty[$.",
+     "solution": "Initialisation : $u_0 = 0$ vérifie $0 \\le u_0 < 2$. Hérédité : supposons $0 \\le u_n < 2$ pour un $n$ fixé. Alors $2 \\le u_n + 2 < 4$. La fonction racine carrée étant strictement croissante sur $[0;+\\infty[$, $\\sqrt2 \\le \\sqrt{u_n+2} < \\sqrt4$, soit $\\sqrt2 \\le u_{n+1} < 2$, et a fortiori $0 \\le u_{n+1} < 2$. Conclusion : $0 \\le u_n < 2$ pour tout $n$. Contrôle : $u_1 \\approx 1{,}41$ et $u_2 \\approx 1{,}85$ sont bien dans $[0;2[$.",
+     "points": 1,
+     "methode": "Dans l'hérédité, applique à l'encadrement de $u_n$ les opérations qui fabriquent $u_{n+1}$, en respectant le sens de variation de chaque fonction utilisée.",
+     "ref": "m2-scex-suites-ex2-q2"
+    },
+    {
+     "notion": "Sens de variation et monotonie",
+     "difficulty": 2,
+     "statement": "3) Exprimer $u_{n+1}^2 - u_n^2$ en fonction de $u_n$ sous forme factorisée, puis en déduire le sens de variation de $(u_n)$.",
+     "options": [
+      {
+       "label": "$u_{n+1}^2 - u_n^2 = -(u_n - 2)(u_n + 1)$ ; $(u_n)$ est strictement croissante",
+       "correct": true,
+       "why": "$u_n - 2 < 0$ et $u_n + 1 > 0$, donc $u_{n+1}^2 > u_n^2$, et les termes sont positifs."
+      },
+      {
+       "label": "$u_{n+1}^2 - u_n^2 = (u_n - 2)(u_n + 1)$ ; $(u_n)$ est strictement décroissante",
+       "why": "Erreur de signe : $u_n + 2 - u_n^2 = -(u_n^2 - u_n - 2)$. D'ailleurs $u_1 = \\sqrt2 > u_0 = 0$."
+      },
+      {
+       "label": "$u_{n+1}^2 - u_n^2 = -(u_n - 2)(u_n + 1)$ ; $(u_n)$ est strictement décroissante",
+       "why": "Bonne factorisation, mais lecture du signe fausse : $-(\\text{négatif})\\times(\\text{positif}) > 0$."
+      },
+      {
+       "label": "$u_{n+1}^2 - u_n^2 = (u_n + 2)^2 - u_n^2$ ; $(u_n)$ est strictement croissante",
+       "why": "$u_{n+1}^2 = u_n + 2$, pas $(u_n+2)^2$ : élever au carré supprime la racine, il ne faut pas élever $u_n + 2$ au carré."
+      }
+     ],
+     "hint": "$u_{n+1}^2 = u_n + 2$. Factorise le trinôme $x^2 - x - 2$ (racines évidentes), puis utilise l'encadrement de la question 2.",
+     "solution": "$u_{n+1}^2 - u_n^2 = (u_n + 2) - u_n^2 = -(u_n^2 - u_n - 2)$. Le trinôme $x^2 - x - 2$ a pour racines $2$ et $-1$, donc $u_{n+1}^2 - u_n^2 = -(u_n - 2)(u_n + 1)$. Comme $0 \\le u_n < 2$ : $u_n - 2 < 0$ et $u_n + 1 > 0$, donc $u_{n+1}^2 - u_n^2 > 0$. Les termes étant positifs, $u_{n+1}^2 > u_n^2$ entraîne $u_{n+1} > u_n$ : $(u_n)$ est strictement croissante. Contrôle : $u_0 = 0 < u_1 \\approx 1{,}41 < u_2 \\approx 1{,}85$.",
+     "points": 1,
+     "methode": "Avec des racines, compare les carrés : pour des termes positifs, $u_{n+1} - u_n$ et $u_{n+1}^2 - u_n^2$ ont le même signe.",
+     "ref": "m2-scex-suites-ex2-q3"
+    },
+    {
+     "notion": "Convergence monotone",
+     "difficulty": 2,
+     "statement": "4) Justifier que la suite $(u_n)$ est convergente. Que peut-on dire de sa limite $\\ell$ à ce stade ?",
+     "options": [
+      {
+       "label": "$(u_n)$ converge vers un réel $\\ell$ tel que $0 \\le \\ell \\le 2$",
+       "correct": true,
+       "why": "Croissante et majorée par $2$, donc convergente ; l'encadrement $0 \\le u_n < 2$ devient $0 \\le \\ell \\le 2$."
+      },
+      {
+       "label": "$(u_n)$ converge vers $\\sqrt{2}$",
+       "why": "$\\sqrt2$ est seulement $u_1$ ; le théorème de convergence monotone ne donne pas la valeur de la limite."
+      },
+      {
+       "label": "$(u_n)$ tend vers $+\\infty$, car elle est croissante",
+       "why": "Croissante ne suffit pas pour tendre vers $+\\infty$ : elle est aussi majorée par $2$."
+      },
+      {
+       "label": "$(u_n)$ converge vers un réel $\\ell$ tel que $0 \\le \\ell < 2$",
+       "why": "Les inégalités strictes deviennent larges en passant à la limite : on obtient seulement $\\ell \\le 2$ (et on verra que $\\ell = 2$)."
+      }
+     ],
+     "hint": "Croissante et majorée : quel théorème s'applique ? Comment passent les inégalités à la limite ?",
+     "solution": "D'après les questions 2 et 3, $(u_n)$ est croissante et majorée par $2$ : par le théorème de convergence monotone, elle converge vers un réel $\\ell$. En passant à la limite dans $0 \\le u_n < 2$, on obtient $0 \\le \\ell \\le 2$ (une inégalité stricte devient large). Contrôle : la limite doit être au moins $u_2 \\approx 1{,}85$, puisque la suite croît.",
+     "points": 1,
+     "methode": "Croissante et majorée (ou décroissante et minorée) : la suite converge. À la limite, les inégalités strictes deviennent larges.",
+     "ref": "m2-scex-suites-ex2-q4"
+    },
+    {
+     "notion": "Limite et fonction continue",
+     "difficulty": 3,
+     "statement": "5) Sachant que $f$ est continue sur $[0;2]$, déterminer la valeur de $\\ell$.",
+     "options": [
+      {
+       "label": "$\\ell = 2$",
+       "correct": true,
+       "why": "$\\ell = \\sqrt{\\ell + 2} \\Rightarrow \\ell^2 - \\ell - 2 = 0 \\Rightarrow (\\ell - 2)(\\ell + 1) = 0$, et $\\ell \\ge 0$."
+      },
+      {
+       "label": "$\\ell = -1$",
+       "why": "$-1$ est solution de $\\ell^2 = \\ell + 2$, mais pas de $\\ell = \\sqrt{\\ell+2}$ : une racine carrée est positive, et $0 \\le \\ell \\le 2$."
+      },
+      {
+       "label": "$\\ell = 2$ ou $\\ell = -1$",
+       "why": "Une suite convergente a une seule limite : il faut éliminer $-1$ grâce à $\\ell \\ge 0$."
+      },
+      {
+       "label": "$\\ell = \\sqrt{2 + \\sqrt2}$",
+       "why": "C'est $u_2$, pas la limite : $\\sqrt{2 + \\sqrt2} \\approx 1{,}85$ ne vérifie pas $f(\\ell) = \\ell$, car $f(1{,}85) \\approx 1{,}96$."
+      }
+     ],
+     "hint": "Passe à la limite dans $u_{n+1} = f(u_n)$, élève au carré, résous, puis trie avec $0 \\le \\ell \\le 2$.",
+     "solution": "$(u_n)$ converge vers $\\ell \\in [0;2]$ et $f$ est continue en $\\ell$, donc $\\ell = f(\\ell)$, soit $\\ell = \\sqrt{\\ell + 2}$. En élevant au carré (les deux membres sont positifs) : $\\ell^2 - \\ell - 2 = 0$, soit $(\\ell-2)(\\ell+1) = 0$. Comme $\\ell \\ge 0$, $\\ell = 2$. Donc $\\lim u_n = 2$. Contrôle : $f(2) = \\sqrt4 = 2$, c'est bien un point fixe, et c'est l'abscisse de l'intersection de la courbe de $f$ avec la droite $y = x$.",
+     "points": 1,
+     "methode": "Si $u_{n+1} = f(u_n)$, $u_n \\to \\ell$ et $f$ continue en $\\ell$, alors $f(\\ell) = \\ell$. Trie ensuite les solutions avec l'encadrement de $\\ell$.",
+     "ref": "m2-scex-suites-ex2-q5"
+    },
+    {
+     "notion": "Théorème d'encadrement (les gendarmes)",
+     "difficulty": 3,
+     "statement": "6) a) Vérifier que $2 - u_{n+1} = \\dfrac{2 - u_n}{2 + u_{n+1}}$ pour tout $n$. b) En déduire un encadrement de $2 - u_n$ permettant de retrouver la limite.",
+     "options": [
+      {
+       "label": "$0 < 2 - u_{n+1} \\le \\dfrac12(2 - u_n)$, d'où $0 < 2 - u_n \\le 2\\left(\\dfrac12\\right)^n$",
+       "correct": true,
+       "why": "$2 + u_{n+1} \\ge 2$ donne la majoration ; par récurrence, $2 - u_n \\le (2 - u_0)\\left(\\frac12\\right)^n$."
+      },
+      {
+       "label": "$0 < 2 - u_{n+1} \\le \\dfrac14(2 - u_n)$, d'où $0 < 2 - u_n \\le 2\\left(\\dfrac14\\right)^n$",
+       "why": "Tu as utilisé $u_{n+1} < 2$ : cela donne $2 + u_{n+1} < 4$, donc une MINORATION $2 - u_{n+1} > \\frac14(2 - u_n)$, pas une majoration."
+      },
+      {
+       "label": "$0 < 2 - u_{n+1} \\le \\dfrac12(2 - u_n)$, d'où $0 < 2 - u_n \\le \\left(\\dfrac12\\right)^n$",
+       "why": "Bonne inégalité, mais mauvais premier terme : $2 - u_0 = 2$, donc la majoration est $2\\left(\\frac12\\right)^n$. Pour $n = 0$ ta borne donne $2 \\le 1$."
+      },
+      {
+       "label": "$2 - u_{n+1} \\ge \\dfrac12(2 - u_n)$, d'où $2 - u_n \\ge 2\\left(\\dfrac12\\right)^n$",
+       "why": "Sens inversé : $2 + u_{n+1} \\ge 2$ donne $\\frac{1}{2 + u_{n+1}} \\le \\frac12$, donc une majoration. Pour $n = 1$ : $2 - u_1 \\approx 0{,}59 < 1$."
+      }
+     ],
+     "hint": "a) Calcule $(2 - u_{n+1})(2 + u_{n+1}) = 4 - u_{n+1}^2$. b) Minore le dénominateur $2 + u_{n+1}$ grâce à $u_{n+1} \\ge 0$.",
+     "solution": "a) $(2 - u_{n+1})(2 + u_{n+1}) = 4 - u_{n+1}^2 = 4 - (u_n + 2) = 2 - u_n$, et $2 + u_{n+1} > 0$, d'où l'égalité. b) Comme $u_{n+1} \\ge 0$, $2 + u_{n+1} \\ge 2$, donc $0 < 2 - u_{n+1} \\le \\frac12(2 - u_n)$ (positif car $u_n < 2$). Par récurrence : $2 - u_0 = 2$, et si $2 - u_n \\le 2\\left(\\frac12\\right)^n$ alors $2 - u_{n+1} \\le \\frac12\\times2\\left(\\frac12\\right)^n = 2\\left(\\frac12\\right)^{n+1}$. Comme $2\\left(\\frac12\\right)^n \\to 0$, les gendarmes donnent $\\lim(2 - u_n) = 0$, soit $\\lim u_n = 2$ : on retrouve la limite, avec en plus une vitesse. Contrôle : $2 - u_2 \\approx 0{,}152 \\le 2\\times\\frac14 = 0{,}5$.",
+     "points": 1,
+     "methode": "Pour mesurer la vitesse de convergence, majore $|u_{n+1} - \\ell|$ par $k|u_n - \\ell|$ avec $0 < k < 1$, puis cumule par récurrence : $|u_n - \\ell| \\le k^n|u_0 - \\ell|$.",
+     "ref": "m2-scex-suites-ex2-q6"
+    }
+   ],
+   "figure": "suite-escalier"
+  },
+  {
+   "ref": "m2-scex-suites-ex3",
+   "chapter": "suites",
+   "kind": "probleme",
+   "title": "Exercice 3 — Suite homographique et suite auxiliaire",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "En dynamique des populations, le modèle de Beverton–Holt décrit une population dont la croissance est freinée par les ressources disponibles. On l'étudie ici sous la forme suivante. Soit $f$ la fonction définie sur $[0;+\\infty[$ par $f(x) = \\dfrac{4x}{x+1}$. On considère la suite $(u_n)$ définie par $u_0 = 1$ et, pour tout $n\\in\\mathbb{N}$, $u_{n+1} = f(u_n)$ ; $u_n$ représente l'effectif (en milliers d'individus) d'une population de poissons l'année $n$. Partie A : on étudie la fonction $f$ (dérivée, image d'un intervalle, points fixes). Partie B : on étudie la suite $(u_n)$ à l'aide de la fonction $f$ (encadrement, monotonie, convergence). Partie C : on obtient une formule explicite de $u_n$ grâce à la suite auxiliaire $(v_n)$ définie pour tout $n$ par $v_n = \\dfrac{u_n - 3}{u_n}$ (on admettra que $u_n \\neq 0$ pour tout $n$, ce qui découle de la partie B). On rappelle que la limite d'une suite géométrique $q^n$ avec $-1 < q < 1$ est $0$.",
+   "questions": [
+    {
+     "notion": "Étape 1 — La stabilité de l'intervalle",
+     "difficulty": 1,
+     "statement": "1) Calculer $f'(x)$ pour tout $x \\ge 0$ et en déduire le sens de variation de $f$.",
+     "options": [
+      {
+       "label": "$f'(x) = \\dfrac{4}{(x+1)^2}$ ; $f$ est strictement croissante sur $[0;+\\infty[$",
+       "correct": true,
+       "why": "$\\frac{4(x+1) - 4x}{(x+1)^2} = \\frac{4}{(x+1)^2} > 0$."
+      },
+      {
+       "label": "$f'(x) = \\dfrac{8x+4}{(x+1)^2}$ ; $f$ est strictement croissante",
+       "why": "Tu as additionné au lieu de soustraire : $\\left(\\frac uv\\right)' = \\frac{u'v - uv'}{v^2}$."
+      },
+      {
+       "label": "$f'(x) = 4$ ; $f$ est strictement croissante",
+       "why": "Tu as dérivé seulement le numérateur : $f$ est un quotient, son dénominateur dépend aussi de $x$."
+      },
+      {
+       "label": "$f'(x) = \\dfrac{-4}{(x+1)^2}$ ; $f$ est strictement décroissante",
+       "why": "Tu as calculé $uv' - u'v$ : l'ordre est $u'v - uv'$. Vérifie : $f(0) = 0 < f(1) = 2$."
+      }
+     ],
+     "hint": "Formule du quotient avec $u(x) = 4x$ et $v(x) = x + 1$.",
+     "solution": "$u(x) = 4x$, $u'(x) = 4$, $v(x) = x+1$, $v'(x) = 1$. $f'(x) = \\dfrac{4(x+1) - 4x\\times 1}{(x+1)^2} = \\dfrac{4}{(x+1)^2}$, strictement positif sur $[0;+\\infty[$ : $f$ est strictement croissante. Contrôle : $f(0) = 0$, $f(1) = 2$, $f(3) = 3$ : les valeurs augmentent.",
+     "points": 1,
+     "methode": "$\\left(\\frac uv\\right)' = \\frac{u'v - uv'}{v^2}$ ; pour une homographie $\\frac{ax + b}{cx + d}$, le numérateur de la dérivée est la constante $ad - bc$.",
+     "part": "Partie A — Étude de la fonction f",
+     "ref": "m2-scex-suites-ex3-q1"
+    },
+    {
+     "notion": "Étape 1 — La stabilité de l'intervalle",
+     "difficulty": 1,
+     "statement": "2) Déterminer l'image de l'intervalle $[1;3]$ par $f$.",
+     "options": [
+      {
+       "label": "$f([1;3]) = [2;3]$, qui est inclus dans $[1;3]$",
+       "correct": true,
+       "why": "$f$ est continue et croissante, $f(1) = 2$ et $f(3) = 3$."
+      },
+      {
+       "label": "$f([1;3]) = [1;3]$",
+       "why": "Tu as recopié l'intervalle de départ sans calculer $f(1)$ et $f(3)$."
+      },
+      {
+       "label": "$f([1;3]) = [4;12]$",
+       "why": "Tu as oublié le dénominateur $x + 1$ : $f(1) = \\frac{4}{2} = 2$, pas $4$."
+      },
+      {
+       "label": "$f([1;3]) = [0;3]$",
+       "why": "$f(0) = 0$, mais $0 \\notin [1;3]$ : la borne inférieure est $f(1)$."
+      }
+     ],
+     "hint": "$f$ étant continue et croissante, $f([a;b]) = [f(a);f(b)]$.",
+     "solution": "$f$ est continue et strictement croissante sur $[1;3]$, donc $f([1;3]) = [f(1);f(3)]$. Or $f(1) = \\frac{4}{2} = 2$ et $f(3) = \\frac{12}{4} = 3$. Donc $f([1;3]) = [2;3] \\subset [1;3]$ : l'intervalle $[1;3]$ est stable par $f$. Contrôle : $f(2) = \\frac83 \\approx 2{,}67$ est bien dans $[2;3]$.",
+     "points": 1,
+     "methode": "Pour une fonction continue et croissante, l'image de $[a;b]$ est $[f(a);f(b)]$. Si elle est incluse dans $[a;b]$, l'intervalle est stable.",
+     "part": "Partie A — Étude de la fonction f",
+     "ref": "m2-scex-suites-ex3-q2"
+    },
+    {
+     "notion": "Suites homographiques",
+     "difficulty": 2,
+     "statement": "3) Résoudre dans $[0;+\\infty[$ l'équation $f(x) = x$.",
+     "options": [
+      {
+       "label": "Les solutions sont $0$ et $3$",
+       "correct": true,
+       "why": "$\\frac{4x}{x+1} = x \\Leftrightarrow 4x = x^2 + x \\Leftrightarrow x(x - 3) = 0$."
+      },
+      {
+       "label": "La seule solution est $3$",
+       "why": "Tu as divisé par $x$ sans traiter le cas $x = 0$ : $f(0) = 0$, donc $0$ est aussi solution."
+      },
+      {
+       "label": "Les solutions sont $0$ et $-3$",
+       "why": "Erreur de signe : $4x = x^2 + x$ donne $x^2 - 3x = 0$, soit $x(x-3) = 0$. Et $-3 \\notin [0;+\\infty[$."
+      },
+      {
+       "label": "La seule solution est $4$",
+       "why": "$4$ est la limite de $f$ en $+\\infty$ (asymptote $y = 4$), pas un point fixe : $f(4) = \\frac{16}{5} \\ne 4$."
+      }
+     ],
+     "hint": "Multiplie par $x + 1 > 0$ et factorise par $x$.",
+     "solution": "Pour $x \\ge 0$, $x + 1 > 0$, donc $f(x) = x \\Leftrightarrow 4x = x(x+1) \\Leftrightarrow x^2 - 3x = 0 \\Leftrightarrow x(x-3) = 0$. Les solutions sont $0$ et $3$ : ce sont les points fixes de $f$, c'est-à-dire les seules limites possibles pour une suite $u_{n+1} = f(u_n)$ convergente. Contrôle : $f(3) = \\frac{12}{4} = 3$ et $f(0) = 0$.",
+     "points": 1,
+     "methode": "Points fixes de $f$ = solutions de $f(x) = x$ = abscisses des intersections de la courbe avec $y = x$ ; ce sont les limites possibles de la suite.",
+     "part": "Partie A — Étude de la fonction f",
+     "ref": "m2-scex-suites-ex3-q3"
+    },
+    {
+     "notion": "Le raisonnement par récurrence",
+     "difficulty": 2,
+     "statement": "4) En utilisant la question 2, démontrer par récurrence un encadrement de $u_n$ valable pour tout $n\\in\\mathbb{N}$.",
+     "options": [
+      {
+       "label": "$1 \\le u_n \\le 3$ pour tout $n$",
+       "correct": true,
+       "why": "Vrai pour $u_0 = 1$, et si $u_n \\in [1;3]$ alors $u_{n+1} = f(u_n) \\in [2;3] \\subset [1;3]$."
+      },
+      {
+       "label": "$2 \\le u_n \\le 3$ pour tout $n$",
+       "why": "Faux pour $n = 0$ : $u_0 = 1$. L'initialisation échoue (c'est vrai seulement à partir de $n = 1$)."
+      },
+      {
+       "label": "$u_n \\ge 3$ pour tout $n$",
+       "why": "$u_0 = 1 < 3$ : faux dès le départ."
+      },
+      {
+       "label": "$0 \\le u_n \\le 1$ pour tout $n$",
+       "why": "$u_1 = f(1) = 2 > 1$ : l'hérédité échoue."
+      }
+     ],
+     "hint": "Vérifie d'abord l'initialisation avec $u_0 = 1$, puis utilise $f([1;3]) \\subset [1;3]$ dans l'hérédité.",
+     "solution": "Soit $P(n)$ : $1 \\le u_n \\le 3$. Initialisation : $u_0 = 1 \\in [1;3]$. Hérédité : si $u_n \\in [1;3]$, alors $u_{n+1} = f(u_n) \\in f([1;3]) = [2;3] \\subset [1;3]$. Conclusion : $1 \\le u_n \\le 3$ pour tout $n$ ; en particulier $u_n \\ne 0$, ce qui justifie la définition de $(v_n)$. Contrôle : $u_1 = 2$ et $u_2 = \\frac83$ sont bien dans $[1;3]$.",
+     "points": 1,
+     "methode": "Stabilité : si $f(I) \\subset I$ et $u_0 \\in I$, une récurrence immédiate donne $u_n \\in I$ pour tout $n$.",
+     "part": "Partie B — Étude de la suite",
+     "ref": "m2-scex-suites-ex3-q4"
+    },
+    {
+     "notion": "Étape 2 — La monotonie",
+     "difficulty": 2,
+     "statement": "5) Montrer que, pour tout $n$, $u_{n+1} - u_n = \\dfrac{u_n(3 - u_n)}{u_n + 1}$, et en déduire le sens de variation de $(u_n)$.",
+     "options": [
+      {
+       "label": "$u_{n+1} - u_n = \\dfrac{u_n(3 - u_n)}{u_n + 1} \\ge 0$ : $(u_n)$ est croissante",
+       "correct": true,
+       "why": "$\\frac{4u_n - u_n(u_n+1)}{u_n+1} = \\frac{3u_n - u_n^2}{u_n+1}$ et chaque facteur est positif car $1 \\le u_n \\le 3$."
+      },
+      {
+       "label": "$u_{n+1} - u_n = \\dfrac{u_n(u_n - 3)}{u_n + 1} \\le 0$ : $(u_n)$ est décroissante",
+       "why": "Erreur de signe : $4u_n - u_n^2 - u_n = 3u_n - u_n^2 = u_n(3 - u_n)$. D'ailleurs $u_1 = 2 > u_0 = 1$."
+      },
+      {
+       "label": "$u_{n+1} - u_n = \\dfrac{3u_n}{u_n + 1} > 0$ : $(u_n)$ est strictement croissante",
+       "why": "Tu as soustrait $u_n$ au numérateur sans le multiplier par $u_n + 1$ : il manque le terme $-u_n^2$."
+      },
+      {
+       "label": "$u_{n+1} - u_n = \\dfrac{u_n(3 - u_n)}{u_n + 1}$ ; $(u_n)$ est décroissante car $3 - u_n \\le 0$",
+       "why": "Tu as mal lu l'encadrement : $u_n \\le 3$ donne $3 - u_n \\ge 0$. D'ailleurs $u_1 = 2 > u_0 = 1$."
+      }
+     ],
+     "hint": "Réduis $\\frac{4u_n}{u_n + 1} - u_n$ au même dénominateur $u_n + 1$, puis étudie le signe de chaque facteur.",
+     "solution": "$u_{n+1} - u_n = \\dfrac{4u_n}{u_n+1} - u_n = \\dfrac{4u_n - u_n^2 - u_n}{u_n+1} = \\dfrac{u_n(3-u_n)}{u_n+1}$. D'après la question 4, $1 \\le u_n \\le 3$, donc $u_n > 0$, $3 - u_n \\ge 0$ et $u_n + 1 > 0$ : $u_{n+1} - u_n \\ge 0$. La suite $(u_n)$ est croissante. Contrôle : $u_0 = 1$, $u_1 = 2$, $u_2 = \\frac83 \\approx 2{,}67$.",
+     "points": 1,
+     "methode": "Monotonie d'une suite récurrente : calcule $u_{n+1} - u_n$, factorise, et utilise l'encadrement déjà prouvé pour le signe.",
+     "part": "Partie B — Étude de la suite",
+     "ref": "m2-scex-suites-ex3-q5"
+    },
+    {
+     "notion": "Limite et fonction continue",
+     "difficulty": 2,
+     "statement": "6) En déduire que $(u_n)$ converge et déterminer sa limite $\\ell$.",
+     "options": [
+      {
+       "label": "$(u_n)$ converge et $\\ell = 3$",
+       "correct": true,
+       "why": "Croissante et majorée par $3$, elle converge vers $\\ell \\in [1;3]$ ; $f$ continue donne $f(\\ell) = \\ell$, donc $\\ell \\in \\{0;3\\}$, et $\\ell \\ge 1$."
+      },
+      {
+       "label": "$(u_n)$ converge et $\\ell = 0$",
+       "why": "$0$ est bien un point fixe de $f$, mais $\\ell \\ge 1$ puisque $u_n \\ge 1$ pour tout $n$ : il est exclu."
+      },
+      {
+       "label": "$(u_n)$ converge, mais on ne peut pas déterminer $\\ell$",
+       "why": "Le théorème de convergence monotone ne donne pas $\\ell$, mais la continuité de $f$ fournit $f(\\ell) = \\ell$, et la question 3 conclut."
+      },
+      {
+       "label": "$(u_n)$ tend vers $+\\infty$, car elle est croissante",
+       "why": "Elle est croissante mais majorée par $3$ : elle ne peut pas tendre vers $+\\infty$."
+      }
+     ],
+     "hint": "Utilise les questions 4 et 5 pour la convergence, puis la continuité de $f$ et la question 3 pour la valeur.",
+     "solution": "$(u_n)$ est croissante (question 5) et majorée par $3$ (question 4), donc elle converge vers un réel $\\ell$ avec $1 \\le \\ell \\le 3$. La fonction $f$ est continue sur $[1;3]$ et $u_{n+1} = f(u_n)$, donc $f(\\ell) = \\ell$. D'après la question 3, $\\ell = 0$ ou $\\ell = 3$ ; comme $\\ell \\ge 1$, $\\ell = 3$. Interprétation : la population se stabilise vers $3$ milliers d'individus, la capacité d'accueil du milieu. Contrôle : $u_3 = f\\left(\\frac83\\right) = \\frac{32}{11} \\approx 2{,}91$, déjà proche de $3$.",
+     "points": 1,
+     "methode": "Convergence monotone puis $f(\\ell) = \\ell$ (continuité) : l'encadrement de la suite élimine les points fixes impossibles.",
+     "part": "Partie B — Étude de la suite",
+     "ref": "m2-scex-suites-ex3-q6"
+    },
+    {
+     "notion": "Suites géométriques",
+     "difficulty": 2,
+     "statement": "7) Montrer que la suite $(v_n)$ est géométrique ; préciser sa raison et son premier terme.",
+     "options": [
+      {
+       "label": "$(v_n)$ est géométrique de raison $\\dfrac14$ et de premier terme $v_0 = -2$",
+       "correct": true,
+       "why": "$u_{n+1} - 3 = \\frac{u_n - 3}{u_n + 1}$ et $u_{n+1} = \\frac{4u_n}{u_n+1}$ donnent $v_{n+1} = \\frac{u_n - 3}{4u_n} = \\frac14 v_n$."
+      },
+      {
+       "label": "$(v_n)$ est géométrique de raison $4$ et de premier terme $v_0 = -2$",
+       "why": "Tu as inversé le rapport : $v_{n+1} = \\frac14 v_n$. Vérifie : $v_1 = \\frac{2 - 3}{2} = -\\frac12 = \\frac14\\times(-2)$."
+      },
+      {
+       "label": "$(v_n)$ est géométrique de raison $-2$ et de premier terme $v_0 = 1$",
+       "why": "$-2$ est le premier terme $v_0 = \\frac{1 - 3}{1}$, pas la raison ; et $v_0 \\ne u_0$."
+      },
+      {
+       "label": "$(v_n)$ est géométrique de raison $\\dfrac13$ et de premier terme $v_0 = -2$",
+       "why": "Recalcule $u_{n+1} - 3 = \\frac{4u_n - 3u_n - 3}{u_n+1} = \\frac{u_n - 3}{u_n+1}$ : la raison est $\\frac14$."
+      }
+     ],
+     "hint": "Exprime $u_{n+1} - 3$ et $u_{n+1}$ en fonction de $u_n$, puis fais le quotient.",
+     "solution": "$u_{n+1} - 3 = \\dfrac{4u_n - 3(u_n+1)}{u_n+1} = \\dfrac{u_n - 3}{u_n+1}$. Donc $v_{n+1} = \\dfrac{u_{n+1} - 3}{u_{n+1}} = \\dfrac{u_n - 3}{u_n+1}\\times\\dfrac{u_n+1}{4u_n} = \\dfrac14\\times\\dfrac{u_n - 3}{u_n} = \\dfrac14 v_n$. $(v_n)$ est géométrique de raison $\\frac14$ et de premier terme $v_0 = \\frac{1-3}{1} = -2$. Contrôle : $v_1 = \\frac{u_1 - 3}{u_1} = -\\frac12$ et $v_2 = \\frac{8/3 - 3}{8/3} = -\\frac18$ : on multiplie bien par $\\frac14$ à chaque fois.",
+     "points": 1,
+     "methode": "Homographie à points fixes $0$ et $3$ : $v_n = \\frac{u_n - 3}{u_n}$ est géométrique ; on calcule séparément numérateur et dénominateur de $v_{n+1}$.",
+     "part": "Partie C — Formule explicite et seuil",
+     "ref": "m2-scex-suites-ex3-q7"
+    },
+    {
+     "notion": "Étape 3 — Le calcul de la limite",
+     "difficulty": 3,
+     "statement": "8) En déduire $u_n$ en fonction de $n$, puis le plus petit entier $n$ tel que $u_n > 2{,}99$. On donne $4^4 = 256$ et $4^5 = 1\\,024$.",
+     "options": [
+      {
+       "label": "$u_n = \\dfrac{3}{1 + 2\\left(\\frac14\\right)^n}$ ; $n = 5$",
+       "correct": true,
+       "why": "$u_n = \\frac{3}{1 - v_n}$ avec $v_n = -2\\left(\\frac14\\right)^n$ ; puis $u_n > 2{,}99 \\Leftrightarrow 4^n > 598$."
+      },
+      {
+       "label": "$u_n = \\dfrac{3}{1 + 2\\left(\\frac14\\right)^n}$ ; $n = 4$",
+       "why": "Bonne formule, mais $4^4 = 256 < 598$ : $u_4 = \\frac{3}{1 + 2/256} \\approx 2{,}977 < 2{,}99$."
+      },
+      {
+       "label": "$u_n = \\dfrac{3}{1 - 2\\left(\\frac14\\right)^n}$ ; $n = 5$",
+       "why": "Erreur de signe : $v_0 = -2$, donc $1 - v_n = 1 + 2\\left(\\frac14\\right)^n$. Ta formule donne $u_0 = -3$ au lieu de $1$."
+      },
+      {
+       "label": "$u_n = 3 - 2\\left(\\dfrac14\\right)^n$ ; $n = 4$",
+       "why": "Tu as traité $v_n$ comme $u_n - 3$ : ici $v_n = 1 - \\frac{3}{u_n}$, il faut isoler $u_n$. Ta formule donne $u_0 = 1$ mais $u_1 = 2{,}5 \\ne 2$."
+      }
+     ],
+     "hint": "Isole $u_n$ dans $v_n = 1 - \\frac{3}{u_n}$, remplace $v_n = v_0 q^n$, puis résous $\\frac{3}{1 + 2\\cdot 4^{-n}} > 2{,}99$ en isolant $4^n$.",
+     "solution": "$v_n = -2\\left(\\frac14\\right)^n$. De $v_n = \\frac{u_n - 3}{u_n} = 1 - \\frac{3}{u_n}$ on tire $\\frac{3}{u_n} = 1 - v_n$, donc $u_n = \\dfrac{3}{1 - v_n} = \\dfrac{3}{1 + 2\\left(\\frac14\\right)^n}$ ; on retrouve $\\lim u_n = 3$. Ensuite $u_n > 2{,}99 \\Leftrightarrow 1 + \\frac{2}{4^n} < \\frac{3}{2{,}99} \\Leftrightarrow \\frac{2}{4^n} < \\frac{0{,}01}{2{,}99} \\Leftrightarrow 4^n > 598$. Comme $4^4 = 256$ et $4^5 = 1\\,024$, le plus petit entier est $n = 5$ : à partir de la 5e année, la population dépasse $2\\,990$ individus. Contrôle : $u_0 = \\frac33 = 1$, $u_1 = \\frac{3}{1{,}5} = 2 = f(1)$, et $u_5 = \\frac{3}{1 + 2/1024} \\approx 2{,}994$.",
+     "points": 1,
+     "methode": "Pour revenir à $u_n$, isole-le dans la définition de $v_n$ et vérifie sur $u_0$, $u_1$. Pour un seuil, isole la puissance $q^n$ puis compare aux puissances données.",
+     "part": "Partie C — Formule explicite et seuil",
+     "ref": "m2-scex-suites-ex3-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-suites-ex4",
+   "chapter": "suites",
+   "kind": "probleme",
+   "title": "Exercice 4 — Encadrer une somme pour trouver sa limite",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Dans tout l'exercice, $n$ désigne un entier naturel non nul. On s'intéresse aux deux sommes de $n$ termes suivantes, dont chaque terme dépend à la fois de l'indice de sommation $k$ et de $n$ : $T_n = \\displaystyle\\sum_{k=1}^{n} \\frac{n}{n^2 + k} = \\frac{n}{n^2+1} + \\frac{n}{n^2+2} + \\dots + \\frac{n}{n^2+n}$ et $U_n = \\displaystyle\\sum_{k=1}^{n} \\frac{k}{n^2 + k} = \\frac{1}{n^2+1} + \\frac{2}{n^2+2} + \\dots + \\frac{n}{n^2+n}$. Attention : quand $n$ augmente, tous les termes changent et leur nombre augmente aussi ; on ne peut donc pas calculer la limite « terme à terme ». La méthode consiste à encadrer chaque terme par des expressions plus simples, dont la somme se calcule, puis à appliquer le théorème des gendarmes. La partie A calcule les premiers termes, la partie B étudie $(T_n)$, la partie C étudie $(U_n)$ puis relie les deux sommes pour obtenir une limite plus fine.",
+   "questions": [
+    {
+     "notion": "Suites numériques : vocabulaire",
+     "difficulty": 1,
+     "statement": "1) Calculer $T_1$.",
+     "options": [
+      {
+       "label": "$T_1 = \\dfrac12$",
+       "correct": true,
+       "why": "Un seul terme ($k = 1$) : $\\frac{1}{1^2+1} = \\frac12$."
+      },
+      {
+       "label": "$T_1 = 1$",
+       "why": "Tu as oublié le $+k$ au dénominateur : $T_1 = \\frac{1}{1^2 + 1}$."
+      },
+      {
+       "label": "$T_1 = \\dfrac13$",
+       "why": "Pour $n = 1$, $k$ va de $1$ à $1$ : le dénominateur est $1 + 1 = 2$, pas $1 + 2$."
+      },
+      {
+       "label": "$T_1 = 2$",
+       "why": "Tu as inversé la fraction : le terme est $\\frac{n}{n^2 + k}$."
+      }
+     ],
+     "hint": "Pour $n = 1$, la somme n'a qu'un terme, celui d'indice $k = 1$.",
+     "solution": "Pour $n = 1$ : $T_1 = \\displaystyle\\sum_{k=1}^{1}\\frac{1}{1+k} = \\frac{1}{2}$. Contrôle : on verra que $\\frac{n^2}{n^2+n} \\le T_n \\le \\frac{n^2}{n^2+1}$ ; pour $n = 1$ les deux bornes valent $\\frac12$.",
+     "points": 1,
+     "methode": "Pour évaluer une somme $\\sum_{k=1}^{n}$ en un $n$ précis, remplace d'abord $n$ partout, puis fais varier $k$.",
+     "part": "Partie A — Premiers termes",
+     "ref": "m2-scex-suites-ex4-q1"
+    },
+    {
+     "notion": "Sommes de termes consécutifs",
+     "difficulty": 1,
+     "statement": "2) Calculer $T_2$.",
+     "options": [
+      {
+       "label": "$T_2 = \\dfrac{11}{15}$",
+       "correct": true,
+       "why": "$\\frac{2}{5} + \\frac{2}{6} = \\frac{6}{15} + \\frac{5}{15} = \\frac{11}{15}$."
+      },
+      {
+       "label": "$T_2 = \\dfrac{2}{5}$",
+       "why": "Tu n'as gardé que le terme $k = 1$ : pour $n = 2$, il y a deux termes."
+      },
+      {
+       "label": "$T_2 = \\dfrac{4}{11}$",
+       "why": "On n'additionne pas les numérateurs et les dénominateurs entre eux : il faut un dénominateur commun."
+      },
+      {
+       "label": "$T_2 = \\dfrac{2}{3}$",
+       "why": "Tu as pris deux fois le terme $k = 2$ : $2\\times\\frac{2}{6}$."
+      }
+     ],
+     "hint": "Écris les deux termes ($k = 1$ et $k = 2$) avec $n = 2$, puis réduis au même dénominateur.",
+     "solution": "$T_2 = \\dfrac{2}{4+1} + \\dfrac{2}{4+2} = \\dfrac25 + \\dfrac13 = \\dfrac{6 + 5}{15} = \\dfrac{11}{15} \\approx 0{,}733$. Contrôle : $\\frac{4}{6} \\approx 0{,}667 \\le T_2 \\le \\frac45 = 0{,}8$, conformément à l'encadrement de la partie B.",
+     "points": 1,
+     "methode": "Somme de quelques termes : écris-les tous explicitement avant de calculer.",
+     "part": "Partie A — Premiers termes",
+     "ref": "m2-scex-suites-ex4-q2"
+    },
+    {
+     "notion": "Type 5 — Encadrer pour conclure",
+     "difficulty": 2,
+     "statement": "3) Montrer que, pour tout entier $k$ tel que $1 \\le k \\le n$, on a un encadrement de $\\dfrac{n}{n^2+k}$ indépendant de $k$. Lequel ?",
+     "options": [
+      {
+       "label": "$\\dfrac{n}{n^2+n} \\le \\dfrac{n}{n^2+k} \\le \\dfrac{n}{n^2+1}$",
+       "correct": true,
+       "why": "$n^2+1 \\le n^2+k \\le n^2+n$ et la fonction inverse est décroissante sur $]0;+\\infty[$."
+      },
+      {
+       "label": "$\\dfrac{n}{n^2+1} \\le \\dfrac{n}{n^2+k} \\le \\dfrac{n}{n^2+n}$",
+       "why": "Inégalités inversées : plus le dénominateur est grand, plus la fraction est petite."
+      },
+      {
+       "label": "$\\dfrac{1}{n^2+n} \\le \\dfrac{n}{n^2+k} \\le \\dfrac{1}{n^2+1}$",
+       "why": "Tu as perdu le numérateur $n$ : la borne de droite est alors fausse ($\\frac{n}{n^2+k} > \\frac{1}{n^2+1}$ dès que $n \\ge 2$)."
+      },
+      {
+       "label": "$\\dfrac{n}{n^2+n} \\le \\dfrac{n}{n^2+k} \\le \\dfrac{n}{n^2+n+1}$",
+       "why": "La borne de droite est plus petite que celle de gauche : aucun nombre ne peut vérifier cet encadrement."
+      }
+     ],
+     "hint": "Encadre d'abord le dénominateur $n^2 + k$, puis passe à l'inverse (le sens change).",
+     "solution": "Pour $1 \\le k \\le n$ : $n^2+1 \\le n^2+k \\le n^2+n$. Tous ces nombres sont strictement positifs ; la fonction inverse est décroissante sur $]0;+\\infty[$, donc $\\frac{1}{n^2+n} \\le \\frac{1}{n^2+k}\\le\\frac{1}{n^2+1}$. En multipliant par $n > 0$ : $\\frac{n}{n^2+n} \\le \\frac{n}{n^2+k} \\le \\frac{n}{n^2+1}$. Contrôle pour $n = 2$, $k = 1$ : $\\frac26 \\le \\frac25 \\le \\frac25$.",
+     "points": 1,
+     "methode": "Pour encadrer un terme général, encadre l'indice $k$ entre ses valeurs extrêmes ; attention au changement de sens en passant à l'inverse.",
+     "part": "Partie B — Limite de la somme T_n",
+     "ref": "m2-scex-suites-ex4-q3"
+    },
+    {
+     "notion": "Sommes de termes et limites de sommes",
+     "difficulty": 2,
+     "statement": "4) En sommant ces inégalités pour $k$ allant de $1$ à $n$, encadrer $T_n$.",
+     "options": [
+      {
+       "label": "$\\dfrac{n^2}{n^2+n} \\le T_n \\le \\dfrac{n^2}{n^2+1}$",
+       "correct": true,
+       "why": "On ajoute $n$ fois la même borne : $n\\times\\frac{n}{n^2+n}$ et $n\\times\\frac{n}{n^2+1}$."
+      },
+      {
+       "label": "$\\dfrac{n}{n^2+n} \\le T_n \\le \\dfrac{n}{n^2+1}$",
+       "why": "Il y a $n$ termes dans la somme : chaque borne est ajoutée $n$ fois. Pour $n = 2$, ta borne supérieure $0{,}4$ est inférieure à $T_2 \\approx 0{,}733$."
+      },
+      {
+       "label": "$\\dfrac{n(n+1)}{2(n^2+n)} \\le T_n \\le \\dfrac{n(n+1)}{2(n^2+1)}$",
+       "why": "Tu as sommé les $k$ ($1+2+\\dots+n$), mais ici les numérateurs valent tous $n$ : les bornes ne dépendent pas de $k$."
+      },
+      {
+       "label": "$\\dfrac{n^2}{n^2+1} \\le T_n \\le \\dfrac{n^2}{n^2+n}$",
+       "why": "Inégalités inversées : la borne inférieure est celle de dénominateur $n^2 + n$."
+      }
+     ],
+     "hint": "Combien de termes contient la somme ? Les bornes dépendent-elles de $k$ ?",
+     "solution": "La somme compte $n$ termes et les bornes de la question 3 ne dépendent pas de $k$. En additionnant les $n$ inégalités : $n\\times\\frac{n}{n^2+n} \\le T_n \\le n\\times\\frac{n}{n^2+1}$, soit $\\frac{n^2}{n^2+n} \\le T_n \\le \\frac{n^2}{n^2+1}$. Contrôle : pour $n = 2$, $\\frac46 \\approx 0{,}667 \\le T_2 = \\frac{11}{15} \\approx 0{,}733 \\le \\frac45 = 0{,}8$.",
+     "points": 1,
+     "methode": "Somme de $n$ termes encadrés par des bornes indépendantes de $k$ : on multiplie chaque borne par le nombre de termes.",
+     "part": "Partie B — Limite de la somme T_n",
+     "ref": "m2-scex-suites-ex4-q4"
+    },
+    {
+     "notion": "Théorème d'encadrement (les gendarmes)",
+     "difficulty": 2,
+     "statement": "5) En déduire $\\lim\\limits_{n\\to+\\infty} T_n$.",
+     "options": [
+      {
+       "label": "$\\lim T_n = 1$",
+       "correct": true,
+       "why": "$\\frac{n^2}{n^2+n} = \\frac{1}{1 + \\frac1n} \\to 1$ et $\\frac{n^2}{n^2+1} = \\frac{1}{1 + \\frac1{n^2}} \\to 1$ : gendarmes."
+      },
+      {
+       "label": "$\\lim T_n = 0$",
+       "why": "Chaque terme tend vers $0$, mais leur nombre augmente : on ne peut pas conclure terme à terme."
+      },
+      {
+       "label": "$\\lim T_n = +\\infty$",
+       "why": "La somme a de plus en plus de termes, mais elle est majorée par $\\frac{n^2}{n^2+1} < 1$."
+      },
+      {
+       "label": "$\\lim T_n = \\dfrac12$",
+       "why": "$\\frac12$ est la valeur de $T_1$, pas la limite."
+      }
+     ],
+     "hint": "Calcule la limite des deux bornes en factorisant par $n^2$.",
+     "solution": "$\\dfrac{n^2}{n^2+n} = \\dfrac{1}{1+\\frac1n} \\to 1$ et $\\dfrac{n^2}{n^2+1} = \\dfrac{1}{1+\\frac{1}{n^2}} \\to 1$. D'après le théorème des gendarmes, $\\lim T_n = 1$. Contrôle : pour $n = 100$, l'encadrement donne $0{,}990 \\le T_{100} \\le 0{,}9999$.",
+     "points": 1,
+     "methode": "Somme de $n$ termes qui dépendent de $n$ : encadre chaque terme, somme les $n$ encadrements, puis applique les gendarmes.",
+     "part": "Partie B — Limite de la somme T_n",
+     "ref": "m2-scex-suites-ex4-q5"
+    },
+    {
+     "notion": "Sommes de termes consécutifs",
+     "difficulty": 3,
+     "statement": "6) En procédant de la même façon pour $U_n$ (encadrer le dénominateur $n^2 + k$ seulement), et en utilisant la somme $1 + 2 + \\dots + n$, encadrer $U_n$.",
+     "options": [
+      {
+       "label": "$\\dfrac12 \\le U_n \\le \\dfrac{n(n+1)}{2(n^2+1)}$",
+       "correct": true,
+       "why": "$\\frac{k}{n^2+n} \\le \\frac{k}{n^2+k} \\le \\frac{k}{n^2+1}$, puis $\\sum k = \\frac{n(n+1)}{2}$ ; la borne de gauche se simplifie en $\\frac12$."
+      },
+      {
+       "label": "$\\dfrac12 \\le U_n \\le \\dfrac{n+1}{2(n^2+1)}$",
+       "why": "Tu as utilisé $1 + 2 + \\dots + n = \\frac{n+1}{2}$ : la formule est $\\frac{n(n+1)}{2}$. Pour $n = 2$, ta borne supérieure $0{,}3$ est inférieure à $U_2 \\approx 0{,}533$."
+      },
+      {
+       "label": "$\\dfrac{n(n+1)}{2(n^2+1)} \\le U_n \\le \\dfrac12$",
+       "why": "Inégalités inversées : la borne de dénominateur $n^2 + n$ est la plus petite. Pour $n = 2$ : $U_2 = \\frac{8}{15} > \\frac12$."
+      },
+      {
+       "label": "$\\dfrac{n}{2} \\le U_n \\le \\dfrac{n^2(n+1)}{2(n^2+1)}$",
+       "why": "Tu as multiplié par $n$ une somme déjà calculée : la somme des $k$ contient déjà les $n$ termes. Pour $n = 2$, $U_2 \\approx 0{,}53 < 1$."
+      }
+     ],
+     "hint": "Ici les numérateurs $k$ varient : encadre seulement $\\frac{1}{n^2+k}$, multiplie par $k > 0$, puis somme en utilisant $1 + 2 + \\dots + n$ (suite arithmétique).",
+     "solution": "Pour $1 \\le k \\le n$ : $\\frac{1}{n^2+n} \\le \\frac{1}{n^2+k} \\le \\frac{1}{n^2+1}$, et en multipliant par $k > 0$ : $\\frac{k}{n^2+n} \\le \\frac{k}{n^2+k} \\le \\frac{k}{n^2+1}$. En sommant pour $k$ de $1$ à $n$, avec $1 + 2 + \\dots + n = \\frac{n(n+1)}{2}$ (somme de $n$ termes d'une suite arithmétique) : $\\frac{n(n+1)}{2(n^2+n)} \\le U_n \\le \\frac{n(n+1)}{2(n^2+1)}$. Or $\\frac{n(n+1)}{2n(n+1)} = \\frac12$. Contrôle : $U_2 = \\frac15 + \\frac26 = \\frac{8}{15} \\approx 0{,}533$, compris entre $\\frac12$ et $\\frac{6}{10} = 0{,}6$.",
+     "points": 1,
+     "methode": "Quand le numérateur dépend de $k$, n'encadre que la partie qui gêne et garde la partie dont la somme est connue ($\\sum k = \\frac{n(n+1)}{2}$).",
+     "part": "Partie C — Une seconde somme et une limite plus fine",
+     "ref": "m2-scex-suites-ex4-q6"
+    },
+    {
+     "notion": "Sommes de termes et limites de sommes",
+     "difficulty": 2,
+     "statement": "7) En déduire $\\lim\\limits_{n\\to+\\infty} U_n$.",
+     "options": [
+      {
+       "label": "$\\lim U_n = \\dfrac12$",
+       "correct": true,
+       "why": "$\\frac{n(n+1)}{2(n^2+1)} = \\frac{n^2 + n}{2n^2 + 2} \\to \\frac12$ ; la borne inférieure vaut $\\frac12$ : gendarmes."
+      },
+      {
+       "label": "$\\lim U_n = 1$",
+       "why": "Tu as repris la limite de $T_n$ : ici les bornes tendent vers $\\frac12$, car la somme des numérateurs est $\\frac{n(n+1)}{2}$ et non $n^2$."
+      },
+      {
+       "label": "$\\lim U_n = 0$",
+       "why": "Chaque terme $\\frac{k}{n^2+k}$ est petit, mais il y en a $n$ : il faut l'encadrement, qui donne $\\frac12$."
+      },
+      {
+       "label": "$\\lim U_n = +\\infty$",
+       "why": "$U_n$ est majorée par $\\frac{n(n+1)}{2(n^2+1)}$, qui tend vers $\\frac12$ : elle ne peut pas tendre vers $+\\infty$."
+      }
+     ],
+     "hint": "Calcule la limite de $\\frac{n(n+1)}{2(n^2+1)}$ en factorisant par $n^2$, puis conclus.",
+     "solution": "$\\dfrac{n(n+1)}{2(n^2+1)} = \\dfrac{n^2\\left(1 + \\frac1n\\right)}{2n^2\\left(1 + \\frac1{n^2}\\right)} = \\dfrac{1 + \\frac1n}{2\\left(1 + \\frac{1}{n^2}\\right)} \\to \\dfrac12$. Comme $\\frac12 \\le U_n \\le \\frac{n(n+1)}{2(n^2+1)}$, le théorème des gendarmes donne $\\lim U_n = \\frac12$. Contrôle : pour $n = 100$, l'encadrement donne $0{,}5 \\le U_{100} \\le \\frac{10\\,100}{20\\,002} \\approx 0{,}505$.",
+     "points": 1,
+     "methode": "Limite d'une borne rationnelle en $n$ : factorise par le terme dominant ; si les deux bornes ont la même limite, conclus par les gendarmes.",
+     "part": "Partie C — Une seconde somme et une limite plus fine",
+     "ref": "m2-scex-suites-ex4-q7"
+    },
+    {
+     "notion": "Lever une forme indéterminée",
+     "difficulty": 3,
+     "statement": "8) Vérifier que $n\\,T_n + U_n = n$ pour tout $n \\ge 1$, puis en déduire $\\lim\\limits_{n\\to+\\infty} n\\left(1 - T_n\\right)$.",
+     "options": [
+      {
+       "label": "$\\lim n(1 - T_n) = \\dfrac12$",
+       "correct": true,
+       "why": "$n T_n + U_n = \\sum_{k=1}^{n}\\frac{n^2 + k}{n^2 + k} = n$, donc $n(1 - T_n) = U_n \\to \\frac12$."
+      },
+      {
+       "label": "$\\lim n(1 - T_n) = 0$",
+       "why": "Tu as utilisé $1 - T_n \\to 0$ seul : $n(1 - T_n)$ est une forme « $\\infty\\times0$ », il faut la relation avec $U_n$."
+      },
+      {
+       "label": "$\\lim n(1 - T_n) = -\\dfrac12$",
+       "why": "Erreur de signe : la relation donne $n - nT_n = U_n$, et $U_n > 0$ ; donc $n(1 - T_n)$ est positif (d'ailleurs $T_n < 1$)."
+      },
+      {
+       "label": "$\\lim n(1 - T_n) = +\\infty$",
+       "why": "Tu n'as gardé que $n \\to +\\infty$ ; or $1 - T_n$ tend vers $0$ assez vite pour compenser : le produit vaut $U_n \\le 0{,}6$."
+      }
+     ],
+     "hint": "Additionne terme à terme : $n\\times\\frac{n}{n^2+k} + \\frac{k}{n^2+k}$. Puis isole $n(1 - T_n)$.",
+     "solution": "Pour chaque $k$ : $n\\times\\frac{n}{n^2+k} + \\frac{k}{n^2+k} = \\frac{n^2 + k}{n^2+k} = 1$. En sommant ces $n$ égalités : $nT_n + U_n = n$, donc $n - nT_n = U_n$, soit $n(1 - T_n) = U_n$. D'après la question 7, $\\lim n(1 - T_n) = \\frac12$. Interprétation : $T_n$ tend vers $1$ et l'écart $1 - T_n$ se comporte comme $\\frac{1}{2n}$. Contrôle : pour $n = 2$, $2\\left(1 - \\frac{11}{15}\\right) = \\frac{8}{15} = U_2$.",
+     "points": 1,
+     "methode": "Forme « $\\infty \\times 0$ » sur une somme : cherche une relation exacte avec une autre somme dont la limite est connue, plutôt que de traiter les facteurs séparément.",
+     "part": "Partie C — Une seconde somme et une limite plus fine",
+     "ref": "m2-scex-suites-ex4-q8"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-scex-suites-serie-1",
+   "title": "Suites numériques · Série 1 — Les bases",
+   "description": "Partie I : 6 questions flash · Partie II : Exercice 1 (6 questions).",
+   "kind": "custom",
+   "chapter": "suites",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-scex-suites-flash-q1",
+    "m2-scex-suites-flash-q2",
+    "m2-scex-suites-flash-q3",
+    "m2-scex-suites-flash-q5",
+    "m2-scex-suites-flash-q9",
+    "m2-scex-suites-flash-q13",
+    "m2-scex-suites-ex1-q1",
+    "m2-scex-suites-ex1-q2",
+    "m2-scex-suites-ex1-q3",
+    "m2-scex-suites-ex1-q4",
+    "m2-scex-suites-ex1-q5",
+    "m2-scex-suites-ex1-q6"
+   ]
+  },
+  {
+   "slug": "m2-scex-suites-serie-2",
+   "title": "Suites numériques · Série 2 — Entraînement",
+   "description": "Partie I : 6 questions flash · Partie II : Exercice 2 (6 questions).",
+   "kind": "custom",
+   "chapter": "suites",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-scex-suites-flash-q41",
+    "m2-scex-suites-flash-q44",
+    "m2-scex-suites-flash-q47",
+    "m2-scex-suites-flash-q49",
+    "m2-scex-suites-flash-q50",
+    "m2-scex-suites-flash-q54",
+    "m2-scex-suites-ex2-q1",
+    "m2-scex-suites-ex2-q2",
+    "m2-scex-suites-ex2-q3",
+    "m2-scex-suites-ex2-q4",
+    "m2-scex-suites-ex2-q5",
+    "m2-scex-suites-ex2-q6"
+   ]
+  },
+  {
+   "slug": "m2-scex-suites-serie-3",
+   "title": "Suites numériques · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (8 questions) + Exercice 4 (8 questions).",
+   "kind": "custom",
+   "chapter": "suites",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-scex-suites-ex3-q1",
+    "m2-scex-suites-ex3-q2",
+    "m2-scex-suites-ex3-q3",
+    "m2-scex-suites-ex3-q4",
+    "m2-scex-suites-ex3-q5",
+    "m2-scex-suites-ex3-q6",
+    "m2-scex-suites-ex3-q7",
+    "m2-scex-suites-ex3-q8",
+    "m2-scex-suites-ex4-q1",
+    "m2-scex-suites-ex4-q2",
+    "m2-scex-suites-ex4-q3",
+    "m2-scex-suites-ex4-q4",
+    "m2-scex-suites-ex4-q5",
+    "m2-scex-suites-ex4-q6",
+    "m2-scex-suites-ex4-q7",
+    "m2-scex-suites-ex4-q8"
+   ]
+  }
+ ]
+}

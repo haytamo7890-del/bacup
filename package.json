@@ -11,7 +11,10 @@
     "generate:modes": "node --env-file=.env.local scripts/generate-explanation-modes.mjs",
     "import:exams": "node --env-file=.env.local scripts/generate-exam-qcu.mjs",
     "import:content": "node --env-file=.env.local scripts/import-content.mjs",
-    "import:cours": "node --env-file=.env.local scripts/import-cours.mjs"
+    "import:cours": "node --env-file=.env.local scripts/import-cours.mjs",
+    "import:prep": "node --env-file=.env.local scripts/import-prep.mjs",
+    "export:cours": "node --env-file=.env.local scripts/export-cours-text.mjs",
+    "content:kit": "node --env-file=.env.local scripts/build-content-kit.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",

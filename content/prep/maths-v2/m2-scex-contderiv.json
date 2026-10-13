@@ -1,0 +1,3516 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "pc",
+  "svt"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-scex-contderiv-flash-1",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Un dénominateur au carré",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limite finie ou infinie en un point",
+     "difficulty": 1,
+     "statement": "Soit $f$ la fonction définie sur $\\mathbb{R}\\setminus\\{3\\}$ par $f(x) = \\dfrac{2x+1}{(x-3)^2}$. Quand $x$ s'approche de $3$, par la gauche comme par la droite, le numérateur tend vers $7$ et le dénominateur tend vers $0$. Que vaut $\\lim\\limits_{x\\to3} f(x)$ ?",
+     "options": [
+      {
+       "label": "$+\\infty$",
+       "correct": true,
+       "why": "Forme $\\dfrac{7}{0^+}$ : le carré rend le dénominateur strictement positif des deux côtés de $3$."
+      },
+      {
+       "label": "$-\\infty$",
+       "why": "Tu as cru que le dénominateur devient négatif à gauche de $3$. Or $(x-3)^2 > 0$ pour tout $x \\ne 3$ : on divise $7$ par un petit nombre positif."
+      },
+      {
+       "label": "$7$",
+       "why": "Tu n'as gardé que la limite du numérateur. Diviser $7$ par un nombre qui tend vers $0$ ne donne jamais une limite finie : $f(3{,}01) = 70\\,200$."
+      },
+      {
+       "label": "pas de limite : $+\\infty$ à droite et $-\\infty$ à gauche",
+       "why": "Tu as raisonné comme pour $\\dfrac{1}{x-3}$. Ici le dénominateur est un carré : il est positif à gauche aussi, les deux limites valent $+\\infty$."
+      }
+     ],
+     "hint": "Avant de conclure, détermine le signe du dénominateur au voisinage de $3$.",
+     "solution": "On a $\\lim\\limits_{x\\to3}(2x+1) = 7 > 0$ et $\\lim\\limits_{x\\to3}(x-3)^2 = 0$ avec $(x-3)^2 > 0$ pour $x \\ne 3$, donc le dénominateur tend vers $0^+$. Par quotient (forme $\\frac{7}{0^+}$), $\\lim\\limits_{x\\to3} f(x) = +\\infty$. La droite d'équation $x = 3$ est asymptote verticale à la courbe de $f$, la courbe « monte » des deux côtés. Contrôle : $f(3{,}01) = \\dfrac{7{,}02}{0{,}0001} = 70\\,200$ et $f(2{,}99) = \\dfrac{6{,}98}{0{,}0001} = 69\\,800$ : très grands et positifs des deux côtés.",
+     "points": 1,
+     "methode": "Forme « $\\frac{k}{0}$ » avec $k \\ne 0$ : la limite est infinie ; son signe vient du signe de $k$ et du signe du dénominateur (à étudier à gauche et à droite).",
+     "ref": "m2-scex-contderiv-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-2",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Juste à gauche de 1",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limites à gauche et à droite",
+     "difficulty": 1,
+     "statement": "Soit $f(x) = \\dfrac{x+2}{x-1}$ définie sur $\\mathbb{R}\\setminus\\{1\\}$. On étudie $f$ juste à gauche de $1$, c'est-à-dire pour $x < 1$ très proche de $1$ (par exemple $x = 0{,}999$). Que vaut $\\lim\\limits_{x\\to1^-} f(x)$ ?",
+     "options": [
+      {
+       "label": "$-\\infty$",
+       "correct": true,
+       "why": "$x + 2 \\to 3 > 0$ et, pour $x < 1$, $x - 1 \\to 0^-$ : forme $\\dfrac{3}{0^-} = -\\infty$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "C'est la limite à droite. Pour $x < 1$, $x - 1 < 0$ : on divise $3$ par un petit nombre négatif."
+      },
+      {
+       "label": "$3$",
+       "why": "Tu as gardé seulement le numérateur ; un dénominateur qui tend vers $0$ rend la limite infinie, pas finie."
+      },
+      {
+       "label": "elle n'existe pas",
+       "why": "Tu confonds avec la limite en $1$ (sans côté), qui n'existe pas car les deux côtés diffèrent. La limite à gauche, elle, existe."
+      }
+     ],
+     "hint": "Quel est le signe de $x - 1$ lorsque $x < 1$ ?",
+     "solution": "Quand $x \\to 1^-$ : $x + 2 \\to 3$ et $x - 1 \\to 0$ en restant négatif ($x < 1$). Par quotient, $\\lim\\limits_{x\\to1^-} f(x) = -\\infty$. De même $\\lim\\limits_{x\\to1^+} f(x) = +\\infty$ : la droite $x = 1$ est asymptote verticale, et $f$ n'a pas de limite (bilatérale) en $1$. Contrôle : $f(0{,}999) = \\dfrac{2{,}999}{-0{,}001} = -2\\,999$, très négatif.",
+     "points": 1,
+     "methode": "En un point où le dénominateur s'annule, fais un tableau de signes du dénominateur : il donne le signe de $0^\\pm$ de chaque côté.",
+     "ref": "m2-scex-contderiv-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-3",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Une valeur absolue au dénominateur",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limites à gauche et à droite",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = \\dfrac{x^2 - 1}{|x - 1|}$ définie sur $\\mathbb{R}\\setminus\\{1\\}$. Les limites à gauche et à droite de $f$ en $1$, notées $\\lim\\limits_{x\\to1^-} f(x)$ et $\\lim\\limits_{x\\to1^+} f(x)$, valent respectivement :",
+     "options": [
+      {
+       "label": "$-2$ et $2$",
+       "correct": true,
+       "why": "Pour $x > 1$, $f(x) = x + 1 \\to 2$ ; pour $x < 1$, $|x-1| = 1 - x$ donc $f(x) = -(x+1) \\to -2$."
+      },
+      {
+       "label": "$2$ et $2$",
+       "why": "Tu as remplacé $|x - 1|$ par $x - 1$ des deux côtés. Pour $x < 1$, $|x - 1| = -(x-1)$ : $f(0{,}99) = -1{,}99$."
+      },
+      {
+       "label": "$2$ et $-2$",
+       "why": "Tu as inversé les côtés : à droite ($x > 1$) la valeur absolue vaut $x - 1$ et $f(x) = x + 1 \\to 2$."
+      },
+      {
+       "label": "$-\\infty$ et $+\\infty$",
+       "why": "Le dénominateur tend vers $0$, mais le numérateur aussi : c'est une forme $\\frac00$ qu'il faut simplifier, pas un « $\\frac{k}{0}$ »."
+      }
+     ],
+     "hint": "Sépare les cas $x > 1$ et $x < 1$ pour enlever la valeur absolue, puis factorise $x^2 - 1$.",
+     "solution": "$x^2 - 1 = (x-1)(x+1)$. Si $x > 1$ : $|x - 1| = x - 1$, donc $f(x) = x + 1$ et $\\lim\\limits_{x\\to1^+} f(x) = 2$. Si $x < 1$ : $|x - 1| = -(x - 1)$, donc $f(x) = -(x+1)$ et $\\lim\\limits_{x\\to1^-} f(x) = -2$. Les deux limites sont finies mais différentes : $f$ n'a pas de limite en $1$ et ne peut pas être prolongée par continuité. Contrôle : $f(1{,}01) = \\dfrac{0{,}0201}{0{,}01} = 2{,}01$ et $f(0{,}99) = \\dfrac{-0{,}0199}{0{,}01} = -1{,}99$.",
+     "points": 1,
+     "methode": "Valeur absolue en un point : on sépare toujours $x > a$ et $x < a$, puis on calcule une limite de chaque côté.",
+     "ref": "m2-scex-contderiv-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-4",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "La masse à long terme",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limites à l'infini",
+     "difficulty": 1,
+     "statement": "Dans une culture, la masse de bactéries (en grammes) au temps $t$ (en heures) est modélisée par $m(t) = \\dfrac{6t^2 + t + 4}{2t^2 + 7}$ pour $t \\ge 0$. Vers quelle valeur la masse se stabilise-t-elle à long terme, c'est-à-dire que vaut $\\lim\\limits_{t\\to+\\infty} m(t)$ ?",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "En $+\\infty$, une fraction rationnelle a la limite du quotient des termes de plus haut degré : $\\dfrac{6t^2}{2t^2} = 3$."
+      },
+      {
+       "label": "$\\dfrac{4}{7}$",
+       "why": "Tu as fait le quotient des termes constants : c'est $m(0)$, la masse initiale, pas la masse à long terme."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Le numérateur tend vers $+\\infty$, mais le dénominateur aussi : c'est une forme $\\frac{\\infty}{\\infty}$, qui se lève ici en une limite finie."
+      },
+      {
+       "label": "$6$",
+       "why": "Tu as gardé le coefficient dominant du numérateur sans le diviser par celui du dénominateur, $2$."
+      }
+     ],
+     "hint": "Factorise numérateur et dénominateur par $t^2$.",
+     "solution": "Pour $t > 0$ : $m(t) = \\dfrac{t^2\\left(6 + \\frac1t + \\frac{4}{t^2}\\right)}{t^2\\left(2 + \\frac{7}{t^2}\\right)} = \\dfrac{6 + \\frac1t + \\frac{4}{t^2}}{2 + \\frac{7}{t^2}}$. Les termes en $\\frac1t$ et $\\frac{1}{t^2}$ tendent vers $0$, donc $\\lim\\limits_{t\\to+\\infty} m(t) = \\dfrac62 = 3$ : la masse se stabilise vers $3$ g (asymptote horizontale $y = 3$). Contrôle : $m(100) = \\dfrac{60\\,104}{20\\,007} \\approx 3{,}004$.",
+     "points": 1,
+     "methode": "Fraction rationnelle en $\\pm\\infty$ : limite du quotient des termes de plus haut degré.",
+     "ref": "m2-scex-contderiv-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-5",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "L'approximation du banquier",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limites de référence",
+     "difficulty": 1,
+     "statement": "Pour un faible taux d'intérêt continu $x$, le gain relatif d'un placement sur un an vaut $\\mathrm{e}^{x} - 1$, et les banquiers l'approchent simplement par $x$. Cette approximation repose sur la valeur de $\\lim\\limits_{x\\to0}\\dfrac{\\mathrm{e}^{x}-1}{x}$, qui vaut :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "C'est une limite de référence : le taux d'accroissement de $\\exp$ en $0$ tend vers $\\exp'(0) = \\mathrm{e}^0 = 1$."
+      },
+      {
+       "label": "$0$",
+       "why": "Tu as vu le numérateur tendre vers $0$, mais le dénominateur aussi : c'est une forme $\\frac00$, pas $0$."
+      },
+      {
+       "label": "$\\mathrm{e}$",
+       "why": "Tu as confondu avec $\\mathrm{e}^1$. Le calcul $\\dfrac{\\mathrm{e}^{0{,}01}-1}{0{,}01} \\approx 1{,}005$ est loin de $2{,}718$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Diviser par $x \\to 0$ ne donne $\\infty$ que si le numérateur a une limite non nulle ; ici il tend vers $0$."
+      }
+     ],
+     "hint": "Reconnais le taux d'accroissement de $\\exp$ entre $0$ et $x$.",
+     "solution": "$\\dfrac{\\mathrm{e}^{x}-1}{x} = \\dfrac{\\mathrm{e}^{x} - \\mathrm{e}^{0}}{x - 0}$ est le taux d'accroissement de la fonction $\\exp$ en $0$. Comme $\\exp$ est dérivable en $0$ avec $\\exp'(0) = \\mathrm{e}^0 = 1$, la limite vaut $1$. C'est pourquoi $\\mathrm{e}^{x} - 1 \\approx x$ pour $x$ proche de $0$. Contrôle : pour $x = 0{,}01$, $\\dfrac{\\mathrm{e}^{0{,}01}-1}{0{,}01} \\approx 1{,}005$.",
+     "points": 1,
+     "methode": "À connaître : en $0$, $\\dfrac{\\mathrm{e}^x - 1}{x} \\to 1$, $\\dfrac{\\ln(1+x)}{x} \\to 1$, $\\dfrac{\\sin x}{x} \\to 1$ ; ce sont des nombres dérivés.",
+     "ref": "m2-scex-contderiv-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-6",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Un bénéfice qui finit par chuter",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Opérations sur les limites",
+     "difficulty": 1,
+     "statement": "Le bénéfice (en milliers de dirhams) d'un atelier produisant $x$ centaines d'objets est modélisé par $B(x) = (5 - x)(x^2 + 2)$, pour $x \\ge 0$. Si l'on prolonge ce modèle à de très grandes productions, que vaut $\\lim\\limits_{x\\to+\\infty} B(x)$ ?",
+     "options": [
+      {
+       "label": "$-\\infty$",
+       "correct": true,
+       "why": "$5 - x \\to -\\infty$ et $x^2 + 2 \\to +\\infty$ : le produit tend vers $-\\infty$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Tu n'as regardé que le facteur $x^2 + 2$. Le premier facteur devient négatif : $B(10) = -5 \\times 102 = -510$."
+      },
+      {
+       "label": "forme indéterminée",
+       "why": "$(-\\infty)\\times(+\\infty)$ n'est pas indéterminé : les règles des signes s'appliquent. Seul $0\\times\\infty$ l'est."
+      },
+      {
+       "label": "$10$",
+       "why": "C'est $B(0) = 5 \\times 2$, le bénéfice sans production ; on demande le comportement pour $x$ très grand."
+      }
+     ],
+     "hint": "Calcule la limite de chaque facteur, puis applique la règle du produit.",
+     "solution": "$\\lim\\limits_{x\\to+\\infty}(5 - x) = -\\infty$ et $\\lim\\limits_{x\\to+\\infty}(x^2 + 2) = +\\infty$. Par produit, $\\lim\\limits_{x\\to+\\infty} B(x) = -\\infty$ : au-delà d'un certain volume (ici $x > 5$), l'atelier perd de l'argent. Contrôle : $B(10) = (5-10)(100+2) = -510$, déjà très négatif.",
+     "points": 1,
+     "methode": "Produit de limites : « $\\infty \\times \\infty$ » donne $\\infty$ avec la règle des signes ; seul « $0 \\times \\infty$ » est indéterminé.",
+     "ref": "m2-scex-contderiv-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-7",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Repérer la vraie difficulté",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Les formes indéterminées",
+     "difficulty": 1,
+     "statement": "On veut calculer quatre limites en $+\\infty$ en appliquant directement les règles sur les sommes, produits et quotients. Pour laquelle de ces limites tombe-t-on sur une forme indéterminée ?",
+     "options": [
+      {
+       "label": "$\\lim\\limits_{x\\to+\\infty}\\left(x - \\sqrt{x^2+1}\\right)$",
+       "correct": true,
+       "why": "Les deux termes tendent vers $+\\infty$ : c'est la forme $\\infty - \\infty$."
+      },
+      {
+       "label": "$\\lim\\limits_{x\\to+\\infty}\\left(x + \\sqrt{x}\\right)$",
+       "why": "$+\\infty + \\infty = +\\infty$ : une somme de deux $+\\infty$ n'est jamais indéterminée."
+      },
+      {
+       "label": "$\\lim\\limits_{x\\to+\\infty}\\dfrac{3}{x^2+1}$",
+       "why": "Un numérateur fixe divisé par un dénominateur qui tend vers $+\\infty$ donne $0$ directement."
+      },
+      {
+       "label": "$\\lim\\limits_{x\\to+\\infty} x\\,\\mathrm{e}^{x}$",
+       "why": "$(+\\infty)\\times(+\\infty) = +\\infty$ : pas d'indétermination dans ce produit."
+      }
+     ],
+     "hint": "Les quatre formes indéterminées sont $\\infty - \\infty$, $0\\times\\infty$, $\\frac{\\infty}{\\infty}$ et $\\frac00$.",
+     "solution": "Pour $x - \\sqrt{x^2+1}$, on a $x \\to +\\infty$ et $\\sqrt{x^2+1} \\to +\\infty$ : forme $\\infty - \\infty$. On la lève avec la quantité conjuguée : $x - \\sqrt{x^2+1} = \\dfrac{x^2 - (x^2+1)}{x + \\sqrt{x^2+1}} = \\dfrac{-1}{x+\\sqrt{x^2+1}} \\to 0$. Les trois autres se calculent directement : $+\\infty$, $0$ et $+\\infty$. Contrôle : pour $x = 100$, $100 - \\sqrt{10\\,001} \\approx -0{,}005$, proche de $0$.",
+     "points": 1,
+     "methode": "Avant tout calcul, identifie la forme : si ce n'est pas une des 4 FI, la limite se lit directement.",
+     "ref": "m2-scex-contderiv-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-8",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Racine moins x en l'infini",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Techniques de levée",
+     "difficulty": 2,
+     "statement": "On considère $f(x) = \\sqrt{x^2 + 6x} - x$ pour $x > 0$. Les deux termes tendent vers $+\\infty$ quand $x \\to +\\infty$. En utilisant une technique adaptée, déterminer $\\lim\\limits_{x\\to+\\infty} f(x)$.",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "Avec la quantité conjuguée, $f(x) = \\dfrac{6x}{\\sqrt{x^2+6x}+x} = \\dfrac{6}{\\sqrt{1+\\frac6x}+1} \\to \\dfrac62 = 3$."
+      },
+      {
+       "label": "$0$",
+       "why": "Tu as remplacé $\\sqrt{x^2+6x}$ par $x$ trop tôt : l'écart entre les deux ne tend pas vers $0$. Pour $x = 1\\,000$, $f(x) \\approx 2{,}99$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Chaque terme tend vers $+\\infty$, mais leur différence est une FI $\\infty - \\infty$ : il faut transformer l'écriture."
+      },
+      {
+       "label": "$6$",
+       "why": "Tu as bien utilisé le conjugué, mais oublié que le dénominateur $\\sqrt{x^2+6x} + x$ se comporte comme $2x$, pas comme $x$."
+      }
+     ],
+     "hint": "Multiplie et divise par la quantité conjuguée $\\sqrt{x^2+6x} + x$, puis factorise par $x$.",
+     "solution": "$f(x) = \\dfrac{(\\sqrt{x^2+6x} - x)(\\sqrt{x^2+6x} + x)}{\\sqrt{x^2+6x} + x} = \\dfrac{x^2 + 6x - x^2}{\\sqrt{x^2+6x}+x} = \\dfrac{6x}{x\\sqrt{1 + \\frac6x} + x} = \\dfrac{6}{\\sqrt{1+\\frac6x}+1}$ (car $x > 0$, $\\sqrt{x^2} = x$). Comme $\\frac6x \\to 0$, la limite vaut $\\dfrac{6}{1+1} = 3$. Contrôle : $f(1\\,000) = \\sqrt{1\\,006\\,000} - 1\\,000 \\approx 2{,}996$.",
+     "points": 1,
+     "methode": "FI $\\infty - \\infty$ avec une racine : quantité conjuguée, puis factorisation par le terme dominant.",
+     "ref": "m2-scex-contderiv-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-9",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Un 0/0 avec une racine",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Techniques de levée",
+     "difficulty": 3,
+     "statement": "Soit $f(x) = \\dfrac{x^2 + x - 2}{\\sqrt{x} - 1}$ définie sur $[0;1[\\cup]1;+\\infty[$. En $x = 1$, numérateur et dénominateur s'annulent. Déterminer $\\lim\\limits_{x\\to1} f(x)$.",
+     "options": [
+      {
+       "label": "$6$",
+       "correct": true,
+       "why": "$x^2 + x - 2 = (x-1)(x+2)$ et $\\dfrac{x - 1}{\\sqrt x - 1} = \\sqrt x + 1$ : $f(x) = (\\sqrt x + 1)(x + 2) \\to 2\\times3$."
+      },
+      {
+       "label": "$3$",
+       "why": "Tu as simplifié $x - 1$ avec $\\sqrt x - 1$ comme s'ils étaient égaux. Or $\\dfrac{x-1}{\\sqrt x - 1} = \\sqrt x + 1 \\to 2$, pas $1$."
+      },
+      {
+       "label": "$\\dfrac32$",
+       "why": "Tu as divisé par $\\sqrt x + 1$ au lieu de multiplier : $(\\sqrt x - 1)(\\sqrt x + 1) = x - 1$, donc $\\dfrac{1}{\\sqrt x - 1} = \\dfrac{\\sqrt x + 1}{x - 1}$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Le dénominateur tend vers $0$, mais le numérateur aussi : forme $\\frac00$, il faut simplifier avant de conclure."
+      }
+     ],
+     "hint": "Factorise le numérateur (racine évidente $1$), puis multiplie haut et bas par $\\sqrt x + 1$.",
+     "solution": "Le trinôme a pour racine évidente $1$ : $x^2 + x - 2 = (x - 1)(x + 2)$. De plus $(\\sqrt x - 1)(\\sqrt x + 1) = x - 1$. Pour $x \\ne 1$ : $f(x) = \\dfrac{(x-1)(x+2)(\\sqrt x + 1)}{(\\sqrt x - 1)(\\sqrt x + 1)} = \\dfrac{(x-1)(x+2)(\\sqrt x + 1)}{x - 1} = (x+2)(\\sqrt x + 1)$. Donc $\\lim\\limits_{x\\to1} f(x) = 3 \\times 2 = 6$. Contrôle : $f(1{,}01) = \\dfrac{0{,}0301}{0{,}004988} \\approx 6{,}03$.",
+     "points": 1,
+     "methode": "FI $\\frac00$ en $a$ : factorise par $(x - a)$ ; s'il y a une racine, multiplie par la quantité conjuguée pour faire apparaître $(x - a)$.",
+     "ref": "m2-scex-contderiv-flash-q9"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-10",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Une minoration qui suffit",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limites par comparaison",
+     "difficulty": 2,
+     "statement": "On pose $f(x) = 2x + \\cos x$ pour tout réel $x$. On rappelle que $-1 \\le \\cos x \\le 1$ pour tout $x$, et que $\\cos x$ n'a pas de limite en $+\\infty$. Quelle conclusion correctement justifiée obtient-on pour $\\lim\\limits_{x\\to+\\infty} f(x)$ ?",
+     "options": [
+      {
+       "label": "$+\\infty$, car $f(x) \\ge 2x - 1$ et $\\lim\\limits_{x\\to+\\infty}(2x - 1) = +\\infty$",
+       "correct": true,
+       "why": "Minorer par une fonction qui tend vers $+\\infty$ suffit : c'est le théorème de comparaison."
+      },
+      {
+       "label": "pas de limite, car $\\cos x$ n'a pas de limite en $+\\infty$",
+       "why": "Un terme sans limite n'empêche pas la somme d'en avoir une : $\\cos x$ reste borné alors que $2x$ explose."
+      },
+      {
+       "label": "$+\\infty$, car $f(x) \\le 2x + 1$ et $\\lim\\limits_{x\\to+\\infty}(2x + 1) = +\\infty$",
+       "why": "Une majoration par une fonction qui tend vers $+\\infty$ ne prouve rien : $f$ pourrait rester petite sous ce plafond."
+      },
+      {
+       "label": "$+\\infty$, car $\\cos x \\to 1$ en $+\\infty$",
+       "why": "Faux : $\\cos x$ oscille entre $-1$ et $1$ sans limite (par exemple $\\cos(2k\\pi) = 1$ et $\\cos(\\pi + 2k\\pi) = -1$)."
+      }
+     ],
+     "hint": "Pour prouver une limite $+\\infty$, il faut minorer $f(x)$, pas la majorer.",
+     "solution": "Pour tout $x$, $\\cos x \\ge -1$, donc $f(x) = 2x + \\cos x \\ge 2x - 1$. Or $\\lim\\limits_{x\\to+\\infty}(2x - 1) = +\\infty$. D'après le théorème de comparaison, $\\lim\\limits_{x\\to+\\infty} f(x) = +\\infty$. Contrôle : pour $x = 100\\pi$, $f(x) = 200\\pi + 1 \\approx 629$, et pour $x = 101\\pi$, $f(x) = 202\\pi - 1 \\approx 634$ : les oscillations de $\\pm1$ sont négligeables.",
+     "points": 1,
+     "methode": "Limite $+\\infty$ : trouve $g \\le f$ avec $g \\to +\\infty$. Limite $-\\infty$ : trouve $f \\le g$ avec $g \\to -\\infty$.",
+     "ref": "m2-scex-contderiv-flash-q10"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-11",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Une oscillation amortie",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Théorème d'encadrement",
+     "difficulty": 2,
+     "statement": "L'écart à l'équilibre d'un ressort amorti est modélisé par $d(t) = \\dfrac{4\\cos(5t)}{t^2 + 1}$ (en cm), pour $t \\ge 0$ (en s). Que vaut $\\lim\\limits_{t\\to+\\infty} d(t)$ ?",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "$-\\dfrac{4}{t^2+1} \\le d(t) \\le \\dfrac{4}{t^2+1}$ et les deux bornes tendent vers $0$ : théorème des gendarmes."
+      },
+      {
+       "label": "$4$",
+       "why": "C'est $d(0) = \\dfrac{4\\cos 0}{1}$, l'écart initial ; on demande le comportement quand $t$ devient grand."
+      },
+      {
+       "label": "pas de limite, car $\\cos(5t)$ oscille",
+       "why": "Le cosinus oscille, mais son amplitude est écrasée par $\\dfrac{4}{t^2+1} \\to 0$ : l'encadrement donne la limite."
+      },
+      {
+       "label": "elle oscille entre $-4$ et $4$",
+       "why": "Ce sont les bornes à $t = 0$ ; à $t = 10$, $|d(t)| \\le \\dfrac{4}{101} \\approx 0{,}04$ cm."
+      }
+     ],
+     "hint": "Encadre $\\cos(5t)$ entre $-1$ et $1$, puis divise par $t^2 + 1 > 0$.",
+     "solution": "Pour tout $t \\ge 0$ : $-1 \\le \\cos(5t) \\le 1$, et comme $t^2 + 1 > 0$, $-\\dfrac{4}{t^2+1} \\le d(t) \\le \\dfrac{4}{t^2+1}$. Or $\\lim\\limits_{t\\to+\\infty}\\dfrac{4}{t^2+1} = 0$ et $\\lim\\limits_{t\\to+\\infty}\\left(-\\dfrac{4}{t^2+1}\\right) = 0$. D'après le théorème d'encadrement, $\\lim\\limits_{t\\to+\\infty} d(t) = 0$ : le ressort revient à l'équilibre. Contrôle : à $t = 10$ s, $|d(t)| \\le 0{,}04$ cm.",
+     "points": 1,
+     "methode": "Fonction « bornée × qui tend vers 0 » : encadre la partie bornée, puis applique les gendarmes.",
+     "ref": "m2-scex-contderiv-flash-q11"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-12",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Racine d'un quotient en l'infini",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limite d'une fonction composée",
+     "difficulty": 2,
+     "statement": "On pose $f(x) = \\sqrt{\\dfrac{9x + 1}{x + 2}}$ pour $x \\ge 0$. Le quotient sous la racine admet une limite finie en $+\\infty$ et la fonction racine carrée est continue. Que vaut $\\lim\\limits_{x\\to+\\infty} f(x)$ ?",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "$\\dfrac{9x+1}{x+2} \\to 9$, puis $\\sqrt{X} \\to \\sqrt9 = 3$ quand $X \\to 9$."
+      },
+      {
+       "label": "$9$",
+       "why": "Tu as calculé la limite de la fonction intérieure et oublié d'appliquer la racine carrée."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Le numérateur tend vers $+\\infty$, mais le quotient $\\dfrac{9x+1}{x+2}$ tend vers $9$ : la racine reste bornée."
+      },
+      {
+       "label": "$\\dfrac{1}{\\sqrt2}$",
+       "why": "C'est $f(0) = \\sqrt{\\frac12}$ ; tu as utilisé les termes constants au lieu des termes dominants."
+      }
+     ],
+     "hint": "Calcule d'abord la limite $\\ell$ de l'intérieur, puis la limite de $\\sqrt{X}$ quand $X \\to \\ell$.",
+     "solution": "Posons $u(x) = \\dfrac{9x+1}{x+2}$. En $+\\infty$, $u(x) \\to \\dfrac{9x}{x} = 9$. La fonction racine carrée est continue en $9$, donc $\\lim\\limits_{X\\to9}\\sqrt{X} = 3$. Par composition, $\\lim\\limits_{x\\to+\\infty} f(x) = 3$ : la droite $y = 3$ est asymptote horizontale. Contrôle : $f(1\\,000) = \\sqrt{\\dfrac{9\\,001}{1\\,002}} \\approx \\sqrt{8{,}983} \\approx 2{,}997$.",
+     "points": 1,
+     "methode": "Limite d'une composée $g\\circ u$ : limite $\\ell$ de $u$, puis limite de $g$ en $\\ell$.",
+     "ref": "m2-scex-contderiv-flash-q12"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-13",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Recoller deux morceaux",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Continuité en un point",
+     "difficulty": 2,
+     "statement": "Soit $a$ un réel et $f$ définie sur $\\mathbb{R}$ par $f(x) = x^2 + a$ si $x \\le 2$ et $f(x) = 3x - 1$ si $x > 2$. Pour quelle valeur de $a$ la fonction $f$ est-elle continue en $2$ ?",
+     "options": [
+      {
+       "label": "$a = 1$",
+       "correct": true,
+       "why": "Il faut $\\lim\\limits_{x\\to2^+}(3x - 1) = f(2)$, soit $5 = 4 + a$."
+      },
+      {
+       "label": "$a = 5$",
+       "why": "Tu as écrit $a = 5$ en oubliant le terme $x^2$, qui vaut $4$ en $x = 2$."
+      },
+      {
+       "label": "$a = 9$",
+       "why": "Erreur de signe : $4 + a = 5$ donne $a = 5 - 4$, pas $5 + 4$."
+      },
+      {
+       "label": "toute valeur de $a$ convient",
+       "why": "Chaque formule est continue sur son intervalle, mais le « recollement » en $2$ impose une égalité : pour $a = 0$, $f(2) = 4 \\ne 5$."
+      }
+     ],
+     "hint": "Écris l'égalité « limite à droite en $2$ = $f(2)$ » (la limite à gauche vaut automatiquement $f(2)$).",
+     "solution": "Pour $x \\le 2$, $f$ est un polynôme : $\\lim\\limits_{x\\to2^-} f(x) = f(2) = 4 + a$. Pour $x > 2$ : $\\lim\\limits_{x\\to2^+} f(x) = 3\\times2 - 1 = 5$. $f$ est continue en $2$ si et seulement si $\\lim\\limits_{x\\to2^+} f(x) = f(2)$, soit $4 + a = 5$, d'où $a = 1$. Contrôle : avec $a = 1$, $f(2) = 5$ et $f(2{,}001) = 5{,}003$, très proche.",
+     "points": 1,
+     "methode": "Fonction définie par morceaux : continue en $a$ ⇔ limite à gauche = limite à droite = $f(a)$.",
+     "ref": "m2-scex-contderiv-flash-q13"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-14",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Le tarif d'un transporteur",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Continuité en un point",
+     "difficulty": 1,
+     "statement": "Un transporteur facture un colis de masse $x$ kg selon $T(x) = 20$ DH si $0 < x \\le 1$ et $T(x) = 20 + 15(x - 1)$ DH si $x > 1$. La fonction tarif $T$ est-elle continue en $x = 1$ ?",
+     "options": [
+      {
+       "label": "oui, car $\\lim\\limits_{x\\to1^+} T(x) = 20 = T(1)$",
+       "correct": true,
+       "why": "Le second morceau vaut $20 + 15\\times0 = 20$ quand $x \\to 1^+$ : pas de saut."
+      },
+      {
+       "label": "non, car $T$ est définie par deux formules différentes",
+       "why": "Deux formules ne créent pas forcément de saut : il faut comparer les limites avec $T(1)$."
+      },
+      {
+       "label": "non, car $\\lim\\limits_{x\\to1^+} T(x) = 35$",
+       "why": "Tu as calculé $20 + 15$ en oubliant le facteur $(x - 1)$, qui tend vers $0$."
+      },
+      {
+       "label": "oui, mais seulement si $x$ est entier",
+       "why": "La continuité en $1$ ne dépend que du comportement de $T$ autour de $1$ ; il n'y a aucune condition d'entier."
+      }
+     ],
+     "hint": "Compare $T(1)$ avec la limite de $20 + 15(x-1)$ quand $x \\to 1^+$.",
+     "solution": "$T(1) = 20$ (premier morceau). À gauche, $T$ est constante égale à $20$, donc $\\lim\\limits_{x\\to1^-} T(x) = 20$. À droite, $\\lim\\limits_{x\\to1^+}[20 + 15(x-1)] = 20$. Les deux limites égalent $T(1)$ : $T$ est continue en $1$. Concrètement, un colis de $1{,}01$ kg coûte $20{,}15$ DH, à peine plus qu'un colis de $1$ kg. Contrôle : $T(1{,}1) = 21{,}5$ et $T(0{,}9) = 20$ : pas de saut.",
+     "points": 1,
+     "methode": "Continuité en $a$ : calcule $f(a)$, la limite à gauche et la limite à droite ; elles doivent être égales.",
+     "ref": "m2-scex-contderiv-flash-q14"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-15",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Où la fonction est-elle continue ?",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Continuité sur un intervalle et opérations",
+     "difficulty": 1,
+     "statement": "Soit $f(x) = \\dfrac{\\sqrt{x - 1}}{x - 3}$. On sait que les fonctions polynômes et la fonction racine carrée sont continues sur leur ensemble de définition. Sur quel ensemble la fonction $f$ est-elle continue ?",
+     "options": [
+      {
+       "label": "$[1;3[\\,\\cup\\,]3;+\\infty[$",
+       "correct": true,
+       "why": "Il faut $x - 1 \\ge 0$ et $x \\ne 3$ : $f$ est continue sur son ensemble de définition (opérations sur fonctions continues)."
+      },
+      {
+       "label": "$\\mathbb{R}\\setminus\\{3\\}$",
+       "why": "Tu as oublié la racine : $\\sqrt{x - 1}$ n'existe pas pour $x < 1$ (par exemple $x = 0$)."
+      },
+      {
+       "label": "$[1;+\\infty[$",
+       "why": "Tu as oublié le dénominateur : en $x = 3$, on diviserait par $0$."
+      },
+      {
+       "label": "$]1;3[\\,\\cup\\,]3;+\\infty[$",
+       "why": "Tu as exclu $1$, mais $\\sqrt{0} = 0$ est défini : $f(1) = \\dfrac{0}{-2} = 0$."
+      }
+     ],
+     "hint": "Écris les deux conditions : radicande positif ou nul, dénominateur non nul.",
+     "solution": "$f$ est définie si $x - 1 \\ge 0$ (soit $x \\ge 1$) et $x - 3 \\ne 0$ (soit $x \\ne 3$) : $D_f = [1;3[\\cup]3;+\\infty[$. Sur cet ensemble, $x \\mapsto \\sqrt{x-1}$ est continue (composée de fonctions continues) et $x \\mapsto x - 3$ est continue et ne s'annule pas : par quotient, $f$ est continue sur chacun des intervalles $[1;3[$ et $]3;+\\infty[$. Contrôle : $f(1) = 0$ existe, et $f(3)$ n'existe pas.",
+     "points": 1,
+     "methode": "Somme, produit, quotient (dénominateur non nul), composée de fonctions continues : continue sur l'ensemble de définition.",
+     "ref": "m2-scex-contderiv-flash-q15"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-16",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "De la vitesse moyenne à la vitesse instantanée",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Prolongement par continuité",
+     "difficulty": 2,
+     "statement": "Une particule a pour position $p(t) = t^3$ (en m) à l'instant $t$ (en s). Sa vitesse moyenne entre les instants $2$ et $t$ est $v(t) = \\dfrac{t^3 - 8}{t - 2}$ pour $t \\ne 2$. Quelle valeur faut-il donner à $v(2)$ pour que $v$ soit continue en $2$ ?",
+     "options": [
+      {
+       "label": "$12$",
+       "correct": true,
+       "why": "$t^3 - 8 = (t-2)(t^2 + 2t + 4)$, donc $v(t) = t^2 + 2t + 4 \\to 12$ : c'est la vitesse instantanée $p'(2) = 3\\times2^2$."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\frac00$ est une forme indéterminée, pas $0$ : il faut simplifier par $t - 2$."
+      },
+      {
+       "label": "$8$",
+       "why": "C'est la position $p(2) = 8$ m, pas la limite de la vitesse moyenne."
+      },
+      {
+       "label": "aucune : $v$ n'est pas prolongeable en $2$",
+       "why": "$v$ admet en $2$ une limite finie ($12$), donc elle est prolongeable par continuité."
+      }
+     ],
+     "hint": "Factorise $t^3 - 8 = t^3 - 2^3$ par $(t - 2)$.",
+     "solution": "Avec $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ : $t^3 - 8 = (t - 2)(t^2 + 2t + 4)$. Pour $t \\ne 2$, $v(t) = t^2 + 2t + 4$, donc $\\lim\\limits_{t\\to2} v(t) = 4 + 4 + 4 = 12$. Cette limite est finie : $v$ est prolongeable par continuité en $2$ en posant $v(2) = 12$ m/s, la vitesse instantanée. Contrôle : $p'(t) = 3t^2$ donne $p'(2) = 12$, et $v(2{,}01) = \\dfrac{8{,}120601 - 8}{0{,}01} \\approx 12{,}06$.",
+     "points": 1,
+     "methode": "Prolongeable par continuité en $a$ ⇔ limite finie $\\ell$ en $a$ ; on pose alors $f(a) = \\ell$.",
+     "ref": "m2-scex-contderiv-flash-q16"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-17",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Ce que garantit la continuité",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Image d'un intervalle et théorème des valeurs intermédiaires",
+     "difficulty": 2,
+     "statement": "Une fonction $f$ est continue sur $[0;4]$, avec $f(0) = -2$ et $f(4) = 5$. On ne sait rien de ses variations (elle peut monter et descendre). Parmi les affirmations suivantes, laquelle est certainement vraie ?",
+     "options": [
+      {
+       "label": "$f([0;4])$ contient l'intervalle $[-2;5]$",
+       "correct": true,
+       "why": "L'image d'un intervalle par une fonction continue est un intervalle ; il contient $f(0)$ et $f(4)$, donc tout ce qui est entre."
+      },
+      {
+       "label": "$f([0;4]) = [-2;5]$",
+       "why": "L'égalité n'est garantie que si $f$ est monotone. Une fonction qui monte jusqu'à $8$ avant de redescendre à $5$ a une image plus grande."
+      },
+      {
+       "label": "$f$ prend la valeur $6$ sur $[0;4]$",
+       "why": "$6$ n'est pas compris entre $f(0)$ et $f(4)$ : rien n'oblige $f$ à l'atteindre (une fonction affine de $-2$ à $5$ ne le fait pas)."
+      },
+      {
+       "label": "l'équation $f(x) = 0$ a une unique solution dans $[0;4]$",
+       "why": "Le TVI donne l'existence ; l'unicité exige la stricte monotonie. Sans elle, $f$ peut couper l'axe trois fois."
+      }
+     ],
+     "hint": "Le TVI garantit que toute valeur comprise entre $f(0)$ et $f(4)$ est atteinte, rien de plus.",
+     "solution": "$f$ est continue sur l'intervalle $[0;4]$, donc $f([0;4])$ est un intervalle. Il contient $f(0) = -2$ et $f(4) = 5$, donc il contient $[-2;5]$ : tout réel $k \\in [-2;5]$ admet au moins un antécédent (TVI). On ne peut pas dire plus : l'image peut être plus grande que $[-2;5]$, et une valeur comme $0$ peut être atteinte plusieurs fois. Contrôle : $f(x) = \\frac{7}{4}x - 2$ (affine) a pour image exactement $[-2;5]$ et n'atteint pas $6$ ; une fonction qui oscille peut atteindre $0$ plusieurs fois.",
+     "points": 1,
+     "methode": "Continue sur $[a;b]$ ⇒ toute valeur entre $f(a)$ et $f(b)$ est atteinte (existence seulement).",
+     "ref": "m2-scex-contderiv-flash-q17"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-18",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Localiser une racine à 0,1 près",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Théorème des valeurs intermédiaires",
+     "difficulty": 1,
+     "statement": "Soit $f(x) = x^3 + 2x - 5$. La fonction $f$ est continue et strictement croissante sur $\\mathbb{R}$, et l'équation $f(x) = 0$ admet une unique solution $\\alpha$. On donne $f(1{,}2) = -0{,}872$, $f(1{,}3) = -0{,}203$, $f(1{,}4) = 0{,}544$. Dans quel intervalle se trouve $\\alpha$ ?",
+     "options": [
+      {
+       "label": "$]1{,}3\\,;1{,}4[$",
+       "correct": true,
+       "why": "$f(1{,}3) < 0 < f(1{,}4)$ et $f$ est continue strictement croissante : $\\alpha$ est entre $1{,}3$ et $1{,}4$."
+      },
+      {
+       "label": "$]1{,}2\\,;1{,}3[$",
+       "why": "$f(1{,}2)$ et $f(1{,}3)$ sont tous deux négatifs : pas de changement de signe, donc pas de solution entre eux."
+      },
+      {
+       "label": "$]1{,}4\\,;1{,}5[$",
+       "why": "$f(1{,}4) > 0$ et $f$ est croissante : $f(x) > 0$ pour tout $x \\ge 1{,}4$, la solution est avant."
+      },
+      {
+       "label": "$]1\\,;1{,}2[$",
+       "why": "$f(1) = -2$ et $f(1{,}2) = -0{,}872$ sont négatifs : aucun changement de signe sur cet intervalle."
+      }
+     ],
+     "hint": "Cherche les deux valeurs consécutives entre lesquelles $f$ change de signe.",
+     "solution": "$f$ est continue et strictement croissante sur $[1{,}3\\,;1{,}4]$, avec $f(1{,}3) = 2{,}197 + 2{,}6 - 5 = -0{,}203 < 0$ et $f(1{,}4) = 2{,}744 + 2{,}8 - 5 = 0{,}544 > 0$. D'après le TVI, l'unique solution vérifie $1{,}3 < \\alpha < 1{,}4$. Contrôle : $f(1{,}33) = 2{,}352637 + 2{,}66 - 5 \\approx 0{,}013 > 0$, donc même $\\alpha \\in ]1{,}3\\,;1{,}33[$, cohérent.",
+     "points": 1,
+     "methode": "Localiser $\\alpha$ : trouve deux valeurs où $f$ change de signe ; la stricte monotonie garantit qu'il n'y a qu'une solution.",
+     "ref": "m2-scex-contderiv-flash-q18"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-19",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Combien de fois la courbe coupe l'axe ?",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Théorème des valeurs intermédiaires",
+     "difficulty": 3,
+     "statement": "Soit $f(x) = x^3 - 3x + 1$ définie sur $\\mathbb{R}$. On a $f'(x) = 3(x-1)(x+1)$, $f(-1) = 3$, $f(1) = -1$, $\\lim\\limits_{x\\to-\\infty} f(x) = -\\infty$ et $\\lim\\limits_{x\\to+\\infty} f(x) = +\\infty$. Combien de solutions réelles l'équation $f(x) = 0$ admet-elle ?",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "Une solution sur chacun des intervalles $]-\\infty;-1[$, $]-1;1[$ et $]1;+\\infty[$, où $f$ est strictement monotone et change de signe."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as appliqué le TVI une seule fois. Or $f$ change de sens deux fois : $0$ est atteint en montant, en descendant puis en remontant."
+      },
+      {
+       "label": "$2$",
+       "why": "Tu as oublié une branche : sur $]-\\infty;-1]$, $f$ monte de $-\\infty$ à $3$, donc passe aussi par $0$."
+      },
+      {
+       "label": "$0$",
+       "why": "$f$ prend des valeurs positives ($f(-1) = 3$) et négatives ($f(1) = -1$) : par continuité, elle s'annule forcément."
+      }
+     ],
+     "hint": "Dresse le tableau de variations, puis applique le TVI sur chaque intervalle de stricte monotonie.",
+     "solution": "$f'(x) = 3(x-1)(x+1)$ : $f$ est strictement croissante sur $]-\\infty;-1]$, strictement décroissante sur $[-1;1]$, strictement croissante sur $[1;+\\infty[$. Sur $]-\\infty;-1]$, $f$ est continue et va de $-\\infty$ à $3$ : $0$ est atteint une fois. Sur $[-1;1]$, de $3$ à $-1$ : une fois. Sur $[1;+\\infty[$, de $-1$ à $+\\infty$ : une fois. Total : $3$ solutions. Contrôle : $f(-2) = -1 < 0 < f(0) = 1$ et $f(1) = -1 < 0 < f(2) = 3$, les solutions sont proches de $-1{,}88$ ; $0{,}35$ ; $1{,}53$.",
+     "points": 1,
+     "methode": "Nombre de solutions de $f(x) = k$ : découpe selon le tableau de variations, applique le TVI (version strictement monotone) sur chaque morceau, puis additionne.",
+     "ref": "m2-scex-contderiv-flash-q19"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-20",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Image d'un segment par une parabole",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Image d'un intervalle et d'un segment",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = x^2 - 2x$ sur le segment $[-1;4]$. On a $f'(x) = 2(x - 1)$, $f(-1) = 3$, $f(1) = -1$ et $f(4) = 8$. Quelle est l'image $f([-1;4])$ du segment par $f$ ?",
+     "options": [
+      {
+       "label": "$[-1;8]$",
+       "correct": true,
+       "why": "Image d'un segment par une fonction continue : $[m;M]$ avec $m = -1$ (minimum en $1$) et $M = 8$ (en $4$)."
+      },
+      {
+       "label": "$[3;8]$",
+       "why": "Tu as pris $[f(-1);f(4)]$ en oubliant que $f$ descend jusqu'à $-1$ en $x = 1$ : $f$ n'est pas monotone."
+      },
+      {
+       "label": "$[0;8]$",
+       "why": "$0$ n'est pas le minimum : $f(1) = 1 - 2 = -1 < 0$."
+      },
+      {
+       "label": "$[-1;3]$",
+       "why": "Tu as oublié la valeur en $4$ : $f(4) = 16 - 8 = 8 > 3$."
+      }
+     ],
+     "hint": "L'image d'un segment par une fonction continue est le segment $[\\min;\\max]$ ; cherche-les dans le tableau de variations.",
+     "solution": "$f$ est continue sur $[-1;4]$, décroissante sur $[-1;1]$ et croissante sur $[1;4]$. Son minimum est $f(1) = -1$ ; son maximum est le plus grand de $f(-1) = 3$ et $f(4) = 8$, soit $8$. Donc $f([-1;4]) = [-1;8]$. Contrôle : sur $[-1;1]$, l'image est $[-1;3]$ ; sur $[1;4]$, l'image est $[-1;8]$ ; la réunion est bien $[-1;8]$.",
+     "points": 1,
+     "methode": "Image d'un segment par une fonction continue non monotone : découpe en morceaux monotones, calcule l'image de chacun, puis réunis.",
+     "ref": "m2-scex-contderiv-flash-q20"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-21",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Une borne atteinte, l'autre non",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Image d'un intervalle par une fonction monotone",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = \\dfrac{2x - 1}{x + 1}$ sur $I = [0;+\\infty[$. On a $f'(x) = \\dfrac{3}{(x+1)^2}$, $f(0) = -1$ et $\\lim\\limits_{x\\to+\\infty} f(x) = 2$. Quel est l'intervalle image $f(I)$ ?",
+     "options": [
+      {
+       "label": "$[-1;2[$",
+       "correct": true,
+       "why": "$f$ est continue et strictement croissante : $f(I) = \\left[f(0)\\,;\\lim\\limits_{+\\infty} f\\right[$, la borne $2$ n'est jamais atteinte."
+      },
+      {
+       "label": "$[-1;2]$",
+       "why": "$2$ est une limite, pas une valeur : $f(x) = 2 \\Leftrightarrow 2x - 1 = 2x + 2$, impossible."
+      },
+      {
+       "label": "$]-1;2[$",
+       "why": "$-1$ est atteint en $x = 0$, qui appartient à $I$ : le crochet doit être fermé en $-1$."
+      },
+      {
+       "label": "$[-1;+\\infty[$",
+       "why": "$f$ croît, mais vers une limite finie $2$ : elle ne dépasse jamais $2$."
+      }
+     ],
+     "hint": "Pour une fonction continue strictement croissante sur $[a;+\\infty[$, l'image est $\\left[f(a)\\,;\\lim\\limits_{+\\infty} f\\right[$.",
+     "solution": "$f'(x) = \\dfrac{3}{(x+1)^2} > 0$ : $f$ est continue et strictement croissante sur $[0;+\\infty[$. Donc $f(I) = \\left[f(0)\\,;\\lim\\limits_{x\\to+\\infty} f(x)\\right[ = [-1;2[$. La borne $-1$ est atteinte en $0$ ; la borne $2$ ne l'est jamais, car $f(x) = 2 - \\dfrac{3}{x+1} < 2$. Contrôle : $f(2) = 1$ et $f(99) = 1{,}97$, toujours dans $[-1;2[$.",
+     "points": 1,
+     "methode": "Fonction continue strictement monotone : l'image d'un intervalle s'obtient avec les valeurs (bornes fermées) ou les limites (bornes ouvertes) aux extrémités.",
+     "ref": "m2-scex-contderiv-flash-q21"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-22",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Expliciter une réciproque",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Fonction réciproque",
+     "difficulty": 3,
+     "statement": "La fonction $f(x) = x^2 + 4x$ est continue et strictement croissante sur $[-2;+\\infty[$, et réalise une bijection de $[-2;+\\infty[$ sur $[-4;+\\infty[$. Pour $x \\in [-4;+\\infty[$, l'expression de sa réciproque $f^{-1}(x)$ est :",
+     "options": [
+      {
+       "label": "$-2 + \\sqrt{x + 4}$",
+       "correct": true,
+       "why": "$y = (x+2)^2 - 4$ avec $x + 2 \\ge 0$ donne $x + 2 = \\sqrt{y + 4}$."
+      },
+      {
+       "label": "$-2 - \\sqrt{x + 4}$",
+       "why": "C'est l'autre racine de l'équation : elle est $\\le -2$, hors de l'intervalle de départ. Par exemple elle donnerait $f^{-1}(0) = -4$, or $-4 \\notin [-2;+\\infty[$."
+      },
+      {
+       "label": "$\\dfrac{1}{x^2 + 4x}$",
+       "why": "Tu confonds la réciproque $f^{-1}$ avec l'inverse $\\dfrac1f$ : ce sont deux notions différentes."
+      },
+      {
+       "label": "$2 + \\sqrt{x + 4}$",
+       "why": "Erreur de signe dans la forme canonique : $x^2 + 4x = (x + 2)^2 - 4$, donc on soustrait $2$ à la fin."
+      }
+     ],
+     "hint": "Écris $f$ sous forme canonique, puis résous $y = f(x)$ d'inconnue $x \\ge -2$.",
+     "solution": "Pour $x \\ge -2$ et $y \\ge -4$ : $y = x^2 + 4x \\Leftrightarrow y + 4 = (x+2)^2 \\Leftrightarrow x + 2 = \\sqrt{y + 4}$ (car $x + 2 \\ge 0$) $\\Leftrightarrow x = -2 + \\sqrt{y + 4}$. Donc $f^{-1}(x) = -2 + \\sqrt{x + 4}$ pour $x \\ge -4$. Contrôle : $f(0) = 0$ et $f^{-1}(0) = -2 + 2 = 0$ ; $f(1) = 5$ et $f^{-1}(5) = -2 + 3 = 1$ ✓.",
+     "points": 1,
+     "methode": "Expliciter $f^{-1}$ : résoudre $y = f(x)$ en $x$, en gardant la solution qui appartient à l'intervalle de départ.",
+     "ref": "m2-scex-contderiv-flash-q22"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-23",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Lire une réciproque dans un tableau",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Fonction réciproque",
+     "difficulty": 1,
+     "statement": "Une fonction $f$ est continue et strictement croissante sur $[1;5]$, avec $f(1) = -3$, $f(2) = 0$ et $f(5) = 7$. Elle admet donc une fonction réciproque $f^{-1}$. Que vaut $f^{-1}(0)$, et sur quel intervalle $f^{-1}$ est-elle définie ?",
+     "options": [
+      {
+       "label": "$f^{-1}(0) = 2$, sur $[-3;7]$",
+       "correct": true,
+       "why": "$f(2) = 0$ donne $f^{-1}(0) = 2$ ; $f^{-1}$ est définie sur l'image $f([1;5]) = [-3;7]$."
+      },
+      {
+       "label": "$f^{-1}(0) = 2$, sur $[1;5]$",
+       "why": "$[1;5]$ est l'ensemble de départ de $f$ ; $f^{-1}$ part de l'ensemble image, $[-3;7]$."
+      },
+      {
+       "label": "$f^{-1}(0) = -3$, sur $[-3;7]$",
+       "why": "$-3$ est $f(1)$ ; $f^{-1}(0)$ est le nombre dont l'image par $f$ vaut $0$, c'est-à-dire $2$."
+      },
+      {
+       "label": "$f^{-1}(0) = 7$, sur $[1;5]$",
+       "why": "Tu as lu la mauvaise ligne du tableau et inversé les intervalles ; $f(5) = 7$ ne concerne pas l'antécédent de $0$."
+      }
+     ],
+     "hint": "$f^{-1}(y) = x \\Leftrightarrow f(x) = y$ ; et $f^{-1}$ est définie sur $f(I)$.",
+     "solution": "$f$ est continue et strictement croissante sur $[1;5]$ : c'est une bijection de $[1;5]$ sur $f([1;5]) = [f(1);f(5)] = [-3;7]$. Sa réciproque $f^{-1}$ est définie sur $[-3;7]$, à valeurs dans $[1;5]$, et elle est aussi strictement croissante. Comme $f(2) = 0$, on a $f^{-1}(0) = 2$. Contrôle : $f^{-1}(-3) = 1$ et $f^{-1}(7) = 5$, et $2 \\in [1;5]$ ✓.",
+     "points": 1,
+     "methode": "Pour $f^{-1}$ : les rôles s'échangent, départ ↔ arrivée et antécédent ↔ image.",
+     "ref": "m2-scex-contderiv-flash-q23"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-24",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Le petit angle d'un capteur",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Conséquences des limites trigonométriques",
+     "difficulty": 2,
+     "statement": "Un capteur mesure un petit angle $x$ (en radians) et son électronique calcule le rapport $r(x) = \\dfrac{\\sin(3x)}{2x}$. Quand l'angle devient très petit, ce rapport se rapproche d'une valeur. Que vaut $\\lim\\limits_{x\\to0} r(x)$ ?",
+     "options": [
+      {
+       "label": "$\\dfrac32$",
+       "correct": true,
+       "why": "$\\dfrac{\\sin(3x)}{2x} = \\dfrac32\\times\\dfrac{\\sin(3x)}{3x}$ et $\\dfrac{\\sin X}{X} \\to 1$ quand $X = 3x \\to 0$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as appliqué $\\dfrac{\\sin X}{X} \\to 1$ sans vérifier que l'argument du sinus est le même qu'au dénominateur ($3x$ contre $2x$)."
+      },
+      {
+       "label": "$\\dfrac23$",
+       "why": "Tu as inversé le rapport : le $3$ vient du numérateur, il reste en haut."
+      },
+      {
+       "label": "$0$",
+       "why": "Le numérateur tend vers $0$, mais le dénominateur aussi : forme $\\frac00$ qu'on lève avec $\\dfrac{\\sin X}{X}$."
+      }
+     ],
+     "hint": "Fais apparaître $\\dfrac{\\sin(3x)}{3x}$.",
+     "solution": "Pour $x \\ne 0$ : $r(x) = \\dfrac{\\sin(3x)}{2x} = \\dfrac{3}{2}\\times\\dfrac{\\sin(3x)}{3x}$. Quand $x \\to 0$, $X = 3x \\to 0$ et $\\dfrac{\\sin X}{X} \\to 1$. Donc $\\lim\\limits_{x\\to0} r(x) = \\dfrac32$. Contrôle : $r(0{,}01) = \\dfrac{\\sin 0{,}03}{0{,}02} \\approx \\dfrac{0{,}029996}{0{,}02} \\approx 1{,}4998$.",
+     "points": 1,
+     "methode": "$\\lim\\limits_{x\\to0}\\dfrac{\\sin(ax)}{bx} = \\dfrac{a}{b}$ : fais toujours apparaître le même argument en haut et en bas.",
+     "ref": "m2-scex-contderiv-flash-q24"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-25",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "La loi de Kepler",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Fonction racine n-ième et puissances rationnelles",
+     "difficulty": 2,
+     "statement": "D'après la troisième loi de Kepler, la période $T$ (en années) d'une planète du système solaire et son demi-grand axe $a$ (en unités astronomiques) vérifient $T^2 = a^3$. Une planète met $8$ ans pour faire le tour du Soleil. Son demi-grand axe vaut :",
+     "options": [
+      {
+       "label": "$4$ UA",
+       "correct": true,
+       "why": "$a^3 = 64$ donc $a = \\sqrt[3]{64} = 64^{1/3} = 4$, soit $a = 8^{2/3}$."
+      },
+      {
+       "label": "$2$ UA",
+       "why": "Tu as calculé $\\sqrt[3]{8}$ en oubliant d'élever $T$ au carré : il faut $a^3 = T^2 = 64$."
+      },
+      {
+       "label": "$16\\sqrt2$ UA",
+       "why": "Tu as inversé les exposants : c'est $8^{3/2}$, solution de $a^2 = T^3$, pas de $a^3 = T^2$."
+      },
+      {
+       "label": "$\\dfrac{64}{3}$ UA",
+       "why": "Tu as divisé par $3$ au lieu de prendre la racine cubique : $\\left(\\frac{64}{3}\\right)^3 \\ne 64$."
+      }
+     ],
+     "hint": "Calcule $T^2$, puis prends la racine cubique.",
+     "solution": "$T = 8$ donc $a^3 = T^2 = 64$. La fonction $x \\mapsto x^3$ est une bijection de $[0;+\\infty[$ sur $[0;+\\infty[$, donc $a = \\sqrt[3]{64} = 4$ UA. Écriture en puissance rationnelle : $a = T^{2/3} = 8^{2/3} = \\left(\\sqrt[3]8\\right)^2 = 2^2 = 4$. Contrôle : $4^3 = 64 = 8^2$ ✓ (pour la Terre, $T = 1$ donne $a = 1$, cohérent).",
+     "points": 1,
+     "methode": "$\\sqrt[n]{x} = x^{1/n}$ et $x^{p/q} = \\left(\\sqrt[q]{x}\\right)^p$ pour $x > 0$ : isole la puissance, puis prends la racine $n$-ième.",
+     "ref": "m2-scex-contderiv-flash-q25"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-26",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Équation d'une tangente",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Nombre dérivé et tangente",
+     "difficulty": 1,
+     "statement": "Soit $f(x) = x^2 - 3x + 1$ et $(\\mathcal{C})$ sa courbe. On veut tracer la tangente $(T)$ à $(\\mathcal{C})$ au point d'abscisse $2$. On a $f(2) = -1$ et $f'(2) = 1$. Une équation de $(T)$ est :",
+     "options": [
+      {
+       "label": "$y = x - 3$",
+       "correct": true,
+       "why": "$y = f'(2)(x - 2) + f(2) = (x - 2) - 1$."
+      },
+      {
+       "label": "$y = x - 1$",
+       "why": "Tu as écrit $y = f'(2)\\,x + f(2)$ en oubliant de décaler : la formule contient $(x - 2)$."
+      },
+      {
+       "label": "$y = x + 1$",
+       "why": "Erreur de signe : tu as utilisé $(x + 2)$ au lieu de $(x - 2)$."
+      },
+      {
+       "label": "$y = -x + 3$",
+       "why": "Tu as inversé $f(2)$ et $f'(2)$ : la pente est $f'(2) = 1$, pas $-1$."
+      }
+     ],
+     "hint": "Formule : $y = f'(a)(x - a) + f(a)$.",
+     "solution": "Avec $a = 2$ : $f(2) = 4 - 6 + 1 = -1$ et $f'(x) = 2x - 3$ donc $f'(2) = 1$. $(T) : y = 1\\times(x - 2) + (-1)$, soit $y = x - 3$. Contrôle : en $x = 2$, la tangente donne $y = -1 = f(2)$ ✓, et sa pente $1$ est bien $f'(2)$.",
+     "points": 1,
+     "methode": "Tangente en $a$ : $y = f'(a)(x - a) + f(a)$ ; vérifie toujours que $x = a$ redonne $f(a)$.",
+     "ref": "m2-scex-contderiv-flash-q26"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-27",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Vitesse d'une bille en chute libre",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Nombre dérivé et tangente",
+     "difficulty": 2,
+     "statement": "Une bille lâchée sans vitesse initiale a parcouru $d(t) = 4{,}9\\,t^2$ mètres après $t$ secondes. Sa vitesse instantanée à $t = 3$ s est le nombre dérivé $d'(3) = \\lim\\limits_{h\\to0}\\dfrac{d(3+h) - d(3)}{h}$. Elle vaut :",
+     "options": [
+      {
+       "label": "$29{,}4\\ \\mathrm{m\\,s^{-1}}$",
+       "correct": true,
+       "why": "$\\dfrac{d(3+h) - d(3)}{h} = 4{,}9(6 + h) \\to 29{,}4$."
+      },
+      {
+       "label": "$44{,}1\\ \\mathrm{m\\,s^{-1}}$",
+       "why": "C'est $d(3) = 4{,}9\\times9 = 44{,}1$ : une distance en mètres, pas une vitesse."
+      },
+      {
+       "label": "$14{,}7\\ \\mathrm{m\\,s^{-1}}$",
+       "why": "C'est la vitesse moyenne entre $0$ et $3$ s, $\\dfrac{44{,}1}{3}$ ; la vitesse instantanée est plus grande car la bille accélère."
+      },
+      {
+       "label": "$9{,}8\\ \\mathrm{m\\,s^{-1}}$",
+       "why": "Tu as dérivé deux fois : $9{,}8$ est l'accélération $d''(t) = g$, pas la vitesse."
+      }
+     ],
+     "hint": "Développe $d(3 + h) - d(3)$, divise par $h$, puis fais tendre $h$ vers $0$.",
+     "solution": "$d(3+h) = 4{,}9(9 + 6h + h^2)$, donc $d(3+h) - d(3) = 4{,}9(6h + h^2)$ et $\\dfrac{d(3+h) - d(3)}{h} = 4{,}9(6 + h)$ pour $h \\ne 0$. Quand $h \\to 0$, ce taux tend vers $4{,}9\\times6 = 29{,}4$. Donc $d'(3) = 29{,}4\\ \\mathrm{m\\,s^{-1}}$. Contrôle : avec la formule $d'(t) = 9{,}8\\,t$, on retrouve $d'(3) = 29{,}4$ ; et c'est bien le double de la vitesse moyenne $14{,}7$ (mouvement uniformément accéléré).",
+     "points": 1,
+     "methode": "Nombre dérivé = limite du taux d'accroissement $\\dfrac{f(a+h) - f(a)}{h}$ ; en physique, c'est la vitesse instantanée.",
+     "ref": "m2-scex-contderiv-flash-q27"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-28",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Un point anguleux",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Dérivabilité à gauche et à droite",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = |x^2 - 4|$. Au voisinage de $2$, on a $f(x) = x^2 - 4$ pour $x \\ge 2$ et $f(x) = 4 - x^2$ pour $x \\in [0;2]$. Les nombres dérivés à gauche et à droite de $f$ en $2$, $f'_g(2)$ et $f'_d(2)$, valent respectivement :",
+     "options": [
+      {
+       "label": "$-4$ et $4$",
+       "correct": true,
+       "why": "À droite : $(x^2 - 4)' = 2x \\to 4$ ; à gauche : $(4 - x^2)' = -2x \\to -4$."
+      },
+      {
+       "label": "$4$ et $4$",
+       "why": "Tu as dérivé $x^2 - 4$ des deux côtés : à gauche de $2$, la valeur absolue change le signe de l'expression."
+      },
+      {
+       "label": "$-2$ et $2$",
+       "why": "Tu as dérivé seulement le facteur $|x - 2|$ : $|x^2 - 4| = |x - 2|(x + 2)$ et le facteur $x + 2$ vaut $4$ en $2$."
+      },
+      {
+       "label": "$0$ et $0$",
+       "why": "$f(2) = 0$ n'implique pas une tangente horizontale : le taux $\\dfrac{f(x) - f(2)}{x - 2}$ tend vers $\\pm4$."
+      }
+     ],
+     "hint": "Calcule $\\lim\\limits_{x\\to2^-}\\dfrac{f(x) - f(2)}{x - 2}$ et $\\lim\\limits_{x\\to2^+}\\dfrac{f(x) - f(2)}{x - 2}$, avec $f(2) = 0$.",
+     "solution": "Pour $x > 2$ : $\\dfrac{f(x) - f(2)}{x - 2} = \\dfrac{(x-2)(x+2)}{x - 2} = x + 2 \\to 4$, donc $f'_d(2) = 4$. Pour $x \\in [0;2[$ : $\\dfrac{4 - x^2}{x - 2} = -(x + 2) \\to -4$, donc $f'_g(2) = -4$. Les deux nombres sont différents : $f$ n'est pas dérivable en $2$ ; la courbe a un point anguleux en $(2;0)$ avec deux demi-tangentes de pentes $-4$ et $4$. Contrôle : $\\dfrac{f(2{,}01)}{0{,}01} = 4{,}01$ et $\\dfrac{f(1{,}99)}{-0{,}01} = -3{,}99$.",
+     "points": 1,
+     "methode": "Dérivable en $a$ ⇔ dérivable à gauche et à droite avec $f'_g(a) = f'_d(a)$ ; sinon, point anguleux.",
+     "ref": "m2-scex-contderiv-flash-q28"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-29",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dériver un quotient",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Dérivées usuelles et opérations",
+     "difficulty": 1,
+     "statement": "Soit $f(x) = \\dfrac{2x + 1}{x - 3}$ définie sur $\\mathbb{R}\\setminus\\{3\\}$. Avec $u = 2x + 1$ et $v = x - 3$, on applique la formule $\\left(\\dfrac uv\\right)' = \\dfrac{u'v - uv'}{v^2}$. Pour tout $x \\ne 3$, $f'(x)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{-7}{(x - 3)^2}$",
+       "correct": true,
+       "why": "$u'v - uv' = 2(x - 3) - (2x + 1) = -7$."
+      },
+      {
+       "label": "$\\dfrac{7}{(x - 3)^2}$",
+       "why": "Tu as calculé $uv' - u'v$ : l'ordre est $u'v - uv'$. Le signe compte, il donne le sens de variation."
+      },
+      {
+       "label": "$2$",
+       "why": "Tu as fait $\\dfrac{u'}{v'}$ : un quotient ne se dérive pas « en haut et en bas »."
+      },
+      {
+       "label": "$\\dfrac{-5}{(x - 3)^2}$",
+       "why": "Tu n'as pas distribué le signe moins : $-(2x + 1) = -2x - 1$, donc $2x - 6 - 2x - 1 = -7$."
+      }
+     ],
+     "hint": "Calcule séparément $u' = 2$, $v' = 1$, puis $u'v - uv'$ en faisant attention au signe moins.",
+     "solution": "$u'(x) = 2$, $v'(x) = 1$. $f'(x) = \\dfrac{2(x - 3) - (2x + 1)\\times1}{(x - 3)^2} = \\dfrac{2x - 6 - 2x - 1}{(x-3)^2} = \\dfrac{-7}{(x - 3)^2}$. $f'(x) < 0$ : $f$ est décroissante sur $]-\\infty;3[$ et sur $]3;+\\infty[$. Contrôle : forme $\\dfrac{ax+b}{cx+d}$, $f' = \\dfrac{ad - bc}{(cx+d)^2} = \\dfrac{2\\times(-3) - 1\\times1}{(x-3)^2} = \\dfrac{-7}{(x-3)^2}$ ✓.",
+     "points": 1,
+     "methode": "$\\left(\\dfrac uv\\right)' = \\dfrac{u'v - uv'}{v^2}$ ; pour une homographique, numérateur $= ad - bc$.",
+     "ref": "m2-scex-contderiv-flash-q29"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-30",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dériver une racine composée",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Dérivée d'une composée et d'une réciproque",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = \\sqrt{x^2 + 9}$ définie sur $\\mathbb{R}$. On utilise la formule $\\left(\\sqrt{u}\\right)' = \\dfrac{u'}{2\\sqrt u}$ (valable là où $u > 0$). Que vaut le nombre dérivé $f'(4)$ ?",
+     "options": [
+      {
+       "label": "$\\dfrac45$",
+       "correct": true,
+       "why": "$f'(x) = \\dfrac{2x}{2\\sqrt{x^2+9}} = \\dfrac{x}{\\sqrt{x^2+9}}$, donc $f'(4) = \\dfrac{4}{5}$."
+      },
+      {
+       "label": "$\\dfrac{1}{10}$",
+       "why": "Tu as oublié de multiplier par $u'(4) = 8$ : tu as calculé $\\dfrac{1}{2\\sqrt{25}}$."
+      },
+      {
+       "label": "$\\dfrac85$",
+       "why": "Tu as oublié le $2$ du dénominateur : $\\dfrac{u'}{2\\sqrt u} = \\dfrac{8}{10}$, pas $\\dfrac85$."
+      },
+      {
+       "label": "$5$",
+       "why": "C'est $f(4) = \\sqrt{25}$, la valeur de la fonction, pas son nombre dérivé."
+      }
+     ],
+     "hint": "Identifie $u(x) = x^2 + 9$ et $u'(x) = 2x$, puis applique la formule.",
+     "solution": "$u(x) = x^2 + 9 > 0$ et $u'(x) = 2x$. Donc $f'(x) = \\dfrac{2x}{2\\sqrt{x^2 + 9}} = \\dfrac{x}{\\sqrt{x^2 + 9}}$, et $f'(4) = \\dfrac{4}{\\sqrt{25}} = \\dfrac45 = 0{,}8$. Contrôle : $\\dfrac{f(4{,}01) - f(4)}{0{,}01} = \\dfrac{\\sqrt{25{,}0801} - 5}{0{,}01} \\approx 0{,}80$ ✓.",
+     "points": 1,
+     "methode": "Composée : $(g\\circ u)' = u'\\times g'\\circ u$ ; ici $\\left(\\sqrt u\\right)' = \\dfrac{u'}{2\\sqrt u}$ : n'oublie jamais $u'$.",
+     "ref": "m2-scex-contderiv-flash-q30"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-31",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dérivable malgré la racine",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Dérivabilité et nombre dérivé",
+     "difficulty": 3,
+     "statement": "Soit $f(x) = x\\sqrt{x}$ sur $[0;+\\infty[$. La fonction racine carrée n'est pas dérivable en $0$. On étudie le taux d'accroissement $\\dfrac{f(h) - f(0)}{h}$ pour $h > 0$. Quelle conclusion est correcte ?",
+     "options": [
+      {
+       "label": "$f$ est dérivable à droite en $0$ et $f'_d(0) = 0$",
+       "correct": true,
+       "why": "$\\dfrac{f(h) - f(0)}{h} = \\dfrac{h\\sqrt h}{h} = \\sqrt h \\to 0$."
+      },
+      {
+       "label": "$f$ n'est pas dérivable en $0$, car $\\sqrt{x}$ ne l'est pas",
+       "why": "Le produit de $x$ par $\\sqrt x$ peut être dérivable même si $\\sqrt x$ ne l'est pas : seul le taux d'accroissement décide."
+      },
+      {
+       "label": "$f$ est dérivable à droite en $0$ et $f'_d(0) = \\dfrac32$",
+       "why": "Tu as pris le coefficient de $f'(x) = \\dfrac32\\sqrt x$ sans l'évaluer en $0$ : $\\dfrac32\\sqrt0 = 0$."
+      },
+      {
+       "label": "$\\lim\\limits_{h\\to0^+}\\dfrac{f(h) - f(0)}{h} = +\\infty$ : demi-tangente verticale",
+       "why": "C'est le cas de $\\sqrt x$, dont le taux vaut $\\dfrac{1}{\\sqrt h}$. Ici le facteur $x$ « écrase » la racine : le taux vaut $\\sqrt h$."
+      }
+     ],
+     "hint": "Simplifie $\\dfrac{h\\sqrt h}{h}$, puis fais tendre $h$ vers $0^+$.",
+     "solution": "$f(0) = 0$. Pour $h > 0$ : $\\dfrac{f(h) - f(0)}{h} = \\dfrac{h\\sqrt h}{h} = \\sqrt h$, et $\\lim\\limits_{h\\to0^+}\\sqrt h = 0$. Cette limite est finie : $f$ est dérivable à droite en $0$ et $f'_d(0) = 0$. La courbe admet en $O$ une demi-tangente horizontale. Contrôle : pour $x > 0$, $f(x) = x^{3/2}$ donc $f'(x) = \\dfrac32\\sqrt x$, qui tend bien vers $0$ en $0^+$.",
+     "points": 1,
+     "methode": "Pour étudier la dérivabilité en un point « à problème », reviens toujours à la définition : limite du taux d'accroissement.",
+     "ref": "m2-scex-contderiv-flash-q31"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-32",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Où la fonction descend-elle ?",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Sens de variation",
+     "difficulty": 1,
+     "statement": "Soit $f(x) = x^3 - 12x + 5$ définie sur $\\mathbb{R}$. On a $f'(x) = 3x^2 - 12 = 3(x - 2)(x + 2)$. Sur quel intervalle la fonction $f$ est-elle décroissante ?",
+     "options": [
+      {
+       "label": "$[-2;2]$",
+       "correct": true,
+       "why": "$f'(x) \\le 0$ entre les racines $-2$ et $2$ (trinôme de coefficient $3 > 0$)."
+      },
+      {
+       "label": "$]-\\infty;-2]\\cup[2;+\\infty[$",
+       "why": "C'est là que $f' \\ge 0$ : tu as confondu « signe du coefficient » et « signe entre les racines »."
+      },
+      {
+       "label": "$\\left[-2\\sqrt3\\,;2\\sqrt3\\right]$",
+       "why": "Tu as résolu $3x^2 = 12$ en oubliant de diviser par $3$ : $x^2 = 4$, pas $x^2 = 12$."
+      },
+      {
+       "label": "$[0;2]$",
+       "why": "Tu n'as regardé que $x \\ge 0$ ; $f'(-1) = 3 - 12 = -9 < 0$, donc $f$ décroît aussi sur $[-2;0]$."
+      }
+     ],
+     "hint": "Un trinôme $ax^2 + bx + c$ a le signe de $a$ à l'extérieur des racines, le signe contraire entre les racines.",
+     "solution": "$f'(x) = 3(x - 2)(x + 2)$ s'annule en $-2$ et $2$. Avec $a = 3 > 0$, $f'(x) < 0$ sur $]-2;2[$ et $f'(x) > 0$ ailleurs. Donc $f$ est croissante sur $]-\\infty;-2]$, décroissante sur $[-2;2]$, croissante sur $[2;+\\infty[$. Contrôle : $f(-2) = -8 + 24 + 5 = 21$ et $f(2) = 8 - 24 + 5 = -11$ : on descend bien de $21$ à $-11$ entre $-2$ et $2$.",
+     "points": 1,
+     "methode": "Sens de variation : signe de $f'$, avec un tableau de signes factorisé.",
+     "ref": "m2-scex-contderiv-flash-q32"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-33",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "L'enclos le plus grand",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Extremums",
+     "difficulty": 3,
+     "statement": "Un éleveur dispose de $40$ m de grillage pour clôturer un enclos rectangulaire adossé à un mur (le mur ferme un côté). Si $x$ est la largeur (en m) des deux côtés perpendiculaires au mur, l'aire vaut $A(x) = x(40 - 2x)$ pour $0 < x < 20$. Quelle est l'aire maximale ?",
+     "options": [
+      {
+       "label": "$200\\ \\mathrm{m^2}$",
+       "correct": true,
+       "why": "$A'(x) = 40 - 4x$ s'annule en $x = 10$ en passant du positif au négatif : $A(10) = 10\\times20 = 200$."
+      },
+      {
+       "label": "$400\\ \\mathrm{m^2}$",
+       "why": "Tu as étudié $x(40 - x)$, en oubliant qu'il y a deux côtés de largeur $x$ : le côté parallèle au mur mesure $40 - 2x$."
+      },
+      {
+       "label": "$100\\ \\mathrm{m^2}$",
+       "why": "Tu as supposé que le carré est optimal ($4$ côtés de $10$ m) ; mais le mur remplace un côté, et $A(10) = 200 > 100$."
+      },
+      {
+       "label": "$\\dfrac{1\\,600}{9} \\approx 177{,}8\\ \\mathrm{m^2}$",
+       "why": "C'est un carré de côté $\\frac{40}{3}$ (trois côtés égaux) : $A\\left(\\frac{40}{3}\\right) = \\frac{40}{3}\\times\\frac{40}{3} < 200$, ce n'est pas le maximum."
+      }
+     ],
+     "hint": "Dérive $A$, étudie son signe sur $]0;20[$ et calcule la valeur au point où $A'$ change de signe.",
+     "solution": "$A(x) = 40x - 2x^2$, donc $A'(x) = 40 - 4x$. $A'(x) > 0$ pour $x < 10$ et $A'(x) < 0$ pour $x > 10$ : $A$ est croissante sur $]0;10]$ puis décroissante sur $[10;20[$. Elle admet un maximum en $x = 10$ : $A(10) = 10\\times(40 - 20) = 200\\ \\mathrm{m^2}$. L'enclos optimal mesure $10$ m sur $20$ m. Contrôle : $A(9) = 198$ et $A(11) = 198$, tous deux inférieurs à $200$ ✓.",
+     "points": 1,
+     "methode": "Problème d'optimisation : mets la grandeur en fonction d'une variable, dérive, cherche le changement de signe de la dérivée.",
+     "ref": "m2-scex-contderiv-flash-q33"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-34",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Inflexion d'une cubique",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Convexité et points d'inflexion",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = x^3 - 6x^2 + 9x + 1$ définie sur $\\mathbb{R}$. On a $f'(x) = 3x^2 - 12x + 9$ et $f''(x) = 6x - 12$. La courbe de $f$ admet un point d'inflexion. Quelles sont ses coordonnées ?",
+     "options": [
+      {
+       "label": "$(2\\,;3)$",
+       "correct": true,
+       "why": "$f''$ s'annule en $2$ en changeant de signe, et $f(2) = 8 - 24 + 18 + 1 = 3$."
+      },
+      {
+       "label": "$(1\\,;5)$",
+       "why": "En $x = 1$, c'est $f'$ qui s'annule : c'est un maximum local, pas une inflexion."
+      },
+      {
+       "label": "$(2\\,;0)$",
+       "why": "L'abscisse est bonne, mais tu as pris $f''(2) = 0$ comme ordonnée ; l'ordonnée est $f(2)$."
+      },
+      {
+       "label": "$(3\\,;1)$",
+       "why": "En $x = 3$, $f'$ s'annule : c'est un minimum local ; la concavité ne change pas en $3$ ($f''(3) = 6 > 0$)."
+      }
+     ],
+     "hint": "Cherche où $f''$ s'annule en changeant de signe, puis calcule l'image par $f$.",
+     "solution": "$f''(x) = 6(x - 2)$ : négative sur $]-\\infty;2[$ (courbe concave), positive sur $]2;+\\infty[$ (courbe convexe). $f''$ s'annule en $2$ en changeant de signe, donc $I(2\\,;f(2))$ est un point d'inflexion, avec $f(2) = 8 - 24 + 18 + 1 = 3$. Contrôle : pour une cubique, l'inflexion est au milieu des extremums $x = 1$ et $x = 3$ : $\\frac{1+3}{2} = 2$ ✓, et $\\frac{f(1) + f(3)}{2} = \\frac{5 + 1}{2} = 3$ ✓.",
+     "points": 1,
+     "methode": "Point d'inflexion : $f''$ s'annule ET change de signe ; ordonnée $= f(a)$.",
+     "ref": "m2-scex-contderiv-flash-q34"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-35",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Convexité d'une fonction exponentielle",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Convexité et points d'inflexion",
+     "difficulty": 3,
+     "statement": "Soit $f(x) = x\\,\\mathrm{e}^{-x}$ définie sur $\\mathbb{R}$. On a $f'(x) = (1 - x)\\,\\mathrm{e}^{-x}$. Sur quel intervalle la courbe de $f$ est-elle convexe ?",
+     "options": [
+      {
+       "label": "$[2;+\\infty[$",
+       "correct": true,
+       "why": "$f''(x) = (x - 2)\\,\\mathrm{e}^{-x}$ est positive pour $x \\ge 2$."
+      },
+      {
+       "label": "$]-\\infty;2]$",
+       "why": "Tu as inversé : sur $]-\\infty;2]$, $f''(x) = (x - 2)\\mathrm{e}^{-x} \\le 0$, la courbe est concave."
+      },
+      {
+       "label": "$[1;+\\infty[$",
+       "why": "Tu as utilisé le signe de $f'$ (qui change en $1$) : la convexité se lit sur $f''$."
+      },
+      {
+       "label": "$]0;+\\infty[$",
+       "why": "Tu as confondu « $f(x) > 0$ » et « courbe convexe » : $f''(1) = -\\mathrm{e}^{-1} < 0$, la courbe est concave en $1$."
+      }
+     ],
+     "hint": "Dérive $f'(x) = (1 - x)\\mathrm{e}^{-x}$ comme un produit, puis étudie le signe de $f''$.",
+     "solution": "$f''(x) = (-1)\\,\\mathrm{e}^{-x} + (1 - x)(-\\mathrm{e}^{-x}) = (-1 - 1 + x)\\,\\mathrm{e}^{-x} = (x - 2)\\,\\mathrm{e}^{-x}$. Comme $\\mathrm{e}^{-x} > 0$, $f''(x)$ a le signe de $x - 2$ : la courbe est concave sur $]-\\infty;2]$ et convexe sur $[2;+\\infty[$, avec un point d'inflexion $I(2\\,;2\\mathrm{e}^{-2})$. Contrôle : $f''(3) = \\mathrm{e}^{-3} > 0$ et $f''(0) = -2 < 0$ ✓.",
+     "points": 1,
+     "methode": "Convexe ⇔ $f'' \\ge 0$ (courbe au-dessus de ses tangentes) ; concave ⇔ $f'' \\le 0$.",
+     "ref": "m2-scex-contderiv-flash-q35"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-36",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Une asymptote oblique",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Branches infinies et asymptotes",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = \\dfrac{2x^2 + 3x - 1}{x + 1}$ définie sur $]-1;+\\infty[$. Une division euclidienne donne, pour tout $x > -1$, $f(x) = 2x + 1 - \\dfrac{2}{x + 1}$. En $+\\infty$, la courbe de $f$ admet pour asymptote la droite d'équation :",
+     "options": [
+      {
+       "label": "$y = 2x + 1$",
+       "correct": true,
+       "why": "$f(x) - (2x + 1) = -\\dfrac{2}{x+1} \\to 0$ en $+\\infty$."
+      },
+      {
+       "label": "$y = 2x$",
+       "why": "Tu as oublié l'ordonnée à l'origine : $f(x) - 2x = 1 - \\dfrac{2}{x+1} \\to 1$, pas $0$."
+      },
+      {
+       "label": "$y = 2x + 3$",
+       "why": "Tu as divisé terme à terme $\\dfrac{2x^2 + 3x}{x}$ en ignorant le $+1$ du dénominateur ; la division euclidienne donne $2x + 1$."
+      },
+      {
+       "label": "$y = 2$",
+       "why": "$f(x) \\to +\\infty$ en $+\\infty$ : il n'y a pas d'asymptote horizontale. $2$ est le coefficient directeur de l'asymptote."
+      }
+     ],
+     "hint": "Une droite $y = ax + b$ est asymptote en $+\\infty$ si $\\lim\\limits_{x\\to+\\infty}[f(x) - (ax + b)] = 0$.",
+     "solution": "Pour $x > -1$ : $f(x) - (2x + 1) = -\\dfrac{2}{x + 1}$, et $\\lim\\limits_{x\\to+\\infty}\\left(-\\dfrac{2}{x+1}\\right) = 0$. Donc la droite $(\\Delta) : y = 2x + 1$ est asymptote oblique à la courbe en $+\\infty$. De plus $f(x) - (2x + 1) < 0$ : la courbe est en dessous de $(\\Delta)$. Contrôle : $(2x + 1)(x + 1) - 2 = 2x^2 + 3x + 1 - 2 = 2x^2 + 3x - 1$ ✓ ; et $f(99) = 199 - 0{,}02 = 198{,}98$.",
+     "points": 1,
+     "methode": "Asymptote oblique : écris $f(x) = ax + b + \\varepsilon(x)$ avec $\\varepsilon(x) \\to 0$ ; le signe de $\\varepsilon$ donne la position.",
+     "ref": "m2-scex-contderiv-flash-q36"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-37",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Les deux asymptotes d'une homographique",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Branches infinies et asymptotes",
+     "difficulty": 1,
+     "statement": "Soit $f(x) = \\dfrac{3x - 2}{x + 4}$ définie sur $\\mathbb{R}\\setminus\\{-4\\}$, de courbe $(\\mathcal{C})$. On a $\\lim\\limits_{x\\to-4^+} f(x) = -\\infty$ et $\\lim\\limits_{x\\to\\pm\\infty} f(x) = 3$. Quelles sont les asymptotes de $(\\mathcal{C})$ ?",
+     "options": [
+      {
+       "label": "$x = -4$ et $y = 3$",
+       "correct": true,
+       "why": "Limite infinie en $-4$ : asymptote verticale ; limite finie $3$ en $\\pm\\infty$ : asymptote horizontale."
+      },
+      {
+       "label": "$x = 4$ et $y = 3$",
+       "why": "Erreur de signe : le dénominateur s'annule pour $x + 4 = 0$, soit $x = -4$."
+      },
+      {
+       "label": "$x = -4$ et $y = -\\dfrac12$",
+       "why": "$-\\dfrac24$ est le quotient des termes constants, soit $f(0)$ ; en $\\pm\\infty$ on prend le quotient des termes en $x$ : $\\frac{3}{1}$."
+      },
+      {
+       "label": "$y = -4$ et $x = 3$",
+       "why": "Tu as inversé : une limite infinie en un point $a$ donne une droite verticale $x = a$."
+      }
+     ],
+     "hint": "Limite infinie en $a$ ⇒ asymptote verticale $x = a$ ; limite finie $b$ en $\\infty$ ⇒ asymptote horizontale $y = b$.",
+     "solution": "$\\lim\\limits_{x\\to-4} |f(x)| = +\\infty$ (forme $\\frac{-14}{0}$) : la droite d'équation $x = -4$ est asymptote verticale. En $\\pm\\infty$, $f(x) \\to \\dfrac{3x}{x} = 3$ : la droite $y = 3$ est asymptote horizontale. Contrôle : $f(1\\,000) = \\dfrac{2\\,998}{1\\,004} \\approx 2{,}986$, proche de $3$ ; $f(-3{,}99) = \\dfrac{-13{,}97}{0{,}01} = -1\\,397$.",
+     "points": 1,
+     "methode": "Homographique $\\dfrac{ax + b}{cx + d}$ : asymptotes $x = -\\dfrac dc$ et $y = \\dfrac ac$.",
+     "ref": "m2-scex-contderiv-flash-q37"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-38",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "La pente de la réciproque",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Dérivée d'une fonction réciproque",
+     "difficulty": 3,
+     "statement": "La fonction $f(x) = x^3 + x + 1$ est continue et strictement croissante sur $\\mathbb{R}$ ; c'est une bijection de $\\mathbb{R}$ sur $\\mathbb{R}$, de réciproque $f^{-1}$. On remarque que $f(1) = 3$. Que vaut $\\left(f^{-1}\\right)'(3)$ ?",
+     "options": [
+      {
+       "label": "$\\dfrac14$",
+       "correct": true,
+       "why": "$\\left(f^{-1}\\right)'(3) = \\dfrac{1}{f'\\left(f^{-1}(3)\\right)} = \\dfrac{1}{f'(1)} = \\dfrac{1}{3 + 1}$."
+      },
+      {
+       "label": "$\\dfrac{1}{28}$",
+       "why": "Tu as calculé $\\dfrac{1}{f'(3)}$ : il faut évaluer $f'$ en $f^{-1}(3) = 1$, pas en $3$."
+      },
+      {
+       "label": "$4$",
+       "why": "C'est $f'(1)$ ; la pente de la réciproque est l'inverse de la pente de $f$ (symétrie par rapport à $y = x$)."
+      },
+      {
+       "label": "$\\dfrac13$",
+       "why": "Tu as pris l'inverse de $f(1) = 3$ au lieu de l'inverse de $f'(1) = 4$."
+      }
+     ],
+     "hint": "Formule : $\\left(f^{-1}\\right)'(b) = \\dfrac{1}{f'(a)}$ où $a = f^{-1}(b)$, à condition que $f'(a) \\ne 0$.",
+     "solution": "$f'(x) = 3x^2 + 1 > 0$. Comme $f(1) = 1 + 1 + 1 = 3$, on a $f^{-1}(3) = 1$, et $f'(1) = 4 \\ne 0$. Donc $f^{-1}$ est dérivable en $3$ et $\\left(f^{-1}\\right)'(3) = \\dfrac{1}{f'(1)} = \\dfrac14$. Contrôle géométrique : la tangente à $\\mathcal{C}_f$ en $(1;3)$ a pour pente $4$ ; sa symétrique par rapport à $y = x$, tangente à $\\mathcal{C}_{f^{-1}}$ en $(3;1)$, a pour pente $\\frac14$ ✓.",
+     "points": 1,
+     "methode": "$\\left(f^{-1}\\right)'(b) = \\dfrac{1}{f'(a)}$ avec $f(a) = b$ : trouve d'abord l'antécédent $a$.",
+     "ref": "m2-scex-contderiv-flash-q38"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-39",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Prouver que exp dépasse sa tangente",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Démontrer une inégalité : la méthode de l'étude de fonction",
+     "difficulty": 3,
+     "statement": "Pour démontrer que $\\mathrm{e}^{x} \\ge 1 + x$ pour tout réel $x$, on pose $g(x) = \\mathrm{e}^{x} - 1 - x$. On a $g'(x) = \\mathrm{e}^{x} - 1$ et $g(0) = 0$. Quel argument permet de conclure rigoureusement ?",
+     "options": [
+      {
+       "label": "$g$ décroît sur $]-\\infty;0]$, croît sur $[0;+\\infty[$ : son minimum est $g(0) = 0$, donc $g \\ge 0$",
+       "correct": true,
+       "why": "$g'(x) < 0$ pour $x < 0$ et $g'(x) > 0$ pour $x > 0$ : $0$ est le minimum global de $g$."
+      },
+      {
+       "label": "$g$ est croissante sur $\\mathbb{R}$ et $g(0) = 0$, donc $g \\ge 0$",
+       "why": "$g$ n'est pas croissante sur $\\mathbb{R}$ : $g'(-1) = \\mathrm{e}^{-1} - 1 < 0$. Et même croissante, elle serait négative avant $0$."
+      },
+      {
+       "label": "$g(0) = 0$ et $g'(0) = 0$, cela suffit",
+       "why": "Une dérivée nulle peut correspondre à un maximum : pour $-x^2$, on a aussi $f(0) = f'(0) = 0$, mais $-x^2 \\le 0$."
+      },
+      {
+       "label": "$g'(x) \\ge 0$ pour $x \\ge 0$, donc $g \\ge 0$ sur $\\mathbb{R}$",
+       "why": "Cet argument ne traite que $x \\ge 0$ ; pour $x < 0$, il faut utiliser que $g$ est décroissante jusqu'à $0$."
+      }
+     ],
+     "hint": "Étudie le signe de $g'$ sur tout $\\mathbb{R}$ et lis le minimum dans le tableau de variations.",
+     "solution": "$g'(x) = \\mathrm{e}^{x} - 1$ : $g'(x) < 0$ si $x < 0$ (car $\\mathrm{e}^{x} < 1$) et $g'(x) > 0$ si $x > 0$. Donc $g$ est décroissante sur $]-\\infty;0]$ et croissante sur $[0;+\\infty[$ : elle admet un minimum global en $0$, $g(0) = 1 - 1 - 0 = 0$. Ainsi $g(x) \\ge 0$ pour tout $x$, c'est-à-dire $\\mathrm{e}^{x} \\ge 1 + x$. Géométriquement : la courbe de $\\exp$ est au-dessus de sa tangente $y = x + 1$ en $0$. Contrôle : $x = -2$ donne $\\mathrm{e}^{-2} \\approx 0{,}135 \\ge -1$ ; $x = 1$ donne $2{,}718 \\ge 2$ ✓.",
+     "points": 1,
+     "methode": "Prouver $A(x) \\ge B(x)$ : étudier $g = A - B$ et montrer que son minimum est $\\ge 0$.",
+     "ref": "m2-scex-contderiv-flash-q39"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-40",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Simplifier par une fonction croissante",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Utiliser la stricte monotonie",
+     "difficulty": 2,
+     "statement": "La fonction $f(x) = x^3 + x$ est strictement croissante sur $\\mathbb{R}$ (car $f'(x) = 3x^2 + 1 > 0$). Sans développer, résoudre dans $\\mathbb{R}$ l'inéquation $f(2x - 1) < f(x + 3)$.",
+     "options": [
+      {
+       "label": "$x < 4$",
+       "correct": true,
+       "why": "$f$ strictement croissante : $f(a) < f(b) \\Leftrightarrow a < b$, donc $2x - 1 < x + 3$."
+      },
+      {
+       "label": "$x > 4$",
+       "why": "Tu as inversé le sens : c'est une fonction strictement décroissante qui renverse l'inégalité."
+      },
+      {
+       "label": "$x < \\dfrac43$",
+       "why": "Erreur de transposition : $2x - 1 < x + 3$ donne $2x - x < 3 + 1$, soit $x < 4$, pas $3x < 4$."
+      },
+      {
+       "label": "on ne peut pas conclure sans développer $f(2x-1)$ et $f(x+3)$",
+       "why": "La stricte monotonie suffit justement : elle permet de « retirer » $f$ des deux côtés."
+      }
+     ],
+     "hint": "Pour une fonction strictement croissante, $f(a) < f(b) \\Leftrightarrow a < b$.",
+     "solution": "$f$ est strictement croissante sur $\\mathbb{R}$, donc pour tous réels $a$, $b$ : $f(a) < f(b) \\Leftrightarrow a < b$. Ainsi $f(2x - 1) < f(x + 3) \\Leftrightarrow 2x - 1 < x + 3 \\Leftrightarrow x < 4$. $S = ]-\\infty;4[$. Contrôle : pour $x = 0$, $f(-1) = -2 < f(3) = 30$ ✓ ; pour $x = 5$, $f(9) = 738 > f(8) = 520$, l'inégalité est fausse ✓.",
+     "points": 1,
+     "methode": "Stricte monotonie : on « simplifie » par $f$ dans une égalité ou une inégalité (en renversant le sens si $f$ est décroissante).",
+     "ref": "m2-scex-contderiv-flash-q40"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-41",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Encadrer sur un segment",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Encadrer une fonction sur un intervalle",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = \\dfrac{1}{x^2 + 1}$. Sur l'intervalle $[1;3]$, la fonction $f$ est strictement décroissante (car $f'(x) = \\dfrac{-2x}{(x^2+1)^2} < 0$). Quel est l'encadrement correct de $f(x)$ pour tout $x \\in [1;3]$, avec les meilleures bornes possibles ?",
+     "options": [
+      {
+       "label": "$\\dfrac{1}{10} \\le f(x) \\le \\dfrac12$",
+       "correct": true,
+       "why": "$f$ décroissante : $f(3) \\le f(x) \\le f(1)$, avec $f(3) = \\frac{1}{10}$ et $f(1) = \\frac12$."
+      },
+      {
+       "label": "$\\dfrac12 \\le f(x) \\le \\dfrac{1}{10}$",
+       "why": "Tu as appliqué l'ordre d'une fonction croissante ; de plus $\\frac12 > \\frac{1}{10}$, cet encadrement est vide."
+      },
+      {
+       "label": "$\\dfrac14 \\le f(x) \\le \\dfrac12$",
+       "why": "Tu as calculé $f(3) = \\frac{1}{3 + 1}$ en oubliant le carré : $f(3) = \\frac{1}{9 + 1} = \\frac{1}{10} < \\frac14$."
+      },
+      {
+       "label": "$\\dfrac{1}{10} < f(x) < \\dfrac12$",
+       "why": "Les bornes sont atteintes : $f(1) = \\frac12$ et $f(3) = \\frac{1}{10}$, les inégalités doivent être larges."
+      }
+     ],
+     "hint": "Pour une fonction décroissante sur $[a;b]$ : $f(b) \\le f(x) \\le f(a)$.",
+     "solution": "$f$ est continue et strictement décroissante sur $[1;3]$. Pour $1 \\le x \\le 3$ : $f(3) \\le f(x) \\le f(1)$, soit $\\dfrac{1}{10} \\le f(x) \\le \\dfrac12$. Les deux bornes sont atteintes (en $3$ et en $1$), donc on ne peut pas faire mieux : $f([1;3]) = \\left[\\frac{1}{10}\\,;\\frac12\\right]$. Contrôle : $f(2) = \\frac15 = 0{,}2 \\in [0{,}1\\,;0{,}5]$ ✓.",
+     "points": 1,
+     "methode": "Encadrer $f$ sur $[a;b]$ : utilise les variations ; décroissante ⇒ l'ordre s'inverse.",
+     "ref": "m2-scex-contderiv-flash-q41"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-42",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Le signe d'un taux continu",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Définition et premières propriétés",
+     "difficulty": 1,
+     "statement": "Le taux d'évolution continu d'une grandeur sur une période vaut $r = \\ln(c)$, où $c > 0$ est le coefficient multiplicateur ($c = 1{,}2$ pour une hausse de $20\\,\\%$). Pour quelles valeurs de $c$ ce taux est-il strictement négatif ?",
+     "options": [
+      {
+       "label": "$c \\in\\, ]0;1[$",
+       "correct": true,
+       "why": "$\\ln c < 0 \\Leftrightarrow 0 < c < 1$ : une baisse correspond à un coefficient inférieur à $1$."
+      },
+      {
+       "label": "$c \\in\\, ]-\\infty;1[$",
+       "why": "$\\ln$ n'est définie que sur $]0;+\\infty[$ : un coefficient négatif ou nul n'a pas de logarithme."
+      },
+      {
+       "label": "$c \\in\\, ]0;\\mathrm{e}[$",
+       "why": "Tu as résolu $\\ln c < 1$ : c'est en $1$ (et non en $\\mathrm{e}$) que $\\ln$ change de signe."
+      },
+      {
+       "label": "$c \\in\\, ]1;+\\infty[$",
+       "why": "C'est l'inverse : pour $c > 1$, $\\ln c > 0$ (hausse), par exemple $\\ln 1{,}2 \\approx 0{,}18$."
+      }
+     ],
+     "hint": "$\\ln 1 = 0$ et $\\ln$ est strictement croissante sur $]0;+\\infty[$.",
+     "solution": "$\\ln$ est définie et strictement croissante sur $]0;+\\infty[$, avec $\\ln 1 = 0$. Pour $c > 0$ : $\\ln c < 0 \\Leftrightarrow \\ln c < \\ln 1 \\Leftrightarrow c < 1$. Donc $r < 0 \\Leftrightarrow c \\in ]0;1[$ : le taux est négatif exactement quand la grandeur baisse. Contrôle : une baisse de $20\\,\\%$ donne $c = 0{,}8$ et $\\ln 0{,}8 \\approx -0{,}22 < 0$ ✓.",
+     "points": 1,
+     "methode": "Signe de $\\ln x$ : négatif sur $]0;1[$, nul en $1$, positif sur $]1;+\\infty[$.",
+     "ref": "m2-scex-contderiv-flash-q42"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-43",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Simplifier une somme de logarithmes",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Propriétés algébriques",
+     "difficulty": 1,
+     "statement": "Pour préparer un calcul, on veut écrire le nombre $A = \\ln 50 - 2\\ln 5 + \\ln 4$ sous la forme $k\\ln 2$ avec $k$ entier, en utilisant uniquement les propriétés algébriques du logarithme. On obtient :",
+     "options": [
+      {
+       "label": "$3\\ln 2$",
+       "correct": true,
+       "why": "$A = \\ln\\dfrac{50\\times4}{5^2} = \\ln 8 = \\ln 2^3$."
+      },
+      {
+       "label": "$\\ln 29$",
+       "why": "Tu as transformé les produits en sommes : $\\ln a - \\ln b = \\ln\\frac ab$, et non $\\ln(a - b)$."
+      },
+      {
+       "label": "$\\ln 20$",
+       "why": "Tu as écrit $2\\ln 5 = \\ln 10$ ; or $2\\ln 5 = \\ln 5^2 = \\ln 25$."
+      },
+      {
+       "label": "$-\\ln 2$",
+       "why": "Tu as soustrait $\\ln 4$ au lieu de l'ajouter : $\\ln\\frac{50}{25\\times4} = \\ln\\frac12$."
+      }
+     ],
+     "hint": "Utilise $n\\ln a = \\ln a^n$, $\\ln a + \\ln b = \\ln ab$, $\\ln a - \\ln b = \\ln\\frac ab$.",
+     "solution": "$2\\ln 5 = \\ln 25$. Donc $A = \\ln 50 - \\ln 25 + \\ln 4 = \\ln\\dfrac{50}{25} + \\ln 4 = \\ln 2 + \\ln 4 = \\ln 8 = \\ln 2^3 = 3\\ln 2$. Contrôle numérique : $\\ln 50 - 2\\ln 5 + \\ln 4 \\approx 3{,}912 - 3{,}219 + 1{,}386 = 2{,}079$ et $3\\ln 2 \\approx 2{,}079$ ✓.",
+     "points": 1,
+     "methode": "Ramène tout à un seul $\\ln$ (produit/quotient), puis décompose en facteurs premiers.",
+     "ref": "m2-scex-contderiv-flash-q43"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-44",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "La tangente qui passe par l'origine",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Étude de la fonction",
+     "difficulty": 2,
+     "statement": "On note $(\\Gamma)$ la courbe de la fonction $\\ln$ dans un repère orthonormé. On sait que $\\ln$ est dérivable sur $]0;+\\infty[$ avec $\\ln'(x) = \\dfrac1x$, et que $\\ln\\mathrm{e} = 1$. Une équation de la tangente à $(\\Gamma)$ au point d'abscisse $\\mathrm{e}$ est :",
+     "options": [
+      {
+       "label": "$y = \\dfrac{x}{\\mathrm{e}}$",
+       "correct": true,
+       "why": "$y = \\dfrac{1}{\\mathrm{e}}(x - \\mathrm{e}) + 1 = \\dfrac{x}{\\mathrm{e}} - 1 + 1$."
+      },
+      {
+       "label": "$y = x - 1$",
+       "why": "C'est la tangente en $1$ (point $(1;0)$, pente $1$), pas en $\\mathrm{e}$."
+      },
+      {
+       "label": "$y = \\dfrac{x}{\\mathrm{e}} + 1$",
+       "why": "Tu as oublié de développer $\\frac1{\\mathrm{e}}(x - \\mathrm{e})$ : le $-1$ qui en sort compense le $+1$."
+      },
+      {
+       "label": "$y = \\mathrm{e}\\,x - \\mathrm{e}^2 + 1$",
+       "why": "Tu as pris pour pente $\\mathrm{e}$ au lieu de $\\ln'(\\mathrm{e}) = \\frac{1}{\\mathrm{e}}$."
+      }
+     ],
+     "hint": "Calcule $\\ln'(\\mathrm{e})$ puis applique $y = f'(a)(x - a) + f(a)$.",
+     "solution": "$f(\\mathrm{e}) = \\ln\\mathrm{e} = 1$ et $f'(\\mathrm{e}) = \\dfrac{1}{\\mathrm{e}}$. Tangente : $y = \\dfrac1{\\mathrm{e}}(x - \\mathrm{e}) + 1 = \\dfrac{x}{\\mathrm{e}}$. Remarque : cette tangente passe par l'origine. Comme $(\\Gamma)$ est concave ($\\ln''(x) = -\\frac{1}{x^2} < 0$), elle est sous cette tangente : $\\ln x \\le \\dfrac{x}{\\mathrm{e}}$ pour tout $x > 0$. Contrôle : en $x = \\mathrm{e}$, $\\dfrac{\\mathrm{e}}{\\mathrm{e}} = 1 = \\ln\\mathrm{e}$ ✓.",
+     "points": 1,
+     "methode": "Courbe de $\\ln$ : concave, tangente $y = x - 1$ en $1$ et $y = \\frac{x}{\\mathrm{e}}$ en $\\mathrm{e}$.",
+     "ref": "m2-scex-contderiv-flash-q44"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-45",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dériver le logarithme d'un quotient",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Dérivée de $\\ln u$",
+     "difficulty": 3,
+     "statement": "Soit $f(x) = \\ln\\left(\\dfrac{x - 1}{x + 1}\\right)$ définie sur $]1;+\\infty[$ (le quotient y est strictement positif). Pour tout $x > 1$, $f'(x)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{2}{x^2 - 1}$",
+       "correct": true,
+       "why": "$f(x) = \\ln(x - 1) - \\ln(x + 1)$, donc $f'(x) = \\dfrac{1}{x-1} - \\dfrac{1}{x+1} = \\dfrac{2}{x^2-1}$."
+      },
+      {
+       "label": "$\\dfrac{x + 1}{x - 1}$",
+       "why": "Tu as calculé $\\dfrac1u$ en oubliant de multiplier par $u'$ : la formule est $\\dfrac{u'}{u}$."
+      },
+      {
+       "label": "$\\dfrac{2}{(x + 1)^2}$",
+       "why": "C'est $u'$ seul ; il faut encore le diviser par $u = \\dfrac{x-1}{x+1}$."
+      },
+      {
+       "label": "$\\dfrac{-2}{x^2 - 1}$",
+       "why": "Erreur de signe : $\\dfrac{1}{x-1} - \\dfrac{1}{x+1} = \\dfrac{(x+1) - (x-1)}{x^2 - 1} = \\dfrac{+2}{x^2-1}$."
+      }
+     ],
+     "hint": "Sépare d'abord le logarithme du quotient en différence de deux logarithmes.",
+     "solution": "Pour $x > 1$, $x - 1 > 0$ et $x + 1 > 0$, donc $f(x) = \\ln(x - 1) - \\ln(x + 1)$. Alors $f'(x) = \\dfrac{1}{x - 1} - \\dfrac{1}{x + 1} = \\dfrac{(x+1) - (x-1)}{(x-1)(x+1)} = \\dfrac{2}{x^2 - 1}$. Autre méthode : $u = \\frac{x-1}{x+1}$, $u' = \\frac{2}{(x+1)^2}$ et $\\frac{u'}{u} = \\frac{2}{(x+1)^2}\\times\\frac{x+1}{x-1} = \\frac{2}{x^2-1}$ ✓. Contrôle : $f'(x) > 0$, cohérent avec $u$ croissante. ",
+     "points": 1,
+     "methode": "$(\\ln u)' = \\dfrac{u'}{u}$ ; pour un $\\ln$ de produit ou de quotient, découpe d'abord (si les facteurs sont positifs).",
+     "ref": "m2-scex-contderiv-flash-q45"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-46",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Quand le médicament cesse d'agir",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Équations et inéquations",
+     "difficulty": 2,
+     "statement": "Après injection, la concentration d'un médicament dans le sang vaut $C(t) = 20\\,\\mathrm{e}^{-0{,}3t}$ (en mg/L), $t$ en heures. Le médicament n'est plus efficace lorsque $C(t) < 5$. À partir de quand cela se produit-il ?",
+     "options": [
+      {
+       "label": "$t > \\dfrac{\\ln 4}{0{,}3} \\approx 4{,}62$ h",
+       "correct": true,
+       "why": "$\\mathrm{e}^{-0{,}3t} < \\frac14 \\Leftrightarrow -0{,}3t < -\\ln 4 \\Leftrightarrow t > \\frac{\\ln 4}{0{,}3}$."
+      },
+      {
+       "label": "$t < \\dfrac{\\ln 4}{0{,}3} \\approx 4{,}62$ h",
+       "why": "En divisant par $-0{,}3 < 0$, il faut changer le sens de l'inégalité ; et $C(0) = 20 > 5$."
+      },
+      {
+       "label": "$t > \\dfrac{\\ln 15}{0{,}3} \\approx 9{,}03$ h",
+       "why": "Tu as soustrait ($20 - 5 = 15$) au lieu de diviser : il faut isoler $\\mathrm{e}^{-0{,}3t} = \\frac{5}{20}$."
+      },
+      {
+       "label": "$t > 0{,}3\\ln 4 \\approx 0{,}42$ h",
+       "why": "Tu as multiplié par $0{,}3$ au lieu de diviser ; $C(0{,}42) \\approx 17{,}6 > 5$."
+      }
+     ],
+     "hint": "Isole $\\mathrm{e}^{-0{,}3t}$, applique $\\ln$ (strictement croissante), puis divise par un nombre négatif.",
+     "solution": "$C(t) < 5 \\Leftrightarrow \\mathrm{e}^{-0{,}3t} < \\dfrac14 \\Leftrightarrow -0{,}3t < \\ln\\dfrac14 = -\\ln 4$ (car $\\ln$ est strictement croissante) $\\Leftrightarrow t > \\dfrac{\\ln 4}{0{,}3} \\approx 4{,}62$. Le médicament n'est plus efficace après environ $4$ h $37$ min. Contrôle : $C(4{,}62) = 20\\,\\mathrm{e}^{-1{,}386} \\approx 20\\times0{,}25 = 5$ ✓.",
+     "points": 1,
+     "methode": "Inéquation $a\\,\\mathrm{e}^{kt} < b$ : isole l'exponentielle, applique $\\ln$, et change le sens si tu divises par un négatif.",
+     "ref": "m2-scex-contderiv-flash-q46"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-47",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Une équation à domaine piégé",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Équations et inéquations",
+     "difficulty": 3,
+     "statement": "On veut résoudre dans $\\mathbb{R}$ l'équation $\\ln x + \\ln(x - 2) = \\ln 3$. Attention : avant de transformer l'équation, il faut déterminer l'ensemble des réels pour lesquels elle a un sens. L'ensemble des solutions est :",
+     "options": [
+      {
+       "label": "$S = \\{3\\}$",
+       "correct": true,
+       "why": "Domaine $x > 2$ ; $x(x - 2) = 3$ donne $x = 3$ ou $x = -1$, et seul $3$ est dans le domaine."
+      },
+      {
+       "label": "$S = \\{-1\\,;3\\}$",
+       "why": "Tu as oublié le domaine : $\\ln(-1)$ n'existe pas, donc $-1$ n'est pas solution."
+      },
+      {
+       "label": "$S = \\{-1\\}$",
+       "why": "Tu as gardé la mauvaise racine : $-1 < 2$ est hors du domaine, alors que $3$ convient ($\\ln 3 + \\ln 1 = \\ln 3$)."
+      },
+      {
+       "label": "$S = \\left\\{\\dfrac52\\right\\}$",
+       "why": "Tu as écrit $\\ln x + \\ln(x-2) = \\ln(2x - 2)$ : la somme des $\\ln$ est le $\\ln$ du produit, pas de la somme."
+      }
+     ],
+     "hint": "Domaine d'abord ($x > 0$ et $x - 2 > 0$), puis $\\ln a + \\ln b = \\ln(ab)$.",
+     "solution": "Domaine : $x > 0$ et $x > 2$, soit $x \\in ]2;+\\infty[$. Sur ce domaine : $\\ln x + \\ln(x - 2) = \\ln[x(x-2)]$, donc l'équation équivaut à $x(x - 2) = 3 \\Leftrightarrow x^2 - 2x - 3 = 0 \\Leftrightarrow (x - 3)(x + 1) = 0$. Les racines sont $3$ et $-1$ ; seule $3$ appartient au domaine. $S = \\{3\\}$. Contrôle : $\\ln 3 + \\ln 1 = \\ln 3$ ✓.",
+     "points": 1,
+     "methode": "Équation avec $\\ln$ : domaine, puis regroupement en un seul $\\ln$, puis $\\ln A = \\ln B \\Leftrightarrow A = B$, puis tri des solutions.",
+     "ref": "m2-scex-contderiv-flash-q47"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-48",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Diluer une solution acide",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Logarithme décimal",
+     "difficulty": 2,
+     "statement": "Le pH d'une solution est $\\mathrm{pH} = -\\log[\\mathrm{H_3O^+}]$. Une solution d'acide fort a un pH égal à $3{,}2$. On la dilue $100$ fois, ce qui divise $[\\mathrm{H_3O^+}]$ par $100$. Quel est le nouveau pH ?",
+     "options": [
+      {
+       "label": "$5{,}2$",
+       "correct": true,
+       "why": "$-\\log\\dfrac{c}{100} = -\\log c + \\log 100 = 3{,}2 + 2$."
+      },
+      {
+       "label": "$1{,}2$",
+       "why": "Tu as soustrait $\\log 100$ : diluer diminue l'acidité, donc le pH augmente."
+      },
+      {
+       "label": "$6{,}4$",
+       "why": "Tu as multiplié le pH par $\\log 100 = 2$ ; $\\log$ transforme un quotient en différence, pas en produit."
+      },
+      {
+       "label": "$103{,}2$",
+       "why": "Tu as ajouté $100$ au lieu de $\\log 100 = 2$ ; un pH de $103$ n'a aucun sens en solution aqueuse."
+      }
+     ],
+     "hint": "Utilise $\\log\\dfrac ab = \\log a - \\log b$ et $\\log 100 = 2$.",
+     "solution": "Avant dilution, $[\\mathrm{H_3O^+}] = c$ avec $-\\log c = 3{,}2$. Après, $[\\mathrm{H_3O^+}] = \\dfrac{c}{100}$, donc $\\mathrm{pH}' = -\\log\\dfrac{c}{100} = -(\\log c - \\log 100) = 3{,}2 + 2 = 5{,}2$. Contrôle : $c = 10^{-3{,}2} \\approx 6{,}3\\times10^{-4}$ mol/L, et $\\dfrac{c}{100} \\approx 6{,}3\\times10^{-6} = 10^{-5{,}2}$ ✓.",
+     "points": 1,
+     "methode": "$\\log(10^n) = n$ : multiplier une grandeur par $10^n$ ajoute $n$ à son logarithme décimal.",
+     "ref": "m2-scex-contderiv-flash-q48"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-49",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Exp et ln se neutralisent",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Définition",
+     "difficulty": 1,
+     "statement": "La fonction exponentielle est la réciproque de $\\ln$ : pour tout réel $a$, $\\ln(\\mathrm{e}^{a}) = a$, et pour tout $b > 0$, $\\mathrm{e}^{\\ln b} = b$. En utilisant ces deux relations, calculer $A = \\mathrm{e}^{2\\ln 3} - \\ln\\left(\\mathrm{e}^{5}\\right)$.",
+     "options": [
+      {
+       "label": "$4$",
+       "correct": true,
+       "why": "$\\mathrm{e}^{2\\ln 3} = \\mathrm{e}^{\\ln 9} = 9$ et $\\ln(\\mathrm{e}^5) = 5$, donc $A = 9 - 5$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as calculé $\\mathrm{e}^{2\\ln 3} = 2\\times3 = 6$ ; or $2\\ln 3 = \\ln 3^2 = \\ln 9$, donc on obtient $9$."
+      },
+      {
+       "label": "$14$",
+       "why": "Erreur de signe : on soustrait $\\ln(\\mathrm{e}^5) = 5$, on ne l'ajoute pas."
+      },
+      {
+       "label": "$\\mathrm{e}^{6} - 5$",
+       "why": "Tu as remplacé $\\ln 3$ par $3$ dans l'exposant : $\\mathrm{e}^{2\\ln 3} \\ne \\mathrm{e}^{6}$ ($\\approx 403$)."
+      }
+     ],
+     "hint": "Écris $2\\ln 3$ comme un seul logarithme avant d'appliquer $\\mathrm{e}^{\\ln b} = b$.",
+     "solution": "$2\\ln 3 = \\ln 3^2 = \\ln 9$, donc $\\mathrm{e}^{2\\ln 3} = \\mathrm{e}^{\\ln 9} = 9$. Et $\\ln(\\mathrm{e}^{5}) = 5$. D'où $A = 9 - 5 = 4$. Contrôle numérique : $2\\ln 3 \\approx 2{,}197$ et $\\mathrm{e}^{2{,}197} \\approx 9{,}00$ ✓.",
+     "points": 1,
+     "methode": "$\\exp$ et $\\ln$ se « détruisent » : $\\mathrm{e}^{\\ln b} = b$ ($b > 0$) et $\\ln\\mathrm{e}^{a} = a$ ; avec un coefficient, utilise d'abord $n\\ln b = \\ln b^n$.",
+     "ref": "m2-scex-contderiv-flash-q49"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-50",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Dériver la courbe en cloche",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Dérivée de $\\mathrm{e}^{u}$",
+     "difficulty": 2,
+     "statement": "En statistique, la courbe « en cloche » est celle de $f(x) = \\mathrm{e}^{-\\frac{x^2}{2}}$, définie sur $\\mathbb{R}$. Pour étudier ses variations, on calcule sa dérivée avec la formule $\\left(\\mathrm{e}^{u}\\right)' = u'\\,\\mathrm{e}^{u}$. Pour tout réel $x$, $f'(x)$ vaut :",
+     "options": [
+      {
+       "label": "$-x\\,\\mathrm{e}^{-\\frac{x^2}{2}}$",
+       "correct": true,
+       "why": "$u(x) = -\\dfrac{x^2}{2}$, $u'(x) = -x$, donc $f' = u'\\mathrm{e}^{u}$."
+      },
+      {
+       "label": "$\\mathrm{e}^{-\\frac{x^2}{2}}$",
+       "why": "Tu as oublié $u'$ : seule $\\mathrm{e}^x$ est sa propre dérivée, pas $\\mathrm{e}^{u(x)}$."
+      },
+      {
+       "label": "$-\\dfrac{x^2}{2}\\,\\mathrm{e}^{-\\frac{x^2}{2}}$",
+       "why": "Tu as multiplié par $u$ au lieu de $u'$."
+      },
+      {
+       "label": "$x\\,\\mathrm{e}^{-\\frac{x^2}{2}}$",
+       "why": "Erreur de signe : la dérivée de $-\\frac{x^2}{2}$ est $-x$. Ton résultat ferait croître la cloche pour $x > 0$, alors qu'elle décroît."
+      }
+     ],
+     "hint": "Identifie $u(x)$, calcule $u'(x)$, puis applique $(\\mathrm{e}^u)' = u'\\mathrm{e}^u$.",
+     "solution": "Posons $u(x) = -\\dfrac{x^2}{2}$ : $u'(x) = -\\dfrac{2x}{2} = -x$. Donc $f'(x) = u'(x)\\,\\mathrm{e}^{u(x)} = -x\\,\\mathrm{e}^{-\\frac{x^2}{2}}$. Comme l'exponentielle est strictement positive, $f'$ a le signe de $-x$ : $f$ croît sur $]-\\infty;0]$, décroît sur $[0;+\\infty[$, maximum $f(0) = 1$. Contrôle : la courbe est symétrique par rapport à l'axe des ordonnées ($f$ paire), donc $f'$ doit être impaire : $-x\\,\\mathrm{e}^{-x^2/2}$ l'est ✓.",
+     "points": 1,
+     "methode": "$(\\mathrm{e}^{u})' = u'\\,\\mathrm{e}^{u}$ ; le signe de $f'$ est celui de $u'$.",
+     "ref": "m2-scex-contderiv-flash-q50"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-51",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "La loi de Kleiber",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Fonctions puissances",
+     "difficulty": 2,
+     "statement": "Selon la loi de Kleiber, le métabolisme de base d'un mammifère de masse $m$ (en kg) vaut environ $M = 70\\,m^{0{,}75}$ (en kcal par jour), où $m^{0{,}75} = \\mathrm{e}^{0{,}75\\ln m}$. Pour un animal de $16$ kg, le métabolisme vaut :",
+     "options": [
+      {
+       "label": "$560$ kcal/jour",
+       "correct": true,
+       "why": "$16^{0{,}75} = 16^{3/4} = \\left(\\sqrt[4]{16}\\right)^3 = 2^3 = 8$, et $70\\times8 = 560$."
+      },
+      {
+       "label": "$840$ kcal/jour",
+       "why": "Tu as calculé $0{,}75\\times16 = 12$ : une puissance n'est pas un produit."
+      },
+      {
+       "label": "$280$ kcal/jour",
+       "why": "Tu as utilisé $16^{0{,}5} = 4$ : l'exposant est $\\frac34$, pas $\\frac12$."
+      },
+      {
+       "label": "$140$ kcal/jour",
+       "why": "Tu as calculé $\\sqrt[4]{16} = 2$ sans l'élever au cube : $16^{3/4} = 2^3$."
+      }
+     ],
+     "hint": "Écris $0{,}75 = \\dfrac34$ et $16 = 2^4$.",
+     "solution": "$16^{0{,}75} = \\left(2^4\\right)^{3/4} = 2^{4\\times\\frac34} = 2^3 = 8$. Donc $M = 70\\times8 = 560$ kcal par jour. Avec la définition : $16^{0{,}75} = \\mathrm{e}^{0{,}75\\ln16} = \\mathrm{e}^{3\\ln 2} = 8$ ✓. Contrôle : un animal $16$ fois plus lourd qu'un animal de $1$ kg ($70$ kcal) dépense seulement $8$ fois plus d'énergie, d'où l'intérêt de l'exposant $< 1$.",
+     "points": 1,
+     "methode": "$a^{p/q} = \\left(\\sqrt[q]{a}\\right)^p = \\mathrm{e}^{\\frac pq\\ln a}$ pour $a > 0$ : décompose $a$ en puissance d'un entier simple.",
+     "ref": "m2-scex-contderiv-flash-q51"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-52",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Vérifier une primitive",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Notion de primitive",
+     "difficulty": 1,
+     "statement": "Une fonction $F$ est une primitive de $f$ sur $I$ si $F$ est dérivable sur $I$ et $F' = f$. Parmi les fonctions suivantes, laquelle est une primitive sur $\\mathbb{R}$ de $f(x) = x\\,\\mathrm{e}^{x}$ ?",
+     "options": [
+      {
+       "label": "$F(x) = (x - 1)\\,\\mathrm{e}^{x}$",
+       "correct": true,
+       "why": "$F'(x) = \\mathrm{e}^{x} + (x - 1)\\mathrm{e}^{x} = x\\,\\mathrm{e}^{x}$ ✓."
+      },
+      {
+       "label": "$F(x) = (x + 1)\\,\\mathrm{e}^{x}$",
+       "why": "C'est la dérivée de $f$ : $(x\\mathrm{e}^x)' = (x + 1)\\mathrm{e}^x$. En dérivant $(x+1)\\mathrm{e}^x$ on obtient $(x+2)\\mathrm{e}^x$."
+      },
+      {
+       "label": "$F(x) = \\dfrac{x^2}{2}\\,\\mathrm{e}^{x}$",
+       "why": "On ne primitive pas un produit facteur par facteur : $F'(x) = \\left(x + \\frac{x^2}{2}\\right)\\mathrm{e}^x \\ne f(x)$."
+      },
+      {
+       "label": "$F(x) = (1 - x)\\,\\mathrm{e}^{x}$",
+       "why": "Erreur de signe : $F'(x) = -\\mathrm{e}^x + (1 - x)\\mathrm{e}^x = -x\\,\\mathrm{e}^x$."
+      }
+     ],
+     "hint": "Pas besoin de « trouver » : dérive chaque proposition et compare avec $f$.",
+     "solution": "On dérive $F(x) = (x - 1)\\mathrm{e}^{x}$ comme un produit : $F'(x) = 1\\times\\mathrm{e}^{x} + (x - 1)\\mathrm{e}^{x} = x\\,\\mathrm{e}^{x} = f(x)$. Donc $F$ est une primitive de $f$ sur $\\mathbb{R}$ ; toutes les primitives sont $x \\mapsto (x - 1)\\mathrm{e}^{x} + c$. Contrôle : $F'(0) = 0 = f(0)$ et $F'(1) = \\mathrm{e} = f(1)$ ✓.",
+     "points": 1,
+     "methode": "Pour vérifier qu'une fonction est une primitive, dérive-la : c'est toujours plus sûr que de primitiver.",
+     "ref": "m2-scex-contderiv-flash-q52"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-53",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "La primitive qui s'annule en 1",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Primitives des fonctions usuelles",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = 3x^2 - \\dfrac{4}{x^2}$ définie sur $]0;+\\infty[$. On cherche la primitive $F$ de $f$ sur $]0;+\\infty[$ qui vérifie $F(1) = 0$. Cette primitive est :",
+     "options": [
+      {
+       "label": "$F(x) = x^3 + \\dfrac4x - 5$",
+       "correct": true,
+       "why": "Une primitive de $-\\dfrac{4}{x^2}$ est $\\dfrac4x$ ; puis $F(1) = 1 + 4 + c = 0$ donne $c = -5$."
+      },
+      {
+       "label": "$F(x) = x^3 - \\dfrac4x + 3$",
+       "why": "Erreur de signe : la dérivée de $\\frac1x$ est $-\\frac{1}{x^2}$, donc une primitive de $-\\frac{4}{x^2}$ est $+\\frac4x$."
+      },
+      {
+       "label": "$F(x) = x^3 + \\dfrac4x$",
+       "why": "C'est bien une primitive, mais $F(1) = 5 \\ne 0$ : tu as oublié d'ajuster la constante."
+      },
+      {
+       "label": "$F(x) = 6x + \\dfrac{8}{x^3} - 14$",
+       "why": "Tu as dérivé $f$ au lieu de la primitiver."
+      }
+     ],
+     "hint": "Écris $-\\dfrac{4}{x^2} = -4x^{-2}$, primitive terme à terme, ajoute une constante $c$ et utilise $F(1) = 0$.",
+     "solution": "Une primitive de $3x^2$ est $x^3$. Une primitive de $-\\dfrac{4}{x^2}$ est $\\dfrac{4}{x}$ (car $\\left(\\frac4x\\right)' = -\\frac{4}{x^2}$). Les primitives de $f$ sont $F(x) = x^3 + \\dfrac4x + c$. Condition : $F(1) = 1 + 4 + c = 0$, donc $c = -5$ et $F(x) = x^3 + \\dfrac4x - 5$. Contrôle : $F'(x) = 3x^2 - \\dfrac{4}{x^2} = f(x)$ ✓ et $F(1) = 0$ ✓.",
+     "points": 1,
+     "methode": "Primitive avec condition : primitive générale « $+ c$ », puis la condition fixe $c$.",
+     "ref": "m2-scex-contderiv-flash-q53"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-54",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Le café qui refroidit",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Équations différentielles $y' = ay + b$",
+     "difficulty": 2,
+     "statement": "Un café à $90\\ ^\\circ\\mathrm{C}$ refroidit dans une pièce à $20\\ ^\\circ\\mathrm{C}$. Sa température $\\theta(t)$ ($t$ en minutes) vérifie la loi de Newton $\\theta' = -0{,}1\\,\\theta + 2$, avec $\\theta(0) = 90$. L'expression de $\\theta(t)$ est :",
+     "options": [
+      {
+       "label": "$\\theta(t) = 20 + 70\\,\\mathrm{e}^{-0{,}1t}$",
+       "correct": true,
+       "why": "Solution constante $\\theta = 20$ ; $\\theta(t) = 20 + C\\mathrm{e}^{-0{,}1t}$ et $\\theta(0) = 20 + C = 90$."
+      },
+      {
+       "label": "$\\theta(t) = 90\\,\\mathrm{e}^{-0{,}1t}$",
+       "why": "C'est la solution de $y' = -0{,}1y$ : tu as oublié le terme $+2$. Ce café finirait à $0\\ ^\\circ\\mathrm{C}$, pas à la température de la pièce."
+      },
+      {
+       "label": "$\\theta(t) = 20 + 90\\,\\mathrm{e}^{-0{,}1t}$",
+       "why": "Tu as pris $C = \\theta(0)$ ; or $\\theta(0) = 20 + C$. Avec ta formule, $\\theta(0) = 110$."
+      },
+      {
+       "label": "$\\theta(t) = 20 + 70\\,\\mathrm{e}^{0{,}1t}$",
+       "why": "Erreur de signe dans l'exposant : $a = -0{,}1$. Ta température exploserait au lieu de baisser."
+      }
+     ],
+     "hint": "Cherche la solution constante ($\\theta' = 0$), puis ajoute $C\\mathrm{e}^{at}$ et utilise $\\theta(0)$.",
+     "solution": "Ici $a = -0{,}1$ et $b = 2$. Solution constante : $0 = -0{,}1\\theta + 2 \\Leftrightarrow \\theta = 20$. Solutions générales : $\\theta(t) = C\\mathrm{e}^{-0{,}1t} + 20$. Condition initiale : $\\theta(0) = C + 20 = 90$, donc $C = 70$. Ainsi $\\theta(t) = 20 + 70\\,\\mathrm{e}^{-0{,}1t}$. Contrôle : $\\theta(0) = 90$ ✓, $\\lim\\limits_{t\\to+\\infty}\\theta(t) = 20$ (température de la pièce) ✓, et $\\theta'(t) = -7\\mathrm{e}^{-0{,}1t} = -0{,}1(\\theta - 20)$ ✓.",
+     "points": 1,
+     "methode": "$y' = ay + b$ ($a \\ne 0$) : $y = C\\mathrm{e}^{ax} - \\dfrac ba$ ; la condition initiale fixe $C$.",
+     "ref": "m2-scex-contderiv-flash-q54"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-55",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Charge d'un condensateur",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Équations différentielles $y' = ay + b$",
+     "difficulty": 3,
+     "statement": "On charge un condensateur : la tension $u$ (en V) à ses bornes vérifie $u' = -2u + 24$ avec $u(0) = 0$ ($t$ en s), donc $u(t) = 12\\left(1 - \\mathrm{e}^{-2t}\\right)$. Au bout de combien de temps la tension atteint-elle $9$ V, soit $75\\,\\%$ de sa valeur finale ?",
+     "options": [
+      {
+       "label": "$t = \\ln 2 \\approx 0{,}69$ s",
+       "correct": true,
+       "why": "$\\mathrm{e}^{-2t} = \\frac14 \\Leftrightarrow -2t = -\\ln 4 \\Leftrightarrow t = \\frac{\\ln 4}{2} = \\ln 2$."
+      },
+      {
+       "label": "$t = 2\\ln 4 \\approx 2{,}77$ s",
+       "why": "Tu as multiplié par $2$ au lieu de diviser : $u(2\\ln 4) = 12(1 - 4^{-4}) \\approx 11{,}95$ V, presque la charge complète."
+      },
+      {
+       "label": "$t = \\dfrac12\\ln\\dfrac43 \\approx 0{,}14$ s",
+       "why": "Tu as résolu $\\mathrm{e}^{-2t} = \\frac34$, c'est-à-dire $u = 3$ V : il reste $1 - 0{,}75 = 0{,}25$ dans la parenthèse."
+      },
+      {
+       "label": "$t = 0{,}375$ s",
+       "why": "Tu as supposé la charge proportionnelle au temps ($0{,}75\\times0{,}5$) ; elle suit une exponentielle, pas une droite."
+      }
+     ],
+     "hint": "Résous $12\\left(1 - \\mathrm{e}^{-2t}\\right) = 9$ en isolant l'exponentielle.",
+     "solution": "Vérification du modèle : $u'(t) = 24\\mathrm{e}^{-2t}$ et $-2u + 24 = -24 + 24\\mathrm{e}^{-2t} + 24 = 24\\mathrm{e}^{-2t}$ ✓, $u(0) = 0$ ✓. Puis $u(t) = 9 \\Leftrightarrow 1 - \\mathrm{e}^{-2t} = \\dfrac34 \\Leftrightarrow \\mathrm{e}^{-2t} = \\dfrac14 \\Leftrightarrow -2t = \\ln\\dfrac14 = -2\\ln 2 \\Leftrightarrow t = \\ln 2 \\approx 0{,}69$ s. Contrôle : $u(\\ln 2) = 12\\left(1 - \\mathrm{e}^{-2\\ln 2}\\right) = 12\\left(1 - \\frac14\\right) = 9$ ✓.",
+     "points": 1,
+     "methode": "Temps pour atteindre une fraction $p$ de la valeur finale : $1 - \\mathrm{e}^{-t/\\tau} = p \\Rightarrow t = -\\tau\\ln(1 - p)$.",
+     "ref": "m2-scex-contderiv-flash-q55"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-56",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "L'oscillateur harmonique",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Équations différentielles $y'' + ay' + by = 0$",
+     "difficulty": 2,
+     "statement": "Un ressort non amorti a une élongation $x(t)$ (en m) qui vérifie l'équation différentielle $x'' + 25x = 0$. L'ensemble des solutions de cette équation est formé des fonctions ($A$ et $B$ réels quelconques) :",
+     "options": [
+      {
+       "label": "$t \\mapsto A\\cos(5t) + B\\sin(5t)$",
+       "correct": true,
+       "why": "Équation caractéristique $r^2 + 25 = 0$ : racines $\\pm5i$, donc $p = 0$ et $q = 5$."
+      },
+      {
+       "label": "$t \\mapsto A\\cos(25t) + B\\sin(25t)$",
+       "why": "Tu as oublié la racine carrée : la pulsation est $\\sqrt{25} = 5$. Avec $\\cos(25t)$, $x'' = -625x$."
+      },
+      {
+       "label": "$t \\mapsto A\\mathrm{e}^{5t} + B\\mathrm{e}^{-5t}$",
+       "why": "Tu as résolu $r^2 - 25 = 0$ : ici $r^2 = -25$, les racines sont complexes, la solution oscille."
+      },
+      {
+       "label": "$t \\mapsto A\\cos\\left(\\dfrac t5\\right) + B\\sin\\left(\\dfrac t5\\right)$",
+       "why": "Tu as pris l'inverse de la pulsation : avec $\\cos\\frac t5$, on aurait $x'' = -\\frac{1}{25}x$."
+      }
+     ],
+     "hint": "Écris l'équation caractéristique $r^2 + 25 = 0$ et cherche ses racines complexes $p \\pm iq$.",
+     "solution": "Équation caractéristique : $r^2 + 25 = 0$, $\\Delta = -100 < 0$, racines $r = \\pm5i$ ($p = 0$, $q = 5$). Les solutions sont $x(t) = \\mathrm{e}^{0\\cdot t}\\left(A\\cos 5t + B\\sin 5t\\right) = A\\cos(5t) + B\\sin(5t)$. Période : $T = \\frac{2\\pi}{5} \\approx 1{,}26$ s. Contrôle : si $x = \\cos 5t$, $x'' = -25\\cos 5t = -25x$ ✓.",
+     "points": 1,
+     "methode": "$y'' + \\omega^2 y = 0$ : $y = A\\cos(\\omega t) + B\\sin(\\omega t)$ ; c'est l'oscillateur harmonique de pulsation $\\omega$.",
+     "ref": "m2-scex-contderiv-flash-q56"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-57",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Des oscillations amorties",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Équations différentielles $y'' + ay' + by = 0$",
+     "difficulty": 3,
+     "statement": "Un circuit électrique amorti est modélisé par l'équation différentielle $(E) : y'' + 2y' + 5y = 0$. On cherche toutes les solutions de $(E)$ à l'aide de l'équation caractéristique. Les solutions sont les fonctions ($A$, $B$ réels) :",
+     "options": [
+      {
+       "label": "$x \\mapsto \\mathrm{e}^{-x}\\left(A\\cos 2x + B\\sin 2x\\right)$",
+       "correct": true,
+       "why": "$r^2 + 2r + 5 = 0$ : $\\Delta = -16$, $r = -1 \\pm 2i$, donc $p = -1$ et $q = 2$."
+      },
+      {
+       "label": "$x \\mapsto \\mathrm{e}^{x}\\left(A\\cos 2x + B\\sin 2x\\right)$",
+       "why": "Erreur de signe sur $p = -\\frac{b}{2a} = -1$ : avec $\\mathrm{e}^{x}$, les oscillations s'amplifieraient, ce qui contredit l'amortissement."
+      },
+      {
+       "label": "$x \\mapsto \\mathrm{e}^{-x}\\left(A\\cos 4x + B\\sin 4x\\right)$",
+       "why": "Tu as pris $q = \\sqrt{16} = 4$ sans diviser par $2$ : $q = \\frac{\\sqrt{-\\Delta}}{2} = 2$."
+      },
+      {
+       "label": "$x \\mapsto \\mathrm{e}^{-2x}\\left(A\\cos x + B\\sin x\\right)$",
+       "why": "Tu as inversé partie réelle et partie imaginaire : les racines sont $-1 \\pm 2i$, pas $-2 \\pm i$."
+      }
+     ],
+     "hint": "Calcule $\\Delta$ ; s'il est négatif, les racines sont $p \\pm iq$ avec $p = -\\dfrac{b}{2a}$ et $q = \\dfrac{\\sqrt{-\\Delta}}{2a}$.",
+     "solution": "Équation caractéristique : $r^2 + 2r + 5 = 0$. $\\Delta = 4 - 20 = -16 < 0$, racines $r = \\dfrac{-2 \\pm 4i}{2} = -1 \\pm 2i$. Donc $p = -1$, $q = 2$ et les solutions sont $y(x) = \\mathrm{e}^{-x}\\left(A\\cos 2x + B\\sin 2x\\right)$. Contrôle : pour $y = \\mathrm{e}^{-x}\\cos 2x$, $y' = \\mathrm{e}^{-x}(-\\cos 2x - 2\\sin 2x)$, $y'' = \\mathrm{e}^{-x}(-3\\cos 2x + 4\\sin 2x)$ et $y'' + 2y' + 5y = \\mathrm{e}^{-x}(-3 - 2 + 5)\\cos 2x + \\mathrm{e}^{-x}(4 - 4)\\sin 2x = 0$ ✓.",
+     "points": 1,
+     "methode": "$\\Delta < 0$ : $y = \\mathrm{e}^{px}(A\\cos qx + B\\sin qx)$ ; $p < 0$ ⇔ oscillations amorties.",
+     "ref": "m2-scex-contderiv-flash-q57"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-58",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Une pente infinie",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Interprétation géométrique de la dérivabilité",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = \\sqrt{x - 1}$ sur $[1;+\\infty[$, de courbe $(\\mathcal{C})$, et $A(1\\,;0)$. Un calcul donne $\\lim\\limits_{x\\to1^+}\\dfrac{f(x) - f(1)}{x - 1} = \\lim\\limits_{x\\to1^+}\\dfrac{1}{\\sqrt{x - 1}} = +\\infty$. Quelle est l'interprétation graphique correcte de ce résultat ?",
+     "options": [
+      {
+       "label": "$(\\mathcal{C})$ admet en $A$ une demi-tangente verticale",
+       "correct": true,
+       "why": "Un taux d'accroissement qui tend vers $\\pm\\infty$ signifie une tangente « infiniment raide » : verticale."
+      },
+      {
+       "label": "la droite $x = 1$ est asymptote verticale à $(\\mathcal{C})$",
+       "why": "Une asymptote verticale exige $\\lim f = \\pm\\infty$ ; ici $f(1) = 0$ est fini, c'est la pente qui est infinie."
+      },
+      {
+       "label": "$(\\mathcal{C})$ admet en $A$ une demi-tangente horizontale",
+       "why": "Ce serait le cas si la limite du taux valait $0$ ; ici elle vaut $+\\infty$."
+      },
+      {
+       "label": "$f$ n'est pas continue en $1$",
+       "why": "$f$ est continue en $1$ ($\\sqrt{x - 1} \\to 0 = f(1)$) ; elle n'est simplement pas dérivable à droite en $1$."
+      }
+     ],
+     "hint": "Que représente géométriquement le taux d'accroissement ? Et que signifie une pente infinie ?",
+     "solution": "Le taux $\\dfrac{f(x) - f(1)}{x - 1}$ est la pente de la corde $[AM]$ avec $M(x\\,;f(x))$. Quand $x \\to 1^+$, cette pente tend vers $+\\infty$ : $f$ n'est pas dérivable à droite en $1$, et $(\\mathcal{C})$ admet en $A(1\\,;0)$ une demi-tangente verticale (dirigée vers le haut, puisque $f(x) \\ge 0$). Contrôle : $\\dfrac{f(1{,}0001)}{0{,}0001} = \\dfrac{0{,}01}{0{,}0001} = 100$ : pente déjà très grande.",
+     "points": 1,
+     "methode": "Limite du taux : finie $\\ell$ ⇒ tangente de pente $\\ell$ ; $0$ ⇒ horizontale ; $\\pm\\infty$ ⇒ demi-tangente verticale ; deux limites différentes ⇒ point anguleux.",
+     "ref": "m2-scex-contderiv-flash-q58"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-59",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Une direction sans asymptote",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Branches infinies (classification complète)",
+     "difficulty": 3,
+     "statement": "Soit $f(x) = x + \\sqrt{x}$ sur $[0;+\\infty[$. On a $\\lim\\limits_{x\\to+\\infty} f(x) = +\\infty$, $\\lim\\limits_{x\\to+\\infty}\\dfrac{f(x)}{x} = 1$ et $\\lim\\limits_{x\\to+\\infty}\\left(f(x) - x\\right) = +\\infty$. Quelle est la nature de la branche infinie de la courbe de $f$ en $+\\infty$ ?",
+     "options": [
+      {
+       "label": "une branche parabolique de direction la droite $y = x$",
+       "correct": true,
+       "why": "$\\frac{f(x)}{x} \\to a = 1$ mais $f(x) - ax \\to +\\infty$ : pas d'asymptote, branche parabolique de direction $y = x$."
+      },
+      {
+       "label": "une asymptote oblique d'équation $y = x$",
+       "why": "Il faudrait $f(x) - x \\to b$ fini ; ici $f(x) - x = \\sqrt x \\to +\\infty$ : la courbe s'éloigne de la droite."
+      },
+      {
+       "label": "une branche parabolique de direction l'axe des ordonnées",
+       "why": "Cette branche correspond à $\\frac{f(x)}{x} \\to \\pm\\infty$ ; ici le rapport tend vers $1$."
+      },
+      {
+       "label": "une branche parabolique de direction l'axe des abscisses",
+       "why": "Cette branche correspond à $\\frac{f(x)}{x} \\to 0$ (comme $\\sqrt x$ seule) ; ici le rapport tend vers $1$."
+      }
+     ],
+     "hint": "Classement : $\\frac{f(x)}{x} \\to \\pm\\infty$, $\\to 0$ ou $\\to a \\ne 0$ ; dans le dernier cas, étudie $f(x) - ax$.",
+     "solution": "$\\lim f = +\\infty$, donc on étudie $\\dfrac{f(x)}{x} = 1 + \\dfrac{1}{\\sqrt x} \\to 1 = a$. Ensuite $f(x) - 1\\cdot x = \\sqrt x \\to +\\infty$ : la limite n'est pas finie. Donc la courbe admet en $+\\infty$ une branche parabolique de direction la droite $y = x$ (elle « suit » cette direction en s'en éloignant indéfiniment). Contrôle : pour $x = 10\\,000$, $f(x) = 10\\,100$, à $100$ unités au-dessus de la droite $y = x$, écart qui continue de croître.",
+     "points": 1,
+     "methode": "$\\frac{f}{x} \\to a \\ne 0$ : si $f - ax \\to b$ fini, asymptote $y = ax + b$ ; si $f - ax \\to \\pm\\infty$, branche parabolique de direction $y = ax$.",
+     "ref": "m2-scex-contderiv-flash-q59"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-60",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Le centre d'une hyperbole",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Symétries et position relative",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = \\dfrac{2x + 1}{x - 1}$ sur $\\mathbb{R}\\setminus\\{1\\}$. Sa courbe admet les asymptotes $x = 1$ et $y = 2$. On veut montrer qu'elle admet un centre de symétrie $\\Omega(a;b)$, c'est-à-dire que $f(2a - x) + f(x) = 2b$. Quel est ce point $\\Omega$ ?",
+     "options": [
+      {
+       "label": "$\\Omega(1\\,;2)$",
+       "correct": true,
+       "why": "Le centre d'une hyperbole est l'intersection des asymptotes ; on vérifie $f(2 - x) + f(x) = 4$."
+      },
+      {
+       "label": "$\\Omega(-1\\,;2)$",
+       "why": "Erreur de signe : la valeur interdite est $1$ ($x - 1 = 0$), pas $-1$."
+      },
+      {
+       "label": "$\\Omega(2\\,;1)$",
+       "why": "Tu as inversé abscisse et ordonnée : $\\Omega$ est sur l'asymptote verticale $x = 1$."
+      },
+      {
+       "label": "$\\Omega(1\\,;-1)$",
+       "why": "$-1 = \\frac{1}{-1}$ est $f(0)$ ; l'ordonnée du centre est la limite $2$ en $\\pm\\infty$."
+      }
+     ],
+     "hint": "Pense à l'intersection des deux asymptotes, puis vérifie avec la relation $f(2a - x) + f(x) = 2b$.",
+     "solution": "Candidat : $\\Omega(1;2)$, intersection des asymptotes. Pour $x \\ne 1$ (et donc $2 - x \\ne 1$) : $f(2 - x) = \\dfrac{2(2 - x) + 1}{(2 - x) - 1} = \\dfrac{5 - 2x}{1 - x} = \\dfrac{2x - 5}{x - 1}$. Donc $f(2 - x) + f(x) = \\dfrac{2x - 5 + 2x + 1}{x - 1} = \\dfrac{4(x - 1)}{x - 1} = 4 = 2\\times2$. Ainsi $\\Omega(1;2)$ est centre de symétrie de la courbe. Contrôle : $f(0) = -1$ et $f(2) = 5$ ; leur milieu $\\left(1\\,;\\frac{-1+5}{2}\\right) = (1;2)$ ✓.",
+     "points": 1,
+     "methode": "Centre de symétrie $\\Omega(a;b)$ : montre que $2a - x \\in D_f$ et $f(2a - x) + f(x) = 2b$. Axe $x = a$ : $f(2a - x) = f(x)$.",
+     "ref": "m2-scex-contderiv-flash-q60"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-61",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "Au-dessus ou en dessous ?",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Symétries et position relative",
+     "difficulty": 2,
+     "statement": "Soit $f(x) = x - 1 + \\dfrac{\\ln x}{x}$ sur $]0;+\\infty[$ et $(\\Delta)$ la droite d'équation $y = x - 1$. Pour étudier la position relative de la courbe $(\\mathcal{C})$ de $f$ et de $(\\Delta)$, on étudie le signe de $f(x) - (x - 1)$. On obtient que $(\\mathcal{C})$ est :",
+     "options": [
+      {
+       "label": "sous $(\\Delta)$ sur $]0;1[$, au-dessus sur $]1;+\\infty[$",
+       "correct": true,
+       "why": "$f(x) - (x - 1) = \\dfrac{\\ln x}{x}$ a le signe de $\\ln x$ (car $x > 0$)."
+      },
+      {
+       "label": "au-dessus de $(\\Delta)$ sur tout $]0;+\\infty[$",
+       "why": "Tu as supposé $\\frac{\\ln x}{x} > 0$ partout ; or pour $x = \\frac12$, $\\ln\\frac12 < 0$."
+      },
+      {
+       "label": "sous $(\\Delta)$ sur $]0;\\mathrm{e}[$, au-dessus sur $]\\mathrm{e};+\\infty[$",
+       "why": "Tu as confondu avec le maximum de $\\frac{\\ln x}{x}$, atteint en $\\mathrm{e}$ : le signe change en $1$, là où $\\ln$ s'annule."
+      },
+      {
+       "label": "au-dessus de $(\\Delta)$ sur $]0;1[$, sous $(\\Delta)$ sur $]1;+\\infty[$",
+       "why": "Tu as inversé : $\\ln x < 0$ sur $]0;1[$, donc $f(x) < x - 1$ sur cet intervalle."
+      }
+     ],
+     "hint": "Calcule $f(x) - (x - 1)$, puis étudie son signe ; le dénominateur $x$ est positif.",
+     "solution": "$f(x) - (x - 1) = \\dfrac{\\ln x}{x}$. Sur $]0;+\\infty[$, $x > 0$ donc ce nombre a le signe de $\\ln x$ : négatif sur $]0;1[$, nul en $1$, positif sur $]1;+\\infty[$. Ainsi $(\\mathcal{C})$ est sous $(\\Delta)$ sur $]0;1[$, coupe $(\\Delta)$ au point $(1\\,;0)$, et est au-dessus sur $]1;+\\infty[$. Contrôle : $f(\\mathrm{e}) = \\mathrm{e} - 1 + \\frac1{\\mathrm{e}} > \\mathrm{e} - 1$ ✓ et $f\\left(\\frac12\\right) = -\\frac12 - 2\\ln 2 < -\\frac12$ ✓.",
+     "points": 1,
+     "methode": "Position courbe/droite : signe de $f(x) - (ax + b)$ ; il s'annule aux points d'intersection.",
+     "ref": "m2-scex-contderiv-flash-q61"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-flash-62",
+   "chapter": "contderiv",
+   "kind": "qcu",
+   "title": "La limite d'une suite récurrente",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Application aux suites",
+     "difficulty": 3,
+     "statement": "Soit $(u_n)$ définie par $u_0 = 0$ et $u_{n+1} = \\sqrt{2 + u_n}$. On admet que $(u_n)$ est croissante et majorée par $2$, donc convergente vers un réel $\\ell \\ge 0$. La fonction $f : x \\mapsto \\sqrt{2 + x}$ est continue sur $[0;2]$. Que vaut $\\ell$ ?",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "Par continuité de $f$, $\\ell = \\sqrt{2 + \\ell}$, d'où $\\ell^2 - \\ell - 2 = 0$, et $\\ell \\ge 0$ impose $\\ell = 2$."
+      },
+      {
+       "label": "$-1$",
+       "why": "C'est l'autre racine de $\\ell^2 - \\ell - 2 = 0$ ; elle est exclue car tous les $u_n$ sont positifs, donc $\\ell \\ge 0$ (et $\\sqrt{2 - 1} = 1 \\ne -1$)."
+      },
+      {
+       "label": "$\\sqrt2$",
+       "why": "C'est $u_1$, le premier terme après $u_0$ ; la suite continue de croître ($u_2 = \\sqrt{2 + \\sqrt2} \\approx 1{,}85$)."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Une suite croissante et majorée converge : elle ne peut pas dépasser $2$."
+      }
+     ],
+     "hint": "Passe à la limite dans $u_{n+1} = f(u_n)$ en utilisant la continuité de $f$ en $\\ell$.",
+     "solution": "$(u_n)$ converge vers $\\ell \\in [0;2]$ et $f$ est continue en $\\ell$, donc $f(u_n) \\to f(\\ell)$. Comme $u_{n+1} \\to \\ell$ aussi, on a $\\ell = f(\\ell) = \\sqrt{2 + \\ell}$. En élevant au carré : $\\ell^2 = 2 + \\ell \\Leftrightarrow (\\ell - 2)(\\ell + 1) = 0$. Puisque $\\ell \\ge 0$, $\\ell = 2$. Contrôle : $u_3 = \\sqrt{2 + 1{,}848} \\approx 1{,}962$ et $u_4 \\approx 1{,}990$ : la suite s'approche bien de $2$.",
+     "points": 1,
+     "methode": "Si $u_{n+1} = f(u_n)$, $u_n \\to \\ell$ et $f$ continue en $\\ell$, alors $\\ell = f(\\ell)$ : résous cette équation et trie avec les encadrements connus.",
+     "ref": "m2-scex-contderiv-flash-q62"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-ex1",
+   "chapter": "contderiv",
+   "kind": "probleme",
+   "title": "Exercice 1 — Étude d'une fonction rationnelle",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "On considère la fonction $f$ définie sur l'intervalle $I = ]-1;+\\infty[$ par $f(x) = x + \\dfrac{4}{x+1}$. On note $(\\mathcal{C})$ sa courbe représentative dans un repère orthonormé $(O;\\vec i,\\vec j)$ (unité : $1$ cm) et $(\\Delta)$ la droite d'équation $y = x$. Cette fonction apparaît par exemple dans un problème d'optimisation : si $x + 1$ représente la durée (en jours) d'un stockage, $x$ un coût proportionnel et $\\dfrac{4}{x+1}$ un coût de commande réparti sur la durée, $f(x)$ est le coût total, que l'on cherche à rendre minimal. On admet que $f$ est dérivable sur $I$. Dans tout l'exercice, on justifiera les limites par les règles opératoires, et on interprétera graphiquement chaque résultat obtenu sur les limites (asymptotes, position).",
+   "questions": [
+    {
+     "notion": "Limites à gauche et à droite",
+     "difficulty": 1,
+     "statement": "1) Calculer $\\lim\\limits_{x\\to-1^+} f(x)$ et interpréter graphiquement le résultat.",
+     "options": [
+      {
+       "label": "$+\\infty$ ; la droite d'équation $x = -1$ est asymptote verticale à $(\\mathcal{C})$",
+       "correct": true,
+       "why": "$x + 1 \\to 0^+$ donc $\\dfrac{4}{x+1} \\to +\\infty$, et $x \\to -1$ : la somme tend vers $+\\infty$."
+      },
+      {
+       "label": "$-\\infty$ ; la droite d'équation $x = -1$ est asymptote verticale à $(\\mathcal{C})$",
+       "why": "Sur $I$, $x > -1$ donc $x + 1 > 0$ : on divise $4$ par un petit nombre positif, le résultat est positif et grand."
+      },
+      {
+       "label": "$3$ ; $(\\mathcal{C})$ passe par le point $(-1\\,;3)$",
+       "why": "Tu as remplacé $x$ par $1$ au lieu de $-1$ ; en $-1$, le dénominateur s'annule et $f$ n'est même pas définie."
+      },
+      {
+       "label": "$+\\infty$ ; la droite d'équation $y = -1$ est asymptote horizontale à $(\\mathcal{C})$",
+       "why": "Une limite infinie en un point $a$ donne une asymptote verticale $x = a$, pas horizontale."
+      }
+     ],
+     "hint": "Étudie le signe de $x + 1$ quand $x$ tend vers $-1$ par valeurs supérieures.",
+     "solution": "Quand $x \\to -1^+$ : $x + 1 \\to 0$ avec $x + 1 > 0$, donc $\\dfrac{4}{x + 1} \\to +\\infty$ ; et $x \\to -1$. Par somme, $\\lim\\limits_{x\\to-1^+} f(x) = +\\infty$. Interprétation : la droite d'équation $x = -1$ est asymptote verticale à $(\\mathcal{C})$. Dans le modèle de stock, une durée de stockage presque nulle fait exploser le coût de commande. Contrôle : $f(-0{,}99) = -0{,}99 + \\dfrac{4}{0{,}01} = 399{,}01$.",
+     "points": 1,
+     "methode": "Limite en une borne ouverte où le dénominateur s'annule : forme $\\frac{k}{0^\\pm}$ ⇒ asymptote verticale.",
+     "ref": "m2-scex-contderiv-ex1-q1"
+    },
+    {
+     "notion": "Branches infinies et asymptotes",
+     "difficulty": 2,
+     "statement": "2) Calculer $\\lim\\limits_{x\\to+\\infty} f(x)$, puis $\\lim\\limits_{x\\to+\\infty}\\left[f(x) - x\\right]$. Que peut-on en déduire pour $(\\mathcal{C})$ en $+\\infty$ ?",
+     "options": [
+      {
+       "label": "$\\lim f = +\\infty$ et $(\\Delta) : y = x$ est asymptote oblique à $(\\mathcal{C})$ en $+\\infty$",
+       "correct": true,
+       "why": "$f(x) - x = \\dfrac{4}{x+1} \\to 0$ : c'est la définition d'une asymptote oblique."
+      },
+      {
+       "label": "$\\lim f = +\\infty$ et la droite $y = x + 4$ est asymptote oblique en $+\\infty$",
+       "why": "Le $4$ est divisé par $x + 1$ : il disparaît à l'infini. On a $f(x) - (x + 4) \\to -4 \\ne 0$."
+      },
+      {
+       "label": "$\\lim f = +\\infty$ et $(\\mathcal{C})$ a une branche parabolique de direction $(Oy)$",
+       "why": "$\\frac{f(x)}{x} = 1 + \\frac{4}{x(x+1)} \\to 1$, pas $\\pm\\infty$ ; de plus $f(x) - x$ a une limite finie."
+      },
+      {
+       "label": "$\\lim f = 4$ et la droite $y = 4$ est asymptote horizontale",
+       "why": "$x \\to +\\infty$ dans la somme : $f(x)$ n'a pas de limite finie, $f(100) \\approx 100{,}04$."
+      }
+     ],
+     "hint": "Écris $f(x) - x$ et calcule sa limite.",
+     "solution": "$\\lim\\limits_{x\\to+\\infty} x = +\\infty$ et $\\lim\\limits_{x\\to+\\infty}\\dfrac{4}{x+1} = 0$, donc $\\lim\\limits_{x\\to+\\infty} f(x) = +\\infty$. Ensuite $f(x) - x = \\dfrac{4}{x + 1}$ et $\\lim\\limits_{x\\to+\\infty}\\dfrac{4}{x+1} = 0$. Donc la droite $(\\Delta) : y = x$ est asymptote oblique à $(\\mathcal{C})$ au voisinage de $+\\infty$. Contrôle : $f(99) = 99 + 0{,}04 = 99{,}04$, à $0{,}04$ au-dessus de $(\\Delta)$.",
+     "points": 1,
+     "methode": "$y = ax + b$ est asymptote en $+\\infty$ ⇔ $\\lim [f(x) - (ax + b)] = 0$.",
+     "ref": "m2-scex-contderiv-ex1-q2"
+    },
+    {
+     "notion": "Dérivées usuelles et opérations",
+     "difficulty": 2,
+     "statement": "3) Montrer que pour tout $x \\in I$, $f'(x)$ peut s'écrire sous forme factorisée. On obtient :",
+     "options": [
+      {
+       "label": "$f'(x) = \\dfrac{(x - 1)(x + 3)}{(x + 1)^2}$",
+       "correct": true,
+       "why": "$f'(x) = 1 - \\dfrac{4}{(x+1)^2} = \\dfrac{(x+1)^2 - 2^2}{(x+1)^2}$, puis identité $a^2 - b^2$."
+      },
+      {
+       "label": "$f'(x) = \\dfrac{(x + 1)^2 + 4}{(x + 1)^2}$",
+       "why": "Erreur de signe : $\\left(\\frac{1}{u}\\right)' = -\\frac{u'}{u^2}$, donc $\\left(\\frac{4}{x+1}\\right)' = -\\frac{4}{(x+1)^2}$."
+      },
+      {
+       "label": "$f'(x) = \\dfrac{(x - 1)(x + 3)}{x + 1}$",
+       "why": "Le dénominateur de $f'$ est $(x + 1)^2$ : c'est le carré qui vient de la dérivée de $\\frac1u$."
+      },
+      {
+       "label": "$f'(x) = \\dfrac{(x - 3)(x + 1)}{(x + 1)^2}$",
+       "why": "Mauvaise factorisation : $(x+1)^2 - 4 = (x + 1 - 2)(x + 1 + 2) = (x - 1)(x + 3)$."
+      }
+     ],
+     "hint": "Dérive $\\dfrac{4}{x+1}$ avec $\\left(\\dfrac1u\\right)' = -\\dfrac{u'}{u^2}$, réduis au même dénominateur, puis factorise $a^2 - b^2$.",
+     "solution": "Pour $x \\in I$ : $f'(x) = 1 - \\dfrac{4}{(x + 1)^2} = \\dfrac{(x + 1)^2 - 4}{(x + 1)^2} = \\dfrac{(x + 1 - 2)(x + 1 + 2)}{(x + 1)^2} = \\dfrac{(x - 1)(x + 3)}{(x + 1)^2}$. Contrôle : $f'(0) = 1 - 4 = -3$ et $\\dfrac{(0 - 1)(0 + 3)}{1} = -3$ ✓.",
+     "points": 1,
+     "methode": "Après dérivation, réduis au même dénominateur et factorise : le signe de $f'$ se lit alors directement.",
+     "ref": "m2-scex-contderiv-ex1-q3"
+    },
+    {
+     "notion": "Extremums",
+     "difficulty": 2,
+     "statement": "4) Sachant que $f'(x) = \\dfrac{(x - 1)(x + 3)}{(x + 1)^2}$ (question 3), dresser le tableau de variations de $f$ sur $I$. On en déduit que $f$ admet :",
+     "options": [
+      {
+       "label": "un minimum égal à $3$, atteint en $x = 1$",
+       "correct": true,
+       "why": "Sur $I$, $f'$ a le signe de $x - 1$ : $f$ décroît sur $]-1;1]$, croît sur $[1;+\\infty[$ ; $f(1) = 1 + 2 = 3$."
+      },
+      {
+       "label": "un maximum égal à $3$, atteint en $x = 1$",
+       "why": "$f$ décroît puis croît autour de $1$ : c'est un minimum. D'ailleurs $f$ tend vers $+\\infty$ aux deux bornes."
+      },
+      {
+       "label": "un minimum égal à $-5$, atteint en $x = -3$",
+       "why": "$-3$ annule $f'$, mais $-3 \\notin I = ]-1;+\\infty[$ : cette racine est hors du domaine."
+      },
+      {
+       "label": "un minimum égal à $0$, atteint en $x = 1$",
+       "why": "$0$ est la valeur de $f'(1)$ ; le minimum est la valeur de $f$, soit $f(1) = 3$."
+      }
+     ],
+     "hint": "Sur $I$, quel est le signe de $x + 3$ ? de $(x + 1)^2$ ?",
+     "solution": "Pour $x > -1$ : $x + 3 > 0$ et $(x + 1)^2 > 0$, donc $f'(x)$ a le signe de $x - 1$. Ainsi $f$ est strictement décroissante sur $]-1;1]$ (de $+\\infty$ à $3$) et strictement croissante sur $[1;+\\infty[$ (de $3$ à $+\\infty$). $f$ admet un minimum global en $1$ : $f(1) = 1 + \\dfrac{4}{2} = 3$. Dans le modèle, le coût minimal est obtenu pour une durée de stockage $x + 1 = 2$ jours. Contrôle : $f(0) = 4 > 3$ et $f(3) = 4 > 3$ ✓.",
+     "points": 1,
+     "methode": "Extremum : $f'$ s'annule en changeant de signe ; vérifie toujours que la racine de $f'$ est dans le domaine.",
+     "ref": "m2-scex-contderiv-ex1-q4"
+    },
+    {
+     "notion": "Symétries et position relative",
+     "difficulty": 2,
+     "statement": "5) Étudier la position relative de $(\\mathcal{C})$ et de son asymptote $(\\Delta) : y = x$ sur $I$.",
+     "options": [
+      {
+       "label": "$(\\mathcal{C})$ est strictement au-dessus de $(\\Delta)$ sur tout $I$",
+       "correct": true,
+       "why": "$f(x) - x = \\dfrac{4}{x+1} > 0$ car $x + 1 > 0$ sur $I$."
+      },
+      {
+       "label": "$(\\mathcal{C})$ est strictement en dessous de $(\\Delta)$ sur tout $I$",
+       "why": "$\\frac{4}{x + 1}$ est le quotient de deux positifs sur $I$ : il est positif, la courbe est au-dessus."
+      },
+      {
+       "label": "$(\\mathcal{C})$ coupe $(\\Delta)$ au point d'abscisse $1$",
+       "why": "$f(1) = 3 \\ne 1$ ; et $f(x) - x = \\frac{4}{x+1}$ ne s'annule jamais."
+      },
+      {
+       "label": "$(\\mathcal{C})$ est au-dessus de $(\\Delta)$ seulement pour $x > 0$",
+       "why": "Le signe de $\\frac{4}{x+1}$ dépend de $x + 1$, positif sur tout $I$, pas de $x$ : $f(-0{,}5) - (-0{,}5) = 8 > 0$."
+      }
+     ],
+     "hint": "Étudie le signe de $f(x) - x$ sur $I$.",
+     "solution": "Pour $x \\in I$ : $f(x) - x = \\dfrac{4}{x + 1}$. Comme $x + 1 > 0$, $f(x) - x > 0$ : $(\\mathcal{C})$ est strictement au-dessus de $(\\Delta)$ sur $I$, sans jamais la couper. L'écart $\\dfrac{4}{x+1}$ diminue vers $0$ quand $x \\to +\\infty$ (asymptote). Contrôle : $f(1) - 1 = 2 > 0$ et $f(7) - 7 = 0{,}5 > 0$ ✓.",
+     "points": 1,
+     "methode": "Position courbe/droite : signe de $f(x) - (ax + b)$.",
+     "ref": "m2-scex-contderiv-ex1-q5"
+    },
+    {
+     "notion": "Théorème des valeurs intermédiaires",
+     "difficulty": 3,
+     "statement": "6) En utilisant le tableau de variations de $f$ (question 4), déterminer le nombre de solutions dans $I$ de l'équation $f(x) = 5$, puis les calculer.",
+     "options": [
+      {
+       "label": "deux solutions : $2 - \\sqrt5$ et $2 + \\sqrt5$",
+       "correct": true,
+       "why": "Une solution sur $]-1;1[$, une sur $]1;+\\infty[$ ; l'équation équivaut à $x^2 - 4x - 1 = 0$."
+      },
+      {
+       "label": "une seule solution : $2 + \\sqrt5$",
+       "why": "Tu as rejeté $2 - \\sqrt5 \\approx -0{,}24$, or $-0{,}24 > -1$ : elle appartient bien à $I$."
+      },
+      {
+       "label": "deux solutions : $4 - 2\\sqrt5$ et $4 + 2\\sqrt5$",
+       "why": "Tu as oublié de diviser par $2a = 2$ : $x = \\dfrac{4 \\pm \\sqrt{20}}{2} = 2 \\pm \\sqrt5$."
+      },
+      {
+       "label": "aucune solution",
+       "why": "$5 > 3 = \\min f$ et $f$ tend vers $+\\infty$ aux deux bornes : $5$ est atteint de chaque côté du minimum."
+      }
+     ],
+     "hint": "Applique le TVI sur $]-1;1]$ puis sur $[1;+\\infty[$ ; pour calculer, multiplie par $x + 1 > 0$.",
+     "solution": "Sur $]-1;1]$, $f$ est continue et strictement décroissante de $+\\infty$ à $3$ ; comme $5 \\in ]3;+\\infty[$, l'équation a une unique solution dans cet intervalle. De même sur $[1;+\\infty[$ ($f$ croît de $3$ à $+\\infty$) : une unique solution. Donc deux solutions. Calcul : pour $x > -1$, $f(x) = 5 \\Leftrightarrow x(x + 1) + 4 = 5(x + 1) \\Leftrightarrow x^2 - 4x - 1 = 0$ ; $\\Delta = 20$, $x = \\dfrac{4 \\pm 2\\sqrt5}{2} = 2 \\pm \\sqrt5$. On a $2 - \\sqrt5 \\approx -0{,}24 \\in ]-1;1[$ et $2 + \\sqrt5 \\approx 4{,}24 \\in ]1;+\\infty[$, conformément au TVI. Contrôle : $f(2 + \\sqrt5) = 2 + \\sqrt5 + \\dfrac{4}{3 + \\sqrt5} = 2 + \\sqrt5 + (3 - \\sqrt5) = 5$ ✓.",
+     "points": 1,
+     "methode": "Nombre de solutions de $f(x) = k$ : lis le tableau de variations, applique le TVI sur chaque intervalle de stricte monotonie, puis contrôle le calcul exact.",
+     "ref": "m2-scex-contderiv-ex1-q6"
+    }
+   ],
+   "figure": "asymptote"
+  },
+  {
+   "ref": "m2-scex-contderiv-ex2",
+   "chapter": "contderiv",
+   "kind": "probleme",
+   "title": "Exercice 2 — La fonction x − 1 − ln x",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $g$ la fonction définie sur $]0;+\\infty[$ par $g(x) = x - 1 - \\ln x$, et $(\\mathcal{C}_g)$ sa courbe dans un repère orthonormé. Cette fonction mesure l'écart entre la droite $y = x - 1$ et la courbe de $\\ln$ : elle sert à démontrer une inégalité très utilisée au BAC, puis à étudier une suite. On rappelle les limites de référence $\\lim\\limits_{x\\to0^+}\\ln x = -\\infty$ et $\\lim\\limits_{x\\to+\\infty}\\dfrac{\\ln x}{x} = 0$, ainsi que les propriétés $\\ln(ab) = \\ln a + \\ln b$ et $\\ln\\dfrac ab = \\ln a - \\ln b$ pour $a, b > 0$. On admet que $g$ est dérivable sur $]0;+\\infty[$. Pour tout entier $n \\ge 1$, on pose enfin $S_n = 1 + \\dfrac12 + \\dfrac13 + \\cdots + \\dfrac1n = \\sum\\limits_{k=1}^{n}\\dfrac1k$.",
+   "questions": [
+    {
+     "notion": "Limites de référence",
+     "difficulty": 1,
+     "statement": "1) Calculer $\\lim\\limits_{x\\to0^+} g(x)$ et interpréter graphiquement.",
+     "options": [
+      {
+       "label": "$+\\infty$ ; l'axe des ordonnées est asymptote verticale à $(\\mathcal{C}_g)$",
+       "correct": true,
+       "why": "$x - 1 \\to -1$ et $-\\ln x \\to +\\infty$ : la somme tend vers $+\\infty$."
+      },
+      {
+       "label": "$-\\infty$ ; l'axe des ordonnées est asymptote verticale à $(\\mathcal{C}_g)$",
+       "why": "Attention au signe « $-$ » devant $\\ln x$ : $\\ln x \\to -\\infty$ donc $-\\ln x \\to +\\infty$."
+      },
+      {
+       "label": "$-1$ ; $(\\mathcal{C}_g)$ part du point $(0\\,;-1)$",
+       "why": "Tu as oublié le terme $-\\ln x$, qui n'a pas de limite finie en $0^+$."
+      },
+      {
+       "label": "$0$ ; $(\\mathcal{C}_g)$ passe par l'origine",
+       "why": "$0$ est la valeur minimale de $g$ (atteinte en $1$), pas sa limite en $0$ ; et $g$ n'est pas définie en $0$."
+      }
+     ],
+     "hint": "Utilise $\\lim\\limits_{x\\to0^+}\\ln x = -\\infty$ et fais attention au signe moins.",
+     "solution": "Quand $x \\to 0^+$ : $x - 1 \\to -1$ et $\\ln x \\to -\\infty$, donc $-\\ln x \\to +\\infty$. Par somme, $\\lim\\limits_{x\\to0^+} g(x) = +\\infty$. Interprétation : la droite d'équation $x = 0$ (l'axe des ordonnées) est asymptote verticale à $(\\mathcal{C}_g)$. Contrôle : $g(0{,}001) = -0{,}999 + 6{,}908 \\approx 5{,}91$, et $g(10^{-6}) \\approx 12{,}8$ : ça grandit bien.",
+     "points": 1,
+     "methode": "En $0^+$ : $\\ln x \\to -\\infty$ ; un « $-\\ln x$ » tend donc vers $+\\infty$.",
+     "ref": "m2-scex-contderiv-ex2-q1"
+    },
+    {
+     "notion": "Techniques de levée",
+     "difficulty": 2,
+     "statement": "2) a) Vérifier que pour tout $x > 0$, $g(x) = x\\left(1 - \\dfrac1x - \\dfrac{\\ln x}{x}\\right)$. b) En déduire $\\lim\\limits_{x\\to+\\infty} g(x)$.",
+     "options": [
+      {
+       "label": "$+\\infty$",
+       "correct": true,
+       "why": "La parenthèse tend vers $1 - 0 - 0 = 1$ et $x \\to +\\infty$ : le produit tend vers $+\\infty$."
+      },
+      {
+       "label": "forme indéterminée, $g$ n'a pas de limite en $+\\infty$",
+       "why": "$x - \\ln x$ est bien une FI $\\infty - \\infty$ au départ, mais la factorisation par $x$ la lève : la limite existe."
+      },
+      {
+       "label": "$0$",
+       "why": "Tu as cru que $x$ et $\\ln x$ « se compensent » ; en fait $\\ln x$ est négligeable devant $x$ : $g(100) \\approx 94{,}4$."
+      },
+      {
+       "label": "$-\\infty$",
+       "why": "Tu as fait dominer $-\\ln x$ ; c'est l'inverse : $\\frac{\\ln x}{x} \\to 0$, donc $x$ l'emporte."
+      }
+     ],
+     "hint": "Factorise par le terme dominant $x$ et utilise $\\dfrac{\\ln x}{x} \\to 0$.",
+     "solution": "a) Pour $x > 0$ : $x\\left(1 - \\dfrac1x - \\dfrac{\\ln x}{x}\\right) = x - 1 - \\ln x = g(x)$ ✓. b) En $+\\infty$ : $\\dfrac1x \\to 0$ et $\\dfrac{\\ln x}{x} \\to 0$ (croissances comparées), donc la parenthèse tend vers $1$ ; et $x \\to +\\infty$. Par produit, $\\lim\\limits_{x\\to+\\infty} g(x) = +\\infty$. Contrôle : $g(100) = 99 - \\ln 100 \\approx 99 - 4{,}6 = 94{,}4$.",
+     "points": 1,
+     "methode": "FI $\\infty - \\infty$ entre $x$ et $\\ln x$ : factorise par $x$ et utilise $\\frac{\\ln x}{x} \\to 0$.",
+     "ref": "m2-scex-contderiv-ex2-q2"
+    },
+    {
+     "notion": "Étude de la fonction",
+     "difficulty": 1,
+     "statement": "3) Calculer $g'(x)$ pour tout $x > 0$.",
+     "options": [
+      {
+       "label": "$g'(x) = \\dfrac{x - 1}{x}$",
+       "correct": true,
+       "why": "$g'(x) = 1 - \\dfrac1x = \\dfrac{x - 1}{x}$."
+      },
+      {
+       "label": "$g'(x) = \\dfrac{1 - x}{x}$",
+       "why": "Erreur de signe en réduisant : $1 - \\frac1x = \\frac{x}{x} - \\frac1x = \\frac{x - 1}{x}$."
+      },
+      {
+       "label": "$g'(x) = 1 - \\ln x$",
+       "why": "La dérivée de $\\ln x$ est $\\frac1x$, pas $\\ln x$."
+      },
+      {
+       "label": "$g'(x) = \\dfrac{x + 1}{x}$",
+       "why": "$-\\ln x$ se dérive en $-\\frac1x$, pas en $+\\frac1x$."
+      }
+     ],
+     "hint": "$(\\ln x)' = \\dfrac1x$ et la dérivée d'une constante est nulle.",
+     "solution": "$g'(x) = 1 - 0 - \\dfrac1x = \\dfrac{x - 1}{x}$ pour tout $x > 0$. Contrôle : $g'(1) = 0$, ce qui annonce un extremum en $1$ ; et $g'(2) = \\frac12 > 0$.",
+     "points": 1,
+     "methode": "$(\\ln x)' = \\frac1x$ ; réduis au même dénominateur pour lire le signe.",
+     "ref": "m2-scex-contderiv-ex2-q3"
+    },
+    {
+     "notion": "Extremums",
+     "difficulty": 2,
+     "statement": "4) Sachant que $g'(x) = \\dfrac{x - 1}{x}$, dresser le tableau de variations de $g$. On obtient que $g$ admet :",
+     "options": [
+      {
+       "label": "un minimum égal à $0$, atteint en $x = 1$",
+       "correct": true,
+       "why": "$g' < 0$ sur $]0;1[$, $g' > 0$ sur $]1;+\\infty[$, et $g(1) = 1 - 1 - \\ln 1 = 0$."
+      },
+      {
+       "label": "un maximum égal à $0$, atteint en $x = 1$",
+       "why": "$g$ décroît puis croît : c'est un minimum (et $g \\to +\\infty$ aux deux bornes)."
+      },
+      {
+       "label": "un minimum égal à $-1$, atteint en $x = 1$",
+       "why": "$\\ln 1 = 0$, donc $g(1) = 1 - 1 - 0 = 0$."
+      },
+      {
+       "label": "un minimum égal à $\\mathrm{e} - 2$, atteint en $x = \\mathrm{e}$",
+       "why": "$g'$ s'annule en $x = 1$, pas en $\\mathrm{e}$ ; et $g(\\mathrm{e}) = \\mathrm{e} - 2 > 0 = g(1)$."
+      }
+     ],
+     "hint": "Sur $]0;+\\infty[$, le dénominateur $x$ est positif : le signe de $g'$ est celui de $x - 1$.",
+     "solution": "Pour $x > 0$, $g'(x)$ a le signe de $x - 1$ : $g$ est strictement décroissante sur $]0;1]$ (de $+\\infty$ à $0$) et strictement croissante sur $[1;+\\infty[$ (de $0$ à $+\\infty$). Elle admet un minimum global en $1$ : $g(1) = 0$. Contrôle : $g(\\mathrm{e}) = \\mathrm{e} - 2 \\approx 0{,}72 > 0$ et $g\\left(\\frac12\\right) = -\\frac12 + \\ln 2 \\approx 0{,}19 > 0$ ✓.",
+     "points": 1,
+     "methode": "Tableau de variations : signe de $g'$, puis valeurs et limites aux bornes.",
+     "ref": "m2-scex-contderiv-ex2-q4"
+    },
+    {
+     "notion": "Démontrer une inégalité : la méthode de l'étude de fonction",
+     "difficulty": 2,
+     "statement": "5) Déduire de la question 4 une inégalité vérifiée par $\\ln x$ pour tout $x > 0$, et préciser le cas d'égalité.",
+     "options": [
+      {
+       "label": "$\\ln x \\le x - 1$, avec égalité seulement pour $x = 1$",
+       "correct": true,
+       "why": "$g(x) \\ge g(1) = 0$ donne $x - 1 - \\ln x \\ge 0$ ; $g(x) = 0$ seulement en $1$."
+      },
+      {
+       "label": "$\\ln x \\ge x - 1$, avec égalité seulement pour $x = 1$",
+       "why": "Sens inversé : le minimum de $g$ est $0$, donc $g(x) \\ge 0$, soit $\\ln x \\le x - 1$. Contre-exemple : $\\ln 2 \\approx 0{,}69 < 1$."
+      },
+      {
+       "label": "$\\ln x < x - 1$ pour tout $x > 0$",
+       "why": "L'inégalité n'est pas stricte partout : en $x = 1$, $\\ln 1 = 0 = 1 - 1$."
+      },
+      {
+       "label": "$\\ln x \\le 1 - x$, avec égalité pour $x = 1$",
+       "why": "Faux pour $x = 2$ : $\\ln 2 \\approx 0{,}69 > 1 - 2 = -1$."
+      }
+     ],
+     "hint": "Un minimum nul donne $g(x) \\ge 0$ pour tout $x$.",
+     "solution": "D'après la question 4, $0$ est le minimum de $g$ sur $]0;+\\infty[$ : pour tout $x > 0$, $g(x) \\ge 0$, c'est-à-dire $x - 1 - \\ln x \\ge 0$, soit $\\ln x \\le x - 1$. Comme $g$ est strictement monotone sur $]0;1]$ et sur $[1;+\\infty[$, $g(x) = 0$ uniquement pour $x = 1$ : l'égalité n'a lieu qu'en $1$. Graphiquement, la courbe de $\\ln$ est sous sa tangente $y = x - 1$ au point $(1;0)$. Contrôle : $x = 0{,}5$ : $\\ln 0{,}5 \\approx -0{,}69 \\le -0{,}5$ ✓.",
+     "points": 1,
+     "methode": "Pour prouver $A(x) \\le B(x)$ : étudie $g = B - A$ et montre que son minimum est $\\ge 0$.",
+     "ref": "m2-scex-contderiv-ex2-q5"
+    },
+    {
+     "notion": "Application : inégalités et suites",
+     "difficulty": 3,
+     "statement": "6) En appliquant l'inégalité de la question 5 à $x = 1 + \\dfrac1k$ ($k \\ge 1$), on obtient $\\ln(k + 1) - \\ln k \\le \\dfrac1k$. En sommant ces inégalités pour $k$ allant de $1$ à $n$, que peut-on en déduire pour la suite $(S_n)$ ?",
+     "options": [
+      {
+       "label": "$S_n \\ge \\ln(n + 1)$ pour tout $n \\ge 1$, donc $\\lim S_n = +\\infty$",
+       "correct": true,
+       "why": "La somme des $\\ln(k+1) - \\ln k$ est télescopique et vaut $\\ln(n + 1) - \\ln 1 = \\ln(n+1)$."
+      },
+      {
+       "label": "$S_n \\le \\ln(n + 1)$ pour tout $n \\ge 1$, donc $(S_n)$ est majorée",
+       "why": "Sens inversé : chaque terme $\\frac1k$ est supérieur ou égal à $\\ln(k+1) - \\ln k$. D'ailleurs $S_1 = 1 > \\ln 2 \\approx 0{,}69$."
+      },
+      {
+       "label": "$S_n \\ge \\ln(n + 1)$ pour tout $n \\ge 1$, donc $(S_n)$ converge",
+       "why": "Être minorée ne donne pas la convergence ; ici le minorant tend vers $+\\infty$, donc $S_n \\to +\\infty$."
+      },
+      {
+       "label": "$S_n \\ge n\\ln 2$ pour tout $n \\ge 1$",
+       "why": "Tu as appliqué l'inégalité avec $x = 2$ pour chaque $k$, alors que $x = 1 + \\frac1k$ dépend de $k$. Contre-exemple : $S_{10} \\approx 2{,}93 < 10\\ln 2 \\approx 6{,}93$."
+      }
+     ],
+     "hint": "Écris les inégalités pour $k = 1, 2, \\ldots, n$ et additionne : les termes en $\\ln$ se simplifient deux à deux.",
+     "solution": "Pour $k \\ge 1$, $x = 1 + \\frac1k > 0$ donc $\\ln\\left(1 + \\frac1k\\right) \\le \\frac1k$, et $\\ln\\left(1 + \\frac1k\\right) = \\ln\\frac{k+1}{k} = \\ln(k+1) - \\ln k$. En sommant de $k = 1$ à $n$ : $\\sum\\limits_{k=1}^{n}\\left[\\ln(k+1) - \\ln k\\right] \\le S_n$. La somme de gauche est télescopique : $(\\ln 2 - \\ln 1) + (\\ln 3 - \\ln 2) + \\cdots + (\\ln(n+1) - \\ln n) = \\ln(n+1)$. Donc $S_n \\ge \\ln(n + 1)$. Comme $\\lim\\limits_{n\\to+\\infty}\\ln(n+1) = +\\infty$, par comparaison $\\lim S_n = +\\infty$. Contrôle : $S_4 = 1 + 0{,}5 + 0{,}333 + 0{,}25 \\approx 2{,}08 \\ge \\ln 5 \\approx 1{,}61$ ✓.",
+     "points": 1,
+     "methode": "Inégalité de fonction → inégalité sur une suite : applique-la en un point bien choisi dépendant de $k$, puis somme (souvent télescopique).",
+     "ref": "m2-scex-contderiv-ex2-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-contderiv-ex3",
+   "chapter": "contderiv",
+   "kind": "probleme",
+   "title": "Exercice 3 — Étude complète d'une fonction exponentielle",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par $f(x) = (2 - x)\\,\\mathrm{e}^{x}$, et $(\\mathcal{C})$ sa courbe représentative dans un repère orthonormé $(O;\\vec i,\\vec j)$ (unité : $2$ cm). On rappelle les limites de référence : $\\lim\\limits_{x\\to-\\infty}\\mathrm{e}^{x} = 0$, $\\lim\\limits_{x\\to-\\infty}x\\,\\mathrm{e}^{x} = 0$ et $\\lim\\limits_{x\\to+\\infty}\\dfrac{\\mathrm{e}^{x}}{x} = +\\infty$. On admet que $f$ est deux fois dérivable sur $\\mathbb{R}$ et que, pour tout réel $x$, $f''(x) = -x\\,\\mathrm{e}^{x}$. On note $(T)$ la tangente à $(\\mathcal{C})$ au point d'abscisse $0$. On donne les valeurs approchées : $\\mathrm{e} \\approx 2{,}72$ ; $\\mathrm{e}^{2} \\approx 7{,}39$ ; $f(-2) = 4\\mathrm{e}^{-2} \\approx 0{,}54$ ; $f(-1) = 3\\mathrm{e}^{-1} \\approx 1{,}10$. Partie A : on étudie le comportement de $f$ aux bornes de $\\mathbb{R}$. Partie B : on étudie les variations de $f$, la tangente $(T)$ et la convexité de $(\\mathcal{C})$. Partie C : on étudie l'équation $f(x) = 1$, puis on détermine une primitive de $f$. Dans chaque partie, on pourra utiliser les résultats des questions précédentes, même s'ils n'ont pas été démontrés.",
+   "questions": [
+    {
+     "notion": "Limites à l'infini",
+     "difficulty": 1,
+     "statement": "1) Calculer $\\lim\\limits_{x\\to-\\infty} f(x)$ et interpréter graphiquement le résultat.",
+     "options": [
+      {
+       "label": "$0$ ; l'axe des abscisses est asymptote à $(\\mathcal{C})$ en $-\\infty$",
+       "correct": true,
+       "why": "$f(x) = 2\\mathrm{e}^{x} - x\\mathrm{e}^{x}$ et les deux termes tendent vers $0$ en $-\\infty$."
+      },
+      {
+       "label": "$+\\infty$ ; pas d'asymptote en $-\\infty$",
+       "why": "$2 - x \\to +\\infty$, mais $\\mathrm{e}^{x} \\to 0$ l'emporte : $\\lim\\limits_{x\\to-\\infty}x\\,\\mathrm{e}^{x} = 0$."
+      },
+      {
+       "label": "$-\\infty$ ; pas d'asymptote en $-\\infty$",
+       "why": "Aucun terme ne tend vers $-\\infty$ : après développement, les deux termes tendent vers $0$."
+      },
+      {
+       "label": "$2$ ; la droite $y = 2$ est asymptote à $(\\mathcal{C})$ en $-\\infty$",
+       "why": "Tu as calculé $f(0) = 2$ ; on cherche le comportement en $-\\infty$."
+      }
+     ],
+     "hint": "Développe : $f(x) = 2\\mathrm{e}^{x} - x\\,\\mathrm{e}^{x}$, puis utilise les limites rappelées.",
+     "solution": "$f(x) = 2\\mathrm{e}^{x} - x\\,\\mathrm{e}^{x}$. En $-\\infty$ : $\\lim\\mathrm{e}^{x} = 0$ et $\\lim x\\,\\mathrm{e}^{x} = 0$. Donc $\\lim\\limits_{x\\to-\\infty} f(x) = 0$ : la droite d'équation $y = 0$ (axe des abscisses) est asymptote horizontale à $(\\mathcal{C})$ au voisinage de $-\\infty$. Contrôle : $f(-10) = 12\\,\\mathrm{e}^{-10} \\approx 0{,}0005$.",
+     "points": 1,
+     "methode": "En $-\\infty$ : $x^n\\mathrm{e}^{x} \\to 0$ ; développe pour faire apparaître ces termes.",
+     "part": "Partie A — Limites et branches infinies",
+     "ref": "m2-scex-contderiv-ex3-q1"
+    },
+    {
+     "notion": "Branches infinies (classification complète)",
+     "difficulty": 2,
+     "statement": "2) a) Calculer $\\lim\\limits_{x\\to+\\infty} f(x)$. b) Montrer que $\\lim\\limits_{x\\to+\\infty}\\dfrac{f(x)}{x} = -\\infty$, puis interpréter graphiquement.",
+     "options": [
+      {
+       "label": "$\\lim f = -\\infty$ ; branche parabolique de direction l'axe des ordonnées en $+\\infty$",
+       "correct": true,
+       "why": "$\\frac{f(x)}{x} = \\left(\\frac2x - 1\\right)\\mathrm{e}^{x} \\to (-1)\\times(+\\infty) = -\\infty$ : direction $(Oy)$."
+      },
+      {
+       "label": "$\\lim f = -\\infty$ ; asymptote oblique en $+\\infty$",
+       "why": "Une asymptote oblique exige $\\frac{f(x)}{x} \\to a$ fini et non nul ; ici le rapport tend vers $-\\infty$."
+      },
+      {
+       "label": "$\\lim f = -\\infty$ ; branche parabolique de direction l'axe des abscisses",
+       "why": "La direction $(Ox)$ correspond à $\\frac{f(x)}{x} \\to 0$ ; ici le rapport tend vers $-\\infty$."
+      },
+      {
+       "label": "$\\lim f = +\\infty$ ; branche parabolique de direction l'axe des ordonnées",
+       "why": "Le facteur $2 - x$ devient négatif pour $x > 2$ : $f(3) = -\\mathrm{e}^{3} \\approx -20$, la courbe plonge vers $-\\infty$."
+      }
+     ],
+     "hint": "Pour b), écris $\\dfrac{f(x)}{x} = \\left(\\dfrac2x - 1\\right)\\mathrm{e}^{x}$.",
+     "solution": "a) $\\lim\\limits_{x\\to+\\infty}(2 - x) = -\\infty$ et $\\lim\\limits_{x\\to+\\infty}\\mathrm{e}^{x} = +\\infty$, donc par produit $\\lim\\limits_{x\\to+\\infty} f(x) = -\\infty$. b) Pour $x > 0$ : $\\dfrac{f(x)}{x} = \\dfrac{2 - x}{x}\\,\\mathrm{e}^{x} = \\left(\\dfrac2x - 1\\right)\\mathrm{e}^{x}$ ; $\\dfrac2x - 1 \\to -1$ et $\\mathrm{e}^{x} \\to +\\infty$, donc $\\dfrac{f(x)}{x} \\to -\\infty$. La courbe $(\\mathcal{C})$ admet en $+\\infty$ une branche parabolique de direction l'axe des ordonnées (vers le bas). Contrôle : $\\frac{f(5)}{5} = \\frac{-3\\mathrm{e}^5}{5} \\approx -89$.",
+     "points": 1,
+     "methode": "Classement en $\\pm\\infty$ quand $f \\to \\pm\\infty$ : $\\frac{f(x)}{x} \\to \\pm\\infty$ ⇒ direction $(Oy)$ ; $\\to 0$ ⇒ direction $(Ox)$ ; $\\to a \\ne 0$ ⇒ étudier $f(x) - ax$.",
+     "part": "Partie A — Limites et branches infinies",
+     "ref": "m2-scex-contderiv-ex3-q2"
+    },
+    {
+     "notion": "Dérivées usuelles et opérations",
+     "difficulty": 1,
+     "statement": "3) Montrer que pour tout réel $x$, $f'(x) = (1 - x)\\,\\mathrm{e}^{x}$. Quelle dérivée obtient-on ?",
+     "options": [
+      {
+       "label": "$f'(x) = (1 - x)\\,\\mathrm{e}^{x}$",
+       "correct": true,
+       "why": "$(uv)' = u'v + uv' = (-1)\\mathrm{e}^{x} + (2 - x)\\mathrm{e}^{x}$."
+      },
+      {
+       "label": "$f'(x) = -\\mathrm{e}^{x}$",
+       "why": "Tu as dérivé chaque facteur séparément et fait le produit $(-1)\\times\\mathrm{e}^x$ : la dérivée d'un produit n'est pas le produit des dérivées."
+      },
+      {
+       "label": "$f'(x) = (3 - x)\\,\\mathrm{e}^{x}$",
+       "why": "Erreur de signe : la dérivée de $2 - x$ est $-1$, pas $+1$."
+      },
+      {
+       "label": "$f'(x) = (2 - x)\\,\\mathrm{e}^{x}$",
+       "why": "Tu n'as dérivé que le facteur $\\mathrm{e}^x$ : il manque le terme $u'v = -\\mathrm{e}^x$."
+      }
+     ],
+     "hint": "$u(x) = 2 - x$, $v(x) = \\mathrm{e}^{x}$ ; $(uv)' = u'v + uv'$.",
+     "solution": "Avec $u(x) = 2 - x$ ($u' = -1$) et $v(x) = \\mathrm{e}^{x}$ ($v' = \\mathrm{e}^{x}$) : $f'(x) = -\\mathrm{e}^{x} + (2 - x)\\mathrm{e}^{x} = (1 - x)\\,\\mathrm{e}^{x}$. Contrôle : en dérivant encore, $f''(x) = -\\mathrm{e}^{x} + (1 - x)\\mathrm{e}^{x} = -x\\,\\mathrm{e}^{x}$, ce qui est bien le résultat admis dans l'énoncé ✓.",
+     "points": 1,
+     "methode": "Produit avec $\\mathrm{e}^{x}$ : $\\left(P(x)\\mathrm{e}^{x}\\right)' = \\left(P'(x) + P(x)\\right)\\mathrm{e}^{x}$.",
+     "part": "Partie B — Variations, tangente et convexité",
+     "ref": "m2-scex-contderiv-ex3-q3"
+    },
+    {
+     "notion": "Extremums",
+     "difficulty": 2,
+     "statement": "4) Étudier le signe de $f'(x)$, dresser le tableau de variations de $f$ et préciser son extremum.",
+     "options": [
+      {
+       "label": "$f$ croît sur $]-\\infty;1]$, décroît sur $[1;+\\infty[$ ; maximum $f(1) = \\mathrm{e}$",
+       "correct": true,
+       "why": "$\\mathrm{e}^{x} > 0$, donc $f'$ a le signe de $1 - x$ ; $f(1) = (2 - 1)\\mathrm{e}^1 = \\mathrm{e}$."
+      },
+      {
+       "label": "$f$ décroît sur $]-\\infty;1]$, croît sur $[1;+\\infty[$ ; minimum $f(1) = \\mathrm{e}$",
+       "why": "$1 - x > 0$ pour $x < 1$ : $f$ croît d'abord. Une fonction qui tend vers $-\\infty$ en $+\\infty$ ne peut pas avoir de minimum."
+      },
+      {
+       "label": "$f$ croît sur $]-\\infty;0]$, décroît sur $[0;+\\infty[$ ; maximum $f(0) = 2$",
+       "why": "$f'(0) = 1 \\ne 0$ : $0$ n'est pas un extremum (c'est l'abscisse du point d'inflexion)."
+      },
+      {
+       "label": "$f$ croît sur $]-\\infty;1]$, décroît sur $[1;+\\infty[$ ; maximum $f(1) = 1$",
+       "why": "Les variations sont justes, mais la valeur du maximum est $f(1) = \\mathrm{e}$ : tu as donné l'abscisse."
+      }
+     ],
+     "hint": "$\\mathrm{e}^{x} > 0$ : le signe de $f'(x)$ est celui de $1 - x$.",
+     "solution": "Pour tout $x$, $\\mathrm{e}^{x} > 0$, donc $f'(x)$ a le signe de $1 - x$ : positif sur $]-\\infty;1[$, nul en $1$, négatif sur $]1;+\\infty[$. Ainsi $f$ est strictement croissante sur $]-\\infty;1]$ (de $0$ à $\\mathrm{e}$) et strictement décroissante sur $[1;+\\infty[$ (de $\\mathrm{e}$ à $-\\infty$). Maximum global : $f(1) = \\mathrm{e} \\approx 2{,}72$. Contrôle : $f(0) = 2$ et $f(2) = 0$, tous deux inférieurs à $\\mathrm{e}$ ✓.",
+     "points": 1,
+     "methode": "Tableau de variations : signe de $f'$ ; en ligne, limites aux bornes et valeur aux points où $f'$ s'annule.",
+     "part": "Partie B — Variations, tangente et convexité",
+     "ref": "m2-scex-contderiv-ex3-q4"
+    },
+    {
+     "notion": "Nombre dérivé et tangente",
+     "difficulty": 2,
+     "statement": "5) Déterminer une équation de la tangente $(T)$ à $(\\mathcal{C})$ au point d'abscisse $0$.",
+     "options": [
+      {
+       "label": "$(T) : y = x + 2$",
+       "correct": true,
+       "why": "$f(0) = 2$ et $f'(0) = (1 - 0)\\mathrm{e}^0 = 1$ : $y = 1\\times(x - 0) + 2$."
+      },
+      {
+       "label": "$(T) : y = 2x + 1$",
+       "why": "Tu as inversé $f(0) = 2$ (ordonnée à l'origine) et $f'(0) = 1$ (pente)."
+      },
+      {
+       "label": "$(T) : y = x$",
+       "why": "Tu as oublié l'ordonnée à l'origine $f(0) = 2$ : la tangente doit passer par $(0\\,;2)$."
+      },
+      {
+       "label": "$(T) : y = -x + 2$",
+       "why": "$f'(0) = (1 - 0)\\mathrm{e}^{0} = +1$, pas $-1$ : $f$ est croissante en $0$."
+      }
+     ],
+     "hint": "$y = f'(0)(x - 0) + f(0)$.",
+     "solution": "$f(0) = (2 - 0)\\mathrm{e}^{0} = 2$ et $f'(0) = (1 - 0)\\mathrm{e}^{0} = 1$. Donc $(T) : y = 1\\times(x - 0) + 2$, soit $y = x + 2$. Contrôle : $(T)$ passe par $(0;2)$, point de $(\\mathcal{C})$ ✓, et coupe l'axe des abscisses en $x = -2$.",
+     "points": 1,
+     "methode": "Tangente en $a$ : $y = f'(a)(x - a) + f(a)$.",
+     "part": "Partie B — Variations, tangente et convexité",
+     "ref": "m2-scex-contderiv-ex3-q5"
+    },
+    {
+     "notion": "Convexité et points d'inflexion",
+     "difficulty": 3,
+     "statement": "6) En utilisant $f''(x) = -x\\,\\mathrm{e}^{x}$, étudier la convexité de $(\\mathcal{C})$, déterminer son point d'inflexion, puis en déduire la position de $(\\mathcal{C})$ par rapport à $(T) : y = x + 2$.",
+     "options": [
+      {
+       "label": "Inflexion en $I(0\\,;2)$ ; $(\\mathcal{C})$ est au-dessus de $(T)$ sur $]-\\infty;0]$ et en dessous sur $[0;+\\infty[$",
+       "correct": true,
+       "why": "Convexe sur $]-\\infty;0]$ (au-dessus de ses tangentes), concave sur $[0;+\\infty[$ (en dessous) : la courbe traverse $(T)$ en $I$."
+      },
+      {
+       "label": "Inflexion en $(1\\,;\\mathrm{e})$ ; $(\\mathcal{C})$ est en dessous de sa tangente en ce point",
+       "why": "En $x = 1$, c'est $f'$ qui s'annule (maximum) ; c'est $f''$ qui change de signe en $0$."
+      },
+      {
+       "label": "Inflexion en $I(0\\,;2)$ ; $(\\mathcal{C})$ est au-dessus de $(T)$ sur tout $\\mathbb{R}$",
+       "why": "Au-dessus de la tangente partout exigerait la convexité sur $\\mathbb{R}$. Or $f(1) = \\mathrm{e} \\approx 2{,}72 < 3$ : en $1$, la courbe est sous $(T)$."
+      },
+      {
+       "label": "Inflexion en $I(0\\,;2)$ ; $(\\mathcal{C})$ est en dessous de $(T)$ sur $]-\\infty;0]$ et au-dessus sur $[0;+\\infty[$",
+       "why": "Tu as inversé : $f'' > 0$ sur $]-\\infty;0[$ (convexe, au-dessus). Vérification : $f(-1) \\approx 1{,}10 > 1 = -1 + 2$."
+      }
+     ],
+     "hint": "Signe de $-x\\,\\mathrm{e}^{x}$ ; une courbe convexe est au-dessus de ses tangentes, une courbe concave en dessous.",
+     "solution": "$\\mathrm{e}^{x} > 0$, donc $f''(x)$ a le signe de $-x$ : $f'' > 0$ sur $]-\\infty;0[$, $(\\mathcal{C})$ est convexe sur $]-\\infty;0]$ ; $f'' < 0$ sur $]0;+\\infty[$, $(\\mathcal{C})$ est concave sur $[0;+\\infty[$. $f''$ s'annule en $0$ en changeant de signe : $I(0\\,;f(0)) = (0\\,;2)$ est un point d'inflexion. $(T)$ est la tangente en $I$ : sur $]-\\infty;0]$, la courbe convexe est au-dessus de $(T)$ ; sur $[0;+\\infty[$, la courbe concave est en dessous ; elle traverse $(T)$ en $I$. Contrôle : $f(-1) \\approx 1{,}10 > 1$ et $f(1) \\approx 2{,}72 < 3$ ✓.",
+     "points": 1,
+     "methode": "Au point d'inflexion, la courbe traverse sa tangente ; la convexité donne la position de chaque côté.",
+     "part": "Partie B — Variations, tangente et convexité",
+     "ref": "m2-scex-contderiv-ex3-q6"
+    },
+    {
+     "notion": "Théorème des valeurs intermédiaires",
+     "difficulty": 3,
+     "statement": "7) Montrer que l'équation $f(x) = 1$ admet exactement deux solutions $\\alpha$ et $\\beta$ dans $\\mathbb{R}$ (avec $\\alpha < \\beta$), et les localiser à l'aide des valeurs données dans l'énoncé.",
+     "options": [
+      {
+       "label": "$\\alpha \\in\\, ]-2;-1[$ et $\\beta \\in\\, ]1;2[$",
+       "correct": true,
+       "why": "$f(-2) \\approx 0{,}54 < 1 < f(-1) \\approx 1{,}10$ sur la partie croissante ; $f(1) = \\mathrm{e} > 1 > f(2) = 0$ sur la partie décroissante."
+      },
+      {
+       "label": "$\\alpha \\in\\, ]-1;0[$ et $\\beta \\in\\, ]1;2[$",
+       "why": "$f(-1) \\approx 1{,}10$ et $f(0) = 2$ sont tous deux supérieurs à $1$ : pas de solution entre $-1$ et $0$."
+      },
+      {
+       "label": "une seule solution $\\beta \\in\\, ]1;2[$",
+       "why": "Tu as oublié la branche croissante : sur $]-\\infty;1]$, $f$ va de $0$ à $\\mathrm{e}$ et passe donc par $1$."
+      },
+      {
+       "label": "$\\alpha \\in\\, ]-2;-1[$ et $\\beta \\in\\, ]2;3[$",
+       "why": "$f(2) = 0 < 1$ et $f$ décroît sur $[1;+\\infty[$ : $f(x) < 1$ pour tout $x \\ge 2$, donc $\\beta < 2$."
+      }
+     ],
+     "hint": "Applique le TVI (cas strictement monotone) sur $]-\\infty;1]$ puis sur $[1;+\\infty[$, et affine avec les valeurs numériques.",
+     "solution": "Sur $]-\\infty;1]$, $f$ est continue et strictement croissante, de $0$ (limite en $-\\infty$) à $\\mathrm{e}$ ; or $1 \\in ]0;\\mathrm{e}[$, donc il existe une unique solution $\\alpha$. Comme $f(-2) \\approx 0{,}54 < 1 < f(-1) \\approx 1{,}10$, $\\alpha \\in ]-2;-1[$. Sur $[1;+\\infty[$, $f$ est continue et strictement décroissante de $\\mathrm{e}$ à $-\\infty$ ; $1 \\in ]-\\infty;\\mathrm{e}[$ : unique solution $\\beta$. Comme $f(1) = \\mathrm{e} > 1 > f(2) = 0$, $\\beta \\in ]1;2[$. Au total, exactement deux solutions. Contrôle : $\\alpha \\approx -1{,}15$ et $\\beta \\approx 1{,}84$ (calculatrice), cohérents.",
+     "points": 1,
+     "methode": "Nombre de solutions de $f(x) = k$ : un TVI par intervalle de stricte monotonie, puis encadrement par des valeurs de part et d'autre de $k$.",
+     "part": "Partie C — Équation et primitive",
+     "ref": "m2-scex-contderiv-ex3-q7"
+    },
+    {
+     "notion": "Primitives des fonctions usuelles",
+     "difficulty": 3,
+     "statement": "8) a) Déterminer les réels $a$ et $b$ tels que $F(x) = (ax + b)\\,\\mathrm{e}^{x}$ soit une primitive de $f$ sur $\\mathbb{R}$. b) En déduire la primitive $G$ de $f$ sur $\\mathbb{R}$ qui s'annule en $2$.",
+     "options": [
+      {
+       "label": "$G(x) = (3 - x)\\,\\mathrm{e}^{x} - \\mathrm{e}^{2}$",
+       "correct": true,
+       "why": "$F(x) = (3 - x)\\mathrm{e}^{x}$, puis $G = F + c$ avec $G(2) = \\mathrm{e}^2 + c = 0$."
+      },
+      {
+       "label": "$G(x) = (3 - x)\\,\\mathrm{e}^{x}$",
+       "why": "C'est bien une primitive de $f$, mais elle vaut $\\mathrm{e}^{2} \\ne 0$ en $2$ : tu as oublié d'ajuster la constante."
+      },
+      {
+       "label": "$G(x) = (3 - x)\\,\\mathrm{e}^{x} + \\mathrm{e}^{2}$",
+       "why": "Erreur de signe sur la constante : $G(2) = \\mathrm{e}^2 + \\mathrm{e}^2 = 2\\mathrm{e}^2 \\ne 0$."
+      },
+      {
+       "label": "$G(x) = (1 - x)\\,\\mathrm{e}^{x} + \\mathrm{e}^{2}$",
+       "why": "$(1 - x)\\mathrm{e}^{x}$ est $f'$, pas une primitive de $f$ : on a dérivé au lieu de primitiver."
+      }
+     ],
+     "hint": "Dérive $(ax + b)\\mathrm{e}^{x}$, identifie avec $(2 - x)\\mathrm{e}^{x}$, puis ajoute une constante fixée par $G(2) = 0$.",
+     "solution": "a) $F'(x) = a\\,\\mathrm{e}^{x} + (ax + b)\\mathrm{e}^{x} = (ax + a + b)\\mathrm{e}^{x}$. On veut $ax + a + b = -x + 2$ pour tout $x$ : $a = -1$ et $a + b = 2$, donc $b = 3$. Ainsi $F(x) = (3 - x)\\mathrm{e}^{x}$. b) Les primitives de $f$ sont $x \\mapsto (3 - x)\\mathrm{e}^{x} + c$. $G(2) = (3 - 2)\\mathrm{e}^{2} + c = 0$ donne $c = -\\mathrm{e}^{2}$. Donc $G(x) = (3 - x)\\,\\mathrm{e}^{x} - \\mathrm{e}^{2}$. Contrôle : $G'(x) = -\\mathrm{e}^{x} + (3 - x)\\mathrm{e}^{x} = (2 - x)\\mathrm{e}^{x} = f(x)$ ✓ et $G(2) = \\mathrm{e}^2 - \\mathrm{e}^2 = 0$ ✓.",
+     "points": 1,
+     "methode": "Primitive de $(\\alpha x + \\beta)\\mathrm{e}^{x}$ : cherche $(ax + b)\\mathrm{e}^{x}$ et identifie les coefficients ; la condition fixe ensuite la constante.",
+     "part": "Partie C — Équation et primitive",
+     "ref": "m2-scex-contderiv-ex3-q8"
+    }
+   ],
+   "figure": "convexite-inflexion"
+  },
+  {
+   "ref": "m2-scex-contderiv-ex4",
+   "chapter": "contderiv",
+   "kind": "probleme",
+   "title": "Exercice 4 — Équation différentielle et fonction ln x / x",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Partie A. On considère l'équation différentielle $(E) : y'' - 4y' + 4y = 0$, où $y$ est une fonction deux fois dérivable sur $\\mathbb{R}$. On note $\\varphi$ la solution de $(E)$ qui vérifie $\\varphi(0) = 1$ et $\\varphi'(0) = 3$. Partie B. Soit $h$ la fonction définie sur $]0;+\\infty[$ par $h(x) = \\dfrac{\\ln x}{x}$, et $(\\mathcal{C}_h)$ sa courbe dans un repère orthonormé. On rappelle que $\\lim\\limits_{x\\to0^+}\\ln x = -\\infty$ et $\\lim\\limits_{x\\to+\\infty}\\dfrac{\\ln x}{x} = 0$ ; on admet que $h$ est dérivable sur $]0;+\\infty[$. Partie C. On utilise l'étude de $h$ pour comparer les nombres $\\pi^{\\mathrm{e}}$ et $\\mathrm{e}^{\\pi}$ sans calculatrice, puis pour résoudre dans $]0;+\\infty[$ l'équation $(F) : x^2 = 2^x$, où $2^x = \\mathrm{e}^{x\\ln 2}$. On rappelle que pour $a > 0$ et $b > 0$, $a^b = \\mathrm{e}^{b\\ln a}$, et que $\\ln$ et $\\exp$ sont strictement croissantes. Données : $\\mathrm{e} \\approx 2{,}718$ ; $\\pi \\approx 3{,}142$ ; $\\ln 2 \\approx 0{,}693$ ; $\\dfrac{1}{\\mathrm{e}} \\approx 0{,}368$. Les parties B et C sont liées ; la partie A est indépendante.",
+   "questions": [
+    {
+     "notion": "Équations différentielles $y'' + ay' + by = 0$",
+     "difficulty": 1,
+     "statement": "1) Résoudre l'équation différentielle $(E) : y'' - 4y' + 4y = 0$.",
+     "options": [
+      {
+       "label": "$y(x) = (Ax + B)\\,\\mathrm{e}^{2x}$, $A, B\\in\\mathbb{R}$",
+       "correct": true,
+       "why": "$r^2 - 4r + 4 = (r - 2)^2 = 0$ : racine double $r = 2$."
+      },
+      {
+       "label": "$y(x) = A\\mathrm{e}^{2x} + B\\mathrm{e}^{-2x}$, $A, B\\in\\mathbb{R}$",
+       "why": "$(r-2)^2 = 0$ a une seule racine (double) : $-2$ n'est pas racine ($4 + 8 + 4 = 16 \\ne 0$)."
+      },
+      {
+       "label": "$y(x) = (Ax + B)\\,\\mathrm{e}^{-2x}$, $A, B\\in\\mathbb{R}$",
+       "why": "Erreur de signe : la racine de $r^2 - 4r + 4$ est $r = +2$."
+      },
+      {
+       "label": "$y(x) = A\\mathrm{e}^{2x} + B$, $A, B\\in\\mathbb{R}$",
+       "why": "Pour une racine double $r$, la forme est $(Ax + B)\\mathrm{e}^{rx}$ ; la constante $B$ seule n'est pas solution ($4B \\ne 0$)."
+      }
+     ],
+     "hint": "Écris l'équation caractéristique $r^2 - 4r + 4 = 0$ et calcule son discriminant.",
+     "solution": "Équation caractéristique : $r^2 - 4r + 4 = 0$, $\\Delta = 16 - 16 = 0$, racine double $r = 2$. Les solutions de $(E)$ sont les fonctions $y(x) = (Ax + B)\\,\\mathrm{e}^{2x}$, avec $A$ et $B$ réels. Contrôle : pour $y = x\\,\\mathrm{e}^{2x}$, $y' = (1 + 2x)\\mathrm{e}^{2x}$, $y'' = (4 + 4x)\\mathrm{e}^{2x}$ et $y'' - 4y' + 4y = (4 + 4x - 4 - 8x + 4x)\\mathrm{e}^{2x} = 0$ ✓.",
+     "points": 1,
+     "methode": "$\\Delta > 0$ : $A\\mathrm{e}^{r_1x} + B\\mathrm{e}^{r_2x}$ ; $\\Delta = 0$ : $(Ax + B)\\mathrm{e}^{rx}$ ; $\\Delta < 0$ : $\\mathrm{e}^{px}(A\\cos qx + B\\sin qx)$.",
+     "part": "Partie A — Équation différentielle",
+     "ref": "m2-scex-contderiv-ex4-q1"
+    },
+    {
+     "notion": "Équations différentielles $y'' + ay' + by = 0$",
+     "difficulty": 2,
+     "statement": "2) Déterminer la solution $\\varphi$ de $(E)$ vérifiant $\\varphi(0) = 1$ et $\\varphi'(0) = 3$.",
+     "options": [
+      {
+       "label": "$\\varphi(x) = (x + 1)\\,\\mathrm{e}^{2x}$",
+       "correct": true,
+       "why": "$\\varphi(0) = B = 1$ et $\\varphi'(0) = A + 2B = 3$, donc $A = 1$."
+      },
+      {
+       "label": "$\\varphi(x) = (3x + 1)\\,\\mathrm{e}^{2x}$",
+       "why": "Tu as pris $A = \\varphi'(0)$ ; or $\\varphi'(x) = (2Ax + A + 2B)\\mathrm{e}^{2x}$, donc $\\varphi'(0) = A + 2B$. Ta fonction donne $\\varphi'(0) = 5$."
+      },
+      {
+       "label": "$\\varphi(x) = (x + 3)\\,\\mathrm{e}^{2x}$",
+       "why": "$\\varphi(0) = B$ doit valoir $1$, pas $3$ : ta fonction donne $\\varphi(0) = 3$."
+      },
+      {
+       "label": "$\\varphi(x) = (x + 1)\\,\\mathrm{e}^{-2x}$",
+       "why": "L'exposant reste $2x$ (racine $r = 2$) ; ta fonction n'est pas solution de $(E)$ et $\\varphi'(0) = -1$."
+      }
+     ],
+     "hint": "Calcule $\\varphi'(x) = A\\mathrm{e}^{2x} + 2(Ax + B)\\mathrm{e}^{2x}$, puis évalue $\\varphi$ et $\\varphi'$ en $0$.",
+     "solution": "$\\varphi(x) = (Ax + B)\\mathrm{e}^{2x}$ et $\\varphi'(x) = A\\mathrm{e}^{2x} + 2(Ax + B)\\mathrm{e}^{2x}$. $\\varphi(0) = B = 1$ ; $\\varphi'(0) = A + 2B = 3$, d'où $A = 1$. Donc $\\varphi(x) = (x + 1)\\,\\mathrm{e}^{2x}$. Contrôle : $\\varphi(0) = 1$ ✓ et $\\varphi'(x) = (2x + 3)\\mathrm{e}^{2x}$ donne $\\varphi'(0) = 3$ ✓.",
+     "points": 1,
+     "methode": "Conditions initiales : écris $y(0)$ et $y'(0)$ en fonction de $A$ et $B$, puis résous le système.",
+     "part": "Partie A — Équation différentielle",
+     "ref": "m2-scex-contderiv-ex4-q2"
+    },
+    {
+     "notion": "Dérivée de $\\mathrm{e}^{u}$",
+     "difficulty": 2,
+     "statement": "3) On admet que $\\varphi(x) = (x + 1)\\,\\mathrm{e}^{2x}$. Calculer $\\varphi'(x)$, étudier son signe et en déduire l'extremum de $\\varphi$ sur $\\mathbb{R}$.",
+     "options": [
+      {
+       "label": "un minimum égal à $-\\dfrac12\\mathrm{e}^{-3}$, atteint en $x = -\\dfrac32$",
+       "correct": true,
+       "why": "$\\varphi'(x) = (2x + 3)\\mathrm{e}^{2x}$ change de signe en $-\\frac32$ (de $-$ à $+$) ; $\\varphi\\left(-\\frac32\\right) = -\\frac12\\mathrm{e}^{-3}$."
+      },
+      {
+       "label": "un minimum égal à $-\\dfrac12$, atteint en $x = -\\dfrac32$",
+       "why": "Tu as oublié le facteur exponentiel : $\\varphi\\left(-\\frac32\\right) = \\left(-\\frac12\\right)\\mathrm{e}^{-3} \\approx -0{,}025$."
+      },
+      {
+       "label": "un minimum égal à $0$, atteint en $x = -1$",
+       "why": "Tu as annulé $\\varphi$ au lieu de $\\varphi'$ : $\\varphi'(-1) = \\mathrm{e}^{-2} \\ne 0$."
+      },
+      {
+       "label": "un minimum égal à $\\dfrac12\\mathrm{e}^{-1}$, atteint en $x = -\\dfrac12$",
+       "why": "Tu as dérivé $\\mathrm{e}^{2x}$ en $2\\mathrm{e}^{2x}$ mais oublié le terme $1\\times\\mathrm{e}^{2x}$ du produit : $\\varphi' = (2x + 3)\\mathrm{e}^{2x}$, pas $(2x + 1)\\mathrm{e}^{2x}$."
+      }
+     ],
+     "hint": "$\\left(\\mathrm{e}^{2x}\\right)' = 2\\mathrm{e}^{2x}$ ; dérive le produit puis factorise par $\\mathrm{e}^{2x}$.",
+     "solution": "$\\varphi'(x) = 1\\times\\mathrm{e}^{2x} + (x + 1)\\times2\\mathrm{e}^{2x} = (2x + 3)\\,\\mathrm{e}^{2x}$. Comme $\\mathrm{e}^{2x} > 0$, $\\varphi'(x)$ a le signe de $2x + 3$ : négatif pour $x < -\\frac32$, positif pour $x > -\\frac32$. $\\varphi$ admet donc un minimum en $-\\frac32$ : $\\varphi\\left(-\\frac32\\right) = \\left(-\\frac32 + 1\\right)\\mathrm{e}^{-3} = -\\dfrac12\\mathrm{e}^{-3} \\approx -0{,}025$. Contrôle : $\\varphi(-1) = 0$ et $\\varphi(-2) = -\\mathrm{e}^{-4} \\approx -0{,}018$, tous deux supérieurs à $-0{,}025$ ✓.",
+     "points": 1,
+     "methode": "$(\\mathrm{e}^{u})' = u'\\mathrm{e}^{u}$ ; avec un produit $P(x)\\mathrm{e}^{ax}$, la dérivée est $(P' + aP)\\mathrm{e}^{ax}$.",
+     "part": "Partie A — Équation différentielle",
+     "ref": "m2-scex-contderiv-ex4-q3"
+    },
+    {
+     "notion": "Limites de référence",
+     "difficulty": 1,
+     "statement": "4) Calculer $\\lim\\limits_{x\\to0^+} h(x)$ et $\\lim\\limits_{x\\to+\\infty} h(x)$, puis interpréter graphiquement.",
+     "options": [
+      {
+       "label": "$-\\infty$ en $0^+$ et $0$ en $+\\infty$ : asymptotes $x = 0$ et $y = 0$",
+       "correct": true,
+       "why": "En $0^+$ : $\\ln x \\to -\\infty$ et $\\frac1x \\to +\\infty$, produit $-\\infty$ ; en $+\\infty$ : limite de référence $0$."
+      },
+      {
+       "label": "$+\\infty$ en $0^+$ et $0$ en $+\\infty$",
+       "why": "Erreur de signe : $\\ln x \\to -\\infty$ multiplié par $\\frac1x \\to +\\infty$ donne $-\\infty$."
+      },
+      {
+       "label": "$-\\infty$ en $0^+$ et $+\\infty$ en $+\\infty$",
+       "why": "$\\ln x \\to +\\infty$ en $+\\infty$, mais beaucoup moins vite que $x$ : $\\frac{\\ln x}{x} \\to 0$ ($h(1\\,000) \\approx 0{,}007$)."
+      },
+      {
+       "label": "$-\\infty$ en $0^+$ et $1$ en $+\\infty$",
+       "why": "$\\frac{\\infty}{\\infty}$ n'est pas égal à $1$ : c'est une forme indéterminée, levée ici par croissances comparées."
+      }
+     ],
+     "hint": "En $0^+$, ce n'est pas une forme indéterminée : écris $h(x) = \\ln x\\times\\dfrac1x$.",
+     "solution": "En $0^+$ : $h(x) = \\ln x\\times\\dfrac1x$ avec $\\ln x \\to -\\infty$ et $\\dfrac1x \\to +\\infty$ ; par produit, $\\lim\\limits_{x\\to0^+} h(x) = -\\infty$ : l'axe des ordonnées est asymptote verticale. En $+\\infty$ : $\\lim\\limits_{x\\to+\\infty}\\dfrac{\\ln x}{x} = 0$ (croissances comparées) : l'axe des abscisses est asymptote horizontale. Contrôle : $h(0{,}01) = \\frac{-4{,}6}{0{,}01} = -460$ et $h(1\\,000) \\approx 0{,}0069$ ✓.",
+     "points": 1,
+     "methode": "En $+\\infty$ : $\\frac{\\ln x}{x^n} \\to 0$ ; en $0^+$ : $\\frac{\\ln x}{x} \\to -\\infty$ (pas de FI).",
+     "part": "Partie B — Étude de la fonction h",
+     "ref": "m2-scex-contderiv-ex4-q4"
+    },
+    {
+     "notion": "Dérivées usuelles et opérations",
+     "difficulty": 2,
+     "statement": "5) Montrer que pour tout $x > 0$, $h'(x) = \\dfrac{1 - \\ln x}{x^2}$. Quelle expression obtient-on en appliquant la formule de dérivation d'un quotient ?",
+     "options": [
+      {
+       "label": "$h'(x) = \\dfrac{1 - \\ln x}{x^2}$",
+       "correct": true,
+       "why": "$\\dfrac{u'v - uv'}{v^2} = \\dfrac{\\frac1x\\times x - \\ln x\\times1}{x^2}$."
+      },
+      {
+       "label": "$h'(x) = \\dfrac{\\ln x - 1}{x^2}$",
+       "why": "Tu as calculé $uv' - u'v$ : l'ordre est $u'v - uv'$."
+      },
+      {
+       "label": "$h'(x) = \\dfrac{1}{x}$",
+       "why": "Tu as fait $\\frac{u'}{v'} = \\frac{1/x}{1}$ : un quotient ne se dérive pas « en haut et en bas »."
+      },
+      {
+       "label": "$h'(x) = \\dfrac{1 - \\ln x}{x}$",
+       "why": "Le dénominateur est $v^2 = x^2$, pas $x$."
+      }
+     ],
+     "hint": "$u(x) = \\ln x$, $v(x) = x$ ; $\\left(\\dfrac uv\\right)' = \\dfrac{u'v - uv'}{v^2}$.",
+     "solution": "Avec $u(x) = \\ln x$ ($u' = \\frac1x$) et $v(x) = x$ ($v' = 1$) : $h'(x) = \\dfrac{\\frac1x\\times x - \\ln x\\times1}{x^2} = \\dfrac{1 - \\ln x}{x^2}$. Contrôle : $h'(1) = 1$, donc la tangente en $(1;0)$ est $y = x - 1$ ; et $h'(\\mathrm{e}) = 0$ annonce un extremum en $\\mathrm{e}$.",
+     "points": 1,
+     "methode": "$\\left(\\dfrac uv\\right)' = \\dfrac{u'v - uv'}{v^2}$ ; simplifie $\\frac1x\\times x = 1$.",
+     "part": "Partie B — Étude de la fonction h",
+     "ref": "m2-scex-contderiv-ex4-q5"
+    },
+    {
+     "notion": "Extremums",
+     "difficulty": 2,
+     "statement": "6) Étudier le signe de $h'(x)$, dresser le tableau de variations de $h$ et préciser son extremum.",
+     "options": [
+      {
+       "label": "$h$ croît sur $]0;\\mathrm{e}]$, décroît sur $[\\mathrm{e};+\\infty[$ ; maximum $h(\\mathrm{e}) = \\dfrac{1}{\\mathrm{e}}$",
+       "correct": true,
+       "why": "$1 - \\ln x > 0 \\Leftrightarrow x < \\mathrm{e}$ ; $h(\\mathrm{e}) = \\frac{\\ln\\mathrm{e}}{\\mathrm{e}} = \\frac1{\\mathrm{e}}$."
+      },
+      {
+       "label": "$h$ décroît sur $]0;\\mathrm{e}]$, croît sur $[\\mathrm{e};+\\infty[$ ; minimum $h(\\mathrm{e}) = \\dfrac{1}{\\mathrm{e}}$",
+       "why": "Sens inversé : pour $x < \\mathrm{e}$, $\\ln x < 1$, donc $1 - \\ln x > 0$ et $h$ croît."
+      },
+      {
+       "label": "$h$ croît sur $]0;1]$, décroît sur $[1;+\\infty[$ ; maximum $h(1) = 0$",
+       "why": "Tu as résolu $\\ln x = 0$ au lieu de $\\ln x = 1$ ; $h'(1) = 1 \\ne 0$."
+      },
+      {
+       "label": "$h$ croît sur $]0;\\mathrm{e}]$, décroît sur $[\\mathrm{e};+\\infty[$ ; maximum $h(\\mathrm{e}) = 1$",
+       "why": "$1$ est $\\ln\\mathrm{e}$ ; il faut encore diviser par $\\mathrm{e}$ : $h(\\mathrm{e}) = \\frac{1}{\\mathrm{e}} \\approx 0{,}37$."
+      }
+     ],
+     "hint": "$x^2 > 0$ : le signe de $h'$ est celui de $1 - \\ln x$ ; résous $\\ln x < 1$.",
+     "solution": "$x^2 > 0$, donc $h'(x)$ a le signe de $1 - \\ln x$. Or $1 - \\ln x > 0 \\Leftrightarrow \\ln x < 1 \\Leftrightarrow x < \\mathrm{e}$. Donc $h$ est strictement croissante sur $]0;\\mathrm{e}]$ (de $-\\infty$ à $\\frac1{\\mathrm{e}}$) et strictement décroissante sur $[\\mathrm{e};+\\infty[$ (de $\\frac1{\\mathrm{e}}$ à $0$). Maximum global : $h(\\mathrm{e}) = \\dfrac{1}{\\mathrm{e}} \\approx 0{,}368$. Contrôle : $h(2) = \\frac{\\ln 2}{2} \\approx 0{,}347$ et $h(4) \\approx 0{,}347$, tous deux inférieurs à $0{,}368$ ✓.",
+     "points": 1,
+     "methode": "Signe d'une expression avec $\\ln$ : résous l'inéquation correspondante en utilisant la stricte croissance de $\\ln$.",
+     "part": "Partie B — Étude de la fonction h",
+     "ref": "m2-scex-contderiv-ex4-q6"
+    },
+    {
+     "notion": "Utiliser la stricte monotonie",
+     "difficulty": 3,
+     "statement": "7) En utilisant le sens de variation de $h$ sur $[\\mathrm{e};+\\infty[$ et le fait que $\\mathrm{e} < \\pi$, comparer les nombres $\\pi^{\\mathrm{e}}$ et $\\mathrm{e}^{\\pi}$.",
+     "options": [
+      {
+       "label": "$\\pi^{\\mathrm{e}} < \\mathrm{e}^{\\pi}$",
+       "correct": true,
+       "why": "$h(\\pi) < h(\\mathrm{e})$ donne $\\mathrm{e}\\ln\\pi < \\pi$, soit $\\ln(\\pi^{\\mathrm{e}}) < \\ln(\\mathrm{e}^{\\pi})$."
+      },
+      {
+       "label": "$\\pi^{\\mathrm{e}} > \\mathrm{e}^{\\pi}$",
+       "why": "Tu as utilisé $h$ comme si elle était croissante sur $[\\mathrm{e};+\\infty[$ ; elle y est décroissante, donc $h(\\pi) < h(\\mathrm{e})$."
+      },
+      {
+       "label": "$\\pi^{\\mathrm{e}} = \\mathrm{e}^{\\pi}$",
+       "why": "Égalité impossible : $h$ est strictement décroissante sur $[\\mathrm{e};+\\infty[$ et $\\pi \\ne \\mathrm{e}$, donc $h(\\pi) \\ne h(\\mathrm{e})$."
+      },
+      {
+       "label": "on ne peut pas comparer sans calculatrice",
+       "why": "Le sens de variation de $h$ suffit : c'est tout l'intérêt de la question. (Numériquement : $22{,}46 < 23{,}14$.)"
+      }
+     ],
+     "hint": "Compare $h(\\pi)$ et $h(\\mathrm{e})$, multiplie par $\\mathrm{e}\\pi > 0$, puis passe à l'exponentielle.",
+     "solution": "$h$ est strictement décroissante sur $[\\mathrm{e};+\\infty[$ et $\\mathrm{e} < \\pi$, donc $h(\\pi) < h(\\mathrm{e})$ : $\\dfrac{\\ln\\pi}{\\pi} < \\dfrac{1}{\\mathrm{e}}$. En multipliant par $\\mathrm{e}\\pi > 0$ : $\\mathrm{e}\\ln\\pi < \\pi$, soit $\\ln\\left(\\pi^{\\mathrm{e}}\\right) < \\ln\\left(\\mathrm{e}^{\\pi}\\right)$ (car $\\ln\\left(\\pi^{\\mathrm{e}}\\right) = \\mathrm{e}\\ln\\pi$ et $\\ln(\\mathrm{e}^{\\pi}) = \\pi$). La fonction $\\ln$ étant strictement croissante, $\\pi^{\\mathrm{e}} < \\mathrm{e}^{\\pi}$. Contrôle : $\\pi^{\\mathrm{e}} \\approx 22{,}46$ et $\\mathrm{e}^{\\pi} \\approx 23{,}14$ ✓.",
+     "points": 1,
+     "methode": "Pour comparer $a^b$ et $b^a$ : passe au $\\ln$, ce qui ramène à comparer $\\frac{\\ln a}{a}$ et $\\frac{\\ln b}{b}$.",
+     "part": "Partie C — Applications",
+     "ref": "m2-scex-contderiv-ex4-q7"
+    },
+    {
+     "notion": "Équations et inéquations",
+     "difficulty": 3,
+     "statement": "8) a) Montrer que pour $x > 0$, $(F) : x^2 = 2^x$ équivaut à $h(x) = h(2)$. b) En utilisant le tableau de variations de $h$ (question 6) et le fait que $0 < h(2) < \\frac1{\\mathrm{e}}$, déterminer les solutions de $(F)$ dans $]0;+\\infty[$.",
+     "options": [
+      {
+       "label": "deux solutions : $x = 2$ et $x = 4$",
+       "correct": true,
+       "why": "$h(2) = h(4) = \\frac{\\ln 2}{2}$ ; $h$ prend chaque valeur de $]0;\\frac1{\\mathrm{e}}[$ une fois sur $]1;\\mathrm{e}[$ et une fois sur $]\\mathrm{e};+\\infty[$."
+      },
+      {
+       "label": "une seule solution : $x = 2$",
+       "why": "Tu n'as regardé que $]0;\\mathrm{e}]$ ; sur $[\\mathrm{e};+\\infty[$, $h$ décroît de $\\frac1{\\mathrm{e}}$ à $0$ et reprend la valeur $h(2)$ : en $4$, $4^2 = 16 = 2^4$."
+      },
+      {
+       "label": "une seule solution : $x = 4$",
+       "why": "$x = 2$ est solution évidente : $2^2 = 4 = 2^2$. Le TVI sur $]0;\\mathrm{e}]$ en fournit une, qui est $2$."
+      },
+      {
+       "label": "trois solutions : $2$, $4$ et une dans $]0;1[$",
+       "why": "Sur $]0;1[$, $\\ln x < 0$ donc $h(x) < 0 < h(2)$ : aucune solution dans cet intervalle."
+      }
+     ],
+     "hint": "Applique $\\ln$ aux deux membres, divise par $2x > 0$, puis cherche les antécédents de $h(2)$ sur chaque intervalle de monotonie.",
+     "solution": "a) Pour $x > 0$, les deux membres sont strictement positifs : $x^2 = 2^x \\Leftrightarrow 2\\ln x = x\\ln 2 \\Leftrightarrow \\dfrac{\\ln x}{x} = \\dfrac{\\ln 2}{2} \\Leftrightarrow h(x) = h(2)$. b) $h(2) = \\frac{\\ln 2}{2} \\approx 0{,}347$, et $0 < 0{,}347 < 0{,}368$. Sur $]0;\\mathrm{e}]$, $h$ est continue strictement croissante de $-\\infty$ à $\\frac1{\\mathrm{e}}$ : $h(2)$ a un unique antécédent, qui est $2$. Sur $[\\mathrm{e};+\\infty[$, $h$ est continue strictement décroissante de $\\frac1{\\mathrm{e}}$ à $0$ (exclu) : $h(2)$ a un unique antécédent, et $h(4) = \\frac{\\ln 4}{4} = \\frac{2\\ln 2}{4} = \\frac{\\ln 2}{2}$, donc c'est $4$. $S = \\{2\\,;4\\}$. Contrôle : $2^2 = 4 = 2^2$ et $4^2 = 16 = 2^4$ ✓.",
+     "points": 1,
+     "methode": "Équation du type $x^a = a^x$ : passe au $\\ln$ pour se ramener à $h(x) = h(a)$, puis compte les antécédents grâce aux variations de $h$.",
+     "part": "Partie C — Applications",
+     "ref": "m2-scex-contderiv-ex4-q8"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-scex-contderiv-serie-1",
+   "title": "Continuité, dérivation et étude de fonctions · Série 1 — Les bases",
+   "description": "Partie I : 6 questions flash · Partie II : Exercice 1 (6 questions).",
+   "kind": "custom",
+   "chapter": "contderiv",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-scex-contderiv-flash-q1",
+    "m2-scex-contderiv-flash-q2",
+    "m2-scex-contderiv-flash-q4",
+    "m2-scex-contderiv-flash-q5",
+    "m2-scex-contderiv-flash-q6",
+    "m2-scex-contderiv-flash-q7",
+    "m2-scex-contderiv-ex1-q1",
+    "m2-scex-contderiv-ex1-q2",
+    "m2-scex-contderiv-ex1-q3",
+    "m2-scex-contderiv-ex1-q4",
+    "m2-scex-contderiv-ex1-q5",
+    "m2-scex-contderiv-ex1-q6"
+   ]
+  },
+  {
+   "slug": "m2-scex-contderiv-serie-2",
+   "title": "Continuité, dérivation et étude de fonctions · Série 2 — Entraînement",
+   "description": "Partie I : 6 questions flash · Partie II : Exercice 2 (6 questions).",
+   "kind": "custom",
+   "chapter": "contderiv",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-scex-contderiv-flash-q45",
+    "m2-scex-contderiv-flash-q47",
+    "m2-scex-contderiv-flash-q55",
+    "m2-scex-contderiv-flash-q57",
+    "m2-scex-contderiv-flash-q59",
+    "m2-scex-contderiv-flash-q62",
+    "m2-scex-contderiv-ex2-q1",
+    "m2-scex-contderiv-ex2-q2",
+    "m2-scex-contderiv-ex2-q3",
+    "m2-scex-contderiv-ex2-q4",
+    "m2-scex-contderiv-ex2-q5",
+    "m2-scex-contderiv-ex2-q6"
+   ]
+  },
+  {
+   "slug": "m2-scex-contderiv-serie-3",
+   "title": "Continuité, dérivation et étude de fonctions · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (8 questions) + Exercice 4 (8 questions).",
+   "kind": "custom",
+   "chapter": "contderiv",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-scex-contderiv-ex3-q1",
+    "m2-scex-contderiv-ex3-q2",
+    "m2-scex-contderiv-ex3-q3",
+    "m2-scex-contderiv-ex3-q4",
+    "m2-scex-contderiv-ex3-q5",
+    "m2-scex-contderiv-ex3-q6",
+    "m2-scex-contderiv-ex3-q7",
+    "m2-scex-contderiv-ex3-q8",
+    "m2-scex-contderiv-ex4-q1",
+    "m2-scex-contderiv-ex4-q2",
+    "m2-scex-contderiv-ex4-q3",
+    "m2-scex-contderiv-ex4-q4",
+    "m2-scex-contderiv-ex4-q5",
+    "m2-scex-contderiv-ex4-q6",
+    "m2-scex-contderiv-ex4-q7",
+    "m2-scex-contderiv-ex4-q8"
+   ]
+  }
+ ]
+}

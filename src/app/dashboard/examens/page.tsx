@@ -8,19 +8,10 @@ import { Tex } from "@/components/math";
 import Link from "next/link";
 import { subjectTheme } from "@/config/subjects";
 import { SubjectAmbient, SubjectName } from "@/components/subject-pad";
+import { ExamsSoonPanel } from "@/components/prep/exams-soon";
+import { FEATURES } from "@/config";
 import {
-  BookOpen,
-  Check,
-  ChevronLeft,
-  ChevronRight,
-  Clock,
-  Eye,
-  FileText,
-  Loader2,
-  Lock,
-  Shuffle,
-  Sparkles,
-  Zap,
+  BookOpen, Check, ChevronLeft, ChevronRight, Clock, Eye, FileText, Loader2, Lock, Shuffle, Zap, Lightbulb,
 } from "lucide-react";
 
 type Subject = { id: string; name: string };
@@ -70,6 +61,7 @@ export default function ExamensPage() {
     "subjects" | "modes" | "exams" | "notions" | "run" | "results"
   >("subjects");
   const [loading, setLoading] = useState(false);
+  const [soonOpen, setSoonOpen] = useState(false);
 
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [subject, setSubject] = useState<Subject | null>(null);
@@ -104,7 +96,7 @@ export default function ExamensPage() {
         lvl = sp?.level_id ?? null;
       }
       setLevelId(lvl);
-      let q = supabase.from("exams").select("subject_id, subjects(id, name)").eq("exam_type", "national");
+      let q = supabase.from("exams").select("subject_id, subjects(id, name)").in("exam_type", ["national", "blanc"]);
       if (lvl) q = q.eq("level_id", lvl);
       const { data } = await q;
       const map = new Map<string, Subject>();
@@ -113,16 +105,27 @@ export default function ExamensPage() {
       }
       setSubjects(Array.from(map.values()).sort((a, b) => a.name.localeCompare(b.name)));
 
-      // Deep-link from Espace Préparation: ?exam=<id>[&mode=etude] auto-starts a run.
+      // Deep-link: ?exam=<id>[&mode=etude] (Espace Préparation) or ?defi=<id>
+      // (Défi National) opens the session runner. A défi resolves to its exam and
+      // carries the defi id through so the score lands on the leaderboard.
       const params = new URLSearchParams(window.location.search);
-      const examId = params.get("exam");
+      let examId = params.get("exam");
+      const defi = params.get("defi");
+      if (defi && !examId) {
+        const { data: ch } = await supabase
+          .from("challenges")
+          .select("exam_id")
+          .eq("id", defi)
+          .maybeSingle();
+        examId = (ch as { exam_id: string | null } | null)?.exam_id ?? null;
+      }
       if (examId) {
-        const { data: ex } = await supabase
-          .from("exams")
-          .select("id, title, year, session, exam_type, duration_minutes")
-          .eq("id", examId)
-          .single();
-        if (ex) await startExam(ex as Exam, params.get("mode") === "etude" ? "revise" : "exam");
+        const runMode =
+          params.get("mode") === "etude" || params.get("mode") === "revise" ? "revise" : "exam";
+        const sp = new URLSearchParams({ exam: examId, mode: runMode });
+        if (defi) sp.set("defi", defi);
+        router.replace(`/dashboard/examens/session?${sp.toString()}`);
+        return;
       }
     })();
     return () => {
@@ -173,7 +176,7 @@ export default function ExamensPage() {
       .from("exams")
       .select("id, title, year, session, exam_type, duration_minutes")
       .eq("subject_id", s.id)
-      .eq("exam_type", "national"); // seulement les examens nationaux pour l'instant
+      .in("exam_type", ["national", "blanc"]); // examens nationaux + examens blancs
     if (levelId) eq = eq.eq("level_id", levelId);
     let cq = supabase.from("chapters").select("id, name, code").eq("subject_id", s.id);
     if (levelId) cq = cq.eq("level_id", levelId);
@@ -249,6 +252,7 @@ export default function ExamensPage() {
     if (!subject) return;
     setLoading(true);
     let q = supabase.from("exercises").select(EX_SELECT).eq("subject_id", subject.id);
+    if (!FEATURES.examEngine) q = q.is("exam_id", null); // examens blancs hidden while the exam engine is locked
     if (levelId) q = q.eq("level_id", levelId);
     const { data } = await q;
     const all = flatten((data ?? []) as unknown as ExRow[]);
@@ -281,6 +285,7 @@ export default function ExamensPage() {
     if (!subject) return;
     setLoading(true);
     let q = supabase.from("exercises").select(EX_SELECT).eq("subject_id", subject.id);
+    if (!FEATURES.examEngine) q = q.is("exam_id", null); // examens blancs hidden while the exam engine is locked
     if (levelId) q = q.eq("level_id", levelId);
     const { data } = await q;
     const all = flatten((data ?? []) as unknown as ExRow[]);
@@ -335,8 +340,8 @@ export default function ExamensPage() {
   if (step === "subjects") {
     return (
       <Shell
-        title="Examen blanc rapide"
-        subtitle="Choisis une matière, puis lance un examen blanc chronométré."
+        title="Préparation"
+        subtitle="Choisis une matière : révise par notion ou enchaîne des séries d'exercices."
         tabs={
           <Link href="/dashboard/examens/preparation" className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full chip hover:-translate-y-0.5 transition">
             <FileText className="w-4 h-4" /> Toutes les annales
@@ -353,7 +358,7 @@ export default function ExamensPage() {
               <div className="w-11 h-11 rounded-2xl bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan grid place-items-center font-bold uppercase">
                 {s.name.slice(0, 2)}
               </div>
-              <SubjectName name={s.name} sizeClass="text-3xl" className="mt-3" />
+              <SubjectName name={s.name} sizeClass="text-2xl" className="mt-3" />
               <div className="mt-1 text-xs text-neutral-400">Voir les examens</div>
             </button>
           ))}
@@ -373,37 +378,56 @@ export default function ExamensPage() {
         {loading ? (
           <Loading />
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <ModeCard
-              icon={<FileText className="w-5 h-5" />}
-              title="Examen Complet"
-              desc="Sujet complet, chronomètre officiel, conditions réelles du Bac."
-              onClick={() => setStep("exams")}
-            />
-            <ModeCard
-              icon={<Shuffle className="w-5 h-5" />}
-              title="Exercices Aléatoires"
-              desc="Questions aléatoires pour une pratique rapide et variée."
-              badge={access.isDemo ? "Premium" : undefined}
-              premium={access.isDemo}
-              onClick={() => (access.isDemo ? router.push("/payment") : startRandom(20))}
-            />
-            <ModeCard
-              icon={<BookOpen className="w-5 h-5" />}
-              title="Par Notion"
-              desc="Choisis un chapitre ou une notion précise pour t'entraîner."
-              badge={access.isDemo ? "Premium" : "Nouveau"}
-              premium={access.isDemo}
-              onClick={() => (access.isDemo ? router.push("/payment") : setStep("notions"))}
-            />
-            <ModeCard
-              icon={<Zap className="w-5 h-5" />}
-              title="Mode Adaptatif"
-              desc="L'IA cible tes points faibles pour progresser plus vite."
-              badge="Premium"
-              premium
-              onClick={() => (access.isDemo ? router.push("/payment") : startAdaptive(20))}
-            />
+          <div className="space-y-8">
+            <section>
+              <SectionLabel n={1} title="Réviser par notion" desc="Cible une notion précise — corrigé détaillé + IA." />
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <ModeCard
+                  icon={<BookOpen className="w-5 h-5" />}
+                  title="Par Notion"
+                  desc="Choisis un chapitre ou une notion précise pour t'entraîner."
+                  badge={access.isDemo ? "Premium" : "Nouveau"}
+                  premium={access.isDemo}
+                  onClick={() => (access.isDemo ? router.push("/payment") : setStep("notions"))}
+                />
+              </div>
+            </section>
+
+            <section>
+              <SectionLabel n={2} title="Séries d'exercices" desc="Enchaîne des séries pour t'entraîner : au hasard, ou ciblées sur tes points faibles." />
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <ModeCard
+                  icon={<Shuffle className="w-5 h-5" />}
+                  title="Exercices Aléatoires"
+                  desc="Une série variée tirée au hasard dans toute la matière."
+                  badge={access.isDemo ? "Premium" : undefined}
+                  premium={access.isDemo}
+                  onClick={() => (access.isDemo ? router.push("/payment") : startRandom(20))}
+                />
+                <ModeCard
+                  icon={<Zap className="w-5 h-5" />}
+                  title="Mode Adaptatif"
+                  desc="L'IA cible tes points faibles pour progresser plus vite."
+                  badge="Premium"
+                  premium
+                  onClick={() => (access.isDemo ? router.push("/payment") : startAdaptive(20))}
+                />
+              </div>
+            </section>
+
+            <section>
+              <SectionLabel n={3} title="Exam blanc & national" desc="Sujets nationaux et examens blancs, chronométrés comme le jour J." />
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <ModeCard
+                  icon={FEATURES.examEngine ? <FileText className="w-5 h-5" /> : <Lock className="w-5 h-5" />}
+                  title="Examen Complet"
+                  desc="Sujet complet, chronomètre officiel, conditions réelles du Bac."
+                  badge={FEATURES.examEngine ? undefined : "Bientôt"}
+                  onClick={() => (FEATURES.examEngine ? setStep("exams") : setSoonOpen(true))}
+                />
+              </div>
+            </section>
+            <ExamsSoonPanel open={soonOpen} onClose={() => setSoonOpen(false)} />
           </div>
         )}
       </Shell>
@@ -444,7 +468,7 @@ export default function ExamensPage() {
   }
 
   // ---------- EXAMS LIST ----------
-  if (step === "exams") {
+  if (step === "exams" && FEATURES.examEngine) {
     return (
       <Shell
         title={subject?.name ?? "Examens"}
@@ -466,7 +490,7 @@ export default function ExamensPage() {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-arctic-blue dark:text-arctic-cyan text-xs font-semibold">
-                    <FileText className="w-4 h-4" /> {e.exam_type === "national" ? "National" : "Régional"} · {e.year}
+                    <FileText className="w-4 h-4" /> {e.exam_type === "national" ? "National" : e.exam_type === "blanc" ? "Examen blanc" : e.exam_type === "regional" ? "Régional" : "Examen"} · {e.year}
                   </div>
                   {locked && <Lock className="w-4 h-4 text-neutral-400" />}
                 </div>
@@ -615,7 +639,7 @@ export default function ExamensPage() {
           <span className="text-2xl text-neutral-400 font-medium">/20</span>
         </div>
         <div className="relative mt-3 text-lg font-bold">
-          {passed ? "Bravo, continue comme ça ! 🎉" : "Ne lâche rien — chaque erreur te fait progresser. 💪"}
+          {passed ? "Bravo, continue comme ça." : "Ne lâche rien : chaque erreur te fait progresser."}
         </div>
         <div className="relative mt-1 text-sm text-neutral-400">
           {earnedPts} / {totalPts} points · {questions.length} questions
@@ -624,7 +648,7 @@ export default function ExamensPage() {
           <div className="relative mt-4 inline-flex items-center gap-3 rounded-full bg-arctic-blue/10 px-4 py-2 text-sm font-semibold">
             <span className="text-arctic-blue dark:text-arctic-cyan">+{xpResult.earned} XP</span>
             <span className="text-neutral-400">·</span>
-            <span className="text-orange-500">🔥 {xpResult.streak} j</span>
+            <span className="text-orange-500">Série : {xpResult.streak} j</span>
           </div>
         )}
       </div>
@@ -715,9 +739,9 @@ function ExplainMenu({ q, choiceLabel, locked }: { q: Q; choiceLabel: string; lo
         }),
       });
       const json = await res.json();
-      setText(json.text || `⚠ ${json.error || "Le coach IA n'a pas pu répondre."}`);
+      setText(json.text || `${json.error || "Le coach IA n'a pas pu répondre."}`);
     } catch {
-      setText("⚠ Impossible de contacter le coach.");
+      setText("Impossible de contacter le coach.");
     }
     setBusy(null);
   }
@@ -726,7 +750,7 @@ function ExplainMenu({ q, choiceLabel, locked }: { q: Q; choiceLabel: string; lo
     <div className="mt-4">
       <div className="flex items-center gap-2 flex-wrap">
         <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-arctic-blue dark:text-arctic-cyan">
-          <Sparkles className="w-3.5 h-3.5" /> Expliquer avec l&apos;IA :
+          <Lightbulb className="w-3.5 h-3.5" /> Expliquer avec l&apos;IA :
         </span>
         {AI_MODES.map((m) => (
           <button
@@ -782,6 +806,18 @@ function Shell({
         {tabs}
       </div>
       <div className="mt-7">{children}</div>
+    </div>
+  );
+}
+
+function SectionLabel({ n, title, desc }: { n: number; title: string; desc: string }) {
+  return (
+    <div className="mb-3 flex items-center gap-3">
+      <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center text-xs font-extrabold shrink-0">{n}</span>
+      <div className="min-w-0">
+        <div className="font-bold tracking-tight">{title}</div>
+        <div className="text-xs text-neutral-400">{desc}</div>
+      </div>
     </div>
   );
 }

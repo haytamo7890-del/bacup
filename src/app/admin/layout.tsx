@@ -6,7 +6,7 @@ import Link from "next/link";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { AdminLevelProvider, AdminLevelSwitch } from "@/lib/admin-level";
 import {
-  Loader2, LayoutDashboard, BadgeCheck, Users, BookOpen, FileText, ScrollText, Settings, LogOut, ArrowLeft,
+  Loader2, LayoutDashboard, BadgeCheck, Users, BookOpen, ListChecks, FileText, FileJson, ScrollText, Settings, LogOut, ArrowLeft, Target,
 } from "lucide-react";
 
 const NAV = [
@@ -14,6 +14,9 @@ const NAV = [
   { href: "/admin/activations", label: "Activations", icon: BadgeCheck },
   { href: "/admin/etudiants", label: "Étudiants", icon: Users },
   { href: "/admin/cours", label: "Cours", icon: BookOpen },
+  { href: "/admin/preparation", label: "Préparation", icon: Target },
+  { href: "/admin/exercices", label: "Exercices", icon: ListChecks },
+  { href: "/admin/import-cours", label: "Import cours", icon: FileJson },
   { href: "/admin/examens", label: "Examens", icon: FileText },
   { href: "/admin/annales", label: "Annales", icon: ScrollText },
   { href: "/admin/parametres", label: "Paiement", icon: Settings },

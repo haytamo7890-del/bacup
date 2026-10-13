@@ -1,0 +1,969 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "sm_a",
+  "sm_b"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-sm-integrale-flash-1",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Définition",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Définition",
+     "difficulty": 1,
+     "statement": "$\\displaystyle\\int_1^4\\frac{1}{\\sqrt x}\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "$[2\\sqrt x]_1^4 = 4 - 2$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as pris $\\sqrt x$ comme primitive de $\\frac{1}{\\sqrt x}$ : sa dérivée est $\\frac{1}{2\\sqrt x}$, il manque un facteur $2$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Tu as calculé $\\frac{1}{\\sqrt4}$ : il faut une primitive."
+      },
+      {
+       "label": "$\\dfrac{14}{3}$",
+       "why": "Tu as intégré $\\sqrt x$ au lieu de $\\frac{1}{\\sqrt x}$."
+      }
+     ],
+     "hint": "Une primitive de $\\frac{1}{\\sqrt x}$ est $2\\sqrt x$.",
+     "solution": "$\\displaystyle\\int_1^4\\frac{\\mathrm dx}{\\sqrt x} = \\left[2\\sqrt x\\right]_1^4 = 2\\times2 - 2\\times1 = 2$.",
+     "points": 1,
+     "methode": "Primitive de $\\frac{u'}{\\sqrt u}$ : $2\\sqrt u$.",
+     "ref": "m2-sm-integrale-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-flash-2",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Intégrales de fonctions composées",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Intégrales de fonctions composées",
+     "difficulty": 2,
+     "statement": "$\\displaystyle\\int_0^{\\frac\\pi2}\\sin x\\cos^2x\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac13$",
+       "correct": true,
+       "why": "Forme $-u'u^2$ avec $u = \\cos x$ : $\\left[-\\frac{\\cos^3x}{3}\\right]_0^{\\pi/2} = 0 + \\frac13$."
+      },
+      {
+       "label": "$-\\dfrac13$",
+       "why": "Erreur de signe : $(\\cos x)' = -\\sin x$, donc une primitive est $-\\frac{\\cos^3 x}{3}$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as oublié de diviser par $3$."
+      },
+      {
+       "label": "$\\dfrac23$",
+       "why": "Recalcule $\\left[-\\frac{\\cos^3x}{3}\\right]_0^{\\pi/2} = 0 - \\left(-\\frac13\\right)$."
+      }
+     ],
+     "hint": "Reconnais $u'u^n$ avec $u = \\cos x$.",
+     "solution": "Avec $u = \\cos x$, $u' = -\\sin x$ : $\\sin x\\cos^2x = -u'u^2$, de primitive $-\\frac{u^3}{3}$. $\\displaystyle\\int_0^{\\pi/2}\\sin x\\cos^2x\\,\\mathrm dx = \\left[-\\frac{\\cos^3x}{3}\\right]_0^{\\pi/2} = 0 - \\left(-\\frac13\\right) = \\frac13$.",
+     "points": 1,
+     "methode": "$u'u^n$ a pour primitive $\\frac{u^{n+1}}{n+1}$.",
+     "ref": "m2-sm-integrale-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-flash-3",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Intégration par parties",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Intégration par parties",
+     "difficulty": 2,
+     "statement": "$\\displaystyle\\int_0^{\\pi}x\\cos x\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$-2$",
+       "correct": true,
+       "why": "$[x\\sin x]_0^\\pi - \\int_0^\\pi\\sin x\\,\\mathrm dx = 0 - 2$."
+      },
+      {
+       "label": "$2$",
+       "why": "Erreur de signe : la formule est $[uv] - \\int u'v$."
+      },
+      {
+       "label": "$0$",
+       "why": "Le crochet est nul, mais il reste $-\\int_0^\\pi\\sin x\\,\\mathrm dx = -2$."
+      },
+      {
+       "label": "$\\pi$",
+       "why": "Recalcule : $[x\\sin x]_0^{\\pi} = \\pi\\sin\\pi = 0$."
+      }
+     ],
+     "hint": "$u = x$, $v' = \\cos x$.",
+     "solution": "$u = x$, $u' = 1$, $v = \\sin x$. $\\displaystyle\\int_0^\\pi x\\cos x\\,\\mathrm dx = [x\\sin x]_0^\\pi - \\int_0^\\pi\\sin x\\,\\mathrm dx = 0 - [-\\cos x]_0^\\pi = -(1 + 1) = -2$.",
+     "points": 1,
+     "ref": "m2-sm-integrale-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-flash-4",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Intégrale et symétries",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Intégrale et symétries",
+     "difficulty": 1,
+     "statement": "$\\displaystyle\\int_{-1}^{1}x^5\\,\\mathrm{e}^{x^2}\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "La fonction est impaire et l'intervalle symétrique."
+      },
+      {
+       "label": "$2\\displaystyle\\int_0^1x^5\\mathrm{e}^{x^2}\\,\\mathrm{d}x$",
+       "why": "Formule réservée aux fonctions paires ; ici $f(-x) = -f(x)$."
+      },
+      {
+       "label": "$\\mathrm{e} - 1$",
+       "why": "Aucun calcul n'est nécessaire : la symétrie suffit."
+      },
+      {
+       "label": "$1$",
+       "why": "Vérifie la parité : $(-x)^5\\mathrm e^{(-x)^2} = -x^5\\mathrm e^{x^2}$."
+      }
+     ],
+     "hint": "Calcule $f(-x)$.",
+     "solution": "$f(-x) = (-x)^5\\mathrm e^{(-x)^2} = -x^5\\mathrm e^{x^2} = -f(x)$ : $f$ est impaire. Son intégrale sur $[-1;1]$ est nulle.",
+     "points": 1,
+     "ref": "m2-sm-integrale-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-flash-5",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Inégalité de la moyenne",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Inégalité de la moyenne",
+     "difficulty": 2,
+     "statement": "Pour $x\\in[0;1]$, $\\dfrac12 \\le \\dfrac{1}{1 + x^2} \\le 1$. On en déduit :",
+     "options": [
+      {
+       "label": "$\\dfrac12 \\le \\displaystyle\\int_0^1\\frac{\\mathrm{d}x}{1 + x^2} \\le 1$",
+       "correct": true,
+       "why": "$m(b - a) \\le \\int_a^b f \\le M(b - a)$ avec $b - a = 1$."
+      },
+      {
+       "label": "$0 \\le \\displaystyle\\int_0^1\\frac{\\mathrm{d}x}{1 + x^2} \\le \\dfrac12$",
+       "why": "La fonction est toujours $\\ge \\frac12$ : son intégrale sur un intervalle de longueur $1$ aussi."
+      },
+      {
+       "label": "$1 \\le \\displaystyle\\int_0^1\\frac{\\mathrm{d}x}{1 + x^2} \\le 2$",
+       "why": "Tu as multiplié par $2$ : la longueur de l'intervalle est $1$."
+      },
+      {
+       "label": "$\\displaystyle\\int_0^1\\frac{\\mathrm{d}x}{1 + x^2} = \\dfrac34$",
+       "why": "On n'obtient qu'un encadrement, pas la valeur exacte."
+      }
+     ],
+     "hint": "Intègre l'encadrement sur $[0;1]$.",
+     "solution": "Pour $x\\in[0;1]$ : $\\frac12 \\le \\frac{1}{1+x^2} \\le 1$. En intégrant ($0 < 1$) : $\\frac12(1 - 0) \\le \\displaystyle\\int_0^1\\frac{\\mathrm dx}{1+x^2} \\le 1(1 - 0)$.",
+     "points": 1,
+     "methode": "Inégalité de la moyenne : $m \\le f \\le M$ sur $[a;b]$ ⇒ $m(b-a) \\le \\int_a^b f \\le M(b-a)$.",
+     "ref": "m2-sm-integrale-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-flash-6",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Volume de révolution",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Volume de révolution",
+     "difficulty": 2,
+     "statement": "Le volume engendré par la rotation autour de $(Ox)$ de la courbe de $x\\mapsto\\mathrm{e}^x$, $x\\in[0;1]$, vaut en u.v. :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\pi(\\mathrm{e}^2 - 1)}{2}$",
+       "correct": true,
+       "why": "$\\pi\\int_0^1\\mathrm e^{2x}\\,\\mathrm dx = \\pi\\left[\\frac{\\mathrm e^{2x}}{2}\\right]_0^1$."
+      },
+      {
+       "label": "$\\pi(\\mathrm{e} - 1)$",
+       "why": "Tu as intégré $\\mathrm e^x$ au lieu de $(\\mathrm e^x)^2 = \\mathrm e^{2x}$."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^2 - 1}{2}$",
+       "why": "Il manque le facteur $\\pi$."
+      },
+      {
+       "label": "$\\pi(\\mathrm{e}^2 - 1)$",
+       "why": "Une primitive de $\\mathrm e^{2x}$ est $\\frac{\\mathrm e^{2x}}{2}$."
+      }
+     ],
+     "hint": "$V = \\pi\\int_a^b f(x)^2\\,\\mathrm dx$.",
+     "solution": "$V = \\pi\\displaystyle\\int_0^1(\\mathrm e^x)^2\\,\\mathrm dx = \\pi\\int_0^1\\mathrm e^{2x}\\,\\mathrm dx = \\pi\\left[\\frac{\\mathrm e^{2x}}{2}\\right]_0^1 = \\frac{\\pi(\\mathrm e^2 - 1)}{2}$.",
+     "points": 1,
+     "ref": "m2-sm-integrale-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-flash-7",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Fonction définie par une intégrale",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Fonction définie par une intégrale",
+     "difficulty": 3,
+     "statement": "Soit $F(x) = \\displaystyle\\int_0^{x^2}\\mathrm{e}^{-t^2}\\,\\mathrm{d}t$. Alors $F'(x)$ vaut :",
+     "options": [
+      {
+       "label": "$2x\\,\\mathrm{e}^{-x^4}$",
+       "correct": true,
+       "why": "$F = H\\circ u$ avec $H' = \\mathrm e^{-t^2}$ et $u = x^2$ : $F' = u'\\,\\mathrm e^{-u^2}$."
+      },
+      {
+       "label": "$\\mathrm{e}^{-x^4}$",
+       "why": "Tu as oublié de multiplier par la dérivée de la borne $(x^2)' = 2x$."
+      },
+      {
+       "label": "$2x\\,\\mathrm{e}^{-x^2}$",
+       "why": "On remplace $t$ par la borne $x^2$ : $\\mathrm e^{-(x^2)^2} = \\mathrm e^{-x^4}$."
+      },
+      {
+       "label": "$\\mathrm{e}^{-x^2}$",
+       "why": "C'est la dérivée de $\\int_0^x\\mathrm e^{-t^2}\\,\\mathrm dt$ : ici la borne est $x^2$."
+      }
+     ],
+     "hint": "$\\left(\\int_a^{u(x)}f(t)\\,\\mathrm dt\\right)' = u'(x)\\,f(u(x))$.",
+     "solution": "Soit $H(y) = \\displaystyle\\int_0^y\\mathrm e^{-t^2}\\,\\mathrm dt$ ; $H'(y) = \\mathrm e^{-y^2}$ et $F(x) = H(x^2)$. Donc $F'(x) = 2x\\,H'(x^2) = 2x\\,\\mathrm e^{-x^4}$.",
+     "points": 1,
+     "methode": "Borne variable $u(x)$ : $F'(x) = u'(x)\\,f(u(x))$ (et on retranche le terme de la borne basse si elle varie aussi).",
+     "ref": "m2-sm-integrale-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-flash-8",
+   "chapter": "integrale",
+   "kind": "qcu",
+   "title": "Positivité, ordre et valeur moyenne",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Positivité, ordre et valeur moyenne",
+     "difficulty": 2,
+     "statement": "La valeur moyenne de $\\sin$ sur $[0;\\pi]$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac{2}{\\pi}$",
+       "correct": true,
+       "why": "$\\frac{1}{\\pi}\\int_0^\\pi\\sin x\\,\\mathrm dx = \\frac{2}{\\pi}$."
+      },
+      {
+       "label": "$2$",
+       "why": "C'est l'intégrale ; il faut diviser par la longueur $\\pi$."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\sin \\ge 0$ sur $[0;\\pi]$ : sa moyenne est positive."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "La moyenne de $\\sin$ n'est pas la moyenne de ses valeurs extrêmes $0$ et $1$."
+      }
+     ],
+     "hint": "$\\mu = \\frac{1}{b-a}\\int_a^b f$.",
+     "solution": "$\\displaystyle\\int_0^\\pi\\sin x\\,\\mathrm dx = [-\\cos x]_0^\\pi = 1 + 1 = 2$, donc $\\mu = \\frac{2}{\\pi}\\approx0{,}64$.",
+     "points": 1,
+     "ref": "m2-sm-integrale-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-ex1",
+   "chapter": "integrale",
+   "kind": "probleme",
+   "title": "Exercice 1 — Quatre intégrales, quatre techniques",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Calculer les intégrales suivantes en choisissant la bonne technique : forme $u'u^n$, intégration par parties (une ou deux fois), décomposition.",
+   "questions": [
+    {
+     "notion": "Intégrales de fonctions composées",
+     "difficulty": 2,
+     "statement": "1) $\\displaystyle\\int_0^1\\frac{x}{(x^2 + 1)^2}\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac14$",
+       "correct": true,
+       "why": "$\\left[-\\frac{1}{2(x^2+1)}\\right]_0^1 = -\\frac14 + \\frac12$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Tu as oublié de retrancher la valeur en $1$ (ou de diviser par $2$)."
+      },
+      {
+       "label": "$-\\dfrac14$",
+       "why": "Erreur de signe : la primitive de $\\frac{u'}{u^2}$ est $-\\frac1u$."
+      },
+      {
+       "label": "$\\dfrac{\\ln2}{2}$",
+       "why": "$\\frac{\\ln u}{2}$ est la primitive de $\\frac{u'}{2u}$, pas de $\\frac{u'}{2u^2}$."
+      }
+     ],
+     "hint": "$\\frac{x}{(x^2+1)^2} = \\frac12\\cdot\\frac{u'}{u^2}$ avec $u = x^2 + 1$.",
+     "solution": "Avec $u = x^2 + 1$, $u' = 2x$ : $\\dfrac{x}{(x^2+1)^2} = \\dfrac12\\cdot\\dfrac{u'}{u^2}$, de primitive $-\\dfrac{1}{2u}$. $\\displaystyle\\int_0^1 = \\left[-\\frac{1}{2(x^2+1)}\\right]_0^1 = -\\frac14 + \\frac12 = \\frac14$.",
+     "points": 1,
+     "ref": "m2-sm-integrale-ex1-q1"
+    },
+    {
+     "notion": "Intégration par parties",
+     "difficulty": 2,
+     "statement": "2) $\\displaystyle\\int_1^{\\mathrm{e}}x\\ln x\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\mathrm{e}^2 + 1}{4}$",
+       "correct": true,
+       "why": "$\\left[\\frac{x^2}{2}\\ln x\\right]_1^{\\mathrm e} - \\int_1^{\\mathrm e}\\frac x2\\,\\mathrm dx = \\frac{\\mathrm e^2}{2} - \\frac{\\mathrm e^2 - 1}{4}$."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^2 - 1}{4}$",
+       "why": "C'est l'intégrale $\\int_1^{\\mathrm e}\\frac x2\\,\\mathrm dx$ seule ; il manque le crochet."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^2}{2}$",
+       "why": "Tu t'es arrêté au crochet."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^2}{4}$",
+       "why": "$\\left[\\frac{x^2}{4}\\right]_1^{\\mathrm e} = \\frac{\\mathrm e^2 - 1}{4}$ : n'oublie pas la borne $1$."
+      }
+     ],
+     "hint": "Pose $u = \\ln x$ (on le dérive) et $v' = x$.",
+     "solution": "$u = \\ln x$, $u' = \\frac1x$, $v' = x$, $v = \\frac{x^2}{2}$. $\\displaystyle\\int_1^{\\mathrm e}x\\ln x\\,\\mathrm dx = \\left[\\frac{x^2}{2}\\ln x\\right]_1^{\\mathrm e} - \\int_1^{\\mathrm e}\\frac{x}{2}\\,\\mathrm dx = \\frac{\\mathrm e^2}{2} - \\frac{\\mathrm e^2 - 1}{4} = \\frac{\\mathrm e^2 + 1}{4}$.",
+     "points": 1,
+     "ref": "m2-sm-integrale-ex1-q2"
+    },
+    {
+     "notion": "Techniques de calcul",
+     "difficulty": 2,
+     "statement": "3) $\\displaystyle\\int_0^1\\frac{x + 2}{x + 1}\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$1 + \\ln 2$",
+       "correct": true,
+       "why": "$\\frac{x+2}{x+1} = 1 + \\frac{1}{x+1}$."
+      },
+      {
+       "label": "$\\ln 2$",
+       "why": "Tu as oublié la partie entière $1$ de la décomposition."
+      },
+      {
+       "label": "$2\\ln 2$",
+       "why": "$\\frac{x+2}{x+1} = 1 + \\frac{1}{x+1}$, pas $\\frac{2}{x+1}$."
+      },
+      {
+       "label": "$1 + \\ln\\dfrac32$",
+       "why": "Le dénominateur est $x + 1$ : $[\\ln(x+1)]_0^1 = \\ln 2$."
+      }
+     ],
+     "hint": "Écris $x + 2 = (x + 1) + 1$.",
+     "solution": "$\\dfrac{x + 2}{x + 1} = 1 + \\dfrac{1}{x+1}$, donc $\\displaystyle\\int_0^1 = \\left[x + \\ln(x+1)\\right]_0^1 = 1 + \\ln 2$.",
+     "points": 1,
+     "ref": "m2-sm-integrale-ex1-q3"
+    },
+    {
+     "notion": "Intégration par parties",
+     "difficulty": 3,
+     "statement": "4) Sachant que $\\displaystyle\\int_0^1x\\,\\mathrm{e}^x\\,\\mathrm{d}x = 1$, l'intégrale $\\displaystyle\\int_0^1x^2\\,\\mathrm{e}^x\\,\\mathrm{d}x$ vaut :",
+     "options": [
+      {
+       "label": "$\\mathrm{e} - 2$",
+       "correct": true,
+       "why": "$[x^2\\mathrm e^x]_0^1 - 2\\int_0^1x\\mathrm e^x\\,\\mathrm dx = \\mathrm e - 2$."
+      },
+      {
+       "label": "$\\mathrm{e}$",
+       "why": "Tu t'es arrêté au crochet."
+      },
+      {
+       "label": "$2 - \\mathrm{e}$",
+       "why": "Ce nombre est négatif alors que l'intégrande est positive."
+      },
+      {
+       "label": "$\\mathrm{e} - 1$",
+       "why": "$(x^2)' = 2x$ : on retranche $2\\times1$, pas $1$."
+      }
+     ],
+     "hint": "$u = x^2$, $v' = \\mathrm e^x$ ; réutilise l'intégrale donnée.",
+     "solution": "$u = x^2$, $u' = 2x$, $v = \\mathrm e^x$ : $\\displaystyle\\int_0^1x^2\\mathrm e^x\\,\\mathrm dx = [x^2\\mathrm e^x]_0^1 - \\int_0^1 2x\\mathrm e^x\\,\\mathrm dx = \\mathrm e - 2\\times1 = \\mathrm e - 2 \\approx 0{,}72$.",
+     "points": 1,
+     "methode": "Polynôme de degré $n$ × exponentielle : $n$ intégrations par parties successives.",
+     "ref": "m2-sm-integrale-ex1-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-ex2",
+   "chapter": "integrale",
+   "kind": "probleme",
+   "title": "Exercice 2 — Aire, volume et encadrement",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soient $f(x) = \\sqrt x$ et $g(x) = x^2$ sur $[0;1]$ (on a $g \\le f$ sur cet intervalle), et $I = \\displaystyle\\int_0^1\\mathrm{e}^{-x^2}\\,\\mathrm{d}x$.",
+   "questions": [
+    {
+     "notion": "Aire entre deux courbes",
+     "difficulty": 2,
+     "statement": "1) L'aire du domaine compris entre les courbes de $f$ et $g$ sur $[0;1]$ vaut, en u.a. :",
+     "options": [
+      {
+       "label": "$\\dfrac13$",
+       "correct": true,
+       "why": "$\\int_0^1(\\sqrt x - x^2)\\,\\mathrm dx = \\frac23 - \\frac13$."
+      },
+      {
+       "label": "$-\\dfrac13$",
+       "why": "On intègre « haut − bas » : $f - g$, pas $g - f$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as additionné les deux intégrales."
+      },
+      {
+       "label": "$\\dfrac23$",
+       "why": "C'est l'aire sous $f$ seule."
+      }
+     ],
+     "hint": "$\\int_0^1\\sqrt x\\,\\mathrm dx = \\left[\\frac23x^{3/2}\\right]_0^1$.",
+     "solution": "$\\mathcal A = \\displaystyle\\int_0^1(\\sqrt x - x^2)\\,\\mathrm dx = \\left[\\frac23x^{3/2} - \\frac{x^3}{3}\\right]_0^1 = \\frac23 - \\frac13 = \\frac13$ u.a.",
+     "points": 1,
+     "ref": "m2-sm-integrale-ex2-q1"
+    },
+    {
+     "notion": "Volume de révolution",
+     "difficulty": 3,
+     "statement": "2) Le volume du solide obtenu en faisant tourner ce domaine autour de $(Ox)$ vaut, en u.v. :",
+     "options": [
+      {
+       "label": "$\\dfrac{3\\pi}{10}$",
+       "correct": true,
+       "why": "$\\pi\\int_0^1\\left(f^2 - g^2\\right) = \\pi\\int_0^1(x - x^4)\\,\\mathrm dx = \\pi\\left(\\frac12 - \\frac15\\right)$."
+      },
+      {
+       "label": "$\\dfrac{\\pi}{9}$",
+       "why": "Tu as élevé l'aire au carré : on intègre $f^2 - g^2$, pas $(f - g)^2$ ni $\\mathcal A^2$."
+      },
+      {
+       "label": "$\\dfrac{3}{10}$",
+       "why": "Il manque le facteur $\\pi$."
+      },
+      {
+       "label": "$\\dfrac{7\\pi}{10}$",
+       "why": "On soustrait le volume intérieur : $\\frac12 - \\frac15$, pas $\\frac12 + \\frac15$."
+      }
+     ],
+     "hint": "Volume « avec un trou » : $V = \\pi\\int_a^b\\left(f(x)^2 - g(x)^2\\right)\\mathrm dx$.",
+     "solution": "$V = \\pi\\displaystyle\\int_0^1\\left((\\sqrt x)^2 - (x^2)^2\\right)\\mathrm dx = \\pi\\int_0^1(x - x^4)\\,\\mathrm dx = \\pi\\left(\\frac12 - \\frac15\\right) = \\frac{3\\pi}{10}$ u.v.",
+     "points": 1,
+     "ref": "m2-sm-integrale-ex2-q2"
+    },
+    {
+     "notion": "Encadrement d'une intégrale",
+     "difficulty": 2,
+     "statement": "3) Pour $x\\in[0;1]$, $x^2 \\le x$, donc $\\mathrm{e}^{-x} \\le \\mathrm{e}^{-x^2} \\le 1$. On en déduit :",
+     "options": [
+      {
+       "label": "$1 - \\dfrac1{\\mathrm{e}} \\le I \\le 1$",
+       "correct": true,
+       "why": "$\\int_0^1\\mathrm e^{-x}\\,\\mathrm dx = 1 - \\mathrm e^{-1}$."
+      },
+      {
+       "label": "$\\dfrac1{\\mathrm{e}} \\le I \\le 1$",
+       "why": "$\\frac1{\\mathrm e}$ est le minimum de $\\mathrm e^{-x}$, mais on intègre : $\\int_0^1\\mathrm e^{-x}\\,\\mathrm dx = 1 - \\frac1{\\mathrm e}$."
+      },
+      {
+       "label": "$0 \\le I \\le 1 - \\dfrac1{\\mathrm{e}}$",
+       "why": "$1 - \\frac1{\\mathrm e}$ est un minorant de $I$, pas un majorant."
+      },
+      {
+       "label": "$1 - \\mathrm{e} \\le I \\le 1$",
+       "why": "Une primitive de $\\mathrm e^{-x}$ est $-\\mathrm e^{-x}$ : $[-\\mathrm e^{-x}]_0^1 = 1 - \\mathrm e^{-1}$."
+      }
+     ],
+     "hint": "Intègre chaque membre sur $[0;1]$.",
+     "solution": "$\\mathrm e^{-x} \\le \\mathrm e^{-x^2} \\le 1$ sur $[0;1]$ (car $-x \\le -x^2$ et $\\exp$ est croissante). En intégrant : $\\left[-\\mathrm e^{-x}\\right]_0^1 \\le I \\le 1$, soit $1 - \\frac1{\\mathrm e} \\le I \\le 1$.",
+     "points": 1,
+     "ref": "m2-sm-integrale-ex2-q3"
+    },
+    {
+     "notion": "Encadrement d'une intégrale",
+     "difficulty": 3,
+     "statement": "4) Sachant que $\\mathrm{e}^{-t} \\ge 1 - t$ pour tout réel $t$, on obtient :",
+     "options": [
+      {
+       "label": "$I \\ge \\dfrac23$",
+       "correct": true,
+       "why": "Avec $t = x^2$ : $\\mathrm e^{-x^2} \\ge 1 - x^2$, et $\\int_0^1(1 - x^2)\\,\\mathrm dx = \\frac23$."
+      },
+      {
+       "label": "$I \\ge 1$",
+       "why": "$\\int_0^1(1 - x^2)\\,\\mathrm dx = 1 - \\frac13 = \\frac23$."
+      },
+      {
+       "label": "$I \\ge \\dfrac13$",
+       "why": "C'est $\\int_0^1 x^2\\,\\mathrm dx$, pas $\\int_0^1(1 - x^2)\\,\\mathrm dx$."
+      },
+      {
+       "label": "$I \\le \\dfrac23$",
+       "why": "L'inégalité $\\mathrm e^{-t} \\ge 1 - t$ donne un minorant."
+      }
+     ],
+     "hint": "Applique l'inégalité avec $t = x^2$, puis intègre.",
+     "solution": "Avec $t = x^2$ : $\\mathrm e^{-x^2} \\ge 1 - x^2$ sur $[0;1]$. En intégrant : $I \\ge \\displaystyle\\int_0^1(1 - x^2)\\,\\mathrm dx = 1 - \\frac13 = \\frac23$. Cet encadrement $\\frac23 \\le I \\le 1$ est meilleur que le précédent ($1 - \\frac1{\\mathrm e}\\approx0{,}63$).",
+     "points": 1,
+     "ref": "m2-sm-integrale-ex2-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-ex3",
+   "chapter": "integrale",
+   "kind": "probleme",
+   "title": "Exercice 3 — La fonction F(x) = ∫ de x à 2x de eᵗ / t",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Pour $x > 0$, on pose $F(x) = \\displaystyle\\int_x^{2x}\\frac{\\mathrm{e}^t}{t}\\,\\mathrm{d}t$.",
+   "questions": [
+    {
+     "notion": "Fonction définie par une intégrale",
+     "difficulty": 3,
+     "statement": "1) Pour $x > 0$, $F'(x)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\mathrm{e}^x\\left(\\mathrm{e}^x - 1\\right)}{x}$",
+       "correct": true,
+       "why": "$2\\times\\frac{\\mathrm e^{2x}}{2x} - \\frac{\\mathrm e^x}{x} = \\frac{\\mathrm e^{2x} - \\mathrm e^x}{x}$."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^{2x}}{2x} - \\dfrac{\\mathrm{e}^x}{x}$",
+       "why": "Tu as oublié de multiplier par la dérivée de la borne $(2x)' = 2$."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^x}{x}$",
+       "why": "Tu n'as dérivé que par rapport à la borne basse, et sans le signe moins."
+      },
+      {
+       "label": "$\\dfrac{\\mathrm{e}^{2x} + \\mathrm{e}^x}{x}$",
+       "why": "La borne basse contribue avec un signe moins."
+      }
+     ],
+     "hint": "Si $H$ est une primitive de $\\frac{\\mathrm e^t}{t}$, $F(x) = H(2x) - H(x)$.",
+     "solution": "Soit $H$ une primitive de $t\\mapsto\\frac{\\mathrm e^t}{t}$ sur $]0;+\\infty[$ : $F(x) = H(2x) - H(x)$, donc $F'(x) = 2\\cdot\\dfrac{\\mathrm e^{2x}}{2x} - \\dfrac{\\mathrm e^x}{x} = \\dfrac{\\mathrm e^{2x} - \\mathrm e^x}{x} = \\dfrac{\\mathrm e^x(\\mathrm e^x - 1)}{x}$.",
+     "points": 1,
+     "part": "Partie A — Variations",
+     "ref": "m2-sm-integrale-ex3-q1"
+    },
+    {
+     "notion": "Fonction définie par une intégrale",
+     "difficulty": 2,
+     "statement": "2) Sur $]0;+\\infty[$, la fonction $F$ est :",
+     "options": [
+      {
+       "label": "strictement croissante",
+       "correct": true,
+       "why": "$\\mathrm e^x > 0$, $\\mathrm e^x - 1 > 0$ et $x > 0$ : $F' > 0$."
+      },
+      {
+       "label": "strictement décroissante",
+       "why": "Pour $x > 0$, $\\mathrm e^x > 1$ : $F'(x) > 0$."
+      },
+      {
+       "label": "constante",
+       "why": "$F'$ ne s'annule pas sur $]0;+\\infty[$."
+      },
+      {
+       "label": "croissante puis décroissante",
+       "why": "Le signe de $F'$ est le même pour tout $x > 0$."
+      }
+     ],
+     "hint": "Signe de chaque facteur de $F'(x)$ pour $x > 0$.",
+     "solution": "Pour $x > 0$ : $\\mathrm e^x > 0$, $\\mathrm e^x - 1 > 0$ et $x > 0$, donc $F'(x) > 0$ : $F$ est strictement croissante sur $]0;+\\infty[$.",
+     "points": 1,
+     "part": "Partie A — Variations",
+     "ref": "m2-sm-integrale-ex3-q2"
+    },
+    {
+     "notion": "Encadrement d'une intégrale",
+     "difficulty": 3,
+     "statement": "3) Pour $t\\in[x;2x]$, $\\mathrm{e}^x \\le \\mathrm{e}^t \\le \\mathrm{e}^{2x}$. On en déduit :",
+     "options": [
+      {
+       "label": "$\\mathrm{e}^x\\ln2 \\le F(x) \\le \\mathrm{e}^{2x}\\ln 2$",
+       "correct": true,
+       "why": "$\\frac{\\mathrm e^x}{t} \\le \\frac{\\mathrm e^t}{t} \\le \\frac{\\mathrm e^{2x}}{t}$ et $\\int_x^{2x}\\frac{\\mathrm dt}{t} = \\ln 2$."
+      },
+      {
+       "label": "$\\mathrm{e}^x \\le F(x) \\le \\mathrm{e}^{2x}$",
+       "why": "Tu as oublié le facteur $\\frac1t$ : $\\int_x^{2x}\\frac{\\mathrm dt}{t} = \\ln2$, pas $1$."
+      },
+      {
+       "label": "$\\mathrm{e}^{2x}\\ln2 \\le F(x) \\le \\mathrm{e}^{x}\\ln 2$",
+       "why": "Inégalités inversées : $\\mathrm e^x \\le \\mathrm e^{2x}$ pour $x > 0$."
+      },
+      {
+       "label": "$\\ln 2 \\le F(x) \\le 2\\ln 2$",
+       "why": "Faux pour $x$ grand : $F(x) \\ge \\mathrm e^x\\ln 2 \\to +\\infty$."
+      }
+     ],
+     "hint": "Divise l'encadrement par $t > 0$, puis intègre sur $[x;2x]$.",
+     "solution": "Pour $t\\in[x;2x]$ : $\\dfrac{\\mathrm e^x}{t} \\le \\dfrac{\\mathrm e^t}{t} \\le \\dfrac{\\mathrm e^{2x}}{t}$. En intégrant ($x < 2x$) : $\\mathrm e^x\\displaystyle\\int_x^{2x}\\frac{\\mathrm dt}{t} \\le F(x) \\le \\mathrm e^{2x}\\int_x^{2x}\\frac{\\mathrm dt}{t}$. Or $\\displaystyle\\int_x^{2x}\\frac{\\mathrm dt}{t} = \\ln 2x - \\ln x = \\ln 2$.",
+     "points": 1,
+     "part": "Partie B — Limites",
+     "ref": "m2-sm-integrale-ex3-q3"
+    },
+    {
+     "notion": "Encadrement d'une intégrale",
+     "difficulty": 3,
+     "statement": "4) $\\lim\\limits_{x\\to0^+}F(x)$ vaut :",
+     "options": [
+      {
+       "label": "$\\ln 2$",
+       "correct": true,
+       "why": "Les deux bornes $\\mathrm e^x\\ln2$ et $\\mathrm e^{2x}\\ln2$ tendent vers $\\ln2$."
+      },
+      {
+       "label": "$0$",
+       "why": "L'intervalle $[x;2x]$ rétrécit, mais $\\frac{\\mathrm e^t}{t}$ explose près de $0$ : les deux effets se compensent."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "L'encadrement montre que $F(x)$ reste entre $\\mathrm e^x\\ln2$ et $\\mathrm e^{2x}\\ln2$."
+      },
+      {
+       "label": "$1$",
+       "why": "$\\mathrm e^0 = 1$, mais il reste le facteur $\\ln 2$."
+      }
+     ],
+     "hint": "Gendarmes avec l'encadrement de la question 3.",
+     "solution": "$\\lim\\limits_{x\\to0^+}\\mathrm e^x\\ln2 = \\lim\\limits_{x\\to0^+}\\mathrm e^{2x}\\ln 2 = \\ln 2$. Par encadrement, $\\lim\\limits_{x\\to0^+}F(x) = \\ln 2$.",
+     "points": 1,
+     "part": "Partie B — Limites",
+     "ref": "m2-sm-integrale-ex3-q4"
+    },
+    {
+     "notion": "Encadrement d'une intégrale",
+     "difficulty": 2,
+     "statement": "5) $\\lim\\limits_{x\\to+\\infty}F(x)$ vaut :",
+     "options": [
+      {
+       "label": "$+\\infty$",
+       "correct": true,
+       "why": "$F(x) \\ge \\mathrm e^x\\ln 2 \\to +\\infty$."
+      },
+      {
+       "label": "$\\ln 2$",
+       "why": "C'est la limite en $0^+$."
+      },
+      {
+       "label": "$0$",
+       "why": "$F(x) \\ge \\mathrm e^x\\ln2$ : elle ne peut pas tendre vers $0$."
+      },
+      {
+       "label": "$\\mathrm{e}$",
+       "why": "Utilise le minorant $\\mathrm e^x\\ln 2$."
+      }
+     ],
+     "hint": "Utilise le minorant.",
+     "solution": "$F(x) \\ge \\mathrm e^x\\ln 2$ et $\\lim\\limits_{x\\to+\\infty}\\mathrm e^x\\ln2 = +\\infty$, donc par comparaison $\\lim\\limits_{x\\to+\\infty}F(x) = +\\infty$.",
+     "points": 1,
+     "part": "Partie B — Limites",
+     "ref": "m2-sm-integrale-ex3-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-integrale-ex4",
+   "chapter": "integrale",
+   "kind": "probleme",
+   "title": "Exercice 4 — Suite d'intégrales Iₙ = ∫ xⁿ / (1 + x)",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Pour tout $n\\in\\mathbb N$, on pose $I_n = \\displaystyle\\int_0^1\\frac{x^n}{1 + x}\\,\\mathrm{d}x$. On admet que $(I_n)$ est décroissante.",
+   "questions": [
+    {
+     "notion": "Définition",
+     "difficulty": 1,
+     "statement": "1) $I_0$ vaut :",
+     "options": [
+      {
+       "label": "$\\ln 2$",
+       "correct": true,
+       "why": "$[\\ln(1 + x)]_0^1 = \\ln 2$."
+      },
+      {
+       "label": "$1$",
+       "why": "$x^0 = 1$, mais il reste le dénominateur $1 + x$."
+      },
+      {
+       "label": "$-\\ln 2$",
+       "why": "$\\ln 2 - \\ln 1 = \\ln 2 > 0$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Ce n'est pas la valeur de $\\frac{1}{1+x}$ en $1$ qu'on cherche, mais son intégrale."
+      }
+     ],
+     "hint": "Primitive de $\\frac{1}{1+x}$.",
+     "solution": "$I_0 = \\displaystyle\\int_0^1\\frac{\\mathrm dx}{1 + x} = [\\ln(1+x)]_0^1 = \\ln 2$.",
+     "points": 1,
+     "part": "Partie A — Calculs",
+     "ref": "m2-sm-integrale-ex4-q1"
+    },
+    {
+     "notion": "Techniques de calcul",
+     "difficulty": 2,
+     "statement": "2) Pour tout $n$, $I_n + I_{n+1}$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{1}{n+1}$",
+       "correct": true,
+       "why": "$\\frac{x^n + x^{n+1}}{1 + x} = x^n$ et $\\int_0^1x^n\\,\\mathrm dx = \\frac{1}{n+1}$."
+      },
+      {
+       "label": "$\\dfrac{1}{n+2}$",
+       "why": "C'est $\\int_0^1x^{n+1}\\,\\mathrm dx$ : on factorise $x^n(1 + x)$."
+      },
+      {
+       "label": "$\\dfrac1n$",
+       "why": "Une primitive de $x^n$ est $\\frac{x^{n+1}}{n+1}$."
+      },
+      {
+       "label": "$\\ln 2$",
+       "why": "$\\ln 2 = I_0$ ; ici on additionne deux termes consécutifs."
+      }
+     ],
+     "hint": "Additionne les intégrandes et simplifie par $1 + x$.",
+     "solution": "$I_n + I_{n+1} = \\displaystyle\\int_0^1\\frac{x^n(1 + x)}{1 + x}\\,\\mathrm dx = \\int_0^1x^n\\,\\mathrm dx = \\frac{1}{n+1}$.",
+     "points": 1,
+     "part": "Partie A — Calculs",
+     "ref": "m2-sm-integrale-ex4-q2"
+    },
+    {
+     "notion": "Techniques de calcul",
+     "difficulty": 1,
+     "statement": "3) On en déduit $I_1 =$ :",
+     "options": [
+      {
+       "label": "$1 - \\ln 2$",
+       "correct": true,
+       "why": "$I_0 + I_1 = 1$."
+      },
+      {
+       "label": "$\\ln 2 - 1$",
+       "why": "Ce nombre est négatif alors que $\\frac{x}{1+x} \\ge 0$ sur $[0;1]$."
+      },
+      {
+       "label": "$1 + \\ln 2$",
+       "why": "$I_1 = 1 - I_0$, pas $1 + I_0$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Avec $n = 0$ : $I_0 + I_1 = \\frac{1}{0 + 1} = 1$."
+      }
+     ],
+     "hint": "Relation de la question 2 avec $n = 0$.",
+     "solution": "Avec $n = 0$ : $I_0 + I_1 = 1$, donc $I_1 = 1 - \\ln 2 \\approx 0{,}31$.",
+     "points": 1,
+     "part": "Partie A — Calculs",
+     "ref": "m2-sm-integrale-ex4-q3"
+    },
+    {
+     "notion": "Positivité, ordre et valeur moyenne",
+     "difficulty": 2,
+     "statement": "4) Pour $x\\in[0;1]$, $0 \\le \\dfrac{x^n}{1+x} \\le x^n$. Alors $\\lim\\limits_{n\\to+\\infty}I_n$ vaut :",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "$0 \\le I_n \\le \\frac{1}{n+1} \\to 0$."
+      },
+      {
+       "label": "$\\ln 2$",
+       "why": "$\\ln 2 = I_0$ ; la suite décroît vers $0$."
+      },
+      {
+       "label": "$1$",
+       "why": "$I_n \\le \\frac{1}{n+1}$ : elle ne peut pas tendre vers $1$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "La suite est décroissante et positive."
+      }
+     ],
+     "hint": "Intègre l'encadrement, puis gendarmes.",
+     "solution": "En intégrant : $0 \\le I_n \\le \\displaystyle\\int_0^1x^n\\,\\mathrm dx = \\frac{1}{n+1}$. Par encadrement, $\\lim I_n = 0$.",
+     "points": 1,
+     "part": "Partie B — Comportement asymptotique",
+     "ref": "m2-sm-integrale-ex4-q4"
+    },
+    {
+     "notion": "Encadrement d'une intégrale",
+     "difficulty": 3,
+     "statement": "5) En utilisant $I_{n+1} \\le I_n$ et la question 2, on obtient $\\dfrac{1}{2(n+1)} \\le I_n \\le \\dfrac{1}{2n}$ ($n \\ge 1$). Alors $\\lim\\limits_{n\\to+\\infty}nI_n$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac12$",
+       "correct": true,
+       "why": "$\\frac{n}{2(n+1)} \\le nI_n \\le \\frac12$ et $\\frac{n}{2(n+1)} \\to \\frac12$."
+      },
+      {
+       "label": "$0$",
+       "why": "$I_n \\to 0$, mais $n\\to+\\infty$ : on multiplie l'encadrement par $n$."
+      },
+      {
+       "label": "$1$",
+       "why": "Le majorant de $nI_n$ est $\\frac12$."
+      },
+      {
+       "label": "$\\ln 2$",
+       "why": "$\\ln2 = I_0$, sans lien avec cette limite."
+      }
+     ],
+     "hint": "Multiplie l'encadrement par $n > 0$.",
+     "solution": "De $I_{n+1} \\le I_n$ et $I_n + I_{n+1} = \\frac{1}{n+1}$ : $2I_n \\ge \\frac{1}{n+1}$. De $I_n \\le I_{n-1}$ et $I_{n-1} + I_n = \\frac1n$ : $2I_n \\le \\frac1n$. Donc $\\frac{n}{2(n+1)} \\le nI_n \\le \\frac12$ et, par encadrement, $\\lim nI_n = \\frac12$.",
+     "points": 1,
+     "part": "Partie B — Comportement asymptotique",
+     "ref": "m2-sm-integrale-ex4-q5"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-sm-integrale-serie-1",
+   "title": "Calcul intégral · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (4 questions).",
+   "kind": "custom",
+   "chapter": "integrale",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-sm-integrale-flash-q1",
+    "m2-sm-integrale-flash-q2",
+    "m2-sm-integrale-flash-q3",
+    "m2-sm-integrale-flash-q4",
+    "m2-sm-integrale-ex1-q1",
+    "m2-sm-integrale-ex1-q2",
+    "m2-sm-integrale-ex1-q3",
+    "m2-sm-integrale-ex1-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-integrale-serie-2",
+   "title": "Calcul intégral · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (4 questions).",
+   "kind": "custom",
+   "chapter": "integrale",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-sm-integrale-flash-q5",
+    "m2-sm-integrale-flash-q6",
+    "m2-sm-integrale-flash-q7",
+    "m2-sm-integrale-flash-q8",
+    "m2-sm-integrale-ex2-q1",
+    "m2-sm-integrale-ex2-q2",
+    "m2-sm-integrale-ex2-q3",
+    "m2-sm-integrale-ex2-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-integrale-serie-3",
+   "title": "Calcul intégral · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (5 questions) + Exercice 4 (5 questions).",
+   "kind": "custom",
+   "chapter": "integrale",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-sm-integrale-ex3-q1",
+    "m2-sm-integrale-ex3-q2",
+    "m2-sm-integrale-ex3-q3",
+    "m2-sm-integrale-ex3-q4",
+    "m2-sm-integrale-ex3-q5",
+    "m2-sm-integrale-ex4-q1",
+    "m2-sm-integrale-ex4-q2",
+    "m2-sm-integrale-ex4-q3",
+    "m2-sm-integrale-ex4-q4",
+    "m2-sm-integrale-ex4-q5"
+   ]
+  }
+ ]
+}

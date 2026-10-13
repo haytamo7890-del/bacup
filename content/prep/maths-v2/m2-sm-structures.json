@@ -1,0 +1,1001 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "sm_a",
+  "sm_b"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-sm-structures-flash-1",
+   "chapter": "structures",
+   "kind": "qcu",
+   "title": "Définition",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Définition",
+     "difficulty": 1,
+     "statement": "Laquelle de ces lois est une loi de composition interne dans $\\mathbb N$ ?",
+     "options": [
+      {
+       "label": "$a * b = a + b + ab$",
+       "correct": true,
+       "why": "Somme et produit d'entiers naturels restent dans $\\mathbb N$."
+      },
+      {
+       "label": "$a * b = a - b$",
+       "why": "$2 - 3 = -1 \\notin \\mathbb N$."
+      },
+      {
+       "label": "$a * b = \\dfrac ab$",
+       "why": "$\\frac12\\notin\\mathbb N$, et $\\frac a0$ n'est pas défini."
+      },
+      {
+       "label": "$a * b = \\sqrt{ab}$",
+       "why": "$\\sqrt{1\\times2} = \\sqrt2\\notin\\mathbb N$."
+      }
+     ],
+     "hint": "Cherche un contre-exemple pour chaque loi.",
+     "solution": "Pour $a, b\\in\\mathbb N$ : $a + b + ab\\in\\mathbb N$, donc $*$ est une loi de composition interne dans $\\mathbb N$. Les autres lois sortent de $\\mathbb N$ (contre-exemples : $2 - 3$, $\\frac12$, $\\sqrt2$).",
+     "points": 1,
+     "methode": "Loi interne dans $E$ : pour tous $a, b\\in E$, $a*b\\in E$. Un seul contre-exemple suffit pour la réfuter.",
+     "ref": "m2-sm-structures-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-flash-2",
+   "chapter": "structures",
+   "kind": "qcu",
+   "title": "Groupe",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Groupe",
+     "difficulty": 1,
+     "statement": "Sur $\\mathbb R$, on définit $a * b = a + b - 1$. L'élément neutre de $*$ est :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "$a * 1 = a + 1 - 1 = a$."
+      },
+      {
+       "label": "$0$",
+       "why": "$a * 0 = a - 1 \\ne a$."
+      },
+      {
+       "label": "$-1$",
+       "why": "$a * (-1) = a - 2 \\ne a$."
+      },
+      {
+       "label": "$2$",
+       "why": "$a * 2 = a + 1 \\ne a$."
+      }
+     ],
+     "hint": "Résous $a * e = a$ pour tout $a$.",
+     "solution": "$a * e = a \\Leftrightarrow a + e - 1 = a \\Leftrightarrow e = 1$. Et $1 * a = a$ aussi (loi commutative).",
+     "points": 1,
+     "ref": "m2-sm-structures-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-flash-3",
+   "chapter": "structures",
+   "kind": "qcu",
+   "title": "Propriétés fondamentales des groupes",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Propriétés fondamentales des groupes",
+     "difficulty": 2,
+     "statement": "Pour la loi $a * b = a + b - 1$ sur $\\mathbb R$, le symétrique de $a$ est :",
+     "options": [
+      {
+       "label": "$2 - a$",
+       "correct": true,
+       "why": "$a * (2 - a) = a + 2 - a - 1 = 1 = e$."
+      },
+      {
+       "label": "$-a$",
+       "why": "$a * (-a) = -1 \\ne 1$ : le neutre n'est pas $0$ ici."
+      },
+      {
+       "label": "$\\dfrac1a$",
+       "why": "Ce serait le symétrique pour la multiplication usuelle."
+      },
+      {
+       "label": "$1 - a$",
+       "why": "$a * (1 - a) = 0 \\ne 1$."
+      }
+     ],
+     "hint": "Résous $a * a' = e = 1$.",
+     "solution": "$a * a' = 1 \\Leftrightarrow a + a' - 1 = 1 \\Leftrightarrow a' = 2 - a$.",
+     "points": 1,
+     "methode": "Symétrique : résous $a * a' = e$ (avec le neutre de la loi, pas $0$ ni $1$ par réflexe).",
+     "ref": "m2-sm-structures-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-flash-4",
+   "chapter": "structures",
+   "kind": "qcu",
+   "title": "Groupes et sous-groupes",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Groupes et sous-groupes",
+     "difficulty": 2,
+     "statement": "Lequel de ces ensembles est un sous-groupe de $(\\mathbb Z,+)$ ?",
+     "options": [
+      {
+       "label": "$3\\mathbb Z$",
+       "correct": true,
+       "why": "Il contient $0$ et $3k - 3k' = 3(k - k')\\in3\\mathbb Z$."
+      },
+      {
+       "label": "$\\mathbb N$",
+       "why": "Le symétrique de $1$ est $-1 \\notin \\mathbb N$."
+      },
+      {
+       "label": "l'ensemble des entiers impairs",
+       "why": "Il ne contient pas $0$, et $1 + 1 = 2$ est pair."
+      },
+      {
+       "label": "$\\{0\\,;1\\}$",
+       "why": "$1 + 1 = 2 \\notin \\{0;1\\}$."
+      }
+     ],
+     "hint": "Critère : $H \\ne \\emptyset$ et $x - y\\in H$ pour tous $x, y\\in H$.",
+     "solution": "$3\\mathbb Z \\ne \\emptyset$ ($0\\in3\\mathbb Z$) et pour $x = 3k$, $y = 3k'$ : $x - y = 3(k - k')\\in3\\mathbb Z$. C'est un sous-groupe de $(\\mathbb Z, +)$.",
+     "points": 1,
+     "methode": "Sous-groupe de $(G,*)$ : $H \\ne\\emptyset$ et $x * y'\\in H$ pour tous $x, y\\in H$.",
+     "ref": "m2-sm-structures-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-flash-5",
+   "chapter": "structures",
+   "kind": "qcu",
+   "title": "Anneau et corps",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Anneau et corps",
+     "difficulty": 1,
+     "statement": "Lequel de ces anneaux est un corps ?",
+     "options": [
+      {
+       "label": "$(\\mathbb Q,+,\\times)$",
+       "correct": true,
+       "why": "Tout rationnel non nul a un inverse rationnel."
+      },
+      {
+       "label": "$(\\mathbb Z,+,\\times)$",
+       "why": "$2$ n'a pas d'inverse dans $\\mathbb Z$."
+      },
+      {
+       "label": "$(\\mathbb N,+,\\times)$",
+       "why": "$(\\mathbb N,+)$ n'est même pas un groupe."
+      },
+      {
+       "label": "$(\\mathcal M_2(\\mathbb R),+,\\times)$",
+       "why": "Il existe des matrices non nulles non inversibles (déterminant nul), et le produit n'est pas commutatif."
+      }
+     ],
+     "hint": "Un corps : anneau commutatif où tout élément non nul est inversible.",
+     "solution": "$(\\mathbb Q,+,\\times)$ est un anneau commutatif unitaire et tout $\\frac pq \\ne 0$ a pour inverse $\\frac qp\\in\\mathbb Q$ : c'est un corps.",
+     "points": 1,
+     "ref": "m2-sm-structures-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-flash-6",
+   "chapter": "structures",
+   "kind": "qcu",
+   "title": "Anneaux : inversibles et intégrité",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Anneaux : inversibles et intégrité",
+     "difficulty": 2,
+     "statement": "Dans l'anneau $(\\mathbb Z/6\\mathbb Z,+,\\times)$ :",
+     "options": [
+      {
+       "label": "$\\bar2\\times\\bar3 = \\bar0$, donc l'anneau n'est pas intègre",
+       "correct": true,
+       "why": "Deux éléments non nuls ont un produit nul."
+      },
+      {
+       "label": "c'est un corps",
+       "why": "$6$ n'est pas premier ; $\\bar2$ n'est pas inversible."
+      },
+      {
+       "label": "$\\bar5$ n'est pas inversible",
+       "why": "$\\bar5\\times\\bar5 = \\overline{25} = \\bar1$ : $\\bar5$ est son propre inverse."
+      },
+      {
+       "label": "$\\bar2$ est inversible",
+       "why": "$2k \\equiv 1\\ [6]$ n'a pas de solution : $2k$ est toujours pair."
+      }
+     ],
+     "hint": "Cherche deux classes non nulles dont le produit vaut $\\bar0$.",
+     "solution": "$\\bar2 \\ne \\bar0$, $\\bar3 \\ne \\bar0$ et $\\bar2\\times\\bar3 = \\bar6 = \\bar0$ : $\\bar2$ et $\\bar3$ sont des diviseurs de zéro, l'anneau $\\mathbb Z/6\\mathbb Z$ n'est pas intègre (donc pas un corps).",
+     "points": 1,
+     "methode": "$\\mathbb Z/n\\mathbb Z$ est un corps ⇔ $n$ est premier ; $\\bar a$ inversible ⇔ $\\mathrm{pgcd}(a;n) = 1$.",
+     "ref": "m2-sm-structures-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-flash-7",
+   "chapter": "structures",
+   "kind": "qcu",
+   "title": "Familles libres, génératrices, bases",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Familles libres, génératrices, bases",
+     "difficulty": 2,
+     "statement": "Laquelle de ces familles est une base de $\\mathbb R^2$ ?",
+     "options": [
+      {
+       "label": "$\\big((1;1),(1;-1)\\big)$",
+       "correct": true,
+       "why": "$\\det = 1\\times(-1) - 1\\times1 = -2 \\ne 0$ : libre, et $2$ vecteurs en dimension $2$."
+      },
+      {
+       "label": "$\\big((1;2),(2;4)\\big)$",
+       "why": "$(2;4) = 2(1;2)$ : la famille est liée."
+      },
+      {
+       "label": "$\\big((1;0)\\big)$",
+       "why": "Un seul vecteur ne peut pas engendrer $\\mathbb R^2$."
+      },
+      {
+       "label": "$\\big((1;0),(0;1),(1;1)\\big)$",
+       "why": "Génératrice, mais liée : $(1;1) = (1;0) + (0;1)$."
+      }
+     ],
+     "hint": "Base de $\\mathbb R^2$ : exactement $2$ vecteurs, de déterminant non nul.",
+     "solution": "$\\det\\big((1;1),(1;-1)\\big) = 1\\times(-1) - 1\\times1 = -2 \\ne 0$ : les deux vecteurs sont libres, et $2 = \\dim\\mathbb R^2$. C'est une base.",
+     "points": 1,
+     "methode": "En dimension $n$ : une famille de $n$ vecteurs est une base ⇔ elle est libre ⇔ elle est génératrice.",
+     "ref": "m2-sm-structures-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-flash-8",
+   "chapter": "structures",
+   "kind": "qcu",
+   "title": "Homomorphismes",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Homomorphismes",
+     "difficulty": 2,
+     "statement": "Laquelle de ces applications est un homomorphisme de $(\\mathbb R,+)$ vers $(\\mathbb R_+^*,\\times)$ ?",
+     "options": [
+      {
+       "label": "$x\\mapsto\\mathrm{e}^x$",
+       "correct": true,
+       "why": "$\\mathrm e^{x + y} = \\mathrm e^x\\times\\mathrm e^y$."
+      },
+      {
+       "label": "$x\\mapsto x^2$",
+       "why": "$(x + y)^2 \\ne x^2y^2$ en général ; et $0^2 \\notin \\mathbb R_+^*$."
+      },
+      {
+       "label": "$x\\mapsto x + 1$",
+       "why": "$(x + y) + 1 \\ne (x + 1)(y + 1)$ en général."
+      },
+      {
+       "label": "$x\\mapsto\\ln x$",
+       "why": "$\\ln$ n'est pas définie sur tout $\\mathbb R$ ; c'est un homomorphisme dans l'autre sens."
+      }
+     ],
+     "hint": "Il faut $f(x + y) = f(x)\\times f(y)$.",
+     "solution": "Pour tous réels $x, y$ : $\\mathrm e^{x+y} = \\mathrm e^x\\,\\mathrm e^y$, et $\\mathrm e^x > 0$. Donc $x\\mapsto\\mathrm e^x$ est un homomorphisme (et même un isomorphisme) de $(\\mathbb R,+)$ vers $(\\mathbb R_+^*,\\times)$.",
+     "points": 1,
+     "methode": "$f : (G,*) \\to (H,\\top)$ est un homomorphisme si $f(x * y) = f(x)\\top f(y)$.",
+     "ref": "m2-sm-structures-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-ex1",
+   "chapter": "structures",
+   "kind": "probleme",
+   "title": "Exercice 1 — Une loi sur ]1 ; +∞[",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Sur $I = ]1;+\\infty[$, on définit $x * y = xy - x - y + 2$. On remarque que $x * y = (x - 1)(y - 1) + 1$.",
+   "questions": [
+    {
+     "notion": "Définition",
+     "difficulty": 1,
+     "statement": "1) $*$ est une loi de composition interne dans $I$ car, pour $x, y\\in I$ :",
+     "options": [
+      {
+       "label": "$(x - 1)(y - 1) > 0$, donc $x * y > 1$",
+       "correct": true,
+       "why": "Les deux facteurs sont strictement positifs."
+      },
+      {
+       "label": "$xy > 1$, donc $x * y > 1$",
+       "why": "$xy > 1$ ne suffit pas : on retranche $x + y$."
+      },
+      {
+       "label": "$x * y = y * x$",
+       "why": "La commutativité ne dit pas que le résultat reste dans $I$."
+      },
+      {
+       "label": "$x + y > 2$",
+       "why": "Ne montre pas que $xy - x - y + 2 > 1$."
+      }
+     ],
+     "hint": "Utilise l'écriture $(x - 1)(y - 1) + 1$.",
+     "solution": "Pour $x, y > 1$ : $x - 1 > 0$ et $y - 1 > 0$, donc $(x-1)(y-1) > 0$ et $x * y = (x-1)(y-1) + 1 > 1$ : $x * y\\in I$.",
+     "points": 1,
+     "ref": "m2-sm-structures-ex1-q1"
+    },
+    {
+     "notion": "Groupe",
+     "difficulty": 2,
+     "statement": "2) L'élément neutre de $*$ dans $I$ est :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "$(x - 1)(2 - 1) + 1 = x$."
+      },
+      {
+       "label": "$1$",
+       "why": "$1\\notin I$, et $x * 1 = 1 \\ne x$."
+      },
+      {
+       "label": "$0$",
+       "why": "$0\\notin I$."
+      },
+      {
+       "label": "$3$",
+       "why": "$x * 3 = 2(x - 1) + 1 = 2x - 1 \\ne x$."
+      }
+     ],
+     "hint": "Résous $(x - 1)(e - 1) + 1 = x$ pour tout $x$.",
+     "solution": "$x * e = x \\Leftrightarrow (x - 1)(e - 1) = x - 1 \\Leftrightarrow e - 1 = 1$ (car $x - 1 \\ne 0$), soit $e = 2\\in I$.",
+     "points": 1,
+     "ref": "m2-sm-structures-ex1-q2"
+    },
+    {
+     "notion": "Propriétés fondamentales des groupes",
+     "difficulty": 2,
+     "statement": "3) Le symétrique de $x\\in I$ pour $*$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac{x}{x - 1}$",
+       "correct": true,
+       "why": "$(x - 1)(x' - 1) = 1 \\Rightarrow x' = 1 + \\frac{1}{x - 1}$."
+      },
+      {
+       "label": "$\\dfrac1x$",
+       "why": "$\\frac1x < 1$ pour $x > 1$ : il n'est même pas dans $I$."
+      },
+      {
+       "label": "$2 - x$",
+       "why": "$2 - x < 1$ pour $x > 1$ : pas dans $I$."
+      },
+      {
+       "label": "$\\dfrac{1}{x - 1}$",
+       "why": "Il manque le $+1$ : $x' = 1 + \\frac{1}{x-1}$."
+      }
+     ],
+     "hint": "Résous $x * x' = 2$.",
+     "solution": "$x * x' = 2 \\Leftrightarrow (x-1)(x'-1) = 1 \\Leftrightarrow x' = 1 + \\dfrac{1}{x - 1} = \\dfrac{x}{x-1}$, et $x' > 1$ ✓.",
+     "points": 1,
+     "ref": "m2-sm-structures-ex1-q3"
+    },
+    {
+     "notion": "Homomorphismes",
+     "difficulty": 2,
+     "statement": "4) L'application $\\varphi : I \\to \\mathbb R_+^*$, $\\varphi(x) = x - 1$, vérifie pour tous $x, y\\in I$ :",
+     "options": [
+      {
+       "label": "$\\varphi(x * y) = \\varphi(x)\\times\\varphi(y)$",
+       "correct": true,
+       "why": "$\\varphi(x * y) = (x - 1)(y - 1)$."
+      },
+      {
+       "label": "$\\varphi(x * y) = \\varphi(x) + \\varphi(y)$",
+       "why": "$(x-1)(y-1) \\ne (x - 1) + (y - 1)$ en général."
+      },
+      {
+       "label": "$\\varphi(x * y) = x * y$",
+       "why": "$\\varphi(x * y) = x * y - 1$."
+      },
+      {
+       "label": "$\\varphi(x * y) = \\varphi(x) * \\varphi(y)$",
+       "why": "L'arrivée est $(\\mathbb R_+^*,\\times)$ : on compare avec un produit."
+      }
+     ],
+     "hint": "Calcule $\\varphi(x * y) = x * y - 1$.",
+     "solution": "$\\varphi(x * y) = (x - 1)(y - 1) + 1 - 1 = (x - 1)(y - 1) = \\varphi(x)\\times\\varphi(y)$. $\\varphi$ est une bijection de $I$ sur $\\mathbb R_+^*$ : c'est un isomorphisme, donc $(I,*)$ est un groupe commutatif, comme $(\\mathbb R_+^*,\\times)$.",
+     "points": 1,
+     "methode": "Transfert de structure : un isomorphisme vers un groupe connu prouve que $(E,*)$ est un groupe.",
+     "ref": "m2-sm-structures-ex1-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-ex2",
+   "chapter": "structures",
+   "kind": "probleme",
+   "title": "Exercice 2 — Un sous-espace vectoriel de ℝ³",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Dans $\\mathbb R^3$, on considère $F = \\{(x;y;z)\\in\\mathbb R^3 \\mid x + y - z = 0\\}$, et les vecteurs $u = (1;2;3)$, $v = (1;0;1)$, $w = (0;1;1)$.",
+   "questions": [
+    {
+     "notion": "Espace vectoriel et sous-espace",
+     "difficulty": 1,
+     "statement": "1) $F$ est un sous-espace vectoriel de $\\mathbb R^3$ car :",
+     "options": [
+      {
+       "label": "il contient $(0;0;0)$ et il est stable par combinaison linéaire",
+       "correct": true,
+       "why": "Définition d'un sous-espace vectoriel."
+      },
+      {
+       "label": "il est inclus dans $\\mathbb R^3$",
+       "why": "Toute partie de $\\mathbb R^3$ n'est pas un sous-espace (ex. une droite ne passant pas par $O$)."
+      },
+      {
+       "label": "il contient le vecteur $(1;0;1)$",
+       "why": "Contenir un vecteur ne suffit pas."
+      },
+      {
+       "label": "il est non vide",
+       "why": "Il faut aussi la stabilité par combinaison linéaire."
+      }
+     ],
+     "hint": "Rappelle les conditions d'un sous-espace vectoriel.",
+     "solution": "$(0;0;0)\\in F$ ($0 + 0 - 0 = 0$). Si $X, X'\\in F$ et $\\alpha, \\beta\\in\\mathbb R$ : $(\\alpha x + \\beta x') + (\\alpha y + \\beta y') - (\\alpha z + \\beta z') = \\alpha\\cdot0 + \\beta\\cdot0 = 0$, donc $\\alpha X + \\beta X'\\in F$.",
+     "points": 1,
+     "ref": "m2-sm-structures-ex2-q1"
+    },
+    {
+     "notion": "Familles libres, génératrices, bases",
+     "difficulty": 2,
+     "statement": "2) Une base de $F$ est :",
+     "options": [
+      {
+       "label": "$\\big((1;0;1),(0;1;1)\\big)$",
+       "correct": true,
+       "why": "$z = x + y$ : $(x;y;x+y) = x(1;0;1) + y(0;1;1)$, et ces deux vecteurs sont libres."
+      },
+      {
+       "label": "$\\big((1;1;-1)\\big)$",
+       "why": "$(1;1;-1)$ n'est pas dans $F$ : $1 + 1 + 1 \\ne 0$. C'est un vecteur normal."
+      },
+      {
+       "label": "$\\big((1;0;1),(2;0;2)\\big)$",
+       "why": "Famille liée : $(2;0;2) = 2(1;0;1)$."
+      },
+      {
+       "label": "$\\big((1;0;0),(0;1;0)\\big)$",
+       "why": "Ces vecteurs ne sont pas dans $F$ ($1 + 0 - 0 \\ne 0$)."
+      }
+     ],
+     "hint": "Exprime $z$ en fonction de $x$ et $y$.",
+     "solution": "$X\\in F \\Leftrightarrow z = x + y \\Leftrightarrow X = x(1;0;1) + y(0;1;1)$. La famille $\\big((1;0;1),(0;1;1)\\big)$ engendre $F$ et elle est libre (vecteurs non colinéaires) : c'est une base.",
+     "points": 1,
+     "ref": "m2-sm-structures-ex2-q2"
+    },
+    {
+     "notion": "Espaces vectoriels",
+     "difficulty": 1,
+     "statement": "3) La dimension de $F$ est :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "Une base de $F$ a $2$ vecteurs."
+      },
+      {
+       "label": "$3$",
+       "why": "$F \\ne \\mathbb R^3$ : $(1;0;0)\\notin F$."
+      },
+      {
+       "label": "$1$",
+       "why": "La base trouvée contient deux vecteurs libres."
+      },
+      {
+       "label": "$0$",
+       "why": "$F$ contient des vecteurs non nuls."
+      }
+     ],
+     "hint": "Compte les vecteurs d'une base.",
+     "solution": "$\\dim F = 2$ : c'est un plan vectoriel de $\\mathbb R^3$.",
+     "points": 1,
+     "ref": "m2-sm-structures-ex2-q3"
+    },
+    {
+     "notion": "Espaces vectoriels : dépendance",
+     "difficulty": 2,
+     "statement": "4) La famille $(u, v, w)$ est :",
+     "options": [
+      {
+       "label": "liée, car $u = v + 2w$",
+       "correct": true,
+       "why": "$(1;0;1) + 2(0;1;1) = (1;2;3)$."
+      },
+      {
+       "label": "libre",
+       "why": "$u - v - 2w = 0$ est une combinaison nulle à coefficients non tous nuls."
+      },
+      {
+       "label": "liée, car $u = 2v + w$",
+       "why": "$2v + w = (2;1;3) \\ne u$."
+      },
+      {
+       "label": "libre, car aucun vecteur n'est nul",
+       "why": "Des vecteurs non nuls peuvent être liés."
+      }
+     ],
+     "hint": "Cherche $\\alpha, \\beta$ tels que $u = \\alpha v + \\beta w$.",
+     "solution": "$\\alpha v + \\beta w = (\\alpha;\\beta;\\alpha + \\beta) = (1;2;3)$ donne $\\alpha = 1$, $\\beta = 2$, et $\\alpha + \\beta = 3$ ✓. Donc $u = v + 2w$ : la famille est liée. (D'ailleurs $u, v, w\\in F$, qui est de dimension $2$.)",
+     "points": 1,
+     "ref": "m2-sm-structures-ex2-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-ex3",
+   "chapter": "structures",
+   "kind": "probleme",
+   "title": "Exercice 3 — Les matrices M(a, b) et le corps des complexes",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Pour $(a;b)\\in\\mathbb R^2$, on pose $M(a,b) = \\begin{pmatrix} a & -b \\\\ b & a\\end{pmatrix}$ et $E = \\{M(a,b) \\mid (a;b)\\in\\mathbb R^2\\}$. On admet que $(E,+)$ est un groupe commutatif.",
+   "questions": [
+    {
+     "notion": "Groupes et sous-groupes",
+     "difficulty": 2,
+     "statement": "1) Le produit $M(a,b)\\times M(c,d)$ est égal à :",
+     "options": [
+      {
+       "label": "$M(ac - bd\\,;ad + bc)$",
+       "correct": true,
+       "why": "Ligne 1 × colonne 1 : $ac - bd$ ; ligne 2 × colonne 1 : $bc + ad$."
+      },
+      {
+       "label": "$M(ac + bd\\,;ad - bc)$",
+       "why": "Erreur de signes : $a c + (-b)d = ac - bd$."
+      },
+      {
+       "label": "$M(ac\\,;bd)$",
+       "why": "Le produit matriciel ne se fait pas coefficient par coefficient."
+      },
+      {
+       "label": "$M(ac - bd\\,;ad - bc)$",
+       "why": "Coefficient $(2,1)$ : $b\\times c + a\\times d = ad + bc$."
+      }
+     ],
+     "hint": "Calcule le coefficient $(1,1)$ et le coefficient $(2,1)$.",
+     "solution": "$\\begin{pmatrix} a & -b \\\\ b & a\\end{pmatrix}\\begin{pmatrix} c & -d \\\\ d & c\\end{pmatrix} = \\begin{pmatrix} ac - bd & -(ad + bc) \\\\ ad + bc & ac - bd\\end{pmatrix} = M(ac - bd\\,;ad + bc)$. Donc $E$ est stable par $\\times$.",
+     "points": 1,
+     "part": "Partie A — Structure d'anneau",
+     "ref": "m2-sm-structures-ex3-q1"
+    },
+    {
+     "notion": "Anneau et corps",
+     "difficulty": 1,
+     "statement": "2) L'élément neutre de $\\times$ dans $E$ est :",
+     "options": [
+      {
+       "label": "$M(1,0)$",
+       "correct": true,
+       "why": "$M(1,0) = I_2$."
+      },
+      {
+       "label": "$M(0,1)$",
+       "why": "$M(0,1)^2 = M(-1,0) = -I_2$ : ce n'est pas le neutre."
+      },
+      {
+       "label": "$M(1,1)$",
+       "why": "$M(1,1)\\times M(a,b) = M(a - b, a + b) \\ne M(a,b)$."
+      },
+      {
+       "label": "$M(0,0)$",
+       "why": "C'est le neutre de l'addition."
+      }
+     ],
+     "hint": "L'identité $I_2$ est-elle dans $E$ ?",
+     "solution": "$I_2 = \\begin{pmatrix}1&0\\\\0&1\\end{pmatrix} = M(1,0)\\in E$, et c'est le neutre de la multiplication des matrices.",
+     "points": 1,
+     "part": "Partie A — Structure d'anneau",
+     "ref": "m2-sm-structures-ex3-q2"
+    },
+    {
+     "notion": "Anneaux : inversibles et intégrité",
+     "difficulty": 2,
+     "statement": "3) L'inverse de $M(1,1)$ dans $E$ est :",
+     "options": [
+      {
+       "label": "$M\\left(\\dfrac12\\,;-\\dfrac12\\right)$",
+       "correct": true,
+       "why": "$M(1,1)\\times M\\left(\\frac12;-\\frac12\\right) = M\\left(\\frac12 + \\frac12;-\\frac12 + \\frac12\\right) = M(1,0)$."
+      },
+      {
+       "label": "$M(1\\,;-1)$",
+       "why": "$M(1,1)\\times M(1,-1) = M(2,0) = 2I_2$ : il faut diviser par $a^2 + b^2 = 2$."
+      },
+      {
+       "label": "$M\\left(-\\dfrac12\\,;\\dfrac12\\right)$",
+       "why": "Ce produit donne $M(-1,0)$ : signes inversés."
+      },
+      {
+       "label": "$M\\left(\\dfrac12\\,;\\dfrac12\\right)$",
+       "why": "$M(1,1)\\times M\\left(\\frac12;\\frac12\\right) = M(0,1) \\ne I_2$."
+      }
+     ],
+     "hint": "Inverse de $M(a,b)$ : $M\\left(\\frac{a}{a^2+b^2};\\frac{-b}{a^2+b^2}\\right)$ (comme $\\frac{1}{a+ib}$).",
+     "solution": "$\\det M(a,b) = a^2 + b^2$. Pour $(a;b) = (1;1)$ : $M(1,1)^{-1} = M\\left(\\frac{1}{2};\\frac{-1}{2}\\right)$. Contrôle : $M(1,1)\\times M\\left(\\frac12;-\\frac12\\right) = M\\left(\\frac12 + \\frac12;-\\frac12 + \\frac12\\right) = M(1,0)$ ✓.",
+     "points": 1,
+     "part": "Partie A — Structure d'anneau",
+     "ref": "m2-sm-structures-ex3-q3"
+    },
+    {
+     "notion": "Homomorphismes",
+     "difficulty": 2,
+     "statement": "4) Soit $\\varphi : \\mathbb C\\to E$, $\\varphi(a + ib) = M(a,b)$. Alors $\\varphi\\big((1 + i)(2 - i)\\big)$ vaut :",
+     "options": [
+      {
+       "label": "$M(3,1)$",
+       "correct": true,
+       "why": "$(1 + i)(2 - i) = 2 - i + 2i + 1 = 3 + i$."
+      },
+      {
+       "label": "$M(3,-1)$",
+       "why": "Recalcule la partie imaginaire : $-i + 2i = +i$."
+      },
+      {
+       "label": "$M(2,-1)$",
+       "why": "C'est $\\varphi(2 - i)$ seul."
+      },
+      {
+       "label": "$M(1,3)$",
+       "why": "Partie réelle $3$, partie imaginaire $1$ : $M(3,1)$."
+      }
+     ],
+     "hint": "Calcule d'abord le produit dans $\\mathbb C$ (ou multiplie $M(1,1)$ par $M(2,-1)$).",
+     "solution": "$(1 + i)(2 - i) = 2 - i + 2i - i^2 = 3 + i$, donc $\\varphi(3 + i) = M(3,1)$. On vérifie que $M(1,1)\\times M(2,-1) = M(2 + 1;-1 + 2) = M(3,1)$ : $\\varphi$ transforme produit en produit.",
+     "points": 1,
+     "part": "Partie B — Isomorphisme",
+     "ref": "m2-sm-structures-ex3-q4"
+    },
+    {
+     "notion": "Anneau et corps",
+     "difficulty": 3,
+     "statement": "5) Puisque $\\varphi$ est un isomorphisme d'anneaux de $(\\mathbb C,+,\\times)$ sur $(E,+,\\times)$, on conclut que $(E,+,\\times)$ est :",
+     "options": [
+      {
+       "label": "un corps commutatif",
+       "correct": true,
+       "why": "La structure de corps commutatif de $\\mathbb C$ se transporte par isomorphisme."
+      },
+      {
+       "label": "un anneau non commutatif",
+       "why": "$M(a,b)M(c,d) = M(ac - bd;ad + bc) = M(c,d)M(a,b)$ : commutatif."
+      },
+      {
+       "label": "un anneau non intègre",
+       "why": "Un corps est intègre."
+      },
+      {
+       "label": "un groupe multiplicatif contenant $M(0,0)$",
+       "why": "$M(0,0)$ n'est pas inversible : $(E\\setminus\\{M(0,0)\\},\\times)$ est un groupe, pas $(E,\\times)$."
+      }
+     ],
+     "hint": "Transfert de structure par isomorphisme.",
+     "solution": "$\\varphi$ est un isomorphisme de $(\\mathbb C,+,\\times)$ sur $(E,+,\\times)$, et $(\\mathbb C,+,\\times)$ est un corps commutatif. Donc $(E,+,\\times)$ est un corps commutatif.",
+     "points": 1,
+     "part": "Partie B — Isomorphisme",
+     "ref": "m2-sm-structures-ex3-q5"
+    },
+    {
+     "notion": "Espaces vectoriels",
+     "difficulty": 2,
+     "statement": "6) $E$ est un sous-espace vectoriel de $(\\mathcal M_2(\\mathbb R),+,\\cdot)$ de dimension :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "$M(a,b) = aI_2 + bJ$ avec $J = M(0,1)$, et $(I_2, J)$ est libre."
+      },
+      {
+       "label": "$4$",
+       "why": "C'est la dimension de $\\mathcal M_2(\\mathbb R)$ ; $E$ ne dépend que de $2$ paramètres."
+      },
+      {
+       "label": "$1$",
+       "why": "$I_2$ et $J$ ne sont pas colinéaires."
+      },
+      {
+       "label": "$3$",
+       "why": "Il n'y a que deux paramètres libres, $a$ et $b$."
+      }
+     ],
+     "hint": "Écris $M(a,b)$ comme combinaison linéaire de deux matrices fixes.",
+     "solution": "$M(a,b) = a\\begin{pmatrix}1&0\\\\0&1\\end{pmatrix} + b\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix} = aI_2 + bJ$. $(I_2, J)$ engendre $E$ et est libre ($aI_2 + bJ = 0 \\Rightarrow a = b = 0$) : c'est une base, $\\dim E = 2$.",
+     "points": 1,
+     "part": "Partie B — Isomorphisme",
+     "ref": "m2-sm-structures-ex3-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-structures-ex4",
+   "chapter": "structures",
+   "kind": "probleme",
+   "title": "Exercice 4 — La loi x * y = (x + y) / (1 + xy) sur ]−1 ; 1[",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Sur $G = ]-1;1[$, on définit $x * y = \\dfrac{x + y}{1 + xy}$ (on admet que c'est une loi interne). Soit $f : G \\to \\mathbb R_+^*$ définie par $f(x) = \\dfrac{1 + x}{1 - x}$ ; on admet que $f$ est une bijection.",
+   "questions": [
+    {
+     "notion": "Définition",
+     "difficulty": 1,
+     "statement": "1) $\\dfrac12 * \\dfrac12$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac45$",
+       "correct": true,
+       "why": "$\\frac{1/2 + 1/2}{1 + 1/4} = \\frac{1}{5/4}$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as oublié le dénominateur $1 + \\frac14$ ; d'ailleurs $1 \\notin G$."
+      },
+      {
+       "label": "$\\dfrac14$",
+       "why": "C'est $\\frac12\\times\\frac12$, pas $\\frac12 * \\frac12$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Recalcule : $\\frac{1}{1{,}25} = 0{,}8$."
+      }
+     ],
+     "hint": "Remplace $x$ et $y$ par $\\frac12$.",
+     "solution": "$\\dfrac12 * \\dfrac12 = \\dfrac{\\frac12 + \\frac12}{1 + \\frac14} = \\dfrac{1}{\\frac54} = \\dfrac45\\in G$ ✓.",
+     "points": 1,
+     "part": "Partie A — Isomorphisme",
+     "ref": "m2-sm-structures-ex4-q1"
+    },
+    {
+     "notion": "Homomorphismes",
+     "difficulty": 2,
+     "statement": "2) Pour tous $x, y\\in G$, on a :",
+     "options": [
+      {
+       "label": "$f(x * y) = f(x)\\times f(y)$",
+       "correct": true,
+       "why": "$f(x * y) = \\frac{1 + xy + x + y}{1 + xy - x - y} = \\frac{(1 + x)(1 + y)}{(1 - x)(1 - y)}$."
+      },
+      {
+       "label": "$f(x * y) = f(x) + f(y)$",
+       "why": "Le calcul donne un quotient de produits : c'est $f(x)\\times f(y)$."
+      },
+      {
+       "label": "$f(x * y) = f(x) * f(y)$",
+       "why": "$f(x)$ et $f(y)$ sont dans $\\mathbb R_+^*$, muni de $\\times$, pas de $*$."
+      },
+      {
+       "label": "$f(x * y) = \\dfrac{f(x)}{f(y)}$",
+       "why": "Le numérateur se factorise en $(1 + x)(1 + y)$, le dénominateur en $(1 - x)(1 - y)$."
+      }
+     ],
+     "hint": "Calcule $1 + x * y$ et $1 - x * y$ sur le dénominateur commun $1 + xy$.",
+     "solution": "$1 + x * y = \\dfrac{1 + xy + x + y}{1 + xy} = \\dfrac{(1 + x)(1 + y)}{1 + xy}$ et $1 - x * y = \\dfrac{(1 - x)(1 - y)}{1 + xy}$. Donc $f(x * y) = \\dfrac{(1+x)(1+y)}{(1-x)(1-y)} = f(x)\\times f(y)$.",
+     "points": 1,
+     "part": "Partie A — Isomorphisme",
+     "ref": "m2-sm-structures-ex4-q2"
+    },
+    {
+     "notion": "Groupe",
+     "difficulty": 2,
+     "statement": "3) $(G,*)$ est donc un groupe commutatif, isomorphe à $(\\mathbb R_+^*,\\times)$. Son élément neutre est :",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "$f(0) = 1$, neutre de $(\\mathbb R_+^*,\\times)$ ; et $x * 0 = \\frac{x}{1} = x$."
+      },
+      {
+       "label": "$1$",
+       "why": "$1\\notin G = ]-1;1[$."
+      },
+      {
+       "label": "$-1$",
+       "why": "$-1\\notin G$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "$x * \\frac12 = \\frac{x + 1/2}{1 + x/2} \\ne x$ en général."
+      }
+     ],
+     "hint": "L'isomorphisme envoie le neutre sur le neutre : cherche $e$ tel que $f(e) = 1$.",
+     "solution": "$f(e) = 1 \\Leftrightarrow \\frac{1 + e}{1 - e} = 1 \\Leftrightarrow e = 0$. Contrôle : $x * 0 = \\frac{x + 0}{1 + 0} = x$ ✓.",
+     "points": 1,
+     "part": "Partie A — Isomorphisme",
+     "ref": "m2-sm-structures-ex4-q3"
+    },
+    {
+     "notion": "Propriétés fondamentales des groupes",
+     "difficulty": 2,
+     "statement": "4) Le symétrique de $x\\in G$ pour $*$ est :",
+     "options": [
+      {
+       "label": "$-x$",
+       "correct": true,
+       "why": "$x * (-x) = \\frac{0}{1 - x^2} = 0$."
+      },
+      {
+       "label": "$\\dfrac1x$",
+       "why": "$\\frac1x\\notin G$ pour $x\\in G\\setminus\\{0\\}$."
+      },
+      {
+       "label": "$1 - x$",
+       "why": "$x * (1 - x) = \\frac{1}{1 + x - x^2} \\ne 0$."
+      },
+      {
+       "label": "$x$",
+       "why": "$x * x = \\frac{2x}{1 + x^2} \\ne 0$ pour $x \\ne 0$."
+      }
+     ],
+     "hint": "Résous $x * x' = 0$.",
+     "solution": "$x * x' = 0 \\Leftrightarrow x + x' = 0 \\Leftrightarrow x' = -x\\in G$.",
+     "points": 1,
+     "part": "Partie B — Sous-groupe",
+     "ref": "m2-sm-structures-ex4-q4"
+    },
+    {
+     "notion": "Groupes et sous-groupes",
+     "difficulty": 3,
+     "statement": "5) $H = [0;1[$ est-il un sous-groupe de $(G,*)$ ?",
+     "options": [
+      {
+       "label": "Non, car le symétrique de $\\frac12$ est $-\\frac12\\notin H$",
+       "correct": true,
+       "why": "Un sous-groupe contient le symétrique de chacun de ses éléments."
+      },
+      {
+       "label": "Oui, car $H$ est stable par $*$",
+       "why": "La stabilité ne suffit pas : il faut aussi les symétriques."
+      },
+      {
+       "label": "Oui, car $0\\in H$",
+       "why": "Contenir le neutre est nécessaire, pas suffisant."
+      },
+      {
+       "label": "Non, car $H$ n'est pas stable par $*$",
+       "why": "$H$ est stable : pour $x, y \\ge 0$, $x * y \\ge 0$. Le problème vient des symétriques."
+      }
+     ],
+     "hint": "Teste les symétriques des éléments de $H$.",
+     "solution": "$H$ contient $0$ et il est stable par $*$ ($x, y \\ge 0 \\Rightarrow x * y \\ge 0$). Mais $\\frac12\\in H$ et son symétrique $-\\frac12\\notin H$ : $H$ n'est pas un sous-groupe.",
+     "points": 1,
+     "methode": "Sous-groupe : non vide, stable, ET stable par passage au symétrique.",
+     "ref": "m2-sm-structures-ex4-q5"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-sm-structures-serie-1",
+   "title": "Structures algébriques · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (4 questions).",
+   "kind": "custom",
+   "chapter": "structures",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-sm-structures-flash-q1",
+    "m2-sm-structures-flash-q2",
+    "m2-sm-structures-flash-q3",
+    "m2-sm-structures-flash-q4",
+    "m2-sm-structures-ex1-q1",
+    "m2-sm-structures-ex1-q2",
+    "m2-sm-structures-ex1-q3",
+    "m2-sm-structures-ex1-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-structures-serie-2",
+   "title": "Structures algébriques · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (4 questions).",
+   "kind": "custom",
+   "chapter": "structures",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-sm-structures-flash-q5",
+    "m2-sm-structures-flash-q6",
+    "m2-sm-structures-flash-q7",
+    "m2-sm-structures-flash-q8",
+    "m2-sm-structures-ex2-q1",
+    "m2-sm-structures-ex2-q2",
+    "m2-sm-structures-ex2-q3",
+    "m2-sm-structures-ex2-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-structures-serie-3",
+   "title": "Structures algébriques · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (6 questions) + Exercice 4 (5 questions).",
+   "kind": "custom",
+   "chapter": "structures",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-sm-structures-ex3-q1",
+    "m2-sm-structures-ex3-q2",
+    "m2-sm-structures-ex3-q3",
+    "m2-sm-structures-ex3-q4",
+    "m2-sm-structures-ex3-q5",
+    "m2-sm-structures-ex3-q6",
+    "m2-sm-structures-ex4-q1",
+    "m2-sm-structures-ex4-q2",
+    "m2-sm-structures-ex4-q3",
+    "m2-sm-structures-ex4-q4",
+    "m2-sm-structures-ex4-q5"
+   ]
+  }
+ ]
+}

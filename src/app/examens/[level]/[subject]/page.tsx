@@ -91,7 +91,7 @@ export default async function SubjectHub({ params }: { params: Promise<Params> }
         </header>
 
         <div className="mt-8 space-y-3">
-          {d.exams.length === 0 && <p className="c-dim">Les sujets arrivent bientôt. ✨</p>}
+          {d.exams.length === 0 && <p className="c-dim">Les sujets arrivent bientôt.</p>}
           {d.exams.map((e) => {
             const slug = examSlug(e.year, e.session);
             return (

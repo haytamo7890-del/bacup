@@ -107,7 +107,7 @@ export default async function ExamensHub() {
           ))}
         </div>
 
-        {levels.length === 0 && <p className="mt-12 c-dim">Le contenu arrive très bientôt. ✨</p>}
+        {levels.length === 0 && <p className="mt-12 c-dim">Le contenu arrive très bientôt.</p>}
         {levels.map(([lc, lvl]) => (
           <section key={lc} className="mt-14">
             <div className="flex items-center gap-3">

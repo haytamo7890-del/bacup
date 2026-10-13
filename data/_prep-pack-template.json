@@ -1,0 +1,51 @@
+{
+  "format": "bacup.prep/v1",
+  "level": "2bac",
+  "subject": "pc",
+  "track": null,
+  "exercises": [
+    {
+      "ref": "pc-rc-ex-charge-01",
+      "chapter": "pc-rc",
+      "title": "Charge d'un condensateur — bases",
+      "difficulty": 1,
+      "context": "Un condensateur de capacité $C = 10\\,\\mu F$ est chargé à travers un conducteur ohmique $R = 1\\,k\\Omega$ sous une tension $E = 6\\,V$.",
+      "questions": [
+        {
+          "ref": "pc-rc-q-tau-01",
+          "notion": "La constante de temps",
+          "statement": "Que vaut la constante de temps $\\tau$ du circuit ?",
+          "options": ["$10\\,ms$", "$1\\,ms$", "$100\\,ms$", "$0{,}1\\,ms$"],
+          "correct": 0,
+          "solution": "$\\tau = RC = 10^3 \\times 10\\times10^{-6} = 10^{-2}\\,s = 10\\,ms$."
+        },
+        {
+          "ref": "pc-rc-q-charge-01",
+          "notion": "La charge du condensateur",
+          "statement": "Quelle est la tension $u_C$ aux bornes du condensateur à $t = \\tau$ ?",
+          "options": [
+            { "label": "$\\approx 3{,}8\\,V$", "is_correct": true },
+            { "label": "$3\\,V$" },
+            { "label": "$6\\,V$" },
+            { "label": "$\\approx 2{,}2\\,V$" }
+          ],
+          "solution": "$u_C(\\tau) = E(1 - e^{-1}) \\approx 0{,}63\\,E \\approx 3{,}8\\,V$."
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "slug": "pc-rc-serie-essentiels",
+      "title": "Dipôle RC · Les essentiels",
+      "description": "Les 2 réflexes à avoir sur la charge d'un condensateur.",
+      "kind": "custom",
+      "chapter": "pc-rc",
+      "difficulty": 1,
+      "xp_bonus": 30,
+      "position": 10,
+      "published": true,
+      "questions": ["pc-rc-q-tau-01", "pc-rc-q-charge-01"]
+    }
+  ]
+}

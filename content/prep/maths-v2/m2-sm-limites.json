@@ -1,0 +1,1039 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "sm_a",
+  "sm_b"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-sm-limites-flash-1",
+   "chapter": "limites",
+   "kind": "qcu",
+   "title": "Conséquences des limites trigonométriques",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Conséquences des limites trigonométriques",
+     "difficulty": 1,
+     "statement": "$\\lim\\limits_{x\\to0}\\dfrac{\\sin 3x}{x}$ vaut :",
+     "options": [
+      {
+       "label": "$3$",
+       "correct": true,
+       "why": "$\\frac{\\sin3x}{x} = 3\\times\\frac{\\sin 3x}{3x} \\to 3\\times1$."
+      },
+      {
+       "label": "$1$",
+       "why": "$\\frac{\\sin u}{u} \\to 1$ exige le même $u$ en haut et en bas : ici il manque le facteur $3$."
+      },
+      {
+       "label": "$\\dfrac13$",
+       "why": "Tu as divisé par $3$ au lieu de multiplier."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\frac00$ est une forme indéterminée, pas $0$."
+      }
+     ],
+     "hint": "Fais apparaître $\\dfrac{\\sin 3x}{3x}$.",
+     "solution": "Pour $x\\ne0$ : $\\dfrac{\\sin3x}{x} = 3\\cdot\\dfrac{\\sin3x}{3x}$. Comme $3x\\to0$ et $\\lim\\limits_{u\\to0}\\dfrac{\\sin u}{u} = 1$, la limite vaut $3$.",
+     "points": 1,
+     "methode": "$\\lim\\limits_{x\\to0}\\frac{\\sin ax}{x} = a$ : fais apparaître $\\frac{\\sin u}{u}$ avec le même $u$.",
+     "ref": "m2-sm-limites-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-flash-2",
+   "chapter": "limites",
+   "kind": "qcu",
+   "title": "Conséquences des limites trigonométriques",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Conséquences des limites trigonométriques",
+     "difficulty": 2,
+     "statement": "$\\lim\\limits_{x\\to0}\\dfrac{1 - \\cos x}{x^2}$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac12$",
+       "correct": true,
+       "why": "Limite de référence."
+      },
+      {
+       "label": "$0$",
+       "why": "C'est $\\lim\\frac{1 - \\cos x}{x}$ ; ici le dénominateur est $x^2$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as confondu avec $\\lim\\frac{\\sin x}{x}$."
+      },
+      {
+       "label": "$2$",
+       "why": "Tu as inversé : la limite est $\\frac12$."
+      }
+     ],
+     "hint": "Écris $1 - \\cos x = 2\\sin^2\\frac x2$.",
+     "solution": "$\\dfrac{1 - \\cos x}{x^2} = \\dfrac{2\\sin^2\\frac x2}{x^2} = \\dfrac12\\left(\\dfrac{\\sin\\frac x2}{\\frac x2}\\right)^2 \\to \\dfrac12\\times1^2 = \\dfrac12$.",
+     "points": 1,
+     "methode": "Références en $0$ : $\\frac{\\sin x}{x}\\to1$, $\\frac{\\tan x}{x}\\to1$, $\\frac{1-\\cos x}{x^2}\\to\\frac12$.",
+     "ref": "m2-sm-limites-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-flash-3",
+   "chapter": "limites",
+   "kind": "qcu",
+   "title": "Techniques de levée",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Techniques de levée",
+     "difficulty": 2,
+     "statement": "$\\lim\\limits_{x\\to+\\infty}\\left(\\sqrt{x^2 + x} - x\\right)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac12$",
+       "correct": true,
+       "why": "$\\frac{x}{\\sqrt{x^2+x} + x} = \\frac{1}{\\sqrt{1 + \\frac1x} + 1} \\to \\frac12$."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\sqrt{x^2 + x}$ n'est pas « environ $x$ » à une constante près négligeable : le conjugué donne $\\frac12$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "FI $\\infty - \\infty$ : il faut transformer avant de conclure."
+      },
+      {
+       "label": "$1$",
+       "why": "Après factorisation par $x$, le dénominateur tend vers $2$, pas $1$."
+      }
+     ],
+     "hint": "Quantité conjuguée, puis factorise par $x > 0$.",
+     "solution": "$\\sqrt{x^2+x} - x = \\dfrac{(x^2 + x) - x^2}{\\sqrt{x^2 + x} + x} = \\dfrac{x}{x\\left(\\sqrt{1 + \\frac1x} + 1\\right)} = \\dfrac{1}{\\sqrt{1 + \\frac1x} + 1} \\to \\dfrac12$.",
+     "points": 1,
+     "methode": "FI avec racine : conjugué ; puis factorise par le terme dominant (attention, $\\sqrt{x^2} = |x|$).",
+     "ref": "m2-sm-limites-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-flash-4",
+   "chapter": "limites",
+   "kind": "qcu",
+   "title": "Limites à gauche et à droite",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Limites à gauche et à droite",
+     "difficulty": 1,
+     "statement": "$\\lim\\limits_{x\\to0^+}\\dfrac{|x|}{x}$ vaut :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "Pour $x > 0$, $|x| = x$, donc le quotient vaut $1$."
+      },
+      {
+       "label": "$-1$",
+       "why": "C'est la limite à gauche ($|x| = -x$ pour $x < 0$)."
+      },
+      {
+       "label": "$0$",
+       "why": "Le quotient est constant égal à $1$ pour $x > 0$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Numérateur et dénominateur tendent vers $0$ ensemble ; le quotient vaut $1$."
+      }
+     ],
+     "hint": "Que vaut $|x|$ quand $x > 0$ ?",
+     "solution": "Pour $x > 0$, $|x| = x$ donc $\\dfrac{|x|}{x} = 1$ : la limite à droite vaut $1$. (À gauche, elle vaut $-1$ : la fonction n'a pas de limite en $0$.)",
+     "points": 1,
+     "methode": "Une valeur absolue en $0$ : sépare $x > 0$ et $x < 0$.",
+     "ref": "m2-sm-limites-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-flash-5",
+   "chapter": "limites",
+   "kind": "qcu",
+   "title": "Fonction racine n-ième et puissances rationnelles",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Fonction racine n-ième et puissances rationnelles",
+     "difficulty": 2,
+     "statement": "$8^{\\frac23}$ vaut :",
+     "options": [
+      {
+       "label": "$4$",
+       "correct": true,
+       "why": "$8^{\\frac23} = \\left(\\sqrt[3]8\\right)^2 = 2^2$."
+      },
+      {
+       "label": "$\\dfrac{16}{3}$",
+       "why": "Tu as multiplié $8$ par $\\frac23$ : c'est un exposant, pas un coefficient."
+      },
+      {
+       "label": "$2$",
+       "why": "C'est $8^{\\frac13}$ : il reste à élever au carré."
+      },
+      {
+       "label": "$64$",
+       "why": "C'est $8^2$ : il faut encore prendre la racine cubique."
+      }
+     ],
+     "hint": "$a^{\\frac pq} = \\left(\\sqrt[q]a\\right)^p$.",
+     "solution": "$8^{\\frac23} = \\left(8^{\\frac13}\\right)^2 = \\left(\\sqrt[3]8\\right)^2 = 2^2 = 4$.",
+     "points": 1,
+     "methode": "Pour $a > 0$ : $a^{\\frac pq} = \\sqrt[q]{a^p} = \\left(\\sqrt[q]a\\right)^p$.",
+     "ref": "m2-sm-limites-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-flash-6",
+   "chapter": "limites",
+   "kind": "qcu",
+   "title": "Fonction réciproque",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Fonction réciproque",
+     "difficulty": 2,
+     "statement": "$f(x) = x^3 + 1$ est une bijection de $\\mathbb R$ sur $\\mathbb R$. $f^{-1}(9)$ vaut :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "On résout $x^3 + 1 = 9$, soit $x^3 = 8$."
+      },
+      {
+       "label": "$730$",
+       "why": "C'est $f(9)$, pas $f^{-1}(9)$."
+      },
+      {
+       "label": "$\\sqrt[3]{10}$",
+       "why": "Tu as ajouté $1$ au lieu de le retrancher : $x^3 = 9 - 1$."
+      },
+      {
+       "label": "$\\dfrac{1}{730}$",
+       "why": "$f^{-1}$ n'est pas $\\frac1f$."
+      }
+     ],
+     "hint": "$f^{-1}(9)$ est l'unique $x$ tel que $f(x) = 9$.",
+     "solution": "$f^{-1}(9) = x \\Leftrightarrow f(x) = 9 \\Leftrightarrow x^3 = 8 \\Leftrightarrow x = 2$.",
+     "points": 1,
+     "methode": "$y = f(x) \\Leftrightarrow x = f^{-1}(y)$ ; ne confonds pas $f^{-1}$ et $\\frac1f$.",
+     "ref": "m2-sm-limites-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-flash-7",
+   "chapter": "limites",
+   "kind": "qcu",
+   "title": "Image d'un intervalle par une fonction monotone",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Image d'un intervalle par une fonction monotone",
+     "difficulty": 2,
+     "statement": "L'image de $[0;+\\infty[$ par $f(x) = \\dfrac{1}{x+1}$ est :",
+     "options": [
+      {
+       "label": "$]0;1]$",
+       "correct": true,
+       "why": "$f$ est continue, strictement décroissante, $f(0) = 1$ et $\\lim\\limits_{+\\infty}f = 0$ (non atteinte)."
+      },
+      {
+       "label": "$[0;1]$",
+       "why": "$0$ n'est jamais atteint : $\\frac{1}{x+1} > 0$."
+      },
+      {
+       "label": "$]0;1[$",
+       "why": "$1 = f(0)$ est atteint."
+      },
+      {
+       "label": "$[1;+\\infty[$",
+       "why": "$f$ est décroissante : les images sont plus petites que $f(0) = 1$."
+      }
+     ],
+     "hint": "Décroissante : $f([a;+\\infty[) = \\left]\\lim_{+\\infty} f\\,;f(a)\\right]$.",
+     "solution": "$f$ est continue et strictement décroissante sur $[0;+\\infty[$, donc $f([0;+\\infty[) = \\left]\\lim\\limits_{x\\to+\\infty}f(x)\\,;f(0)\\right] = ]0;1]$.",
+     "points": 1,
+     "methode": "Image d'un intervalle par $f$ continue strictement monotone : on lit les bornes (valeurs ou limites) dans le bon ordre.",
+     "ref": "m2-sm-limites-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-flash-8",
+   "chapter": "limites",
+   "kind": "qcu",
+   "title": "TVI et encadrement par dichotomie",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "TVI et encadrement par dichotomie",
+     "difficulty": 3,
+     "statement": "$f(x) = x^3 + x - 1$ s'annule en un unique $\\alpha\\in]0;1[$. Sachant que $f(0{,}5) < 0$ et $f(0{,}75) > 0$, on a :",
+     "options": [
+      {
+       "label": "$\\alpha\\in]0{,}5\\,;0{,}75[$",
+       "correct": true,
+       "why": "$f$ change de signe entre $0{,}5$ et $0{,}75$."
+      },
+      {
+       "label": "$\\alpha\\in]0\\,;0{,}5[$",
+       "why": "$f(0) < 0$ et $f(0{,}5) < 0$ : pas de changement de signe sur cet intervalle."
+      },
+      {
+       "label": "$\\alpha\\in]0{,}75\\,;1[$",
+       "why": "$f(0{,}75) > 0$ et $f(1) > 0$ : pas de changement de signe."
+      },
+      {
+       "label": "$\\alpha = 0{,}625$",
+       "why": "La dichotomie donne un encadrement, pas une valeur exacte."
+      }
+     ],
+     "hint": "Où $f$ change-t-elle de signe ?",
+     "solution": "$f$ est continue et strictement croissante. $f(0{,}5) = -0{,}375 < 0$ et $f(0{,}75) \\approx 0{,}17 > 0$ : par le TVI, $\\alpha\\in]0{,}5;0{,}75[$ (encadrement d'amplitude $0{,}25$).",
+     "points": 1,
+     "methode": "Dichotomie : on coupe l'intervalle en deux et on garde la moitié où $f$ change de signe.",
+     "ref": "m2-sm-limites-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-ex1",
+   "chapter": "limites",
+   "kind": "probleme",
+   "title": "Exercice 1 — Limite, continuité et image d'un segment",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $f$ la fonction définie sur $[-1;+\\infty[$ par $f(x) = \\dfrac{\\sqrt{x + 1} - 1}{x}$ si $x \\ne 0$, et $f(0) = a$, où $a$ est un réel.",
+   "questions": [
+    {
+     "notion": "Formes indéterminées : les techniques",
+     "difficulty": 2,
+     "statement": "1) $\\lim\\limits_{x\\to0}\\dfrac{\\sqrt{x+1} - 1}{x}$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac12$",
+       "correct": true,
+       "why": "$\\frac{(x+1) - 1}{x(\\sqrt{x+1} + 1)} = \\frac{1}{\\sqrt{x+1} + 1} \\to \\frac12$."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\frac00$ est une forme indéterminée."
+      },
+      {
+       "label": "$1$",
+       "why": "Après simplification, le dénominateur tend vers $2$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Le numérateur tend aussi vers $0$ : il faut lever l'indétermination."
+      }
+     ],
+     "hint": "Multiplie par la quantité conjuguée $\\sqrt{x+1} + 1$.",
+     "solution": "$\\dfrac{\\sqrt{x+1} - 1}{x} = \\dfrac{(x + 1) - 1}{x\\left(\\sqrt{x+1} + 1\\right)} = \\dfrac{1}{\\sqrt{x+1} + 1} \\to \\dfrac{1}{2}$.",
+     "points": 1,
+     "methode": "Autre lecture : c'est le nombre dérivé de $\\sqrt{x+1}$ en $0$, soit $\\frac{1}{2\\sqrt1}$.",
+     "ref": "m2-sm-limites-ex1-q1"
+    },
+    {
+     "notion": "Continuité en un point",
+     "difficulty": 1,
+     "statement": "2) $f$ est continue en $0$ si et seulement si :",
+     "options": [
+      {
+       "label": "$a = \\dfrac12$",
+       "correct": true,
+       "why": "Continuité en $0$ ⇔ $\\lim\\limits_{x\\to0}f(x) = f(0)$."
+      },
+      {
+       "label": "$a = 0$",
+       "why": "La limite en $0$ vaut $\\frac12$, pas $0$."
+      },
+      {
+       "label": "$a = 1$",
+       "why": "$\\frac{1}{\\sqrt1 + 1} = \\frac12$."
+      },
+      {
+       "label": "pour tout réel $a$",
+       "why": "La valeur $f(0)$ doit être égale à la limite."
+      }
+     ],
+     "hint": "Compare $f(0) = a$ avec la limite de la question 1.",
+     "solution": "$f$ est continue en $0$ ⇔ $\\lim\\limits_{x\\to0}f(x) = f(0)$ ⇔ $a = \\frac12$.",
+     "points": 1,
+     "ref": "m2-sm-limites-ex1-q2"
+    },
+    {
+     "notion": "Limites à l'infini",
+     "difficulty": 2,
+     "statement": "3) $\\lim\\limits_{x\\to+\\infty}f(x)$ vaut :",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "$f(x) = \\frac{1}{\\sqrt{x+1} + 1} \\to 0$."
+      },
+      {
+       "label": "$1$",
+       "why": "Le dénominateur $\\sqrt{x+1} + 1$ tend vers $+\\infty$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Le numérateur se comporte comme $\\sqrt x$, le dénominateur comme $x$ : $x$ l'emporte."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "C'est la limite en $0$, pas en $+\\infty$."
+      }
+     ],
+     "hint": "Utilise l'écriture simplifiée de la question 1.",
+     "solution": "Pour $x \\ne 0$ : $f(x) = \\dfrac{1}{\\sqrt{x+1} + 1}$, et le dénominateur tend vers $+\\infty$, donc $\\lim\\limits_{x\\to+\\infty}f(x) = 0$.",
+     "points": 1,
+     "ref": "m2-sm-limites-ex1-q3"
+    },
+    {
+     "notion": "Image d'un intervalle par une fonction monotone",
+     "difficulty": 2,
+     "statement": "4) On prend $a = \\frac12$ ; $f$ est alors continue et strictement décroissante sur $[0;3]$. L'image $f([0;3])$ est :",
+     "options": [
+      {
+       "label": "$\\left[\\dfrac13\\,;\\dfrac12\\right]$",
+       "correct": true,
+       "why": "$f(3) = \\frac{1}{2 + 1} = \\frac13$ et $f(0) = \\frac12$."
+      },
+      {
+       "label": "$\\left[0\\,;\\dfrac13\\right]$",
+       "why": "$f(0) = \\frac12$, pas $0$."
+      },
+      {
+       "label": "$\\left]\\dfrac13\\,;\\dfrac12\\right[$",
+       "why": "Sur un segment, les bornes $f(0)$ et $f(3)$ sont atteintes."
+      },
+      {
+       "label": "$\\left[\\dfrac12\\,;3\\right]$",
+       "why": "Tu as mélangé une image ($f(0)$) et un antécédent ($3$)."
+      }
+     ],
+     "hint": "Décroissante : $f([a;b]) = [f(b);f(a)]$.",
+     "solution": "$f$ est continue et strictement décroissante sur $[0;3]$, donc $f([0;3]) = [f(3);f(0)]$. $f(3) = \\dfrac{\\sqrt4 - 1}{3} = \\dfrac13$ et $f(0) = \\dfrac12$. Donc $f([0;3]) = \\left[\\frac13;\\frac12\\right]$.",
+     "points": 1,
+     "ref": "m2-sm-limites-ex1-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-ex2",
+   "chapter": "limites",
+   "kind": "probleme",
+   "title": "Exercice 2 — La fonction x / √(x² + 1) et sa réciproque",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $f$ la fonction définie sur $\\mathbb R$ par $f(x) = \\dfrac{x}{\\sqrt{x^2 + 1}}$. On admet que $f$ est continue et strictement croissante sur $\\mathbb R$, et qu'elle est impaire.",
+   "questions": [
+    {
+     "notion": "Limites à l'infini",
+     "difficulty": 2,
+     "statement": "1) $\\lim\\limits_{x\\to+\\infty}f(x)$ vaut :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "Pour $x > 0$ : $f(x) = \\frac{1}{\\sqrt{1 + \\frac{1}{x^2}}} \\to 1$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "Numérateur et dénominateur sont « de degré 1 » : le quotient reste borné."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\sqrt{x^2 + 1}$ se comporte comme $x$, pas comme $x^2$."
+      },
+      {
+       "label": "$-1$",
+       "why": "$-1$ est la limite en $-\\infty$ (car $\\sqrt{x^2} = |x| = -x$ pour $x < 0$)."
+      }
+     ],
+     "hint": "Factorise $x^2$ sous la racine : $\\sqrt{x^2(1 + \\frac{1}{x^2})} = |x|\\sqrt{1 + \\frac1{x^2}}$.",
+     "solution": "Pour $x > 0$ : $\\sqrt{x^2 + 1} = x\\sqrt{1 + \\frac{1}{x^2}}$, donc $f(x) = \\dfrac{1}{\\sqrt{1 + \\frac{1}{x^2}}} \\to 1$. Par imparité, $\\lim\\limits_{x\\to-\\infty}f(x) = -1$.",
+     "points": 1,
+     "ref": "m2-sm-limites-ex2-q1"
+    },
+    {
+     "notion": "Image d'un intervalle par une fonction monotone",
+     "difficulty": 2,
+     "statement": "2) $f(\\mathbb R)$ est l'intervalle :",
+     "options": [
+      {
+       "label": "$]-1;1[$",
+       "correct": true,
+       "why": "$f$ est continue strictement croissante, de limites $-1$ et $1$ (non atteintes)."
+      },
+      {
+       "label": "$[-1;1]$",
+       "why": "$\\pm1$ sont des limites, jamais atteintes : $|x| < \\sqrt{x^2 + 1}$."
+      },
+      {
+       "label": "$\\mathbb R$",
+       "why": "$f$ est bornée par $1$ en valeur absolue."
+      },
+      {
+       "label": "$]0;1[$",
+       "why": "$f$ prend des valeurs négatives pour $x < 0$."
+      }
+     ],
+     "hint": "$f(\\mathbb R) = \\left]\\lim_{-\\infty}f\\,;\\lim_{+\\infty}f\\right[$ pour $f$ continue strictement croissante.",
+     "solution": "$f$ est continue et strictement croissante sur $\\mathbb R$ : $f(\\mathbb R) = \\left]\\lim\\limits_{-\\infty}f;\\lim\\limits_{+\\infty}f\\right[ = ]-1;1[$. Ainsi $f$ est une bijection de $\\mathbb R$ sur $]-1;1[$.",
+     "points": 1,
+     "ref": "m2-sm-limites-ex2-q2"
+    },
+    {
+     "notion": "Fonction réciproque",
+     "difficulty": 3,
+     "statement": "3) Pour tout $y\\in]-1;1[$, $f^{-1}(y)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{y}{\\sqrt{1 - y^2}}$",
+       "correct": true,
+       "why": "$y^2(x^2 + 1) = x^2 \\Rightarrow x^2 = \\frac{y^2}{1 - y^2}$, et $x$ a le signe de $y$."
+      },
+      {
+       "label": "$\\dfrac{\\sqrt{1 - y^2}}{y}$",
+       "why": "Tu as inversé le quotient ; d'ailleurs ce n'est pas défini en $y = 0$."
+      },
+      {
+       "label": "$\\dfrac{y}{\\sqrt{1 + y^2}}$",
+       "why": "C'est $f(y)$, pas $f^{-1}(y)$."
+      },
+      {
+       "label": "$y\\sqrt{1 - y^2}$",
+       "why": "De $x^2(1 - y^2) = y^2$ on tire $x^2 = \\frac{y^2}{1 - y^2}$ : on divise."
+      }
+     ],
+     "hint": "Résous $y = \\frac{x}{\\sqrt{x^2+1}}$ en $x$ : élève au carré, puis choisis le signe.",
+     "solution": "$y = \\dfrac{x}{\\sqrt{x^2+1}} \\Rightarrow y^2(x^2 + 1) = x^2 \\Rightarrow x^2(1 - y^2) = y^2 \\Rightarrow x^2 = \\dfrac{y^2}{1 - y^2}$. Comme $x$ et $y$ ont le même signe : $x = \\dfrac{y}{\\sqrt{1 - y^2}}$. Donc $f^{-1}(y) = \\dfrac{y}{\\sqrt{1-y^2}}$.",
+     "points": 1,
+     "methode": "Pour trouver $f^{-1}$ : résous $y = f(x)$ d'inconnue $x$, et contrôle les signes après une élévation au carré.",
+     "ref": "m2-sm-limites-ex2-q3"
+    },
+    {
+     "notion": "Fonction réciproque",
+     "difficulty": 2,
+     "statement": "4) $f^{-1}\\left(\\dfrac12\\right)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\sqrt3}{3}$",
+       "correct": true,
+       "why": "$\\frac{1/2}{\\sqrt{3/4}} = \\frac{1/2}{\\sqrt3/2} = \\frac1{\\sqrt3}$."
+      },
+      {
+       "label": "$\\sqrt3$",
+       "why": "Tu as inversé : $\\frac{1/2}{\\sqrt3/2} = \\frac{1}{\\sqrt3}$."
+      },
+      {
+       "label": "$\\dfrac{1}{\\sqrt5}$",
+       "why": "C'est $f\\left(\\frac12\\right)$, pas $f^{-1}\\left(\\frac12\\right)$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "$f^{-1}(y) \\ne y$ en général."
+      }
+     ],
+     "hint": "Remplace $y$ par $\\frac12$ dans la formule de la question 3.",
+     "solution": "$f^{-1}\\left(\\frac12\\right) = \\dfrac{\\frac12}{\\sqrt{1 - \\frac14}} = \\dfrac{\\frac12}{\\frac{\\sqrt3}{2}} = \\dfrac{1}{\\sqrt3} = \\dfrac{\\sqrt3}{3}$. Contrôle : $f\\left(\\frac{1}{\\sqrt3}\\right) = \\dfrac{1/\\sqrt3}{\\sqrt{4/3}} = \\dfrac{1/\\sqrt3}{2/\\sqrt3} = \\dfrac12$ ✓.",
+     "points": 1,
+     "ref": "m2-sm-limites-ex2-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-ex3",
+   "chapter": "limites",
+   "kind": "probleme",
+   "title": "Exercice 3 — TVI, image d'un segment et passage aux suites",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $f$ la fonction définie sur $\\mathbb R$ par $f(x) = x^3 - 3x + 1$. On a $f'(x) = 3(x-1)(x+1)$ : $f$ est décroissante sur $[0;1]$ et croissante sur $[1;2]$.",
+   "questions": [
+    {
+     "notion": "Limites à l'infini",
+     "difficulty": 1,
+     "statement": "1) $\\lim\\limits_{x\\to-\\infty}f(x)$ vaut :",
+     "options": [
+      {
+       "label": "$-\\infty$",
+       "correct": true,
+       "why": "Un polynôme a la limite de son terme de plus haut degré : $x^3 \\to -\\infty$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "$x^3 \\to -\\infty$ quand $x\\to-\\infty$ (puissance impaire)."
+      },
+      {
+       "label": "$1$",
+       "why": "Le terme constant ne compte pas à l'infini."
+      },
+      {
+       "label": "forme indéterminée",
+       "why": "Factorise par $x^3$ : $x^3\\left(1 - \\frac{3}{x^2} + \\frac{1}{x^3}\\right)$, plus d'indétermination."
+      }
+     ],
+     "hint": "Terme de plus haut degré.",
+     "solution": "$f(x) = x^3\\left(1 - \\frac{3}{x^2} + \\frac{1}{x^3}\\right)$ et la parenthèse tend vers $1$ : $\\lim\\limits_{x\\to-\\infty}f(x) = -\\infty$.",
+     "points": 1,
+     "part": "Partie A — Racines de f",
+     "ref": "m2-sm-limites-ex3-q1"
+    },
+    {
+     "notion": "Théorème des valeurs intermédiaires",
+     "difficulty": 2,
+     "statement": "2) Sachant que $f(0) = 1$, $f(1) = -1$ et $f(2) = 3$, le nombre de solutions de $f(x) = 0$ dans $[0;2]$ est :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "Une sur $]0;1[$ (décroissante de $1$ à $-1$) et une sur $]1;2[$ (croissante de $-1$ à $3$)."
+      },
+      {
+       "label": "$1$",
+       "why": "Il y a deux intervalles de stricte monotonie avec changement de signe."
+      },
+      {
+       "label": "$3$",
+       "why": "Sur chaque intervalle de stricte monotonie, il y a au plus une solution."
+      },
+      {
+       "label": "$0$",
+       "why": "$f(0) > 0$ et $f(1) < 0$ : le TVI garantit une solution."
+      }
+     ],
+     "hint": "Applique le TVI sur $[0;1]$ puis sur $[1;2]$.",
+     "solution": "Sur $[0;1]$, $f$ est continue, strictement décroissante, $f(0) = 1 > 0$ et $f(1) = -1 < 0$ : une unique solution $\\alpha\\in]0;1[$. Sur $[1;2]$, $f$ est strictement croissante, $f(1) < 0 < f(2)$ : une unique solution $\\beta\\in]1;2[$. Total : $2$.",
+     "points": 1,
+     "part": "Partie A — Racines de f",
+     "ref": "m2-sm-limites-ex3-q2"
+    },
+    {
+     "notion": "TVI et encadrement par dichotomie",
+     "difficulty": 2,
+     "statement": "3) Sachant que $f(1{,}5) = -0{,}125$ et $f(1{,}75) \\approx 1{,}11$, on a :",
+     "options": [
+      {
+       "label": "$\\beta\\in]1{,}5\\,;1{,}75[$",
+       "correct": true,
+       "why": "$f$ change de signe entre $1{,}5$ et $1{,}75$."
+      },
+      {
+       "label": "$\\beta\\in]1\\,;1{,}5[$",
+       "why": "$f(1) < 0$ et $f(1{,}5) < 0$ : pas de changement de signe."
+      },
+      {
+       "label": "$\\beta\\in]1{,}75\\,;2[$",
+       "why": "$f(1{,}75) > 0$ et $f(2) > 0$ : pas de changement de signe."
+      },
+      {
+       "label": "$\\beta = 1{,}5$",
+       "why": "$f(1{,}5) = -0{,}125 \\ne 0$."
+      }
+     ],
+     "hint": "Garde la moitié d'intervalle où $f$ change de signe.",
+     "solution": "$f(1{,}5) = 3{,}375 - 4{,}5 + 1 = -0{,}125 < 0$ et $f(1{,}75) = 5{,}359\\ldots - 5{,}25 + 1 \\approx 1{,}11 > 0$ : $\\beta\\in]1{,}5;1{,}75[$.",
+     "points": 1,
+     "part": "Partie A — Racines de f",
+     "ref": "m2-sm-limites-ex3-q3"
+    },
+    {
+     "notion": "Image d'un intervalle et d'un segment",
+     "difficulty": 3,
+     "statement": "4) L'image du segment $[0;2]$ par $f$ est :",
+     "options": [
+      {
+       "label": "$[-1;3]$",
+       "correct": true,
+       "why": "Le minimum est $f(1) = -1$ et le maximum est $\\max(f(0), f(2)) = 3$."
+      },
+      {
+       "label": "$[1;3]$",
+       "why": "Tu as pris $[f(0);f(2)]$ : $f$ n'est pas monotone sur $[0;2]$, elle descend à $-1$."
+      },
+      {
+       "label": "$[-1;1]$",
+       "why": "C'est $f([0;1])$ seulement."
+      },
+      {
+       "label": "$[0;2]$",
+       "why": "C'est l'intervalle de départ, pas son image."
+      }
+     ],
+     "hint": "L'image d'un segment par une fonction continue est $[m;M]$ : cherche le minimum et le maximum.",
+     "solution": "$f$ est continue sur le segment $[0;2]$, donc $f([0;2]) = [m;M]$. D'après les variations : $m = f(1) = -1$ et $M = \\max(f(0), f(2)) = \\max(1, 3) = 3$. Donc $f([0;2]) = [-1;3]$.",
+     "points": 1,
+     "methode": "Fonction continue non monotone sur un segment : image $= [\\min;\\max]$, à lire dans le tableau de variations.",
+     "part": "Partie B — Image et réciproque",
+     "ref": "m2-sm-limites-ex3-q4"
+    },
+    {
+     "notion": "Fonction réciproque",
+     "difficulty": 2,
+     "statement": "5) La restriction $g$ de $f$ à $[1;2]$ est une bijection de $[1;2]$ sur :",
+     "options": [
+      {
+       "label": "$[-1;3]$",
+       "correct": true,
+       "why": "$g$ est continue strictement croissante : $g([1;2]) = [f(1);f(2)]$."
+      },
+      {
+       "label": "$[1;2]$",
+       "why": "C'est l'ensemble de départ de $g$, pas son image."
+      },
+      {
+       "label": "$\\mathbb R$",
+       "why": "Sur un segment, une fonction continue est bornée."
+      },
+      {
+       "label": "$[1;3]$",
+       "why": "$f(1) = 1 - 3 + 1 = -1$, pas $1$."
+      }
+     ],
+     "hint": "Image de $[1;2]$ par une fonction continue strictement croissante.",
+     "solution": "$g$ est continue et strictement croissante sur $[1;2]$ : elle réalise une bijection de $[1;2]$ sur $[g(1);g(2)] = [-1;3]$. Sa réciproque $g^{-1}$ est définie sur $[-1;3]$, et $g^{-1}(0) = \\beta$.",
+     "points": 1,
+     "part": "Partie B — Image et réciproque",
+     "ref": "m2-sm-limites-ex3-q5"
+    },
+    {
+     "notion": "Passage aux suites",
+     "difficulty": 2,
+     "statement": "6) $\\lim\\limits_{n\\to+\\infty}f\\left(1 + \\dfrac1n\\right)$ vaut :",
+     "options": [
+      {
+       "label": "$-1$",
+       "correct": true,
+       "why": "$1 + \\frac1n \\to 1$ et $f$ est continue en $1$ : la limite est $f(1)$."
+      },
+      {
+       "label": "$1$",
+       "why": "$1$ est la limite de $1 + \\frac1n$, pas de $f\\left(1 + \\frac1n\\right)$."
+      },
+      {
+       "label": "$0$",
+       "why": "$f(1) = -1 \\ne 0$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "La suite $1 + \\frac1n$ converge : on évalue $f$ en sa limite, par continuité."
+      }
+     ],
+     "hint": "Si $u_n \\to \\ell$ et $f$ est continue en $\\ell$, alors $f(u_n) \\to f(\\ell)$.",
+     "solution": "$u_n = 1 + \\frac1n \\to 1$ et $f$ est continue en $1$ (polynôme), donc $f(u_n) \\to f(1) = 1 - 3 + 1 = -1$.",
+     "points": 1,
+     "methode": "$u_n \\to \\ell$ et $f$ continue en $\\ell$ ⇒ $f(u_n) \\to f(\\ell)$.",
+     "part": "Partie B — Image et réciproque",
+     "ref": "m2-sm-limites-ex3-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-limites-ex4",
+   "chapter": "limites",
+   "kind": "probleme",
+   "title": "Exercice 4 — Limites trigonométriques et la fonction x sin(1/x)",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Partie A : calculs de limites trigonométriques. Partie B : soit $g$ la fonction définie sur $\\mathbb R^*$ par $g(x) = x\\sin\\dfrac1x$, et $g(0) = 0$.",
+   "questions": [
+    {
+     "notion": "Conséquences des limites trigonométriques",
+     "difficulty": 1,
+     "statement": "1) $\\lim\\limits_{x\\to0}\\dfrac{\\tan 2x}{x}$ vaut :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "$\\frac{\\tan 2x}{x} = 2\\times\\frac{\\tan2x}{2x} \\to 2$."
+      },
+      {
+       "label": "$1$",
+       "why": "Il manque le facteur $2$ : fais apparaître $\\frac{\\tan 2x}{2x}$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Tu as divisé par $2$ au lieu de multiplier."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\frac00$ est une forme indéterminée."
+      }
+     ],
+     "hint": "$\\lim\\limits_{u\\to0}\\frac{\\tan u}{u} = 1$.",
+     "solution": "$\\dfrac{\\tan2x}{x} = 2\\cdot\\dfrac{\\tan2x}{2x}$ et $\\lim\\limits_{u\\to0}\\dfrac{\\tan u}{u} = 1$, donc la limite vaut $2$.",
+     "points": 1,
+     "part": "Partie A — Limites trigonométriques",
+     "ref": "m2-sm-limites-ex4-q1"
+    },
+    {
+     "notion": "Formes indéterminées : les techniques",
+     "difficulty": 3,
+     "statement": "2) $\\lim\\limits_{x\\to0}\\dfrac{1 - \\cos 2x}{x^2}$ vaut :",
+     "options": [
+      {
+       "label": "$2$",
+       "correct": true,
+       "why": "$1 - \\cos2x = 2\\sin^2x$, donc $\\frac{1 - \\cos2x}{x^2} = 2\\left(\\frac{\\sin x}{x}\\right)^2 \\to 2$."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "C'est la limite de $\\frac{1 - \\cos x}{x^2}$ ; ici l'angle est $2x$."
+      },
+      {
+       "label": "$4$",
+       "why": "Tu as pris $\\frac{1 - \\cos u}{u^2} \\to 1$ : la limite de référence est $\\frac12$, d'où $\\frac12\\times4 = 2$."
+      },
+      {
+       "label": "$1$",
+       "why": "Recalcule avec $1 - \\cos 2x = 2\\sin^2 x$."
+      }
+     ],
+     "hint": "$1 - \\cos 2x = 2\\sin^2 x$.",
+     "solution": "$\\dfrac{1 - \\cos2x}{x^2} = \\dfrac{2\\sin^2x}{x^2} = 2\\left(\\dfrac{\\sin x}{x}\\right)^2 \\to 2$. (Avec la référence : $\\frac{1 - \\cos 2x}{(2x)^2}\\times 4 \\to \\frac12\\times4 = 2$.)",
+     "points": 1,
+     "part": "Partie A — Limites trigonométriques",
+     "ref": "m2-sm-limites-ex4-q2"
+    },
+    {
+     "notion": "Prolongement par continuité",
+     "difficulty": 3,
+     "statement": "3) La fonction $h(x) = \\dfrac{\\sin(\\pi x)}{x - 1}$ est prolongeable par continuité en $1$ en posant $h(1) =$ :",
+     "options": [
+      {
+       "label": "$-\\pi$",
+       "correct": true,
+       "why": "Avec $t = x - 1$ : $\\sin(\\pi t + \\pi) = -\\sin(\\pi t)$, donc $h = -\\pi\\frac{\\sin \\pi t}{\\pi t} \\to -\\pi$."
+      },
+      {
+       "label": "$\\pi$",
+       "why": "Attention : $\\sin(\\pi + \\pi t) = -\\sin(\\pi t)$, d'où le signe moins."
+      },
+      {
+       "label": "$0$",
+       "why": "$\\frac00$ est une forme indéterminée."
+      },
+      {
+       "label": "$1$",
+       "why": "Le facteur $\\pi$ (et le signe) ne disparaissent pas."
+      }
+     ],
+     "hint": "Pose $t = x - 1 \\to 0$ et utilise $\\sin(\\pi + a) = -\\sin a$.",
+     "solution": "Posons $t = x - 1$. Alors $\\sin(\\pi x) = \\sin(\\pi t + \\pi) = -\\sin(\\pi t)$ et $h(x) = -\\dfrac{\\sin\\pi t}{t} = -\\pi\\cdot\\dfrac{\\sin\\pi t}{\\pi t} \\to -\\pi$. On pose $h(1) = -\\pi$.",
+     "points": 1,
+     "methode": "Limite en $a \\ne 0$ : change de variable $t = x - a$ pour te ramener en $0$.",
+     "part": "Partie A — Limites trigonométriques",
+     "ref": "m2-sm-limites-ex4-q3"
+    },
+    {
+     "notion": "Théorèmes de comparaison",
+     "difficulty": 2,
+     "statement": "4) $\\lim\\limits_{x\\to0}g(x) = \\lim\\limits_{x\\to0}x\\sin\\dfrac1x$ vaut :",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "$|g(x)| \\le |x| \\to 0$."
+      },
+      {
+       "label": "elle n'existe pas car $\\sin\\frac1x$ oscille",
+       "why": "$\\sin\\frac1x$ oscille mais reste bornée, et elle est multipliée par $x \\to 0$."
+      },
+      {
+       "label": "$1$",
+       "why": "Tu as confondu avec $\\frac{\\sin u}{u}$ : ici, $\\frac1x \\to \\infty$, pas $0$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "$|g(x)| \\le |x|$ : $g$ est très petite près de $0$."
+      }
+     ],
+     "hint": "Majore $\\left|\\sin\\frac1x\\right|$ par $1$.",
+     "solution": "Pour $x \\ne 0$ : $|g(x)| = |x|\\left|\\sin\\frac1x\\right| \\le |x|$, et $|x| \\to 0$. Par comparaison, $\\lim\\limits_{x\\to0}g(x) = 0$.",
+     "points": 1,
+     "methode": "Bornée × (tend vers $0$) ⇒ tend vers $0$ (par encadrement).",
+     "part": "Partie B — La fonction g",
+     "ref": "m2-sm-limites-ex4-q4"
+    },
+    {
+     "notion": "Continuité en un point",
+     "difficulty": 2,
+     "statement": "5) La fonction $g$ est-elle continue en $0$ ?",
+     "options": [
+      {
+       "label": "Oui, car $\\lim\\limits_{x\\to0}g(x) = 0 = g(0)$",
+       "correct": true,
+       "why": "La limite existe et égale la valeur."
+      },
+      {
+       "label": "Non, car $\\sin\\frac1x$ n'a pas de limite en $0$",
+       "why": "C'est $g$ qui doit avoir une limite, pas $\\sin\\frac1x$."
+      },
+      {
+       "label": "Non, car $g$ n'est pas définie en $0$",
+       "why": "L'énoncé pose $g(0) = 0$."
+      },
+      {
+       "label": "Oui, car $\\lim\\limits_{x\\to0}g(x) = 1$",
+       "why": "La limite vaut $0$ (question 4), et elle doit être égale à $g(0) = 0$."
+      }
+     ],
+     "hint": "Compare la limite de la question 4 et $g(0)$.",
+     "solution": "$\\lim\\limits_{x\\to0}g(x) = 0 = g(0)$, donc $g$ est continue en $0$.",
+     "points": 1,
+     "part": "Partie B — La fonction g",
+     "ref": "m2-sm-limites-ex4-q5"
+    },
+    {
+     "notion": "Limite d'une fonction composée",
+     "difficulty": 3,
+     "statement": "6) $\\lim\\limits_{x\\to+\\infty}g(x) = \\lim\\limits_{x\\to+\\infty}x\\sin\\dfrac1x$ vaut :",
+     "options": [
+      {
+       "label": "$1$",
+       "correct": true,
+       "why": "Avec $t = \\frac1x \\to 0^+$ : $x\\sin\\frac1x = \\frac{\\sin t}{t} \\to 1$."
+      },
+      {
+       "label": "$0$",
+       "why": "C'est la limite en $0$ ; en $+\\infty$, $\\frac1x \\to 0$ et on retrouve $\\frac{\\sin t}{t}$."
+      },
+      {
+       "label": "$+\\infty$",
+       "why": "$\\sin\\frac1x$ tend vers $0$ et compense exactement $x$."
+      },
+      {
+       "label": "elle n'existe pas",
+       "why": "En $+\\infty$, $\\frac1x \\to 0$ : $\\sin\\frac1x$ n'oscille plus."
+      }
+     ],
+     "hint": "Pose $t = \\frac1x$.",
+     "solution": "Posons $t = \\frac1x$ ; quand $x\\to+\\infty$, $t \\to 0^+$ et $x\\sin\\frac1x = \\dfrac{\\sin t}{t} \\to 1$. (Compare avec la question 4 : même fonction, comportement très différent en $0$ et en $+\\infty$.)",
+     "points": 1,
+     "methode": "Limite d'une composée : change de variable pour reconnaître une limite de référence.",
+     "part": "Partie B — La fonction g",
+     "ref": "m2-sm-limites-ex4-q6"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-sm-limites-serie-1",
+   "title": "Limites et continuité · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (4 questions).",
+   "kind": "custom",
+   "chapter": "limites",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-sm-limites-flash-q1",
+    "m2-sm-limites-flash-q2",
+    "m2-sm-limites-flash-q3",
+    "m2-sm-limites-flash-q4",
+    "m2-sm-limites-ex1-q1",
+    "m2-sm-limites-ex1-q2",
+    "m2-sm-limites-ex1-q3",
+    "m2-sm-limites-ex1-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-limites-serie-2",
+   "title": "Limites et continuité · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (4 questions).",
+   "kind": "custom",
+   "chapter": "limites",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-sm-limites-flash-q5",
+    "m2-sm-limites-flash-q6",
+    "m2-sm-limites-flash-q7",
+    "m2-sm-limites-flash-q8",
+    "m2-sm-limites-ex2-q1",
+    "m2-sm-limites-ex2-q2",
+    "m2-sm-limites-ex2-q3",
+    "m2-sm-limites-ex2-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-limites-serie-3",
+   "title": "Limites et continuité · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (6 questions) + Exercice 4 (6 questions).",
+   "kind": "custom",
+   "chapter": "limites",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-sm-limites-ex3-q1",
+    "m2-sm-limites-ex3-q2",
+    "m2-sm-limites-ex3-q3",
+    "m2-sm-limites-ex3-q4",
+    "m2-sm-limites-ex3-q5",
+    "m2-sm-limites-ex3-q6",
+    "m2-sm-limites-ex4-q1",
+    "m2-sm-limites-ex4-q2",
+    "m2-sm-limites-ex4-q3",
+    "m2-sm-limites-ex4-q4",
+    "m2-sm-limites-ex4-q5",
+    "m2-sm-limites-ex4-q6"
+   ]
+  }
+ ]
+}

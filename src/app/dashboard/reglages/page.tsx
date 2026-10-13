@@ -83,7 +83,7 @@ export default function ReglagesPage() {
     setSavingPwd(true);
     const { error } = await supabase.auth.updateUser({ password: pwd });
     setSavingPwd(false);
-    setPwdMsg(error ? error.message : "✓ Mot de passe mis à jour.");
+    setPwdMsg(error ? error.message : "Mot de passe mis à jour.");
     if (!error) { setPwd(""); setPwd2(""); }
   }
   async function logout() { await supabase.auth.signOut(); router.replace("/login"); }
@@ -147,7 +147,7 @@ export default function ReglagesPage() {
           <div><label className={lbl}>Nouveau mot de passe</label><input type="password" className={input} value={pwd} onChange={(e) => setPwd(e.target.value)} placeholder="••••••" /></div>
           <div><label className={lbl}>Confirmer</label><input type="password" className={input} value={pwd2} onChange={(e) => setPwd2(e.target.value)} placeholder="••••••" /></div>
         </div>
-        {pwdMsg && <p className={`mt-2 text-sm ${pwdMsg.startsWith("✓") ? "text-emerald-500" : "text-red-500"}`}>{pwdMsg}</p>}
+        {pwdMsg && <p className={`mt-2 text-sm ${pwdMsg === "Mot de passe mis à jour." ? "text-emerald-500" : "text-red-500"}`}>{pwdMsg}</p>}
         <div className="mt-3 flex justify-end">
           <button onClick={changePwd} disabled={savingPwd} className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:opacity-90 transition disabled:opacity-50">
             {savingPwd ? <Loader2 className="w-4 h-4 animate-spin" /> : <ShieldCheck className="w-4 h-4" />} Mettre à jour

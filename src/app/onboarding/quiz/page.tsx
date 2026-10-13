@@ -4,10 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import {
-  Target, GraduationCap, CalendarCheck, AlertCircle, Award, Medal, Trophy, Crown,
-  Stethoscope, Cpu, Briefcase, Compass, Flame, CalendarDays, Zap, RefreshCw,
-  Clock, Brain, Dumbbell, HeartPulse, Timer, Sparkles, Layers, Library, TrendingUp,
-  ArrowRight, Loader2, Check, ChevronDown, type LucideIcon,
+  Target, GraduationCap, CalendarCheck, AlertCircle, Award, Medal, Trophy, Crown, Stethoscope, Cpu, Briefcase, Compass, Flame, CalendarDays, Zap, RefreshCw, Clock, Brain, Dumbbell, HeartPulse, Timer, Layers, Library, TrendingUp, ArrowRight, Loader2, Check, ChevronDown, type LucideIcon, ListChecks, MessageCircle, Gauge
 } from "lucide-react";
 
 type Opt = { label: string; value: string; note?: number; icon: LucideIcon };
@@ -191,7 +188,7 @@ function Reveal({ firstName, target, ambition, blocker, consistency, onContinue,
   return (
     <div className="mt-6 fade-up pb-8">
       <div className="flex items-center justify-between gap-3">
-        <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-arctic-blue dark:text-arctic-cyan"><Sparkles className="w-4 h-4" /> Ton plan Bac-up</div>
+        <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-arctic-blue dark:text-arctic-cyan"><ListChecks className="w-4 h-4" /> Ton plan Bac-up</div>
         <button onClick={onContinue} disabled={saving} className="inline-flex items-center gap-1.5 text-xs font-bold rounded-full bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white px-3.5 py-1.5 transition-all duration-200 ease-out hover:brightness-110 hover:-translate-y-0.5 active:scale-95 disabled:opacity-60">
           Activer <ArrowRight className="w-3.5 h-3.5" />
         </button>
@@ -246,7 +243,7 @@ const TOOLS: { key: string; icon: LucideIcon; title: string; desc: string; grad:
   { key: "monk", icon: Flame, title: "Monk Mode", desc: "Bâtis une série quotidienne et tiens la distance.", grad: "from-orange-500 to-orange-600" },
   { key: "ranking", icon: Trophy, title: "Classement national", desc: "Mesure-toi aux autres et reste compétitif.", grad: "from-amber-500 to-amber-600" },
   { key: "biblio", icon: Library, title: "Bibliothèque", desc: "Stocke tes fiches PDF et révise-les dans l'app.", grad: "from-emerald-500 to-emerald-700" },
-  { key: "coach", icon: Sparkles, title: "Coach IA", desc: "Un plan qui s'adapte à toi, semaine après semaine.", grad: "from-cyan-500 to-cyan-700" },
+  { key: "coach", icon: MessageCircle, title: "Coach IA", desc: "Un plan qui s'adapte à toi, semaine après semaine.", grad: "from-cyan-500 to-cyan-700" },
 ];
 
 function recommendedTools(blocker?: string, consistency?: string): Set<string> {
@@ -365,7 +362,7 @@ function GrowthPanel({ start, target }: { start: number; target: number }) {
     : [{ pre: "×", n: 5, suf: "", l: "d'entraînement ciblé" }, { pre: "×", n: 3, suf: "", l: "de maîtrise" }, { pre: "+", n: 30, suf: "%", l: "de confiance" }];
   const tabs = [
     { k: "progress" as const, label: "Progression", Icon: TrendingUp },
-    { k: "perf" as const, label: "Performance", Icon: Sparkles },
+    { k: "perf" as const, label: "Performance", Icon: Gauge },
   ];
   return (
     <div className="glass rounded-3xl p-4 sm:p-5">

@@ -20,6 +20,14 @@ function norm(s: string): string {
 // (e.g. "géométrique" → arithgeo in Suites, but "géométrie" → geo in Complexes)
 // list several candidates and let the chapter's own slug set disambiguate.
 const RULES: [string, string[]][] = [
+  // --- sc-ex 2bac course notions: explicit, highest priority (beat loose keyword collisions) ---
+  ["produit scalaire", ["pscal"]],
+  ["produit vectoriel", ["vect"]],
+  ["limite d'une fonction", ["limite"]],
+  ["limites usuelles", ["limite"]],
+  ["formes indeterminees", ["limite"]],
+  ["fonction composee", ["limite"]],
+  ["proprietes", ["propriete"]],
   // --- suites ---
   ["arithmetico", ["arithgeo"]],
   ["arithmetiqu", ["arithgeo"]],
@@ -58,7 +66,7 @@ const RULES: [string, string[]][] = [
   ["etude", ["derivee"]],
   ["inegalite", ["propriete", "derivee"]],
   // --- intégrale ---
-  ["aire", ["application", "vect"]],
+  ["aires", ["application"]],
   ["volume", ["application"]],
   ["fonction definie par une integrale", ["application"]],
   ["fonction integrale", ["application"]],

@@ -12,6 +12,22 @@ export type SubjectRef = { code: string; coeff: number; durationMin: number };
 /** The 5 science filières Bac-up supports (order = own-first applied at render). */
 export const FILIERES = ["sm_a", "sm_b", "pc", "svt", "eco"] as const;
 export const FILIERE_SET = new Set<string>(FILIERES);
+/** Filières with Préparation content (2bac). Others see a « Bientôt » card. */
+export const PREP_FILIERES = new Set<string>(["sm_a", "sm_b", "pc", "svt"]);
+
+/**
+ * Chapters stored as shared ("commun") that a filière does NOT study.
+ * Keyed by track code → chapter codes. Applied in Cours and Préparation.
+ * Source: SVT-filière physique-chimie annales (2016–2026) never test these;
+ * validated with the team on 2026-10-04. Edit here, nowhere else.
+ */
+export const HIDDEN_CHAPTERS: Record<string, string[]> = {
+  svt: ["pc-rlc-force", "pc-particule-chargee", "pc-satellites", "pc-electrolyse"],
+};
+export function chapterVisibleFor(trackCode: string | null | undefined, chapterCode: string | null | undefined): boolean {
+  if (!trackCode || !chapterCode) return true;
+  return !(HIDDEN_CHAPTERS[trackCode] ?? []).includes(chapterCode);
+}
 /** Short labels for the filière chips. */
 export const FILIERE_SHORT: Record<string, string> = { sm_a: "SM-A", sm_b: "SM-B", pc: "PC", svt: "SVT", eco: "Éco" };
 

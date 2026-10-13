@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import {
-  BadgeCheck, Users, BookOpen, FileText, Loader2, Wallet, TrendingUp, Sparkles, UserCheck, ArrowRight,
+  BadgeCheck, Users, BookOpen, FileText, Loader2, Wallet, TrendingUp, Eye, UserCheck, ArrowRight,
 } from "lucide-react";
 
 type Paid = { amount_mad: number; created_at: string };
@@ -107,7 +107,7 @@ export default function AdminHome() {
       {/* ACCOUNTS */}
       <div className="mt-4 grid grid-cols-2 lg:grid-cols-4 gap-4">
         <Stat label="Comptes actifs" value={s?.active} loading={loading} icon={Users} href="/admin/etudiants" accent="text-emerald-500 bg-emerald-500/15" />
-        <Stat label="En démo" value={s?.demo} loading={loading} icon={Sparkles} href="/admin/etudiants" accent="text-arctic-blue dark:text-arctic-cyan bg-arctic-blue/15" />
+        <Stat label="En démo" value={s?.demo} loading={loading} icon={Eye} href="/admin/etudiants" accent="text-arctic-blue dark:text-arctic-cyan bg-arctic-blue/15" />
         <Stat label="Paiements en attente" value={s?.pendingPay} loading={loading} icon={BadgeCheck} href="/admin/activations" accent="text-amber-500 bg-amber-400/15" />
         <Stat label="En attente" value={s?.pending} loading={loading} icon={Users} href="/admin/etudiants" accent="text-neutral-500 bg-neutral-400/15" />
       </div>

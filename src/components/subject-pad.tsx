@@ -65,7 +65,7 @@ export function SubjectPad({
 
       <div className="relative flex items-center justify-between gap-4">
         <div className="min-w-0">
-          <SubjectName name={name} sizeClass="text-3xl sm:text-4xl" className="text-white" />
+          <SubjectName name={name} sizeClass="text-2xl" className="text-white" />
           {subtitle && <div className="mt-0.5 text-xs text-white/50">{subtitle}</div>}
         </div>
         {right && <div className="shrink-0">{right}</div>}

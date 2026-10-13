@@ -1,0 +1,1005 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "sm_a",
+  "sm_b"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-sm-complexes-flash-1",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "L'ensemble des nombres complexes",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "L'ensemble des nombres complexes",
+     "difficulty": 1,
+     "statement": "La forme algébrique de $\\dfrac{1}{2 + i}$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac{2 - i}{5}$",
+       "correct": true,
+       "why": "$\\frac{2 - i}{(2+i)(2-i)} = \\frac{2 - i}{4 + 1}$."
+      },
+      {
+       "label": "$\\dfrac{2 + i}{5}$",
+       "why": "On multiplie par le conjugué $2 - i$, donc le numérateur devient $2 - i$."
+      },
+      {
+       "label": "$\\dfrac12 + i$",
+       "why": "On n'inverse pas la partie réelle et la partie imaginaire séparément."
+      },
+      {
+       "label": "$\\dfrac{2 - i}{3}$",
+       "why": "$(2 + i)(2 - i) = 4 - i^2 = 5$, pas $3$."
+      }
+     ],
+     "hint": "Multiplie numérateur et dénominateur par le conjugué du dénominateur.",
+     "solution": "$\\dfrac{1}{2 + i} = \\dfrac{2 - i}{(2 + i)(2 - i)} = \\dfrac{2 - i}{5} = \\dfrac25 - \\dfrac15 i$.",
+     "points": 1,
+     "methode": "$\\frac{1}{z} = \\frac{\\bar z}{|z|^2}$.",
+     "ref": "m2-sm-complexes-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-complexes-flash-2",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Module, argument, forme trigonométrique",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Module, argument, forme trigonométrique",
+     "difficulty": 2,
+     "statement": "Un argument de $z = -1 + i$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac{3\\pi}{4}$",
+       "correct": true,
+       "why": "$|z| = \\sqrt2$, $\\cos\\theta = -\\frac{\\sqrt2}{2}$, $\\sin\\theta = \\frac{\\sqrt2}{2}$."
+      },
+      {
+       "label": "$\\dfrac{\\pi}{4}$",
+       "why": "$\\frac\\pi4$ est l'argument de $1 + i$ ; ici la partie réelle est négative."
+      },
+      {
+       "label": "$-\\dfrac{\\pi}{4}$",
+       "why": "$-\\frac\\pi4$ correspond à $1 - i$."
+      },
+      {
+       "label": "$\\dfrac{5\\pi}{4}$",
+       "why": "$\\frac{5\\pi}{4}$ est l'argument de $-1 - i$ : la partie imaginaire serait négative."
+      }
+     ],
+     "hint": "Place le point $(-1;1)$ : dans quel quadrant ?",
+     "solution": "$|z| = \\sqrt2$, $\\cos\\theta = \\frac{-1}{\\sqrt2}$ et $\\sin\\theta = \\frac{1}{\\sqrt2}$ : $\\theta = \\frac{3\\pi}{4}\\ [2\\pi]$.",
+     "points": 1,
+     "ref": "m2-sm-complexes-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-complexes-flash-3",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Propriétés du module et de l'argument",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Propriétés du module et de l'argument",
+     "difficulty": 2,
+     "statement": "Soit $z = \\dfrac{(1 + i)^4}{(\\sqrt3 + i)^2}$. Un argument de $z$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac{2\\pi}{3}$",
+       "correct": true,
+       "why": "$4\\times\\frac\\pi4 - 2\\times\\frac\\pi6 = \\pi - \\frac\\pi3$."
+      },
+      {
+       "label": "$\\dfrac{4\\pi}{3}$",
+       "why": "On soustrait l'argument du dénominateur : $\\pi - \\frac\\pi3$, pas $\\pi + \\frac\\pi3$."
+      },
+      {
+       "label": "$\\dfrac{\\pi}{3}$",
+       "why": "$\\arg(1+i)^4 = 4\\times\\frac\\pi4 = \\pi$, pas $\\frac{2\\pi}{3}$."
+      },
+      {
+       "label": "$\\dfrac{\\pi}{6}$",
+       "why": "Tu as utilisé les arguments sans les multiplier par les exposants."
+      }
+     ],
+     "hint": "$\\arg\\frac{z_1^n}{z_2^m} = n\\arg z_1 - m\\arg z_2$.",
+     "solution": "$\\arg(1 + i) = \\frac\\pi4$ et $\\arg(\\sqrt3 + i) = \\frac\\pi6$. $\\arg z = 4\\times\\frac\\pi4 - 2\\times\\frac\\pi6 = \\pi - \\frac\\pi3 = \\frac{2\\pi}{3}\\ [2\\pi]$. (Et $|z| = \\frac{(\\sqrt2)^4}{2^2} = 1$.)",
+     "points": 1,
+     "methode": "Argument : produit ⇒ somme, quotient ⇒ différence, puissance $n$ ⇒ multiplié par $n$.",
+     "ref": "m2-sm-complexes-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-complexes-flash-4",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Racine carrée algébrique d'un complexe",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Racine carrée algébrique d'un complexe",
+     "difficulty": 2,
+     "statement": "Les racines carrées de $3 + 4i$ sont :",
+     "options": [
+      {
+       "label": "$2 + i$ et $-2 - i$",
+       "correct": true,
+       "why": "$(2 + i)^2 = 4 + 4i - 1 = 3 + 4i$."
+      },
+      {
+       "label": "$2 - i$ et $-2 + i$",
+       "why": "$(2 - i)^2 = 3 - 4i$ : le signe de la partie imaginaire ne convient pas."
+      },
+      {
+       "label": "$1 + 2i$ et $-1 - 2i$",
+       "why": "$(1 + 2i)^2 = -3 + 4i$."
+      },
+      {
+       "label": "$\\sqrt5$ et $-\\sqrt5$",
+       "why": "$\\sqrt5 = \\sqrt{|3 + 4i|}$ est le module des racines, pas les racines."
+      }
+     ],
+     "hint": "Cherche $x + iy$ avec $x^2 - y^2 = 3$, $2xy = 4$ et $x^2 + y^2 = 5$.",
+     "solution": "Soit $\\delta = x + iy$ avec $\\delta^2 = 3 + 4i$. Alors $x^2 - y^2 = 3$, $x^2 + y^2 = |3 + 4i| = 5$ et $2xy = 4$. D'où $x^2 = 4$, $y^2 = 1$ et $xy > 0$ : $\\delta = 2 + i$ ou $\\delta = -2 - i$.",
+     "points": 1,
+     "methode": "Racine carrée de $a + ib$ : système $x^2 - y^2 = a$, $x^2 + y^2 = \\sqrt{a^2+b^2}$, signe de $xy$ donné par $b$.",
+     "ref": "m2-sm-complexes-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-complexes-flash-5",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Racines n-ièmes",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Racines n-ièmes",
+     "difficulty": 2,
+     "statement": "Lequel de ces nombres est une racine cubique de $8i$ ?",
+     "options": [
+      {
+       "label": "$-2i$",
+       "correct": true,
+       "why": "$(-2i)^3 = -8i^3 = -8(-i) = 8i$."
+      },
+      {
+       "label": "$2i$",
+       "why": "$(2i)^3 = 8i^3 = -8i$."
+      },
+      {
+       "label": "$2\\,\\mathrm{e}^{i\\frac{\\pi}{3}}$",
+       "why": "$\\left(2\\mathrm e^{i\\pi/3}\\right)^3 = 8\\mathrm e^{i\\pi} = -8$."
+      },
+      {
+       "label": "$\\dfrac{8i}{3}$",
+       "why": "Une racine cubique ne s'obtient pas en divisant par $3$."
+      }
+     ],
+     "hint": "$8i = 8\\mathrm e^{i\\pi/2}$ : les racines cubiques sont $2\\mathrm e^{i\\left(\\frac\\pi6 + \\frac{2k\\pi}{3}\\right)}$.",
+     "solution": "$8i = 8\\mathrm e^{i\\pi/2}$. Ses racines cubiques sont $2\\mathrm e^{i\\left(\\frac\\pi6 + \\frac{2k\\pi}{3}\\right)}$, $k\\in\\{0,1,2\\}$ : $2\\mathrm e^{i\\pi/6}$, $2\\mathrm e^{i5\\pi/6}$ et $2\\mathrm e^{i3\\pi/2} = -2i$.",
+     "points": 1,
+     "methode": "Racines $n$-ièmes de $r\\mathrm e^{i\\theta}$ : $\\sqrt[n]{r}\\,\\mathrm e^{i\\left(\\frac{\\theta}{n} + \\frac{2k\\pi}{n}\\right)}$, $k = 0,\\dots,n-1$.",
+     "ref": "m2-sm-complexes-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-complexes-flash-6",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Transformations du plan",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Transformations du plan",
+     "difficulty": 2,
+     "statement": "La transformation d'écriture complexe $z' = -2z + 3$ est :",
+     "options": [
+      {
+       "label": "l'homothétie de centre le point d'affixe $1$ et de rapport $-2$",
+       "correct": true,
+       "why": "Rapport $-2$ ; centre $\\omega = -2\\omega + 3$, soit $\\omega = 1$."
+      },
+      {
+       "label": "l'homothétie de centre le point d'affixe $1$ et de rapport $2$",
+       "why": "Le rapport est le coefficient de $z$ : $-2$."
+      },
+      {
+       "label": "l'homothétie de centre le point d'affixe $3$ et de rapport $-2$",
+       "why": "Le centre est le point fixe : $\\omega = -2\\omega + 3$ donne $\\omega = 1$."
+      },
+      {
+       "label": "la translation de vecteur d'affixe $3$",
+       "why": "Une translation s'écrit $z' = z + b$ ; ici le coefficient de $z$ est $-2$."
+      }
+     ],
+     "hint": "$z' = az + b$ avec $a\\in\\mathbb R^*\\setminus\\{1\\}$ : homothétie de rapport $a$ ; le centre est le point fixe.",
+     "solution": "$z' = az + b$ avec $a = -2 \\in \\mathbb{R}\\setminus\\{0;1\\}$ : c'est une homothétie de rapport $-2$. Son centre $\\Omega(\\omega)$ vérifie $\\omega = -2\\omega + 3$, soit $\\omega = 1$.",
+     "points": 1,
+     "methode": "$z' = z + b$ : translation ; $z' = kz + b$ ($k$ réel $\\neq 0, 1$) : homothétie ; $z' = \\mathrm e^{i\\theta}z + b$ : rotation.",
+     "ref": "m2-sm-complexes-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-complexes-flash-7",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Affixe, distance, angle",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Affixe, distance, angle",
+     "difficulty": 2,
+     "statement": "Trois points distincts $A$, $B$, $C$ vérifient $\\dfrac{c - a}{b - a} = 2i$. Alors :",
+     "options": [
+      {
+       "label": "$(AB)\\perp(AC)$ et $AC = 2AB$",
+       "correct": true,
+       "why": "Module $2$ : $\\frac{AC}{AB} = 2$ ; argument $\\frac\\pi2$ : $(\\overrightarrow{AB},\\overrightarrow{AC}) = \\frac\\pi2$."
+      },
+      {
+       "label": "$A$, $B$, $C$ sont alignés",
+       "why": "L'alignement correspond à un quotient réel ; ici il est imaginaire pur."
+      },
+      {
+       "label": "$(AB)\\perp(AC)$ et $AB = 2AC$",
+       "why": "$\\left|\\frac{c-a}{b-a}\\right| = \\frac{AC}{AB} = 2$ : c'est $AC$ qui est le double."
+      },
+      {
+       "label": "$(\\overrightarrow{AB},\\overrightarrow{AC}) = \\dfrac{\\pi}{4}$",
+       "why": "$\\arg(2i) = \\frac\\pi2$, pas $\\frac\\pi4$."
+      }
+     ],
+     "hint": "$\\left|\\frac{c-a}{b-a}\\right| = \\frac{AC}{AB}$ et $\\arg\\frac{c-a}{b-a} = (\\overrightarrow{AB},\\overrightarrow{AC})$.",
+     "solution": "$\\left|\\dfrac{c - a}{b - a}\\right| = |2i| = 2$, donc $AC = 2AB$. $\\arg\\dfrac{c-a}{b-a} = \\arg(2i) = \\frac\\pi2$, donc $(\\overrightarrow{AB},\\overrightarrow{AC}) = \\frac\\pi2$ : $(AB)\\perp(AC)$.",
+     "points": 1,
+     "methode": "Quotient $\\frac{c-a}{b-a}$ : réel ⇒ alignés ; imaginaire pur ⇒ perpendiculaires ; $\\mathrm e^{\\pm i\\pi/3}$ ⇒ équilatéral.",
+     "ref": "m2-sm-complexes-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-complexes-flash-8",
+   "chapter": "complexes",
+   "kind": "qcu",
+   "title": "Formes et linéarisation",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Formes et linéarisation",
+     "difficulty": 2,
+     "statement": "Pour tout réel $x$, $\\sin^2x$ est égal à :",
+     "options": [
+      {
+       "label": "$\\dfrac{1 - \\cos2x}{2}$",
+       "correct": true,
+       "why": "$\\cos 2x = 1 - 2\\sin^2x$."
+      },
+      {
+       "label": "$\\dfrac{1 + \\cos2x}{2}$",
+       "why": "C'est $\\cos^2 x$."
+      },
+      {
+       "label": "$1 - \\cos2x$",
+       "why": "Il manque la division par $2$ : en $x = \\frac\\pi2$, on aurait $2$."
+      },
+      {
+       "label": "$\\dfrac{\\cos2x - 1}{2}$",
+       "why": "Ce nombre est négatif ; or $\\sin^2x \\ge 0$."
+      }
+     ],
+     "hint": "Euler : $\\sin x = \\frac{\\mathrm e^{ix} - \\mathrm e^{-ix}}{2i}$, ou $\\cos2x = 1 - 2\\sin^2x$.",
+     "solution": "$\\cos 2x = 1 - 2\\sin^2x$, donc $\\sin^2x = \\dfrac{1 - \\cos2x}{2}$. (Contrôle en $x = \\frac\\pi2$ : $\\frac{1 + 1}{2} = 1$ ✓.)",
+     "points": 1,
+     "ref": "m2-sm-complexes-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-complexes-ex1",
+   "chapter": "complexes",
+   "kind": "probleme",
+   "title": "Exercice 1 — Équation du second degré à coefficients complexes",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Le plan complexe est rapporté à un repère orthonormé direct $(O;\\vec u,\\vec v)$. On considère l'équation $(E) : z^2 - (3 + i)z + 2 + 2i = 0$.",
+   "questions": [
+    {
+     "notion": "Racine carrée algébrique d'un complexe",
+     "difficulty": 1,
+     "statement": "1) Le discriminant de $(E)$ vaut :",
+     "options": [
+      {
+       "label": "$\\Delta = -2i$",
+       "correct": true,
+       "why": "$(3 + i)^2 - 4(2 + 2i) = 8 + 6i - 8 - 8i$."
+      },
+      {
+       "label": "$\\Delta = 8 + 6i$",
+       "why": "Tu as oublié de retrancher $4ac = 4(2 + 2i)$."
+      },
+      {
+       "label": "$\\Delta = 2i$",
+       "why": "Erreur de signe : $6i - 8i = -2i$."
+      },
+      {
+       "label": "$\\Delta = -2 - 2i$",
+       "why": "$(3 + i)^2 = 9 + 6i - 1 = 8 + 6i$ : recalcule."
+      }
+     ],
+     "hint": "$\\Delta = b^2 - 4ac$ avec $b = -(3 + i)$, $a = 1$, $c = 2 + 2i$.",
+     "solution": "$\\Delta = (3 + i)^2 - 4(2 + 2i) = (9 + 6i - 1) - 8 - 8i = -2i$.",
+     "points": 1,
+     "ref": "m2-sm-complexes-ex1-q1"
+    },
+    {
+     "notion": "Racine carrée algébrique d'un complexe",
+     "difficulty": 2,
+     "statement": "2) Les racines carrées de $\\Delta$ sont :",
+     "options": [
+      {
+       "label": "$1 - i$ et $-1 + i$",
+       "correct": true,
+       "why": "$(1 - i)^2 = 1 - 2i - 1 = -2i$."
+      },
+      {
+       "label": "$1 + i$ et $-1 - i$",
+       "why": "$(1 + i)^2 = 2i$ : le signe ne convient pas."
+      },
+      {
+       "label": "$i\\sqrt2$ et $-i\\sqrt2$",
+       "why": "$(i\\sqrt2)^2 = -2$, pas $-2i$."
+      },
+      {
+       "label": "$\\sqrt2$ et $-\\sqrt2$",
+       "why": "$\\sqrt2$ est le module des racines, pas les racines."
+      }
+     ],
+     "hint": "Cherche $x + iy$ avec $x^2 - y^2 = 0$, $2xy = -2$.",
+     "solution": "$\\delta = x + iy$ : $x^2 - y^2 = 0$, $x^2 + y^2 = |-2i| = 2$, $2xy = -2$. D'où $x^2 = y^2 = 1$ et $xy < 0$ : $\\delta = 1 - i$ ou $-1 + i$.",
+     "points": 1,
+     "ref": "m2-sm-complexes-ex1-q2"
+    },
+    {
+     "notion": "Racine carrée algébrique d'un complexe",
+     "difficulty": 2,
+     "statement": "3) Les solutions de $(E)$ sont :",
+     "options": [
+      {
+       "label": "$2$ et $1 + i$",
+       "correct": true,
+       "why": "$\\frac{3 + i \\pm (1 - i)}{2}$ donne $\\frac{4}{2}$ et $\\frac{2 + 2i}{2}$."
+      },
+      {
+       "label": "$2$ et $1 - i$",
+       "why": "$\\frac{(3 + i) - (1 - i)}{2} = \\frac{2 + 2i}{2} = 1 + i$."
+      },
+      {
+       "label": "$4$ et $2 + 2i$",
+       "why": "Tu as oublié de diviser par $2a = 2$."
+      },
+      {
+       "label": "$-2$ et $-1 - i$",
+       "why": "$z = \\frac{-b \\pm\\delta}{2a}$ avec $-b = 3 + i$."
+      }
+     ],
+     "hint": "$z = \\dfrac{-b \\pm \\delta}{2a}$.",
+     "solution": "$z_1 = \\dfrac{3 + i + 1 - i}{2} = 2$ et $z_2 = \\dfrac{3 + i - 1 + i}{2} = 1 + i$. Contrôle : $z_1 + z_2 = 3 + i$ ✓ et $z_1z_2 = 2 + 2i$ ✓.",
+     "points": 1,
+     "methode": "Contrôle rapide : somme $= -\\frac ba$ et produit $= \\frac ca$.",
+     "ref": "m2-sm-complexes-ex1-q3"
+    },
+    {
+     "notion": "Affixe, distance, angle",
+     "difficulty": 1,
+     "statement": "4) Soient $A$ et $B$ les points d'affixes $2$ et $1 + i$. La distance $AB$ vaut :",
+     "options": [
+      {
+       "label": "$\\sqrt2$",
+       "correct": true,
+       "why": "$|(1 + i) - 2| = |-1 + i| = \\sqrt2$."
+      },
+      {
+       "label": "$2$",
+       "why": "Calcule le module de $b - a = -1 + i$."
+      },
+      {
+       "label": "$\\sqrt{10}$",
+       "why": "Tu as additionné : $|b + a| = |3 + i|$ ; il faut $|b - a|$."
+      },
+      {
+       "label": "$0$",
+       "why": "$A \\ne B$ : la distance est strictement positive."
+      }
+     ],
+     "hint": "$AB = |b - a|$.",
+     "solution": "$AB = |z_B - z_A| = |1 + i - 2| = |-1 + i| = \\sqrt{1 + 1} = \\sqrt2$.",
+     "points": 1,
+     "ref": "m2-sm-complexes-ex1-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-complexes-ex2",
+   "chapter": "complexes",
+   "kind": "probleme",
+   "title": "Exercice 2 — Racines n-ièmes et carré",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Le plan complexe est rapporté à un repère orthonormé direct $(O;\\vec u,\\vec v)$. Cet exercice porte sur les racines $n$-ièmes de l'unité et sur l'équation $z^4 = -16$.",
+   "questions": [
+    {
+     "notion": "Racines n-ièmes",
+     "difficulty": 1,
+     "statement": "1) Les racines quatrièmes de l'unité sont :",
+     "options": [
+      {
+       "label": "$1$, $i$, $-1$, $-i$",
+       "correct": true,
+       "why": "$\\mathrm e^{2ik\\pi/4}$ pour $k = 0, 1, 2, 3$."
+      },
+      {
+       "label": "$1$ et $-1$",
+       "why": "Ce sont seulement les racines réelles ; dans $\\mathbb C$, il y en a $4$."
+      },
+      {
+       "label": "$1$ et $i$",
+       "why": "$z^4 = 1$ admet exactement $4$ solutions dans $\\mathbb C$."
+      },
+      {
+       "label": "$1$, $\\mathrm e^{i\\frac\\pi4}$, $\\mathrm e^{i\\frac\\pi2}$, $\\mathrm e^{i\\frac{3\\pi}4}$",
+       "why": "L'écart entre deux racines est $\\frac{2\\pi}{4} = \\frac\\pi2$, pas $\\frac\\pi4$."
+      }
+     ],
+     "hint": "$\\omega_k = \\mathrm e^{\\frac{2ik\\pi}{n}}$, $k = 0,\\dots,n-1$.",
+     "solution": "Les racines quatrièmes de l'unité sont $\\mathrm e^{ik\\pi/2}$, $k\\in\\{0,1,2,3\\}$ : $1$, $i$, $-1$, $-i$.",
+     "points": 1,
+     "ref": "m2-sm-complexes-ex2-q1"
+    },
+    {
+     "notion": "Racines n-ièmes",
+     "difficulty": 2,
+     "statement": "2) Pour $n \\ge 2$, la somme des $n$ racines $n$-ièmes de l'unité vaut :",
+     "options": [
+      {
+       "label": "$0$",
+       "correct": true,
+       "why": "Somme géométrique de raison $\\omega = \\mathrm e^{2i\\pi/n} \\ne 1$ : $\\frac{1 - \\omega^n}{1 - \\omega} = 0$."
+      },
+      {
+       "label": "$n$",
+       "why": "Ce serait vrai si toutes les racines valaient $1$."
+      },
+      {
+       "label": "$1$",
+       "why": "Pour $n = 2$ : $1 + (-1) = 0$."
+      },
+      {
+       "label": "$-1$",
+       "why": "$\\omega^n = 1$, donc le numérateur $1 - \\omega^n$ est nul."
+      }
+     ],
+     "hint": "Les racines sont $1, \\omega, \\omega^2, \\dots, \\omega^{n-1}$ avec $\\omega = \\mathrm e^{2i\\pi/n}$.",
+     "solution": "$\\displaystyle\\sum_{k=0}^{n-1}\\omega^k = \\frac{1 - \\omega^n}{1 - \\omega} = \\frac{1 - 1}{1 - \\omega} = 0$ (car $\\omega \\ne 1$ pour $n \\ge 2$).",
+     "points": 1,
+     "ref": "m2-sm-complexes-ex2-q2"
+    },
+    {
+     "notion": "Racines n-ièmes",
+     "difficulty": 2,
+     "statement": "3) Les solutions de $z^4 = -16$ sont :",
+     "options": [
+      {
+       "label": "$\\sqrt2(1 + i)$, $\\sqrt2(-1 + i)$, $\\sqrt2(-1 - i)$, $\\sqrt2(1 - i)$",
+       "correct": true,
+       "why": "$-16 = 16\\mathrm e^{i\\pi}$ : $z = 2\\mathrm e^{i\\left(\\frac\\pi4 + \\frac{k\\pi}{2}\\right)}$."
+      },
+      {
+       "label": "$2$, $2i$, $-2$, $-2i$",
+       "why": "Ce sont les solutions de $z^4 = 16$ : $2^4 = +16$."
+      },
+      {
+       "label": "$2\\,\\mathrm{e}^{i\\frac\\pi4}$ seulement",
+       "why": "Une équation $z^4 = a$ ($a \\neq 0$) a $4$ solutions."
+      },
+      {
+       "label": "$4i$ et $-4i$",
+       "why": "$(4i)^4 = 256$ ; de plus il y a $4$ solutions."
+      }
+     ],
+     "hint": "Écris $-16 = 16\\mathrm e^{i\\pi}$.",
+     "solution": "$-16 = 16\\mathrm e^{i\\pi}$, donc $z = 2\\mathrm e^{i\\left(\\frac\\pi4 + \\frac{k\\pi}{2}\\right)}$, $k\\in\\{0,1,2,3\\}$ : $2\\mathrm e^{i\\pi/4} = \\sqrt2 + i\\sqrt2$, puis $\\sqrt2(-1 + i)$, $\\sqrt2(-1 - i)$, $\\sqrt2(1 - i)$.",
+     "points": 1,
+     "ref": "m2-sm-complexes-ex2-q3"
+    },
+    {
+     "notion": "Géométrie complexe",
+     "difficulty": 3,
+     "statement": "4) Les points images de ces quatre solutions forment :",
+     "options": [
+      {
+       "label": "un carré de côté $2\\sqrt2$",
+       "correct": true,
+       "why": "Ils sont sur le cercle de centre $O$ de rayon $2$, espacés de $\\frac\\pi2$ ; côté $|\\sqrt2(1+i) - \\sqrt2(-1+i)| = 2\\sqrt2$."
+      },
+      {
+       "label": "un carré de côté $2$",
+       "why": "$2$ est le rayon du cercle (distance au centre), pas le côté."
+      },
+      {
+       "label": "un rectangle non carré",
+       "why": "Une rotation de centre $O$ et d'angle $\\frac\\pi2$ envoie chaque sommet sur le suivant : c'est un carré."
+      },
+      {
+       "label": "un losange de côté $4$",
+       "why": "$4$ est la diagonale ($2\\times$ rayon), pas le côté."
+      }
+     ],
+     "hint": "Calcule la distance entre deux sommets consécutifs.",
+     "solution": "Les quatre points sont sur le cercle de centre $O$ et de rayon $2$, et on passe de l'un au suivant par la rotation de centre $O$ d'angle $\\frac\\pi2$ : c'est un carré. Côté : $\\left|\\sqrt2(1 + i) - \\sqrt2(-1 + i)\\right| = |2\\sqrt2| = 2\\sqrt2$ (et sa diagonale vaut $4$).",
+     "points": 1,
+     "ref": "m2-sm-complexes-ex2-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-sm-complexes-ex3",
+   "chapter": "complexes",
+   "kind": "probleme",
+   "title": "Exercice 3 — Rotation, homothétie et lieux géométriques",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Le plan complexe est rapporté à un repère orthonormé direct $(O;\\vec u,\\vec v)$. Soit $\\Omega$ le point d'affixe $\\omega = 1 + i$ et $A$ le point d'affixe $a = 3 + i$. Soit $R$ la rotation de centre $\\Omega$ et d'angle $\\dfrac{\\pi}{2}$, et $h$ l'homothétie de centre $\\Omega$ et de rapport $2$.",
+   "questions": [
+    {
+     "notion": "Transformations du plan",
+     "difficulty": 2,
+     "statement": "1) L'écriture complexe de $R$ est :",
+     "options": [
+      {
+       "label": "$z' = iz + 2$",
+       "correct": true,
+       "why": "$z' - \\omega = i(z - \\omega)$ donne $z' = iz - i(1 + i) + 1 + i = iz + 2$."
+      },
+      {
+       "label": "$z' = iz + 1 + i$",
+       "why": "Tu as oublié le terme $-i\\omega$ : $z' = iz + \\omega - i\\omega$."
+      },
+      {
+       "label": "$z' = -iz + 2$",
+       "why": "$\\mathrm e^{i\\pi/2} = i$, pas $-i$."
+      },
+      {
+       "label": "$z' = iz - 2$",
+       "why": "Erreur de signe : $-i(1 + i) = -i + 1$, donc $1 + i + 1 - i = 2$."
+      }
+     ],
+     "hint": "$z' - \\omega = \\mathrm e^{i\\theta}(z - \\omega)$.",
+     "solution": "$z' - (1 + i) = i(z - 1 - i) = iz - i + 1$, donc $z' = iz + 2$. Contrôle : $\\omega$ est fixe, $i(1 + i) + 2 = 1 + i$ ✓.",
+     "points": 1,
+     "part": "Partie A — Rotation",
+     "ref": "m2-sm-complexes-ex3-q1"
+    },
+    {
+     "notion": "Transformations du plan",
+     "difficulty": 1,
+     "statement": "2) L'affixe de $A' = R(A)$ est :",
+     "options": [
+      {
+       "label": "$1 + 3i$",
+       "correct": true,
+       "why": "$i(3 + i) + 2 = 3i - 1 + 2$."
+      },
+      {
+       "label": "$-1 + 3i$",
+       "why": "Tu as oublié le terme constant $+2$."
+      },
+      {
+       "label": "$1 - 3i$",
+       "why": "$i\\times3 = 3i$ : la partie imaginaire est positive."
+      },
+      {
+       "label": "$3 + 3i$",
+       "why": "$i\\times i = -1$ : recalcule $i(3 + i)$."
+      }
+     ],
+     "hint": "Remplace $z$ par $a = 3 + i$.",
+     "solution": "$a' = i(3 + i) + 2 = 3i + i^2 + 2 = 1 + 3i$.",
+     "points": 1,
+     "part": "Partie A — Rotation",
+     "ref": "m2-sm-complexes-ex3-q2"
+    },
+    {
+     "notion": "Géométrie complexe",
+     "difficulty": 2,
+     "statement": "3) Le triangle $\\Omega AA'$ est :",
+     "options": [
+      {
+       "label": "rectangle isocèle en $\\Omega$",
+       "correct": true,
+       "why": "$\\frac{a' - \\omega}{a - \\omega} = i$ : $\\Omega A = \\Omega A'$ et angle droit en $\\Omega$."
+      },
+      {
+       "label": "équilatéral",
+       "why": "L'angle en $\\Omega$ vaut $\\frac\\pi2$, pas $\\frac\\pi3$."
+      },
+      {
+       "label": "rectangle en $A$",
+       "why": "L'angle droit est au centre de la rotation, $\\Omega$."
+      },
+      {
+       "label": "isocèle en $A$",
+       "why": "$\\Omega A = \\Omega A'$ : il est isocèle en $\\Omega$."
+      }
+     ],
+     "hint": "Calcule $\\frac{a' - \\omega}{a - \\omega}$.",
+     "solution": "$\\dfrac{a' - \\omega}{a - \\omega} = \\dfrac{2i}{2} = i = \\mathrm e^{i\\pi/2}$ : $\\Omega A' = \\Omega A$ et $(\\overrightarrow{\\Omega A},\\overrightarrow{\\Omega A'}) = \\frac\\pi2$. Le triangle est rectangle isocèle en $\\Omega$.",
+     "points": 1,
+     "part": "Partie A — Rotation",
+     "ref": "m2-sm-complexes-ex3-q3"
+    },
+    {
+     "notion": "Transformations du plan",
+     "difficulty": 2,
+     "statement": "4) L'écriture complexe de $h$ est :",
+     "options": [
+      {
+       "label": "$z' = 2z - 1 - i$",
+       "correct": true,
+       "why": "$z' - \\omega = 2(z - \\omega)$, donc $z' = 2z - \\omega$."
+      },
+      {
+       "label": "$z' = 2z + 1 + i$",
+       "why": "$z' = 2z - 2\\omega + \\omega = 2z - \\omega$ : signe moins."
+      },
+      {
+       "label": "$z' = 2z$",
+       "why": "C'est l'homothétie de centre $O$, pas $\\Omega$."
+      },
+      {
+       "label": "$z' = 2(z + 1 + i)$",
+       "why": "Le centre doit être fixe : $2(\\omega + \\omega) \\ne \\omega$."
+      }
+     ],
+     "hint": "$z' - \\omega = k(z - \\omega)$.",
+     "solution": "$z' - \\omega = 2(z - \\omega) \\Leftrightarrow z' = 2z - \\omega = 2z - 1 - i$. Contrôle : $2(1 + i) - 1 - i = 1 + i$ ✓.",
+     "points": 1,
+     "part": "Partie B — Homothétie et lieux",
+     "ref": "m2-sm-complexes-ex3-q4"
+    },
+    {
+     "notion": "Lieux géométriques",
+     "difficulty": 2,
+     "statement": "5) L'ensemble des points $M(z)$ tels que $|z - 1 - i| = |z - 3 - i|$ est :",
+     "options": [
+      {
+       "label": "la droite d'équation $x = 2$",
+       "correct": true,
+       "why": "$M\\Omega = MA$ : médiatrice de $[\\Omega A]$, avec $\\Omega(1;1)$ et $A(3;1)$."
+      },
+      {
+       "label": "la droite d'équation $y = 1$",
+       "why": "C'est la droite $(\\Omega A)$, pas sa médiatrice."
+      },
+      {
+       "label": "le cercle de centre $\\Omega$ et de rayon $2$",
+       "why": "L'égalité de deux distances donne une médiatrice, pas un cercle."
+      },
+      {
+       "label": "la droite d'équation $x = 1$",
+       "why": "La médiatrice passe par le milieu $(2;1)$ de $[\\Omega A]$."
+      }
+     ],
+     "hint": "$|z - \\omega| = M\\Omega$ et $|z - a| = MA$.",
+     "solution": "$|z - \\omega| = |z - a| \\Leftrightarrow M\\Omega = MA$ : c'est la médiatrice de $[\\Omega A]$. $\\Omega(1;1)$ et $A(3;1)$ ont la même ordonnée ; la médiatrice est la droite verticale passant par le milieu $(2;1)$ : $x = 2$.",
+     "points": 1,
+     "part": "Partie B — Homothétie et lieux",
+     "ref": "m2-sm-complexes-ex3-q5"
+    },
+    {
+     "notion": "Lieux géométriques",
+     "difficulty": 3,
+     "statement": "6) L'ensemble des points $M(z)$, $z \\ne \\omega$, tels que $\\dfrac{z - a}{z - \\omega}$ soit imaginaire pur est :",
+     "options": [
+      {
+       "label": "le cercle de diamètre $[\\Omega A]$ privé du point $\\Omega$",
+       "correct": true,
+       "why": "Quotient imaginaire pur non nul ⇔ $(\\overrightarrow{M\\Omega},\\overrightarrow{MA}) = \\pm\\frac\\pi2$ ; $A$ convient aussi (quotient nul)."
+      },
+      {
+       "label": "la médiatrice de $[\\Omega A]$",
+       "why": "C'est le lieu de $|z - a| = |z - \\omega|$, pas d'un quotient imaginaire pur."
+      },
+      {
+       "label": "la droite $(\\Omega A)$ privée de $\\Omega$",
+       "why": "C'est le lieu où le quotient est réel."
+      },
+      {
+       "label": "le cercle de centre $\\Omega$ et de rayon $2$",
+       "why": "L'angle droit en $M$ place $M$ sur le cercle de diamètre $[\\Omega A]$, de centre $(2;1)$ et de rayon $1$."
+      }
+     ],
+     "hint": "Un quotient imaginaire pur traduit un angle droit en $M$.",
+     "solution": "Pour $M \\ne A$ et $M\\neq\\Omega$ : $\\frac{z - a}{z - \\omega}\\in i\\mathbb R^*$ ⇔ $(\\overrightarrow{M\\Omega},\\overrightarrow{MA}) = \\pm\\frac\\pi2$ ⇔ $M$ est sur le cercle de diamètre $[\\Omega A]$. Pour $M = A$, le quotient vaut $0$, imaginaire pur. L'ensemble est donc le cercle de diamètre $[\\Omega A]$ privé de $\\Omega$.",
+     "points": 1,
+     "methode": "$\\frac{z - a}{z - b}$ réel ⇔ $M\\in(AB)$ ; imaginaire pur ⇔ $M$ sur le cercle de diamètre $[AB]$ (points exclus à vérifier).",
+     "part": "Partie B — Homothétie et lieux",
+     "ref": "m2-sm-complexes-ex3-q6"
+    }
+   ],
+   "figure": "plan-complexe"
+  },
+  {
+   "ref": "m2-sm-complexes-ex4",
+   "chapter": "complexes",
+   "kind": "probleme",
+   "title": "Exercice 4 — Forme de 1 + e^{iθ}, puissances et linéarisation",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Soit $\\theta\\in]-\\pi;\\pi[$ et $u = 1 + \\mathrm{e}^{i\\theta}$.",
+   "questions": [
+    {
+     "notion": "Formes et linéarisation",
+     "difficulty": 2,
+     "statement": "1) En factorisant par $\\mathrm{e}^{i\\frac{\\theta}{2}}$, on obtient :",
+     "options": [
+      {
+       "label": "$u = 2\\cos\\dfrac\\theta2\\,\\mathrm{e}^{i\\frac\\theta2}$",
+       "correct": true,
+       "why": "$\\mathrm e^{i\\theta/2}\\left(\\mathrm e^{-i\\theta/2} + \\mathrm e^{i\\theta/2}\\right) = \\mathrm e^{i\\theta/2}\\times2\\cos\\frac\\theta2$."
+      },
+      {
+       "label": "$u = 2\\sin\\dfrac\\theta2\\,\\mathrm{e}^{i\\frac\\theta2}$",
+       "why": "$\\mathrm e^{ia} + \\mathrm e^{-ia} = 2\\cos a$ ; c'est la différence qui donne $2i\\sin a$."
+      },
+      {
+       "label": "$u = 2\\cos\\theta\\,\\mathrm{e}^{i\\theta}$",
+       "why": "On factorise par l'angle moitié $\\frac\\theta2$."
+      },
+      {
+       "label": "$u = \\cos\\dfrac\\theta2\\,\\mathrm{e}^{i\\frac\\theta2}$",
+       "why": "Euler : $\\mathrm e^{ia} + \\mathrm e^{-ia} = 2\\cos a$ ; il manque le facteur $2$."
+      }
+     ],
+     "hint": "Technique de l'angle moitié : $1 = \\mathrm e^{i\\theta/2}\\mathrm e^{-i\\theta/2}$.",
+     "solution": "$u = \\mathrm e^{i\\theta/2}\\left(\\mathrm e^{-i\\theta/2} + \\mathrm e^{i\\theta/2}\\right) = 2\\cos\\frac\\theta2\\,\\mathrm e^{i\\theta/2}$.",
+     "points": 1,
+     "part": "Partie A — Forme exponentielle",
+     "ref": "m2-sm-complexes-ex4-q1"
+    },
+    {
+     "notion": "Propriétés du module et de l'argument",
+     "difficulty": 2,
+     "statement": "2) Pour $\\theta\\in]-\\pi;\\pi[$, le module de $u$ est :",
+     "options": [
+      {
+       "label": "$2\\cos\\dfrac\\theta2$",
+       "correct": true,
+       "why": "$\\frac\\theta2\\in\\left]-\\frac\\pi2;\\frac\\pi2\\right[$, donc $\\cos\\frac\\theta2 > 0$."
+      },
+      {
+       "label": "$2$",
+       "why": "$|1 + \\mathrm e^{i\\theta}| \\ne |1| + |\\mathrm e^{i\\theta}|$ en général."
+      },
+      {
+       "label": "$2\\left|\\sin\\dfrac\\theta2\\right|$",
+       "why": "C'est le module de $1 - \\mathrm e^{i\\theta}$."
+      },
+      {
+       "label": "$\\sqrt2$",
+       "why": "Le module dépend de $\\theta$ ; pour $\\theta = 0$, $u = 2$."
+      }
+     ],
+     "hint": "Signe de $\\cos\\frac\\theta2$ quand $\\theta\\in]-\\pi;\\pi[$.",
+     "solution": "$\\frac\\theta2\\in\\left]-\\frac\\pi2;\\frac\\pi2\\right[$, donc $2\\cos\\frac\\theta2 > 0$ : c'est le module de $u$, et $\\arg u = \\frac\\theta2\\ [2\\pi]$.",
+     "points": 1,
+     "part": "Partie A — Forme exponentielle",
+     "ref": "m2-sm-complexes-ex4-q2"
+    },
+    {
+     "notion": "Module, argument, forme trigonométrique",
+     "difficulty": 3,
+     "statement": "3) Pour $\\theta = \\dfrac{2\\pi}{3}$, $u^{2027}$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac12 - i\\dfrac{\\sqrt3}{2}$",
+       "correct": true,
+       "why": "$u = 2\\cos\\frac\\pi3\\,\\mathrm e^{i\\pi/3} = \\mathrm e^{i\\pi/3}$ ; $2027 = 6\\times337 + 5$, donc $u^{2027} = \\mathrm e^{5i\\pi/3}$."
+      },
+      {
+       "label": "$1$",
+       "why": "$u^6 = 1$, mais $2027$ n'est pas multiple de $6$ : le reste est $5$."
+      },
+      {
+       "label": "$\\dfrac12 + i\\dfrac{\\sqrt3}{2}$",
+       "why": "C'est $u$ lui-même ($u^1$) ; le reste de $2027$ modulo $6$ est $5$, pas $1$."
+      },
+      {
+       "label": "$-1$",
+       "why": "$u^3 = \\mathrm e^{i\\pi} = -1$ ; mais $2027 \\equiv 5 \\pmod 6$."
+      }
+     ],
+     "hint": "$u = \\mathrm e^{i\\pi/3}$ : cherche le reste de $2027$ dans la division par $6$.",
+     "solution": "Pour $\\theta = \\frac{2\\pi}{3}$ : $|u| = 2\\cos\\frac\\pi3 = 1$ et $u = \\mathrm e^{i\\pi/3}$, donc $u^6 = 1$. $2027 = 6\\times337 + 5$, d'où $u^{2027} = u^5 = \\mathrm e^{5i\\pi/3} = \\frac12 - i\\frac{\\sqrt3}{2}$.",
+     "points": 1,
+     "methode": "Grande puissance : forme exponentielle, puis réduction de l'exposant modulo la période.",
+     "part": "Partie A — Forme exponentielle",
+     "ref": "m2-sm-complexes-ex4-q3"
+    },
+    {
+     "notion": "Formes et linéarisation",
+     "difficulty": 3,
+     "statement": "4) La linéarisation de $\\cos^4 x$ est :",
+     "options": [
+      {
+       "label": "$\\dfrac{\\cos4x + 4\\cos2x + 3}{8}$",
+       "correct": true,
+       "why": "$\\frac{1}{16}\\left(2\\cos4x + 8\\cos2x + 6\\right)$."
+      },
+      {
+       "label": "$\\dfrac{\\cos4x + 4\\cos2x + 3}{16}$",
+       "why": "Tu as oublié que $\\mathrm e^{ikx} + \\mathrm e^{-ikx} = 2\\cos kx$ : on simplifie par $2$."
+      },
+      {
+       "label": "$\\dfrac{\\cos4x + 4\\cos2x + 6}{8}$",
+       "why": "Le terme constant est $\\frac{6}{16} = \\frac38$ : en $x = 0$, on doit trouver $1$."
+      },
+      {
+       "label": "$\\cos 4x$",
+       "why": "En $x = \\frac\\pi4$ : $\\cos^4\\frac\\pi4 = \\frac14$ mais $\\cos\\pi = -1$."
+      }
+     ],
+     "hint": "$\\cos^4x = \\frac{(\\mathrm e^{ix} + \\mathrm e^{-ix})^4}{16}$ ; binôme $1, 4, 6, 4, 1$.",
+     "solution": "$\\cos^4x = \\dfrac{\\mathrm e^{4ix} + 4\\mathrm e^{2ix} + 6 + 4\\mathrm e^{-2ix} + \\mathrm e^{-4ix}}{16} = \\dfrac{2\\cos4x + 8\\cos2x + 6}{16} = \\dfrac{\\cos4x + 4\\cos2x + 3}{8}$. Contrôle en $x = 0$ : $\\frac{1 + 4 + 3}{8} = 1$ ✓.",
+     "points": 1,
+     "methode": "Contrôle une linéarisation en $x = 0$.",
+     "part": "Partie B — Linéarisation",
+     "ref": "m2-sm-complexes-ex4-q4"
+    },
+    {
+     "notion": "Formes et linéarisation",
+     "difficulty": 2,
+     "statement": "5) En identifiant les parties imaginaires dans $(\\cos x + i\\sin x)^3 = \\cos3x + i\\sin3x$, on obtient :",
+     "options": [
+      {
+       "label": "$\\sin3x = 3\\sin x - 4\\sin^3x$",
+       "correct": true,
+       "why": "$\\mathrm{Im} = 3\\cos^2x\\sin x - \\sin^3x = 3(1 - \\sin^2x)\\sin x - \\sin^3x$."
+      },
+      {
+       "label": "$\\sin3x = 4\\sin^3x - 3\\sin x$",
+       "why": "Signe inversé : en $x = \\frac\\pi2$, $\\sin\\frac{3\\pi}{2} = -1$ alors que cette formule donne $4 - 3 = 1$."
+      },
+      {
+       "label": "$\\sin3x = 3\\sin x - \\sin^3x$",
+       "why": "Tu as remplacé $\\cos^2 x$ par $1$ : $\\cos^2x = 1 - \\sin^2x$."
+      },
+      {
+       "label": "$\\sin3x = \\sin^3x$",
+       "why": "Faux en $x = \\frac\\pi6$ : $\\sin\\frac\\pi2 = 1$ mais $\\sin^3\\frac\\pi6 = \\frac18$."
+      }
+     ],
+     "hint": "$(c + is)^3 = c^3 + 3ic^2s - 3cs^2 - is^3$.",
+     "solution": "Partie imaginaire : $3\\cos^2x\\sin x - \\sin^3x = 3(1 - \\sin^2x)\\sin x - \\sin^3x = 3\\sin x - 4\\sin^3x$. Par Moivre, elle vaut $\\sin3x$.",
+     "points": 1,
+     "part": "Partie B — Linéarisation",
+     "ref": "m2-sm-complexes-ex4-q5"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-sm-complexes-serie-1",
+   "title": "Nombres complexes · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (4 questions).",
+   "kind": "custom",
+   "chapter": "complexes",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-sm-complexes-flash-q1",
+    "m2-sm-complexes-flash-q2",
+    "m2-sm-complexes-flash-q3",
+    "m2-sm-complexes-flash-q4",
+    "m2-sm-complexes-ex1-q1",
+    "m2-sm-complexes-ex1-q2",
+    "m2-sm-complexes-ex1-q3",
+    "m2-sm-complexes-ex1-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-complexes-serie-2",
+   "title": "Nombres complexes · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (4 questions).",
+   "kind": "custom",
+   "chapter": "complexes",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-sm-complexes-flash-q5",
+    "m2-sm-complexes-flash-q6",
+    "m2-sm-complexes-flash-q7",
+    "m2-sm-complexes-flash-q8",
+    "m2-sm-complexes-ex2-q1",
+    "m2-sm-complexes-ex2-q2",
+    "m2-sm-complexes-ex2-q3",
+    "m2-sm-complexes-ex2-q4"
+   ]
+  },
+  {
+   "slug": "m2-sm-complexes-serie-3",
+   "title": "Nombres complexes · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (6 questions) + Exercice 4 (5 questions).",
+   "kind": "custom",
+   "chapter": "complexes",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-sm-complexes-ex3-q1",
+    "m2-sm-complexes-ex3-q2",
+    "m2-sm-complexes-ex3-q3",
+    "m2-sm-complexes-ex3-q4",
+    "m2-sm-complexes-ex3-q5",
+    "m2-sm-complexes-ex3-q6",
+    "m2-sm-complexes-ex4-q1",
+    "m2-sm-complexes-ex4-q2",
+    "m2-sm-complexes-ex4-q3",
+    "m2-sm-complexes-ex4-q4",
+    "m2-sm-complexes-ex4-q5"
+   ]
+  }
+ ]
+}

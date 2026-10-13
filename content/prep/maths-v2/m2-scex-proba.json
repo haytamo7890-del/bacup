@@ -1,0 +1,1043 @@
+{
+ "format": "bacup.prep/v2",
+ "level": "2bac",
+ "subject": "maths",
+ "tracks": [
+  "pc",
+  "svt"
+ ],
+ "exercises": [
+  {
+   "ref": "m2-scex-proba-flash-1",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Combinaisons",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Combinaisons",
+     "difficulty": 1,
+     "statement": "Le nombre $\\mathrm{C}_5^2$ vaut :",
+     "options": [
+      {
+       "label": "$10$",
+       "correct": true,
+       "why": "$\\mathrm C_5^2 = \\frac{5\\times4}{2\\times1} = 10$."
+      },
+      {
+       "label": "$20$",
+       "why": "C'est $\\mathrm A_5^2 = 5\\times4$ : dans une combinaison, l'ordre ne compte pas, on divise par $2!$."
+      },
+      {
+       "label": "$25$",
+       "why": "$5^2$ compte les tirages ordonnés avec remise."
+      },
+      {
+       "label": "$120$",
+       "why": "C'est $5!$, le nombre de façons d'ordonner $5$ objets."
+      }
+     ],
+     "hint": "$\\mathrm C_n^p = \\dfrac{n!}{p!(n-p)!}$.",
+     "solution": "$\\mathrm C_5^2 = \\dfrac{5!}{2!\\,3!} = \\dfrac{5\\times4}{2} = 10$.",
+     "points": 1,
+     "methode": "$\\mathrm C_n^p = \\frac{\\mathrm A_n^p}{p!}$ : on divise par $p!$ car l'ordre ne compte pas.",
+     "ref": "m2-scex-proba-flash-q1"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-flash-2",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Permutations et factorielle",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Permutations et factorielle",
+     "difficulty": 1,
+     "statement": "De combien de façons peut-on ranger $4$ livres différents sur une étagère ?",
+     "options": [
+      {
+       "label": "$24$",
+       "correct": true,
+       "why": "$4! = 4\\times3\\times2\\times1 = 24$."
+      },
+      {
+       "label": "$16$",
+       "why": "$4^2$ n'a pas de sens ici : chaque livre n'est placé qu'une fois."
+      },
+      {
+       "label": "$4$",
+       "why": "Il y a $4$ choix pour la première place, puis $3$, puis $2$, puis $1$."
+      },
+      {
+       "label": "$256$",
+       "why": "$4^4$ autoriserait de placer plusieurs fois le même livre."
+      }
+     ],
+     "hint": "Combien de choix pour la 1re place, puis pour la 2e… ?",
+     "solution": "Il s'agit de permutations de $4$ objets : $4! = 4\\times3\\times2\\times1 = 24$ rangements.",
+     "points": 1,
+     "methode": "Ordonner $n$ objets distincts : $n!$ façons.",
+     "ref": "m2-scex-proba-flash-q2"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-flash-3",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Les trois situations du programme",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Les trois situations du programme",
+     "difficulty": 2,
+     "statement": "Combien de codes à $3$ chiffres (de $0$ à $9$) peut-on former si les chiffres peuvent se répéter ?",
+     "options": [
+      {
+       "label": "$1000$",
+       "correct": true,
+       "why": "$10\\times10\\times10 = 10^3$ : tirages ordonnés avec répétition."
+      },
+      {
+       "label": "$720$",
+       "why": "$10\\times9\\times8$ interdit les répétitions ; ici elles sont permises."
+      },
+      {
+       "label": "$120$",
+       "why": "$\\mathrm C_{10}^3$ ne tient pas compte de l'ordre, alors qu'un code est ordonné."
+      },
+      {
+       "label": "$30$",
+       "why": "$10\\times3$ : on multiplie les choix, on ne les additionne pas position par position."
+      }
+     ],
+     "hint": "Ordre important ? Répétition possible ?",
+     "solution": "Un code est ordonné et les répétitions sont permises : c'est une $3$-liste de $\\{0,\\dots,9\\}$, il y en a $10^3 = 1000$.",
+     "points": 1,
+     "methode": "Ordonné avec répétition : $n^p$ ; ordonné sans répétition : $\\mathrm A_n^p$ ; non ordonné sans répétition : $\\mathrm C_n^p$.",
+     "ref": "m2-scex-proba-flash-q3"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-flash-4",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Règles de calcul",
+   "difficulty": 1,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Règles de calcul",
+     "difficulty": 1,
+     "statement": "$P(A) = 0{,}5$, $P(B) = 0{,}4$ et $P(A\\cap B) = 0{,}2$. Alors $P(A\\cup B)$ vaut :",
+     "options": [
+      {
+       "label": "$0{,}7$",
+       "correct": true,
+       "why": "$0{,}5 + 0{,}4 - 0{,}2 = 0{,}7$."
+      },
+      {
+       "label": "$0{,}9$",
+       "why": "Tu as oublié de retrancher $P(A\\cap B)$, comptée deux fois."
+      },
+      {
+       "label": "$0{,}2$",
+       "why": "C'est $P(A\\cap B)$, pas $P(A\\cup B)$."
+      },
+      {
+       "label": "$1{,}1$",
+       "why": "Une probabilité ne dépasse jamais $1$ : tu as ajouté $P(A\\cap B)$ au lieu de la retrancher."
+      }
+     ],
+     "hint": "$P(A\\cup B) = P(A) + P(B) - P(A\\cap B)$.",
+     "solution": "$P(A\\cup B) = P(A) + P(B) - P(A\\cap B) = 0{,}5 + 0{,}4 - 0{,}2 = 0{,}7$.",
+     "points": 1,
+     "methode": "$P(A\\cup B) = P(A) + P(B) - P(A\\cap B)$ ; $P(\\bar A) = 1 - P(A)$.",
+     "ref": "m2-scex-proba-flash-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-flash-5",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Probabilité conditionnelle",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Probabilité conditionnelle",
+     "difficulty": 2,
+     "statement": "$P(A) = 0{,}3$ et $P(A\\cap B) = 0{,}12$. Alors $P_A(B)$ vaut :",
+     "options": [
+      {
+       "label": "$0{,}4$",
+       "correct": true,
+       "why": "$P_A(B) = \\frac{0{,}12}{0{,}3} = 0{,}4$."
+      },
+      {
+       "label": "$0{,}036$",
+       "why": "Tu as multiplié : $P_A(B) = \\frac{P(A\\cap B)}{P(A)}$."
+      },
+      {
+       "label": "$0{,}12$",
+       "why": "C'est $P(A\\cap B)$ : il faut diviser par $P(A)$."
+      },
+      {
+       "label": "$2{,}5$",
+       "why": "Tu as inversé le quotient ; une probabilité est entre $0$ et $1$."
+      }
+     ],
+     "hint": "$P_A(B) = \\dfrac{P(A\\cap B)}{P(A)}$.",
+     "solution": "$P_A(B) = \\dfrac{P(A\\cap B)}{P(A)} = \\dfrac{0{,}12}{0{,}3} = 0{,}4$.",
+     "points": 1,
+     "methode": "$P_A(B) = \\frac{P(A\\cap B)}{P(A)}$, donc $P(A\\cap B) = P(A)\\times P_A(B)$.",
+     "ref": "m2-scex-proba-flash-q5"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-flash-6",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Indépendance",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Indépendance",
+     "difficulty": 2,
+     "statement": "$A$ et $B$ sont indépendants, avec $P(A) = 0{,}5$ et $P(B) = 0{,}4$. Alors $P(A\\cap B)$ vaut :",
+     "options": [
+      {
+       "label": "$0{,}2$",
+       "correct": true,
+       "why": "Indépendants : $P(A\\cap B) = P(A)\\times P(B)$."
+      },
+      {
+       "label": "$0{,}9$",
+       "why": "C'est $P(A) + P(B)$ : indépendance ⇒ produit."
+      },
+      {
+       "label": "$0$",
+       "why": "$P(A\\cap B) = 0$ caractérise des événements incompatibles, pas indépendants."
+      },
+      {
+       "label": "$0{,}1$",
+       "why": "Tu as fait une différence : c'est un produit."
+      }
+     ],
+     "hint": "Définition de l'indépendance.",
+     "solution": "$A$ et $B$ indépendants ⇔ $P(A\\cap B) = P(A)\\times P(B) = 0{,}5\\times0{,}4 = 0{,}2$.",
+     "points": 1,
+     "methode": "Ne confonds pas indépendants ($P(A\\cap B) = P(A)P(B)$) et incompatibles ($A\\cap B = \\emptyset$).",
+     "ref": "m2-scex-proba-flash-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-flash-7",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Espérance, variance, écart-type",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Espérance, variance, écart-type",
+     "difficulty": 2,
+     "statement": "$X$ prend les valeurs $-1$, $1$ et $4$ avec les probabilités respectives $0{,}5$ ; $0{,}3$ et $0{,}2$. $E(X)$ vaut :",
+     "options": [
+      {
+       "label": "$0{,}6$",
+       "correct": true,
+       "why": "$-0{,}5 + 0{,}3 + 0{,}8 = 0{,}6$."
+      },
+      {
+       "label": "$\\dfrac43$",
+       "why": "C'est la moyenne des valeurs sans les pondérer par leurs probabilités."
+      },
+      {
+       "label": "$1{,}6$",
+       "why": "Tu as oublié le signe de $-1$ : $(-1)\\times0{,}5 = -0{,}5$."
+      },
+      {
+       "label": "$0$",
+       "why": "Recalcule $\\sum x_i\\,p_i$ terme par terme."
+      }
+     ],
+     "hint": "$E(X) = \\sum x_i\\,P(X = x_i)$.",
+     "solution": "$E(X) = (-1)\\times0{,}5 + 1\\times0{,}3 + 4\\times0{,}2 = -0{,}5 + 0{,}3 + 0{,}8 = 0{,}6$.",
+     "points": 1,
+     "methode": "$E(X) = \\sum x_ip_i$ ; vérifie d'abord que $\\sum p_i = 1$.",
+     "ref": "m2-scex-proba-flash-q7"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-flash-8",
+   "chapter": "proba",
+   "kind": "qcu",
+   "title": "Loi binomiale",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "questions": [
+    {
+     "notion": "Loi binomiale",
+     "difficulty": 2,
+     "statement": "$X$ suit la loi binomiale $\\mathcal{B}\\left(4;\\frac12\\right)$. $P(X = 2)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac38$",
+       "correct": true,
+       "why": "$\\mathrm C_4^2\\left(\\frac12\\right)^2\\left(\\frac12\\right)^2 = \\frac{6}{16}$."
+      },
+      {
+       "label": "$\\dfrac1{16}$",
+       "why": "Tu as oublié le coefficient $\\mathrm C_4^2 = 6$ (les positions des succès)."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "$\\frac12$ est la probabilité d'un succès, pas d'exactement $2$ succès sur $4$."
+      },
+      {
+       "label": "$\\dfrac14$",
+       "why": "Tu as calculé $\\left(\\frac12\\right)^2$ sans tenir compte des $2$ échecs ni des positions."
+      }
+     ],
+     "hint": "$P(X = k) = \\mathrm C_n^k\\,p^k(1-p)^{n-k}$.",
+     "solution": "$P(X = 2) = \\mathrm C_4^2\\left(\\frac12\\right)^2\\left(1 - \\frac12\\right)^{2} = 6\\times\\frac{1}{16} = \\frac38$.",
+     "points": 1,
+     "methode": "Binomiale : $P(X = k) = \\mathrm C_n^k p^k(1-p)^{n-k}$.",
+     "ref": "m2-scex-proba-flash-q8"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-ex1",
+   "chapter": "proba",
+   "kind": "probleme",
+   "title": "Exercice 1 — Tirage simultané de deux boules",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Une urne contient $4$ boules rouges et $3$ boules vertes, indiscernables au toucher. On tire simultanément $2$ boules de l'urne.",
+   "questions": [
+    {
+     "notion": "Combinaisons",
+     "difficulty": 1,
+     "statement": "1) Le nombre de tirages possibles est :",
+     "options": [
+      {
+       "label": "$21$",
+       "correct": true,
+       "why": "Tirage simultané : $\\mathrm C_7^2 = \\frac{7\\times6}{2} = 21$."
+      },
+      {
+       "label": "$42$",
+       "why": "$\\mathrm A_7^2 = 42$ tient compte de l'ordre ; un tirage simultané n'est pas ordonné."
+      },
+      {
+       "label": "$49$",
+       "why": "$7^2$ correspond à des tirages successifs avec remise."
+      },
+      {
+       "label": "$12$",
+       "why": "$4\\times3$ ne compte que les tirages « une rouge et une verte »."
+      }
+     ],
+     "hint": "Simultané ⇒ combinaisons.",
+     "solution": "Un tirage est une partie à $2$ éléments de l'ensemble des $7$ boules : $\\mathrm{card}\\,\\Omega = \\mathrm C_7^2 = 21$.",
+     "points": 1,
+     "ref": "m2-scex-proba-ex1-q1"
+    },
+    {
+     "notion": "Vocabulaire et équiprobabilité",
+     "difficulty": 2,
+     "statement": "2) La probabilité de tirer deux boules rouges est :",
+     "options": [
+      {
+       "label": "$\\dfrac27$",
+       "correct": true,
+       "why": "$\\frac{\\mathrm C_4^2}{\\mathrm C_7^2} = \\frac{6}{21}$."
+      },
+      {
+       "label": "$\\dfrac{16}{49}$",
+       "why": "$\\left(\\frac47\\right)^2$ correspond à des tirages avec remise."
+      },
+      {
+       "label": "$\\dfrac47$",
+       "why": "C'est la probabilité qu'une boule tirée soit rouge, pas les deux."
+      },
+      {
+       "label": "$\\dfrac{6}{49}$",
+       "why": "Le numérateur est bon ($\\mathrm C_4^2 = 6$), mais le dénominateur est $\\mathrm C_7^2 = 21$."
+      }
+     ],
+     "hint": "Équiprobabilité : $\\frac{\\text{cas favorables}}{\\text{cas possibles}}$.",
+     "solution": "Les tirages sont équiprobables. Nombre de tirages de deux rouges : $\\mathrm C_4^2 = 6$. $P = \\frac{6}{21} = \\frac27$.",
+     "points": 1,
+     "ref": "m2-scex-proba-ex1-q2"
+    },
+    {
+     "notion": "Dénombrer sous contrainte",
+     "difficulty": 2,
+     "statement": "3) La probabilité de tirer deux boules de la même couleur est :",
+     "options": [
+      {
+       "label": "$\\dfrac37$",
+       "correct": true,
+       "why": "$\\frac{\\mathrm C_4^2 + \\mathrm C_3^2}{21} = \\frac{6 + 3}{21}$."
+      },
+      {
+       "label": "$\\dfrac27$",
+       "why": "Tu n'as compté que les deux rouges ; il y a aussi deux vertes."
+      },
+      {
+       "label": "$\\dfrac47$",
+       "why": "C'est la probabilité de deux couleurs différentes ($\\frac{4\\times3}{21}$)."
+      },
+      {
+       "label": "$\\dfrac{18}{21}$",
+       "why": "Tu as multiplié $\\mathrm C_4^2\\times\\mathrm C_3^2$ : « rouge-rouge OU vert-vert » se traduit par une somme."
+      }
+     ],
+     "hint": "« Même couleur » = « deux rouges » ou « deux vertes » (incompatibles).",
+     "solution": "Deux rouges : $\\mathrm C_4^2 = 6$ ; deux vertes : $\\mathrm C_3^2 = 3$. Ces cas sont incompatibles : $P = \\frac{6 + 3}{21} = \\frac{9}{21} = \\frac37$.",
+     "points": 1,
+     "methode": "« OU » entre cas incompatibles ⇒ somme ; « ET » entre choix successifs ⇒ produit.",
+     "ref": "m2-scex-proba-ex1-q3"
+    },
+    {
+     "notion": "Règles de calcul",
+     "difficulty": 2,
+     "statement": "4) La probabilité de tirer au moins une boule verte est :",
+     "options": [
+      {
+       "label": "$\\dfrac57$",
+       "correct": true,
+       "why": "Contraire de « deux rouges » : $1 - \\frac27$."
+      },
+      {
+       "label": "$\\dfrac17$",
+       "why": "C'est la probabilité de tirer deux vertes ($\\frac{3}{21}$)."
+      },
+      {
+       "label": "$\\dfrac27$",
+       "why": "C'est la probabilité de l'événement contraire (deux rouges)."
+      },
+      {
+       "label": "$\\dfrac37$",
+       "why": "C'est la probabilité de tirer deux boules de même couleur."
+      }
+     ],
+     "hint": "« Au moins une verte » a pour contraire « aucune verte ».",
+     "solution": "L'événement contraire de « au moins une verte » est « deux rouges », de probabilité $\\frac27$. Donc $P = 1 - \\frac27 = \\frac57$. (Contrôle : une verte $\\frac{12}{21}$ + deux vertes $\\frac{3}{21} = \\frac{15}{21} = \\frac57$ ✓.)",
+     "points": 1,
+     "methode": "« Au moins un » : passe presque toujours par l'événement contraire.",
+     "ref": "m2-scex-proba-ex1-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-ex2",
+   "chapter": "proba",
+   "kind": "probleme",
+   "title": "Exercice 2 — Deux machines et des pièces défectueuses",
+   "difficulty": 2,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Une usine fabrique des pièces sur deux machines. La machine $A$ produit $60\\,\\%$ des pièces et la machine $B$ le reste. $2\\,\\%$ des pièces de $A$ et $5\\,\\%$ des pièces de $B$ sont défectueuses. On prélève une pièce au hasard et on note $D$ l'événement « la pièce est défectueuse ».",
+   "questions": [
+    {
+     "notion": "L'arbre pondéré",
+     "difficulty": 1,
+     "statement": "1) $P(A\\cap D)$ vaut :",
+     "options": [
+      {
+       "label": "$0{,}012$",
+       "correct": true,
+       "why": "$P(A)\\times P_A(D) = 0{,}6\\times0{,}02$."
+      },
+      {
+       "label": "$0{,}02$",
+       "why": "C'est $P_A(D)$ : il faut multiplier par $P(A) = 0{,}6$."
+      },
+      {
+       "label": "$0{,}62$",
+       "why": "On multiplie le long d'une branche, on n'additionne pas."
+      },
+      {
+       "label": "$0{,}6$",
+       "why": "C'est $P(A)$ seule."
+      }
+     ],
+     "hint": "Produit des probabilités le long du chemin $A \\to D$.",
+     "solution": "$P(A\\cap D) = P(A)\\times P_A(D) = 0{,}6\\times0{,}02 = 0{,}012$.",
+     "points": 1,
+     "ref": "m2-scex-proba-ex2-q1"
+    },
+    {
+     "notion": "Type 2 — Exploiter un arbre pondéré",
+     "difficulty": 2,
+     "statement": "2) $P(D)$ vaut :",
+     "options": [
+      {
+       "label": "$0{,}032$",
+       "correct": true,
+       "why": "$0{,}6\\times0{,}02 + 0{,}4\\times0{,}05 = 0{,}012 + 0{,}020$."
+      },
+      {
+       "label": "$0{,}07$",
+       "why": "Tu as additionné les taux $2\\,\\%$ et $5\\,\\%$ sans les pondérer par $P(A)$ et $P(B)$."
+      },
+      {
+       "label": "$0{,}035$",
+       "why": "La moyenne simple de $2\\,\\%$ et $5\\,\\%$ ignore que $A$ produit plus que $B$."
+      },
+      {
+       "label": "$0{,}02$",
+       "why": "Tu n'as gardé que la branche de $B$ : il faut ajouter celle de $A$."
+      }
+     ],
+     "hint": "Formule des probabilités totales avec la partition $\\{A, B\\}$.",
+     "solution": "$P(D) = P(A\\cap D) + P(B\\cap D) = 0{,}6\\times0{,}02 + 0{,}4\\times0{,}05 = 0{,}012 + 0{,}02 = 0{,}032$.",
+     "points": 1,
+     "methode": "Probabilités totales : $P(D) = \\sum P(A_i)\\,P_{A_i}(D)$ sur une partition.",
+     "ref": "m2-scex-proba-ex2-q2"
+    },
+    {
+     "notion": "Inverser un conditionnement",
+     "difficulty": 3,
+     "statement": "3) La pièce prélevée est défectueuse. La probabilité qu'elle provienne de $A$ est :",
+     "options": [
+      {
+       "label": "$0{,}375$",
+       "correct": true,
+       "why": "$P_D(A) = \\frac{0{,}012}{0{,}032}$."
+      },
+      {
+       "label": "$0{,}02$",
+       "why": "C'est $P_A(D)$ : on cherche $P_D(A)$, le conditionnement inverse."
+      },
+      {
+       "label": "$0{,}6$",
+       "why": "C'est $P(A)$ sans information ; savoir que la pièce est défectueuse change la probabilité."
+      },
+      {
+       "label": "$0{,}012$",
+       "why": "C'est $P(A\\cap D)$ : il faut diviser par $P(D)$."
+      }
+     ],
+     "hint": "$P_D(A) = \\dfrac{P(A\\cap D)}{P(D)}$.",
+     "solution": "$P_D(A) = \\dfrac{P(A\\cap D)}{P(D)} = \\dfrac{0{,}012}{0{,}032} = \\dfrac{12}{32} = 0{,}375$.",
+     "points": 1,
+     "methode": "Inverser : $P_D(A) = \\frac{P(A)P_A(D)}{P(D)}$, avec $P(D)$ obtenue par les probabilités totales.",
+     "ref": "m2-scex-proba-ex2-q3"
+    },
+    {
+     "notion": "Indépendance",
+     "difficulty": 2,
+     "statement": "4) Les événements $A$ et $D$ sont-ils indépendants ?",
+     "options": [
+      {
+       "label": "Non, car $P(A\\cap D) \\ne P(A)\\times P(D)$",
+       "correct": true,
+       "why": "$0{,}012 \\ne 0{,}6\\times0{,}032 = 0{,}0192$."
+      },
+      {
+       "label": "Oui, car $P(A\\cap D) = P(A)\\times P(D)$",
+       "why": "$P(A)\\times P(D) = 0{,}0192 \\ne 0{,}012$."
+      },
+      {
+       "label": "Oui, car $A$ et $D$ sont incompatibles",
+       "why": "$P(A\\cap D) = 0{,}012 \\ne 0$ : ils ne sont pas incompatibles."
+      },
+      {
+       "label": "Non, car $P(D) \\ne P(A)$",
+       "why": "Comparer $P(D)$ et $P(A)$ ne dit rien de l'indépendance."
+      }
+     ],
+     "hint": "Compare $P(A\\cap D)$ et $P(A)\\times P(D)$ (ou $P_A(D)$ et $P(D)$).",
+     "solution": "$P(A)\\times P(D) = 0{,}6\\times0{,}032 = 0{,}0192 \\ne 0{,}012 = P(A\\cap D)$ : $A$ et $D$ ne sont pas indépendants. (Autre façon : $P_A(D) = 0{,}02 \\ne P(D) = 0{,}032$.)",
+     "points": 1,
+     "ref": "m2-scex-proba-ex2-q4"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-ex3",
+   "chapter": "proba",
+   "kind": "probleme",
+   "title": "Exercice 3 — Variable aléatoire et jeu",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Une urne contient $3$ boules blanches et $2$ boules noires. On tire simultanément $2$ boules. On note $X$ le nombre de boules noires tirées. Pour jouer, on paie $2$ DH ; on reçoit $5$ DH par boule noire tirée. On note $G$ le gain algébrique du joueur.",
+   "questions": [
+    {
+     "notion": "Type 1 — Dénombrer puis calculer une probabilité",
+     "difficulty": 1,
+     "statement": "1) $P(X = 1)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac35$",
+       "correct": true,
+       "why": "$\\frac{\\mathrm C_3^1\\mathrm C_2^1}{\\mathrm C_5^2} = \\frac{6}{10}$."
+      },
+      {
+       "label": "$\\dfrac{3}{10}$",
+       "why": "C'est $P(X = 0) = \\frac{\\mathrm C_3^2}{10}$."
+      },
+      {
+       "label": "$\\dfrac25$",
+       "why": "$\\frac25$ est la proportion de boules noires dans l'urne, pas la probabilité d'en tirer exactement une."
+      },
+      {
+       "label": "$\\dfrac12$",
+       "why": "Recompte : une blanche ($3$ choix) et une noire ($2$ choix), soit $6$ tirages sur $10$."
+      }
+     ],
+     "hint": "$\\mathrm{card}\\,\\Omega = \\mathrm C_5^2 = 10$ ; une blanche ET une noire.",
+     "solution": "$\\mathrm{card}\\,\\Omega = \\mathrm C_5^2 = 10$. Tirages avec exactement une noire : $\\mathrm C_3^1\\times\\mathrm C_2^1 = 6$. $P(X = 1) = \\frac{6}{10} = \\frac35$.",
+     "points": 1,
+     "part": "Partie A — Loi de X",
+     "ref": "m2-scex-proba-ex3-q1"
+    },
+    {
+     "notion": "Variable aléatoire et loi de probabilité",
+     "difficulty": 2,
+     "statement": "2) La loi de probabilité de $X$ est :",
+     "options": [
+      {
+       "label": "$P(X=0) = \\frac{3}{10}$ ; $P(X=1) = \\frac{6}{10}$ ; $P(X=2) = \\frac{1}{10}$",
+       "correct": true,
+       "why": "$\\mathrm C_3^2 = 3$, $6$, $\\mathrm C_2^2 = 1$ sur $10$ ; la somme fait $1$."
+      },
+      {
+       "label": "$P(X=0) = \\frac{3}{10}$ ; $P(X=1) = \\frac{6}{10}$ ; $P(X=2) = \\frac{2}{10}$",
+       "why": "La somme vaut $\\frac{11}{10} > 1$ : $\\mathrm C_2^2 = 1$, pas $2$."
+      },
+      {
+       "label": "$P(X=0) = \\frac{1}{3}$ ; $P(X=1) = \\frac{1}{3}$ ; $P(X=2) = \\frac{1}{3}$",
+       "why": "Les valeurs de $X$ ne sont pas équiprobables : ce sont les tirages qui le sont."
+      },
+      {
+       "label": "$P(X=1) = \\frac{6}{10}$ ; $P(X=2) = \\frac{4}{10}$",
+       "why": "Tu as oublié la valeur $X = 0$ (deux blanches)."
+      }
+     ],
+     "hint": "Calcule chaque probabilité, puis vérifie que la somme vaut $1$.",
+     "solution": "$P(X=0) = \\frac{\\mathrm C_3^2}{10} = \\frac{3}{10}$, $P(X=1) = \\frac{6}{10}$, $P(X=2) = \\frac{\\mathrm C_2^2}{10} = \\frac{1}{10}$. Contrôle : $\\frac{3 + 6 + 1}{10} = 1$ ✓.",
+     "points": 1,
+     "methode": "Loi d'une variable aléatoire : valeurs possibles + probabilités, et leur somme vaut $1$.",
+     "part": "Partie A — Loi de X",
+     "ref": "m2-scex-proba-ex3-q2"
+    },
+    {
+     "notion": "Espérance, variance, écart-type",
+     "difficulty": 2,
+     "statement": "3) $E(X)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac45$",
+       "correct": true,
+       "why": "$0\\times\\frac3{10} + 1\\times\\frac6{10} + 2\\times\\frac1{10} = \\frac{8}{10}$."
+      },
+      {
+       "label": "$1$",
+       "why": "$1$ est la valeur la plus probable, pas l'espérance."
+      },
+      {
+       "label": "$\\dfrac35$",
+       "why": "Tu as oublié la contribution de $X = 2$ : $2\\times\\frac1{10}$."
+      },
+      {
+       "label": "$\\dfrac{7}{10}$",
+       "why": "Tu as compté $X = 2$ avec le coefficient $1$ au lieu de $2$."
+      }
+     ],
+     "hint": "$E(X) = \\sum x_i\\,p_i$.",
+     "solution": "$E(X) = 0\\times\\frac{3}{10} + 1\\times\\frac{6}{10} + 2\\times\\frac{1}{10} = \\frac{8}{10} = \\frac45$.",
+     "points": 1,
+     "part": "Partie A — Loi de X",
+     "ref": "m2-scex-proba-ex3-q3"
+    },
+    {
+     "notion": "Variance : les deux formules et leur usage",
+     "difficulty": 3,
+     "statement": "4) $V(X)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{9}{25}$",
+       "correct": true,
+       "why": "$E(X^2) = \\frac{6}{10} + \\frac{4}{10} = 1$ et $V = 1 - \\left(\\frac45\\right)^2 = \\frac{9}{25}$."
+      },
+      {
+       "label": "$1$",
+       "why": "C'est $E(X^2)$ : il faut retrancher $E(X)^2$."
+      },
+      {
+       "label": "$\\dfrac15$",
+       "why": "Tu as retranché $E(X)$ au lieu de $E(X)^2$."
+      },
+      {
+       "label": "$\\dfrac{16}{25}$",
+       "why": "C'est $E(X)^2$ seul."
+      }
+     ],
+     "hint": "$V(X) = E(X^2) - E(X)^2$ (Koenig-Huygens).",
+     "solution": "$E(X^2) = 0^2\\times\\frac{3}{10} + 1^2\\times\\frac{6}{10} + 2^2\\times\\frac{1}{10} = \\frac{10}{10} = 1$. $V(X) = E(X^2) - E(X)^2 = 1 - \\frac{16}{25} = \\frac{9}{25}$, donc $\\sigma(X) = \\frac35$.",
+     "points": 1,
+     "methode": "$V(X) = E(X^2) - [E(X)]^2$ : calcule d'abord $E(X^2) = \\sum x_i^2 p_i$.",
+     "part": "Partie A — Loi de X",
+     "ref": "m2-scex-proba-ex3-q4"
+    },
+    {
+     "notion": "Type 5 — Espérance d'un jeu",
+     "difficulty": 3,
+     "statement": "5) L'espérance du gain $G$ du joueur est :",
+     "options": [
+      {
+       "label": "$2$ DH",
+       "correct": true,
+       "why": "$G = 5X - 2$, donc $E(G) = 5E(X) - 2 = 4 - 2$."
+      },
+      {
+       "label": "$4$ DH",
+       "why": "Tu as oublié de retrancher la mise de $2$ DH."
+      },
+      {
+       "label": "$6$ DH",
+       "why": "La mise se retranche : $G = 5X - 2$, pas $5X + 2$."
+      },
+      {
+       "label": "$0$ DH",
+       "why": "Le jeu n'est pas équitable : $E(G) = 2 > 0$, il est favorable au joueur."
+      }
+     ],
+     "hint": "Exprime $G$ en fonction de $X$, puis utilise $E(aX + b) = aE(X) + b$.",
+     "solution": "Le joueur reçoit $5X$ DH et paie $2$ DH : $G = 5X - 2$. Par linéarité, $E(G) = 5E(X) - 2 = 5\\times\\frac45 - 2 = 2$ DH. Le jeu est favorable au joueur.",
+     "points": 1,
+     "methode": "$E(aX + b) = aE(X) + b$ ; un jeu est équitable si $E(G) = 0$.",
+     "part": "Partie B — Jeu",
+     "ref": "m2-scex-proba-ex3-q5"
+    },
+    {
+     "notion": "Type 4 — Reconnaître et exploiter une loi binomiale",
+     "difficulty": 3,
+     "statement": "6) On remet les boules et on répète l'épreuve $3$ fois de façon indépendante. Soit $Y$ le nombre d'épreuves où l'on tire exactement une boule noire. $P(Y = 2)$ vaut :",
+     "options": [
+      {
+       "label": "$\\dfrac{54}{125}$",
+       "correct": true,
+       "why": "$Y\\sim\\mathcal B\\left(3;\\frac35\\right)$ : $\\mathrm C_3^2\\left(\\frac35\\right)^2\\frac25 = 3\\times\\frac{9}{25}\\times\\frac25$."
+      },
+      {
+       "label": "$\\dfrac{27}{125}$",
+       "why": "Tu as calculé $\\left(\\frac35\\right)^3$ : il faut $2$ succès ET $1$ échec, avec le coefficient $\\mathrm C_3^2$."
+      },
+      {
+       "label": "$\\dfrac{18}{125}$",
+       "why": "Tu as oublié le coefficient $\\mathrm C_3^2 = 3$ (choix des deux épreuves réussies)."
+      },
+      {
+       "label": "$\\dfrac{36}{125}$",
+       "why": "C'est $P(Y = 1) = 3\\times\\frac35\\times\\left(\\frac25\\right)^2$."
+      }
+     ],
+     "hint": "$3$ épreuves identiques et indépendantes, succès « exactement une noire » de probabilité $\\frac35$.",
+     "solution": "$Y$ compte les succès dans $3$ épreuves de Bernoulli indépendantes de paramètre $p = P(X = 1) = \\frac35$ : $Y\\sim\\mathcal B\\left(3;\\frac35\\right)$. $P(Y = 2) = \\mathrm C_3^2\\left(\\frac35\\right)^2\\left(\\frac25\\right)^1 = 3\\times\\frac{9}{25}\\times\\frac25 = \\frac{54}{125}$.",
+     "points": 1,
+     "part": "Partie B — Jeu",
+     "ref": "m2-scex-proba-ex3-q6"
+    }
+   ]
+  },
+  {
+   "ref": "m2-scex-proba-ex4",
+   "chapter": "proba",
+   "kind": "probleme",
+   "title": "Exercice 4 — Test de dépistage",
+   "difficulty": 3,
+   "origin": {
+    "type": "original"
+   },
+   "context": "Dans une population, $5\\,\\%$ des personnes sont atteintes d'une maladie. On dispose d'un test : si la personne est malade, le test est positif avec une probabilité de $0{,}98$ ; si elle n'est pas malade, le test est positif avec une probabilité de $0{,}03$. On note $M$ « la personne est malade » et $T$ « le test est positif ».",
+   "questions": [
+    {
+     "notion": "L'arbre pondéré",
+     "difficulty": 1,
+     "statement": "1) $P(\\bar M\\cap T)$ vaut :",
+     "options": [
+      {
+       "label": "$0{,}0285$",
+       "correct": true,
+       "why": "$P(\\bar M)\\times P_{\\bar M}(T) = 0{,}95\\times0{,}03$."
+      },
+      {
+       "label": "$0{,}03$",
+       "why": "C'est $P_{\\bar M}(T)$ : il faut multiplier par $P(\\bar M) = 0{,}95$."
+      },
+      {
+       "label": "$0{,}0015$",
+       "why": "Tu as multiplié par $P(M) = 0{,}05$ au lieu de $P(\\bar M) = 0{,}95$."
+      },
+      {
+       "label": "$0{,}9215$",
+       "why": "Tu as multiplié $0{,}95$ par $0{,}97$ : c'est $P(\\bar M\\cap\\bar T)$."
+      }
+     ],
+     "hint": "Chemin $\\bar M \\to T$ dans l'arbre.",
+     "solution": "$P(\\bar M) = 1 - 0{,}05 = 0{,}95$. $P(\\bar M\\cap T) = 0{,}95\\times0{,}03 = 0{,}0285$.",
+     "points": 1,
+     "part": "Partie A — Le test",
+     "ref": "m2-scex-proba-ex4-q1"
+    },
+    {
+     "notion": "Type 2 — Exploiter un arbre pondéré",
+     "difficulty": 2,
+     "statement": "2) $P(T)$ vaut :",
+     "options": [
+      {
+       "label": "$0{,}0775$",
+       "correct": true,
+       "why": "$0{,}05\\times0{,}98 + 0{,}0285 = 0{,}049 + 0{,}0285$."
+      },
+      {
+       "label": "$1{,}01$",
+       "why": "Tu as additionné $0{,}98 + 0{,}03$ : une probabilité ne dépasse pas $1$, il faut pondérer chaque branche."
+      },
+      {
+       "label": "$0{,}049$",
+       "why": "Tu as oublié les faux positifs (branche $\\bar M\\cap T$)."
+      },
+      {
+       "label": "$0{,}505$",
+       "why": "La moyenne simple de $0{,}98$ et $0{,}03$ ignore que les malades ne sont que $5\\,\\%$."
+      }
+     ],
+     "hint": "Probabilités totales avec $\\{M,\\bar M\\}$.",
+     "solution": "$P(T) = P(M)P_M(T) + P(\\bar M)P_{\\bar M}(T) = 0{,}05\\times0{,}98 + 0{,}95\\times0{,}03 = 0{,}049 + 0{,}0285 = 0{,}0775$.",
+     "points": 1,
+     "part": "Partie A — Le test",
+     "ref": "m2-scex-proba-ex4-q2"
+    },
+    {
+     "notion": "Inverser un conditionnement",
+     "difficulty": 3,
+     "statement": "3) Le test d'une personne est positif. La probabilité qu'elle soit malade est, à $10^{-2}$ près :",
+     "options": [
+      {
+       "label": "$0{,}63$",
+       "correct": true,
+       "why": "$P_T(M) = \\frac{0{,}049}{0{,}0775} \\approx 0{,}632$."
+      },
+      {
+       "label": "$0{,}98$",
+       "why": "C'est $P_M(T)$ : le conditionnement est inversé."
+      },
+      {
+       "label": "$0{,}05$",
+       "why": "C'est $P(M)$ sans tenir compte du résultat du test."
+      },
+      {
+       "label": "$0{,}049$",
+       "why": "C'est $P(M\\cap T)$ : il faut encore diviser par $P(T)$."
+      }
+     ],
+     "hint": "$P_T(M) = \\dfrac{P(M\\cap T)}{P(T)}$.",
+     "solution": "$P_T(M) = \\dfrac{P(M\\cap T)}{P(T)} = \\dfrac{0{,}049}{0{,}0775} \\approx 0{,}632$. Même avec un test fiable à $98\\,\\%$, environ un positif sur trois n'est pas malade, car la maladie est rare.",
+     "points": 1,
+     "methode": "Ne confonds jamais $P_M(T)$ (fiabilité du test) et $P_T(M)$ (ce qu'apprend le patient).",
+     "part": "Partie A — Le test",
+     "ref": "m2-scex-proba-ex4-q3"
+    },
+    {
+     "notion": "Épreuve de Bernoulli",
+     "difficulty": 2,
+     "statement": "4) On teste $10$ personnes choisies au hasard, de façon indépendante. Soit $X$ le nombre de tests positifs. $X$ suit la loi :",
+     "options": [
+      {
+       "label": "$\\mathcal{B}(10\\,;0{,}0775)$",
+       "correct": true,
+       "why": "$10$ épreuves indépendantes, succès « test positif » de probabilité $P(T)$."
+      },
+      {
+       "label": "$\\mathcal{B}(10\\,;0{,}05)$",
+       "why": "$0{,}05$ est la probabilité d'être malade, pas d'avoir un test positif."
+      },
+      {
+       "label": "$\\mathcal{B}(10\\,;0{,}98)$",
+       "why": "$0{,}98$ est la probabilité d'être positif sachant qu'on est malade."
+      },
+      {
+       "label": "$\\mathcal{B}(0{,}0775\\,;10)$",
+       "why": "L'ordre des paramètres est $(n\\,;p)$ : nombre d'épreuves, puis probabilité du succès."
+      }
+     ],
+     "hint": "Identifie $n$ (nombre de répétitions) et $p$ (probabilité du succès étudié).",
+     "solution": "On répète $10$ fois, de façon indépendante, une épreuve de Bernoulli dont le succès « test positif » a pour probabilité $p = P(T) = 0{,}0775$. $X$ compte les succès : $X\\sim\\mathcal B(10\\,;0{,}0775)$.",
+     "points": 1,
+     "methode": "Binomiale : $n$ épreuves identiques ET indépendantes, deux issues ; $p$ = probabilité du succès compté.",
+     "part": "Partie B — Plusieurs tests",
+     "ref": "m2-scex-proba-ex4-q4"
+    },
+    {
+     "notion": "Loi binomiale : aller plus loin",
+     "difficulty": 3,
+     "statement": "5) La probabilité qu'au moins un des $10$ tests soit positif est :",
+     "options": [
+      {
+       "label": "$1 - 0{,}9225^{10}$",
+       "correct": true,
+       "why": "$P(X \\ge 1) = 1 - P(X = 0) = 1 - (1 - 0{,}0775)^{10}$."
+      },
+      {
+       "label": "$0{,}9225^{10}$",
+       "why": "C'est $P(X = 0)$ : aucun test positif."
+      },
+      {
+       "label": "$10\\times0{,}0775$",
+       "why": "C'est l'espérance $E(X)$, pas une probabilité."
+      },
+      {
+       "label": "$1 - 0{,}0775^{10}$",
+       "why": "Tu as pris $1 - P(X = 10)$ : le contraire de « au moins un » est « aucun »."
+      }
+     ],
+     "hint": "Contraire de « au moins un positif » : « aucun positif ».",
+     "solution": "$P(X \\ge 1) = 1 - P(X = 0) = 1 - (1 - 0{,}0775)^{10} = 1 - 0{,}9225^{10} \\approx 1 - 0{,}446 = 0{,}554$.",
+     "points": 1,
+     "methode": "$P(X \\ge 1) = 1 - (1 - p)^n$.",
+     "part": "Partie B — Plusieurs tests",
+     "ref": "m2-scex-proba-ex4-q5"
+    },
+    {
+     "notion": "Espérance, variance, écart-type",
+     "difficulty": 2,
+     "statement": "6) L'espérance de $X$ vaut :",
+     "options": [
+      {
+       "label": "$0{,}775$",
+       "correct": true,
+       "why": "$E(X) = np = 10\\times0{,}0775$."
+      },
+      {
+       "label": "$7{,}75$",
+       "why": "Erreur de virgule : $10\\times0{,}0775 = 0{,}775$."
+      },
+      {
+       "label": "$0{,}0775$",
+       "why": "C'est $p$ : il faut multiplier par $n = 10$."
+      },
+      {
+       "label": "$0{,}715$",
+       "why": "C'est (environ) la variance $np(1-p)$, pas l'espérance."
+      }
+     ],
+     "hint": "Pour $X\\sim\\mathcal B(n;p)$ : $E(X) = np$.",
+     "solution": "$E(X) = np = 10\\times0{,}0775 = 0{,}775$ : en moyenne, moins d'un test positif sur $10$ personnes. ($V(X) = np(1-p) \\approx 0{,}715$.)",
+     "points": 1,
+     "methode": "$\\mathcal B(n;p)$ : $E(X) = np$, $V(X) = np(1-p)$.",
+     "part": "Partie B — Plusieurs tests",
+     "ref": "m2-scex-proba-ex4-q6"
+    }
+   ]
+  }
+ ],
+ "series": [
+  {
+   "slug": "m2-scex-proba-serie-1",
+   "title": "Calcul des probabilités · Série 1 — Les bases",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 1 (4 questions).",
+   "kind": "custom",
+   "chapter": "proba",
+   "difficulty": 1,
+   "xp_bonus": 20,
+   "position": 101,
+   "published": true,
+   "questions": [
+    "m2-scex-proba-flash-q1",
+    "m2-scex-proba-flash-q2",
+    "m2-scex-proba-flash-q3",
+    "m2-scex-proba-flash-q4",
+    "m2-scex-proba-ex1-q1",
+    "m2-scex-proba-ex1-q2",
+    "m2-scex-proba-ex1-q3",
+    "m2-scex-proba-ex1-q4"
+   ]
+  },
+  {
+   "slug": "m2-scex-proba-serie-2",
+   "title": "Calcul des probabilités · Série 2 — Entraînement",
+   "description": "Partie I : 4 questions flash · Partie II : Exercice 2 (4 questions).",
+   "kind": "custom",
+   "chapter": "proba",
+   "difficulty": 2,
+   "xp_bonus": 30,
+   "position": 102,
+   "published": true,
+   "questions": [
+    "m2-scex-proba-flash-q5",
+    "m2-scex-proba-flash-q6",
+    "m2-scex-proba-flash-q7",
+    "m2-scex-proba-flash-q8",
+    "m2-scex-proba-ex2-q1",
+    "m2-scex-proba-ex2-q2",
+    "m2-scex-proba-ex2-q3",
+    "m2-scex-proba-ex2-q4"
+   ]
+  },
+  {
+   "slug": "m2-scex-proba-serie-3",
+   "title": "Calcul des probabilités · Série 3 — Type BAC",
+   "description": "Partie II : Exercice 3 (6 questions) + Exercice 4 (6 questions).",
+   "kind": "custom",
+   "chapter": "proba",
+   "difficulty": 3,
+   "xp_bonus": 50,
+   "position": 103,
+   "published": true,
+   "questions": [
+    "m2-scex-proba-ex3-q1",
+    "m2-scex-proba-ex3-q2",
+    "m2-scex-proba-ex3-q3",
+    "m2-scex-proba-ex3-q4",
+    "m2-scex-proba-ex3-q5",
+    "m2-scex-proba-ex3-q6",
+    "m2-scex-proba-ex4-q1",
+    "m2-scex-proba-ex4-q2",
+    "m2-scex-proba-ex4-q3",
+    "m2-scex-proba-ex4-q4",
+    "m2-scex-proba-ex4-q5",
+    "m2-scex-proba-ex4-q6"
+   ]
+  }
+ ]
+}

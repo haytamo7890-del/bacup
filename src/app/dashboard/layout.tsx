@@ -1,12 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { ArrowRight, Info } from "lucide-react";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { DashboardSidebar } from "@/components/dashboard/sidebar";
 import { DashboardTopbar } from "@/components/dashboard/topbar";
+import { NavMemory, DASH_SCROLLER_ID } from "@/components/dashboard/nav-memory";
+import { Bac1SoonGate } from "@/components/dashboard/bac1-soon";
+import { FEATURES } from "@/config";
 
 export default function DashboardLayout({
   children,
@@ -21,6 +24,7 @@ export default function DashboardLayout({
   const [name, setName] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [status, setStatus] = useState("");
+  const [locked, setLocked] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -38,7 +42,7 @@ export default function DashboardLayout({
         .single();
       const { data: sp } = await supabase
         .from("student_profiles")
-        .select("level_id, track_id, status, levels(name), tracks(name)")
+        .select("level_id, track_id, status, levels(code, name), tracks(name)")
         .eq("id", user.id)
         .single();
 
@@ -47,8 +51,12 @@ export default function DashboardLayout({
         router.push("/onboarding");
         return;
       }
+      // 1bac before launch: account kept, whole app locked « Bientôt » (no payment).
+      const levelCode = (sp?.levels as unknown as { code: string } | null)?.code ?? "";
+      const bac1Locked = !isAdmin && levelCode === "1bac" && !FEATURES.level1bac;
+      setLocked(bac1Locked);
       // Freemium: 'active' (paid) and 'demo' (free tier) can enter; others pay.
-      if (!isAdmin && sp?.status !== "active" && sp?.status !== "demo") {
+      if (!isAdmin && !bac1Locked && sp?.status !== "active" && sp?.status !== "demo") {
         router.push("/payment");
         return;
       }
@@ -77,7 +85,7 @@ export default function DashboardLayout({
       <div className="pointer-events-none absolute -top-40 right-10 w-[520px] h-[520px] bg-arctic-cyan/10 blur-3xl rounded-full" />
       <div className="pointer-events-none absolute bottom-0 left-40 w-[420px] h-[420px] bg-arctic-blue/10 blur-3xl rounded-full" />
 
-      <DashboardSidebar collapsed={collapsed} />
+      <DashboardSidebar collapsed={collapsed} locked={locked} />
 
       <div className="relative flex-1 min-w-0 flex flex-col">
         <DashboardTopbar
@@ -85,20 +93,21 @@ export default function DashboardLayout({
           subtitle={subtitle}
           onToggle={() => setCollapsed((v) => !v)}
         />
-        {status === "demo" && (
+        {status === "demo" && !locked && (
           <Link
             href="/payment"
             className="mx-6 lg:mx-10 mt-3 rounded-xl bg-gradient-to-r from-arctic-cyan/15 to-arctic-blue/15 border border-arctic-blue/25 px-4 py-2.5 flex items-center justify-between gap-3 hover:brightness-110 transition"
           >
             <span className="text-sm font-semibold text-arctic-blue dark:text-arctic-cyan inline-flex items-center gap-2">
-              <Sparkles className="w-4 h-4" /> Mode démo · accès limité
+              <Info className="w-4 h-4" /> Mode démo · accès limité
             </span>
             <span className="text-sm font-bold text-arctic-blue dark:text-arctic-cyan inline-flex items-center gap-1">
               Obtenir l&apos;accès <ArrowRight className="w-4 h-4" />
             </span>
           </Link>
         )}
-        <main className="flex-1 overflow-y-auto px-6 lg:px-10 pb-12">{children}</main>
+        <main id={DASH_SCROLLER_ID} className="flex-1 overflow-y-auto px-5 sm:px-8 lg:px-14 pt-2 pb-20">{locked ? <Bac1SoonGate /> : children}</main>
+        <Suspense fallback={null}><NavMemory /></Suspense>
       </div>
     </div>
   );

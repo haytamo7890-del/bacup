@@ -60,7 +60,7 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         <Link href="/" className="inline-flex mb-8"><BrandLockup /></Link>
 
-        <h1 className="text-2xl font-extrabold tracking-tight">Bon retour 👋</h1>
+        <h1 className="text-2xl font-extrabold tracking-tight">Bon retour</h1>
         <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Connecte-toi à ton compte.</p>
 
         <button

@@ -5,26 +5,44 @@ import katex from "katex";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { CourseFigure } from "./figures";
 import {
-  BookMarked, Sigma, CheckCircle2, Lightbulb, Wrench, Info, AlertTriangle,
-  Sparkles, ListTree, ChevronDown, ScrollText, Check, PencilLine, Target, ChevronRight,
+  BookMarked, Sigma, CheckCircle2, Lightbulb, Wrench, Info, AlertTriangle, ListTree, ChevronDown, ScrollText, Check, PencilLine, Target, ChevronRight, FlaskConical, Microscope, FileText, Bookmark,
 } from "lucide-react";
 
 /** Interactive context: mastery toggles + the practice-overlay launcher (funnels). */
-const InteractiveCtx = createContext<{ mastered: Set<string>; toggle: (k: string) => void; practice?: (notion: string) => void; canPractice?: (notion: string) => boolean } | null>(null);
+const InteractiveCtx = createContext<{ mastered: Set<string>; toggle: (k: string) => void; practice?: (notion: string) => void; canPractice?: (notion: string) => boolean; train?: (notion: string) => void } | null>(null);
 
 /** Funnel CTA — opens the inline practice overlay for a notion, then resumes the cours. */
-function FunnelCTA({ notion, onClick }: { notion: string; onClick: () => void }) {
-  return (
-    <button onClick={onClick} className="mt-4 w-full group rounded-2xl border border-arctic-blue/30 bg-gradient-to-r from-arctic-blue/[0.07] to-arctic-cyan/[0.04] px-4 py-3 flex items-center justify-between gap-3 hover:border-arctic-blue/60 hover:shadow-md hover:shadow-arctic-blue/10 transition">
-      <span className="flex items-center gap-2.5 text-left min-w-0">
-        <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center shrink-0 shadow-sm shadow-arctic-blue/25"><Target className="w-4 h-4" /></span>
-        <span className="min-w-0">
-          <span className="block text-sm font-bold tracking-tight">Teste-toi sur cette notion</span>
-          <span className="block text-[12px] text-neutral-500 dark:text-neutral-400 truncate">Exercices corrigés · tu reviens ensuite au cours</span>
+function FunnelCTA({ notion, onClick, onTrain }: { notion: string; onClick: () => void; onTrain?: () => void }) {
+  // Primary: the Espace de préparation runner for this notion (records XP, mastery level, review queue).
+  // Secondary: a quick inline self-test that keeps the student on the cours.
+  if (!onTrain) {
+    return (
+      <button onClick={onClick} className="mt-4 w-full group rounded-2xl border border-arctic-blue/30 bg-gradient-to-r from-arctic-blue/[0.07] to-arctic-cyan/[0.04] px-4 py-3 flex items-center justify-between gap-3 hover:border-arctic-blue/60 hover:shadow-md hover:shadow-arctic-blue/10 transition">
+        <span className="flex items-center gap-2.5 text-left min-w-0">
+          <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center shrink-0 shadow-sm shadow-arctic-blue/25"><Target className="w-4 h-4" /></span>
+          <span className="min-w-0">
+            <span className="block text-sm font-bold tracking-tight">Teste-toi sur cette notion</span>
+            <span className="block text-[12px] text-neutral-500 dark:text-neutral-400 truncate">Exercices corrigés · tu reviens ensuite au cours</span>
+          </span>
         </span>
-      </span>
-      <ChevronRight className="w-5 h-5 text-arctic-blue dark:text-arctic-cyan shrink-0 group-hover:translate-x-0.5 transition" />
-    </button>
+        <ChevronRight className="w-5 h-5 text-arctic-blue dark:text-arctic-cyan shrink-0 group-hover:translate-x-0.5 transition" />
+      </button>
+    );
+  }
+  return (
+    <div className="mt-4 w-full rounded-2xl border border-arctic-blue/30 bg-gradient-to-r from-arctic-blue/[0.07] to-arctic-cyan/[0.04] p-2 flex flex-wrap items-center gap-2">
+      <button onClick={onTrain} title={notion} className="flex-1 min-w-[13rem] group rounded-xl px-2.5 py-2 flex items-center gap-2.5 text-left min-w-0 hover:bg-arctic-blue/[0.06] transition">
+        <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center shrink-0 shadow-sm shadow-arctic-blue/25"><Target className="w-4.5 h-4.5" /></span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-sm font-bold tracking-tight">M&apos;entraîner sur cette notion</span>
+          <span className="block text-[12px] text-neutral-500 dark:text-neutral-400 truncate">Préparation · XP, niveau de maîtrise, révision espacée</span>
+        </span>
+        <ChevronRight className="w-5 h-5 text-arctic-blue dark:text-arctic-cyan shrink-0 group-hover:translate-x-0.5 transition" />
+      </button>
+      <button onClick={onClick} className="shrink-0 ml-auto text-[12px] font-semibold px-3.5 py-2 rounded-xl bg-white/60 dark:bg-white/[0.06] text-neutral-600 dark:text-neutral-300 hover:text-arctic-blue dark:hover:text-arctic-cyan transition">
+        Test rapide
+      </button>
+    </div>
   );
 }
 
@@ -33,7 +51,7 @@ function FunnelBlock({ notion }: { notion: string }) {
   const ctx = useContext(InteractiveCtx);
   if (!ctx?.practice) return null;
   if (ctx.canPractice && !ctx.canPractice(notion)) return null; // hide when the notion has no exercises yet
-  return <FunnelCTA notion={notion} onClick={() => ctx.practice!(notion)} />;
+  return <FunnelCTA notion={notion} onClick={() => ctx.practice!(notion)} onTrain={ctx.train ? () => ctx.train!(notion) : undefined} />;
 }
 
 /* ------------------------------ inline text ------------------------------ */
@@ -163,20 +181,23 @@ const CO: Record<string, { label: string; icon: typeof Info; bar: string; bg: st
   methode:       { label: "Méthode type", icon: Wrench,       bar: "border-sky-500/60",      bg: "bg-sky-500/[0.05]",      tile: "bg-sky-500/15 text-sky-600 dark:text-sky-300", text: "text-sky-600 dark:text-sky-300" },
   remarque:      { label: "Remarque",     icon: Info,         bar: "border-neutral-400/50",  bg: "bg-neutral-400/[0.05]",  tile: "bg-neutral-400/15 text-neutral-500 dark:text-neutral-300", text: "text-neutral-500 dark:text-neutral-300" },
   attention:     { label: "Attention",    icon: AlertTriangle,bar: "border-amber-500/60",    bg: "bg-amber-500/[0.06]",    tile: "bg-amber-500/15 text-amber-600 dark:text-amber-300", text: "text-amber-600 dark:text-amber-300" },
-  aretenir:      { label: "À retenir",    icon: Sparkles,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
+  aretenir:      { label: "À retenir",    icon: Bookmark,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   demonstration: { label: "Démonstration",icon: ScrollText,   bar: "border-neutral-400/40",  bg: "bg-black/[0.02] dark:bg-white/[0.03]", tile: "bg-neutral-400/15 text-neutral-500 dark:text-neutral-300", text: "text-neutral-500 dark:text-neutral-300", collapsible: true },
   solution:      { label: "Correction",   icon: CheckCircle2, bar: "border-emerald-500/50",  bg: "bg-emerald-500/[0.05]",  tile: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-300", text: "text-emerald-600 dark:text-emerald-300", collapsible: true },
+  experience:    { label: "Expérience",    icon: FlaskConical, bar: "border-teal-500/60",     bg: "bg-teal-500/[0.05]",     tile: "bg-teal-500/15 text-teal-600 dark:text-teal-300", text: "text-teal-600 dark:text-teal-300" },
+  observation:   { label: "Observation",   icon: Microscope,   bar: "border-teal-500/50",     bg: "bg-teal-500/[0.04]",     tile: "bg-teal-500/15 text-teal-600 dark:text-teal-300", text: "text-teal-600 dark:text-teal-300" },
+  document:      { label: "Document",      icon: FileText,     bar: "border-cyan-500/60",     bg: "bg-cyan-500/[0.05]",     tile: "bg-cyan-500/15 text-cyan-600 dark:text-cyan-300", text: "text-cyan-600 dark:text-cyan-300" },
   // English-workbook callouts
   rule:          { label: "Rule",         icon: BookMarked,   bar: "border-arctic-blue/60",  bg: "bg-arctic-blue/[0.05]",  tile: "bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   example:       { label: "Example",      icon: Lightbulb,    bar: "border-emerald-500/60",  bg: "bg-emerald-500/[0.05]",  tile: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-300", text: "text-emerald-600 dark:text-emerald-300" },
   tip:           { label: "Tip",          icon: Info,         bar: "border-sky-500/60",      bg: "bg-sky-500/[0.05]",      tile: "bg-sky-500/15 text-sky-600 dark:text-sky-300", text: "text-sky-600 dark:text-sky-300" },
-  remember:      { label: "Remember",     icon: Sparkles,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
+  remember:      { label: "Remember",     icon: Bookmark,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   mistake:       { label: "Common mistake", icon: AlertTriangle, bar: "border-amber-500/60", bg: "bg-amber-500/[0.06]",   tile: "bg-amber-500/15 text-amber-600 dark:text-amber-300", text: "text-amber-600 dark:text-amber-300" },
   // Philosophie (arabe)
   tarif:         { label: "تعريف",         icon: BookMarked,   bar: "border-arctic-blue/60",  bg: "bg-arctic-blue/[0.05]",  tile: "bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   ishkal:        { label: "إشكال",         icon: AlertTriangle,bar: "border-amber-500/60",    bg: "bg-amber-500/[0.06]",    tile: "bg-amber-500/15 text-amber-600 dark:text-amber-300", text: "text-amber-600 dark:text-amber-300" },
   mawqif:        { label: "موقف فلسفي",    icon: Sigma,        bar: "border-indigo-500/60",   bg: "bg-indigo-500/[0.05]",   tile: "bg-indigo-500/15 text-indigo-500 dark:text-indigo-300", text: "text-indigo-500 dark:text-indigo-300" },
-  khoulasa:      { label: "خلاصة",         icon: Sparkles,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
+  khoulasa:      { label: "خلاصة",         icon: Bookmark,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
 };
 
 /** Inline application the student does while reading; "Fait" feeds the maîtrise %. */
@@ -292,7 +313,53 @@ export function extractCards(body: string): { kind: string; title?: string; bloc
   return cards;
 }
 
-export function CourseContent({ body, lessonId, onProgress, onPractice, canPractice }: { body: string; lessonId?: string; onProgress?: (mastered: number, total: number) => void; onPractice?: (notion: string) => void; canPractice?: (notion: string) => boolean }) {
+/** Callouts worth memorising, with the question shown on the front of the flashcard. */
+export const CARD_KINDS: Record<string, { label: string; prompt: string }> = {
+  definition: { label: "Définition", prompt: "Définis" },
+  theoreme:   { label: "Théorème", prompt: "Énonce le théorème" },
+  propriete:  { label: "Propriété", prompt: "Rappelle la propriété" },
+  aretenir:   { label: "À retenir", prompt: "Qu'est-ce qu'il faut retenir ?" },
+  methode:    { label: "Méthode", prompt: "Quelle est la méthode ?" },
+  attention:  { label: "Piège", prompt: "Quel est le piège à éviter ?" },
+  rule:       { label: "Rule", prompt: "State the rule" },
+  remember:   { label: "Remember", prompt: "What should you remember?" },
+  mistake:    { label: "Common mistake", prompt: "What's the common mistake?" },
+  tarif:      { label: "تعريف", prompt: "عرّف" },
+  mawqif:     { label: "موقف فلسفي", prompt: "ما هو الموقف؟" },
+  khoulasa:   { label: "خلاصة", prompt: "ما هي الخلاصة؟" },
+};
+export type DeckCard = { id: string; kind: string; title?: string; notion: string | null; lessonId: string; lessonTitle: string; blocks: Block[] };
+
+/** Small stable hash so a card keeps its memory (box, due date) across sessions. */
+function hashKey(s: string): string {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return (h >>> 0).toString(36);
+}
+function blocksText(bs: Block[]): string {
+  return bs.map((b) => b.t === "p" ? b.text : b.t === "display" ? b.tex : b.t === "ul" || b.t === "ol" ? b.items.join(" ") : b.t === "callout" ? blocksText(b.body) : "").join(" ");
+}
+
+/** Flashcards of one lesson: every memorisable callout, tagged with the notion (## heading) it sits in. */
+export function extractDeck(lesson: { id: string; title: string; body: string | null }): DeckCard[] {
+  const out: DeckCard[] = [];
+  for (const sec of parseSections(lesson.body ?? "")) {
+    const walk = (bs: Block[]) => {
+      for (const b of bs) {
+        if (b.t !== "callout") continue;
+        if (CARD_KINDS[b.kind] && b.body.length) {
+          const key = `${lesson.id}|${b.kind}|${b.title ?? ""}|${blocksText(b.body).slice(0, 120)}`;
+          out.push({ id: hashKey(key), kind: b.kind, title: b.title, notion: sec.title, lessonId: lesson.id, lessonTitle: lesson.title, blocks: b.body });
+        }
+        walk(b.body);
+      }
+    };
+    walk(sec.blocks);
+  }
+  return out;
+}
+
+export function CourseContent({ body, lessonId, onProgress, onPractice, canPractice, onTrain }: { body: string; lessonId?: string; onProgress?: (mastered: number, total: number) => void; onPractice?: (notion: string) => void; canPractice?: (notion: string) => boolean; onTrain?: (notion: string) => void }) {
   const supabase = useMemo(() => createBrowserSupabase(), []);
   const sections = useMemo(() => parseSections(body), [body]);
   const titled = useMemo(() => sections.filter((s) => s.title), [sections]);
@@ -343,7 +410,7 @@ export function CourseContent({ body, lessonId, onProgress, onPractice, canPract
   const rtl = /[؀-ۿ]/.test(body); // Arabic → full right-to-left layout
 
   return (
-    <InteractiveCtx.Provider value={{ mastered, toggle, practice: onPractice, canPractice }}>
+    <InteractiveCtx.Provider value={{ mastered, toggle, practice: onPractice, canPractice, train: onTrain }}>
     <div className="text-[15px]" dir={rtl ? "rtl" : "ltr"}>
       {hasToc && (
         <div className="mb-5 rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.03] p-4">
@@ -371,7 +438,7 @@ export function CourseContent({ body, lessonId, onProgress, onPractice, canPract
 
       {sections.map((s) =>
         s.title ? (
-          <details key={s.id} id={s.id} open className="group mb-3 rounded-2xl border border-black/[0.05] dark:border-white/[0.06] overflow-hidden">
+          <details key={s.id} id={s.id} data-notion={s.title ?? undefined} open className="group mb-3 rounded-2xl border border-black/[0.05] dark:border-white/[0.06] overflow-hidden">
             <summary className="cursor-pointer list-none flex items-center justify-between gap-2 px-4 py-3 hover:bg-black/[0.02] dark:hover:bg-white/[0.03] transition">
               <span className="flex items-center gap-3 min-w-0">
                 <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-arctic-cyan/25 to-arctic-blue/10 text-arctic-blue dark:text-arctic-cyan grid place-items-center text-xs font-extrabold shrink-0">{num.get(s.id)}</span>
@@ -381,7 +448,7 @@ export function CourseContent({ body, lessonId, onProgress, onPractice, canPract
             </summary>
             <div className="px-4 pb-4 pt-1">
               <Blocks blocks={s.blocks} />
-              {onPractice && (!canPractice || canPractice(s.title!)) && <FunnelCTA notion={s.title!} onClick={() => onPractice(s.title!)} />}
+              {onPractice && (!canPractice || canPractice(s.title!)) && <FunnelCTA notion={s.title!} onClick={() => onPractice(s.title!)} onTrain={onTrain ? () => onTrain(s.title!) : undefined} />}
             </div>
           </details>
         ) : (

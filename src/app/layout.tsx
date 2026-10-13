@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     siteName: "Bac Up",
   },
   twitter: { card: "summary_large_image", title: "Bac Up — Réussis ton BAC. Sans t'ennuyer." },
+  manifest: "/manifest.webmanifest",
+  appleWebApp: { capable: true, title: "Bac Up", statusBarStyle: "black-translucent" },
 };
+
+export const viewport = { themeColor: "#0e1a2d" };
 
 export default function RootLayout({
   children,
@@ -35,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning className={`${inter.variable} ${afacad.variable} ${yellowtail.variable} ${arefRuqaa.variable}`}>
       <head>
-        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500&display=swap" />
+        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" />
       </head>
       <body className="font-sans antialiased bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>

@@ -177,7 +177,7 @@ export default function AdminExamens() {
       }
     }
     setImporting(false); setImportText(""); setPreview(null); setShowImport(false); loadExams();
-    alert("Examen importé ✓");
+    alert("Examen importé");
   }
 
   async function openExam(e: Exam) {
