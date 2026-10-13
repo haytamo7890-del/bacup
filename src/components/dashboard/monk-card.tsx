@@ -103,6 +103,7 @@ export function MonkCard() {
       setErr("Impossible d'enregistrer. Réessaie.");
       return;
     }
+    window.dispatchEvent(new Event("bacup:monk-changed")); // sidebar shine updates instantly
     const { data } = await supabase.rpc("monk_sync");
     if (data && typeof (data as { streak?: number }).streak === "number") setSyncedStreak((data as { streak: number }).streak);
   }

@@ -92,7 +92,7 @@ export function GoalPill() {
         <BrandLogo size={18} className="shrink-0" />
         {target != null ? (
           <span className="goal-shine tabular-nums whitespace-nowrap">
-            {fr(target)}/20{ambitionLabel && <span className="hidden md:inline"> · {ambitionLabel}</span>}
+            {fr(target)}/20{ambitionLabel && <span className="hidden 2xl:inline"> · {ambitionLabel}</span>}
           </span>
         ) : (
           <span className="goal-shine whitespace-nowrap">Fixe ton objectif</span>
@@ -100,7 +100,7 @@ export function GoalPill() {
       </button>
 
       {open && (
-        <div role="dialog" aria-label="Mon objectif" className="absolute right-0 top-11 z-50 w-72 glass rounded-2xl p-4 shadow-xl fade-up">
+        <div role="dialog" aria-label="Mon objectif" className="absolute left-1/2 -translate-x-1/2 top-11 z-50 w-72 glass rounded-2xl p-4 shadow-xl">
           <div className="flex items-center justify-between">
             <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400">Mon objectif au BAC</span>
             <button type="button" onClick={() => setOpen(false)} aria-label="Fermer" className="w-7 h-7 grid place-items-center rounded-full text-neutral-400 hover:bg-black/5 dark:hover:bg-white/10"><X className="w-4 h-4" /></button>

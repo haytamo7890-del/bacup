@@ -1,8 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
+import { useQueryState } from "@/lib/use-query-state";
 import { useAccess } from "@/lib/use-access";
 import { UpgradeCard } from "@/components/dashboard/paywall";
 import { curriculumFor } from "@/config/curriculum";
@@ -20,7 +21,13 @@ const QUOTA = 250 * 1024 * 1024;
 const fmtSize = (b: number) => (b < 1024 * 1024 ? `${Math.max(1, Math.round(b / 1024))} Ko` : `${(b / 1024 / 1024).toFixed(1)} Mo`);
 
 export default function BibliothequePage() {
+  return <Suspense fallback={null}><BibliothequePageInner /></Suspense>;
+}
+
+/** URL state: o = "subject:<code>" | "folder:<id>" | "loose" · file = open PDF id */
+function BibliothequePageInner() {
   const supabase = createBrowserSupabase();
+  const q = useQueryState();
   const access = useAccess();
   const [ready, setReady] = useState(false);
   const [uid, setUid] = useState("");
@@ -28,7 +35,9 @@ export default function BibliothequePage() {
   const [folders, setFolders] = useState<CustomFolder[]>([]);
   const [files, setFiles] = useState<LibFile[]>([]);
 
-  const [open, setOpen] = useState<{ kind: "subject" | "folder" | "loose"; key: string; name: string } | null>(null);
+  type Open = { kind: "subject" | "folder" | "loose"; key: string; name: string };
+  const setOpen = (o: Open | null) =>
+    o ? q.set({ o: o.kind === "loose" ? "loose" : `${o.kind}:${o.key}`, file: null }) : q.up({ o: null, file: null });
   const [uploadOpen, setUploadOpen] = useState(false);
   const [viewer, setViewer] = useState<{ blob: Blob; url: string; name: string } | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
@@ -64,6 +73,37 @@ export default function BibliothequePage() {
 
   useEffect(() => { load(); }, [load]);
 
+  const oParam = q.get("o");
+  const open = useMemo<Open | null>(() => {
+    if (!oParam) return null;
+    if (oParam === "loose") return { kind: "loose", key: "", name: "Sans dossier" };
+    const [kind, key] = [oParam.slice(0, oParam.indexOf(":")), oParam.slice(oParam.indexOf(":") + 1)];
+    if (kind === "subject") { const sub = subjects.find((x) => x.code === key); return sub ? { kind, key, name: sub.name } : null; }
+    if (kind === "folder") { const fo = folders.find((x) => x.id === key); return fo ? { kind, key, name: fo.name } : null; }
+    return null;
+  }, [oParam, subjects, folders]);
+
+  // URL → open PDF (survives Back, refresh and the sidebar "last spot").
+  const fileParam = q.get("file");
+  useEffect(() => {
+    if (!ready) return;
+    const f = fileParam ? files.find((x) => x.id === fileParam) : undefined;
+    if (!f) { setViewer((v) => { if (v) URL.revokeObjectURL(v.url); return null; }); return; }
+    let alive = true;
+    (async () => {
+      setBusy(f.id);
+      // Download through the authenticated client → render the blob in-app
+      // (a blob URL always renders inline, never forces a download).
+      const { data, error } = await supabase.storage.from("library").download(f.storage_path);
+      if (!alive) return;
+      setBusy(null);
+      if (error || !data) { alert("Impossible d'ouvrir le fichier."); q.set({ file: null }, { replace: true }); return; }
+      setViewer((v) => { if (v) URL.revokeObjectURL(v.url); return { blob: data, url: URL.createObjectURL(data), name: f.name }; });
+    })();
+    return () => { alive = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fileParam, ready]);
+
   const used = useMemo(() => files.reduce((s, f) => s + f.size_bytes, 0), [files]);
   const usedPct = Math.min(100, Math.round((used / QUOTA) * 100));
   const countFor = (pred: (f: LibFile) => boolean) => files.filter(pred).length;
@@ -89,19 +129,8 @@ export default function BibliothequePage() {
     await supabase.from("library_folders").delete().eq("id", id);
     load();
   }
-  async function openFile(f: LibFile) {
-    setBusy(f.id);
-    // Download through the authenticated client → render the blob in-app
-    // (a blob URL always renders inline, never forces a download).
-    const { data, error } = await supabase.storage.from("library").download(f.storage_path);
-    setBusy(null);
-    if (error || !data) { alert("Impossible d'ouvrir le fichier."); return; }
-    setViewer({ blob: data, url: URL.createObjectURL(data), name: f.name });
-  }
-  function closeViewer() {
-    if (viewer) URL.revokeObjectURL(viewer.url);
-    setViewer(null);
-  }
+  function openFile(f: LibFile) { q.set({ file: f.id }); }
+  function closeViewer() { q.up({ file: null }); }
   async function renameFile(f: LibFile) {
     const name = window.prompt("Renommer :", f.name);
     if (!name?.trim()) return;
@@ -125,7 +154,7 @@ export default function BibliothequePage() {
           <span className="w-11 h-11 rounded-2xl bg-gradient-to-br from-arctic-cyan to-arctic-blue text-white grid place-items-center shadow-lg shadow-arctic-blue/30"><Library className="w-6 h-6" /></span>
           <div><h1 className="text-3xl font-bold tracking-tight">Bibliothèque</h1><p className="text-sm text-neutral-500 dark:text-neutral-400">Tes PDF, rangés par matière.</p></div>
         </div>
-        <UpgradeCard title="Ta bibliothèque est réservée à l’accès complet" sub="Téléverse et range tes PDF par matière, retrouve-les partout. 220 DH pour toute l’année." />
+        <UpgradeCard title="Ta bibliothèque est réservée à l’accès complet" sub="Téléverse et range tes PDF par matière, retrouve-les partout. 250 DH, accès jusqu’au 31 juillet 2027." />
       </div>
     );
   }

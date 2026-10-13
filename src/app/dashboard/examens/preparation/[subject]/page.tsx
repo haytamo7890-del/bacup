@@ -10,10 +10,11 @@
  *                Locked « Bientôt » while FEATURES.examEngine is false (opens <ExamsSoonPanel>).
  * Route: /dashboard/examens/preparation/<subjectCode>?f=<track>&mode=notion|series|examens&chapter=<id>
  */
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
+import { useQueryState } from "@/lib/use-query-state";
 import { useAccess } from "@/lib/use-access";
 import { subjectTheme } from "@/config/subjects";
 import { SubjectAmbient } from "@/components/subject-pad";
@@ -39,6 +40,11 @@ type Exam = { id: string; year: number; session: string; exam_type: string; dura
 type NotionRow = { notion: string; total: number; done: number; correct: number; probTotal: number; probCorrect: number; level: Level };
 
 export default function PrepSubjectPage() {
+  return <Suspense fallback={null}><PrepSubjectPageInner /></Suspense>;
+}
+
+function PrepSubjectPageInner() {
+  const q = useQueryState();
   const supabase = useMemo(() => createBrowserSupabase(), []);
   const access = useAccess();
   const params = useParams<{ subject: string }>();
@@ -62,6 +68,14 @@ export default function PrepSubjectPage() {
   const [soonOpen, setSoonOpen] = useState(false);
 
   const subject = ctx?.subjectsByCode.get(code) ?? null;
+
+  // Mirror tab / open chapter / department into the URL (in place) so Back,
+  // refresh and the sidebar "last spot" reopen exactly this view.
+  useEffect(() => {
+    if (!ctx) return;
+    q.set({ mode: mode === "notion" ? null : mode, chapter: openCh, d: dept || null }, { replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ctx, mode, openCh, dept]);
   const t = subjectTheme(code);
 
   useEffect(() => {
@@ -71,6 +85,7 @@ export default function PrepSubjectPage() {
       if (m === "examens" && !FEATURES.examEngine) setSoonOpen(true);
       else if (m === "series" || m === "examens" || m === "notion") setMode(m);
       if (sp.get("chapter")) setOpenCh(sp.get("chapter"));
+      if (sp.get("d")) setDept(sp.get("d")!);
       const c = await loadStudentCtx(supabase);
       setCtx(c);
       setFiliere(c?.ownTrack || null); // own filière only

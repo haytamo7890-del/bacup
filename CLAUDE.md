@@ -59,7 +59,7 @@ docs/                   product-spec.md, plan-day1.md, erd.mermaid
 - **Cours** (`/dashboard/cours`): rich renderer — `##` sections, `:::callout` fences (FR/EN/AR kinds), `$…$`/`$$…$$`
   math, markdown tables, named SVG figures via `[[fig:NAME]]` (`src/components/course/figures.tsx`), and per-section
   practice **funnels**. Content across Maths, PC, SVT, SI, Anglais and Philo (Arabic, RTL). Dept/unit grouping.
-- **QCU banks (~1,094 questions):** every question tagged with a `notion` = a cours `##` heading; funnels filter to
+- **QCU banks (~6,660 questions across all tracks, as of 2026-10-06):** every question tagged with a `notion` = a cours `##` heading; funnels filter to
   that notion only (maths via `notionSlug` in `src/config/notion-map.ts`; other subjects via text-overlap in
   `src/app/dashboard/cours/page.tsx` `selectForNotion`). Answers **randomly shuffled** each open
   (`src/components/course/practice-quiz.tsx`, Fisher–Yates). Funnel CTA hidden on sections with no questions
@@ -87,6 +87,18 @@ docs/                   product-spec.md, plan-day1.md, erd.mermaid
   Content brief for the content team: `docs/content-brief-preparation.md`; scaffolds `content/prep/scaffolds/**` (manifest);
   gold-standard example `content/prep/examples/pc-rc-exemple-complet.json` (imported).
 - **Exam engine LOCKED (2026-10-04):** `FEATURES.examEngine = false` in `src/config/index.ts`. Examens tab/cards show a « Bientôt » pill and open `<ExamsSoonPanel>` (`src/components/prep/exams-soon.tsx`: construction bar = `EXAMS_COMING_SOON.progress` + what the section will do); `/dashboard/examens/session` renders `<ExamsSoonGate>`; blanc exercises are excluded from random/adaptive runs. Data kept in DB. Sidebar label is now **Préparation**. Flip the flag to re-open.
+- **SM maths parity (2026-10-06):** SM cours rewritten at SM depth (56 lessons, résumé + objectives + funnel on every cours,
+  ~4.4k chars avg; arctan, Rolle/TAF/IAF, racines n-ièmes, transformations, y''+ay'+by=0, Riemann, Z/nZ…; structures &
+  arithmétique written from scratch). SM QCU 33 → 84/chapter (674 per track; sm_a = sm_b): PC-track questions copied +
+  original SM questions, ALL with hint, `why` on 4 options, méthode, difficulty, solution. Live DB is the source of truth;
+  repo record = `db/seed/sm_maths_cours_20261006.sql` + `content/prep/maths-sm-v2/` (snapshots, not import packs).
+  Helper tables (RLS on, staging only): `lesson_drafts`, `lesson_patches`, `qcu_drafts` (+ fn `build_sm_pack(codes)` →
+  bacup.prep/v2 pack), `notion_map_pc_sm`, `b1_enrich`, `meth_stage`; backups `lessons_backup_20261006`, `emoji_backup_20261006`.
+  QA: `node scripts/content-qa/validate-cours.mjs` / `validate-qcu.mjs` (KaTeX, renderer rules, emoji, exact notions).
+- **No-emoji sweep (2026-10-06):** removed ✓/✔/✗ verification marks from 314 solutions, 132 lessons, 4 options
+  (fn `strip_checkmarks`; table cells became « oui »/« non »). ♀/♂ kept in SVT (biology notation).
+- **Notion resolver fix:** `groupByNotion` now gives a question whose tag equals a heading to THAT heading; substring
+  overlap only for loose tags (before: earlier short headings like « Groupe » swallowed 31 SM questions).
 - Calculette page (`/dashboard/calculette`). Bibliothèque, classement, monk mode, reminders, payments/admin.
 - Schema/migrations: `0001` … `0028` (0027/0028 applied to the live DB). Idempotent content seeds under `db/seed/`. AI gateway with cheap/strong routing.
 
@@ -102,3 +114,15 @@ docs/                   product-spec.md, plan-day1.md, erd.mermaid
 - Supabase migrations are applied manually (paste SQL). Keep them in `db/migrations`, numbered. Content seeds in
   `db/seed/` are idempotent; several bank/tagging changes were applied directly to the live DB via the connector.
 - Adding a QCU: tag its `notion` with a phrase that appears in the chapter's `##` heading, or the funnel won't show it.
+
+## Growth layer (handoff 2026-10: landing, onboarding, ambassadors)
+- Spec: `docs/handoff-2026-10/` (API, flows, business rules, data model). Pages = static HTML in `public/bacup/`
+  served by `beforeFiles` rewrites in `next.config.ts`: `/onboarding`, `/ambassadeurs`, `/ambassadeurs/espace`
+  and `/` (landing). The old `src/app/page.tsx` and `/onboarding` page.tsx are shadowed by these rewrites.
+- Login for those pages: `public/bacup/bacup-auth.js` -> `/api/auth/email` (6-digit code), `/api/auth/verify`,
+  `/api/auth/google` (`next` kept in cookie `bacup_next`, read by `/auth/callback`), `/api/auth/signout`, `/api/me`.
+  Apple button visible but inactive until the Apple account exists.
+- Rules: `src/config/bacup.ts` (250 DH, -20 code, +19 COD, access until 31 Jul 2027, ambassador rules, stream<->track map).
+- Schema: `db/migrations/0034_growth_orders_ambassadors.sql` (orders, activation_cards, ambassadors, promo_codes, sales,
+  bonuses, payouts, link_clicks, community_requests, app_settings; Carte élève columns; guards stopping users from
+  editing their own role / paid status).

@@ -101,6 +101,7 @@ export default function MonkModePage() {
       if (error) { setErr(error.message); setBusy(null); return; }
       setChecks((cs) => [...cs, { habit_id: habitId, day: TODAY }]);
     }
+    window.dispatchEvent(new Event("bacup:monk-changed")); // sidebar shine updates instantly
     await runSync();
     setBusy(null);
   }

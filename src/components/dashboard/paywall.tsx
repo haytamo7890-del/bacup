@@ -15,7 +15,7 @@ export function LockBadge({ className = "" }: { className?: string }) {
 /** Full upgrade card (demo → paid). */
 export function UpgradeCard({
   title = "Débloque tout Bac-up",
-  sub = "Toutes les matières, examens, IA et coach — 220 DH pour toute l’année.",
+  sub = "Toutes les matières, examens, IA et coach — 250 DH, accès jusqu’au 31 juillet 2027.",
   className = "",
 }: {
   title?: string;

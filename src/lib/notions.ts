@@ -61,7 +61,8 @@ function stems(s: string): Set<string> {
 
 /**
  * Split a chapter bank into its notions, in cours order:
- *   1. exact slug / phrase overlap (questionsForNotion) — first heading claims;
+ *   1. exact slug / phrase overlap (questionsForNotion) — a tag equal to a heading goes to that heading,
+ *      otherwise the first overlapping heading claims;
  *   2. fuzzy: an unclaimed question goes to the heading sharing the most word stems with its tag;
  *   3. still unmatched tags become their own groups (extra) so no question is ever invisible;
  *      untagged leftovers land in "Autres notions".
@@ -74,11 +75,22 @@ export function groupByNotion<T extends { id: string; notion?: string | null }>(
   const claimed = new Set<string>();
   const groups: NotionGroup<T>[] = [];
   const seen = new Set<string>();
+  // A tag that IS a heading belongs to that heading only: substring overlap must not let an earlier,
+  // shorter heading ("Groupe", "Équations différentielles $y' = ay + b$") swallow it.
+  const headKeys = new Set(headings.map((h) => normNotion(h.notion)));
+  const exactKey = (q: T): string | null => {
+    const k = q.notion ? normNotion(q.notion) : "";
+    return k && headKeys.has(k) ? k : null;
+  };
   for (const h of headings) {
     const key = normNotion(h.notion);
     if (seen.has(key)) continue;
     seen.add(key);
-    const sel = questionsForNotion(h.notion, items).filter((q) => !claimed.has(q.id));
+    const sel = questionsForNotion(h.notion, items).filter((q) => {
+      if (claimed.has(q.id)) return false;
+      const own = exactKey(q);
+      return own === null || own === key;
+    });
     sel.forEach((q) => claimed.add(q.id));
     groups.push({ notion: h.notion, lessonId: h.lessonId, items: sel });
   }

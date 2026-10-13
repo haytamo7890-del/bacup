@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -16,17 +16,20 @@ import {
 } from "lucide-react";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import { BrandLogo } from "@/components/brand";
+import { navStore } from "@/lib/nav-memory";
+import { loadPrepStats } from "@/lib/prep";
+import { SoonPill } from "@/components/prep/exams-soon";
 
-type NavItem = { label: string; icon: LucideIcon; href: string; match: (p: string) => boolean };
+type NavItem = { label: string; icon: LucideIcon; href: string; key: string; match: (p: string) => boolean };
 
 const NAV: NavItem[] = [
-  { label: "Dashboard", icon: Layers, href: "/dashboard", match: (p) => p === "/dashboard" },
-  { label: "Cours", icon: BookOpen, href: "/dashboard/cours", match: (p) => p.startsWith("/dashboard/cours") },
-  { label: "Préparation", icon: FileText, href: "/dashboard/examens/preparation", match: (p) => p.startsWith("/dashboard/examens") },
-  { label: "Annales", icon: ScrollText, href: "/dashboard/annales", match: (p) => p.startsWith("/dashboard/annales") },
-  { label: "Bibliothèque", icon: Library, href: "/dashboard/bibliotheque", match: (p) => p.startsWith("/dashboard/bibliotheque") },
-  { label: "Monk Mode", icon: Sun, href: "/dashboard/monk", match: (p) => p.startsWith("/dashboard/monk") },
-  { label: "Classement", icon: Trophy, href: "/dashboard/classement", match: (p) => p.startsWith("/dashboard/classement") },
+  { label: "Dashboard", key: "dashboard", icon: Layers, href: "/dashboard", match: (p) => p === "/dashboard" },
+  { label: "Cours", key: "cours", icon: BookOpen, href: "/dashboard/cours", match: (p) => p.startsWith("/dashboard/cours") },
+  { label: "Préparation", key: "prep", icon: FileText, href: "/dashboard/examens/preparation", match: (p) => p.startsWith("/dashboard/examens") },
+  { label: "Annales", key: "annales", icon: ScrollText, href: "/dashboard/annales", match: (p) => p.startsWith("/dashboard/annales") },
+  { label: "Bibliothèque", key: "biblio", icon: Library, href: "/dashboard/bibliotheque", match: (p) => p.startsWith("/dashboard/bibliotheque") },
+  { label: "Monk Mode", key: "monk", icon: Sun, href: "/dashboard/monk", match: (p) => p.startsWith("/dashboard/monk") },
+  { label: "Classement", key: "classement", icon: Trophy, href: "/dashboard/classement", match: (p) => p.startsWith("/dashboard/classement") },
 ];
 
 /** Stable 5-digit "Student ID" derived from the user's uuid. */
@@ -36,10 +39,45 @@ function studentId(uuid: string): string {
   return String((h % 90000) + 10000);
 }
 
-export function DashboardSidebar({ collapsed }: { collapsed: boolean }) {
+/** `locked`: 1bac before launch. Every entry shows « Bientôt » and leads nowhere. */
+export function DashboardSidebar({ collapsed, locked = false }: { collapsed: boolean; locked?: boolean }) {
   const pathname = usePathname();
+  // Each feature reopens where the student left it; clicking the feature you're
+  // already in takes you to its home (Linear/Slack behaviour).
+  const spots = useSyncExternalStore(navStore.subscribe, navStore.get, navStore.getServer);
+  const hrefFor = (key: string, root: string, active: boolean) =>
+    active || key === "dashboard" ? root : spots[key]?.url ?? root;
   const supabase = createBrowserSupabase();
   const [me, setMe] = useState<{ name: string; email: string; id: string } | null>(null);
+  // Préparation shines (same light sweep as the objectif pill) only while something waits:
+  // révisions due today or errors to replay. Re-checked on every page change.
+  const [prepWaiting, setPrepWaiting] = useState(false);
+  // Monk Mode shines the same way while today's non-négociables are not all ticked.
+  const [monkWaiting, setMonkWaiting] = useState(false);
+  const [monkTick, setMonkTick] = useState(0);
+  useEffect(() => {
+    const on = () => setMonkTick((n) => n + 1);
+    window.addEventListener("bacup:monk-changed", on);
+    return () => window.removeEventListener("bacup:monk-changed", on);
+  }, []);
+  useEffect(() => {
+    let live = true;
+    loadPrepStats(supabase).then((st) => { if (live) setPrepWaiting(!!st && (st.due > 0 || st.errors > 0)); });
+    (async () => {
+      const d = new Date();
+      const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+      const [{ data: h, error }, { data: c }] = await Promise.all([
+        supabase.from("monk_habits").select("id, is_core").eq("active", true),
+        supabase.from("monk_checks").select("habit_id").eq("day", today),
+      ]);
+      if (!live || error) return;
+      const core = ((h ?? []) as { id: string; is_core: boolean }[]).filter((x) => x.is_core).map((x) => x.id);
+      const done = new Set(((c ?? []) as { habit_id: string }[]).map((x) => x.habit_id));
+      setMonkWaiting(core.length >= 4 && !core.every((id) => done.has(id)));
+    })();
+    return () => { live = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname, monkTick]);
 
   useEffect(() => {
     (async () => {
@@ -97,10 +135,21 @@ export function DashboardSidebar({ collapsed }: { collapsed: boolean }) {
           {NAV.map((item) => {
             const active = item.match(pathname);
             const Icon = item.icon;
+            if (locked) {
+              return (
+                <div key={item.label} title={`${item.label} · Bientôt`} aria-disabled="true" className={`${row(false)} cursor-default opacity-60 hover:bg-transparent dark:hover:bg-transparent hover:text-neutral-500 dark:hover:text-neutral-400`}>
+                  <Icon className="w-5 h-5 shrink-0" strokeWidth={1.75} />
+                  {!collapsed && <span className="truncate flex-1">{item.label}</span>}
+                  {!collapsed && <SoonPill />}
+                </div>
+              );
+            }
             return (
-              <Link key={item.label} href={item.href} title={item.label} className={row(active)}>
+              <Link key={item.label} href={hrefFor(item.key, item.href, active)} title={item.label} className={row(active)}>
                 <Icon className="w-5 h-5 shrink-0 transition-transform duration-200 group-hover:scale-110" strokeWidth={active ? 2 : 1.75} />
-                {!collapsed && <span className="truncate">{item.label}</span>}
+                {!collapsed && (
+                  <span className={`truncate ${(item.key === "prep" && prepWaiting) || (item.key === "monk" && monkWaiting) ? `goal-shine ${active ? "goal-shine-active" : ""}` : ""}`}>{item.label}</span>
+                )}
               </Link>
             );
           })}
@@ -108,10 +157,18 @@ export function DashboardSidebar({ collapsed }: { collapsed: boolean }) {
 
         {/* bottom — always visible */}
         <div className={`shrink-0 pt-3 mt-3 ${divider}`}>
-          <Link href="/dashboard/reglages" title="Réglages" className={row(settingsActive)}>
+          {locked ? (
+            <div title="Réglages · Bientôt" aria-disabled="true" className={`${row(false)} cursor-default opacity-60 hover:bg-transparent dark:hover:bg-transparent hover:text-neutral-500 dark:hover:text-neutral-400`}>
+              <Settings className="w-5 h-5 shrink-0" strokeWidth={1.75} />
+              {!collapsed && <span className="flex-1">Réglages</span>}
+              {!collapsed && <SoonPill />}
+            </div>
+          ) : (
+          <Link href={hrefFor("reglages", "/dashboard/reglages", settingsActive)} title="Réglages" className={row(settingsActive)}>
             <Settings className="w-5 h-5 shrink-0 transition-transform duration-200 group-hover:rotate-45" strokeWidth={settingsActive ? 2 : 1.75} />
             {!collapsed && <span>Réglages</span>}
           </Link>
+          )}
         </div>
       </div>
     </aside>

@@ -7,7 +7,7 @@
  *   /examens/[level]/[subject]/[year]-session-[session]/corrige
  */
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://bac-up.ma").replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://bacup.ma").replace(/\/$/, "");
 export const SITE_NAME = "Bac-up";
 
 /** DB subject.code → SEO-friendly URL slug (full words, like the market standard). */

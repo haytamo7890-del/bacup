@@ -55,7 +55,7 @@ export default function ClassementPage() {
       {access.isDemo ? (
         <div className="mt-7">
           <UpgradeCard title="Le classement est réservé à l'accès complet"
-            sub="Gagne des XP, grimpe le classement et débloque toute la gamification. 220 DH pour toute l'année." />
+            sub="Gagne des XP, grimpe le classement et débloque toute la gamification. 250 DH, accès jusqu'au 31 juillet 2027." />
         </div>
       ) : (
       <>

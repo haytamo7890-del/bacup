@@ -313,6 +313,52 @@ export function extractCards(body: string): { kind: string; title?: string; bloc
   return cards;
 }
 
+/** Callouts worth memorising, with the question shown on the front of the flashcard. */
+export const CARD_KINDS: Record<string, { label: string; prompt: string }> = {
+  definition: { label: "Définition", prompt: "Définis" },
+  theoreme:   { label: "Théorème", prompt: "Énonce le théorème" },
+  propriete:  { label: "Propriété", prompt: "Rappelle la propriété" },
+  aretenir:   { label: "À retenir", prompt: "Qu'est-ce qu'il faut retenir ?" },
+  methode:    { label: "Méthode", prompt: "Quelle est la méthode ?" },
+  attention:  { label: "Piège", prompt: "Quel est le piège à éviter ?" },
+  rule:       { label: "Rule", prompt: "State the rule" },
+  remember:   { label: "Remember", prompt: "What should you remember?" },
+  mistake:    { label: "Common mistake", prompt: "What's the common mistake?" },
+  tarif:      { label: "تعريف", prompt: "عرّف" },
+  mawqif:     { label: "موقف فلسفي", prompt: "ما هو الموقف؟" },
+  khoulasa:   { label: "خلاصة", prompt: "ما هي الخلاصة؟" },
+};
+export type DeckCard = { id: string; kind: string; title?: string; notion: string | null; lessonId: string; lessonTitle: string; blocks: Block[] };
+
+/** Small stable hash so a card keeps its memory (box, due date) across sessions. */
+function hashKey(s: string): string {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return (h >>> 0).toString(36);
+}
+function blocksText(bs: Block[]): string {
+  return bs.map((b) => b.t === "p" ? b.text : b.t === "display" ? b.tex : b.t === "ul" || b.t === "ol" ? b.items.join(" ") : b.t === "callout" ? blocksText(b.body) : "").join(" ");
+}
+
+/** Flashcards of one lesson: every memorisable callout, tagged with the notion (## heading) it sits in. */
+export function extractDeck(lesson: { id: string; title: string; body: string | null }): DeckCard[] {
+  const out: DeckCard[] = [];
+  for (const sec of parseSections(lesson.body ?? "")) {
+    const walk = (bs: Block[]) => {
+      for (const b of bs) {
+        if (b.t !== "callout") continue;
+        if (CARD_KINDS[b.kind] && b.body.length) {
+          const key = `${lesson.id}|${b.kind}|${b.title ?? ""}|${blocksText(b.body).slice(0, 120)}`;
+          out.push({ id: hashKey(key), kind: b.kind, title: b.title, notion: sec.title, lessonId: lesson.id, lessonTitle: lesson.title, blocks: b.body });
+        }
+        walk(b.body);
+      }
+    };
+    walk(sec.blocks);
+  }
+  return out;
+}
+
 export function CourseContent({ body, lessonId, onProgress, onPractice, canPractice, onTrain }: { body: string; lessonId?: string; onProgress?: (mastered: number, total: number) => void; onPractice?: (notion: string) => void; canPractice?: (notion: string) => boolean; onTrain?: (notion: string) => void }) {
   const supabase = useMemo(() => createBrowserSupabase(), []);
   const sections = useMemo(() => parseSections(body), [body]);
@@ -392,7 +438,7 @@ export function CourseContent({ body, lessonId, onProgress, onPractice, canPract
 
       {sections.map((s) =>
         s.title ? (
-          <details key={s.id} id={s.id} open className="group mb-3 rounded-2xl border border-black/[0.05] dark:border-white/[0.06] overflow-hidden">
+          <details key={s.id} id={s.id} data-notion={s.title ?? undefined} open className="group mb-3 rounded-2xl border border-black/[0.05] dark:border-white/[0.06] overflow-hidden">
             <summary className="cursor-pointer list-none flex items-center justify-between gap-2 px-4 py-3 hover:bg-black/[0.02] dark:hover:bg-white/[0.03] transition">
               <span className="flex items-center gap-3 min-w-0">
                 <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-arctic-cyan/25 to-arctic-blue/10 text-arctic-blue dark:text-arctic-cyan grid place-items-center text-xs font-extrabold shrink-0">{num.get(s.id)}</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
 import {
@@ -10,9 +10,11 @@ import {
 import { ProgressCurve } from "@/components/dashboard/progress-curve";
 import { subjectTheme } from "@/config/subjects";
 import { SubjectBanner } from "@/components/subject-banner";
-import { PrepAlerts } from "@/components/prep/prep-alerts";
-import { FEATURES } from "@/config";
 import { MonkCard } from "@/components/dashboard/monk-card";
+import { Mascot, dashboardLines, type MascotLine } from "@/components/mascot/mascot";
+import { PlanTodayCard, type PlanDayInfo } from "@/components/plan/today-card";
+import { loadPlan } from "@/lib/plan/data";
+import { loadPrepStats } from "@/lib/prep";
 
 type Stats = {
   xp: number; level: number; streak: number; accuracy: number | null;
@@ -20,26 +22,64 @@ type Stats = {
   subjects: { name: string; mastery: number }[];
 };
 type LeaderRow = { rank: number; display_name: string; total_xp: number; is_me: boolean };
-type NewContent = { kind: "cours" | "examen"; title: string; sub: string; href: string; subject: string } | null;
 type ResumeItem = { key: string; chapter: string; subject: string; done: number; total: number; href: string };
 
 
 export default function DashboardHome() {
   const supabase = createBrowserSupabase();
   const [greeting, setGreeting] = useState("Bonjour");
+  const [tagline, setTagline] = useState("");
   const [name, setName] = useState("");
   const [stats, setStats] = useState<Stats | null>(null);
   const [series, setSeries] = useState<number[]>([]);
   const [board, setBoard] = useState<LeaderRow[]>([]);
   const [myRank, setMyRank] = useState<{ rank: number; total_xp: number } | null>(null);
-  const [fresh, setFresh] = useState<NewContent>(null);
   const [resume, setResume] = useState<ResumeItem[]>([]);
   const [libFiles, setLibFiles] = useState<{ id: string; name: string; size_bytes: number; subject_code: string | null }[]>([]);
   const [libUsed, setLibUsed] = useState(0);
+  const [talkIn, setTalkIn] = useState<Omit<Parameters<typeof dashboardLines>[0], "plan"> & { hasPlan: boolean } | null>(null);
+  const [planDay, setPlanDay] = useState<PlanDayInfo | undefined>(undefined);
+  const talk = useMemo<MascotLine[]>(() => {
+    if (!talkIn || (talkIn.hasPlan && planDay === undefined)) return [];
+    return dashboardLines({ ...talkIn, plan: planDay ?? null });
+  }, [talkIn, planDay]);
 
   useEffect(() => {
     const h = new Date().getHours();
     setGreeting(h < 5 ? "Bonsoir" : h < 18 ? "Bonjour" : "Bonsoir");
+    // tagline changes with the moment of the day (matin · après-midi · soir)
+    setTagline(
+      h >= 5 && h < 12 ? "La tête est fraîche, profites-en."
+      : h >= 12 && h < 18 ? "Une série maintenant, c'est ça de pris."
+      : "Dix minutes ce soir valent mieux que rien demain.",
+    );
+    // Le Lauréat: away for a while? reviews / errors waiting? non-négociables left tonight?
+    (async () => {
+      const VISIT = "bacup.lastVisit";
+      let daysAway = 0;
+      try {
+        const prev = localStorage.getItem(VISIT);
+        if (prev) daysAway = Math.floor((Date.now() - Date.parse(prev)) / 86_400_000);
+        localStorage.setItem(VISIT, new Date().toISOString());
+      } catch { /* private mode */ }
+      const d = new Date();
+      const day = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+      const [st, { data: hb, error: he }, { data: ck }, plan, { data: lv }] = await Promise.all([
+        loadPrepStats(supabase).catch(() => null),
+        supabase.from("monk_habits").select("id, is_core").eq("active", true),
+        supabase.from("monk_checks").select("habit_id").eq("day", day),
+        loadPlan(supabase).catch(() => null),
+        supabase.auth.getUser().then(async ({ data: { user } }) => user ? await supabase.from("student_profiles").select("levels(code)").eq("id", user.id).maybeSingle() : { data: null }),
+      ]);
+      const is2bac = (lv?.levels as unknown as { code: string } | null)?.code === "2bac";
+      let monkLeft: number | null = null;
+      if (!he) {
+        const core = ((hb ?? []) as { id: string; is_core: boolean }[]).filter((x) => x.is_core).map((x) => x.id);
+        const done = new Set(((ck ?? []) as { habit_id: string }[]).map((x) => x.habit_id));
+        if (core.length >= 4) monkLeft = core.filter((id) => !done.has(id)).length;
+      }
+      setTalkIn({ daysAway, due: st?.due ?? 0, errors: st?.errors ?? 0, monkLeft, hour: h, noPlan: is2bac && !plan, hasPlan: !!plan });
+    })();
     (async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return;
@@ -63,17 +103,6 @@ export default function DashboardHome() {
       const { data: lu } = await supabase.rpc("library_usage");
       if (lu != null) setLibUsed(Number(lu) || 0);
 
-      const [{ data: les }, { data: exs }] = await Promise.all([
-        supabase.from("lessons").select("id, title, created_at, chapters(name, subjects(code, name))").order("created_at", { ascending: false }).limit(1),
-        supabase.from("exams").select("id, title, year, created_at, subjects(code, name)").order("created_at", { ascending: false }).limit(1),
-      ]);
-      const l0 = (les?.[0] ?? null) as { title: string; created_at: string; chapters: { name: string; subjects: { code: string; name: string } | null } | null } | null;
-      const e0 = (exs?.[0] ?? null) as { title: string | null; year: number; created_at: string; subjects: { code: string; name: string } | null } | null;
-      const lTime = l0 ? Date.parse(l0.created_at) : 0;
-      const eTime = e0 && FEATURES.examEngine ? Date.parse(e0.created_at) : 0;
-      if (lTime === 0 && eTime === 0) setFresh(null);
-      else if (lTime >= eTime && l0) setFresh({ kind: "cours", title: l0.chapters?.name ?? "Nouveau cours", sub: l0.title, href: "/dashboard/cours", subject: l0.chapters?.subjects?.code ?? l0.chapters?.subjects?.name ?? "" });
-      else if (e0) setFresh({ kind: "examen", title: e0.title ?? `Examen ${e0.year}`, sub: "Nouvel examen disponible", href: e0.subjects?.code ? `/dashboard/examens/preparation/${e0.subjects.code}?mode=examens` : "/dashboard/examens/preparation", subject: e0.subjects?.code ?? e0.subjects?.name ?? "" });
 
       const { data: comp } = await supabase.from("lesson_completions").select("lesson_id");
       const doneIds = new Set((comp ?? []).map((r) => r.lesson_id as string));
@@ -102,17 +131,14 @@ export default function DashboardHome() {
 
   return (
     <div className="max-w-6xl mx-auto py-8 space-y-5 fade-up">
-      <div>
+      <Mascot lines={talk} size="sm" variant="inline">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">{greeting}{firstName ? `, ${firstName}` : ""}.</h1>
-        <p className="mt-1.5 text-neutral-500 dark:text-neutral-400">Voici où tu en es. Chaque QCM fait monter ces chiffres.</p>
-      </div>
-
-      {/* review engine — "À réviser aujourd'hui" + "Mes erreurs" */}
-      <PrepAlerts showEmpty />
+        <p className="mt-1.5 min-h-[1.5em] text-neutral-500 dark:text-neutral-400">{tagline}</p>
+      </Mascot>
 
       {/* BENTO — same asymmetric layout as the reference */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-        <div className="lg:col-span-7"><NewContentBanner c={fresh} /></div>
+        <div className="lg:col-span-7 min-w-0"><PlanTodayCard onDay={setPlanDay} /></div>
         <div className="lg:col-span-5"><MonkCard /></div>
         <div className="lg:col-span-5"><LibraryCell files={libFiles} usedBytes={libUsed} /></div>
         <div className="lg:col-span-7"><ResumeCarousel items={resume} /></div>
@@ -202,19 +228,6 @@ export default function DashboardHome() {
 }
 
 /* ---------- BENTO CELLS ---------- */
-
-function NewContentBanner({ c }: { c: NewContent }) {
-  return (
-    <SubjectBanner
-      mode="new"
-      code={c?.subject ?? ""}
-      name={c?.subject ?? "Bac Up"}
-      href={c?.href ?? "/dashboard/cours"}
-      subtitle={c ? c.sub : "Le prochain cours ou examen ajouté apparaîtra ici."}
-      className="h-full min-h-[220px]"
-    />
-  );
-}
 
 function LibraryCell({ files, usedBytes }: { files: { id: string; name: string; size_bytes: number; subject_code: string | null }[]; usedBytes: number }) {
   const QUOTA = 250 * 1024 * 1024;

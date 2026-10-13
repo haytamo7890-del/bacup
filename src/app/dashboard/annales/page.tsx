@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { createBrowserSupabase } from "@/lib/supabase-browser";
+import { useQueryState } from "@/lib/use-query-state";
 import { useAccess } from "@/lib/use-access";
 import { PdfReader } from "@/components/pdf-reader";
 import { curriculumFor, type SubjectRef, examTokensFor, tracksForSubject, COMMON_PAPER_SUBJECTS, FILIERE_SHORT } from "@/config/curriculum";
@@ -33,8 +34,14 @@ function sortExams(a: Exam, b: Exam) {
 }
 
 export default function AnnalesPage() {
+  return <Suspense fallback={null}><AnnalesPageInner /></Suspense>;
+}
+
+/** URL state: f = filière (omitted = own) · s = matière · ff = filière filter · x = exam key · m = sujet|corrige */
+function AnnalesPageInner() {
   const supabase = createBrowserSupabase();
   const router = useRouter();
+  const q = useQueryState();
   const access = useAccess();
   const [loading, setLoading] = useState(true);
 
@@ -46,19 +53,14 @@ export default function AnnalesPage() {
   const [subjectsByCode, setSubjectsByCode] = useState<Map<string, Subject>>(new Map());
   const [resByCode, setResByCode] = useState<Map<string, Res[]>>(new Map());
 
-  const [filiere, setFiliere] = useState<string | null>(null);
-  const [subjectCode, setSubjectCode] = useState<string | null>(null);
-  const [filFilter, setFilFilter] = useState<string | null>(null);
-  const [reading, setReading] = useState<{ exam: Exam; mode: "sujet" | "corrige" } | null>(null);
+  const filiere = q.get("f");
+  const subjectCode = q.get("s");
+  const filFilter = q.get("ff");
 
-  function openSubject(code: string) {
-    setSubjectCode(code);
-    setFilFilter(null);
-  }
-  function closeSubject() {
-    setSubjectCode(null);
-    setFilFilter(null);
-  }
+  function openSubject(code: string) { q.set({ s: code, ff: null, x: null, m: null }); }
+  function closeSubject() { q.up({ s: null, ff: null, x: null, m: null }); }
+  const setReading = (r: { exam: Exam; mode: "sujet" | "corrige" } | null) =>
+    r ? q.set({ x: r.exam.key, m: r.mode }) : q.up({ x: null, m: null });
 
   useEffect(() => {
     (async () => {
@@ -77,7 +79,6 @@ export default function AnnalesPage() {
         setLevelName((sp?.levels as unknown as { name: string } | null)?.name ?? "");
         setOwnTrack(tc);
         setOwnTrackName((sp?.tracks as unknown as { name: string } | null)?.name ?? "");
-        setFiliere(tc);
       }
       const sByCode = new Map<string, Subject>();
       for (const s of (subs ?? []) as Subject[]) sByCode.set(s.code, s);
@@ -157,6 +158,19 @@ export default function AnnalesPage() {
     }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeFil, levelCode, resByCode, subjectsByCode]);
+
+  // Open paper, resolved from the URL. Demo: only the free session's sujet opens.
+  const reading = (() => {
+    const key = q.get("x");
+    if (!key || !subjectCode) return null;
+    const exam = pairedExams(subjectCode).find((e) => e.key === key);
+    if (!exam) return null;
+    if (access.isDemo) {
+      const free = examsForFiliere(subjectCode, COMMON_PAPER_SUBJECTS.has(subjectCode) ? null : activeFil)[0]?.key;
+      if (exam.key !== free) return null;
+    }
+    return { exam, mode: (q.get("m") === "corrige" ? "corrige" : "sujet") as "sujet" | "corrige" };
+  })();
 
   if (loading) return <div className="grid place-items-center h-64 text-neutral-400"><Loader2 className="w-6 h-6 animate-spin" /></div>;
 
@@ -282,7 +296,7 @@ export default function AnnalesPage() {
                     const n = countForTrack(tr);
                     const empty = n === 0;
                     return (
-                      <button key={tr} onClick={() => setFilFilter(tr)} title={own ? "Ta filière" : (FILIERE_SHORT[tr] ?? tr)}
+                      <button key={tr} onClick={() => q.set({ ff: tr }, { replace: true })} title={own ? "Ta filière" : (FILIERE_SHORT[tr] ?? tr)}
                         className={`inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full transition ${on
                           ? "bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white shadow-lg shadow-arctic-blue/20"
                           : empty
@@ -336,7 +350,7 @@ export default function AnnalesPage() {
               const isOwn = c.code === ownTrack;
               const on = c.code === activeFil;
               return (
-                <button key={c.code} onClick={() => { setFiliere(c.code); setSubjectCode(null); }} title={c.name}
+                <button key={c.code} onClick={() => q.set({ f: c.code === ownTrack ? null : c.code, s: null, ff: null, x: null, m: null }, { replace: true })} title={c.name}
                   className={`inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full transition ${on ? "bg-gradient-to-r from-arctic-cyan to-arctic-blue text-white shadow-lg shadow-arctic-blue/20" : "chip text-neutral-600 dark:text-neutral-300 hover:-translate-y-0.5"}`}>
                   {c.label}
                   {isOwn && <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full ${on ? "bg-white/25" : "bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan"}`}>TA FILIÈRE</span>}
