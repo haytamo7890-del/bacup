@@ -223,6 +223,46 @@ function AppBlock({ block }: { block: Extract<Block, { t: "callout" }> }) {
   );
 }
 
+/** Plain text of a block list (paragraphs only), used by the Quran / hadith cards. */
+function plainText(bs: Block[]): string {
+  return bs.map((b) => (b.t === "p" ? b.text : "")).join(" ").replace(/\s+/g, " ").trim();
+}
+
+/** Quran verse(s): mushaf font, RTL, a numbered end-of-ayah ornament after each verse. In the data the marker is U+06DD followed by the number. */
+function AyaBlock({ block }: { block: Extract<Block, { t: "callout" }> }) {
+  const parts = plainText(block.body).split(/\s*\u06DD\s*(\d+)\s*/);
+  const verses: { text: string; n?: string }[] = [];
+  for (let k = 0; k < parts.length; k += 2) { if (parts[k]) verses.push({ text: parts[k], n: parts[k + 1] }); }
+  return (
+    <figure dir="rtl" className="my-5 rounded-2xl border border-emerald-600/25 bg-emerald-600/[0.05] px-5 py-4">
+      <div className="text-center leading-[2.6] text-[26px] text-neutral-900 dark:text-neutral-50" style={{ fontFamily: "var(--font-quran), 'Amiri Quran', 'Scheherazade New', serif" }}>
+        <span className="text-emerald-700 dark:text-emerald-300 mx-1">&#xFD3F;</span>
+        {verses.map((v, k) => (
+          <span key={k}>
+            {v.text}
+            {v.n ? <span className="inline-grid place-items-center align-middle mx-1.5 w-8 h-8 rounded-full border border-emerald-600/50 text-emerald-700 dark:text-emerald-300 text-[13px] font-bold leading-none" style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>{v.n}</span> : null}
+            {k < verses.length - 1 ? " " : ""}
+          </span>
+        ))}
+        <span className="text-emerald-700 dark:text-emerald-300 mx-1">&#xFD3E;</span>
+      </div>
+      {block.title ? <figcaption className="mt-2 text-center text-xs font-semibold text-emerald-700 dark:text-emerald-300">{block.title}</figcaption> : null}
+    </figure>
+  );
+}
+
+/** Hadith: quoted text with the narrator / source line. */
+function HadithBlock({ block }: { block: Extract<Block, { t: "callout" }> }) {
+  return (
+    <figure dir="rtl" className="my-5 rounded-2xl border-s-[3px] border-amber-500/60 bg-amber-500/[0.05] px-5 py-4">
+      <div className="text-xl leading-[2.2] text-neutral-900 dark:text-neutral-50" style={{ fontFamily: "var(--font-quran), 'Amiri Quran', serif" }}>
+        &laquo; {plainText(block.body)} &raquo;
+      </div>
+      {block.title ? <figcaption className="mt-2 text-xs font-semibold text-amber-700 dark:text-amber-300">{block.title}</figcaption> : null}
+    </figure>
+  );
+}
+
 export function Blocks({ blocks }: { blocks: Block[] }) {
   return (
     <>
@@ -251,6 +291,8 @@ export function Blocks({ blocks }: { blocks: Block[] }) {
         if (b.t === "ul") return <ul key={i} className="my-2.5 space-y-1.5 pl-1">{b.items.map((it, j) => <li key={j} className="flex gap-2.5 text-neutral-700 dark:text-neutral-200"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-arctic-blue/70 shrink-0" /><span>{inline(it)}</span></li>)}</ul>;
         if (b.t === "ol") return <ol key={i} className="my-2.5 space-y-1.5">{b.items.map((it, j) => <li key={j} className="flex gap-3 text-neutral-700 dark:text-neutral-200"><span className="shrink-0 w-6 h-6 rounded-lg bg-sky-500/15 text-sky-600 dark:text-sky-300 grid place-items-center text-xs font-bold">{j + 1}</span><span className="pt-0.5">{inline(it)}</span></li>)}</ol>;
         if (b.kind === "app") return <AppBlock key={i} block={b} />;
+        if (b.kind === "aya") return <AyaBlock key={i} block={b} />;
+        if (b.kind === "hadith") return <HadithBlock key={i} block={b} />;
         if (b.kind === "funnel") return <FunnelBlock key={i} notion={b.title || "cette notion"} />;
         // callout
         const c = CO[b.kind] ?? CO.remarque;
