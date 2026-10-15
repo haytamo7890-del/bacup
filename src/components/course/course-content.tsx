@@ -197,6 +197,15 @@ const CO: Record<string, { label: string; icon: typeof Info; bar: string; bg: st
   tarif:         { label: "تعريف",         icon: BookMarked,   bar: "border-arctic-blue/60",  bg: "bg-arctic-blue/[0.05]",  tile: "bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
   ishkal:        { label: "إشكال",         icon: AlertTriangle,bar: "border-amber-500/60",    bg: "bg-amber-500/[0.06]",    tile: "bg-amber-500/15 text-amber-600 dark:text-amber-300", text: "text-amber-600 dark:text-amber-300" },
   mawqif:        { label: "موقف فلسفي",    icon: Sigma,        bar: "border-indigo-500/60",   bg: "bg-indigo-500/[0.05]",   tile: "bg-indigo-500/15 text-indigo-500 dark:text-indigo-300", text: "text-indigo-500 dark:text-indigo-300" },
+  mafhoum:       { label: "مفهوم",         icon: BookMarked,   bar: "border-arctic-blue/60",  bg: "bg-arctic-blue/[0.05]",  tile: "bg-arctic-blue/15 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
+  qaida:         { label: "قاعدة",         icon: ListTree,     bar: "border-violet-500/60",   bg: "bg-violet-500/[0.05]",   tile: "bg-violet-500/15 text-violet-500 dark:text-violet-300", text: "text-violet-500 dark:text-violet-300" },
+  mithal:        { label: "مثال",          icon: Lightbulb,    bar: "border-emerald-500/60",  bg: "bg-emerald-500/[0.05]",  tile: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-300", text: "text-emerald-600 dark:text-emerald-300" },
+  manhajiya:     { label: "منهجية",        icon: Wrench,       bar: "border-sky-500/60",      bg: "bg-sky-500/[0.05]",      tile: "bg-sky-500/15 text-sky-600 dark:text-sky-300", text: "text-sky-600 dark:text-sky-300" },
+  tanbih:        { label: "تنبيه",         icon: AlertTriangle,bar: "border-amber-500/60",    bg: "bg-amber-500/[0.06]",    tile: "bg-amber-500/15 text-amber-600 dark:text-amber-300", text: "text-amber-600 dark:text-amber-300" },
+  wathiqa:       { label: "وثيقة",         icon: FileText,     bar: "border-cyan-500/60",     bg: "bg-cyan-500/[0.05]",     tile: "bg-cyan-500/15 text-cyan-600 dark:text-cyan-300", text: "text-cyan-600 dark:text-cyan-300" },
+  parcoeur:      { label: "للحفظ",         icon: Bookmark,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
+  regional:      { label: "سؤال نموذجي · الجهوي", icon: Target, bar: "border-indigo-500/60",   bg: "bg-indigo-500/[0.05]",   tile: "bg-indigo-500/15 text-indigo-500 dark:text-indigo-300", text: "text-indigo-500 dark:text-indigo-300" },
+  modele:        { label: "جواب نموذجي",   icon: CheckCircle2, bar: "border-emerald-500/50",  bg: "bg-emerald-500/[0.05]",  tile: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-300", text: "text-emerald-600 dark:text-emerald-300", collapsible: true },
   khoulasa:      { label: "خلاصة",         icon: Bookmark,     bar: "border-arctic-cyan/60",  bg: "bg-gradient-to-br from-arctic-cyan/[0.10] to-arctic-blue/[0.04]", tile: "bg-arctic-cyan/20 text-arctic-blue dark:text-arctic-cyan", text: "text-arctic-blue dark:text-arctic-cyan" },
 };
 
@@ -263,6 +272,76 @@ function HadithBlock({ block }: { block: Extract<Block, { t: "callout" }> }) {
   );
 }
 
+/** Items of the first bullet list of a callout body ("- a | b" lines). */
+function listItems(bs: Block[]): string[] {
+  return bs.flatMap((b) => (b.t === "ul" ? b.items : []));
+}
+
+function VisualShell({ title, label, children }: { title?: string; label: string; children: ReactNode }) {
+  return (
+    <div className="my-5 rounded-2xl border border-black/[0.06] dark:border-white/[0.08] bg-black/[0.02] dark:bg-white/[0.03] p-4">
+      <div className="mb-3 flex items-center gap-2"><span className="text-[11px] font-bold uppercase tracking-wide text-arctic-blue dark:text-arctic-cyan">{label}</span>{title ? <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">{inline(title)}</span> : null}</div>
+      {children}
+    </div>
+  );
+}
+
+/** Chronology: "- date | event". */
+function TimelineBlock({ block }: { block: Extract<Block, { t: "callout" }> }) {
+  const rows = listItems(block.body).map((it) => { const [d, ...r] = it.split("|"); return { d: d.trim(), e: r.join("|").trim() }; });
+  return (
+    <VisualShell title={block.title} label="Chronologie">
+      <ol className="relative ms-3 border-s-2 border-arctic-blue/30 space-y-4">
+        {rows.map((r, k) => (
+          <li key={k} className="ps-5 relative">
+            <span className="absolute -start-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-neutral-950 border-2 border-arctic-blue" />
+            <div className="text-sm font-bold text-arctic-blue dark:text-arctic-cyan">{inline(r.d)}</div>
+            <div className="text-neutral-700 dark:text-neutral-200 leading-relaxed">{inline(r.e)}</div>
+          </li>
+        ))}
+      </ol>
+    </VisualShell>
+  );
+}
+
+/** Cause/consequence chain or method steps: "- Step :: detail". */
+function SchemaBlock({ block }: { block: Extract<Block, { t: "callout" }> }) {
+  const steps = listItems(block.body).map((it) => { const [a, ...r] = it.split("::"); return { a: a.trim(), d: r.join("::").trim() }; });
+  return (
+    <VisualShell title={block.title} label="Schéma">
+      <div className="flex flex-col items-stretch">
+        {steps.map((st, k) => (
+          <div key={k} className="flex flex-col items-center">
+            <div className="w-full rounded-xl border border-arctic-blue/30 bg-arctic-blue/[0.06] px-4 py-2.5">
+              <div className="font-bold text-neutral-900 dark:text-white">{inline(st.a)}</div>
+              {st.d ? <div className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">{inline(st.d)}</div> : null}
+            </div>
+            {k < steps.length - 1 ? <ChevronDown className="my-1 w-5 h-5 text-arctic-blue/70" /> : null}
+          </div>
+        ))}
+      </div>
+    </VisualShell>
+  );
+}
+
+/** Mind map: title = centre, "- Branch :: a ; b ; c" = cards. */
+function CarteBlock({ block }: { block: Extract<Block, { t: "callout" }> }) {
+  const branches = listItems(block.body).map((it) => { const [a, ...r] = it.split("::"); return { a: a.trim(), items: r.join("::").split(/[;\u061B]/).map((x) => x.trim()).filter(Boolean) }; });
+  return (
+    <VisualShell label="Carte mentale">
+      {block.title ? <div className="mx-auto mb-3 w-fit max-w-full rounded-full bg-gradient-to-br from-arctic-cyan to-arctic-blue px-5 py-2 text-center font-bold text-white shadow-sm shadow-arctic-blue/25">{inline(block.title)}</div> : null}
+      <div className="grid gap-3 sm:grid-cols-2">
+        {branches.map((br, k) => (
+          <div key={k} className="rounded-xl border border-arctic-blue/25 bg-white/60 dark:bg-white/[0.04] p-3">
+            <div className="mb-1.5 font-bold text-arctic-blue dark:text-arctic-cyan">{inline(br.a)}</div>
+            {br.items.length ? <ul className="space-y-1">{br.items.map((x, j) => <li key={j} className="flex gap-2 text-sm text-neutral-700 dark:text-neutral-200"><span className="mt-2 w-1.5 h-1.5 rounded-full bg-arctic-blue/70 shrink-0" /><span>{inline(x)}</span></li>)}</ul> : null}
+          </div>
+        ))}
+      </div>
+    </VisualShell>
+  );
+}
+
 export function Blocks({ blocks }: { blocks: Block[] }) {
   return (
     <>
@@ -292,6 +371,9 @@ export function Blocks({ blocks }: { blocks: Block[] }) {
         if (b.t === "ol") return <ol key={i} className="my-2.5 space-y-1.5">{b.items.map((it, j) => <li key={j} className="flex gap-3 text-neutral-700 dark:text-neutral-200"><span className="shrink-0 w-6 h-6 rounded-lg bg-sky-500/15 text-sky-600 dark:text-sky-300 grid place-items-center text-xs font-bold">{j + 1}</span><span className="pt-0.5">{inline(it)}</span></li>)}</ol>;
         if (b.kind === "app") return <AppBlock key={i} block={b} />;
         if (b.kind === "aya") return <AyaBlock key={i} block={b} />;
+        if (b.kind === "timeline") return <TimelineBlock key={i} block={b} />;
+        if (b.kind === "schema") return <SchemaBlock key={i} block={b} />;
+        if (b.kind === "carte") return <CarteBlock key={i} block={b} />;
         if (b.kind === "hadith") return <HadithBlock key={i} block={b} />;
         if (b.kind === "funnel") return <FunnelBlock key={i} notion={b.title || "cette notion"} />;
         // callout
