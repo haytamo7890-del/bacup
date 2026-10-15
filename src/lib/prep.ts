@@ -179,12 +179,12 @@ export async function loadPlayable(supabase: Sb, questionIds: string[]): Promise
 
 /** Mastery ladder per notion (Khan-style), computed from the student's latest attempt on each question. */
 export type Level = 0 | 1 | 2 | 3 | 4;
-export const LEVELS: { label: string; short: string; tone: string; dot: string }[] = [
-  { label: "À découvrir", short: "Nouveau", tone: "bg-black/[0.05] dark:bg-white/[0.07] text-neutral-500", dot: "bg-neutral-300 dark:bg-neutral-600" },
-  { label: "En cours", short: "En cours", tone: "bg-amber-500/15 text-amber-600 dark:text-amber-400", dot: "bg-amber-500" },
-  { label: "Acquis", short: "Acquis", tone: "bg-sky-500/15 text-sky-600 dark:text-sky-400", dot: "bg-sky-500" },
-  { label: "Maîtrisé", short: "Maîtrisé", tone: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400", dot: "bg-emerald-500" },
-  { label: "Niveau BAC", short: "BAC", tone: "bg-gradient-to-r from-amber-400 to-orange-500 text-white", dot: "bg-orange-500" },
+export const LEVELS: { label: string; short: string }[] = [
+  { label: "À découvrir", short: "Nouveau" },
+  { label: "En cours", short: "En cours" },
+  { label: "Acquis", short: "Acquis" },
+  { label: "Maîtrisé", short: "Maîtrisé" },
+  { label: "Niveau BAC", short: "BAC" },
 ];
 /**
  *  0 À découvrir : nothing answered yet
@@ -233,6 +233,20 @@ export type ErrorRow = {
 export async function loadErrors(supabase: Sb, subjectCode?: string | null): Promise<ErrorRow[]> {
   const { data } = await supabase.rpc("my_errors", { p_subject: subjectCode ?? null });
   return (data ?? []) as ErrorRow[];
+}
+
+/** Notions of several chapters in one query (chapterId → headings in cours order). */
+export async function loadSubjectNotions(supabase: Sb, chapterIds: string[]): Promise<Map<string, { notion: string; lessonId: string }[]>> {
+  const out = new Map<string, { notion: string; lessonId: string }[]>();
+  if (!chapterIds.length) return out;
+  const { data } = await supabase.from("lessons").select("id, chapter_id, body, kind, position").in("chapter_id", chapterIds).order("position");
+  for (const l of (data ?? []) as { id: string; chapter_id: string; body: string | null; kind: string }[]) {
+    if (l.kind === "resume") continue;
+    const a = out.get(l.chapter_id) ?? [];
+    for (const n of lessonNotions(l.body)) a.push({ notion: n, lessonId: l.id });
+    out.set(l.chapter_id, a);
+  }
+  return out;
 }
 
 /** Headings (notions) of a chapter's cours lessons, in cours order. */

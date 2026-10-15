@@ -99,6 +99,7 @@ docs/                   product-spec.md, plan-day1.md, erd.mermaid
   (fn `strip_checkmarks`; table cells became « oui »/« non »). ♀/♂ kept in SVT (biology notation).
 - **Notion resolver fix:** `groupByNotion` now gives a question whose tag equals a heading to THAT heading; substring
   overlap only for loose tags (before: earlier short headings like « Groupe » swallowed 31 SM questions).
+- **Préparation redesign (2026-10-15, UI Reset):** hub = « Aujourd'hui » (ONE next action: révision due → erreurs → reprendre → commencer; série de jours, XP du jour vs `PREP_GOALS.dailyXp`, niveau) + « Tes matières » (one ring per matière). Subject page = ONE path, no tabs: header ring (notions maîtrisées) + 4-level counts + « Continuer » → unit trays → chapter cards (one `LevelMark` per notion; opened: notions + « Valider le chapitre » with its séries) → « Séries BAC » → Examens (locked). Primitives in `src/components/prep/ui.tsx` (`Tray`, `CARD`, `Ring`, `LevelMark`, `LevelLegend`); levels are single-accent (no per-level colours).
 - Calculette page (`/dashboard/calculette`). Bibliothèque, classement, monk mode, reminders, payments/admin.
 - Schema/migrations: `0001` … `0028` (0027/0028 applied to the live DB). Idempotent content seeds under `db/seed/`. AI gateway with cheap/strong routing.
 

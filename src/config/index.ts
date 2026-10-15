@@ -79,3 +79,9 @@ export const EXAMS_COMING_SOON = {
   meanwhile: "En attendant, entraîne-toi par notion et avec les séries : c'est là que se construit ta note.",
 } as const;
 
+
+/** Préparation gamification knobs (hub « Aujourd'hui » card). record_practice gives 10 XP per right answer. */
+export const PREP_GOALS = {
+  dailyXp: 100, // ≈ 10 bonnes réponses
+  seriesPassPct: 70, // a série counts as validated at this score (mirrors record_practice)
+} as const;
